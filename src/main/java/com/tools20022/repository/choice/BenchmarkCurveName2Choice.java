@@ -68,6 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.choice.BenchmarkCurveName4Choice
  * BenchmarkCurveName4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BenchmarkCurveName7Choice
+ * BenchmarkCurveName7Choice}</li>
  * </ul>
  * </li>
  * </ul>
@@ -115,6 +117,9 @@ public class BenchmarkCurveName2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName4Choice#mmIndex
 	 * BenchmarkCurveName4Choice.mmIndex}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName7Choice#mmCode
+	 * BenchmarkCurveName7Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -128,7 +133,7 @@ public class BenchmarkCurveName2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Benchmark curve name expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmIndex);
+			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmIndex, BenchmarkCurveName7Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BenchmarkCurveName1Code.mmObject();
@@ -171,6 +176,9 @@ public class BenchmarkCurveName2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName4Choice#mmName
 	 * BenchmarkCurveName4Choice.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName7Choice#mmProprietary
+	 * BenchmarkCurveName7Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -184,7 +192,7 @@ public class BenchmarkCurveName2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Benchmark curve name expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmName);
+			nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmName, BenchmarkCurveName7Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -200,7 +208,7 @@ public class BenchmarkCurveName2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BenchmarkCurveName2Choice";
 				definition = "Choice of format for benchmark curve name.";
-				nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(BenchmarkCurveName4Choice.mmObject(), BenchmarkCurveName7Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

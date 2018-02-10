@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to report on a payment transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionReturnCriteria4
+ * TransactionReturnCriteria4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,6 +107,14 @@ public class TransactionReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Destination of the payment (be it a member or a system or both)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria4#mmPaymentToReturnCriteria
+	 * TransactionReturnCriteria4.mmPaymentToReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPaymentToReturnCriteria = new MMMessageAssociationEnd() {
@@ -110,6 +125,7 @@ public class TransactionReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentToReturnCriteria";
 			definition = "Destination of the payment (be it a member or a system or both).";
+			nextVersions_lazy = () -> Arrays.asList(TransactionReturnCriteria4.mmPaymentToReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -143,6 +159,14 @@ public class TransactionReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Origin of the payment (be it a member or a system or both)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria4#mmPaymentFromReturnCriteria
+	 * TransactionReturnCriteria4.mmPaymentFromReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPaymentFromReturnCriteria = new MMMessageAssociationEnd() {
@@ -153,6 +177,7 @@ public class TransactionReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFromReturnCriteria";
 			definition = "Origin of the payment (be it a member or a system or both).";
+			nextVersions_lazy = () -> Arrays.asList(TransactionReturnCriteria4.mmPaymentFromReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -186,6 +211,14 @@ public class TransactionReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the criteria used to report on the cash entry."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria4#mmAccountCashEntryReturnCriteria
+	 * TransactionReturnCriteria4.mmAccountCashEntryReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountCashEntryReturnCriteria = new MMMessageAssociationEnd() {
@@ -196,6 +229,7 @@ public class TransactionReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCashEntryReturnCriteria";
 			definition = "Defines the criteria used to report on the cash entry.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionReturnCriteria4.mmAccountCashEntryReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -228,6 +262,14 @@ public class TransactionReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the criteria used to report on the payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReturnCriteria4#mmPaymentReturnCriteria
+	 * TransactionReturnCriteria4.mmPaymentReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPaymentReturnCriteria = new MMMessageAssociationEnd() {
@@ -238,6 +280,7 @@ public class TransactionReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentReturnCriteria";
 			definition = "Defines the criteria used to report on the payment.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionReturnCriteria4.mmPaymentReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -254,6 +297,7 @@ public class TransactionReturnCriteria3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReturnCriteria3";
 				definition = "Defines the criteria used to report on a payment transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionReturnCriteria4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

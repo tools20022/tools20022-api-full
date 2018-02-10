@@ -508,6 +508,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * GenericIdentification164}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AdditionalReference9
  * AdditionalReference9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification165
+ * GenericIdentification165}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification166
+ * GenericIdentification166}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification169
+ * GenericIdentification169}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StressedProduct1
+ * StressedProduct1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification168
+ * GenericIdentification168}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification172
+ * GenericIdentification172}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification167
+ * GenericIdentification167}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification170
+ * GenericIdentification170}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageReference1
+ * MessageReference1}</li>
  * </ul>
  * </li>
  * <li>
@@ -1372,11 +1390,17 @@ public class GenericIdentification {
 	 * {@linkplain com.tools20022.repository.msg.AlternatePartyIdentification7#mmAlternateIdentification
 	 * AlternatePartyIdentification7.mmAlternateIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification3#mmIdentification
+	 * AlternateIdentification3.mmIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification78#mmIdentification
 	 * GenericIdentification78.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SafekeepingPlaceTypeAndText6#mmIdentification
 	 * SafekeepingPlaceTypeAndText6.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTradeVenueCriteria1Choice#mmAnyMIC
+	 * SecuritiesTradeVenueCriteria1Choice.mmAnyMIC}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification29#mmIdentification
 	 * DocumentIdentification29.mmIdentification}</li>
@@ -1597,6 +1621,14 @@ public class GenericIdentification {
 	 * {@linkplain com.tools20022.repository.msg.TradingVenueIdentification2#mmIdentification
 	 * TradingVenueIdentification2.mmIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria2#mmBillingIdentification
+	 * BillingSearchCriteria2.mmBillingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport2#mmBillingIdentification
+	 * BillingReport2.mmBillingIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPriceSource
+	 * Debt3.mmPriceSource}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AdditionalReference8#mmReference
 	 * AdditionalReference8.mmReference}</li>
 	 * <li>
@@ -1653,6 +1685,51 @@ public class GenericIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradeData16#mmStatusOriginator
 	 * TradeData16.mmStatusOriginator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification165#mmIdentification
+	 * GenericIdentification165.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification166#mmIdentification
+	 * GenericIdentification166.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification169#mmIdentification
+	 * GenericIdentification169.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StressedProduct1#mmIdentification
+	 * StressedProduct1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification168#mmIdentification
+	 * GenericIdentification168.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification172#mmIdentification
+	 * GenericIdentification172.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification167#mmIdentification
+	 * GenericIdentification167.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification170#mmIdentification
+	 * GenericIdentification170.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification50#mmIdentification
+	 * DocumentIdentification50.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageReference1#mmReference
+	 * MessageReference1.mmReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmIdentification
+	 * InvoiceHeader3.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmDeliveryNoteIdentification
+	 * LineItem17.mmDeliveryNoteIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmQuotationDocumentIdentification
+	 * TradeAgreement16.mmQuotationDocumentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmContractDocumentIdentification
+	 * TradeAgreement16.mmContractDocumentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmBuyerOrderIdentificationDocument
+	 * TradeAgreement16.mmBuyerOrderIdentificationDocument}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1739,12 +1816,12 @@ public class GenericIdentification {
 					GenericIdentification53.mmIdentification, GenericIdentification71.mmIdentification, GenericIdentification73.mmIdentification, GenericIdentification74.mmIdentification, GenericIdentification72.mmIdentification,
 					GenericIdentification70.mmIdentification, GenericIdentification75.mmIdentification, GenericIdentification76.mmIdentification, BusinessLetter1.mmLetterIdentifier, QualifiedDocumentInformation1.mmItemListIdentifier,
 					QualifiedDocumentInformation1.mmItemIdentifier, ATMCommandIdentification1.mmProcessor, GenericIdentification77.mmIdentification, AdditionalReference6.mmReference, SecuritiesAccount24.mmIdentification,
-					AlternatePartyIdentification7.mmAlternateIdentification, GenericIdentification78.mmIdentification, SafekeepingPlaceTypeAndText6.mmIdentification, DocumentIdentification29.mmIdentification,
-					SupportingDocumentEntry1.mmEntryIdentification, DocumentGeneralInformation3.mmDocumentNumber, TradeContract1.mmContractDocumentIdentification, InterestPaymentDateRange1.mmInterestScheduleIdentification,
-					LegalOrganisation2.mmIdentification, DocumentIdentification28.mmIdentification, TransactionCertificateRecord1.mmCertificateRecordIdentification, ContractClosureReason1Choice.mmCode,
-					ContractClosureReason1Choice.mmProprietary, SecuritiesAccount26.mmIdentification, SecuritiesCertificate4.mmNumber, SafekeepingPlaceTypeAndText8.mmIdentification, SecuritiesAccount25.mmIdentification,
-					GenericIdentification80.mmIdentification, RemittanceInformation12.mmRemittanceIdentification, ReferredDocumentInformation7.mmNumber, BillingStatement2.mmStatementIdentification,
-					AlternateIdentification4.mmIdentification, DocumentIdentification31.mmIdentification, DocumentIdentification32.mmIdentification, DocumentIdentification33.mmIdentification,
+					AlternatePartyIdentification7.mmAlternateIdentification, AlternateIdentification3.mmIdentification, GenericIdentification78.mmIdentification, SafekeepingPlaceTypeAndText6.mmIdentification,
+					SecuritiesTradeVenueCriteria1Choice.mmAnyMIC, DocumentIdentification29.mmIdentification, SupportingDocumentEntry1.mmEntryIdentification, DocumentGeneralInformation3.mmDocumentNumber,
+					TradeContract1.mmContractDocumentIdentification, InterestPaymentDateRange1.mmInterestScheduleIdentification, LegalOrganisation2.mmIdentification, DocumentIdentification28.mmIdentification,
+					TransactionCertificateRecord1.mmCertificateRecordIdentification, ContractClosureReason1Choice.mmCode, ContractClosureReason1Choice.mmProprietary, SecuritiesAccount26.mmIdentification, SecuritiesCertificate4.mmNumber,
+					SafekeepingPlaceTypeAndText8.mmIdentification, SecuritiesAccount25.mmIdentification, GenericIdentification80.mmIdentification, RemittanceInformation12.mmRemittanceIdentification, ReferredDocumentInformation7.mmNumber,
+					BillingStatement2.mmStatementIdentification, AlternateIdentification4.mmIdentification, DocumentIdentification31.mmIdentification, DocumentIdentification32.mmIdentification, DocumentIdentification33.mmIdentification,
 					DocumentIdentification3Choice.mmAccountServicerDocumentIdentification, DocumentIdentification3Choice.mmAccountOwnerDocumentIdentification, AdditionalReference7.mmReference, GenericIdentification81.mmIdentification,
 					DirectDebitMandate5.mmMandateIdentification, AlternateSecurityIdentification7.mmIdentification, InvestmentAccountOwnershipInformation12.mmClientIdentification, GenericIdentification82.mmIdentification,
 					PartyProfileInformation5.mmValidatingParty, PartyProfileInformation5.mmCheckingParty, PartyProfileInformation5.mmResponsibleParty, InvestmentAccountOwnershipInformation13.mmClientIdentification,
@@ -1757,11 +1834,14 @@ public class GenericIdentification {
 					GenericIdentification93.mmIdentification, GenericIdentification92.mmIdentification, GenericIdentificationSD1.mmAccountServicerIdentification, GenericIdentificationSD1.mmAccountOwnerIdentification,
 					InvoiceHeader2.mmIdentification, TradeAgreement13.mmQuotationDocumentIdentification, TradeAgreement13.mmContractDocumentIdentification, TradeAgreement13.mmBuyerOrderIdentificationDocument,
 					LineItem16.mmDeliveryNoteIdentification, MarketClaimDetailsSD1.mmAccountServicerIdentification, MarketClaimDetailsSD1.mmAccountOwnerIdentification, TradingVenueIdentification2.mmIdentification,
-					AdditionalReference8.mmReference, FundSettlementParameters11.mmSecuritiesSettlementSystemIdentification, GenericIdentification164.mmIdentification, FundSettlementParameters12.mmSecuritiesSettlementSystemIdentification,
-					InvestmentAccountOwnershipInformation15.mmClientIdentification, InvestmentAccountOwnershipInformation14.mmClientIdentification, DirectDebitMandate6.mmMandateIdentification, AdditionalReference9.mmReference,
-					RegulatoryReporting6.mmExecutionVenue, TradeData14.mmStatusOriginator, TradeData12.mmStatusOriginator, TradeData15.mmStatusOriginator, Mandate10.mmMandateIdentification,
-					RemittanceInformation13.mmRemittanceIdentification, Mandate9.mmMandateIdentification, Mandate11.mmMandateIdentification, ReferredMandateDocument1.mmNumber, Mandate8.mmMandateIdentification,
-					TradeData16.mmStatusOriginator);
+					BillingSearchCriteria2.mmBillingIdentification, BillingReport2.mmBillingIdentification, Debt3.mmPriceSource, AdditionalReference8.mmReference, FundSettlementParameters11.mmSecuritiesSettlementSystemIdentification,
+					GenericIdentification164.mmIdentification, FundSettlementParameters12.mmSecuritiesSettlementSystemIdentification, InvestmentAccountOwnershipInformation15.mmClientIdentification,
+					InvestmentAccountOwnershipInformation14.mmClientIdentification, DirectDebitMandate6.mmMandateIdentification, AdditionalReference9.mmReference, RegulatoryReporting6.mmExecutionVenue, TradeData14.mmStatusOriginator,
+					TradeData12.mmStatusOriginator, TradeData15.mmStatusOriginator, Mandate10.mmMandateIdentification, RemittanceInformation13.mmRemittanceIdentification, Mandate9.mmMandateIdentification, Mandate11.mmMandateIdentification,
+					ReferredMandateDocument1.mmNumber, Mandate8.mmMandateIdentification, TradeData16.mmStatusOriginator, GenericIdentification165.mmIdentification, GenericIdentification166.mmIdentification,
+					GenericIdentification169.mmIdentification, StressedProduct1.mmIdentification, GenericIdentification168.mmIdentification, GenericIdentification172.mmIdentification, GenericIdentification167.mmIdentification,
+					GenericIdentification170.mmIdentification, DocumentIdentification50.mmIdentification, MessageReference1.mmReference, InvoiceHeader3.mmIdentification, LineItem17.mmDeliveryNoteIdentification,
+					TradeAgreement16.mmQuotationDocumentIdentification, TradeAgreement16.mmContractDocumentIdentification, TradeAgreement16.mmBuyerOrderIdentificationDocument);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2549,7 +2629,7 @@ public class GenericIdentification {
 	 * name} = "Account"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account for which a type is specified"</li>
+	 * definition} = "Account for which a type is specified."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmAccount = new MMBusinessAssociationEnd() {
@@ -2558,7 +2638,7 @@ public class GenericIdentification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
-			definition = "Account for which a type is specified";
+			definition = "Account for which a type is specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmType;
@@ -2827,6 +2907,14 @@ public class GenericIdentification {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesIdentification
 	 * SecuritiesIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification19Choice#mmBasketConstituents
+	 * SecurityIdentification19Choice.mmBasketConstituents}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -2847,6 +2935,7 @@ public class GenericIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesIdentification = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(SecurityIdentification19Choice.mmBasketConstituents);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3061,7 +3150,8 @@ public class GenericIdentification {
 						GenericIdentification81.mmObject(), GenericIdentification82.mmObject(), OtherIdentification3Choice.mmObject(), GenericIdentification84.mmObject(), GenericIdentification85.mmObject(),
 						GenericIdentification86.mmObject(), GenericIdentification144.mmObject(), GenericIdentification163.mmObject(), GenericIdentification89.mmObject(), GenericIdentification79.mmObject(),
 						GenericIdentification94.mmObject(), GenericIdentification90.mmObject(), GenericIdentification93.mmObject(), GenericIdentification92.mmObject(), AdditionalReference8.mmObject(), GenericIdentification164.mmObject(),
-						AdditionalReference9.mmObject());
+						AdditionalReference9.mmObject(), GenericIdentification165.mmObject(), GenericIdentification166.mmObject(), GenericIdentification169.mmObject(), StressedProduct1.mmObject(), GenericIdentification168.mmObject(),
+						GenericIdentification172.mmObject(), GenericIdentification167.mmObject(), GenericIdentification170.mmObject(), MessageReference1.mmObject());
 			}
 
 			@Override

@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of elements used to provide summary information on entries."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalTransactions6
+ * TotalTransactions6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TotalTransactions4
@@ -104,6 +111,14 @@ public class TotalTransactions5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the total number and sum of debit and credit entries."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTransactions6#mmTotalEntries
+	 * TotalTransactions6.mmTotalEntries}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class TotalTransactions5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEntries";
 			definition = "Specifies the total number and sum of debit and credit entries.";
+			nextVersions_lazy = () -> Arrays.asList(TotalTransactions6.mmTotalEntries);
 			previousVersion_lazy = () -> TotalTransactions4.mmTotalEntries;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -153,6 +169,14 @@ public class TotalTransactions5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the total number and sum of credit entries."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTransactions6#mmTotalCreditEntries
+	 * TotalTransactions6.mmTotalCreditEntries}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +192,7 @@ public class TotalTransactions5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCreditEntries";
 			definition = "Specifies the total number and sum of credit entries.";
+			nextVersions_lazy = () -> Arrays.asList(TotalTransactions6.mmTotalCreditEntries);
 			previousVersion_lazy = () -> TotalTransactions4.mmTotalCreditEntries;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -202,6 +227,14 @@ public class TotalTransactions5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the total number and sum of debit entries."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTransactions6#mmTotalDebitEntries
+	 * TotalTransactions6.mmTotalDebitEntries}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -217,6 +250,7 @@ public class TotalTransactions5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalDebitEntries";
 			definition = "Specifies the total number and sum of debit entries.";
+			nextVersions_lazy = () -> Arrays.asList(TotalTransactions6.mmTotalDebitEntries);
 			previousVersion_lazy = () -> TotalTransactions4.mmTotalDebitEntries;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -253,6 +287,14 @@ public class TotalTransactions5 {
 	 * definition} =
 	 * "Specifies the total number and sum of entries per bank transaction code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalTransactions6#mmTotalEntriesPerBankTransactionCode
+	 * TotalTransactions6.mmTotalEntriesPerBankTransactionCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -268,6 +310,7 @@ public class TotalTransactions5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEntriesPerBankTransactionCode";
 			definition = "Specifies the total number and sum of entries per bank transaction code.";
+			nextVersions_lazy = () -> Arrays.asList(TotalTransactions6.mmTotalEntriesPerBankTransactionCode);
 			previousVersion_lazy = () -> TotalTransactions4.mmTotalEntriesPerBankTransactionCode;
 			minOccurs = 0;
 			isComposite = true;
@@ -284,6 +327,7 @@ public class TotalTransactions5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalTransactions5";
 				definition = "Set of elements used to provide summary information on entries.";
+				nextVersions_lazy = () -> Arrays.asList(TotalTransactions6.mmObject());
 				previousVersion_lazy = () -> TotalTransactions4.mmObject();
 			}
 		});

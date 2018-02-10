@@ -154,7 +154,7 @@ public class MarketInfrastructureIdentification1Choice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Clearing system identification in a proprietary form.\n"</li>
+	 * definition} = "Clearing system identification in a proprietary form.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -165,7 +165,7 @@ public class MarketInfrastructureIdentification1Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Clearing system identification in a proprietary form.\n";
+			definition = "Clearing system identification in a proprietary form.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

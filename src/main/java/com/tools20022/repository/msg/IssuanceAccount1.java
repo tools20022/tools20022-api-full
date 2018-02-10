@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the account to or from which a securities entry is made and the usage type."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IssuanceAccount2
+ * IssuanceAccount2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +105,14 @@ public class IssuanceAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a securities entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IssuanceAccount2#mmIssuanceAccount
+	 * IssuanceAccount2.mmIssuanceAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuanceAccount = new MMMessageAttribute() {
@@ -108,6 +123,7 @@ public class IssuanceAccount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceAccount";
 			definition = "Account to or from which a securities entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(IssuanceAccount2.mmIssuanceAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
@@ -142,6 +158,14 @@ public class IssuanceAccount1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines if the related issuance account is the primary account or not."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IssuanceAccount2#mmPrimaryAccountIndicator
+	 * IssuanceAccount2.mmPrimaryAccountIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPrimaryAccountIndicator = new MMMessageAttribute() {
@@ -152,6 +176,7 @@ public class IssuanceAccount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryAccountIndicator";
 			definition = "Defines if the related issuance account is the primary account or not.";
+			nextVersions_lazy = () -> Arrays.asList(IssuanceAccount2.mmPrimaryAccountIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -166,6 +191,7 @@ public class IssuanceAccount1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IssuanceAccount1";
 				definition = "Defines the account to or from which a securities entry is made and the usage type.";
+				nextVersions_lazy = () -> Arrays.asList(IssuanceAccount2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

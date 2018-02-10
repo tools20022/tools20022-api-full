@@ -227,7 +227,7 @@ public class RemittanceAdviceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information that cannot be  captured in the structured elements and/or any other specific block."
+	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -244,7 +244,7 @@ public class RemittanceAdviceV01 {
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
-			definition = "Additional information that cannot be  captured in the structured elements and/or any other specific block.";
+			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			nextVersions_lazy = () -> Arrays.asList(RemittanceAdviceV02.mmSupplementaryData);
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();

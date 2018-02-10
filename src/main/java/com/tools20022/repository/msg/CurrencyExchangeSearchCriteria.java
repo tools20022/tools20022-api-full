@@ -69,6 +69,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the criteria used to search for currency exchange information."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria1
+ * CurrencyExchangeSearchCriteria1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +117,14 @@ public class CurrencyExchangeSearchCriteria {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Currency of the amount to be converted in a currency conversion."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria1#mmSourceCurrency
+	 * CurrencyExchangeSearchCriteria1.mmSourceCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
@@ -120,6 +136,7 @@ public class CurrencyExchangeSearchCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceCurrency";
 			definition = "Currency of the amount to be converted in a currency conversion.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyExchangeSearchCriteria1.mmSourceCurrency);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -159,6 +176,14 @@ public class CurrencyExchangeSearchCriteria {
 	 * definition} =
 	 * "Currency into which an amount is to be converted in a currency conversion."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria1#mmTargetCurrency
+	 * CurrencyExchangeSearchCriteria1.mmTargetCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTargetCurrency = new MMMessageAttribute() {
@@ -170,6 +195,7 @@ public class CurrencyExchangeSearchCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCurrency";
 			definition = "Currency into which an amount is to be converted in a currency conversion.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyExchangeSearchCriteria1.mmTargetCurrency);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -192,6 +218,7 @@ public class CurrencyExchangeSearchCriteria {
 				})).get();
 				name = "CurrencyExchangeSearchCriteria";
 				definition = "Defines the criteria used to search for currency exchange information.";
+				nextVersions_lazy = () -> Arrays.asList(CurrencyExchangeSearchCriteria1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -193,6 +193,8 @@ public class CashAvailability {
 	 * CashAvailabilityDate1Choice.mmActualDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CashAvailability1#mmDate
 	 * CashAvailability1.mmDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Deposit1#mmMaturityDate
+	 * Deposit1.mmMaturityDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -214,7 +216,7 @@ public class CashAvailability {
 	public static final MMBusinessAttribute mmDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashBalanceAvailabilityDate1.mmActualDate, CashBalanceAvailability1.mmDate, CashBalanceAvailability2.mmDate, PaymentTerms6.mmDueDate, CashAvailabilityDate1Choice.mmActualDate,
-					CashAvailability1.mmDate);
+					CashAvailability1.mmDate, Deposit1.mmMaturityDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAvailability.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

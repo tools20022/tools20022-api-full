@@ -34,7 +34,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * This message set covers the post-trade processing in the foreign exchange
  * trade domain together with cash management and administration messages to
- * support the associated payments processing and notification of system events
+ * support the associated payments processing and notification of system events.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -106,7 +106,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Post-Trade Foreign Exchange - ISO - Latest version"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This message set covers the post-trade processing in the foreign exchange trade domain together with cash management and administration messages to support the associated payments processing and notification of system events"
+ * "This message set covers the post-trade processing in the foreign exchange trade domain together with cash management and administration messages to support the associated payments processing and notification of system events."
  * </li>
  * </ul>
  */
@@ -120,7 +120,7 @@ public class PostTradeForeignExchangeISOLatestversion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Post-Trade Foreign Exchange - ISO - Latest version";
-				definition = "This message set covers the post-trade processing in the foreign exchange trade domain together with cash management and administration messages to support the associated payments processing and notification of system events";
+				definition = "This message set covers the post-trade processing in the foreign exchange trade domain together with cash management and administration messages to support the associated payments processing and notification of system events.";
 				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeWithdrawalNotificationV03.mmObject(), PayInCallV02.mmObject(), PayInEventAcknowledgementV02.mmObject(), PayInScheduleV03.mmObject(),
 						StaticDataReportV02.mmObject(), StaticDataRequestV02.mmObject(), SystemEventAcknowledgementV01.mmObject(), MessageRejectV01.mmObject(), SystemEventNotificationV02.mmObject(),
 						ForeignExchangeTradeInstructionV04.mmObject(), ForeignExchangeTradeStatusNotificationV06.mmObject(), ForeignExchangeTradeInstructionCancellationV04.mmObject(), ForeignExchangeTradeInstructionAmendmentV04.mmObject(),

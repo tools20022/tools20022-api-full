@@ -73,6 +73,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ISAYearsOfIssue6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Year in which the ISA plan is issued."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ISAYearsOfIssue7
+ * ISAYearsOfIssue7}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,6 +120,14 @@ public class ISAYearsOfIssue6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "ISA that was issued during the current fiscal year."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue7#mmCurrentYear
+	 * ISAYearsOfIssue7.mmCurrentYear}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrentYear = new MMMessageAttribute() {
@@ -124,6 +139,7 @@ public class ISAYearsOfIssue6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYear";
 			definition = "ISA that was issued during the current fiscal year.";
+			nextVersions_lazy = () -> Arrays.asList(ISAYearsOfIssue7.mmCurrentYear);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CurrentYearType2Choice.mmObject();
@@ -161,6 +177,14 @@ public class ISAYearsOfIssue6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Selection of investment plans issued during previous years."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue7#mmPreviousYears
+	 * ISAYearsOfIssue7.mmPreviousYears}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPreviousYears = new MMMessageAssociationEnd() {
@@ -172,6 +196,7 @@ public class ISAYearsOfIssue6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousYears";
 			definition = "Selection of investment plans issued during previous years.";
+			nextVersions_lazy = () -> Arrays.asList(ISAYearsOfIssue7.mmPreviousYears);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -189,6 +214,7 @@ public class ISAYearsOfIssue6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISAYearsOfIssue6";
 				definition = "Year in which the ISA plan is issued.";
+				nextVersions_lazy = () -> Arrays.asList(ISAYearsOfIssue7.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

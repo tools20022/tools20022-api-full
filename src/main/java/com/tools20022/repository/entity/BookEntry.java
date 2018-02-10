@@ -18,9 +18,7 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
-import com.tools20022.repository.choice.IntraBalanceOrOperationalError1Choice;
-import com.tools20022.repository.choice.IntraBalanceOrOperationalError2Choice;
-import com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.CreditInstrument;
 import com.tools20022.repository.GeneratedRepository;
@@ -136,6 +134,36 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError3Choice#mmModifications
  * IntraBalanceOrOperationalError3Choice.mmModifications}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalancePending3#mmMovement
+ * IntraBalancePending3.mmMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError4Choice#mmMovements
+ * IntraBalanceOrOperationalError4Choice.mmMovements}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError6Choice#mmModifications
+ * IntraBalanceOrOperationalError6Choice.mmModifications}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError5Choice#mmCancellations
+ * IntraBalanceOrOperationalError5Choice.mmCancellations}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation3#mmCancellation
+ * IntraBalanceCancellation3.mmCancellation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement3#mmMovementDetails
+ * IntraBalanceMovement3.mmMovementDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmUnderlyingIntraBalance
+ * IntraBalanceCancellation4.mmUnderlyingIntraBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceModification4#mmUnderlyingIntraBalance
+ * IntraBalanceModification4.mmUnderlyingIntraBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceMovements2#mmMovement
+ * IntraBalanceMovements2.mmMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceModification3#mmModification
+ * IntraBalanceModification3.mmModification}</li>
  * </ul>
  * </li>
  * <li>
@@ -183,6 +211,45 @@ import java.util.Objects;
  * IntraBalanceOrOperationalError3Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria3
  * IntraBalanceQueryCriteria3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalance3 IntraBalance3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalancePending3
+ * IntraBalancePending3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError4Choice
+ * IntraBalanceOrOperationalError4Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError6Choice
+ * IntraBalanceOrOperationalError6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalance4 IntraBalance4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError5Choice
+ * IntraBalanceOrOperationalError5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalancePosting3
+ * IntraBalancePosting3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceCancellation3
+ * IntraBalanceCancellation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceMovement3
+ * IntraBalanceMovement3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceMovement4
+ * IntraBalanceMovement4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4
+ * IntraBalanceCancellation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceModification4
+ * IntraBalanceModification4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceType2
+ * IntraBalanceType2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalancePending4
+ * IntraBalancePending4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceMovements2
+ * IntraBalanceMovements2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria5
+ * IntraBalanceQueryCriteria5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalancePosting4
+ * IntraBalancePosting4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6
+ * IntraBalanceQueryCriteria6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceModification3
+ * IntraBalanceModification3}</li>
  * </ul>
  * </li>
  * <li>
@@ -244,6 +311,9 @@ public class BookEntry extends CreditInstrument {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction33#mmAccountEntry
 	 * Transaction33.mmAccountEntry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction59#mmAccountEntry
+	 * Transaction59.mmAccountEntry}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -266,7 +336,7 @@ public class BookEntry extends CreditInstrument {
 	public static final MMBusinessAssociationEnd mmCashEntry = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Transaction3.mmAccountEntry, Transaction4.mmAccountEntry, Transaction5.mmAccountEntry, Transaction24.mmAccountEntry, CorporateActionElection3.mmCashMovementDetails,
-					Transaction33.mmAccountEntry);
+					Transaction33.mmAccountEntry, Transaction59.mmAccountEntry);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BookEntry.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -578,7 +648,9 @@ public class BookEntry extends CreditInstrument {
 				derivationElement_lazy = () -> Arrays.asList(PaymentDetails5.mmPaymentMethod, PaymentDetails6.mmPaymentMethod, PaymentDetails7.mmPaymentMethod, FinancingAllowedSummary1.mmFinancingDateDetails,
 						IntraBalanceCancellation2.mmUnderlyingIntraBalance, IntraBalanceCancellation1.mmCancellation, IntraBalanceOrOperationalError2Choice.mmCancellations, IntraBalanceMovement1.mmMovementDetails,
 						IntraBalanceMovements1.mmMovement, IntraBalanceOrOperationalError1Choice.mmMovements, IntraBalancePending1.mmMovement, IntraBalanceModification2.mmUnderlyingIntraBalance, IntraBalanceModification1.mmModification,
-						IntraBalanceOrOperationalError3Choice.mmModifications);
+						IntraBalanceOrOperationalError3Choice.mmModifications, IntraBalancePending3.mmMovement, IntraBalanceOrOperationalError4Choice.mmMovements, IntraBalanceOrOperationalError6Choice.mmModifications,
+						IntraBalanceOrOperationalError5Choice.mmCancellations, IntraBalanceCancellation3.mmCancellation, IntraBalanceMovement3.mmMovementDetails, IntraBalanceCancellation4.mmUnderlyingIntraBalance,
+						IntraBalanceModification4.mmUnderlyingIntraBalance, IntraBalanceMovements2.mmMovement, IntraBalanceModification3.mmModification);
 				superType_lazy = () -> CreditInstrument.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BookEntry.mmCashEntry, com.tools20022.repository.entity.BookEntry.mmDebitEntry, com.tools20022.repository.entity.BookEntry.mmCreditEntry,
 						com.tools20022.repository.entity.BookEntry.mmTransferAdvice, com.tools20022.repository.entity.BookEntry.mmFundSubscriptionCashInFlow, com.tools20022.repository.entity.BookEntry.mmFundRedemptionCashOutFlow,
@@ -586,7 +658,11 @@ public class BookEntry extends CreditInstrument {
 				derivationComponent_lazy = () -> Arrays.asList(FinancingDateDetails1.mmObject(), IntraBalance2.mmObject(), IntraBalance1.mmObject(), IntraBalanceCancellation2.mmObject(), IntraBalanceCancellation1.mmObject(),
 						IntraBalanceOrOperationalError2Choice.mmObject(), IntraBalanceMovement2.mmObject(), IntraBalanceMovement1.mmObject(), IntraBalanceMovements1.mmObject(), IntraBalanceOrOperationalError1Choice.mmObject(),
 						IntraBalanceQueryCriteria2.mmObject(), IntraBalancePending2.mmObject(), IntraBalancePending1.mmObject(), IntraBalancePosting2.mmObject(), IntraBalancePosting1.mmObject(), IntraBalanceType1.mmObject(),
-						IntraBalanceModification2.mmObject(), IntraBalanceModification1.mmObject(), IntraBalanceOrOperationalError3Choice.mmObject(), IntraBalanceQueryCriteria3.mmObject());
+						IntraBalanceModification2.mmObject(), IntraBalanceModification1.mmObject(), IntraBalanceOrOperationalError3Choice.mmObject(), IntraBalanceQueryCriteria3.mmObject(), IntraBalance3.mmObject(),
+						IntraBalancePending3.mmObject(), IntraBalanceOrOperationalError4Choice.mmObject(), IntraBalanceOrOperationalError6Choice.mmObject(), IntraBalance4.mmObject(), IntraBalanceOrOperationalError5Choice.mmObject(),
+						IntraBalancePosting3.mmObject(), IntraBalanceCancellation3.mmObject(), IntraBalanceMovement3.mmObject(), IntraBalanceMovement4.mmObject(), IntraBalanceCancellation4.mmObject(), IntraBalanceModification4.mmObject(),
+						IntraBalanceType2.mmObject(), IntraBalancePending4.mmObject(), IntraBalanceMovements2.mmObject(), IntraBalanceQueryCriteria5.mmObject(), IntraBalancePosting4.mmObject(), IntraBalanceQueryCriteria6.mmObject(),
+						IntraBalanceModification3.mmObject());
 			}
 
 			@Override

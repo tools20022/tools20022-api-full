@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the criteria which are used to search for an account and to report on the account. A name may be given to the new query."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValueCriteria2
+ * CollateralValueCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,7 +108,15 @@ public class CollateralValueCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name of the query defined by the search criteria and return criteria. "</li>
+	 * "Name of the query defined by the search criteria and return criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria2#mmQueryName
+	 * CollateralValueCriteria2.mmQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
@@ -111,7 +126,8 @@ public class CollateralValueCriteria1 {
 			xmlTag = "QryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
-			definition = "Name of the query defined by the search criteria and return criteria. ";
+			definition = "Name of the query defined by the search criteria and return criteria.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueCriteria2.mmQueryName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -145,6 +161,14 @@ public class CollateralValueCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria to be used to extract the account information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria2#mmSearchCriteria
+	 * CollateralValueCriteria2.mmSearchCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
@@ -155,6 +179,7 @@ public class CollateralValueCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to be used to extract the account information.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueCriteria2.mmSearchCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -188,6 +213,14 @@ public class CollateralValueCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the expected account report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueCriteria2#mmReturnCriteria
+	 * CollateralValueCriteria2.mmReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
@@ -198,6 +231,7 @@ public class CollateralValueCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the expected account report.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueCriteria2.mmReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -214,6 +248,7 @@ public class CollateralValueCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueCriteria1";
 				definition = "Defines the criteria which are used to search for an account and to report on the account. A name may be given to the new query.";
+				nextVersions_lazy = () -> Arrays.asList(CollateralValueCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CharacterSearchChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of characters to be matched to be considered as valid."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.CharacterSearch1Choice
+ * CharacterSearch1Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +108,14 @@ public class CharacterSearchChoice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Exact set of characters to be matched to be considered valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CharacterSearch1Choice#mmEqual
+	 * CharacterSearch1Choice.mmEqual}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEqual = new MMMessageAttribute() {
@@ -111,6 +126,7 @@ public class CharacterSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Equal";
 			definition = "Exact set of characters to be matched to be considered valid.";
+			nextVersions_lazy = () -> Arrays.asList(CharacterSearch1Choice.mmEqual);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -144,6 +160,14 @@ public class CharacterSearchChoice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Exact set of characters that cannot match to be considered valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CharacterSearch1Choice#mmNotEqual
+	 * CharacterSearch1Choice.mmNotEqual}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNotEqual = new MMMessageAttribute() {
@@ -154,6 +178,7 @@ public class CharacterSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqual";
 			definition = "Exact set of characters that cannot match to be considered valid.";
+			nextVersions_lazy = () -> Arrays.asList(CharacterSearch1Choice.mmNotEqual);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -186,6 +211,14 @@ public class CharacterSearchChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Set of characters to be matched to be considered valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CharacterSearch1Choice#mmContain
+	 * CharacterSearch1Choice.mmContain}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmContain = new MMMessageAttribute() {
@@ -196,6 +229,7 @@ public class CharacterSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Contain";
 			definition = "Set of characters to be matched to be considered valid.";
+			nextVersions_lazy = () -> Arrays.asList(CharacterSearch1Choice.mmContain);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -229,6 +263,14 @@ public class CharacterSearchChoice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of characters that cannot match to be considered valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CharacterSearch1Choice#mmNotContain
+	 * CharacterSearch1Choice.mmNotContain}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNotContain = new MMMessageAttribute() {
@@ -239,6 +281,7 @@ public class CharacterSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotContain";
 			definition = "Set of characters that cannot match to be considered valid.";
+			nextVersions_lazy = () -> Arrays.asList(CharacterSearch1Choice.mmNotContain);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -254,6 +297,7 @@ public class CharacterSearchChoice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CharacterSearchChoice";
 				definition = "Set of characters to be matched to be considered as valid.";
+				nextVersions_lazy = () -> Arrays.asList(CharacterSearch1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

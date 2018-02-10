@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.DebitAuthorisationResponseV02;
 import com.tools20022.repository.area.camt.DebitAuthorisationResponseV03;
+import com.tools20022.repository.area.camt.DebitAuthorisationResponseV04;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.Max140Text;
@@ -70,6 +71,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV03#mmConfirmation
  * DebitAuthorisationResponseV03.mmConfirmation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV04#mmConfirmation
+ * DebitAuthorisationResponseV04.mmConfirmation}</li>
  * </ul>
  * </li>
  * <li>
@@ -297,7 +301,7 @@ public class DebitAuthorisationConfirmation2 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisationConfirmation2.mmDebitAuthorisation, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.mmAmountToDebit,
 						com.tools20022.repository.msg.DebitAuthorisationConfirmation2.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisationConfirmation2.mmReason);
-				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationResponseV02.mmConfirmation, DebitAuthorisationResponseV03.mmConfirmation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationResponseV02.mmConfirmation, DebitAuthorisationResponseV03.mmConfirmation, DebitAuthorisationResponseV04.mmConfirmation);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisationConfirmation2";

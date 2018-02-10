@@ -221,7 +221,7 @@ public class UndertakingTerminationNotice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Document or template enclosed in the termination notification. "</li>
+	 * "Document or template enclosed in the termination notification."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEnclosedFile = new MMMessageAssociationEnd() {
@@ -232,7 +232,7 @@ public class UndertakingTerminationNotice1 {
 			xmlTag = "NclsdFile";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnclosedFile";
-			definition = "Document or template enclosed in the termination notification. ";
+			definition = "Document or template enclosed in the termination notification.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Document9.mmObject();

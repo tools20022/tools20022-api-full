@@ -270,6 +270,18 @@ public class CorporateActionDistribution {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmPostingQuantity
 	 * SecuritiesOption63.mmPostingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmPostingQuantity
+	 * SecuritiesOption65.mmPostingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmPostingQuantity
+	 * SecuritiesOption66.mmPostingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmPostingQuantity
+	 * SecuritiesOption67.mmPostingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption69#mmPostingQuantity
+	 * SecuritiesOption69.mmPostingQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -296,7 +308,8 @@ public class CorporateActionDistribution {
 					SecuritiesOption31.mmPostingQuantity, SecuritiesOption35.mmPostingQuantity, SecuritiesOption36.mmPostingQuantity, SecuritiesOption5.mmPostingQuantity, SecuritiesOption11.mmPostingQuantity,
 					SecuritiesOption19.mmPostingQuantity, SecuritiesOption21.mmPostingQuantity, SecuritiesOption27.mmPostingQuantity, SecuritiesOption32.mmPostingQuantity, CorporateActionSecuritiesMovement2.mmPostingQuantity,
 					CorporateActionMovement1.mmConfirmedBalanceSecuritiesQuantity, SecuritiesProceeds1.mmPostingQuantity, SecuritiesOption42.mmPostingQuantity, SecuritiesOption48.mmPostingQuantity, SecuritiesOption53.mmPostingQuantity,
-					SecuritiesOption50.mmPostingQuantity, SecuritiesOption55.mmPostingQuantity, SecuritiesOption58.mmPostingQuantity, SecuritiesOption60.mmPostingQuantity, SecuritiesOption63.mmPostingQuantity);
+					SecuritiesOption50.mmPostingQuantity, SecuritiesOption55.mmPostingQuantity, SecuritiesOption58.mmPostingQuantity, SecuritiesOption60.mmPostingQuantity, SecuritiesOption63.mmPostingQuantity,
+					SecuritiesOption65.mmPostingQuantity, SecuritiesOption66.mmPostingQuantity, SecuritiesOption67.mmPostingQuantity, SecuritiesOption69.mmPostingQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -457,6 +470,43 @@ public class CorporateActionDistribution {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption48#mmOriginalPostingDate
 	 * CashOption48.mmOriginalPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate15#mmPostingDate
+	 * SecurityDate15.mmPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmPostingDate
+	 * FinancialInstrumentAttributes93.mmPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmPostingDate
+	 * SecuritiesOption66.mmPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmOriginalPostingDate
+	 * SecuritiesOption66.mmOriginalPostingDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption59#mmPostingDate
+	 * CashOption59.mmPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption59#mmOriginalPostingDate
+	 * CashOption59.mmOriginalPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmPostingDate
+	 * CorporateActionDate65.mmPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate17#mmPostingDate
+	 * SecurityDate17.mmPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption69#mmPostingDate
+	 * SecuritiesOption69.mmPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption69#mmOriginalPostingDate
+	 * SecuritiesOption69.mmOriginalPostingDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption62#mmPostingDate
+	 * CashOption62.mmPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption62#mmOriginalPostingDate
+	 * CashOption62.mmOriginalPostingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes94#mmPostingDate
+	 * FinancialInstrumentAttributes94.mmPostingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -485,7 +535,9 @@ public class CorporateActionDistribution {
 					FinancialInstrumentAttributes25.mmPostingDate, FinancialInstrumentAttributes46.mmPostingDate, FinancialInstrumentAttributes47.mmPostingDate, CorporateActionSecuritiesMovement2.mmPostingDateTime,
 					CorporateActionSecuritiesMovement1.mmPostingDateTime, CorporateActionSecuritiesMovement1.mmPostingQuantity, FinancialInstrumentAttributes68.mmPostingDate, SecuritiesOption53.mmPostingDate,
 					SecuritiesOption53.mmOriginalPostingDate, CashOption45.mmPostingDate, CashOption45.mmOriginalPostingDate, SecurityDate11.mmPostingDate, FinancialInstrumentAttributes73.mmPostingDate, SecuritiesOption58.mmPostingDate,
-					SecuritiesOption58.mmOriginalPostingDate, SecurityDate13.mmPostingDate, CashOption48.mmPostingDate, CashOption48.mmOriginalPostingDate);
+					SecuritiesOption58.mmOriginalPostingDate, SecurityDate13.mmPostingDate, CashOption48.mmPostingDate, CashOption48.mmOriginalPostingDate, SecurityDate15.mmPostingDate, FinancialInstrumentAttributes93.mmPostingDate,
+					SecuritiesOption66.mmPostingDate, SecuritiesOption66.mmOriginalPostingDate, CashOption59.mmPostingDate, CashOption59.mmOriginalPostingDate, CorporateActionDate65.mmPostingDate, SecurityDate17.mmPostingDate,
+					SecuritiesOption69.mmPostingDate, SecuritiesOption69.mmOriginalPostingDate, CashOption62.mmPostingDate, CashOption62.mmOriginalPostingDate, FinancialInstrumentAttributes94.mmPostingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -634,6 +686,33 @@ public class CorporateActionDistribution {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecurityDate13#mmPaymentDate
 	 * SecurityDate13.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate15#mmPaymentDate
+	 * SecurityDate15.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmPaymentDate
+	 * CorporateActionDate61.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate62#mmPaymentDate
+	 * CorporateActionDate62.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmPaymentDate
+	 * SecurityDate16.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmPaymentDate
+	 * CorporateActionDate65.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate17#mmPaymentDate
+	 * SecurityDate17.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate18#mmPaymentDate
+	 * SecurityDate18.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate72#mmPaymentDate
+	 * CorporateActionDate72.mmPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmPaymentDate
+	 * CorporateActionDate74.mmPaymentDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -662,7 +741,9 @@ public class CorporateActionDistribution {
 					CorporateActionDate1.mmPaymentDate, CorporateActionDate13.mmPaymentDate, CorporateActionDate14.mmPaymentDate, CorporateActionDate21.mmPaymentDate, CorporateActionDate22.mmPaymentDate,
 					CorporateActionDate25.mmPaymentDate, CorporateActionDate27.mmPaymentDate, CorporateActionDate28.mmPaymentDate, CorporateActionDate4.mmPaymentDate, CorporateActionDate3.mmPaymentDate, CorporateActionDate5.mmPaymentDate,
 					EntitlementAdvice1.mmPaymentDate, GlobalDistributionRequest1.mmPaymentDate, SecurityDate12.mmPaymentDate, CorporateActionDate47.mmPaymentDate, SecurityDate11.mmPaymentDate, CorporateActionDate44.mmPaymentDate,
-					CorporateActionDate56.mmPaymentDate, CorporateActionDate58.mmPaymentDate, SecurityDate14.mmPaymentDate, SecurityDate13.mmPaymentDate);
+					CorporateActionDate56.mmPaymentDate, CorporateActionDate58.mmPaymentDate, SecurityDate14.mmPaymentDate, SecurityDate13.mmPaymentDate, SecurityDate15.mmPaymentDate, CorporateActionDate61.mmPaymentDate,
+					CorporateActionDate62.mmPaymentDate, SecurityDate16.mmPaymentDate, CorporateActionDate65.mmPaymentDate, SecurityDate17.mmPaymentDate, SecurityDate18.mmPaymentDate, CorporateActionDate72.mmPaymentDate,
+					CorporateActionDate74.mmPaymentDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -755,6 +836,18 @@ public class CorporateActionDistribution {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption48#mmPostingAmount
 	 * CashOption48.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmPostingAmount
+	 * CorporateActionAmounts44.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption59#mmPostingAmount
+	 * CashOption59.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmPostingAmount
+	 * CorporateActionAmounts45.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption62#mmPostingAmount
+	 * CashOption62.mmPostingAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -779,7 +872,7 @@ public class CorporateActionDistribution {
 					CorporateActionAmounts17.mmPostingAmount, CorporateActionAmounts20.mmPostingAmount, CorporateActionAmounts23.mmPostingAmount, CorporateActionAmounts24.mmPostingAmount, CashOption5.mmPostingAmount,
 					CashOption7.mmPostingAmount, CashOption19.mmPostingAmount, CashOption23.mmPostingAmount, AmountAndCurrencyExchange2.mmAnnouncedPostingAmount, AmountAndCurrencyExchange3.mmAnnouncedPostingAmount,
 					CorporateActionAmounts29.mmPostingAmount, CorporateActionAmounts35.mmPostingAmount, CorporateActionAmounts37.mmPostingAmount, CashOption45.mmPostingAmount, CorporateActionAmounts39.mmPostingAmount,
-					CashOption48.mmPostingAmount);
+					CashOption48.mmPostingAmount, CorporateActionAmounts44.mmPostingAmount, CashOption59.mmPostingAmount, CorporateActionAmounts45.mmPostingAmount, CashOption62.mmPostingAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -933,6 +1026,24 @@ public class CorporateActionDistribution {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmTaxVoucherDetails
 	 * CashOption55.mmTaxVoucherDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31#mmAdditionalTax
+	 * RateDetails31.mmAdditionalTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmAdditionalTax
+	 * RateDetails32.mmAdditionalTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption58#mmTaxVoucherDetails
+	 * CashOption58.mmTaxVoucherDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption60#mmTaxVoucherDetails
+	 * CashOption60.mmTaxVoucherDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33#mmAdditionalTax
+	 * RateDetails33.mmAdditionalTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34#mmAdditionalTax
+	 * RateDetails34.mmAdditionalTax}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -960,7 +1071,8 @@ public class CorporateActionDistribution {
 					RateDetails13.mmAdditionalTax, CashOption30.mmTaxVoucherDetails, RateDetails15.mmAdditionalTax, RateDetails14.mmAdditionalTax, RateDetails18.mmAdditionalTax, CashOption38.mmTaxVoucherDetails,
 					RateDetails21.mmAdditionalTax, CashOption39.mmTaxVoucherDetails, CashOption41.mmTaxVoucherDetails, CashOption44.mmTaxVoucherDetails, RateDetails23.mmAdditionalTax, RateDetails22.mmAdditionalTax,
 					CashOption46.mmTaxVoucherDetails, RateDetails24.mmAdditionalTax, RateDetails25.mmAdditionalTax, RateDetails26.mmAdditionalTax, CashOption52.mmTaxVoucherDetails, RateDetails27.mmAdditionalTax,
-					RateDetails28.mmAdditionalTax, RateDetails30.mmAdditionalTax, CashOption55.mmTaxVoucherDetails);
+					RateDetails28.mmAdditionalTax, RateDetails30.mmAdditionalTax, CashOption55.mmTaxVoucherDetails, RateDetails31.mmAdditionalTax, RateDetails32.mmAdditionalTax, CashOption58.mmTaxVoucherDetails,
+					CashOption60.mmTaxVoucherDetails, RateDetails33.mmAdditionalTax, RateDetails34.mmAdditionalTax);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1217,7 +1329,7 @@ public class CorporateActionDistribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the movement is a high priority or not.\r\nMeaning when true: High priority\r\nMeaning when false: Standard"
+	 * "Indicates whether the movement is a high priority or not.\r\nMeaning when true: High priority\r\nMeaning when false: Standard."
 	 * </li>
 	 * </ul>
 	 */
@@ -1228,7 +1340,7 @@ public class CorporateActionDistribution {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "HighPriorityIndicator";
-			definition = "Indicates whether the movement is a high priority or not.\r\nMeaning when true: High priority\r\nMeaning when false: Standard";
+			definition = "Indicates whether the movement is a high priority or not.\r\nMeaning when true: High priority\r\nMeaning when false: Standard.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1473,7 +1585,7 @@ public class CorporateActionDistribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cash amount after any deductions and allowances have been made"</li>
+	 * "Cash amount after any deductions and allowances have been made."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmNetAmount = new MMBusinessAttribute() {
@@ -1483,7 +1595,7 @@ public class CorporateActionDistribution {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NetAmount";
-			definition = "Cash amount after any deductions and allowances have been made";
+			definition = "Cash amount after any deductions and allowances have been made.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();

@@ -21,10 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07;
-import com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08;
-import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07;
-import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Role;
@@ -82,6 +79,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#mmAdditionalInformation
  * CorporateActionMovementReversalAdviceV08.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmAdditionalInformation
+ * CorporateActionMovementReversalAdviceV09.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09#mmAdditionalInformation
+ * CorporateActionMovementConfirmationV09.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -309,7 +312,7 @@ public class CorporateActionNarrative31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA)"
+	 * "Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -327,7 +330,7 @@ public class CorporateActionNarrative31 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70E::TAXE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxationConditions";
-			definition = "Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA)";
+			definition = "Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA).";
 			previousVersion_lazy = () -> CorporateActionNarrative4.mmTaxationConditions;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -340,7 +343,8 @@ public class CorporateActionNarrative31 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative31.mmAdditionalText, com.tools20022.repository.msg.CorporateActionNarrative31.mmNarrativeVersion,
 						com.tools20022.repository.msg.CorporateActionNarrative31.mmPartyContactNarrative, com.tools20022.repository.msg.CorporateActionNarrative31.mmTaxationConditions);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementConfirmationV07.mmAdditionalInformation, CorporateActionMovementReversalAdviceV07.mmAdditionalInformation,
-						CorporateActionMovementConfirmationV08.mmAdditionalInformation, CorporateActionMovementReversalAdviceV08.mmAdditionalInformation);
+						CorporateActionMovementConfirmationV08.mmAdditionalInformation, CorporateActionMovementReversalAdviceV08.mmAdditionalInformation, CorporateActionMovementReversalAdviceV09.mmAdditionalInformation,
+						CorporateActionMovementConfirmationV09.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -872,7 +872,7 @@ public class InvestmentPlan {
 	 * name} = "PlanStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of the savings or withdrawal investment plan. "</li>
+	 * definition} = "Status of the savings or withdrawal investment plan."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmPlanStatus = new MMBusinessAttribute() {
@@ -883,7 +883,7 @@ public class InvestmentPlan {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentPlan.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PlanStatus";
-			definition = "Status of the savings or withdrawal investment plan. ";
+			definition = "Status of the savings or withdrawal investment plan.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlanStatusCode.mmObject();

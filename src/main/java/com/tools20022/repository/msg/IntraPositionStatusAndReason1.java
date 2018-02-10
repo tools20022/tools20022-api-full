@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraPositionStatusAndReason1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of the movement status types."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason2
+ * IntraPositionStatusAndReason2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +116,14 @@ public class IntraPositionStatusAndReason1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides details on the processing status of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason2#mmProcessingStatus
+	 * IntraPositionStatusAndReason2.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
@@ -120,6 +135,7 @@ public class IntraPositionStatusAndReason1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusAndReason2.mmProcessingStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus35Choice.mmObject();
 		}
@@ -155,7 +171,15 @@ public class IntraPositionStatusAndReason1 {
 	 * name} = "SettlementStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides the settlement status of a transaction"</li>
+	 * definition} = "Provides the settlement status of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason2#mmSettlementStatus
+	 * IntraPositionStatusAndReason2.mmSettlementStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
@@ -166,7 +190,8 @@ public class IntraPositionStatusAndReason1 {
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
-			definition = "Provides the settlement status of a transaction";
+			definition = "Provides the settlement status of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusAndReason2.mmSettlementStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus9Choice.mmObject();
@@ -203,6 +228,14 @@ public class IntraPositionStatusAndReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the state or the condition."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusAndReason2#mmSettled
+	 * IntraPositionStatusAndReason2.mmSettled}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
@@ -214,6 +247,7 @@ public class IntraPositionStatusAndReason1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Specifies the state or the condition.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusAndReason2.mmSettled);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -231,6 +265,7 @@ public class IntraPositionStatusAndReason1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionStatusAndReason1";
 				definition = "Choice of the movement status types.";
+				nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusAndReason2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

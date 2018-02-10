@@ -25,6 +25,7 @@ class ListBuilderForGeneratedRepository_03 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) TransactionOrError1Choice.mmObject());
 		list.add((T) TransactionReport1.mmObject());
 		list.add((T) Transactions5.mmObject());
 		list.add((T) TransactionReportOrError1Choice.mmObject());
@@ -524,7 +525,6 @@ class ListBuilderForGeneratedRepository_03 {
 		list.add((T) QuantityBreakdown18.mmObject());
 		list.add((T) QuantityAndAccount32.mmObject());
 		list.add((T) SecuritiesTransactionType16Choice.mmObject());
-		list.add((T) SettlementTransactionCondition14Choice.mmObject());
 		ListBuilderForGeneratedRepository_04.addElems(list);
 		return list;
 	}

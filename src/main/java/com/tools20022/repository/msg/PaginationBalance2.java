@@ -145,7 +145,7 @@ public class PaginationBalance2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Closing balance of the financial instrument in the statement or of the intermediary closing balance of the page of the statement"
+	 * "Closing balance of the financial instrument in the statement or of the intermediary closing balance of the page of the statement."
 	 * </li>
 	 * </ul>
 	 */
@@ -156,7 +156,7 @@ public class PaginationBalance2 {
 			xmlTag = "ClsgBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBalance";
-			definition = "Closing balance of the financial instrument in the statement or of the intermediary closing balance of the page of the statement";
+			definition = "Closing balance of the financial instrument in the statement or of the intermediary closing balance of the page of the statement.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

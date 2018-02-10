@@ -236,7 +236,7 @@ public class PriceFormat51Choice {
 	 * name} = "IndexPoints"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Price expressed as an index points"</li>
+	 * definition} = "Price expressed as an index points."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -253,7 +253,7 @@ public class PriceFormat51Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90K:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexPoints";
-			definition = "Price expressed as an index points";
+			definition = "Price expressed as an index points.";
 			previousVersion_lazy = () -> PriceFormat6Choice.mmIndexPoints;
 			maxOccurs = 1;
 			minOccurs = 1;

@@ -25,8 +25,11 @@ import com.tools20022.repository.choice.MemberIdentification2Choice;
 import com.tools20022.repository.choice.MemberReportOrError2Choice;
 import com.tools20022.repository.entity.SystemMemberRole;
 import com.tools20022.repository.GeneratedRepository;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -59,12 +62,19 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MemberReport3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reports either on a member or a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MemberReport4 MemberReport4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +116,14 @@ public class MemberReport3 {
 	 * definition} =
 	 * "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MemberReport4#mmMemberIdentification
+	 * MemberReport4.mmMemberIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMemberIdentification = new MMMessageAttribute() {
@@ -117,6 +135,7 @@ public class MemberReport3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
+			nextVersions_lazy = () -> Arrays.asList(MemberReport4.mmMemberIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MemberIdentification2Choice.mmObject();
@@ -153,6 +172,14 @@ public class MemberReport3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reports either on a member or a business error."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MemberReport4#mmMemberOrError
+	 * MemberReport4.mmMemberOrError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMemberOrError = new MMMessageAssociationEnd() {
@@ -164,6 +191,7 @@ public class MemberReport3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemberOrError";
 			definition = "Reports either on a member or a business error.";
+			nextVersions_lazy = () -> Arrays.asList(MemberReport4.mmMemberOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,9 +205,17 @@ public class MemberReport3 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MemberReport3.mmMemberIdentification, com.tools20022.repository.msg.MemberReport3.mmMemberOrError);
 				trace_lazy = () -> SystemMemberRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "MemberReport3";
 				definition = "Reports either on a member or a business error.";
+				nextVersions_lazy = () -> Arrays.asList(MemberReport4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

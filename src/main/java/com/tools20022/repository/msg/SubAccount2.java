@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * The subaccount of the safekeeping account
+ * The subaccount of the safekeeping account.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -58,7 +58,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SubAccount2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "The subaccount of the safekeeping account"</li>
+ * definition} = "The subaccount of the safekeeping account."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -124,7 +124,7 @@ public class SubAccount2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubAccount2";
-				definition = "The subaccount of the safekeeping account";
+				definition = "The subaccount of the safekeeping account.";
 			}
 		});
 		return mmObject_lazy.get();

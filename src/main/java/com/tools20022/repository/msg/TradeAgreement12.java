@@ -302,7 +302,7 @@ public class TradeAgreement12 {
 	 * name} = "CommonReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reference common to both parties of the trade. "</li>
+	 * definition} = "Reference common to both parties of the trade."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -318,7 +318,7 @@ public class TradeAgreement12 {
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			definition = "Reference common to both parties of the trade. ";
+			definition = "Reference common to both parties of the trade.";
 			previousVersion_lazy = () -> TradeAgreement9.mmCommonReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -412,7 +412,7 @@ public class TradeAgreement12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the identification of a previous event in the life of a trade which is amended or cancelled. "
+	 * "Reference to the identification of a previous event in the life of a trade which is amended or cancelled."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -429,7 +429,7 @@ public class TradeAgreement12 {
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
-			definition = "Reference to the identification of a previous event in the life of a trade which is amended or cancelled. ";
+			definition = "Reference to the identification of a previous event in the life of a trade which is amended or cancelled.";
 			previousVersion_lazy = () -> TradeAgreement9.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;

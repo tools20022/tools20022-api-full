@@ -92,6 +92,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Specifies a ratio: amount price and price fixing date per financial instrument quantity."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity8
+ * AmountPricePerFinancialInstrumentQuantity8}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -135,6 +143,14 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of amount price."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity8#mmAmountPriceType
+	 * AmountPricePerFinancialInstrumentQuantity8.mmAmountPriceType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmountPriceType = new MMMessageAttribute() {
@@ -147,6 +163,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPriceType";
 			definition = "Type of amount price.";
+			nextVersions_lazy = () -> Arrays.asList(AmountPricePerFinancialInstrumentQuantity8.mmAmountPriceType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> YieldedOrValueType1Choice.mmObject();
@@ -188,6 +205,14 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value given to a price."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity8#mmPriceValue
+	 * AmountPricePerFinancialInstrumentQuantity8.mmPriceValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPriceValue = new MMMessageAttribute() {
@@ -200,6 +225,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceValue";
 			definition = "Value given to a price.";
+			nextVersions_lazy = () -> Arrays.asList(AmountPricePerFinancialInstrumentQuantity8.mmPriceValue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();
@@ -240,6 +266,15 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity8#mmFinancialInstrumentQuantity
+	 * AmountPricePerFinancialInstrumentQuantity8.mmFinancialInstrumentQuantity}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentQuantity = new MMMessageAssociationEnd() {
@@ -252,6 +287,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity";
 			definition = "Quantity of financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(AmountPricePerFinancialInstrumentQuantity8.mmFinancialInstrumentQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -291,6 +327,14 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date at which the actual price for a financial instrument is fixed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity8#mmPriceFixingDate
+	 * AmountPricePerFinancialInstrumentQuantity8.mmPriceFixingDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPriceFixingDate = new MMMessageAttribute() {
@@ -302,6 +346,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceFixingDate";
 			definition = "Date at which the actual price for a financial instrument is fixed.";
+			nextVersions_lazy = () -> Arrays.asList(AmountPricePerFinancialInstrumentQuantity8.mmPriceFixingDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -326,6 +371,7 @@ public class AmountPricePerFinancialInstrumentQuantity5 {
 				})).get();
 				name = "AmountPricePerFinancialInstrumentQuantity5";
 				definition = "Specifies a ratio: amount price and price fixing date per financial instrument quantity.";
+				nextVersions_lazy = () -> Arrays.asList(AmountPricePerFinancialInstrumentQuantity8.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -107,6 +107,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides the details on the original group, to which the message refers."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalGroupHeader9
+ * OriginalGroupHeader9}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -149,6 +156,14 @@ public class OriginalGroupHeader5 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original assigner, to unambiguously identify the original group cancellation request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmOriginalGroupCancellationIdentification
+	 * OriginalGroupHeader9.mmOriginalGroupCancellationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalGroupCancellationIdentification = new MMMessageAttribute() {
@@ -160,6 +175,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupCancellationIdentification";
 			definition = "Unique identification, as assigned by the original assigner, to unambiguously identify the original group cancellation request.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmOriginalGroupCancellationIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -195,6 +211,14 @@ public class OriginalGroupHeader5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the case."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmResolvedCase
+	 * OriginalGroupHeader9.mmResolvedCase}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmResolvedCase = new MMMessageAssociationEnd() {
@@ -206,6 +230,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolvedCase";
 			definition = "Identifies the case.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmResolvedCase);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -246,6 +271,14 @@ public class OriginalGroupHeader5 {
 	 * definition} =
 	 * "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmOriginalMessageIdentification
+	 * OriginalGroupHeader9.mmOriginalMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalMessageIdentification = new MMMessageAttribute() {
@@ -257,6 +290,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmOriginalMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -291,6 +325,14 @@ public class OriginalGroupHeader5 {
 	 * definition} =
 	 * "Specifies the original message name identifier to which the message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmOriginalMessageNameIdentification
+	 * OriginalGroupHeader9.mmOriginalMessageNameIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalMessageNameIdentification = new MMMessageAttribute() {
@@ -301,6 +343,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmOriginalMessageNameIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -338,6 +381,14 @@ public class OriginalGroupHeader5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the original message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmOriginalCreationDateTime
+	 * OriginalGroupHeader9.mmOriginalCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalCreationDateTime = new MMMessageAttribute() {
@@ -349,6 +400,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmOriginalCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -383,6 +435,14 @@ public class OriginalGroupHeader5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Number of individual transactions contained in the original message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmOriginalNumberOfTransactions
+	 * OriginalGroupHeader9.mmOriginalNumberOfTransactions}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalNumberOfTransactions = new MMMessageAttribute() {
@@ -393,6 +453,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNumberOfTransactions";
 			definition = "Number of individual transactions contained in the original message.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmOriginalNumberOfTransactions);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
@@ -428,6 +489,14 @@ public class OriginalGroupHeader5 {
 	 * definition} =
 	 * "Total of all individual amounts included in the original message, irrespective of currencies."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmOriginalControlSum
+	 * OriginalGroupHeader9.mmOriginalControlSum}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalControlSum = new MMMessageAttribute() {
@@ -438,6 +507,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalControlSum";
 			definition = "Total of all individual amounts included in the original message, irrespective of currencies.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmOriginalControlSum);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -471,6 +541,14 @@ public class OriginalGroupHeader5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the status of a group cancellation request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmGroupCancellationStatus
+	 * OriginalGroupHeader9.mmGroupCancellationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmGroupCancellationStatus = new MMMessageAttribute() {
@@ -481,6 +559,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellationStatus";
 			definition = "Specifies the status of a group cancellation request.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmGroupCancellationStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> GroupCancellationStatus1Code.mmObject();
@@ -519,6 +598,14 @@ public class OriginalGroupHeader5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides detailed information on the cancellation status reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmCancellationStatusReasonInformation
+	 * OriginalGroupHeader9.mmCancellationStatusReasonInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCancellationStatusReasonInformation = new MMMessageAssociationEnd() {
@@ -530,6 +617,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformation";
 			definition = "Provides detailed information on the cancellation status reason.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmCancellationStatusReasonInformation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CancellationStatusReason2.mmObject();
@@ -564,6 +652,14 @@ public class OriginalGroupHeader5 {
 	 * definition} =
 	 * "Detailed information on the number of transactions for each identical cancellation status."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmNumberOfTransactionsPerCancellationStatus
+	 * OriginalGroupHeader9.mmNumberOfTransactionsPerCancellationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNumberOfTransactionsPerCancellationStatus = new MMMessageAssociationEnd() {
@@ -574,6 +670,7 @@ public class OriginalGroupHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerCancellationStatus";
 			definition = "Detailed information on the number of transactions for each identical cancellation status.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmNumberOfTransactionsPerCancellationStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.NumberOfTransactionsPerStatus1.mmObject();
@@ -595,6 +692,7 @@ public class OriginalGroupHeader5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupHeader5";
 				definition = "Provides the details on the original group, to which the message refers.";
+				nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

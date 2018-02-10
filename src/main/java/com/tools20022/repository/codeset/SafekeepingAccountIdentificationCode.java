@@ -76,7 +76,7 @@ public class SafekeepingAccountIdentificationCode extends MMCode {
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
 	 * Announcement applies to all safekeeping accounts that own underlying
-	 * financial instrument. (Used for general or preliminary announcements.)
+	 * financial instrument. (Used for general or preliminary announcements.).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -94,7 +94,7 @@ public class SafekeepingAccountIdentificationCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Announcement applies to all safekeeping accounts that own underlying financial instrument.  (Used for general or preliminary announcements.)"
+	 * "Announcement applies to all safekeeping accounts that own underlying financial instrument. (Used for general or preliminary announcements.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -102,7 +102,7 @@ public class SafekeepingAccountIdentificationCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "General";
-			definition = "Announcement applies to all safekeeping accounts that own underlying financial instrument.  (Used for general or preliminary announcements.)";
+			definition = "Announcement applies to all safekeeping accounts that own underlying financial instrument. (Used for general or preliminary announcements.).";
 			owner_lazy = () -> com.tools20022.repository.codeset.SafekeepingAccountIdentificationCode.mmObject();
 			codeName = "GENR";
 		}

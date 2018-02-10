@@ -165,6 +165,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * OtherPrices2.mmReportedPrice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.OtherPrices2#mmReferencePrice
  * OtherPrices2.mmReferencePrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice8Choice#mmOther
+ * SecuritiesTransactionPrice8Choice.mmOther}</li>
  * </ul>
  * </li>
  * <li>
@@ -191,6 +194,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice
  * SecuritiesTransactionPrice4Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice9Choice
+ * SecuritiesTransactionPrice9Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice8Choice
+ * SecuritiesTransactionPrice8Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -417,6 +426,12 @@ public class Price {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ATMCassetteCounters3#mmCurrentAmount
 	 * ATMCassetteCounters3.mmCurrentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormat61Choice#mmAmountPrice
+	 * PriceFormat61Choice.mmAmountPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormat62Choice#mmAmountPrice
+	 * PriceFormat62Choice.mmAmountPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -446,7 +461,7 @@ public class Price {
 					PriceFormat39Choice.mmAmountPrice, ATMCassetteCounters1.mmUnitValue, ATMCassetteCounters1.mmCurrentAmount, PriceFormat45Choice.mmAmountPrice, PriceFormat50Choice.mmAmountPrice, PriceFormat48Choice.mmAmountPrice,
 					PriceFormat51Choice.mmAmountPrice, PriceFormat46Choice.mmAmountPrice, PriceFormat49Choice.mmAmountPrice, PriceFormat47Choice.mmAmountPrice, PriceFormat44Choice.mmAmountPrice, PriceFormat56Choice.mmAmountPrice,
 					PriceFormat57Choice.mmAmountPrice, PriceFormat52Choice.mmAmountPrice, PriceFormat59Choice.mmAmountPrice, PriceFormat55Choice.mmAmountPrice, PriceFormat53Choice.mmAmountPrice, PriceFormat60Choice.mmAmountPrice,
-					PriceFormat58Choice.mmAmountPrice, ATMCassetteCounters3.mmUnitValue, ATMCassetteCounters3.mmCurrentAmount);
+					PriceFormat58Choice.mmAmountPrice, ATMCassetteCounters3.mmUnitValue, ATMCassetteCounters3.mmCurrentAmount, PriceFormat61Choice.mmAmountPrice, PriceFormat62Choice.mmAmountPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -682,6 +697,9 @@ public class Price {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.LineItem16#mmNetPriceAllowanceCharge
 	 * LineItem16.mmNetPriceAllowanceCharge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmNetPriceAllowanceCharge
+	 * LineItem17.mmNetPriceAllowanceCharge}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -704,7 +722,7 @@ public class Price {
 			derivation_lazy = () -> Arrays.asList(LineItem10.mmNetPriceAllowanceCharge, LineItemDetails4.mmAdjustment, LineItem5.mmAdjustment, LineItemDetails7.mmAdjustment, LineItem7.mmAdjustment, LineItemDetails6.mmAdjustment,
 					LineItem4.mmAdjustment, LineItemDetails9.mmAdjustment, LineItem9.mmAdjustment, ReportLine3.mmAdjustment, ReportLine2.mmAdjustment, ReportLine4.mmAdjustment, LineItem11.mmAdjustment, LineItemDetails10.mmAdjustment,
 					ReportLine7.mmAdjustment, LineItem12.mmAdjustment, LineItemDetails11.mmAdjustment, ReportLine6.mmAdjustment, ReportLine5.mmAdjustment, LineItemDetails13.mmAdjustment, LineItem13.mmAdjustment, LineItem15.mmAdjustment,
-					LineItemDetails14.mmAdjustment, LineItem16.mmNetPriceAllowanceCharge);
+					LineItemDetails14.mmAdjustment, LineItem16.mmNetPriceAllowanceCharge, LineItem17.mmNetPriceAllowanceCharge);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -790,6 +808,8 @@ public class Price {
 	 * UnitPrice9.mmOtherUnitOfMeasure}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.UnitPrice18#mmUnitPrice
 	 * UnitPrice18.mmUnitPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ContractSize1#mmUnit
+	 * ContractSize1.mmUnit}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -810,7 +830,7 @@ public class Price {
 	 */
 	public static final MMBusinessAttribute mmUnitOfMeasure = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(UnitPrice8.mmUnitOfMeasureCode, UnitPrice8.mmOtherUnitOfMeasure, UnitPrice9.mmUnitOfMeasureCode, UnitPrice9.mmOtherUnitOfMeasure, UnitPrice18.mmUnitPrice);
+			derivation_lazy = () -> Arrays.asList(UnitPrice8.mmUnitOfMeasureCode, UnitPrice8.mmOtherUnitOfMeasure, UnitPrice9.mmUnitOfMeasureCode, UnitPrice9.mmOtherUnitOfMeasure, UnitPrice18.mmUnitPrice, ContractSize1.mmUnit);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1147,6 +1167,20 @@ public class Price {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice4Choice#mmPrice
 	 * SecuritiesTransactionPrice4Choice.mmPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option13#mmStrikePrice
+	 * Option13.mmStrikePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmStrikePrice
+	 * FinancialInstrumentAttributes91.mmStrikePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmStrikePrice
+	 * FinancialInstrumentAttributes92.mmStrikePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmStrikePrice
+	 * FinancialInstrumentAttributes95.mmStrikePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmStrikePrice
+	 * FinancialInstrumentAttributes97.mmStrikePrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1171,7 +1205,8 @@ public class Price {
 					FinancialInstrumentAttributes36.mmStrikePrice, FinancialInstrumentAttributes42.mmStrikePrice, FinancialInstrumentAttributes27.mmStrikePrice, FinancialInstrumentAttributes14.mmStrikePrice,
 					FinancialInstrumentAttributes30.mmStrikePrice, FinancialInstrumentAttributes28.mmStrikePrice, Option1.mmStrikePrice, FinancialInstrumentAttributes15.mmStrikePrice, FinancialInstrumentAttributes29.mmStrikePrice,
 					Option7.mmStrikePrice, FinancialInstrumentAttributes2.mmStrikePrice, FinancialInstrumentAttributes63.mmStrikePrice, FinancialInstrumentAttributes64.mmStrikePrice, FinancialInstrumentAttributes75.mmStrikePrice,
-					FinancialInstrumentAttributes78.mmStrikePrice, SecuritiesTransactionPrice4Choice.mmPrice);
+					FinancialInstrumentAttributes78.mmStrikePrice, SecuritiesTransactionPrice4Choice.mmPrice, Option13.mmStrikePrice, FinancialInstrumentAttributes91.mmStrikePrice, FinancialInstrumentAttributes92.mmStrikePrice,
+					FinancialInstrumentAttributes95.mmStrikePrice, FinancialInstrumentAttributes97.mmStrikePrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Price.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1201,13 +1236,14 @@ public class Price {
 						OtherPrices1.mmOtherPrice, OtherPrices1.mmIndexPrice, OtherPrices1.mmReportedPrice, OtherPrices1.mmReferencePrice, ProprietaryPrice1.mmPrice, ProprietaryPrice2.mmPrice, BillingPrice1.mmUnitPrice,
 						OtherPrices2.mmMaximum, OtherPrices2.mmTransaction, OtherPrices2.mmMarkedUp, OtherPrices2.mmMarkedDown, OtherPrices2.mmNetDisclosed, OtherPrices2.mmNetUndisclosed, OtherPrices2.mmNotionalGross,
 						OtherPrices2.mmBenchmarkWeightedAverage, OtherPrices2.mmAllMarketsWeightedAverage, OtherPrices2.mmBenchmark, OtherPrices2.mmOtherPrice, OtherPrices2.mmIndexPrice, OtherPrices2.mmReportedPrice,
-						OtherPrices2.mmReferencePrice);
+						OtherPrices2.mmReferencePrice, SecuritiesTransactionPrice8Choice.mmOther);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Price.mmAmount, com.tools20022.repository.entity.Price.mmOption, com.tools20022.repository.entity.Price.mmUnitPriceProduct,
 						com.tools20022.repository.entity.Price.mmNetPriceProduct, com.tools20022.repository.entity.Price.mmPriceAdjustment, com.tools20022.repository.entity.Price.mmGrossPriceProduct,
 						com.tools20022.repository.entity.Price.mmUnitOfMeasure, com.tools20022.repository.entity.Price.mmPriceTolerance, com.tools20022.repository.entity.Price.mmCurrency, com.tools20022.repository.entity.Price.mmFactor,
 						com.tools20022.repository.entity.Price.mmNetting, com.tools20022.repository.entity.Price.mmSecuritiesPricing);
 				derivationComponent_lazy = () -> Arrays.asList(PriceValueChange1.mmObject(), OtherPrices1.mmObject(), ProprietaryPrice1.mmObject(), ProprietaryPrice2.mmObject(), PriceRate1.mmObject(), UnitPrice8.mmObject(),
-						UnitPrice9.mmObject(), BillingPrice1.mmObject(), OtherPrices2.mmObject(), UnitPrice18.mmObject(), ATMCassetteCounters1.mmObject(), ATMCassetteCounters3.mmObject(), SecuritiesTransactionPrice4Choice.mmObject());
+						UnitPrice9.mmObject(), BillingPrice1.mmObject(), OtherPrices2.mmObject(), UnitPrice18.mmObject(), ATMCassetteCounters1.mmObject(), ATMCassetteCounters3.mmObject(), SecuritiesTransactionPrice4Choice.mmObject(),
+						SecuritiesTransactionPrice9Choice.mmObject(), SecuritiesTransactionPrice8Choice.mmObject());
 			}
 
 			@Override

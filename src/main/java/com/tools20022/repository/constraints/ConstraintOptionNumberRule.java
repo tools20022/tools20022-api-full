@@ -55,7 +55,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ElectionDetails/OptionNumber is present, then OptionNumber is not allowed in any occurrences of ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails.\n\nIf ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionNumber is present  at least once and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionNumber is present at least once then ElectionDetails/CorporateActionOptionNumber is not allowed."
+	 * "If ElectionDetails/OptionNumber is present, then OptionNumber is not allowed in any occurrences of ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails.\n\nIf ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionNumber is present at least once and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionNumber is present at least once then ElectionDetails/CorporateActionOptionNumber is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -64,8 +64,80 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkAgentCAElectionAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "If ElectionDetails/OptionNumber is present, then OptionNumber is not allowed in any occurrences of ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails.\n\nIf ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionNumber is present  at least once and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionNumber is present at least once then ElectionDetails/CorporateActionOptionNumber is not allowed.";
+			definition = "If ElectionDetails/OptionNumber is present, then OptionNumber is not allowed in any occurrences of ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails.\n\nIf ElectionDetails/SecuritiesMovementDetails/DebitAccountDetails/OptionNumber is present at least once and/or ElectionDetails/SecuritiesMovementDetails/CreditAccountDetails/OptionNumber is present at least once then ElectionDetails/CorporateActionOptionNumber is not allowed.";
 			owner_lazy = () -> AgentCAElectionAdviceV01.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09
+	 * CorporateActionMovementReversalAdviceV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided in the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementReversalAdviceV08
+	 * ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementReversalAdviceV09> forCorporateActionMovementReversalAdviceV09 = new MMConstraint<CorporateActionMovementReversalAdviceV09>() {
+		{
+			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberRule";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided in the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV08;
+			owner_lazy = () -> CorporateActionMovementReversalAdviceV09.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09
+	 * CorporateActionMovementConfirmationV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided in the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementConfirmationV08
+	 * ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementConfirmationV09> forCorporateActionMovementConfirmationV09 = new MMConstraint<CorporateActionMovementConfirmationV09>() {
+		{
+			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberRule";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided in the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV08;
+			owner_lazy = () -> CorporateActionMovementConfirmationV09.mmObject();
 		}
 	};
 	/**
@@ -85,7 +157,15 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementConfirmationV09
+	 * ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV09}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -99,7 +179,8 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV07;
 			owner_lazy = () -> CorporateActionMovementConfirmationV08.mmObject();
 		}
@@ -121,7 +202,15 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementReversalAdviceV09
+	 * ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV09}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -135,7 +224,8 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV07;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV08.mmObject();
 		}
@@ -157,7 +247,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -166,7 +256,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdvice002V08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			owner_lazy = () -> CorporateActionMovementReversalAdvice002V08.mmObject();
 		}
 	};
@@ -187,7 +277,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -196,98 +286,8 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmation002V08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			owner_lazy = () -> CorporateActionMovementConfirmation002V08.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07
-	 * CorporateActionMovementConfirmationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OptionNumberRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementConfirmationV08
-	 * ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementConfirmationV06
-	 * ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionMovementConfirmationV07> forCorporateActionMovementConfirmationV07 = new MMConstraint<CorporateActionMovementConfirmationV07>() {
-		{
-			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV06;
-			owner_lazy = () -> CorporateActionMovementConfirmationV07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07
-	 * CorporateActionMovementReversalAdviceV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OptionNumberRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementReversalAdviceV08
-	 * ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementReversalAdviceV06
-	 * ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionMovementReversalAdviceV07> forCorporateActionMovementReversalAdviceV07 = new MMConstraint<CorporateActionMovementReversalAdviceV07>() {
-		{
-			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06;
-			owner_lazy = () -> CorporateActionMovementReversalAdviceV07.mmObject();
 		}
 	};
 	/**
@@ -307,7 +307,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -316,7 +316,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV01.mmObject();
 		}
 	};
@@ -337,7 +337,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -346,7 +346,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV02.mmObject();
 		}
 	};
@@ -367,7 +367,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -376,7 +376,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			owner_lazy = () -> CorporateActionMovementConfirmationV03.mmObject();
 		}
 	};
@@ -397,7 +397,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -414,7 +414,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV05);
 			owner_lazy = () -> CorporateActionMovementConfirmationV04.mmObject();
 		}
@@ -436,7 +436,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -445,7 +445,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV01.mmObject();
 		}
 	};
@@ -466,7 +466,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -475,7 +475,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV02.mmObject();
 		}
 	};
@@ -496,7 +496,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -505,7 +505,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV03.mmObject();
 		}
 	};
@@ -526,7 +526,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -543,7 +543,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV05);
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV04.mmObject();
 		}
@@ -565,7 +565,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -587,7 +587,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV04;
 			owner_lazy = () -> CorporateActionMovementConfirmationV05.mmObject();
@@ -610,7 +610,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -632,7 +632,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV04;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV05.mmObject();
@@ -655,7 +655,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -677,7 +677,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV05;
 			owner_lazy = () -> CorporateActionMovementConfirmationV06.mmObject();
@@ -700,7 +700,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. "
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -722,10 +722,100 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent. ";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV05;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07
+	 * CorporateActionMovementConfirmationV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementConfirmationV08
+	 * ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementConfirmationV06
+	 * ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementConfirmationV07> forCorporateActionMovementConfirmationV07 = new MMConstraint<CorporateActionMovementConfirmationV07>() {
+		{
+			validator = ConstraintOptionNumberRule::checkCorporateActionMovementConfirmationV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberRule";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementConfirmationV06;
+			owner_lazy = () -> CorporateActionMovementConfirmationV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07
+	 * CorporateActionMovementReversalAdviceV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementReversalAdviceV08
+	 * ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionMovementReversalAdviceV06
+	 * ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementReversalAdviceV07> forCorporateActionMovementReversalAdviceV07 = new MMConstraint<CorporateActionMovementReversalAdviceV07>() {
+		{
+			validator = ConstraintOptionNumberRule::checkCorporateActionMovementReversalAdviceV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberRule";
+			definition = "The CorporateActionConfirmationDetails/OptionNumber value provided must be the same as the one provided into the related CorporateActionOptionDetails/OptionNumber element of the CorporateActionNotification or CorporateActionMovementPreliminaryAdvice messages previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionMovementReversalAdviceV06;
+			owner_lazy = () -> CorporateActionMovementReversalAdviceV07.mmObject();
 		}
 	};
 	/**
@@ -745,7 +835,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * </ul>
 	 */
@@ -754,7 +844,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			owner_lazy = () -> CorporateActionOption9.mmObject();
 		}
 	};
@@ -775,7 +865,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * </ul>
 	 */
@@ -784,7 +874,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			owner_lazy = () -> CorporateActionOption18.mmObject();
 		}
 	};
@@ -805,7 +895,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * </ul>
 	 */
@@ -814,7 +904,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			owner_lazy = () -> CorporateActionOption22.mmObject();
 		}
 	};
@@ -835,7 +925,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * </ul>
 	 */
@@ -844,7 +934,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			owner_lazy = () -> CorporateActionOption27.mmObject();
 		}
 	};
@@ -865,7 +955,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * </ul>
 	 */
@@ -874,7 +964,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			owner_lazy = () -> CorporateActionOption26.mmObject();
 		}
 	};
@@ -895,7 +985,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -912,7 +1002,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionOption116);
 			owner_lazy = () -> CorporateActionOption41.mmObject();
 		}
@@ -934,7 +1024,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * </ul>
 	 */
@@ -943,7 +1033,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			owner_lazy = () -> CorporateActionOption50.mmObject();
 		}
 	};
@@ -964,7 +1054,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * </ul>
 	 */
@@ -973,7 +1063,7 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType eg, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			owner_lazy = () -> CorporateActionOption29.mmObject();
 		}
 	};
@@ -994,7 +1084,15 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType, for example, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionOption141
+	 * ConstraintOptionNumberRule.forCorporateActionOption141}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1008,7 +1106,8 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption116;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType, for example, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionOption141);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionOption41;
 			owner_lazy = () -> CorporateActionOption116.mmObject();
 		}
@@ -1030,7 +1129,7 @@ public class ConstraintOptionNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType, for example, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
+	 * "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option."
 	 * </li>
 	 * </ul>
 	 */
@@ -1039,8 +1138,74 @@ public class ConstraintOptionNumberRule {
 			validator = ConstraintOptionNumberRule::checkCorporateActionOption121;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberRule";
-			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the  OptionType, for example, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
+			definition = "For differentiation between options, the OptionNumber must be used (preferred rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code). Therefore, the OptionNumber value must be different for each option.";
 			owner_lazy = () -> CorporateActionOption121.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption141
+	 * CorporateActionOption141}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For differentiation between options, the OptionNumber rather than the OptionType must be used, for example, in the case where two or more offers can be described by the same corporate action option code. Therefore, the OptionNumber value must be different for each option."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberRule#forCorporateActionOption116
+	 * ConstraintOptionNumberRule.forCorporateActionOption116}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption141> forCorporateActionOption141 = new MMConstraint<CorporateActionOption141>() {
+		{
+			validator = ConstraintOptionNumberRule::checkCorporateActionOption141;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberRule";
+			definition = "For differentiation between options, the OptionNumber rather than the OptionType must be used, for example, in the case where two or more offers can be described by the same corporate action option code. Therefore, the OptionNumber value must be different for each option.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberRule.forCorporateActionOption116;
+			owner_lazy = () -> CorporateActionOption141.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption144
+	 * CorporateActionOption144}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For differentiation between options, the OptionNumber rather than the OptionType must be used, for example, in the case where two or more offers can be described by the same corporate action option code. Therefore, the OptionNumber value must be different for each option."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption144> forCorporateActionOption144 = new MMConstraint<CorporateActionOption144>() {
+		{
+			validator = ConstraintOptionNumberRule::checkCorporateActionOption144;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberRule";
+			definition = "For differentiation between options, the OptionNumber rather than the OptionType must be used, for example, in the case where two or more offers can be described by the same corporate action option code. Therefore, the OptionNumber value must be different for each option.";
+			owner_lazy = () -> CorporateActionOption144.mmObject();
 		}
 	};
 
@@ -1057,6 +1222,28 @@ public class ConstraintOptionNumberRule {
 	 * ElectionDetails/CorporateActionOptionNumber is not allowed.
 	 */
 	public static void checkAgentCAElectionAdviceV01(AgentCAElectionAdviceV01 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The CorporateActionConfirmationDetails/OptionNumber value provided must
+	 * be the same as the one provided in the related
+	 * CorporateActionOptionDetails/OptionNumber element of the
+	 * CorporateActionNotification or CorporateActionMovementPreliminaryAdvice
+	 * messages previously sent.
+	 */
+	public static void checkCorporateActionMovementReversalAdviceV09(CorporateActionMovementReversalAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The CorporateActionConfirmationDetails/OptionNumber value provided must
+	 * be the same as the one provided in the related
+	 * CorporateActionOptionDetails/OptionNumber element of the
+	 * CorporateActionNotification or CorporateActionMovementPreliminaryAdvice
+	 * messages previously sent.
+	 */
+	public static void checkCorporateActionMovementConfirmationV09(CorporateActionMovementConfirmationV09 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1101,28 +1288,6 @@ public class ConstraintOptionNumberRule {
 	 * messages previously sent.
 	 */
 	public static void checkCorporateActionMovementConfirmation002V08(CorporateActionMovementConfirmation002V08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The CorporateActionConfirmationDetails/OptionNumber value provided must
-	 * be the same as the one provided into the related
-	 * CorporateActionOptionDetails/OptionNumber element of the
-	 * CorporateActionNotification or CorporateActionMovementPreliminaryAdvice
-	 * messages previously sent.
-	 */
-	public static void checkCorporateActionMovementConfirmationV07(CorporateActionMovementConfirmationV07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The CorporateActionConfirmationDetails/OptionNumber value provided must
-	 * be the same as the one provided into the related
-	 * CorporateActionOptionDetails/OptionNumber element of the
-	 * CorporateActionNotification or CorporateActionMovementPreliminaryAdvice
-	 * messages previously sent.
-	 */
-	public static void checkCorporateActionMovementReversalAdviceV07(CorporateActionMovementReversalAdviceV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1259,6 +1424,28 @@ public class ConstraintOptionNumberRule {
 	}
 
 	/**
+	 * The CorporateActionConfirmationDetails/OptionNumber value provided must
+	 * be the same as the one provided into the related
+	 * CorporateActionOptionDetails/OptionNumber element of the
+	 * CorporateActionNotification or CorporateActionMovementPreliminaryAdvice
+	 * messages previously sent.
+	 */
+	public static void checkCorporateActionMovementConfirmationV07(CorporateActionMovementConfirmationV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The CorporateActionConfirmationDetails/OptionNumber value provided must
+	 * be the same as the one provided into the related
+	 * CorporateActionOptionDetails/OptionNumber element of the
+	 * CorporateActionNotification or CorporateActionMovementPreliminaryAdvice
+	 * messages previously sent.
+	 */
+	public static void checkCorporateActionMovementReversalAdviceV07(CorporateActionMovementReversalAdviceV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * For differentiation between options, the OptionNumber must be used
 	 * (preferred rather than the OptionType eg, in the case where two or more
 	 * offers can be described by the same corporate action option code).
@@ -1357,6 +1544,26 @@ public class ConstraintOptionNumberRule {
 	 * option.
 	 */
 	public static void checkCorporateActionOption121(CorporateActionOption121 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For differentiation between options, the OptionNumber rather than the
+	 * OptionType must be used, for example, in the case where two or more
+	 * offers can be described by the same corporate action option code.
+	 * Therefore, the OptionNumber value must be different for each option.
+	 */
+	public static void checkCorporateActionOption141(CorporateActionOption141 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For differentiation between options, the OptionNumber rather than the
+	 * OptionType must be used, for example, in the case where two or more
+	 * offers can be described by the same corporate action option code.
+	 * Therefore, the OptionNumber value must be different for each option.
+	 */
+	public static void checkCorporateActionOption144(CorporateActionOption144 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

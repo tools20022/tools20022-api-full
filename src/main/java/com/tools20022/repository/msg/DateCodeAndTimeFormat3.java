@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DateCodeAndTimeFormat3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies  a date code and a time."</li>
+ * definition} = "Specifies a date code and a time."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.DateCodeAndTimeFormat1
@@ -181,7 +181,7 @@ public class DateCodeAndTimeFormat3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateCodeAndTimeFormat3";
-				definition = "Specifies  a date code and a time.";
+				definition = "Specifies a date code and a time.";
 				previousVersion_lazy = () -> DateCodeAndTimeFormat1.mmObject();
 			}
 		});

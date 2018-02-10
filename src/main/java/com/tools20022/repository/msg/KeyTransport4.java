@@ -71,6 +71,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Key encryption key (KEK), encrypted with a previously distributed asymmetric public key."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.KeyTransport5 KeyTransport5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.KeyTransport3
  * KeyTransport3}</li>
@@ -107,6 +113,13 @@ public class KeyTransport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the data structure."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.KeyTransport5#mmVersion
+	 * KeyTransport5.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -122,6 +135,7 @@ public class KeyTransport4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
+			nextVersions_lazy = () -> Arrays.asList(KeyTransport5.mmVersion);
 			previousVersion_lazy = () -> KeyTransport3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -154,6 +168,14 @@ public class KeyTransport4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of a cryptographic asymmetric key for the recipient."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.KeyTransport5#mmRecipientIdentification
+	 * KeyTransport5.mmRecipientIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -169,6 +191,7 @@ public class KeyTransport4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Identification of a cryptographic asymmetric key for the recipient.";
+			nextVersions_lazy = () -> Arrays.asList(KeyTransport5.mmRecipientIdentification);
 			previousVersion_lazy = () -> KeyTransport3.mmRecipientIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -202,6 +225,14 @@ public class KeyTransport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Algorithm to encrypt the key encryption key (KEK)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.KeyTransport5#mmKeyEncryptionAlgorithm
+	 * KeyTransport5.mmKeyEncryptionAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -217,6 +248,7 @@ public class KeyTransport4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEncryptionAlgorithm";
 			definition = "Algorithm to encrypt the key encryption key (KEK).";
+			nextVersions_lazy = () -> Arrays.asList(KeyTransport5.mmKeyEncryptionAlgorithm);
 			previousVersion_lazy = () -> KeyTransport3.mmKeyEncryptionAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -251,6 +283,14 @@ public class KeyTransport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Encrypted key encryption key (KEK)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.KeyTransport5#mmEncryptedKey
+	 * KeyTransport5.mmEncryptedKey}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -266,6 +306,7 @@ public class KeyTransport4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKey";
 			definition = "Encrypted key encryption key (KEK).";
+			nextVersions_lazy = () -> Arrays.asList(KeyTransport5.mmEncryptedKey);
 			previousVersion_lazy = () -> KeyTransport3.mmEncryptedKey;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -282,6 +323,7 @@ public class KeyTransport4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KeyTransport4";
 				definition = "Key encryption key (KEK), encrypted with a previously distributed asymmetric public key.";
+				nextVersions_lazy = () -> Arrays.asList(KeyTransport5.mmObject());
 				previousVersion_lazy = () -> KeyTransport3.mmObject();
 			}
 		});

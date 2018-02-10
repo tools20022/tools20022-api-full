@@ -225,7 +225,7 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility)  may be present, but not both."
+	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -242,7 +242,7 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 			validator = ConstraintOrderOriginatorEligibility3Rule::checkRedemptionMultipleOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
-			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility)  may be present, but not both.";
+			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOrderOriginatorEligibility3Rule.forRedemptionMultipleOrder6);
 			owner_lazy = () -> RedemptionMultipleOrder4.mmObject();
 		}
@@ -372,7 +372,7 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility)   may be present, but not both."
+	 * "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both."
 	 * </li>
 	 * </ul>
 	 */
@@ -381,7 +381,7 @@ public class ConstraintOrderOriginatorEligibility3Rule {
 			validator = ConstraintOrderOriginatorEligibility3Rule::checkSubscriptionMultipleOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderOriginatorEligibility3Rule";
-			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility)   may be present, but not both.";
+			definition = "Either InvestmentAccountDetails/OrderOriginatorEligibility or (one or more instances of IndividualOrderDetails/RelatedPartiesDetails/OrderOriginatorEligibility) may be present, but not both.";
 			owner_lazy = () -> SubscriptionMultipleOrder3.mmObject();
 		}
 	};

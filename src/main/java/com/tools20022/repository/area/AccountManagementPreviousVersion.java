@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Messages that support the management of account related activities, such as
- * the opening and maintenance of an account
+ * the opening and maintenance of an account.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -115,7 +115,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Account Management - Previous version - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Messages that support the management of account related activities, such as the opening and maintenance of an account"
+ * "Messages that support the management of account related activities, such as the opening and maintenance of an account."
  * </li>
  * </ul>
  */
@@ -129,7 +129,7 @@ public class AccountManagementPreviousVersion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Account Management - Previous version - master";
-				definition = "Messages that support the management of account related activities, such as the opening and maintenance of an account";
+				definition = "Messages that support the management of account related activities, such as the opening and maintenance of an account.";
 				messageDefinition_lazy = () -> Arrays.asList(AccountAdditionalInformationRequestV01.mmObject(), AccountClosingAdditionalInformationRequestV01.mmObject(), AccountClosingAmendmentRequestV01.mmObject(),
 						AccountClosingRequestV01.mmObject(), AccountExcludedMandateMaintenanceAmendmentRequestV01.mmObject(), AccountExcludedMandateMaintenanceRequestV01.mmObject(), AccountMandateMaintenanceAmendmentRequestV01.mmObject(),
 						AccountMandateMaintenanceRequestV01.mmObject(), AccountOpeningAdditionalInformationRequestV01.mmObject(), AccountOpeningAmendmentRequestV01.mmObject(), AccountOpeningRequestV01.mmObject(),

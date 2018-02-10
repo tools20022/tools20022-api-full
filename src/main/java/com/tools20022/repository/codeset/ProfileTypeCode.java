@@ -112,7 +112,7 @@ public class ProfileTypeCode extends MMCode {
 	 * according to the strategies defined by their managers. Through this
 	 * access model, the participants of these servers are hosted primarily
 	 * within the premises of Brazilian Market and significantly reduce the time
-	 * of submission of offers to trading systems
+	 * of submission of offers to trading systems.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -130,7 +130,7 @@ public class ProfileTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Investors operating through algorithms and send orders automatically according to the strategies defined by their managers. Through this access model, the participants of these servers are hosted primarily within the premises of Brazilian Market and significantly reduce the time of submission of offers to trading systems"
+	 * "Investors operating through algorithms and send orders automatically according to the strategies defined by their managers. Through this access model, the participants of these servers are hosted primarily within the premises of Brazilian Market and significantly reduce the time of submission of offers to trading systems."
 	 * </li>
 	 * </ul>
 	 */
@@ -138,7 +138,7 @@ public class ProfileTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighFrequencyTrader";
-			definition = "Investors operating through algorithms and send orders automatically according to the strategies defined by their managers. Through this access model, the participants of these servers are hosted primarily within the premises of Brazilian Market and significantly reduce the time of submission of offers to trading systems";
+			definition = "Investors operating through algorithms and send orders automatically according to the strategies defined by their managers. Through this access model, the participants of these servers are hosted primarily within the premises of Brazilian Market and significantly reduce the time of submission of offers to trading systems.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ProfileTypeCode.mmObject();
 			codeName = "HFTR";
 		}

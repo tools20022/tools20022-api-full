@@ -78,6 +78,14 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyIdentification115Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of identification of a party."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification118Choice
+ * PartyIdentification118Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -120,6 +128,14 @@ public class PartyIdentification115Choice {
 	 * definition} =
 	 * "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\"."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification118Choice#mmAnyBIC
+	 * PartyIdentification118Choice.mmAnyBIC}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -136,6 +152,7 @@ public class PartyIdentification115Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 \"Banking - Banking telecommunication messages - Business identifier code (BIC)\".";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification118Choice.mmAnyBIC);
 			previousVersion_lazy = () -> PartyIdentification93Choice.mmAnyBIC;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -332,6 +349,7 @@ public class PartyIdentification115Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification115Choice";
 				definition = "Choice of identification of a party.";
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentification118Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

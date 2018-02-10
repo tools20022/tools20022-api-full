@@ -94,7 +94,7 @@ public class ExecutionType1Choice {
 	 * name} = "Time"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Execution type is executed based on an time trigger."</li>
+	 * definition} = "Execution type is executed based on a time trigger."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTime = new MMMessageAttribute() {
@@ -104,7 +104,7 @@ public class ExecutionType1Choice {
 			xmlTag = "Tm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Time";
-			definition = "Execution type is executed based on an time trigger.";
+			definition = "Execution type is executed based on a time trigger.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();

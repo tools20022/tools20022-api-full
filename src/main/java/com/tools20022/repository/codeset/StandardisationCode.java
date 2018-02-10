@@ -49,6 +49,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * StandardisationCode.Flexible}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Standardisation1Code
+ * Standardisation1Code}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -189,6 +196,7 @@ public class StandardisationCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandardisationCode";
 				definition = "Specifies whether the terms of the security (underlying instruments, expiration date, contract size) are defined according to the exchange specifications or whether they can be user defined.";
+				derivation_lazy = () -> Arrays.asList(Standardisation1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StandardisationCode.Standardised, com.tools20022.repository.codeset.StandardisationCode.NonStandardised,
 						com.tools20022.repository.codeset.StandardisationCode.Flexible);
 			}

@@ -422,7 +422,7 @@ public class TradeTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A trade from an investment fund to another  investment fund."</li>
+	 * "A trade from an investment fund to another investment fund."</li>
 	 * </ul>
 	 */
 	public static final TradeTypeCode FundToFund = new TradeTypeCode() {
@@ -430,13 +430,13 @@ public class TradeTypeCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TRTR//FUND"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FundToFund";
-			definition = "A trade from an investment fund to another  investment fund.";
+			definition = "A trade from an investment fund to another investment fund.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradeTypeCode.mmObject();
 			codeName = "FDFD";
 		}
 	};
 	/**
-	 * Trade involving risk
+	 * Trade involving risk.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -456,7 +456,7 @@ public class TradeTypeCode extends MMCode {
 	 * name} = "RiskTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Trade involving risk"</li>
+	 * definition} = "Trade involving risk."</li>
 	 * </ul>
 	 */
 	public static final TradeTypeCode RiskTrade = new TradeTypeCode() {
@@ -464,7 +464,7 @@ public class TradeTypeCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "418"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RiskTrade";
-			definition = "Trade involving risk";
+			definition = "Trade involving risk.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradeTypeCode.mmObject();
 			codeName = "RISK";
 		}
@@ -542,7 +542,7 @@ public class TradeTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Trade which is guaranteed to be finalized
+	 * Trade which is guaranteed to be finalized.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -562,7 +562,7 @@ public class TradeTypeCode extends MMCode {
 	 * name} = "GuaranteedClose"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Trade which is guaranteed to be finalized"</li>
+	 * definition} = "Trade which is guaranteed to be finalized."</li>
 	 * </ul>
 	 */
 	public static final TradeTypeCode GuaranteedClose = new TradeTypeCode() {
@@ -570,7 +570,7 @@ public class TradeTypeCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "418"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedClose";
-			definition = "Trade which is guaranteed to be finalized";
+			definition = "Trade which is guaranteed to be finalized.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradeTypeCode.mmObject();
 			codeName = "GUAR";
 		}
@@ -1124,7 +1124,7 @@ public class TradeTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * The security will be bought back in the future..
+	 * The security will be bought back in the future.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1141,14 +1141,14 @@ public class TradeTypeCode extends MMCode {
 	 * name} = "FutureBuyBackTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "The security will be bought back in the future.."</li>
+	 * definition} = "The security will be bought back in the future."</li>
 	 * </ul>
 	 */
 	public static final TradeTypeCode FutureBuyBackTrade = new TradeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FutureBuyBackTrade";
-			definition = "The security will be bought back in the future..";
+			definition = "The security will be bought back in the future.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradeTypeCode.mmObject();
 			codeName = "FBBT";
 		}

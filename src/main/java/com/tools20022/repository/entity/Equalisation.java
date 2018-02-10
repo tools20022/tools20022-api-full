@@ -190,6 +190,30 @@ public class Equalisation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RateDetails30#mmEqualisationRate
 	 * RateDetails30.mmEqualisationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmEqualisationAmount
+	 * CorporateActionAmounts42.mmEqualisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmEqualisationAmount
+	 * CorporateActionAmounts43.mmEqualisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmEqualisationRate
+	 * RateDetails32.mmEqualisationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmEqualisationAmount
+	 * CorporateActionAmounts44.mmEqualisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmEqualisationAmount
+	 * CorporateActionAmounts45.mmEqualisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33#mmEqualisationRate
+	 * RateDetails33.mmEqualisationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmEqualisationAmount
+	 * CorporateActionAmounts46.mmEqualisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmEqualisationAmount
+	 * CorporateActionAmounts47.mmEqualisationAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -215,7 +239,9 @@ public class Equalisation {
 					Equalisation2.mmAmount, CorporateActionAmounts29.mmEqualisationAmount, RateDetails15.mmEqualisationRate, CorporateActionAmounts27.mmEqualisationAmount, CorporateActionAmounts28.mmEqualisationAmount,
 					CorporateActionAmounts33.mmEqualisationAmount, CorporateActionAmounts32.mmEqualisationAmount, RateDetails21.mmEqualisationRate, CorporateActionAmounts35.mmEqualisationAmount,
 					CorporateActionAmounts37.mmEqualisationAmount, RateDetails23.mmEqualisationRate, CorporateActionAmounts36.mmEqualisationAmount, CorporateActionAmounts38.mmEqualisationAmount, RateDetails24.mmEqualisationRate,
-					CorporateActionAmounts39.mmEqualisationAmount, CorporateActionAmounts41.mmEqualisationAmount, CorporateActionAmounts40.mmEqualisationAmount, RateDetails27.mmEqualisationRate, RateDetails30.mmEqualisationRate);
+					CorporateActionAmounts39.mmEqualisationAmount, CorporateActionAmounts41.mmEqualisationAmount, CorporateActionAmounts40.mmEqualisationAmount, RateDetails27.mmEqualisationRate, RateDetails30.mmEqualisationRate,
+					CorporateActionAmounts42.mmEqualisationAmount, CorporateActionAmounts43.mmEqualisationAmount, RateDetails32.mmEqualisationRate, CorporateActionAmounts44.mmEqualisationAmount,
+					CorporateActionAmounts45.mmEqualisationAmount, RateDetails33.mmEqualisationRate, CorporateActionAmounts46.mmEqualisationAmount, CorporateActionAmounts47.mmEqualisationAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Equalisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -280,6 +306,12 @@ public class Equalisation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmEqualisationDate
 	 * CorporateActionDate58.mmEqualisationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmEqualisationDate
+	 * CorporateActionDate61.mmEqualisationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmEqualisationDate
+	 * CorporateActionDate74.mmEqualisationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -303,7 +335,7 @@ public class Equalisation {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmEqualisationDate, CorporateActionDate13.mmEqualisationDate, CorporateActionDate14.mmEqualisationDate, CorporateActionDate21.mmEqualisationDate,
 					CorporateActionDate22.mmEqualisationDate, CorporateActionDate25.mmEqualisationDate, CorporateActionDate27.mmEqualisationDate, CorporateActionDate28.mmEqualisationDate, CorporateActionDate2.mmEqualisationDate,
-					CorporateActionDate44.mmEqualisationDate, CorporateActionDate58.mmEqualisationDate);
+					CorporateActionDate44.mmEqualisationDate, CorporateActionDate58.mmEqualisationDate, CorporateActionDate61.mmEqualisationDate, CorporateActionDate74.mmEqualisationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Equalisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -364,6 +396,12 @@ public class Equalisation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RateDetails28#mmEqualisationRate
 	 * RateDetails28.mmEqualisationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31#mmEqualisationRate
+	 * RateDetails31.mmEqualisationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34#mmEqualisationRate
+	 * RateDetails34.mmEqualisationRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -384,7 +422,7 @@ public class Equalisation {
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(RateDetails10.mmEqualisationRate, RateDetails13.mmEqualisationRate, Equalisation1.mmRate, Equalisation2.mmRate, RateDetails14.mmEqualisationRate, RateDetails18.mmEqualisationRate,
-					RateDetails22.mmEqualisationRate, RateDetails25.mmEqualisationRate, RateDetails26.mmEqualisationRate, RateDetails28.mmEqualisationRate);
+					RateDetails22.mmEqualisationRate, RateDetails25.mmEqualisationRate, RateDetails26.mmEqualisationRate, RateDetails28.mmEqualisationRate, RateDetails31.mmEqualisationRate, RateDetails34.mmEqualisationRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Equalisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

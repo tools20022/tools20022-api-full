@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.CashManagementPreviousVersion;
+import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.AccountStatement5;
 import com.tools20022.repository.msg.GroupHeader58;
 import com.tools20022.repository.msg.SupplementaryData1;
@@ -89,8 +89,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "BkToCstmrStmt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.053.001.05}</li>
@@ -325,7 +325,7 @@ public class BankToCustomerStatementV05 {
 				messageSet_lazy = () -> Arrays.asList(BanktoCustomerCashManagementISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "BkToCstmrStmt";
-				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
+				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmGroupHeader, com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmStatement,
 						com.tools20022.repository.area.camt.BankToCustomerStatementV05.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

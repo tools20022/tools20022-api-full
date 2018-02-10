@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ReportItemRejectionReason1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides the report item rejection reason in a coded or proprietary  form."</li>
+ * "Provides the report item rejection reason in a coded or proprietary form."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason13Choice
@@ -166,7 +166,7 @@ public class ReportItemRejectionReason1Choice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status reason expressed as a proprietary code"</li>
+	 * definition} = "Status reason expressed as a proprietary code."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,7 +182,7 @@ public class ReportItemRejectionReason1Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Status reason expressed as a proprietary code";
+			definition = "Status reason expressed as a proprietary code.";
 			previousVersion_lazy = () -> RejectionAndRepairReason13Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -199,7 +199,7 @@ public class ReportItemRejectionReason1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportItemRejectionReason1Choice";
-				definition = "Provides the report item rejection reason in a coded or proprietary  form.";
+				definition = "Provides the report item rejection reason in a coded or proprietary form.";
 				previousVersion_lazy = () -> RejectionAndRepairReason13Choice.mmObject();
 			}
 		});

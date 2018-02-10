@@ -77,6 +77,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraPositionDetails40"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of the intra-position movement."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionDetails45
+ * IntraPositionDetails45}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.IntraPositionDetails32
@@ -120,7 +127,15 @@ public class IntraPositionDetails40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails45#mmSafekeepingPlace
+	 * IntraPositionDetails45.mmSafekeepingPlace}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -137,7 +152,8 @@ public class IntraPositionDetails40 {
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
-			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionDetails45.mmSafekeepingPlace);
 			previousVersion_lazy = () -> IntraPositionDetails32.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -177,6 +193,14 @@ public class IntraPositionDetails40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance from which the securities were moved."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails45#mmBalanceFrom
+	 * IntraPositionDetails45.mmBalanceFrom}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -193,6 +217,7 @@ public class IntraPositionDetails40 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the securities were moved.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionDetails45.mmBalanceFrom);
 			previousVersion_lazy = () -> IntraPositionDetails32.mmBalanceFrom;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -232,6 +257,14 @@ public class IntraPositionDetails40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Intra-position movement(s) having been performed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails45#mmIntraPositionMovement
+	 * IntraPositionDetails45.mmIntraPositionMovement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -248,6 +281,7 @@ public class IntraPositionDetails40 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
 			definition = "Intra-position movement(s) having been performed.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionDetails45.mmIntraPositionMovement);
 			previousVersion_lazy = () -> IntraPositionDetails32.mmIntraPositionMovement;
 			minOccurs = 1;
 			isComposite = true;
@@ -266,6 +300,7 @@ public class IntraPositionDetails40 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionDetails40";
 				definition = "Details of the intra-position movement.";
+				nextVersions_lazy = () -> Arrays.asList(IntraPositionDetails45.mmObject());
 				previousVersion_lazy = () -> IntraPositionDetails32.mmObject();
 			}
 		});

@@ -189,7 +189,7 @@ public class PartyIdentification116 {
 	 * name} = "TaxParty"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TaxParty"</li>
+	 * definition} = "TaxParty."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTaxParty = new MMMessageAssociationEnd() {
@@ -199,7 +199,7 @@ public class PartyIdentification116 {
 			xmlTag = "TaxPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxParty";
-			definition = "TaxParty";
+			definition = "TaxParty.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -532,7 +532,7 @@ public class TransactionAgents1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Place where settlement of the securities takes place.\n\nNote : this is typed by a financial institution identification - as this is the standard way of identifying eg securities settlement agent/central system."
+	 * "Place where settlement of the securities takes place.\n\nNote: this is typed by a financial institution identification - as this is the standard way of identifying eg securities settlement agent/central system."
 	 * </li>
 	 * </ul>
 	 */
@@ -544,7 +544,7 @@ public class TransactionAgents1 {
 			xmlTag = "SttlmPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlace";
-			definition = "Place where settlement of the securities takes place.\n\nNote : this is typed by a financial institution identification - as this is the standard way of identifying eg securities settlement agent/central system.";
+			definition = "Place where settlement of the securities takes place.\n\nNote: this is typed by a financial institution identification - as this is the standard way of identifying eg securities settlement agent/central system.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

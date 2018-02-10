@@ -115,7 +115,7 @@ public class ClassificationType30Choice {
 	 * name} = "ClassificationFinancialInstrument"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)"</li>
+	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -135,7 +135,7 @@ public class ClassificationType30Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
-			definition = "ISO 10962 Classification of Financial Instrument (CFI)";
+			definition = "ISO 10962 Classification of Financial Instrument (CFI).";
 			nextVersions_lazy = () -> Arrays.asList(ClassificationType32Choice.mmClassificationFinancialInstrument);
 			maxOccurs = 1;
 			minOccurs = 1;

@@ -378,7 +378,7 @@ public class AccountDetailsConfirmationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides detailed information about the request or instruction which triggered this confirmation. "
+	 * "Provides detailed information about the request or instruction which triggered this confirmation."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -400,7 +400,7 @@ public class AccountDetailsConfirmationV04 {
 			xmlTag = "ConfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDetails";
-			definition = "Provides detailed information about the request or instruction which triggered this confirmation. ";
+			definition = "Provides detailed information about the request or instruction which triggered this confirmation.";
 			nextVersions_lazy = () -> Arrays.asList(AccountDetailsConfirmationV05.mmConfirmationDetails);
 			previousVersion_lazy = () -> AccountDetailsConfirmationV03.mmConfirmationDetails;
 			maxOccurs = 1;

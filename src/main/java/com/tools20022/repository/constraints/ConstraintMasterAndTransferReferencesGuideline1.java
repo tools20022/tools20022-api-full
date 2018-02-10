@@ -50,7 +50,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
+	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
 	 * </ul>
 	 */
@@ -59,7 +59,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
-			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
+			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			owner_lazy = () -> Transfer15.mmObject();
 		}
 	};
@@ -79,7 +79,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
+	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -96,7 +96,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
-			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
+			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer32);
 			owner_lazy = () -> Transfer21.mmObject();
 		}
@@ -117,7 +117,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
+	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
 	 * </ul>
 	 */
@@ -126,7 +126,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
-			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
+			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			owner_lazy = () -> Transfer11.mmObject();
 		}
 	};
@@ -146,7 +146,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
+	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -163,7 +163,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
-			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
+			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer27);
 			owner_lazy = () -> Transfer19.mmObject();
 		}
@@ -184,7 +184,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
+	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -206,7 +206,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
-			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
+			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer30);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer19;
 			owner_lazy = () -> Transfer27.mmObject();
@@ -228,7 +228,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
+	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -242,7 +242,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
-			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
+			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer27;
 			owner_lazy = () -> Transfer30.mmObject();
 		}
@@ -263,7 +263,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
+	 * "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -277,7 +277,7 @@ public class ConstraintMasterAndTransferReferencesGuideline1 {
 			validator = ConstraintMasterAndTransferReferencesGuideline1::checkTransfer32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterAndTransferReferencesGuideline1";
-			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction.  Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
+			definition = "TransferReference, ClientReference and CounterpartyReference may each be repeated across multiple instances of the TransferDetails component where the respective party has allocated only a single reference to all transfers within the instruction. Where the instructing party allocates a master reference to link several transfers together, but does not allocate individual references at transfer level, it should repeat that reference in the MasterReference and each instance of TransferReference.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMasterAndTransferReferencesGuideline1.forTransfer21;
 			owner_lazy = () -> Transfer32.mmObject();
 		}

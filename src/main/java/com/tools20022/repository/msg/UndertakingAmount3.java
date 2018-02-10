@@ -148,7 +148,7 @@ public class UndertakingAmount3 {
 	 * name} = "AdditionalInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Additional information concerning the demand amount. "</li>
+	 * definition} = "Additional information concerning the demand amount."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
@@ -158,7 +158,7 @@ public class UndertakingAmount3 {
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
-			definition = "Additional information concerning the demand amount. ";
+			definition = "Additional information concerning the demand amount.";
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();

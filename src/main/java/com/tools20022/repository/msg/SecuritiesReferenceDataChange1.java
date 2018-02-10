@@ -75,6 +75,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Describes the comparison between the currently established baseline elements and the proposed ones."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataChange2
+ * SecuritiesReferenceDataChange2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +118,14 @@ public class SecuritiesReferenceDataChange1 {
 	 * definition} =
 	 * "Identifies the financial instrument for which the changes are listed in the advice."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataChange2#mmFinancialInstrumentIdentification
+	 * SecuritiesReferenceDataChange2.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
@@ -121,6 +136,7 @@ public class SecuritiesReferenceDataChange1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the financial instrument for which the changes are listed in the advice.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesReferenceDataChange2.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -156,6 +172,14 @@ public class SecuritiesReferenceDataChange1 {
 	 * definition} =
 	 * "Name of the element, as specified in the short tag name for the field in the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataChange2#mmFieldName
+	 * SecuritiesReferenceDataChange2.mmFieldName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFieldName = new MMMessageAttribute() {
@@ -166,6 +190,7 @@ public class SecuritiesReferenceDataChange1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FieldName";
 			definition = "Name of the element, as specified in the short tag name for the field in the message.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesReferenceDataChange2.mmFieldName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -199,6 +224,14 @@ public class SecuritiesReferenceDataChange1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value of the related field before the change was applied."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataChange2#mmOldFieldValue
+	 * SecuritiesReferenceDataChange2.mmOldFieldValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOldFieldValue = new MMMessageAttribute() {
@@ -209,6 +242,7 @@ public class SecuritiesReferenceDataChange1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OldFieldValue";
 			definition = "Value of the related field before the change was applied.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesReferenceDataChange2.mmOldFieldValue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -241,6 +275,14 @@ public class SecuritiesReferenceDataChange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value of the related field after the change was applied."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataChange2#mmNewFieldValue
+	 * SecuritiesReferenceDataChange2.mmNewFieldValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNewFieldValue = new MMMessageAttribute() {
@@ -251,6 +293,7 @@ public class SecuritiesReferenceDataChange1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewFieldValue";
 			definition = "Value of the related field after the change was applied.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesReferenceDataChange2.mmNewFieldValue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -283,6 +326,14 @@ public class SecuritiesReferenceDataChange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the timestamp of the operation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataChange2#mmOperationTimeStamp
+	 * SecuritiesReferenceDataChange2.mmOperationTimeStamp}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOperationTimeStamp = new MMMessageAttribute() {
@@ -293,6 +344,7 @@ public class SecuritiesReferenceDataChange1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationTimeStamp";
 			definition = "Specifies the timestamp of the operation.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesReferenceDataChange2.mmOperationTimeStamp);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -309,6 +361,7 @@ public class SecuritiesReferenceDataChange1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesReferenceDataChange1";
 				definition = "Describes the comparison between the currently established baseline elements and the proposed ones.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesReferenceDataChange2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

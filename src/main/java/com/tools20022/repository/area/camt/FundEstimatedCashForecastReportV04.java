@@ -236,7 +236,7 @@ public class FundEstimatedCashForecastReportV04 {
 	 * name} = "PoolReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Collective reference identifying a set of messages"</li>
+	 * definition} = "Collective reference identifying a set of messages."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -249,7 +249,7 @@ public class FundEstimatedCashForecastReportV04 {
 			xmlTag = "PoolRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
-			definition = "Collective reference identifying a set of messages";
+			definition = "Collective reference identifying a set of messages.";
 			previousVersion_lazy = () -> FundEstimatedCashForecastReportV03.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -579,7 +579,7 @@ public class FundEstimatedCashForecastReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information that can not be captured in the structured fields and/or any other specific block. "
+	 * "Additional information that can not be captured in the structured fields and/or any other specific block."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -593,7 +593,7 @@ public class FundEstimatedCashForecastReportV04 {
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
-			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
+			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			previousVersion_lazy = () -> FundEstimatedCashForecastReportV03.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();

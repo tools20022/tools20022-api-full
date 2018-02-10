@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesAccount1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies one or a range of securities accounts."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.SecuritiesAccount2Choice
+ * SecuritiesAccount2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +108,14 @@ public class SecuritiesAccount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Range of identifications of the securities accounts."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesAccount2Choice#mmRange
+	 * SecuritiesAccount2Choice.mmRange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRange = new MMMessageAssociationEnd() {
@@ -111,6 +126,7 @@ public class SecuritiesAccount1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Range";
 			definition = "Range of identifications of the securities accounts.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount2Choice.mmRange);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -148,6 +164,14 @@ public class SecuritiesAccount1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identification of the securities account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesAccount2Choice#mmAccount
+	 * SecuritiesAccount2Choice.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
@@ -159,6 +183,7 @@ public class SecuritiesAccount1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique identification of the securities account.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount2Choice.mmAccount);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccount13.mmObject();
@@ -174,6 +199,7 @@ public class SecuritiesAccount1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccount1Choice";
 				definition = "Specifies one or a range of securities accounts.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

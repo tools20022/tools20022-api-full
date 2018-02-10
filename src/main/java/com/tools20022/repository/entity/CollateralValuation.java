@@ -133,6 +133,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuredCollateral2Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CollateralValuation6
  * CollateralValuation6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValue2
+ * CollateralValue2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValuePosition2
+ * CollateralValuePosition2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContractValuationData4
+ * ContractValuationData4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContractValuationData5
+ * ContractValuationData5}</li>
  * </ul>
  * </li>
  * <li>
@@ -143,7 +151,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CollateralValuation"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -291,8 +299,17 @@ public class CollateralValuation {
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#mmValueDate
 	 * SecuritiesCollateral7.mmValueDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValue2#mmValuationDate
+	 * CollateralValue2.mmValuationDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#mmValueDate
 	 * SecuritiesCollateral8.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractValuationData4#mmTimeStamp
+	 * ContractValuationData4.mmTimeStamp}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractValuationData5#mmTimeStamp
+	 * ContractValuationData5.mmTimeStamp}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -316,7 +333,7 @@ public class CollateralValuation {
 			derivation_lazy = () -> Arrays.asList(SecuritiesCollateral1.mmValueDate, CashCollateral1.mmValueDate, OtherCollateral1.mmValueDate, CollateralValue1.mmValuationDate, SecuritiesCollateral2.mmValueDate,
 					OtherCollateral2.mmValueDate, CashCollateral3.mmValueDate, SecuritiesCollateral3.mmValueDate, OtherCollateral3.mmValueDate, CashCollateral4.mmValueDate, CashCollateral2.mmValueDate, OtherCollateral4.mmValueDate,
 					SecuritiesCollateral4.mmValueDate, CashCollateral5.mmValueDate, OtherCollateral7.mmValueDate, OtherCollateral6.mmValueDate, SecuritiesCollateral6.mmValueDate, SecuritiesCollateral5.mmValueDate,
-					OtherCollateral5.mmValueDate, SecuritiesCollateral7.mmValueDate, SecuritiesCollateral8.mmValueDate);
+					OtherCollateral5.mmValueDate, SecuritiesCollateral7.mmValueDate, CollateralValue2.mmValuationDate, SecuritiesCollateral8.mmValueDate, ContractValuationData4.mmTimeStamp, ContractValuationData5.mmTimeStamp);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -405,6 +422,9 @@ public class CollateralValuation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CollateralValuePosition1#mmTotalCollateralValuation
 	 * CollateralValuePosition1.mmTotalCollateralValuation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuePosition2#mmTotalCollateralValuation
+	 * CollateralValuePosition2.mmTotalCollateralValuation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -427,7 +447,7 @@ public class CollateralValuation {
 	 */
 	public static final MMBusinessAttribute mmReportedCurrencyAndAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(CollateralAmount1.mmReportedCurrencyAndAmount, CollateralValuePosition1.mmTotalCollateralValuation);
+			derivation_lazy = () -> Arrays.asList(CollateralAmount1.mmReportedCurrencyAndAmount, CollateralValuePosition1.mmTotalCollateralValuation, CollateralValuePosition2.mmTotalCollateralValuation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -582,6 +602,9 @@ public class CollateralValuation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CollateralValue1#mmValuationCurrency
 	 * CollateralValue1.mmValuationCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValue2#mmValuationCurrency
+	 * CollateralValue2.mmValuationCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -602,7 +625,7 @@ public class CollateralValuation {
 	 */
 	public static final MMBusinessAttribute mmCollateralValuationCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(CollateralValue1.mmValuationCurrency);
+			derivation_lazy = () -> Arrays.asList(CollateralValue1.mmValuationCurrency, CollateralValue2.mmValuationCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -626,7 +649,7 @@ public class CollateralValuation {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValuation";
 				definition = "Provides details about the valuation of each piece of collateral that is posted.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Collateral.mmValuation, com.tools20022.repository.entity.CollateralManagement.mmCollateralValuation);
@@ -637,7 +660,8 @@ public class CollateralValuation {
 						com.tools20022.repository.entity.CollateralValuation.mmMarketValueAmount, com.tools20022.repository.entity.CollateralValuation.mmAdjustedRate,
 						com.tools20022.repository.entity.CollateralValuation.mmCollateralValuationCurrency);
 				derivationComponent_lazy = () -> Arrays.asList(CollateralValuation1.mmObject(), CollateralValuePosition1.mmObject(), CollateralValue1.mmObject(), CollateralValuation2.mmObject(), SecuredCollateral1Choice.mmObject(),
-						CollateralValuation3.mmObject(), CollateralValuation4.mmObject(), CollateralValuation5.mmObject(), CollateralValuation7.mmObject(), SecuredCollateral2Choice.mmObject(), CollateralValuation6.mmObject());
+						CollateralValuation3.mmObject(), CollateralValuation4.mmObject(), CollateralValuation5.mmObject(), CollateralValuation7.mmObject(), SecuredCollateral2Choice.mmObject(), CollateralValuation6.mmObject(),
+						CollateralValue2.mmObject(), CollateralValuePosition2.mmObject(), ContractValuationData4.mmObject(), ContractValuationData5.mmObject());
 			}
 
 			@Override

@@ -1025,7 +1025,7 @@ public class RejectionReasonV3Code extends MMCode {
 		}
 	};
 	/**
-	 * Instruction is irrevocable
+	 * Instruction is irrevocable.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1042,14 +1042,14 @@ public class RejectionReasonV3Code extends MMCode {
 	 * name} = "InstructionIrrevocable"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Instruction is irrevocable"</li>
+	 * definition} = "Instruction is irrevocable."</li>
 	 * </ul>
 	 */
 	public static final RejectionReasonV3Code InstructionIrrevocable = new RejectionReasonV3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIrrevocable";
-			definition = "Instruction is irrevocable";
+			definition = "Instruction is irrevocable.";
 			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV3Code.mmObject();
 			codeName = "INIR";
 		}
@@ -1058,7 +1058,7 @@ public class RejectionReasonV3Code extends MMCode {
 	 * Option is not valid; it has been cancelled by the market or service
 	 * provider, and cannot be responded to. Any responses already processed
 	 * against this option are considered void and new responses will be
-	 * required .
+	 * required.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1076,7 +1076,7 @@ public class RejectionReasonV3Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required ."
+	 * "Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required."
 	 * </li>
 	 * </ul>
 	 */
@@ -1084,7 +1084,7 @@ public class RejectionReasonV3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionCancelled";
-			definition = "Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required .";
+			definition = "Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required.";
 			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV3Code.mmObject();
 			codeName = "CANC";
 		}
@@ -1850,7 +1850,7 @@ public class RejectionReasonV3Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Primarily used when the Notice of Execution received by the buy-side contains fees, gross trade amount, net trade amount, etc., values that differ from the buy-side's calculations.  Buy-side may reject the trade if they feel that the difference in calculations is too high."
+	 * "Primarily used when the Notice of Execution received by the buy-side contains fees, gross trade amount, net trade amount, etc., values that differ from the buy-side's calculations. Buy-side may reject the trade if they feel that the difference in calculations is too high."
 	 * </li>
 	 * </ul>
 	 */
@@ -1858,7 +1858,7 @@ public class RejectionReasonV3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDifference";
-			definition = "Primarily used when the Notice of Execution received by the buy-side contains fees, gross trade amount, net trade amount, etc., values that differ from the buy-side's calculations.  Buy-side may reject the trade if they feel that the difference in calculations is too high.";
+			definition = "Primarily used when the Notice of Execution received by the buy-side contains fees, gross trade amount, net trade amount, etc., values that differ from the buy-side's calculations. Buy-side may reject the trade if they feel that the difference in calculations is too high.";
 			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV3Code.mmObject();
 			codeName = "CADI";
 		}
@@ -5896,14 +5896,14 @@ public class RejectionReasonV3Code extends MMCode {
 	 * name} = "InvalidBalance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Instruction aims at using  an invalid balance."</li>
+	 * definition} = "Instruction aims at using an invalid balance."</li>
 	 * </ul>
 	 */
 	public static final RejectionReasonV3Code InvalidBalance = new RejectionReasonV3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidBalance";
-			definition = "Instruction aims at using  an invalid balance.";
+			definition = "Instruction aims at using an invalid balance.";
 			owner_lazy = () -> com.tools20022.repository.codeset.RejectionReasonV3Code.mmObject();
 			codeName = "INVB";
 		}

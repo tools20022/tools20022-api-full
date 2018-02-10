@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pacs.FIToFIPaymentReversalV06;
 import com.tools20022.repository.area.pacs.FIToFIPaymentReversalV07;
+import com.tools20022.repository.area.pacs.FIToFIPaymentReversalV08;
 import com.tools20022.repository.choice.Authorisation1Choice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
@@ -90,6 +91,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV07#mmGroupHeader
  * FIToFIPaymentReversalV07.mmGroupHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV08#mmGroupHeader
+ * FIToFIPaymentReversalV08.mmGroupHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -776,7 +780,7 @@ public class GroupHeader71 {
 						com.tools20022.repository.msg.GroupHeader71.mmControlSum, com.tools20022.repository.msg.GroupHeader71.mmGroupReversal, com.tools20022.repository.msg.GroupHeader71.mmTotalReversedInterbankSettlementAmount,
 						com.tools20022.repository.msg.GroupHeader71.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader71.mmSettlementInformation, com.tools20022.repository.msg.GroupHeader71.mmInstructingAgent,
 						com.tools20022.repository.msg.GroupHeader71.mmInstructedAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentReversalV06.mmGroupHeader, FIToFIPaymentReversalV07.mmGroupHeader);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentReversalV06.mmGroupHeader, FIToFIPaymentReversalV07.mmGroupHeader, FIToFIPaymentReversalV08.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintControlSumAndGroupReversalRule.forGroupHeader71,

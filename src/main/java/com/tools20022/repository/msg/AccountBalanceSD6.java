@@ -76,7 +76,14 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountBalanceSD6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  "
+ * "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs)."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountBalanceSD11
+ * AccountBalanceSD11}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -112,6 +119,14 @@ public class AccountBalanceSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD11#mmPlaceAndName
+	 * AccountBalanceSD11.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -122,6 +137,7 @@ public class AccountBalanceSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD11.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -155,6 +171,14 @@ public class AccountBalanceSD6 {
 	 * definition} =
 	 * "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD11#mmOriginalBalance
+	 * AccountBalanceSD11.mmOriginalBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginalBalance = new MMMessageAssociationEnd() {
@@ -165,6 +189,7 @@ public class AccountBalanceSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD11.mmOriginalBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -197,7 +222,15 @@ public class AccountBalanceSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Adjusted position held in  a security that is subject to redemption call."
+	 * "Adjusted position held in a security that is subject to redemption call."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD11#mmAdjustedBalance
+	 * AccountBalanceSD11.mmAdjustedBalance}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -208,7 +241,8 @@ public class AccountBalanceSD6 {
 			xmlTag = "AdjstdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedBalance";
-			definition = "Adjusted position held in  a security that is subject to redemption call.";
+			definition = "Adjusted position held in a security that is subject to redemption call.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD11.mmAdjustedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -243,6 +277,14 @@ public class AccountBalanceSD6 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD11#mmUnpledgedBalance
+	 * AccountBalanceSD11.mmUnpledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUnpledgedBalance = new MMMessageAssociationEnd() {
@@ -253,6 +295,7 @@ public class AccountBalanceSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD11.mmUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -287,6 +330,14 @@ public class AccountBalanceSD6 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD11#mmInvestmentUnpledgedBalance
+	 * AccountBalanceSD11.mmInvestmentUnpledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
@@ -297,6 +348,7 @@ public class AccountBalanceSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD11.mmInvestmentUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -331,6 +383,14 @@ public class AccountBalanceSD6 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD11#mmInvestmentPledgedBalance
+	 * AccountBalanceSD11.mmInvestmentPledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentPledgedBalance = new MMMessageAssociationEnd() {
@@ -341,6 +401,7 @@ public class AccountBalanceSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD11.mmInvestmentPledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -357,7 +418,8 @@ public class AccountBalanceSD6 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountBalanceSD6";
-				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
+				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).";
+				nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD11.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

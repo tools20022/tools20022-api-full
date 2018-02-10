@@ -240,7 +240,7 @@ public class PartyIdentification73Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party Identification specified as a list of values per element"</li>
+	 * "Party Identification specified as a list of values per element."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
@@ -251,7 +251,7 @@ public class PartyIdentification73Choice {
 			xmlTag = "PtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
-			definition = "Party Identification specified as a list of values per element";
+			definition = "Party Identification specified as a list of values per element.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification59.mmObject();

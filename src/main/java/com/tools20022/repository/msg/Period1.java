@@ -63,6 +63,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Time span defined by a start date and time, and an end date and time."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Period14 Period14}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +108,13 @@ public class Period1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the range starts."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period14#mmStartDate
+	 * Period14.mmStartDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
@@ -113,6 +126,7 @@ public class Period1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Date and time at which the range starts.";
+			nextVersions_lazy = () -> Arrays.asList(Period14.mmStartDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
@@ -150,6 +164,13 @@ public class Period1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the range ends."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period14#mmEndDate
+	 * Period14.mmEndDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
@@ -161,6 +182,7 @@ public class Period1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "Date and time at which the range ends.";
+			nextVersions_lazy = () -> Arrays.asList(Period14.mmEndDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
@@ -176,6 +198,7 @@ public class Period1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period1";
 				definition = "Time span defined by a start date and time, and an end date and time.";
+				nextVersions_lazy = () -> Arrays.asList(Period14.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

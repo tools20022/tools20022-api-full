@@ -475,6 +475,69 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmCashClearingSystem
 	 * SettlementDetails139.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmCashClearingSystem
+	 * SettlementDetails140.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmCashClearingSystem
+	 * SettlementDetails147.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmCashClearingSystem
+	 * SettlementDetails142.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmCashClearingSystem
+	 * SettlementDetails144.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmCashClearingSystem
+	 * SettlementDetails148.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmCashClearingSystem
+	 * SettlementDetails141.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmCashClearingSystem
+	 * SettlementDetails145.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmCashClearingSystem
+	 * SettlementDetails146.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmCashClearingSystem
+	 * SettlementDetails143.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmCashClearingSystem
+	 * SettlementDetails149.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmCashClearingSystem
+	 * SettlementDetails150.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmCashClearingSystem
+	 * SettlementDetails151.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmCashClearingSystem
+	 * SettlementDetails152.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmCashClearingSystem
+	 * SettlementDetails153.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmCashClearingSystem
+	 * SettlementDetails155.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmCashClearingSystem
+	 * SettlementDetails156.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmCashClearingSystem
+	 * SettlementDetails157.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmCashClearingSystem
+	 * SettlementDetails158.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmCashClearingSystem
+	 * SettlementDetails160.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmCashClearingSystem
+	 * SettlementDetails161.mmCashClearingSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmCashClearingSystem
+	 * SettlementDetails162.mmCashClearingSystem}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -520,7 +583,12 @@ public class SettlementInstructionSystemRole extends CashSettlementInstructionPa
 					SettlementDetails115.mmCashClearingSystem, SettlementDetails117.mmCashClearingSystem, SettlementDetails116.mmCashClearingSystem, SettlementDetails113.mmCashClearingSystem, SettlementDetails128.mmCashClearingSystem,
 					SettlementDetails120.mmCashClearingSystem, SettlementDetails119.mmCashClearingSystem, SettlementDetails125.mmCashClearingSystem, SettlementDetails126.mmCashClearingSystem, SettlementDetails122.mmCashClearingSystem,
 					SettlementDetails127.mmCashClearingSystem, SettlementDetails121.mmCashClearingSystem, SettlementDetails134.mmCashClearingSystem, SettlementDetails137.mmCashClearingSystem, SettlementDetails132.mmCashClearingSystem,
-					SettlementDetails138.mmCashClearingSystem, SettlementDetails130.mmCashClearingSystem, SettlementDetails131.mmCashClearingSystem, SettlementDetails133.mmCashClearingSystem, SettlementDetails139.mmCashClearingSystem);
+					SettlementDetails138.mmCashClearingSystem, SettlementDetails130.mmCashClearingSystem, SettlementDetails131.mmCashClearingSystem, SettlementDetails133.mmCashClearingSystem, SettlementDetails139.mmCashClearingSystem,
+					SettlementDetails140.mmCashClearingSystem, SettlementDetails147.mmCashClearingSystem, SettlementDetails142.mmCashClearingSystem, SettlementDetails144.mmCashClearingSystem, SettlementDetails148.mmCashClearingSystem,
+					SettlementDetails141.mmCashClearingSystem, SettlementDetails145.mmCashClearingSystem, SettlementDetails146.mmCashClearingSystem, SettlementDetails143.mmCashClearingSystem, SettlementDetails149.mmCashClearingSystem,
+					SettlementDetails150.mmCashClearingSystem, SettlementDetails151.mmCashClearingSystem, SettlementDetails152.mmCashClearingSystem, SettlementDetails153.mmCashClearingSystem, SettlementDetails155.mmCashClearingSystem,
+					SettlementDetails156.mmCashClearingSystem, SettlementDetails157.mmCashClearingSystem, SettlementDetails158.mmCashClearingSystem, SettlementDetails160.mmCashClearingSystem, SettlementDetails161.mmCashClearingSystem,
+					SettlementDetails162.mmCashClearingSystem);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementInstructionSystemRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

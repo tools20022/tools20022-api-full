@@ -198,7 +198,7 @@ public class CorporateAction6SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Agreement of the target company.\r\nTargetCompanyAgreement should only be used for corporate action event type code TEND. It is not necessary for  corporate action event type code BIDS.   \r\n 対象会社の同意の有無\r\n公開買付のときのみ。（自己株買付のときは無し）"
+	 * "Agreement of the target company.\r\nTargetCompanyAgreement should only be used for corporate action event type code TEND. It is not necessary for corporate action event type code BIDS. \r\n 対象会社の同意の有無\r\n公開買付のときのみ。（自己株買付のときは無し）."
 	 * </li>
 	 * </ul>
 	 */
@@ -209,7 +209,7 @@ public class CorporateAction6SD1 {
 			xmlTag = "TrgtCpnyAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCompanyAgreement";
-			definition = "Agreement of the target company.\r\nTargetCompanyAgreement should only be used for corporate action event type code TEND. It is not necessary for  corporate action event type code BIDS.   \r\n 対象会社の同意の有無\r\n公開買付のときのみ。（自己株買付のときは無し）";
+			definition = "Agreement of the target company.\r\nTargetCompanyAgreement should only be used for corporate action event type code TEND. It is not necessary for corporate action event type code BIDS. \r\n 対象会社の同意の有無\r\n公開買付のときのみ。（自己株買付のときは無し）.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TargetCompanyAgreementCode.mmObject();
@@ -242,7 +242,7 @@ public class CorporateAction6SD1 {
 	 * name} = "TotalNumberOfNewSharesIssued"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Total number of new shares to be issued.\r\n発行新株式数"</li>
+	 * definition} = "Total number of new shares to be issued.\r\n発行新株式数."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalNumberOfNewSharesIssued = new MMMessageAttribute() {
@@ -252,7 +252,7 @@ public class CorporateAction6SD1 {
 			xmlTag = "TtlNbOfNewShrsIssd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNumberOfNewSharesIssued";
-			definition = "Total number of new shares to be issued.\r\n発行新株式数";
+			definition = "Total number of new shares to be issued.\r\n発行新株式数.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();

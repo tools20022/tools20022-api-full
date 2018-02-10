@@ -77,6 +77,14 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorCurrencyConversionResponse4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Currency conversion outcome from the service provider."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5
+ * AcceptorCurrencyConversionResponse5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse3
@@ -119,6 +127,14 @@ public class AcceptorCurrencyConversionResponse4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5#mmEnvironment
+	 * AcceptorCurrencyConversionResponse5.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -135,6 +151,7 @@ public class AcceptorCurrencyConversionResponse4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponse5.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorCurrencyConversionResponse3.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -175,6 +192,14 @@ public class AcceptorCurrencyConversionResponse4 {
 	 * definition} =
 	 * "Currency conversion of a card payment transaction between an acceptor and an acquirer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5#mmTransaction
+	 * AcceptorCurrencyConversionResponse5.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -191,6 +216,7 @@ public class AcceptorCurrencyConversionResponse4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Currency conversion of a card payment transaction between an acceptor and an acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponse5.mmTransaction);
 			previousVersion_lazy = () -> AcceptorCurrencyConversionResponse3.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -229,6 +255,14 @@ public class AcceptorCurrencyConversionResponse4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Details of the currency conversion."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5#mmCurrencyConversionResult
+	 * AcceptorCurrencyConversionResponse5.mmCurrencyConversionResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -245,6 +279,7 @@ public class AcceptorCurrencyConversionResponse4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionResult";
 			definition = "Details of the currency conversion.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponse5.mmCurrencyConversionResult);
 			previousVersion_lazy = () -> AcceptorCurrencyConversionResponse3.mmCurrencyConversionResult;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -264,6 +299,7 @@ public class AcceptorCurrencyConversionResponse4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCurrencyConversionResponse4";
 				definition = "Currency conversion outcome from the service provider.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponse5.mmObject());
 				previousVersion_lazy = () -> AcceptorCurrencyConversionResponse3.mmObject();
 			}
 		});

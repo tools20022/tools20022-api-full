@@ -186,6 +186,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies amounts in the framework of a corporate action event."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionAmounts42
+ * CorporateActionAmounts42}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts27
@@ -238,6 +245,14 @@ public class CorporateActionAmounts36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money before any deductions and allowances have been made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmGrossCashAmount
+	 * CorporateActionAmounts42.mmGrossCashAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -255,6 +270,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossCashAmount";
 			definition = "Amount of money before any deductions and allowances have been made.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmGrossCashAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmGrossCashAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -299,6 +315,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of money after deductions and allowances have been made, if any, that is, the total amount +/- charges/fees."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmNetCashAmount
+	 * CorporateActionAmounts42.mmNetCashAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -316,6 +340,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetCashAmount";
 			definition = "Amount of money after deductions and allowances have been made, if any, that is, the total amount +/- charges/fees.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmNetCashAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmNetCashAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -360,6 +385,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fees."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmSolicitationFees
+	 * CorporateActionAmounts42.mmSolicitationFees}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -377,6 +410,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationFees";
 			definition = "Cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fees.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmSolicitationFees);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmSolicitationFees;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -421,6 +455,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Cash disbursement in lieu of a fractional quantity of, for example, equity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmCashInLieuOfShare
+	 * CorporateActionAmounts42.mmCashInLieuOfShare}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -438,6 +480,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfShare";
 			definition = "Cash disbursement in lieu of a fractional quantity of, for example, equity.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmCashInLieuOfShare);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmCashInLieuOfShare;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -481,6 +524,14 @@ public class CorporateActionAmounts36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money distributed as the result of a capital gain."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmCapitalGain
+	 * CorporateActionAmounts42.mmCapitalGain}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -498,6 +549,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGain";
 			definition = "Amount of money distributed as the result of a capital gain.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmCapitalGain);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmCapitalGain;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -540,6 +592,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money representing a coupon payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmInterestAmount
+	 * CorporateActionAmounts42.mmInterestAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -557,6 +617,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestAmount";
 			definition = "Amount of money representing a coupon payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmInterestAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmInterestAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -601,6 +662,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "(Unique to France) Amount due to a buyer of securities dealt prior to ex date which may be subject to different rate of taxation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmIndemnityAmount
+	 * CorporateActionAmounts42.mmIndemnityAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -618,6 +687,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndemnityAmount";
 			definition = "(Unique to France) Amount due to a buyer of securities dealt prior to ex date which may be subject to different rate of taxation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmIndemnityAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmIndemnityAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -659,6 +729,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of money that the borrower pays to the lender as a compensation. It does not entitle the lender to reclaim any tax credit and is sometimes treated differently by the local tax authorities of the lender. Also covers compensation/indemnity of missed dividend concerning early/late settlements if applicable to a market."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmManufacturedDividendPaymentAmount
+	 * CorporateActionAmounts42.mmManufacturedDividendPaymentAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -675,6 +753,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManufacturedDividendPaymentAmount";
 			definition = "Amount of money that the borrower pays to the lender as a compensation. It does not entitle the lender to reclaim any tax credit and is sometimes treated differently by the local tax authorities of the lender. Also covers compensation/indemnity of missed dividend concerning early/late settlements if applicable to a market.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmManufacturedDividendPaymentAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmManufacturedDividendPaymentAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -717,6 +796,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money reinvested in additional securities."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmReinvestmentAmount
+	 * CorporateActionAmounts42.mmReinvestmentAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -734,6 +821,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentAmount";
 			definition = "Amount of money reinvested in additional securities.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmReinvestmentAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmReinvestmentAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -778,6 +866,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount resulting from a fully franked dividend paid by a company; amount includes tax credit for companies that have made sufficient tax payments during the fiscal period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmFullyFrankedAmount
+	 * CorporateActionAmounts42.mmFullyFrankedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -795,6 +891,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullyFrankedAmount";
 			definition = "Amount resulting from a fully franked dividend paid by a company; amount includes tax credit for companies that have made sufficient tax payments during the fiscal period.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmFullyFrankedAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmFullyFrankedAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -839,6 +936,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount resulting from an unfranked dividend paid by a company; the amount does not include tax credit and is subject to withholding tax."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmUnfrankedAmount
+	 * CorporateActionAmounts42.mmUnfrankedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -856,6 +961,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnfrankedAmount";
 			definition = "Amount resulting from an unfranked dividend paid by a company; the amount does not include tax credit and is subject to withholding tax.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmUnfrankedAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmUnfrankedAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -899,6 +1005,14 @@ public class CorporateActionAmounts36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money related to taxable income that cannot be categorised."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmSundryOrOtherAmount
+	 * CorporateActionAmounts42.mmSundryOrOtherAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -916,6 +1030,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SundryOrOtherAmount";
 			definition = "Amount of money related to taxable income that cannot be categorised.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmSundryOrOtherAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmSundryOrOtherAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -957,6 +1072,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money that has not been subject to taxation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmTaxFreeAmount
+	 * CorporateActionAmounts42.mmTaxFreeAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -974,6 +1097,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxFreeAmount";
 			definition = "Amount of money that has not been subject to taxation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmTaxFreeAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmTaxFreeAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1015,6 +1139,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of income eligible for deferred taxation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmTaxDeferredAmount
+	 * CorporateActionAmounts42.mmTaxDeferredAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1032,6 +1164,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDeferredAmount";
 			definition = "Amount of income eligible for deferred taxation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmTaxDeferredAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmTaxDeferredAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1073,6 +1206,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of value added tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmValueAddedTaxAmount
+	 * CorporateActionAmounts42.mmValueAddedTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1090,6 +1231,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTaxAmount";
 			definition = "Amount of value added tax.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmValueAddedTaxAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmValueAddedTaxAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1131,6 +1273,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of stamp duty."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmStampDutyAmount
+	 * CorporateActionAmounts42.mmStampDutyAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1148,6 +1298,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDutyAmount";
 			definition = "Amount of stamp duty.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmStampDutyAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmStampDutyAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1191,6 +1342,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount that was paid in excess of actual tax obligation and was reclaimed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmTaxReclaimAmount
+	 * CorporateActionAmounts42.mmTaxReclaimAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1208,6 +1367,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaimAmount";
 			definition = "Amount that was paid in excess of actual tax obligation and was reclaimed.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmTaxReclaimAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmTaxReclaimAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1252,6 +1412,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of taxes that have been previously paid in relation to the taxable event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmTaxCreditAmount
+	 * CorporateActionAmounts42.mmTaxCreditAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1269,6 +1437,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditAmount";
 			definition = "Amount of taxes that have been previously paid in relation to the taxable event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmTaxCreditAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmTaxCreditAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1310,6 +1479,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of additional taxes that cannot be categorised."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmAdditionalTaxAmount
+	 * CorporateActionAmounts42.mmAdditionalTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1327,6 +1504,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTaxAmount";
 			definition = "Amount of additional taxes that cannot be categorised.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmAdditionalTaxAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmAdditionalTaxAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1370,6 +1548,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmWithholdingTaxAmount
+	 * CorporateActionAmounts42.mmWithholdingTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1387,6 +1573,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxAmount";
 			definition = "Amount of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmWithholdingTaxAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmWithholdingTaxAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1427,6 +1614,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of money withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate levied by the jurisdiction of the issuer’s tax domicile."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmSecondLevelTaxAmount
+	 * CorporateActionAmounts42.mmSecondLevelTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecondLevelTaxAmount = new MMMessageAttribute() {
@@ -1438,6 +1633,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTaxAmount";
 			definition = "Amount of money withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate levied by the jurisdiction of the issuer’s tax domicile.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmSecondLevelTaxAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -1478,6 +1674,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of fiscal tax to apply."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmFiscalStampAmount
+	 * CorporateActionAmounts42.mmFiscalStampAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1495,6 +1699,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalStampAmount";
 			definition = "Amount of fiscal tax to apply.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmFiscalStampAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmFiscalStampAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1538,6 +1743,14 @@ public class CorporateActionAmounts36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money paid to an executing broker as a commission."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmExecutingBrokerAmount
+	 * CorporateActionAmounts42.mmExecutingBrokerAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1555,6 +1768,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBrokerAmount";
 			definition = "Amount of money paid to an executing broker as a commission.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmExecutingBrokerAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmExecutingBrokerAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1597,6 +1811,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of paying/sub-paying agent commission."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmPayingAgentCommissionAmount
+	 * CorporateActionAmounts42.mmPayingAgentCommissionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1614,6 +1836,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgentCommissionAmount";
 			definition = "Amount of paying/sub-paying agent commission.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmPayingAgentCommissionAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmPayingAgentCommissionAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1656,6 +1879,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Local broker's commission."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmLocalBrokerCommissionAmount
+	 * CorporateActionAmounts42.mmLocalBrokerCommissionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1673,6 +1904,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalBrokerCommissionAmount";
 			definition = "Local broker's commission.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmLocalBrokerCommissionAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmLocalBrokerCommissionAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1717,6 +1949,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of money charged by a regulatory authority, for example, securities and exchange fees."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmRegulatoryFeesAmount
+	 * CorporateActionAmounts42.mmRegulatoryFeesAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1734,6 +1974,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryFeesAmount";
 			definition = "Amount of money charged by a regulatory authority, for example, securities and exchange fees.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmRegulatoryFeesAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmRegulatoryFeesAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1778,6 +2019,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "All costs related to the physical delivery of documents such as stamps, postage, carrier fees, insurances or messenger services."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmShippingFeesAmount
+	 * CorporateActionAmounts42.mmShippingFeesAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1795,6 +2044,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingFeesAmount";
 			definition = "All costs related to the physical delivery of documents such as stamps, postage, carrier fees, insurances or messenger services.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmShippingFeesAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmShippingFeesAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1839,6 +2089,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmChargesAmount
+	 * CorporateActionAmounts42.mmChargesAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1856,6 +2114,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmount";
 			definition = "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmChargesAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmChargesAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1900,6 +2159,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Cash amount based on terms of corporate action event and balance of underlying securities, entitled to/from account owner (which may be positive or negative)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmEntitledAmount
+	 * CorporateActionAmounts42.mmEntitledAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1917,6 +2184,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitledAmount";
 			definition = "Cash amount based on terms of corporate action event and balance of underlying securities, entitled to/from account owner (which may be positive or negative).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmEntitledAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmEntitledAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1961,6 +2229,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Posting/settlement amount in its original currency when conversion from/into another currency has occurred."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmOriginalAmount
+	 * CorporateActionAmounts42.mmOriginalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1978,6 +2254,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAmount";
 			definition = "Posting/settlement amount in its original currency when conversion from/into another currency has occurred.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmOriginalAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmOriginalAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2022,6 +2299,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of money representing a distribution of a bond's principal, for example, repayment of outstanding debt."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmPrincipalOrCorpus
+	 * CorporateActionAmounts42.mmPrincipalOrCorpus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2039,6 +2324,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrincipalOrCorpus";
 			definition = "Amount of money representing a distribution of a bond's principal, for example, repayment of outstanding debt.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmPrincipalOrCorpus);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmPrincipalOrCorpus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2083,6 +2369,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of money (not interest) in addition to the principal at the redemption of a bond."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmRedemptionPremiumAmount
+	 * CorporateActionAmounts42.mmRedemptionPremiumAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2100,6 +2394,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPremiumAmount";
 			definition = "Amount of money (not interest) in addition to the principal at the redemption of a bond.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmRedemptionPremiumAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmRedemptionPremiumAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2144,6 +2439,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount relating to the underlying security for which income is distributed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmIncomePortion
+	 * CorporateActionAmounts42.mmIncomePortion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2161,6 +2464,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePortion";
 			definition = "Amount relating to the underlying security for which income is distributed.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmIncomePortion);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmIncomePortion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2202,6 +2506,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of stock exchange tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmStockExchangeTax
+	 * CorporateActionAmounts42.mmStockExchangeTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2219,6 +2531,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
 			definition = "Amount of stock exchange tax.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmStockExchangeTax);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmStockExchangeTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2262,6 +2575,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Total amount of tax withheld at source in conformance with the EU Savings Directive."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmEUTaxRetentionAmount
+	 * CorporateActionAmounts42.mmEUTaxRetentionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2279,6 +2600,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EUTaxRetentionAmount";
 			definition = "Total amount of tax withheld at source in conformance with the EU Savings Directive.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmEUTaxRetentionAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmEUTaxRetentionAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2321,7 +2643,15 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of interest that has been accrued in between coupon payment periods"
+	 * "Amount of interest that has been accrued in between coupon payment periods."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmAccruedInterestAmount
+	 * CorporateActionAmounts42.mmAccruedInterestAmount}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -2339,7 +2669,8 @@ public class CorporateActionAmounts36 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19B::ACRU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
-			definition = "Amount of interest that has been accrued in between coupon payment periods";
+			definition = "Amount of interest that has been accrued in between coupon payment periods.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmAccruedInterestAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmAccruedInterestAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2381,6 +2712,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Portion of the fund distribution amount which represents the average accrued income included in the purchase price for units bought during the account period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmEqualisationAmount
+	 * CorporateActionAmounts42.mmEqualisationAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2397,6 +2736,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualisationAmount";
 			definition = "Portion of the fund distribution amount which represents the average accrued income included in the purchase price for units bought during the account period.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmEqualisationAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmEqualisationAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2436,6 +2776,14 @@ public class CorporateActionAmounts36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "FATCA (Foreign Account Tax Compliance Act) related tax amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmFATCATaxAmount
+	 * CorporateActionAmounts42.mmFATCATaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2452,6 +2800,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FATCATaxAmount";
 			definition = "FATCA (Foreign Account Tax Compliance Act) related tax amount.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmFATCATaxAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmFATCATaxAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2491,6 +2840,14 @@ public class CorporateActionAmounts36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of tax related income subject to NRA (Non Resident Alien)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmNRATaxAmount
+	 * CorporateActionAmounts42.mmNRATaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2507,6 +2864,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATaxAmount";
 			definition = "Amount of tax related income subject to NRA (Non Resident Alien).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmNRATaxAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmNRATaxAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2545,6 +2903,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of tax related to back up withholding."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmBackUpWithholdingTaxAmount
+	 * CorporateActionAmounts42.mmBackUpWithholdingTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2561,6 +2927,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BackUpWithholdingTaxAmount";
 			definition = "Amount of tax related to back up withholding.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmBackUpWithholdingTaxAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmBackUpWithholdingTaxAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2601,6 +2968,14 @@ public class CorporateActionAmounts36 {
 	 * definition} =
 	 * "Amount of overall tax withheld at source by fund managers prior to considering the tax obligation of each unit holder."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmTaxOnIncomeAmount
+	 * CorporateActionAmounts42.mmTaxOnIncomeAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2617,6 +2992,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxOnIncomeAmount";
 			definition = "Amount of overall tax withheld at source by fund managers prior to considering the tax obligation of each unit holder.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmTaxOnIncomeAmount);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmTaxOnIncomeAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2655,6 +3031,14 @@ public class CorporateActionAmounts36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of Transaction tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmTransactionTax
+	 * CorporateActionAmounts42.mmTransactionTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2671,6 +3055,7 @@ public class CorporateActionAmounts36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
 			definition = "Amount of Transaction tax.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmTransactionTax);
 			previousVersion_lazy = () -> CorporateActionAmounts27.mmTransactionTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2707,6 +3092,7 @@ public class CorporateActionAmounts36 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAmounts36";
 				definition = "Specifies amounts in the framework of a corporate action event.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionAmounts42.mmObject());
 				previousVersion_lazy = () -> CorporateActionAmounts27.mmObject();
 			}
 		});

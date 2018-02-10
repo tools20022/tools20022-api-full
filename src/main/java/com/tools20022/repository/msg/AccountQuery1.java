@@ -61,6 +61,12 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountQuery1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specification of the query criteria."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountQuery2 AccountQuery2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +103,13 @@ public class AccountQuery1 {
 	 * definition} =
 	 * "Specifies the type of matching items to be returned in the response to the query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountQuery2#mmQueryType
+	 * AccountQuery2.mmQueryType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
@@ -107,6 +120,7 @@ public class AccountQuery1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
+			nextVersions_lazy = () -> Arrays.asList(AccountQuery2.mmQueryType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
@@ -138,6 +152,14 @@ public class AccountQuery1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the account query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountQuery2#mmAccountCriteria
+	 * AccountQuery2.mmAccountCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountCriteria = new MMMessageAssociationEnd() {
@@ -148,6 +170,7 @@ public class AccountQuery1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountCriteria";
 			definition = "Defines the account query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(AccountQuery2.mmAccountCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -163,6 +186,7 @@ public class AccountQuery1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountQuery1";
 				definition = "Specification of the query criteria.";
+				nextVersions_lazy = () -> Arrays.asList(AccountQuery2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

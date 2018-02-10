@@ -32,7 +32,7 @@ import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Unique and unambiguous way to identify a party
+ * Unique and unambiguous way to identify a party.
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -1267,6 +1267,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.PartyIdentification112#mmIdentification
  * PartyIdentification112.mmIdentification}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification12#mmBICFI
+ * FinancialInstitutionIdentification12.mmBICFI}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msg.SafekeepingAccount7#mmAccountServicer
  * SafekeepingAccount7.mmAccountServicer}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification113#mmParty
@@ -1283,6 +1286,60 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PartyIdentification120#mmAlternateIdentification
  * PartyIdentification120.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification121#mmProprietary
+ * PartyIdentification121.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification122#mmProprietary
+ * PartyIdentification122.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount157#mmPartyIdentification
+ * PartyIdentificationAndAccount157.mmPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification123#mmPartyIdentification
+ * PartyIdentification123.mmPartyIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification124#mmParty
+ * PartyIdentification124.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount158#mmPartyIdentification
+ * PartyIdentificationAndAccount158.mmPartyIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty4#mmParty
+ * ProprietaryParty4.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmIdentification
+ * PartyIdentification125.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification126#mmIdentification
+ * PartyIdentification126.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount159#mmIdentification
+ * PartyIdentificationAndAccount159.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount159#mmAlternateIdentification
+ * PartyIdentificationAndAccount159.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmIdentification
+ * PartyIdentification127.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmAlternateIdentification
+ * PartyIdentification127.mmAlternateIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party35Choice#mmParty
+ * Party35Choice.mmParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification128#mmIdentification
+ * PartyIdentification128.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification128#mmAlternateIdentification
+ * PartyIdentification128.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount160#mmIdentification
+ * PartyIdentificationAndAccount160.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount160#mmAlternateIdentification
+ * PartyIdentificationAndAccount160.mmAlternateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmIdentification
+ * PartyIdentification129.mmIdentification}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -2119,6 +2176,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * CounterpartyIdentification2Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification112
  * PartyIdentification112}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification12
+ * FinancialInstitutionIdentification12}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification113
  * PartyIdentification113}</li>
  * <li>
@@ -2131,6 +2191,58 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.CounterpartyIdentification3Choice
  * CounterpartyIdentification3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementAgent1
+ * SettlementAgent1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConcentrationAgent1
+ * ConcentrationAgent1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification118Choice
+ * PartyIdentification118Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CoverTwoDefaulters1
+ * CoverTwoDefaulters1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification121
+ * PartyIdentification121}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ClearingAccount1
+ * ClearingAccount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification122
+ * PartyIdentification122}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount157
+ * PartyIdentificationAndAccount157}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification123
+ * PartyIdentification123}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification124
+ * PartyIdentification124}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification119Choice
+ * PartyIdentification119Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount158
+ * PartyIdentificationAndAccount158}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty4
+ * ProprietaryParty4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification125
+ * PartyIdentification125}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party34Choice Party34Choice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification126
+ * PartyIdentification126}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount159
+ * PartyIdentificationAndAccount159}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification127
+ * PartyIdentification127}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party35Choice Party35Choice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification128
+ * PartyIdentification128}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount160
+ * PartyIdentificationAndAccount160}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party36Choice Party36Choice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification129
+ * PartyIdentification129}</li>
  * </ul>
  * </li>
  * <li>
@@ -2149,7 +2261,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PartyIdentificationInformation"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Unique and unambiguous way to identify a party"</li>
+ * definition} = "Unique and unambiguous way to identify a party."</li>
  * </ul>
  */
 public class PartyIdentificationInformation {
@@ -2817,6 +2929,33 @@ public class PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters10#mmAcquirerIdentification
 	 * AcquirerProtocolParameters10.mmAcquirerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification119Choice#mmProprietaryIdentification
+	 * PartyIdentification119Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification13#mmOther
+	 * PersonIdentification13.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification9Choice#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification9Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71#mmMerchantIdentification
+	 * CardPaymentEnvironment71.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69#mmMerchantIdentification
+	 * CardPaymentEnvironment69.mmMerchantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification14#mmOther
+	 * PersonIdentification14.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation32#mmIdentification
+	 * Organisation32.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmAcquirerIdentification
+	 * AcquirerProtocolParameters11.mmAcquirerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification15#mmOther
+	 * PersonIdentification15.mmOther}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2895,7 +3034,9 @@ public class PartyIdentificationInformation {
 					IndividualPerson32.mmOtherIdentification, FinancialInstitutionIdentification8Choice.mmProprietaryIdentification, IndividualPerson31.mmOtherIdentification, InvestmentAccountOwnershipInformation15.mmOtherIdentification,
 					InvestmentAccountOwnershipInformation14.mmOtherIdentification, IndividualPersonIdentification3Choice.mmIdentificationNumber, SafekeepingPlaceFormat27Choice.mmProprietary,
 					CounterpartyIdentification3Choice.mmSectorAndLocation, CounterpartyIdentification3Choice.mmNameAndLocation, CardPaymentEnvironment64.mmMerchantIdentification, CardPaymentEnvironment65.mmMerchantIdentification,
-					CardPaymentEnvironment67.mmMerchantIdentification, CardPaymentEnvironment63.mmMerchantIdentification, AcquirerProtocolParameters10.mmAcquirerIdentification);
+					CardPaymentEnvironment67.mmMerchantIdentification, CardPaymentEnvironment63.mmMerchantIdentification, AcquirerProtocolParameters10.mmAcquirerIdentification, PartyIdentification119Choice.mmProprietaryIdentification,
+					PersonIdentification13.mmOther, FinancialInstitutionIdentification9Choice.mmProprietaryIdentification, CardPaymentEnvironment71.mmMerchantIdentification, CardPaymentEnvironment69.mmMerchantIdentification,
+					PersonIdentification14.mmOther, Organisation32.mmIdentification, AcquirerProtocolParameters11.mmAcquirerIdentification, PersonIdentification15.mmOther);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3056,6 +3197,9 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.msg.Organisation17#mmTaxIdentification
 	 * Organisation17.mmTaxIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmTaxationIdentificationNumber
+	 * Organisation20.mmTaxationIdentificationNumber}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Organisation21#mmTaxIdentificationNumber
 	 * Organisation21.mmTaxIdentificationNumber}</li>
 	 * <li>
@@ -3068,8 +3212,17 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmTaxIdentificationNumber
 	 * PersonIdentification11.mmTaxIdentificationNumber}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation27#mmTaxIdentificationNumber
+	 * Organisation27.mmTaxIdentificationNumber}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorTaxIdentificationNumber
 	 * DirectDebitMandate6.mmDebtorTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmTaxIdentificationNumber
+	 * Organisation31.mmTaxIdentificationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification15#mmTaxIdentificationNumber
+	 * PersonIdentification15.mmTaxIdentificationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3095,8 +3248,9 @@ public class PartyIdentificationInformation {
 					PersonIdentification3.mmTaxIdentificationNumber, TaxInformation2.mmCreditorTaxIdentification, TaxInformation2.mmDebtorTaxIdentification, TaxParty1.mmTaxIdentification, TaxParty1.mmRegistrationIdentification,
 					TaxParty2.mmTaxIdentification, TaxParty2.mmRegistrationIdentification, NonFinancialInstitutionIdentification1.mmTaxIdentificationNumber, PersonIdentification2.mmTaxIdentificationNumber,
 					PersonIdentificationType1Choice.mmTaxIdentificationNumber, TaxParty3.mmTaxIdentification, TaxParty3.mmRegistrationIdentification, BillingTaxRegion1.mmCustomerTaxIdentification, PartyIdentification24.mmTaxIdentification,
-					Organisation15.mmTaxIdentificationNumber, PersonIdentification7.mmTaxIdentificationNumber, Organisation16.mmTaxIdentification, Organisation17.mmTaxIdentification, Organisation21.mmTaxIdentificationNumber,
-					DirectDebitMandate5.mmDebtorTaxIdentificationNumber, PartyIdentification96Choice.mmTaxIdentificationNumber, PersonIdentification11.mmTaxIdentificationNumber, DirectDebitMandate6.mmDebtorTaxIdentificationNumber);
+					Organisation15.mmTaxIdentificationNumber, PersonIdentification7.mmTaxIdentificationNumber, Organisation16.mmTaxIdentification, Organisation17.mmTaxIdentification, Organisation20.mmTaxationIdentificationNumber,
+					Organisation21.mmTaxIdentificationNumber, DirectDebitMandate5.mmDebtorTaxIdentificationNumber, PartyIdentification96Choice.mmTaxIdentificationNumber, PersonIdentification11.mmTaxIdentificationNumber,
+					Organisation27.mmTaxIdentificationNumber, DirectDebitMandate6.mmDebtorTaxIdentificationNumber, Organisation31.mmTaxIdentificationNumber, PersonIdentification15.mmTaxIdentificationNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3159,6 +3313,9 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.msg.Organisation17#mmNationalRegistrationNumber
 	 * Organisation17.mmNationalRegistrationNumber}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmRegistrationNumber
+	 * Organisation20.mmRegistrationNumber}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Organisation21#mmNationalRegistrationNumber
 	 * Organisation21.mmNationalRegistrationNumber}</li>
 	 * <li>
@@ -3168,8 +3325,14 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#mmNationalRegistrationNumber
 	 * PartyIdentification96Choice.mmNationalRegistrationNumber}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation27#mmNationalRegistrationNumber
+	 * Organisation27.mmNationalRegistrationNumber}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DirectDebitMandate6#mmDebtorNationalRegistrationNumber
 	 * DirectDebitMandate6.mmDebtorNationalRegistrationNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmNationalRegistrationNumber
+	 * Organisation31.mmNationalRegistrationNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3194,8 +3357,9 @@ public class PartyIdentificationInformation {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation2.mmNationalRegistrationNumber, DirectDebitMandate3.mmDebtorNationalRegistrationNumber, DirectDebitMandate4.mmDebtorNationalRegistrationNumber,
 					Organisation13.mmNationalRegistrationNumber, Organisation4.mmNationalRegistrationNumber, PartyIdentification5Choice.mmNationalRegistrationNumber, Organisation3.mmNationalRegistrationNumber,
-					Organisation15.mmNationalRegistrationNumber, Organisation16.mmNationalRegistrationNumber, Organisation17.mmNationalRegistrationNumber, Organisation21.mmNationalRegistrationNumber,
-					DirectDebitMandate5.mmDebtorNationalRegistrationNumber, PartyIdentification96Choice.mmNationalRegistrationNumber, DirectDebitMandate6.mmDebtorNationalRegistrationNumber);
+					Organisation15.mmNationalRegistrationNumber, Organisation16.mmNationalRegistrationNumber, Organisation17.mmNationalRegistrationNumber, Organisation20.mmRegistrationNumber, Organisation21.mmNationalRegistrationNumber,
+					DirectDebitMandate5.mmDebtorNationalRegistrationNumber, PartyIdentification96Choice.mmNationalRegistrationNumber, Organisation27.mmNationalRegistrationNumber, DirectDebitMandate6.mmDebtorNationalRegistrationNumber,
+					Organisation31.mmNationalRegistrationNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3589,7 +3753,7 @@ public class PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the period during which an identification is valid"</li>
+	 * "Specifies the period during which an identification is valid."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
@@ -3598,7 +3762,7 @@ public class PartyIdentificationInformation {
 			elementContext_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
-			definition = "Specifies the period during which an identification is valid";
+			definition = "Specifies the period during which an identification is valid.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedIdentification;
@@ -3800,6 +3964,15 @@ public class PartyIdentificationInformation {
 	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3#mmBranchIdentification
 	 * SecuredMarketTransaction3.mmBranchIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrganisationIdentification5Choice#mmLEI
+	 * OrganisationIdentification5Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrganisationIdentification1Choice#mmLEI
+	 * OrganisationIdentification1Choice.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrganisationIdentification3Choice#mmLEI
+	 * OrganisationIdentification3Choice.mmLEI}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument53#mmLEI
 	 * FinancialInstrument53.mmLEI}</li>
 	 * <li>
@@ -3832,6 +4005,39 @@ public class PartyIdentificationInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmBranchIdentification
 	 * UnsecuredMarketTransaction4.mmBranchIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementAgent1#mmIdentification
+	 * SettlementAgent1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConcentrationAgent1#mmIdentification
+	 * ConcentrationAgent1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CoverTwoDefaulters1#mmCover1Identification
+	 * CoverTwoDefaulters1.mmCover1Identification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CoverTwoDefaulters1#mmCover2Identification
+	 * CoverTwoDefaulters1.mmCover2Identification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument59#mmIssuer
+	 * FinancialInstrument59.mmIssuer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Deposit1#mmCounterpartyIdentification
+	 * Deposit1.mmCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification15#mmLEI
+	 * FinancialInstitutionIdentification15.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount159#mmLEI
+	 * PartyIdentificationAndAccount159.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmLEI
+	 * PartyIdentification127.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification128#mmLEI
+	 * PartyIdentification128.mmLEI}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount160#mmLEI
+	 * PartyIdentificationAndAccount160.mmLEI}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3863,9 +4069,12 @@ public class PartyIdentificationInformation {
 					PartyIdentification103.mmLEI, PartyIdentificationAndAccount131.mmLEI, PartyIdentificationAndAccount146.mmLEI, PartyIdentificationAndAccount135.mmLEI, PartyIdentificationAndAccount137.mmLEI,
 					PartyIdentificationAndAccount136.mmLEI, PartyIdentificationAndAccount134.mmLEI, CounterpartyIdentification2Choice.mmLEI, UnsecuredMarketTransaction2.mmBranchIdentification,
 					ForeignExchangeSwapTransaction2.mmBranchIdentification, SecuredMarketTransaction2.mmBranchIdentification, MoneyMarketTransactionStatus2.mmBranchIdentification, UnsecuredMarketTransaction3.mmBranchIdentification,
-					OvernightIndexSwapTransaction3.mmBranchIdentification, SecuredMarketTransaction3.mmBranchIdentification, FinancialInstrument53.mmLEI, FinancialInstitutionIdentification10.mmLEI, Organisation30.mmLegalEntityIdentifier,
-					Organisation29.mmLegalEntityIdentifier, SecuritiesReferenceDataReport5.mmIssuer, FinancialInstrument48Choice.mmLEI, SecuredMarketTransaction4.mmBranchIdentification, CounterpartyIdentification3Choice.mmLEI,
-					ForeignExchangeSwapTransaction3.mmBranchIdentification, OvernightIndexSwapTransaction4.mmBranchIdentification, UnsecuredMarketTransaction4.mmBranchIdentification);
+					OvernightIndexSwapTransaction3.mmBranchIdentification, SecuredMarketTransaction3.mmBranchIdentification, OrganisationIdentification5Choice.mmLEI, OrganisationIdentification1Choice.mmLEI,
+					OrganisationIdentification3Choice.mmLEI, FinancialInstrument53.mmLEI, FinancialInstitutionIdentification10.mmLEI, Organisation30.mmLegalEntityIdentifier, Organisation29.mmLegalEntityIdentifier,
+					SecuritiesReferenceDataReport5.mmIssuer, FinancialInstrument48Choice.mmLEI, SecuredMarketTransaction4.mmBranchIdentification, CounterpartyIdentification3Choice.mmLEI,
+					ForeignExchangeSwapTransaction3.mmBranchIdentification, OvernightIndexSwapTransaction4.mmBranchIdentification, UnsecuredMarketTransaction4.mmBranchIdentification, SettlementAgent1.mmIdentification,
+					ConcentrationAgent1.mmIdentification, CoverTwoDefaulters1.mmCover1Identification, CoverTwoDefaulters1.mmCover2Identification, FinancialInstrument59.mmIssuer, Deposit1.mmCounterpartyIdentification,
+					FinancialInstitutionIdentification15.mmLEI, PartyIdentificationAndAccount159.mmLEI, PartyIdentification127.mmLEI, PartyIdentification128.mmLEI, PartyIdentificationAndAccount160.mmLEI);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PartyIdentificationInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3892,7 +4101,7 @@ public class PartyIdentificationInformation {
 				semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "BusinessComment", new String[]{"BusinessComment", "\"Information\" to be removed when PartyIdentification message component is removed."}));
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationInformation";
-				definition = "Unique and unambiguous way to identify a party";
+				definition = "Unique and unambiguous way to identify a party.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmRelatedPartyIdentification, com.tools20022.repository.entity.Party.mmIdentification,
 						com.tools20022.repository.entity.PartyName.mmPartyIdentification, com.tools20022.repository.entity.DateTimePeriod.mmRelatedIdentification, com.tools20022.repository.entity.Market.mmIdentification);
 				derivationElement_lazy = () -> Arrays.asList(PartyIdentification1Choice.mmNameAndAddress, PartyIdentification2Choice.mmNameAndAddress, PartyIdentification5Choice.mmNameAndAddress, PartyIdentification8.mmIdentification,
@@ -3998,8 +4207,12 @@ public class PartyIdentificationInformation {
 						PartyIdentificationAndAccount146.mmIdentification, PartyIdentificationAndAccount136.mmIdentification, PartyIdentificationAndAccount136.mmAlternateIdentification, PartyIdentificationAndAccount134.mmIdentification,
 						PartyIdentificationAndAccount134.mmAlternateIdentification, PartyIdentification109.mmIdentification, PartyIdentification111.mmIdentification, PartyIdentification110.mmIdentification,
 						PartyIdentification115Choice.mmNameAndAddress, SafeKeepingPlace2.mmSafekeepingPlaceFormat, PlaceOfTradeIdentification2.mmMarketTypeAndIdentification, Pledgee2.mmPledgeeTypeAndIdentification,
-						PartyIdentification112.mmIdentification, SafekeepingAccount7.mmAccountServicer, PartyIdentification113.mmParty, PartyIdentificationAndAccount147.mmPartyIdentification, PartyIdentification119.mmIdentification,
-						PartyIdentification120.mmIdentification, PartyIdentification120.mmAlternateIdentification);
+						PartyIdentification112.mmIdentification, FinancialInstitutionIdentification12.mmBICFI, SafekeepingAccount7.mmAccountServicer, PartyIdentification113.mmParty, PartyIdentificationAndAccount147.mmPartyIdentification,
+						PartyIdentification119.mmIdentification, PartyIdentification120.mmIdentification, PartyIdentification120.mmAlternateIdentification, PartyIdentification121.mmProprietary, PartyIdentification122.mmProprietary,
+						PartyIdentificationAndAccount157.mmPartyIdentification, PartyIdentification123.mmPartyIdentification, PartyIdentification124.mmParty, PartyIdentificationAndAccount158.mmPartyIdentification,
+						ProprietaryParty4.mmParty, PartyIdentification125.mmIdentification, PartyIdentification126.mmIdentification, PartyIdentificationAndAccount159.mmIdentification,
+						PartyIdentificationAndAccount159.mmAlternateIdentification, PartyIdentification127.mmIdentification, PartyIdentification127.mmAlternateIdentification, Party35Choice.mmParty, PartyIdentification128.mmIdentification,
+						PartyIdentification128.mmAlternateIdentification, PartyIdentificationAndAccount160.mmIdentification, PartyIdentificationAndAccount160.mmAlternateIdentification, PartyIdentification129.mmIdentification);
 				subType_lazy = () -> Arrays.asList(OrganisationIdentification.mmObject(), PersonIdentification.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PartyIdentificationInformation.mmOtherIdentification, com.tools20022.repository.entity.PartyIdentificationInformation.mmIdentifiedParty,
 						com.tools20022.repository.entity.PartyIdentificationInformation.mmTaxIdentificationNumber, com.tools20022.repository.entity.PartyIdentificationInformation.mmNationalRegistrationNumber,
@@ -4076,7 +4289,12 @@ public class PartyIdentificationInformation {
 						PartyIdentificationAndAccount131.mmObject(), PartyIdentificationAndAccount146.mmObject(), PartyIdentificationAndAccount136.mmObject(), PartyIdentificationAndAccount134.mmObject(), PartyIdentification109.mmObject(),
 						PartyIdentification111.mmObject(), PartyIdentification110.mmObject(), PartyIdentification115Choice.mmObject(), SafeKeepingPlace2.mmObject(), PartyIdentification114Choice.mmObject(),
 						PlaceOfTradeIdentification2.mmObject(), Pledgee2.mmObject(), PartyIdentification95Choice.mmObject(), CounterpartyIdentification2Choice.mmObject(), PartyIdentification112.mmObject(),
-						PartyIdentification113.mmObject(), PartyIdentificationAndAccount147.mmObject(), PartyIdentification119.mmObject(), PartyIdentification120.mmObject(), CounterpartyIdentification3Choice.mmObject());
+						FinancialInstitutionIdentification12.mmObject(), PartyIdentification113.mmObject(), PartyIdentificationAndAccount147.mmObject(), PartyIdentification119.mmObject(), PartyIdentification120.mmObject(),
+						CounterpartyIdentification3Choice.mmObject(), SettlementAgent1.mmObject(), ConcentrationAgent1.mmObject(), PartyIdentification118Choice.mmObject(), CoverTwoDefaulters1.mmObject(), PartyIdentification121.mmObject(),
+						ClearingAccount1.mmObject(), PartyIdentification122.mmObject(), PartyIdentificationAndAccount157.mmObject(), PartyIdentification123.mmObject(), PartyIdentification124.mmObject(),
+						PartyIdentification119Choice.mmObject(), PartyIdentificationAndAccount158.mmObject(), ProprietaryParty4.mmObject(), PartyIdentification125.mmObject(), Party34Choice.mmObject(), PartyIdentification126.mmObject(),
+						PartyIdentificationAndAccount159.mmObject(), PartyIdentification127.mmObject(), Party35Choice.mmObject(), PartyIdentification128.mmObject(), PartyIdentificationAndAccount160.mmObject(), Party36Choice.mmObject(),
+						PartyIdentification129.mmObject());
 			}
 
 			@Override

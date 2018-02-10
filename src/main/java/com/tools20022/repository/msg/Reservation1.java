@@ -70,6 +70,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Liquidity set aside by the account owner for specific purposes."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Reservation3 Reservation3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +116,13 @@ public class Reservation1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Reservation3#mmAmount
+	 * Reservation3.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -121,6 +134,7 @@ public class Reservation1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
+			nextVersions_lazy = () -> Arrays.asList(Reservation3.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
@@ -158,6 +172,13 @@ public class Reservation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the limit, such as enabled or disabled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Reservation3#mmStatus
+	 * Reservation3.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -169,6 +190,7 @@ public class Reservation1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the limit, such as enabled or disabled.";
+			nextVersions_lazy = () -> Arrays.asList(Reservation3.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ReservationStatus1Choice.mmObject();
@@ -207,6 +229,14 @@ public class Reservation1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the reservation becomes effective."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Reservation3#mmStartDateTime
+	 * Reservation3.mmStartDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
@@ -218,6 +248,7 @@ public class Reservation1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDateTime";
 			definition = "Date and time at which the reservation becomes effective.";
+			nextVersions_lazy = () -> Arrays.asList(Reservation3.mmStartDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -233,6 +264,7 @@ public class Reservation1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reservation1";
 				definition = "Liquidity set aside by the account owner for specific purposes.";
+				nextVersions_lazy = () -> Arrays.asList(Reservation3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -503,6 +503,18 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmSubscriptionCostDebitDate
 	 * CorporateActionDate55.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate60#mmSubscriptionCostDebitDate
+	 * CorporateActionDate60.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmSubscriptionCostDebitDate
+	 * CorporateActionDate64.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate68#mmSubscriptionCostDebitDate
+	 * CorporateActionDate68.mmSubscriptionCostDebitDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmSubscriptionCostDebitDate
+	 * CorporateActionDate71.mmSubscriptionCostDebitDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -528,7 +540,8 @@ public class BiddingConditions {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmSubscriptionCostDebitDate, CorporateActionDate10.mmSubscriptionCostDebitDate, CorporateActionDate18.mmSubscriptionCostDebitDate,
 					CorporateActionDate19.mmSubscriptionCostDebitDate, CorporateActionDate8.mmSubscriptionCostDebitDate, CorporateActionDate11.mmSubscriptionCostDebitDate, CorporateActionDate15.mmSubscriptionCostDebitDate,
 					CorporateActionDate16.mmSubscriptionCostDebitDate, CorporateActionDate4.mmSubscriptionCostDebitDate, CorporateActionDate29.mmSubscriptionCostDebitDate, CorporateActionDate33.mmSubscriptionCostDebitDate,
-					CorporateActionDate46.mmSubscriptionCostDebitDate, CorporateActionDate48.mmSubscriptionCostDebitDate, CorporateActionDate52.mmSubscriptionCostDebitDate, CorporateActionDate55.mmSubscriptionCostDebitDate);
+					CorporateActionDate46.mmSubscriptionCostDebitDate, CorporateActionDate48.mmSubscriptionCostDebitDate, CorporateActionDate52.mmSubscriptionCostDebitDate, CorporateActionDate55.mmSubscriptionCostDebitDate,
+					CorporateActionDate60.mmSubscriptionCostDebitDate, CorporateActionDate64.mmSubscriptionCostDebitDate, CorporateActionDate68.mmSubscriptionCostDebitDate, CorporateActionDate71.mmSubscriptionCostDebitDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -679,6 +692,24 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate85#mmMaximumAllowedOversubscriptionRate
 	 * CorporateActionRate85.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate86#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate86.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate87.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate88#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate88.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate92#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate92.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate94#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate94.mmMaximumAllowedOversubscriptionRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate97#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate97.mmMaximumAllowedOversubscriptionRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -713,7 +744,9 @@ public class BiddingConditions {
 					CorporateActionRate67.mmMaximumAllowedOversubscriptionRate, CorporateActionRate74.mmMaximumAllowedOversubscriptionRate, CorporateActionRate79.mmMaximumAllowedOversubscriptionRate,
 					CorporateActionRate76.mmMaximumAllowedOversubscriptionRate, CorporateActionRate82.mmMaximumAllowedOversubscriptionRate, CorporateActionRate80.mmMaximumAllowedOversubscriptionRate,
 					CorporateActionRate81.mmMaximumAllowedOversubscriptionRate, CorporateActionRate83.mmMaximumAllowedOversubscriptionRate, CorporateActionRate84.mmMaximumAllowedOversubscriptionRate,
-					CorporateActionRate85.mmMaximumAllowedOversubscriptionRate);
+					CorporateActionRate85.mmMaximumAllowedOversubscriptionRate, CorporateActionRate86.mmMaximumAllowedOversubscriptionRate, CorporateActionRate87.mmMaximumAllowedOversubscriptionRate,
+					CorporateActionRate88.mmMaximumAllowedOversubscriptionRate, CorporateActionRate92.mmMaximumAllowedOversubscriptionRate, CorporateActionRate94.mmMaximumAllowedOversubscriptionRate,
+					CorporateActionRate97.mmMaximumAllowedOversubscriptionRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -851,6 +884,24 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate85#mmProrationRate
 	 * CorporateActionRate85.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate86#mmProrationRate
+	 * CorporateActionRate86.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmProrationRate
+	 * CorporateActionRate87.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate88#mmProrationRate
+	 * CorporateActionRate88.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate92#mmProrationRate
+	 * CorporateActionRate92.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate94#mmProrationRate
+	 * CorporateActionRate94.mmProrationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate97#mmProrationRate
+	 * CorporateActionRate97.mmProrationRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -878,7 +929,8 @@ public class BiddingConditions {
 					CorporateActionRate46.mmProrationRate, CorporateActionRate45.mmProrationRate, CorporateActionRate44.mmProrationRate, CorporateActionRate60.mmProrationRate, CorporateActionRate64.mmProrationRate,
 					CorporateActionRate57.mmProrationRate, CorporateActionRate68.mmProrationRate, CorporateActionRate70.mmProrationRate, CorporateActionRate67.mmProrationRate, CorporateActionRate74.mmProrationRate,
 					CorporateActionRate79.mmProrationRate, CorporateActionRate76.mmProrationRate, CorporateActionRate82.mmProrationRate, CorporateActionRate80.mmProrationRate, CorporateActionRate81.mmProrationRate,
-					CorporateActionRate83.mmProrationRate, CorporateActionRate84.mmProrationRate, CorporateActionRate85.mmProrationRate);
+					CorporateActionRate83.mmProrationRate, CorporateActionRate84.mmProrationRate, CorporateActionRate85.mmProrationRate, CorporateActionRate86.mmProrationRate, CorporateActionRate87.mmProrationRate,
+					CorporateActionRate88.mmProrationRate, CorporateActionRate92.mmProrationRate, CorporateActionRate94.mmProrationRate, CorporateActionRate97.mmProrationRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1035,6 +1087,30 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RateDetails30#mmApplicableRate
 	 * RateDetails30.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31#mmApplicableRate
+	 * RateDetails31.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmApplicableRate
+	 * RateDetails32.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmApplicableRate
+	 * CorporateActionRate90.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate89#mmApplicableRate
+	 * CorporateActionRate89.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate93#mmApplicableRate
+	 * CorporateActionRate93.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33#mmApplicableRate
+	 * RateDetails33.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate95#mmApplicableRate
+	 * CorporateActionRate95.mmApplicableRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34#mmApplicableRate
+	 * RateDetails34.mmApplicableRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1063,7 +1139,9 @@ public class BiddingConditions {
 					RateDetails13.mmApplicableRate, CorporateActionRate2.mmApplicableRate, RateDetails15.mmApplicableRate, CorporateActionRate48.mmApplicableRate, CorporateActionRate49.mmApplicableRate, RateDetails14.mmApplicableRate,
 					CorporateActionRate58.mmApplicableRate, RateDetails18.mmApplicableRate, RateDetails21.mmApplicableRate, CorporateActionRate65.mmApplicableRate, RateDetails23.mmApplicableRate, CorporateActionRate69.mmApplicableRate,
 					RateDetails22.mmApplicableRate, CorporateActionRate72.mmApplicableRate, RateDetails24.mmApplicableRate, RateDetails25.mmApplicableRate, CorporateActionRate77.mmApplicableRate, CorporateActionRate75.mmApplicableRate,
-					RateDetails26.mmApplicableRate, RateDetails27.mmApplicableRate, RateDetails28.mmApplicableRate, RateDetails30.mmApplicableRate);
+					RateDetails26.mmApplicableRate, RateDetails27.mmApplicableRate, RateDetails28.mmApplicableRate, RateDetails30.mmApplicableRate, RateDetails31.mmApplicableRate, RateDetails32.mmApplicableRate,
+					CorporateActionRate90.mmApplicableRate, CorporateActionRate89.mmApplicableRate, CorporateActionRate93.mmApplicableRate, RateDetails33.mmApplicableRate, CorporateActionRate95.mmApplicableRate,
+					RateDetails34.mmApplicableRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1290,6 +1368,12 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate77#mmTransformationRate
 	 * CorporateActionRate77.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate89#mmTransformationRate
+	 * CorporateActionRate89.mmTransformationRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate95#mmTransformationRate
+	 * CorporateActionRate95.mmTransformationRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1314,7 +1398,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate7.mmTransformationRate, CorporateActionRate13.mmTransformationRate, CorporateActionRate17.mmTransformationRate, CorporateActionRate19.mmTransformationRate,
 					CorporateActionRate28.mmTransformationRate, CorporateActionRate33.mmTransformationRate, CorporateActionRate48.mmTransformationRate, CorporateActionRate58.mmTransformationRate, CorporateActionRate69.mmTransformationRate,
-					CorporateActionRate77.mmTransformationRate);
+					CorporateActionRate77.mmTransformationRate, CorporateActionRate89.mmTransformationRate, CorporateActionRate95.mmTransformationRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1379,6 +1463,12 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmProrationDate
 	 * CorporateActionDate58.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmProrationDate
+	 * CorporateActionDate61.mmProrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmProrationDate
+	 * CorporateActionDate74.mmProrationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1403,7 +1493,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmProrationDate, CorporateActionDate13.mmProrationDate, CorporateActionDate14.mmProrationDate, CorporateActionDate21.mmProrationDate,
 					CorporateActionDate22.mmProrationDate, CorporateActionDate25.mmProrationDate, CorporateActionDate27.mmProrationDate, CorporateActionDate28.mmProrationDate, CorporateActionDate2.mmProrationDate,
-					CorporateActionDate44.mmProrationDate, CorporateActionDate58.mmProrationDate);
+					CorporateActionDate44.mmProrationDate, CorporateActionDate58.mmProrationDate, CorporateActionDate61.mmProrationDate, CorporateActionDate74.mmProrationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1458,6 +1548,9 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmCompulsoryPurchasePeriod
 	 * CorporateActionPeriod10.mmCompulsoryPurchasePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmCompulsoryPurchasePeriod
+	 * CorporateActionPeriod14.mmCompulsoryPurchasePeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1481,7 +1574,7 @@ public class BiddingConditions {
 	public static final MMBusinessAssociationEnd mmCompulsoryPurchasePeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmCompulsoryPurchasePeriod, CorporateActionPeriod6.mmCompulsoryPurchasePeriod, CorporateActionPeriod8.mmCompulsoryPurchasePeriod,
-					CorporateActionPeriod1.mmCompulsoryPurchasePeriod, CorporateActionPeriod10.mmCompulsoryPurchasePeriod);
+					CorporateActionPeriod1.mmCompulsoryPurchasePeriod, CorporateActionPeriod10.mmCompulsoryPurchasePeriod, CorporateActionPeriod14.mmCompulsoryPurchasePeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1547,6 +1640,12 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate78#mmPercentageSought
 	 * CorporateActionRate78.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmPercentageSought
+	 * CorporateActionRate91.mmPercentageSought}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate96#mmPercentageSought
+	 * CorporateActionRate96.mmPercentageSought}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1571,7 +1670,8 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmPercentageSought, CorporateActionRate14.mmPercentageSought, CorporateActionRate16.mmPercentageSought, CorporateActionRate24.mmPercentageSought,
 					CorporateActionRate27.mmPercentageSought, CorporateActionRate32.mmPercentageSought, CorporateActionRate35.mmPercentageSought, CorporateActionRate41.mmPercentageSought, CorporateActionRate1.mmPercentageSought,
-					CorporateActionRate43.mmPercentageSought, CorporateActionRate56.mmPercentageSought, CorporateActionRate66.mmPercentageSought, CorporateActionRate78.mmPercentageSought);
+					CorporateActionRate43.mmPercentageSought, CorporateActionRate56.mmPercentageSought, CorporateActionRate66.mmPercentageSought, CorporateActionRate78.mmPercentageSought, CorporateActionRate91.mmPercentageSought,
+					CorporateActionRate96.mmPercentageSought);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1643,6 +1743,12 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate78#mmBidInterval
 	 * CorporateActionRate78.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmBidInterval
+	 * CorporateActionRate91.mmBidInterval}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate96#mmBidInterval
+	 * CorporateActionRate96.mmBidInterval}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1665,7 +1771,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate3.mmBidInterval, CorporateActionRate14.mmBidInterval, CorporateActionRate16.mmBidInterval, CorporateActionRate24.mmBidInterval, CorporateActionRate27.mmBidInterval,
 					CorporateActionRate32.mmBidInterval, CorporateActionRate35.mmBidInterval, CorporateActionRate41.mmBidInterval, CorporateActionRate1.mmBidInterval, CorporateActionRate43.mmBidInterval,
-					CorporateActionRate56.mmBidInterval, CorporateActionRate66.mmBidInterval, CorporateActionRate78.mmBidInterval);
+					CorporateActionRate56.mmBidInterval, CorporateActionRate66.mmBidInterval, CorporateActionRate78.mmBidInterval, CorporateActionRate91.mmBidInterval, CorporateActionRate96.mmBidInterval);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2066,6 +2172,12 @@ public class BiddingConditions {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD2#mmBaseDenomination
 	 * CorporateActionQuantitySD2.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity9#mmBaseDenomination
+	 * CorporateActionQuantity9.mmBaseDenomination}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantity10#mmBaseDenomination
+	 * CorporateActionQuantity10.mmBaseDenomination}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2090,7 +2202,7 @@ public class BiddingConditions {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionQuantity1.mmBaseDenomination, CorporateActionQuantity2.mmBaseDenomination, CorporateActionQuantity3.mmBaseDenomination, CorporateActionQuantity4.mmBaseDenomination,
 					CorporateActionQuantity5.mmBaseDenomination, CorporateActionQuantity6.mmBaseDenomination, CorporateAction2.mmBaseDenomination, CorporateActionQuantity7.mmBaseDenomination, CorporateActionQuantity8.mmBaseDenomination,
-					CorporateActionQuantitySD2.mmBaseDenomination);
+					CorporateActionQuantitySD2.mmBaseDenomination, CorporateActionQuantity9.mmBaseDenomination, CorporateActionQuantity10.mmBaseDenomination);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BiddingConditions.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

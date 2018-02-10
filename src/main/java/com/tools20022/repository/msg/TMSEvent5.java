@@ -76,6 +76,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Result of an individual terminal management action performed by the point of interaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSEvent6 TMSEvent6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.TMSEvent4
  * TMSEvent4}</li>
@@ -114,6 +120,13 @@ public class TMSEvent5 {
 	 * definition} =
 	 * "Date time of the terminal management action performed by the point of interaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSEvent6#mmTimeStamp
+	 * TMSEvent6.mmTimeStamp}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +142,7 @@ public class TMSEvent5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeStamp";
 			definition = "Date time of the terminal management action performed by the point of interaction.";
+			nextVersions_lazy = () -> Arrays.asList(TMSEvent6.mmTimeStamp);
 			previousVersion_lazy = () -> TMSEvent4.mmTimeStamp;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -168,6 +182,13 @@ public class TMSEvent5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Final result of the processed terminal management action."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSEvent6#mmResult
+	 * TMSEvent6.mmResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -184,6 +205,7 @@ public class TMSEvent5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Final result of the processed terminal management action.";
+			nextVersions_lazy = () -> Arrays.asList(TMSEvent6.mmResult);
 			previousVersion_lazy = () -> TMSEvent4.mmResult;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -218,6 +240,14 @@ public class TMSEvent5 {
 	 * definition} =
 	 * "Identification of the terminal management action performed by the point of interaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSEvent6#mmActionIdentification
+	 * TMSEvent6.mmActionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -233,6 +263,7 @@ public class TMSEvent5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionIdentification";
 			definition = "Identification of the terminal management action performed by the point of interaction.";
+			nextVersions_lazy = () -> Arrays.asList(TMSEvent6.mmActionIdentification);
 			previousVersion_lazy = () -> TMSEvent4.mmActionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -266,6 +297,14 @@ public class TMSEvent5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional information related to a failure."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSEvent6#mmAdditionalErrorInformation
+	 * TMSEvent6.mmAdditionalErrorInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -281,6 +320,7 @@ public class TMSEvent5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalErrorInformation";
 			definition = "Additional information related to a failure.";
+			nextVersions_lazy = () -> Arrays.asList(TMSEvent6.mmAdditionalErrorInformation);
 			previousVersion_lazy = () -> TMSEvent4.mmAdditionalErrorInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -298,6 +338,7 @@ public class TMSEvent5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSEvent5";
 				definition = "Result of an individual terminal management action performed by the point of interaction.";
+				nextVersions_lazy = () -> Arrays.asList(TMSEvent6.mmObject());
 				previousVersion_lazy = () -> TMSEvent4.mmObject();
 			}
 		});

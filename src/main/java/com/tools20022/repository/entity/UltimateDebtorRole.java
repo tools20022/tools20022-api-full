@@ -59,6 +59,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmUltimateDebtor
  * RequestedModification6.mmUltimateDebtor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmUltimateDebtor
+ * RequestedModification7.mmUltimateDebtor}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Garnishment2#mmGarnishee
+ * Garnishment2.mmGarnishee}</li>
  * </ul>
  * </li>
  * <li>
@@ -89,7 +94,7 @@ public class UltimateDebtorRole extends PaymentObligationPartyRole {
 				name = "UltimateDebtorRole";
 				definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
 				derivationElement_lazy = () -> Arrays.asList(RequestedModification2.mmUltimateDebtor, RequestedModification3.mmUltimateDebtor, Garnishment1.mmGarnishee, RequestedModification4.mmUltimateDebtor,
-						RequestedModification5.mmUltimateDebtor, RequestedModification6.mmUltimateDebtor);
+						RequestedModification5.mmUltimateDebtor, RequestedModification6.mmUltimateDebtor, RequestedModification7.mmUltimateDebtor, Garnishment2.mmGarnishee);
 				superType_lazy = () -> PaymentObligationPartyRole.mmObject();
 			}
 

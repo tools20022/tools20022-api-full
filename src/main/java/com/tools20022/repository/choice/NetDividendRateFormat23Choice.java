@@ -71,6 +71,14 @@ import javax.xml.bind.annotation.XmlType;
  * "NetDividendRateFormat23Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between an amount or an unspecified rate."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat30Choice
+ * NetDividendRateFormat30Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +119,14 @@ public class NetDividendRateFormat23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of monetary units specified in a currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat30Choice#mmAmount
+	 * NetDividendRateFormat30Choice.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -122,6 +138,7 @@ public class NetDividendRateFormat23Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
+			nextVersions_lazy = () -> Arrays.asList(NetDividendRateFormat30Choice.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -158,6 +175,14 @@ public class NetDividendRateFormat23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies an amount and a rate status."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat30Choice#mmAmountAndRateStatus
+	 * NetDividendRateFormat30Choice.mmAmountAndRateStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
@@ -169,6 +194,7 @@ public class NetDividendRateFormat23Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndRateStatus";
 			definition = "Specifies an amount and a rate status.";
+			nextVersions_lazy = () -> Arrays.asList(NetDividendRateFormat30Choice.mmAmountAndRateStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -205,6 +231,14 @@ public class NetDividendRateFormat23Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies different formats for the net dividend rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.NetDividendRateFormat30Choice#mmRateTypeAndAmountAndRateStatus
+	 * NetDividendRateFormat30Choice.mmRateTypeAndAmountAndRateStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
@@ -216,6 +250,7 @@ public class NetDividendRateFormat23Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the net dividend rate.";
+			nextVersions_lazy = () -> Arrays.asList(NetDividendRateFormat30Choice.mmRateTypeAndAmountAndRateStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -233,6 +268,7 @@ public class NetDividendRateFormat23Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetDividendRateFormat23Choice";
 				definition = "Choice between an amount or an unspecified rate.";
+				nextVersions_lazy = () -> Arrays.asList(NetDividendRateFormat30Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

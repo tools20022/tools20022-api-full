@@ -88,6 +88,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CashAccountSearchCriteria5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to search for an account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6
+ * CashAccountSearchCriteria6}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -129,6 +136,14 @@ public class CashAccountSearchCriteria5 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmAccountIdentification
+	 * CashAccountSearchCriteria6.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
@@ -140,6 +155,7 @@ public class CashAccountSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountSearchCriteria6.mmAccountIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
@@ -178,6 +194,14 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the nature, or use, of the cash account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmType
+	 * CashAccountSearchCriteria6.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -189,6 +213,7 @@ public class CashAccountSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature, or use, of the cash account.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountSearchCriteria6.mmType);
 			minOccurs = 0;
 			complexType_lazy = () -> CashAccountType2Choice.mmObject();
 		}
@@ -226,6 +251,14 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the currency of the cash account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmCurrency
+	 * CashAccountSearchCriteria6.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
@@ -237,6 +270,7 @@ public class CashAccountSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Specifies the currency of the cash account.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountSearchCriteria6.mmCurrency);
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
@@ -272,6 +306,14 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of the account which is being queried."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmBalance
+	 * CashAccountSearchCriteria6.mmBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
@@ -283,6 +325,7 @@ public class CashAccountSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Balance of the account which is being queried.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountSearchCriteria6.mmBalance);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
@@ -319,6 +362,14 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Owner of the account which is being queried."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmAccountOwner
+	 * CashAccountSearchCriteria6.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -330,6 +381,7 @@ public class CashAccountSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountSearchCriteria6.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -368,6 +420,14 @@ public class CashAccountSearchCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Servicer of the account which is being queried."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmAccountServicer
+	 * CashAccountSearchCriteria6.mmAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
@@ -379,6 +439,7 @@ public class CashAccountSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Servicer of the account which is being queried.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountSearchCriteria6.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -398,6 +459,7 @@ public class CashAccountSearchCriteria5 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountSearchCriteria5";
 				definition = "Defines the criteria used to search for an account.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccountSearchCriteria6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

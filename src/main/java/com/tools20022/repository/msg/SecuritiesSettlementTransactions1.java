@@ -79,6 +79,14 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesSettlementTransactions1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides the transactions in the report."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions2
+ * SecuritiesSettlementTransactions2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,6 +121,14 @@ public class SecuritiesSettlementTransactions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions2#mmAccountOwner
+	 * SecuritiesSettlementTransactions2.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -123,6 +139,7 @@ public class SecuritiesSettlementTransactions1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactions2.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -155,6 +172,14 @@ public class SecuritiesSettlementTransactions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account where financial instruments are maintained."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions2#mmSafekeepingAccount
+	 * SecuritiesSettlementTransactions2.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
@@ -165,6 +190,7 @@ public class SecuritiesSettlementTransactions1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactions2.mmSafekeepingAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -197,6 +223,14 @@ public class SecuritiesSettlementTransactions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status and status reason of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions2#mmStatusAndReason
+	 * SecuritiesSettlementTransactions2.mmStatusAndReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
@@ -207,6 +241,7 @@ public class SecuritiesSettlementTransactions1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactions2.mmStatusAndReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -239,6 +274,14 @@ public class SecuritiesSettlementTransactions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the individual transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactions2#mmTransaction
+	 * SecuritiesSettlementTransactions2.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
@@ -249,6 +292,7 @@ public class SecuritiesSettlementTransactions1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Identifies the individual transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactions2.mmTransaction);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Transaction25.mmObject();
@@ -267,6 +311,7 @@ public class SecuritiesSettlementTransactions1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesSettlementTransactions1";
 				definition = "Provides the transactions in the report.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactions2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

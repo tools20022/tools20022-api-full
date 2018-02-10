@@ -943,6 +943,14 @@ public class ConstraintDenominationRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount65
+	 * ConstraintDenominationRule.forQuantityAndAccount65}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -956,6 +964,7 @@ public class ConstraintDenominationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount25;
 			owner_lazy = () -> QuantityAndAccount39.mmObject();
 		}
@@ -979,6 +988,14 @@ public class ConstraintDenominationRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount64
+	 * ConstraintDenominationRule.forQuantityAndAccount64}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -992,6 +1009,7 @@ public class ConstraintDenominationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount64);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount28;
 			owner_lazy = () -> QuantityAndAccount41.mmObject();
 		}
@@ -1015,6 +1033,14 @@ public class ConstraintDenominationRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount63
+	 * ConstraintDenominationRule.forQuantityAndAccount63}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1028,6 +1054,7 @@ public class ConstraintDenominationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount63);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount27;
 			owner_lazy = () -> QuantityAndAccount42.mmObject();
 		}
@@ -1051,6 +1078,14 @@ public class ConstraintDenominationRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount68
+	 * ConstraintDenominationRule.forQuantityAndAccount68}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1064,6 +1099,7 @@ public class ConstraintDenominationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount30;
 			owner_lazy = () -> QuantityAndAccount43.mmObject();
 		}
@@ -1087,6 +1123,14 @@ public class ConstraintDenominationRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount67
+	 * ConstraintDenominationRule.forQuantityAndAccount67}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1100,6 +1144,7 @@ public class ConstraintDenominationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount67);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount26;
 			owner_lazy = () -> QuantityAndAccount45.mmObject();
 		}
@@ -1123,6 +1168,14 @@ public class ConstraintDenominationRule {
 	 * definition} =
 	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount66
+	 * ConstraintDenominationRule.forQuantityAndAccount66}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1136,6 +1189,7 @@ public class ConstraintDenominationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationRule";
 			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount66);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount29;
 			owner_lazy = () -> QuantityAndAccount44.mmObject();
 		}
@@ -1545,6 +1599,402 @@ public class ConstraintDenominationRule {
 			owner_lazy = () -> QuantityAndAccount60.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64
+	 * QuantityAndAccount64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount41
+	 * ConstraintDenominationRule.forQuantityAndAccount41}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount64> forQuantityAndAccount64 = new MMConstraint<QuantityAndAccount64>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount41;
+			owner_lazy = () -> QuantityAndAccount64.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount63
+	 * QuantityAndAccount63}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount42
+	 * ConstraintDenominationRule.forQuantityAndAccount42}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount63> forQuantityAndAccount63 = new MMConstraint<QuantityAndAccount63>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount63;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount42;
+			owner_lazy = () -> QuantityAndAccount63.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount65
+	 * QuantityAndAccount65}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount39
+	 * ConstraintDenominationRule.forQuantityAndAccount39}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount65> forQuantityAndAccount65 = new MMConstraint<QuantityAndAccount65>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount65;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount39;
+			owner_lazy = () -> QuantityAndAccount65.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount66
+	 * QuantityAndAccount66}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount44
+	 * ConstraintDenominationRule.forQuantityAndAccount44}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount66> forQuantityAndAccount66 = new MMConstraint<QuantityAndAccount66>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount66;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount44;
+			owner_lazy = () -> QuantityAndAccount66.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount67
+	 * QuantityAndAccount67}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount45
+	 * ConstraintDenominationRule.forQuantityAndAccount45}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount67> forQuantityAndAccount67 = new MMConstraint<QuantityAndAccount67>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount67;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount45;
+			owner_lazy = () -> QuantityAndAccount67.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68
+	 * QuantityAndAccount68}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDenominationRule#forQuantityAndAccount43
+	 * ConstraintDenominationRule.forQuantityAndAccount43}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount68> forQuantityAndAccount68 = new MMConstraint<QuantityAndAccount68>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount68;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDenominationRule.forQuantityAndAccount43;
+			owner_lazy = () -> QuantityAndAccount68.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount69
+	 * QuantityAndAccount69}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount69> forQuantityAndAccount69 = new MMConstraint<QuantityAndAccount69>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount69;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> QuantityAndAccount69.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount70
+	 * QuantityAndAccount70}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount70> forQuantityAndAccount70 = new MMConstraint<QuantityAndAccount70>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount70;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> QuantityAndAccount70.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount71
+	 * QuantityAndAccount71}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount71> forQuantityAndAccount71 = new MMConstraint<QuantityAndAccount71>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount71;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> QuantityAndAccount71.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72
+	 * QuantityAndAccount72}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount72> forQuantityAndAccount72 = new MMConstraint<QuantityAndAccount72>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount72;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> QuantityAndAccount72.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount75
+	 * QuantityAndAccount75}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount75> forQuantityAndAccount75 = new MMConstraint<QuantityAndAccount75>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount75;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> QuantityAndAccount75.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount76
+	 * QuantityAndAccount76}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DenominationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount76> forQuantityAndAccount76 = new MMConstraint<QuantityAndAccount76>() {
+		{
+			validator = ConstraintDenominationRule::checkQuantityAndAccount76;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DenominationRule";
+			definition = "Unless bilaterally agreed between the account owner and servicer, if DenominationChoice is used, it must not contain information that can be provided in a structured field.";
+			owner_lazy = () -> QuantityAndAccount76.mmObject();
+		}
+	};
 
 	/**
 	 * Unless bilaterally agreed between the account owner and servicer, if
@@ -1948,6 +2398,114 @@ public class ConstraintDenominationRule {
 	 * provided in a structured field.
 	 */
 	public static void checkQuantityAndAccount60(QuantityAndAccount60 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount64(QuantityAndAccount64 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount63(QuantityAndAccount63 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount65(QuantityAndAccount65 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount66(QuantityAndAccount66 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount67(QuantityAndAccount67 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount68(QuantityAndAccount68 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount69(QuantityAndAccount69 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount70(QuantityAndAccount70 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount71(QuantityAndAccount71 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount72(QuantityAndAccount72 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount75(QuantityAndAccount75 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Unless bilaterally agreed between the account owner and servicer, if
+	 * DenominationChoice is used, it must not contain information that can be
+	 * provided in a structured field.
+	 */
+	public static void checkQuantityAndAccount76(QuantityAndAccount76 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -215,7 +215,7 @@ public class InvestorProfileStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * Status of the investor profile is in the process of being enabled
+	 * Status of the investor profile is in the process of being enabled.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -233,14 +233,14 @@ public class InvestorProfileStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Status of the investor profile is in the process of being enabled"</li>
+	 * "Status of the investor profile is in the process of being enabled."</li>
 	 * </ul>
 	 */
 	public static final InvestorProfileStatusCode Enabling = new InvestorProfileStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabling";
-			definition = "Status of the investor profile is in the process of being enabled";
+			definition = "Status of the investor profile is in the process of being enabled.";
 			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatusCode.mmObject();
 			codeName = "ENBG";
 		}
@@ -276,7 +276,7 @@ public class InvestorProfileStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * Status of the investor profile is partially suspended .
+	 * Status of the investor profile is partially suspended.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -293,14 +293,14 @@ public class InvestorProfileStatusCode extends MMCode {
 	 * name} = "PartiallySuspended"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of the investor profile is partially suspended ."</li>
+	 * definition} = "Status of the investor profile is partially suspended."</li>
 	 * </ul>
 	 */
 	public static final InvestorProfileStatusCode PartiallySuspended = new InvestorProfileStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartiallySuspended";
-			definition = "Status of the investor profile is partially suspended .";
+			definition = "Status of the investor profile is partially suspended.";
 			owner_lazy = () -> com.tools20022.repository.codeset.InvestorProfileStatusCode.mmObject();
 			codeName = "PSUS";
 		}

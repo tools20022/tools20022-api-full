@@ -169,7 +169,7 @@ public class PaymentTransactionParty2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Financial institution that receives the payment transaction from the account owner, or other authorised party, and processes the instruction. "
+	 * "Financial institution that receives the payment transaction from the account owner, or other authorised party, and processes the instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -181,7 +181,7 @@ public class PaymentTransactionParty2 {
 			xmlTag = "DbtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
-			definition = "Financial institution that receives the payment transaction from the account owner, or other authorised party, and processes the instruction. ";
+			definition = "Financial institution that receives the payment transaction from the account owner, or other authorised party, and processes the instruction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -371,7 +371,7 @@ public class PaymentTransactionParty2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Financial institution that receives the payment transaction on behalf of an account owner, or other nominated party, and credits the account. "
+	 * "Financial institution that receives the payment transaction on behalf of an account owner, or other nominated party, and credits the account."
 	 * </li>
 	 * </ul>
 	 */
@@ -383,7 +383,7 @@ public class PaymentTransactionParty2 {
 			xmlTag = "CdtrAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
-			definition = "Financial institution that receives the payment transaction on behalf of an account owner, or other nominated party, and credits the account. ";
+			definition = "Financial institution that receives the payment transaction on behalf of an account owner, or other nominated party, and credits the account.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -422,7 +422,7 @@ public class PaymentTransactionParty2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.  "
+	 * "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner."
 	 * </li>
 	 * </ul>
 	 */
@@ -434,7 +434,7 @@ public class PaymentTransactionParty2 {
 			xmlTag = "Cdtr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
-			definition = "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.  ";
+			definition = "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

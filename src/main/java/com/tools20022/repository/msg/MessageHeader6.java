@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ReturnStandingOrderV03;
 import com.tools20022.repository.choice.RequestType3Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
@@ -57,6 +58,15 @@ import javax.xml.bind.annotation.XmlType;
  * MessageHeader6.mmQueryName}</li>
  * <li>{@linkplain com.tools20022.repository.msg.MessageHeader6#mmRequestType
  * MessageHeader6.mmRequestType}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ReturnStandingOrderV03#mmMessageHeader
+ * ReturnStandingOrderV03.mmMessageHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -296,6 +306,7 @@ public class MessageHeader6 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader6.mmMessageIdentification, com.tools20022.repository.msg.MessageHeader6.mmCreationDateTime,
 						com.tools20022.repository.msg.MessageHeader6.mmOriginalBusinessQuery, com.tools20022.repository.msg.MessageHeader6.mmQueryName, com.tools20022.repository.msg.MessageHeader6.mmRequestType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ReturnStandingOrderV03.mmMessageHeader);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader6";

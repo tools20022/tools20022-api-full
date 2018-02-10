@@ -65,6 +65,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.StandingOrderCriteria2Choice
+ * StandingOrderCriteria2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +109,14 @@ public class StandingOrderCriteria1Choice {
 	 * definition} =
 	 * "Recalls the criteria (search and return criteria) defined in a preceding query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.StandingOrderCriteria2Choice#mmQueryName
+	 * StandingOrderCriteria2Choice.mmQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
@@ -111,6 +127,7 @@ public class StandingOrderCriteria1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderCriteria2Choice.mmQueryName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -142,6 +159,14 @@ public class StandingOrderCriteria1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Explicitly defines the query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.StandingOrderCriteria2Choice#mmNewCriteria
+	 * StandingOrderCriteria2Choice.mmNewCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
@@ -152,6 +177,7 @@ public class StandingOrderCriteria1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Explicitly defines the query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderCriteria2Choice.mmNewCriteria);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -167,6 +193,7 @@ public class StandingOrderCriteria1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderCriteria1Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
+				nextVersions_lazy = () -> Arrays.asList(StandingOrderCriteria2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -122,7 +122,7 @@ public class SecuritiesAccount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification for the account between the account owner and the account servicer.”"
+	 * "Unambiguous identification for the account between the account owner and the account servicer.”."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -143,7 +143,7 @@ public class SecuritiesAccount14 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1"), new FIXSynonym(this, "660"), new ISO15022Synonym(this, ":97a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
-			definition = "Unambiguous identification for the account between the account owner and the account servicer.”";
+			definition = "Unambiguous identification for the account between the account owner and the account servicer.”.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccount25.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;

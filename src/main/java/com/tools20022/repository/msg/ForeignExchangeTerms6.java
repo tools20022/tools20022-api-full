@@ -366,7 +366,7 @@ public class ForeignExchangeTerms6 {
 	 * name} = "QuotingInstitution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party that proposes a  foreign exchange rate."</li>
+	 * definition} = "Party that proposes a foreign exchange rate."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -385,7 +385,7 @@ public class ForeignExchangeTerms6 {
 			xmlTag = "QtgInstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotingInstitution";
-			definition = "Party that proposes a  foreign exchange rate.";
+			definition = "Party that proposes a foreign exchange rate.";
 			nextVersions_lazy = () -> Arrays.asList(ForeignExchangeTerms32.mmQuotingInstitution);
 			maxOccurs = 1;
 			minOccurs = 0;

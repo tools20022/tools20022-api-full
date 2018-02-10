@@ -348,7 +348,7 @@ public class AccountOpeningInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Detailed information about the investment account to be opened"</li>
+	 * "Detailed information about the investment account to be opened."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmInvestmentAccount = new MMMessageBuildingBlock() {
@@ -356,7 +356,7 @@ public class AccountOpeningInstructionV02 {
 			xmlTag = "InvstmtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
-			definition = "Detailed information about the investment account to be opened";
+			definition = "Detailed information about the investment account to be opened.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccount26.mmObject();

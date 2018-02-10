@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * "BeneficiaryCertificationType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the type of beneficiary's certification."</li>
+ * "Choice of formats to express the type of beneficiary's certification."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,7 +106,7 @@ public class BeneficiaryCertificationType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to  specify the type of beneficiary's certification."</li>
+	 * "Standard code to specify the type of beneficiary's certification."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -117,7 +117,7 @@ public class BeneficiaryCertificationType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the type of beneficiary's certification.";
+			definition = "Standard code to specify the type of beneficiary's certification.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BeneficiaryCertificationType1Code.mmObject();
@@ -156,7 +156,7 @@ public class BeneficiaryCertificationType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the type of beneficiary's certification."</li>
+	 * "Proprietary code to express the type of beneficiary's certification."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -167,7 +167,7 @@ public class BeneficiaryCertificationType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the type of beneficiary's certification.";
+			definition = "Proprietary code to express the type of beneficiary's certification.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -182,7 +182,7 @@ public class BeneficiaryCertificationType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BeneficiaryCertificationType1FormatChoice";
-				definition = "Choice of formats to  express the type of beneficiary's certification.";
+				definition = "Choice of formats to express the type of beneficiary's certification.";
 			}
 		});
 		return mmObject_lazy.get();

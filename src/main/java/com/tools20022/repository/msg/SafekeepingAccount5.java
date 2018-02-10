@@ -361,7 +361,7 @@ public class SafekeepingAccount5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Report on the net position of a financial instrument, on the account,  for a certain date."
+	 * "Report on the net position of a financial instrument, on the account, for a certain date."
 	 * </li>
 	 * </ul>
 	 */
@@ -373,7 +373,7 @@ public class SafekeepingAccount5 {
 			xmlTag = "BalForAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
-			definition = "Report on the net position of a financial instrument, on the account,  for a certain date.";
+			definition = "Report on the net position of a financial instrument, on the account, for a certain date.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance1.mmObject();

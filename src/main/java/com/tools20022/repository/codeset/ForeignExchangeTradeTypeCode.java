@@ -108,7 +108,7 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Trade is part of a swap agreement
+	 * Trade is part of a swap agreement.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -125,14 +125,14 @@ public class ForeignExchangeTradeTypeCode extends MMCode {
 	 * name} = "Swap"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Trade is part of a swap agreement"</li>
+	 * definition} = "Trade is part of a swap agreement."</li>
 	 * </ul>
 	 */
 	public static final ForeignExchangeTradeTypeCode Swap = new ForeignExchangeTradeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Swap";
-			definition = "Trade is part of a swap agreement";
+			definition = "Trade is part of a swap agreement.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ForeignExchangeTradeTypeCode.mmObject();
 			codeName = "SWAP";
 		}

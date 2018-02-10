@@ -226,7 +226,7 @@ public class GroupHeader23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that is entitled by the account owner to receive information about movements in the account. \n\nGuideline : MessageRecipient should only be identified when different from the account owner."
+	 * "Party that is entitled by the account owner to receive information about movements in the account. \n\nGuideline: MessageRecipient should only be identified when different from the account owner."
 	 * </li>
 	 * </ul>
 	 */
@@ -237,7 +237,7 @@ public class GroupHeader23 {
 			xmlTag = "MsgRcpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
-			definition = "Party that is entitled by the account owner to receive information about movements in the account. \n\nGuideline : MessageRecipient should only be identified when different from the account owner.";
+			definition = "Party that is entitled by the account owner to receive information about movements in the account. \n\nGuideline: MessageRecipient should only be identified when different from the account owner.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

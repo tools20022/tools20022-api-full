@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  * "FractionDispositionType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
+ * "Choice of formats to express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
  * </li>
  * </ul>
  */
@@ -109,7 +109,7 @@ public class FractionDispositionType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to  specify how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
+	 * "Standard code to specify how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
 	 * </li>
 	 * </ul>
 	 */
@@ -121,7 +121,7 @@ public class FractionDispositionType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
+			definition = "Standard code to specify how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FractionDispositionType1Code.mmObject();
@@ -160,7 +160,7 @@ public class FractionDispositionType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
+	 * "Proprietary code to express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
 	 * </li>
 	 * </ul>
 	 */
@@ -172,7 +172,7 @@ public class FractionDispositionType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
+			definition = "Proprietary code to express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -187,7 +187,7 @@ public class FractionDispositionType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FractionDispositionType1FormatChoice";
-				definition = "Choice of formats to  express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
+				definition = "Choice of formats to express how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -272,7 +272,7 @@ public class ATMCassette2 {
 	 * name} = "SubType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type of items the cash-in takes"</li>
+	 * definition} = "Type of items the cash-in takes."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubType = new MMMessageAttribute() {
@@ -282,7 +282,7 @@ public class ATMCassette2 {
 			xmlTag = "SubTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubType";
-			definition = "Type of items the cash-in takes";
+			definition = "Type of items the cash-in takes.";
 			minOccurs = 0;
 			simpleType_lazy = () -> ATMNoteType1Code.mmObject();
 		}

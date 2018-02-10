@@ -97,6 +97,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode4#mmBankTransactionCode
  * TotalsPerBankTransactionCode4.mmBankTransactionCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmBankTransactionCode
+ * TotalsPerBankTransactionCode5.mmBankTransactionCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReturnReason3#mmOriginalBankTransactionCode
+ * PaymentReturnReason3.mmOriginalBankTransactionCode}</li>
  * </ul>
  * </li>
  * <li>
@@ -536,7 +542,8 @@ public class BankTransaction {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.GenericIdentification.mmIdentificationForBankTransaction, com.tools20022.repository.entity.Entry.mmBankTransactionCode,
 						com.tools20022.repository.entity.PaymentProcessing.mmBankTransaction, com.tools20022.repository.entity.BankOperation.mmOperationType);
 				derivationElement_lazy = () -> Arrays.asList(BankTransactionCodeStructure1.mmDomain, BankTransactionCodeStructure4.mmDomain, TotalsPerBankTransactionCode2.mmBankTransactionCode,
-						PaymentReturnReason2.mmOriginalBankTransactionCode, TotalsPerBankTransactionCode3.mmBankTransactionCode, TotalsPerBankTransactionCode4.mmBankTransactionCode);
+						PaymentReturnReason2.mmOriginalBankTransactionCode, TotalsPerBankTransactionCode3.mmBankTransactionCode, TotalsPerBankTransactionCode4.mmBankTransactionCode, TotalsPerBankTransactionCode5.mmBankTransactionCode,
+						PaymentReturnReason3.mmOriginalBankTransactionCode);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankTransaction.mmDomain, com.tools20022.repository.entity.BankTransaction.mmFamily, com.tools20022.repository.entity.BankTransaction.mmSubFamily,
 						com.tools20022.repository.entity.BankTransaction.mmProprietaryIdentification, com.tools20022.repository.entity.BankTransaction.mmBankOperation, com.tools20022.repository.entity.BankTransaction.mmRelatedEntry,
 						com.tools20022.repository.entity.BankTransaction.mmRelatedPayment);

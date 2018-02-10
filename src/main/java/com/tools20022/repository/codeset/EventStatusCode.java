@@ -86,7 +86,7 @@ public class EventStatusCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
-	 * Event information not confirmed by the issuer or other official source
+	 * Event information not confirmed by the issuer or other official source.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -104,20 +104,21 @@ public class EventStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Event information not confirmed by the issuer or other official source"</li>
+	 * "Event information not confirmed by the issuer or other official source."
+	 * </li>
 	 * </ul>
 	 */
 	public static final EventStatusCode NotConfirmed = new EventStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "NotConfirmed";
-			definition = "Event information not confirmed by the issuer or other official source";
+			definition = "Event information not confirmed by the issuer or other official source.";
 			owner_lazy = () -> com.tools20022.repository.codeset.EventStatusCode.mmObject();
 			codeName = "NCON";
 		}
 	};
 	/**
-	 * Event information confirmed by issuer or other official source
+	 * Event information confirmed by issuer or other official source.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -135,14 +136,14 @@ public class EventStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Event information confirmed by issuer or other official source"</li>
+	 * "Event information confirmed by issuer or other official source."</li>
 	 * </ul>
 	 */
 	public static final EventStatusCode Confirmed = new EventStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "Confirmed";
-			definition = "Event information confirmed by issuer or other official source";
+			definition = "Event information confirmed by issuer or other official source.";
 			owner_lazy = () -> com.tools20022.repository.codeset.EventStatusCode.mmObject();
 			codeName = "CONF";
 		}

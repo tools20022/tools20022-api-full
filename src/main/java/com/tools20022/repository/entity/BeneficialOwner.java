@@ -211,6 +211,12 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AccountSubLevel14#mmBeneficialOwner
  * AccountSubLevel14.mmBeneficialOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeCounterpartyReport5#mmBeneficiary
+ * TradeCounterpartyReport5.mmBeneficiary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeCounterpartyReport6#mmBeneficiary
+ * TradeCounterpartyReport6.mmBeneficiary}</li>
  * </ul>
  * </li>
  * <li>
@@ -537,6 +543,24 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmCertificationBreakdownType
 	 * CorporateActionOption133.mmCertificationBreakdownType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmCertificationType
+	 * CorporateAction41.mmCertificationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmCertificationBreakdownType
+	 * CorporateActionOption138.mmCertificationBreakdownType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmCertificationBreakdownType
+	 * CorporateActionOption139.mmCertificationBreakdownType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmCertificationBreakdownType
+	 * CorporateActionOption148.mmCertificationBreakdownType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmCertificationType
+	 * CorporateAction51.mmCertificationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmCertificationBreakdownType
+	 * CorporateActionOption150.mmCertificationBreakdownType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -576,7 +600,8 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 					BeneficiaryCertificationType10Choice.mmProprietary, CorporateActionOption125.mmCertificationBreakdownType, PartyIdentification101.mmCertificationType, CorporateActionOption127.mmCertificationBreakdownType,
 					CorporateAction40.mmCertificationType, BeneficiaryCertificationType11Choice.mmCode, BeneficiaryCertificationType11Choice.mmProprietary, BeneficiaryCertificationType12Choice.mmCode,
 					BeneficiaryCertificationType12Choice.mmProprietary, CorporateActionOption130.mmCertificationBreakdownType, CorporateActionOption129.mmCertificationBreakdownType, CorporateActionOption135.mmCertificationBreakdownType,
-					CorporateActionOption133.mmCertificationBreakdownType);
+					CorporateActionOption133.mmCertificationBreakdownType, CorporateAction41.mmCertificationType, CorporateActionOption138.mmCertificationBreakdownType, CorporateActionOption139.mmCertificationBreakdownType,
+					CorporateActionOption148.mmCertificationBreakdownType, CorporateAction51.mmCertificationType, CorporateActionOption150.mmCertificationBreakdownType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -705,6 +730,18 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmNonDomicileCountry
 	 * CorporateActionOption133.mmNonDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmNonDomicileCountry
+	 * CorporateActionOption138.mmNonDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmNonDomicileCountry
+	 * CorporateActionOption139.mmNonDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmNonDomicileCountry
+	 * CorporateActionOption148.mmNonDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmNonDomicileCountry
+	 * CorporateActionOption150.mmNonDomicileCountry}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -734,7 +771,8 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 					BeneficialOwner1.mmNonDomicileCountry, CorporateActionOption100.mmNonDomicileCountry, CorporateActionOption101.mmNonDomicileCountry, CorporateActionOption108.mmNonDomicileCountry,
 					CorporateActionOption106.mmNonDomicileCountry, BeneficialOwner2.mmNonDomicileCountry, CorporateActionOption115.mmNonDomicileCountry, CorporateActionOption114.mmNonDomicileCountry,
 					CorporateActionOption125.mmNonDomicileCountry, CorporateActionOption127.mmNonDomicileCountry, CorporateActionOption130.mmNonDomicileCountry, CorporateActionOption129.mmNonDomicileCountry,
-					CorporateActionOption135.mmNonDomicileCountry, CorporateActionOption133.mmNonDomicileCountry);
+					CorporateActionOption135.mmNonDomicileCountry, CorporateActionOption133.mmNonDomicileCountry, CorporateActionOption138.mmNonDomicileCountry, CorporateActionOption139.mmNonDomicileCountry,
+					CorporateActionOption148.mmNonDomicileCountry, CorporateActionOption150.mmNonDomicileCountry);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -896,6 +934,24 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmCertificationBreakdownIndicator
 	 * CorporateActionOption133.mmCertificationBreakdownIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmCertificationBreakdownIndicator
+	 * CorporateAction41.mmCertificationBreakdownIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmCertificationBreakdownIndicator
+	 * CorporateActionOption138.mmCertificationBreakdownIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmCertificationBreakdownIndicator
+	 * CorporateActionOption139.mmCertificationBreakdownIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmCertificationBreakdownIndicator
+	 * CorporateActionOption148.mmCertificationBreakdownIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmCertificationBreakdownIndicator
+	 * CorporateAction51.mmCertificationBreakdownIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmCertificationBreakdownIndicator
+	 * CorporateActionOption150.mmCertificationBreakdownIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -912,7 +968,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether or not certification is required from the account owner, for instance a certification is required to participate to a corporate action event.\r\nY: certification required \r\nN: no certification required"
+	 * "Indicates whether or not certification is required from the account owner, for instance a certification is required to participate to a corporate action event.\r\nY: certification required \r\nN: no certification required."
 	 * </li>
 	 * </ul>
 	 */
@@ -931,12 +987,14 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 					CorporateActionOption115.mmCertificationBreakdownIndicator, CorporateActionOption114.mmCertificationBreakdownIndicator, CorporateAction31.mmCertificationBreakdownIndicator,
 					CorporateActionOption125.mmCertificationBreakdownIndicator, CorporateActionOption127.mmCertificationBreakdownIndicator, CorporateAction40.mmCertificationBreakdownIndicator,
 					CorporateActionOption130.mmCertificationBreakdownIndicator, CorporateActionOption129.mmCertificationBreakdownIndicator, CorporateActionOption135.mmCertificationBreakdownIndicator,
-					CorporateActionOption133.mmCertificationBreakdownIndicator);
+					CorporateActionOption133.mmCertificationBreakdownIndicator, CorporateAction41.mmCertificationBreakdownIndicator, CorporateActionOption138.mmCertificationBreakdownIndicator,
+					CorporateActionOption139.mmCertificationBreakdownIndicator, CorporateActionOption148.mmCertificationBreakdownIndicator, CorporateAction51.mmCertificationBreakdownIndicator,
+					CorporateActionOption150.mmCertificationBreakdownIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.BeneficialOwner.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertificationIndicator";
-			definition = "Indicates whether or not certification is required from the account owner, for instance a certification is required to participate to a corporate action event.\r\nY: certification required \r\nN: no certification required";
+			definition = "Indicates whether or not certification is required from the account owner, for instance a certification is required to participate to a corporate action event.\r\nY: certification required \r\nN: no certification required.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1235,7 +1293,7 @@ public class BeneficialOwner extends SecuritiesPartyRole {
 						PartyIdentification93.mmOwnerIdentification, AccountParties13.mmBeneficiary, AccountParties14.mmBeneficiary, PartyIdentification101.mmOwnerIdentification, AccountParties15.mmBeneficiary,
 						SafekeepingAccount7.mmBeneficialOwner, AccountParties16.mmBeneficiary, AccountSubLevel15.mmBeneficialOwner, AccountSubLevel16.mmBeneficialOwner, AccountSubLevel18.mmBeneficialOwner,
 						AccountSubLevel19.mmBeneficialOwner, AccountSubLevel11.mmBeneficialOwner, AccountSubLevel12.mmBeneficialOwner, AccountSubLevel17.mmBeneficialOwner, AccountSubLevel13.mmBeneficialOwner,
-						AccountSubLevel14.mmBeneficialOwner);
+						AccountSubLevel14.mmBeneficialOwner, TradeCounterpartyReport5.mmBeneficiary, TradeCounterpartyReport6.mmBeneficiary);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BeneficialOwner.mmCertificationType, com.tools20022.repository.entity.BeneficialOwner.mmNonDomicileCountry,
 						com.tools20022.repository.entity.BeneficialOwner.mmCertificationIndicator, com.tools20022.repository.entity.BeneficialOwner.mmCertificationFormat, com.tools20022.repository.entity.BeneficialOwner.mmERISAEligibility,

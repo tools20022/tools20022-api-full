@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "InvestorType2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for investor type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.InvestorType3Choice
+ * InvestorType3Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,6 +112,14 @@ public class InvestorType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Investor type expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorType3Choice#mmCode
+	 * InvestorType3Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -116,6 +131,7 @@ public class InvestorType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Investor type expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(InvestorType3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestorType1Code.mmObject();
@@ -153,6 +169,14 @@ public class InvestorType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Investor type expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorType3Choice#mmProprietary
+	 * InvestorType3Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -164,6 +188,7 @@ public class InvestorType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Investor type expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(InvestorType3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,6 +205,7 @@ public class InvestorType2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestorType2Choice";
 				definition = "Choice of format for investor type.";
+				nextVersions_lazy = () -> Arrays.asList(InvestorType3Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

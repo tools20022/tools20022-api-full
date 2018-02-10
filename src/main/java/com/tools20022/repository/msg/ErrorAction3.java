@@ -67,6 +67,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Action to perform in case of error on the related action in progress."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ErrorAction4 ErrorAction4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.ErrorAction2
  * ErrorAction2}</li>
@@ -109,6 +115,14 @@ public class ErrorAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "List of error action result codes."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ErrorAction4#mmActionResult
+	 * ErrorAction4.mmActionResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +139,7 @@ public class ErrorAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionResult";
 			definition = "List of error action result codes.";
+			nextVersions_lazy = () -> Arrays.asList(ErrorAction4.mmActionResult);
 			previousVersion_lazy = () -> ErrorAction2.mmActionResult;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult3Code.mmObject();
@@ -162,6 +177,14 @@ public class ErrorAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Action to be processed for the related errors."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ErrorAction4#mmActionToProcess
+	 * ErrorAction4.mmActionToProcess}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -178,6 +201,7 @@ public class ErrorAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionToProcess";
 			definition = "Action to be processed for the related errors.";
+			nextVersions_lazy = () -> Arrays.asList(ErrorAction4.mmActionToProcess);
 			previousVersion_lazy = () -> ErrorAction2.mmActionToProcess;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -194,6 +218,7 @@ public class ErrorAction3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ErrorAction3";
 				definition = "Action to perform in case of error on the related action in progress.";
+				nextVersions_lazy = () -> Arrays.asList(ErrorAction4.mmObject());
 				previousVersion_lazy = () -> ErrorAction2.mmObject();
 			}
 		});

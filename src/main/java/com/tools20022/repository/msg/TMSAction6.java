@@ -112,6 +112,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Single terminal management action to be performed by the point of interaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSAction7 TMSAction7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.TMSAction5
  * TMSAction5}</li>
@@ -156,6 +162,13 @@ public class TMSAction6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Types of action to be performed by a point of interaction (POI)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmType
+	 * TMSAction7.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,6 +185,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Types of action to be performed by a point of interaction (POI).";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmType);
 			previousVersion_lazy = () -> TMSAction5.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -203,6 +217,13 @@ public class TMSAction6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Host access information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmRemoteAccess
+	 * TMSAction7.mmRemoteAccess}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -218,6 +239,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemoteAccess";
 			definition = "Host access information.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmRemoteAccess);
 			previousVersion_lazy = () -> TMSAction5.mmRemoteAccess;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -253,6 +275,14 @@ public class TMSAction6 {
 	 * definition} =
 	 * "Identification of the master terminal manager or the terminal manager with which the POI has to perform the action."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmTerminalManagerIdentification
+	 * TMSAction7.mmTerminalManagerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -268,6 +298,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the master terminal manager or the terminal manager with which the POI has to perform the action.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmTerminalManagerIdentification);
 			previousVersion_lazy = () -> TMSAction5.mmTerminalManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -302,6 +333,13 @@ public class TMSAction6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "TMS protocol to use for performing the maintenance action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmTMSProtocol
+	 * TMSAction7.mmTMSProtocol}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -317,6 +355,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocol";
 			definition = "TMS protocol to use for performing the maintenance action.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmTMSProtocol);
 			previousVersion_lazy = () -> TMSAction5.mmTMSProtocol;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -350,6 +389,14 @@ public class TMSAction6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Version of the TMS protocol to use to perform the maintenance action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmTMSProtocolVersion
+	 * TMSAction7.mmTMSProtocolVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -365,6 +412,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolVersion";
 			definition = "Version of the TMS protocol to use to perform the maintenance action.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmTMSProtocolVersion);
 			previousVersion_lazy = () -> TMSAction5.mmTMSProtocolVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -396,6 +444,14 @@ public class TMSAction6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data set on which the action has to be performed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmDataSetIdentification
+	 * TMSAction7.mmDataSetIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -411,6 +467,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Data set on which the action has to be performed.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmDataSetIdentification);
 			previousVersion_lazy = () -> TMSAction5.mmDataSetIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -445,6 +502,13 @@ public class TMSAction6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of POI components to send in a status report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmComponentType
+	 * TMSAction7.mmComponentType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -460,6 +524,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComponentType";
 			definition = "Type of POI components to send in a status report.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmComponentType);
 			previousVersion_lazy = () -> TMSAction5.mmComponentType;
 			minOccurs = 0;
 			simpleType_lazy = () -> DataSetCategory9Code.mmObject();
@@ -492,6 +557,14 @@ public class TMSAction6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the delegation scope assigned by the MTM."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmDelegationScopeIdentification
+	 * TMSAction7.mmDelegationScopeIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -507,6 +580,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationScopeIdentification";
 			definition = "Identification of the delegation scope assigned by the MTM.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmDelegationScopeIdentification);
 			previousVersion_lazy = () -> TMSAction5.mmDelegationScopeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -542,6 +616,14 @@ public class TMSAction6 {
 	 * definition} =
 	 * "Definition of the delegation scope, for instance inside the payment application parameters the range of application profiles, the RID (Registered application provider Identification)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmDelegationScopeDefinition
+	 * TMSAction7.mmDelegationScopeDefinition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -557,6 +639,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationScopeDefinition";
 			definition = "Definition of the delegation scope, for instance inside the payment application parameters the range of application profiles, the RID (Registered application provider Identification).";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmDelegationScopeDefinition);
 			previousVersion_lazy = () -> TMSAction5.mmDelegationScopeDefinition;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -592,6 +675,14 @@ public class TMSAction6 {
 	 * definition} =
 	 * "Proof of delegation to be verified by the POI, when performing the delegated actions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmDelegationProof
+	 * TMSAction7.mmDelegationProof}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -607,6 +698,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationProof";
 			definition = "Proof of delegation to be verified by the POI, when performing the delegated actions.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmDelegationProof);
 			previousVersion_lazy = () -> TMSAction5.mmDelegationProof;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -639,6 +731,14 @@ public class TMSAction6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Protected proof of delegation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmProtectedDelegationProof
+	 * TMSAction7.mmProtectedDelegationProof}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -654,6 +754,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedDelegationProof";
 			definition = "Protected proof of delegation.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmProtectedDelegationProof);
 			previousVersion_lazy = () -> TMSAction5.mmProtectedDelegationProof;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -695,6 +796,13 @@ public class TMSAction6 {
 	 * definition} =
 	 * "Event on which the action has to be activated by the point of interaction (POI)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmTrigger
+	 * TMSAction7.mmTrigger}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -711,6 +819,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Trigger";
 			definition = "Event on which the action has to be activated by the point of interaction (POI).";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmTrigger);
 			previousVersion_lazy = () -> TMSAction5.mmTrigger;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -751,6 +860,14 @@ public class TMSAction6 {
 	 * definition} =
 	 * "Additional process to perform before starting or after completing the action by the point of interaction (POI)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmAdditionalProcess
+	 * TMSAction7.mmAdditionalProcess}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -767,6 +884,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalProcess";
 			definition = "Additional process to perform before starting or after completing the action by the point of interaction (POI).";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmAdditionalProcess);
 			previousVersion_lazy = () -> TMSAction5.mmAdditionalProcess;
 			minOccurs = 0;
 			simpleType_lazy = () -> TerminalManagementAdditionalProcess1Code.mmObject();
@@ -798,6 +916,13 @@ public class TMSAction6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Definition of retry process if activation of the action fails."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmReTry
+	 * TMSAction7.mmReTry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -813,6 +938,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReTry";
 			definition = "Definition of retry process if activation of the action fails.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmReTry);
 			previousVersion_lazy = () -> TMSAction5.mmReTry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -845,6 +971,13 @@ public class TMSAction6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time the action has to be performed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmTimeCondition
+	 * TMSAction7.mmTimeCondition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -860,6 +993,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeCondition";
 			definition = "Date and time the action has to be performed.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmTimeCondition);
 			previousVersion_lazy = () -> TMSAction5.mmTimeCondition;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -895,6 +1029,13 @@ public class TMSAction6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Terminal manager challenge for cryptographic key injection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmTMChallenge
+	 * TMSAction7.mmTMChallenge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -910,6 +1051,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmTMChallenge);
 			previousVersion_lazy = () -> TMSAction5.mmTMChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -945,6 +1087,14 @@ public class TMSAction6 {
 	 * definition} =
 	 * "Certificate chain for the encryption of temporary transport key of the key to inject."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmKeyEnciphermentCertificate
+	 * TMSAction7.mmKeyEnciphermentCertificate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -960,6 +1110,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEnciphermentCertificate";
 			definition = "Certificate chain for the encryption of temporary transport key of the key to inject.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmKeyEnciphermentCertificate);
 			previousVersion_lazy = () -> TMSAction5.mmKeyEnciphermentCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
@@ -991,6 +1142,13 @@ public class TMSAction6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Action to perform in case of error on the related action in progress."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TMSAction7#mmErrorAction
+	 * TMSAction7.mmErrorAction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1006,6 +1164,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ErrorAction";
 			definition = "Action to perform in case of error on the related action in progress.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmErrorAction);
 			previousVersion_lazy = () -> TMSAction5.mmErrorAction;
 			minOccurs = 0;
 			isComposite = true;
@@ -1039,6 +1198,14 @@ public class TMSAction6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional information about the maintenance action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSAction7#mmAdditionalInformation
+	 * TMSAction7.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1054,6 +1221,7 @@ public class TMSAction6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information about the maintenance action.";
+			nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmAdditionalInformation);
 			previousVersion_lazy = () -> TMSAction5.mmAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
@@ -1075,6 +1243,7 @@ public class TMSAction6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSAction6";
 				definition = "Single terminal management action to be performed by the point of interaction.";
+				nextVersions_lazy = () -> Arrays.asList(TMSAction7.mmObject());
 				previousVersion_lazy = () -> TMSAction5.mmObject();
 			}
 		});

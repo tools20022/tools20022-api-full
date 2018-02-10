@@ -101,6 +101,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of characteristics shared by all individual transactions included in the message."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader74 GroupHeader74}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -141,6 +147,14 @@ public class GroupHeader52 {
 	 * definition} =
 	 * "Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.\nUsage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader74#mmMessageIdentification
+	 * GroupHeader74.mmMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
@@ -152,6 +166,7 @@ public class GroupHeader52 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.\nUsage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader74.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -188,6 +203,14 @@ public class GroupHeader52 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader74#mmCreationDateTime
+	 * GroupHeader74.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -199,6 +222,7 @@ public class GroupHeader52 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader74.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -234,6 +258,14 @@ public class GroupHeader52 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that initiates the status message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader74#mmInitiatingParty
+	 * GroupHeader74.mmInitiatingParty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
@@ -245,6 +277,7 @@ public class GroupHeader52 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Party that initiates the status message.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader74.mmInitiatingParty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -284,6 +317,14 @@ public class GroupHeader52 {
 	 * definition} =
 	 * "Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader74#mmForwardingAgent
+	 * GroupHeader74.mmForwardingAgent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmForwardingAgent = new MMMessageAssociationEnd() {
@@ -295,6 +336,7 @@ public class GroupHeader52 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardingAgent";
 			definition = "Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader74.mmForwardingAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -333,6 +375,14 @@ public class GroupHeader52 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Financial institution servicing an account for the debtor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader74#mmDebtorAgent
+	 * GroupHeader74.mmDebtorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
@@ -344,6 +394,7 @@ public class GroupHeader52 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader74.mmDebtorAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -382,6 +433,14 @@ public class GroupHeader52 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Financial institution servicing an account for the creditor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader74#mmCreditorAgent
+	 * GroupHeader74.mmCreditorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
@@ -393,6 +452,7 @@ public class GroupHeader52 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader74.mmCreditorAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -413,6 +473,7 @@ public class GroupHeader52 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader52";
 				definition = "Set of characteristics shared by all individual transactions included in the message.";
+				nextVersions_lazy = () -> Arrays.asList(GroupHeader74.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

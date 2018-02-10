@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.InvestigationPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ClaimNonReceipt1;
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -36,6 +38,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} =
  * {@linkplain com.tools20022.repository.entity.InvestigationPartyRole
  * InvestigationPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ClaimNonReceipt1#mmOriginalNextAgent
+ * ClaimNonReceipt1.mmOriginalNextAgent}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -62,6 +73,7 @@ public class Assignee extends InvestigationPartyRole {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Assignee";
 				definition = "Party to which the case is assigned.";
+				derivationElement_lazy = () -> Arrays.asList(ClaimNonReceipt1.mmOriginalNextAgent);
 				superType_lazy = () -> InvestigationPartyRole.mmObject();
 			}
 

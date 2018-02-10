@@ -65,6 +65,12 @@ import javax.xml.bind.annotation.XmlType;
  * "SystemClosure1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information about inactivity of a system."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemClosure2 SystemClosure2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,6 +110,13 @@ public class SystemClosure1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period of time when the system is closed/not operating."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemClosure2#mmPeriod
+	 * SystemClosure2.mmPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPeriod = new MMMessageAttribute() {
@@ -115,6 +128,7 @@ public class SystemClosure1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Period of time when the system is closed/not operating.";
+			nextVersions_lazy = () -> Arrays.asList(SystemClosure2.mmPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -133,6 +147,11 @@ public class SystemClosure1 {
 	 * {@linkplain com.tools20022.repository.choice.ClosureReason2Choice
 	 * ClosureReason2Choice}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.SystemClosureInformation#mmClosureReason
+	 * SystemClosureInformation.mmClosureReason}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.SystemClosure1 SystemClosure1}</li>
@@ -147,16 +166,25 @@ public class SystemClosure1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason the system is closed/not operating."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemClosure2#mmReason
+	 * SystemClosure2.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
 		{
+			businessElementTrace_lazy = () -> SystemClosureInformation.mmClosureReason;
 			componentContext_lazy = () -> com.tools20022.repository.msg.SystemClosure1.mmObject();
 			isDerived = false;
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason the system is closed/not operating.";
+			nextVersions_lazy = () -> Arrays.asList(SystemClosure2.mmReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ClosureReason2Choice.mmObject();
@@ -172,6 +200,7 @@ public class SystemClosure1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemClosure1";
 				definition = "Information about inactivity of a system.";
+				nextVersions_lazy = () -> Arrays.asList(SystemClosure2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

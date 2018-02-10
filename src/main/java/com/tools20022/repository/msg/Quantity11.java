@@ -76,6 +76,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Details on the quantity, account and other related information involved in a transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity14 Quantity14}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Quantity7
  * Quantity7}</li>
@@ -120,6 +126,14 @@ public class Quantity11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of securities to be settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity14#mmSettlementQuantity
+	 * Quantity14.mmSettlementQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -137,6 +151,7 @@ public class Quantity11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity14.mmSettlementQuantity);
 			previousVersion_lazy = () -> Quantity7.mmSettlementQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -179,6 +194,14 @@ public class Quantity11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Denomination of the security to be received or delivered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity14#mmDenominationChoice
+	 * Quantity14.mmDenominationChoice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -196,6 +219,7 @@ public class Quantity11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationChoice";
 			definition = "Denomination of the security to be received or delivered.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity14.mmDenominationChoice);
 			previousVersion_lazy = () -> Quantity7.mmDenominationChoice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -237,6 +261,14 @@ public class Quantity11 {
 	 * definition} =
 	 * "Unique and unambiguous identifier of a certificate assigned by the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity14#mmCertificateNumber
+	 * Quantity14.mmCertificateNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -254,6 +286,7 @@ public class Quantity11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity14.mmCertificateNumber);
 			previousVersion_lazy = () -> Quantity7.mmCertificateNumber;
 			minOccurs = 0;
 			isComposite = true;
@@ -294,6 +327,14 @@ public class Quantity11 {
 	 * definition} =
 	 * "Breakdown of a quantity into lots such as tax lots, instrument series, etc."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity14#mmQuantityBreakdown
+	 * Quantity14.mmQuantityBreakdown}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -311,6 +352,7 @@ public class Quantity11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity14.mmQuantityBreakdown);
 			previousVersion_lazy = () -> Quantity7.mmQuantityBreakdown;
 			minOccurs = 0;
 			isComposite = true;
@@ -328,6 +370,7 @@ public class Quantity11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity11";
 				definition = "Details on the quantity, account and other related information involved in a transaction.";
+				nextVersions_lazy = () -> Arrays.asList(Quantity14.mmObject());
 				previousVersion_lazy = () -> Quantity7.mmObject();
 			}
 		});

@@ -236,7 +236,7 @@ public class SafekeepingAccount3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of a subaccount within the safekeeping account"</li>
+	 * "Identification of a subaccount within the safekeeping account."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
@@ -247,7 +247,7 @@ public class SafekeepingAccount3 {
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
-			definition = "Identification of a subaccount within the safekeeping account";
+			definition = "Identification of a subaccount within the safekeeping account.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

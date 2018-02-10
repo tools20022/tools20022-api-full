@@ -503,7 +503,7 @@ public class StandingOrder2 {
 	 * name} = "ValidityPeriod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Dates during which the standing order is in effect. "</li>
+	 * definition} = "Dates during which the standing order is in effect."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValidityPeriod = new MMMessageAttribute() {
@@ -514,7 +514,7 @@ public class StandingOrder2 {
 			xmlTag = "VldtyPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
-			definition = "Dates during which the standing order is in effect. ";
+			definition = "Dates during which the standing order is in effect.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails1.mmObject();
@@ -650,7 +650,7 @@ public class StandingOrder2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification to unambiguously identiy the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence."
+	 * "Unique identification to unambiguously identify the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence."
 	 * </li>
 	 * </ul>
 	 */
@@ -662,7 +662,7 @@ public class StandingOrder2 {
 			xmlTag = "LkSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetIdentification";
-			definition = "Unique identification to unambiguously identiy the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence.";
+			definition = "Unique identification to unambiguously identify the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -845,7 +845,7 @@ public class StandingOrder2 {
 	 * name} = "CreditorAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Cash account credited from a  standing order mechanism."</li>
+	 * definition} = "Cash account credited from a standing order mechanism."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
@@ -856,7 +856,7 @@ public class StandingOrder2 {
 			xmlTag = "CdtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
-			definition = "Cash account credited from a  standing order mechanism.";
+			definition = "Cash account credited from a standing order mechanism.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -986,7 +986,7 @@ public class StandingOrder2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero."
+	 * "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is zero."
 	 * </li>
 	 * </ul>
 	 */
@@ -998,7 +998,7 @@ public class StandingOrder2 {
 			xmlTag = "ZeroSweepInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroSweepIndicator";
-			definition = "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero.";
+			definition = "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is zero.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();

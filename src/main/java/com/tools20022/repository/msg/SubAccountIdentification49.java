@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SubAccountIdentification49"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides all sub-account details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification51
+ * SubAccountIdentification51}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SubAccountIdentification44
@@ -123,6 +130,14 @@ public class SubAccountIdentification49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification51#mmAccountOwner
+	 * SubAccountIdentification51.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +154,7 @@ public class SubAccountIdentification49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification51.mmAccountOwner);
 			previousVersion_lazy = () -> SubAccountIdentification44.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -177,6 +193,14 @@ public class SubAccountIdentification49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a securities entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification51#mmSafekeepingAccount
+	 * SubAccountIdentification51.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -193,6 +217,7 @@ public class SubAccountIdentification49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification51.mmSafekeepingAccount);
 			previousVersion_lazy = () -> SubAccountIdentification44.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -230,6 +255,14 @@ public class SubAccountIdentification49 {
 	 * definition} =
 	 * "Indicates whether there is activity or information update reported in the statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification51#mmActivityIndicator
+	 * SubAccountIdentification51.mmActivityIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -245,6 +278,7 @@ public class SubAccountIdentification49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
+			nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification51.mmActivityIndicator);
 			previousVersion_lazy = () -> SubAccountIdentification44.mmActivityIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -283,6 +317,14 @@ public class SubAccountIdentification49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reporting per financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification51#mmFinancialInstrumentDetails
+	 * SubAccountIdentification51.mmFinancialInstrumentDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -299,6 +341,7 @@ public class SubAccountIdentification49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Reporting per financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification51.mmFinancialInstrumentDetails);
 			previousVersion_lazy = () -> SubAccountIdentification44.mmFinancialInstrumentDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -317,6 +360,7 @@ public class SubAccountIdentification49 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SubAccountIdentification49";
 				definition = "Provides all sub-account details.";
+				nextVersions_lazy = () -> Arrays.asList(SubAccountIdentification51.mmObject());
 				previousVersion_lazy = () -> SubAccountIdentification44.mmObject();
 			}
 		});

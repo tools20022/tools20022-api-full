@@ -83,6 +83,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
  * =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ProductType4Code
+ * ProductType4Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ProductType5Code
  * ProductType5Code}</li>
  * </ul>
@@ -604,7 +606,7 @@ public class ProductTypeV2Code extends MMCode {
 		}
 	};
 	/**
-	 * Identifies categories of instruments related to Emission Allowance
+	 * Identifies categories of instruments related to Emission Allowance.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -622,14 +624,14 @@ public class ProductTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies categories of instruments related to Emission Allowance"</li>
+	 * "Identifies categories of instruments related to Emission Allowance."</li>
 	 * </ul>
 	 */
 	public static final ProductTypeV2Code EmissionAllowance = new ProductTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
-			definition = "Identifies categories of instruments related to Emission Allowance";
+			definition = "Identifies categories of instruments related to Emission Allowance.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ProductTypeV2Code.mmObject();
 			codeName = "EMAL";
 		}
@@ -647,7 +649,7 @@ public class ProductTypeV2Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductTypeV2Code";
 				definition = "Specifies the type of product or financial instrument.";
-				derivation_lazy = () -> Arrays.asList(ProductType5Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(ProductType4Code.mmObject(), ProductType5Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ProductTypeV2Code.Agency, com.tools20022.repository.codeset.ProductTypeV2Code.Commodity, com.tools20022.repository.codeset.ProductTypeV2Code.Corporate,
 						com.tools20022.repository.codeset.ProductTypeV2Code.Currency, com.tools20022.repository.codeset.ProductTypeV2Code.Equity, com.tools20022.repository.codeset.ProductTypeV2Code.Government,
 						com.tools20022.repository.codeset.ProductTypeV2Code.Loan, com.tools20022.repository.codeset.ProductTypeV2Code.MoneyMarket, com.tools20022.repository.codeset.ProductTypeV2Code.Mortgage,

@@ -78,6 +78,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Specifies how the supply chain shipping arrangements and the delivery of products and/or services as well as related documentation."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery3 TradeDelivery3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.TradeDelivery1
  * TradeDelivery1}</li>
@@ -119,6 +125,14 @@ public class TradeDelivery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Actual delivery period of the products and/or services."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmDeliveryPeriod
+	 * TradeDelivery3.mmDeliveryPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -135,6 +149,7 @@ public class TradeDelivery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryPeriod";
 			definition = "Actual delivery period of the products and/or services.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDelivery3.mmDeliveryPeriod);
 			previousVersion_lazy = () -> TradeDelivery1.mmDeliveryPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -173,6 +188,14 @@ public class TradeDelivery2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Actual delivery date/time of the products and/or services."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmDeliveryDateTime
+	 * TradeDelivery3.mmDeliveryDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +212,7 @@ public class TradeDelivery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDateTime";
 			definition = "Actual delivery date/time of the products and/or services.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDelivery3.mmDeliveryDateTime);
 			previousVersion_lazy = () -> TradeDelivery1.mmDeliveryDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -224,6 +248,13 @@ public class TradeDelivery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party from whom the goods are dispatched."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery3#mmShipFrom
+	 * TradeDelivery3.mmShipFrom}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -240,6 +271,7 @@ public class TradeDelivery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipFrom";
 			definition = "Party from whom the goods are dispatched.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDelivery3.mmShipFrom);
 			previousVersion_lazy = () -> TradeDelivery1.mmShipFrom;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -276,6 +308,13 @@ public class TradeDelivery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party to whom the goods are dispatched."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery3#mmShipTo
+	 * TradeDelivery3.mmShipTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -292,6 +331,7 @@ public class TradeDelivery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipTo";
 			definition = "Party to whom the goods are dispatched.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDelivery3.mmShipTo);
 			previousVersion_lazy = () -> TradeDelivery1.mmShipTo;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -328,6 +368,14 @@ public class TradeDelivery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Final party to whom the goods are dispatched."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmUltimateShipTo
+	 * TradeDelivery3.mmUltimateShipTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -344,6 +392,7 @@ public class TradeDelivery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateShipTo";
 			definition = "Final party to whom the goods are dispatched.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDelivery3.mmUltimateShipTo);
 			previousVersion_lazy = () -> TradeDelivery1.mmUltimateShipTo;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -383,6 +432,14 @@ public class TradeDelivery2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Delivery note related to the delivery of the products and/or services."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmDeliveryNote
+	 * TradeDelivery3.mmDeliveryNote}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -399,6 +456,7 @@ public class TradeDelivery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryNote";
 			definition = "Delivery note related to the delivery of the products and/or services.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDelivery3.mmDeliveryNote);
 			previousVersion_lazy = () -> TradeDelivery1.mmDeliveryNote;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -435,6 +493,14 @@ public class TradeDelivery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Physical consolidation of goods for transport."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmConsignment
+	 * TradeDelivery3.mmConsignment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -451,6 +517,7 @@ public class TradeDelivery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignment";
 			definition = "Physical consolidation of goods for transport.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDelivery3.mmConsignment);
 			previousVersion_lazy = () -> TradeDelivery1.mmConsignment;
 			minOccurs = 0;
 			isComposite = true;
@@ -469,6 +536,7 @@ public class TradeDelivery2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeDelivery2";
 				definition = "Specifies how the supply chain shipping arrangements and the delivery of products and/or services as well as related documentation.";
+				nextVersions_lazy = () -> Arrays.asList(TradeDelivery3.mmObject());
 				previousVersion_lazy = () -> TradeDelivery1.mmObject();
 			}
 		});

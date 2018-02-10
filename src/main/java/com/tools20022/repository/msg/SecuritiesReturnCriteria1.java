@@ -681,7 +681,7 @@ public class SecuritiesReturnCriteria1 {
 	 * name} = "CSD"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "CSD of a security"</li>
+	 * definition} = "CSD of a security."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCSD = new MMMessageAttribute() {
@@ -691,7 +691,7 @@ public class SecuritiesReturnCriteria1 {
 			xmlTag = "CSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSD";
-			definition = "CSD of a security";
+			definition = "CSD of a security.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -856,7 +856,7 @@ public class SecuritiesReturnCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size."
+	 * "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125 shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size."
 	 * </li>
 	 * </ul>
 	 */
@@ -867,7 +867,7 @@ public class SecuritiesReturnCriteria1 {
 			xmlTag = "DevtgSttlmUnit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviatingSettlementUnit";
-			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
+			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125 shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();

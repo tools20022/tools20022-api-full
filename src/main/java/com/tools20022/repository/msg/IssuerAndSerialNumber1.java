@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "IssuerAndSerialNumber1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Certificate issuer name and serial number  (see X.509)."</li>
+ * definition} = "Certificate issuer name and serial number (see X.509)."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -160,7 +160,7 @@ public class IssuerAndSerialNumber1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IssuerAndSerialNumber1";
-				definition = "Certificate issuer name and serial number  (see X.509).";
+				definition = "Certificate issuer name and serial number (see X.509).";
 			}
 		});
 		return mmObject_lazy.get();

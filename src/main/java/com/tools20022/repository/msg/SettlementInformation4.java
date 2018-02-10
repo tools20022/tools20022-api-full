@@ -75,6 +75,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementInformation17
+ * SettlementInformation17}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +117,14 @@ public class SettlementInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Choice between formats for the quantity of security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation17#mmSecuritiesQuantityType
+	 * SettlementInformation17.mmSecuritiesQuantityType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecuritiesQuantityType = new MMMessageAttribute() {
@@ -120,6 +135,7 @@ public class SettlementInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesQuantityType";
 			definition = "Choice between formats for the quantity of security.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInformation17.mmSecuritiesQuantityType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementUnitType2Choice.mmObject();
@@ -156,6 +172,14 @@ public class SettlementInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies when the contract (i.e. MBS/TBA) will settle."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation17#mmContractSettlementMonth
+	 * SettlementInformation17.mmContractSettlementMonth}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmContractSettlementMonth = new MMMessageAttribute() {
@@ -167,6 +191,7 @@ public class SettlementInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSettlementMonth";
 			definition = "Specifies when the contract (i.e. MBS/TBA) will settle.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInformation17.mmContractSettlementMonth);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
@@ -201,6 +226,14 @@ public class SettlementInformation4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the minimum quantity (unit or nominal) of a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation17#mmMinimumDenomination
+	 * SettlementInformation17.mmMinimumDenomination}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumDenomination = new MMMessageAttribute() {
@@ -211,6 +244,7 @@ public class SettlementInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumDenomination";
 			definition = "Indicates the minimum quantity (unit or nominal) of a security.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInformation17.mmMinimumDenomination);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
@@ -245,6 +279,14 @@ public class SettlementInformation4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Minimum multiple quantity (unit or nominal) of securities."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation17#mmMinimumMultipleQuantity
+	 * SettlementInformation17.mmMinimumMultipleQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumMultipleQuantity = new MMMessageAttribute() {
@@ -255,6 +297,7 @@ public class SettlementInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMultipleQuantity";
 			definition = "Minimum multiple quantity (unit or nominal) of securities.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInformation17.mmMinimumMultipleQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
@@ -288,7 +331,15 @@ public class SettlementInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size."
+	 * "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125 shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInformation17#mmDeviatingSettlementUnit
+	 * SettlementInformation17.mmDeviatingSettlementUnit}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -299,7 +350,8 @@ public class SettlementInformation4 {
 			xmlTag = "DevtgSttlmUnit";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviatingSettlementUnit";
-			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
+			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125 shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInformation17.mmDeviatingSettlementUnit);
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
 		}
@@ -315,6 +367,7 @@ public class SettlementInformation4 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInformation4";
 				definition = "Settlement of the securities in a securities transaction, that is, the instruction to deliver or receive securities, involving the payment of an amount of money or not.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementInformation17.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

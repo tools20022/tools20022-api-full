@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Instruction to pay an amount of money to an ultimate beneficiary, on behalf
  * of an originator. This instruction may have to be forwarded several times to
- * complete the settlement chain.
+ * complete the settlement chain. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -74,7 +74,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentDetails2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n"
+ * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n."
  * </li>
  * </ul>
  */
@@ -116,7 +116,7 @@ public class PaymentDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n"
+	 * "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -128,7 +128,7 @@ public class PaymentDetails2 {
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
-			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n";
+			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
@@ -166,7 +166,7 @@ public class PaymentDetails2 {
 	 * name} = "PaymentType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type, or nature, of the payment, eg, express payment.\n"</li>
+	 * definition} = "Type, or nature, of the payment, eg, express payment.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentType = new MMMessageAttribute() {
@@ -177,7 +177,7 @@ public class PaymentDetails2 {
 			xmlTag = "PmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentType";
-			definition = "Type, or nature, of the payment, eg, express payment.\n";
+			definition = "Type, or nature, of the payment, eg, express payment.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PaymentType1Code.mmObject();
@@ -216,7 +216,7 @@ public class PaymentDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n"
+	 * "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -228,7 +228,7 @@ public class PaymentDetails2 {
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
-			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n";
+			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityCodeChoice.mmObject();
@@ -267,7 +267,7 @@ public class PaymentDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time range within which the payment instruction must be processed.\n"
+	 * "Date and time range within which the payment instruction must be processed.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -279,7 +279,7 @@ public class PaymentDetails2 {
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingValidityTime";
-			definition = "Date and time range within which the payment instruction must be processed.\n";
+			definition = "Date and time range within which the payment instruction must be processed.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -295,7 +295,7 @@ public class PaymentDetails2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentDetails2";
-				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
+				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n.";
 			}
 		});
 		return mmObject_lazy.get();

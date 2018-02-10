@@ -66,6 +66,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Specifies the arrangement of the transport of goods and services and the parties involved in this process."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment5 Consignment5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Consignment2
  * Consignment2}</li>
@@ -107,6 +113,13 @@ public class Consignment4 {
 	 * definition} =
 	 * "Party consigning goods as stipulated in the transport contract by the party ordering transport."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Consignment5#mmConsignor
+	 * Consignment5.mmConsignor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -123,6 +136,7 @@ public class Consignment4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignor";
 			definition = "Party consigning goods as stipulated in the transport contract by the party ordering transport.";
+			nextVersions_lazy = () -> Arrays.asList(Consignment5.mmConsignor);
 			previousVersion_lazy = () -> Consignment2.mmConsignor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -159,6 +173,13 @@ public class Consignment4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party to which goods are consigned."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Consignment5#mmConsignee
+	 * Consignment5.mmConsignee}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -175,6 +196,7 @@ public class Consignment4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consignee";
 			definition = "Party to which goods are consigned.";
+			nextVersions_lazy = () -> Arrays.asList(Consignment5.mmConsignee);
 			previousVersion_lazy = () -> Consignment2.mmConsignee;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -213,6 +235,14 @@ public class Consignment4 {
 	 * definition} =
 	 * "Particular aircraft, vehicle, vessel or other device used for the transport of a consignment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Consignment5#mmTransportMeans
+	 * Consignment5.mmTransportMeans}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -229,6 +259,7 @@ public class Consignment4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportMeans";
 			definition = "Particular aircraft, vehicle, vessel or other device used for the transport of a consignment.";
+			nextVersions_lazy = () -> Arrays.asList(Consignment5.mmTransportMeans);
 			previousVersion_lazy = () -> Consignment2.mmTransportMeans;
 			minOccurs = 0;
 			isComposite = true;
@@ -245,6 +276,7 @@ public class Consignment4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Consignment4";
 				definition = "Specifies the arrangement of the transport of goods and services and the parties involved in this process.";
+				nextVersions_lazy = () -> Arrays.asList(Consignment5.mmObject());
 				previousVersion_lazy = () -> Consignment2.mmObject();
 			}
 		});

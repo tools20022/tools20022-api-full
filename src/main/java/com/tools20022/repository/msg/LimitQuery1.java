@@ -60,6 +60,12 @@ import javax.xml.bind.annotation.XmlType;
  * "LimitQuery1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the query criteria."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitQuery2 LimitQuery2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,6 +102,13 @@ public class LimitQuery1 {
 	 * definition} =
 	 * "Specifies the type of matching items to be returned in the response to the query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LimitQuery2#mmQueryType
+	 * LimitQuery2.mmQueryType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
@@ -106,6 +119,7 @@ public class LimitQuery1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
+			nextVersions_lazy = () -> Arrays.asList(LimitQuery2.mmQueryType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
@@ -137,6 +151,14 @@ public class LimitQuery1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the limit query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitQuery2#mmLimitCriteria
+	 * LimitQuery2.mmLimitCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLimitCriteria = new MMMessageAssociationEnd() {
@@ -147,6 +169,7 @@ public class LimitQuery1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteria";
 			definition = "Defines the limit query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(LimitQuery2.mmLimitCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -162,6 +185,7 @@ public class LimitQuery1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitQuery1";
 				definition = "Defines the query criteria.";
+				nextVersions_lazy = () -> Arrays.asList(LimitQuery2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

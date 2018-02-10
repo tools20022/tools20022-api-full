@@ -172,7 +172,7 @@ public class MeetingEntitlement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date..."
+	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date."
 	 * </li>
 	 * </ul>
 	 */
@@ -184,7 +184,7 @@ public class MeetingEntitlement {
 			elementContext_lazy = () -> com.tools20022.repository.entity.MeetingEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EntitlementFixingDate";
-			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date...";
+			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();

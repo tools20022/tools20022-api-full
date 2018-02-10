@@ -62,6 +62,14 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesTransactionType17Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for a securities transaction type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType31Choice
+ * SecuritiesTransactionType31Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +106,14 @@ public class SecuritiesTransactionType17Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Securities transaction type expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType31Choice#mmCode
+	 * SecuritiesTransactionType31Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -108,6 +124,7 @@ public class SecuritiesTransactionType17Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Securities transaction type expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionType31Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesTransactionType11Code.mmObject();
@@ -141,6 +158,14 @@ public class SecuritiesTransactionType17Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Securities transaction type expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType31Choice#mmProprietary
+	 * SecuritiesTransactionType31Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -151,6 +176,7 @@ public class SecuritiesTransactionType17Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Securities transaction type expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionType31Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,6 +192,7 @@ public class SecuritiesTransactionType17Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesTransactionType17Choice";
 				definition = "Choice of format for a securities transaction type.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionType31Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

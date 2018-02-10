@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.choice.Reversal7Choice;
 import com.tools20022.repository.codeset.TransferInFunction2Code;
 import com.tools20022.repository.msg.CopyInformation4;
@@ -97,8 +97,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "RvslOfTrfInConf"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.008.001.07}</li>
@@ -119,6 +119,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nAn executing party, for example, a transfer agent, sends the ReversalOfTransferInConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent TransferInConfirmation message.\r\nUsage\r\nThe ReversalOfTransferInConfirmation message is used to reverse a previously sent TransferInConfirmation.\r\nThere are two ways to specify the reversal of the transfer in confirmation. Either:\r\n- the business references, for example, TransferReference, TransferConfirmationIdentification, of the transfer confirmation are quoted, or,\r\n- all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.\r\nThe message identification of the TransferInConfirmation message in which the transfer confirmation was conveyed may also be quoted in PreviousReference.\r\nThe message reference (MessageIdentification) of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\n"
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08
+ * ReversalOfTransferInConfirmationV08}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -154,7 +162,15 @@ public class ReversalOfTransferInConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference that uniquely identifies a message from a business application standpoint. "
+	 * "Reference that uniquely identifies a message from a business application standpoint."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08#mmMessageIdentification
+	 * ReversalOfTransferInConfirmationV08.mmMessageIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -168,7 +184,8 @@ public class ReversalOfTransferInConfirmationV07 {
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
-			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
+			definition = "Reference that uniquely identifies a message from a business application standpoint.";
+			nextVersions_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV08.mmMessageIdentification);
 			previousVersion_lazy = () -> ReversalOfTransferInConfirmationV06.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -258,6 +275,14 @@ public class ReversalOfTransferInConfirmationV07 {
 	 * definition} =
 	 * "Function of the transfer-in, that is, whether the message is used as a reversal of a previously sent confirmation or as a reversal of a previously sent advice. The absence of Function indicates the message is a reversal of a previously sent confirmation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08#mmFunction
+	 * ReversalOfTransferInConfirmationV08.mmFunction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmFunction = new MMMessageBuildingBlock() {
@@ -266,6 +291,7 @@ public class ReversalOfTransferInConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Function";
 			definition = "Function of the transfer-in, that is, whether the message is used as a reversal of a previously sent confirmation or as a reversal of a previously sent advice. The absence of Function indicates the message is a reversal of a previously sent confirmation.";
+			nextVersions_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV08.mmFunction);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransferInFunction2Code.mmObject();
@@ -354,6 +380,14 @@ public class ReversalOfTransferInConfirmationV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the market practice to which the message conforms."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08#mmMarketPracticeVersion
+	 * ReversalOfTransferInConfirmationV08.mmMarketPracticeVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -367,6 +401,7 @@ public class ReversalOfTransferInConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
+			nextVersions_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV08.mmMarketPracticeVersion);
 			previousVersion_lazy = () -> ReversalOfTransferInConfirmationV06.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -405,6 +440,14 @@ public class ReversalOfTransferInConfirmationV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information provided when the message is a copy of a previous message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08#mmCopyDetails
+	 * ReversalOfTransferInConfirmationV08.mmCopyDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -418,6 +461,7 @@ public class ReversalOfTransferInConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
+			nextVersions_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV08.mmCopyDetails);
 			previousVersion_lazy = () -> ReversalOfTransferInConfirmationV06.mmCopyDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -440,11 +484,12 @@ public class ReversalOfTransferInConfirmationV07 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReversalOfTransferInConfirmationV07";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the ReversalOfTransferInConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent TransferInConfirmation message.\r\nUsage\r\nThe ReversalOfTransferInConfirmation message is used to reverse a previously sent TransferInConfirmation.\r\nThere are two ways to specify the reversal of the transfer in confirmation. Either:\r\n- the business references, for example, TransferReference, TransferConfirmationIdentification, of the transfer confirmation are quoted, or,\r\n- all the details of the transfer confirmation (this includes TransferReference and TransferConfirmationIdentification) are quoted but this is not recommended.\r\nThe message identification of the TransferInConfirmation message in which the transfer confirmation was conveyed may also be quoted in PreviousReference.\r\nThe message reference (MessageIdentification) of the TransferInInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\n";
+				nextVersions_lazy = () -> Arrays.asList(ReversalOfTransferInConfirmationV08.mmObject());
 				previousVersion_lazy = () -> ReversalOfTransferInConfirmationV06.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "RvslOfTrfInConf";
-				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmMessageIdentification,
 						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmReferences, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmFunction,
 						com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmReversal, com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07.mmMarketPracticeVersion,

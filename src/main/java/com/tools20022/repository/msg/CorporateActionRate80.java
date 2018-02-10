@@ -115,6 +115,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionRate80"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies rates related to a corporate action option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionRate87
+ * CorporateActionRate87}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionRate68
@@ -161,6 +168,14 @@ public class CorporateActionRate80 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Rate used for additional tax that cannot be categorised."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmAdditionalTax
+	 * CorporateActionRate87.mmAdditionalTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -178,6 +193,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTax";
 			definition = "Rate used for additional tax that cannot be categorised.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmAdditionalTax);
 			previousVersion_lazy = () -> CorporateActionRate68.mmAdditionalTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -222,6 +238,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Cash dividend amount per equity before deductions or allowances have been made."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmGrossDividendRate
+	 * CorporateActionRate87.mmGrossDividendRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -239,6 +263,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossDividendRate";
 			definition = "Cash dividend amount per equity before deductions or allowances have been made.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmGrossDividendRate);
 			previousVersion_lazy = () -> CorporateActionRate68.mmGrossDividendRate;
 			minOccurs = 0;
 			isComposite = true;
@@ -279,6 +304,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Cash dividend amount per equity after deductions or allowances have been made."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmNetDividendRate
+	 * CorporateActionRate87.mmNetDividendRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -295,6 +328,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate";
 			definition = "Cash dividend amount per equity after deductions or allowances have been made.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmNetDividendRate);
 			previousVersion_lazy = () -> CorporateActionRate68.mmNetDividendRate;
 			minOccurs = 0;
 			isComposite = true;
@@ -338,6 +372,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Public index rate applied to the amount paid to adjust it to inflation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmIndexFactor
+	 * CorporateActionRate87.mmIndexFactor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -355,6 +397,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexFactor";
 			definition = "Public index rate applied to the amount paid to adjust it to inflation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmIndexFactor);
 			previousVersion_lazy = () -> CorporateActionRate68.mmIndexFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -399,6 +442,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "The actual interest rate used for the payment of the interest for the specified interest period. \nUsage guideline: It is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmInterestRateUsedForPayment
+	 * CorporateActionRate87.mmInterestRateUsedForPayment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -416,6 +467,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateUsedForPayment";
 			definition = "The actual interest rate used for the payment of the interest for the specified interest period. \nUsage guideline: It is used to provide the applicable rate for the current payment, after all calculations have been performed, that is, application of period and method of interest computation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmInterestRateUsedForPayment);
 			previousVersion_lazy = () -> CorporateActionRate68.mmInterestRateUsedForPayment;
 			minOccurs = 0;
 			isComposite = true;
@@ -458,6 +510,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Maximum percentage of shares available through the over subscription privilege, usually a percentage of the basic subscription shares, for example, an account owner subscribing to 100 shares may over subscribe to a maximum of 50 additional shares when the over subscription maximum is 50 percent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmMaximumAllowedOversubscriptionRate
+	 * CorporateActionRate87.mmMaximumAllowedOversubscriptionRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -475,6 +535,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAllowedOversubscriptionRate";
 			definition = "Maximum percentage of shares available through the over subscription privilege, usually a percentage of the basic subscription shares, for example, an account owner subscribing to 100 shares may over subscribe to a maximum of 50 additional shares when the over subscription maximum is 50 percent.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmMaximumAllowedOversubscriptionRate);
 			previousVersion_lazy = () -> CorporateActionRate68.mmMaximumAllowedOversubscriptionRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -516,6 +577,14 @@ public class CorporateActionRate80 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Percentage of securities accepted by the offeror/issuer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmProrationRate
+	 * CorporateActionRate87.mmProrationRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -533,6 +602,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationRate";
 			definition = "Percentage of securities accepted by the offeror/issuer.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmProrationRate);
 			previousVersion_lazy = () -> CorporateActionRate68.mmProrationRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -576,6 +646,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmWithholdingTaxRate
+	 * CorporateActionRate87.mmWithholdingTaxRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -593,6 +671,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate";
 			definition = "Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmWithholdingTaxRate);
 			previousVersion_lazy = () -> CorporateActionRate68.mmWithholdingTaxRate;
 			minOccurs = 0;
 			isComposite = true;
@@ -632,6 +711,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmSecondLevelTax
+	 * CorporateActionRate87.mmSecondLevelTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -648,6 +735,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax";
 			definition = "Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmSecondLevelTax);
 			previousVersion_lazy = () -> CorporateActionRate68.mmSecondLevelTax;
 			minOccurs = 0;
 			isComposite = true;
@@ -688,6 +776,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments, for example, in the context of the EU Savings directive."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmTaxableIncomePerDividendShare
+	 * CorporateActionRate87.mmTaxableIncomePerDividendShare}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -704,6 +800,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerDividendShare";
 			definition = "Amount included in the dividend/NAV that is identified as gains directly or indirectly derived from interest payments, for example, in the context of the EU Savings directive.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmTaxableIncomePerDividendShare);
 			previousVersion_lazy = () -> CorporateActionRate68.mmTaxableIncomePerDividendShare;
 			minOccurs = 0;
 			isComposite = true;
@@ -745,6 +842,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Exchange rate (provided by the issuer) between the dividend or interest rate in the paid currency and the declared dividend or interest rate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmIssuerDeclaredExchangeRate
+	 * CorporateActionRate87.mmIssuerDeclaredExchangeRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -761,6 +866,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerDeclaredExchangeRate";
 			definition = "Exchange rate (provided by the issuer) between the dividend or interest rate in the paid currency and the declared dividend or interest rate.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmIssuerDeclaredExchangeRate);
 			previousVersion_lazy = () -> CorporateActionRate68.mmIssuerDeclaredExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -800,6 +906,14 @@ public class CorporateActionRate80 {
 	 * definition} =
 	 * "Overall tax withheld at source by fund managers prior to considering the tax obligation of each unit holder."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmTaxOnIncome
+	 * CorporateActionRate87.mmTaxOnIncome}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -816,6 +930,7 @@ public class CorporateActionRate80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxOnIncome";
 			definition = "Overall tax withheld at source by fund managers prior to considering the tax obligation of each unit holder.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmTaxOnIncome);
 			previousVersion_lazy = () -> CorporateActionRate68.mmTaxOnIncome;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -841,6 +956,7 @@ public class CorporateActionRate80 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate80";
 				definition = "Specifies rates related to a corporate action option.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionRate87.mmObject());
 				previousVersion_lazy = () -> CorporateActionRate68.mmObject();
 			}
 		});

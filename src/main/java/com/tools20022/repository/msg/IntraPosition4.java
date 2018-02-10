@@ -96,6 +96,12 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraPosition4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of the intra-position movement."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPosition5 IntraPosition5}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -139,6 +145,14 @@ public class IntraPosition4 {
 	 * definition} =
 	 * "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition5#mmFinancialInstrumentIdentification
+	 * IntraPosition5.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
@@ -151,6 +165,7 @@ public class IntraPosition4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPosition5.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -189,6 +204,14 @@ public class IntraPosition4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of securities to be settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition5#mmSettlementQuantity
+	 * IntraPosition5.mmSettlementQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSettlementQuantity = new MMMessageAttribute() {
@@ -200,6 +223,7 @@ public class IntraPosition4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPosition5.mmSettlementQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
@@ -240,6 +264,14 @@ public class IntraPosition4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the securities are to be moved."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition5#mmSettlementDate
+	 * IntraPosition5.mmSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSettlementDate = new MMMessageAttribute() {
@@ -252,6 +284,7 @@ public class IntraPosition4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities are to be moved.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPosition5.mmSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -291,6 +324,14 @@ public class IntraPosition4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance from which the securities are moving."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition5#mmBalanceFrom
+	 * IntraPosition5.mmBalanceFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
@@ -303,6 +344,7 @@ public class IntraPosition4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the securities are moving.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPosition5.mmBalanceFrom);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -343,6 +385,13 @@ public class IntraPosition4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance to which the securities are moving."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.IntraPosition5#mmBalanceTo
+	 * IntraPosition5.mmBalanceTo}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
@@ -355,6 +404,7 @@ public class IntraPosition4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the securities are moving.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPosition5.mmBalanceTo);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -392,6 +442,14 @@ public class IntraPosition4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number identifying a lot constituting the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition5#mmSecuritiesSubBalanceIdentification
+	 * IntraPosition5.mmSecuritiesSubBalanceIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesSubBalanceIdentification = new MMMessageAssociationEnd() {
@@ -403,6 +461,7 @@ public class IntraPosition4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSubBalanceIdentification";
 			definition = "Number identifying a lot constituting the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPosition5.mmSecuritiesSubBalanceIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -441,6 +500,13 @@ public class IntraPosition4 {
 	 * definition} =
 	 * "Specifies whether the transaction is to be executed with a high priority."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.IntraPosition5#mmPriority
+	 * IntraPosition5.mmPriority}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
@@ -452,6 +518,7 @@ public class IntraPosition4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPosition5.mmPriority);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
@@ -478,6 +545,7 @@ public class IntraPosition4 {
 				})).get();
 				name = "IntraPosition4";
 				definition = "Details of the intra-position movement.";
+				nextVersions_lazy = () -> Arrays.asList(IntraPosition5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

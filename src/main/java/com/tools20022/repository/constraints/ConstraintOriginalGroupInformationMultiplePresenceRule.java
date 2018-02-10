@@ -20,18 +20,100 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06;
-import com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07;
-import com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08;
-import com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01;
+import com.tools20022.repository.area.pacs.*;
 import java.util.Arrays;
 
 /**
- * If OriginalGroupInformation is present and multiple times (Occurrence &gt;
- * 1), then TransactionInformation[*]/OriginalGroupInformation must be present.
+ * If OriginalGroupInformationAndStatus is present and multiple times
+ * (Occurrence &gt; 1), then
+ * TransactionInformationAndStatus[*]/OriginalGroupInformation must be present.
  */
 public class ConstraintOriginalGroupInformationMultiplePresenceRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV09
+	 * FIToFIPaymentStatusReportV09}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/TransactionInformationAndStatus[*]/OriginalGroupInformation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndStatus[2]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OriginalGroupInformationMultiplePresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformationAndStatus is present and multiple times (Occurrence &gt; 1), then TransactionInformationAndStatus[*]/OriginalGroupInformation must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#forFIToFIPaymentStatusReportV08
+	 * ConstraintOriginalGroupInformationMultiplePresenceRule.
+	 * forFIToFIPaymentStatusReportV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FIToFIPaymentStatusReportV09> forFIToFIPaymentStatusReportV09 = new MMConstraint<FIToFIPaymentStatusReportV09>() {
+		{
+			validator = ConstraintOriginalGroupInformationMultiplePresenceRule::checkFIToFIPaymentStatusReportV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OriginalGroupInformationMultiplePresenceRule";
+			definition = "If OriginalGroupInformationAndStatus is present and multiple times (Occurrence > 1), then TransactionInformationAndStatus[*]/OriginalGroupInformation must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusReportV08;
+			owner_lazy = () -> FIToFIPaymentStatusReportV09.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV02
+	 * FIToFIPaymentStatusRequestV02}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/TransactionInformation[*]/OriginalGroupInformation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalGroupInformation[2]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OriginalGroupInformationMultiplePresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformation is present and multiple times (Occurrence &gt; 1), then TransactionInformation[*]/OriginalGroupInformation must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#forFIToFIPaymentStatusRequestV01
+	 * ConstraintOriginalGroupInformationMultiplePresenceRule.
+	 * forFIToFIPaymentStatusRequestV01}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FIToFIPaymentStatusRequestV02> forFIToFIPaymentStatusRequestV02 = new MMConstraint<FIToFIPaymentStatusRequestV02>() {
+		{
+			validator = ConstraintOriginalGroupInformationMultiplePresenceRule::checkFIToFIPaymentStatusRequestV02;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OriginalGroupInformationMultiplePresenceRule";
+			definition = "If OriginalGroupInformation is present and multiple times (Occurrence > 1), then TransactionInformation[*]/OriginalGroupInformation must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusRequestV01;
+			owner_lazy = () -> FIToFIPaymentStatusRequestV02.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformation[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -55,6 +137,15 @@ public class ConstraintOriginalGroupInformationMultiplePresenceRule {
 	 * definition} =
 	 * "If OriginalGroupInformation is present and multiple times (Occurrence &gt; 1), then TransactionInformation[*]/OriginalGroupInformation must be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#forFIToFIPaymentStatusRequestV02
+	 * ConstraintOriginalGroupInformationMultiplePresenceRule.
+	 * forFIToFIPaymentStatusRequestV02}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FIToFIPaymentStatusRequestV01> forFIToFIPaymentStatusRequestV01 = new MMConstraint<FIToFIPaymentStatusRequestV01>() {
@@ -63,6 +154,7 @@ public class ConstraintOriginalGroupInformationMultiplePresenceRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationMultiplePresenceRule";
 			definition = "If OriginalGroupInformation is present and multiple times (Occurrence > 1), then TransactionInformation[*]/OriginalGroupInformation must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusRequestV02);
 			owner_lazy = () -> FIToFIPaymentStatusRequestV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformation[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformation[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -90,6 +182,15 @@ public class ConstraintOriginalGroupInformationMultiplePresenceRule {
 	 * definition} =
 	 * "If OriginalGroupInformationAndStatus is present and multiple times (Occurrence &gt; 1), then TransactionInformationAndStatus[*]/OriginalGroupInformation must be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#forFIToFIPaymentStatusReportV09
+	 * ConstraintOriginalGroupInformationMultiplePresenceRule.
+	 * forFIToFIPaymentStatusReportV09}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -104,8 +205,54 @@ public class ConstraintOriginalGroupInformationMultiplePresenceRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationMultiplePresenceRule";
 			definition = "If OriginalGroupInformationAndStatus is present and multiple times (Occurrence > 1), then TransactionInformationAndStatus[*]/OriginalGroupInformation must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusReportV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusReportV07;
 			owner_lazy = () -> FIToFIPaymentStatusReportV08.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06
+	 * FIToFIPaymentStatusReportV06}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/TransactionInformationAndStatus[*]/OriginalGroupInformation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndStatus[2]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OriginalGroupInformationMultiplePresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OriginalGroupInformationAndStatus is present and multiple times (Occurrence &gt; 1), then TransactionInformationAndStatus[*]/OriginalGroupInformation must be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#forFIToFIPaymentStatusReportV07
+	 * ConstraintOriginalGroupInformationMultiplePresenceRule.
+	 * forFIToFIPaymentStatusReportV07}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FIToFIPaymentStatusReportV06> forFIToFIPaymentStatusReportV06 = new MMConstraint<FIToFIPaymentStatusReportV06>() {
+		{
+			validator = ConstraintOriginalGroupInformationMultiplePresenceRule::checkFIToFIPaymentStatusReportV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OriginalGroupInformationMultiplePresenceRule";
+			definition = "If OriginalGroupInformationAndStatus is present and multiple times (Occurrence > 1), then TransactionInformationAndStatus[*]/OriginalGroupInformation must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusReportV07);
+			owner_lazy = () -> FIToFIPaymentStatusReportV06.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
@@ -161,51 +308,25 @@ public class ConstraintOriginalGroupInformationMultiplePresenceRule {
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
+
 	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06
-	 * FIToFIPaymentStatusReportV06}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/TransactionInformationAndStatus[*]/OriginalGroupInformation&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/OriginalGroupInformationAndStatus[2]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OriginalGroupInformationMultiplePresenceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If OriginalGroupInformationAndStatus is present and multiple times (Occurrence &gt; 1), then TransactionInformationAndStatus[*]/OriginalGroupInformation must be present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule#forFIToFIPaymentStatusReportV07
-	 * ConstraintOriginalGroupInformationMultiplePresenceRule.
-	 * forFIToFIPaymentStatusReportV07}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
+	 * If OriginalGroupInformationAndStatus is present and multiple times
+	 * (Occurrence &gt; 1), then
+	 * TransactionInformationAndStatus[*]/OriginalGroupInformation must be
+	 * present.
 	 */
-	public static final MMConstraint<FIToFIPaymentStatusReportV06> forFIToFIPaymentStatusReportV06 = new MMConstraint<FIToFIPaymentStatusReportV06>() {
-		{
-			validator = ConstraintOriginalGroupInformationMultiplePresenceRule::checkFIToFIPaymentStatusReportV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OriginalGroupInformationMultiplePresenceRule";
-			definition = "If OriginalGroupInformationAndStatus is present and multiple times (Occurrence > 1), then TransactionInformationAndStatus[*]/OriginalGroupInformation must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOriginalGroupInformationMultiplePresenceRule.forFIToFIPaymentStatusReportV07);
-			owner_lazy = () -> FIToFIPaymentStatusReportV06.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/TransactionInformationAndStatus[*]/OriginalGroupInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OriginalGroupInformationAndStatus[2]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-	};
+	public static void checkFIToFIPaymentStatusReportV09(FIToFIPaymentStatusReportV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If OriginalGroupInformation is present and multiple times (Occurrence
+	 * &gt; 1), then TransactionInformation[*]/OriginalGroupInformation must be
+	 * present.
+	 */
+	public static void checkFIToFIPaymentStatusRequestV02(FIToFIPaymentStatusRequestV02 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If OriginalGroupInformation is present and multiple times (Occurrence
@@ -232,7 +353,7 @@ public class ConstraintOriginalGroupInformationMultiplePresenceRule {
 	 * TransactionInformationAndStatus[*]/OriginalGroupInformation must be
 	 * present.
 	 */
-	public static void checkFIToFIPaymentStatusReportV07(FIToFIPaymentStatusReportV07 obj) throws Exception {
+	public static void checkFIToFIPaymentStatusReportV06(FIToFIPaymentStatusReportV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -242,7 +363,7 @@ public class ConstraintOriginalGroupInformationMultiplePresenceRule {
 	 * TransactionInformationAndStatus[*]/OriginalGroupInformation must be
 	 * present.
 	 */
-	public static void checkFIToFIPaymentStatusReportV06(FIToFIPaymentStatusReportV06 obj) throws Exception {
+	public static void checkFIToFIPaymentStatusReportV07(FIToFIPaymentStatusReportV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

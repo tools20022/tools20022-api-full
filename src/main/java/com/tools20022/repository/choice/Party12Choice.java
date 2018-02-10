@@ -71,6 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.choice.Party28Choice Party28Choice}
  * </li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party35Choice Party35Choice}
+ * </li>
  * </ul>
  * </li>
  * </ul>
@@ -116,6 +118,8 @@ public class Party12Choice {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#mmParty
 	 * Party28Choice.mmParty}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Party35Choice#mmParty
+	 * Party35Choice.mmParty}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -129,7 +133,7 @@ public class Party12Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Identification of a person or an organisation.";
-			nextVersions_lazy = () -> Arrays.asList(Party28Choice.mmParty);
+			nextVersions_lazy = () -> Arrays.asList(Party28Choice.mmParty, Party35Choice.mmParty);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -173,6 +177,8 @@ public class Party12Choice {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#mmAgent
 	 * Party28Choice.mmAgent}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Party35Choice#mmAgent
+	 * Party35Choice.mmAgent}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -186,7 +192,7 @@ public class Party12Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Agent";
 			definition = "Identification of a financial institution.";
-			nextVersions_lazy = () -> Arrays.asList(Party28Choice.mmAgent);
+			nextVersions_lazy = () -> Arrays.asList(Party28Choice.mmAgent, Party35Choice.mmAgent);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -203,7 +209,7 @@ public class Party12Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Party12Choice";
 				definition = "Identification of a person, an organisation or a financial institution.";
-				nextVersions_lazy = () -> Arrays.asList(Party28Choice.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(Party28Choice.mmObject(), Party35Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

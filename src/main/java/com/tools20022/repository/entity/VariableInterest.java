@@ -255,6 +255,18 @@ public class VariableInterest {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmVariableRateChangeFrequency
 	 * FinancialInstrumentAttributes78.mmVariableRateChangeFrequency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmVariableRateChangeFrequency
+	 * FinancialInstrumentAttributes91.mmVariableRateChangeFrequency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmVariableRateChangeFrequency
+	 * FinancialInstrumentAttributes92.mmVariableRateChangeFrequency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmVariableRateChangeFrequency
+	 * FinancialInstrumentAttributes95.mmVariableRateChangeFrequency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmVariableRateChangeFrequency
+	 * FinancialInstrumentAttributes97.mmVariableRateChangeFrequency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -284,7 +296,9 @@ public class VariableInterest {
 					FinancialInstrumentAttributes30.mmVariableRateChangeFrequency, FinancialInstrumentAttributes28.mmVariableRateChangeFrequency, InterestChange1.mmVariableRateChangeFrequency,
 					FinancialInstrumentAttributes31.mmVariableRateChangeFrequency, FinancialInstrumentAttributes44.mmVariableRateChangeFrequency, FinancialInstrumentAttributes15.mmVariableRateChangeFrequency,
 					FinancialInstrumentAttributes29.mmVariableRateChangeFrequency, FinancialInstrumentAttributes2.mmVariableRateChangeFrequency, FinancialInstrumentAttributes63.mmVariableRateChangeFrequency,
-					FinancialInstrumentAttributes64.mmVariableRateChangeFrequency, FinancialInstrumentAttributes75.mmVariableRateChangeFrequency, FinancialInstrumentAttributes78.mmVariableRateChangeFrequency);
+					FinancialInstrumentAttributes64.mmVariableRateChangeFrequency, FinancialInstrumentAttributes75.mmVariableRateChangeFrequency, FinancialInstrumentAttributes78.mmVariableRateChangeFrequency,
+					FinancialInstrumentAttributes91.mmVariableRateChangeFrequency, FinancialInstrumentAttributes92.mmVariableRateChangeFrequency, FinancialInstrumentAttributes95.mmVariableRateChangeFrequency,
+					FinancialInstrumentAttributes97.mmVariableRateChangeFrequency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -483,6 +497,8 @@ public class VariableInterest {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmFloatingRateFixingDate
 	 * FinancialInstrumentAttributes78.mmFloatingRateFixingDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmInterestFixingDate
+	 * Debt3.mmInterestFixingDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#mmFloatingRateFixingDate
 	 * FinancialInstrumentAttributes79.mmFloatingRateFixingDate}</li>
@@ -501,6 +517,18 @@ public class VariableInterest {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83#mmFloatingRateFixingDate
 	 * FinancialInstrumentAttributes83.mmFloatingRateFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmFloatingRateFixingDate
+	 * FinancialInstrumentAttributes91.mmFloatingRateFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmFloatingRateFixingDate
+	 * FinancialInstrumentAttributes92.mmFloatingRateFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmFloatingRateFixingDate
+	 * FinancialInstrumentAttributes95.mmFloatingRateFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmFloatingRateFixingDate
+	 * FinancialInstrumentAttributes97.mmFloatingRateFixingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -543,9 +571,11 @@ public class VariableInterest {
 					FinancialInstrumentAttributes57.mmFloatingRateFixingDate, FinancialInstrumentAttributes56.mmFloatingRateFixingDate, FinancialInstrumentAttributes63.mmFloatingRateFixingDate,
 					FinancialInstrumentAttributes64.mmFloatingRateFixingDate, FinancialInstrumentAttributes66.mmFloatingRateFixingDate, FinancialInstrumentAttributes65.mmFloatingRateFixingDate,
 					FinancialInstrumentAttributes67.mmFloatingRateFixingDate, FinancialInstrumentAttributes70.mmFloatingRateFixingDate, FinancialInstrumentAttributes69.mmFloatingRateFixingDate,
-					FinancialInstrumentAttributes71.mmFloatingRateFixingDate, FinancialInstrumentAttributes75.mmFloatingRateFixingDate, FinancialInstrumentAttributes78.mmFloatingRateFixingDate,
+					FinancialInstrumentAttributes71.mmFloatingRateFixingDate, FinancialInstrumentAttributes75.mmFloatingRateFixingDate, FinancialInstrumentAttributes78.mmFloatingRateFixingDate, Debt3.mmInterestFixingDate,
 					FinancialInstrumentAttributes79.mmFloatingRateFixingDate, FinancialInstrumentAttributes81.mmFloatingRateFixingDate, FinancialInstrumentAttributes80.mmFloatingRateFixingDate,
-					FinancialInstrumentAttributes85.mmFloatingRateFixingDate, FinancialInstrumentAttributes84.mmFloatingRateFixingDate, FinancialInstrumentAttributes83.mmFloatingRateFixingDate);
+					FinancialInstrumentAttributes85.mmFloatingRateFixingDate, FinancialInstrumentAttributes84.mmFloatingRateFixingDate, FinancialInstrumentAttributes83.mmFloatingRateFixingDate,
+					FinancialInstrumentAttributes91.mmFloatingRateFixingDate, FinancialInstrumentAttributes92.mmFloatingRateFixingDate, FinancialInstrumentAttributes95.mmFloatingRateFixingDate,
+					FinancialInstrumentAttributes97.mmFloatingRateFixingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::FRNR"));
@@ -760,7 +790,7 @@ public class VariableInterest {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates that the rate reset will occur at the end of the payment period (True case)"
+	 * "Indicates that the rate reset will occur at the end of the payment period (True case)."
 	 * </li>
 	 * </ul>
 	 */
@@ -771,7 +801,7 @@ public class VariableInterest {
 			elementContext_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Arrears";
-			definition = "Indicates that the rate reset will occur at the end of the payment period (True case)";
+			definition = "Indicates that the rate reset will occur at the end of the payment period (True case).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -815,7 +845,7 @@ public class VariableInterest {
 	 * name} = "Index"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the index used for calculating the interest"</li>
+	 * definition} = "Identifies the index used for calculating the interest."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmIndex = new MMBusinessAssociationEnd() {
@@ -824,7 +854,7 @@ public class VariableInterest {
 			elementContext_lazy = () -> com.tools20022.repository.entity.VariableInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Index";
-			definition = "Identifies the index used for calculating the interest";
+			definition = "Identifies the index used for calculating the interest.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Index.mmVariableInterest;
 			aggregation = MMAggregation.NONE;

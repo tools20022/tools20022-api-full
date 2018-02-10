@@ -375,7 +375,7 @@ public class MeetingInstructionStatusV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the securities for which the meeting is organised. "</li>
+	 * "Identifies the securities for which the meeting is organised."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -391,7 +391,7 @@ public class MeetingInstructionStatusV04 {
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
-			definition = "Identifies the securities for which the meeting is organised. ";
+			definition = "Identifies the securities for which the meeting is organised.";
 			nextVersions_lazy = () -> Arrays.asList(MeetingInstructionStatusV05.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;

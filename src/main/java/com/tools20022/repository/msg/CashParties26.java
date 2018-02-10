@@ -93,6 +93,21 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#mmCashParties
  * SecuritiesSettlementTransactionInstructionV07.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08#mmCashParties
+ * SecuritiesSettlementTransactionGenerationNotificationV08.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08#mmCashParties
+ * SecuritiesSettlementTransactionConfirmationV08.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV08#mmCashParties
+ * SecuritiesFinancingInstructionV08.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08#mmCashParties
+ * SecuritiesFinancingConfirmationV08.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08#mmCashParties
+ * SecuritiesSettlementTransactionInstructionV08.mmCashParties}</li>
  * </ul>
  * </li>
  * <li>
@@ -424,7 +439,8 @@ public class CashParties26 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionInstructionV06.mmCashParties, SecuritiesSettlementTransactionConfirmationV06.mmCashParties, SecuritiesFinancingInstructionV06.mmCashParties,
 						SecuritiesSettlementTransactionGenerationNotificationV06.mmCashParties, SecuritiesFinancingConfirmationV06.mmCashParties, SecuritiesFinancingInstructionV07.mmCashParties,
 						SecuritiesSettlementTransactionGenerationNotificationV07.mmCashParties, SecuritiesSettlementTransactionConfirmationV07.mmCashParties, SecuritiesFinancingConfirmationV07.mmCashParties,
-						SecuritiesSettlementTransactionInstructionV07.mmCashParties);
+						SecuritiesSettlementTransactionInstructionV07.mmCashParties, SecuritiesSettlementTransactionGenerationNotificationV08.mmCashParties, SecuritiesSettlementTransactionConfirmationV08.mmCashParties,
+						SecuritiesFinancingInstructionV08.mmCashParties, SecuritiesFinancingConfirmationV08.mmCashParties, SecuritiesSettlementTransactionInstructionV08.mmCashParties);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

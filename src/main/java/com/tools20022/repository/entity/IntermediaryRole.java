@@ -176,6 +176,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#mmIntermediary
  * InvestmentAccount64.mmIntermediary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmIntermediaryInformation
+ * ReceiveInformation18.mmIntermediaryInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount66#mmIntermediaryInformation
+ * InvestmentAccount66.mmIntermediaryInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount67#mmIntermediaryInformation
+ * InvestmentAccount67.mmIntermediaryInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmIntermediaryInformation
+ * DeliverInformation19.mmIntermediaryInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmIntermediaryInformation
+ * ReceiveInformation19.mmIntermediaryInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmIntermediaryInformation
+ * DeliverInformation18.mmIntermediaryInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmIntermediaryInformation
+ * InvestmentAccount68.mmIntermediaryInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -207,6 +228,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.Intermediary33 Intermediary33}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Intermediary35 Intermediary35}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Intermediary37 Intermediary37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary41 Intermediary41}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary42 Intermediary42}</li>
  * </ul>
  * </li>
  * <li>
@@ -246,12 +269,13 @@ public class IntermediaryRole extends AccountPartyRole {
 						AccountSubLevel4.mmAgent, AccountSubLevel5.mmAgentCode, AccountSubLevel2.mmAgent, AccountSubLevel3.mmAgent, AccountSubLevel6.mmAgent, AccountSubLevel7.mmAgent, AccountSubLevel8.mmAgent, AccountSubLevel9.mmAgent,
 						Intermediary32.mmRole, InvestmentAccount54.mmIntermediaryInformation, ReceiveInformation17.mmIntermediaryInformation, ReceiveInformation16.mmIntermediaryInformation, InvestmentAccount56.mmIntermediaryInformation,
 						DeliverInformation16.mmIntermediaryInformation, DeliverInformation17.mmIntermediaryInformation, InvestmentAccount52.mmIntermediary, InvestmentAccount57.mmIntermediaryInformation, Intermediary37.mmRole,
-						AggregateHoldingBalance3.mmAgent, InvestmentAccount64.mmIntermediary);
+						AggregateHoldingBalance3.mmAgent, InvestmentAccount64.mmIntermediary, ReceiveInformation18.mmIntermediaryInformation, InvestmentAccount66.mmIntermediaryInformation, InvestmentAccount67.mmIntermediaryInformation,
+						DeliverInformation19.mmIntermediaryInformation, ReceiveInformation19.mmIntermediaryInformation, DeliverInformation18.mmIntermediaryInformation, InvestmentAccount68.mmIntermediaryInformation);
 				superType_lazy = () -> AccountPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Intermediary5.mmObject(), Intermediary12.mmObject(), Intermediary1.mmObject(), Intermediary7.mmObject(), Intermediary6.mmObject(), Intermediary13.mmObject(),
 						Intermediary11.mmObject(), Intermediary2.mmObject(), Intermediary3.mmObject(), Intermediary21.mmObject(), Intermediary23.mmObject(), Intermediary22.mmObject(), Intermediary17.mmObject(), Intermediary18.mmObject(),
 						Intermediary24.mmObject(), Intermediary26.mmObject(), Intermediary25.mmObject(), Intermediary27.mmObject(), Intermediary28.mmObject(), Intermediary32.mmObject(), Intermediary36.mmObject(), Intermediary34.mmObject(),
-						Intermediary33.mmObject(), Intermediary35.mmObject(), Intermediary37.mmObject());
+						Intermediary33.mmObject(), Intermediary35.mmObject(), Intermediary37.mmObject(), Intermediary41.mmObject(), Intermediary42.mmObject());
 			}
 
 			@Override

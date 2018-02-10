@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Instruction to pay an amount of money to an ultimate beneficiary, on behalf
  * of an originator. This instruction may have to be forwarded several times to
- * complete the settlement chain.
+ * complete the settlement chain. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentInstruction3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n"
+ * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -117,7 +117,7 @@ public class PaymentInstruction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date at which the initiating party requests that the payment instruction be processed. \n"
+	 * "Date at which the initiating party requests that the payment instruction be processed. \n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -137,7 +137,7 @@ public class PaymentInstruction3 {
 			xmlTag = "ReqdExctnDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDateTime";
-			definition = "Date at which the initiating party requests that the payment instruction be processed. \n";
+			definition = "Date at which the initiating party requests that the payment instruction be processed. \n.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction13.mmRequestedExecutionDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -212,7 +212,7 @@ public class PaymentInstruction3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentInstruction3";
-				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
+				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n.";
 				nextVersions_lazy = () -> Arrays.asList(PaymentInstruction13.mmObject());
 			}
 		});

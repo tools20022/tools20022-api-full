@@ -148,7 +148,7 @@ public class ConstraintControlSumAndGroupReturnRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf GroupReturn is true, then ControlSum is not allowed."
+	 * "ISO20022 Rule: \nIf GroupReturn is true, then ControlSum is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -157,7 +157,7 @@ public class ConstraintControlSumAndGroupReturnRule {
 			validator = ConstraintControlSumAndGroupReturnRule::checkGroupHeader17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSumAndGroupReturnRule";
-			definition = "ISO20022 Rule:\nIf GroupReturn is true, then ControlSum is not allowed.";
+			definition = "ISO20022 Rule: \nIf GroupReturn is true, then ControlSum is not allowed.";
 			owner_lazy = () -> GroupHeader17.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ControlSum</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -182,7 +182,7 @@ public class ConstraintControlSumAndGroupReturnRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf GroupReturn is true, then ControlSum is not allowed."
+	 * "ISO20022 Rule: \nIf GroupReturn is true, then ControlSum is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -191,7 +191,7 @@ public class ConstraintControlSumAndGroupReturnRule {
 			validator = ConstraintControlSumAndGroupReturnRule::checkGroupHeader27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSumAndGroupReturnRule";
-			definition = "ISO20022 Rule:\nIf GroupReturn is true, then ControlSum is not allowed.";
+			definition = "ISO20022 Rule: \nIf GroupReturn is true, then ControlSum is not allowed.";
 			owner_lazy = () -> GroupHeader27.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ControlSum</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupReturn</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.codeset.PreConfirmation1Code;
 import com.tools20022.repository.datatype.Max35Text;
@@ -79,6 +80,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07#mmAdditionalParameters
  * SecuritiesSettlementTransactionConfirmationV07.mmAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08#mmAdditionalParameters
+ * SecuritiesSettlementTransactionConfirmationV08.mmAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
@@ -541,7 +545,7 @@ public class AdditionalParameters29 {
 						com.tools20022.repository.msg.AdditionalParameters29.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
 						com.tools20022.repository.msg.AdditionalParameters29.mmClientTripartyCollateralTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters29.mmClientCollateralInstructionIdentification,
 						com.tools20022.repository.msg.AdditionalParameters29.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmationV07.mmAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmationV07.mmAdditionalParameters, SecuritiesSettlementTransactionConfirmationV08.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters29);

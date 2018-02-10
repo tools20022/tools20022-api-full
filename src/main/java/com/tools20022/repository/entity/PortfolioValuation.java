@@ -20,6 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Position1;
 import com.tools20022.repository.msg.TotalPortfolioValuation1;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -83,6 +84,7 @@ import java.util.Objects;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.TotalPortfolioValuation1
  * TotalPortfolioValuation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Position1 Position1}</li>
  * </ul>
  * </li>
  * <li>
@@ -425,7 +427,7 @@ public class PortfolioValuation {
 	 * name} = "ExpensesPaid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Expenses attributable to the portfolio"</li>
+	 * definition} = "Expenses attributable to the portfolio."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmExpensesPaid = new MMBusinessAttribute() {
@@ -435,7 +437,7 @@ public class PortfolioValuation {
 			elementContext_lazy = () -> com.tools20022.repository.entity.PortfolioValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpensesPaid";
-			definition = "Expenses attributable to the portfolio";
+			definition = "Expenses attributable to the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -557,7 +559,7 @@ public class PortfolioValuation {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PortfolioValuation.mmTotalPortfolioValue, com.tools20022.repository.entity.PortfolioValuation.mmTotalBookValue,
 						com.tools20022.repository.entity.PortfolioValuation.mmTotalReceipts, com.tools20022.repository.entity.PortfolioValuation.mmTotalDisbursements, com.tools20022.repository.entity.PortfolioValuation.mmIncomeReceived,
 						com.tools20022.repository.entity.PortfolioValuation.mmExpensesPaid, com.tools20022.repository.entity.PortfolioValuation.mmPortfolio, com.tools20022.repository.entity.PortfolioValuation.mmValuationPeriod);
-				derivationComponent_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(TotalPortfolioValuation1.mmObject(), Position1.mmObject());
 			}
 
 			@Override

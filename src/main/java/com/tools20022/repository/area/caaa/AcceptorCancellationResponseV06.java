@@ -25,7 +25,7 @@ import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVer
 import com.tools20022.repository.msg.AcceptorCancellationResponse6;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header30;
-import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017;
+import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -60,8 +60,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
- * CAPEAcceptortoAcquirerMaintenance20162017}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOLatestversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -84,6 +84,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "The AcceptorCancellationResponse message is sent by the acquirer (or its agent) to an acceptor (or its agent), to return the outcome of the cancellation request. If the response is positive, the acquirer has voided the financial data from the captured transaction."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV07
+ * AcceptorCancellationResponseV07}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -118,6 +126,14 @@ public class AcceptorCancellationResponseV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cancellation response message management information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV07#mmHeader
+	 * AcceptorCancellationResponseV07.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +147,7 @@ public class AcceptorCancellationResponseV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Cancellation response message management information.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationResponseV07.mmHeader);
 			previousVersion_lazy = () -> AcceptorCancellationResponseV05.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -168,6 +185,14 @@ public class AcceptorCancellationResponseV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information related to the cancellation response."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV07#mmCancellationResponse
+	 * AcceptorCancellationResponseV07.mmCancellationResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,6 +206,7 @@ public class AcceptorCancellationResponseV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationResponse";
 			definition = "Information related to the cancellation response.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationResponseV07.mmCancellationResponse);
 			previousVersion_lazy = () -> AcceptorCancellationResponseV05.mmCancellationResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -218,6 +244,14 @@ public class AcceptorCancellationResponseV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Trailer of the message containing a MAC."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCancellationResponseV07#mmSecurityTrailer
+	 * AcceptorCancellationResponseV07.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +265,7 @@ public class AcceptorCancellationResponseV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationResponseV07.mmSecurityTrailer);
 			previousVersion_lazy = () -> AcceptorCancellationResponseV05.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -252,8 +287,9 @@ public class AcceptorCancellationResponseV06 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationResponseV06";
 				definition = "The AcceptorCancellationResponse message is sent by the acquirer (or its agent) to an acceptor (or its agent), to return the outcome of the cancellation request. If the response is positive, the acquirer has voided the financial data from the captured transaction.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationResponseV07.mmObject());
 				previousVersion_lazy = () -> AcceptorCancellationResponseV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEAcceptortoAcquirerMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCxlRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();

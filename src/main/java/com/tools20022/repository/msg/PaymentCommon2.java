@@ -79,6 +79,12 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentCommon2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Common details for all payment instruction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon3 PaymentCommon3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.PaymentCommon1
  * PaymentCommon1}</li>
@@ -114,6 +120,14 @@ public class PaymentCommon2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Origin of the payment (be it a member or a system or both)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon3#mmPaymentFrom
+	 * PaymentCommon3.mmPaymentFrom}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +143,7 @@ public class PaymentCommon2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrom";
 			definition = "Origin of the payment (be it a member or a system or both).";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCommon3.mmPaymentFrom);
 			previousVersion_lazy = () -> PaymentCommon1.mmPaymentFrom;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -161,6 +176,13 @@ public class PaymentCommon2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Destination of the payment (be it a member or a system or both)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon3#mmPaymentTo
+	 * PaymentCommon3.mmPaymentTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -176,6 +198,7 @@ public class PaymentCommon2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTo";
 			definition = "Destination of the payment (be it a member or a system or both).";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCommon3.mmPaymentTo);
 			previousVersion_lazy = () -> PaymentCommon1.mmPaymentTo;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -212,7 +235,15 @@ public class PaymentCommon2 {
 	 * name} = "CommonStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of a transfer.\n"</li>
+	 * definition} = "Status of a transfer.\n."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon3#mmCommonStatus
+	 * PaymentCommon3.mmCommonStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -228,7 +259,8 @@ public class PaymentCommon2 {
 			xmlTag = "CmonSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonStatus";
-			definition = "Status of a transfer.\n";
+			definition = "Status of a transfer.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCommon3.mmCommonStatus);
 			previousVersion_lazy = () -> PaymentCommon1.mmCommonStatus;
 			minOccurs = 0;
 			isComposite = true;
@@ -269,6 +301,14 @@ public class PaymentCommon2 {
 	 * definition} =
 	 * "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon3#mmRequestedExecutionDate
+	 * PaymentCommon3.mmRequestedExecutionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -285,6 +325,7 @@ public class PaymentCommon2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCommon3.mmRequestedExecutionDate);
 			previousVersion_lazy = () -> PaymentCommon1.mmRequestedExecutionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -325,6 +366,13 @@ public class PaymentCommon2 {
 	 * definition} =
 	 * "Date and time at which an entry is posted to an account on the account servicer's books."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCommon3#mmEntryDate
+	 * PaymentCommon3.mmEntryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -341,6 +389,7 @@ public class PaymentCommon2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDate";
 			definition = "Date and time at which an entry is posted to an account on the account servicer's books.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCommon3.mmEntryDate);
 			previousVersion_lazy = () -> PaymentCommon1.mmEntryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -379,7 +428,15 @@ public class PaymentCommon2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the payment instruction is a debit or a credit.\n"</li>
+	 * "Indicates whether the payment instruction is a debit or a credit.\n."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon3#mmCreditDebitIndicator
+	 * PaymentCommon3.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -395,7 +452,8 @@ public class PaymentCommon2 {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the payment instruction is a debit or a credit.\n";
+			definition = "Indicates whether the payment instruction is a debit or a credit.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCommon3.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> PaymentCommon1.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -435,6 +493,14 @@ public class PaymentCommon2 {
 	 * definition} =
 	 * "Indicates the message or event from which an instruction has been initiated."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon3#mmPaymentMethod
+	 * PaymentCommon3.mmPaymentMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -451,6 +517,7 @@ public class PaymentCommon2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Indicates the message or event from which an instruction has been initiated.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCommon3.mmPaymentMethod);
 			previousVersion_lazy = () -> PaymentCommon1.mmPaymentMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -470,6 +537,7 @@ public class PaymentCommon2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCommon2";
 				definition = "Common details for all payment instruction.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentCommon3.mmObject());
 				previousVersion_lazy = () -> PaymentCommon1.mmObject();
 			}
 		});

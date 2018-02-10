@@ -110,6 +110,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the criteria which are used to search for standing orders defined within the system."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2
+ * StandingOrderSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -148,6 +155,14 @@ public class StandingOrderSearchCriteria1 {
 	 * definition} =
 	 * "Indicates whether the key fields or business attributes defined within the system must be returned."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmKeyAttributesIndicator
+	 * StandingOrderSearchCriteria2.mmKeyAttributesIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmKeyAttributesIndicator = new MMMessageAttribute() {
@@ -158,6 +173,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyAttributesIndicator";
 			definition = "Indicates whether the key fields or business attributes defined within the system must be returned.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmKeyAttributesIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -197,6 +213,14 @@ public class StandingOrderSearchCriteria1 {
 	 * definition} =
 	 * "Unique identification to unambiguously identify the standing order used to initiate the liquidity transfer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmStandingOrderIdentification
+	 * StandingOrderSearchCriteria2.mmStandingOrderIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStandingOrderIdentification = new MMMessageAttribute() {
@@ -208,6 +232,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderIdentification";
 			definition = "Unique identification to unambiguously identify the standing order used to initiate the liquidity transfer.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmStandingOrderIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -246,6 +271,14 @@ public class StandingOrderSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of the standing order."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmType
+	 * StandingOrderSearchCriteria2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -257,6 +290,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the standing order.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> StandingOrderType1Choice.mmObject();
@@ -295,6 +329,14 @@ public class StandingOrderSearchCriteria1 {
 	 * definition} =
 	 * "Liquidity transfer origin or destination account within the pool of accounts under management of the requestor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmAccount
+	 * StandingOrderSearchCriteria2.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
@@ -306,6 +348,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Liquidity transfer origin or destination account within the pool of accounts under management of the requestor.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -342,6 +385,14 @@ public class StandingOrderSearchCriteria1 {
 	 * definition} =
 	 * "Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmCurrency
+	 * StandingOrderSearchCriteria2.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
@@ -352,6 +403,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Unique and unambiguous identification for a standing order, as assigned by the account servicer or the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -389,7 +441,15 @@ public class StandingOrderSearchCriteria1 {
 	 * name} = "ValidityPeriod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Dates during which the standing order is in effect. "</li>
+	 * definition} = "Dates during which the standing order is in effect."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmValidityPeriod
+	 * StandingOrderSearchCriteria2.mmValidityPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValidityPeriod = new MMMessageAttribute() {
@@ -400,7 +460,8 @@ public class StandingOrderSearchCriteria1 {
 			xmlTag = "VldtyPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
-			definition = "Dates during which the standing order is in effect. ";
+			definition = "Dates during which the standing order is in effect.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmValidityPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DatePeriodDetails2Choice.mmObject();
@@ -434,6 +495,14 @@ public class StandingOrderSearchCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies if the account is debited or credited by the standing order."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmSystemMember
+	 * StandingOrderSearchCriteria2.mmSystemMember}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSystemMember = new MMMessageAssociationEnd() {
@@ -444,6 +513,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemMember";
 			definition = "Specifies if the account is debited or credited by the standing order.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmSystemMember);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -482,6 +552,14 @@ public class StandingOrderSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Entity involved in an activity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmResponsibleParty
+	 * StandingOrderSearchCriteria2.mmResponsibleParty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmResponsibleParty = new MMMessageAssociationEnd() {
@@ -493,6 +571,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsibleParty";
 			definition = "Entity involved in an activity.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmResponsibleParty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -534,6 +613,14 @@ public class StandingOrderSearchCriteria1 {
 	 * definition} =
 	 * "Liquidity transfer origin or destination account within the pool of accounts under management of the requestor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmAssociatedPoolAccount
+	 * StandingOrderSearchCriteria2.mmAssociatedPoolAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAssociatedPoolAccount = new MMMessageAttribute() {
@@ -545,6 +632,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssociatedPoolAccount";
 			definition = "Liquidity transfer origin or destination account within the pool of accounts under management of the requestor.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmAssociatedPoolAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
@@ -582,7 +670,15 @@ public class StandingOrderSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification to unambiguously identiy the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence."
+	 * "Unique identification to unambiguously identify the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmLinkSetIdentification
+	 * StandingOrderSearchCriteria2.mmLinkSetIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -594,7 +690,8 @@ public class StandingOrderSearchCriteria1 {
 			xmlTag = "LkSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetIdentification";
-			definition = "Unique identification to unambiguously identiy the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence.";
+			definition = "Unique identification to unambiguously identify the link set in which the standing order is defined. The link set is a collection of standing order defined in a specific sequence.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmLinkSetIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -634,6 +731,14 @@ public class StandingOrderSearchCriteria1 {
 	 * definition} =
 	 * "Unique identification to unambiguously identify liquidity transfer standing order within the link set."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmLinkSetOrderIdentification
+	 * StandingOrderSearchCriteria2.mmLinkSetOrderIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLinkSetOrderIdentification = new MMMessageAttribute() {
@@ -645,6 +750,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetOrderIdentification";
 			definition = "Unique identification to unambiguously identify liquidity transfer standing order within the link set.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmLinkSetOrderIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -684,6 +790,14 @@ public class StandingOrderSearchCriteria1 {
 	 * definition} =
 	 * "Specifies the sequence in which the system will execute the liquidity transfers standing order within the link set when additional liquidity is required."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmLinkSetOrderSequence
+	 * StandingOrderSearchCriteria2.mmLinkSetOrderSequence}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLinkSetOrderSequence = new MMMessageAttribute() {
@@ -695,6 +809,7 @@ public class StandingOrderSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkSetOrderSequence";
 			definition = "Specifies the sequence in which the system will execute the liquidity transfers standing order within the link set when additional liquidity is required.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmLinkSetOrderSequence);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -733,7 +848,15 @@ public class StandingOrderSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the query shall return all liquidity transfer standing orders defined as zero sweeping orders.\r\nWhen the indicator is set to true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero."
+	 * "Indicates whether the query shall return all liquidity transfer standing orders defined as zero sweeping orders.\r\nWhen the indicator is set to true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is zero."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmZeroSweepIndicator
+	 * StandingOrderSearchCriteria2.mmZeroSweepIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -745,7 +868,8 @@ public class StandingOrderSearchCriteria1 {
 			xmlTag = "ZeroSweepInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroSweepIndicator";
-			definition = "Indicates whether the query shall return all liquidity transfer standing orders defined as zero sweeping orders.\r\nWhen the indicator is set to true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero.";
+			definition = "Indicates whether the query shall return all liquidity transfer standing orders defined as zero sweeping orders.\r\nWhen the indicator is set to true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is zero.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmZeroSweepIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -766,6 +890,7 @@ public class StandingOrderSearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderSearchCriteria1";
 				definition = "Defines the criteria which are used to search for standing orders defined within the system.";
+				nextVersions_lazy = () -> Arrays.asList(StandingOrderSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -72,6 +72,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CollateralValuePosition1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of the collateral value position/balance."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValuePosition2
+ * CollateralValuePosition2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +113,14 @@ public class CollateralValuePosition1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time when the data was last accessed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuePosition2#mmDataAccessTime
+	 * CollateralValuePosition2.mmDataAccessTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDataAccessTime = new MMMessageAttribute() {
@@ -116,6 +131,7 @@ public class CollateralValuePosition1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataAccessTime";
 			definition = "Date and time when the data was last accessed.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuePosition2.mmDataAccessTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -154,6 +170,14 @@ public class CollateralValuePosition1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total value of the collateral valuation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuePosition2#mmTotalCollateralValuation
+	 * CollateralValuePosition2.mmTotalCollateralValuation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalCollateralValuation = new MMMessageAttribute() {
@@ -165,6 +189,7 @@ public class CollateralValuePosition1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalCollateralValuation";
 			definition = "Total value of the collateral valuation.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuePosition2.mmTotalCollateralValuation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -203,6 +228,14 @@ public class CollateralValuePosition1 {
 	 * definition} =
 	 * "Unique identification, as assigned by the account servicer, to unambiguously identify the securities account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuePosition2#mmSecuritiesAccount
+	 * CollateralValuePosition2.mmSecuritiesAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
@@ -214,6 +247,7 @@ public class CollateralValuePosition1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the securities account.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuePosition2.mmSecuritiesAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -253,6 +287,14 @@ public class CollateralValuePosition1 {
 	 * definition} =
 	 * "Unique identification, as known by the account owner, to unambiguously identify the securities on which the collateral value position is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValuePosition2#mmSecurities
+	 * CollateralValuePosition2.mmSecurities}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecurities = new MMMessageAssociationEnd() {
@@ -264,6 +306,7 @@ public class CollateralValuePosition1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
 			definition = "Unique identification, as known by the account owner, to unambiguously identify the securities on which the collateral value position is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValuePosition2.mmSecurities);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecurityCharacteristics1.mmObject();
@@ -280,6 +323,7 @@ public class CollateralValuePosition1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValuePosition1";
 				definition = "Details of the collateral value position/balance.";
+				nextVersions_lazy = () -> Arrays.asList(CollateralValuePosition2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

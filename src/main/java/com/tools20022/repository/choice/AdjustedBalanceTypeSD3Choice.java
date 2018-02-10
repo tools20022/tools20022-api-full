@@ -61,6 +61,14 @@ import javax.xml.bind.annotation.XmlType;
  * "AdjustedBalanceTypeSD3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of balance types to provide transaction details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AdjustedBalanceTypeSD4Choice
+ * AdjustedBalanceTypeSD4Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.AdjustedBalanceTypeSD1Choice
@@ -105,6 +113,14 @@ public class AdjustedBalanceTypeSD3Choice {
 	 * definition} =
 	 * "Stock loan transaction position. Stock loan is loaned / borrowed from / to a third party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AdjustedBalanceTypeSD4Choice#mmStockLoan
+	 * AdjustedBalanceTypeSD4Choice.mmStockLoan}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -121,6 +137,7 @@ public class AdjustedBalanceTypeSD3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLoan";
 			definition = "Stock loan transaction position. Stock loan is loaned / borrowed from / to a third party.";
+			nextVersions_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD4Choice.mmStockLoan);
 			previousVersion_lazy = () -> AdjustedBalanceTypeSD1Choice.mmStockLoan;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -158,7 +175,15 @@ public class AdjustedBalanceTypeSD3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. "
+	 * "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AdjustedBalanceTypeSD4Choice#mmRepo
+	 * AdjustedBalanceTypeSD4Choice.mmRepo}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -175,7 +200,8 @@ public class AdjustedBalanceTypeSD3Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "REPO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
-			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. ";
+			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time.";
+			nextVersions_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD4Choice.mmRepo);
 			previousVersion_lazy = () -> AdjustedBalanceTypeSD1Choice.mmRepo;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -191,6 +217,7 @@ public class AdjustedBalanceTypeSD3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdjustedBalanceTypeSD3Choice";
 				definition = "Choice of balance types to provide transaction details.";
+				nextVersions_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD4Choice.mmObject());
 				previousVersion_lazy = () -> AdjustedBalanceTypeSD1Choice.mmObject();
 			}
 		});

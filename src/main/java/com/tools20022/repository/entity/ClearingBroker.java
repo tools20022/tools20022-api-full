@@ -23,6 +23,8 @@ import com.tools20022.repository.entity.Broker;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ConfirmationParties2;
 import com.tools20022.repository.msg.ConfirmationParties4;
+import com.tools20022.repository.msg.TradeCounterpartyReport5;
+import com.tools20022.repository.msg.TradeCounterpartyReport6;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -47,6 +49,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ConfirmationParties2#mmClearingFirm
  * ConfirmationParties2.mmClearingFirm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeCounterpartyReport5#mmClearingMember
+ * TradeCounterpartyReport5.mmClearingMember}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeCounterpartyReport6#mmClearingMember
+ * TradeCounterpartyReport6.mmClearingMember}</li>
  * </ul>
  * </li>
  * <li>
@@ -77,7 +85,7 @@ public class ClearingBroker extends Broker {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingBroker";
 				definition = "Party which acts as a liaison between an investor and a clearing corporation.";
-				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmClearingFirm, ConfirmationParties2.mmClearingFirm);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmClearingFirm, ConfirmationParties2.mmClearingFirm, TradeCounterpartyReport5.mmClearingMember, TradeCounterpartyReport6.mmClearingMember);
 				superType_lazy = () -> Broker.mmObject();
 			}
 

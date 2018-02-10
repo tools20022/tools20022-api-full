@@ -20,9 +20,11 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.PreviousYear2Choice;
 import com.tools20022.repository.choice.PreviousYearChoice;
 import com.tools20022.repository.msg.PreviousYear1;
 import com.tools20022.repository.msg.PreviousYear2;
+import java.util.Arrays;
 
 /**
  * SpecificPreviousYears must not contain the current year.
@@ -46,6 +48,14 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "SpecificPreviousYears must not contain the current year."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSpecificPreviousYearsGuideline#forPreviousYear2Choice
+	 * ConstraintSpecificPreviousYearsGuideline.forPreviousYear2Choice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PreviousYearChoice> forPreviousYearChoice = new MMConstraint<PreviousYearChoice>() {
@@ -54,6 +64,7 @@ public class ConstraintSpecificPreviousYearsGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificPreviousYearsGuideline";
 			definition = "SpecificPreviousYears must not contain the current year.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSpecificPreviousYearsGuideline.forPreviousYear2Choice);
 			owner_lazy = () -> PreviousYearChoice.mmObject();
 		}
 	};
@@ -111,6 +122,40 @@ public class ConstraintSpecificPreviousYearsGuideline {
 			owner_lazy = () -> PreviousYear2.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.PreviousYear2Choice
+	 * PreviousYear2Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SpecificPreviousYearsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "SpecificPreviousYears must not contain the current year."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSpecificPreviousYearsGuideline#forPreviousYearChoice
+	 * ConstraintSpecificPreviousYearsGuideline.forPreviousYearChoice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PreviousYear2Choice> forPreviousYear2Choice = new MMConstraint<PreviousYear2Choice>() {
+		{
+			validator = ConstraintSpecificPreviousYearsGuideline::checkPreviousYear2Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SpecificPreviousYearsGuideline";
+			definition = "SpecificPreviousYears must not contain the current year.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSpecificPreviousYearsGuideline.forPreviousYearChoice;
+			owner_lazy = () -> PreviousYear2Choice.mmObject();
+		}
+	};
 
 	/**
 	 * SpecificPreviousYears must not contain the current year.
@@ -130,6 +175,13 @@ public class ConstraintSpecificPreviousYearsGuideline {
 	 * SpecificPreviousYears must not contain the current year.
 	 */
 	public static void checkPreviousYear2(PreviousYear2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * SpecificPreviousYears must not contain the current year.
+	 */
+	public static void checkPreviousYear2Choice(PreviousYear2Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

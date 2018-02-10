@@ -31,7 +31,7 @@ import java.util.Arrays;
  * confirming the partial settlement of an instruction.<br>
  * - with code PARC in the very last message sent to confirm the settlement of
  * the remaining part.<br>
- * For more details, see the relevant market practice document on www.smpg.info
+ * For more details, see the relevant market practice document on www.smpg.info.
  */
 public class ConstraintPartialSettlementGuideline {
 
@@ -52,7 +52,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -61,7 +61,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters2.mmObject();
 		}
 	};
@@ -82,7 +82,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -91,7 +91,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters6.mmObject();
 		}
 	};
@@ -112,7 +112,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -121,7 +121,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters12.mmObject();
 		}
 	};
@@ -142,7 +142,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -151,7 +151,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters13.mmObject();
 		}
 	};
@@ -172,7 +172,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -189,7 +189,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters24);
 			owner_lazy = () -> AdditionalParameters18.mmObject();
 		}
@@ -211,7 +211,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -220,7 +220,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters19.mmObject();
 		}
 	};
@@ -241,7 +241,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -250,7 +250,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount2.mmObject();
 		}
 	};
@@ -271,7 +271,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -280,7 +280,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount12.mmObject();
 		}
 	};
@@ -301,7 +301,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -310,7 +310,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount15.mmObject();
 		}
 	};
@@ -331,7 +331,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -340,7 +340,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount20.mmObject();
 		}
 	};
@@ -361,7 +361,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -378,7 +378,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forQuantityAndAccount41);
 			owner_lazy = () -> QuantityAndAccount28.mmObject();
 		}
@@ -400,7 +400,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -409,7 +409,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount37.mmObject();
 		}
 	};
@@ -430,7 +430,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -447,7 +447,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters22);
 			owner_lazy = () -> AdditionalParameters17.mmObject();
 		}
@@ -469,7 +469,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -478,7 +478,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters20.mmObject();
 		}
 	};
@@ -499,7 +499,15 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline#forQuantityAndAccount64
+	 * ConstraintPartialSettlementGuideline.forQuantityAndAccount64}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -513,7 +521,8 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forQuantityAndAccount64);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forQuantityAndAccount28;
 			owner_lazy = () -> QuantityAndAccount41.mmObject();
 		}
@@ -535,7 +544,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -549,7 +558,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters18;
 			owner_lazy = () -> AdditionalParameters24.mmObject();
 		}
@@ -571,7 +580,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -593,7 +602,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters29);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters17;
 			owner_lazy = () -> AdditionalParameters22.mmObject();
@@ -616,7 +625,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -625,7 +634,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters26.mmObject();
 		}
 	};
@@ -646,7 +655,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -663,7 +672,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forQuantityAndAccount57);
 			owner_lazy = () -> QuantityAndAccount51.mmObject();
 		}
@@ -685,7 +694,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -694,7 +703,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters27.mmObject();
 		}
 	};
@@ -715,7 +724,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -729,7 +738,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters22;
 			owner_lazy = () -> AdditionalParameters29.mmObject();
 		}
@@ -751,7 +760,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -760,7 +769,7 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkAdditionalParameters31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe PartialSettlement field should be used as follows:\r\n- with code PAIN in the first message(s) (there may be more than one) confirming the partial settlement of an instruction.\r\n- with code PARC in the very last message sent to confirm the settlement of the remaining part.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> AdditionalParameters31.mmObject();
 		}
 	};
@@ -781,7 +790,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -795,9 +804,75 @@ public class ConstraintPartialSettlementGuideline {
 			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementGuideline";
-			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forQuantityAndAccount51;
 			owner_lazy = () -> QuantityAndAccount57.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64
+	 * QuantityAndAccount64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialSettlementGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline#forQuantityAndAccount41
+	 * ConstraintPartialSettlementGuideline.forQuantityAndAccount41}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount64> forQuantityAndAccount64 = new MMConstraint<QuantityAndAccount64>() {
+		{
+			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PartialSettlementGuideline";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forQuantityAndAccount41;
+			owner_lazy = () -> QuantityAndAccount64.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72
+	 * QuantityAndAccount72}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PartialSettlementGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount72> forQuantityAndAccount72 = new MMConstraint<QuantityAndAccount72>() {
+		{
+			validator = ConstraintPartialSettlementGuideline::checkQuantityAndAccount72;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PartialSettlementGuideline";
+			definition = "Partial settlement information only applies to markets where partial settlement is allowed.\r\nThe SettledQuantity field provides the quantity of securities effectively settled.\r\nThe other quantities (PreviouslySettledQuantity and/or RemainingToBeSettledQuantity) may be provided, but this is not mandatory.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> QuantityAndAccount72.mmObject();
 		}
 	};
 
@@ -810,7 +885,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters2(AdditionalParameters2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -825,7 +900,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters6(AdditionalParameters6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -840,7 +915,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters12(AdditionalParameters12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -855,7 +930,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters13(AdditionalParameters13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -870,7 +945,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters18(AdditionalParameters18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -885,7 +960,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters19(AdditionalParameters19 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -899,7 +974,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount2(QuantityAndAccount2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -913,7 +988,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount12(QuantityAndAccount12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -927,7 +1002,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount15(QuantityAndAccount15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -941,7 +1016,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount20(QuantityAndAccount20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -955,7 +1030,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount28(QuantityAndAccount28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -969,7 +1044,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount37(QuantityAndAccount37 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -984,7 +1059,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters17(AdditionalParameters17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -999,7 +1074,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters20(AdditionalParameters20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1013,7 +1088,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount41(QuantityAndAccount41 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1028,7 +1103,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters24(AdditionalParameters24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1043,7 +1118,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters22(AdditionalParameters22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1058,7 +1133,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters26(AdditionalParameters26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1072,7 +1147,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount51(QuantityAndAccount51 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1087,7 +1162,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters27(AdditionalParameters27 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1102,7 +1177,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters29(AdditionalParameters29 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1117,7 +1192,7 @@ public class ConstraintPartialSettlementGuideline {
 	 * - with code PARC in the very last message sent to confirm the settlement
 	 * of the remaining part.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkAdditionalParameters31(AdditionalParameters31 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1131,9 +1206,37 @@ public class ConstraintPartialSettlementGuideline {
 	 * The other quantities (PreviouslySettledQuantity and/or
 	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount57(QuantityAndAccount57 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Partial settlement information only applies to markets where partial
+	 * settlement is allowed.<br>
+	 * The SettledQuantity field provides the quantity of securities effectively
+	 * settled.<br>
+	 * The other quantities (PreviouslySettledQuantity and/or
+	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount64(QuantityAndAccount64 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Partial settlement information only applies to markets where partial
+	 * settlement is allowed.<br>
+	 * The SettledQuantity field provides the quantity of securities effectively
+	 * settled.<br>
+	 * The other quantities (PreviouslySettledQuantity and/or
+	 * RemainingToBeSettledQuantity) may be provided, but this is not mandatory.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount72(QuantityAndAccount72 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

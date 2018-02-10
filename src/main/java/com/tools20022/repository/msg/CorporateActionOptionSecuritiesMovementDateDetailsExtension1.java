@@ -198,7 +198,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time at which Cash In Lieu (CIL) will be paid to DTC  (The Depository Trust Corporation) participants. On a single option that has multiple payouts, one of which is CIL, the payouts can be allocated on different days."
+	 * "Date and time at which Cash In Lieu (CIL) will be paid to DTC (The Depository Trust Corporation) participants. On a single option that has multiple payouts, one of which is CIL, the payouts can be allocated on different days."
 	 * </li>
 	 * </ul>
 	 */
@@ -210,7 +210,7 @@ public class CorporateActionOptionSecuritiesMovementDateDetailsExtension1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC CIL Allocation Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCCILAllocationDateAndTime";
-			definition = "Date and time at which Cash In Lieu (CIL) will be paid to DTC  (The Depository Trust Corporation) participants. On a single option that has multiple payouts, one of which is CIL, the payouts can be allocated on different days.";
+			definition = "Date and time at which Cash In Lieu (CIL) will be paid to DTC (The Depository Trust Corporation) participants. On a single option that has multiple payouts, one of which is CIL, the payouts can be allocated on different days.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();

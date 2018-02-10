@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06;
+import com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
@@ -145,7 +145,7 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06#mmAllegementDetails
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06#mmAllegementDetails
  * SecuritiesSettlementTransactionAllegementReport002V06.mmAllegementDetails}</li>
  * </ul>
  * </li>

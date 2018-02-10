@@ -118,6 +118,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionPeriod10"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies periods of a corporate action."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPeriod14
+ * CorporateActionPeriod14}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod8
@@ -166,6 +173,14 @@ public class CorporateActionPeriod10 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Period during which the price of a security is determined."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmPriceCalculationPeriod
+	 * CorporateActionPeriod14.mmPriceCalculationPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +198,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmPriceCalculationPeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmPriceCalculationPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -224,6 +240,14 @@ public class CorporateActionPeriod10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period during which the interest rate has been applied."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmInterestPeriod
+	 * CorporateActionPeriod14.mmInterestPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -241,6 +265,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriod";
 			definition = "Period during which the interest rate has been applied.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmInterestPeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmInterestPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -284,6 +309,14 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period during a take-over where any outstanding equity must be purchased by the take-over company."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmCompulsoryPurchasePeriod
+	 * CorporateActionPeriod14.mmCompulsoryPurchasePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -301,6 +334,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompulsoryPurchasePeriod";
 			definition = "Period during a take-over where any outstanding equity must be purchased by the take-over company.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmCompulsoryPurchasePeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmCompulsoryPurchasePeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -342,6 +376,14 @@ public class CorporateActionPeriod10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period during which the security is blocked."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmBlockingPeriod
+	 * CorporateActionPeriod14.mmBlockingPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -359,6 +401,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockingPeriod";
 			definition = "Period during which the security is blocked.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmBlockingPeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmBlockingPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -402,6 +445,14 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period assigned by the court in a class action. It determines the client's eligible transactions that will be included in the class action and used to determine the resulting entitlement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmClaimPeriod
+	 * CorporateActionPeriod14.mmClaimPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -419,6 +470,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimPeriod";
 			definition = "Period assigned by the court in a class action. It determines the client's eligible transactions that will be included in the class action and used to determine the resulting entitlement.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmClaimPeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmClaimPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -462,6 +514,15 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date for which book entry transfers will be accepted and the date on which the suspension will be released and book entry transfer processing will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForBookEntryTransfer
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForBookEntryTransfer}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -479,6 +540,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForBookEntryTransfer";
 			definition = "Period defining the last date for which book entry transfers will be accepted and the date on which the suspension will be released and book entry transfer processing will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmDepositorySuspensionPeriodForBookEntryTransfer);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmDepositorySuspensionPeriodForBookEntryTransfer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -522,6 +584,14 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date for which deposits, into nominee name, at the agent will be accepted and the date on which the suspension will be released and deposits at agent will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForDepositAtAgent
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForDepositAtAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -539,6 +609,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForDepositAtAgent";
 			definition = "Period defining the last date for which deposits, into nominee name, at the agent will be accepted and the date on which the suspension will be released and deposits at agent will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmDepositorySuspensionPeriodForDepositAtAgent);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmDepositorySuspensionPeriodForDepositAtAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -582,6 +653,14 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date for which deposits will be accepted and the date on which the suspension will be released and deposits will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForDeposit
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForDeposit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -599,6 +678,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForDeposit";
 			definition = "Period defining the last date for which deposits will be accepted and the date on which the suspension will be released and deposits will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmDepositorySuspensionPeriodForDeposit);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmDepositorySuspensionPeriodForDeposit;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -642,6 +722,14 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date for which pledges will be accepted and the date on which the suspension will be released and pledge processing will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForPledge
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForPledge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -659,6 +747,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForPledge";
 			definition = "Period defining the last date for which pledges will be accepted and the date on which the suspension will be released and pledge processing will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmDepositorySuspensionPeriodForPledge);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmDepositorySuspensionPeriodForPledge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -702,6 +791,14 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date for which intra-position balances can be segregated and the date on which the suspension will be released and the ability to segregate intra-position balances will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForSegregation
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForSegregation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -719,6 +816,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForSegregation";
 			definition = "Period defining the last date for which intra-position balances can be segregated and the date on which the suspension will be released and the ability to segregate intra-position balances will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmDepositorySuspensionPeriodForSegregation);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmDepositorySuspensionPeriodForSegregation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -762,6 +860,15 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date for which withdrawals, from nominee name at the agent will be accepted and the date on which the suspension will be released and withdrawals at agent processing will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForWithdrawalAtAgent
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForWithdrawalAtAgent}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -779,6 +886,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalAtAgent";
 			definition = "Period defining the last date for which withdrawals, from nominee name at the agent will be accepted and the date on which the suspension will be released and withdrawals at agent processing will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmDepositorySuspensionPeriodForWithdrawalAtAgent);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalAtAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -822,6 +930,15 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date for which physical withdrawals in the nominee's name will be accepted and the date on which the suspension will be released and physical withdrawals in the nominee's name will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForWithdrawalInNomineeName
+	 * CorporateActionPeriod14.
+	 * mmDepositorySuspensionPeriodForWithdrawalInNomineeName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -840,6 +957,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalInNomineeName";
 			definition = "Period defining the last date for which physical withdrawals in the nominee's name will be accepted and the date on which the suspension will be released and physical withdrawals in the nominee's name will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmDepositorySuspensionPeriodForWithdrawalInNomineeName);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInNomineeName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -883,6 +1001,15 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date on which withdrawal requests in street name's will be accepted on the event security and the date on which the suspension will be released and withdrawal in street name's processing on the event security will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForWithdrawalInStreetName
+	 * CorporateActionPeriod14.
+	 * mmDepositorySuspensionPeriodForWithdrawalInStreetName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -901,6 +1028,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawalInStreetName";
 			definition = "Period defining the last date on which withdrawal requests in street name's will be accepted on the event security and the date on which the suspension will be released and withdrawal in street name's processing on the event security will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmDepositorySuspensionPeriodForWithdrawalInStreetName);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInStreetName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -944,6 +1072,14 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period defining the last date on which shareholder registration will be accepted by the issuer and the date on which shareholder registration will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmBookClosurePeriod
+	 * CorporateActionPeriod14.mmBookClosurePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -961,6 +1097,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookClosurePeriod";
 			definition = "Period defining the last date on which shareholder registration will be accepted by the issuer and the date on which shareholder registration will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmBookClosurePeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmBookClosurePeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1003,6 +1140,14 @@ public class CorporateActionPeriod10 {
 	 * definition} =
 	 * "Period during which the settlement activities at the co-depositories are suspended in order to stabilise the holdings at the CSD."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmCoDepositoriesSuspensionPeriod
+	 * CorporateActionPeriod14.mmCoDepositoriesSuspensionPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1019,6 +1164,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoDepositoriesSuspensionPeriod";
 			definition = "Period during which the settlement activities at the co-depositories are suspended in order to stabilise the holdings at the CSD.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmCoDepositoriesSuspensionPeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod8.mmCoDepositoriesSuspensionPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1056,6 +1202,14 @@ public class CorporateActionPeriod10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period during which a physical certificate can be split."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmSplitPeriod
+	 * CorporateActionPeriod14.mmSplitPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSplitPeriod = new MMMessageAssociationEnd() {
@@ -1067,6 +1221,7 @@ public class CorporateActionPeriod10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitPeriod";
 			definition = "Period during which a physical certificate can be split.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmSplitPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1091,6 +1246,7 @@ public class CorporateActionPeriod10 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod10";
 				definition = "Specifies periods of a corporate action.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod14.mmObject());
 				previousVersion_lazy = () -> CorporateActionPeriod8.mmObject();
 			}
 		});

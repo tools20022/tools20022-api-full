@@ -71,6 +71,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "It is used to provide confirmation details of one or more reservations set by the member (or on behalf of the member) and managed by the transaction administrator."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ReservationOrError6Choice
+ * ReservationOrError6Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.ReservationOrError2Choice
@@ -113,6 +120,14 @@ public class ReservationOrError4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reports on reservations."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationOrError6Choice#mmBusinessReport
+	 * ReservationOrError6Choice.mmBusinessReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +144,7 @@ public class ReservationOrError4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on reservations.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationOrError6Choice.mmBusinessReport);
 			previousVersion_lazy = () -> ReservationOrError2Choice.mmBusinessReport;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -164,6 +180,14 @@ public class ReservationOrError4Choice {
 	 * definition} =
 	 * "Indicates that an operational error has been issued during the processing of the related request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationOrError6Choice#mmOperationalError
+	 * ReservationOrError6Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,6 +203,7 @@ public class ReservationOrError4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationOrError6Choice.mmOperationalError);
 			previousVersion_lazy = () -> ReservationOrError2Choice.mmOperationalError;
 			minOccurs = 1;
 			isComposite = true;
@@ -195,6 +220,7 @@ public class ReservationOrError4Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationOrError4Choice";
 				definition = "It is used to provide confirmation details of one or more reservations set by the member (or on behalf of the member) and managed by the transaction administrator.";
+				nextVersions_lazy = () -> Arrays.asList(ReservationOrError6Choice.mmObject());
 				previousVersion_lazy = () -> ReservationOrError2Choice.mmObject();
 			}
 		});

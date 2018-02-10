@@ -221,8 +221,8 @@ public class Header19 {
 	 * name} = "ProtocolVersion"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Version of the acquirer to issuer protocol specifications"
-	 * </li>
+	 * definition} =
+	 * "Version of the acquirer to issuer protocol specifications."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,7 +237,7 @@ public class Header19 {
 			xmlTag = "PrtcolVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
-			definition = "Version of the acquirer to issuer protocol specifications";
+			definition = "Version of the acquirer to issuer protocol specifications.";
 			previousVersion_lazy = () -> Header18.mmProtocolVersion;
 			maxOccurs = 1;
 			minOccurs = 1;

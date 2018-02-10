@@ -22,8 +22,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06;
 import com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V05;
-import com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.Frequency26Choice;
 import com.tools20022.repository.choice.Number3Choice;
@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.XmlType;
  * SecuritiesSettlementTransactionAllegementReport002V05.
  * mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06#mmStatementGeneralDetails
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06#mmStatementGeneralDetails
  * SecuritiesSettlementTransactionAllegementReport002V06.
  * mmStatementGeneralDetails}</li>
  * </ul>

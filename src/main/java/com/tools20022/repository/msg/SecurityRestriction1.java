@@ -71,6 +71,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecurityRestriction1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Restrictions applicable to the security."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityRestriction2
+ * SecurityRestriction2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +113,14 @@ public class SecurityRestriction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period during which the restriction applies."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityRestriction2#mmEffectivePeriod
+	 * SecurityRestriction2.mmEffectivePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEffectivePeriod = new MMMessageAttribute() {
@@ -116,6 +131,7 @@ public class SecurityRestriction1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectivePeriod";
 			definition = "Period during which the restriction applies.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityRestriction2.mmEffectivePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DateTimePeriodDetails1.mmObject();
@@ -151,6 +167,14 @@ public class SecurityRestriction1 {
 	 * definition} =
 	 * "Type of the restriction, for example, selling restriction, buying restriction, placing restriction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityRestriction2#mmRestrictionType
+	 * SecurityRestriction2.mmRestrictionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
@@ -161,6 +185,7 @@ public class SecurityRestriction1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityRestriction2.mmRestrictionType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityRestrictionType1Choice.mmObject();
@@ -195,6 +220,14 @@ public class SecurityRestriction1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the regulatory restrictions applicable to a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityRestriction2#mmLegalRestrictionType
+	 * SecurityRestriction2.mmLegalRestrictionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLegalRestrictionType = new MMMessageAttribute() {
@@ -205,6 +238,7 @@ public class SecurityRestriction1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalRestrictionType";
 			definition = "Specifies the regulatory restrictions applicable to a security.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityRestriction2.mmLegalRestrictionType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> LegalRestrictions2Choice.mmObject();
@@ -240,6 +274,14 @@ public class SecurityRestriction1 {
 	 * definition} =
 	 * "Specifies whether the restriction to be applied is relevant for citizen, resident, country."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityRestriction2#mmInvestorRestrictionType
+	 * SecurityRestriction2.mmInvestorRestrictionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInvestorRestrictionType = new MMMessageAttribute() {
@@ -250,6 +292,7 @@ public class SecurityRestriction1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorRestrictionType";
 			definition = "Specifies whether the restriction to be applied is relevant for citizen, resident, country.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityRestriction2.mmInvestorRestrictionType);
 			minOccurs = 0;
 			complexType_lazy = () -> InvestorRestrictionType2Choice.mmObject();
 		}
@@ -282,6 +325,14 @@ public class SecurityRestriction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of investor that is allowed to hold the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityRestriction2#mmInvestorType
+	 * SecurityRestriction2.mmInvestorType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInvestorType = new MMMessageAttribute() {
@@ -292,6 +343,7 @@ public class SecurityRestriction1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorType";
 			definition = "Type of investor that is allowed to hold the security.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityRestriction2.mmInvestorType);
 			minOccurs = 0;
 			complexType_lazy = () -> InvestorType2Choice.mmObject();
 		}
@@ -307,6 +359,7 @@ public class SecurityRestriction1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityRestriction1";
 				definition = "Restrictions applicable to the security.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityRestriction2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

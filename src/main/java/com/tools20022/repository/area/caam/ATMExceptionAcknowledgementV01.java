@@ -206,7 +206,7 @@ public class ATMExceptionAcknowledgementV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to the acknowledgement  of an ATM exception."</li>
+	 * "Information related to the acknowledgement of an ATM exception."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmATMExceptionAcknowledgement = new MMMessageBuildingBlock() {
@@ -214,7 +214,7 @@ public class ATMExceptionAcknowledgementV01 {
 			xmlTag = "ATMXcptnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMExceptionAcknowledgement";
-			definition = "Information related to the acknowledgement  of an ATM exception.";
+			definition = "Information related to the acknowledgement of an ATM exception.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ATMExceptionAcknowledgement1.mmObject();

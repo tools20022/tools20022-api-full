@@ -68,6 +68,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Quantity9"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the quantity of a product in a trade transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity16 Quantity16}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Quantity4
  * Quantity4}</li>
@@ -109,6 +115,13 @@ public class Quantity9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies a unit of measure with a code or free text."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Quantity16#mmUnitOfMeasure
+	 * Quantity16.mmUnitOfMeasure}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUnitOfMeasure = new MMMessageAssociationEnd() {
@@ -120,6 +133,7 @@ public class Quantity9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
 			definition = "Specifies a unit of measure with a code or free text.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity16.mmUnitOfMeasure);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -160,6 +174,13 @@ public class Quantity9 {
 	 * definition} =
 	 * "Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Quantity16#mmValue
+	 * Quantity16.mmValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -176,6 +197,7 @@ public class Quantity9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).";
+			nextVersions_lazy = () -> Arrays.asList(Quantity16.mmValue);
 			previousVersion_lazy = () -> Quantity4.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -216,6 +238,13 @@ public class Quantity9 {
 	 * definition} =
 	 * "Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Quantity16#mmFactor
+	 * Quantity16.mmFactor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -232,6 +261,7 @@ public class Quantity9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Factor";
 			definition = "Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity16.mmFactor);
 			previousVersion_lazy = () -> Quantity4.mmFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -248,6 +278,7 @@ public class Quantity9 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity9";
 				definition = "Specifies the quantity of a product in a trade transaction.";
+				nextVersions_lazy = () -> Arrays.asList(Quantity16.mmObject());
 				previousVersion_lazy = () -> Quantity4.mmObject();
 			}
 		});

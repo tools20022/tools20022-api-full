@@ -1134,7 +1134,7 @@ public class Undertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of guarantee or standby letter of credit, for example, performance,  payment, etc."
+	 * "Type of guarantee or standby letter of credit, for example, performance, payment, etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -1145,7 +1145,7 @@ public class Undertaking {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
-			definition = "Type of guarantee or standby letter of credit, for example, performance,  payment, etc.";
+			definition = "Type of guarantee or standby letter of credit, for example, performance, payment, etc.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalUndertakingTypeCode.mmObject();
@@ -1518,7 +1518,7 @@ public class Undertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions. "
+	 * "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions."
 	 * </li>
 	 * </ul>
 	 */
@@ -1529,7 +1529,7 @@ public class Undertaking {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Undertaking.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ModelForm";
-			definition = "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions. ";
+			definition = "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.ModelForm.mmUndertaking;

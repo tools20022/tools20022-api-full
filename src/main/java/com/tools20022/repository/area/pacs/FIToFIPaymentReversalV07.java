@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.PaymentsClearingandSettlementLatestVersion;
+import com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader71;
 import com.tools20022.repository.msg.OriginalGroupHeader3;
 import com.tools20022.repository.msg.PaymentTransaction81;
@@ -92,8 +92,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "FIToFIPmtRvsl"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementLatestVersion
- * PaymentsClearingandSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion
+ * PaymentsClearingandSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.007.001.07}</li>
@@ -158,6 +158,13 @@ import javax.xml.bind.annotation.*;
  * definition} =
  * "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe FIToFIPaymentReversal message is exchanged between agents to reverse a payment message that has been settled. The result will be a credit on the debtor account (when the reversed payment was a Direct Debit) or a debit on the creditor account (when the reversed payment was a Credit Transfer).\r\nThe FIToFIPaymentReversal message may or may not be the follow-up of a payment message.\r\nThe FIToFIPaymentReversal message refers to the original payment message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentReversal message can be used in domestic and cross-border scenarios."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV08
+ * FIToFIPaymentReversalV08}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV06
@@ -193,6 +200,14 @@ public class FIToFIPaymentReversalV07 {
 	 * definition} =
 	 * "Set of characteristics shared by all individual transactions included in the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV08#mmGroupHeader
+	 * FIToFIPaymentReversalV08.mmGroupHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -206,6 +221,7 @@ public class FIToFIPaymentReversalV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
+			nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentReversalV08.mmGroupHeader);
 			previousVersion_lazy = () -> FIToFIPaymentReversalV06.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -245,6 +261,14 @@ public class FIToFIPaymentReversalV07 {
 	 * definition} =
 	 * "Information concerning the original group of transactions, to which the message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV08#mmOriginalGroupInformation
+	 * FIToFIPaymentReversalV08.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -258,6 +282,7 @@ public class FIToFIPaymentReversalV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
+			nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentReversalV08.mmOriginalGroupInformation);
 			previousVersion_lazy = () -> FIToFIPaymentReversalV06.mmOriginalGroupInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -297,6 +322,14 @@ public class FIToFIPaymentReversalV07 {
 	 * definition} =
 	 * "Information concerning the original transactions, to which the reversal message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV08#mmTransactionInformation
+	 * FIToFIPaymentReversalV08.mmTransactionInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -310,6 +343,7 @@ public class FIToFIPaymentReversalV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformation";
 			definition = "Information concerning the original transactions, to which the reversal message refers.";
+			nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentReversalV08.mmTransactionInformation);
 			previousVersion_lazy = () -> FIToFIPaymentReversalV06.mmTransactionInformation;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransaction81.mmObject();
@@ -348,6 +382,14 @@ public class FIToFIPaymentReversalV07 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV08#mmSupplementaryData
+	 * FIToFIPaymentReversalV08.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -361,6 +403,7 @@ public class FIToFIPaymentReversalV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentReversalV08.mmSupplementaryData);
 			previousVersion_lazy = () -> FIToFIPaymentReversalV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
@@ -391,11 +434,12 @@ public class FIToFIPaymentReversalV07 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FIToFIPaymentReversalV07";
 				definition = "Scope\r\nThe FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe FIToFIPaymentReversal message is exchanged between agents to reverse a payment message that has been settled. The result will be a credit on the debtor account (when the reversed payment was a Direct Debit) or a debit on the creditor account (when the reversed payment was a Credit Transfer).\r\nThe FIToFIPaymentReversal message may or may not be the follow-up of a payment message.\r\nThe FIToFIPaymentReversal message refers to the original payment message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.";
+				nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentReversalV08.mmObject());
 				previousVersion_lazy = () -> FIToFIPaymentReversalV06.mmObject();
 				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOLatestversion.mmObject(), MX_Payment_Maintenance_2016_2017.mmObject(), PaymentsClearingandSettlementMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "FIToFIPmtRvsl";
-				businessArea_lazy = () -> PaymentsClearingandSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.FIToFIPaymentReversalV07.mmGroupHeader, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV07.mmOriginalGroupInformation,
 						com.tools20022.repository.area.pacs.FIToFIPaymentReversalV07.mmTransactionInformation, com.tools20022.repository.area.pacs.FIToFIPaymentReversalV07.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

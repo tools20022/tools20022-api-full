@@ -105,7 +105,7 @@ public class OptionDateOrPeriod1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "First date on which the call option or the put option can be exercised. "
+	 * "First date on which the call option or the put option can be exercised."
 	 * </li>
 	 * </ul>
 	 */
@@ -117,7 +117,7 @@ public class OptionDateOrPeriod1Choice {
 			xmlTag = "EarlstExrcDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestExerciseDate";
-			definition = "First date on which the call option or the put option can be exercised. ";
+			definition = "First date on which the call option or the put option can be exercised.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -155,7 +155,7 @@ public class OptionDateOrPeriod1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number of calendar days that the holder of the instrument/issuer of the instrument will give to the issuer/holder of the instrument before exercising the put/call option. "
+	 * "Number of calendar days that the holder of the instrument/issuer of the instrument will give to the issuer/holder of the instrument before exercising the put/call option."
 	 * </li>
 	 * </ul>
 	 */
@@ -167,7 +167,7 @@ public class OptionDateOrPeriod1Choice {
 			xmlTag = "NtcePrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoticePeriod";
-			definition = "Number of calendar days that the holder of the instrument/issuer of the instrument will give to the issuer/holder of the instrument before exercising the put/call option. ";
+			definition = "Number of calendar days that the holder of the instrument/issuer of the instrument will give to the issuer/holder of the instrument before exercising the put/call option.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();

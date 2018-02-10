@@ -84,6 +84,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CashBalance5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Balance details for a cash account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance10 CashBalance10}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -123,6 +129,13 @@ public class CashBalance5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency and amount of money of the cash balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance10#mmAmount
+	 * CashBalance10.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -134,6 +147,7 @@ public class CashBalance5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Currency and amount of money of the cash balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance10.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -171,7 +185,15 @@ public class CashBalance5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance"
+	 * "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance10#mmCreditDebitIndicator
+	 * CashBalance10.mmCreditDebitIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -183,7 +205,8 @@ public class CashBalance5 {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance";
+			definition = "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance10.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -219,6 +242,13 @@ public class CashBalance5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the nature of a balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance10#mmType
+	 * CashBalance10.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -230,6 +260,7 @@ public class CashBalance5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of a balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance10.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -268,6 +299,13 @@ public class CashBalance5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Current status of a cash balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance10#mmStatus
+	 * CashBalance10.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -279,6 +317,7 @@ public class CashBalance5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Current status of a cash balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance10.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BalanceStatus1Code.mmObject();
@@ -317,6 +356,13 @@ public class CashBalance5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which the balance is or will be available."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance10#mmValueDate
+	 * CashBalance10.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
@@ -328,6 +374,7 @@ public class CashBalance5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time at which the balance is or will be available.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance10.mmValueDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -361,6 +408,14 @@ public class CashBalance5 {
 	 * definition} =
 	 * "Number of payments taken into account for the calculation of the cash balance value."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance10#mmNumberOfPayments
+	 * CashBalance10.mmNumberOfPayments}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNumberOfPayments = new MMMessageAttribute() {
@@ -371,6 +426,7 @@ public class CashBalance5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfPayments";
 			definition = "Number of payments taken into account for the calculation of the cash balance value.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance10.mmNumberOfPayments);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -408,6 +464,14 @@ public class CashBalance5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Type providing further information on balance restrictions."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance10#mmRestrictionType
+	 * CashBalance10.mmRestrictionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRestrictionType = new MMMessageAssociationEnd() {
@@ -419,6 +483,7 @@ public class CashBalance5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type providing further information on balance restrictions.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance10.mmRestrictionType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -437,6 +502,7 @@ public class CashBalance5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalance5";
 				definition = "Balance details for a cash account.";
+				nextVersions_lazy = () -> Arrays.asList(CashBalance10.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -523,7 +523,7 @@ public class TMSProtocolParameters1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "New identification of the recipient party to set in TMS messages with this terminal manager"
+	 * "New identification of the recipient party to set in TMS messages with this terminal manager."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -542,7 +542,7 @@ public class TMSProtocolParameters1 {
 			xmlTag = "RcptPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientPartyIdentification";
-			definition = "New identification of the recipient party to set in TMS messages with this terminal manager";
+			definition = "New identification of the recipient party to set in TMS messages with this terminal manager.";
 			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters2.mmRecipientPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;

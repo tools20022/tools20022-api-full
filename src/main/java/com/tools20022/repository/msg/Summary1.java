@@ -281,7 +281,8 @@ public class Summary1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total value of the collateral (post-haircut) held by the exposed party"</li>
+	 * "Total value of the collateral (post-haircut) held by the exposed party."
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalValueOfCollateral = new MMMessageAttribute() {
@@ -292,7 +293,7 @@ public class Summary1 {
 			xmlTag = "TtlValOfColl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalValueOfCollateral";
-			definition = "Total value of the collateral (post-haircut) held by the exposed party";
+			definition = "Total value of the collateral (post-haircut) held by the exposed party.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

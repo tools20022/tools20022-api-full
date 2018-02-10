@@ -1,0 +1,759 @@
+/* Tools20022 - API for ISO 20022
+* Copyright (C) 2017 Tools20022.com - László Bukodi 
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+package com.tools20022.repository.msg;
+
+import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.pain.CustomerPaymentReversalV08;
+import com.tools20022.repository.choice.Authorisation1Choice;
+import com.tools20022.repository.datatype.*;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+/**
+ * Provides characteristics shared by all individual transactions included in
+ * the message.
+ * <p>
+ * <strong>Constant fields:</strong>
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
+ * messageElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader75#mmMessageIdentification
+ * GroupHeader75.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader75#mmCreationDateTime
+ * GroupHeader75.mmCreationDateTime}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader75#mmAuthorisation
+ * GroupHeader75.mmAuthorisation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader75#mmNumberOfTransactions
+ * GroupHeader75.mmNumberOfTransactions}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader75#mmControlSum
+ * GroupHeader75.mmControlSum}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader75#mmGroupReversal
+ * GroupHeader75.mmGroupReversal}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader75#mmInitiatingParty
+ * GroupHeader75.mmInitiatingParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GroupHeader75#mmForwardingAgent
+ * GroupHeader75.mmForwardingAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader75#mmDebtorAgent
+ * GroupHeader75.mmDebtorAgent}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader75#mmCreditorAgent
+ * GroupHeader75.mmCreditorAgent}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08#mmGroupHeader
+ * CustomerPaymentReversalV08.mmGroupHeader}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
+ * dataDictionary} =
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getConstraint
+ * constraint} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintControlSumAndGroupReversalRule#forGroupHeader75
+ * ConstraintControlSumAndGroupReversalRule.forGroupHeader75}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forGroupHeader75
+ * ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader75}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "GroupHeader75"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Provides characteristics shared by all individual transactions included in the message."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+ * previousVersion} = {@linkplain com.tools20022.repository.msg.GroupHeader56
+ * GroupHeader56}</li>
+ * </ul>
+ */
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "GroupHeader75", propOrder = {"messageIdentification", "creationDateTime", "authorisation", "numberOfTransactions", "controlSum", "groupReversal", "initiatingParty", "forwardingAgent", "debtorAgent", "creditorAgent"})
+public class GroupHeader75 {
+
+	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "MsgId", required = true)
+	protected Max35Text messageIdentification;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
+	 * Max35Text}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentIdentification#mmExecutionIdentification
+	 * PaymentIdentification.mmExecutionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "MsgId"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "MessageIdentification"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.\nUsage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmMessageIdentification
+	 * GroupHeader56.mmMessageIdentification}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> PaymentIdentification.mmExecutionIdentification;
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "MsgId";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "MessageIdentification";
+			definition = "Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.\nUsage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.";
+			previousVersion_lazy = () -> GroupHeader56.mmMessageIdentification;
+			maxOccurs = 1;
+			minOccurs = 1;
+			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+	};
+	@XmlElement(name = "CreDtTm", required = true)
+	protected ISODateTime creationDateTime;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
+	 * ISODateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.PaymentExecution#mmCreationDate
+	 * PaymentExecution.mmCreationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CreDtTm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreationDateTime"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Date and time at which the message was created."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmCreationDateTime
+	 * GroupHeader56.mmCreationDateTime}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> PaymentExecution.mmCreationDate;
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "CreDtTm";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreationDateTime";
+			definition = "Date and time at which the message was created.";
+			previousVersion_lazy = () -> GroupHeader56.mmCreationDateTime;
+			maxOccurs = 1;
+			minOccurs = 1;
+			simpleType_lazy = () -> ISODateTime.mmObject();
+		}
+	};
+	@XmlElement(name = "Authstn")
+	protected List<Authorisation1Choice> authorisation;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getComplexType
+	 * complexType} =
+	 * {@linkplain com.tools20022.repository.choice.Authorisation1Choice
+	 * Authorisation1Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Authstn"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Authorisation"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.\n\nUsage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.\nThe authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmAuthorisation
+	 * GroupHeader56.mmAuthorisation}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmAuthorisation = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "Authstn";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Authorisation";
+			definition = "User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.\n\nUsage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.\nThe authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.";
+			previousVersion_lazy = () -> GroupHeader56.mmAuthorisation;
+			maxOccurs = 2;
+			minOccurs = 0;
+			complexType_lazy = () -> Authorisation1Choice.mmObject();
+		}
+	};
+	@XmlElement(name = "NbOfTxs", required = true)
+	protected Max15NumericText numberOfTransactions;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.Max15NumericText
+	 * Max15NumericText}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "NbOfTxs"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NumberOfTransactions"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Number of individual transactions contained in the message."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmNumberOfTransactions
+	 * GroupHeader56.mmNumberOfTransactions}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmNumberOfTransactions = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "NbOfTxs";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NumberOfTransactions";
+			definition = "Number of individual transactions contained in the message.";
+			previousVersion_lazy = () -> GroupHeader56.mmNumberOfTransactions;
+			maxOccurs = 1;
+			minOccurs = 1;
+			simpleType_lazy = () -> Max15NumericText.mmObject();
+		}
+	};
+	@XmlElement(name = "CtrlSum")
+	protected DecimalNumber controlSum;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.DecimalNumber
+	 * DecimalNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CtrlSum"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ControlSum"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Total of all individual amounts included in the message, irrespective of currencies."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmControlSum
+	 * GroupHeader56.mmControlSum}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmControlSum = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "CtrlSum";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ControlSum";
+			definition = "Total of all individual amounts included in the message, irrespective of currencies.";
+			previousVersion_lazy = () -> GroupHeader56.mmControlSum;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> DecimalNumber.mmObject();
+		}
+	};
+	@XmlElement(name = "GrpRvsl")
+	protected TrueFalseIndicator groupReversal;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.TrueFalseIndicator
+	 * TrueFalseIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "GrpRvsl"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupReversal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Indicates whether the reversal applies to the whole group of transactions or to individual transactions within the original group."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmGroupReversal
+	 * GroupHeader56.mmGroupReversal}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmGroupReversal = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "GrpRvsl";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupReversal";
+			definition = "Indicates whether the reversal applies to the whole group of transactions or to individual transactions within the original group.";
+			previousVersion_lazy = () -> GroupHeader56.mmGroupReversal;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
+		}
+	};
+	@XmlElement(name = "InitgPty")
+	protected PartyIdentification125 initiatingParty;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} = {@linkplain com.tools20022.repository.msg.PartyIdentification125
+	 * PartyIdentification125}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Party#mmIdentification
+	 * Party.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "InitgPty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InitiatingParty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Party that initiates the reversal message. \nUsage: This can be either the creditor or a party that initiates the reversal of the direct debit on behalf of the creditor."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmInitiatingParty
+	 * GroupHeader56.mmInitiatingParty}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
+		{
+			businessElementTrace_lazy = () -> Party.mmIdentification;
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "InitgPty";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InitiatingParty";
+			definition = "Party that initiates the reversal message. \nUsage: This can be either the creditor or a party that initiates the reversal of the direct debit on behalf of the creditor.";
+			previousVersion_lazy = () -> GroupHeader56.mmInitiatingParty;
+			maxOccurs = 1;
+			minOccurs = 0;
+			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification125.mmObject();
+		}
+	};
+	@XmlElement(name = "FwdgAgt")
+	protected BranchAndFinancialInstitutionIdentification5 forwardingAgent;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5
+	 * BranchAndFinancialInstitutionIdentification5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "FwdgAgt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ForwardingAgent"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmForwardingAgent
+	 * GroupHeader56.mmForwardingAgent}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd mmForwardingAgent = new MMMessageAssociationEnd() {
+		{
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "FwdgAgt";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ForwardingAgent";
+			definition = "Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain.";
+			previousVersion_lazy = () -> GroupHeader56.mmForwardingAgent;
+			maxOccurs = 1;
+			minOccurs = 0;
+			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+	};
+	@XmlElement(name = "DbtrAgt")
+	protected BranchAndFinancialInstitutionIdentification5 debtorAgent;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5
+	 * BranchAndFinancialInstitutionIdentification5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "DbtrAgt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DebtorAgent"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Financial institution servicing an account for the debtor."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmDebtorAgent
+	 * GroupHeader56.mmDebtorAgent}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
+		{
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "DbtrAgt";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DebtorAgent";
+			definition = "Financial institution servicing an account for the debtor.";
+			previousVersion_lazy = () -> GroupHeader56.mmDebtorAgent;
+			maxOccurs = 1;
+			minOccurs = 0;
+			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+	};
+	@XmlElement(name = "CdtrAgt")
+	protected BranchAndFinancialInstitutionIdentification5 creditorAgent;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5
+	 * BranchAndFinancialInstitutionIdentification5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Organisation#mmOrganisationIdentification
+	 * Organisation.mmOrganisationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CdtrAgt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditorAgent"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Financial institution servicing an account for the creditor."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader56#mmCreditorAgent
+	 * GroupHeader56.mmCreditorAgent}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
+		{
+			businessElementTrace_lazy = () -> Organisation.mmOrganisationIdentification;
+			componentContext_lazy = () -> com.tools20022.repository.msg.GroupHeader75.mmObject();
+			isDerived = false;
+			xmlTag = "CdtrAgt";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreditorAgent";
+			definition = "Financial institution servicing an account for the creditor.";
+			previousVersion_lazy = () -> GroupHeader56.mmCreditorAgent;
+			maxOccurs = 1;
+			minOccurs = 0;
+			isComposite = true;
+			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
+		}
+	};
+
+	final static public MMMessageComponent mmObject() {
+		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
+			{
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader75.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader75.mmCreationDateTime,
+						com.tools20022.repository.msg.GroupHeader75.mmAuthorisation, com.tools20022.repository.msg.GroupHeader75.mmNumberOfTransactions, com.tools20022.repository.msg.GroupHeader75.mmControlSum,
+						com.tools20022.repository.msg.GroupHeader75.mmGroupReversal, com.tools20022.repository.msg.GroupHeader75.mmInitiatingParty, com.tools20022.repository.msg.GroupHeader75.mmForwardingAgent,
+						com.tools20022.repository.msg.GroupHeader75.mmDebtorAgent, com.tools20022.repository.msg.GroupHeader75.mmCreditorAgent);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentReversalV08.mmGroupHeader);
+				trace_lazy = () -> Payment.mmObject();
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintControlSumAndGroupReversalRule.forGroupHeader75,
+						com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader75);
+				registrationStatus = MMRegistrationStatus.REGISTERED;
+				name = "GroupHeader75";
+				definition = "Provides characteristics shared by all individual transactions included in the message.";
+				previousVersion_lazy = () -> GroupHeader56.mmObject();
+			}
+		});
+		return mmObject_lazy.get();
+	}
+
+	public Max35Text getMessageIdentification() {
+		return messageIdentification;
+	}
+
+	public GroupHeader75 setMessageIdentification(Max35Text messageIdentification) {
+		this.messageIdentification = Objects.requireNonNull(messageIdentification);
+		return this;
+	}
+
+	public ISODateTime getCreationDateTime() {
+		return creationDateTime;
+	}
+
+	public GroupHeader75 setCreationDateTime(ISODateTime creationDateTime) {
+		this.creationDateTime = Objects.requireNonNull(creationDateTime);
+		return this;
+	}
+
+	public List<Authorisation1Choice> getAuthorisation() {
+		return authorisation == null ? authorisation = new ArrayList<>() : authorisation;
+	}
+
+	public GroupHeader75 setAuthorisation(List<Authorisation1Choice> authorisation) {
+		this.authorisation = Objects.requireNonNull(authorisation);
+		return this;
+	}
+
+	public Max15NumericText getNumberOfTransactions() {
+		return numberOfTransactions;
+	}
+
+	public GroupHeader75 setNumberOfTransactions(Max15NumericText numberOfTransactions) {
+		this.numberOfTransactions = Objects.requireNonNull(numberOfTransactions);
+		return this;
+	}
+
+	public Optional<DecimalNumber> getControlSum() {
+		return controlSum == null ? Optional.empty() : Optional.of(controlSum);
+	}
+
+	public GroupHeader75 setControlSum(DecimalNumber controlSum) {
+		this.controlSum = controlSum;
+		return this;
+	}
+
+	public Optional<TrueFalseIndicator> getGroupReversal() {
+		return groupReversal == null ? Optional.empty() : Optional.of(groupReversal);
+	}
+
+	public GroupHeader75 setGroupReversal(TrueFalseIndicator groupReversal) {
+		this.groupReversal = groupReversal;
+		return this;
+	}
+
+	public Optional<PartyIdentification125> getInitiatingParty() {
+		return initiatingParty == null ? Optional.empty() : Optional.of(initiatingParty);
+	}
+
+	public GroupHeader75 setInitiatingParty(com.tools20022.repository.msg.PartyIdentification125 initiatingParty) {
+		this.initiatingParty = initiatingParty;
+		return this;
+	}
+
+	public Optional<BranchAndFinancialInstitutionIdentification5> getForwardingAgent() {
+		return forwardingAgent == null ? Optional.empty() : Optional.of(forwardingAgent);
+	}
+
+	public GroupHeader75 setForwardingAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 forwardingAgent) {
+		this.forwardingAgent = forwardingAgent;
+		return this;
+	}
+
+	public Optional<BranchAndFinancialInstitutionIdentification5> getDebtorAgent() {
+		return debtorAgent == null ? Optional.empty() : Optional.of(debtorAgent);
+	}
+
+	public GroupHeader75 setDebtorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 debtorAgent) {
+		this.debtorAgent = debtorAgent;
+		return this;
+	}
+
+	public Optional<BranchAndFinancialInstitutionIdentification5> getCreditorAgent() {
+		return creditorAgent == null ? Optional.empty() : Optional.of(creditorAgent);
+	}
+
+	public GroupHeader75 setCreditorAgent(com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5 creditorAgent) {
+		this.creditorAgent = creditorAgent;
+		return this;
+	}
+}

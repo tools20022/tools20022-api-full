@@ -215,7 +215,7 @@ public class EarlyPayment1 {
 	 * name} = "DiscountAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Early payment discount with tax, with currency. "</li>
+	 * definition} = "Early payment discount with tax, with currency."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,7 +231,7 @@ public class EarlyPayment1 {
 			xmlTag = "DscntAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountAmount";
-			definition = "Early payment discount with tax, with currency. ";
+			definition = "Early payment discount with tax, with currency.";
 			previousVersion_lazy = () -> PaymentTerms3.mmDiscountAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -355,7 +355,7 @@ public class EarlyPayment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Payable amount with discount of early payment, with currency. "</li>
+	 * "Payable amount with discount of early payment, with currency."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDuePayableAmountWithEarlyPayment = new MMMessageAttribute() {
@@ -365,7 +365,7 @@ public class EarlyPayment1 {
 			xmlTag = "DuePyblAmtWthEarlyPmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuePayableAmountWithEarlyPayment";
-			definition = "Payable amount with discount of early payment, with currency. ";
+			definition = "Payable amount with discount of early payment, with currency.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();

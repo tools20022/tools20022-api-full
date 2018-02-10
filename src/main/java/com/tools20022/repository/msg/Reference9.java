@@ -149,7 +149,7 @@ public class Reference9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identifier of most recent order as assigned by sell-side (broker, exchange..)."
+	 * "Unique identifier of most recent order as assigned by sell-side (broker, exchange.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -161,7 +161,7 @@ public class Reference9 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "37"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderIdentification";
-			definition = "Unique identifier of most recent order as assigned by sell-side (broker, exchange..).";
+			definition = "Unique identifier of most recent order as assigned by sell-side (broker, exchange.).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

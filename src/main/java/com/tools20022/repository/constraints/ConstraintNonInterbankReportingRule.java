@@ -90,7 +90,7 @@ public class ConstraintNonInterbankReportingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions.  \r\n"
+	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n"
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -114,7 +114,7 @@ public class ConstraintNonInterbankReportingRule {
 			validator = ConstraintNonInterbankReportingRule::checkCounterpartyIdentification2Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonInterbankReportingRule";
-			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions.  \r\n";
+			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification3Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification1Choice;
 			owner_lazy = () -> CounterpartyIdentification2Choice.mmObject();
@@ -137,7 +137,7 @@ public class ConstraintNonInterbankReportingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions.  \r\n"
+	 * "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n"
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -152,7 +152,7 @@ public class ConstraintNonInterbankReportingRule {
 			validator = ConstraintNonInterbankReportingRule::checkCounterpartyIdentification3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonInterbankReportingRule";
-			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions.  \r\n";
+			definition = "When the reported transaction is not an interbank transaction and the counterparty is not a supranational authority and the transaction is not conducted via a central clearing counterparty, please refer to the relevant reporting instructions. \r\n";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNonInterbankReportingRule.forCounterpartyIdentification2Choice;
 			owner_lazy = () -> CounterpartyIdentification3Choice.mmObject();
 		}

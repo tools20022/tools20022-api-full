@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies the type of demand for payment
+ * Specifies the type of demand for payment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DemandType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the type of demand for payment"</li>
+ * definition} = "Specifies the type of demand for payment."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -130,7 +130,7 @@ public class DemandType1Code extends MMCode {
 				example = Arrays.asList("PAYM");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DemandType1Code";
-				definition = "Specifies the type of demand for payment";
+				definition = "Specifies the type of demand for payment.";
 				trace_lazy = () -> DemandTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DemandType1Code.PayOnly, com.tools20022.repository.codeset.DemandType1Code.PayOrExtend);
 			}

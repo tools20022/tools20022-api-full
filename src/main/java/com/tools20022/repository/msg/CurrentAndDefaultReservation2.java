@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CurrentAndDefaultReservation2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reports on reservations."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation3
+ * CurrentAndDefaultReservation3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation1
@@ -106,6 +113,14 @@ public class CurrentAndDefaultReservation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report is given for a current reservation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation3#mmCurrentReservation
+	 * CurrentAndDefaultReservation3.mmCurrentReservation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -122,6 +137,7 @@ public class CurrentAndDefaultReservation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentReservation";
 			definition = "Report is given for a current reservation.";
+			nextVersions_lazy = () -> Arrays.asList(CurrentAndDefaultReservation3.mmCurrentReservation);
 			previousVersion_lazy = () -> CurrentAndDefaultReservation1.mmCurrentReservation;
 			minOccurs = 0;
 			isComposite = true;
@@ -158,6 +174,14 @@ public class CurrentAndDefaultReservation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report is given for a default reservation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation3#mmDefaultReservation
+	 * CurrentAndDefaultReservation3.mmDefaultReservation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -174,6 +198,7 @@ public class CurrentAndDefaultReservation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultReservation";
 			definition = "Report is given for a default reservation.";
+			nextVersions_lazy = () -> Arrays.asList(CurrentAndDefaultReservation3.mmDefaultReservation);
 			previousVersion_lazy = () -> CurrentAndDefaultReservation1.mmDefaultReservation;
 			minOccurs = 0;
 			isComposite = true;
@@ -190,6 +215,7 @@ public class CurrentAndDefaultReservation2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrentAndDefaultReservation2";
 				definition = "Reports on reservations.";
+				nextVersions_lazy = () -> Arrays.asList(CurrentAndDefaultReservation3.mmObject());
 				previousVersion_lazy = () -> CurrentAndDefaultReservation1.mmObject();
 			}
 		});

@@ -88,18 +88,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.auth.CurrencyControlRequestOrLetterV01
  * CurrencyControlRequestOrLetterV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01
- * MoneyMarketForeignExchangeSwapsStatisticalReportV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01
- * MoneyMarketOvernightIndexSwapsStatisticalReportV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketUnsecuredMarketStatisticalReportV01
- * MoneyMarketUnsecuredMarketStatisticalReportV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.auth.MoneyMarketSecuredMarketStatisticalReportV01
- * MoneyMarketSecuredMarketStatisticalReportV01}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.auth.MoneyMarketStatisticalReportStatusAdviceV01
  * MoneyMarketStatisticalReportStatusAdviceV01}</li>
  * <li>{@linkplain com.tools20022.repository.area.auth.InvoiceTaxReportV01
@@ -147,9 +135,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonWorkingDayReportV01
  * FinancialInstrumentReportingNonWorkingDayReportV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingTransactionReportV01
- * FinancialInstrumentReportingTransactionReportV01}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingEquityTradingActivityReportV01
  * FinancialInstrumentReportingEquityTradingActivityReportV01}</li>
  * <li>
@@ -173,6 +158,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.auth.FinancialInstrumentReportingNonEquityTradingActivityReportV01
  * FinancialInstrumentReportingNonEquityTradingActivityReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPIncomeStatementAndCapitalAdequacyReportV01
+ * CCPIncomeStatementAndCapitalAdequacyReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPMemberObligationsReportV01
+ * CCPMemberObligationsReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPClearedProductReportV01
+ * CCPClearedProductReportV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.auth.CCPCollateralReportV01
+ * CCPCollateralReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPAvailableFinancialResourcesReportV01
+ * CCPAvailableFinancialResourcesReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPDailyCashFlowsReportV01
+ * CCPDailyCashFlowsReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPPortfolioStressTestingDefinitionReportV01
+ * CCPPortfolioStressTestingDefinitionReportV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.auth.CCPInvestmentsReportV01
+ * CCPInvestmentsReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPBackTestingDefinitionReportV01
+ * CCPBackTestingDefinitionReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPAccountPositionReportV01
+ * CCPAccountPositionReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPPortfolioStressTestingResultReportV01
+ * CCPPortfolioStressTestingResultReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPLiquidityStressTestingDefinitionReportV01
+ * CCPLiquidityStressTestingDefinitionReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPClearingMemberReportV01
+ * CCPClearingMemberReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPMemberRequirementsReportV01
+ * CCPMemberRequirementsReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPLiquidityStressTestingResultReportV01
+ * CCPLiquidityStressTestingResultReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.auth.CCPBackTestingResultReportV01
+ * CCPBackTestingResultReportV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -207,17 +238,19 @@ public class AuthoritiesLatestVersion {
 						RegulatoryTransactionReportCancellationStatusV01.mmObject(), InformationRequestOpeningV01.mmObject(), InformationRequestResponseV01.mmObject(), InformationRequestStatusChangeNotificationV01.mmObject(),
 						ContractRegistrationStatementRequestV01.mmObject(), ContractRegistrationAmendmentRequestV01.mmObject(), ContractRegistrationConfirmationV01.mmObject(), ContractRegistrationRequestV01.mmObject(),
 						CurrencyControlStatusAdviceV01.mmObject(), CurrencyControlSupportingDocumentDeliveryV01.mmObject(), ContractRegistrationClosureRequestV01.mmObject(), ContractRegistrationStatementV01.mmObject(),
-						PaymentRegulatoryInformationNotificationV01.mmObject(), CurrencyControlRequestOrLetterV01.mmObject(), MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmObject(),
-						MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmObject(), MoneyMarketUnsecuredMarketStatisticalReportV01.mmObject(), MoneyMarketSecuredMarketStatisticalReportV01.mmObject(),
-						MoneyMarketStatisticalReportStatusAdviceV01.mmObject(), InvoiceTaxReportV01.mmObject(), InvoiceTaxReportStatusAdviceV01.mmObject(), MoneyMarketUnsecuredMarketStatisticalReportV02.mmObject(),
-						MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmObject(), MoneyMarketSecuredMarketStatisticalReportV02.mmObject(), MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmObject(),
-						FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmObject(), FinancialInstrumentReportingInstrumentClassificationReportV01.mmObject(),
-						FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmObject(), FinancialInstrumentReportingEquityTradingActivityResultV01.mmObject(),
-						FinancialInstrumentReportingEquityTransparencyDataReportV01.mmObject(), FinancialInstrumentReportingReferenceDataReportV01.mmObject(), FinancialInstrumentReportingInvalidReferenceDataReportV01.mmObject(),
-						FinancialInstrumentReportingStatusAdviceV01.mmObject(), FinancialInstrumentReportingNonWorkingDayReportV01.mmObject(), FinancialInstrumentReportingTransactionReportV01.mmObject(),
+						PaymentRegulatoryInformationNotificationV01.mmObject(), CurrencyControlRequestOrLetterV01.mmObject(), MoneyMarketStatisticalReportStatusAdviceV01.mmObject(), InvoiceTaxReportV01.mmObject(),
+						InvoiceTaxReportStatusAdviceV01.mmObject(), MoneyMarketUnsecuredMarketStatisticalReportV02.mmObject(), MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmObject(),
+						MoneyMarketSecuredMarketStatisticalReportV02.mmObject(), MoneyMarketOvernightIndexSwapsStatisticalReportV02.mmObject(), FinancialInstrumentReportingTradingVolumeCapDataReportV01.mmObject(),
+						FinancialInstrumentReportingInstrumentClassificationReportV01.mmObject(), FinancialInstrumentReportingNonEquityTradingActivityResultV01.mmObject(),
+						FinancialInstrumentReportingEquityTradingActivityResultV01.mmObject(), FinancialInstrumentReportingEquityTransparencyDataReportV01.mmObject(), FinancialInstrumentReportingReferenceDataReportV01.mmObject(),
+						FinancialInstrumentReportingInvalidReferenceDataReportV01.mmObject(), FinancialInstrumentReportingStatusAdviceV01.mmObject(), FinancialInstrumentReportingNonWorkingDayReportV01.mmObject(),
 						FinancialInstrumentReportingEquityTradingActivityReportV01.mmObject(), FinancialInstrumentReportingCurrencyCodeReportV01.mmObject(), FinancialInstrumentReportingReferenceDataIndexReportV01.mmObject(),
 						FinancialInstrumentReportingMarketIdentificationCodeReportV01.mmObject(), FinancialInstrumentReportingNonEquityTransparencyDataReportV01.mmObject(),
-						FinancialInstrumentReportingReferenceDataDeltaReportV01.mmObject(), FinancialInstrumentReportingCountryCodeReportV01.mmObject(), FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmObject());
+						FinancialInstrumentReportingReferenceDataDeltaReportV01.mmObject(), FinancialInstrumentReportingCountryCodeReportV01.mmObject(), FinancialInstrumentReportingNonEquityTradingActivityReportV01.mmObject(),
+						CCPIncomeStatementAndCapitalAdequacyReportV01.mmObject(), CCPMemberObligationsReportV01.mmObject(), CCPClearedProductReportV01.mmObject(), CCPCollateralReportV01.mmObject(),
+						CCPAvailableFinancialResourcesReportV01.mmObject(), CCPDailyCashFlowsReportV01.mmObject(), CCPPortfolioStressTestingDefinitionReportV01.mmObject(), CCPInvestmentsReportV01.mmObject(),
+						CCPBackTestingDefinitionReportV01.mmObject(), CCPAccountPositionReportV01.mmObject(), CCPPortfolioStressTestingResultReportV01.mmObject(), CCPLiquidityStressTestingDefinitionReportV01.mmObject(),
+						CCPClearingMemberReportV01.mmObject(), CCPMemberRequirementsReportV01.mmObject(), CCPLiquidityStressTestingResultReportV01.mmObject(), CCPBackTestingResultReportV01.mmObject());
 				code = "auth";
 			}
 		});

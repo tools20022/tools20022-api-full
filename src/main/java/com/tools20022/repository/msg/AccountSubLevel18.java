@@ -349,7 +349,7 @@ public class AccountSubLevel18 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Report on the net position of a financial instrument on the sub-account (sub-account level 8),  for a certain date. The agent, for example, a trade intermediary, may also be specified."
+	 * "Report on the net position of a financial instrument on the sub-account (sub-account level 8), for a certain date. The agent, for example, a trade intermediary, may also be specified."
 	 * </li>
 	 * </ul>
 	 */
@@ -361,7 +361,7 @@ public class AccountSubLevel18 {
 			xmlTag = "BalDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceDetails";
-			definition = "Report on the net position of a financial instrument on the sub-account (sub-account level 8),  for a certain date. The agent, for example, a trade intermediary, may also be specified.";
+			definition = "Report on the net position of a financial instrument on the sub-account (sub-account level 8), for a certain date. The agent, for example, a trade intermediary, may also be specified.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AggregateHoldingBalance3.mmObject();

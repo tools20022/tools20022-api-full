@@ -35,6 +35,80 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08
+	 * SecuritiesSettlementTransactionGenerationNotificationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If AdditionalPhysicalOrRegistrationDetails is present then the transaction must be free of payment."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionGenerationNotificationV07
+	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionGenerationNotificationV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV08> forSecuritiesSettlementTransactionGenerationNotificationV08 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV08>() {
+		{
+			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionGenerationNotificationV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalPhysicalOrRegistrationDetailsRule";
+			definition = "If AdditionalPhysicalOrRegistrationDetails is present then the transaction must be free of payment.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionGenerationNotificationV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08
+	 * SecuritiesSettlementTransactionInstructionV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If AdditionalPhysicalOrRegistrationDetails is present, then the instruction must be free of payment."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV08> forSecuritiesSettlementTransactionInstructionV08 = new MMConstraint<SecuritiesSettlementTransactionInstructionV08>() {
+		{
+			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalPhysicalOrRegistrationDetailsRule";
+			definition = "If AdditionalPhysicalOrRegistrationDetails is present, then the instruction must be free of payment.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07
 	 * SecuritiesSettlementTransactionGenerationNotificationV07}</li>
 	 * <li>
@@ -47,6 +121,15 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "If AdditionalPhysicalOrRegistrationDetails is present then the transaction must be free of payment."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionGenerationNotificationV08
+	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionGenerationNotificationV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -62,6 +145,7 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPhysicalOrRegistrationDetailsRule";
 			definition = "If AdditionalPhysicalOrRegistrationDetails is present then the transaction must be free of payment.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionGenerationNotificationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionGenerationNotificationV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV07.mmObject();
 		}
@@ -85,6 +169,15 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 	 * definition} =
 	 * "If AdditionalPhysicalOrRegistrationDetails is present, then the instruction must be free of payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV08
+	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionInstructionV08}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -99,6 +192,7 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPhysicalOrRegistrationDetailsRule";
 			definition = "If AdditionalPhysicalOrRegistrationDetails is present, then the instruction must be free of payment.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV07.mmObject();
 		}
@@ -161,160 +255,6 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 			name = "AdditionalPhysicalOrRegistrationDetailsRule";
 			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
 			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotification002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
-	 * SecuritiesSettlementTransactionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV07
-	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
-	 * forSecuritiesSettlementTransactionInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV05
-	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
-	 * forSecuritiesSettlementTransactionInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
-		{
-			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalPhysicalOrRegistrationDetailsRule";
-			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06
-	 * SecuritiesSettlementTransactionGenerationNotificationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionGenerationNotificationV07
-	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
-	 * forSecuritiesSettlementTransactionGenerationNotificationV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionGenerationNotificationV05
-	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
-	 * forSecuritiesSettlementTransactionGenerationNotificationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV06> forSecuritiesSettlementTransactionGenerationNotificationV06 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV06>() {
-		{
-			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionGenerationNotificationV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalPhysicalOrRegistrationDetailsRule";
-			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionGenerationNotificationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionGenerationNotificationV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06
-	 * SecuritiesSettlementTransactionGenerationNotification002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V06> forSecuritiesSettlementTransactionGenerationNotification002V06 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V06>() {
-		{
-			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionGenerationNotification002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalPhysicalOrRegistrationDetailsRule";
-			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
-			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotification002V06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
-	 * SecuritiesSettlementTransactionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
-		{
-			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstruction002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalPhysicalOrRegistrationDetailsRule";
-			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
-			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
 		}
 	};
 	/**
@@ -671,6 +611,176 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
+	 * SecuritiesSettlementTransactionInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV05
+	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
+		{
+			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalPhysicalOrRegistrationDetailsRule";
+			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06
+	 * SecuritiesSettlementTransactionGenerationNotificationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionGenerationNotificationV07
+	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionGenerationNotificationV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule#forSecuritiesSettlementTransactionGenerationNotificationV05
+	 * ConstraintAdditionalPhysicalOrRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionGenerationNotificationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV06> forSecuritiesSettlementTransactionGenerationNotificationV06 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotificationV06>() {
+		{
+			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionGenerationNotificationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalPhysicalOrRegistrationDetailsRule";
+			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionGenerationNotificationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalPhysicalOrRegistrationDetailsRule.forSecuritiesSettlementTransactionGenerationNotificationV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotificationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V06
+	 * SecuritiesSettlementTransactionGenerationNotification002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V06> forSecuritiesSettlementTransactionGenerationNotification002V06 = new MMConstraint<SecuritiesSettlementTransactionGenerationNotification002V06>() {
+		{
+			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionGenerationNotification002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalPhysicalOrRegistrationDetailsRule";
+			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
+			owner_lazy = () -> SecuritiesSettlementTransactionGenerationNotification002V06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
+	 * SecuritiesSettlementTransactionInstruction002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalPhysicalOrRegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
+		{
+			validator = ConstraintAdditionalPhysicalOrRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstruction002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalPhysicalOrRegistrationDetailsRule";
+			definition = "If AdditionalPhysicalOrRegistrationDetails is used, then the instruction must be free of payment.";
+			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
+		}
+	};
+
+	/**
+	 * If AdditionalPhysicalOrRegistrationDetails is present then the
+	 * transaction must be free of payment.
+	 */
+	public static void checkSecuritiesSettlementTransactionGenerationNotificationV08(SecuritiesSettlementTransactionGenerationNotificationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If AdditionalPhysicalOrRegistrationDetails is present, then the
+	 * instruction must be free of payment.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV08(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If AdditionalPhysicalOrRegistrationDetails is present then the
@@ -701,38 +811,6 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 	 * must be free of payment.
 	 */
 	public static void checkSecuritiesSettlementTransactionGenerationNotification002V07(SecuritiesSettlementTransactionGenerationNotification002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If AdditionalPhysicalOrRegistrationDetails is used, then the instruction
-	 * must be free of payment.
-	 */
-	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If AdditionalPhysicalOrRegistrationDetails is used, then the instruction
-	 * must be free of payment.
-	 */
-	public static void checkSecuritiesSettlementTransactionGenerationNotificationV06(SecuritiesSettlementTransactionGenerationNotificationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If AdditionalPhysicalOrRegistrationDetails is used, then the instruction
-	 * must be free of payment.
-	 */
-	public static void checkSecuritiesSettlementTransactionGenerationNotification002V06(SecuritiesSettlementTransactionGenerationNotification002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If AdditionalPhysicalOrRegistrationDetails is used, then the instruction
-	 * must be free of payment.
-	 */
-	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -813,6 +891,38 @@ public class ConstraintAdditionalPhysicalOrRegistrationDetailsRule {
 	 * must be free of payment.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV05(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If AdditionalPhysicalOrRegistrationDetails is used, then the instruction
+	 * must be free of payment.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If AdditionalPhysicalOrRegistrationDetails is used, then the instruction
+	 * must be free of payment.
+	 */
+	public static void checkSecuritiesSettlementTransactionGenerationNotificationV06(SecuritiesSettlementTransactionGenerationNotificationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If AdditionalPhysicalOrRegistrationDetails is used, then the instruction
+	 * must be free of payment.
+	 */
+	public static void checkSecuritiesSettlementTransactionGenerationNotification002V06(SecuritiesSettlementTransactionGenerationNotification002V06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If AdditionalPhysicalOrRegistrationDetails is used, then the instruction
+	 * must be free of payment.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

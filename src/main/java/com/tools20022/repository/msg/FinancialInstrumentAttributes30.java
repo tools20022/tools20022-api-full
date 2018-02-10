@@ -622,7 +622,7 @@ public class FinancialInstrumentAttributes30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc."
+	 * "Indicates the level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -635,7 +635,7 @@ public class FinancialInstrumentAttributes30 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PREF"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferenceToIncome";
-			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
+			definition = "Indicates the level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -731,7 +731,7 @@ public class FinancialInstrumentAttributes30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies how an option can be exercised (American, European, Bermudan)"
+	 * "Specifies how an option can be exercised (American, European, Bermudan)."
 	 * </li>
 	 * </ul>
 	 */
@@ -744,7 +744,7 @@ public class FinancialInstrumentAttributes30 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12B::OPST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStyle";
-			definition = "Specifies how an option can be exercised (American, European, Bermudan)";
+			definition = "Specifies how an option can be exercised (American, European, Bermudan).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * "Party11Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Nature or use of the account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.Party34Choice Party34Choice}
+ * </li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +114,14 @@ public class Party11Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Party34Choice#mmOrganisationIdentification
+	 * Party34Choice.mmOrganisationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOrganisationIdentification = new MMMessageAssociationEnd() {
@@ -118,6 +133,7 @@ public class Party11Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentification";
 			definition = "Unique and unambiguous way to identify an organisation.";
+			nextVersions_lazy = () -> Arrays.asList(Party34Choice.mmOrganisationIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -155,7 +171,16 @@ public class Party11Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identification of a person, eg, passport."</li>
+	 * "Unique and unambiguous identification of a person, for example a passport."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Party34Choice#mmPrivateIdentification
+	 * Party34Choice.mmPrivateIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPrivateIdentification = new MMMessageAssociationEnd() {
@@ -166,7 +191,8 @@ public class Party11Choice {
 			xmlTag = "PrvtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivateIdentification";
-			definition = "Unique and unambiguous identification of a person, eg, passport.";
+			definition = "Unique and unambiguous identification of a person, for example a passport.";
+			nextVersions_lazy = () -> Arrays.asList(Party34Choice.mmPrivateIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +209,7 @@ public class Party11Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Party11Choice";
 				definition = "Nature or use of the account.";
+				nextVersions_lazy = () -> Arrays.asList(Party34Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

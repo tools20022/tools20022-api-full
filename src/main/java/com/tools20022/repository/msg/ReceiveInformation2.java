@@ -287,7 +287,7 @@ public class ReceiveInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the financial instrument is to be physically  delivered."
+	 * "Indicates whether the financial instrument is to be physically delivered."
 	 * </li>
 	 * </ul>
 	 */
@@ -299,7 +299,7 @@ public class ReceiveInformation2 {
 			xmlTag = "PhysTrfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferIndicator";
-			definition = "Indicates whether the financial instrument is to be physically  delivered.";
+			definition = "Indicates whether the financial instrument is to be physically delivered.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

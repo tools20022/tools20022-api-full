@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.ATMCardTransactionLatestVersion;
+import com.tools20022.repository.area.ATMCardTransactionPreviousVersion;
 import com.tools20022.repository.msg.ATMCompletionAcknowledgement1;
 import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
@@ -72,8 +72,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "ATMCmpltnAck"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
- * ATMCardTransactionLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.ATMCardTransactionPreviousVersion
+ * ATMCardTransactionPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catp.009.001.01}</li>
@@ -214,7 +214,7 @@ public class ATMCompletionAcknowledgementV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to the acknowledgement  of an ATM completion on the ATM. manager."
+	 * "Information related to the acknowledgement of an ATM completion on the ATM. manager."
 	 * </li>
 	 * </ul>
 	 */
@@ -223,7 +223,7 @@ public class ATMCompletionAcknowledgementV01 {
 			xmlTag = "ATMCmpltnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMCompletionAcknowledgement";
-			definition = "Information related to the acknowledgement  of an ATM completion on the ATM. manager.";
+			definition = "Information related to the acknowledgement of an ATM completion on the ATM. manager.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ATMCompletionAcknowledgement1.mmObject();
@@ -292,7 +292,7 @@ public class ATMCompletionAcknowledgementV01 {
 				messageSet_lazy = () -> Arrays.asList(ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "ATMCmpltnAck";
-				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
+				businessArea_lazy = () -> ATMCardTransactionPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.mmHeader,
 						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.mmProtectedATMCompletionAcknowledgement, com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.mmATMCompletionAcknowledgement,
 						com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01.mmSecurityTrailer);

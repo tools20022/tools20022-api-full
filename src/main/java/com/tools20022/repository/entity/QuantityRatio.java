@@ -60,8 +60,8 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmIntermediateSecuritiesProceedsDefinition
  * QuantityRatio.mmIntermediateSecuritiesProceedsDefinition}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmwarrant
- * QuantityRatio.mmwarrant}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmWarrant
+ * QuantityRatio.mmWarrant}</li>
  * </ul>
  * </li>
  * <li>
@@ -601,21 +601,21 @@ public class QuantityRatio {
 	 * registrationStatus} =
 	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "warrant"</li>
+	 * name} = "Warrant"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the warrant for the related quantity or the underlying quantity. "
+	 * "Provides the warrant for the related quantity or the underlying quantity."
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMBusinessAssociationEnd mmwarrant = new MMBusinessAssociationEnd() {
+	public static final MMBusinessAssociationEnd mmWarrant = new MMBusinessAssociationEnd() {
 		{
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
-			name = "warrant";
-			definition = "Provides the warrant for the related quantity or the underlying quantity. ";
+			name = "Warrant";
+			definition = "Provides the warrant for the related quantity or the underlying quantity.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Warrant.mmWarrantParity;
@@ -642,7 +642,7 @@ public class QuantityRatio {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuantityRatio.mmAdditionalQuantityForResultantSecuritiesProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmQuantity1,
 						com.tools20022.repository.entity.QuantityRatio.mmQuantity2, com.tools20022.repository.entity.QuantityRatio.mmAdditionalQuantityForSubscribedSecuritiesProceedsDefinition,
 						com.tools20022.repository.entity.QuantityRatio.mmNewToOldProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmNewToUnderlyingProceedsDefinition,
-						com.tools20022.repository.entity.QuantityRatio.mmIntermediateSecuritiesProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmwarrant);
+						com.tools20022.repository.entity.QuantityRatio.mmIntermediateSecuritiesProceedsDefinition, com.tools20022.repository.entity.QuantityRatio.mmWarrant);
 				derivationComponent_lazy = () -> Arrays.asList(QuantityToQuantityRatio1.mmObject(), QuantityToQuantityRatio2.mmObject(), LongQuantityToQuantityRatio2.mmObject());
 			}
 
@@ -717,11 +717,11 @@ public class QuantityRatio {
 		return this;
 	}
 
-	public Warrant getwarrant() {
+	public Warrant getWarrant() {
 		return warrant;
 	}
 
-	public QuantityRatio setwarrant(com.tools20022.repository.entity.Warrant warrant) {
+	public QuantityRatio setWarrant(com.tools20022.repository.entity.Warrant warrant) {
 		this.warrant = Objects.requireNonNull(warrant);
 		return this;
 	}

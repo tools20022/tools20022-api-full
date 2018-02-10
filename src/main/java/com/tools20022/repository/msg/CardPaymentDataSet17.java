@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CardPaymentDataSet17"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Transaction for whose batch capture has been rejected."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSet20
+ * CardPaymentDataSet20}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet15
@@ -106,6 +113,14 @@ public class CardPaymentDataSet17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Sequential counter of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet20#mmTransactionSequenceCounter
+	 * CardPaymentDataSet20.mmTransactionSequenceCounter}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -121,6 +136,7 @@ public class CardPaymentDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionSequenceCounter";
 			definition = "Sequential counter of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet20.mmTransactionSequenceCounter);
 			previousVersion_lazy = () -> CardPaymentDataSet15.mmTransactionSequenceCounter;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -153,6 +169,14 @@ public class CardPaymentDataSet17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Response to the capture of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet20#mmTransactionResponse
+	 * CardPaymentDataSet20.mmTransactionResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +192,7 @@ public class CardPaymentDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the capture of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet20.mmTransactionResponse);
 			previousVersion_lazy = () -> CardPaymentDataSet15.mmTransactionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -202,6 +227,14 @@ public class CardPaymentDataSet17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data related to the environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet20#mmEnvironment
+	 * CardPaymentDataSet20.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -217,6 +250,7 @@ public class CardPaymentDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Data related to the environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet20.mmEnvironment);
 			previousVersion_lazy = () -> CardPaymentDataSet15.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -251,6 +285,14 @@ public class CardPaymentDataSet17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction that has been rejected."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet20#mmTransaction
+	 * CardPaymentDataSet20.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -266,6 +308,7 @@ public class CardPaymentDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction that has been rejected.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet20.mmTransaction);
 			previousVersion_lazy = () -> CardPaymentDataSet15.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -283,6 +326,7 @@ public class CardPaymentDataSet17 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSet17";
 				definition = "Transaction for whose batch capture has been rejected.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet20.mmObject());
 				previousVersion_lazy = () -> CardPaymentDataSet15.mmObject();
 			}
 		});

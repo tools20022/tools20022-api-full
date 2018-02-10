@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies if the stamp duty is applicable
+ * Specifies if the stamp duty is applicable.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -79,7 +79,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "StampDutyTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies if the stamp duty is applicable"</li>
+ * definition} = "Specifies if the stamp duty is applicable."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -117,7 +117,7 @@ public class StampDutyTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * SDRT paid on another transaction
+	 * SDRT paid on another transaction.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -134,14 +134,14 @@ public class StampDutyTypeCode extends MMCode {
 	 * name} = "Paid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "SDRT paid on another transaction"</li>
+	 * definition} = "SDRT paid on another transaction."</li>
 	 * </ul>
 	 */
 	public static final StampDutyTypeCode Paid = new StampDutyTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Paid";
-			definition = "SDRT paid on another transaction";
+			definition = "SDRT paid on another transaction.";
 			owner_lazy = () -> com.tools20022.repository.codeset.StampDutyTypeCode.mmObject();
 			codeName = "SDRT";
 		}
@@ -248,7 +248,7 @@ public class StampDutyTypeCode extends MMCode {
 				example = Arrays.asList("SDRU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StampDutyTypeCode";
-				definition = "Specifies if the stamp duty is applicable";
+				definition = "Specifies if the stamp duty is applicable.";
 				derivation_lazy = () -> Arrays.asList(StampDutyType2Code.mmObject(), StampDutyType1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyTypeCode.OutsideCSD, com.tools20022.repository.codeset.StampDutyTypeCode.Paid, com.tools20022.repository.codeset.StampDutyTypeCode.NotApplicable,
 						com.tools20022.repository.codeset.StampDutyTypeCode.Exemption, com.tools20022.repository.codeset.StampDutyTypeCode.Applicable);

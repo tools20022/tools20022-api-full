@@ -110,7 +110,7 @@ public class CurrencyControlRecordStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identification of each entry/record within the package of transactions. "
+	 * "Unique and unambiguous identification of each entry/record within the package of transactions."
 	 * </li>
 	 * </ul>
 	 */
@@ -121,7 +121,7 @@ public class CurrencyControlRecordStatus1 {
 			xmlTag = "RcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordIdentification";
-			definition = "Unique and unambiguous identification of each entry/record within the package of transactions. ";
+			definition = "Unique and unambiguous identification of each entry/record within the package of transactions.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

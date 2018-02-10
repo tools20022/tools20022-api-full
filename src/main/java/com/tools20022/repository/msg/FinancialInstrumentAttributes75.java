@@ -22,8 +22,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
-import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
@@ -186,7 +186,7 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05#mmFinancialInstrumentAttributes
  * IntraPositionMovementConfirmation002V05.mmFinancialInstrumentAttributes}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06#mmFinancialInstrumentAttributes
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06#mmFinancialInstrumentAttributes
  * IntraPositionMovementConfirmation002V06.mmFinancialInstrumentAttributes}</li>
  * </ul>
  * </li>
@@ -633,7 +633,7 @@ public class FinancialInstrumentAttributes75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies how an option can be exercised (American, European, Bermudan)"
+	 * "Specifies how an option can be exercised (American, European, Bermudan)."
 	 * </li>
 	 * </ul>
 	 */
@@ -646,7 +646,7 @@ public class FinancialInstrumentAttributes75 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12B::OPST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStyle";
-			definition = "Specifies how an option can be exercised (American, European, Bermudan)";
+			definition = "Specifies how an option can be exercised (American, European, Bermudan).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

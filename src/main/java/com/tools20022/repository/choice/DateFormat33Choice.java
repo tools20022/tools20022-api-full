@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between an ISODate or ISODateTime format or a date code."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat46Choice
+ * DateFormat46Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.DateFormat11Choice
@@ -103,6 +110,14 @@ public class DateFormat33Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date expressed as a calendar date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat46Choice#mmDate
+	 * DateFormat46Choice.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class DateFormat33Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat46Choice.mmDate);
 			previousVersion_lazy = () -> DateFormat11Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -154,6 +170,14 @@ public class DateFormat33Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat46Choice#mmDateCode
+	 * DateFormat46Choice.mmDateCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -170,6 +194,7 @@ public class DateFormat33Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat46Choice.mmDateCode);
 			previousVersion_lazy = () -> DateFormat11Choice.mmDateCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -186,6 +211,7 @@ public class DateFormat33Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat33Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code.";
+				nextVersions_lazy = () -> Arrays.asList(DateFormat46Choice.mmObject());
 				previousVersion_lazy = () -> DateFormat11Choice.mmObject();
 			}
 		});

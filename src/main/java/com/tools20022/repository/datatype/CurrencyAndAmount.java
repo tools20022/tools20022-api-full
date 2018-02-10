@@ -59,7 +59,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "CurrencyAndAmount"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217.  The decimal separator is a dot.\nNote: A zero amount is considered a positive amount."
+ * "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217. The decimal separator is a dot.\nNote: A zero amount is considered a positive amount."
  * </li>
  * </ul>
  */
@@ -76,7 +76,7 @@ public class CurrencyAndAmount {
 				example = Arrays.asList("100000");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyAndAmount";
-				definition = "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217.  The decimal separator is a dot.\nNote: A zero amount is considered a positive amount.";
+				definition = "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217. The decimal separator is a dot.\nNote: A zero amount is considered a positive amount.";
 				currencyIdentifierSet_lazy = () -> CurrencyCode.mmObject();
 				minInclusive = "0";
 				totalDigits = 18;

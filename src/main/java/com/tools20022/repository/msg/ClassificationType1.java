@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ClassificationType1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the classification."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ClassificationType2
+ * ClassificationType2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +116,14 @@ public class ClassificationType1 {
 	 * definition} =
 	 * "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClassificationType2#mmClassificationFinancialInstrument
+	 * ClassificationType2.mmClassificationFinancialInstrument}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
@@ -120,6 +135,7 @@ public class ClassificationType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
+			nextVersions_lazy = () -> Arrays.asList(ClassificationType2.mmClassificationFinancialInstrument);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
@@ -160,6 +176,14 @@ public class ClassificationType1 {
 	 * definition} =
 	 * "Name of the identification scheme, in a coded form as published in an external list."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClassificationType2#mmFinancialInstrumentProductTypeCode
+	 * ClassificationType2.mmFinancialInstrumentProductTypeCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentProductTypeCode = new MMMessageAttribute() {
@@ -171,6 +195,7 @@ public class ClassificationType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentProductTypeCode";
 			definition = "Name of the identification scheme, in a coded form as published in an external list.";
+			nextVersions_lazy = () -> Arrays.asList(ClassificationType2.mmFinancialInstrumentProductTypeCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalFinancialInstrumentProductType1Code.mmObject();
@@ -209,6 +234,14 @@ public class ClassificationType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary classification of financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClassificationType2#mmAlternateClassification
+	 * ClassificationType2.mmAlternateClassification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAlternateClassification = new MMMessageAttribute() {
@@ -220,6 +253,7 @@ public class ClassificationType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateClassification";
 			definition = "Proprietary classification of financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(ClassificationType2.mmAlternateClassification);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification41.mmObject();
 		}
@@ -235,6 +269,7 @@ public class ClassificationType1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ClassificationType1";
 				definition = "Choice of format for the classification.";
+				nextVersions_lazy = () -> Arrays.asList(ClassificationType2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

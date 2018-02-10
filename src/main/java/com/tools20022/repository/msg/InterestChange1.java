@@ -436,7 +436,7 @@ public class InterestChange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates that the rate reset will occur at the end of the payment period (True case)"
+	 * "Indicates that the rate reset will occur at the end of the payment period (True case)."
 	 * </li>
 	 * </ul>
 	 */
@@ -448,7 +448,7 @@ public class InterestChange1 {
 			xmlTag = "Arrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Arriers";
-			definition = "Indicates that the rate reset will occur at the end of the payment period (True case)";
+			definition = "Indicates that the rate reset will occur at the end of the payment period (True case).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();

@@ -547,6 +547,14 @@ public class ConstraintTradeDateRule {
 	 * definition} =
 	 * "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDateRule#forSecuritiesTradeDetails72
+	 * ConstraintTradeDateRule.forSecuritiesTradeDetails72}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -560,6 +568,7 @@ public class ConstraintTradeDateRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails72);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails24;
 			owner_lazy = () -> SecuritiesTradeDetails48.mmObject();
 		}
@@ -643,6 +652,14 @@ public class ConstraintTradeDateRule {
 	 * definition} =
 	 * "If Trade Date/Time is present with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDateRule#forSecuritiesTradeDetails71
+	 * ConstraintTradeDateRule.forSecuritiesTradeDetails71}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -656,6 +673,7 @@ public class ConstraintTradeDateRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is present with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails71);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails49;
 			owner_lazy = () -> SecuritiesTradeDetails68.mmObject();
 		}
@@ -688,6 +706,138 @@ public class ConstraintTradeDateRule {
 			name = "TradeDateRule";
 			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
 			owner_lazy = () -> SecuritiesTradeDetails69.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71
+	 * SecuritiesTradeDetails71}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradeDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Trade Date/Time is present with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDateRule#forSecuritiesTradeDetails68
+	 * ConstraintTradeDateRule.forSecuritiesTradeDetails68}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails71> forSecuritiesTradeDetails71 = new MMConstraint<SecuritiesTradeDetails71>() {
+		{
+			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails71;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TradeDateRule";
+			definition = "If Trade Date/Time is present with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails68;
+			owner_lazy = () -> SecuritiesTradeDetails71.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72
+	 * SecuritiesTradeDetails72}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradeDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTradeDateRule#forSecuritiesTradeDetails48
+	 * ConstraintTradeDateRule.forSecuritiesTradeDetails48}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails72> forSecuritiesTradeDetails72 = new MMConstraint<SecuritiesTradeDetails72>() {
+		{
+			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails72;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TradeDateRule";
+			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTradeDateRule.forSecuritiesTradeDetails48;
+			owner_lazy = () -> SecuritiesTradeDetails72.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81
+	 * SecuritiesTradeDetails81}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradeDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails81> forSecuritiesTradeDetails81 = new MMConstraint<SecuritiesTradeDetails81>() {
+		{
+			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails81;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TradeDateRule";
+			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, for example, of the stock exchange, or of the selling broker for OTC.";
+			owner_lazy = () -> SecuritiesTradeDetails81.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85
+	 * SecuritiesTradeDetails85}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TradeDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails85> forSecuritiesTradeDetails85 = new MMConstraint<SecuritiesTradeDetails85>() {
+		{
+			validator = ConstraintTradeDateRule::checkSecuritiesTradeDetails85;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TradeDateRule";
+			definition = "If Trade Date/Time is used with a time or a time + UTC indicator, then it must be the local time of the place of trade, eg, of the stock exchange, or of the selling broker for OTC.";
+			owner_lazy = () -> SecuritiesTradeDetails85.mmObject();
 		}
 	};
 
@@ -868,6 +1018,42 @@ public class ConstraintTradeDateRule {
 	 * or of the selling broker for OTC.
 	 */
 	public static void checkSecuritiesTradeDetails69(SecuritiesTradeDetails69 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Trade Date/Time is present with a time or a time + UTC indicator, then
+	 * it must be the local time of the place of trade, for example, of the
+	 * stock exchange, or of the selling broker for OTC.
+	 */
+	public static void checkSecuritiesTradeDetails71(SecuritiesTradeDetails71 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Trade Date/Time is used with a time or a time + UTC indicator, then it
+	 * must be the local time of the place of trade, for example, of the stock
+	 * exchange, or of the selling broker for OTC.
+	 */
+	public static void checkSecuritiesTradeDetails72(SecuritiesTradeDetails72 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Trade Date/Time is used with a time or a time + UTC indicator, then it
+	 * must be the local time of the place of trade, for example, of the stock
+	 * exchange, or of the selling broker for OTC.
+	 */
+	public static void checkSecuritiesTradeDetails81(SecuritiesTradeDetails81 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Trade Date/Time is used with a time or a time + UTC indicator, then it
+	 * must be the local time of the place of trade, eg, of the stock exchange,
+	 * or of the selling broker for OTC.
+	 */
+	public static void checkSecuritiesTradeDetails85(SecuritiesTradeDetails85 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

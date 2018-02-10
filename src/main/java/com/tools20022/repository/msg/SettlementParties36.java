@@ -221,6 +221,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties62
+ * SettlementParties62}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SettlementParties10
@@ -268,6 +275,14 @@ public class SettlementParties36 {
 	 * definition} =
 	 * "First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties62#mmDepository
+	 * SettlementParties62.mmDepository}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -285,6 +300,7 @@ public class SettlementParties36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Depository";
 			definition = "First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties62.mmDepository);
 			previousVersion_lazy = () -> SettlementParties10.mmDepository;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -328,6 +344,14 @@ public class SettlementParties36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the depository."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties62#mmParty1
+	 * SettlementParties62.mmParty1}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -345,6 +369,7 @@ public class SettlementParties36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party1";
 			definition = "Party that, in a settlement chain interacts with the depository.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties62.mmParty1);
 			previousVersion_lazy = () -> SettlementParties10.mmParty1;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -390,6 +415,14 @@ public class SettlementParties36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the party 1."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties62#mmParty2
+	 * SettlementParties62.mmParty2}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -408,6 +441,7 @@ public class SettlementParties36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party2";
 			definition = "Party that, in a settlement chain interacts with the party 1.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties62.mmParty2);
 			previousVersion_lazy = () -> SettlementParties10.mmParty2;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -452,6 +486,14 @@ public class SettlementParties36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the party 2."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties62#mmParty3
+	 * SettlementParties62.mmParty3}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -469,6 +511,7 @@ public class SettlementParties36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party3";
 			definition = "Party that, in a settlement chain interacts with the party 2.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties62.mmParty3);
 			previousVersion_lazy = () -> SettlementParties10.mmParty3;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -513,6 +556,14 @@ public class SettlementParties36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the party 3."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties62#mmParty4
+	 * SettlementParties62.mmParty4}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -530,6 +581,7 @@ public class SettlementParties36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party4";
 			definition = "Party that, in a settlement chain interacts with the party 3.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties62.mmParty4);
 			previousVersion_lazy = () -> SettlementParties10.mmParty4;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -573,6 +625,14 @@ public class SettlementParties36 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the party 4."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties62#mmParty5
+	 * SettlementParties62.mmParty5}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -590,6 +650,7 @@ public class SettlementParties36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party5";
 			definition = "Party that, in a settlement chain interacts with the party 4.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties62.mmParty5);
 			previousVersion_lazy = () -> SettlementParties10.mmParty5;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -628,6 +689,7 @@ public class SettlementParties36 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties36";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementParties62.mmObject());
 				previousVersion_lazy = () -> SettlementParties10.mmObject();
 			}
 		});

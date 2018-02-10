@@ -18,8 +18,10 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.TrancheIndicator2Choice;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Tranche2;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -55,6 +57,15 @@ import java.util.Objects;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TrancheIndicator2Choice
+ * TrancheIndicator2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tranche2 Tranche2}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -67,7 +78,7 @@ import java.util.Objects;
  * "Tranche"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "One of a number of related assets offered as part of the same transaction. The detachment point less the attachment  point represents the maximum loss.\r\n"
+ * "One of a number of related assets offered as part of the same transaction. The detachment point less the attachment point represents the maximum loss.\r\n"
  * </li>
  * </ul>
  */
@@ -130,6 +141,13 @@ public class Tranche {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tranche2#mmDetachmentPoint
+	 * Tranche2.mmDetachmentPoint}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tranche
@@ -147,6 +165,7 @@ public class Tranche {
 	 */
 	public static final MMBusinessAttribute mmDetachmentPoint = new MMBusinessAttribute() {
 		{
+			derivation_lazy = () -> Arrays.asList(Tranche2.mmDetachmentPoint);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Tranche.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -175,6 +194,13 @@ public class Tranche {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
 	 * simpleType} = {@linkplain com.tools20022.repository.datatype.BaseOneRate
 	 * BaseOneRate}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tranche2#mmAttachmentPoint
+	 * Tranche2.mmAttachmentPoint}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Tranche
@@ -194,6 +220,7 @@ public class Tranche {
 	 */
 	public static final MMBusinessAttribute mmAttachmentPoint = new MMBusinessAttribute() {
 		{
+			derivation_lazy = () -> Arrays.asList(Tranche2.mmAttachmentPoint);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Tranche.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -219,9 +246,10 @@ public class Tranche {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Tranche";
-				definition = "One of a number of related assets offered as part of the same transaction. The detachment point less the attachment  point represents the maximum loss.\r\n";
+				definition = "One of a number of related assets offered as part of the same transaction. The detachment point less the attachment point represents the maximum loss.\r\n";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmTranche);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tranche.mmAsset, com.tools20022.repository.entity.Tranche.mmDetachmentPoint, com.tools20022.repository.entity.Tranche.mmAttachmentPoint);
+				derivationComponent_lazy = () -> Arrays.asList(TrancheIndicator2Choice.mmObject(), Tranche2.mmObject());
 			}
 
 			@Override

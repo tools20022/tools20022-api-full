@@ -80,6 +80,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CashOption45"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides information about the cash option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption59 CashOption59}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.CashOption19
  * CashOption19}</li>
@@ -125,6 +131,14 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the value is a debit or credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption59#mmCreditDebitIndicator
+	 * CashOption59.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -142,6 +156,7 @@ public class CashOption45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or credit.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption59.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> CashOption19.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -184,6 +199,13 @@ public class CashOption45 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Choice between a cash account, a charges account or a tax account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption59#mmAccount
+	 * CashOption59.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -201,6 +223,7 @@ public class CashOption45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Choice between a cash account, a charges account or a tax account.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption59.mmAccount);
 			previousVersion_lazy = () -> CashOption19.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -243,6 +266,13 @@ public class CashOption45 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/Time of the posting (credit or debit) to the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption59#mmPostingDate
+	 * CashOption59.mmPostingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -260,6 +290,7 @@ public class CashOption45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption59.mmPostingDate);
 			previousVersion_lazy = () -> CashOption19.mmPostingDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -300,6 +331,14 @@ public class CashOption45 {
 	 * definition} =
 	 * "Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption59#mmOriginalPostingDate
+	 * CashOption59.mmOriginalPostingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -316,6 +355,7 @@ public class CashOption45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption59.mmOriginalPostingDate);
 			previousVersion_lazy = () -> CashOption19.mmOriginalPostingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -358,6 +398,13 @@ public class CashOption45 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time when calculating economic benefit for a cash amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption59#mmValueDate
+	 * CashOption59.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -375,6 +422,7 @@ public class CashOption45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time when calculating economic benefit for a cash amount.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption59.mmValueDate);
 			previousVersion_lazy = () -> CashOption19.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -416,6 +464,14 @@ public class CashOption45 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money that is to be/was posted to the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption59#mmPostingAmount
+	 * CashOption59.mmPostingAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -433,6 +489,7 @@ public class CashOption45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingAmount";
 			definition = "Amount of money that is to be/was posted to the account.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption59.mmPostingAmount);
 			previousVersion_lazy = () -> CashOption19.mmPostingAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -450,6 +507,7 @@ public class CashOption45 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashOption45";
 				definition = "Provides information about the cash option.";
+				nextVersions_lazy = () -> Arrays.asList(CashOption59.mmObject());
 				previousVersion_lazy = () -> CashOption19.mmObject();
 			}
 		});

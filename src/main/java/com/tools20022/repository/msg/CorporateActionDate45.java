@@ -71,6 +71,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionDate45"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies corporate action dates."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDate63
+ * CorporateActionDate63}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionDate41
@@ -118,6 +125,14 @@ public class CorporateActionDate45 {
 	 * definition} =
 	 * "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate63#mmRecordDate
+	 * CorporateActionDate63.mmRecordDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -135,6 +150,7 @@ public class CorporateActionDate45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate63.mmRecordDate);
 			previousVersion_lazy = () -> CorporateActionDate41.mmRecordDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -178,6 +194,14 @@ public class CorporateActionDate45 {
 	 * definition} =
 	 * "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate63#mmExDividendDate
+	 * CorporateActionDate63.mmExDividendDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -195,6 +219,7 @@ public class CorporateActionDate45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate63.mmExDividendDate);
 			previousVersion_lazy = () -> CorporateActionDate41.mmExDividendDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -238,6 +263,14 @@ public class CorporateActionDate45 {
 	 * definition} =
 	 * "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate63#mmLotteryDate
+	 * CorporateActionDate63.mmLotteryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -255,6 +288,7 @@ public class CorporateActionDate45 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate63.mmLotteryDate);
 			previousVersion_lazy = () -> CorporateActionDate41.mmLotteryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -273,6 +307,7 @@ public class CorporateActionDate45 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate45";
 				definition = "Specifies corporate action dates.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionDate63.mmObject());
 				previousVersion_lazy = () -> CorporateActionDate41.mmObject();
 			}
 		});

@@ -89,6 +89,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardAccount7.mmServicer}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CardAccount12#mmServicer
  * CardAccount12.mmServicer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport20#mmTransferAccountServicerIdentification
+ * AccountReport20.mmTransferAccountServicerIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account24#mmServicer
+ * Account24.mmServicer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount14#mmServicer
+ * CardAccount14.mmServicer}</li>
  * </ul>
  * </li>
  * <li>
@@ -122,7 +129,7 @@ public class AccountServicerRole extends AccountPartyRole {
 				derivationElement_lazy = () -> Arrays.asList(Account5.mmServicer, Account6.mmServicer, AccountReport1.mmTransferAccountServicerIdentification, ParentCashAccount1.mmServicer,
 						AccountReport14.mmTransferAccountServicerIdentification, Account15.mmServicer, Account16.mmServicer, CardAccount3.mmServicer, CardAccount1.mmServicer, CardAccount6.mmServicer, CardAccount4.mmServicer,
 						CardAccount5.mmServicer, CardAccount2.mmServicer, ParentCashAccount2.mmServicer, Account19.mmServicer, CardAccount10.mmServicer, CardAccount9.mmServicer, CardAccount8.mmServicer, CardAccount11.mmServicer,
-						CardAccount13.mmServicer, CardAccount7.mmServicer, CardAccount12.mmServicer);
+						CardAccount13.mmServicer, CardAccount7.mmServicer, CardAccount12.mmServicer, AccountReport20.mmTransferAccountServicerIdentification, Account24.mmServicer, CardAccount14.mmServicer);
 				superType_lazy = () -> AccountPartyRole.mmObject();
 			}
 

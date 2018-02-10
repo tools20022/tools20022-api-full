@@ -112,6 +112,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TransactionDetails76"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identifies the details of the transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails106
+ * TransactionDetails106}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransactionDetails64
@@ -158,6 +165,14 @@ public class TransactionDetails76 {
 	 * definition} =
 	 * "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmAccountOwnerTransactionIdentification
+	 * TransactionDetails106.mmAccountOwnerTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -174,6 +189,7 @@ public class TransactionDetails76 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmAccountOwnerTransactionIdentification);
 			previousVersion_lazy = () -> TransactionDetails64.mmAccountOwnerTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -215,6 +231,14 @@ public class TransactionDetails76 {
 	 * definition} =
 	 * "Unambiguous identification of the transaction as known by the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmAccountServicerTransactionIdentification
+	 * TransactionDetails106.mmAccountServicerTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +255,7 @@ public class TransactionDetails76 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmAccountServicerTransactionIdentification);
 			previousVersion_lazy = () -> TransactionDetails64.mmAccountServicerTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -272,6 +297,14 @@ public class TransactionDetails76 {
 	 * definition} =
 	 * "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmMarketInfrastructureTransactionIdentification
+	 * TransactionDetails106.mmMarketInfrastructureTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -288,6 +321,7 @@ public class TransactionDetails76 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmMarketInfrastructureTransactionIdentification);
 			previousVersion_lazy = () -> TransactionDetails64.mmMarketInfrastructureTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -328,6 +362,14 @@ public class TransactionDetails76 {
 	 * definition} =
 	 * "Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmProcessorTransactionIdentification
+	 * TransactionDetails106.mmProcessorTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -344,6 +386,7 @@ public class TransactionDetails76 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmProcessorTransactionIdentification);
 			previousVersion_lazy = () -> TransactionDetails64.mmProcessorTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -384,6 +427,14 @@ public class TransactionDetails76 {
 	 * definition} =
 	 * "Identification of a transaction that cannot be identified using a standard reference element present in the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmOtherTransactionIdentification
+	 * TransactionDetails106.mmOtherTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -400,6 +451,7 @@ public class TransactionDetails76 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTransactionIdentification";
 			definition = "Identification of a transaction that cannot be identified using a standard reference element present in the message.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmOtherTransactionIdentification);
 			previousVersion_lazy = () -> TransactionDetails64.mmOtherTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -437,6 +489,14 @@ public class TransactionDetails76 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmAccountOwner
+	 * TransactionDetails106.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -453,6 +513,7 @@ public class TransactionDetails76 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmAccountOwner);
 			previousVersion_lazy = () -> TransactionDetails64.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -491,6 +552,14 @@ public class TransactionDetails76 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a securities entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmSafekeepingAccount
+	 * TransactionDetails106.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -507,6 +576,7 @@ public class TransactionDetails76 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmSafekeepingAccount);
 			previousVersion_lazy = () -> TransactionDetails64.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -547,6 +617,14 @@ public class TransactionDetails76 {
 	 * definition} =
 	 * "Provides additional details on the transaction which can not be included within the structured fields of the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmTransactionDetails
+	 * TransactionDetails106.mmTransactionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -563,6 +641,7 @@ public class TransactionDetails76 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Provides additional details on the transaction which can not be included within the structured fields of the message.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmTransactionDetails);
 			previousVersion_lazy = () -> TransactionDetails64.mmTransactionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -586,6 +665,7 @@ public class TransactionDetails76 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionDetails76";
 				definition = "Identifies the details of the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionDetails106.mmObject());
 				previousVersion_lazy = () -> TransactionDetails64.mmObject();
 			}
 		});

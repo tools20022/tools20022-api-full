@@ -108,7 +108,7 @@ public class ValidationStatusInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The result of the technical validation (e.g. Accepted, Reception error) executed on the  request message."
+	 * "The result of the technical validation (e.g. Accepted, Reception error) executed on the request message."
 	 * </li>
 	 * </ul>
 	 */
@@ -120,7 +120,7 @@ public class ValidationStatusInformation1 {
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			definition = "The result of the technical validation (e.g. Accepted, Reception error) executed on the  request message.";
+			definition = "The result of the technical validation (e.g. Accepted, Reception error) executed on the request message.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TechnicalValidationStatus1Code.mmObject();

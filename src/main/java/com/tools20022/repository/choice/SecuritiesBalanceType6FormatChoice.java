@@ -64,8 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesBalanceType6FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the type of securities balance."
- * </li>
+ * definition} = "Choice of formats to express the type of securities balance."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -155,7 +154,7 @@ public class SecuritiesBalanceType6FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the type of securities balance."</li>
+	 * "Proprietary code to express the type of securities balance."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -166,7 +165,7 @@ public class SecuritiesBalanceType6FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the type of securities balance.";
+			definition = "Proprietary code to express the type of securities balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -181,7 +180,7 @@ public class SecuritiesBalanceType6FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesBalanceType6FormatChoice";
-				definition = "Choice of formats to  express the type of securities balance.";
+				definition = "Choice of formats to express the type of securities balance.";
 			}
 		});
 		return mmObject_lazy.get();

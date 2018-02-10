@@ -129,6 +129,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification119
  * PartyIdentification119}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification121
+ * PartyIdentification121}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -180,6 +182,9 @@ public class PartyIdentification109 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification119#mmIdentification
 	 * PartyIdentification119.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification121#mmProprietary
+	 * PartyIdentification121.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -198,7 +203,7 @@ public class PartyIdentification109 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of the party.";
-			nextVersions_lazy = () -> Arrays.asList(PartyIdentification119.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification119.mmIdentification, PartyIdentification121.mmProprietary);
 			previousVersion_lazy = () -> PartyIdentification98.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -282,7 +287,7 @@ public class PartyIdentification109 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification109";
 				definition = "Identification of the party.";
-				nextVersions_lazy = () -> Arrays.asList(PartyIdentification119.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentification119.mmObject(), PartyIdentification121.mmObject());
 				previousVersion_lazy = () -> PartyIdentification98.mmObject();
 			}
 		});

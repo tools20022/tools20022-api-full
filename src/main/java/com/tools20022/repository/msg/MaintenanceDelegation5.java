@@ -95,6 +95,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Information on the delegation of a maintenance action or maintenance function."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MaintenanceDelegation7
+ * MaintenanceDelegation7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation3
@@ -135,6 +142,14 @@ public class MaintenanceDelegation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of delegation action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmDelegationType
+	 * MaintenanceDelegation7.mmDelegationType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -150,6 +165,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationType";
 			definition = "Type of delegation action.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmDelegationType);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmDelegationType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -184,6 +200,14 @@ public class MaintenanceDelegation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Maintenance service to be delegated."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmMaintenanceService
+	 * MaintenanceDelegation7.mmMaintenanceService}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -199,6 +223,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceService";
 			definition = "Maintenance service to be delegated.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmMaintenanceService);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmMaintenanceService;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory11Code.mmObject();
@@ -232,7 +257,15 @@ public class MaintenanceDelegation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate. "
+	 * "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmPartialDelegation
+	 * MaintenanceDelegation7.mmPartialDelegation}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -248,7 +281,8 @@ public class MaintenanceDelegation5 {
 			xmlTag = "PrtlDlgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDelegation";
-			definition = "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate. ";
+			definition = "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmPartialDelegation);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmPartialDelegation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -284,6 +318,14 @@ public class MaintenanceDelegation5 {
 	 * definition} =
 	 * "Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmPOISubset
+	 * MaintenanceDelegation7.mmPOISubset}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -299,6 +341,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POISubset";
 			definition = "Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmPOISubset);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmPOISubset;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -333,6 +376,14 @@ public class MaintenanceDelegation5 {
 	 * definition} =
 	 * "Information for the MTM to build or include delegated actions in the management plan of the POI."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmDelegatedAction
+	 * MaintenanceDelegation7.mmDelegatedAction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -348,6 +399,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegatedAction";
 			definition = "Information for the MTM to build or include delegated actions in the management plan of the POI.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmDelegatedAction);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmDelegatedAction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -383,6 +435,14 @@ public class MaintenanceDelegation5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the delegation scope assigned by the MTM."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmDelegationScopeIdentification
+	 * MaintenanceDelegation7.mmDelegationScopeIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -398,6 +458,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationScopeIdentification";
 			definition = "Identification of the delegation scope assigned by the MTM.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmDelegationScopeIdentification);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmDelegationScopeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -434,6 +495,14 @@ public class MaintenanceDelegation5 {
 	 * definition} =
 	 * "Definition of the delegation scope, for instance inside the payment application parameters the range of application profiles, the RID (registered application provider identification)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmDelegationScopeDefinition
+	 * MaintenanceDelegation7.mmDelegationScopeDefinition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -449,6 +518,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationScopeDefinition";
 			definition = "Definition of the delegation scope, for instance inside the payment application parameters the range of application profiles, the RID (registered application provider identification).";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmDelegationScopeDefinition);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmDelegationScopeDefinition;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -483,6 +553,14 @@ public class MaintenanceDelegation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Certificate path of the terminal manager."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmCertificate
+	 * MaintenanceDelegation7.mmCertificate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -498,6 +576,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Certificate path of the terminal manager.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmCertificate);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
@@ -531,6 +610,14 @@ public class MaintenanceDelegation5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Association of the TM identifier and the MTM identifier of a POI."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmPOIIdentificationAssociation
+	 * MaintenanceDelegation7.mmPOIIdentificationAssociation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -546,6 +633,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentificationAssociation";
 			definition = "Association of the TM identifier and the MTM identifier of a POI.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmPOIIdentificationAssociation);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmPOIIdentificationAssociation;
 			minOccurs = 0;
 			isComposite = true;
@@ -578,6 +666,14 @@ public class MaintenanceDelegation5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the key to manage or to download."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmSymmetricKey
+	 * MaintenanceDelegation7.mmSymmetricKey}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -593,6 +689,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricKey";
 			definition = "Identification of the key to manage or to download.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmSymmetricKey);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmSymmetricKey;
 			minOccurs = 0;
 			isComposite = true;
@@ -628,6 +725,14 @@ public class MaintenanceDelegation5 {
 	 * definition} =
 	 * "Configuration parameters of the terminal manager to be sent by the MTM."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegation7#mmParameterDataSet
+	 * MaintenanceDelegation7.mmParameterDataSet}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -643,6 +748,7 @@ public class MaintenanceDelegation5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParameterDataSet";
 			definition = "Configuration parameters of the terminal manager to be sent by the MTM.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmParameterDataSet);
 			previousVersion_lazy = () -> MaintenanceDelegation3.mmParameterDataSet;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -663,6 +769,7 @@ public class MaintenanceDelegation5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegation5";
 				definition = "Information on the delegation of a maintenance action or maintenance function.";
+				nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation7.mmObject());
 				previousVersion_lazy = () -> MaintenanceDelegation3.mmObject();
 			}
 		});

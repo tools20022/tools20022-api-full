@@ -423,7 +423,7 @@ public class CommunicationAddress3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service."
+	 * "Address for the Universal Resource Locator (URL), for example an address used over the www (HTTP) service."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -446,7 +446,7 @@ public class CommunicationAddress3 {
 			xmlTag = "URLAdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
-			definition = "Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.";
+			definition = "Address for the Universal Resource Locator (URL), for example an address used over the www (HTTP) service.";
 			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress5.mmURLAddress, CommunicationAddress6.mmURLAddress);
 			maxOccurs = 1;
 			minOccurs = 0;

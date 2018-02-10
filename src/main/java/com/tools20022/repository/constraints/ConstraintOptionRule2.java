@@ -48,7 +48,7 @@ public class ConstraintOptionRule2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "IF MovementGeneralInformation/OrderType is not CHAN (OptionChangeOrder), then OptionNumber and OptionType must be present in MovementGeneralInformation and cannot be present in any occurrence of UnderlyingSecuritiesMovementDetails/CreditAccountDetails neither in  UnderlyingSecuritiesMovement/DebitAccountDetails."
+	 * "IF MovementGeneralInformation/OrderType is not CHAN (OptionChangeOrder), then OptionNumber and OptionType must be present in MovementGeneralInformation and cannot be present in any occurrence of UnderlyingSecuritiesMovementDetails/CreditAccountDetails neither in UnderlyingSecuritiesMovement/DebitAccountDetails."
 	 * </li>
 	 * </ul>
 	 */
@@ -57,7 +57,7 @@ public class ConstraintOptionRule2 {
 			validator = ConstraintOptionRule2::checkAgentCAMovementInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionRule2";
-			definition = "IF MovementGeneralInformation/OrderType is not CHAN (OptionChangeOrder), then OptionNumber and OptionType must be present in MovementGeneralInformation and cannot be present in any occurrence of UnderlyingSecuritiesMovementDetails/CreditAccountDetails neither in  UnderlyingSecuritiesMovement/DebitAccountDetails.";
+			definition = "IF MovementGeneralInformation/OrderType is not CHAN (OptionChangeOrder), then OptionNumber and OptionType must be present in MovementGeneralInformation and cannot be present in any occurrence of UnderlyingSecuritiesMovementDetails/CreditAccountDetails neither in UnderlyingSecuritiesMovement/DebitAccountDetails.";
 			owner_lazy = () -> AgentCAMovementInstructionV01.mmObject();
 		}
 	};

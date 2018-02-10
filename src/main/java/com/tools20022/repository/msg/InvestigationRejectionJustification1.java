@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.RejectInvestigationV03;
 import com.tools20022.repository.area.camt.RejectInvestigationV04;
+import com.tools20022.repository.area.camt.RejectInvestigationV05;
 import com.tools20022.repository.codeset.InvestigationRejection1Code;
 import com.tools20022.repository.entity.PaymentInvestigationCaseRejection;
 import com.tools20022.repository.GeneratedRepository;
@@ -61,6 +62,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04#mmJustification
  * RejectInvestigationV04.mmJustification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.RejectInvestigationV05#mmJustification
+ * RejectInvestigationV05.mmJustification}</li>
  * </ul>
  * </li>
  * <li>
@@ -138,7 +142,7 @@ public class InvestigationRejectionJustification1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.InvestigationRejectionJustification1.mmRejectionReason);
-				messageBuildingBlock_lazy = () -> Arrays.asList(RejectInvestigationV03.mmJustification, RejectInvestigationV04.mmJustification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(RejectInvestigationV03.mmJustification, RejectInvestigationV04.mmJustification, RejectInvestigationV05.mmJustification);
 				trace_lazy = () -> PaymentInvestigationCaseRejection.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

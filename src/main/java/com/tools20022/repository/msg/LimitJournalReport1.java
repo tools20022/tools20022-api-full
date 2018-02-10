@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Reports either on the risk management limit or on a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitJournalReport2
+ * LimitJournalReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -95,6 +102,14 @@ public class LimitJournalReport1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the limit on which information is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitJournalReport2#mmLimitIdentification
+	 * LimitJournalReport2.mmLimitIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
@@ -105,6 +120,7 @@ public class LimitJournalReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the limit on which information is requested.";
+			nextVersions_lazy = () -> Arrays.asList(LimitJournalReport2.mmLimitIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -140,6 +156,14 @@ public class LimitJournalReport1 {
 	 * definition} =
 	 * "Specifies the business report either as a limit utilisation journal or a business error."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitJournalReport2#mmLimitReport
+	 * LimitJournalReport2.mmLimitReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLimitReport = new MMMessageAssociationEnd() {
@@ -150,6 +174,7 @@ public class LimitJournalReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitReport";
 			definition = "Specifies the business report either as a limit utilisation journal or a business error.";
+			nextVersions_lazy = () -> Arrays.asList(LimitJournalReport2.mmLimitReport);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -165,6 +190,7 @@ public class LimitJournalReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalReport1";
 				definition = "Reports either on the risk management limit or on a business error.";
+				nextVersions_lazy = () -> Arrays.asList(LimitJournalReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -582,7 +582,7 @@ public class EntitlementAssessment {
 	 * name} = "EntitlementRatio"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes assigned to one security. "</li>
+	 * definition} = "Number of votes assigned to one security."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEntitlementRatio = new MMMessageAttribute() {
@@ -593,7 +593,7 @@ public class EntitlementAssessment {
 			xmlTag = "EntitlmntRatio";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementRatio";
-			definition = "Number of votes assigned to one security. ";
+			definition = "Number of votes assigned to one security.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();

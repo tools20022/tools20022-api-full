@@ -67,6 +67,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of elements used to define the balance type and sub-type."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceType13 BalanceType13}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,6 +110,14 @@ public class BalanceType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Coded or proprietary format balance type."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceType13#mmCodeOrProprietary
+	 * BalanceType13.mmCodeOrProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCodeOrProprietary = new MMMessageAssociationEnd() {
@@ -115,6 +129,7 @@ public class BalanceType12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CodeOrProprietary";
 			definition = "Coded or proprietary format balance type.";
+			nextVersions_lazy = () -> Arrays.asList(BalanceType13.mmCodeOrProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -152,6 +167,13 @@ public class BalanceType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the balance sub-type."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.BalanceType13#mmSubType
+	 * BalanceType13.mmSubType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSubType = new MMMessageAssociationEnd() {
@@ -163,6 +185,7 @@ public class BalanceType12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubType";
 			definition = "Specifies the balance sub-type.";
+			nextVersions_lazy = () -> Arrays.asList(BalanceType13.mmSubType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -179,6 +202,7 @@ public class BalanceType12 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BalanceType12";
 				definition = "Set of elements used to define the balance type and sub-type.";
+				nextVersions_lazy = () -> Arrays.asList(BalanceType13.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

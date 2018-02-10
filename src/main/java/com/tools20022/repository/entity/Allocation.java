@@ -27,10 +27,7 @@ import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.PreAllocation1;
-import com.tools20022.repository.msg.SyndicatedLoan1;
-import com.tools20022.repository.msg.UnderlyingAttributes;
-import com.tools20022.repository.msg.UnderlyingAttributes2;
+import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -155,6 +152,9 @@ public class Allocation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmAllocationPercentage
 	 * UnderlyingAttributes2.mmAllocationPercentage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmAllocationPercentage
+	 * UnderlyingAttributes3.mmAllocationPercentage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -175,7 +175,7 @@ public class Allocation {
 	 */
 	public static final MMBusinessAttribute mmPercentage = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmAllocationPercent, UnderlyingAttributes2.mmAllocationPercentage);
+			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmAllocationPercent, UnderlyingAttributes2.mmAllocationPercentage, UnderlyingAttributes3.mmAllocationPercentage);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Allocation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

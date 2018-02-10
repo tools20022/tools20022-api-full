@@ -143,8 +143,8 @@ public class CorporateActionNarrative17SD1 {
 	 * name} = "OtherAdditionalInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Other additional information in the local language.\r\n備考"
-	 * </li>
+	 * definition} =
+	 * "Other additional information in the local language.\r\n備考."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOtherAdditionalInformation = new MMMessageAttribute() {
@@ -154,7 +154,7 @@ public class CorporateActionNarrative17SD1 {
 			xmlTag = "OthrAddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAdditionalInformation";
-			definition = "Other additional information in the local language.\r\n備考";
+			definition = "Other additional information in the local language.\r\n備考.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max450Text.mmObject();

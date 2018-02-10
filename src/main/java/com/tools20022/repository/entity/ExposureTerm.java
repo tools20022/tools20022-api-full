@@ -420,6 +420,39 @@ public class ExposureTerm {
 	 * SettlementDetails133.mmExposureType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Obligation5#mmExposureType
 	 * Obligation5.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmExposureType
+	 * SettlementDetails140.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmExposureType
+	 * SettlementDetails142.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmExposureType
+	 * SettlementDetails144.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmExposureType
+	 * SettlementDetails145.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmExposureType
+	 * SettlementDetails146.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmExposureType
+	 * SettlementDetails143.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmExposureType
+	 * SettlementDetails155.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmExposureType
+	 * SettlementDetails156.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmExposureType
+	 * SettlementDetails157.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmExposureType
+	 * SettlementDetails158.mmExposureType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmExposureType
+	 * SettlementDetails160.mmExposureType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -455,7 +488,9 @@ public class ExposureTerm {
 					ExposureType16Choice.mmProprietary, SettlementDetails101.mmExposureType, Obligation4.mmExposureType, SettlementDetails111.mmExposureType, SettlementDetails112.mmExposureType, SettlementDetails110.mmExposureType,
 					SettlementDetails115.mmExposureType, SettlementDetails113.mmExposureType, ExposureType17Choice.mmCode, ExposureType17Choice.mmProprietary, SettlementDetails128.mmExposureType, SettlementDetails120.mmExposureType,
 					SettlementDetails119.mmExposureType, SettlementDetails122.mmExposureType, SettlementDetails121.mmExposureType, SettlementDetails134.mmExposureType, SettlementDetails137.mmExposureType,
-					SettlementDetails132.mmExposureType, SettlementDetails138.mmExposureType, SettlementDetails133.mmExposureType, Obligation5.mmExposureType);
+					SettlementDetails132.mmExposureType, SettlementDetails138.mmExposureType, SettlementDetails133.mmExposureType, Obligation5.mmExposureType, SettlementDetails140.mmExposureType, SettlementDetails142.mmExposureType,
+					SettlementDetails144.mmExposureType, SettlementDetails145.mmExposureType, SettlementDetails146.mmExposureType, SettlementDetails143.mmExposureType, SettlementDetails155.mmExposureType,
+					SettlementDetails156.mmExposureType, SettlementDetails157.mmExposureType, SettlementDetails158.mmExposureType, SettlementDetails160.mmExposureType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ExposureTerm.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

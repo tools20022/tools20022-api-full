@@ -479,7 +479,7 @@ public class Amendment1 {
 	 * name} = "NewExpiryDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Requested new expiry terms for the undertaking. "</li>
+	 * definition} = "Requested new expiry terms for the undertaking."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNewExpiryDetails = new MMMessageAssociationEnd() {
@@ -490,7 +490,7 @@ public class Amendment1 {
 			xmlTag = "NewXpryDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewExpiryDetails";
-			definition = "Requested new expiry terms for the undertaking. ";
+			definition = "Requested new expiry terms for the undertaking.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

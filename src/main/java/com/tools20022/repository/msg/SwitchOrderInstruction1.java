@@ -115,7 +115,7 @@ public class SwitchOrderInstruction1 {
 	 * name} = "SwitchOrderDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information related to the switch order"</li>
+	 * definition} = "Information related to the switch order."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSwitchOrderDetails = new MMMessageAssociationEnd() {
@@ -126,7 +126,7 @@ public class SwitchOrderInstruction1 {
 			xmlTag = "SwtchOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOrderDetails";
-			definition = "Information related to the switch order";
+			definition = "Information related to the switch order.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

@@ -99,7 +99,7 @@ public class Rate1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument. \nExample percentage rate : Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10 of a percent, and 7.0 is 7%.\nExample Textual rate : Rate is expressed as a text."
+	 * "Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument. \nExample percentage rate: Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10 of a percent, and 7.0 is 7%.\nExample Textual rate: Rate is expressed as a text."
 	 * </li>
 	 * </ul>
 	 */
@@ -111,7 +111,7 @@ public class Rate1 {
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
-			definition = "Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument. \nExample percentage rate : Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10 of a percent, and 7.0 is 7%.\nExample Textual rate : Rate is expressed as a text.";
+			definition = "Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument. \nExample percentage rate: Rate expressed as a percentage, ie, in hundredths, eg, 0.7 is 7/10 of a percent, and 7.0 is 7%.\nExample Textual rate: Rate is expressed as a text.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -147,7 +147,7 @@ public class Rate1 {
 	 * name} = "ValidityRange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "An amount range where the interest rate is applicable"</li>
+	 * definition} = "An amount range where the interest rate is applicable."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmValidityRange = new MMMessageAssociationEnd() {
@@ -158,7 +158,7 @@ public class Rate1 {
 			xmlTag = "VldtyRg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityRange";
-			definition = "An amount range where the interest rate is applicable";
+			definition = "An amount range where the interest rate is applicable.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

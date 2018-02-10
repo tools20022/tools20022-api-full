@@ -183,7 +183,7 @@ public class AccountManagementMessageReference4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of account management instruction for which the status  is requested or a request to know the status of the account."
+	 * "Type of account management instruction for which the status is requested or a request to know the status of the account."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -199,7 +199,7 @@ public class AccountManagementMessageReference4 {
 			xmlTag = "StsReqTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusRequestType";
-			definition = "Type of account management instruction for which the status  is requested or a request to know the status of the account.";
+			definition = "Type of account management instruction for which the status is requested or a request to know the status of the account.";
 			previousVersion_lazy = () -> AccountManagementMessageReference3.mmStatusRequestType;
 			maxOccurs = 1;
 			minOccurs = 1;

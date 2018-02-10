@@ -128,6 +128,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ReportSpecification2#mmCorrespondentCountry
  * ReportSpecification2.mmCorrespondentCountry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmTaxationCountry
+ * IndividualPerson19.mmTaxationCountry}</li>
  * </ul>
  * </li>
  * <li>
@@ -679,6 +682,18 @@ public class Country {
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification93#mmNonDomicileCountry
 	 * PartyIdentification93.mmNonDomicileCountry}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmRegistrationCountry
+	 * Organisation20.mmRegistrationCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmTaxationCountry
+	 * Organisation20.mmTaxationCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmCountryOfOperation
+	 * Organisation20.mmCountryOfOperation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmCountryOfBirth
+	 * IndividualPerson19.mmCountryOfBirth}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Organisation21#mmTaxationCountry
 	 * Organisation21.mmTaxationCountry}</li>
 	 * <li>
@@ -728,6 +743,20 @@ public class Country {
 	 * {@linkplain com.tools20022.repository.msg.PersonIdentification12#mmCountryOfBranch
 	 * PersonIdentification12.mmCountryOfBranch}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmCountryOfIssue
+	 * TransactionDetails93.mmCountryOfIssue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria6#mmCountryOfIssue
+	 * IntraPositionQueryCriteria6.mmCountryOfIssue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation27#mmTaxationCountry
+	 * Organisation27.mmTaxationCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation27#mmRegistrationCountry
+	 * Organisation27.mmRegistrationCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmCountryOfIssue
+	 * Issuance3.mmCountryOfIssue}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RedemptionBulkExecution5#mmPlaceOfTrade
 	 * RedemptionBulkExecution5.mmPlaceOfTrade}</li>
 	 * <li>
@@ -736,6 +765,30 @@ public class Country {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Organisation29#mmRegistrationCountry
 	 * Organisation29.mmRegistrationCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmCountryOfIssue
+	 * TransactionDetails102.mmCountryOfIssue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmTaxationCountry
+	 * Organisation31.mmTaxationCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmRegistrationCountry
+	 * Organisation31.mmRegistrationCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmCountryOfResidence
+	 * PartyIdentification125.mmCountryOfResidence}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DateAndPlaceOfBirth1#mmCountryOfBirth
+	 * DateAndPlaceOfBirth1.mmCountryOfBirth}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification126#mmCountryOfResidence
+	 * PartyIdentification126.mmCountryOfResidence}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmCountryCode
+	 * PostalAddress22.mmCountryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmCountryOfResidence
+	 * PartyIdentification129.mmCountryOfResidence}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -785,11 +838,14 @@ public class Country {
 					LineItemDetails11.mmProductOrigin, PartyIdentification75Choice.mmCountry, PostalAddress13.mmCountry, TransportByRail5.mmRailCarrierCountry, TransportByRail5.mmCarrierAgentCountry, TransportByRoad5.mmRoadCarrierCountry,
 					TransportByRoad5.mmCarrierAgentCountry, Organisation16.mmRegistrationCountry, Organisation17.mmRegistrationCountry, LineItemDetails13.mmProductOrigin, LineItemDetails14.mmProductOrigin, BeneficialOwner2.mmNationality,
 					PostalAddress17.mmCountry, AlternatePartyIdentification7.mmCountry, PartyIdentificationAndAccount108.mmNationality, PartyIdentification77.mmCountryOfResidence, PostalAddress19.mmCountry,
-					PartyIdentification93Choice.mmCountry, PostalAddress18.mmCountry, PartyIdentification93.mmDomicileCountry, PartyIdentification93.mmNonDomicileCountry, Organisation21.mmTaxationCountry,
-					Organisation21.mmRegistrationCountry, Organisation22.mmRegistrationCountry, PostalAddress21.mmCountry, Organisation24.mmRegistrationCountry, CountryAndResidentialStatusType2.mmCountry,
-					PartyIdentification102Choice.mmCountry, AlternatePartyIdentification8.mmCountry, PartyIdentification101.mmDomicileCountry, PartyIdentification101.mmNonDomicileCountry, PartyIdentification111Choice.mmCountry,
-					AlternatePartyIdentification9.mmCountry, PartyIdentificationAndAccount135.mmNationality, PartyIdentification115Choice.mmCountry, PartyIdentification112.mmCountryOfResidence, CountryCodeAndName3.mmCode,
-					PersonIdentification12.mmCountryOfBranch, RedemptionBulkExecution5.mmPlaceOfTrade, Organisation30.mmRegistrationCountry, Organisation29.mmRegistrationCountry);
+					PartyIdentification93Choice.mmCountry, PostalAddress18.mmCountry, PartyIdentification93.mmDomicileCountry, PartyIdentification93.mmNonDomicileCountry, Organisation20.mmRegistrationCountry,
+					Organisation20.mmTaxationCountry, Organisation20.mmCountryOfOperation, IndividualPerson19.mmCountryOfBirth, Organisation21.mmTaxationCountry, Organisation21.mmRegistrationCountry, Organisation22.mmRegistrationCountry,
+					PostalAddress21.mmCountry, Organisation24.mmRegistrationCountry, CountryAndResidentialStatusType2.mmCountry, PartyIdentification102Choice.mmCountry, AlternatePartyIdentification8.mmCountry,
+					PartyIdentification101.mmDomicileCountry, PartyIdentification101.mmNonDomicileCountry, PartyIdentification111Choice.mmCountry, AlternatePartyIdentification9.mmCountry, PartyIdentificationAndAccount135.mmNationality,
+					PartyIdentification115Choice.mmCountry, PartyIdentification112.mmCountryOfResidence, CountryCodeAndName3.mmCode, PersonIdentification12.mmCountryOfBranch, TransactionDetails93.mmCountryOfIssue,
+					IntraPositionQueryCriteria6.mmCountryOfIssue, Organisation27.mmTaxationCountry, Organisation27.mmRegistrationCountry, Issuance3.mmCountryOfIssue, RedemptionBulkExecution5.mmPlaceOfTrade,
+					Organisation30.mmRegistrationCountry, Organisation29.mmRegistrationCountry, TransactionDetails102.mmCountryOfIssue, Organisation31.mmTaxationCountry, Organisation31.mmRegistrationCountry,
+					PartyIdentification125.mmCountryOfResidence, DateAndPlaceOfBirth1.mmCountryOfBirth, PartyIdentification126.mmCountryOfResidence, PostalAddress22.mmCountryCode, PartyIdentification129.mmCountryOfResidence);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Country.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1393,7 +1449,7 @@ public class Country {
 						com.tools20022.repository.entity.PostalAddress.mmCountry, com.tools20022.repository.entity.Product.mmOrigin, com.tools20022.repository.entity.Tax.mmCountry, com.tools20022.repository.entity.Person.mmNationality,
 						com.tools20022.repository.entity.PaymentCard.mmCardCountryCode, com.tools20022.repository.entity.SafekeepingPlace.mmCountry, com.tools20022.repository.entity.BeneficialOwner.mmNonDomicileCountry,
 						com.tools20022.repository.entity.CardPaymentAcquiring.mmCountry, com.tools20022.repository.entity.RegulatoryAuthorityRole.mmCountry, com.tools20022.repository.entity.Market.mmCountry);
-				derivationElement_lazy = () -> Arrays.asList(ReportSpecification3.mmCorrespondentCountry, ReportSpecification4.mmCorrespondentCountry, ReportSpecification2.mmCorrespondentCountry);
+				derivationElement_lazy = () -> Arrays.asList(ReportSpecification3.mmCorrespondentCountry, ReportSpecification4.mmCorrespondentCountry, ReportSpecification2.mmCorrespondentCountry, IndividualPerson19.mmTaxationCountry);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Country.mmDomiciledFunds, com.tools20022.repository.entity.Country.mmCode, com.tools20022.repository.entity.Country.mmCitizen,
 						com.tools20022.repository.entity.Country.mmTax, com.tools20022.repository.entity.Country.mmCountryForSafekeepingPlace, com.tools20022.repository.entity.Country.mmCountryForBeneficialOwner,
 						com.tools20022.repository.entity.Country.mmProducedProducts, com.tools20022.repository.entity.Country.mmNationalRegulatoryAuthority, com.tools20022.repository.entity.Country.mmRelatedCardPayment,

@@ -113,7 +113,7 @@ public class TransferOut3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information identifying the investor, ie name, address social security number and date of birth.. "
+	 * "Information identifying the investor, ie name, address social security number and date of birth."
 	 * </li>
 	 * </ul>
 	 */
@@ -125,7 +125,7 @@ public class TransferOut3 {
 			xmlTag = "Invstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Investor";
-			definition = "Information identifying the investor, ie name, address social security number and date of birth.. ";
+			definition = "Information identifying the investor, ie name, address social security number and date of birth.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

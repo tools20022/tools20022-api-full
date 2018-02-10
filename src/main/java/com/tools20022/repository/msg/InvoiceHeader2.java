@@ -87,6 +87,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Collection of data for that is exchanged between two or more parties in written, printed or electronic form."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader3 InvoiceHeader3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.InvoiceHeader1
  * InvoiceHeader1}</li>
@@ -128,6 +134,14 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identification of this invoice document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmIdentification
+	 * InvoiceHeader3.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -144,6 +158,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification of this invoice document.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmIdentification);
 			previousVersion_lazy = () -> InvoiceHeader1.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -183,6 +198,13 @@ public class InvoiceHeader2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the type of the document, for example commercial invoice."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmTypeCode
+	 * InvoiceHeader3.mmTypeCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -199,6 +221,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeCode";
 			definition = "Specifies the type of the document, for example commercial invoice.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmTypeCode);
 			previousVersion_lazy = () -> InvoiceHeader1.mmTypeCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -237,6 +260,13 @@ public class InvoiceHeader2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Name of invoice document or transaction, for example, tax invoice."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmName
+	 * InvoiceHeader3.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -253,6 +283,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of invoice document or transaction, for example, tax invoice.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmName);
 			previousVersion_lazy = () -> InvoiceHeader1.mmName;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -289,6 +320,14 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Issue date of the document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmIssueDateTime
+	 * InvoiceHeader3.mmIssueDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -305,6 +344,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDateTime";
 			definition = "Issue date of the document.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmIssueDateTime);
 			previousVersion_lazy = () -> InvoiceHeader1.mmIssueDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -341,6 +381,13 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that issued this invoice document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmIssuer
+	 * InvoiceHeader3.mmIssuer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -357,6 +404,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Party that issued this invoice document.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmIssuer);
 			previousVersion_lazy = () -> InvoiceHeader1.mmIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -396,6 +444,14 @@ public class InvoiceHeader2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Unique identifier for a language used in this invoice document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmLanguageCode
+	 * InvoiceHeader3.mmLanguageCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -412,6 +468,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LanguageCode";
 			definition = "Unique identifier for a language used in this invoice document.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmLanguageCode);
 			previousVersion_lazy = () -> InvoiceHeader1.mmLanguageCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -446,6 +503,14 @@ public class InvoiceHeader2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicator that the document is a copy of the\noriginal document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmCopyIndicator
+	 * InvoiceHeader3.mmCopyIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -461,6 +526,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyIndicator";
 			definition = "Indicator that the document is a copy of the\noriginal document.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmCopyIndicator);
 			previousVersion_lazy = () -> InvoiceHeader1.mmCopyIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -499,6 +565,14 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the function of the document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmDocumentPurpose
+	 * InvoiceHeader3.mmDocumentPurpose}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -515,6 +589,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentPurpose";
 			definition = "Specifies the function of the document.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmDocumentPurpose);
 			previousVersion_lazy = () -> InvoiceHeader1.mmDocumentPurpose;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -548,6 +623,14 @@ public class InvoiceHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Note included in this invoice document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmIncludedNote
+	 * InvoiceHeader3.mmIncludedNote}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -563,6 +646,7 @@ public class InvoiceHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedNote";
 			definition = "Note included in this invoice document.";
+			nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmIncludedNote);
 			previousVersion_lazy = () -> InvoiceHeader1.mmIncludedNote;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalInformation6.mmObject();
@@ -580,6 +664,7 @@ public class InvoiceHeader2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvoiceHeader2";
 				definition = "Collection of data for that is exchanged between two or more parties in written, printed or electronic form.";
+				nextVersions_lazy = () -> Arrays.asList(InvoiceHeader3.mmObject());
 				previousVersion_lazy = () -> InvoiceHeader1.mmObject();
 			}
 		});

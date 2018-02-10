@@ -25,6 +25,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.secl.SettlementObligationReportV03;
 import com.tools20022.repository.area.secl.TradeLegNotificationCancellationV03;
 import com.tools20022.repository.area.secl.TradeLegNotificationV03;
+import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.Max70Text;
@@ -101,6 +102,24 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV07#mmSafekeepingAccount
  * SecuritiesSettlementConditionsModificationRequestV07.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07#mmSafekeepingAccount
+ * IntraPositionMovementConfirmationV07.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV07#mmSafekeepingAccount
+ * IntraPositionMovementPostingReportV07.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV09#mmSafekeepingAccount
+ * SecuritiesTransactionPendingReportV09.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV07#mmSafekeepingAccount
+ * SecuritiesSettlementTransactionAllegementReportV07.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV05#mmSafekeepingAccount
+ * PortfolioTransferNotificationV05.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV08#mmSafekeepingAccount
+ * SecuritiesTransactionPostingReportV08.mmSafekeepingAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -293,7 +312,9 @@ public class SecuritiesAccount19 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(TradeLegNotificationV03.mmDeliveryAccount, TradeLegNotificationCancellationV03.mmDeliveryAccount, SettlementObligationReportV03.mmDeliveryAccount,
 						SecuritiesSettlementConditionsModificationRequestV06.mmSafekeepingAccount, PortfolioTransferNotificationV04.mmSafekeepingAccount, SecuritiesStatusOrStatementQueryStatusAdviceV04.mmSafekeepingAccount,
 						SecuritiesSettlementTransactionModificationRequestStatusAdviceV04.mmSafekeepingAccount, SecuritiesSettlementConditionModificationStatusAdviceV07.mmSafekeepingAccount,
-						SecuritiesSettlementAllegementRemovalAdviceV04.mmSafekeepingAccount, SecuritiesTransactionCancellationRequestV05.mmSafekeepingAccount, SecuritiesSettlementConditionsModificationRequestV07.mmSafekeepingAccount);
+						SecuritiesSettlementAllegementRemovalAdviceV04.mmSafekeepingAccount, SecuritiesTransactionCancellationRequestV05.mmSafekeepingAccount, SecuritiesSettlementConditionsModificationRequestV07.mmSafekeepingAccount,
+						IntraPositionMovementConfirmationV07.mmSafekeepingAccount, IntraPositionMovementPostingReportV07.mmSafekeepingAccount, SecuritiesTransactionPendingReportV09.mmSafekeepingAccount,
+						SecuritiesSettlementTransactionAllegementReportV07.mmSafekeepingAccount, PortfolioTransferNotificationV05.mmSafekeepingAccount, SecuritiesTransactionPostingReportV08.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

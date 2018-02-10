@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "BorrowerLendingDeadline1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Stock lending deadline assigned to a borrower of the stock."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline3
+ * BorrowerLendingDeadline3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +114,14 @@ public class BorrowerLendingDeadline1 {
 	 * definition} =
 	 * "Date/time set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline3#mmStockLendingDeadline
+	 * BorrowerLendingDeadline3.mmStockLendingDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmStockLendingDeadline = new MMMessageAssociationEnd() {
@@ -118,6 +133,7 @@ public class BorrowerLendingDeadline1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLendingDeadline";
 			definition = "Date/time set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan.";
+			nextVersions_lazy = () -> Arrays.asList(BorrowerLendingDeadline3.mmStockLendingDeadline);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -156,6 +172,14 @@ public class BorrowerLendingDeadline1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party who has borrowed stocks on loan."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline3#mmBorrower
+	 * BorrowerLendingDeadline3.mmBorrower}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBorrower = new MMMessageAssociationEnd() {
@@ -167,6 +191,7 @@ public class BorrowerLendingDeadline1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Borrower";
 			definition = "Party who has borrowed stocks on loan.";
+			nextVersions_lazy = () -> Arrays.asList(BorrowerLendingDeadline3.mmBorrower);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +208,7 @@ public class BorrowerLendingDeadline1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BorrowerLendingDeadline1";
 				definition = "Stock lending deadline assigned to a borrower of the stock.";
+				nextVersions_lazy = () -> Arrays.asList(BorrowerLendingDeadline3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

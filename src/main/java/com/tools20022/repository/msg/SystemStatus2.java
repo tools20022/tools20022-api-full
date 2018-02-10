@@ -68,6 +68,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Status of a system and the period of time during which the status is valid."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemStatus3 SystemStatus3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.SystemStatus1
  * SystemStatus1}</li>
@@ -108,6 +114,13 @@ public class SystemStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Current status of a system."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemStatus3#mmStatus
+	 * SystemStatus3.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +137,7 @@ public class SystemStatus2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Current status of a system.";
+			nextVersions_lazy = () -> Arrays.asList(SystemStatus3.mmStatus);
 			previousVersion_lazy = () -> SystemStatus1.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -163,7 +177,15 @@ public class SystemStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Period of time during which the status of the system is valid. "</li>
+	 * "Period of time during which the status of the system is valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemStatus3#mmValidityTime
+	 * SystemStatus3.mmValidityTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,7 +201,8 @@ public class SystemStatus2 {
 			xmlTag = "VldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityTime";
-			definition = "Period of time during which the status of the system is valid. ";
+			definition = "Period of time during which the status of the system is valid.";
+			nextVersions_lazy = () -> Arrays.asList(SystemStatus3.mmValidityTime);
 			previousVersion_lazy = () -> SystemStatus1.mmValidityTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -196,6 +219,7 @@ public class SystemStatus2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemStatus2";
 				definition = "Status of a system and the period of time during which the status is valid.";
+				nextVersions_lazy = () -> Arrays.asList(SystemStatus3.mmObject());
 				previousVersion_lazy = () -> SystemStatus1.mmObject();
 			}
 		});

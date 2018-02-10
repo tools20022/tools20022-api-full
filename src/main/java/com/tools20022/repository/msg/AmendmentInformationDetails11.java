@@ -102,6 +102,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides further details on the list of direct debit mandate elements that have been modified when the amendment indicator has been set."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12
+ * AmendmentInformationDetails12}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails10
@@ -148,6 +155,14 @@ public class AmendmentInformationDetails11 {
 	 * definition} =
 	 * "Unique identification, as assigned by the creditor, to unambiguously identify the original mandate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalMandateIdentification
+	 * AmendmentInformationDetails12.mmOriginalMandateIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -164,6 +179,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMandateIdentification";
 			definition = "Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalMandateIdentification);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalMandateIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -202,6 +218,14 @@ public class AmendmentInformationDetails11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Original creditor scheme identification that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalCreditorSchemeIdentification
+	 * AmendmentInformationDetails12.mmOriginalCreditorSchemeIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -218,6 +242,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreditorSchemeIdentification";
 			definition = "Original creditor scheme identification that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalCreditorSchemeIdentification);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalCreditorSchemeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -257,6 +282,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original creditor agent that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalCreditorAgent
+	 * AmendmentInformationDetails12.mmOriginalCreditorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -273,6 +306,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreditorAgent";
 			definition = "Original creditor agent that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalCreditorAgent);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalCreditorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -311,6 +345,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original creditor agent account that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalCreditorAgentAccount
+	 * AmendmentInformationDetails12.mmOriginalCreditorAgentAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -327,6 +369,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreditorAgentAccount";
 			definition = "Original creditor agent account that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalCreditorAgentAccount);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalCreditorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -365,6 +408,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original debtor that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalDebtor
+	 * AmendmentInformationDetails12.mmOriginalDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -381,6 +432,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDebtor";
 			definition = "Original debtor that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalDebtor);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -419,6 +471,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original debtor account that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalDebtorAccount
+	 * AmendmentInformationDetails12.mmOriginalDebtorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -435,6 +495,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDebtorAccount";
 			definition = "Original debtor account that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalDebtorAccount);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -474,6 +535,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original debtor agent that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalDebtorAgent
+	 * AmendmentInformationDetails12.mmOriginalDebtorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -490,6 +559,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDebtorAgent";
 			definition = "Original debtor agent that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalDebtorAgent);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -528,6 +598,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original debtor agent account that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalDebtorAgentAccount
+	 * AmendmentInformationDetails12.mmOriginalDebtorAgentAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -544,6 +622,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalDebtorAgentAccount";
 			definition = "Original debtor agent account that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalDebtorAgentAccount);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalDebtorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -583,6 +662,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original final collection date that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalFinalCollectionDate
+	 * AmendmentInformationDetails12.mmOriginalFinalCollectionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -599,6 +686,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalFinalCollectionDate";
 			definition = "Original final collection date that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalFinalCollectionDate);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalFinalCollectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -638,6 +726,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original frequency that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalFrequency
+	 * AmendmentInformationDetails12.mmOriginalFrequency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -654,6 +750,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalFrequency";
 			definition = "Original frequency that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalFrequency);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -694,6 +791,14 @@ public class AmendmentInformationDetails11 {
 	 * definition} =
 	 * "Original reason for the mandate to allow the user to distinguish between different mandates for the same creditor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalReason
+	 * AmendmentInformationDetails12.mmOriginalReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -710,6 +815,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalReason";
 			definition = "Original reason for the mandate to allow the user to distinguish between different mandates for the same creditor.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalReason);
 			previousVersion_lazy = () -> AmendmentInformationDetails10.mmOriginalReason;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -750,6 +856,14 @@ public class AmendmentInformationDetails11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original number of tracking days that has been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalTrackingDays
+	 * AmendmentInformationDetails12.mmOriginalTrackingDays}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalTrackingDays = new MMMessageAttribute() {
@@ -761,6 +875,7 @@ public class AmendmentInformationDetails11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTrackingDays";
 			definition = "Original number of tracking days that has been modified.";
+			nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmOriginalTrackingDays);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact2NumericText.mmObject();
@@ -782,6 +897,7 @@ public class AmendmentInformationDetails11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmendmentInformationDetails11";
 				definition = "Provides further details on the list of direct debit mandate elements that have been modified when the amendment indicator has been set.";
+				nextVersions_lazy = () -> Arrays.asList(AmendmentInformationDetails12.mmObject());
 				previousVersion_lazy = () -> AmendmentInformationDetails10.mmObject();
 			}
 		});

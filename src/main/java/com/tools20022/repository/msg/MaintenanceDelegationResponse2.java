@@ -72,6 +72,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Information related to the request of maintenance delegations."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MaintenanceDelegationResponse3
+ * MaintenanceDelegationResponse3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationResponse1
@@ -110,6 +117,14 @@ public class MaintenanceDelegationResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Terminal manager identification."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationResponse3#mmTMIdentification
+	 * MaintenanceDelegationResponse3.mmTMIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +140,7 @@ public class MaintenanceDelegationResponse2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMIdentification";
 			definition = "Terminal manager identification.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponse3.mmTMIdentification);
 			previousVersion_lazy = () -> MaintenanceDelegationResponse1.mmTMIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -159,6 +175,14 @@ public class MaintenanceDelegationResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Master terminal manager identification."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationResponse3#mmMasterTMIdentification
+	 * MaintenanceDelegationResponse3.mmMasterTMIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -174,6 +198,7 @@ public class MaintenanceDelegationResponse2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterTMIdentification";
 			definition = "Master terminal manager identification.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponse3.mmMasterTMIdentification);
 			previousVersion_lazy = () -> MaintenanceDelegationResponse1.mmMasterTMIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -207,6 +232,14 @@ public class MaintenanceDelegationResponse2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information on the delegation of a maintenance action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegationResponse3#mmDelegationResponse
+	 * MaintenanceDelegationResponse3.mmDelegationResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -222,6 +255,7 @@ public class MaintenanceDelegationResponse2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationResponse";
 			definition = "Information on the delegation of a maintenance action.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponse3.mmDelegationResponse);
 			previousVersion_lazy = () -> MaintenanceDelegationResponse1.mmDelegationResponse;
 			minOccurs = 1;
 			isComposite = true;
@@ -239,6 +273,7 @@ public class MaintenanceDelegationResponse2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegationResponse2";
 				definition = "Information related to the request of maintenance delegations.";
+				nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponse3.mmObject());
 				previousVersion_lazy = () -> MaintenanceDelegationResponse1.mmObject();
 			}
 		});

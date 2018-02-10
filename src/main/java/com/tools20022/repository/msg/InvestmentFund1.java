@@ -265,7 +265,7 @@ public class InvestmentFund1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total transactional units (subscriptions and redemptions) which are applied to the investment fund or  investment fund share class for the report period."
+	 * "Total transactional units (subscriptions and redemptions) which are applied to the investment fund or investment fund share class for the report period."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +276,7 @@ public class InvestmentFund1 {
 			xmlTag = "TxnlUnits";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionalUnits";
-			definition = "Total transactional units (subscriptions and redemptions) which are applied to the investment fund or  investment fund share class for the report period.";
+			definition = "Total transactional units (subscriptions and redemptions) which are applied to the investment fund or investment fund share class for the report period.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -315,7 +315,7 @@ public class InvestmentFund1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total value of the investment fund or  investment fund share class units"
+	 * "Total value of the investment fund or investment fund share class units."
 	 * </li>
 	 * </ul>
 	 */
@@ -327,7 +327,7 @@ public class InvestmentFund1 {
 			xmlTag = "TtlVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalValue";
-			definition = "Total value of the investment fund or  investment fund share class units";
+			definition = "Total value of the investment fund or investment fund share class units.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();

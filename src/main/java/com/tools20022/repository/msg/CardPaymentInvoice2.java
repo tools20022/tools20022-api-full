@@ -73,6 +73,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CardPaymentInvoice2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Detailed invoice data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice3
+ * CardPaymentInvoice3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice1
@@ -112,6 +119,14 @@ public class CardPaymentInvoice2 {
 	 * definition} =
 	 * "General data relevant to the main body of the invoice such as date of issue, currency code and identification number."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice3#mmInvoiceHeader
+	 * CardPaymentInvoice3.mmInvoiceHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -127,6 +142,7 @@ public class CardPaymentInvoice2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceHeader";
 			definition = "General data relevant to the main body of the invoice such as date of issue, currency code and identification number.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentInvoice3.mmInvoiceHeader);
 			previousVersion_lazy = () -> CardPaymentInvoice1.mmInvoiceHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -166,6 +182,14 @@ public class CardPaymentInvoice2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Contractual details related to the agreement between parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice3#mmTradeAgreement
+	 * CardPaymentInvoice3.mmTradeAgreement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +206,7 @@ public class CardPaymentInvoice2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAgreement";
 			definition = "Contractual details related to the agreement between parties.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentInvoice3.mmTradeAgreement);
 			previousVersion_lazy = () -> CardPaymentInvoice1.mmTradeAgreement;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -222,6 +247,14 @@ public class CardPaymentInvoice2 {
 	 * definition} =
 	 * "Supply chain shipping arrangements for delivery of invoiced products and/or services."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice3#mmTradeDelivery
+	 * CardPaymentInvoice3.mmTradeDelivery}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -238,6 +271,7 @@ public class CardPaymentInvoice2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDelivery";
 			definition = "Supply chain shipping arrangements for delivery of invoiced products and/or services.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentInvoice3.mmTradeDelivery);
 			previousVersion_lazy = () -> CardPaymentInvoice1.mmTradeDelivery;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -277,6 +311,14 @@ public class CardPaymentInvoice2 {
 	 * definition} =
 	 * "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice3#mmLineItem
+	 * CardPaymentInvoice3.mmLineItem}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -293,6 +335,7 @@ public class CardPaymentInvoice2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItem";
 			definition = "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentInvoice3.mmLineItem);
 			previousVersion_lazy = () -> CardPaymentInvoice1.mmLineItem;
 			minOccurs = 0;
 			isComposite = true;
@@ -310,6 +353,7 @@ public class CardPaymentInvoice2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentInvoice2";
 				definition = "Detailed invoice data.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentInvoice3.mmObject());
 				previousVersion_lazy = () -> CardPaymentInvoice1.mmObject();
 			}
 		});

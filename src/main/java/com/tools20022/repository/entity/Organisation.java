@@ -298,6 +298,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.TradeParty3#mmLegalOrganisation
  * TradeParty3.mmLegalOrganisation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmIssuerOrganisation
+ * Issuance3.mmIssuerOrganisation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant3#mmWarrantAgent
+ * Warrant3.mmWarrantAgent}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msg.OrganisationIdentification28#mmName
  * OrganisationIdentification28.mmName}</li>
@@ -316,6 +320,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.OriginalPaymentInformation7#mmCreditorAgent
  * OriginalPaymentInformation7.mmCreditorAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeParty4#mmLegalOrganisation
+ * TradeParty4.mmLegalOrganisation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -371,11 +378,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * SectorAndLocation1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation18 Organisation18}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation19 Organisation19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Counterparty2 Counterparty2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.LegalOrganisation2
  * LegalOrganisation2}</li>
  * <li>
  * {@linkplain com.tools20022.repository.choice.DerivativePartyIdentification1Choice
  * DerivativePartyIdentification1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Counterparty3 Counterparty3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation21 Organisation21}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation22 Organisation22}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation23 Organisation23}</li>
@@ -386,12 +395,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReportedPartyIdentification1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation25 Organisation25}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation26 Organisation26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OrganisationIdentification27
+ * OrganisationIdentification27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation27 Organisation27}</li>
  * <li>{@linkplain com.tools20022.repository.msg.OrganisationIdentification28
  * OrganisationIdentification28}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation30 Organisation30}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation29 Organisation29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Counterparty15 Counterparty15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Counterparty17 Counterparty17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Counterparty16 Counterparty16}</li>
  * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1
  * NameAndLocation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation31 Organisation31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation32 Organisation32}</li>
  * </ul>
  * </li>
  * <li>
@@ -447,10 +464,14 @@ public class Organisation extends Party {
 	 * Organisation22.mmPurpose}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Organisation24#mmPurpose
 	 * Organisation24.mmPurpose}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation27#mmPurpose
+	 * Organisation27.mmPurpose}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Organisation30#mmPurpose
 	 * Organisation30.mmPurpose}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Organisation29#mmPurpose
 	 * Organisation29.mmPurpose}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation31#mmPurpose
+	 * Organisation31.mmPurpose}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -482,7 +503,7 @@ public class Organisation extends Party {
 	public static final MMBusinessAttribute mmPurpose = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation2.mmPurpose, Organisation13.mmPurpose, Organisation4.mmPurpose, Organisation3.mmPurpose, Organisation15.mmPurpose, Organisation16.mmPurpose, Organisation17.mmPurpose,
-					Organisation21.mmPurpose, Organisation22.mmPurpose, Organisation24.mmPurpose, Organisation30.mmPurpose, Organisation29.mmPurpose);
+					Organisation21.mmPurpose, Organisation22.mmPurpose, Organisation24.mmPurpose, Organisation27.mmPurpose, Organisation30.mmPurpose, Organisation29.mmPurpose, Organisation31.mmPurpose);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -567,11 +588,17 @@ public class Organisation extends Party {
 	 * {@linkplain com.tools20022.repository.msg.Organisation24#mmRegistrationDate
 	 * Organisation24.mmRegistrationDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation27#mmRegistrationDate
+	 * Organisation27.mmRegistrationDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Organisation30#mmRegistrationDate
 	 * Organisation30.mmRegistrationDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Organisation29#mmRegistrationDate
 	 * Organisation29.mmRegistrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmRegistrationDate
+	 * Organisation31.mmRegistrationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -605,7 +632,8 @@ public class Organisation extends Party {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation2.mmRegistrationDate, Organisation13.mmRegistrationDate, Organisation4.mmRegistrationDate, Organisation3.mmRegistrationDate, Organisation6.mmRegistrationDate,
 					Organisation12.mmRegistrationDate, OrganisationModification1.mmRegistrationDate, Organisation7.mmRegistrationDate, Organisation15.mmRegistrationDate, Organisation16.mmRegistrationDate, Organisation17.mmRegistrationDate,
-					LegalOrganisation2.mmRegistrationDate, Organisation21.mmRegistrationDate, Organisation22.mmRegistrationDate, Organisation24.mmRegistrationDate, Organisation30.mmRegistrationDate, Organisation29.mmRegistrationDate);
+					LegalOrganisation2.mmRegistrationDate, Organisation21.mmRegistrationDate, Organisation22.mmRegistrationDate, Organisation24.mmRegistrationDate, Organisation27.mmRegistrationDate, Organisation30.mmRegistrationDate,
+					Organisation29.mmRegistrationDate, Organisation31.mmRegistrationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -651,7 +679,7 @@ public class Organisation extends Party {
 	 * {@linkplain com.tools20022.repository.entity.OrganisationIdentification
 	 * OrganisationIdentification}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 774 elements</li>
+	 * derivation} = List of 861 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -1042,6 +1070,14 @@ public class Organisation extends Party {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.LegalStructureCode
 	 * LegalStructureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmOrganisationLegalStatus
+	 * Organisation20.mmOrganisationLegalStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -1059,6 +1095,7 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAttribute mmLegalStructure = new MMBusinessAttribute() {
 		{
+			derivation_lazy = () -> Arrays.asList(Organisation20.mmOrganisationLegalStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1103,6 +1140,15 @@ public class Organisation extends Party {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CollateralValuation7#mmSector
 	 * CollateralValuation7.mmSector}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionSector1#mmSector
+	 * NonFinancialInstitutionSector1.mmSector}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionSector2#mmSector
+	 * NonFinancialInstitutionSector2.mmSector}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAdditionalQueryCriteria3#mmCorporateSector
+	 * TradeAdditionalQueryCriteria3.mmCorporateSector}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1123,7 +1169,8 @@ public class Organisation extends Party {
 	 */
 	public static final MMBusinessAssociationEnd mmSector = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CollateralValuation4.mmSector, CollateralValuation7.mmSector);
+			derivation_lazy = () -> Arrays.asList(CollateralValuation4.mmSector, CollateralValuation7.mmSector, NonFinancialInstitutionSector1.mmSector, NonFinancialInstitutionSector2.mmSector,
+					TradeAdditionalQueryCriteria3.mmCorporateSector);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Organisation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1410,8 +1457,9 @@ public class Organisation extends Party {
 						ISATransfer12.mmOtherCorporateInvestor, OriginalPaymentInformation6.mmDebtorAgent, OriginalPaymentInformation6.mmCreditorAgent, ISATransfer19.mmPrimaryCorporateInvestor, ISATransfer19.mmSecondaryCorporateInvestor,
 						ISATransfer19.mmOtherCorporateInvestor, OriginalItemReference3.mmDebtorAgent, OriginalItemReference3.mmIntermediaryAgent, Party24Choice.mmOrganisation, Party23Choice.mmOrganisation, TradeParty2.mmLegalOrganisation,
 						OriginalItemReference4.mmDebtorAgent, OriginalItemReference4.mmIntermediaryAgent, Party30Choice.mmOrganisation, Party31Choice.mmOrganisation, ISATransfer24.mmPrimaryCorporateInvestor,
-						ISATransfer24.mmSecondaryCorporateInvestor, ISATransfer24.mmOtherCorporateInvestor, TradeParty3.mmLegalOrganisation, OrganisationIdentification28.mmName, OrganisationIdentification28.mmPostalAddress,
-						Party33Choice.mmOrganisation, Party32Choice.mmOrganisation, OriginalPaymentInformation7.mmDebtorAgent, OriginalPaymentInformation7.mmCreditorAgent);
+						ISATransfer24.mmSecondaryCorporateInvestor, ISATransfer24.mmOtherCorporateInvestor, TradeParty3.mmLegalOrganisation, Issuance3.mmIssuerOrganisation, Warrant3.mmWarrantAgent, OrganisationIdentification28.mmName,
+						OrganisationIdentification28.mmPostalAddress, Party33Choice.mmOrganisation, Party32Choice.mmOrganisation, OriginalPaymentInformation7.mmDebtorAgent, OriginalPaymentInformation7.mmCreditorAgent,
+						TradeParty4.mmLegalOrganisation);
 				subType_lazy = () -> Arrays.asList(FinancialInstitution.mmObject(), NonFinancialInstitution.mmObject());
 				superType_lazy = () -> Party.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Organisation.mmPurpose, com.tools20022.repository.entity.Organisation.mmRegistrationDate,
@@ -1424,9 +1472,11 @@ public class Organisation extends Party {
 						BranchAndFinancialInstitutionIdentification5.mmObject(), BranchAndFinancialInstitutionIdentification3.mmObject(), BranchAndFinancialInstitutionIdentification4.mmObject(), Organisation6.mmObject(),
 						Organisation12.mmObject(), Organisation14.mmObject(), OrganisationModification1.mmObject(), Organisation7.mmObject(), Organisation5.mmObject(), Organisation8.mmObject(), Organisation9.mmObject(),
 						BranchAndFinancialInstitutionIdentification.mmObject(), LegalOrganisation1.mmObject(), FinancialInstitution2.mmObject(), FinancialInstitution3.mmObject(), Organisation15.mmObject(), Organisation16.mmObject(),
-						Organisation17.mmObject(), SectorAndLocation1.mmObject(), Organisation18.mmObject(), Organisation19.mmObject(), LegalOrganisation2.mmObject(), DerivativePartyIdentification1Choice.mmObject(),
-						Organisation21.mmObject(), Organisation22.mmObject(), Organisation23.mmObject(), Organisation24.mmObject(), NameOrSector1Choice.mmObject(), ReportedPartyIdentification1.mmObject(), Organisation25.mmObject(),
-						Organisation26.mmObject(), OrganisationIdentification28.mmObject(), Organisation30.mmObject(), Organisation29.mmObject(), NameAndLocation1.mmObject());
+						Organisation17.mmObject(), SectorAndLocation1.mmObject(), Organisation18.mmObject(), Organisation19.mmObject(), Counterparty2.mmObject(), LegalOrganisation2.mmObject(),
+						DerivativePartyIdentification1Choice.mmObject(), Counterparty3.mmObject(), Organisation21.mmObject(), Organisation22.mmObject(), Organisation23.mmObject(), Organisation24.mmObject(), NameOrSector1Choice.mmObject(),
+						ReportedPartyIdentification1.mmObject(), Organisation25.mmObject(), Organisation26.mmObject(), OrganisationIdentification27.mmObject(), Organisation27.mmObject(), OrganisationIdentification28.mmObject(),
+						Organisation30.mmObject(), Organisation29.mmObject(), Counterparty15.mmObject(), Counterparty17.mmObject(), Counterparty16.mmObject(), NameAndLocation1.mmObject(), Organisation31.mmObject(),
+						Organisation32.mmObject());
 			}
 
 			@Override

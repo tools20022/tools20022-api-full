@@ -268,6 +268,14 @@ public class ConstraintCashSettlementSystemUsageRule {
 	 * definition} =
 	 * "Cash settlement system codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCashSettlementSystemUsageRule#forSettlementDetails146
+	 * ConstraintCashSettlementSystemUsageRule.forSettlementDetails146}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -281,6 +289,7 @@ public class ConstraintCashSettlementSystemUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementSystemUsageRule";
 			definition = "Cash settlement system codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashSettlementSystemUsageRule.forSettlementDetails146);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashSettlementSystemUsageRule.forSettlementDetails94;
 			owner_lazy = () -> SettlementDetails122.mmObject();
 		}
@@ -313,6 +322,72 @@ public class ConstraintCashSettlementSystemUsageRule {
 			name = "CashSettlementSystemUsageRule";
 			definition = "Cash settlement system codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
 			owner_lazy = () -> SettlementDetails138.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146
+	 * SettlementDetails146}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashSettlementSystemUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Cash settlement system codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCashSettlementSystemUsageRule#forSettlementDetails122
+	 * ConstraintCashSettlementSystemUsageRule.forSettlementDetails122}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails146> forSettlementDetails146 = new MMConstraint<SettlementDetails146>() {
+		{
+			validator = ConstraintCashSettlementSystemUsageRule::checkSettlementDetails146;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashSettlementSystemUsageRule";
+			definition = "Cash settlement system codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashSettlementSystemUsageRule.forSettlementDetails122;
+			owner_lazy = () -> SettlementDetails146.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158
+	 * SettlementDetails158}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashSettlementSystemUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Cash settlement system codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails158> forSettlementDetails158 = new MMConstraint<SettlementDetails158>() {
+		{
+			validator = ConstraintCashSettlementSystemUsageRule::checkSettlementDetails158;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashSettlementSystemUsageRule";
+			definition = "Cash settlement system codes are to be used only by agents directly involved in the settlement process, such as local settlement agents, CSD's and central banks.";
+			owner_lazy = () -> SettlementDetails158.mmObject();
 		}
 	};
 
@@ -385,6 +460,24 @@ public class ConstraintCashSettlementSystemUsageRule {
 	 * CSD's and central banks.
 	 */
 	public static void checkSettlementDetails138(SettlementDetails138 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Cash settlement system codes are to be used only by agents directly
+	 * involved in the settlement process, such as local settlement agents,
+	 * CSD's and central banks.
+	 */
+	public static void checkSettlementDetails146(SettlementDetails146 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Cash settlement system codes are to be used only by agents directly
+	 * involved in the settlement process, such as local settlement agents,
+	 * CSD's and central banks.
+	 */
+	public static void checkSettlementDetails158(SettlementDetails158 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

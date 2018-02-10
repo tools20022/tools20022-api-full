@@ -62,7 +62,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PriceValueType10Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies  the value of a price."</li>
+ * definition} = "Specifies the value of a price."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -105,7 +105,7 @@ public class PriceValueType10Code extends MMCode {
 				example = Arrays.asList("UKWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType10Code";
-				definition = "Specifies  the value of a price.";
+				definition = "Specifies the value of a price.";
 				trace_lazy = () -> PriceValueTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PriceValueType10Code.Unknown);
 			}

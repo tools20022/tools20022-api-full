@@ -170,6 +170,9 @@ public class PersonProfile {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Garnishment1#mmEmployeeTerminationIndicator
 	 * Garnishment1.mmEmployeeTerminationIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Garnishment2#mmEmployeeTerminationIndicator
+	 * Garnishment2.mmEmployeeTerminationIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -191,7 +194,7 @@ public class PersonProfile {
 	 */
 	public static final MMBusinessAttribute mmEmployeeTerminationIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Garnishment1.mmEmployeeTerminationIndicator);
+			derivation_lazy = () -> Arrays.asList(Garnishment1.mmEmployeeTerminationIndicator, Garnishment2.mmEmployeeTerminationIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -435,7 +438,7 @@ public class PersonProfile {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies if due diligence checks on the political exposure of the investor have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.)"
+	 * "Specifies if due diligence checks on the political exposure of the investor have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -448,7 +451,7 @@ public class PersonProfile {
 			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PoliticalExposureType";
-			definition = "Specifies if due diligence checks on the political exposure of the investor have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.)";
+			definition = "Specifies if due diligence checks on the political exposure of the investor have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PoliticalExposureTypeCode.mmObject();
@@ -528,6 +531,9 @@ public class PersonProfile {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Garnishment1#mmFamilyMedicalInsuranceIndicator
 	 * Garnishment1.mmFamilyMedicalInsuranceIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Garnishment2#mmFamilyMedicalInsuranceIndicator
+	 * Garnishment2.mmFamilyMedicalInsuranceIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -544,18 +550,18 @@ public class PersonProfile {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates if the person has family medical insurance coverage available. "
+	 * "Indicates if the person has family medical insurance coverage available."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmFamilyMedicalInsuranceIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Garnishment1.mmFamilyMedicalInsuranceIndicator);
+			derivation_lazy = () -> Arrays.asList(Garnishment1.mmFamilyMedicalInsuranceIndicator, Garnishment2.mmFamilyMedicalInsuranceIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PersonProfile.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FamilyMedicalInsuranceIndicator";
-			definition = "Indicates if the person has family medical insurance coverage available. ";
+			definition = "Indicates if the person has family medical insurance coverage available.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

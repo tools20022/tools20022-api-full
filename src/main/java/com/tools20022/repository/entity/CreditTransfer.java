@@ -153,6 +153,18 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmCreditTransferTransactionInformation
  * PaymentInstruction22.mmCreditTransferTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmCreditTransferTransactionInformation
+ * PaymentInstruction24.mmCreditTransferTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BalanceTransfer1#mmBalanceTransferMethod
+ * BalanceTransfer1.mmBalanceTransferMethod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmReturnChain
+ * PaymentTransaction87.mmReturnChain}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmUnderlyingCustomerCreditTransfer
+ * CreditTransferTransaction31.mmUnderlyingCustomerCreditTransfer}</li>
  * </ul>
  * </li>
  * <li>
@@ -243,6 +255,16 @@ import java.util.Optional;
  * CreditTransferTransaction22}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CreditTransfer8
  * CreditTransfer8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditTransferTransaction27
+ * CreditTransferTransaction27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditTransferTransaction31
+ * CreditTransferTransaction31}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionParties5
+ * TransactionParties5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditTransferTransaction32
+ * CreditTransferTransaction32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditTransferTransaction30
+ * CreditTransferTransaction30}</li>
  * </ul>
  * </li>
  * <li>
@@ -379,7 +401,8 @@ public class CreditTransfer extends IndividualPayment {
 						PaymentInstrument12Choice.mmCreditTransferDetails, PaymentInstrument13Choice.mmCreditTransferDetails, PaymentInstrument14Choice.mmCreditTransferDetails, PaymentInstruction16.mmCreditTransferTransactionInformation,
 						CreditTransferTransaction17.mmUnderlyingCustomerCreditTransfer, PaymentInstruction17.mmCreditTransferTransaction, CreditTransferTransaction23.mmUnderlyingCustomerCreditTransfer,
 						PaymentInstruction19.mmCreditTransferTransaction, PaymentInstruction20.mmCreditTransferTransactionInformation, PaymentInstrument21Choice.mmCreditTransferDetails, PaymentInstrument20Choice.mmCreditTransferDetails,
-						PaymentInstruction23.mmCreditTransferTransaction, PaymentInstruction22.mmCreditTransferTransactionInformation);
+						PaymentInstruction23.mmCreditTransferTransaction, PaymentInstruction22.mmCreditTransferTransactionInformation, PaymentInstruction24.mmCreditTransferTransactionInformation, BalanceTransfer1.mmBalanceTransferMethod,
+						PaymentTransaction87.mmReturnChain, CreditTransferTransaction31.mmUnderlyingCustomerCreditTransfer);
 				superType_lazy = () -> IndividualPayment.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CreditTransfer.mmStandingOrder, com.tools20022.repository.entity.CreditTransfer.mmRelatedStandingOrder);
 				derivationComponent_lazy = () -> Arrays.asList(CreditTransferTransactionInformation1.mmObject(), CreditTransferTransactionInformation10.mmObject(), CreditTransferTransaction1.mmObject(),
@@ -390,7 +413,8 @@ public class CreditTransfer extends IndividualPayment {
 						CreditTransferTransactionInformation8.mmObject(), CreditTransferTransactionInformation7.mmObject(), CreditTransferTransactionInformation9.mmObject(), CreditTransfer7.mmObject(),
 						CreditTransferTransaction17.mmObject(), CreditTransferTransaction19.mmObject(), CreditTransferTransaction18.mmObject(), CreditTransferTransaction20.mmObject(), CreditTransferTransaction21.mmObject(),
 						CreditTransferTransaction23.mmObject(), CreditTransferTransaction25.mmObject(), CreditTransferTransaction24.mmObject(), CreditTransferTransaction26.mmObject(), CreditTransferTransaction22.mmObject(),
-						CreditTransfer8.mmObject());
+						CreditTransfer8.mmObject(), CreditTransferTransaction27.mmObject(), CreditTransferTransaction31.mmObject(), TransactionParties5.mmObject(), CreditTransferTransaction32.mmObject(),
+						CreditTransferTransaction30.mmObject());
 			}
 
 			@Override

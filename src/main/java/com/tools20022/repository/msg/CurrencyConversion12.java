@@ -102,6 +102,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyConversion14
+ * CurrencyConversion14}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CurrencyConversion6
@@ -143,6 +150,14 @@ public class CurrencyConversion12 {
 	 * definition} =
 	 * "Identification of the currency conversion operation for the service provider."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmCurrencyConversionIdentification
+	 * CurrencyConversion14.mmCurrencyConversionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -158,6 +173,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionIdentification";
 			definition = "Identification of the currency conversion operation for the service provider.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmCurrencyConversionIdentification);
 			previousVersion_lazy = () -> CurrencyConversion6.mmCurrencyConversionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -197,6 +213,14 @@ public class CurrencyConversion12 {
 	 * definition} =
 	 * "Currency into which the amount is converted (ISO 4217, 3 alphanumeric characters)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmTargetCurrency
+	 * CurrencyConversion14.mmTargetCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -213,6 +237,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCurrency";
 			definition = "Currency into which the amount is converted (ISO 4217, 3 alphanumeric characters).";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmTargetCurrency);
 			previousVersion_lazy = () -> CurrencyConversion6.mmTargetCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -254,6 +279,14 @@ public class CurrencyConversion12 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount converted in the target currency, including additional charges."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmResultingAmount
+	 * CurrencyConversion14.mmResultingAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,6 +303,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultingAmount";
 			definition = "Amount converted in the target currency, including additional charges.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmResultingAmount);
 			previousVersion_lazy = () -> CurrencyConversion6.mmResultingAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -311,6 +345,14 @@ public class CurrencyConversion12 {
 	 * definition} =
 	 * "Exchange rate, expressed as a percentage, applied to convert the original amount into the resulting amount."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmExchangeRate
+	 * CurrencyConversion14.mmExchangeRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -327,6 +369,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Exchange rate, expressed as a percentage, applied to convert the original amount into the resulting amount.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmExchangeRate);
 			previousVersion_lazy = () -> CurrencyConversion6.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -368,6 +411,14 @@ public class CurrencyConversion12 {
 	 * definition} =
 	 * "Exchange rate, expressed as a percentage, applied to convert the resulting amount into the original amount."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmInvertedExchangeRate
+	 * CurrencyConversion14.mmInvertedExchangeRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -384,6 +435,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvertedExchangeRate";
 			definition = "Exchange rate, expressed as a percentage, applied to convert the resulting amount into the original amount.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmInvertedExchangeRate);
 			previousVersion_lazy = () -> CurrencyConversion6.mmInvertedExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -423,6 +475,14 @@ public class CurrencyConversion12 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the exchange rate has been quoted."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmQuotationDate
+	 * CurrencyConversion14.mmQuotationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -439,6 +499,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date and time at which the exchange rate has been quoted.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmQuotationDate);
 			previousVersion_lazy = () -> CurrencyConversion6.mmQuotationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -472,6 +533,14 @@ public class CurrencyConversion12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Validity limit of the exchange rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmValidUntil
+	 * CurrencyConversion14.mmValidUntil}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -487,6 +556,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidUntil";
 			definition = "Validity limit of the exchange rate.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmValidUntil);
 			previousVersion_lazy = () -> CurrencyConversion6.mmValidUntil;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -526,6 +596,14 @@ public class CurrencyConversion12 {
 	 * definition} =
 	 * "Currency from which the amount is converted (ISO 4217, 3 alphanumeric characters)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmSourceCurrency
+	 * CurrencyConversion14.mmSourceCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -542,6 +620,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceCurrency";
 			definition = "Currency from which the amount is converted (ISO 4217, 3 alphanumeric characters).";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmSourceCurrency);
 			previousVersion_lazy = () -> CurrencyConversion6.mmSourceCurrency;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -580,6 +659,14 @@ public class CurrencyConversion12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Original amount in the source currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmOriginalAmount
+	 * CurrencyConversion14.mmOriginalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -596,6 +683,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalAmount";
 			definition = "Original amount in the source currency.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmOriginalAmount);
 			previousVersion_lazy = () -> CurrencyConversion6.mmOriginalAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -635,6 +723,14 @@ public class CurrencyConversion12 {
 	 * definition} =
 	 * "Commission or additional charges made as part of a currency conversion."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmCommissionDetails
+	 * CurrencyConversion14.mmCommissionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -651,6 +747,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommissionDetails";
 			definition = "Commission or additional charges made as part of a currency conversion.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmCommissionDetails);
 			previousVersion_lazy = () -> CurrencyConversion6.mmCommissionDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -687,6 +784,14 @@ public class CurrencyConversion12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Markup made as part of a currency conversion."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmMarkUpDetails
+	 * CurrencyConversion14.mmMarkUpDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -703,6 +808,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarkUpDetails";
 			definition = "Markup made as part of a currency conversion.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmMarkUpDetails);
 			previousVersion_lazy = () -> CurrencyConversion6.mmMarkUpDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -736,6 +842,14 @@ public class CurrencyConversion12 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Card scheme declaration (disclaimer) to present to the cardholder."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmDeclarationDetails
+	 * CurrencyConversion14.mmDeclarationDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -751,6 +865,7 @@ public class CurrencyConversion12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclarationDetails";
 			definition = "Card scheme declaration (disclaimer) to present to the cardholder.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmDeclarationDetails);
 			previousVersion_lazy = () -> CurrencyConversion6.mmDeclarationDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -772,6 +887,7 @@ public class CurrencyConversion12 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion12";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be accepted by the cardholder.";
+				nextVersions_lazy = () -> Arrays.asList(CurrencyConversion14.mmObject());
 				previousVersion_lazy = () -> CurrencyConversion6.mmObject();
 			}
 		});

@@ -21,10 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07;
-import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08;
-import com.tools20022.repository.area.seev.CorporateActionNotificationV06;
-import com.tools20022.repository.area.seev.CorporateActionNotificationV07;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
@@ -77,6 +74,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08#mmAccountDetails
  * CorporateActionMovementPreliminaryAdviceV08.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmAccountDetails
+ * CorporateActionNotificationV08.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmAccountDetails
+ * CorporateActionMovementPreliminaryAdviceV09.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -226,7 +229,7 @@ public class AccountIdentification32Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification32Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification32Choice.mmAccountsListAndBalanceDetails);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV07.mmAccountDetails, CorporateActionNotificationV06.mmAccountDetails, CorporateActionNotificationV07.mmAccountDetails,
-						CorporateActionMovementPreliminaryAdviceV08.mmAccountDetails);
+						CorporateActionMovementPreliminaryAdviceV08.mmAccountDetails, CorporateActionNotificationV08.mmAccountDetails, CorporateActionMovementPreliminaryAdviceV09.mmAccountDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

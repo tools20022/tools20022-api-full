@@ -97,7 +97,7 @@ public class LimitQueryDefinition1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies if all matching items or only the new matching items since the latest query are returned. "
+	 * "Specifies if all matching items or only the new matching items since the latest query are returned."
 	 * </li>
 	 * </ul>
 	 */
@@ -108,7 +108,7 @@ public class LimitQueryDefinition1 {
 			xmlTag = "QryTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
-			definition = "Specifies if all matching items or only the new matching items since the latest query are returned. ";
+			definition = "Specifies if all matching items or only the new matching items since the latest query are returned.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType1Code.mmObject();

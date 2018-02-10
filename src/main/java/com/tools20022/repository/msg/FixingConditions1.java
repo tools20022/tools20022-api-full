@@ -221,7 +221,7 @@ public class FixingConditions1 {
 	 * name} = "CommonReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reference common to both parties of the trade. "</li>
+	 * definition} = "Reference common to both parties of the trade."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
@@ -232,7 +232,7 @@ public class FixingConditions1 {
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			definition = "Reference common to both parties of the trade. ";
+			definition = "Reference common to both parties of the trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -270,7 +270,7 @@ public class FixingConditions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the identification of a previous event in the life of a trade which is amended or cancelled. "
+	 * "Reference to the identification of a previous event in the life of a trade which is amended or cancelled."
 	 * </li>
 	 * </ul>
 	 */
@@ -282,7 +282,7 @@ public class FixingConditions1 {
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
-			definition = "Reference to the identification of a previous event in the life of a trade which is amended or cancelled. ";
+			definition = "Reference to the identification of a previous event in the life of a trade which is amended or cancelled.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

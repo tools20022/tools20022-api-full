@@ -97,7 +97,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentInstructionReference2Details"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Identifies a payment instruction by a set of characteristics  (as per EBA system requirements) which provides an unambiguous identification of the instruction."
+ * "Identifies a payment instruction by a set of characteristics (as per EBA system requirements) which provides an unambiguous identification of the instruction."
  * </li>
  * </ul>
  */
@@ -139,7 +139,7 @@ public class PaymentInstructionReference2Details {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n"
+	 * "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -151,7 +151,7 @@ public class PaymentInstructionReference2Details {
 			xmlTag = "PmtInstrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionReference";
-			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n";
+			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -442,7 +442,7 @@ public class PaymentInstructionReference2Details {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the payment instruction is a debit or a credit.\n"</li>
+	 * "Indicates whether the payment instruction is a debit or a credit.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
@@ -453,7 +453,7 @@ public class PaymentInstructionReference2Details {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the payment instruction is a debit or a credit.\n";
+			definition = "Indicates whether the payment instruction is a debit or a credit.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -491,7 +491,7 @@ public class PaymentInstructionReference2Details {
 	 * name} = "StatusValue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of a transfer.\n"</li>
+	 * definition} = "Status of a transfer.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatusValue = new MMMessageAttribute() {
@@ -502,7 +502,7 @@ public class PaymentInstructionReference2Details {
 			xmlTag = "StsVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusValue";
-			definition = "Status of a transfer.\n";
+			definition = "Status of a transfer.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentInstructionStatus1Code.mmObject();
@@ -540,7 +540,7 @@ public class PaymentInstructionReference2Details {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time at which the status was assigned to the transfer.\n"</li>
+	 * "Date and time at which the status was assigned to the transfer.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatusValueTime = new MMMessageAttribute() {
@@ -551,7 +551,7 @@ public class PaymentInstructionReference2Details {
 			xmlTag = "StsValTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusValueTime";
-			definition = "Date and time at which the status was assigned to the transfer.\n";
+			definition = "Date and time at which the status was assigned to the transfer.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -662,7 +662,7 @@ public class PaymentInstructionReference2Details {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentInstructionReference2Details";
-				definition = "Identifies a payment instruction by a set of characteristics  (as per EBA system requirements) which provides an unambiguous identification of the instruction.";
+				definition = "Identifies a payment instruction by a set of characteristics (as per EBA system requirements) which provides an unambiguous identification of the instruction.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07;
 import com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
@@ -79,6 +80,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06#mmSafekeepingPlace
  * IntraPositionMovementConfirmationV06.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07#mmSafekeepingPlace
+ * IntraPositionMovementConfirmationV07.mmSafekeepingPlace}</li>
  * </ul>
  * </li>
  * <li>
@@ -345,7 +349,8 @@ public class SafekeepingPlaceFormat10Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmCountry,
 						com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmTypeAndIdentification, com.tools20022.repository.choice.SafekeepingPlaceFormat10Choice.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementInstructionV04.mmSafekeepingPlace, IntraPositionMovementConfirmationV05.mmSafekeepingPlace, IntraPositionMovementConfirmationV06.mmSafekeepingPlace);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementInstructionV04.mmSafekeepingPlace, IntraPositionMovementConfirmationV05.mmSafekeepingPlace, IntraPositionMovementConfirmationV06.mmSafekeepingPlace,
+						IntraPositionMovementConfirmationV07.mmSafekeepingPlace);
 				trace_lazy = () -> SafekeepingPlace.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

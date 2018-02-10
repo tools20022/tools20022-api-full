@@ -63,6 +63,12 @@ import javax.xml.bind.annotation.XmlType;
  * "BusinessDay5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reports on business day information."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessDay6 BusinessDay6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.BusinessDay1
  * BusinessDay1}</li>
@@ -99,6 +105,14 @@ public class BusinessDay5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a particular market infrastructure."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDay6#mmSystemIdentification
+	 * BusinessDay6.mmSystemIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -114,6 +128,7 @@ public class BusinessDay5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
 			definition = "Identification of a particular market infrastructure.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDay6.mmSystemIdentification);
 			previousVersion_lazy = () -> BusinessDay1.mmSystemIdentification;
 			minOccurs = 1;
 			isComposite = true;
@@ -148,6 +163,14 @@ public class BusinessDay5 {
 	 * definition} =
 	 * "Requested information on the system availability for a specific business day or business error when information has not been found."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDay6#mmBusinessDayOrError
+	 * BusinessDay6.mmBusinessDayOrError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -163,6 +186,7 @@ public class BusinessDay5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDayOrError";
 			definition = "Requested information on the system availability for a specific business day or business error when information has not been found.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDay6.mmBusinessDayOrError);
 			previousVersion_lazy = () -> BusinessDay1.mmBusinessDayOrError;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -179,6 +203,7 @@ public class BusinessDay5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessDay5";
 				definition = "Reports on business day information.";
+				nextVersions_lazy = () -> Arrays.asList(BusinessDay6.mmObject());
 				previousVersion_lazy = () -> BusinessDay1.mmObject();
 			}
 		});

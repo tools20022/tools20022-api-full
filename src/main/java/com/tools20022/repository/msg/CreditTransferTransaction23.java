@@ -209,6 +209,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provide further details specific to the individual transaction(s) included in the message."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditTransferTransaction31
+ * CreditTransferTransaction31}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction17
@@ -254,6 +261,14 @@ public class CreditTransferTransaction23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Set of elements used to reference a payment instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmPaymentIdentification
+	 * CreditTransferTransaction31.mmPaymentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,6 +285,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Set of elements used to reference a payment instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmPaymentIdentification);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmPaymentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -310,6 +326,14 @@ public class CreditTransferTransaction23 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to further specify the type of transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmPaymentTypeInformation
+	 * CreditTransferTransaction31.mmPaymentTypeInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -326,6 +350,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeInformation";
 			definition = "Set of elements used to further specify the type of transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmPaymentTypeInformation);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmPaymentTypeInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -368,6 +393,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Amount of money moved between the instructing agent and the instructed agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInterbankSettlementAmount
+	 * CreditTransferTransaction31.mmInterbankSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -384,6 +417,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmInterbankSettlementAmount);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmInterbankSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -424,6 +458,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInterbankSettlementDate
+	 * CreditTransferTransaction31.mmInterbankSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -440,6 +482,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmInterbankSettlementDate);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmInterbankSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -481,6 +524,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmSettlementPriority
+	 * CreditTransferTransaction31.mmSettlementPriority}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -497,6 +548,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPriority";
 			definition = "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmSettlementPriority);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmSettlementPriority;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -537,6 +589,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Provides information on the occurred settlement time(s) of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmSettlementTimeIndication
+	 * CreditTransferTransaction31.mmSettlementTimeIndication}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -553,6 +613,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTimeIndication";
 			definition = "Provides information on the occurred settlement time(s) of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmSettlementTimeIndication);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmSettlementTimeIndication;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -593,6 +654,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Provides information on the requested settlement time(s) of the payment instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmSettlementTimeRequest
+	 * CreditTransferTransaction31.mmSettlementTimeRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -609,6 +678,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTimeRequest";
 			definition = "Provides information on the requested settlement time(s) of the payment instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmSettlementTimeRequest);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmSettlementTimeRequest;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -761,6 +831,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Agent that instructs the next party in the chain to carry out the (set of) instruction(s)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInstructingAgent
+	 * CreditTransferTransaction31.mmInstructingAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -777,6 +855,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmInstructingAgent);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmInstructingAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -818,6 +897,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInstructedAgent
+	 * CreditTransferTransaction31.mmInstructedAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -834,6 +921,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmInstructedAgent);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmInstructedAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -875,6 +963,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmIntermediaryAgent1
+	 * CreditTransferTransaction31.mmIntermediaryAgent1}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -891,6 +987,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent1";
 			definition = "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmIntermediaryAgent1);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmIntermediaryAgent1;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -931,6 +1028,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the intermediary agent 1 at its servicing agent in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmIntermediaryAgent1Account
+	 * CreditTransferTransaction31.mmIntermediaryAgent1Account}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -947,6 +1052,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent1Account";
 			definition = "Unambiguous identification of the account of the intermediary agent 1 at its servicing agent in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmIntermediaryAgent1Account);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmIntermediaryAgent1Account;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -988,6 +1094,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmIntermediaryAgent2
+	 * CreditTransferTransaction31.mmIntermediaryAgent2}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1004,6 +1118,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent2";
 			definition = "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmIntermediaryAgent2);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmIntermediaryAgent2;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1044,6 +1159,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the intermediary agent 2 at its servicing agent in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmIntermediaryAgent2Account
+	 * CreditTransferTransaction31.mmIntermediaryAgent2Account}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1060,6 +1183,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent2Account";
 			definition = "Unambiguous identification of the account of the intermediary agent 2 at its servicing agent in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmIntermediaryAgent2Account);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmIntermediaryAgent2Account;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1101,6 +1225,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmIntermediaryAgent3
+	 * CreditTransferTransaction31.mmIntermediaryAgent3}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1117,6 +1249,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent3";
 			definition = "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmIntermediaryAgent3);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmIntermediaryAgent3;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1157,6 +1290,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the intermediary agent 3 at its servicing agent in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmIntermediaryAgent3Account
+	 * CreditTransferTransaction31.mmIntermediaryAgent3Account}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1173,6 +1314,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent3Account";
 			definition = "Unambiguous identification of the account of the intermediary agent 3 at its servicing agent in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmIntermediaryAgent3Account);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmIntermediaryAgent3Account;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1214,6 +1356,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Ultimate financial institution that owes an amount of money to the (ultimate) institutional creditor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmUltimateDebtor
+	 * CreditTransferTransaction31.mmUltimateDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1230,6 +1380,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate financial institution that owes an amount of money to the (ultimate) institutional creditor.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmUltimateDebtor);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmUltimateDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1271,6 +1422,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Financial institution that owes an amount of money to the (ultimate) financial institutional creditor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmDebtor
+	 * CreditTransferTransaction31.mmDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1287,6 +1446,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Financial institution that owes an amount of money to the (ultimate) financial institutional creditor.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmDebtor);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -1327,6 +1487,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmDebtorAccount
+	 * CreditTransferTransaction31.mmDebtorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1343,6 +1511,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmDebtorAccount);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1383,6 +1552,14 @@ public class CreditTransferTransaction23 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Financial institution servicing an account for the debtor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmDebtorAgent
+	 * CreditTransferTransaction31.mmDebtorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1399,6 +1576,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmDebtorAgent);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1439,6 +1617,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmDebtorAgentAccount
+	 * CreditTransferTransaction31.mmDebtorAgentAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1455,6 +1641,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentAccount";
 			definition = "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmDebtorAgentAccount);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmDebtorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1495,6 +1682,14 @@ public class CreditTransferTransaction23 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Financial institution servicing an account for the creditor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmCreditorAgent
+	 * CreditTransferTransaction31.mmCreditorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1511,6 +1706,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmCreditorAgent);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmCreditorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1551,6 +1747,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmCreditorAgentAccount
+	 * CreditTransferTransaction31.mmCreditorAgentAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1567,6 +1771,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentAccount";
 			definition = "Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmCreditorAgentAccount);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmCreditorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1608,6 +1813,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Financial institution that receives an amount of money from the financial institutional debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmCreditor
+	 * CreditTransferTransaction31.mmCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1624,6 +1837,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Financial institution that receives an amount of money from the financial institutional debtor.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmCreditor);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmCreditor;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -1664,6 +1878,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmCreditorAccount
+	 * CreditTransferTransaction31.mmCreditorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1680,6 +1902,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmCreditorAccount);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmCreditorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1720,6 +1943,14 @@ public class CreditTransferTransaction23 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Ultimate financial institution to which an amount of money is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmUltimateCreditor
+	 * CreditTransferTransaction31.mmUltimateCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1736,6 +1967,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditor";
 			definition = "Ultimate financial institution to which an amount of money is due.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmUltimateCreditor);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmUltimateCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1777,6 +2009,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction31.mmInstructionForCreditorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1793,6 +2033,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgent";
 			definition = "Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmInstructionForCreditorAgent);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmInstructionForCreditorAgent;
 			minOccurs = 0;
 			isComposite = true;
@@ -1833,6 +2074,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. \n\nUsage: The next agent may not be the creditor agent.\nThe instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInstructionForNextAgent
+	 * CreditTransferTransaction31.mmInstructionForNextAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1849,6 +2098,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForNextAgent";
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. \n\nUsage: The next agent may not be the creditor agent.\nThe instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmInstructionForNextAgent);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmInstructionForNextAgent;
 			minOccurs = 0;
 			isComposite = true;
@@ -1888,6 +2138,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmRemittanceInformation
+	 * CreditTransferTransaction31.mmRemittanceInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1904,6 +2162,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmRemittanceInformation);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmRemittanceInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1945,6 +2204,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Provides information on the underlying customer credit transfer for which cover is provided."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmUnderlyingCustomerCreditTransfer
+	 * CreditTransferTransaction31.mmUnderlyingCustomerCreditTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1961,6 +2228,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingCustomerCreditTransfer";
 			definition = "Provides information on the underlying customer credit transfer for which cover is provided.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmUnderlyingCustomerCreditTransfer);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmUnderlyingCustomerCreditTransfer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1998,6 +2266,14 @@ public class CreditTransferTransaction23 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmSupplementaryData
+	 * CreditTransferTransaction31.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2013,6 +2289,7 @@ public class CreditTransferTransaction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmSupplementaryData);
 			previousVersion_lazy = () -> CreditTransferTransaction17.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -2052,6 +2329,7 @@ public class CreditTransferTransaction23 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditTransferTransaction23";
 				definition = "Provide further details specific to the individual transaction(s) included in the message.";
+				nextVersions_lazy = () -> Arrays.asList(CreditTransferTransaction31.mmObject());
 				previousVersion_lazy = () -> CreditTransferTransaction17.mmObject();
 			}
 		});

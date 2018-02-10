@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Future And Option Contract Type
+ * Future And Option Contract Type.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -73,7 +73,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "FutureAndOptionContractTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Future And Option Contract Type"</li>
+ * definition} = "Future And Option Contract Type."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -186,7 +186,7 @@ public class FutureAndOptionContractTypeCode extends MMCode {
 				example = Arrays.asList("ORDY");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FutureAndOptionContractTypeCode";
-				definition = "Future And Option Contract Type";
+				definition = "Future And Option Contract Type.";
 				derivation_lazy = () -> Arrays.asList(FutureAndOptionContractType1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.Ordinary, com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.Index,
 						com.tools20022.repository.codeset.FutureAndOptionContractTypeCode.ExercisedFuture);

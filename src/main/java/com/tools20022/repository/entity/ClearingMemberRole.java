@@ -110,6 +110,16 @@ import java.util.Objects;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ClearingMember1
+ * ClearingMember1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DefaultFundRequirement1
+ * DefaultFundRequirement1}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -197,6 +207,15 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount78#mmSide
 	 * PartyIdentificationAndAccount78.mmSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Counterparty15#mmCounterpartySide
+	 * Counterparty15.mmCounterpartySide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Counterparty17#mmCounterpartySide
+	 * Counterparty17.mmCounterpartySide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Counterparty16#mmCounterpartySide
+	 * Counterparty16.mmCounterpartySide}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -217,7 +236,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 */
 	public static final MMBusinessAttribute mmSide = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(PartyIdentificationAndAccount78.mmSide);
+			derivation_lazy = () -> Arrays.asList(PartyIdentificationAndAccount78.mmSide, Counterparty15.mmCounterpartySide, Counterparty17.mmCounterpartySide, Counterparty16.mmCounterpartySide);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -302,6 +321,9 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementObligation8#mmSafekeepingAccount
 	 * SettlementObligation8.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClearingMember1#mmClearingAccountOwner
+	 * ClearingMember1.mmClearingAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -326,7 +348,8 @@ public class ClearingMemberRole extends SystemPartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(PartyIdentificationAndAccount78.mmClearingAccount, PartyIdentificationAndAccount31.mmClearingAccount, SettlementObligation1.mmSafekeepingAccount, SettlementObligation6.mmSafekeepingAccount,
 					TradeLegStatement1.mmClearingAccount, TradeLegStatement2.mmClearingAccount, NetPosition1.mmClearingAccount, NetPosition2.mmClearingAccount, TradeLeg8.mmSafekeepingAccount, TradeLegStatement3.mmClearingAccount,
-					SettlementObligation7.mmSafekeepingAccount, NetPosition3.mmClearingAccount, TradeLeg10.mmSafekeepingAccount, TradeLeg9.mmSafekeepingAccount, SettlementObligation8.mmSafekeepingAccount);
+					SettlementObligation7.mmSafekeepingAccount, NetPosition3.mmClearingAccount, TradeLeg10.mmSafekeepingAccount, TradeLeg9.mmSafekeepingAccount, SettlementObligation8.mmSafekeepingAccount,
+					ClearingMember1.mmClearingAccountOwner);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -562,7 +585,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Clearing segment within a clearing organisation that allows the segregation of flows coming from clearing counterparty's clearing system. "
+	 * "Clearing segment within a clearing organisation that allows the segregation of flows coming from clearing counterparty's clearing system."
 	 * </li>
 	 * </ul>
 	 */
@@ -572,7 +595,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClearingSegment";
-			definition = "Clearing segment within a clearing organisation that allows the segregation of flows coming from clearing counterparty's clearing system. ";
+			definition = "Clearing segment within a clearing organisation that allows the segregation of flows coming from clearing counterparty's clearing system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ClearingMemberRole.mmRelatedClearingMemberRole;
@@ -647,6 +670,7 @@ public class ClearingMemberRole extends SystemPartyRole {
 						com.tools20022.repository.entity.ClearingMemberRole.mmClearingAccount, com.tools20022.repository.entity.ClearingMemberRole.mmMarginAccount, com.tools20022.repository.entity.ClearingMemberRole.mmDeliveryAccount,
 						com.tools20022.repository.entity.ClearingMemberRole.mmDefaultFundAccount, com.tools20022.repository.entity.ClearingMemberRole.mmClearingSegment,
 						com.tools20022.repository.entity.ClearingMemberRole.mmRelatedClearingMemberRole);
+				derivationComponent_lazy = () -> Arrays.asList(ClearingMember1.mmObject(), DefaultFundRequirement1.mmObject());
 			}
 
 			@Override

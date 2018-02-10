@@ -215,7 +215,7 @@ public class MessageTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Fund detailed estimated cash forecast Report (042)
+	 * Fund detailed estimated cash forecast Report (042).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -232,14 +232,14 @@ public class MessageTypeCode extends MMCode {
 	 * name} = "EstimatedDetailed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Fund detailed estimated cash forecast Report (042)"</li>
+	 * definition} = "Fund detailed estimated cash forecast Report (042)."</li>
 	 * </ul>
 	 */
 	public static final MessageTypeCode EstimatedDetailed = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedDetailed";
-			definition = "Fund detailed estimated cash forecast Report (042)";
+			definition = "Fund detailed estimated cash forecast Report (042).";
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "CF42";
 		}
@@ -275,7 +275,7 @@ public class MessageTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Fund detailed confirmed cash forecast report (camt.043)
+	 * Fund detailed confirmed cash forecast report (camt.043).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -292,14 +292,14 @@ public class MessageTypeCode extends MMCode {
 	 * name} = "CornfirmedDetailed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Fund detailed confirmed cash forecast report (camt.043)"</li>
+	 * definition} = "Fund detailed confirmed cash forecast report (camt.043)."</li>
 	 * </ul>
 	 */
 	public static final MessageTypeCode CornfirmedDetailed = new MessageTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CornfirmedDetailed";
-			definition = "Fund detailed confirmed cash forecast report (camt.043)";
+			definition = "Fund detailed confirmed cash forecast report (camt.043).";
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageTypeCode.mmObject();
 			codeName = "CF43";
 		}

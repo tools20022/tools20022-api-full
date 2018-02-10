@@ -532,7 +532,7 @@ public class RedemptionSchedule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Financial place  taken into account to adjust the date and time, as defined within the business day convention."
+	 * "Financial place taken into account to adjust the date and time, as defined within the business day convention."
 	 * </li>
 	 * </ul>
 	 */
@@ -542,7 +542,7 @@ public class RedemptionSchedule {
 			elementContext_lazy = () -> com.tools20022.repository.entity.RedemptionSchedule.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialCenter";
-			definition = "Financial place  taken into account to adjust the date and time, as defined within the business day convention.";
+			definition = "Financial place taken into account to adjust the date and time, as defined within the business day convention.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialCenterCode.mmObject();

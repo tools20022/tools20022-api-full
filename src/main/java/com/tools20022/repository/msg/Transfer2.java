@@ -237,7 +237,7 @@ public class Transfer2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and optionally  time at which a transaction is completed and cleared, ie, securities are delivered."
+	 * "Date and optionally time at which a transaction is completed and cleared, ie, securities are delivered."
 	 * </li>
 	 * </ul>
 	 */
@@ -249,7 +249,7 @@ public class Transfer2 {
 			xmlTag = "FctvTrfDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTransferDate";
-			definition = "Date and optionally  time at which a transaction is completed and cleared, ie, securities are delivered.";
+			definition = "Date and optionally time at which a transaction is completed and cleared, ie, securities are delivered.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();

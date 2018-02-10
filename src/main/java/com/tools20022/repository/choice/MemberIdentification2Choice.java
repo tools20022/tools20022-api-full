@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ModifyMemberV03;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
@@ -59,6 +60,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.SystemMemberRole
  * SystemMemberRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ModifyMemberV03#mmMemberIdentification
+ * ModifyMemberV03.mmMemberIdentification}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -237,6 +247,7 @@ public class MemberIdentification2Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MemberIdentification2Choice.mmBICFI, com.tools20022.repository.choice.MemberIdentification2Choice.mmClearingSystemMemberIdentification,
 						com.tools20022.repository.choice.MemberIdentification2Choice.mmOther);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ModifyMemberV03.mmMemberIdentification);
 				trace_lazy = () -> SystemMemberRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

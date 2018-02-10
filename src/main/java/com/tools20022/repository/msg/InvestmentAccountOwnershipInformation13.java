@@ -197,8 +197,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * name} = "Party"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information about the organisation or individual person. "
-	 * </li>
+	 * definition} = "Information about the organisation or individual person."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -222,7 +221,7 @@ public class InvestmentAccountOwnershipInformation13 {
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
-			definition = "Information about the organisation or individual person. ";
+			definition = "Information about the organisation or individual person.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmParty);
 			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation11.mmParty;
 			maxOccurs = 1;
@@ -394,7 +393,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells  will be allocated using the same percentage."
+	 * "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells will be allocated using the same percentage."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -419,7 +418,7 @@ public class InvestmentAccountOwnershipInformation13 {
 			xmlTag = "OwnrshBnfcryRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnershipBeneficiaryRate";
-			definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells  will be allocated using the same percentage.";
+			definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells will be allocated using the same percentage.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmOwnershipBeneficiaryRate);
 			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation11.mmOwnershipBeneficiaryRate;
 			maxOccurs = 1;
@@ -1185,7 +1184,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Country and residential status of the organisation or individual person. "
+	 * "Country and residential status of the organisation or individual person."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1205,7 +1204,7 @@ public class InvestmentAccountOwnershipInformation13 {
 			xmlTag = "CtryAndResdtlSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryAndResidentialStatus";
-			definition = "Country and residential status of the organisation or individual person. ";
+			definition = "Country and residential status of the organisation or individual person.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmCountryAndResidentialStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1238,7 +1237,7 @@ public class InvestmentAccountOwnershipInformation13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Annual wealth of the individual person or share capital value of the legal entity and date on which the annual wealth of the individual person was registered or declared or the date the  stock value of the organisation was registered."
+	 * "Annual wealth of the individual person or share capital value of the legal entity and date on which the annual wealth of the individual person was registered or declared or the date the stock value of the organisation was registered."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1257,7 +1256,7 @@ public class InvestmentAccountOwnershipInformation13 {
 			xmlTag = "MntryWlth";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonetaryWealth";
-			definition = "Annual wealth of the individual person or share capital value of the legal entity and date on which the annual wealth of the individual person was registered or declared or the date the  stock value of the organisation was registered.";
+			definition = "Annual wealth of the individual person or share capital value of the legal entity and date on which the annual wealth of the individual person was registered or declared or the date the stock value of the organisation was registered.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation15.mmMonetaryWealth);
 			maxOccurs = 1;
 			minOccurs = 0;

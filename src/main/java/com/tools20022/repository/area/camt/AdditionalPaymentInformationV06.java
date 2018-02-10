@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.CashManagementPreviousVersion;
+import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.choice.UnderlyingTransaction2Choice;
 import com.tools20022.repository.msg.Case3;
 import com.tools20022.repository.msg.CaseAssignment3;
@@ -121,8 +121,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AddtlPmtInf"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.028.001.06}</li>
@@ -463,7 +463,7 @@ public class AdditionalPaymentInformationV06 {
 				messageSet_lazy = () -> Arrays.asList(ExceptionsandInvestigationsISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AddtlPmtInf";
-				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
+				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AdditionalPaymentInformationV06.mmAssignment, com.tools20022.repository.area.camt.AdditionalPaymentInformationV06.mmCase,
 						com.tools20022.repository.area.camt.AdditionalPaymentInformationV06.mmUnderlying, com.tools20022.repository.area.camt.AdditionalPaymentInformationV06.mmInformation,
 						com.tools20022.repository.area.camt.AdditionalPaymentInformationV06.mmSupplementaryData);

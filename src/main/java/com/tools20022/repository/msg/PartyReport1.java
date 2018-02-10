@@ -60,6 +60,12 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Report information about party reference data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyReport2 PartyReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,6 +102,14 @@ public class PartyReport1 {
 	 * definition} =
 	 * "Unique identification to unambiguously identify the party within the system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyReport2#mmPartyIdentification
+	 * PartyReport2.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
@@ -106,6 +120,7 @@ public class PartyReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification to unambiguously identify the party within the system.";
+			nextVersions_lazy = () -> Arrays.asList(PartyReport2.mmPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification3.mmObject();
@@ -138,6 +153,14 @@ public class PartyReport1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the returned party reference data or error information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyReport2#mmPartyOrError
+	 * PartyReport2.mmPartyOrError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPartyOrError = new MMMessageAssociationEnd() {
@@ -148,6 +171,7 @@ public class PartyReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyOrError";
 			definition = "Identifies the returned party reference data or error information.";
+			nextVersions_lazy = () -> Arrays.asList(PartyReport2.mmPartyOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -163,6 +187,7 @@ public class PartyReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyReport1";
 				definition = "Report information about party reference data.";
+				nextVersions_lazy = () -> Arrays.asList(PartyReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

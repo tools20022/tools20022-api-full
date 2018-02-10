@@ -196,6 +196,22 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmInstructionIdentification
  * CorporateActionInstructionStatusAdviceV08.mmInstructionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmInstructionIdentification
+ * CorporateActionNotificationV08.mmInstructionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09#mmInstructionIdentification
+ * CorporateActionMovementConfirmationV09.mmInstructionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmInstructionIdentification
+ * CorporateActionMovementPreliminaryAdviceV09.mmInstructionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmInstructionIdentification
+ * CorporateActionInstructionStatusAdviceV09.mmInstructionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV08#mmInstructionCancellationRequestIdentification
+ * CorporateActionInstructionCancellationRequestStatusAdviceV08.
+ * mmInstructionCancellationRequestIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -290,7 +306,9 @@ public class DocumentIdentification9 {
 						CorporateActionEventProcessingStatusAdviceV05.mmNotificationIdentification, CorporateActionInstructionStatusAdviceV07.mmInstructionIdentification, CorporateActionNotificationV07.mmInstructionIdentification,
 						CorporateActionMovementConfirmationV08.mmInstructionIdentification, CorporateActionEventProcessingStatusAdviceV06.mmNotificationIdentification,
 						CorporateActionMovementPreliminaryAdviceV08.mmInstructionIdentification, CorporateActionInstructionCancellationRequestStatusAdviceV07.mmInstructionCancellationRequestIdentification,
-						CorporateActionInstructionStatusAdviceV08.mmInstructionIdentification);
+						CorporateActionInstructionStatusAdviceV08.mmInstructionIdentification, CorporateActionNotificationV08.mmInstructionIdentification, CorporateActionMovementConfirmationV09.mmInstructionIdentification,
+						CorporateActionMovementPreliminaryAdviceV09.mmInstructionIdentification, CorporateActionInstructionStatusAdviceV09.mmInstructionIdentification,
+						CorporateActionInstructionCancellationRequestStatusAdviceV08.mmInstructionCancellationRequestIdentification);
 				trace_lazy = () -> Document.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

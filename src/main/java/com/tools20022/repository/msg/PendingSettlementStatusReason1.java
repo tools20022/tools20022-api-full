@@ -75,7 +75,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PendingSettlementStatusReason1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Reason for a  pending settlement status."</li>
+ * definition} = "Reason for a pending settlement status."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -193,7 +193,7 @@ public class PendingSettlementStatusReason1 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherStatusRule.forPendingSettlementStatusReason1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingSettlementStatusReason1";
-				definition = "Reason for a  pending settlement status.";
+				definition = "Reason for a pending settlement status.";
 			}
 		});
 		return mmObject_lazy.get();

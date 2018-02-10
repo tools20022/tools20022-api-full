@@ -174,6 +174,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * =
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductAgriculturalType1Code
+ * AssetClassSubProductAgriculturalType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductMetal1Code
+ * AssetClassSubProductMetal1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductEnergyType1Code
+ * AssetClassSubProductEnergyType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductEnvironmentalType1Code
+ * AssetClassSubProductEnvironmentalType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductFreight1Code
+ * AssetClassSubProductFreight1Code}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.codeset.AssetClassSubProductType1Code
  * AssetClassSubProductType1Code}</li>
  * <li>
@@ -1649,15 +1664,16 @@ public class AssetClassSubProductTypeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AssetClassSubProductTypeCode";
 				definition = "Defines the sub-product types for specific asset classes.";
-				derivation_lazy = () -> Arrays.asList(AssetClassSubProductType1Code.mmObject(), AssetClassSubProductType2Code.mmObject(), AssetClassSubProductType3Code.mmObject(), AssetClassSubProductType5Code.mmObject(),
-						AssetClassSubProductType6Code.mmObject(), AssetClassSubProductType7Code.mmObject(), AssetClassSubProductType8Code.mmObject(), AssetClassSubProductType10Code.mmObject(), AssetClassSubProductType15Code.mmObject(),
-						AssetClassSubProductType16Code.mmObject(), AssetClassSubProductType18Code.mmObject(), AssetClassSubProductType19Code.mmObject(), AssetClassSubProductType28Code.mmObject(), AssetClassSubProductType33Code.mmObject(),
-						AssetClassSubProductType25Code.mmObject(), AssetClassSubProductType27Code.mmObject(), AssetClassSubProductType26Code.mmObject(), AssetClassSubProductType32Code.mmObject(), AssetClassSubProductType41Code.mmObject(),
-						AssetClassSubProductType45Code.mmObject(), AssetClassSubProductType21Code.mmObject(), AssetClassSubProductType40Code.mmObject(), AssetClassSubProductType48Code.mmObject(), AssetClassSubProductType23Code.mmObject(),
-						AssetClassSubProductType39Code.mmObject(), AssetClassSubProductType29Code.mmObject(), AssetClassSubProductType22Code.mmObject(), AssetClassSubProductType42Code.mmObject(), AssetClassSubProductType35Code.mmObject(),
-						AssetClassSubProductType44Code.mmObject(), AssetClassSubProductType20Code.mmObject(), AssetClassSubProductType24Code.mmObject(), AssetClassSubProductType30Code.mmObject(), AssetClassSubProductType31Code.mmObject(),
-						AssetClassSubProductType34Code.mmObject(), AssetClassSubProductType36Code.mmObject(), AssetClassSubProductType37Code.mmObject(), AssetClassSubProductType38Code.mmObject(), AssetClassSubProductType43Code.mmObject(),
-						AssetClassSubProductType46Code.mmObject(), AssetClassSubProductType47Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(AssetClassSubProductAgriculturalType1Code.mmObject(), AssetClassSubProductMetal1Code.mmObject(), AssetClassSubProductEnergyType1Code.mmObject(),
+						AssetClassSubProductEnvironmentalType1Code.mmObject(), AssetClassSubProductFreight1Code.mmObject(), AssetClassSubProductType1Code.mmObject(), AssetClassSubProductType2Code.mmObject(),
+						AssetClassSubProductType3Code.mmObject(), AssetClassSubProductType5Code.mmObject(), AssetClassSubProductType6Code.mmObject(), AssetClassSubProductType7Code.mmObject(), AssetClassSubProductType8Code.mmObject(),
+						AssetClassSubProductType10Code.mmObject(), AssetClassSubProductType15Code.mmObject(), AssetClassSubProductType16Code.mmObject(), AssetClassSubProductType18Code.mmObject(), AssetClassSubProductType19Code.mmObject(),
+						AssetClassSubProductType28Code.mmObject(), AssetClassSubProductType33Code.mmObject(), AssetClassSubProductType25Code.mmObject(), AssetClassSubProductType27Code.mmObject(), AssetClassSubProductType26Code.mmObject(),
+						AssetClassSubProductType32Code.mmObject(), AssetClassSubProductType41Code.mmObject(), AssetClassSubProductType45Code.mmObject(), AssetClassSubProductType21Code.mmObject(), AssetClassSubProductType40Code.mmObject(),
+						AssetClassSubProductType48Code.mmObject(), AssetClassSubProductType23Code.mmObject(), AssetClassSubProductType39Code.mmObject(), AssetClassSubProductType29Code.mmObject(), AssetClassSubProductType22Code.mmObject(),
+						AssetClassSubProductType42Code.mmObject(), AssetClassSubProductType35Code.mmObject(), AssetClassSubProductType44Code.mmObject(), AssetClassSubProductType20Code.mmObject(), AssetClassSubProductType24Code.mmObject(),
+						AssetClassSubProductType30Code.mmObject(), AssetClassSubProductType31Code.mmObject(), AssetClassSubProductType34Code.mmObject(), AssetClassSubProductType36Code.mmObject(), AssetClassSubProductType37Code.mmObject(),
+						AssetClassSubProductType38Code.mmObject(), AssetClassSubProductType43Code.mmObject(), AssetClassSubProductType46Code.mmObject(), AssetClassSubProductType47Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Dairy, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Forestry,
 						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.GrainOilSeeds, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Livestock,
 						com.tools20022.repository.codeset.AssetClassSubProductTypeCode.OliveOil, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Softs, com.tools20022.repository.codeset.AssetClassSubProductTypeCode.Coal,

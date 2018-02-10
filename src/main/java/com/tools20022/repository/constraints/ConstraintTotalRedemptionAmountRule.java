@@ -28,7 +28,7 @@ import com.tools20022.repository.msg.SwitchOrder4;
  * If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/
  * PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must
  * also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/
- * PercentageOfTotalRedemptionAmount is not present , then TotalRedemptionAmount
+ * PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount
  * is optional.
  */
 public class ConstraintTotalRedemptionAmountRule {
@@ -49,7 +49,7 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present , then TotalRedemptionAmount is optional."
+	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintTotalRedemptionAmountRule {
 			validator = ConstraintTotalRedemptionAmountRule::checkSwitchOrder2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRedemptionAmountRule";
-			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present , then TotalRedemptionAmount is optional.";
+			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional.";
 			owner_lazy = () -> SwitchOrder2.mmObject();
 		}
 	};
@@ -78,7 +78,7 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present , then TotalRedemptionAmount is optional."
+	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional."
 	 * </li>
 	 * </ul>
 	 */
@@ -87,7 +87,7 @@ public class ConstraintTotalRedemptionAmountRule {
 			validator = ConstraintTotalRedemptionAmountRule::checkSwitchOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRedemptionAmountRule";
-			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present , then TotalRedemptionAmount is optional.";
+			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional.";
 			owner_lazy = () -> SwitchOrder3.mmObject();
 		}
 	};
@@ -107,7 +107,7 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present , then TotalRedemptionAmount is optional."
+	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional."
 	 * </li>
 	 * </ul>
 	 */
@@ -116,7 +116,7 @@ public class ConstraintTotalRedemptionAmountRule {
 			validator = ConstraintTotalRedemptionAmountRule::checkSwitchOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalRedemptionAmountRule";
-			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present , then TotalRedemptionAmount is optional.";
+			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount must also be present. If SubscriptionLegDetails/FinancialInstrumentQuantityChoice/PercentageOfTotalRedemptionAmount is not present, then TotalRedemptionAmount is optional.";
 			owner_lazy = () -> SwitchOrder4.mmObject();
 		}
 	};
@@ -126,7 +126,7 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount
 	 * must also be present. If
 	 * SubscriptionLegDetails/FinancialInstrumentQuantityChoice
-	 * /PercentageOfTotalRedemptionAmount is not present , then
+	 * /PercentageOfTotalRedemptionAmount is not present, then
 	 * TotalRedemptionAmount is optional.
 	 */
 	public static void checkSwitchOrder2(SwitchOrder2 obj) throws Exception {
@@ -138,7 +138,7 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount
 	 * must also be present. If
 	 * SubscriptionLegDetails/FinancialInstrumentQuantityChoice
-	 * /PercentageOfTotalRedemptionAmount is not present , then
+	 * /PercentageOfTotalRedemptionAmount is not present, then
 	 * TotalRedemptionAmount is optional.
 	 */
 	public static void checkSwitchOrder3(SwitchOrder3 obj) throws Exception {
@@ -150,7 +150,7 @@ public class ConstraintTotalRedemptionAmountRule {
 	 * PercentageOfTotalRedemptionAmount is present, then TotalRedemptionAmount
 	 * must also be present. If
 	 * SubscriptionLegDetails/FinancialInstrumentQuantityChoice
-	 * /PercentageOfTotalRedemptionAmount is not present , then
+	 * /PercentageOfTotalRedemptionAmount is not present, then
 	 * TotalRedemptionAmount is optional.
 	 */
 	public static void checkSwitchOrder4(SwitchOrder4 obj) throws Exception {

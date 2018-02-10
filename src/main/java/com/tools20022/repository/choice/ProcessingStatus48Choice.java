@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
 import com.tools20022.repository.entity.StatusReason;
@@ -88,6 +89,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08#mmProcessingStatus
  * SecuritiesSettlementTransactionStatusAdviceV08.mmProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmProcessingStatus
+ * SecuritiesSettlementTransactionStatusAdviceV09.mmProcessingStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -625,7 +629,8 @@ public class ProcessingStatus48Choice {
 						com.tools20022.repository.choice.ProcessingStatus48Choice.mmRejected, com.tools20022.repository.choice.ProcessingStatus48Choice.mmRepair, com.tools20022.repository.choice.ProcessingStatus48Choice.mmCancelled,
 						com.tools20022.repository.choice.ProcessingStatus48Choice.mmPendingCancellation, com.tools20022.repository.choice.ProcessingStatus48Choice.mmProprietary,
 						com.tools20022.repository.choice.ProcessingStatus48Choice.mmCancellationRequested, com.tools20022.repository.choice.ProcessingStatus48Choice.mmModificationRequested);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV07.mmProcessingStatus, SecuritiesSettlementTransactionStatusAdviceV08.mmProcessingStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV07.mmProcessingStatus, SecuritiesSettlementTransactionStatusAdviceV08.mmProcessingStatus,
+						SecuritiesSettlementTransactionStatusAdviceV09.mmProcessingStatus);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -918,6 +918,9 @@ public class ConstraintInvestorCapacityRule {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails67
 	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails67}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails73
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails73}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -933,7 +936,8 @@ public class ConstraintInvestorCapacityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacityRule";
 			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails67);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails67,
+					com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails73);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails33;
 			owner_lazy = () -> SecuritiesTradeDetails51.mmObject();
 		}
@@ -957,6 +961,14 @@ public class ConstraintInvestorCapacityRule {
 	 * definition} =
 	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails76
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails76}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -970,6 +982,7 @@ public class ConstraintInvestorCapacityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacityRule";
 			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails76);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails31;
 			owner_lazy = () -> SecuritiesTradeDetails53.mmObject();
 		}
@@ -993,6 +1006,14 @@ public class ConstraintInvestorCapacityRule {
 	 * definition} =
 	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails74
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails74}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1006,6 +1027,7 @@ public class ConstraintInvestorCapacityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacityRule";
 			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails74);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails38;
 			owner_lazy = () -> SecuritiesTradeDetails55.mmObject();
 		}
@@ -1029,6 +1051,14 @@ public class ConstraintInvestorCapacityRule {
 	 * definition} =
 	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails77
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails77}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1042,6 +1072,7 @@ public class ConstraintInvestorCapacityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacityRule";
 			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails77);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails37;
 			owner_lazy = () -> SecuritiesTradeDetails56.mmObject();
 		}
@@ -1065,6 +1096,14 @@ public class ConstraintInvestorCapacityRule {
 	 * definition} =
 	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails79
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails79}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1078,6 +1117,7 @@ public class ConstraintInvestorCapacityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacityRule";
 			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails79);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails34;
 			owner_lazy = () -> SecuritiesTradeDetails52.mmObject();
 		}
@@ -1101,6 +1141,14 @@ public class ConstraintInvestorCapacityRule {
 	 * definition} =
 	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails78
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails78}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1114,6 +1162,7 @@ public class ConstraintInvestorCapacityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacityRule";
 			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails78);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails32;
 			owner_lazy = () -> SecuritiesTradeDetails50.mmObject();
 		}
@@ -1317,6 +1366,14 @@ public class ConstraintInvestorCapacityRule {
 	 * definition} =
 	 * "If InvestorCapacity is present then the use of the codes needs to be bi-laterally agreed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails75
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails75}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1330,6 +1387,7 @@ public class ConstraintInvestorCapacityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacityRule";
 			definition = "If InvestorCapacity is present then the use of the codes needs to be bi-laterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails75);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails51;
 			owner_lazy = () -> SecuritiesTradeDetails67.mmObject();
 		}
@@ -1362,6 +1420,468 @@ public class ConstraintInvestorCapacityRule {
 			name = "InvestorCapacityRule";
 			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
 			owner_lazy = () -> SecuritiesTradeDetails70.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73
+	 * SecuritiesTradeDetails73}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails51
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails51}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails73> forSecuritiesTradeDetails73 = new MMConstraint<SecuritiesTradeDetails73>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails73;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails51;
+			owner_lazy = () -> SecuritiesTradeDetails73.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74
+	 * SecuritiesTradeDetails74}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails55
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails55}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails74> forSecuritiesTradeDetails74 = new MMConstraint<SecuritiesTradeDetails74>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails74;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails55;
+			owner_lazy = () -> SecuritiesTradeDetails74.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75
+	 * SecuritiesTradeDetails75}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is present then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails67
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails67}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails75> forSecuritiesTradeDetails75 = new MMConstraint<SecuritiesTradeDetails75>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails75;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is present then the use of the codes needs to be bi-laterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails67;
+			owner_lazy = () -> SecuritiesTradeDetails75.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76
+	 * SecuritiesTradeDetails76}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails53
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails53}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails76> forSecuritiesTradeDetails76 = new MMConstraint<SecuritiesTradeDetails76>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails76;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails53;
+			owner_lazy = () -> SecuritiesTradeDetails76.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77
+	 * SecuritiesTradeDetails77}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails56
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails56}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails77> forSecuritiesTradeDetails77 = new MMConstraint<SecuritiesTradeDetails77>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails77;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails56;
+			owner_lazy = () -> SecuritiesTradeDetails77.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78
+	 * SecuritiesTradeDetails78}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails50
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails50}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails78> forSecuritiesTradeDetails78 = new MMConstraint<SecuritiesTradeDetails78>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails78;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails50;
+			owner_lazy = () -> SecuritiesTradeDetails78.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79
+	 * SecuritiesTradeDetails79}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCapacityRule#forSecuritiesTradeDetails52
+	 * ConstraintInvestorCapacityRule.forSecuritiesTradeDetails52}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails79> forSecuritiesTradeDetails79 = new MMConstraint<SecuritiesTradeDetails79>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails79;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCapacityRule.forSecuritiesTradeDetails52;
+			owner_lazy = () -> SecuritiesTradeDetails79.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82
+	 * SecuritiesTradeDetails82}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails82> forSecuritiesTradeDetails82 = new MMConstraint<SecuritiesTradeDetails82>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails82;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			owner_lazy = () -> SecuritiesTradeDetails82.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83
+	 * SecuritiesTradeDetails83}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails83> forSecuritiesTradeDetails83 = new MMConstraint<SecuritiesTradeDetails83>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails83;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			owner_lazy = () -> SecuritiesTradeDetails83.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86
+	 * SecuritiesTradeDetails86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails86> forSecuritiesTradeDetails86 = new MMConstraint<SecuritiesTradeDetails86>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails86;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			owner_lazy = () -> SecuritiesTradeDetails86.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87
+	 * SecuritiesTradeDetails87}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails87> forSecuritiesTradeDetails87 = new MMConstraint<SecuritiesTradeDetails87>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails87;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			owner_lazy = () -> SecuritiesTradeDetails87.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88
+	 * SecuritiesTradeDetails88}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails88> forSecuritiesTradeDetails88 = new MMConstraint<SecuritiesTradeDetails88>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails88;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			owner_lazy = () -> SecuritiesTradeDetails88.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89
+	 * SecuritiesTradeDetails89}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails89> forSecuritiesTradeDetails89 = new MMConstraint<SecuritiesTradeDetails89>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails89;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			owner_lazy = () -> SecuritiesTradeDetails89.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90
+	 * SecuritiesTradeDetails90}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCapacityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails90> forSecuritiesTradeDetails90 = new MMConstraint<SecuritiesTradeDetails90>() {
+		{
+			validator = ConstraintInvestorCapacityRule::checkSecuritiesTradeDetails90;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCapacityRule";
+			definition = "If InvestorCapacity is used, then the use of the codes needs to be bi-laterally agreed.";
+			owner_lazy = () -> SecuritiesTradeDetails90.mmObject();
 		}
 	};
 
@@ -1666,6 +2186,118 @@ public class ConstraintInvestorCapacityRule {
 	 * bi-laterally agreed.
 	 */
 	public static void checkSecuritiesTradeDetails70(SecuritiesTradeDetails70 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails73(SecuritiesTradeDetails73 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails74(SecuritiesTradeDetails74 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is present then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails75(SecuritiesTradeDetails75 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails76(SecuritiesTradeDetails76 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails77(SecuritiesTradeDetails77 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails78(SecuritiesTradeDetails78 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails79(SecuritiesTradeDetails79 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails82(SecuritiesTradeDetails82 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails83(SecuritiesTradeDetails83 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails86(SecuritiesTradeDetails86 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails87(SecuritiesTradeDetails87 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails88(SecuritiesTradeDetails88 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails89(SecuritiesTradeDetails89 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If InvestorCapacity is used, then the use of the codes needs to be
+	 * bi-laterally agreed.
+	 */
+	public static void checkSecuritiesTradeDetails90(SecuritiesTradeDetails90 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

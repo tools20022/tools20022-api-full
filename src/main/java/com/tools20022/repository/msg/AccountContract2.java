@@ -154,7 +154,7 @@ public class AccountContract2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date on which the account and related basic services  are expected to be operational for the account owner."
+	 * "Date on which the account and related basic services are expected to be operational for the account owner."
 	 * </li>
 	 * </ul>
 	 */
@@ -166,7 +166,7 @@ public class AccountContract2 {
 			xmlTag = "TrgtGoLiveDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetGoLiveDate";
-			definition = "Date on which the account and related basic services  are expected to be operational for the account owner.";
+			definition = "Date on which the account and related basic services are expected to be operational for the account owner.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();

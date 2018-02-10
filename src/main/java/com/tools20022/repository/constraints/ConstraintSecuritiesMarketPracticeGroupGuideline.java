@@ -20,6 +20,8 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07;
 import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.area.sese.*;
 import java.util.Arrays;
@@ -31,6 +33,66 @@ import java.util.Arrays;
  */
 public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08
+	 * SecuritiesTransactionPendingReport002V08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTransactionPendingReport002V08> forSecuritiesTransactionPendingReport002V08 = new MMConstraint<SecuritiesTransactionPendingReport002V08>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReport002V08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesTransactionPendingReport002V08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07
+	 * SecuritiesTransactionPostingReport002V07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTransactionPostingReport002V07> forSecuritiesTransactionPostingReport002V07 = new MMConstraint<SecuritiesTransactionPostingReport002V07>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReport002V07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesTransactionPostingReport002V07.mmObject();
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -111,8 +173,8 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08
-	 * SecuritiesTransactionPendingReportV08}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV09
+	 * SecuritiesTransactionPendingReportV09}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -127,19 +189,19 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV07
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV08
 	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesTransactionPendingReportV07}</li>
+	 * forSecuritiesTransactionPendingReportV08}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTransactionPendingReportV08> forSecuritiesTransactionPendingReportV08 = new MMConstraint<SecuritiesTransactionPendingReportV08>() {
+	public static final MMConstraint<SecuritiesTransactionPendingReportV09> forSecuritiesTransactionPendingReportV09 = new MMConstraint<SecuritiesTransactionPendingReportV09>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV08;
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV09;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV07;
-			owner_lazy = () -> SecuritiesTransactionPendingReportV08.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV08;
+			owner_lazy = () -> SecuritiesTransactionPendingReportV09.mmObject();
 		}
 	};
 	/**
@@ -148,8 +210,8 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07
-	 * SecuritiesTransactionPostingReportV07}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV08
+	 * SecuritiesTransactionPostingReportV08}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -164,19 +226,19 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV07
 	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesTransactionPostingReportV06}</li>
+	 * forSecuritiesTransactionPostingReportV07}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTransactionPostingReportV07> forSecuritiesTransactionPostingReportV07 = new MMConstraint<SecuritiesTransactionPostingReportV07>() {
+	public static final MMConstraint<SecuritiesTransactionPostingReportV08> forSecuritiesTransactionPostingReportV08 = new MMConstraint<SecuritiesTransactionPostingReportV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV07;
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV06;
-			owner_lazy = () -> SecuritiesTransactionPostingReportV07.mmObject();
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV07;
+			owner_lazy = () -> SecuritiesTransactionPostingReportV08.mmObject();
 		}
 	};
 	/**
@@ -237,66 +299,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesBalanceCustodyReport002V09.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08
-	 * SecuritiesTransactionPendingReport002V08}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTransactionPendingReport002V08> forSecuritiesTransactionPendingReport002V08 = new MMConstraint<SecuritiesTransactionPendingReport002V08>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReport002V08;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesTransactionPendingReport002V08.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07
-	 * SecuritiesTransactionPostingReport002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTransactionPostingReport002V07> forSecuritiesTransactionPostingReport002V07 = new MMConstraint<SecuritiesTransactionPostingReport002V07>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReport002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesTransactionPostingReport002V07.mmObject();
 		}
 	};
 	/**
@@ -399,8 +401,8 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06
-	 * SecuritiesTransactionPostingReportV06}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08
+	 * SecuritiesTransactionPendingReportV08}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -416,28 +418,28 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV07
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV09
 	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesTransactionPostingReportV07}</li>
+	 * forSecuritiesTransactionPendingReportV09}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV05
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV07
 	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesTransactionPostingReportV05}</li>
+	 * forSecuritiesTransactionPendingReportV07}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTransactionPostingReportV06> forSecuritiesTransactionPostingReportV06 = new MMConstraint<SecuritiesTransactionPostingReportV06>() {
+	public static final MMConstraint<SecuritiesTransactionPendingReportV08> forSecuritiesTransactionPendingReportV08 = new MMConstraint<SecuritiesTransactionPendingReportV08>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV06;
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV05;
-			owner_lazy = () -> SecuritiesTransactionPostingReportV06.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV09);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV07;
+			owner_lazy = () -> SecuritiesTransactionPendingReportV08.mmObject();
 		}
 	};
 	/**
@@ -446,8 +448,8 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07
-	 * SecuritiesTransactionPendingReportV07}</li>
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07
+	 * SecuritiesTransactionPostingReportV07}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -463,28 +465,28 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV08
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV08
 	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesTransactionPendingReportV08}</li>
+	 * forSecuritiesTransactionPostingReportV08}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV06
 	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesTransactionPendingReportV06}</li>
+	 * forSecuritiesTransactionPostingReportV06}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTransactionPendingReportV07> forSecuritiesTransactionPendingReportV07 = new MMConstraint<SecuritiesTransactionPendingReportV07>() {
+	public static final MMConstraint<SecuritiesTransactionPostingReportV07> forSecuritiesTransactionPostingReportV07 = new MMConstraint<SecuritiesTransactionPostingReportV07>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV07;
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV06;
-			owner_lazy = () -> SecuritiesTransactionPendingReportV07.mmObject();
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV06;
+			owner_lazy = () -> SecuritiesTransactionPostingReportV07.mmObject();
 		}
 	};
 	/**
@@ -553,43 +555,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04
-	 * PortfolioTransferNotificationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forPortfolioTransferNotificationV03
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forPortfolioTransferNotificationV03}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferNotificationV04> forPortfolioTransferNotificationV04 = new MMConstraint<PortfolioTransferNotificationV04>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV04;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV03;
-			owner_lazy = () -> PortfolioTransferNotificationV04.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV05
 	 * SecuritiesTransactionCancellationRequestStatusAdviceV05}</li>
 	 * <li>
@@ -619,80 +584,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV04;
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV05.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07
-	 * SecuritiesFinancingInstructionV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV06
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesFinancingInstructionV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingInstructionV07> forSecuritiesFinancingInstructionV07 = new MMConstraint<SecuritiesFinancingInstructionV07>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV06;
-			owner_lazy = () -> SecuritiesFinancingInstructionV07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06
-	 * SecuritiesSettlementTransactionAllegementNotificationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV05
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionAllegementNotificationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV06> forSecuritiesSettlementTransactionAllegementNotificationV06 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV06.mmObject();
 		}
 	};
 	/**
@@ -738,6 +629,523 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07
+	 * SecuritiesSettlementTransactionAllegementNotificationV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV06
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV07> forSecuritiesSettlementTransactionAllegementNotificationV07 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV07>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV06;
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08
+	 * SecuritiesSettlementTransactionConfirmationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionConfirmationV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionConfirmationV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV08> forSecuritiesSettlementTransactionConfirmationV08 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV08>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV05
+	 * PortfolioTransferNotificationV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forPortfolioTransferNotificationV04
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forPortfolioTransferNotificationV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferNotificationV05> forPortfolioTransferNotificationV05 = new MMConstraint<PortfolioTransferNotificationV05>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV04;
+			owner_lazy = () -> PortfolioTransferNotificationV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV08
+	 * SecuritiesFinancingInstructionV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesFinancingInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingInstructionV08> forSecuritiesFinancingInstructionV08 = new MMConstraint<SecuritiesFinancingInstructionV08>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV07;
+			owner_lazy = () -> SecuritiesFinancingInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09
+	 * SecuritiesSettlementTransactionStatusAdviceV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionStatusAdviceV08
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionStatusAdviceV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09> forSecuritiesSettlementTransactionStatusAdviceV09 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV09>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV08;
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV09.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08
+	 * SecuritiesSettlementTransactionInstructionV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV08> forSecuritiesSettlementTransactionInstructionV08 = new MMConstraint<SecuritiesSettlementTransactionInstructionV08>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdvice002V05
+	 * SecuritiesTransactionCancellationRequestStatusAdvice002V05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdvice002V05> forSecuritiesTransactionCancellationRequestStatusAdvice002V05 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdvice002V05>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdvice002V05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07
+	 * SecuritiesSettlementConditionsModificationRequest002V07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequest002V07> forSecuritiesSettlementConditionsModificationRequest002V07 = new MMConstraint<SecuritiesSettlementConditionsModificationRequest002V07>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequest002V07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequest002V07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04
+	 * SecuritiesTransactionCancellationRequestStatusAdviceV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionCancellationRequestStatusAdviceV05
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesTransactionCancellationRequestStatusAdviceV05}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionCancellationRequestStatusAdviceV03
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesTransactionCancellationRequestStatusAdviceV03}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04> forSecuritiesTransactionCancellationRequestStatusAdviceV04 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdviceV04;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV03;
+			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV04.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06
+	 * SecuritiesSettlementConditionsModificationRequestV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementConditionsModificationRequestV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementConditionsModificationRequestV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementConditionsModificationRequestV05
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementConditionsModificationRequestV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV06> forSecuritiesSettlementConditionsModificationRequestV06 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV05;
+			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV04
+	 * PortfolioTransferNotificationV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forPortfolioTransferNotificationV05
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forPortfolioTransferNotificationV05}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forPortfolioTransferNotificationV03
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forPortfolioTransferNotificationV03}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferNotificationV04> forPortfolioTransferNotificationV04 = new MMConstraint<PortfolioTransferNotificationV04>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV04;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV03;
+			owner_lazy = () -> PortfolioTransferNotificationV04.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07
+	 * SecuritiesFinancingInstructionV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV08
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesFinancingInstructionV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV06
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesFinancingInstructionV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingInstructionV07> forSecuritiesFinancingInstructionV07 = new MMConstraint<SecuritiesFinancingInstructionV07>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV06;
+			owner_lazy = () -> SecuritiesFinancingInstructionV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06
+	 * SecuritiesSettlementTransactionAllegementNotificationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV05
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV06> forSecuritiesSettlementTransactionAllegementNotificationV06 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV07
 	 * SecuritiesSettlementTransactionConfirmationV07}</li>
 	 * <li>
@@ -750,6 +1158,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionConfirmationV08
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionConfirmationV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -765,6 +1182,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV07.mmObject();
 		}
@@ -788,6 +1206,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * definition} =
 	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionStatusAdviceV09
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionStatusAdviceV09}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -802,6 +1229,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV07;
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV08.mmObject();
 		}
@@ -825,6 +1253,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * definition} =
 	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionInstructionV08
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionInstructionV08}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -839,6 +1276,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV07.mmObject();
 		}
@@ -879,8 +1317,8 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdvice002V05
-	 * SecuritiesTransactionCancellationRequestStatusAdvice002V05}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V06
+	 * SecuritiesSettlementConditionsModificationRequest002V06}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -894,13 +1332,13 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * </li>
 	 * </ul>
 	 */
-	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdvice002V05> forSecuritiesTransactionCancellationRequestStatusAdvice002V05 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdvice002V05>() {
+	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequest002V06> forSecuritiesSettlementConditionsModificationRequest002V06 = new MMConstraint<SecuritiesSettlementConditionsModificationRequest002V06>() {
 		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdvice002V05;
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequest002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmObject();
+			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequest002V06.mmObject();
 		}
 	};
 	/**
@@ -961,36 +1399,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07
-	 * SecuritiesSettlementConditionsModificationRequest002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequest002V07> forSecuritiesSettlementConditionsModificationRequest002V07 = new MMConstraint<SecuritiesSettlementConditionsModificationRequest002V07>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequest002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequest002V07.mmObject();
 		}
 	};
 	/**
@@ -1081,555 +1489,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			name = "SecuritiesMarketPracticeGroupGuideline";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03
-	 * PortfolioTransferNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forPortfolioTransferNotificationV04
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forPortfolioTransferNotificationV04}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV03;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV04);
-			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV04
-	 * SecuritiesTransactionCancellationRequestStatusAdviceV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionCancellationRequestStatusAdviceV05
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesTransactionCancellationRequestStatusAdviceV05}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionCancellationRequestStatusAdviceV03
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesTransactionCancellationRequestStatusAdviceV03}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04> forSecuritiesTransactionCancellationRequestStatusAdviceV04 = new MMConstraint<SecuritiesTransactionCancellationRequestStatusAdviceV04>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionCancellationRequestStatusAdviceV04;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV05);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionCancellationRequestStatusAdviceV03;
-			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV04.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
-	 * SecuritiesSettlementTransactionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionInstructionV07
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionInstructionV05
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequestV06
-	 * SecuritiesSettlementConditionsModificationRequestV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementConditionsModificationRequestV07
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementConditionsModificationRequestV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementConditionsModificationRequestV05
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementConditionsModificationRequestV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequestV06> forSecuritiesSettlementConditionsModificationRequestV06 = new MMConstraint<SecuritiesSettlementConditionsModificationRequestV06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequestV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementConditionsModificationRequestV05;
-			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequestV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06
-	 * SecuritiesSettlementTransactionConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionConfirmationV07
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionConfirmationV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionConfirmationV05
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionConfirmationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV06> forSecuritiesSettlementTransactionConfirmationV06 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06
-	 * SecuritiesFinancingInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV07
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesFinancingInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV05
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesFinancingInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingInstructionV06> forSecuritiesFinancingInstructionV06 = new MMConstraint<SecuritiesFinancingInstructionV06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV05;
-			owner_lazy = () -> SecuritiesFinancingInstructionV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07
-	 * SecuritiesSettlementTransactionStatusAdviceV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionStatusAdviceV08
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionStatusAdviceV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionStatusAdviceV06
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionStatusAdviceV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07> forSecuritiesSettlementTransactionStatusAdviceV07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV06;
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05
-	 * SecuritiesSettlementTransactionAllegementNotificationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV06
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionAllegementNotificationV06}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV04
-	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
-	 * forSecuritiesSettlementTransactionAllegementNotificationV04}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05> forSecuritiesSettlementTransactionAllegementNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV05;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV04;
-			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV05.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05
-	 * SecuritiesSettlementTransactionAllegementNotification002V05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05> forSecuritiesSettlementTransactionAllegementNotification002V05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotification002V05;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotification002V05.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07
-	 * SecuritiesSettlementTransactionStatusAdvice002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07> forSecuritiesSettlementTransactionStatusAdvice002V07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdvice002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06
-	 * SecuritiesSettlementTransactionConfirmation002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V06> forSecuritiesSettlementTransactionConfirmation002V06 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmation002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V06
-	 * SecuritiesSettlementConditionsModificationRequest002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementConditionsModificationRequest002V06> forSecuritiesSettlementConditionsModificationRequest002V06 = new MMConstraint<SecuritiesSettlementConditionsModificationRequest002V06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementConditionsModificationRequest002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesSettlementConditionsModificationRequest002V06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
-	 * SecuritiesSettlementTransactionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstruction002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06
-	 * SecuritiesFinancingInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesFinancingInstruction002V06> forSecuritiesFinancingInstruction002V06 = new MMConstraint<SecuritiesFinancingInstruction002V06>() {
-		{
-			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstruction002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "SecuritiesMarketPracticeGroupGuideline";
-			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
-			owner_lazy = () -> SecuritiesFinancingInstruction002V06.mmObject();
 		}
 	};
 	/**
@@ -2385,6 +2244,100 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV05;
 			owner_lazy = () -> SecuritiesTransactionPendingReportV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06
+	 * SecuritiesTransactionPostingReportV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesTransactionPostingReportV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPostingReportV05
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesTransactionPostingReportV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTransactionPostingReportV06> forSecuritiesTransactionPostingReportV06 = new MMConstraint<SecuritiesTransactionPostingReportV06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPostingReportV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPostingReportV05;
+			owner_lazy = () -> SecuritiesTransactionPostingReportV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07
+	 * SecuritiesTransactionPendingReportV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV08
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesTransactionPendingReportV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesTransactionPendingReportV06
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesTransactionPendingReportV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTransactionPendingReportV07> forSecuritiesTransactionPendingReportV07 = new MMConstraint<SecuritiesTransactionPendingReportV07>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesTransactionPendingReportV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesTransactionPendingReportV06;
+			owner_lazy = () -> SecuritiesTransactionPendingReportV07.mmObject();
 		}
 	};
 	/**
@@ -3303,6 +3256,46 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03
+	 * PortfolioTransferNotificationV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forPortfolioTransferNotificationV04
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forPortfolioTransferNotificationV04}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkPortfolioTransferNotificationV03;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forPortfolioTransferNotificationV04);
+			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04
 	 * SecuritiesSettlementTransactionAllegementNotificationV04}</li>
 	 * <li>
@@ -3626,6 +3619,409 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV06.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
+	 * SecuritiesSettlementTransactionInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionInstructionV05
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionInstructionV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06
+	 * SecuritiesSettlementTransactionConfirmationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionConfirmationV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionConfirmationV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionConfirmationV05
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionConfirmationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV06> forSecuritiesSettlementTransactionConfirmationV06 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionConfirmationV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06
+	 * SecuritiesFinancingInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV07
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesFinancingInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesFinancingInstructionV05
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesFinancingInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingInstructionV06> forSecuritiesFinancingInstructionV06 = new MMConstraint<SecuritiesFinancingInstructionV06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesFinancingInstructionV05;
+			owner_lazy = () -> SecuritiesFinancingInstructionV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07
+	 * SecuritiesSettlementTransactionStatusAdviceV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionStatusAdviceV08
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionStatusAdviceV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionStatusAdviceV06
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionStatusAdviceV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07> forSecuritiesSettlementTransactionStatusAdviceV07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdviceV07>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdviceV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionStatusAdviceV06;
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05
+	 * SecuritiesSettlementTransactionAllegementNotificationV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV06
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV06}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline#forSecuritiesSettlementTransactionAllegementNotificationV04
+	 * ConstraintSecuritiesMarketPracticeGroupGuideline.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05> forSecuritiesSettlementTransactionAllegementNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotificationV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesMarketPracticeGroupGuideline.forSecuritiesSettlementTransactionAllegementNotificationV04;
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05
+	 * SecuritiesSettlementTransactionAllegementNotification002V05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05> forSecuritiesSettlementTransactionAllegementNotification002V05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionAllegementNotification002V05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotification002V05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07
+	 * SecuritiesSettlementTransactionStatusAdvice002V07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07> forSecuritiesSettlementTransactionStatusAdvice002V07 = new MMConstraint<SecuritiesSettlementTransactionStatusAdvice002V07>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionStatusAdvice002V07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionStatusAdvice002V07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06
+	 * SecuritiesSettlementTransactionConfirmation002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V06> forSecuritiesSettlementTransactionConfirmation002V06 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionConfirmation002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
+	 * SecuritiesSettlementTransactionInstruction002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesSettlementTransactionInstruction002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V06
+	 * SecuritiesFinancingInstruction002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecuritiesMarketPracticeGroupGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesFinancingInstruction002V06> forSecuritiesFinancingInstruction002V06 = new MMConstraint<SecuritiesFinancingInstruction002V06>() {
+		{
+			validator = ConstraintSecuritiesMarketPracticeGroupGuideline::checkSecuritiesFinancingInstruction002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecuritiesMarketPracticeGroupGuideline";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the use of this message.\r\nThese market practices are available on www.smpg.info.";
+			owner_lazy = () -> SecuritiesFinancingInstruction002V06.mmObject();
+		}
+	};
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesTransactionPendingReport002V08(SecuritiesTransactionPendingReport002V08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesTransactionPostingReport002V07(SecuritiesTransactionPostingReport002V07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * The Securities Market Practice Group (SMPG) has published market practice
@@ -3650,7 +4046,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
-	public static void checkSecuritiesTransactionPendingReportV08(SecuritiesTransactionPendingReportV08 obj) throws Exception {
+	public static void checkSecuritiesTransactionPendingReportV09(SecuritiesTransactionPendingReportV09 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3659,7 +4055,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
-	public static void checkSecuritiesTransactionPostingReportV07(SecuritiesTransactionPostingReportV07 obj) throws Exception {
+	public static void checkSecuritiesTransactionPostingReportV08(SecuritiesTransactionPostingReportV08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3686,24 +4082,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
-	public static void checkSecuritiesTransactionPendingReport002V08(SecuritiesTransactionPendingReport002V08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesTransactionPostingReport002V07(SecuritiesTransactionPostingReport002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
 	public static void checkSecuritiesBalanceCustodyReportV08(SecuritiesBalanceCustodyReportV08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -3722,7 +4100,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
-	public static void checkSecuritiesTransactionPostingReportV06(SecuritiesTransactionPostingReportV06 obj) throws Exception {
+	public static void checkSecuritiesTransactionPendingReportV08(SecuritiesTransactionPendingReportV08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3731,7 +4109,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
-	public static void checkSecuritiesTransactionPendingReportV07(SecuritiesTransactionPendingReportV07 obj) throws Exception {
+	public static void checkSecuritiesTransactionPostingReportV07(SecuritiesTransactionPostingReportV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3758,7 +4136,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
-	public static void checkPortfolioTransferNotificationV04(PortfolioTransferNotificationV04 obj) throws Exception {
+	public static void checkSecuritiesTransactionCancellationRequestStatusAdviceV05(SecuritiesTransactionCancellationRequestStatusAdviceV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3767,7 +4145,106 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
-	public static void checkSecuritiesTransactionCancellationRequestStatusAdviceV05(SecuritiesTransactionCancellationRequestStatusAdviceV05 obj) throws Exception {
+	public static void checkSecuritiesSettlementConditionsModificationRequestV07(SecuritiesSettlementConditionsModificationRequestV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionAllegementNotificationV07(SecuritiesSettlementTransactionAllegementNotificationV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionConfirmationV08(SecuritiesSettlementTransactionConfirmationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkPortfolioTransferNotificationV05(PortfolioTransferNotificationV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesFinancingInstructionV08(SecuritiesFinancingInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionStatusAdviceV09(SecuritiesSettlementTransactionStatusAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV08(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesTransactionCancellationRequestStatusAdvice002V05(SecuritiesTransactionCancellationRequestStatusAdvice002V05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementConditionsModificationRequest002V07(SecuritiesSettlementConditionsModificationRequest002V07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesTransactionCancellationRequestStatusAdviceV04(SecuritiesTransactionCancellationRequestStatusAdviceV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementConditionsModificationRequestV06(SecuritiesSettlementConditionsModificationRequestV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkPortfolioTransferNotificationV04(PortfolioTransferNotificationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3786,15 +4263,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * These market practices are available on www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionAllegementNotificationV06(SecuritiesSettlementTransactionAllegementNotificationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementConditionsModificationRequestV07(SecuritiesSettlementConditionsModificationRequestV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3839,7 +4307,7 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
-	public static void checkSecuritiesTransactionCancellationRequestStatusAdvice002V05(SecuritiesTransactionCancellationRequestStatusAdvice002V05 obj) throws Exception {
+	public static void checkSecuritiesSettlementConditionsModificationRequest002V06(SecuritiesSettlementConditionsModificationRequest002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3858,15 +4326,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * These market practices are available on www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstruction002V07(SecuritiesSettlementTransactionInstruction002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementConditionsModificationRequest002V07(SecuritiesSettlementConditionsModificationRequest002V07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -3894,132 +4353,6 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * These market practices are available on www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionConfirmation002V07(SecuritiesSettlementTransactionConfirmation002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkPortfolioTransferNotificationV03(PortfolioTransferNotificationV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesTransactionCancellationRequestStatusAdviceV04(SecuritiesTransactionCancellationRequestStatusAdviceV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementConditionsModificationRequestV06(SecuritiesSettlementConditionsModificationRequestV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementTransactionConfirmationV06(SecuritiesSettlementTransactionConfirmationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesFinancingInstructionV06(SecuritiesFinancingInstructionV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdviceV07(SecuritiesSettlementTransactionStatusAdviceV07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementTransactionAllegementNotificationV05(SecuritiesSettlementTransactionAllegementNotificationV05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementTransactionAllegementNotification002V05(SecuritiesSettlementTransactionAllegementNotification002V05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementTransactionStatusAdvice002V07(SecuritiesSettlementTransactionStatusAdvice002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementTransactionConfirmation002V06(SecuritiesSettlementTransactionConfirmation002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementConditionsModificationRequest002V06(SecuritiesSettlementConditionsModificationRequest002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * The Securities Market Practice Group (SMPG) has published market practice
-	 * recommendations on the use of this message.<br>
-	 * These market practices are available on www.smpg.info.
-	 */
-	public static void checkSecuritiesFinancingInstruction002V06(SecuritiesFinancingInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -4209,6 +4542,24 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * These market practices are available on www.smpg.info.
 	 */
 	public static void checkSecuritiesTransactionPendingReportV06(SecuritiesTransactionPendingReportV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesTransactionPostingReportV06(SecuritiesTransactionPostingReportV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesTransactionPendingReportV07(SecuritiesTransactionPendingReportV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -4469,6 +4820,15 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * recommendations on the use of this message.<br>
 	 * These market practices are available on www.smpg.info.
 	 */
+	public static void checkPortfolioTransferNotificationV03(PortfolioTransferNotificationV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
 	public static void checkSecuritiesSettlementTransactionAllegementNotificationV04(SecuritiesSettlementTransactionAllegementNotificationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -4524,6 +4884,96 @@ public class ConstraintSecuritiesMarketPracticeGroupGuideline {
 	 * These market practices are available on www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionStatusAdviceV06(SecuritiesSettlementTransactionStatusAdviceV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionConfirmationV06(SecuritiesSettlementTransactionConfirmationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesFinancingInstructionV06(SecuritiesFinancingInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionStatusAdviceV07(SecuritiesSettlementTransactionStatusAdviceV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionAllegementNotificationV05(SecuritiesSettlementTransactionAllegementNotificationV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionAllegementNotification002V05(SecuritiesSettlementTransactionAllegementNotification002V05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionStatusAdvice002V07(SecuritiesSettlementTransactionStatusAdvice002V07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionConfirmation002V06(SecuritiesSettlementTransactionConfirmation002V06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the use of this message.<br>
+	 * These market practices are available on www.smpg.info.
+	 */
+	public static void checkSecuritiesFinancingInstruction002V06(SecuritiesFinancingInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

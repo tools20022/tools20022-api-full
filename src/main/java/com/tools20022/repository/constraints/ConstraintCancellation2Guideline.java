@@ -49,7 +49,7 @@ public class ConstraintCancellation2Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. "
+	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintCancellation2Guideline {
 			validator = ConstraintCancellation2Guideline::checkMeetingCancellationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation2Guideline";
-			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. ";
+			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV04.mmObject();
 		}
 	};
@@ -79,7 +79,7 @@ public class ConstraintCancellation2Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. "
+	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
 	 * </ul>
 	 */
@@ -88,7 +88,7 @@ public class ConstraintCancellation2Guideline {
 			validator = ConstraintCancellation2Guideline::checkMeetingCancellationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation2Guideline";
-			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. ";
+			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV02.mmObject();
 		}
 	};
@@ -109,7 +109,7 @@ public class ConstraintCancellation2Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. "
+	 * "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
 	 * </ul>
 	 */
@@ -118,7 +118,7 @@ public class ConstraintCancellation2Guideline {
 			validator = ConstraintCancellation2Guideline::checkMeetingCancellationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation2Guideline";
-			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. ";
+			definition = "It is recommended to cancel a meeting notification message by using MessageCancellation, MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV03.mmObject();
 		}
 	};

@@ -1691,7 +1691,7 @@ public class InvestmentAccount37 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the means by which the investor submits the open account form. "
+	 * "Specifies the means by which the investor submits the open account form."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1711,7 +1711,7 @@ public class InvestmentAccount37 {
 			xmlTag = "TxChanlTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannelType";
-			definition = "Specifies the means by which the investor submits the open account form. ";
+			definition = "Specifies the means by which the investor submits the open account form.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount49.mmTransactionChannelType);
 			maxOccurs = 1;
 			minOccurs = 0;

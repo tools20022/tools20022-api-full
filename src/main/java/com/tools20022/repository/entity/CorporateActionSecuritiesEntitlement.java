@@ -205,6 +205,12 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption61#mmEntitledQuantity
 	 * SecuritiesOption61.mmEntitledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmEntitledQuantity
+	 * SecuritiesOption64.mmEntitledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmEntitledQuantity
+	 * SecuritiesOption68.mmEntitledQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -231,7 +237,8 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 					SecuritiesOption24.mmEntitledQuantity, SecuritiesOption29.mmEntitledQuantity, SecuritiesOption33.mmEntitledQuantity, SecuritiesOption38.mmEntitledQuantity, SecuritiesOption37.mmEntitledQuantity,
 					SecuritiesOption39.mmEntitledQuantity, SecuritiesOption6.mmEntitledQuantity, SecuritiesOption12.mmEntitledQuantity, SecuritiesOption14.mmEntitledQuantity, SecuritiesOption22.mmEntitledQuantity,
 					SecuritiesOption25.mmEntitledQuantity, SecuritiesOption30.mmEntitledQuantity, SecuritiesEntitlement1.mmEntitledSecuritiesQuantity, SecuritiesOption40.mmEntitledQuantity, SecuritiesOption45.mmEntitledQuantity,
-					SecuritiesOption49.mmEntitledQuantity, SecuritiesOption57.mmEntitledQuantity, SecuritiesOption59.mmEntitledQuantity, SecuritiesOption61.mmEntitledQuantity);
+					SecuritiesOption49.mmEntitledQuantity, SecuritiesOption57.mmEntitledQuantity, SecuritiesOption59.mmEntitledQuantity, SecuritiesOption61.mmEntitledQuantity, SecuritiesOption64.mmEntitledQuantity,
+					SecuritiesOption68.mmEntitledQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -345,6 +352,18 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.RenounceableEntitlementStatusTypeFormat4Choice#mmProprietary
 	 * RenounceableEntitlementStatusTypeFormat4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmRenounceableEntitlementStatusType
+	 * CorporateAction41.mmRenounceableEntitlementStatusType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmRenounceableEntitlementStatusType
+	 * FinancialInstrumentAttributes93.mmRenounceableEntitlementStatusType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes94#mmRenounceableEntitlementStatusType
+	 * FinancialInstrumentAttributes94.mmRenounceableEntitlementStatusType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmRenounceableEntitlementStatusType
+	 * CorporateAction51.mmRenounceableEntitlementStatusType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -375,7 +394,8 @@ public class CorporateActionSecuritiesEntitlement extends CorporateActionEntitle
 					CorporateAction2.mmRenounceableEntitlementStatusType, CorporateAction12.mmRenounceableEntitlementStatusType, CorporateAction17.mmRenounceableEntitlementStatusType, CorporateAction31.mmRenounceableEntitlementStatusType,
 					FinancialInstrumentAttributes68.mmRenounceableEntitlementStatusType, RenounceableEntitlementStatusTypeFormat3Choice.mmCode, RenounceableEntitlementStatusTypeFormat3Choice.mmProprietary,
 					FinancialInstrumentAttributes73.mmRenounceableEntitlementStatusType, CorporateAction40.mmRenounceableEntitlementStatusType, RenounceableEntitlementStatusTypeFormat4Choice.mmCode,
-					RenounceableEntitlementStatusTypeFormat4Choice.mmProprietary);
+					RenounceableEntitlementStatusTypeFormat4Choice.mmProprietary, CorporateAction41.mmRenounceableEntitlementStatusType, FinancialInstrumentAttributes93.mmRenounceableEntitlementStatusType,
+					FinancialInstrumentAttributes94.mmRenounceableEntitlementStatusType, CorporateAction51.mmRenounceableEntitlementStatusType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionSecuritiesEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

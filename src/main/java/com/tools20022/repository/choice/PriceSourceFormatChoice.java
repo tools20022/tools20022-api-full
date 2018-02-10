@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Choice of the source (place) of the price quotation
+ * Choice of the source (place) of the price quotation.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -71,7 +71,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PriceSourceFormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of the source (place) of the price quotation"</li>
+ * definition} = "Choice of the source (place) of the price quotation."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -244,7 +244,7 @@ public class PriceSourceFormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceSourceFormatChoice";
-				definition = "Choice of the source (place) of the price quotation";
+				definition = "Choice of the source (place) of the price quotation.";
 			}
 		});
 		return mmObject_lazy.get();

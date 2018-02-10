@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyDataSearchCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of search criteria for querying party reference data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria2
+ * PartyDataSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,6 +123,14 @@ public class PartyDataSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the opening date of the party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria2#mmOpeningDate
+	 * PartyDataSearchCriteria2.mmOpeningDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
@@ -126,6 +141,7 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Specifies the opening date of the party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyDataSearchCriteria2.mmOpeningDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -159,6 +175,14 @@ public class PartyDataSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the closing date of the party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria2#mmClosingDate
+	 * PartyDataSearchCriteria2.mmClosingDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
@@ -169,6 +193,7 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Specifies the closing date of the party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyDataSearchCriteria2.mmClosingDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -202,6 +227,14 @@ public class PartyDataSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type classification of the party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria2#mmType
+	 * PartyDataSearchCriteria2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -212,6 +245,7 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type classification of the party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyDataSearchCriteria2.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SystemPartyType1Code.mmObject();
@@ -245,6 +279,14 @@ public class PartyDataSearchCriteria1 {
 	 * definition} =
 	 * "Identifies the central security depository or the national central bank which initially created the party reference data."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria2#mmCSDOrNCB
+	 * PartyDataSearchCriteria2.mmCSDOrNCB}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
@@ -255,6 +297,7 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
 			definition = "Identifies the central security depository or the national central bank which initially created the party reference data.";
+			nextVersions_lazy = () -> Arrays.asList(PartyDataSearchCriteria2.mmCSDOrNCB);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -291,6 +334,14 @@ public class PartyDataSearchCriteria1 {
 	 * definition} =
 	 * "Unique identification to unambiguously identify the party within the system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria2#mmIdentification
+	 * PartyDataSearchCriteria2.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -301,6 +352,7 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification to unambiguously identify the party within the system.";
+			nextVersions_lazy = () -> Arrays.asList(PartyDataSearchCriteria2.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
@@ -333,6 +385,14 @@ public class PartyDataSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the identification of a restriction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria2#mmRestrictionIdentification
+	 * PartyDataSearchCriteria2.mmRestrictionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRestrictionIdentification = new MMMessageAttribute() {
@@ -343,6 +403,7 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIdentification";
 			definition = "Specifies the identification of a restriction.";
+			nextVersions_lazy = () -> Arrays.asList(PartyDataSearchCriteria2.mmRestrictionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -377,6 +438,14 @@ public class PartyDataSearchCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the date when the restriction for the party has been issued."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyDataSearchCriteria2#mmRestrictionIssueDate
+	 * PartyDataSearchCriteria2.mmRestrictionIssueDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRestrictionIssueDate = new MMMessageAttribute() {
@@ -387,6 +456,7 @@ public class PartyDataSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionIssueDate";
 			definition = "Specifies the date when the restriction for the party has been issued.";
+			nextVersions_lazy = () -> Arrays.asList(PartyDataSearchCriteria2.mmRestrictionIssueDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
@@ -403,6 +473,7 @@ public class PartyDataSearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyDataSearchCriteria1";
 				definition = "Set of search criteria for querying party reference data.";
+				nextVersions_lazy = () -> Arrays.asList(PartyDataSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

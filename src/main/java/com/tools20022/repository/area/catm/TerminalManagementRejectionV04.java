@@ -24,8 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.AcceptorRejection3;
 import com.tools20022.repository.msg.Header28;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017;
+import com.tools20022.repository.msgset.CAPEMaintenance20172018;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -58,12 +57,8 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
  * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016
- * CAPETerminalManagementMaintenance20152016}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
- * CAPETerminalManagementMaintenance20162017}</li>
+ * <li>{@linkplain com.tools20022.repository.msgset.CAPEMaintenance20172018
+ * CAPEMaintenance20172018}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -205,7 +200,7 @@ public class TerminalManagementRejectionV04 {
 				name = "TerminalManagementRejectionV04";
 				definition = "The TerminalManagementRejection message is sent by the terminal manager to reject a message request sent by an acceptor, to indicate that the received message could not be processed.";
 				previousVersion_lazy = () -> TerminalManagementRejectionV03.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPETerminalManagementMaintenance20152016.mmObject(), CAPETerminalManagementMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPEMaintenance20172018.mmObject());
 				rootElement = "Document";
 				xmlTag = "TermnlMgmtRjctn";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

@@ -91,7 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Exceptions and Investigations - Maintenance 2016 - 2017"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This document describes the Exceptions and Investigations message set. "</li>
+ * "This document describes the Exceptions and Investigations message set."</li>
  * </ul>
  */
 public class ExceptionsandInvestigationsMaintenance20162017 {
@@ -104,7 +104,7 @@ public class ExceptionsandInvestigationsMaintenance20162017 {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exceptions and Investigations - Maintenance 2016 - 2017";
-				definition = "This document describes the Exceptions and Investigations message set. ";
+				definition = "This document describes the Exceptions and Investigations message set.";
 				messageDefinition_lazy = () -> Arrays.asList(NotificationOfCaseAssignmentV04.mmObject(), RejectInvestigationV04.mmObject(), CancelCaseAssignmentV03.mmObject(), RequestForDuplicateV04.mmObject(), DuplicateV04.mmObject(),
 						ProprietaryFormatInvestigationV03.mmObject(), DebitAuthorisationResponseV03.mmObject(), CaseStatusReportRequestV03.mmObject(), CaseStatusReportV04.mmObject(), UnableToApplyV05.mmObject(),
 						CustomerPaymentCancellationRequestV06.mmObject(), AdditionalPaymentInformationV07.mmObject(), ResolutionOfInvestigationV07.mmObject(), FIToFIPaymentCancellationRequestV06.mmObject(),

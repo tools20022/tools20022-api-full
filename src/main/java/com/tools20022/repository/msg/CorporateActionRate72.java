@@ -98,6 +98,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionRate72"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies rate details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionRate90
+ * CorporateActionRate90}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionRate49
@@ -147,6 +154,15 @@ public class CorporateActionRate72 {
 	 * definition} =
 	 * "Quantity of additional intermediate securities/new equities awarded for a given quantity of securities derived from subscription."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmAdditionalQuantityForSubscribedResultantSecurities
+	 * CorporateActionRate90.
+	 * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,6 +181,7 @@ public class CorporateActionRate72 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQuantityForSubscribedResultantSecurities";
 			definition = "Quantity of additional intermediate securities/new equities awarded for a given quantity of securities derived from subscription.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmAdditionalQuantityForSubscribedResultantSecurities);
 			previousVersion_lazy = () -> CorporateActionRate49.mmAdditionalQuantityForSubscribedResultantSecurities;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -208,6 +225,14 @@ public class CorporateActionRate72 {
 	 * definition} =
 	 * "Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, for example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmAdditionalQuantityForExistingSecurities
+	 * CorporateActionRate90.mmAdditionalQuantityForExistingSecurities}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -225,6 +250,7 @@ public class CorporateActionRate72 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQuantityForExistingSecurities";
 			definition = "Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, for example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmAdditionalQuantityForExistingSecurities);
 			previousVersion_lazy = () -> CorporateActionRate49.mmAdditionalQuantityForExistingSecurities;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -268,6 +294,14 @@ public class CorporateActionRate72 {
 	 * definition} =
 	 * "Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, for example, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmNewToOld
+	 * CorporateActionRate90.mmNewToOld}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -285,6 +319,7 @@ public class CorporateActionRate72 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewToOld";
 			definition = "Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, for example, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmNewToOld);
 			previousVersion_lazy = () -> CorporateActionRate49.mmNewToOld;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -327,6 +362,14 @@ public class CorporateActionRate72 {
 	 * definition} =
 	 * "Rate used to calculate the amount of the charges/fees that cannot be categorised."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmChargesFees
+	 * CorporateActionRate90.mmChargesFees}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -343,6 +386,7 @@ public class CorporateActionRate72 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesFees";
 			definition = "Rate used to calculate the amount of the charges/fees that cannot be categorised.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmChargesFees);
 			previousVersion_lazy = () -> CorporateActionRate49.mmChargesFees;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -381,6 +425,14 @@ public class CorporateActionRate72 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Percentage of fiscal tax to apply."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmFiscalStamp
+	 * CorporateActionRate90.mmFiscalStamp}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -397,6 +449,7 @@ public class CorporateActionRate72 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalStamp";
 			definition = "Percentage of fiscal tax to apply.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmFiscalStamp);
 			previousVersion_lazy = () -> CorporateActionRate49.mmFiscalStamp;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -438,6 +491,14 @@ public class CorporateActionRate72 {
 	 * definition} =
 	 * "Rate applicable to the event announced, for example, redemption rate for a redemption event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmApplicableRate
+	 * CorporateActionRate90.mmApplicableRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -454,6 +515,7 @@ public class CorporateActionRate72 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicableRate";
 			definition = "Rate applicable to the event announced, for example, redemption rate for a redemption event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmApplicableRate);
 			previousVersion_lazy = () -> CorporateActionRate49.mmApplicableRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -494,6 +556,14 @@ public class CorporateActionRate72 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money per equity allocated as the result of a tax credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmTaxCreditRate
+	 * CorporateActionRate90.mmTaxCreditRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -510,6 +580,7 @@ public class CorporateActionRate72 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate";
 			definition = "Amount of money per equity allocated as the result of a tax credit.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmTaxCreditRate);
 			previousVersion_lazy = () -> CorporateActionRate49.mmTaxCreditRate;
 			minOccurs = 0;
 			complexType_lazy = () -> TaxCreditRateFormat7Choice.mmObject();
@@ -548,6 +619,14 @@ public class CorporateActionRate72 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Rate of financial transaction tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmFinancialTransactionTaxRate
+	 * CorporateActionRate90.mmFinancialTransactionTaxRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -564,6 +643,7 @@ public class CorporateActionRate72 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialTransactionTaxRate";
 			definition = "Rate of financial transaction tax.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmFinancialTransactionTaxRate);
 			previousVersion_lazy = () -> CorporateActionRate49.mmFinancialTransactionTaxRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -584,6 +664,7 @@ public class CorporateActionRate72 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate72";
 				definition = "Specifies rate details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionRate90.mmObject());
 				previousVersion_lazy = () -> CorporateActionRate49.mmObject();
 			}
 		});

@@ -303,7 +303,7 @@ public class SecuritiesOption38 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US."
+	 * "Specifies that the security identified is a temporary security identification used for processing reasons, for example, contra security used in the US."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -324,7 +324,7 @@ public class SecuritiesOption38 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TEMP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
-			definition = "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US.";
+			definition = "Specifies that the security identified is a temporary security identification used for processing reasons, for example, contra security used in the US.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmTemporaryFinancialInstrumentIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -607,7 +607,7 @@ public class SecuritiesOption38 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -628,7 +628,7 @@ public class SecuritiesOption38 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
-			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption40.mmSafekeepingPlace);
 			maxOccurs = 1;
 			minOccurs = 0;

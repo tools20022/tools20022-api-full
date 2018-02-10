@@ -727,7 +727,7 @@ public class CorporateActionRate36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Percentage of the gross dividend rate on which tax must be paid ."</li>
+	 * "Percentage of the gross dividend rate on which tax must be paid."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -747,7 +747,7 @@ public class CorporateActionRate36 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92a::TAXE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRate";
-			definition = "Percentage of the gross dividend rate on which tax must be paid .";
+			definition = "Percentage of the gross dividend rate on which tax must be paid.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate44.mmTaxRelatedRate);
 			minOccurs = 0;
 			isComposite = true;

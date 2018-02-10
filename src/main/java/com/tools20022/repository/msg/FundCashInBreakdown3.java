@@ -187,7 +187,7 @@ public class FundCashInBreakdown3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of the cash flow in,  expressed as a number of units."</li>
+	 * "Amount of the cash flow in, expressed as a number of units."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -203,7 +203,7 @@ public class FundCashInBreakdown3 {
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
-			definition = "Amount of the cash flow in,  expressed as a number of units.";
+			definition = "Amount of the cash flow in, expressed as a number of units.";
 			previousVersion_lazy = () -> FundCashInBreakdown2.mmUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -293,7 +293,7 @@ public class FundCashInBreakdown3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of transaction that resulted in the cash-in movement, for example, subscription, switch-in. "
+	 * "Type of transaction that resulted in the cash-in movement, for example, subscription, switch-in."
 	 * </li>
 	 * </ul>
 	 */
@@ -305,7 +305,7 @@ public class FundCashInBreakdown3 {
 			xmlTag = "InvstmtFndTxInTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactionInType";
-			definition = "Type of transaction that resulted in the cash-in movement, for example, subscription, switch-in. ";
+			definition = "Type of transaction that resulted in the cash-in movement, for example, subscription, switch-in.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

@@ -102,7 +102,7 @@ public class SystemEventType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of system event  that has occurred, expressed in a coded form."</li>
+	 * "Type of system event that has occurred, expressed in a coded form."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -113,7 +113,7 @@ public class SystemEventType2Choice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Type of system event  that has occurred, expressed in a coded form.";
+			definition = "Type of system event that has occurred, expressed in a coded form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SystemEventType2Code.mmObject();
@@ -152,7 +152,7 @@ public class SystemEventType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of system event  that has occurred, expressed as free text or a bilaterally agreed code.\n"
+	 * "Type of system event that has occurred, expressed as free text or a bilaterally agreed code.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -164,7 +164,7 @@ public class SystemEventType2Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Type of system event  that has occurred, expressed as free text or a bilaterally agreed code.\n";
+			definition = "Type of system event that has occurred, expressed as free text or a bilaterally agreed code.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();

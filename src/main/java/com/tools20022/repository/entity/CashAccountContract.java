@@ -105,6 +105,12 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AccountReport14#mmContractDates
  * AccountReport14.mmContractDates}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport20#mmUnderlyingMasterAgreement
+ * AccountReport20.mmUnderlyingMasterAgreement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport20#mmContractDates
+ * AccountReport20.mmContractDates}</li>
  * </ul>
  * </li>
  * <li>
@@ -130,6 +136,14 @@ import java.util.Objects;
  * AccountReport14}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AccountReport17
  * AccountReport17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceTransferReference1
+ * BalanceTransferReference1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport20
+ * AccountReport20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceTransfer1
+ * BalanceTransfer1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport21
+ * AccountReport21}</li>
  * </ul>
  * </li>
  * <li>
@@ -215,6 +229,17 @@ public class CashAccountContract extends AccountContract {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BillingStatement2#mmAccountCharacteristics
 	 * BillingStatement2.mmAccountCharacteristics}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport20#mmAccount
+	 * AccountReport20.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20#mmReferenceAccount
+	 * AccountReport20.mmReferenceAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmAccount
+	 * ReportingRequest4.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport21#mmAccountOrError
+	 * AccountReport21.mmAccountOrError}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -239,7 +264,8 @@ public class CashAccountContract extends AccountContract {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountReport7.mmAccount, AccountReport8.mmAccount, AccountReport10.mmAccount, AccountReport13.mmAccountOrError, AccountReport1.mmAccount, AccountReport1.mmReferenceAccount,
 					AccountReport15.mmAccount, AccountReport15.mmReferenceAccount, ReportingRequest1.mmAccount, ReportingRequest2.mmAccount, ReportingRequest3.mmAccount, BillingStatement1.mmAccountCharacteristics,
-					AccountReport14.mmAccount, AccountReport14.mmReferenceAccount, AccountReport17.mmAccountOrError, BillingStatement2.mmAccountCharacteristics);
+					AccountReport14.mmAccount, AccountReport14.mmReferenceAccount, AccountReport17.mmAccountOrError, BillingStatement2.mmAccountCharacteristics, AccountReport20.mmAccount, AccountReport20.mmReferenceAccount,
+					ReportingRequest4.mmAccount, AccountReport21.mmAccountOrError);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -367,6 +393,14 @@ public class CashAccountContract extends AccountContract {
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.PaymentObligation
 	 * PaymentObligation}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceTransfer1#mmBalanceTransferReference
+	 * BalanceTransfer1.mmBalanceTransferReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -387,6 +421,7 @@ public class CashAccountContract extends AccountContract {
 	 */
 	public static final MMBusinessAssociationEnd mmBalanceTransfer = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(BalanceTransfer1.mmBalanceTransferReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountContract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -458,12 +493,13 @@ public class CashAccountContract extends AccountContract {
 						com.tools20022.repository.entity.PaymentObligation.mmRelatedAccountClosingTerms, com.tools20022.repository.entity.CashAccountService.mmCashAccountContract,
 						com.tools20022.repository.entity.CashAccountMandate.mmCashAccountContract);
 				derivationElement_lazy = () -> Arrays.asList(AccountReport1.mmUnderlyingMasterAgreement, AccountReport1.mmContractDates, AccountReport15.mmUnderlyingMasterAgreement, AccountReport15.mmContractDates,
-						AccountReport14.mmUnderlyingMasterAgreement, AccountReport14.mmContractDates);
+						AccountReport14.mmUnderlyingMasterAgreement, AccountReport14.mmContractDates, AccountReport20.mmUnderlyingMasterAgreement, AccountReport20.mmContractDates);
 				superType_lazy = () -> AccountContract.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccountContract.mmCashAccount, com.tools20022.repository.entity.CashAccountContract.mmTransferCashAccount,
 						com.tools20022.repository.entity.CashAccountContract.mmServices, com.tools20022.repository.entity.CashAccountContract.mmBalanceTransfer, com.tools20022.repository.entity.CashAccountContract.mmCashAccountMandate);
 				derivationComponent_lazy = () -> Arrays.asList(AccountReport7.mmObject(), AccountReport8.mmObject(), AccountReport10.mmObject(), AccountReport13.mmObject(), AccountContract4.mmObject(), AccountContract2.mmObject(),
-						AccountContract3.mmObject(), AccountReport1.mmObject(), AccountReport15.mmObject(), AccountReport14.mmObject(), AccountReport17.mmObject());
+						AccountContract3.mmObject(), AccountReport1.mmObject(), AccountReport15.mmObject(), AccountReport14.mmObject(), AccountReport17.mmObject(), BalanceTransferReference1.mmObject(), AccountReport20.mmObject(),
+						BalanceTransfer1.mmObject(), AccountReport21.mmObject());
 			}
 
 			@Override

@@ -75,6 +75,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person')."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress1
+ * ContactIdentificationAndAddress1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,6 +124,14 @@ public class ContactIdentificationAndAddress {
 	 * definition} =
 	 * "Name by which a party is known and which is usually used to identify that party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress1#mmName
+	 * ContactIdentificationAndAddress1.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
@@ -127,6 +143,7 @@ public class ContactIdentificationAndAddress {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
+			nextVersions_lazy = () -> Arrays.asList(ContactIdentificationAndAddress1.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -165,6 +182,14 @@ public class ContactIdentificationAndAddress {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Role of the party in the activity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress1#mmRole
+	 * ContactIdentificationAndAddress1.mmRole}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
@@ -176,6 +201,7 @@ public class ContactIdentificationAndAddress {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Role of the party in the activity.";
+			nextVersions_lazy = () -> Arrays.asList(ContactIdentificationAndAddress1.mmRole);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentRole1Code.mmObject();
@@ -213,6 +239,14 @@ public class ContactIdentificationAndAddress {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number, or virtual address, used for communication."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress1#mmCommunicationAddress
+	 * ContactIdentificationAndAddress1.mmCommunicationAddress}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCommunicationAddress = new MMMessageAssociationEnd() {
@@ -224,6 +258,7 @@ public class ContactIdentificationAndAddress {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommunicationAddress";
 			definition = "Number, or virtual address, used for communication.";
+			nextVersions_lazy = () -> Arrays.asList(ContactIdentificationAndAddress1.mmCommunicationAddress);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -241,6 +276,7 @@ public class ContactIdentificationAndAddress {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ContactIdentificationAndAddress";
 				definition = "Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person').";
+				nextVersions_lazy = () -> Arrays.asList(ContactIdentificationAndAddress1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

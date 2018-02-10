@@ -18,6 +18,7 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.SecuritiesTradeVenueCriteria1Choice;
 import com.tools20022.repository.choice.TradeMarket1Choice;
 import com.tools20022.repository.codeset.GeographicalEnvironmentCode;
 import com.tools20022.repository.GeneratedRepository;
@@ -81,6 +82,9 @@ import java.util.Objects;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTradeVenueCriteria1Choice
+ * SecuritiesTradeVenueCriteria1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification92
  * MarketIdentification92}</li>
  * </ul>
@@ -356,7 +360,7 @@ public class Market {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Identification"</li>
 	 * <li>
@@ -369,7 +373,7 @@ public class Market {
 			derivation_lazy = () -> Arrays.asList(TradeMarket1Choice.mmCode, TradeMarket1Choice.mmProprietary, MarketIdentification92.mmOperating, MarketIdentification92.mmSegment);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Market.mmObject();
-			registrationStatus = MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifies the market by name, id and/or code.";
 			maxOccurs = 1;
@@ -392,7 +396,7 @@ public class Market {
 				subType_lazy = () -> Arrays.asList(TradingMarket.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Market.mmTrade, com.tools20022.repository.entity.Market.mmJurisdiction, com.tools20022.repository.entity.Market.mmCountry,
 						com.tools20022.repository.entity.Market.mmGeographicalEnvironment, com.tools20022.repository.entity.Market.mmIdentification);
-				derivationComponent_lazy = () -> Arrays.asList(MarketIdentification92.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(SecuritiesTradeVenueCriteria1Choice.mmObject(), MarketIdentification92.mmObject());
 			}
 
 			@Override

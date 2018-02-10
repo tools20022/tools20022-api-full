@@ -205,7 +205,7 @@ public class TradingModeTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When issuer issues the deposits, market members subscribe the deposits.  "
+	 * "When issuer issues the deposits, market members subscribe the deposits."
 	 * </li>
 	 * </ul>
 	 */
@@ -213,13 +213,13 @@ public class TradingModeTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Auction";
-			definition = "When issuer issues the deposits, market members subscribe the deposits.  ";
+			definition = "When issuer issues the deposits, market members subscribe the deposits.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeTypeCode.mmObject();
 			codeName = "AUCT";
 		}
 	};
 	/**
-	 * Counterparties neogiate trading details to execute trades. .
+	 * Counterparties neogiate trading details to execute trades.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -237,14 +237,14 @@ public class TradingModeTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Counterparties neogiate trading details to execute trades. ."</li>
+	 * "Counterparties neogiate trading details to execute trades."</li>
 	 * </ul>
 	 */
 	public static final TradingModeTypeCode Bilateral = new TradingModeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bilateral";
-			definition = "Counterparties neogiate trading details to execute trades. .";
+			definition = "Counterparties neogiate trading details to execute trades.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradingModeTypeCode.mmObject();
 			codeName = "BILA";
 		}

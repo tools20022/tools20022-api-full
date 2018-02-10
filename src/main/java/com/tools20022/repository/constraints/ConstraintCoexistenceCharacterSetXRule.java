@@ -365,36 +365,6 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03
-	 * PortfolioTransferNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CoexistenceCharacterSetXRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
-		{
-			validator = ConstraintCoexistenceCharacterSetXRule::checkPortfolioTransferNotificationV03;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CoexistenceCharacterSetXRule";
-			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
-			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04
 	 * SecuritiesTransactionCancellationRequestV04}</li>
 	 * <li>
@@ -3922,6 +3892,36 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03
+	 * PortfolioTransferNotificationV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CoexistenceCharacterSetXRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
+		{
+			validator = ConstraintCoexistenceCharacterSetXRule::checkPortfolioTransferNotificationV03;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CoexistenceCharacterSetXRule";
+			definition = "During ISO 15022 – 20022 coexistence, characters used in all text fields must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ + { } CR LF.";
+			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV04
 	 * SecuritiesSettlementTransactionAllegementNotificationV04}</li>
 	 * <li>
@@ -6717,15 +6717,6 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 * must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ +
 	 * { } CR LF.
 	 */
-	public static void checkPortfolioTransferNotificationV03(PortfolioTransferNotificationV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * During ISO 15022 – 20022 coexistence, characters used in all text fields
-	 * must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ +
-	 * { } CR LF.
-	 */
 	public static void checkSecuritiesTransactionCancellationRequestV04(SecuritiesTransactionCancellationRequestV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -7681,6 +7672,15 @@ public class ConstraintCoexistenceCharacterSetXRule {
 	 * { } CR LF.
 	 */
 	public static void checkSecuritiesTransactionCancellationRequestStatusAdviceV03(SecuritiesTransactionCancellationRequestStatusAdviceV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * During ISO 15022 – 20022 coexistence, characters used in all text fields
+	 * must correspond to character set X, that is, a-z A-Z / - ? : ( ) . , ‘ +
+	 * { } CR LF.
+	 */
+	public static void checkPortfolioTransferNotificationV03(PortfolioTransferNotificationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

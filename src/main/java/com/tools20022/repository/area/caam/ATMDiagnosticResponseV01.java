@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.ATMManagementLatestVersion;
+import com.tools20022.repository.area.ATMManagementPreviousVersion;
 import com.tools20022.repository.msg.ATMDiagnosticResponse1;
 import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
@@ -73,8 +73,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "ATMDgnstcRspn"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMManagementLatestVersion
- * ATMManagementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.ATMManagementPreviousVersion
+ * ATMManagementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code caam.006.001.01}</li>
@@ -292,7 +292,7 @@ public class ATMDiagnosticResponseV01 {
 				messageSet_lazy = () -> Arrays.asList(ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "ATMDgnstcRspn";
-				businessArea_lazy = () -> ATMManagementLatestVersion.mmObject();
+				businessArea_lazy = () -> ATMManagementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.mmHeader, com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.mmProtectedATMDiagnosticResponse,
 						com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.mmATMDiagnosticResponse, com.tools20022.repository.area.caam.ATMDiagnosticResponseV01.mmSecurityTrailer);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

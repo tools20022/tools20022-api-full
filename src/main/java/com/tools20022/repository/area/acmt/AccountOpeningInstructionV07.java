@@ -737,7 +737,7 @@ public class AccountOpeningInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cash settlement standing instruction associated to  transactions on the account."
+	 * "Cash settlement standing instruction associated to transactions on the account."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -751,7 +751,7 @@ public class AccountOpeningInstructionV07 {
 			xmlTag = "CshSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
-			definition = "Cash settlement standing instruction associated to  transactions on the account.";
+			definition = "Cash settlement standing instruction associated to transactions on the account.";
 			previousVersion_lazy = () -> AccountOpeningInstructionV06.mmCashSettlement;
 			maxOccurs = 8;
 			minOccurs = 0;

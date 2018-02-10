@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "Period3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between a period or a period code."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.Period6Choice Period6Choice}
+ * </li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,6 +110,13 @@ public class Period3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Time span defined by a start date and time, and an end date and time."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.Period6Choice#mmPeriod
+	 * Period6Choice.mmPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
@@ -114,6 +128,7 @@ public class Period3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Time span defined by a start date and time, and an end date and time.";
+			nextVersions_lazy = () -> Arrays.asList(Period6Choice.mmPeriod);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -151,6 +166,14 @@ public class Period3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Standard code to specify the type of period."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Period6Choice#mmPeriodCode
+	 * Period6Choice.mmPeriodCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPeriodCode = new MMMessageAttribute() {
@@ -162,6 +185,7 @@ public class Period3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodCode";
 			definition = "Standard code to specify the type of period.";
+			nextVersions_lazy = () -> Arrays.asList(Period6Choice.mmPeriodCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType8Code.mmObject();
@@ -177,6 +201,7 @@ public class Period3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period3Choice";
 				definition = "Choice between a period or a period code.";
+				nextVersions_lazy = () -> Arrays.asList(Period6Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

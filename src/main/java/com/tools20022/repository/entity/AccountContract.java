@@ -411,7 +411,7 @@ public class AccountContract extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account,"
+	 * "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account."
 	 * </li>
 	 * </ul>
 	 */
@@ -421,7 +421,7 @@ public class AccountContract extends Contract {
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccountService";
-			definition = "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account,";
+			definition = "Operations on a bank account that are allowed as part of the services offered to the owners of a bank account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.AccountService.mmAccountContract;
@@ -713,7 +713,7 @@ public class AccountContract extends Contract {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the means by which the account owner submits the open account form. "
+	 * "Specifies the means by which the account owner submits the open account form."
 	 * </li>
 	 * </ul>
 	 */
@@ -729,7 +729,7 @@ public class AccountContract extends Contract {
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountContract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TransactionChannel";
-			definition = "Specifies the means by which the account owner submits the open account form. ";
+			definition = "Specifies the means by which the account owner submits the open account form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionChannelCode.mmObject();

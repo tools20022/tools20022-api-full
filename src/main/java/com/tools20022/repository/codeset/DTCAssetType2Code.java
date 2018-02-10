@@ -334,7 +334,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "DTCAssetType2Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies  DTC (The Depository Trust Company) security sub-issue type."</li>
+ * "Specifies DTC (The Depository Trust Company) security sub-issue type."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -2632,7 +2632,7 @@ public class DTCAssetType2Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCAssetType2Code";
-				definition = "Specifies  DTC (The Depository Trust Company) security sub-issue type.";
+				definition = "Specifies DTC (The Depository Trust Company) security sub-issue type.";
 				trace_lazy = () -> DTCAssetTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAssetType2Code.ABSDenominUnitsorUndividedInterest, com.tools20022.repository.codeset.DTCAssetType2Code.AmericanDepositaryReceiptADR,
 						com.tools20022.repository.codeset.DTCAssetType2Code.AssetBackedSecurityABSorGlobalABSGABS, com.tools20022.repository.codeset.DTCAssetType2Code.AuctionRatePreferredStockARPS,

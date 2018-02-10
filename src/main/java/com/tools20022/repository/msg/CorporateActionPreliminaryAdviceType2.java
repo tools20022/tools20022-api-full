@@ -80,6 +80,10 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08#mmMovementPreliminaryAdviceGeneralInformation
  * CorporateActionMovementPreliminaryAdvice002V08.
  * mmMovementPreliminaryAdviceGeneralInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmMovementPreliminaryAdviceGeneralInformation
+ * CorporateActionMovementPreliminaryAdviceV09.
+ * mmMovementPreliminaryAdviceGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -224,7 +228,8 @@ public class CorporateActionPreliminaryAdviceType2 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.mmType, com.tools20022.repository.msg.CorporateActionPreliminaryAdviceType2.mmEligibilityIndicator);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV05.mmMovementPreliminaryAdviceGeneralInformation,
 						CorporateActionMovementPreliminaryAdviceV06.mmMovementPreliminaryAdviceGeneralInformation, CorporateActionMovementPreliminaryAdviceV07.mmMovementPreliminaryAdviceGeneralInformation,
-						CorporateActionMovementPreliminaryAdviceV08.mmMovementPreliminaryAdviceGeneralInformation, CorporateActionMovementPreliminaryAdvice002V08.mmMovementPreliminaryAdviceGeneralInformation);
+						CorporateActionMovementPreliminaryAdviceV08.mmMovementPreliminaryAdviceGeneralInformation, CorporateActionMovementPreliminaryAdvice002V08.mmMovementPreliminaryAdviceGeneralInformation,
+						CorporateActionMovementPreliminaryAdviceV09.mmMovementPreliminaryAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

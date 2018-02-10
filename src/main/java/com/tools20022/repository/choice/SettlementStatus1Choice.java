@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementStatus1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the settlement status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.SettlementStatus26Choice
+ * SettlementStatus26Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +117,14 @@ public class SettlementStatus1Choice {
 	 * definition} =
 	 * "Provides the status of settlement of an instruction/financial instrument movement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus26Choice#mmCode
+	 * SettlementStatus26Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -122,6 +137,7 @@ public class SettlementStatus1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of settlement of an instruction/financial instrument movement.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementStatus26Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesSettlementStatus1Code.mmObject();
@@ -165,6 +181,14 @@ public class SettlementStatus1Choice {
 	 * definition} =
 	 * "Provides the status of settlement of an instruction/financial instrument movement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus26Choice#mmProprietary
+	 * SettlementStatus26Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -177,6 +201,7 @@ public class SettlementStatus1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of settlement of an instruction/financial instrument movement.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementStatus26Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -192,6 +217,7 @@ public class SettlementStatus1Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementStatus1Choice";
 				definition = "Choice of format for the settlement status.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementStatus26Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

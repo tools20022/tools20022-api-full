@@ -95,6 +95,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Specifies the details of the underlying transaction on which the investigation is processed."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction4Choice
+ * UnderlyingTransaction4Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction2Choice
@@ -140,6 +148,14 @@ public class UnderlyingTransaction3Choice {
 	 * definition} =
 	 * "Set of elements used to reference the details of the original payment initiation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction4Choice#mmInitiation
+	 * UnderlyingTransaction4Choice.mmInitiation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -156,6 +172,7 @@ public class UnderlyingTransaction3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiation";
 			definition = "Set of elements used to reference the details of the original payment initiation.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction4Choice.mmInitiation);
 			previousVersion_lazy = () -> UnderlyingTransaction2Choice.mmInitiation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -196,6 +213,14 @@ public class UnderlyingTransaction3Choice {
 	 * definition} =
 	 * "Set of elements used to reference the details of the original interbank payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction4Choice#mmInterbank
+	 * UnderlyingTransaction4Choice.mmInterbank}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -212,6 +237,7 @@ public class UnderlyingTransaction3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interbank";
 			definition = "Set of elements used to reference the details of the original interbank payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction4Choice.mmInterbank);
 			previousVersion_lazy = () -> UnderlyingTransaction2Choice.mmInterbank;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -251,6 +277,14 @@ public class UnderlyingTransaction3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference details on the underlying statement cash entry."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction4Choice#mmStatementEntry
+	 * UnderlyingTransaction4Choice.mmStatementEntry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -267,6 +301,7 @@ public class UnderlyingTransaction3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementEntry";
 			definition = "Reference details on the underlying statement cash entry.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction4Choice.mmStatementEntry);
 			previousVersion_lazy = () -> UnderlyingTransaction2Choice.mmStatementEntry;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -287,6 +322,7 @@ public class UnderlyingTransaction3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction3Choice";
 				definition = "Specifies the details of the underlying transaction on which the investigation is processed.";
+				nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction4Choice.mmObject());
 				previousVersion_lazy = () -> UnderlyingTransaction2Choice.mmObject();
 			}
 		});

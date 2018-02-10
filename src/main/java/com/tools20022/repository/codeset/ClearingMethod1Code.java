@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies whether the value is net (inclusive of tax) or gross
+ * Specifies whether the value is net (inclusive of tax) or gross.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "ClearingMethod1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies whether the value is net (inclusive of tax) or gross"</li>
+ * "Specifies whether the value is net (inclusive of tax) or gross."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -153,7 +153,7 @@ public class ClearingMethod1Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClearingMethod1Code";
-				definition = "Specifies whether the value is net (inclusive of tax) or gross";
+				definition = "Specifies whether the value is net (inclusive of tax) or gross.";
 				trace_lazy = () -> ClearingMethodCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ClearingMethod1Code.GrossNegotiation, com.tools20022.repository.codeset.ClearingMethod1Code.NetMatch,
 						com.tools20022.repository.codeset.ClearingMethod1Code.NetNegotiation);

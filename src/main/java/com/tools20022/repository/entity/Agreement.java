@@ -94,6 +94,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeAgreement6}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement13
  * TradeAgreement13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement16
+ * TradeAgreement16}</li>
  * </ul>
  * </li>
  * <li>
@@ -216,6 +218,14 @@ public class Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation11#mmDateOfSignature
 	 * MandateRelatedInformation11.mmDateOfSignature}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.MasterAgreement2#mmVersion
+	 * MasterAgreement2.mmVersion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmDateOfSignature
+	 * MandateRelatedInformation12.mmDateOfSignature}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation13#mmDateOfSignature
+	 * MandateRelatedInformation13.mmDateOfSignature}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -241,7 +251,8 @@ public class Agreement {
 					InvestmentAccount38.mmAccountSignatureDateTime, InvestmentAccount37.mmAccountSignatureDateTime, InvestmentAccount39.mmAccountSignatureDateTime, MandateRelatedInformation10.mmDateOfSignature,
 					InvestmentAccount46.mmAccountSignatureDateTime, InvestmentAccount47.mmAccountSignatureDateTime, RegisteredContractAmendment1.mmStartDate, InvestmentAccount49.mmAccountSignatureDateTime,
 					InvestmentAccount51.mmAccountSignatureDateTime, InvestmentAccount50.mmAccountSignatureDateTime, Agreement4.mmAgreementDate, InvestmentAccount61.mmAccountSignatureDateTime, InvestmentAccount63.mmAccountSignatureDateTime,
-					InvestmentAccount62.mmAccountSignatureDateTime, GeneralInformation5.mmDefinitionsYear, AgreementConditions1.mmDate, MandateRelatedInformation11.mmDateOfSignature);
+					InvestmentAccount62.mmAccountSignatureDateTime, GeneralInformation5.mmDefinitionsYear, AgreementConditions1.mmDate, MandateRelatedInformation11.mmDateOfSignature, MasterAgreement2.mmVersion,
+					MandateRelatedInformation12.mmDateOfSignature, MandateRelatedInformation13.mmDateOfSignature);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -315,6 +326,12 @@ public class Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails11#mmOriginalReason
 	 * AmendmentInformationDetails11.mmOriginalReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmReason
+	 * MandateRelatedInformation12.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalReason
+	 * AmendmentInformationDetails12.mmOriginalReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -338,7 +355,7 @@ public class Agreement {
 		{
 			derivation_lazy = () -> Arrays.asList(Agreement3.mmDescription, ContractDocument1.mmReference, Agreement2.mmAgreementDetails, Agreement1.mmDescription, Mandate7.mmReason, AmendmentInformationDetails10.mmOriginalReason,
 					Mandate6.mmReason, Mandate5.mmReason, MandateRelatedInformation10.mmReason, SupportingDocumentRequestOrLetter1.mmDescription, Agreement4.mmAgreementDetails, Mandate10.mmReason, Mandate9.mmReason,
-					MandateRelatedInformation11.mmReason, Mandate11.mmReason, Mandate8.mmReason, AmendmentInformationDetails11.mmOriginalReason);
+					MandateRelatedInformation11.mmReason, Mandate11.mmReason, Mandate8.mmReason, AmendmentInformationDetails11.mmOriginalReason, MandateRelatedInformation12.mmReason, AmendmentInformationDetails12.mmOriginalReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -390,7 +407,7 @@ public class Agreement {
 	 * name} = "Version"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Version number of a contract or of a  legal agreement."</li>
+	 * definition} = "Version number of a contract or of a legal agreement."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmVersion = new MMBusinessAttribute() {
@@ -400,7 +417,7 @@ public class Agreement {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Version";
-			definition = "Version number of a contract or of a  legal agreement.";
+			definition = "Version number of a contract or of a legal agreement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -461,7 +478,7 @@ public class Agreement {
 	 * name} = "ValidityPeriod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Period during which the agreement is valid"</li>
+	 * definition} = "Period during which the agreement is valid."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
@@ -471,7 +488,7 @@ public class Agreement {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Agreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidityPeriod";
-			definition = "Period during which the agreement is valid";
+			definition = "Period during which the agreement is valid.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedAgreement;
 			aggregation = MMAggregation.NONE;
@@ -700,7 +717,7 @@ public class Agreement {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Agreement.mmDateSigned, com.tools20022.repository.entity.Agreement.mmDescription, com.tools20022.repository.entity.Agreement.mmVersion,
 						com.tools20022.repository.entity.Agreement.mmValidityPeriod, com.tools20022.repository.entity.Agreement.mmDocument, com.tools20022.repository.entity.Agreement.mmTrade,
 						com.tools20022.repository.entity.Agreement.mmJurisdiction);
-				derivationComponent_lazy = () -> Arrays.asList(TradeAgreement6.mmObject(), TradeAgreement13.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(TradeAgreement6.mmObject(), TradeAgreement13.mmObject(), TradeAgreement16.mmObject());
 			}
 
 			@Override

@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action details rates and amounts details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionRateSD9
+ * CorporateActionRateSD9}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,6 +111,14 @@ public class CorporateActionRateSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD9#mmPlaceAndName
+	 * CorporateActionRateSD9.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -114,6 +129,7 @@ public class CorporateActionRateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD9.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -150,7 +166,15 @@ public class CorporateActionRateSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. A portion of the scheduled interest payment will not be paid at the time of distribution.  "
+	 * "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. A portion of the scheduled interest payment will not be paid at the time of distribution."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD9#mmDeferredInterestRate
+	 * CorporateActionRateSD9.mmDeferredInterestRate}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -162,7 +186,8 @@ public class CorporateActionRateSD5 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Deferred Interest Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredInterestRate";
-			definition = "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. A portion of the scheduled interest payment will not be paid at the time of distribution.  ";
+			definition = "Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. A portion of the scheduled interest payment will not be paid at the time of distribution.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD9.mmDeferredInterestRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -195,6 +220,14 @@ public class CorporateActionRateSD5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "American or Global Depository Receipt(s) per ordinary share(s) ratio."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD9#mmAmericanOrGlobalDepositReceiptRatio
+	 * CorporateActionRateSD9.mmAmericanOrGlobalDepositReceiptRatio}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAmericanOrGlobalDepositReceiptRatio = new MMMessageAssociationEnd() {
@@ -205,6 +238,7 @@ public class CorporateActionRateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmericanOrGlobalDepositReceiptRatio";
 			definition = "American or Global Depository Receipt(s) per ordinary share(s) ratio.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD9.mmAmericanOrGlobalDepositReceiptRatio);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -221,6 +255,7 @@ public class CorporateActionRateSD5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD5";
 				definition = "Provides additional information regarding corporate action details rates and amounts details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

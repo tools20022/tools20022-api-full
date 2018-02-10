@@ -122,7 +122,7 @@ public class Order1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument."
+	 * "Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument."
 	 * </li>
 	 * </ul>
 	 */
@@ -135,7 +135,7 @@ public class Order1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "40"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
+			definition = "Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OrderType1Code.mmObject();

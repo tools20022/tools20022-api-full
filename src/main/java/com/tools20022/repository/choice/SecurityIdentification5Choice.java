@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between ISIN and an alternative format for the identification of a
- * financial instrument. ISIN is the preferred format.
+ * financial instrument. ISIN is the preferred format. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -72,7 +72,7 @@ import javax.xml.bind.annotation.XmlType;
  * "SecurityIdentification5Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.\n"
+ * "Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.\n."
  * </li>
  * </ul>
  */
@@ -114,7 +114,7 @@ public class SecurityIdentification5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country."
+	 * "International Securities Identification Number (ISIN). A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country."
 	 * </li>
 	 * </ul>
 	 */
@@ -126,7 +126,7 @@ public class SecurityIdentification5Choice {
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
-			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
+			definition = "International Securities Identification Number (ISIN). A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
@@ -215,7 +215,7 @@ public class SecurityIdentification5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the ability to describe the instrument through a description and main characteristics. "
+	 * "Provides the ability to describe the instrument through a description and main characteristics."
 	 * </li>
 	 * </ul>
 	 */
@@ -227,7 +227,7 @@ public class SecurityIdentification5Choice {
 			xmlTag = "InstrmDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstrumentDescription";
-			definition = "Provides the ability to describe the instrument through a description and main characteristics. ";
+			definition = "Provides the ability to describe the instrument through a description and main characteristics.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -244,7 +244,7 @@ public class SecurityIdentification5Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityIdentification5Choice";
-				definition = "Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.\n";
+				definition = "Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.\n.";
 			}
 		});
 		return mmObject_lazy.get();

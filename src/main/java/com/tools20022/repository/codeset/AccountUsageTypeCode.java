@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies the type of usage of the account
+ * Specifies the type of usage of the account.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AccountUsageTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the type of usage of the account"</li>
+ * definition} = "Specifies the type of usage of the account."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -216,7 +216,7 @@ public class AccountUsageTypeCode extends MMCode {
 				example = Arrays.asList("INVE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountUsageTypeCode";
-				definition = "Specifies the type of usage of the account";
+				definition = "Specifies the type of usage of the account.";
 				derivation_lazy = () -> Arrays.asList(AccountUsageType1Code.mmObject(), AccountUsageType2Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountUsageTypeCode.Investor, com.tools20022.repository.codeset.AccountUsageTypeCode.SettlementParticipant,
 						com.tools20022.repository.codeset.AccountUsageTypeCode.TradingParticipant, com.tools20022.repository.codeset.AccountUsageTypeCode.IssuingParticipant);

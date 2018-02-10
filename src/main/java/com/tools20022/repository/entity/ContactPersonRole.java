@@ -33,7 +33,7 @@ import java.util.Objects;
 
 /**
  * Person to be contacted in a given organisation. In the corporate action
- * domain (including meeting notifications) , it is the contact person at the
+ * domain (including meeting notifications), it is the contact person at the
  * party organising the meeting, at the issuer or at an intermediary.
  * <p>
  * <strong>Class diagram</strong>
@@ -103,6 +103,12 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount126#mmContactPerson
  * PartyIdentificationAndAccount126.mmContactPerson}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentification123#mmContactPerson
+ * PartyIdentification123.mmContactPerson}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount158#mmContactPerson
+ * PartyIdentificationAndAccount158.mmContactPerson}</li>
  * </ul>
  * </li>
  * <li>
@@ -120,6 +126,9 @@ import java.util.Objects;
  * ContactIdentification3}</li>
  * <li>{@linkplain com.tools20022.repository.choice.BankContactPerson1Choice
  * BankContactPerson1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation20 Organisation20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContactIdentification5
+ * ContactIdentification5}</li>
  * </ul>
  * </li>
  * <li>
@@ -135,7 +144,7 @@ import java.util.Objects;
  * "ContactPersonRole"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Person to be contacted in a given organisation. In the corporate action domain (including meeting notifications) , it is the contact person at the party organising the meeting, at the issuer or at an intermediary."
+ * "Person to be contacted in a given organisation. In the corporate action domain (including meeting notifications), it is the contact person at the party organising the meeting, at the issuer or at an intermediary."
  * </li>
  * </ul>
  */
@@ -260,6 +269,13 @@ public class ContactPersonRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Person Person}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.NewAccount1#mmAccountParty
+	 * NewAccount1.mmAccountParty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -278,6 +294,7 @@ public class ContactPersonRole extends Role {
 	 */
 	public static final MMBusinessAssociationEnd mmPerson = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(NewAccount1.mmAccountParty);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPersonRole.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -297,15 +314,16 @@ public class ContactPersonRole extends Role {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContactPersonRole";
-				definition = "Person to be contacted in a given organisation. In the corporate action domain (including meeting notifications) , it is the contact person at the party organising the meeting, at the issuer or at an intermediary.";
+				definition = "Person to be contacted in a given organisation. In the corporate action domain (including meeting notifications), it is the contact person at the party organising the meeting, at the issuer or at an intermediary.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Role.mmContactPersonRole, com.tools20022.repository.entity.Person.mmContactPersonRole, com.tools20022.repository.entity.Meeting.mmPerson);
 				derivationElement_lazy = () -> Arrays.asList(PartyIdentificationAndAccount4.mmContactPerson, PartyIdentification21.mmContactPerson, DeliveryParameters4.mmContactPerson, ContactPerson1.mmContactPerson,
 						PartyIdentificationAndAccount32.mmContactPerson, BankContactPerson1Choice.mmBuyerBankContactPerson, BankContactPerson1Choice.mmSellerBankContactPerson, PartyIdentificationAndAccount102.mmContactPerson,
-						PartyIdentification97.mmContactPerson, PartyIdentificationAndAccount123.mmContactPerson, PartyIdentificationAndAccount126.mmContactPerson);
+						PartyIdentification97.mmContactPerson, PartyIdentificationAndAccount123.mmContactPerson, PartyIdentificationAndAccount126.mmContactPerson, PartyIdentification123.mmContactPerson,
+						PartyIdentificationAndAccount158.mmContactPerson);
 				superType_lazy = () -> com.tools20022.repository.entity.Role.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPersonRole.mmRole, com.tools20022.repository.entity.ContactPersonRole.mmMeeting, com.tools20022.repository.entity.ContactPersonRole.mmPerson);
 				derivationComponent_lazy = () -> Arrays.asList(ContactIdentification2.mmObject(), ContactIdentification1.mmObject(), ContactIdentification4.mmObject(), ContactPerson1.mmObject(), ContactIdentification3.mmObject(),
-						BankContactPerson1Choice.mmObject());
+						BankContactPerson1Choice.mmObject(), Organisation20.mmObject(), ContactIdentification5.mmObject());
 			}
 
 			@Override

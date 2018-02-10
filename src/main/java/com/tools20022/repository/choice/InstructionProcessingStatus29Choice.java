@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08;
+import com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
 import com.tools20022.repository.entity.StatusReason;
@@ -79,6 +80,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmInstructionProcessingStatus
  * CorporateActionInstructionStatusAdviceV08.mmInstructionProcessingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmInstructionProcessingStatus
+ * CorporateActionInstructionStatusAdviceV09.mmInstructionProcessingStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -531,7 +535,7 @@ public class InstructionProcessingStatus29Choice {
 						com.tools20022.repository.choice.InstructionProcessingStatus29Choice.mmAcceptedForFurtherProcessing, com.tools20022.repository.choice.InstructionProcessingStatus29Choice.mmRejected,
 						com.tools20022.repository.choice.InstructionProcessingStatus29Choice.mmPending, com.tools20022.repository.choice.InstructionProcessingStatus29Choice.mmDefaultAction,
 						com.tools20022.repository.choice.InstructionProcessingStatus29Choice.mmStandingInstruction, com.tools20022.repository.choice.InstructionProcessingStatus29Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV08.mmInstructionProcessingStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV08.mmInstructionProcessingStatus, CorporateActionInstructionStatusAdviceV09.mmInstructionProcessingStatus);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

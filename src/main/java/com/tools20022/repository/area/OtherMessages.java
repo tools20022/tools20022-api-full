@@ -50,6 +50,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.other.ForeignExchangeTradeStatusNotificationV04
  * ForeignExchangeTradeStatusNotificationV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.other.FinancialInstrumentReportingStatusAdviceV01
+ * FinancialInstrumentReportingStatusAdviceV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.other.DerivativesTradeReportV01
+ * DerivativesTradeReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.other.DerivativesTradeReportQueryV01
+ * DerivativesTradeReportQueryV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -76,7 +85,8 @@ public class OtherMessages {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OtherMessages";
 				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeBulkStatusNotificationV02.mmObject(), ForeignExchangeTradeInstructionAmendmentV02.mmObject(), ForeignExchangeTradeInstructionCancellationV02.mmObject(),
-						ForeignExchangeTradeInstructionV02.mmObject(), ForeignExchangeTradeStatusAndDetailsNotificationV02.mmObject(), ForeignExchangeTradeStatusNotificationV04.mmObject());
+						ForeignExchangeTradeInstructionV02.mmObject(), ForeignExchangeTradeStatusAndDetailsNotificationV02.mmObject(), ForeignExchangeTradeStatusNotificationV04.mmObject(),
+						FinancialInstrumentReportingStatusAdviceV01.mmObject(), DerivativesTradeReportV01.mmObject(), DerivativesTradeReportQueryV01.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

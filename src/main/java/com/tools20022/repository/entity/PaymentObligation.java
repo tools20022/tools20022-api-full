@@ -204,6 +204,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PaymentObligation2#mmPaymentTerms
  * PaymentObligation2.mmPaymentTerms}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BalanceTransferReference1#mmBalanceTransferReference
+ * BalanceTransferReference1.mmBalanceTransferReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -239,6 +242,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.choice.Purpose3Choice
  * Purpose3Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PaymentTerms6 PaymentTerms6}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CreditLineType1Choice
+ * CreditLineType1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -681,6 +686,36 @@ public class PaymentObligation extends Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmPurpose
 	 * PaymentComplementaryInformation6.mmPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmPurpose
+	 * CreditTransferTransaction27.mmPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation7#mmPurpose
+	 * PaymentComplementaryInformation7.mmPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmPurpose
+	 * RequestedModification7.mmPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmPurpose
+	 * EntryTransaction9.mmPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmPurpose
+	 * OriginalTransactionReference27.mmPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CreditLineType1Choice#mmCode
+	 * CreditLineType1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CreditLineType1Choice#mmProprietary
+	 * CreditLineType1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmPurpose
+	 * CreditTransferTransaction30.mmPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmPurpose
+	 * PaymentInstruction26.mmPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry3#mmPurpose
+	 * StatementResolutionEntry3.mmPurpose}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -696,7 +731,7 @@ public class PaymentObligation extends Obligation {
 	 * name} = "Purpose"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Underlying reason for the payment obligation"</li>
+	 * definition} = "Underlying reason for the payment obligation."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmPurpose = new MMBusinessAttribute() {
@@ -712,12 +747,13 @@ public class PaymentObligation extends Obligation {
 					PaymentComplementaryInformation4.mmPurpose, CreditTransferTransaction19.mmPurpose, OriginalItemReference3.mmPurpose, RequestedModification4.mmPurpose, CreditTransferTransaction20.mmPurpose, NotificationItem5.mmPurpose,
 					EntryTransaction7.mmPurpose, CreditTransferTransaction21.mmPurpose, RequestedModification5.mmPurpose, CreditTransferTransaction25.mmPurpose, PaymentComplementaryInformation5.mmPurpose,
 					CreditTransferTransaction26.mmPurpose, OriginalItemReference4.mmPurpose, CreditTransferTransaction22.mmPurpose, EntryTransaction8.mmPurpose, NotificationItem6.mmPurpose, RequestedModification6.mmPurpose,
-					PaymentComplementaryInformation6.mmPurpose);
+					PaymentComplementaryInformation6.mmPurpose, CreditTransferTransaction27.mmPurpose, PaymentComplementaryInformation7.mmPurpose, RequestedModification7.mmPurpose, EntryTransaction9.mmPurpose,
+					OriginalTransactionReference27.mmPurpose, CreditLineType1Choice.mmCode, CreditLineType1Choice.mmProprietary, CreditTransferTransaction30.mmPurpose, PaymentInstruction26.mmPurpose, StatementResolutionEntry3.mmPurpose);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Purpose";
-			definition = "Underlying reason for the payment obligation";
+			definition = "Underlying reason for the payment obligation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentPurposeCode.mmObject();
@@ -1081,6 +1117,29 @@ public class PaymentObligation extends Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmRemittanceInformation
 	 * PaymentComplementaryInformation6.mmRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmRemittanceInformation
+	 * CreditTransferTransaction27.mmRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation7#mmRemittanceInformation
+	 * PaymentComplementaryInformation7.mmRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmRemittanceInformation
+	 * CreditTransferTransaction31.mmRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRemittanceInformation
+	 * EntryTransaction9.mmRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmRemittanceInformation
+	 * OriginalTransactionReference27.mmRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction32#mmRemittanceInformation
+	 * CreditTransferTransaction32.mmRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmRemittanceInformation
+	 * CreditTransferTransaction30.mmRemittanceInformation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Garnishment2#mmType
+	 * Garnishment2.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1129,7 +1188,9 @@ public class PaymentObligation extends Obligation {
 					CreditTransferTransaction26.mmRemittanceInformation, OriginalItemReference4.mmRemittanceInformation, DirectDebitTransactionInformation19.mmRemittanceInformation, CreditTransferTransaction22.mmRemittanceInformation,
 					EntryTransaction8.mmRemittanceInformation, NotificationItem6.mmRemittanceInformation, OriginalTransactionReference23.mmRemittanceInformation, DirectDebitTransactionInformation21.mmRemittanceInformation,
 					OriginalTransactionReference24.mmRemittanceInformation, OriginalTransactionReference26.mmRemittanceInformation, DirectDebitTransactionInformation22.mmRemittanceInformation,
-					PaymentComplementaryInformation6.mmRemittanceInformation);
+					PaymentComplementaryInformation6.mmRemittanceInformation, CreditTransferTransaction27.mmRemittanceInformation, PaymentComplementaryInformation7.mmRemittanceInformation,
+					CreditTransferTransaction31.mmRemittanceInformation, EntryTransaction9.mmRemittanceInformation, OriginalTransactionReference27.mmRemittanceInformation, CreditTransferTransaction32.mmRemittanceInformation,
+					CreditTransferTransaction30.mmRemittanceInformation, Garnishment2.mmType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1353,6 +1414,12 @@ public class PaymentObligation extends Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction22#mmRelatedRemittanceInformation
 	 * CreditTransferTransaction22.mmRelatedRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmRelatedRemittanceInformation
+	 * CreditTransferTransaction27.mmRelatedRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmRelatedRemittanceInformation
+	 * CreditTransferTransaction30.mmRelatedRemittanceInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1381,7 +1448,8 @@ public class PaymentObligation extends Obligation {
 					CreditTransferTransactionInformation14.mmRelatedRemittanceInformation, CreditTransferTransaction5.mmRelatedRemittanceInformation, CreditTransferTransaction10.mmRelatedRemittanceInformation,
 					CreditTransferTransactionInformation7.mmRelatedRemittanceInformation, CreditTransferTransactionInformation9.mmRelatedRemittanceInformation, CreditTransferTransaction19.mmRelatedRemittanceInformation,
 					CreditTransferTransaction20.mmRelatedRemittanceInformation, CreditTransferTransaction21.mmRelatedRemittanceInformation, CreditTransferTransaction25.mmRelatedRemittanceInformation,
-					CreditTransferTransaction26.mmRelatedRemittanceInformation, CreditTransferTransaction22.mmRelatedRemittanceInformation);
+					CreditTransferTransaction26.mmRelatedRemittanceInformation, CreditTransferTransaction22.mmRelatedRemittanceInformation, CreditTransferTransaction27.mmRelatedRemittanceInformation,
+					CreditTransferTransaction30.mmRelatedRemittanceInformation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2318,6 +2386,48 @@ public class PaymentObligation extends Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmFXAdditionalDetails
 	 * SecuritiesTradeDetails70.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails73.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails74.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails75.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails76.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails77.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails78.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails79.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails82.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails83.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails86.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails87.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails88.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails89.mmFXAdditionalDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails90.mmFXAdditionalDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2349,7 +2459,10 @@ public class PaymentObligation extends Obligation {
 					SecuritiesTradeDetails53.mmFXAdditionalDetails, SecuritiesTradeDetails55.mmFXAdditionalDetails, SecuritiesTradeDetails56.mmFXAdditionalDetails, SecuritiesTradeDetails52.mmFXAdditionalDetails,
 					SecuritiesTradeDetails50.mmFXAdditionalDetails, SecuritiesTradeDetails59.mmFXAdditionalDetails, SecuritiesTradeDetails58.mmFXAdditionalDetails, SecuritiesTradeDetails63.mmFXAdditionalDetails,
 					SecuritiesTradeDetails62.mmFXAdditionalDetails, SecuritiesTradeDetails65.mmFXAdditionalDetails, SecuritiesTradeDetails66.mmFXAdditionalDetails, SecuritiesTradeDetails67.mmFXAdditionalDetails,
-					SecuritiesTradeDetails70.mmFXAdditionalDetails);
+					SecuritiesTradeDetails70.mmFXAdditionalDetails, SecuritiesTradeDetails73.mmFXAdditionalDetails, SecuritiesTradeDetails74.mmFXAdditionalDetails, SecuritiesTradeDetails75.mmFXAdditionalDetails,
+					SecuritiesTradeDetails76.mmFXAdditionalDetails, SecuritiesTradeDetails77.mmFXAdditionalDetails, SecuritiesTradeDetails78.mmFXAdditionalDetails, SecuritiesTradeDetails79.mmFXAdditionalDetails,
+					SecuritiesTradeDetails82.mmFXAdditionalDetails, SecuritiesTradeDetails83.mmFXAdditionalDetails, SecuritiesTradeDetails86.mmFXAdditionalDetails, SecuritiesTradeDetails87.mmFXAdditionalDetails,
+					SecuritiesTradeDetails88.mmFXAdditionalDetails, SecuritiesTradeDetails89.mmFXAdditionalDetails, SecuritiesTradeDetails90.mmFXAdditionalDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentObligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2724,7 +2837,7 @@ public class PaymentObligation extends Obligation {
 						com.tools20022.repository.entity.CommercialTrade.mmPaymentObligation, com.tools20022.repository.entity.CollateralMovement.mmCashCollateralMovement, com.tools20022.repository.entity.BuyIn.mmCashCompensation,
 						com.tools20022.repository.entity.BankingTransaction.mmPaymentObligation, com.tools20022.repository.entity.RepurchaseAgreement.mmPaymentObligation, com.tools20022.repository.entity.Assignment.mmPaymentObligation,
 						com.tools20022.repository.entity.PaymentTerms.mmRelatedPaymentObligation, com.tools20022.repository.entity.InterestManagement.mmPaymentObligation);
-				derivationElement_lazy = () -> Arrays.asList(PaymentObligation1.mmPaymentTerms, PaymentObligation2.mmPaymentTerms);
+				derivationElement_lazy = () -> Arrays.asList(PaymentObligation1.mmPaymentTerms, PaymentObligation2.mmPaymentTerms, BalanceTransferReference1.mmBalanceTransferReference);
 				subType_lazy = () -> Arrays.asList(Instalment.mmObject(), Garnishment.mmObject());
 				superType_lazy = () -> Obligation.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmPaymentOffset, com.tools20022.repository.entity.PaymentObligation.mmPurpose,
@@ -2741,7 +2854,7 @@ public class PaymentObligation extends Obligation {
 						com.tools20022.repository.entity.PaymentObligation.mmPaymentDueDate);
 				derivationComponent_lazy = () -> Arrays.asList(Purpose1Choice.mmObject(), Purpose2Choice.mmObject(), PurposeChoice.mmObject(), SettlementData1.mmObject(), SettlementData2.mmObject(), PaymentTerms3.mmObject(),
 						PaymentTerms1.mmObject(), PaymentTerms2.mmObject(), PaymentObligation1.mmObject(), PaymentObligation2.mmObject(), PaymentTerms4.mmObject(), PaymentTerms5.mmObject(), Purpose3Choice.mmObject(),
-						PaymentTerms6.mmObject());
+						PaymentTerms6.mmObject(), CreditLineType1Choice.mmObject());
 			}
 
 			@Override

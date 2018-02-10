@@ -25,6 +25,7 @@ class ListBuilderForGeneratedRepository_11 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) InRepairStatusReason2.mmObject());
 		list.add((T) InRepairStatus2Choice.mmObject());
 		list.add((T) RejectedStatusReason5.mmObject());
 		list.add((T) RejectedStatus3Choice.mmObject());
@@ -524,7 +525,6 @@ class ListBuilderForGeneratedRepository_11 {
 		list.add((T) AmountAndDirection23.mmObject());
 		list.add((T) OtherAmounts8.mmObject());
 		list.add((T) OtherParties11.mmObject());
-		list.add((T) Statement17.mmObject());
 		ListBuilderForGeneratedRepository_12.addElems(list);
 		return list;
 	}

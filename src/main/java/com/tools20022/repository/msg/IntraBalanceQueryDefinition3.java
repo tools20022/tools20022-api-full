@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the information that is searched through specific criteria."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition6
+ * IntraBalanceQueryDefinition6}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,6 +107,14 @@ public class IntraBalanceQueryDefinition3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the type of query."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition6#mmQueryType
+	 * IntraBalanceQueryDefinition6.mmQueryType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
@@ -110,6 +125,7 @@ public class IntraBalanceQueryDefinition3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Defines the type of query.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryDefinition6.mmQueryType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MovementResponseType1Code.mmObject();
@@ -150,6 +166,14 @@ public class IntraBalanceQueryDefinition3 {
 	 * definition} =
 	 * "Defines the criteria to extract the intra-balance movement instruction information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition6#mmSearchCriteria
+	 * IntraBalanceQueryDefinition6.mmSearchCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSearchCriteria = new MMMessageAttribute() {
@@ -161,6 +185,7 @@ public class IntraBalanceQueryDefinition3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to extract the intra-balance movement instruction information.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryDefinition6.mmSearchCriteria);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.IntraBalanceQueryCriteria3.mmObject();
@@ -176,6 +201,7 @@ public class IntraBalanceQueryDefinition3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryDefinition3";
 				definition = "Defines the information that is searched through specific criteria.";
+				nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryDefinition6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

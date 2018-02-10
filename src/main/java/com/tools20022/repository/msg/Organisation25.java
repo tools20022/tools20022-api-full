@@ -80,6 +80,7 @@ import javax.xml.bind.annotation.XmlType;
  * nextVersions} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.Organisation26 Organisation26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation32 Organisation32}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -123,6 +124,14 @@ public class Organisation25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the merchant."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation32#mmIdentification
+	 * Organisation32.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +148,7 @@ public class Organisation25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the merchant.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation32.mmIdentification);
 			previousVersion_lazy = () -> Organisation8.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -183,6 +193,9 @@ public class Organisation25 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Organisation26#mmCommonName
 	 * Organisation26.mmCommonName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation32#mmCommonName
+	 * Organisation32.mmCommonName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -201,7 +214,7 @@ public class Organisation25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonName";
 			definition = "Name of the merchant as appearing on the receipt.";
-			nextVersions_lazy = () -> Arrays.asList(Organisation26.mmCommonName);
+			nextVersions_lazy = () -> Arrays.asList(Organisation26.mmCommonName, Organisation32.mmCommonName);
 			previousVersion_lazy = () -> Organisation8.mmCommonName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -237,6 +250,14 @@ public class Organisation25 {
 	 * definition} =
 	 * "Location category of the place where the merchant actually performed the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation32#mmLocationCategory
+	 * Organisation32.mmLocationCategory}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -252,6 +273,7 @@ public class Organisation25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCategory";
 			definition = "Location category of the place where the merchant actually performed the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation32.mmLocationCategory);
 			previousVersion_lazy = () -> Organisation8.mmLocationCategory;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -285,6 +307,14 @@ public class Organisation25 {
 	 * definition} =
 	 * "Location and contact information of the merchant performing the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation32#mmLocationAndContact
+	 * Organisation32.mmLocationAndContact}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLocationAndContact = new MMMessageAssociationEnd() {
@@ -295,6 +325,7 @@ public class Organisation25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationAndContact";
 			definition = "Location and contact information of the merchant performing the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation32.mmLocationAndContact);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -327,6 +358,14 @@ public class Organisation25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional merchant data required by a card scheme."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation32#mmSchemeData
+	 * Organisation32.mmSchemeData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -342,6 +381,7 @@ public class Organisation25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeData";
 			definition = "Additional merchant data required by a card scheme.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation32.mmSchemeData);
 			previousVersion_lazy = () -> Organisation8.mmSchemeData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -359,7 +399,7 @@ public class Organisation25 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation25";
 				definition = "Merchant performing the transaction.";
-				nextVersions_lazy = () -> Arrays.asList(Organisation26.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(Organisation26.mmObject(), Organisation32.mmObject());
 				previousVersion_lazy = () -> Organisation8.mmObject();
 			}
 		});

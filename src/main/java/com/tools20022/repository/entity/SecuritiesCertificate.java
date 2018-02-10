@@ -175,6 +175,23 @@ public class SecuritiesCertificate {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Quantity12#mmCertificateNumber
 	 * Quantity12.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmCertificateNumber
+	 * CommonFinancialInstrumentAttributes4.mmCertificateNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit8#mmCertificateNumber
+	 * Unit8.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity14#mmCertificateNumber
+	 * Quantity14.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters6#mmCertificateNumber
+	 * RegistrationParameters6.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity15#mmCertificateNumber
+	 * Quantity15.mmCertificateNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters7#mmCertificateNumber
+	 * RegistrationParameters7.mmCertificateNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -201,7 +218,9 @@ public class SecuritiesCertificate {
 			derivation_lazy = () -> Arrays.asList(Unit1.mmCertificateNumber, Unit3.mmCertificateNumber, RegistrationParameters1.mmCertificateNumber, RegistrationParameters2.mmCertificateNumber,
 					FinancialInstrumentAttributes1.mmCertificateNumber, SecuritiesCertificate3.mmNumber, FinancialInstrumentAttributes31.mmCertificateNumber, FinancialInstrumentAttributes44.mmCertificateNumber,
 					Quantity5.mmCertificateNumber, Quantity6.mmCertificateNumber, Quantity7.mmCertificateNumber, Quantity8.mmCertificateNumber, CommonFinancialInstrumentAttributes1.mmCertificateNumber,
-					RegistrationParameters4.mmCertificateNumber, Quantity11.mmCertificateNumber, Unit6.mmCertificateNumber, RegistrationParameters5.mmCertificateNumber, Quantity12.mmCertificateNumber);
+					RegistrationParameters4.mmCertificateNumber, Quantity11.mmCertificateNumber, Unit6.mmCertificateNumber, RegistrationParameters5.mmCertificateNumber, Quantity12.mmCertificateNumber,
+					CommonFinancialInstrumentAttributes4.mmCertificateNumber, Unit8.mmCertificateNumber, Quantity14.mmCertificateNumber, RegistrationParameters6.mmCertificateNumber, Quantity15.mmCertificateNumber,
+					RegistrationParameters7.mmCertificateNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesCertificate.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":13B::CERT"));

@@ -72,7 +72,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMExceptionAcknowledgement1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information related to the acknowledgement  of an ATM exception."</li>
+ * "Information related to the acknowledgement of an ATM exception."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -217,7 +217,7 @@ public class ATMExceptionAcknowledgement1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMExceptionAcknowledgement1";
-				definition = "Information related to the acknowledgement  of an ATM exception.";
+				definition = "Information related to the acknowledgement of an ATM exception.";
 			}
 		});
 		return mmObject_lazy.get();

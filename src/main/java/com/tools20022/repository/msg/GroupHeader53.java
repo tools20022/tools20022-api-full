@@ -86,6 +86,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV08#mmGroupHeader
  * FIToFIPaymentStatusReportV08.mmGroupHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV09#mmGroupHeader
+ * FIToFIPaymentStatusReportV09.mmGroupHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV02#mmGroupHeader
+ * FIToFIPaymentStatusRequestV02.mmGroupHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -313,7 +319,7 @@ public class GroupHeader53 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GroupHeader53.mmMessageIdentification, com.tools20022.repository.msg.GroupHeader53.mmCreationDateTime,
 						com.tools20022.repository.msg.GroupHeader53.mmInstructingAgent, com.tools20022.repository.msg.GroupHeader53.mmInstructedAgent);
 				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentStatusReportV04.mmGroupHeader, FIToFIPaymentStatusReportV05.mmGroupHeader, FIToFIPaymentStatusReportV06.mmGroupHeader, FIToFIPaymentStatusReportV07.mmGroupHeader,
-						FIToFIPaymentStatusRequestV01.mmGroupHeader, FIToFIPaymentStatusReportV08.mmGroupHeader);
+						FIToFIPaymentStatusRequestV01.mmGroupHeader, FIToFIPaymentStatusReportV08.mmGroupHeader, FIToFIPaymentStatusReportV09.mmGroupHeader, FIToFIPaymentStatusRequestV02.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

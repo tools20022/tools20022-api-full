@@ -64,6 +64,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides system date for all of the changes occurred for an entity."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccountStatement2
+ * SecuritiesAccountStatement2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +105,14 @@ public class SecuritiesAccountStatement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date for which the statement is valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatement2#mmSystemDate
+	 * SecuritiesAccountStatement2.mmSystemDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
@@ -108,6 +123,7 @@ public class SecuritiesAccountStatement1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the statement is valid.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountStatement2.mmSystemDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -142,6 +158,14 @@ public class SecuritiesAccountStatement1 {
 	 * definition} =
 	 * "Provides information on the actual change occurred to a securities account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatement2#mmChange
+	 * SecuritiesAccountStatement2.mmChange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
@@ -152,6 +176,7 @@ public class SecuritiesAccountStatement1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Change";
 			definition = "Provides information on the actual change occurred to a securities account.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountStatement2.mmChange);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccountReferenceDataChange1.mmObject();
@@ -166,6 +191,7 @@ public class SecuritiesAccountStatement1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountStatement1";
 				definition = "Provides system date for all of the changes occurred for an entity.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountStatement2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

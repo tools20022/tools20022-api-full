@@ -78,6 +78,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between formats for the identification of a cash account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice
+ * CashAccountIdentification7Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -120,6 +128,14 @@ public class CashAccountIdentification1Choice {
 	 * definition} =
 	 * "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice#mmIBAN
+	 * CashAccountIdentification7Choice.mmIBAN}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIBAN = new MMMessageAttribute() {
@@ -131,6 +147,7 @@ public class CashAccountIdentification1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBAN";
 			definition = "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountIdentification7Choice.mmIBAN);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> IBANIdentifier.mmObject();
@@ -171,6 +188,14 @@ public class CashAccountIdentification1Choice {
 	 * definition} =
 	 * "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, ie, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice#mmBBAN
+	 * CashAccountIdentification7Choice.mmBBAN}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBBAN = new MMMessageAttribute() {
@@ -182,6 +207,7 @@ public class CashAccountIdentification1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BBAN";
 			definition = "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, ie, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountIdentification7Choice.mmBBAN);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BBANIdentifier.mmObject();
@@ -222,6 +248,14 @@ public class CashAccountIdentification1Choice {
 	 * definition} =
 	 * "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice#mmUPIC
+	 * CashAccountIdentification7Choice.mmUPIC}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUPIC = new MMMessageAttribute() {
@@ -233,6 +267,7 @@ public class CashAccountIdentification1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UPIC";
 			definition = "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountIdentification7Choice.mmUPIC);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UPICIdentifier.mmObject();
@@ -273,6 +308,14 @@ public class CashAccountIdentification1Choice {
 	 * definition} =
 	 * "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice#mmDomesticAccount
+	 * CashAccountIdentification7Choice.mmDomesticAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDomesticAccount = new MMMessageAttribute() {
@@ -284,6 +327,7 @@ public class CashAccountIdentification1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomesticAccount";
 			definition = "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountIdentification7Choice.mmDomesticAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -307,6 +351,7 @@ public class CashAccountIdentification1Choice {
 				})).get();
 				name = "CashAccountIdentification1Choice";
 				definition = "Choice between formats for the identification of a cash account.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccountIdentification7Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

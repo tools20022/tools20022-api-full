@@ -282,7 +282,7 @@ public class AdditiononalInformation12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type or identification of the remark, note, limitation or restriction"</li>
+	 * "Type or identification of the remark, note, limitation or restriction."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,7 +297,7 @@ public class AdditiononalInformation12 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Type or identification of the remark, note, limitation or restriction";
+			definition = "Type or identification of the remark, note, limitation or restriction.";
 			previousVersion_lazy = () -> AccountRestrictions1.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -381,7 +381,7 @@ public class AdditiononalInformation12 {
 	 * name} = "Status"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of the remark , note, limitation or restriction."</li>
+	 * definition} = "Status of the remark, note, limitation or restriction."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -396,7 +396,7 @@ public class AdditiononalInformation12 {
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			definition = "Status of the remark , note, limitation or restriction.";
+			definition = "Status of the remark, note, limitation or restriction.";
 			previousVersion_lazy = () -> AccountRestrictions1.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 0;

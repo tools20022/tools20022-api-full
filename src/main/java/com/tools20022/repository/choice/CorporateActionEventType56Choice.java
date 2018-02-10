@@ -74,6 +74,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionEventType56Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the repair reason."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionEventType73Choice
+ * CorporateActionEventType73Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.CorporateActionEventType30Choice
@@ -122,6 +130,14 @@ public class CorporateActionEventType56Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Corporate action event type expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType73Choice#mmCode
+	 * CorporateActionEventType73Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +155,7 @@ public class CorporateActionEventType56Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Corporate action event type expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType73Choice.mmCode);
 			previousVersion_lazy = () -> CorporateActionEventType30Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -182,6 +199,14 @@ public class CorporateActionEventType56Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Corporate action event type expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType73Choice#mmProprietary
+	 * CorporateActionEventType73Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -199,6 +224,7 @@ public class CorporateActionEventType56Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Corporate action event type expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType73Choice.mmProprietary);
 			previousVersion_lazy = () -> CorporateActionEventType30Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -216,6 +242,7 @@ public class CorporateActionEventType56Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventType56Choice";
 				definition = "Choice of format for the repair reason.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType73Choice.mmObject());
 				previousVersion_lazy = () -> CorporateActionEventType30Choice.mmObject();
 			}
 		});

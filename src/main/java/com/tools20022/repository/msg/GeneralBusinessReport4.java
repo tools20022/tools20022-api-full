@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Reports either on the business information or on a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.GeneralBusinessReport5
+ * GeneralBusinessReport5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport3
@@ -111,7 +118,15 @@ public class GeneralBusinessReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator. "
+	 * "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport5#mmBusinessInformationReference
+	 * GeneralBusinessReport5.mmBusinessInformationReference}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -128,7 +143,8 @@ public class GeneralBusinessReport4 {
 			xmlTag = "BizInfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessInformationReference";
-			definition = "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator. ";
+			definition = "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessReport5.mmBusinessInformationReference);
 			previousVersion_lazy = () -> GeneralBusinessReport3.mmBusinessInformationReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -167,6 +183,14 @@ public class GeneralBusinessReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested business information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport5#mmGeneralBusinessOrError
+	 * GeneralBusinessReport5.mmGeneralBusinessOrError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +207,7 @@ public class GeneralBusinessReport4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralBusinessOrError";
 			definition = "Requested business information.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessReport5.mmGeneralBusinessOrError);
 			previousVersion_lazy = () -> GeneralBusinessReport3.mmGeneralBusinessOrError;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -200,6 +225,7 @@ public class GeneralBusinessReport4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessReport4";
 				definition = "Reports either on the business information or on a business error.";
+				nextVersions_lazy = () -> Arrays.asList(GeneralBusinessReport5.mmObject());
 				previousVersion_lazy = () -> GeneralBusinessReport3.mmObject();
 			}
 		});

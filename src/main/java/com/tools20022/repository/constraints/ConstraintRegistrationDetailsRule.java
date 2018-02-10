@@ -39,6 +39,43 @@ public class ConstraintRegistrationDetailsRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08
+	 * SecuritiesSettlementTransactionInstructionV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementParameters/Registration is present with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV08> forSecuritiesSettlementTransactionInstructionV08 = new MMConstraint<SecuritiesSettlementTransactionInstructionV08>() {
+		{
+			validator = ConstraintRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationDetailsRule";
+			definition = "If SettlementParameters/Registration is present with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07
 	 * SecuritiesSettlementTransactionInstructionV07}</li>
 	 * <li>
@@ -51,6 +88,15 @@ public class ConstraintRegistrationDetailsRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "If SettlementParameters/Registration is present with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV08
+	 * ConstraintRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionInstructionV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -66,6 +112,7 @@ public class ConstraintRegistrationDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDetailsRule";
 			definition = "If SettlementParameters/Registration is present with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV07.mmObject();
 		}
@@ -98,83 +145,6 @@ public class ConstraintRegistrationDetailsRule {
 			name = "RegistrationDetailsRule";
 			definition = "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
-	 * SecuritiesSettlementTransactionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV07
-	 * ConstraintRegistrationDetailsRule.
-	 * forSecuritiesSettlementTransactionInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV05
-	 * ConstraintRegistrationDetailsRule.
-	 * forSecuritiesSettlementTransactionInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
-		{
-			validator = ConstraintRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationDetailsRule";
-			definition = "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
-	 * SecuritiesSettlementTransactionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "RegistrationDetailsRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
-		{
-			validator = ConstraintRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstruction002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "RegistrationDetailsRule";
-			definition = "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA.";
-			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
 		}
 	};
 	/**
@@ -354,6 +324,95 @@ public class ConstraintRegistrationDetailsRule {
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
+	 * SecuritiesSettlementTransactionInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule#forSecuritiesSettlementTransactionInstructionV05
+	 * ConstraintRegistrationDetailsRule.
+	 * forSecuritiesSettlementTransactionInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
+		{
+			validator = ConstraintRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationDetailsRule";
+			definition = "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRegistrationDetailsRule.forSecuritiesSettlementTransactionInstructionV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
+	 * SecuritiesSettlementTransactionInstruction002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RegistrationDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
+		{
+			validator = ConstraintRegistrationDetailsRule::checkSecuritiesSettlementTransactionInstruction002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RegistrationDetailsRule";
+			definition = "If SettlementParameters/Registration is used with code YREG (Registration to take place), then additional registration details must be specified in the AdditonalInformation/RegistrationDetails field of the Party (Receiving or DeliveringSettlementParties) under whom the registration must take place, unless this information is already available at the account servicer via standing instruction/SLA.";
+			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
+		}
+	};
+
+	/**
+	 * If SettlementParameters/Registration is present with code YREG
+	 * (Registration to take place), then additional registration details must
+	 * be specified in the AdditonalInformation/RegistrationDetails field of the
+	 * Party (Receiving or DeliveringSettlementParties) under whom the
+	 * registration must take place, unless this information is already
+	 * available at the account servicer via standing instruction/SLA.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV08(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If SettlementParameters/Registration is present with code YREG
@@ -376,30 +435,6 @@ public class ConstraintRegistrationDetailsRule {
 	 * account servicer via standing instruction/SLA.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstruction002V07(SecuritiesSettlementTransactionInstruction002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SettlementParameters/Registration is used with code YREG (Registration
-	 * to take place), then additional registration details must be specified in
-	 * the AdditonalInformation/RegistrationDetails field of the Party
-	 * (Receiving or DeliveringSettlementParties) under whom the registration
-	 * must take place, unless this information is already available at the
-	 * account servicer via standing instruction/SLA.
-	 */
-	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If SettlementParameters/Registration is used with code YREG (Registration
-	 * to take place), then additional registration details must be specified in
-	 * the AdditonalInformation/RegistrationDetails field of the Party
-	 * (Receiving or DeliveringSettlementParties) under whom the registration
-	 * must take place, unless this information is already available at the
-	 * account servicer via standing instruction/SLA.
-	 */
-	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -460,6 +495,30 @@ public class ConstraintRegistrationDetailsRule {
 	 * account servicer via standing instruction/SLA.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV05(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementParameters/Registration is used with code YREG (Registration
+	 * to take place), then additional registration details must be specified in
+	 * the AdditonalInformation/RegistrationDetails field of the Party
+	 * (Receiving or DeliveringSettlementParties) under whom the registration
+	 * must take place, unless this information is already available at the
+	 * account servicer via standing instruction/SLA.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementParameters/Registration is used with code YREG (Registration
+	 * to take place), then additional registration details must be specified in
+	 * the AdditonalInformation/RegistrationDetails field of the Party
+	 * (Receiving or DeliveringSettlementParties) under whom the registration
+	 * must take place, unless this information is already available at the
+	 * account servicer via standing instruction/SLA.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

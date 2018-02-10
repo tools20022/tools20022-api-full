@@ -183,7 +183,7 @@ public class FundProcessingPassportReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "    Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters\r\n    should provide on their investment funds in order to facilitate their trading. "
+	 * " Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters\r\n should provide on their investment funds in order to facilitate their trading."
 	 * </li>
 	 * </ul>
 	 */
@@ -192,7 +192,7 @@ public class FundProcessingPassportReportV02 {
 			xmlTag = "FPP";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundProcessingPassport";
-			definition = "    Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters\r\n    should provide on their investment funds in order to facilitate their trading. ";
+			definition = " Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters\r\n should provide on their investment funds in order to facilitate their trading.";
 			minOccurs = 1;
 			complexType_lazy = () -> FundProcessingPassport1.mmObject();
 		}

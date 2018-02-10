@@ -62,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * "InterestRateDerivative2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice element specifying the underlying types of an interest rate derivative. "
+ * "Choice element specifying the underlying types of an interest rate derivative."
  * </li>
  * </ul>
  */
@@ -169,7 +169,7 @@ public class InterestRateDerivative2Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRateDerivative2Choice";
-				definition = "Choice element specifying the underlying types of an interest rate derivative. ";
+				definition = "Choice element specifying the underlying types of an interest rate derivative.";
 			}
 		});
 		return mmObject_lazy.get();

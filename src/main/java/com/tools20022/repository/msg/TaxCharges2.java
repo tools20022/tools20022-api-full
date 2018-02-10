@@ -106,7 +106,7 @@ public class TaxCharges2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique reference to unambiguously identify the nature of the tax levied, such as Value Added Tax (VAT)"
+	 * "Unique reference to unambiguously identify the nature of the tax levied, such as Value Added Tax (VAT)."
 	 * </li>
 	 * </ul>
 	 */
@@ -118,7 +118,7 @@ public class TaxCharges2 {
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
-			definition = "Unique reference to unambiguously identify the nature of the tax levied, such as Value Added Tax (VAT)";
+			definition = "Unique reference to unambiguously identify the nature of the tax levied, such as Value Added Tax (VAT).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CashBalanceType1FormatType"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the type of cash balance."</li>
+ * definition} = "Choice of formats to express the type of cash balance."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,7 +105,7 @@ public class CashBalanceType1FormatType {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Standard code to  specify the type of cash balance."</li>
+	 * definition} = "Standard code to specify the type of cash balance."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -116,7 +116,7 @@ public class CashBalanceType1FormatType {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the type of cash balance.";
+			definition = "Standard code to specify the type of cash balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CashBalanceType1Code.mmObject();
@@ -154,7 +154,7 @@ public class CashBalanceType1FormatType {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Proprietary code to  express the type of cash balance."</li>
+	 * definition} = "Proprietary code to express the type of cash balance."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -165,7 +165,7 @@ public class CashBalanceType1FormatType {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the type of cash balance.";
+			definition = "Proprietary code to express the type of cash balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -180,7 +180,7 @@ public class CashBalanceType1FormatType {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalanceType1FormatType";
-				definition = "Choice of formats to  express the type of cash balance.";
+				definition = "Choice of formats to express the type of cash balance.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -664,7 +664,7 @@ public class PaymentInstructionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Account used to process charges associated with a transaction.\n\nUsage : charges account should be used when charges have to be booked to an account different from the account identified in debtor's account."
+	 * "Account used to process charges associated with a transaction.\n\nUsage: charges account should be used when charges have to be booked to an account different from the account identified in debtor's account."
 	 * </li>
 	 * </ul>
 	 */
@@ -676,7 +676,7 @@ public class PaymentInstructionInformation2 {
 			xmlTag = "ChrgsAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccount";
-			definition = "Account used to process charges associated with a transaction.\n\nUsage : charges account should be used when charges have to be booked to an account different from the account identified in debtor's account.";
+			definition = "Account used to process charges associated with a transaction.\n\nUsage: charges account should be used when charges have to be booked to an account different from the account identified in debtor's account.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -715,7 +715,7 @@ public class PaymentInstructionInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Agent that services a charges account.  \n\nUsage : charges account agent should only be used when the charges account agent is different from the creditor agent."
+	 * "Agent that services a charges account. \n\nUsage: charges account agent should only be used when the charges account agent is different from the creditor agent."
 	 * </li>
 	 * </ul>
 	 */
@@ -727,7 +727,7 @@ public class PaymentInstructionInformation2 {
 			xmlTag = "ChrgsAcctAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountAgent";
-			definition = "Agent that services a charges account.  \n\nUsage : charges account agent should only be used when the charges account agent is different from the creditor agent.";
+			definition = "Agent that services a charges account. \n\nUsage: charges account agent should only be used when the charges account agent is different from the creditor agent.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

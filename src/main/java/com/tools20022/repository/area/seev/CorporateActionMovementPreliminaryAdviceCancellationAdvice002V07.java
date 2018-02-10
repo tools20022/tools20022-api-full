@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant;
+import com.tools20022.repository.area.SecuritiesEventsPreviousversionsubsetvariant;
 import com.tools20022.repository.choice.AccountIdentification34Choice;
 import com.tools20022.repository.choice.PartyIdentification104Choice;
 import com.tools20022.repository.msg.CorporateAction35;
@@ -128,8 +128,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnMvmntPrlimryAdvcCxlAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant
- * SecuritiesEventsLatestversionsubsetvariant}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousversionsubsetvariant
+ * SecuritiesEventsPreviousversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.044.002.07}</li>
@@ -534,7 +534,7 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. "
+	 * "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner."
 	 * </li>
 	 * </ul>
 	 */
@@ -543,7 +543,7 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07 {
 			xmlTag = "RsellngAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResellingAgent";
-			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. ";
+			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner.";
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification104Choice.mmObject();
 		}
@@ -625,7 +625,7 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. "
+	 * "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person."
 	 * </li>
 	 * </ul>
 	 */
@@ -634,7 +634,7 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07 {
 			xmlTag = "DrpAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DropAgent";
-			definition = "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. ";
+			definition = "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification104Choice.mmObject();
@@ -716,7 +716,7 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. "
+	 * "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation."
 	 * </li>
 	 * </ul>
 	 */
@@ -725,7 +725,7 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07 {
 			xmlTag = "InfAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationAgent";
-			definition = "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. ";
+			definition = "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification104Choice.mmObject();
@@ -794,7 +794,7 @@ public class CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07 {
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISO15022VariantsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnMvmntPrlimryAdvcCxlAdvc";
-				businessArea_lazy = () -> SecuritiesEventsLatestversionsubsetvariant.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsPreviousversionsubsetvariant.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmMovementPreliminaryAdviceIdentification,
 						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmCorporateActionGeneralInformation,
 						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmAccountDetails,

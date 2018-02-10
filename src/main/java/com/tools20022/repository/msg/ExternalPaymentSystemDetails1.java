@@ -98,7 +98,7 @@ public class ExternalPaymentSystemDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the participant can send Register  of Clearing Positions."
+	 * "Indicates whether the participant can send Register of Clearing Positions."
 	 * </li>
 	 * </ul>
 	 */
@@ -109,7 +109,7 @@ public class ExternalPaymentSystemDetails1 {
 			xmlTag = "ClrPossRegrAllwdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingPositionsRegisterAllowedIndicator";
-			definition = "Indicates whether the participant can send Register  of Clearing Positions.";
+			definition = "Indicates whether the participant can send Register of Clearing Positions.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

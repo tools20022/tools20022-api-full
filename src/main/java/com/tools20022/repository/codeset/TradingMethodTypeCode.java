@@ -243,7 +243,7 @@ public class TradingMethodTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Member activate an order, and if order matches with market maker's quotationa, the order will be filled automatically. "
+	 * "Member activate an order, and if order matches with market maker's quotationa, the order will be filled automatically."
 	 * </li>
 	 * </ul>
 	 */
@@ -251,7 +251,7 @@ public class TradingMethodTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrder";
-			definition = "Member activate an order, and if order matches with market maker's quotationa, the order will be filled automatically. ";
+			definition = "Member activate an order, and if order matches with market maker's quotationa, the order will be filled automatically.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradingMethodTypeCode.mmObject();
 			codeName = "LIOR";
 		}

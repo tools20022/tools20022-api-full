@@ -120,6 +120,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action instructed balance details at option protect level."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
+ * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -156,6 +164,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmPlaceAndName
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -166,6 +183,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -200,6 +218,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * definition} =
 	 * "Instruction reference number assigned by DTC to the uncovered protect instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectIdentification
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProtectIdentification = new MMMessageAttribute() {
@@ -210,6 +237,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectIdentification";
 			definition = "Instruction reference number assigned by DTC to the uncovered protect instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15Text.mmObject();
@@ -245,6 +273,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * definition} =
 	 * "Additional Reference number used to uniquely identify uncovered protect instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectSequenceNumber
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectSequenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProtectSequenceNumber = new MMMessageAttribute() {
@@ -255,6 +292,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectSequenceNumber";
 			definition = "Additional Reference number used to uniquely identify uncovered protect instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectSequenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -294,6 +332,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Option number of the protect instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmOptionNumber
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmOptionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
@@ -306,6 +353,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Option number of the protect instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmOptionNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -339,6 +387,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time of the protect instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectDate
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProtectDate = new MMMessageAttribute() {
@@ -349,6 +406,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectDate";
 			definition = "Date and time of the protect instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -381,7 +439,16 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time of the cover protect.  Will be the latest cover date if partial cover transaction occurs."
+	 * "Date and time of the cover protect. Will be the latest cover date if partial cover transaction occurs."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmCoverProtectDate
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmCoverProtectDate}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -392,7 +459,8 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			xmlTag = "CoverPrtctDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverProtectDate";
-			definition = "Date and time of the cover protect.  Will be the latest cover date if partial cover transaction occurs.";
+			definition = "Date and time of the cover protect. Will be the latest cover date if partial cover transaction occurs.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmCoverProtectDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -425,7 +493,16 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Quantity of the protect instruction.  For protects which are partially covered, the quanitity will be reduced by the amount partially covered."
+	 * "Quantity of the protect instruction. For protects which are partially covered, the quanitity will be reduced by the amount partially covered."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectIdentificationQuantity
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectIdentificationQuantity}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -436,7 +513,8 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			xmlTag = "PrtctIdQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectIdentificationQuantity";
-			definition = "Quantity of the protect instruction.  For protects which are partially covered, the quanitity will be reduced by the amount partially covered.";
+			definition = "Quantity of the protect instruction. For protects which are partially covered, the quanitity will be reduced by the amount partially covered.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectIdentificationQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -471,6 +549,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Quantity of the Protect instruction which has not been covered."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectIdentificationUncoveredQuantity
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectIdentificationUncoveredQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProtectIdentificationUncoveredQuantity = new MMMessageAssociationEnd() {
@@ -481,6 +568,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectIdentificationUncoveredQuantity";
 			definition = "Quantity of the Protect instruction which has not been covered.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectIdentificationUncoveredQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -514,6 +602,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Protect oversubscription quantity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectIdentificationOversubscriptionQuantity
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectIdentificationOversubscriptionQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProtectIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd() {
@@ -524,6 +621,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectIdentificationOversubscriptionQuantity";
 			definition = "Protect oversubscription quantity.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectIdentificationOversubscriptionQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -558,6 +656,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the Protect Instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectIdentificationStatus
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectIdentificationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProtectIdentificationStatus = new MMMessageAttribute() {
@@ -568,6 +675,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectIdentificationStatus";
 			definition = "Status of the Protect Instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectIdentificationStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCProtectInstructionStatus1Code.mmObject();
@@ -600,6 +708,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Conditional Quantity for the Protect Instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectConditionalQuantity
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectConditionalQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProtectConditionalQuantity = new MMMessageAssociationEnd() {
@@ -610,6 +727,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectConditionalQuantity";
 			definition = "Conditional Quantity for the Protect Instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectConditionalQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -642,6 +760,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Tender bid price of the protect instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmProtectTenderBidPrice
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmProtectTenderBidPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProtectTenderBidPrice = new MMMessageAssociationEnd() {
@@ -652,6 +779,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectTenderBidPrice";
 			definition = "Tender bid price of the protect instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmProtectTenderBidPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -686,6 +814,15 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Customer identification entered by client upon instruction submission."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmCustomerReferenceIdentification
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmCustomerReferenceIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
@@ -696,6 +833,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerReferenceIdentification";
 			definition = "Customer identification entered by client upon instruction submission.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmCustomerReferenceIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15Text.mmObject();
@@ -722,6 +860,7 @@ public class CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1 
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1";
 				definition = "Provides additional information regarding corporate action instructed balance details at option protect level.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Provides details on the original request. Identifies the message being
- * acknowledged and its status
+ * acknowledged and its status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -64,7 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * "ReceiptAcknowledgementReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides details on the original request. Identifies the message being acknowledged and its status"
+ * "Provides details on the original request. Identifies the message being acknowledged and its status."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport2
+ * ReceiptAcknowledgementReport2}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -99,6 +106,14 @@ public class ReceiptAcknowledgementReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference of the request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport2#mmRelatedReference
+	 * ReceiptAcknowledgementReport2.mmRelatedReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRelatedReference = new MMMessageAssociationEnd() {
@@ -109,6 +124,7 @@ public class ReceiptAcknowledgementReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference of the request.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiptAcknowledgementReport2.mmRelatedReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -141,6 +157,14 @@ public class ReceiptAcknowledgementReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Gives the status of the request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiptAcknowledgementReport2#mmRequestHandling
+	 * ReceiptAcknowledgementReport2.mmRequestHandling}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
@@ -151,6 +175,7 @@ public class ReceiptAcknowledgementReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestHandling";
 			definition = "Gives the status of the request.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiptAcknowledgementReport2.mmRequestHandling);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -210,7 +235,8 @@ public class ReceiptAcknowledgementReport1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReceiptAcknowledgementReport1";
-				definition = "Provides details on the original request. Identifies the message being acknowledged and its status";
+				definition = "Provides details on the original request. Identifies the message being acknowledged and its status.";
+				nextVersions_lazy = () -> Arrays.asList(ReceiptAcknowledgementReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

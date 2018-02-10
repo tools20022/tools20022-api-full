@@ -1134,7 +1134,7 @@ public class Distribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount by which the issuer devalues a share  (in a decrease value event)."
+	 * "Amount by which the issuer devalues a share (in a decrease value event)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1144,7 +1144,7 @@ public class Distribution {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DecreaseAmount";
-			definition = "Amount by which the issuer devalues a share  (in a decrease value event).";
+			definition = "Amount by which the issuer devalues a share (in a decrease value event).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -1182,7 +1182,7 @@ public class Distribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount, expressed as a percentage, by which the issuer devalues a share  (in a decrease value event)."
+	 * "Amount, expressed as a percentage, by which the issuer devalues a share (in a decrease value event)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1192,7 +1192,7 @@ public class Distribution {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Distribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DecreaseRate";
-			definition = "Amount, expressed as a percentage, by which the issuer devalues a share  (in a decrease value event).";
+			definition = "Amount, expressed as a percentage, by which the issuer devalues a share (in a decrease value event).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();

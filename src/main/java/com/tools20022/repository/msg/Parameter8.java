@@ -68,6 +68,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme)."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter11 Parameter11}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Parameter4
  * Parameter4}</li>
@@ -105,6 +111,14 @@ public class Parameter8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the digest algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter11#mmDigestAlgorithm
+	 * Parameter11.mmDigestAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -120,6 +134,7 @@ public class Parameter8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Identification of the digest algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(Parameter11.mmDigestAlgorithm);
 			previousVersion_lazy = () -> Parameter4.mmDigestAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -154,6 +169,14 @@ public class Parameter8 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Mask generator function cryptographic algorithm and parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter11#mmMaskGeneratorAlgorithm
+	 * Parameter11.mmMaskGeneratorAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -169,6 +192,7 @@ public class Parameter8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaskGeneratorAlgorithm";
 			definition = "Mask generator function cryptographic algorithm and parameters.";
+			nextVersions_lazy = () -> Arrays.asList(Parameter11.mmMaskGeneratorAlgorithm);
 			previousVersion_lazy = () -> Parameter4.mmMaskGeneratorAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -201,6 +225,13 @@ public class Parameter8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Length of the salt to include in the signature."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Parameter11#mmSaltLength
+	 * Parameter11.mmSaltLength}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSaltLength = new MMMessageAttribute() {
@@ -211,6 +242,7 @@ public class Parameter8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaltLength";
 			definition = "Length of the salt to include in the signature.";
+			nextVersions_lazy = () -> Arrays.asList(Parameter11.mmSaltLength);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -242,6 +274,13 @@ public class Parameter8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Trailer field number."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Parameter11#mmTrailerField
+	 * Parameter11.mmTrailerField}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTrailerField = new MMMessageAttribute() {
@@ -252,6 +291,7 @@ public class Parameter8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrailerField";
 			definition = "Trailer field number.";
+			nextVersions_lazy = () -> Arrays.asList(Parameter11.mmTrailerField);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -267,6 +307,7 @@ public class Parameter8 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter8";
 				definition = "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).";
+				nextVersions_lazy = () -> Arrays.asList(Parameter11.mmObject());
 				previousVersion_lazy = () -> Parameter4.mmObject();
 			}
 		});

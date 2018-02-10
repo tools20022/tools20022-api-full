@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ReportQuerySearchCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to search for a report."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria2
+ * ReportQuerySearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -115,6 +122,14 @@ public class ReportQuerySearchCriteria1 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria2#mmAccountIdentification
+	 * ReportQuerySearchCriteria2.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
@@ -125,6 +140,7 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmAccountIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
@@ -158,6 +174,14 @@ public class ReportQuerySearchCriteria1 {
 	 * definition} =
 	 * "Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria2#mmBalance
+	 * ReportQuerySearchCriteria2.mmBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalance = new MMMessageAssociationEnd() {
@@ -168,6 +192,7 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmBalance);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance4.mmObject();
@@ -201,6 +226,14 @@ public class ReportQuerySearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Values of possible reports."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria2#mmReportName
+	 * ReportQuerySearchCriteria2.mmReportName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReportName = new MMMessageAttribute() {
@@ -211,6 +244,7 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportName";
 			definition = "Values of possible reports.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmReportName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -244,6 +278,14 @@ public class ReportQuerySearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report owning party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria2#mmPartyIdentification
+	 * ReportQuerySearchCriteria2.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
@@ -254,6 +296,7 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Report owning party.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -287,6 +330,14 @@ public class ReportQuerySearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Responsible Party of the report owning party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria2#mmResponsiblePartyIdentification
+	 * ReportQuerySearchCriteria2.mmResponsiblePartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
@@ -297,6 +348,7 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsiblePartyIdentification";
 			definition = "Responsible Party of the report owning party.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmResponsiblePartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -330,6 +382,14 @@ public class ReportQuerySearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time when the report was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria2#mmDateSearch
+	 * ReportQuerySearchCriteria2.mmDateSearch}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDateSearch = new MMMessageAttribute() {
@@ -340,6 +400,7 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateSearch";
 			definition = "Date and time when the report was created.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmDateSearch);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -375,6 +436,14 @@ public class ReportQuerySearchCriteria1 {
 	 * definition} =
 	 * "Time when the (business) event, which triggered the report, was scheduled."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQuerySearchCriteria2#mmScheduledTime
+	 * ReportQuerySearchCriteria2.mmScheduledTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
@@ -385,6 +454,7 @@ public class ReportQuerySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledTime";
 			definition = "Time when the (business) event, which triggered the report, was scheduled.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmScheduledTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -402,6 +472,7 @@ public class ReportQuerySearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportQuerySearchCriteria1";
 				definition = "Defines the criteria used to search for a report.";
+				nextVersions_lazy = () -> Arrays.asList(ReportQuerySearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

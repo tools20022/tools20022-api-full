@@ -83,6 +83,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Information for the MTM to build or include delegated actions in the management plan of the POI."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4
+ * MaintenanceDelegateAction4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction2
@@ -124,6 +131,14 @@ public class MaintenanceDelegateAction3 {
 	 * definition} =
 	 * "Flag to indicate that the delegated actions have to be included in a periodic sequence of actions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4#mmPeriodicAction
+	 * MaintenanceDelegateAction4.mmPeriodicAction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +154,7 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodicAction";
 			definition = "Flag to indicate that the delegated actions have to be included in a periodic sequence of actions.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmPeriodicAction);
 			previousVersion_lazy = () -> MaintenanceDelegateAction2.mmPeriodicAction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -173,6 +189,14 @@ public class MaintenanceDelegateAction3 {
 	 * definition} =
 	 * "Network address and parameters of the terminal manager host which will performs the delegated actions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4#mmTMRemoteAccess
+	 * MaintenanceDelegateAction4.mmTMRemoteAccess}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -188,6 +212,7 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMRemoteAccess";
 			definition = "Network address and parameters of the terminal manager host which will performs the delegated actions.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmTMRemoteAccess);
 			previousVersion_lazy = () -> MaintenanceDelegateAction2.mmTMRemoteAccess;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -222,6 +247,14 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "TMS protocol to use to perform the maintenance action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4#mmTMSProtocol
+	 * MaintenanceDelegateAction4.mmTMSProtocol}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,6 +270,7 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocol";
 			definition = "TMS protocol to use to perform the maintenance action.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmTMSProtocol);
 			previousVersion_lazy = () -> MaintenanceDelegateAction2.mmTMSProtocol;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -271,6 +305,14 @@ public class MaintenanceDelegateAction3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Version of the TMS protocol to use to perform the maintenance action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4#mmTMSProtocolVersion
+	 * MaintenanceDelegateAction4.mmTMSProtocolVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -286,6 +328,7 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolVersion";
 			definition = "Version of the TMS protocol to use to perform the maintenance action.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmTMSProtocolVersion);
 			previousVersion_lazy = () -> MaintenanceDelegateAction2.mmTMSProtocolVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -318,7 +361,15 @@ public class MaintenanceDelegateAction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Data set  on which the delegated action has to be performed."</li>
+	 * "Data set on which the delegated action has to be performed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4#mmDataSetIdentification
+	 * MaintenanceDelegateAction4.mmDataSetIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -333,7 +384,8 @@ public class MaintenanceDelegateAction3 {
 			xmlTag = "DataSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
-			definition = "Data set  on which the delegated action has to be performed.";
+			definition = "Data set on which the delegated action has to be performed.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmDataSetIdentification);
 			previousVersion_lazy = () -> MaintenanceDelegateAction2.mmDataSetIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -368,6 +420,14 @@ public class MaintenanceDelegateAction3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Definition of retry process when activation of the action fails."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4#mmReTry
+	 * MaintenanceDelegateAction4.mmReTry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -383,6 +443,7 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReTry";
 			definition = "Definition of retry process when activation of the action fails.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmReTry);
 			previousVersion_lazy = () -> MaintenanceDelegateAction2.mmReTry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -419,6 +480,14 @@ public class MaintenanceDelegateAction3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Additional information to include in the maintenance action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4#mmAdditionalInformation
+	 * MaintenanceDelegateAction4.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -434,6 +503,7 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Additional information to include in the maintenance action.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmAdditionalInformation);
 			previousVersion_lazy = () -> MaintenanceDelegateAction2.mmAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3000Binary.mmObject();
@@ -465,6 +535,14 @@ public class MaintenanceDelegateAction3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Sequence of action to include in the next MTM management plan."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MaintenanceDelegateAction4#mmAction
+	 * MaintenanceDelegateAction4.mmAction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -480,6 +558,7 @@ public class MaintenanceDelegateAction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Sequence of action to include in the next MTM management plan.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmAction);
 			previousVersion_lazy = () -> MaintenanceDelegateAction2.mmAction;
 			minOccurs = 0;
 			isComposite = true;
@@ -498,6 +577,7 @@ public class MaintenanceDelegateAction3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegateAction3";
 				definition = "Information for the MTM to build or include delegated actions in the management plan of the POI.";
+				nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction4.mmObject());
 				previousVersion_lazy = () -> MaintenanceDelegateAction2.mmObject();
 			}
 		});

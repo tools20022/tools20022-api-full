@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorDiagnosticRequest6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Diagnostic request from an acceptor."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest7
+ * AcceptorDiagnosticRequest7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest5
@@ -112,6 +119,14 @@ public class AcceptorDiagnosticRequest6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest7#mmEnvironment
+	 * AcceptorDiagnosticRequest7.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -128,6 +143,7 @@ public class AcceptorDiagnosticRequest6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequest7.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorDiagnosticRequest5.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -146,6 +162,7 @@ public class AcceptorDiagnosticRequest6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticRequest6";
 				definition = "Diagnostic request from an acceptor.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequest7.mmObject());
 				previousVersion_lazy = () -> AcceptorDiagnosticRequest5.mmObject();
 			}
 		});

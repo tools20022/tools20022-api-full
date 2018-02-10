@@ -121,6 +121,18 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07#mmAccountOwner
  * SecuritiesTransactionPostingReportV07.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV09#mmAccountOwner
+ * SecuritiesTransactionPendingReportV09.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV07#mmAccountOwner
+ * SecuritiesSettlementTransactionAllegementReportV07.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV05#mmAccountOwner
+ * PortfolioTransferNotificationV05.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV08#mmAccountOwner
+ * SecuritiesTransactionPostingReportV08.mmAccountOwner}</li>
  * </ul>
  * </li>
  * <li>
@@ -273,7 +285,8 @@ public class PartyIdentification98 {
 						SecuritiesTransactionStatusQueryV04.mmAccountOwner, SecuritiesSettlementAllegementRemovalAdviceV04.mmAccountOwner, SecuritiesTransactionCancellationRequestV05.mmAccountOwner,
 						SecuritiesBalanceAccountingReportV09.mmAccountOwner, SecuritiesSettlementTransactionAllegementReportV05.mmAccountOwner, SecuritiesSettlementTransactionAuditTrailReportV03.mmAccountOwner,
 						SecuritiesTransactionPendingReportV07.mmAccountOwner, SecuritiesSettlementConditionsModificationRequestV07.mmAccountOwner, SecuritiesSettlementTransactionAllegementReportV06.mmAccountOwner,
-						SecuritiesTransactionPendingReportV08.mmAccountOwner, SecuritiesTransactionPostingReportV07.mmAccountOwner);
+						SecuritiesTransactionPendingReportV08.mmAccountOwner, SecuritiesTransactionPostingReportV07.mmAccountOwner, SecuritiesTransactionPendingReportV09.mmAccountOwner,
+						SecuritiesSettlementTransactionAllegementReportV07.mmAccountOwner, PortfolioTransferNotificationV05.mmAccountOwner, SecuritiesTransactionPostingReportV08.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

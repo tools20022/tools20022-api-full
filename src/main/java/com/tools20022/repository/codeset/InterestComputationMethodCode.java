@@ -82,6 +82,24 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Narrative
  * InterestComputationMethodCode.Narrative}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#ActualActualUltimo
+ * InterestComputationMethodCode.ActualActualUltimo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#IC30EPlus360
+ * InterestComputationMethodCode.IC30EPlus360}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Actual364
+ * InterestComputationMethodCode.Actual364}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Business252
+ * InterestComputationMethodCode.Business252}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#Actual360NL
+ * InterestComputationMethodCode.Actual360NL}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode#OneOne
+ * InterestComputationMethodCode.OneOne}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -685,6 +703,222 @@ public class InterestComputationMethodCode extends MMCode {
 			codeName = "NARR";
 		}
 	};
+	/**
+	 * Method whereby interest is calculated based on the actual number of days
+	 * in the coupon period divided by the actual number of days in the year.
+	 * This method is a variation of the ActualActualICMA method with the
+	 * exception that it assumes that the coupon always falls on the last day of
+	 * the month. Method equal to ACT/ACT.ISMA in the FpML model and Act/Act
+	 * (ICSMA Ultimo) in the FixML model.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode
+	 * InterestComputationMethodCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "A015"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ActualActualUltimo"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Method whereby interest is calculated based on the actual number of days in the coupon period divided by the actual number of days in the year. \nThis method is a variation of the ActualActualICMA method with the exception that it assumes that the coupon always falls on the last day of the month.\nMethod equal to ACT/ACT.ISMA in the FpML model and Act/Act (ICSMA Ultimo) in the FixML model."
+	 * </li>
+	 * </ul>
+	 */
+	public static final InterestComputationMethodCode ActualActualUltimo = new InterestComputationMethodCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ActualActualUltimo";
+			definition = "Method whereby interest is calculated based on the actual number of days in the coupon period divided by the actual number of days in the year. \nThis method is a variation of the ActualActualICMA method with the exception that it assumes that the coupon always falls on the last day of the month.\nMethod equal to ACT/ACT.ISMA in the FpML model and Act/Act (ICSMA Ultimo) in the FixML model.";
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestComputationMethodCode.mmObject();
+			codeName = "A015";
+		}
+	};
+	/**
+	 * Method whereby interest is calculated based on a 30-day month and a
+	 * 360-day year. Accrued interest to a value date on the last day of a month
+	 * shall be the same as to the 30th calendar day of the same month. This
+	 * means that a 31st is assumed to be a 30th and the 28 Feb (or 29 Feb for a
+	 * leap year) is assumed to be equivalent to a 30 Feb. This method is a
+	 * variation of the 30E360 method with the exception that if the coupon
+	 * falls on the last day of the month, change it to 1 and increase the month
+	 * by 1 (ie next month). Method equal to ThirtyEPlusThreeSixty in the FixML
+	 * model.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode
+	 * InterestComputationMethodCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "A016"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IC30EPlus360"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Method whereby interest is calculated based on a 30-day month and a 360-day year. Accrued interest to a value date on the last day of a month shall be the same as to the 30th calendar day of the same month. This means that a 31st is assumed to be a 30th and the 28 Feb (or 29 Feb for a leap year) is assumed to be equivalent to a 30 Feb. \nThis method is a variation of the 30E360 method with the exception that if the coupon falls on the last day of the month, change it to 1 and increase the month by 1 (ie next month).\nMethod equal to ThirtyEPlusThreeSixty in the FixML model."
+	 * </li>
+	 * </ul>
+	 */
+	public static final InterestComputationMethodCode IC30EPlus360 = new InterestComputationMethodCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IC30EPlus360";
+			definition = "Method whereby interest is calculated based on a 30-day month and a 360-day year. Accrued interest to a value date on the last day of a month shall be the same as to the 30th calendar day of the same month. This means that a 31st is assumed to be a 30th and the 28 Feb (or 29 Feb for a leap year) is assumed to be equivalent to a 30 Feb. \nThis method is a variation of the 30E360 method with the exception that if the coupon falls on the last day of the month, change it to 1 and increase the month by 1 (ie next month).\nMethod equal to ThirtyEPlusThreeSixty in the FixML model.";
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestComputationMethodCode.mmObject();
+			codeName = "A016";
+		}
+	};
+	/**
+	 * Method whereby interest is calculated based on the actual number of
+	 * accrued days in the interest period divided by 364 Method equal to Act364
+	 * in the FixML model.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode
+	 * InterestComputationMethodCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "A017"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Actual364"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Method whereby interest is calculated based on the actual number of accrued days in the interest period divided by 364\nMethod equal to Act364 in the FixML model."
+	 * </li>
+	 * </ul>
+	 */
+	public static final InterestComputationMethodCode Actual364 = new InterestComputationMethodCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Actual364";
+			definition = "Method whereby interest is calculated based on the actual number of accrued days in the interest period divided by 364\nMethod equal to Act364 in the FixML model.";
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestComputationMethodCode.mmObject();
+			codeName = "A017";
+		}
+	};
+	/**
+	 * Method whereby interest is calculated based on the actual number of
+	 * business days in the interest period divided by 252. Usage: Brazilian
+	 * Currency Swaps. Method equal to BUS/252 in the FpML model and
+	 * BusTwoFiftyTwo in the FixML model.<br>
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode
+	 * InterestComputationMethodCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "A018"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Business252"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Method whereby interest is calculated based on the actual number of business days in the interest period divided by 252. \nUsage: Brazilian Currency Swaps.\nMethod equal to BUS/252 in the FpML model and BusTwoFiftyTwo in the FixML model.\r\n"
+	 * </li>
+	 * </ul>
+	 */
+	public static final InterestComputationMethodCode Business252 = new InterestComputationMethodCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Business252";
+			definition = "Method whereby interest is calculated based on the actual number of business days in the interest period divided by 252. \nUsage: Brazilian Currency Swaps.\nMethod equal to BUS/252 in the FpML model and BusTwoFiftyTwo in the FixML model.\r\n";
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestComputationMethodCode.mmObject();
+			codeName = "A018";
+		}
+	};
+	/**
+	 * Method whereby interest is calculated based on the actual number of
+	 * accrued days in the interest period, excluding any leap day from the
+	 * count, and a 360-day year.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode
+	 * InterestComputationMethodCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "A0019"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Actual360NL"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Method whereby interest is calculated based on the actual number of accrued days in the interest period, excluding any leap day from the count, and a 360-day year."
+	 * </li>
+	 * </ul>
+	 */
+	public static final InterestComputationMethodCode Actual360NL = new InterestComputationMethodCode() {
+		{
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "Actual360NL";
+			definition = "Method whereby interest is calculated based on the actual number of accrued days in the interest period, excluding any leap day from the count, and a 360-day year.";
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestComputationMethodCode.mmObject();
+			codeName = "A0019";
+		}
+	};
+	/**
+	 * Also named 1/1. <br>
+	 * ELABORATION: If parties specify the Day Count Fraction to be 1/1 then in
+	 * calculating the applicable amount, 1 is simply input into the calculation
+	 * as the relevant Day Count Fraction. See also 2006 ISDA Definitions,
+	 * Section 4.16. Day Count Fraction, paragraph (a).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.InterestComputationMethodCode
+	 * InterestComputationMethodCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "A0020"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OneOne"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Also named 1/1. \r\r\nELABORATION: If parties specify the Day Count Fraction to be 1/1 then in calculating the applicable amount, 1 is simply input into the calculation as the relevant Day Count Fraction. See also 2006 ISDA Definitions, Section 4.16. Day Count Fraction, paragraph (a)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final InterestComputationMethodCode OneOne = new InterestComputationMethodCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OneOne";
+			definition = "Also named 1/1. \r\r\nELABORATION: If parties specify the Day Count Fraction to be 1/1 then in calculating the applicable amount, 1 is simply input into the calculation as the relevant Day Count Fraction. See also 2006 ISDA Definitions, Section 4.16. Day Count Fraction, paragraph (a).";
+			owner_lazy = () -> com.tools20022.repository.codeset.InterestComputationMethodCode.mmObject();
+			codeName = "A0020";
+		}
+	};
 	final static private LinkedHashMap<String, InterestComputationMethodCode> codesByName = new LinkedHashMap<>();
 
 	protected InterestComputationMethodCode() {
@@ -706,7 +940,10 @@ public class InterestComputationMethodCode extends MMCode {
 						com.tools20022.repository.codeset.InterestComputationMethodCode.Actual365LorActuActubasisRule, com.tools20022.repository.codeset.InterestComputationMethodCode.ActualActualAFB,
 						com.tools20022.repository.codeset.InterestComputationMethodCode.IC30360ICMAor30360basicrule, com.tools20022.repository.codeset.InterestComputationMethodCode.IC30E2360orEurobondbasismodel2,
 						com.tools20022.repository.codeset.InterestComputationMethodCode.IC30E3360orEurobondbasismodel3, com.tools20022.repository.codeset.InterestComputationMethodCode.Actual365NL,
-						com.tools20022.repository.codeset.InterestComputationMethodCode.Narrative);
+						com.tools20022.repository.codeset.InterestComputationMethodCode.Narrative, com.tools20022.repository.codeset.InterestComputationMethodCode.ActualActualUltimo,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.IC30EPlus360, com.tools20022.repository.codeset.InterestComputationMethodCode.Actual364,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.Business252, com.tools20022.repository.codeset.InterestComputationMethodCode.Actual360NL,
+						com.tools20022.repository.codeset.InterestComputationMethodCode.OneOne);
 			}
 		});
 		return mmObject_lazy.get();
@@ -728,6 +965,12 @@ public class InterestComputationMethodCode extends MMCode {
 		codesByName.put(IC30E3360orEurobondbasismodel3.getCodeName().get(), IC30E3360orEurobondbasismodel3);
 		codesByName.put(Actual365NL.getCodeName().get(), Actual365NL);
 		codesByName.put(Narrative.getCodeName().get(), Narrative);
+		codesByName.put(ActualActualUltimo.getCodeName().get(), ActualActualUltimo);
+		codesByName.put(IC30EPlus360.getCodeName().get(), IC30EPlus360);
+		codesByName.put(Actual364.getCodeName().get(), Actual364);
+		codesByName.put(Business252.getCodeName().get(), Business252);
+		codesByName.put(Actual360NL.getCodeName().get(), Actual360NL);
+		codesByName.put(OneOne.getCodeName().get(), OneOne);
 	}
 
 	public static InterestComputationMethodCode valueOf(String codeName) {

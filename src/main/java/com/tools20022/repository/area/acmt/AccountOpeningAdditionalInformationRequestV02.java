@@ -178,7 +178,7 @@ public class AccountOpeningAdditionalInformationRequestV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the business sender of the message, if it is not the account owner or account servicing financial institution. OrganisationIdentification6"
+	 * "Identifies the business sender of the message, if it is not the account owner or account servicing financial institution. OrganisationIdentification6."
 	 * </li>
 	 * </ul>
 	 */
@@ -187,7 +187,7 @@ public class AccountOpeningAdditionalInformationRequestV02 {
 			xmlTag = "Fr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
-			definition = "Identifies the business sender of the message, if it is not the account owner or account servicing financial institution. OrganisationIdentification6";
+			definition = "Identifies the business sender of the message, if it is not the account owner or account servicing financial institution. OrganisationIdentification6.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OrganisationIdentification8.mmObject();

@@ -72,6 +72,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Intra-balance type used to specify pairs of from/to balances."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceType2
+ * IntraBalanceType2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -114,6 +121,14 @@ public class IntraBalanceType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance from which the amount of money is moved."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceType2#mmBalanceFrom
+	 * IntraBalanceType2.mmBalanceFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
@@ -126,6 +141,7 @@ public class IntraBalanceType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceType2.mmBalanceFrom);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -167,6 +183,14 @@ public class IntraBalanceType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance to which the amount of money is moved."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceType2#mmBalanceTo
+	 * IntraBalanceType2.mmBalanceTo}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalanceTo = new MMMessageAssociationEnd() {
@@ -179,6 +203,7 @@ public class IntraBalanceType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the amount of money is moved.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceType2.mmBalanceTo);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -196,6 +221,7 @@ public class IntraBalanceType1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceType1";
 				definition = "Intra-balance type used to specify pairs of from/to balances.";
+				nextVersions_lazy = () -> Arrays.asList(IntraBalanceType2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

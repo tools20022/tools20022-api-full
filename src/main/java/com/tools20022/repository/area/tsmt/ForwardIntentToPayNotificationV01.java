@@ -255,7 +255,7 @@ public class ForwardIntentToPayNotificationV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification assigned by the matching application to the baseline when it is established. "
+	 * "Unique identification assigned by the matching application to the baseline when it is established."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -272,7 +272,7 @@ public class ForwardIntentToPayNotificationV01 {
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
-			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
+			definition = "Unique identification assigned by the matching application to the baseline when it is established.";
 			nextVersions_lazy = () -> Arrays.asList(ForwardIntentToPayNotificationV02.mmEstablishedBaselineIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -419,7 +419,7 @@ public class ForwardIntentToPayNotificationV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the buyer, uniquely identified by its BIC. "
+	 * "The financial institution of the buyer, uniquely identified by its BIC."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -436,7 +436,7 @@ public class ForwardIntentToPayNotificationV01 {
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
-			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
+			definition = "The financial institution of the buyer, uniquely identified by its BIC.";
 			nextVersions_lazy = () -> Arrays.asList(ForwardIntentToPayNotificationV02.mmBuyerBank);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -474,7 +474,7 @@ public class ForwardIntentToPayNotificationV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the seller, uniquely identified by its BIC. "
+	 * "The financial institution of the seller, uniquely identified by its BIC."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -491,7 +491,7 @@ public class ForwardIntentToPayNotificationV01 {
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
-			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
+			definition = "The financial institution of the seller, uniquely identified by its BIC.";
 			nextVersions_lazy = () -> Arrays.asList(ForwardIntentToPayNotificationV02.mmSellerBank);
 			maxOccurs = 1;
 			minOccurs = 1;

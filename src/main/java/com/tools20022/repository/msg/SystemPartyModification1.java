@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PartyModificationRequestV01;
 import com.tools20022.repository.choice.SystemPartyModification1Choice;
 import com.tools20022.repository.codeset.DataModification1Code;
 import com.tools20022.repository.GeneratedRepository;
@@ -47,6 +48,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SystemPartyModification1#mmRequestedModification
  * SystemPartyModification1.mmRequestedModification}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyModificationRequestV01#mmModification
+ * PartyModificationRequestV01.mmModification}</li>
  * </ul>
  * </li>
  * <li>
@@ -164,6 +174,7 @@ public class SystemPartyModification1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemPartyModification1.mmScopeIndication, com.tools20022.repository.msg.SystemPartyModification1.mmRequestedModification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyModificationRequestV01.mmModification);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyModification1";

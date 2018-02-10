@@ -64,6 +64,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Parameters associated to a cryptographic encryption algorithm."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter12 Parameter12}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Parameter1
  * Parameter1}</li>
@@ -103,6 +109,14 @@ public class Parameter6 {
 	 * definition} =
 	 * "Format of data before encryption, if the format is not plaintext or implicit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter12#mmEncryptionFormat
+	 * Parameter12.mmEncryptionFormat}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEncryptionFormat = new MMMessageAttribute() {
@@ -113,6 +127,7 @@ public class Parameter6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptionFormat";
 			definition = "Format of data before encryption, if the format is not plaintext or implicit.";
+			nextVersions_lazy = () -> Arrays.asList(Parameter12.mmEncryptionFormat);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EncryptionFormat1Code.mmObject();
@@ -147,6 +162,14 @@ public class Parameter6 {
 	 * definition} =
 	 * "Initialisation vector of a cipher block chaining (CBC) mode encryption."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter12#mmInitialisationVector
+	 * Parameter12.mmInitialisationVector}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -162,6 +185,7 @@ public class Parameter6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitialisationVector";
 			definition = "Initialisation vector of a cipher block chaining (CBC) mode encryption.";
+			nextVersions_lazy = () -> Arrays.asList(Parameter12.mmInitialisationVector);
 			previousVersion_lazy = () -> Parameter1.mmInitialisationVector;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -197,6 +221,13 @@ public class Parameter6 {
 	 * definition} =
 	 * "Byte padding for a cypher block chaining mode encryption, if the padding is not implicit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Parameter12#mmBytePadding
+	 * Parameter12.mmBytePadding}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBytePadding = new MMMessageAttribute() {
@@ -207,6 +238,7 @@ public class Parameter6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BytePadding";
 			definition = "Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.";
+			nextVersions_lazy = () -> Arrays.asList(Parameter12.mmBytePadding);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BytePadding1Code.mmObject();
@@ -221,6 +253,7 @@ public class Parameter6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter6";
 				definition = "Parameters associated to a cryptographic encryption algorithm.";
+				nextVersions_lazy = () -> Arrays.asList(Parameter12.mmObject());
 				previousVersion_lazy = () -> Parameter1.mmObject();
 			}
 		});

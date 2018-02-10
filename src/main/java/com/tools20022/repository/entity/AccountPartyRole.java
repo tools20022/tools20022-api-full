@@ -177,6 +177,12 @@ public class AccountPartyRole extends Role {
 	 * Intermediary35.mmAccount}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary37#mmAccount
 	 * Intermediary37.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SettlementAgent1#mmAccount
+	 * SettlementAgent1.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary41#mmAccount
+	 * Intermediary41.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary42#mmAccount
+	 * Intermediary42.mmAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -200,7 +206,7 @@ public class AccountPartyRole extends Role {
 			derivation_lazy = () -> Arrays.asList(Intermediary5.mmAccount, Intermediary12.mmAccount, Intermediary1.mmAccount, Intermediary7.mmAccount, Intermediary6.mmAccount, Intermediary13.mmAccount, Intermediary11.mmAccount,
 					Intermediary2.mmAccount, Intermediary3.mmAccount, Intermediary21.mmAccount, Intermediary23.mmAccount, Intermediary22.mmAccount, PartyIdentification59.mmAccountNumber, Intermediary17.mmAccount, Intermediary18.mmAccount,
 					Intermediary24.mmAccount, Intermediary26.mmAccount, Intermediary25.mmAccount, Intermediary27.mmAccount, Intermediary32.mmAccount, Intermediary36.mmAccount, Intermediary34.mmAccount, Intermediary33.mmAccount,
-					Intermediary35.mmAccount, Intermediary37.mmAccount);
+					Intermediary35.mmAccount, Intermediary37.mmAccount, SettlementAgent1.mmAccount, Intermediary41.mmAccount, Intermediary42.mmAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

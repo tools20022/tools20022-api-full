@@ -148,7 +148,7 @@ public class PaymentSchemeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Channel that is specific to a user community and is required for use within that user community.\n\nUsage : if the channel is included in the list of codes provided for the payment scheme, the code element should be used instead of the proprietary element."
+	 * "Channel that is specific to a user community and is required for use within that user community.\n\nUsage: if the channel is included in the list of codes provided for the payment scheme, the code element should be used instead of the proprietary element."
 	 * </li>
 	 * </ul>
 	 */
@@ -159,7 +159,7 @@ public class PaymentSchemeChoice {
 			xmlTag = "PrtryInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryInformation";
-			definition = "Channel that is specific to a user community and is required for use within that user community.\n\nUsage : if the channel is included in the list of codes provided for the payment scheme, the code element should be used instead of the proprietary element.";
+			definition = "Channel that is specific to a user community and is required for use within that user community.\n\nUsage: if the channel is included in the list of codes provided for the payment scheme, the code element should be used instead of the proprietary element.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

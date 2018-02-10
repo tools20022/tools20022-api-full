@@ -25,7 +25,7 @@ import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVer
 import com.tools20022.repository.msg.AcceptorCancellationAdviceResponse6;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header34;
-import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017;
+import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -60,8 +60,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
- * CAPEAcceptortoAcquirerMaintenance20162017}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOLatestversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -84,6 +84,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "The AcceptorCurrencyConversionAdviceResponse message is sent by the service provider to acknowledge the acceptor about the notification of the reception of the currency conversion advice."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV02
+ * AcceptorCurrencyConversionAdviceResponseV02}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -115,6 +123,14 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Cancellation advice response message management information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV02#mmHeader
+	 * AcceptorCurrencyConversionAdviceResponseV02.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
@@ -123,6 +139,7 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Cancellation advice response message management information.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionAdviceResponseV02.mmHeader);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header34.mmObject();
@@ -160,6 +177,15 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to the currency conversion advice response."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV02#mmCurrencyConversionAdviceResponse
+	 * AcceptorCurrencyConversionAdviceResponseV02.
+	 * mmCurrencyConversionAdviceResponse}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmCurrencyConversionAdviceResponse = new MMMessageBuildingBlock() {
@@ -168,6 +194,7 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionAdviceResponse";
 			definition = "Information related to the currency conversion advice response.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionAdviceResponseV02.mmCurrencyConversionAdviceResponse);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcceptorCancellationAdviceResponse6.mmObject();
@@ -204,6 +231,14 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Trailer of the message containing a MAC."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionAdviceResponseV02#mmSecurityTrailer
+	 * AcceptorCurrencyConversionAdviceResponseV02.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
@@ -212,6 +247,7 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionAdviceResponseV02.mmSecurityTrailer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType15.mmObject();
@@ -232,7 +268,8 @@ public class AcceptorCurrencyConversionAdviceResponseV01 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCurrencyConversionAdviceResponseV01";
 				definition = "The AcceptorCurrencyConversionAdviceResponse message is sent by the service provider to acknowledge the acceptor about the notification of the reception of the currency conversion advice.";
-				messageSet_lazy = () -> Arrays.asList(CAPEAcceptortoAcquirerMaintenance20162017.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionAdviceResponseV02.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCcyConvsAdvcRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();

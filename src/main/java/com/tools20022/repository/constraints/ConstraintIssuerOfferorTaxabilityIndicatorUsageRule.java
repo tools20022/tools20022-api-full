@@ -1131,6 +1131,14 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 	 * definition} =
 	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forCashOption58
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption58}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1144,6 +1152,7 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
 			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption58);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption44;
 			owner_lazy = () -> CashOption52.mmObject();
 		}
@@ -1167,6 +1176,15 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 	 * definition} =
 	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forSecuritiesOption65
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption65
+	 * }</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1181,6 +1199,7 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
 			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption50;
 			owner_lazy = () -> SecuritiesOption60.mmObject();
 		}
@@ -1203,6 +1222,14 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 	 * definition} =
 	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forCashOption57
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption57}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1216,6 +1243,7 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
 			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption57);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption42;
 			owner_lazy = () -> CashOption51.mmObject();
 		}
@@ -1239,6 +1267,15 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 	 * definition} =
 	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forSecuritiesOption64
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption64
+	 * }</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1253,6 +1290,7 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
 			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption64);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption49;
 			owner_lazy = () -> SecuritiesOption59.mmObject();
 		}
@@ -1275,6 +1313,14 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 	 * definition} =
 	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forCashOption56
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption56}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1288,6 +1334,7 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
 			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption56);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption43;
 			owner_lazy = () -> CashOption50.mmObject();
 		}
@@ -1437,6 +1484,332 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
 			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document titled \" TXAP Taxability Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption55.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption56 CashOption56}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \"TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forCashOption50
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption50}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption56> forCashOption56 = new MMConstraint<CashOption56>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkCashOption56;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \"TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption50;
+			owner_lazy = () -> CashOption56.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption57 CashOption57}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forCashOption51
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption51}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption57> forCashOption57 = new MMConstraint<CashOption57>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkCashOption57;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption51;
+			owner_lazy = () -> CashOption57.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64
+	 * SecuritiesOption64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forSecuritiesOption59
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption59
+	 * }</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesOption64> forSecuritiesOption64 = new MMConstraint<SecuritiesOption64>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkSecuritiesOption64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption59;
+			owner_lazy = () -> SecuritiesOption64.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65
+	 * SecuritiesOption65}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forSecuritiesOption60
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption60
+	 * }</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesOption65> forSecuritiesOption65 = new MMConstraint<SecuritiesOption65>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkSecuritiesOption65;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forSecuritiesOption60;
+			owner_lazy = () -> SecuritiesOption65.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption58 CashOption58}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule#forCashOption52
+	 * ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption52}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption58> forCashOption58 = new MMConstraint<CashOption58>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkCashOption58;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerOfferorTaxabilityIndicatorUsageRule.forCashOption52;
+			owner_lazy = () -> CashOption58.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67
+	 * SecuritiesOption67}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesOption67> forSecuritiesOption67 = new MMConstraint<SecuritiesOption67>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkSecuritiesOption67;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> SecuritiesOption67.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption60 CashOption60}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption60> forCashOption60 = new MMConstraint<CashOption60>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkCashOption60;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> CashOption60.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68
+	 * SecuritiesOption68}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesOption68> forSecuritiesOption68 = new MMConstraint<SecuritiesOption68>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkSecuritiesOption68;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> SecuritiesOption68.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption61 CashOption61}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption61> forCashOption61 = new MMConstraint<CashOption61>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkCashOption61;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \" TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> CashOption61.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption63 CashOption63}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerOfferorTaxabilityIndicatorUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \"TXAP Taxability Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption63> forCashOption63 = new MMConstraint<CashOption63>() {
+		{
+			validator = ConstraintIssuerOfferorTaxabilityIndicatorUsageRule::checkCashOption63;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerOfferorTaxabilityIndicatorUsageRule";
+			definition = "The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is provided in the message and it must not be used in events such as dividend or interest.\r\nThe list of proprietary IssuerOfferorTaxabilityIndicator codes that may be used are provided in the document \"TXAP Taxability Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> CashOption63.mmObject();
 		}
 	};
 
@@ -1875,6 +2248,126 @@ public class ConstraintIssuerOfferorTaxabilityIndicatorUsageRule {
 	 * is available on the SMPG website at www.smpg.info.
 	 */
 	public static void checkCashOption55(CashOption55 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document "TXAP Taxability Codes" available on
+	 * the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption56(CashOption56 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document " TXAP Taxability Codes" available
+	 * on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption57(CashOption57 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document " TXAP Taxability Codes" available
+	 * on the SMPG website at www.smpg.info.
+	 */
+	public static void checkSecuritiesOption64(SecuritiesOption64 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document " TXAP Taxability Codes" available
+	 * on the SMPG website at www.smpg.info.
+	 */
+	public static void checkSecuritiesOption65(SecuritiesOption65 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document " TXAP Taxability Codes" available
+	 * on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption58(CashOption58 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document " TXAP Taxability Codes" available
+	 * on the SMPG website at www.smpg.info.
+	 */
+	public static void checkSecuritiesOption67(SecuritiesOption67 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document " TXAP Taxability Codes" available
+	 * on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption60(CashOption60 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document " TXAP Taxability Codes" available
+	 * on the SMPG website at www.smpg.info.
+	 */
+	public static void checkSecuritiesOption68(SecuritiesOption68 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document " TXAP Taxability Codes" available
+	 * on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption61(CashOption61 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The IssuerOfferorTaxabilityIndicator may only be used when no tax rate is
+	 * provided in the message and it must not be used in events such as
+	 * dividend or interest.<br>
+	 * The list of proprietary IssuerOfferorTaxabilityIndicator codes that may
+	 * be used are provided in the document "TXAP Taxability Codes" available on
+	 * the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption63(CashOption63 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

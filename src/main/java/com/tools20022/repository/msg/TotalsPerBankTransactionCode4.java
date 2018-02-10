@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of elements used to provide the total sum of entries per bank transaction code."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5
+ * TotalsPerBankTransactionCode5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode3
@@ -119,6 +126,14 @@ public class TotalsPerBankTransactionCode4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Number of individual entries for the bank transaction code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmNumberOfEntries
+	 * TotalsPerBankTransactionCode5.mmNumberOfEntries}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -134,6 +149,7 @@ public class TotalsPerBankTransactionCode4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfEntries";
 			definition = "Number of individual entries for the bank transaction code.";
+			nextVersions_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode5.mmNumberOfEntries);
 			previousVersion_lazy = () -> TotalsPerBankTransactionCode3.mmNumberOfEntries;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -168,6 +184,14 @@ public class TotalsPerBankTransactionCode4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total of all individual entries included in the report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmSum
+	 * TotalsPerBankTransactionCode5.mmSum}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +207,7 @@ public class TotalsPerBankTransactionCode4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sum";
 			definition = "Total of all individual entries included in the report.";
+			nextVersions_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode5.mmSum);
 			previousVersion_lazy = () -> TotalsPerBankTransactionCode3.mmSum;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -219,6 +244,14 @@ public class TotalsPerBankTransactionCode4 {
 	 * definition} =
 	 * "Total debit or credit amount that is the result of the netted amounts for all debit and credit entries per bank transaction code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmTotalNetEntry
+	 * TotalsPerBankTransactionCode5.mmTotalNetEntry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -234,6 +267,7 @@ public class TotalsPerBankTransactionCode4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNetEntry";
 			definition = "Total debit or credit amount that is the result of the netted amounts for all debit and credit entries per bank transaction code.";
+			nextVersions_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode5.mmTotalNetEntry);
 			previousVersion_lazy = () -> TotalsPerBankTransactionCode3.mmTotalNetEntry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -270,6 +304,14 @@ public class TotalsPerBankTransactionCode4 {
 	 * definition} =
 	 * "Indicates whether the bank transaction code is related to booked or forecast items."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmForecastIndicator
+	 * TotalsPerBankTransactionCode5.mmForecastIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -285,6 +327,7 @@ public class TotalsPerBankTransactionCode4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForecastIndicator";
 			definition = "Indicates whether the bank transaction code is related to booked or forecast items.";
+			nextVersions_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode5.mmForecastIndicator);
 			previousVersion_lazy = () -> TotalsPerBankTransactionCode3.mmForecastIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -325,6 +368,14 @@ public class TotalsPerBankTransactionCode4 {
 	 * definition} =
 	 * "Set of elements used to fully identify the type of underlying transaction resulting in an entry."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmBankTransactionCode
+	 * TotalsPerBankTransactionCode5.mmBankTransactionCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -341,6 +392,7 @@ public class TotalsPerBankTransactionCode4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankTransactionCode";
 			definition = "Set of elements used to fully identify the type of underlying transaction resulting in an entry.";
+			nextVersions_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode5.mmBankTransactionCode);
 			previousVersion_lazy = () -> TotalsPerBankTransactionCode3.mmBankTransactionCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -381,6 +433,14 @@ public class TotalsPerBankTransactionCode4 {
 	 * definition} =
 	 * "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmAvailability
+	 * TotalsPerBankTransactionCode5.mmAvailability}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -397,6 +457,7 @@ public class TotalsPerBankTransactionCode4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest.";
+			nextVersions_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode5.mmAvailability);
 			previousVersion_lazy = () -> TotalsPerBankTransactionCode3.mmAvailability;
 			minOccurs = 0;
 			isComposite = true;
@@ -414,6 +475,7 @@ public class TotalsPerBankTransactionCode4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalsPerBankTransactionCode4";
 				definition = "Set of elements used to provide the total sum of entries per bank transaction code.";
+				nextVersions_lazy = () -> Arrays.asList(TotalsPerBankTransactionCode5.mmObject());
 				previousVersion_lazy = () -> TotalsPerBankTransactionCode3.mmObject();
 			}
 		});

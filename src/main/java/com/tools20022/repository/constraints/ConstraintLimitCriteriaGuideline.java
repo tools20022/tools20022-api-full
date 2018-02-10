@@ -20,16 +20,15 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.msg.LimitCriteria1;
-import com.tools20022.repository.msg.LimitCriteria2;
-import com.tools20022.repository.msg.LimitCriteria3;
+import com.tools20022.repository.msg.*;
+import java.util.Arrays;
 
 /**
  * If a bilateral limit regarding specific members in the system is required,
  * then the identification of the bilateral counterpart should be given. By
  * default, if there is no identification of the bilateral counterpart and the
  * current or default bilateral limit is required, then all the bilateral limits
- * with the relevant counterpart identifications are returned
+ * with the relevant counterpart identifications are returned.
  */
 public class ConstraintLimitCriteriaGuideline {
 
@@ -49,7 +48,7 @@ public class ConstraintLimitCriteriaGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned"
+	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +57,7 @@ public class ConstraintLimitCriteriaGuideline {
 			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteriaGuideline";
-			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned";
+			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
 			owner_lazy = () -> LimitCriteria1.mmObject();
 		}
 	};
@@ -78,7 +77,7 @@ public class ConstraintLimitCriteriaGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned"
+	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
 	 * </li>
 	 * </ul>
 	 */
@@ -87,7 +86,7 @@ public class ConstraintLimitCriteriaGuideline {
 			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteriaGuideline";
-			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned";
+			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
 			owner_lazy = () -> LimitCriteria2.mmObject();
 		}
 	};
@@ -107,7 +106,15 @@ public class ConstraintLimitCriteriaGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned"
+	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline#forLimitCriteria4
+	 * ConstraintLimitCriteriaGuideline.forLimitCriteria4}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -116,8 +123,88 @@ public class ConstraintLimitCriteriaGuideline {
 			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCriteriaGuideline";
-			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned";
+			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria4);
 			owner_lazy = () -> LimitCriteria3.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.LimitCriteria4 LimitCriteria4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LimitCriteriaGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline#forLimitCriteria5
+	 * ConstraintLimitCriteriaGuideline.forLimitCriteria5}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline#forLimitCriteria3
+	 * ConstraintLimitCriteriaGuideline.forLimitCriteria3}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<LimitCriteria4> forLimitCriteria4 = new MMConstraint<LimitCriteria4>() {
+		{
+			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria4;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LimitCriteriaGuideline";
+			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria5);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria3;
+			owner_lazy = () -> LimitCriteria4.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.LimitCriteria5 LimitCriteria5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LimitCriteriaGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline#forLimitCriteria4
+	 * ConstraintLimitCriteriaGuideline.forLimitCriteria4}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<LimitCriteria5> forLimitCriteria5 = new MMConstraint<LimitCriteria5>() {
+		{
+			validator = ConstraintLimitCriteriaGuideline::checkLimitCriteria5;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LimitCriteriaGuideline";
+			definition = "If a bilateral limit regarding specific members in the system is required, then the identification of the bilateral counterpart should be given.\nBy default, if there is no identification of the bilateral counterpart and the current or default bilateral limit is required, then all the bilateral limits with the relevant counterpart identifications are returned.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLimitCriteriaGuideline.forLimitCriteria4;
+			owner_lazy = () -> LimitCriteria5.mmObject();
 		}
 	};
 
@@ -127,7 +214,7 @@ public class ConstraintLimitCriteriaGuideline {
 	 * given. By default, if there is no identification of the bilateral
 	 * counterpart and the current or default bilateral limit is required, then
 	 * all the bilateral limits with the relevant counterpart identifications
-	 * are returned
+	 * are returned.
 	 */
 	public static void checkLimitCriteria1(LimitCriteria1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -139,7 +226,7 @@ public class ConstraintLimitCriteriaGuideline {
 	 * given. By default, if there is no identification of the bilateral
 	 * counterpart and the current or default bilateral limit is required, then
 	 * all the bilateral limits with the relevant counterpart identifications
-	 * are returned
+	 * are returned.
 	 */
 	public static void checkLimitCriteria2(LimitCriteria2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -151,9 +238,33 @@ public class ConstraintLimitCriteriaGuideline {
 	 * given. By default, if there is no identification of the bilateral
 	 * counterpart and the current or default bilateral limit is required, then
 	 * all the bilateral limits with the relevant counterpart identifications
-	 * are returned
+	 * are returned.
 	 */
 	public static void checkLimitCriteria3(LimitCriteria3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If a bilateral limit regarding specific members in the system is
+	 * required, then the identification of the bilateral counterpart should be
+	 * given. By default, if there is no identification of the bilateral
+	 * counterpart and the current or default bilateral limit is required, then
+	 * all the bilateral limits with the relevant counterpart identifications
+	 * are returned.
+	 */
+	public static void checkLimitCriteria4(LimitCriteria4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If a bilateral limit regarding specific members in the system is
+	 * required, then the identification of the bilateral counterpart should be
+	 * given. By default, if there is no identification of the bilateral
+	 * counterpart and the current or default bilateral limit is required, then
+	 * all the bilateral limits with the relevant counterpart identifications
+	 * are returned.
+	 */
+	public static void checkLimitCriteria5(LimitCriteria5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

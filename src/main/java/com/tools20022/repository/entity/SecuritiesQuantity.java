@@ -778,6 +778,27 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice
  * FinancialInstrumentQuantity25Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity41Choice
+ * Quantity41Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity30Choice
+ * FinancialInstrumentQuantity30Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit8 Unit8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit9 Unit9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit10 Unit10}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity42Choice
+ * Quantity42Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity43Choice
+ * Quantity43Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity14 Quantity14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingBalance5
+ * PendingBalance5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingBalance6
+ * PendingBalance6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity15 Quantity15}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity31Choice
+ * FinancialInstrumentQuantity31Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -980,6 +1001,21 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#mmUnit
 	 * FinancialInstrumentQuantity25Choice.mmUnit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity30Choice#mmUnit
+	 * FinancialInstrumentQuantity30Choice.mmUnit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmUnitsDetails
+	 * TransferStatusAndReason5.mmUnitsDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit8#mmUnitsNumber
+	 * Unit8.mmUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit10#mmUnitsNumber
+	 * Unit10.mmUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.choice.Quantity43Choice#mmUnit
+	 * Quantity43Choice.mmUnit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity31Choice#mmUnit
+	 * FinancialInstrumentQuantity31Choice.mmUnit}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1014,7 +1050,8 @@ public class SecuritiesQuantity {
 					SidePocketQuantityAndAmount1.mmUnitsNumber, FinancialInstrumentQuantity2.mmUnitsNumber, FinancialInstrumentQuantity3.mmUnitsNumber, FinancialInstrumentQuantity4.mmUnit, FinancialInstrumentQuantitySearch1Choice.mmUnit,
 					CashOutForecast5.mmSubTotalUnitsNumber, FundCashOutBreakdown3.mmUnitsNumber, NetCashForecast4.mmNetUnitsNumber, CashInForecast5.mmSubTotalUnitsNumber, FundCashInBreakdown3.mmUnitsNumber,
 					CashOutForecast6.mmSubTotalUnitsNumber, CashInForecast6.mmSubTotalUnitsNumber, NetCashForecast5.mmNetUnitsNumber, Unit6.mmUnitsNumber, BlockedHoldingDetails2.mmPartialHoldingUnits,
-					FinancialInstrumentQuantity25Choice.mmUnit);
+					FinancialInstrumentQuantity25Choice.mmUnit, FinancialInstrumentQuantity30Choice.mmUnit, TransferStatusAndReason5.mmUnitsDetails, Unit8.mmUnitsNumber, Unit10.mmUnitsNumber, Quantity43Choice.mmUnit,
+					FinancialInstrumentQuantity31Choice.mmUnit);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "UNIT"));
@@ -1259,6 +1296,10 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmGroup1Or2Units
 	 * SwitchRedemptionLegExecution4.mmGroup1Or2Units}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit8#mmGroup1Or2Units
+	 * Unit8.mmGroup1Or2Units}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit10#mmGroup1Or2Units
+	 * Unit10.mmGroup1Or2Units}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1283,7 +1324,7 @@ public class SecuritiesQuantity {
 					RedemptionExecution5.mmGroup1Or2Units, RedemptionOrder7.mmGroup1Or2Units, RedemptionOrder4.mmGroup1Or2Units, RedemptionOrder6.mmGroup1Or2Units, RedemptionExecution4.mmGroup1Or2Units,
 					RedemptionExecution6.mmGroup1Or2Units, RedemptionOrder8.mmGroup1Or2Units, SwitchRedemptionLegOrder2.mmGroup1Or2Units, SwitchRedemptionLegOrder3.mmGroup1Or2Units, SwitchRedemptionLegExecution2.mmGroup1Or2Units,
 					SwitchRedemptionLegExecution3.mmGroup1Or2Units, Unit6.mmGroup1Or2Units, RedemptionOrder14.mmGroup1Or2Units, SwitchRedemptionLegOrder6.mmGroup1Or2Units, RedemptionOrder15.mmGroup1Or2Units,
-					RedemptionExecution16.mmGroup1Or2Units, RedemptionExecution15.mmGroup1Or2Units, SwitchRedemptionLegExecution4.mmGroup1Or2Units);
+					RedemptionExecution16.mmGroup1Or2Units, RedemptionExecution15.mmGroup1Or2Units, SwitchRedemptionLegExecution4.mmGroup1Or2Units, Unit8.mmGroup1Or2Units, Unit10.mmGroup1Or2Units);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1862,6 +1903,12 @@ public class SecuritiesQuantity {
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount54#mmQuantityBreakdown
 	 * QuantityAndAccount54.mmQuantityBreakdown}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmQuantityBreakdown
+	 * AggregateBalanceInformation34.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2#mmQuantityBreakdown
+	 * CashSubBalanceTypeAndQuantityBreakdown2.mmQuantityBreakdown}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount57#mmQuantityBreakdown
 	 * QuantityAndAccount57.mmQuantityBreakdown}</li>
 	 * <li>
@@ -1876,6 +1923,53 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount60#mmQuantityBreakdown
 	 * QuantityAndAccount60.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OpenInterest1#mmNumberOfLots
+	 * OpenInterest1.mmNumberOfLots}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit9#mmUnitDetails
+	 * Unit9.mmUnitDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmQuantityBreakdown
+	 * QuantityAndAccount64.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount63#mmQuantityBreakdown
+	 * QuantityAndAccount63.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount65#mmQuantityBreakdown
+	 * QuantityAndAccount65.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount66#mmQuantityBreakdown
+	 * QuantityAndAccount66.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount67#mmQuantityBreakdown
+	 * QuantityAndAccount67.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmQuantityBreakdown
+	 * QuantityAndAccount68.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmQuantityBreakdown
+	 * FinancialInstrumentAttributes92.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmQuantityBreakdown
+	 * FinancialInstrumentAttributes95.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount69#mmQuantityBreakdown
+	 * QuantityAndAccount69.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount70#mmQuantityBreakdown
+	 * QuantityAndAccount70.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount71#mmQuantityBreakdown
+	 * QuantityAndAccount71.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmQuantityBreakdown
+	 * QuantityAndAccount72.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount75#mmQuantityBreakdown
+	 * QuantityAndAccount75.mmQuantityBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount76#mmQuantityBreakdown
+	 * QuantityAndAccount76.mmQuantityBreakdown}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1929,8 +2023,12 @@ public class SecuritiesQuantity {
 					QuantityAndAccount47.mmQuantityBreakdown, AggregateBalanceInformation32.mmQuantityBreakdown, AggregateBalanceInformation33.mmQuantityBreakdown, FinancialInstrumentAttributes75.mmQuantityBreakdown,
 					QuantityAndAccount51.mmQuantityBreakdown, QuantityAndAccount49.mmQuantityBreakdown, SecuritiesSubBalanceTypeAndQuantityBreakdown4.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace31.mmQuantityBreakdown,
 					AdditionalBalanceInformation17.mmQuantityBreakdown, SubBalanceInformation17.mmQuantityBreakdown, QuantityAndAccount50.mmQuantityBreakdown, AggregateBalancePerSafekeepingPlace30.mmQuantityBreakdown,
-					QuantityAndAccount55.mmQuantityBreakdown, QuantityAndAccount54.mmQuantityBreakdown, QuantityAndAccount57.mmQuantityBreakdown, QuantityAndAccount58.mmQuantityBreakdown, QuantityAndAccount56.mmQuantityBreakdown,
-					QuantityAndAccount59.mmQuantityBreakdown, QuantityAndAccount60.mmQuantityBreakdown);
+					QuantityAndAccount55.mmQuantityBreakdown, QuantityAndAccount54.mmQuantityBreakdown, AggregateBalanceInformation34.mmQuantityBreakdown, CashSubBalanceTypeAndQuantityBreakdown2.mmQuantityBreakdown,
+					QuantityAndAccount57.mmQuantityBreakdown, QuantityAndAccount58.mmQuantityBreakdown, QuantityAndAccount56.mmQuantityBreakdown, QuantityAndAccount59.mmQuantityBreakdown, QuantityAndAccount60.mmQuantityBreakdown,
+					OpenInterest1.mmNumberOfLots, Unit9.mmUnitDetails, QuantityAndAccount64.mmQuantityBreakdown, QuantityAndAccount63.mmQuantityBreakdown, QuantityAndAccount65.mmQuantityBreakdown, QuantityAndAccount66.mmQuantityBreakdown,
+					QuantityAndAccount67.mmQuantityBreakdown, QuantityAndAccount68.mmQuantityBreakdown, FinancialInstrumentAttributes92.mmQuantityBreakdown, FinancialInstrumentAttributes95.mmQuantityBreakdown,
+					QuantityAndAccount69.mmQuantityBreakdown, QuantityAndAccount70.mmQuantityBreakdown, QuantityAndAccount71.mmQuantityBreakdown, QuantityAndAccount72.mmQuantityBreakdown, QuantityAndAccount75.mmQuantityBreakdown,
+					QuantityAndAccount76.mmQuantityBreakdown);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2184,6 +2282,24 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance12#mmBalance
 	 * CorporateActionEventAndBalance12.mmBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmOpeningBalance
+	 * FinancialInstrumentDetails28.mmOpeningBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmClosingBalance
+	 * FinancialInstrumentDetails28.mmClosingBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance13#mmBalance
+	 * CorporateActionEventAndBalance13.mmBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance14#mmBalance
+	 * CorporateActionEventAndBalance14.mmBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails31#mmOpeningBalance
+	 * FinancialInstrumentDetails31.mmOpeningBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails31#mmClosingBalance
+	 * FinancialInstrumentDetails31.mmClosingBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2214,7 +2330,9 @@ public class SecuritiesQuantity {
 					FinancialInstrumentDetails17.mmClosingBalance, FinancialInstrumentDetails18.mmOpeningBalance, FinancialInstrumentDetails18.mmClosingBalance, FinancialInstrumentDetails20.mmOpeningBalance,
 					FinancialInstrumentDetails20.mmClosingBalance, CorporateActionEventAndBalance9.mmBalance, CorporateActionEventAndBalance10.mmBalance, FinancialInstrumentDetails23.mmOpeningBalance,
 					FinancialInstrumentDetails23.mmClosingBalance, CorporateActionEventAndBalance11.mmBalance, FinancialInstrumentDetails25.mmOpeningBalance, FinancialInstrumentDetails25.mmClosingBalance,
-					FinancialInstrumentDetails27.mmOpeningBalance, FinancialInstrumentDetails27.mmClosingBalance, CorporateActionEventAndBalance12.mmBalance);
+					FinancialInstrumentDetails27.mmOpeningBalance, FinancialInstrumentDetails27.mmClosingBalance, CorporateActionEventAndBalance12.mmBalance, FinancialInstrumentDetails28.mmOpeningBalance,
+					FinancialInstrumentDetails28.mmClosingBalance, CorporateActionEventAndBalance13.mmBalance, CorporateActionEventAndBalance14.mmBalance, FinancialInstrumentDetails31.mmOpeningBalance,
+					FinancialInstrumentDetails31.mmClosingBalance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2705,7 +2823,7 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Event for which the resulting fractional quantity will be paid with cash in lieu. "
+	 * "Event for which the resulting fractional quantity will be paid with cash in lieu."
 	 * </li>
 	 * </ul>
 	 */
@@ -2715,7 +2833,7 @@ public class SecuritiesQuantity {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedEventForFractionalQuantity";
-			definition = "Event for which the resulting fractional quantity will be paid with cash in lieu. ";
+			definition = "Event for which the resulting fractional quantity will be paid with cash in lieu.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmFractionalQuantity;
@@ -3176,6 +3294,12 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails26#mmSubBalance
 	 * FinancialInstrumentDetails26.mmSubBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails29#mmSubBalance
+	 * FinancialInstrumentDetails29.mmSubBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails30#mmSubBalance
+	 * FinancialInstrumentDetails30.mmSubBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3198,7 +3322,7 @@ public class SecuritiesQuantity {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentDetails1.mmSubBalance, FinancialInstrumentDetails4.mmSubBalance, FinancialInstrumentDetails6.mmSubBalance, FinancialInstrumentDetails7.mmSubBalance,
 					FinancialInstrumentDetails10.mmSubBalance, FinancialInstrumentDetails12.mmSubBalance, FinancialInstrumentDetails14.mmSubBalance, FinancialInstrumentDetails15.mmSubBalance, FinancialInstrumentDetails21.mmSubBalance,
-					FinancialInstrumentDetails22.mmSubBalance, FinancialInstrumentDetails24.mmSubBalance, FinancialInstrumentDetails26.mmSubBalance);
+					FinancialInstrumentDetails22.mmSubBalance, FinancialInstrumentDetails24.mmSubBalance, FinancialInstrumentDetails26.mmSubBalance, FinancialInstrumentDetails29.mmSubBalance, FinancialInstrumentDetails30.mmSubBalance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3323,6 +3447,12 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails27#mmTransaction
 	 * FinancialInstrumentDetails27.mmTransaction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmTransaction
+	 * FinancialInstrumentDetails28.mmTransaction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails31#mmTransaction
+	 * FinancialInstrumentDetails31.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3345,7 +3475,8 @@ public class SecuritiesQuantity {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentDetails2.mmTransaction, FinancialInstrumentDetails3.mmTransaction, FinancialInstrumentDetails5.mmTransaction, FinancialInstrumentDetails8.mmTransaction,
 					FinancialInstrumentDetails9.mmTransaction, FinancialInstrumentDetails11.mmTransaction, FinancialInstrumentDetails13.mmTransaction, FinancialInstrumentDetails16.mmTransaction, FinancialInstrumentDetails17.mmTransaction,
-					FinancialInstrumentDetails18.mmTransaction, FinancialInstrumentDetails20.mmTransaction, FinancialInstrumentDetails23.mmTransaction, FinancialInstrumentDetails25.mmTransaction, FinancialInstrumentDetails27.mmTransaction);
+					FinancialInstrumentDetails18.mmTransaction, FinancialInstrumentDetails20.mmTransaction, FinancialInstrumentDetails23.mmTransaction, FinancialInstrumentDetails25.mmTransaction, FinancialInstrumentDetails27.mmTransaction,
+					FinancialInstrumentDetails28.mmTransaction, FinancialInstrumentDetails31.mmTransaction);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3796,6 +3927,8 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashInOutForecast7#mmAmount
 	 * CashInOutForecast7.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit8#mmOtherAmount
+	 * Unit8.mmOtherAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3812,7 +3945,7 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Quantity expressed as an amount, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money."
+	 * "Quantity expressed as an amount, eg, in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money."
 	 * </li>
 	 * </ul>
 	 */
@@ -3822,12 +3955,12 @@ public class SecuritiesQuantity {
 					CashOutForecast4.mmSubTotalAmount, NetCashForecast2.mmNetAmount, NetCashForecast3.mmNetAmount, FundCashInBreakdown1.mmAmount, CashInForecast1.mmSubTotalAmount, FundCashOutBreakdown1.mmAmount,
 					CashOutForecast1.mmSubTotalAmount, FundCashInBreakdown2.mmAmount, CashInForecast3.mmSubTotalAmount, FundCashOutBreakdown2.mmAmount, CashOutForecast3.mmSubTotalAmount, SecuritiesCompensation1.mmSettlementAmount,
 					UnitsAndCash.mmGrandTotalAmount, EstimatedFundCashForecast5.mmCurrencyStatus, CashOutForecast5.mmSubTotalAmount, FundCashOutBreakdown3.mmAmount, NetCashForecast4.mmNetAmount, CashInForecast5.mmSubTotalAmount,
-					FundCashInBreakdown3.mmAmount, CashOutForecast6.mmSubTotalAmount, CashInForecast6.mmSubTotalAmount, NetCashForecast5.mmNetAmount, CashInOutForecast7.mmAmount);
+					FundCashInBreakdown3.mmAmount, CashOutForecast6.mmSubTotalAmount, CashInForecast6.mmSubTotalAmount, NetCashForecast5.mmNetAmount, CashInOutForecast7.mmAmount, Unit8.mmOtherAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount";
-			definition = "Quantity expressed as an amount, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money.";
+			definition = "Quantity expressed as an amount, eg, in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -4306,6 +4439,11 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmPortfolioTransferOutRate
 	 * Transfer31.mmPortfolioTransferOutRate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmTransferRate
+	 * Transfer35.mmTransferRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity42Choice#mmTransferRate
+	 * Quantity42Choice.mmTransferRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4322,18 +4460,18 @@ public class SecuritiesQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Quantity expressed as a percentage rate, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding."
+	 * "Quantity expressed as a percentage rate, eg, in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Quantity13Choice.mmPortfolioTransferOutRate, Transfer28.mmPortfolioTransferOutRate, Transfer31.mmPortfolioTransferOutRate);
+			derivation_lazy = () -> Arrays.asList(Quantity13Choice.mmPortfolioTransferOutRate, Transfer28.mmPortfolioTransferOutRate, Transfer31.mmPortfolioTransferOutRate, Transfer35.mmTransferRate, Quantity42Choice.mmTransferRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rate";
-			definition = "Quantity expressed as a percentage rate, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding.";
+			definition = "Quantity expressed as a percentage rate, eg, in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -6199,7 +6337,9 @@ public class SecuritiesQuantity {
 						FinancialInstrumentQuantitySearch1Choice.mmObject(), FinancialInstrumentQuantitySearch1.mmObject(), QuantitySearch1Choice.mmObject(), Quantity1Choice.mmObject(), Quantity15Choice.mmObject(),
 						Quantity16Choice.mmObject(), OriginalAndCurrentQuantities5.mmObject(), Quantity11.mmObject(), Quantity17Choice.mmObject(), Quantity18Choice.mmObject(), OriginalAndCurrentQuantities6.mmObject(),
 						Quantity20Choice.mmObject(), PendingBalance3.mmObject(), Quantity19Choice.mmObject(), Unit6.mmObject(), PendingBalance4.mmObject(), Quantity22Choice.mmObject(), Quantity23Choice.mmObject(),
-						Quantity21Choice.mmObject(), OriginalAndCurrentQuantities7.mmObject(), Quantity12.mmObject(), Quantity40Choice.mmObject(), FinancialInstrumentQuantity25Choice.mmObject());
+						Quantity21Choice.mmObject(), OriginalAndCurrentQuantities7.mmObject(), Quantity12.mmObject(), Quantity40Choice.mmObject(), FinancialInstrumentQuantity25Choice.mmObject(), Quantity41Choice.mmObject(),
+						FinancialInstrumentQuantity30Choice.mmObject(), Unit8.mmObject(), Unit9.mmObject(), Unit10.mmObject(), Quantity42Choice.mmObject(), Quantity43Choice.mmObject(), Quantity14.mmObject(), PendingBalance5.mmObject(),
+						PendingBalance6.mmObject(), Quantity15.mmObject(), FinancialInstrumentQuantity31Choice.mmObject());
 			}
 
 			@Override

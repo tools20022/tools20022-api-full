@@ -161,7 +161,7 @@ public class ScheduleChangeEntry1 {
 	 * name} = "ScheduleEventIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identificaiton of the scheduled event"</li>
+	 * definition} = "Identificaiton of the scheduled event."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmScheduleEventIdentification = new MMMessageAttribute() {
@@ -171,7 +171,7 @@ public class ScheduleChangeEntry1 {
 			xmlTag = "SchdlEvtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduleEventIdentification";
-			definition = "Identificaiton of the scheduled event";
+			definition = "Identificaiton of the scheduled event.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact1NumericText.mmObject();

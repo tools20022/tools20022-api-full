@@ -116,6 +116,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason3Code
  * ConditionallyAcceptedStatusReason3Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code
+ * ConditionallyAcceptedStatusReason1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -927,7 +930,7 @@ public class ConditionallyAcceptedStatusReasonCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReasonCode";
 				definition = "Specifies the reason for a conditionally accepted status.";
-				derivation_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason2Code.mmObject(), ConditionallyAcceptedStatusReason3Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(ConditionallyAcceptedStatusReason2Code.mmObject(), ConditionallyAcceptedStatusReason3Code.mmObject(), ConditionallyAcceptedStatusReason1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.AwaitingMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.AwaitingFunds,
 						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.AwaitingDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.AwaitingRedemptionMoney,
 						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.AwaitingSubscriptionMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode.Other,

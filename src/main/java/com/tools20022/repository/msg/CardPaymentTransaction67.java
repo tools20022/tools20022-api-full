@@ -87,6 +87,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CardPaymentTransaction67"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Authorisation response from the acquirer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction84
+ * CardPaymentTransaction84}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction54
@@ -130,6 +137,14 @@ public class CardPaymentTransaction67 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Outcome of the authorisation, and actions to perform."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmAuthorisationResult
+	 * CardPaymentTransaction84.mmAuthorisationResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -146,6 +161,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResult";
 			definition = "Outcome of the authorisation, and actions to perform.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmAuthorisationResult);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmAuthorisationResult;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -182,6 +198,14 @@ public class CardPaymentTransaction67 {
 	 * definition} =
 	 * "Result of the verifications performed by the issuer to deliver or decline the authorisation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmTransactionVerificationResult
+	 * CardPaymentTransaction84.mmTransactionVerificationResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -197,6 +221,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionVerificationResult";
 			definition = "Result of the verifications performed by the issuer to deliver or decline the authorisation.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmTransactionVerificationResult);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmTransactionVerificationResult;
 			minOccurs = 0;
 			isComposite = true;
@@ -228,6 +253,14 @@ public class CardPaymentTransaction67 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Product code which are allowed by the payment card."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmAllowedProductCode
+	 * CardPaymentTransaction84.mmAllowedProductCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -243,6 +276,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowedProductCode";
 			definition = "Product code which are allowed by the payment card.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmAllowedProductCode);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmAllowedProductCode;
 			minOccurs = 0;
 			isComposite = true;
@@ -274,6 +308,14 @@ public class CardPaymentTransaction67 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Product code not allowed by the payment card."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmNotAllowedProductCode
+	 * CardPaymentTransaction84.mmNotAllowedProductCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -289,6 +331,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotAllowedProductCode";
 			definition = "Product code not allowed by the payment card.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmNotAllowedProductCode);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmNotAllowedProductCode;
 			minOccurs = 0;
 			isComposite = true;
@@ -321,6 +364,14 @@ public class CardPaymentTransaction67 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Products that may be added to the purchase after the authorisation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmAdditionalAvailableProduct
+	 * CardPaymentTransaction84.mmAdditionalAvailableProduct}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -336,6 +387,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalAvailableProduct";
 			definition = "Products that may be added to the purchase after the authorisation.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmAdditionalAvailableProduct);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmAdditionalAvailableProduct;
 			minOccurs = 0;
 			isComposite = true;
@@ -375,6 +427,14 @@ public class CardPaymentTransaction67 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of the account, related to the payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmBalance
+	 * CardPaymentTransaction84.mmBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -391,6 +451,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Balance of the account, related to the payment.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmBalance);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -424,6 +485,14 @@ public class CardPaymentTransaction67 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Encrypted balance of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmProtectedBalance
+	 * CardPaymentTransaction84.mmProtectedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -439,6 +508,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedBalance";
 			definition = "Encrypted balance of the account.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmProtectedBalance);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmProtectedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -473,6 +543,14 @@ public class CardPaymentTransaction67 {
 	 * definition} =
 	 * "Set of actions to be performed by the POI (Point Of Interaction) system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmAction
+	 * CardPaymentTransaction84.mmAction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -488,6 +566,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Set of actions to be performed by the POI (Point Of Interaction) system.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmAction);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmAction;
 			minOccurs = 0;
 			isComposite = true;
@@ -527,6 +606,14 @@ public class CardPaymentTransaction67 {
 	 * definition} =
 	 * "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be proposed to the cardholder."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmCurrencyConversionEligibility
+	 * CardPaymentTransaction84.mmCurrencyConversionEligibility}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -543,6 +630,7 @@ public class CardPaymentTransaction67 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionEligibility";
 			definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be proposed to the cardholder.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmCurrencyConversionEligibility);
 			previousVersion_lazy = () -> CardPaymentTransaction54.mmCurrencyConversionEligibility;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -564,6 +652,7 @@ public class CardPaymentTransaction67 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction67";
 				definition = "Authorisation response from the acquirer.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction84.mmObject());
 				previousVersion_lazy = () -> CardPaymentTransaction54.mmObject();
 			}
 		});

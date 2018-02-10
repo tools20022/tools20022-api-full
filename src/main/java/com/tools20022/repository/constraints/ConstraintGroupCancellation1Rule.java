@@ -77,7 +77,7 @@ public class ConstraintGroupCancellation1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present.\n"
+	 * "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -86,7 +86,7 @@ public class ConstraintGroupCancellation1Rule {
 			validator = ConstraintGroupCancellation1Rule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellation1Rule";
-			definition = "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present.\n";
+			definition = "If GroupHeader/GroupCancellation is true, then OriginalGroupInformation/CancellationReasonInformation/CancellationReason must present.\n.";
 			owner_lazy = () -> com.tools20022.repository.area.pacs.PaymentCancellationRequestV01.mmObject();
 		}
 	};
@@ -103,7 +103,7 @@ public class ConstraintGroupCancellation1Rule {
 	/**
 	 * If GroupHeader/GroupCancellation is true, then
 	 * OriginalGroupInformation/CancellationReasonInformation/CancellationReason
-	 * must present.
+	 * must present. .
 	 */
 	public static void checkPaymentCancellationRequestV01(com.tools20022.repository.area.pacs.PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();

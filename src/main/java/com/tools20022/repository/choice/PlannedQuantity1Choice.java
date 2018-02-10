@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Planned number of shares to be purchased<br>
- * 買付予定株式数
+ * 買付予定株式数.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PlannedQuantity1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Planned number of shares to be purchased\r\n 買付予定株式数"</li>
+ * definition} = "Planned number of shares to be purchased\r\n 買付予定株式数."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -166,7 +166,7 @@ public class PlannedQuantity1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PlannedQuantity1Choice";
-				definition = "Planned number of shares to be purchased\r\n 買付予定株式数";
+				definition = "Planned number of shares to be purchased\r\n 買付予定株式数.";
 			}
 		});
 		return mmObject_lazy.get();

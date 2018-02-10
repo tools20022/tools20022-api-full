@@ -93,7 +93,7 @@ public class TypeTransactionTotalsCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
-	 * Debit transactions on the cardholder account .
+	 * Debit transactions on the cardholder account.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -110,14 +110,14 @@ public class TypeTransactionTotalsCode extends MMCode {
 	 * name} = "Debit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Debit transactions on the cardholder account ."</li>
+	 * definition} = "Debit transactions on the cardholder account."</li>
 	 * </ul>
 	 */
 	public static final TypeTransactionTotalsCode Debit = new TypeTransactionTotalsCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Debit";
-			definition = "Debit transactions on the cardholder account .";
+			definition = "Debit transactions on the cardholder account.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TypeTransactionTotalsCode.mmObject();
 			codeName = "DEBT";
 		}
@@ -172,7 +172,7 @@ public class TypeTransactionTotalsCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Credit transactions (refund, account, cash service, as defined  in the transaction service type)."
+	 * "Credit transactions (refund, account, cash service, as defined in the transaction service type)."
 	 * </li>
 	 * </ul>
 	 */
@@ -180,7 +180,7 @@ public class TypeTransactionTotalsCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Credit";
-			definition = "Credit transactions (refund, account, cash service, as defined  in the transaction service type).";
+			definition = "Credit transactions (refund, account, cash service, as defined in the transaction service type).";
 			owner_lazy = () -> com.tools20022.repository.codeset.TypeTransactionTotalsCode.mmObject();
 			codeName = "CRDT";
 		}

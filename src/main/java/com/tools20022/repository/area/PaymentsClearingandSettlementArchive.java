@@ -26,7 +26,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Messages that support the clearing and settlement processes for payment
- * transactions between financial institutions
+ * transactions between financial institutions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -102,6 +102,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.area.pacs.PaymentReturnV04
  * PaymentReturnV04}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV05
+ * FinancialInstitutionCreditTransferV05}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV06
  * FIToFIPaymentStatusReportV06}</li>
  * <li>
@@ -111,6 +114,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * FIToFIPaymentReversalV05}</li>
  * <li>{@linkplain com.tools20022.repository.area.pacs.PaymentReturnV05
  * PaymentReturnV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV05
+ * FIToFICustomerCreditTransferV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusReportV07
+ * FIToFIPaymentStatusReportV07}</li>
+ * <li>{@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentReversalV06
+ * FIToFIPaymentReversalV06}</li>
+ * <li>{@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06
+ * PaymentReturnV06}</li>
  * </ul>
  * </li>
  * <li>
@@ -126,7 +139,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Payments Clearing and Settlement - Archive - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Messages that support the clearing and settlement processes for payment transactions between financial institutions"
+ * "Messages that support the clearing and settlement processes for payment transactions between financial institutions."
  * </li>
  * </ul>
  */
@@ -140,13 +153,14 @@ public class PaymentsClearingandSettlementArchive {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Clearing and Settlement - Archive - master";
-				definition = "Messages that support the clearing and settlement processes for payment transactions between financial institutions";
+				definition = "Messages that support the clearing and settlement processes for payment transactions between financial institutions.";
 				messageDefinition_lazy = () -> Arrays.asList(FIToFICustomerCreditTransferV01.mmObject(), FIToFICustomerCreditTransferV02.mmObject(), FIToFICustomerCreditTransferV03.mmObject(), FIToFICustomerCreditTransferV04.mmObject(),
 						FIToFICustomerDirectDebitV01.mmObject(), FIToFICustomerDirectDebitV02.mmObject(), FIToFICustomerDirectDebitV03.mmObject(), FIToFICustomerDirectDebitV04.mmObject(), PaymentCancellationRequestV01.mmObject(),
 						FIToFIPaymentReversalV01.mmObject(), FIToFIPaymentReversalV02.mmObject(), FIToFIPaymentReversalV03.mmObject(), FIToFIPaymentReversalV04.mmObject(), PaymentStatusReportV02.mmObject(),
 						FIToFIPaymentStatusReportV03.mmObject(), FIToFIPaymentStatusReportV04.mmObject(), FIToFIPaymentStatusReportV05.mmObject(), FinancialInstitutionCreditTransferV01.mmObject(),
 						FinancialInstitutionCreditTransferV02.mmObject(), FinancialInstitutionCreditTransferV03.mmObject(), FinancialInstitutionCreditTransferV04.mmObject(), PaymentReturnV01.mmObject(), PaymentReturnV02.mmObject(),
-						PaymentReturnV03.mmObject(), PaymentReturnV04.mmObject(), FIToFIPaymentStatusReportV06.mmObject(), FIToFICustomerDirectDebitV05.mmObject(), FIToFIPaymentReversalV05.mmObject(), PaymentReturnV05.mmObject());
+						PaymentReturnV03.mmObject(), PaymentReturnV04.mmObject(), FinancialInstitutionCreditTransferV05.mmObject(), FIToFIPaymentStatusReportV06.mmObject(), FIToFICustomerDirectDebitV05.mmObject(),
+						FIToFIPaymentReversalV05.mmObject(), PaymentReturnV05.mmObject(), FIToFICustomerCreditTransferV05.mmObject(), FIToFIPaymentStatusReportV07.mmObject(), FIToFIPaymentReversalV06.mmObject(), PaymentReturnV06.mmObject());
 				code = "pacs";
 			}
 		});

@@ -75,6 +75,12 @@ import java.util.Objects;
  * TradeLeg10.mmBroker}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TradeLeg9#mmBroker
  * TradeLeg9.mmBroker}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeCounterpartyReport5#mmBroker
+ * TradeCounterpartyReport5.mmBroker}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeCounterpartyReport6#mmBroker
+ * TradeCounterpartyReport6.mmBroker}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -241,7 +247,8 @@ public class Broker extends TradePartyRole {
 				name = "Broker";
 				definition = "Party that identifies a broker when required (for example, authorised broker, prime broker, etc).";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commission.mmBroker);
-				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmBrokerOfCredit, ConfirmationParties2.mmBrokerOfCredit, TradeLeg8.mmBroker, TradeLeg10.mmBroker, TradeLeg9.mmBroker);
+				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties4.mmBrokerOfCredit, ConfirmationParties2.mmBrokerOfCredit, TradeLeg8.mmBroker, TradeLeg10.mmBroker, TradeLeg9.mmBroker, TradeCounterpartyReport5.mmBroker,
+						TradeCounterpartyReport6.mmBroker);
 				subType_lazy = () -> Arrays.asList(StepInBroker.mmObject(), StepOutBroker.mmObject(), ClearingBroker.mmObject(), ExecutingBrokerRole.mmObject(), LocalBroker.mmObject());
 				superType_lazy = () -> TradePartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Broker.mmRemunerationAmount, com.tools20022.repository.entity.Broker.mmCommission);

@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraBalanceStatusType1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of the intra-balance movement status type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceStatusType2
+ * IntraBalanceStatusType2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class IntraBalanceStatusType1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides details on the processing status of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusType2#mmProcessingStatus
+	 * IntraBalanceStatusType2.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
@@ -119,6 +134,7 @@ public class IntraBalanceStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceStatusType2.mmProcessingStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus33Choice.mmObject();
 		}
@@ -155,7 +171,15 @@ public class IntraBalanceStatusType1 {
 	 * name} = "SettlementStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides the settlement status of a transaction"</li>
+	 * definition} = "Provides the settlement status of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusType2#mmSettlementStatus
+	 * IntraBalanceStatusType2.mmSettlementStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
@@ -166,7 +190,8 @@ public class IntraBalanceStatusType1 {
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
-			definition = "Provides the settlement status of a transaction";
+			definition = "Provides the settlement status of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceStatusType2.mmSettlementStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus1Choice.mmObject();
 		}
@@ -202,6 +227,14 @@ public class IntraBalanceStatusType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the state or the condition."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusType2#mmSettled
+	 * IntraBalanceStatusType2.mmSettled}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
@@ -213,6 +246,7 @@ public class IntraBalanceStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Specifies the state or the condition.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceStatusType2.mmSettled);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -230,6 +264,7 @@ public class IntraBalanceStatusType1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceStatusType1";
 				definition = "Choice of the intra-balance movement status type.";
+				nextVersions_lazy = () -> Arrays.asList(IntraBalanceStatusType2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

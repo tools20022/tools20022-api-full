@@ -244,6 +244,15 @@ public class CreditInstrument {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference24#mmPaymentMethod
 	 * OriginalTransactionReference24.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmPaymentMethod
+	 * PaymentInstruction24.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmPaymentMethod
+	 * OriginalTransactionReference27.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmPaymentMethod
+	 * PaymentInstruction26.mmPaymentMethod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -270,7 +279,7 @@ public class CreditInstrument {
 					PaymentMeans1.mmPaymentMethodCode, OriginalTransactionReference9.mmPaymentMethod, OriginalTransactionReference12.mmPaymentMethod, PaymentInstruction14.mmPaymentMethod, PaymentInstruction16.mmPaymentMethod,
 					PaymentInstruction15.mmPaymentMethod, OriginalTransactionReference20.mmPaymentMethod, PaymentInstruction17.mmPaymentMethod, PaymentInstruction18.mmPaymentMethod, PaymentInstruction19.mmPaymentMethod,
 					PaymentInstruction20.mmPaymentMethod, OriginalTransactionReference22.mmPaymentMethod, PaymentInstruction21.mmPaymentMethod, PaymentInstruction23.mmPaymentMethod, PaymentInstruction22.mmPaymentMethod,
-					OriginalTransactionReference24.mmPaymentMethod);
+					OriginalTransactionReference24.mmPaymentMethod, PaymentInstruction24.mmPaymentMethod, OriginalTransactionReference27.mmPaymentMethod, PaymentInstruction26.mmPaymentMethod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CreditInstrument.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -172,7 +172,7 @@ public class InsuranceDataSet1 {
 	 * name} = "DataSetIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the insurancedata set"</li>
+	 * definition} = "Identifies the insurancedata set."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
@@ -182,7 +182,7 @@ public class InsuranceDataSet1 {
 			xmlTag = "DataSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
-			definition = "Identifies the insurancedata set";
+			definition = "Identifies the insurancedata set.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

@@ -229,7 +229,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the market for the standing settlement instruction. "</li>
+	 * "Identifies the market for the standing settlement instruction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
@@ -237,7 +237,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			xmlTag = "MktId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
-			definition = "Identifies the market for the standing settlement instruction. ";
+			definition = "Identifies the market for the standing settlement instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
@@ -274,7 +274,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Settlement information that helps to identify the standing settlement  instruction, cancellation or deletion for which the status is sent."
+	 * "Settlement information that helps to identify the standing settlement instruction, cancellation or deletion for which the status is sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -283,7 +283,7 @@ public class StandingSettlementInstructionStatusAdviceV01 {
 			xmlTag = "SttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
-			definition = "Settlement information that helps to identify the standing settlement  instruction, cancellation or deletion for which the status is sent.";
+			definition = "Settlement information that helps to identify the standing settlement instruction, cancellation or deletion for which the status is sent.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyOrCurrency1Choice.mmObject();

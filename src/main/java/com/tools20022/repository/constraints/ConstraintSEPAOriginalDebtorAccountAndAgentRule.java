@@ -50,7 +50,7 @@ public class ConstraintSEPAOriginalDebtorAccountAndAgentRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SEPA TVS 3.x rule:\nIf OriginalDebtorAccount field is present, only for changes of accounts within the same bank."
+	 * "SEPA TVS 3.x rule: \nIf OriginalDebtorAccount field is present, only for changes of accounts within the same bank."
 	 * </li>
 	 * </ul>
 	 */
@@ -59,7 +59,7 @@ public class ConstraintSEPAOriginalDebtorAccountAndAgentRule {
 			validator = ConstraintSEPAOriginalDebtorAccountAndAgentRule::checkDirectDebitTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalDebtorAccountAndAgentRule";
-			definition = "SEPA TVS 3.x rule:\nIf OriginalDebtorAccount field is present, only for changes of accounts within the same bank.";
+			definition = "SEPA TVS 3.x rule: \nIf OriginalDebtorAccount field is present, only for changes of accounts within the same bank.";
 			owner_lazy = () -> DirectDebitTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -85,7 +85,7 @@ public class ConstraintSEPAOriginalDebtorAccountAndAgentRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SEPA TVS 3.x rule:\nIf OriginalDebtorAccount field is present, only for changes of accounts within the same bank."
+	 * "SEPA TVS 3.x rule: \nIf OriginalDebtorAccount field is present, only for changes of accounts within the same bank."
 	 * </li>
 	 * </ul>
 	 */
@@ -94,7 +94,7 @@ public class ConstraintSEPAOriginalDebtorAccountAndAgentRule {
 			validator = ConstraintSEPAOriginalDebtorAccountAndAgentRule::checkDirectDebitTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalDebtorAccountAndAgentRule";
-			definition = "SEPA TVS 3.x rule:\nIf OriginalDebtorAccount field is present, only for changes of accounts within the same bank.";
+			definition = "SEPA TVS 3.x rule: \nIf OriginalDebtorAccount field is present, only for changes of accounts within the same bank.";
 			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}

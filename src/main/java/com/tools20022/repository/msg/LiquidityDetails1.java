@@ -142,7 +142,7 @@ public class LiquidityDetails1 {
 	 * name} = "NetAvailableLiquidity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Net available liquidity on the account(s). "</li>
+	 * definition} = "Net available liquidity on the account(s)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNetAvailableLiquidity = new MMMessageAttribute() {
@@ -152,7 +152,7 @@ public class LiquidityDetails1 {
 			xmlTag = "NetAvlblLqdty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAvailableLiquidity";
-			definition = "Net available liquidity on the account(s). ";
+			definition = "Net available liquidity on the account(s).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

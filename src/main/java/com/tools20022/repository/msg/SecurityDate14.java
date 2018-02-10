@@ -373,7 +373,7 @@ public class SecurityDate14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date/time at which the securities to be reorganised will cease to be tradeable. "
+	 * "Date/time at which the securities to be reorganised will cease to be tradeable."
 	 * </li>
 	 * </ul>
 	 */
@@ -384,7 +384,7 @@ public class SecurityDate14 {
 			xmlTag = "LastTradgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTradingDate";
-			definition = "Date/time at which the securities to be reorganised will cease to be tradeable. ";
+			definition = "Date/time at which the securities to be reorganised will cease to be tradeable.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat34Choice.mmObject();

@@ -200,7 +200,7 @@ public class AgentCANotificationAdviceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides information about the type of  notification advice and linked message."
+	 * "Provides information about the type of notification advice and linked message."
 	 * </li>
 	 * </ul>
 	 */
@@ -209,7 +209,7 @@ public class AgentCANotificationAdviceV01 {
 			xmlTag = "NtfctnTpAndLkg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationTypeAndLinkage";
-			definition = "Provides information about the type of  notification advice and linked message.";
+			definition = "Provides information about the type of notification advice and linked message.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> LinkedCorporateAction1.mmObject();

@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ListIdentification1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Unique identifier for a list as assigned by institution, used to associate multiple individual orders.  Uniqueness must be guaranteed within a single trading day.  Institutions which generate multi-day orders should consider embedding a date to assure uniqueness across days."
+ * "Unique identifier for a list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day. Institutions which generate multi-day orders should consider embedding a date to assure uniqueness across days."
  * </li>
  * </ul>
  */
@@ -137,7 +137,7 @@ public class ListIdentification1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ListIdentification1";
-				definition = "Unique identifier for a list as assigned by institution, used to associate multiple individual orders.  Uniqueness must be guaranteed within a single trading day.  Institutions which generate multi-day orders should consider embedding a date to assure uniqueness across days.";
+				definition = "Unique identifier for a list as assigned by institution, used to associate multiple individual orders. Uniqueness must be guaranteed within a single trading day. Institutions which generate multi-day orders should consider embedding a date to assure uniqueness across days.";
 			}
 		});
 		return mmObject_lazy.get();

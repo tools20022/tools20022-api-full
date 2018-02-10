@@ -80,6 +80,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmCashDeposit
  * EntryTransaction8.mmCashDeposit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmCashDeposit
+ * EntryTransaction9.mmCashDeposit}</li>
  * </ul>
  * </li>
  * <li>
@@ -334,7 +337,7 @@ public class CashDeposit extends IndividualPayment {
 				name = "CashDeposit";
 				definition = "Amount of money representing a value paid by a debtor to an agent bank.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.BankingTransaction.mmCashDeposit);
-				derivationElement_lazy = () -> Arrays.asList(EntryTransaction3.mmCashDeposit, EntryTransaction4.mmCashDeposit, EntryTransaction7.mmCashDeposit, EntryTransaction8.mmCashDeposit);
+				derivationElement_lazy = () -> Arrays.asList(EntryTransaction3.mmCashDeposit, EntryTransaction4.mmCashDeposit, EntryTransaction7.mmCashDeposit, EntryTransaction8.mmCashDeposit, EntryTransaction9.mmCashDeposit);
 				superType_lazy = () -> IndividualPayment.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashDeposit.mmNoteDenomination, com.tools20022.repository.entity.CashDeposit.mmNumberOfNotes, com.tools20022.repository.entity.CashDeposit.mmDepositAmount,
 						com.tools20022.repository.entity.CashDeposit.mmRelatedBankingTransaction);

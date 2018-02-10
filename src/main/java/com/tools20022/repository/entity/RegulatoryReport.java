@@ -520,7 +520,7 @@ public class RegulatoryReport {
 			}
 		}
 	};
-	protected ISODate date;
+	protected ISODateTime date;
 	/**
 	 * 
 	 <p>
@@ -528,8 +528,8 @@ public class RegulatoryReport {
 	 * <ul>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
-	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
-	 * ISODate}</li>
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODateTime
+	 * ISODateTime}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
 	 * derivation} =
 	 * <ul>
@@ -565,7 +565,7 @@ public class RegulatoryReport {
 			definition = "Date related to the specified type of regulatory reporting details.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			simpleType_lazy = () -> ISODate.mmObject();
+			simpleType_lazy = () -> ISODateTime.mmObject();
 		}
 
 		public Method getGetterMethod() {
@@ -879,11 +879,11 @@ public class RegulatoryReport {
 		return this;
 	}
 
-	public ISODate getDate() {
+	public ISODateTime getDate() {
 		return date;
 	}
 
-	public RegulatoryReport setDate(ISODate date) {
+	public RegulatoryReport setDate(ISODateTime date) {
 		this.date = Objects.requireNonNull(date);
 		return this;
 	}

@@ -64,6 +64,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action balance details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD5
+ * CorporateActionBalanceSD5}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +105,14 @@ public class CorporateActionBalanceSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD5#mmPlaceAndName
+	 * CorporateActionBalanceSD5.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -108,6 +123,7 @@ public class CorporateActionBalanceSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD5.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -140,6 +156,14 @@ public class CorporateActionBalanceSD2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance of uncovered protect transactions at an event level."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD5#mmTotalUncoveredProtectBalance
+	 * CorporateActionBalanceSD5.mmTotalUncoveredProtectBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTotalUncoveredProtectBalance = new MMMessageAssociationEnd() {
@@ -150,6 +174,7 @@ public class CorporateActionBalanceSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUncoveredProtectBalance";
 			definition = "Balance of uncovered protect transactions at an event level.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD5.mmTotalUncoveredProtectBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -165,6 +190,7 @@ public class CorporateActionBalanceSD2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionBalanceSD2";
 				definition = "Provides additional information regarding corporate action balance details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

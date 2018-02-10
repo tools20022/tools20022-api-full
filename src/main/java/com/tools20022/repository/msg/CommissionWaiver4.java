@@ -161,7 +161,7 @@ public class CommissionWaiver4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proportion of the commission that is waived, for example, if  the commission is 5% and half is waived, 2.5% should be stated in this field."
+	 * "Proportion of the commission that is waived, for example, if the commission is 5% and half is waived, 2.5% should be stated in this field."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -178,7 +178,7 @@ public class CommissionWaiver4 {
 			xmlTag = "WvdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WaivedRate";
-			definition = "Proportion of the commission that is waived, for example, if  the commission is 5% and half is waived, 2.5% should be stated in this field.";
+			definition = "Proportion of the commission that is waived, for example, if the commission is 5% and half is waived, 2.5% should be stated in this field.";
 			previousVersion_lazy = () -> CommissionWaiver3.mmWaivedRate;
 			maxOccurs = 1;
 			minOccurs = 1;

@@ -62,6 +62,13 @@ import javax.xml.bind.annotation.XmlType;
  * "DistributionPolicy1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for a distribution policy."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.DistributionPolicy2Choice
+ * DistributionPolicy2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class DistributionPolicy1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Distribution policy expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DistributionPolicy2Choice#mmCode
+	 * DistributionPolicy2Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class DistributionPolicy1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Distribution policy expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(DistributionPolicy2Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DistributionPolicy1Code.mmObject();
@@ -139,6 +155,14 @@ public class DistributionPolicy1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Distribution policy expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DistributionPolicy2Choice#mmProprietary
+	 * DistributionPolicy2Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -149,6 +173,7 @@ public class DistributionPolicy1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Distribution policy expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(DistributionPolicy2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,6 +189,7 @@ public class DistributionPolicy1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DistributionPolicy1Choice";
 				definition = "Choice of format for a distribution policy.";
+				nextVersions_lazy = () -> Arrays.asList(DistributionPolicy2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

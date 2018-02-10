@@ -265,6 +265,42 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04#mmOtherIndividualInvestor
  * AccountHoldingInformationRequestV04.mmOtherIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08#mmPrimaryIndividualInvestor
+ * PortfolioTransferInstructionV08.mmPrimaryIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08#mmSecondaryIndividualInvestor
+ * PortfolioTransferInstructionV08.mmSecondaryIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08#mmOtherIndividualInvestor
+ * PortfolioTransferInstructionV08.mmOtherIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08#mmPrimaryIndividualInvestor
+ * PortfolioTransferConfirmationV08.mmPrimaryIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08#mmSecondaryIndividualInvestor
+ * PortfolioTransferConfirmationV08.mmSecondaryIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08#mmOtherIndividualInvestor
+ * PortfolioTransferConfirmationV08.mmOtherIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06#mmPrimaryIndividualInvestor
+ * AccountHoldingInformationV06.mmPrimaryIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06#mmSecondaryIndividualInvestor
+ * AccountHoldingInformationV06.mmSecondaryIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06#mmOtherIndividualInvestor
+ * AccountHoldingInformationV06.mmOtherIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmPrimaryIndividualInvestor
+ * AccountHoldingInformationRequestV05.mmPrimaryIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmSecondaryIndividualInvestor
+ * AccountHoldingInformationRequestV05.mmSecondaryIndividualInvestor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmOtherIndividualInvestor
+ * AccountHoldingInformationRequestV05.mmOtherIndividualInvestor}</li>
  * </ul>
  * </li>
  * <li>
@@ -476,7 +512,7 @@ public class IndividualPerson8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information about a person that follows a person's name, eg, qualification such as Doctor of Philosophy (PhD)."
+	 * "Additional information about a person that follows a person's name, for example, qualification such as Doctor of Philosophy (PhD)."
 	 * </li>
 	 * </ul>
 	 */
@@ -488,7 +524,7 @@ public class IndividualPerson8 {
 			xmlTag = "NmSfx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameSuffix";
-			definition = "Additional information about a person that follows a person's name, eg, qualification such as Doctor of Philosophy (PhD).";
+			definition = "Additional information about a person that follows a person's name, for example, qualification such as Doctor of Philosophy (PhD).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -714,7 +750,11 @@ public class IndividualPerson8 {
 						PortfolioTransferInstructionV07.mmOtherIndividualInvestor, AccountHoldingInformationV05.mmPrimaryIndividualInvestor, AccountHoldingInformationV05.mmSecondaryIndividualInvestor,
 						AccountHoldingInformationV05.mmOtherIndividualInvestor, PortfolioTransferConfirmationV07.mmPrimaryIndividualInvestor, PortfolioTransferConfirmationV07.mmSecondaryIndividualInvestor,
 						PortfolioTransferConfirmationV07.mmOtherIndividualInvestor, AccountHoldingInformationRequestV04.mmPrimaryIndividualInvestor, AccountHoldingInformationRequestV04.mmSecondaryIndividualInvestor,
-						AccountHoldingInformationRequestV04.mmOtherIndividualInvestor);
+						AccountHoldingInformationRequestV04.mmOtherIndividualInvestor, PortfolioTransferInstructionV08.mmPrimaryIndividualInvestor, PortfolioTransferInstructionV08.mmSecondaryIndividualInvestor,
+						PortfolioTransferInstructionV08.mmOtherIndividualInvestor, PortfolioTransferConfirmationV08.mmPrimaryIndividualInvestor, PortfolioTransferConfirmationV08.mmSecondaryIndividualInvestor,
+						PortfolioTransferConfirmationV08.mmOtherIndividualInvestor, AccountHoldingInformationV06.mmPrimaryIndividualInvestor, AccountHoldingInformationV06.mmSecondaryIndividualInvestor,
+						AccountHoldingInformationV06.mmOtherIndividualInvestor, AccountHoldingInformationRequestV05.mmPrimaryIndividualInvestor, AccountHoldingInformationRequestV05.mmSecondaryIndividualInvestor,
+						AccountHoldingInformationRequestV05.mmOtherIndividualInvestor);
 				trace_lazy = () -> Person.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSocialSecurityNumberGuideline.forIndividualPerson8);

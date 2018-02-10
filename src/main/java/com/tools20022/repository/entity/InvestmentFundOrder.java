@@ -272,6 +272,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * SwitchLegReferences2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.BlockedStatusReason2
  * BlockedStatusReason2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferReference11
+ * TransferReference11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferReference13
+ * TransferReference13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferReference12
+ * TransferReference12}</li>
  * </ul>
  * </li>
  * <li>
@@ -847,7 +853,7 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of money used to derive the quantity of investment fund units sold or subscribed, before deduction of charges, commissions, and taxes, expressed in the currency requested by the investor.\r\n[Quantity * Price] + (Charges + Commissions +Taxes)]"
+	 * "Amount of money used to derive the quantity of investment fund units sold or subscribed, before deduction of charges, commissions, and taxes, expressed in the currency requested by the investor.\r\n[Quantity * Price] + (Charges + Commissions +Taxes)]."
 	 * </li>
 	 * </ul>
 	 */
@@ -868,7 +874,7 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GrossAmount";
-			definition = "Amount of money used to derive the quantity of investment fund units sold or subscribed, before deduction of charges, commissions, and taxes, expressed in the currency requested by the investor.\r\n[Quantity * Price] + (Charges + Commissions +Taxes)]";
+			definition = "Amount of money used to derive the quantity of investment fund units sold or subscribed, before deduction of charges, commissions, and taxes, expressed in the currency requested by the investor.\r\n[Quantity * Price] + (Charges + Commissions +Taxes)].";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -2956,7 +2962,7 @@ public class InvestmentFundOrder extends SecuritiesOrder {
 						TransferReference8.mmObject(), TransferReference7.mmObject(), OrderType2Choice.mmObject(), TransferReference9.mmObject(), TransferReference10.mmObject(), IndividualOrderConfirmationStatusAndReason2.mmObject(),
 						InvestmentFundOrder11.mmObject(), InvestmentFundOrder9.mmObject(), TransactionType5Choice.mmObject(), FinancialInstrumentQuantity26Choice.mmObject(), FundOrderType4Choice.mmObject(), OrderWaiver1.mmObject(),
 						InvestmentFundsOrderBreakdown2.mmObject(), OrderWaiverReason3Choice.mmObject(), FundOrderData5.mmObject(), FinancialInstrumentQuantity29Choice.mmObject(), InvestmentFundOrder8.mmObject(),
-						SwitchLegReferences2.mmObject(), BlockedStatusReason2.mmObject());
+						SwitchLegReferences2.mmObject(), BlockedStatusReason2.mmObject(), TransferReference11.mmObject(), TransferReference13.mmObject(), TransferReference12.mmObject());
 			}
 
 			@Override

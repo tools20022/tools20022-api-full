@@ -187,6 +187,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CaseAssignment3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Represents the assignment of a case to a party."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment4
+ * CaseAssignment4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -226,6 +233,14 @@ public class CaseAssignment3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Uniquely identifies the case assignment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CaseAssignment4#mmIdentification
+	 * CaseAssignment4.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -237,6 +252,7 @@ public class CaseAssignment3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Uniquely identifies the case assignment.";
+			nextVersions_lazy = () -> Arrays.asList(CaseAssignment4.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -275,6 +291,13 @@ public class CaseAssignment3 {
 	 * definition} =
 	 * "Party who assigns the case. \nUsage: This is also the sender of the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment4#mmAssigner
+	 * CaseAssignment4.mmAssigner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAssigner = new MMMessageAssociationEnd() {
@@ -286,6 +309,7 @@ public class CaseAssignment3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assigner";
 			definition = "Party who assigns the case. \nUsage: This is also the sender of the message.";
+			nextVersions_lazy = () -> Arrays.asList(CaseAssignment4.mmAssigner);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -325,6 +349,13 @@ public class CaseAssignment3 {
 	 * definition} =
 	 * "Party to which the case is assigned.\nUsage: This is also the receiver of the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment4#mmAssignee
+	 * CaseAssignment4.mmAssignee}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAssignee = new MMMessageAssociationEnd() {
@@ -336,6 +367,7 @@ public class CaseAssignment3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assignee";
 			definition = "Party to which the case is assigned.\nUsage: This is also the receiver of the message.";
+			nextVersions_lazy = () -> Arrays.asList(CaseAssignment4.mmAssignee);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -374,6 +406,14 @@ public class CaseAssignment3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the assignment was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CaseAssignment4#mmCreationDateTime
+	 * CaseAssignment4.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -385,6 +425,7 @@ public class CaseAssignment3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the assignment was created.";
+			nextVersions_lazy = () -> Arrays.asList(CaseAssignment4.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -410,6 +451,7 @@ public class CaseAssignment3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseAssignment3";
 				definition = "Represents the assignment of a case to a party.";
+				nextVersions_lazy = () -> Arrays.asList(CaseAssignment4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

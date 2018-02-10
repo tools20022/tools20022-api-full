@@ -59,6 +59,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ProprietaryDate2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of elements used to identify a proprietary date."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate3
+ * ProprietaryDate3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -93,6 +100,13 @@ public class ProprietaryDate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate3#mmType
+	 * ProprietaryDate3.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -103,6 +117,7 @@ public class ProprietaryDate2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of date.";
+			nextVersions_lazy = () -> Arrays.asList(ProprietaryDate3.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -136,6 +151,13 @@ public class ProprietaryDate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date in ISO format."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryDate3#mmDate
+	 * ProprietaryDate3.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
@@ -146,6 +168,7 @@ public class ProprietaryDate2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
+			nextVersions_lazy = () -> Arrays.asList(ProprietaryDate3.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -160,6 +183,7 @@ public class ProprietaryDate2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryDate2";
 				definition = "Set of elements used to identify a proprietary date.";
+				nextVersions_lazy = () -> Arrays.asList(ProprietaryDate3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

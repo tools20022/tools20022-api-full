@@ -22,7 +22,9 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV06;
+import com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV07;
 import com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06;
+import com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV07;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
 import com.tools20022.repository.GeneratedRepository;
@@ -90,6 +92,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV06#mmGroupHeader
  * FIToFICustomerCreditTransferV06.mmGroupHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFICustomerCreditTransferV07#mmGroupHeader
+ * FIToFICustomerCreditTransferV07.mmGroupHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FinancialInstitutionCreditTransferV07#mmGroupHeader
+ * FinancialInstitutionCreditTransferV07.mmGroupHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -725,7 +733,8 @@ public class GroupHeader70 {
 						com.tools20022.repository.msg.GroupHeader70.mmTotalInterbankSettlementAmount, com.tools20022.repository.msg.GroupHeader70.mmInterbankSettlementDate,
 						com.tools20022.repository.msg.GroupHeader70.mmSettlementInformation, com.tools20022.repository.msg.GroupHeader70.mmPaymentTypeInformation, com.tools20022.repository.msg.GroupHeader70.mmInstructingAgent,
 						com.tools20022.repository.msg.GroupHeader70.mmInstructedAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV06.mmGroupHeader, FIToFICustomerCreditTransferV06.mmGroupHeader);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV06.mmGroupHeader, FIToFICustomerCreditTransferV06.mmGroupHeader, FIToFICustomerCreditTransferV07.mmGroupHeader,
+						FinancialInstitutionCreditTransferV07.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalInterbankSettlementAmountAndDateRule.forGroupHeader70);

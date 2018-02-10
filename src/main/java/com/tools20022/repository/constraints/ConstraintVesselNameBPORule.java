@@ -24,7 +24,7 @@ import com.tools20022.repository.msg.SingleTransport8;
 
 /**
  * In case of transport by sea, VesselName must be present if PaymentObligation
- * (BPO) is used in this transaction.”
+ * (BPO) is used in this transaction.”.
  */
 public class ConstraintVesselNameBPORule {
 
@@ -45,7 +45,7 @@ public class ConstraintVesselNameBPORule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In case of transport by sea, VesselName must be present if PaymentObligation (BPO) is used in this transaction.”"
+	 * "In case of transport by sea, VesselName must be present if PaymentObligation (BPO) is used in this transaction.”."
 	 * </li>
 	 * </ul>
 	 */
@@ -54,14 +54,14 @@ public class ConstraintVesselNameBPORule {
 			validator = ConstraintVesselNameBPORule::checkSingleTransport8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VesselNameBPORule";
-			definition = "In case of transport by sea, VesselName must be present if PaymentObligation (BPO) is used in this transaction.”";
+			definition = "In case of transport by sea, VesselName must be present if PaymentObligation (BPO) is used in this transaction.”.";
 			owner_lazy = () -> SingleTransport8.mmObject();
 		}
 	};
 
 	/**
 	 * In case of transport by sea, VesselName must be present if
-	 * PaymentObligation (BPO) is used in this transaction.”
+	 * PaymentObligation (BPO) is used in this transaction.”.
 	 */
 	public static void checkSingleTransport8(SingleTransport8 obj) throws Exception {
 		throw new NotImplementedConstraintException();

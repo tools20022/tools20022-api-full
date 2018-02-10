@@ -277,7 +277,7 @@ public class CommissionWaiver {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proportion of the commission that is waived, ie, if  the commission is 5% and half is waived, 2.5% should be stated in this field."
+	 * "Proportion of the commission that is waived, ie, if the commission is 5% and half is waived, 2.5% should be stated in this field."
 	 * </li>
 	 * </ul>
 	 */
@@ -289,7 +289,7 @@ public class CommissionWaiver {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::COWA"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WaivedRate";
-			definition = "Proportion of the commission that is waived, ie, if  the commission is 5% and half is waived, 2.5% should be stated in this field.";
+			definition = "Proportion of the commission that is waived, ie, if the commission is 5% and half is waived, 2.5% should be stated in this field.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();

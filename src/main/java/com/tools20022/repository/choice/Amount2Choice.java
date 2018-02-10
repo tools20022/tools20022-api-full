@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.BackupPaymentV06;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.datatype.ImpliedCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
@@ -49,6 +50,15 @@ import javax.xml.bind.annotation.XmlType;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.BackupPaymentV06#mmTransferredAmount
+ * BackupPaymentV06.mmTransferredAmount}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -60,7 +70,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Amount2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice between an amount with or without the currency. "</li>
+ * definition} = "Choice between an amount with or without the currency."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -163,10 +173,11 @@ public class Amount2Choice {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.Amount2Choice.mmAmountWithoutCurrency, com.tools20022.repository.choice.Amount2Choice.mmAmountWithCurrency);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BackupPaymentV06.mmTransferredAmount);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amount2Choice";
-				definition = "Choice between an amount with or without the currency. ";
+				definition = "Choice between an amount with or without the currency.";
 			}
 		});
 		return mmObject_lazy.get();

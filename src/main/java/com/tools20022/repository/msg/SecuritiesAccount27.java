@@ -22,6 +22,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.area.sese.SecuritiesTransactionStatusQuery002V04;
 import com.tools20022.repository.datatype.Max70Text;
@@ -30,8 +31,11 @@ import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.SecuritiesAccount;
 import com.tools20022.repository.GeneratedRepository;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -95,19 +99,19 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05#mmSafekeepingAccount
  * IntraPositionMovementConfirmation002V05.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08#mmSafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08#mmSafekeepingAccount
  * SecuritiesTransactionPendingReport002V08.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06#mmSafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06#mmSafekeepingAccount
  * IntraPositionMovementConfirmation002V06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06#mmSafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06#mmSafekeepingAccount
  * IntraPositionMovementPostingReport002V06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06#mmSafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06#mmSafekeepingAccount
  * SecuritiesSettlementTransactionAllegementReport002V06.mmSafekeepingAccount}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07#mmSafekeepingAccount
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07#mmSafekeepingAccount
  * SecuritiesTransactionPostingReport002V07.mmSafekeepingAccount}</li>
  * </ul>
  * </li>
@@ -118,8 +122,9 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = November 11, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesAccount27"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -168,7 +173,7 @@ public class SecuritiesAccount27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification for the account between the account owner and the account servicer.”"
+	 * "Unambiguous identification for the account between the account owner and the account servicer.”."
 	 * </li>
 	 * </ul>
 	 */
@@ -181,7 +186,7 @@ public class SecuritiesAccount27 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1"), new FIXSynonym(this, "660"), new ISO15022Synonym(this, ":97a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
-			definition = "Unambiguous identification for the account between the account owner and the account servicer.”";
+			definition = "Unambiguous identification for the account between the account owner and the account servicer.”.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax35Text.mmObject();
@@ -306,7 +311,14 @@ public class SecuritiesAccount27 {
 						SecuritiesTransactionPostingReport002V07.mmSafekeepingAccount);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("November 11, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "SecuritiesAccount27";
 				definition = "Account to or from which a securities entry is made.";
 			}

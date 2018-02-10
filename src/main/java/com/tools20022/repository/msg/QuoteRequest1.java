@@ -820,7 +820,7 @@ public class QuoteRequest1 {
 	 * name} = "TradingSessionDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Established constraints under which a market operates"</li>
+	 * definition} = "Established constraints under which a market operates."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTradingSessionDetails = new MMMessageAssociationEnd() {
@@ -831,7 +831,7 @@ public class QuoteRequest1 {
 			xmlTag = "TradgSsnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSessionDetails";
-			definition = "Established constraints under which a market operates";
+			definition = "Established constraints under which a market operates.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

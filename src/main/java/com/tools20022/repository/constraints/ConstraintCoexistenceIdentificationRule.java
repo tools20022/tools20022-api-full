@@ -367,36 +367,6 @@ public class ConstraintCoexistenceIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03
-	 * PortfolioTransferNotificationV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CoexistenceIdentificationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
-		{
-			validator = ConstraintCoexistenceIdentificationRule::checkPortfolioTransferNotificationV03;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CoexistenceIdentificationRule";
-			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
-			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestV04
 	 * SecuritiesTransactionCancellationRequestV04}</li>
 	 * <li>
@@ -3916,6 +3886,36 @@ public class ConstraintCoexistenceIdentificationRule {
 			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCoexistenceIdentificationRule.forSecuritiesTransactionCancellationRequestStatusAdviceV04);
 			owner_lazy = () -> SecuritiesTransactionCancellationRequestStatusAdviceV03.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03
+	 * PortfolioTransferNotificationV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CoexistenceIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferNotificationV03> forPortfolioTransferNotificationV03 = new MMConstraint<PortfolioTransferNotificationV03>() {
+		{
+			validator = ConstraintCoexistenceIdentificationRule::checkPortfolioTransferNotificationV03;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CoexistenceIdentificationRule";
+			definition = "During ISO 15022 – 20022 coexistence, all transaction and document identifications or references must be 16 characters or less. The field must not start or end with a slash ‘/’ or contain two consecutive slashes ‘//’.";
+			owner_lazy = () -> PortfolioTransferNotificationV03.mmObject();
 		}
 	};
 	/**
@@ -19754,16 +19754,6 @@ public class ConstraintCoexistenceIdentificationRule {
 	 * must not start or end with a slash ‘/’ or contain two consecutive slashes
 	 * ‘//’.
 	 */
-	public static void checkPortfolioTransferNotificationV03(PortfolioTransferNotificationV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * During ISO 15022 – 20022 coexistence, all transaction and document
-	 * identifications or references must be 16 characters or less. The field
-	 * must not start or end with a slash ‘/’ or contain two consecutive slashes
-	 * ‘//’.
-	 */
 	public static void checkSecuritiesTransactionCancellationRequestV04(SecuritiesTransactionCancellationRequestV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -20825,6 +20815,16 @@ public class ConstraintCoexistenceIdentificationRule {
 	 * ‘//’.
 	 */
 	public static void checkSecuritiesTransactionCancellationRequestStatusAdviceV03(SecuritiesTransactionCancellationRequestStatusAdviceV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * During ISO 15022 – 20022 coexistence, all transaction and document
+	 * identifications or references must be 16 characters or less. The field
+	 * must not start or end with a slash ‘/’ or contain two consecutive slashes
+	 * ‘//’.
+	 */
+	public static void checkPortfolioTransferNotificationV03(PortfolioTransferNotificationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

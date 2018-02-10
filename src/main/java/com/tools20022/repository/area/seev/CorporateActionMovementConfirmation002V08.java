@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant;
+import com.tools20022.repository.area.SecuritiesEventsPreviousversionsubsetvariant;
 import com.tools20022.repository.choice.PartyIdentification104Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion;
@@ -112,8 +112,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnMvmntConf"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant
- * SecuritiesEventsLatestversionsubsetvariant}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousversionsubsetvariant
+ * SecuritiesEventsPreviousversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.036.002.08}</li>
@@ -368,7 +368,7 @@ public class CorporateActionMovementConfirmation002V08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of an other corporate action event that needs to be closely  linked to the processing of the event notified in this document."
+	 * "Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document."
 	 * </li>
 	 * </ul>
 	 */
@@ -377,7 +377,7 @@ public class CorporateActionMovementConfirmation002V08 {
 			xmlTag = "EvtsLkg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventsLinkage";
-			definition = "Identification of an other corporate action event that needs to be closely  linked to the processing of the event notified in this document.";
+			definition = "Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.";
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventReference4.mmObject();
 		}
@@ -809,7 +809,7 @@ public class CorporateActionMovementConfirmation002V08 {
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISO15022VariantsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnMvmntConf";
-				businessArea_lazy = () -> SecuritiesEventsLatestversionsubsetvariant.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsPreviousversionsubsetvariant.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmNotificationIdentification,
 						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmMovementPreliminaryAdviceIdentification,
 						com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmInstructionIdentification, com.tools20022.repository.area.seev.CorporateActionMovementConfirmation002V08.mmOtherDocumentIdentification,

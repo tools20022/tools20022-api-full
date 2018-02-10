@@ -25,8 +25,11 @@ import com.tools20022.repository.codeset.MarketClientSideCode;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.GenericIdentification30;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -57,12 +60,20 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2017</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MarketClientSide4Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the market/client side information."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.MarketClientSide6Choice
+ * MarketClientSide6Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.MarketClientSide1Choice
@@ -112,6 +123,14 @@ public class MarketClientSide4Choice {
 	 * definition} =
 	 * "Market side or a client side information expressed as an ISO 20022 code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketClientSide6Choice#mmCode
+	 * MarketClientSide6Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +148,7 @@ public class MarketClientSide4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Market side or a client side information expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(MarketClientSide6Choice.mmCode);
 			previousVersion_lazy = () -> MarketClientSide1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -173,6 +193,14 @@ public class MarketClientSide4Choice {
 	 * definition} =
 	 * "Market side or a client side information expressed as a proprietary code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketClientSide6Choice#mmProprietary
+	 * MarketClientSide6Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -190,6 +218,7 @@ public class MarketClientSide4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Market side or a client side information expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(MarketClientSide6Choice.mmProprietary);
 			previousVersion_lazy = () -> MarketClientSide1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -202,9 +231,17 @@ public class MarketClientSide4Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MarketClientSide4Choice.mmCode, com.tools20022.repository.choice.MarketClientSide4Choice.mmProprietary);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2017");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "MarketClientSide4Choice";
 				definition = "Choice of format for the market/client side information.";
+				nextVersions_lazy = () -> Arrays.asList(MarketClientSide6Choice.mmObject());
 				previousVersion_lazy = () -> MarketClientSide1Choice.mmObject();
 			}
 		});

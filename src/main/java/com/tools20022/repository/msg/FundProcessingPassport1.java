@@ -392,7 +392,7 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Processing characteristics linked to the instrument, ie, not to  the market."
+	 * "Processing characteristics linked to the instrument, ie, not to the market."
 	 * </li>
 	 * </ul>
 	 */
@@ -404,7 +404,7 @@ public class FundProcessingPassport1 {
 			xmlTag = "ValtnDealgChrtcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDealingCharacteristics";
-			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
+			definition = "Processing characteristics linked to the instrument, ie, not to the market.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -443,7 +443,7 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Processing characteristics linked to the instrument, ie, not to  the market."
+	 * "Processing characteristics linked to the instrument, ie, not to the market."
 	 * </li>
 	 * </ul>
 	 */
@@ -455,7 +455,7 @@ public class FundProcessingPassport1 {
 			xmlTag = "InvstmtRstrctns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentRestrictions";
-			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
+			definition = "Processing characteristics linked to the instrument, ie, not to the market.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -494,7 +494,7 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Processing characteristics linked to the instrument, ie, not to  the market."
+	 * "Processing characteristics linked to the instrument, ie, not to the market."
 	 * </li>
 	 * </ul>
 	 */
@@ -506,7 +506,7 @@ public class FundProcessingPassport1 {
 			xmlTag = "SbcptPrcgChrtcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionProcessingCharacteristics";
-			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
+			definition = "Processing characteristics linked to the instrument, ie, not to the market.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -545,7 +545,7 @@ public class FundProcessingPassport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Processing characteristics linked to the instrument, ie, not to  the market."
+	 * "Processing characteristics linked to the instrument, ie, not to the market."
 	 * </li>
 	 * </ul>
 	 */
@@ -557,7 +557,7 @@ public class FundProcessingPassport1 {
 			xmlTag = "RedPrcgChrtcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionProcessingCharacteristics";
-			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
+			definition = "Processing characteristics linked to the instrument, ie, not to the market.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

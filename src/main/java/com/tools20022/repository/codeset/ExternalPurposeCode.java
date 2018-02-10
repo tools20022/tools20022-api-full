@@ -31,12 +31,19 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies the external purpose code in the format of character string with a
- * maximum length of 35 characters.<br>
+ * maximum length of 4 characters.<br>
  * The list of valid codes is an external code list published separately.<br>
  * External code sets can be downloaded from www.iso20022.org.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExternalPurpose1Code
+ * ExternalPurpose1Code}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -45,7 +52,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getExample
  * example} =
  * <ul>
- * <li>"External Purpose Code 1"</li>
+ * <li>"ACCT"</li>
  * </ul>
  * </li>
  * <li>
@@ -56,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "ExternalPurposeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the external purpose code in the format of character string with a maximum length of 35 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org."
+ * "Specifies the external purpose code in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org."
  * </li>
  * </ul>
  */
@@ -73,12 +80,13 @@ public class ExternalPurposeCode extends MMCode {
 		mmObject_lazy.compareAndSet(null, new MMCodeSet() {
 			{
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				example = Arrays.asList("External Purpose Code 1");
+				example = Arrays.asList("ACCT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalPurposeCode";
-				definition = "Specifies the external purpose code in the format of character string with a maximum length of 35 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				definition = "Specifies the external purpose code in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				derivation_lazy = () -> Arrays.asList(ExternalPurpose1Code.mmObject());
 				minLength = 1;
-				maxLength = 35;
+				maxLength = 4;
 			}
 		});
 		return mmObject_lazy.get();

@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between a standard code or proprietary code to specify a rate type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.RateType69Choice
+ * RateType69Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.RateType23Choice
@@ -109,6 +116,13 @@ public class RateType41Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Standard code to specify the type of net dividend rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.RateType69Choice#mmCode
+	 * RateType69Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +139,7 @@ public class RateType41Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the type of net dividend rate.";
+			nextVersions_lazy = () -> Arrays.asList(RateType69Choice.mmCode);
 			previousVersion_lazy = () -> RateType23Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -164,6 +179,14 @@ public class RateType41Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Proprietary identification of the type of net dividend rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RateType69Choice#mmProprietary
+	 * RateType69Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +203,7 @@ public class RateType41Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the type of net dividend rate.";
+			nextVersions_lazy = () -> Arrays.asList(RateType69Choice.mmProprietary);
 			previousVersion_lazy = () -> RateType23Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -197,6 +221,7 @@ public class RateType41Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateType41Choice";
 				definition = "Choice between a standard code or proprietary code to specify a rate type.";
+				nextVersions_lazy = () -> Arrays.asList(RateType69Choice.mmObject());
 				previousVersion_lazy = () -> RateType23Choice.mmObject();
 			}
 		});

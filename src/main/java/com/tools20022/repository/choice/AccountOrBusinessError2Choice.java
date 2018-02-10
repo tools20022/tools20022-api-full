@@ -70,6 +70,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between account details or a business error when the requested data cannot be retrieved."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError3Choice
+ * AccountOrBusinessError3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError1Choice
@@ -111,6 +119,14 @@ public class AccountOrBusinessError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested information on the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError3Choice#mmAccount
+	 * AccountOrBusinessError3Choice.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -127,6 +143,7 @@ public class AccountOrBusinessError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Requested information on the account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountOrBusinessError3Choice.mmAccount);
 			previousVersion_lazy = () -> AccountOrBusinessError1Choice.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -160,6 +177,14 @@ public class AccountOrBusinessError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason the requested business information is not given."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError3Choice#mmBusinessError
+	 * AccountOrBusinessError3Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -175,6 +200,7 @@ public class AccountOrBusinessError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
+			nextVersions_lazy = () -> Arrays.asList(AccountOrBusinessError3Choice.mmBusinessError);
 			previousVersion_lazy = () -> AccountOrBusinessError1Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
@@ -191,6 +217,7 @@ public class AccountOrBusinessError2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOrBusinessError2Choice";
 				definition = "Choice between account details or a business error when the requested data cannot be retrieved.";
+				nextVersions_lazy = () -> Arrays.asList(AccountOrBusinessError3Choice.mmObject());
 				previousVersion_lazy = () -> AccountOrBusinessError1Choice.mmObject();
 			}
 		});

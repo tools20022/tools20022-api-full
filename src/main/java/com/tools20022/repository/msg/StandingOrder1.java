@@ -81,6 +81,12 @@ import javax.xml.bind.annotation.XmlType;
  * "StandingOrder1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "New standing order values."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingOrder5 StandingOrder5}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -122,6 +128,13 @@ public class StandingOrder1 {
 	 * definition} =
 	 * "Amount of money and currency to be transferred when a payment instruction is created as a result of a standing order."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.StandingOrder5#mmAmount
+	 * StandingOrder5.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -133,6 +146,7 @@ public class StandingOrder1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money and currency to be transferred when a payment instruction is created as a result of a standing order.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrder5.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
@@ -167,7 +181,15 @@ public class StandingOrder1 {
 	 * name} = "CreditorAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Cash account credited from a  standing order mechanism."</li>
+	 * definition} = "Cash account credited from a standing order mechanism."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrder5#mmCreditorAccount
+	 * StandingOrder5.mmCreditorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
@@ -178,7 +200,8 @@ public class StandingOrder1 {
 			xmlTag = "CdtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
-			definition = "Cash account credited from a  standing order mechanism.";
+			definition = "Cash account credited from a standing order mechanism.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrder5.mmCreditorAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -215,6 +238,14 @@ public class StandingOrder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cash account debited from a standing order mechanism."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrder5#mmDebtorAccount
+	 * StandingOrder5.mmDebtorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
@@ -226,6 +257,7 @@ public class StandingOrder1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Cash account debited from a standing order mechanism.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrder5.mmDebtorAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -265,6 +297,14 @@ public class StandingOrder1 {
 	 * definition} =
 	 * "Defines whether the standing order is executed through a time-based or an event-based trigger."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrder5#mmExecutionType
+	 * StandingOrder5.mmExecutionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmExecutionType = new MMMessageAssociationEnd() {
@@ -276,6 +316,7 @@ public class StandingOrder1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionType";
 			definition = "Defines whether the standing order is executed through a time-based or an event-based trigger.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrder5.mmExecutionType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -316,6 +357,13 @@ public class StandingOrder1 {
 	 * definition} =
 	 * "Regularity with which payment instructions are to be created and processed as a result of the standing order, such as daily, weekly, or monthly."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.StandingOrder5#mmFrequency
+	 * StandingOrder5.mmFrequency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFrequency = new MMMessageAttribute() {
@@ -327,6 +375,7 @@ public class StandingOrder1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Regularity with which payment instructions are to be created and processed as a result of the standing order, such as daily, weekly, or monthly.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrder5.mmFrequency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency2Code.mmObject();
@@ -362,7 +411,15 @@ public class StandingOrder1 {
 	 * name} = "ValidityPeriod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Dates during which the standing order is in effect. "</li>
+	 * definition} = "Dates during which the standing order is in effect."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrder5#mmValidityPeriod
+	 * StandingOrder5.mmValidityPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmValidityPeriod = new MMMessageAssociationEnd() {
@@ -373,7 +430,8 @@ public class StandingOrder1 {
 			xmlTag = "VldtyPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
-			definition = "Dates during which the standing order is in effect. ";
+			definition = "Dates during which the standing order is in effect.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrder5.mmValidityPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -412,7 +470,15 @@ public class StandingOrder1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero."
+	 * "Indicates whether the standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is zero."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrder5#mmZeroSweepIndicator
+	 * StandingOrder5.mmZeroSweepIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -424,7 +490,8 @@ public class StandingOrder1 {
 			xmlTag = "ZeroSweepInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ZeroSweepIndicator";
-			definition = "Indicates whether the standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero.";
+			definition = "Indicates whether the standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is zero.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrder5.mmZeroSweepIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -442,6 +509,7 @@ public class StandingOrder1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrder1";
 				definition = "New standing order values.";
+				nextVersions_lazy = () -> Arrays.asList(StandingOrder5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -627,7 +627,7 @@ public class CorporateActionGeneralInformation50 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Fractional quantity resulting from an event which will be paid with cash in lieu. "
+	 * "Fractional quantity resulting from an event which will be paid with cash in lieu."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -647,7 +647,7 @@ public class CorporateActionGeneralInformation50 {
 			xmlTag = "FrctnlQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionalQuantity";
-			definition = "Fractional quantity resulting from an event which will be paid with cash in lieu. ";
+			definition = "Fractional quantity resulting from an event which will be paid with cash in lieu.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation79.mmFractionalQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;

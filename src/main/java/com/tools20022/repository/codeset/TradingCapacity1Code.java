@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies the role of the broker in the transaction.
+ * Specifies the role of the broker in the transaction. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -90,7 +90,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TradingCapacity1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the role of the broker in the transaction.\n"</li>
+ * definition} = "Specifies the role of the broker in the transaction.\n."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -423,7 +423,7 @@ public class TradingCapacity1Code extends MMCode {
 				example = Arrays.asList("PRIN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacity1Code";
-				definition = "Specifies the role of the broker in the transaction.\n";
+				definition = "Specifies the role of the broker in the transaction.\n.";
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacity1Code.TradingPrincipal, com.tools20022.repository.codeset.TradingCapacity1Code.TradingAgent,
 						com.tools20022.repository.codeset.TradingCapacity1Code.CrossingPrincipal, com.tools20022.repository.codeset.TradingCapacity1Code.CrossingAgent, com.tools20022.repository.codeset.TradingCapacity1Code.OtherAgent,
 						com.tools20022.repository.codeset.TradingCapacity1Code.BothAgent, com.tools20022.repository.codeset.TradingCapacity1Code.PrincipalAgent, com.tools20022.repository.codeset.TradingCapacity1Code.Proprietary,

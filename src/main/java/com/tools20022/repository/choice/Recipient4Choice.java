@@ -69,6 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.choice.Recipient5Choice
  * Recipient5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Recipient6Choice
+ * Recipient6Choice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -109,6 +111,14 @@ public class Recipient4Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Encryption key using previously distributed asymmetric public key."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient6Choice#mmKeyTransport
+	 * Recipient6Choice.mmKeyTransport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +134,7 @@ public class Recipient4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyTransport";
 			definition = "Encryption key using previously distributed asymmetric public key.";
+			nextVersions_lazy = () -> Arrays.asList(Recipient6Choice.mmKeyTransport);
 			previousVersion_lazy = () -> Recipient3Choice.mmKeyTransport;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -157,6 +168,13 @@ public class Recipient4Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Key encryption key using previously distributed symmetric key."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.Recipient6Choice#mmKEK
+	 * Recipient6Choice.mmKEK}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,6 +190,7 @@ public class Recipient4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEK";
 			definition = "Key encryption key using previously distributed symmetric key.";
+			nextVersions_lazy = () -> Arrays.asList(Recipient6Choice.mmKEK);
 			previousVersion_lazy = () -> Recipient3Choice.mmKEK;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -213,6 +232,9 @@ public class Recipient4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.Recipient5Choice#mmKeyIdentifier
 	 * Recipient5Choice.mmKeyIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Recipient6Choice#mmKeyIdentifier
+	 * Recipient6Choice.mmKeyIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -230,7 +252,7 @@ public class Recipient4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyIdentifier";
 			definition = "Identification of a protection key without a session key, shared and previously exchanged between the initiator and the recipient.";
-			nextVersions_lazy = () -> Arrays.asList(Recipient5Choice.mmKeyIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(Recipient5Choice.mmKeyIdentifier, Recipient6Choice.mmKeyIdentifier);
 			previousVersion_lazy = () -> Recipient3Choice.mmKeyIdentifier;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -248,7 +270,7 @@ public class Recipient4Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Recipient4Choice";
 				definition = "Transport key or key encryption key (KEK) for the recipient.";
-				nextVersions_lazy = () -> Arrays.asList(Recipient5Choice.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(Recipient5Choice.mmObject(), Recipient6Choice.mmObject());
 				previousVersion_lazy = () -> Recipient3Choice.mmObject();
 			}
 		});

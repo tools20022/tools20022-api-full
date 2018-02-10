@@ -97,6 +97,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesSearchCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Criteria for a query about securities reference data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2
+ * SecuritiesSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -132,6 +139,14 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Way(s) of identifying the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmFinancialInstrumentIdentification
+	 * SecuritiesSearchCriteria2.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
@@ -142,6 +157,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Way(s) of identifying the security.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -178,6 +194,14 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} =
 	 * "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmClassificationFinancialInstrument
+	 * SecuritiesSearchCriteria2.mmClassificationFinancialInstrument}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
@@ -188,6 +212,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmClassificationFinancialInstrument);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();
@@ -224,6 +249,14 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Planned final repayment date at the time of issuance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmMaturityDate
+	 * SecuritiesSearchCriteria2.mmMaturityDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaturityDate = new MMMessageAttribute() {
@@ -235,6 +268,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmMaturityDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -268,6 +302,14 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date/time at which the security was made available."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmIssueDate
+	 * SecuritiesSearchCriteria2.mmIssueDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
@@ -278,6 +320,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date/time at which the security was made available.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmIssueDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -314,6 +357,14 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency in which a security is issued or redenominated."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmIssueCurrency
+	 * SecuritiesSearchCriteria2.mmIssueCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssueCurrency = new MMMessageAttribute() {
@@ -325,6 +376,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmIssueCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -362,6 +414,14 @@ public class SecuritiesSearchCriteria1 {
 	 * definition} =
 	 * "Primary market or country where a security is issued by the issuer or its agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmCountryOfIssue
+	 * SecuritiesSearchCriteria2.mmCountryOfIssue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
@@ -373,6 +433,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmCountryOfIssue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -410,6 +471,14 @@ public class SecuritiesSearchCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the status of the security within its lifecycle."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmSecurityStatus
+	 * SecuritiesSearchCriteria2.mmSecurityStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecurityStatus = new MMMessageAttribute() {
@@ -421,6 +490,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityStatus";
 			definition = "Specifies the status of the security within its lifecycle.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmSecurityStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecurityStatus2Choice.mmObject();
@@ -453,6 +523,14 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Entity involved in an activity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmMaintainingCSD
+	 * SecuritiesSearchCriteria2.mmMaintainingCSD}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMaintainingCSD = new MMMessageAssociationEnd() {
@@ -463,6 +541,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintainingCSD";
 			definition = "Entity involved in an activity.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmMaintainingCSD);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -496,6 +575,14 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Entity involved in an activity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmInvestorCSD
+	 * SecuritiesSearchCriteria2.mmInvestorCSD}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInvestorCSD = new MMMessageAssociationEnd() {
@@ -506,6 +593,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCSD";
 			definition = "Entity involved in an activity.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmInvestorCSD);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -539,6 +627,14 @@ public class SecuritiesSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Entity involved in an activity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmIssuerCSD
+	 * SecuritiesSearchCriteria2.mmIssuerCSD}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
@@ -549,6 +645,7 @@ public class SecuritiesSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "Entity involved in an activity.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmIssuerCSD);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -581,7 +678,15 @@ public class SecuritiesSearchCriteria1 {
 	 * name} = "TechnicalIssuerCSD"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Technical issuer of a security"</li>
+	 * definition} = "Technical issuer of a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmTechnicalIssuerCSD
+	 * SecuritiesSearchCriteria2.mmTechnicalIssuerCSD}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTechnicalIssuerCSD = new MMMessageAssociationEnd() {
@@ -591,7 +696,8 @@ public class SecuritiesSearchCriteria1 {
 			xmlTag = "TechIssrCSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalIssuerCSD";
-			definition = "Technical issuer of a security";
+			definition = "Technical issuer of a security.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmTechnicalIssuerCSD);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -624,7 +730,15 @@ public class SecuritiesSearchCriteria1 {
 	 * name} = "CSD"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "CSD of a security"</li>
+	 * definition} = "CSD of a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSearchCriteria2#mmCSD
+	 * SecuritiesSearchCriteria2.mmCSD}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCSD = new MMMessageAssociationEnd() {
@@ -634,7 +748,8 @@ public class SecuritiesSearchCriteria1 {
 			xmlTag = "CSD";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSD";
-			definition = "CSD of a security";
+			definition = "CSD of a security.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmCSD);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -655,6 +770,7 @@ public class SecuritiesSearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesSearchCriteria1";
 				definition = "Criteria for a query about securities reference data.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

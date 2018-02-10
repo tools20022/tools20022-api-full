@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionChangeType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the type of changes."</li>
+ * definition} = "Choice of formats to express the type of changes."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,7 +104,7 @@ public class CorporateActionChangeType1FormatChoice {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Standard code to  specify the type of changes."</li>
+	 * definition} = "Standard code to specify the type of changes."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -115,7 +115,7 @@ public class CorporateActionChangeType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the type of changes.";
+			definition = "Standard code to specify the type of changes.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionChangeType1Code.mmObject();
@@ -153,7 +153,7 @@ public class CorporateActionChangeType1FormatChoice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Proprietary code to  express the type of changes."</li>
+	 * definition} = "Proprietary code to express the type of changes."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -164,7 +164,7 @@ public class CorporateActionChangeType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the type of changes.";
+			definition = "Proprietary code to express the type of changes.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -179,7 +179,7 @@ public class CorporateActionChangeType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionChangeType1FormatChoice";
-				definition = "Choice of formats to  express the type of changes.";
+				definition = "Choice of formats to express the type of changes.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.XmlType;
  * "StatementReference1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Identifies the reference of the statment  by a unique identifier and the date (and time)."
+ * "Identifies the reference of the statment by a unique identifier and the date (and time)."
  * </li>
  * </ul>
  */
@@ -226,7 +226,7 @@ public class StatementReference1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementReference1";
-				definition = "Identifies the reference of the statment  by a unique identifier and the date (and time).";
+				definition = "Identifies the reference of the statment by a unique identifier and the date (and time).";
 			}
 		});
 		return mmObject_lazy.get();

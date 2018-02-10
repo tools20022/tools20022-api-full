@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
+import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.AccountIdentification32Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.msg.*;
@@ -145,8 +145,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnMvmntPrlimryAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
- * SecuritiesEventsPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.035.001.07}</li>
@@ -231,7 +231,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Page number of the message and  continuation indicator to indicate that the multi-parts preliminary advice is to continue or that the message is the last page of the multi-parts preliminary advice."
+	 * "Page number of the message and continuation indicator to indicate that the multi-parts preliminary advice is to continue or that the message is the last page of the multi-parts preliminary advice."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -253,7 +253,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			xmlTag = "Pgntn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
-			definition = "Page number of the message and  continuation indicator to indicate that the multi-parts preliminary advice is to continue or that the message is the last page of the multi-parts preliminary advice.";
+			definition = "Page number of the message and continuation indicator to indicate that the multi-parts preliminary advice is to continue or that the message is the last page of the multi-parts preliminary advice.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV08.mmPagination);
 			previousVersion_lazy = () -> CorporateActionMovementPreliminaryAdviceV06.mmPagination;
 			maxOccurs = 1;
@@ -1320,7 +1320,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. "
+	 * "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1342,7 +1342,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			xmlTag = "RsellngAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResellingAgent";
-			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. ";
+			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV08.mmResellingAgent);
 			previousVersion_lazy = () -> CorporateActionMovementPreliminaryAdviceV06.mmResellingAgent;
 			minOccurs = 0;
@@ -1441,7 +1441,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. "
+	 * "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1463,7 +1463,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			xmlTag = "DrpAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DropAgent";
-			definition = "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. ";
+			definition = "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV08.mmDropAgent);
 			previousVersion_lazy = () -> CorporateActionMovementPreliminaryAdviceV06.mmDropAgent;
 			maxOccurs = 1;
@@ -1502,7 +1502,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change. "
+	 * "A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1524,7 +1524,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			xmlTag = "SlctnAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationAgent";
-			definition = "A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change. ";
+			definition = "A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV08.mmSolicitationAgent);
 			previousVersion_lazy = () -> CorporateActionMovementPreliminaryAdviceV06.mmSolicitationAgent;
 			minOccurs = 0;
@@ -1562,7 +1562,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. "
+	 * "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1584,7 +1584,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 			xmlTag = "InfAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationAgent";
-			definition = "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. ";
+			definition = "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV08.mmInformationAgent);
 			previousVersion_lazy = () -> CorporateActionMovementPreliminaryAdviceV06.mmInformationAgent;
 			maxOccurs = 1;
@@ -1678,7 +1678,7 @@ public class CorporateActionMovementPreliminaryAdviceV07 {
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnMvmntPrlimryAdvc";
-				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmPagination,
 						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmMovementPreliminaryAdviceGeneralInformation,
 						com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07.mmPreviousMovementPreliminaryAdviceIdentification,

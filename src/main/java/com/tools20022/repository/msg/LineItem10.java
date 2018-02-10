@@ -147,7 +147,7 @@ import javax.xml.bind.annotation.XmlType;
  * "LineItem10"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line items."
+ * "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -1030,7 +1030,7 @@ public class LineItem10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Modification on the value of goods and / or services. For example: rebate, discount, surcharge"
+	 * "Modification on the value of goods and / or services. For example: rebate, discount, surcharge."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1050,7 +1050,7 @@ public class LineItem10 {
 			xmlTag = "FinAdjstmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdjustment";
-			definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
+			definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge.";
 			nextVersions_lazy = () -> Arrays.asList(LineItem16.mmFinancialAdjustment);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Adjustment4.mmObject();
@@ -1913,7 +1913,7 @@ public class LineItem10 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItem10";
-				definition = "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line items.";
+				definition = "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items.";
 				nextVersions_lazy = () -> Arrays.asList(LineItem16.mmObject());
 			}
 		});

@@ -21,6 +21,8 @@ import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.SecuritiesAccountStatus1;
+import com.tools20022.repository.msg.SecuritiesAccountStatus2;
+import java.util.Arrays;
 
 /**
  * If Status equals COMP (Completed) then RelatedSecuritiesAccount must be
@@ -47,6 +49,14 @@ public class ConstraintPresenceRule {
 	 * definition} =
 	 * "If Status equals COMP (Completed) then RelatedSecuritiesAccount must be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPresenceRule#forSecuritiesAccountStatus2
+	 * ConstraintPresenceRule.forSecuritiesAccountStatus2}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesAccountStatus1> forSecuritiesAccountStatus1 = new MMConstraint<SecuritiesAccountStatus1>() {
@@ -55,7 +65,44 @@ public class ConstraintPresenceRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresenceRule";
 			definition = "If Status equals COMP (Completed) then RelatedSecuritiesAccount must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPresenceRule.forSecuritiesAccountStatus2);
 			owner_lazy = () -> SecuritiesAccountStatus1.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus2
+	 * SecuritiesAccountStatus2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PresenceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Status equals COMP (Completed) then RelatedSecuritiesAccount must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPresenceRule#forSecuritiesAccountStatus1
+	 * ConstraintPresenceRule.forSecuritiesAccountStatus1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesAccountStatus2> forSecuritiesAccountStatus2 = new MMConstraint<SecuritiesAccountStatus2>() {
+		{
+			validator = ConstraintPresenceRule::checkSecuritiesAccountStatus2;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PresenceRule";
+			definition = "If Status equals COMP (Completed) then RelatedSecuritiesAccount must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPresenceRule.forSecuritiesAccountStatus1;
+			owner_lazy = () -> SecuritiesAccountStatus2.mmObject();
 		}
 	};
 
@@ -64,6 +111,14 @@ public class ConstraintPresenceRule {
 	 * present.
 	 */
 	public static void checkSecuritiesAccountStatus1(SecuritiesAccountStatus1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Status equals COMP (Completed) then RelatedSecuritiesAccount must be
+	 * present.
+	 */
+	public static void checkSecuritiesAccountStatus2(SecuritiesAccountStatus2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

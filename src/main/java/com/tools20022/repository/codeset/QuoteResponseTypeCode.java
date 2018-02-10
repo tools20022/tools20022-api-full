@@ -246,7 +246,7 @@ public class QuoteResponseTypeCode extends MMCode {
 	};
 	/**
 	 * Rejection of the conditions of a quote because the offer is being
-	 * declined
+	 * declined.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -264,7 +264,7 @@ public class QuoteResponseTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Rejection of the conditions of a quote because the offer is being declined"
+	 * "Rejection of the conditions of a quote because the offer is being declined."
 	 * </li>
 	 * </ul>
 	 */
@@ -272,7 +272,7 @@ public class QuoteResponseTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pass";
-			definition = "Rejection of the conditions of a quote because the offer is being declined";
+			definition = "Rejection of the conditions of a quote because the offer is being declined.";
 			owner_lazy = () -> com.tools20022.repository.codeset.QuoteResponseTypeCode.mmObject();
 			codeName = "PASS";
 		}

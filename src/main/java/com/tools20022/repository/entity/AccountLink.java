@@ -20,9 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.AccountLink1;
-import com.tools20022.repository.msg.AccountLink2;
-import com.tools20022.repository.msg.AccountLinkUpdate1;
+import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -89,6 +87,8 @@ import java.util.Objects;
  * <li>{@linkplain com.tools20022.repository.msg.AccountLink2 AccountLink2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AccountLinkUpdate1
  * AccountLinkUpdate1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLink3 AccountLink3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLink4 AccountLink4}</li>
  * </ul>
  * </li>
  * <li>
@@ -135,6 +135,10 @@ public class AccountLink {
 	 * AccountLink1.mmCashAccount}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink2#mmCashAccount
 	 * AccountLink2.mmCashAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink3#mmCashAccount
+	 * AccountLink3.mmCashAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink4#mmCashAccount
+	 * AccountLink4.mmCashAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -154,7 +158,7 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCashAccount, AccountLink2.mmCashAccount);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCashAccount, AccountLink2.mmCashAccount, AccountLink3.mmCashAccount, AccountLink4.mmCashAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -242,6 +246,12 @@ public class AccountLink {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AccountLink2#mmSecuritiesAccount
 	 * AccountLink2.mmSecuritiesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink3#mmSecuritiesAccount
+	 * AccountLink3.mmSecuritiesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink4#mmSecuritiesAccount
+	 * AccountLink4.mmSecuritiesAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -261,7 +271,7 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(AccountLink1.mmSecuritiesAccount, AccountLink2.mmSecuritiesAccount);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmSecuritiesAccount, AccountLink2.mmSecuritiesAccount, AccountLink3.mmSecuritiesAccount, AccountLink4.mmSecuritiesAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -338,6 +348,9 @@ public class AccountLink {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AccountLink1#mmCashSettlementIndicator
 	 * AccountLink1.mmCashSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink3#mmCashSettlementIndicator
+	 * AccountLink3.mmCashSettlementIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -359,7 +372,7 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAttribute mmCashSettlementIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCashSettlementIndicator);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCashSettlementIndicator, AccountLink3.mmCashSettlementIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -395,6 +408,9 @@ public class AccountLink {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AccountLink1#mmCollateralisationIndicator
 	 * AccountLink1.mmCollateralisationIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink3#mmCollateralisationIndicator
+	 * AccountLink3.mmCollateralisationIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -416,7 +432,7 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAttribute mmCollateralisationIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCollateralisationIndicator);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmCollateralisationIndicator, AccountLink3.mmCollateralisationIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -452,6 +468,9 @@ public class AccountLink {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AccountLink1#mmDefaultIndicator
 	 * AccountLink1.mmDefaultIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink3#mmDefaultIndicator
+	 * AccountLink3.mmDefaultIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -473,7 +492,7 @@ public class AccountLink {
 	 */
 	public static final MMBusinessAttribute mmDefaultIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(AccountLink1.mmDefaultIndicator);
+			derivation_lazy = () -> Arrays.asList(AccountLink1.mmDefaultIndicator, AccountLink3.mmDefaultIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountLink.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -505,7 +524,7 @@ public class AccountLink {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountLink.mmCashAccount, com.tools20022.repository.entity.AccountLink.mmValidityPeriod, com.tools20022.repository.entity.AccountLink.mmSecuritiesAccount,
 						com.tools20022.repository.entity.AccountLink.mmMarketInfrastructure, com.tools20022.repository.entity.AccountLink.mmCashSettlementIndicator, com.tools20022.repository.entity.AccountLink.mmCollateralisationIndicator,
 						com.tools20022.repository.entity.AccountLink.mmDefaultIndicator);
-				derivationComponent_lazy = () -> Arrays.asList(AccountLink1.mmObject(), AccountLink2.mmObject(), AccountLinkUpdate1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(AccountLink1.mmObject(), AccountLink2.mmObject(), AccountLinkUpdate1.mmObject(), AccountLink3.mmObject(), AccountLink4.mmObject());
 			}
 
 			@Override

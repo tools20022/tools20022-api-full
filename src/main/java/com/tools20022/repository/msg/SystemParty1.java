@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PartyCreationRequestV01;
 import com.tools20022.repository.choice.TechnicalIdentification1Choice;
 import com.tools20022.repository.codeset.SystemPartyType1Code;
 import com.tools20022.repository.datatype.ISODate;
@@ -67,6 +68,15 @@ import javax.xml.bind.annotation.XmlType;
  * SystemParty1.mmName}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SystemParty1#mmRestriction
  * SystemParty1.mmRestriction}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyCreationRequestV01#mmParty
+ * PartyCreationRequestV01.mmParty}</li>
  * </ul>
  * </li>
  * <li>
@@ -478,6 +488,7 @@ public class SystemParty1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemParty1.mmIdentification, com.tools20022.repository.msg.SystemParty1.mmAddress, com.tools20022.repository.msg.SystemParty1.mmOpeningDate,
 						com.tools20022.repository.msg.SystemParty1.mmClosingDate, com.tools20022.repository.msg.SystemParty1.mmType, com.tools20022.repository.msg.SystemParty1.mmTechnicalAddress,
 						com.tools20022.repository.msg.SystemParty1.mmMarketSpecificAttribute, com.tools20022.repository.msg.SystemParty1.mmName, com.tools20022.repository.msg.SystemParty1.mmRestriction);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyCreationRequestV01.mmParty);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemParty1";

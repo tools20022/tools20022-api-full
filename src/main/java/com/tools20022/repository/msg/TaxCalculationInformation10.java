@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TaxCalculationInformation10"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information used to calculate the tax."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxCalculationInformation11
+ * TaxCalculationInformation11}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation8
@@ -110,6 +117,14 @@ public class TaxCalculationInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Form of the rebate, for example, cash."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation11#mmBasis
+	 * TaxCalculationInformation11.mmBasis}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -126,6 +141,7 @@ public class TaxCalculationInformation10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Form of the rebate, for example, cash.";
+			nextVersions_lazy = () -> Arrays.asList(TaxCalculationInformation11.mmBasis);
 			previousVersion_lazy = () -> TaxCalculationInformation8.mmBasis;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -165,6 +181,14 @@ public class TaxCalculationInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money on which the tax is charged."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxCalculationInformation11#mmTaxableAmount
+	 * TaxCalculationInformation11.mmTaxableAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,6 +205,7 @@ public class TaxCalculationInformation10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableAmount";
 			definition = "Amount of money on which the tax is charged.";
+			nextVersions_lazy = () -> Arrays.asList(TaxCalculationInformation11.mmTaxableAmount);
 			previousVersion_lazy = () -> TaxCalculationInformation8.mmTaxableAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -197,6 +222,7 @@ public class TaxCalculationInformation10 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxCalculationInformation10";
 				definition = "Information used to calculate the tax.";
+				nextVersions_lazy = () -> Arrays.asList(TaxCalculationInformation11.mmObject());
 				previousVersion_lazy = () -> TaxCalculationInformation8.mmObject();
 			}
 		});

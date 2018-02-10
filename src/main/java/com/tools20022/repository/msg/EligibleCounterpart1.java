@@ -77,6 +77,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Represents a party to be identified as eligible for the instructing party."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.EligibleCounterpart2
+ * EligibleCounterpart2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -112,7 +119,15 @@ public class EligibleCounterpart1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique business identifier code used to identify the party providing the eligible counterpart information"
+	 * "Unique business identifier code used to identify the party providing the eligible counterpart information."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleCounterpart2#mmIssuerIdentification
+	 * EligibleCounterpart2.mmIssuerIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -123,7 +138,8 @@ public class EligibleCounterpart1 {
 			xmlTag = "IssrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerIdentification";
-			definition = "Unique business identifier code used to identify the party providing the eligible counterpart information";
+			definition = "Unique business identifier code used to identify the party providing the eligible counterpart information.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleCounterpart2.mmIssuerIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
@@ -159,6 +175,14 @@ public class EligibleCounterpart1 {
 	 * definition} =
 	 * "Unique business identifier code used to identify the central securities depository to be defined as eligible."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleCounterpart2#mmEligibleCounterpartIdentification
+	 * EligibleCounterpart2.mmEligibleCounterpartIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEligibleCounterpartIdentification = new MMMessageAttribute() {
@@ -169,6 +193,7 @@ public class EligibleCounterpart1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibleCounterpartIdentification";
 			definition = "Unique business identifier code used to identify the central securities depository to be defined as eligible.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleCounterpart2.mmEligibleCounterpartIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
@@ -201,6 +226,14 @@ public class EligibleCounterpart1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date from when the eligible counterpart is valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleCounterpart2#mmValidFrom
+	 * EligibleCounterpart2.mmValidFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
@@ -211,6 +244,7 @@ public class EligibleCounterpart1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Date from when the eligible counterpart is valid.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleCounterpart2.mmValidFrom);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -243,6 +277,14 @@ public class EligibleCounterpart1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date until when the eligible counterpart is valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleCounterpart2#mmValidTo
+	 * EligibleCounterpart2.mmValidTo}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
@@ -253,6 +295,7 @@ public class EligibleCounterpart1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTo";
 			definition = "Date until when the eligible counterpart is valid.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleCounterpart2.mmValidTo);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -286,6 +329,14 @@ public class EligibleCounterpart1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the type of eligibility."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleCounterpart2#mmEligibilityType
+	 * EligibleCounterpart2.mmEligibilityType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEligibilityType = new MMMessageAttribute() {
@@ -296,6 +347,7 @@ public class EligibleCounterpart1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibilityType";
 			definition = "Defines the type of eligibility.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleCounterpart2.mmEligibilityType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EligibilityType1Code.mmObject();
@@ -328,6 +380,14 @@ public class EligibleCounterpart1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identification of the eligible counterpart party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleCounterpart2#mmEligibilityIdentification
+	 * EligibleCounterpart2.mmEligibilityIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEligibilityIdentification = new MMMessageAssociationEnd() {
@@ -338,6 +398,7 @@ public class EligibleCounterpart1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EligibilityIdentification";
 			definition = "Unique identification of the eligible counterpart party.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleCounterpart2.mmEligibilityIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -355,6 +416,7 @@ public class EligibleCounterpart1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibleCounterpart1";
 				definition = "Represents a party to be identified as eligible for the instructing party.";
+				nextVersions_lazy = () -> Arrays.asList(EligibleCounterpart2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -211,7 +211,7 @@ public class SecuritiesOptionSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. "
+	 * "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -236,7 +236,7 @@ public class SecuritiesOptionSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
-			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
+			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmDTCPayMethod);
 			previousVersion_lazy = () -> SecuritiesOptionSD5.mmDTCPayMethod;
 			maxOccurs = 1;
@@ -274,7 +274,7 @@ public class SecuritiesOptionSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema."
+	 * "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -299,7 +299,7 @@ public class SecuritiesOptionSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Order"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
-			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema.";
+			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmDTCPayOrder);
 			previousVersion_lazy = () -> SecuritiesOptionSD5.mmDTCPayOrder;
 			maxOccurs = 1;
@@ -338,7 +338,7 @@ public class SecuritiesOptionSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Income classification of the cash proceeds for dividend reinvestment ."</li>
+	 * "Income classification of the cash proceeds for dividend reinvestment."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -362,7 +362,7 @@ public class SecuritiesOptionSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reinvestment Income Classification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
-			definition = "Income classification of the cash proceeds for dividend reinvestment .";
+			definition = "Income classification of the cash proceeds for dividend reinvestment.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmReinvestmentIncomeClassification);
 			previousVersion_lazy = () -> SecuritiesOptionSD5.mmReinvestmentIncomeClassification;
 			maxOccurs = 1;
@@ -463,7 +463,7 @@ public class SecuritiesOptionSD6 {
 	 * name} = "PriceBasis"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Price is based on either base or disbursed security. "</li>
+	 * definition} = "Price is based on either base or disbursed security."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -487,7 +487,7 @@ public class SecuritiesOptionSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Price Basis"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceBasis";
-			definition = "Price is based on either base or disbursed security. ";
+			definition = "Price is based on either base or disbursed security.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmPriceBasis);
 			previousVersion_lazy = () -> SecuritiesOptionSD5.mmPriceBasis;
 			maxOccurs = 1;
@@ -526,7 +526,7 @@ public class SecuritiesOptionSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. "
+	 * "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -551,7 +551,7 @@ public class SecuritiesOptionSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Exit Explanation Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitExplanationIndicator";
-			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. ";
+			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmDTCExitExplanationIndicator);
 			previousVersion_lazy = () -> SecuritiesOptionSD5.mmDTCExitExplanationIndicator;
 			maxOccurs = 1;
@@ -718,7 +718,7 @@ public class SecuritiesOptionSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the price from the offeror is estimated or final. "</li>
+	 * "Indicates whether the price from the offeror is estimated or final."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -742,7 +742,7 @@ public class SecuritiesOptionSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Estimated Price Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedPriceFlag";
-			definition = "Indicates whether the price from the offeror is estimated or final. ";
+			definition = "Indicates whether the price from the offeror is estimated or final.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD7.mmEstimatedPriceFlag);
 			previousVersion_lazy = () -> SecuritiesOptionSD5.mmEstimatedPriceFlag;
 			maxOccurs = 1;

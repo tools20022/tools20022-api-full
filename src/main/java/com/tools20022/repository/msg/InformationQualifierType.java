@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Further qualifies the information provided in terms of its importance and its format."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InformationQualifierType1
+ * InformationQualifierType1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class InformationQualifierType {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the information is formatted."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InformationQualifierType1#mmIsFormatted
+	 * InformationQualifierType1.mmIsFormatted}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIsFormatted = new MMMessageAttribute() {
@@ -119,6 +134,7 @@ public class InformationQualifierType {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IsFormatted";
 			definition = "Indicates whether the information is formatted.";
+			nextVersions_lazy = () -> Arrays.asList(InformationQualifierType1.mmIsFormatted);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -157,6 +173,14 @@ public class InformationQualifierType {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Priority of the information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InformationQualifierType1#mmPriority
+	 * InformationQualifierType1.mmPriority}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
@@ -168,6 +192,7 @@ public class InformationQualifierType {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Priority of the information.";
+			nextVersions_lazy = () -> Arrays.asList(InformationQualifierType1.mmPriority);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Priority1Code.mmObject();
@@ -183,6 +208,7 @@ public class InformationQualifierType {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationQualifierType";
 				definition = "Further qualifies the information provided in terms of its importance and its format.";
+				nextVersions_lazy = () -> Arrays.asList(InformationQualifierType1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
+import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
 import com.tools20022.repository.msg.AccountIdentification40;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.Statement47;
@@ -89,8 +89,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnInstrStmtRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
+ * SecuritiesEventsPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.042.001.06}</li>
@@ -116,6 +116,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nAn account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH)."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV07
+ * CorporateActionInstructionStatementReportV07}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -152,6 +160,14 @@ public class CorporateActionInstructionStatementReportV06 {
 	 * definition} =
 	 * "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV07#mmPagination
+	 * CorporateActionInstructionStatementReportV07.mmPagination}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,6 +181,7 @@ public class CorporateActionInstructionStatementReportV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Pagination";
 			definition = "Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV07.mmPagination);
 			previousVersion_lazy = () -> CorporateActionInstructionStatementReportV05.mmPagination;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -203,6 +220,14 @@ public class CorporateActionInstructionStatementReportV06 {
 	 * definition} =
 	 * "General characteristics related to a statement which reports information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV07#mmStatementGeneralDetails
+	 * CorporateActionInstructionStatementReportV07.mmStatementGeneralDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -216,6 +241,7 @@ public class CorporateActionInstructionStatementReportV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
 			definition = "General characteristics related to a statement which reports information.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV07.mmStatementGeneralDetails);
 			previousVersion_lazy = () -> CorporateActionInstructionStatementReportV05.mmStatementGeneralDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -255,6 +281,15 @@ public class CorporateActionInstructionStatementReportV06 {
 	 * definition} =
 	 * "Account information and detailed account holdings information report for corporate action events."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV07#mmAccountAndStatementDetails
+	 * CorporateActionInstructionStatementReportV07.mmAccountAndStatementDetails
+	 * }</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -269,6 +304,7 @@ public class CorporateActionInstructionStatementReportV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountAndStatementDetails";
 			definition = "Account information and detailed account holdings information report for corporate action events.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV07.mmAccountAndStatementDetails);
 			previousVersion_lazy = () -> CorporateActionInstructionStatementReportV05.mmAccountAndStatementDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountIdentification40.mmObject();
@@ -307,6 +343,14 @@ public class CorporateActionInstructionStatementReportV06 {
 	 * definition} =
 	 * "Additional information that can not be captured in the structured fields and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV07#mmSupplementaryData
+	 * CorporateActionInstructionStatementReportV07.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -320,6 +364,7 @@ public class CorporateActionInstructionStatementReportV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV07.mmSupplementaryData);
 			previousVersion_lazy = () -> CorporateActionInstructionStatementReportV05.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
@@ -342,11 +387,12 @@ public class CorporateActionInstructionStatementReportV06 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionStatementReportV06";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionStatementReport message to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatementReportV07.mmObject());
 				previousVersion_lazy = () -> CorporateActionInstructionStatementReportV05.mmObject();
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOLatestversion.mmObject(), CorporateActionsMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStmtRpt";
-				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmPagination,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmStatementGeneralDetails,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmAccountAndStatementDetails, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06.mmSupplementaryData);

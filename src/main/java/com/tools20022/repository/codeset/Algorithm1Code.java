@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Identification of a cryptographic algorithm
+ * Identification of a cryptographic algorithm.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -78,7 +78,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Algorithm1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Identification of a cryptographic algorithm"</li>
+ * definition} = "Identification of a cryptographic algorithm."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -289,7 +289,7 @@ public class Algorithm1Code extends MMCode {
 				example = Arrays.asList("MACC");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm1Code";
-				definition = "Identification of a cryptographic algorithm";
+				definition = "Identification of a cryptographic algorithm.";
 				trace_lazy = () -> AlgorithmCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm1Code.RetailCBCMAC, com.tools20022.repository.codeset.Algorithm1Code.RetailSHA256MAC, com.tools20022.repository.codeset.Algorithm1Code.UKPT,
 						com.tools20022.repository.codeset.Algorithm1Code.DUKPT, com.tools20022.repository.codeset.Algorithm1Code.DES112CBC, com.tools20022.repository.codeset.Algorithm1Code.SHA256,

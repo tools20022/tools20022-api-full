@@ -26,7 +26,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Messages that support collateral management actions
+ * Messages that support collateral management actions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -54,7 +54,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Collateral Management - Archive - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Messages that support collateral management actions"</li>
+ * definition} = "Messages that support collateral management actions."</li>
  * </ul>
  */
 public class CollateralManagementArchive {
@@ -67,7 +67,7 @@ public class CollateralManagementArchive {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral Management - Archive - master";
-				definition = "Messages that support collateral management actions";
+				definition = "Messages that support collateral management actions.";
 				messageDefinition_lazy = () -> Arrays.asList(CollateralProposalResponseV03.mmObject(), CollateralProposalV03.mmObject());
 				code = "colr";
 			}

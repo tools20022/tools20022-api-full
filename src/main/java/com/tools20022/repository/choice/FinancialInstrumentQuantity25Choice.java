@@ -158,7 +158,7 @@ public class FinancialInstrumentQuantity25Choice {
 	 * name} = "NominalValue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TBC"</li>
+	 * definition} = "TBC."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNominalValue = new MMMessageAttribute() {
@@ -169,7 +169,7 @@ public class FinancialInstrumentQuantity25Choice {
 			xmlTag = "NmnlVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NominalValue";
-			definition = "TBC";
+			definition = "TBC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -207,7 +207,7 @@ public class FinancialInstrumentQuantity25Choice {
 	 * name} = "MonetaryValue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TBC"</li>
+	 * definition} = "TBC."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMonetaryValue = new MMMessageAttribute() {
@@ -218,7 +218,7 @@ public class FinancialInstrumentQuantity25Choice {
 			xmlTag = "MntryVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonetaryValue";
-			definition = "TBC";
+			definition = "TBC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();

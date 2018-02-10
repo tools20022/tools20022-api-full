@@ -405,7 +405,7 @@ public class Undertaking1 {
 	 * name} = "Obligor"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party obligated to reimburse the issuer. "</li>
+	 * definition} = "Party obligated to reimburse the issuer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmObligor = new MMMessageAssociationEnd() {
@@ -416,7 +416,7 @@ public class Undertaking1 {
 			xmlTag = "Oblgr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligor";
-			definition = "Party obligated to reimburse the issuer. ";
+			definition = "Party obligated to reimburse the issuer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -501,7 +501,7 @@ public class Undertaking1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that issues the undertaking (or counter-undertaking). "</li>
+	 * "Party that issues the undertaking (or counter-undertaking)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
@@ -512,7 +512,7 @@ public class Undertaking1 {
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
-			definition = "Party that issues the undertaking (or counter-undertaking). ";
+			definition = "Party that issues the undertaking (or counter-undertaking).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -981,7 +981,7 @@ public class Undertaking1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party, in addition to the other parties specified in the undertaking, that is also related to the undertaking. "
+	 * "Party, in addition to the other parties specified in the undertaking, that is also related to the undertaking."
 	 * </li>
 	 * </ul>
 	 */
@@ -993,7 +993,7 @@ public class Undertaking1 {
 			xmlTag = "AddtlPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParty";
-			definition = "Party, in addition to the other parties specified in the undertaking, that is also related to the undertaking. ";
+			definition = "Party, in addition to the other parties specified in the undertaking, that is also related to the undertaking.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PartyAndType1.mmObject();
@@ -1317,7 +1317,7 @@ public class Undertaking1 {
 	 * name} = "TransferIndicator"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indicates whether the undertaking is transferable. "</li>
+	 * definition} = "Indicates whether the undertaking is transferable."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransferIndicator = new MMMessageAttribute() {
@@ -1328,7 +1328,7 @@ public class Undertaking1 {
 			xmlTag = "TrfInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIndicator";
-			definition = "Indicates whether the undertaking is transferable. ";
+			definition = "Indicates whether the undertaking is transferable.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1366,7 +1366,7 @@ public class Undertaking1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges. "
+	 * "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges."
 	 * </li>
 	 * </ul>
 	 */
@@ -1378,7 +1378,7 @@ public class Undertaking1 {
 			xmlTag = "TrfChrgsPyblBy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferChargesPayableBy";
-			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges. ";
+			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalTypeOfParty1Code.mmObject();
@@ -1416,7 +1416,7 @@ public class Undertaking1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges. "
+	 * "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges."
 	 * </li>
 	 * </ul>
 	 */
@@ -1428,7 +1428,7 @@ public class Undertaking1 {
 			xmlTag = "ConfChrgsPyblBy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationChargesPayableBy";
-			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges. ";
+			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalTypeOfParty1Code.mmObject();

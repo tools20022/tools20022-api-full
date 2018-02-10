@@ -152,7 +152,7 @@ public class OptionFeaturesFormat8SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Use of pro ration when the corporate action event type code  is TEND or BIDS.\r\nあん分比例方式の適用有無が「無し」「未定」「非設定」"
+	 * "Use of pro ration when the corporate action event type code is TEND or BIDS.\r\nあん分比例方式の適用有無が「無し」「未定」「非設定」."
 	 * </li>
 	 * </ul>
 	 */
@@ -163,7 +163,7 @@ public class OptionFeaturesFormat8SD1 {
 			xmlTag = "PrRatnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProRationType";
-			definition = "Use of pro ration when the corporate action event type code  is TEND or BIDS.\r\nあん分比例方式の適用有無が「無し」「未定」「非設定」";
+			definition = "Use of pro ration when the corporate action event type code is TEND or BIDS.\r\nあん分比例方式の適用有無が「無し」「未定」「非設定」.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProrationType1Code.mmObject();

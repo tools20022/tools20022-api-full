@@ -254,7 +254,7 @@ public class ComparisonResult2 {
 	 * name} = "Replacement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Replacement of an existing content by a different one"</li>
+	 * definition} = "Replacement of an existing content by a different one."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReplacement = new MMMessageAssociationEnd() {
@@ -264,7 +264,7 @@ public class ComparisonResult2 {
 			xmlTag = "Rplcmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replacement";
-			definition = "Replacement of an existing content by a different one";
+			definition = "Replacement of an existing content by a different one.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

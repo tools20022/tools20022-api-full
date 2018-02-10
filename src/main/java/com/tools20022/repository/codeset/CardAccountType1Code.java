@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Type of cardholder account used for the transaction
+ * Type of cardholder account used for the transaction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -80,7 +80,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CardAccountType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Type of cardholder account used for the transaction"</li>
+ * definition} = "Type of cardholder account used for the transaction."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -267,7 +267,7 @@ public class CardAccountType1Code extends MMCode {
 				example = Arrays.asList("DFLT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAccountType1Code";
-				definition = "Type of cardholder account used for the transaction";
+				definition = "Type of cardholder account used for the transaction.";
 				trace_lazy = () -> CardAccountTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardAccountType1Code.Default, com.tools20022.repository.codeset.CardAccountType1Code.Savings,
 						com.tools20022.repository.codeset.CardAccountType1Code.Checking, com.tools20022.repository.codeset.CardAccountType1Code.CreditCard, com.tools20022.repository.codeset.CardAccountType1Code.Universal,

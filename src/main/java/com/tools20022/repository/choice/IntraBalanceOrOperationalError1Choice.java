@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraBalanceOrOperationalError1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between the report data or an operational error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError4Choice
+ * IntraBalanceOrOperationalError4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,6 +111,14 @@ public class IntraBalanceOrOperationalError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the transactions."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError4Choice#mmMovements
+	 * IntraBalanceOrOperationalError4Choice.mmMovements}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMovements = new MMMessageAssociationEnd() {
@@ -114,6 +130,7 @@ public class IntraBalanceOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Movements";
 			definition = "Identifies the transactions.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceOrOperationalError4Choice.mmMovements);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> IntraBalanceMovements1.mmObject();
@@ -145,6 +162,14 @@ public class IntraBalanceOrOperationalError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Operational error resulting from a rejection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.IntraBalanceOrOperationalError4Choice#mmOperationalError
+	 * IntraBalanceOrOperationalError4Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
@@ -155,6 +180,7 @@ public class IntraBalanceOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceOrOperationalError4Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -170,6 +196,7 @@ public class IntraBalanceOrOperationalError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceOrOperationalError1Choice";
 				definition = "Choice between the report data or an operational error.";
+				nextVersions_lazy = () -> Arrays.asList(IntraBalanceOrOperationalError4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

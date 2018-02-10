@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the criteria which are used to search for a transaction and to report on the transaction. A name may be given to the new query."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionCriteria6
+ * TransactionCriteria6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransactionCriteria4
@@ -118,6 +125,14 @@ public class TransactionCriteria5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Name of the query defined by the search criteria and return criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCriteria6#mmNewQueryName
+	 * TransactionCriteria6.mmNewQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -133,6 +148,7 @@ public class TransactionCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
 			definition = "Name of the query defined by the search criteria and return criteria.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionCriteria6.mmNewQueryName);
 			previousVersion_lazy = () -> TransactionCriteria4.mmNewQueryName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -167,6 +183,14 @@ public class TransactionCriteria5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria on which the information is extracted."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCriteria6#mmSearchCriteria
+	 * TransactionCriteria6.mmSearchCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +206,7 @@ public class TransactionCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria on which the information is extracted.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionCriteria6.mmSearchCriteria);
 			previousVersion_lazy = () -> TransactionCriteria4.mmSearchCriteria;
 			minOccurs = 0;
 			isComposite = true;
@@ -216,6 +241,14 @@ public class TransactionCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the format of the requested report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCriteria6#mmStatementReport
+	 * TransactionCriteria6.mmStatementReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +264,7 @@ public class TransactionCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementReport";
 			definition = "Indicates the format of the requested report.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionCriteria6.mmStatementReport);
 			previousVersion_lazy = () -> TransactionCriteria4.mmStatementReport;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -264,6 +298,14 @@ public class TransactionCriteria5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the expected payment transaction report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionCriteria6#mmReturnCriteria
+	 * TransactionCriteria6.mmReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -279,6 +321,7 @@ public class TransactionCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the expected payment transaction report.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionCriteria6.mmReturnCriteria);
 			previousVersion_lazy = () -> TransactionCriteria4.mmReturnCriteria;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -297,6 +340,7 @@ public class TransactionCriteria5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionCriteria5";
 				definition = "Defines the criteria which are used to search for a transaction and to report on the transaction. A name may be given to the new query.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionCriteria6.mmObject());
 				previousVersion_lazy = () -> TransactionCriteria4.mmObject();
 			}
 		});

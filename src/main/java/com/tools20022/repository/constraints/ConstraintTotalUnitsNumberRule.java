@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 /**
  * TotalUnitsNumber must be the sum of all occurrences of
- * UnitsDetails/UnitsNumber
+ * UnitsDetails/UnitsNumber.
  */
 public class ConstraintTotalUnitsNumberRule {
 
@@ -45,7 +45,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -54,7 +54,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer4.mmObject();
 		}
 	};
@@ -74,7 +74,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -83,7 +83,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer7.mmObject();
 		}
 	};
@@ -103,7 +103,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -112,7 +112,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer17.mmObject();
 		}
 	};
@@ -132,7 +132,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -141,7 +141,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer2.mmObject();
 		}
 	};
@@ -161,7 +161,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -170,7 +170,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer10.mmObject();
 		}
 	};
@@ -248,7 +248,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -257,7 +257,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer25.mmObject();
 		}
 	};
@@ -277,7 +277,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -286,7 +286,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer1.mmObject();
 		}
 	};
@@ -306,7 +306,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -315,7 +315,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer9.mmObject();
 		}
 	};
@@ -393,7 +393,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -402,7 +402,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer18.mmObject();
 		}
 	};
@@ -422,7 +422,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -439,7 +439,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer29);
 			owner_lazy = () -> Transfer26.mmObject();
 		}
@@ -527,7 +527,7 @@ public class ConstraintTotalUnitsNumberRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber"
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber."
 	 * </li>
 	 * </ul>
 	 */
@@ -536,7 +536,7 @@ public class ConstraintTotalUnitsNumberRule {
 			validator = ConstraintTotalUnitsNumberRule::checkTransfer8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
-			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber.";
 			owner_lazy = () -> Transfer8.mmObject();
 		}
 	};
@@ -757,6 +757,14 @@ public class ConstraintTotalUnitsNumberRule {
 	 * definition} =
 	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule#forTransfer35
+	 * ConstraintTotalUnitsNumberRule.forTransfer35}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -770,6 +778,7 @@ public class ConstraintTotalUnitsNumberRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer35);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer28;
 			owner_lazy = () -> Transfer31.mmObject();
 		}
@@ -792,6 +801,14 @@ public class ConstraintTotalUnitsNumberRule {
 	 * definition} =
 	 * "Quantity/TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule#forTransfer34
+	 * ConstraintTotalUnitsNumberRule.forTransfer34}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -805,6 +822,7 @@ public class ConstraintTotalUnitsNumberRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumberRule";
 			definition = "Quantity/TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer34);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer27;
 			owner_lazy = () -> Transfer30.mmObject();
 		}
@@ -844,10 +862,80 @@ public class ConstraintTotalUnitsNumberRule {
 			owner_lazy = () -> Transfer33.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transfer35 Transfer35}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TotalUnitsNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule#forTransfer31
+	 * ConstraintTotalUnitsNumberRule.forTransfer31}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transfer35> forTransfer35 = new MMConstraint<Transfer35>() {
+		{
+			validator = ConstraintTotalUnitsNumberRule::checkTransfer35;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TotalUnitsNumberRule";
+			definition = "TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer31;
+			owner_lazy = () -> Transfer35.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transfer34 Transfer34}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TotalUnitsNumberRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Quantity/TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule#forTransfer30
+	 * ConstraintTotalUnitsNumberRule.forTransfer30}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transfer34> forTransfer34 = new MMConstraint<Transfer34>() {
+		{
+			validator = ConstraintTotalUnitsNumberRule::checkTransfer34;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TotalUnitsNumberRule";
+			definition = "Quantity/TotalUnitsNumber must be the sum of all occurrences of UnitsDetails/UnitsNumber when UnitsDetails is present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTotalUnitsNumberRule.forTransfer30;
+			owner_lazy = () -> Transfer34.mmObject();
+		}
+	};
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer4(Transfer4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -855,7 +943,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer7(Transfer7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -863,7 +951,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer17(Transfer17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -871,7 +959,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer2(Transfer2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -879,7 +967,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer10(Transfer10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -903,7 +991,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer25(Transfer25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -911,7 +999,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer1(Transfer1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -919,7 +1007,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer9(Transfer9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -943,7 +1031,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer18(Transfer18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -951,7 +1039,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer26(Transfer26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -975,7 +1063,7 @@ public class ConstraintTotalUnitsNumberRule {
 
 	/**
 	 * TotalUnitsNumber must be the sum of all occurrences of
-	 * UnitsDetails/UnitsNumber
+	 * UnitsDetails/UnitsNumber.
 	 */
 	public static void checkTransfer8(Transfer8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1042,6 +1130,22 @@ public class ConstraintTotalUnitsNumberRule {
 	 * UnitsDetails/UnitsNumber when UnitsDetails is present.
 	 */
 	public static void checkTransfer33(Transfer33 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * TotalUnitsNumber must be the sum of all occurrences of
+	 * UnitsDetails/UnitsNumber when UnitsDetails is present.
+	 */
+	public static void checkTransfer35(Transfer35 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Quantity/TotalUnitsNumber must be the sum of all occurrences of
+	 * UnitsDetails/UnitsNumber when UnitsDetails is present.
+	 */
+	public static void checkTransfer34(Transfer34 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -197,7 +197,7 @@ public class NetObligation1 {
 	 * name} = "Amount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Amount and currency of the obligation"</li>
+	 * definition} = "Amount and currency of the obligation."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -208,7 +208,7 @@ public class NetObligation1 {
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
-			definition = "Amount and currency of the obligation";
+			definition = "Amount and currency of the obligation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -289,7 +289,7 @@ public class NetObligation1 {
 	 * name} = "ObligationDirection"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the direction of the obligation. "</li>
+	 * definition} = "Specifies the direction of the obligation."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmObligationDirection = new MMMessageAttribute() {
@@ -300,7 +300,7 @@ public class NetObligation1 {
 			xmlTag = "OblgtnDrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligationDirection";
-			definition = "Specifies the direction of the obligation. ";
+			definition = "Specifies the direction of the obligation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentReceipt1Code.mmObject();

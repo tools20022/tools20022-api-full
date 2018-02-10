@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Identification of a cryptographic algorithm and parameters for the MAC computation."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AlgorithmIdentification22
+ * AlgorithmIdentification22}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification10
@@ -104,6 +111,14 @@ public class AlgorithmIdentification15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the MAC algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification22#mmAlgorithm
+	 * AlgorithmIdentification22.mmAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class AlgorithmIdentification15 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the MAC algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification22.mmAlgorithm);
 			previousVersion_lazy = () -> AlgorithmIdentification10.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -150,6 +166,14 @@ public class AlgorithmIdentification15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Parameters associated to the MAC algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification22#mmParameter
+	 * AlgorithmIdentification22.mmParameter}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,6 +189,7 @@ public class AlgorithmIdentification15 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated to the MAC algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification22.mmParameter);
 			previousVersion_lazy = () -> AlgorithmIdentification10.mmParameter;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -181,6 +206,7 @@ public class AlgorithmIdentification15 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification15";
 				definition = "Identification of a cryptographic algorithm and parameters for the MAC computation.";
+				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification22.mmObject());
 				previousVersion_lazy = () -> AlgorithmIdentification10.mmObject();
 			}
 		});

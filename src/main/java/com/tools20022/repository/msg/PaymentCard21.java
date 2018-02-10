@@ -89,6 +89,12 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentCard21"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Payment card performing the transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard28 PaymentCard28}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.PaymentCard9
  * PaymentCard9}</li>
@@ -128,6 +134,14 @@ public class PaymentCard21 {
 	 * definition} =
 	 * "Replacement of the message element PlainCardData by a digital envelope using a cryptographic key."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmProtectedCardData
+	 * PaymentCard28.mmProtectedCardData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -143,6 +157,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedCardData";
 			definition = "Replacement of the message element PlainCardData by a digital envelope using a cryptographic key.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmProtectedCardData);
 			previousVersion_lazy = () -> PaymentCard9.mmProtectedCardData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -176,6 +191,14 @@ public class PaymentCard21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Sensitive data associated with the card performing the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmPlainCardData
+	 * PaymentCard28.mmPlainCardData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -191,6 +214,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlainCardData";
 			definition = "Sensitive data associated with the card performing the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmPlainCardData);
 			previousVersion_lazy = () -> PaymentCard9.mmPlainCardData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -226,6 +250,14 @@ public class PaymentCard21 {
 	 * definition} =
 	 * "Unique reference to the card, used by both merchants and acquirers to link tokenized and non-tokenized transactions associated to the same underlying card."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmPaymentAccountReference
+	 * PaymentCard28.mmPaymentAccountReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentAccountReference = new MMMessageAttribute() {
@@ -236,6 +268,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentAccountReference";
 			definition = "Unique reference to the card, used by both merchants and acquirers to link tokenized and non-tokenized transactions associated to the same underlying card.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmPaymentAccountReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -269,6 +302,13 @@ public class PaymentCard21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Bank identifier number of the issuer for routing purpose."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCard28#mmIssuerBIN
+	 * PaymentCard28.mmIssuerBIN}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -284,6 +324,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerBIN";
 			definition = "Bank identifier number of the issuer for routing purpose.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmIssuerBIN);
 			previousVersion_lazy = () -> PaymentCard9.mmIssuerBIN;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -321,6 +362,14 @@ public class PaymentCard21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country code assigned to the card by the card issuer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmCardCountryCode
+	 * PaymentCard28.mmCardCountryCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -337,6 +386,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCountryCode";
 			definition = "Country code assigned to the card by the card issuer.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmCardCountryCode);
 			previousVersion_lazy = () -> PaymentCard9.mmCardCountryCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -371,6 +421,14 @@ public class PaymentCard21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency code of the card issuer (ISO 4217 numeric code)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmCardCurrencyCode
+	 * PaymentCard28.mmCardCurrencyCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -386,6 +444,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardCurrencyCode";
 			definition = "Currency code of the card issuer (ISO 4217 numeric code).";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmCardCurrencyCode);
 			previousVersion_lazy = () -> PaymentCard9.mmCardCurrencyCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -420,6 +479,14 @@ public class PaymentCard21 {
 	 * definition} =
 	 * "Defines a category of cards related to the acceptance processing rules defined by the acquirer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmCardProductProfile
+	 * PaymentCard28.mmCardProductProfile}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -435,6 +502,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProductProfile";
 			definition = "Defines a category of cards related to the acceptance processing rules defined by the acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmCardProductProfile);
 			previousVersion_lazy = () -> PaymentCard9.mmCardProductProfile;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -472,6 +540,13 @@ public class PaymentCard21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Brand name of the card."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCard28#mmCardBrand
+	 * PaymentCard28.mmCardBrand}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -488,6 +563,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardBrand";
 			definition = "Brand name of the card.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmCardBrand);
 			previousVersion_lazy = () -> PaymentCard9.mmCardBrand;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -521,6 +597,14 @@ public class PaymentCard21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "True if the card may be used abroad."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmInternationalCard
+	 * PaymentCard28.mmInternationalCard}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInternationalCard = new MMMessageAttribute() {
@@ -531,6 +615,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InternationalCard";
 			definition = "True if the card may be used abroad.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmInternationalCard);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -562,6 +647,14 @@ public class PaymentCard21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Product that can be purchased with the card."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmAllowedProduct
+	 * PaymentCard28.mmAllowedProduct}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAllowedProduct = new MMMessageAttribute() {
@@ -572,6 +665,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowedProduct";
 			definition = "Product that can be purchased with the card.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmAllowedProduct);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
 		}
@@ -602,6 +696,14 @@ public class PaymentCard21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Options to the service provided by the card."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmServiceOption
+	 * PaymentCard28.mmServiceOption}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmServiceOption = new MMMessageAttribute() {
@@ -612,6 +714,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceOption";
 			definition = "Options to the service provided by the card.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmServiceOption);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -643,6 +746,14 @@ public class PaymentCard21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional card issuer specific data."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmAdditionalCardData
+	 * PaymentCard28.mmAdditionalCardData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -658,6 +769,7 @@ public class PaymentCard21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalCardData";
 			definition = "Additional card issuer specific data.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmAdditionalCardData);
 			previousVersion_lazy = () -> PaymentCard9.mmAdditionalCardData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -678,6 +790,7 @@ public class PaymentCard21 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCard21";
 				definition = "Payment card performing the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentCard28.mmObject());
 				previousVersion_lazy = () -> PaymentCard9.mmObject();
 			}
 		});

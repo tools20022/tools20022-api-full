@@ -237,6 +237,18 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment57#mmAcquirer
  * CardPaymentEnvironment57.mmAcquirer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment70#mmAcquirer
+ * CardPaymentEnvironment70.mmAcquirer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71#mmAcquirer
+ * CardPaymentEnvironment71.mmAcquirer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69#mmAcquirerIdentification
+ * CardPaymentEnvironment69.mmAcquirerIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment68#mmAcquirer
+ * CardPaymentEnvironment68.mmAcquirer}</li>
  * </ul>
  * </li>
  * <li>
@@ -292,7 +304,7 @@ public class AcquirerRole extends CardPaymentPartyRole {
 						CardPaymentEnvironment45.mmAcquirer, CardPaymentEnvironment55.mmAcquirer, CardPaymentEnvironment54.mmAcquirerIdentification, CardPaymentEnvironment53.mmAcquirer, CardPaymentEnvironment47.mmAcquirer,
 						CardPaymentEnvironment61.mmAcquirer, CardPaymentEnvironment64.mmAcquirer, CardPaymentEnvironment60.mmAcquirer, CardPaymentEnvironment65.mmAcquirerIdentification, CardPaymentEnvironment67.mmAcquirer,
 						CardPaymentEnvironment66.mmAcquirerIdentification, CardPaymentEnvironment62.mmAcquirer, CardPaymentEnvironment63.mmAcquirerIdentification, CardPaymentEnvironment58.mmAcquirer, CardPaymentEnvironment59.mmAcquirer,
-						CardPaymentEnvironment57.mmAcquirer);
+						CardPaymentEnvironment57.mmAcquirer, CardPaymentEnvironment70.mmAcquirer, CardPaymentEnvironment71.mmAcquirer, CardPaymentEnvironment69.mmAcquirerIdentification, CardPaymentEnvironment68.mmAcquirer);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(Acquirer1.mmObject(), Acquirer2.mmObject(), Acquirer3.mmObject(), Acquirer4.mmObject(), Acquirer6.mmObject(), Acquirer5.mmObject(), Acquirer7.mmObject(), Acquirer8.mmObject());
 			}

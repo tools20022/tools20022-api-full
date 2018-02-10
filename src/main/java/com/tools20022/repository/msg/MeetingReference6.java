@@ -298,7 +298,7 @@ public class MeetingReference6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the type of meeting for which  instructions are sent."</li>
+	 * "Specifies the type of meeting for which instructions are sent."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -314,7 +314,7 @@ public class MeetingReference6 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Specifies the type of meeting for which  instructions are sent.";
+			definition = "Specifies the type of meeting for which instructions are sent.";
 			previousVersion_lazy = () -> MeetingReference5.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;

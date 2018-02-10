@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between date and date-time for the specification of a period."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.Period5Choice Period5Choice}
+ * </li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +116,14 @@ public class Period2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Time span defined by a start date and time, and an end date and time."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Period5Choice#mmFromDateTimeToDateTime
+	 * Period5Choice.mmFromDateTimeToDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFromDateTimeToDateTime = new MMMessageAssociationEnd() {
@@ -121,6 +136,7 @@ public class Period2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateTimeToDateTime";
 			definition = "Time span defined by a start date and time, and an end date and time.";
+			nextVersions_lazy = () -> Arrays.asList(Period5Choice.mmFromDateTimeToDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -161,6 +177,14 @@ public class Period2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Time span defined by a start date and time, and an end date and time."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Period5Choice#mmFromDateToDate
+	 * Period5Choice.mmFromDateToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFromDateToDate = new MMMessageAssociationEnd() {
@@ -173,6 +197,7 @@ public class Period2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDateToDate";
 			definition = "Time span defined by a start date and time, and an end date and time.";
+			nextVersions_lazy = () -> Arrays.asList(Period5Choice.mmFromDateToDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -189,6 +214,7 @@ public class Period2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period2Choice";
 				definition = "Choice between date and date-time for the specification of a period.";
+				nextVersions_lazy = () -> Arrays.asList(Period5Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

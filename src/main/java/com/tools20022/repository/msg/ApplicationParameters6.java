@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Acceptor parameters dedicated to a payment application of the point of interaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ApplicationParameters7
+ * ApplicationParameters7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ApplicationParameters5
@@ -118,6 +125,14 @@ public class ApplicationParameters6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of action for the configuration parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters7#mmActionType
+	 * ApplicationParameters7.mmActionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -133,6 +148,7 @@ public class ApplicationParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters7.mmActionType);
 			previousVersion_lazy = () -> ApplicationParameters5.mmActionType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -171,6 +187,14 @@ public class ApplicationParameters6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the payment application."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters7#mmApplicationIdentification
+	 * ApplicationParameters7.mmApplicationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -187,6 +211,7 @@ public class ApplicationParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of the payment application.";
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters7.mmApplicationIdentification);
 			previousVersion_lazy = () -> ApplicationParameters5.mmApplicationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -221,6 +246,14 @@ public class ApplicationParameters6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Version of the payment application configuration parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters7#mmVersion
+	 * ApplicationParameters7.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -236,6 +269,7 @@ public class ApplicationParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the payment application configuration parameters.";
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters7.mmVersion);
 			previousVersion_lazy = () -> ApplicationParameters5.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -271,6 +305,14 @@ public class ApplicationParameters6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Configuration parameters used by the related payment application."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters7#mmParameters
+	 * ApplicationParameters7.mmParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -286,6 +328,7 @@ public class ApplicationParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameters";
 			definition = "Configuration parameters used by the related payment application.";
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters7.mmParameters);
 			previousVersion_lazy = () -> ApplicationParameters5.mmParameters;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max100KBinary.mmObject();
@@ -320,6 +363,14 @@ public class ApplicationParameters6 {
 	 * definition} =
 	 * "Sensitive parameters (sequence of parameters including the envelope) encrypted with a cryptographic key."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ApplicationParameters7#mmEncryptedParameters
+	 * ApplicationParameters7.mmEncryptedParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -335,6 +386,7 @@ public class ApplicationParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedParameters";
 			definition = "Sensitive parameters (sequence of parameters including the envelope) encrypted with a cryptographic key.";
+			nextVersions_lazy = () -> Arrays.asList(ApplicationParameters7.mmEncryptedParameters);
 			previousVersion_lazy = () -> ApplicationParameters5.mmEncryptedParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -353,6 +405,7 @@ public class ApplicationParameters6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ApplicationParameters6";
 				definition = "Acceptor parameters dedicated to a payment application of the point of interaction.";
+				nextVersions_lazy = () -> Arrays.asList(ApplicationParameters7.mmObject());
 				previousVersion_lazy = () -> ApplicationParameters5.mmObject();
 			}
 		});

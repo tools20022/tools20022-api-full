@@ -80,6 +80,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Limit4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details on the limits."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Limit7 Limit7}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -120,6 +126,13 @@ public class Limit4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limit7#mmAmount
+	 * Limit7.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -131,6 +144,7 @@ public class Limit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
+			nextVersions_lazy = () -> Arrays.asList(Limit7.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
@@ -168,6 +182,14 @@ public class Limit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies if a limit is a debit limit or a credit limit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Limit7#mmCreditDebitIndicator
+	 * Limit7.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
@@ -179,6 +201,7 @@ public class Limit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if a limit is a debit limit or a credit limit.";
+			nextVersions_lazy = () -> Arrays.asList(Limit7.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -216,6 +239,13 @@ public class Limit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the limit, such as enabled or disabled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limit7#mmStatus
+	 * Limit7.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -227,6 +257,7 @@ public class Limit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the limit, such as enabled or disabled.";
+			nextVersions_lazy = () -> Arrays.asList(Limit7.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LimitStatus1Code.mmObject();
@@ -264,6 +295,13 @@ public class Limit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the limit becomes effective."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limit7#mmStartDateTime
+	 * Limit7.mmStartDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
@@ -275,6 +313,7 @@ public class Limit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDateTime";
 			definition = "Date and time at which the limit becomes effective.";
+			nextVersions_lazy = () -> Arrays.asList(Limit7.mmStartDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -312,6 +351,13 @@ public class Limit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Actual usage of the limit expressed as an amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limit7#mmUsedAmount
+	 * Limit7.mmUsedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUsedAmount = new MMMessageAttribute() {
@@ -323,6 +369,7 @@ public class Limit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmount";
 			definition = "Actual usage of the limit expressed as an amount.";
+			nextVersions_lazy = () -> Arrays.asList(Limit7.mmUsedAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
@@ -362,6 +409,14 @@ public class Limit4 {
 	 * definition} =
 	 * "Specifies if the used amount of the limit is a debit amount or a credit amount."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Limit7#mmUsedAmountCreditDebitIndicator
+	 * Limit7.mmUsedAmountCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUsedAmountCreditDebitIndicator = new MMMessageAttribute() {
@@ -373,6 +428,7 @@ public class Limit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmountCreditDebitIndicator";
 			definition = "Specifies if the used amount of the limit is a debit amount or a credit amount.";
+			nextVersions_lazy = () -> Arrays.asList(Limit7.mmUsedAmountCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -410,6 +466,13 @@ public class Limit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Actual usage of the limit expressed as a percentage."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limit7#mmUsedPercentage
+	 * Limit7.mmUsedPercentage}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUsedPercentage = new MMMessageAttribute() {
@@ -421,6 +484,7 @@ public class Limit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedPercentage";
 			definition = "Actual usage of the limit expressed as a percentage.";
+			nextVersions_lazy = () -> Arrays.asList(Limit7.mmUsedPercentage);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -458,6 +522,13 @@ public class Limit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Actual usage of the limit expressed as an amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limit7#mmRemainingAmount
+	 * Limit7.mmRemainingAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRemainingAmount = new MMMessageAttribute() {
@@ -469,6 +540,7 @@ public class Limit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingAmount";
 			definition = "Actual usage of the limit expressed as an amount.";
+			nextVersions_lazy = () -> Arrays.asList(Limit7.mmRemainingAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Amount2Choice.mmObject();
@@ -486,6 +558,7 @@ public class Limit4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limit4";
 				definition = "Details on the limits.";
+				nextVersions_lazy = () -> Arrays.asList(Limit7.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

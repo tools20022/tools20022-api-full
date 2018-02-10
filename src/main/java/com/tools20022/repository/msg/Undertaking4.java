@@ -269,7 +269,7 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party requested to be named in the local undertaking as the party on whose behalf the undertaking is issued. "
+	 * "Party requested to be named in the local undertaking as the party on whose behalf the undertaking is issued."
 	 * </li>
 	 * </ul>
 	 */
@@ -281,7 +281,7 @@ public class Undertaking4 {
 			xmlTag = "Applcnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicant";
-			definition = "Party requested to be named in the local undertaking as the party on whose behalf the undertaking is issued. ";
+			definition = "Party requested to be named in the local undertaking as the party on whose behalf the undertaking is issued.";
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification43.mmObject();
@@ -654,7 +654,7 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party, in addition to the other parties specified in the requested local undertaking, that is also related to the requested local undertaking. "
+	 * "Party, in addition to the other parties specified in the requested local undertaking, that is also related to the requested local undertaking."
 	 * </li>
 	 * </ul>
 	 */
@@ -666,7 +666,7 @@ public class Undertaking4 {
 			xmlTag = "AddtlPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalParty";
-			definition = "Party, in addition to the other parties specified in the requested local undertaking, that is also related to the requested local undertaking. ";
+			definition = "Party, in addition to the other parties specified in the requested local undertaking, that is also related to the requested local undertaking.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PartyAndType1.mmObject();
@@ -1043,7 +1043,7 @@ public class Undertaking4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges. "
+	 * "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges."
 	 * </li>
 	 * </ul>
 	 */
@@ -1055,7 +1055,7 @@ public class Undertaking4 {
 			xmlTag = "TrfChrgsPyblBy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferChargesPayableBy";
-			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges. ";
+			definition = "Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalTypeOfParty1Code.mmObject();

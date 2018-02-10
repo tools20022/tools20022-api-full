@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * Messages that support the initiation of a payment from the ordering customer
  * to a financial institution that services a cash account and reporting its
- * status
+ * status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -158,6 +158,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV04
  * CreditorPaymentActivationRequestV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV06
+ * CustomerPaymentReversalV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07
+ * CustomerPaymentStatusReportV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -173,7 +179,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Payments Initiation - Archive - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status"
+ * "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status."
  * </li>
  * </ul>
  */
@@ -187,7 +193,7 @@ public class PaymentsInitiationArchive {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Initiation - Archive - master";
-				definition = "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status";
+				definition = "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status.";
 				messageDefinition_lazy = () -> Arrays.asList(CustomerCreditTransferInitiationV02.mmObject(), CustomerCreditTransferInitiationV03.mmObject(), CustomerCreditTransferInitiationV04.mmObject(),
 						CustomerCreditTransferInitiationV05.mmObject(), CustomerDirectDebitInitiationV01.mmObject(), CustomerDirectDebitInitiationV02.mmObject(), CustomerDirectDebitInitiationV03.mmObject(),
 						CustomerDirectDebitInitiationV04.mmObject(), PaymentCancellationRequestV01.mmObject(), CustomerPaymentReversalV01.mmObject(), CustomerPaymentReversalV02.mmObject(), CustomerPaymentReversalV03.mmObject(),
@@ -197,7 +203,7 @@ public class PaymentsInitiationArchive {
 						MandateInitiationRequestV02.mmObject(), MandateInitiationRequestV03.mmObject(), CreditorPaymentActivationRequestStatusReportV01.mmObject(), CreditorPaymentActivationRequestStatusReportV02.mmObject(),
 						CreditorPaymentActivationRequestStatusReportV03.mmObject(), CreditorPaymentActivationRequestV01.mmObject(), CreditorPaymentActivationRequestV02.mmObject(), CreditorPaymentActivationRequestV03.mmObject(),
 						CustomerPaymentReversalV05.mmObject(), CustomerCreditTransferInitiationV06.mmObject(), CustomerPaymentStatusReportV06.mmObject(), CustomerDirectDebitInitiationV05.mmObject(),
-						CreditorPaymentActivationRequestStatusReportV04.mmObject(), CreditorPaymentActivationRequestV04.mmObject());
+						CreditorPaymentActivationRequestStatusReportV04.mmObject(), CreditorPaymentActivationRequestV04.mmObject(), CustomerPaymentReversalV06.mmObject(), CustomerPaymentStatusReportV07.mmObject());
 				code = "pain";
 			}
 		});

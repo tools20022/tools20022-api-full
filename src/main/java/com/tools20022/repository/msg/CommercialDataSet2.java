@@ -113,7 +113,7 @@ public class CommercialDataSet2 {
 	 * name} = "DataSetIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the commercial data set"</li>
+	 * definition} = "Identifies the commercial data set."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDataSetIdentification = new MMMessageAssociationEnd() {
@@ -123,7 +123,7 @@ public class CommercialDataSet2 {
 			xmlTag = "DataSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
-			definition = "Identifies the commercial data set";
+			definition = "Identifies the commercial data set.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -157,8 +157,7 @@ public class CommercialDataSet2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the identification of  the underlying commercial document."
-	 * </li>
+	 * "Reference to the identification of the underlying commercial document."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCommercialDocumentReference = new MMMessageAssociationEnd() {
@@ -168,7 +167,7 @@ public class CommercialDataSet2 {
 			xmlTag = "ComrclDocRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDocumentReference";
-			definition = "Reference to the identification of  the underlying commercial document.";
+			definition = "Reference to the identification of the underlying commercial document.";
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();

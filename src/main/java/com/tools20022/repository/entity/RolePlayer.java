@@ -22,6 +22,8 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CounterpartyTradeNature4Choice;
+import com.tools20022.repository.choice.CounterpartyTradeNature5Choice;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
 import java.util.*;
@@ -72,6 +74,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AccountParties16#mmRegisteredShareholderName
  * AccountParties16.mmRegisteredShareholderName}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeAdditionalQueryCriteria3#mmNatureOfCounterparty
+ * TradeAdditionalQueryCriteria3.mmNatureOfCounterparty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -87,6 +92,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification79
  * PartyIdentification79}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CounterpartyTradeNature5Choice
+ * CounterpartyTradeNature5Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CounterpartyTradeNature4Choice
+ * CounterpartyTradeNature4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -159,6 +170,16 @@ public class RolePlayer {
 	 * Intermediary34.mmRole}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary35#mmRole
 	 * Intermediary35.mmRole}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Counterparty15#mmNature
+	 * Counterparty15.mmNature}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Counterparty17#mmNature
+	 * Counterparty17.mmNature}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Counterparty16#mmNature
+	 * Counterparty16.mmNature}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary41#mmRole
+	 * Intermediary41.mmRole}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary42#mmRole
+	 * Intermediary42.mmRole}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -183,7 +204,7 @@ public class RolePlayer {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation2.mmExtendedPartyRole, ExtendedParty2.mmExtendedPartyRole, InvestmentAccountOwnershipInformation3.mmExtendedPartyRole,
 					ExtendedParty1.mmExtendedPartyRole, ContactIdentification4.mmRole, ContactIdentification3.mmRole, Intermediary26.mmRole, Intermediary25.mmRole, SingleQualifiedPartyIdentification1.mmBaseParty,
-					QualifiedPartyIdentification1.mmRole, Intermediary34.mmRole, Intermediary35.mmRole);
+					QualifiedPartyIdentification1.mmRole, Intermediary34.mmRole, Intermediary35.mmRole, Counterparty15.mmNature, Counterparty17.mmNature, Counterparty16.mmNature, Intermediary41.mmRole, Intermediary42.mmRole);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "BusinessComment", new String[]{"BusinessComment", "TODO"}));
@@ -226,7 +247,8 @@ public class RolePlayer {
 	 * name} = "ValidityPeriod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the period during which a role player is valid"</li>
+	 * definition} = "Specifies the period during which a role player is valid."
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmValidityPeriod = new MMBusinessAssociationEnd() {
@@ -235,7 +257,7 @@ public class RolePlayer {
 			elementContext_lazy = () -> com.tools20022.repository.entity.RolePlayer.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
-			definition = "Specifies the period during which a role player is valid";
+			definition = "Specifies the period during which a role player is valid.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmRelatedRolePlayer;
@@ -253,10 +275,10 @@ public class RolePlayer {
 				definition = "Type of entity that plays a specific role in a specific context.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Role.mmPlayer, com.tools20022.repository.entity.DateTimePeriod.mmRelatedRolePlayer);
 				derivationElement_lazy = () -> Arrays.asList(AccountParties13.mmRegisteredShareholderName, AccountParties14.mmRegisteredShareholderName, AccountParties15.mmRegisteredShareholderName,
-						AccountParties16.mmRegisteredShareholderName);
+						AccountParties16.mmRegisteredShareholderName, TradeAdditionalQueryCriteria3.mmNatureOfCounterparty);
 				subType_lazy = () -> Arrays.asList(Party.mmObject(), System.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RolePlayer.mmRole, com.tools20022.repository.entity.RolePlayer.mmValidityPeriod);
-				derivationComponent_lazy = () -> Arrays.asList(PartyIdentification79.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(PartyIdentification79.mmObject(), CounterpartyTradeNature5Choice.mmObject(), CounterpartyTradeNature4Choice.mmObject());
 			}
 
 			@Override

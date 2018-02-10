@@ -327,7 +327,7 @@ public class ForeignExchangeTerms1 {
 	 * name} = "QuotingInstitution"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party that proposes a  foreign exchange rate."</li>
+	 * definition} = "Party that proposes a foreign exchange rate."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQuotingInstitution = new MMMessageAttribute() {
@@ -338,7 +338,7 @@ public class ForeignExchangeTerms1 {
 			xmlTag = "QtgInstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotingInstitution";
-			definition = "Party that proposes a  foreign exchange rate.";
+			definition = "Party that proposes a foreign exchange rate.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification10Choice.mmObject();

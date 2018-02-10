@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provide further details on transaction specific interest information that applies to the underlying transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionInterest4
+ * TransactionInterest4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +109,14 @@ public class TransactionInterest3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Total amount of interests and taxes included in the entry amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionInterest4#mmTotalInterestAndTaxAmount
+	 * TransactionInterest4.mmTotalInterestAndTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalInterestAndTaxAmount = new MMMessageAttribute() {
@@ -112,6 +127,7 @@ public class TransactionInterest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterestAndTaxAmount";
 			definition = "Total amount of interests and taxes included in the entry amount.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionInterest4.mmTotalInterestAndTaxAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -148,6 +164,14 @@ public class TransactionInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Individual interest record."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionInterest4#mmRecord
+	 * TransactionInterest4.mmRecord}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRecord = new MMMessageAssociationEnd() {
@@ -159,6 +183,7 @@ public class TransactionInterest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Record";
 			definition = "Individual interest record.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionInterest4.mmRecord);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InterestRecord1.mmObject();
@@ -174,6 +199,7 @@ public class TransactionInterest3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionInterest3";
 				definition = "Provide further details on transaction specific interest information that applies to the underlying transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionInterest4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ManagementPlanContent6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Content of the management plan."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ManagementPlanContent7
+ * ManagementPlanContent7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ManagementPlanContent5
@@ -109,6 +116,14 @@ public class ManagementPlanContent6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Terminal manager challenge for cryptographic key injection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent7#mmTMChallenge
+	 * ManagementPlanContent7.mmTMChallenge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +139,7 @@ public class ManagementPlanContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent7.mmTMChallenge);
 			previousVersion_lazy = () -> ManagementPlanContent5.mmTMChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -160,6 +176,14 @@ public class ManagementPlanContent6 {
 	 * definition} =
 	 * "Certificate chain of an asymmetric encryption keys for the encryption of temporary transport key of the key to inject."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent7#mmKeyEnciphermentCertificate
+	 * ManagementPlanContent7.mmKeyEnciphermentCertificate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -175,6 +199,7 @@ public class ManagementPlanContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEnciphermentCertificate";
 			definition = "Certificate chain of an asymmetric encryption keys for the encryption of temporary transport key of the key to inject.";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent7.mmKeyEnciphermentCertificate);
 			previousVersion_lazy = () -> ManagementPlanContent5.mmKeyEnciphermentCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max10KBinary.mmObject();
@@ -207,6 +232,14 @@ public class ManagementPlanContent6 {
 	 * definition} =
 	 * "Terminal management action to be performed by the point of interaction (POI)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlanContent7#mmAction
+	 * ManagementPlanContent7.mmAction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -222,6 +255,7 @@ public class ManagementPlanContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Action";
 			definition = "Terminal management action to be performed by the point of interaction (POI).";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent7.mmAction);
 			previousVersion_lazy = () -> ManagementPlanContent5.mmAction;
 			minOccurs = 1;
 			isComposite = true;
@@ -239,6 +273,7 @@ public class ManagementPlanContent6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanContent6";
 				definition = "Content of the management plan.";
+				nextVersions_lazy = () -> Arrays.asList(ManagementPlanContent7.mmObject());
 				previousVersion_lazy = () -> ManagementPlanContent5.mmObject();
 			}
 		});

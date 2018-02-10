@@ -89,6 +89,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides further details on the agents specific to the individual transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionAgents4
+ * TransactionAgents4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -129,6 +136,14 @@ public class TransactionAgents3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Financial institution servicing an account for the debtor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmDebtorAgent
+	 * TransactionAgents4.mmDebtorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAgent = new MMMessageAssociationEnd() {
@@ -140,6 +155,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmDebtorAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -179,6 +195,14 @@ public class TransactionAgents3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Financial institution servicing an account for the creditor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmCreditorAgent
+	 * TransactionAgents4.mmCreditorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAgent = new MMMessageAssociationEnd() {
@@ -190,6 +214,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmCreditorAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -230,6 +255,14 @@ public class TransactionAgents3 {
 	 * definition} =
 	 * "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmIntermediaryAgent1
+	 * TransactionAgents4.mmIntermediaryAgent1}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryAgent1 = new MMMessageAssociationEnd() {
@@ -241,6 +274,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent1";
 			definition = "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmIntermediaryAgent1);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -281,6 +315,14 @@ public class TransactionAgents3 {
 	 * definition} =
 	 * "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmIntermediaryAgent2
+	 * TransactionAgents4.mmIntermediaryAgent2}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryAgent2 = new MMMessageAssociationEnd() {
@@ -292,6 +334,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent2";
 			definition = "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmIntermediaryAgent2);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -332,6 +375,14 @@ public class TransactionAgents3 {
 	 * definition} =
 	 * "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmIntermediaryAgent3
+	 * TransactionAgents4.mmIntermediaryAgent3}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryAgent3 = new MMMessageAssociationEnd() {
@@ -343,6 +394,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent3";
 			definition = "Agent between the debtor's agent and the creditor's agent.\n\nUsage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmIntermediaryAgent3);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -383,6 +435,14 @@ public class TransactionAgents3 {
 	 * definition} =
 	 * "Party that receives securities from the delivering agent at the place of settlement, such as central securities depository.\nCan also be used in the context of treasury operations."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmReceivingAgent
+	 * TransactionAgents4.mmReceivingAgent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReceivingAgent = new MMMessageAssociationEnd() {
@@ -394,6 +454,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgent";
 			definition = "Party that receives securities from the delivering agent at the place of settlement, such as central securities depository.\nCan also be used in the context of treasury operations.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmReceivingAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -434,6 +495,14 @@ public class TransactionAgents3 {
 	 * definition} =
 	 * "Party that delivers securities to the receiving agent at the place of settlement, such as a central securities depository.\nCan also be used in the context of treasury operations."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmDeliveringAgent
+	 * TransactionAgents4.mmDeliveringAgent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDeliveringAgent = new MMMessageAssociationEnd() {
@@ -445,6 +514,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgent";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, such as a central securities depository.\nCan also be used in the context of treasury operations.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmDeliveringAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -483,6 +553,14 @@ public class TransactionAgents3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Legal entity that has the right to issue securities."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmIssuingAgent
+	 * TransactionAgents4.mmIssuingAgent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIssuingAgent = new MMMessageAssociationEnd() {
@@ -494,6 +572,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuingAgent";
 			definition = "Legal entity that has the right to issue securities.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmIssuingAgent);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -534,6 +613,14 @@ public class TransactionAgents3 {
 	 * definition} =
 	 * "Place where settlement of the securities takes place.\nUsage: This is typed by a financial institution identification as this is the standard way to identify a securities settlement agent/central system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmSettlementPlace
+	 * TransactionAgents4.mmSettlementPlace}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettlementPlace = new MMMessageAssociationEnd() {
@@ -545,6 +632,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPlace";
 			definition = "Place where settlement of the securities takes place.\nUsage: This is typed by a financial institution identification as this is the standard way to identify a securities settlement agent/central system.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmSettlementPlace);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -582,6 +670,14 @@ public class TransactionAgents3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary agent related to the underlying transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionAgents4#mmProprietary
+	 * TransactionAgents4.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -593,6 +689,7 @@ public class TransactionAgents3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary agent related to the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmProprietary);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ProprietaryAgent3.mmObject();
@@ -611,6 +708,7 @@ public class TransactionAgents3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionAgents3";
 				definition = "Provides further details on the agents specific to the individual transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionAgents4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

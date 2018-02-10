@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of elements used to report between the securities account reference data or a business error."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrBusinessError2Choice
+ * SecuritiesAccountOrBusinessError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +110,14 @@ public class SecuritiesAccountOrBusinessError1Choice {
 	 * definition} =
 	 * "Choice between data concerning securities account retrieved or business error."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrBusinessError2Choice#mmSecuritiesAccount
+	 * SecuritiesAccountOrBusinessError2Choice.mmSecuritiesAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
@@ -112,6 +128,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Choice between data concerning securities account retrieved or business error.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountOrBusinessError2Choice.mmSecuritiesAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -144,6 +161,14 @@ public class SecuritiesAccountOrBusinessError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Business error resulting from a rejection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrBusinessError2Choice#mmBusinessError
+	 * SecuritiesAccountOrBusinessError2Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
@@ -154,6 +179,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Business error resulting from a rejection.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountOrBusinessError2Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -169,6 +195,7 @@ public class SecuritiesAccountOrBusinessError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountOrBusinessError1Choice";
 				definition = "Set of elements used to report between the securities account reference data or a business error.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountOrBusinessError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -68,6 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * nextVersions} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.Unit5 Unit5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit9 Unit9}</li>
  * </ul>
  * </li>
  * </ul>
@@ -110,6 +111,13 @@ public class Unit4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Quantity expressed as a number, for example, a number of shares."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit9#mmTotalUnitsNumber
+	 * Unit9.mmTotalUnitsNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalUnitsNumber = new MMMessageAttribute() {
@@ -121,6 +129,7 @@ public class Unit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Quantity expressed as a number, for example, a number of shares.";
+			nextVersions_lazy = () -> Arrays.asList(Unit9.mmTotalUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -156,6 +165,13 @@ public class Unit4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information about the units to be transferred."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit9#mmUnitDetails
+	 * Unit9.mmUnitDetails}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUnitDetails = new MMMessageAttribute() {
@@ -167,6 +183,7 @@ public class Unit4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitDetails";
 			definition = "Information about the units to be transferred.";
+			nextVersions_lazy = () -> Arrays.asList(Unit9.mmUnitDetails);
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Unit5.mmObject();
@@ -182,7 +199,7 @@ public class Unit4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unit4";
 				definition = "Quantity expressed as a number and its details.";
-				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit5.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Unit5.mmObject(), Unit9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

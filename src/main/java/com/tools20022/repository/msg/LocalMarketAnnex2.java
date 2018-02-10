@@ -213,7 +213,7 @@ public class LocalMarketAnnex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Processing characteristics linked to the instrument, ie, not to  the market."
+	 * "Processing characteristics linked to the instrument, ie, not to the market."
 	 * </li>
 	 * </ul>
 	 */
@@ -225,7 +225,7 @@ public class LocalMarketAnnex2 {
 			xmlTag = "SbcptPrcgChrtcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionProcessingCharacteristics";
-			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
+			definition = "Processing characteristics linked to the instrument, ie, not to the market.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -264,7 +264,7 @@ public class LocalMarketAnnex2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Processing characteristics linked to the instrument, ie, not to  the market."
+	 * "Processing characteristics linked to the instrument, ie, not to the market."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +276,7 @@ public class LocalMarketAnnex2 {
 			xmlTag = "RedPrcgChrtcs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionProcessingCharacteristics";
-			definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
+			definition = "Processing characteristics linked to the instrument, ie, not to the market.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

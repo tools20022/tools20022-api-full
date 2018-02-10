@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01;
 import com.tools20022.repository.codeset.ConfirmationRequest1Code;
 import com.tools20022.repository.codeset.TradeConfirmationStatus1Code;
 import com.tools20022.repository.datatype.ISODateTime;
@@ -87,6 +88,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.msg.Confirmation1#mmLastReportRequested
  * Confirmation1.mmLastReportRequested}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01#mmConfirmationInformation
+ * ForeignExchangeTradeConfirmationStatusAdviceV01.mmConfirmationInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -469,7 +479,7 @@ public class Confirmation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Query results will be grouped with fixed number. The field indicates that the total number of groups. "
+	 * "Query results will be grouped with fixed number. The field indicates that the total number of groups."
 	 * </li>
 	 * </ul>
 	 */
@@ -480,7 +490,7 @@ public class Confirmation1 {
 			xmlTag = "PgNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PageNumber";
-			definition = "Query results will be grouped with fixed number. The field indicates that the total number of groups. ";
+			definition = "Query results will be grouped with fixed number. The field indicates that the total number of groups.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35NumericText.mmObject();
@@ -708,6 +718,7 @@ public class Confirmation1 {
 						com.tools20022.repository.msg.Confirmation1.mmTotalNumberOfReports, com.tools20022.repository.msg.Confirmation1.mmPageNumber, com.tools20022.repository.msg.Confirmation1.mmQueryPageNumber,
 						com.tools20022.repository.msg.Confirmation1.mmMessageNumberOfCurrentPage, com.tools20022.repository.msg.Confirmation1.mmListOrderNumber, com.tools20022.repository.msg.Confirmation1.mmLastPageIndicator,
 						com.tools20022.repository.msg.Confirmation1.mmLastReportRequested);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationStatusAdviceV01.mmConfirmationInformation);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Confirmation1";

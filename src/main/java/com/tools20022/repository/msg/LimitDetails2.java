@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.XmlType;
  * "LimitDetails2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit. "
+ * "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit."
  * </li>
  * </ul>
  */
@@ -108,7 +108,7 @@ public class LimitDetails2 {
 	 * name} = "StartDateTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date and time at which the limit becomes effective. "</li>
+	 * definition} = "Date and time at which the limit becomes effective."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStartDateTime = new MMMessageAttribute() {
@@ -119,7 +119,7 @@ public class LimitDetails2 {
 			xmlTag = "StartDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDateTime";
-			definition = "Date and time at which the limit becomes effective. ";
+			definition = "Date and time at which the limit becomes effective.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -231,7 +231,7 @@ public class LimitDetails2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitDetails2";
-				definition = "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit. ";
+				definition = "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit.";
 			}
 		});
 		return mmObject_lazy.get();

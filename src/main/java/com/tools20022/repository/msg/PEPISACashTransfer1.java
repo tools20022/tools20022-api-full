@@ -129,7 +129,7 @@ public class PEPISACashTransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification assigned by the new plan manager to each transfer of asset. "
+	 * "Identification assigned by the new plan manager to each transfer of asset."
 	 * </li>
 	 * </ul>
 	 */
@@ -140,7 +140,7 @@ public class PEPISACashTransfer1 {
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
-			definition = "Identification assigned by the new plan manager to each transfer of asset. ";
+			definition = "Identification assigned by the new plan manager to each transfer of asset.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -178,7 +178,7 @@ public class PEPISACashTransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of product that will be transferred. PEP or ISA. "</li>
+	 * "Indicates the type of product that will be transferred. PEP or ISA."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -189,7 +189,7 @@ public class PEPISACashTransfer1 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Indicates the type of product that will be transferred. PEP or ISA. ";
+			definition = "Indicates the type of product that will be transferred. PEP or ISA.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PEPISA1Code.mmObject();
@@ -228,7 +228,7 @@ public class PEPISACashTransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Quantity expressed as a percentage rate, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding."
+	 * "Quantity expressed as a percentage rate, eg, in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding."
 	 * </li>
 	 * </ul>
 	 */
@@ -240,7 +240,7 @@ public class PEPISACashTransfer1 {
 			xmlTag = "PctgToBeTrfd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageToBeTransferred";
-			definition = "Quantity expressed as a percentage rate, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding.";
+			definition = "Quantity expressed as a percentage rate, eg, in the investment fund business, a quantity of a financial instrument may be expressed as percentage of the investor's total holding.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -279,7 +279,7 @@ public class PEPISACashTransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Quantity expressed as an amount, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money."
+	 * "Quantity expressed as an amount, eg, in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money."
 	 * </li>
 	 * </ul>
 	 */
@@ -291,7 +291,7 @@ public class PEPISACashTransfer1 {
 			xmlTag = "AmtToBeTrfd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountToBeTransferred";
-			definition = "Quantity expressed as an amount, eg,  in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money.";
+			definition = "Quantity expressed as an amount, eg, in the investment fund business, a quantity of a financial instrument may be expressed as an amount of money.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();

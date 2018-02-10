@@ -113,6 +113,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher2 TaxVoucher2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher3 TaxVoucher3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1 TaxVoucher1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher4 TaxVoucher4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher5 TaxVoucher5}</li>
  * </ul>
  * </li>
  * <li>
@@ -336,6 +338,30 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RateDetails30#mmTaxCreditRate
 	 * RateDetails30.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31#mmTaxCreditRate
+	 * RateDetails31.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmTaxCreditRate
+	 * RateDetails32.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmTaxCreditRate
+	 * CorporateActionRate90.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate89#mmTaxCreditRate
+	 * CorporateActionRate89.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate93#mmTaxCreditRate
+	 * CorporateActionRate93.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33#mmTaxCreditRate
+	 * RateDetails33.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate95#mmTaxCreditRate
+	 * CorporateActionRate95.mmTaxCreditRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34#mmTaxCreditRate
+	 * RateDetails34.mmTaxCreditRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -361,7 +387,8 @@ public class TaxVoucher {
 					RateDetails13.mmTaxCreditRate, RateDetails15.mmTaxCreditRate, CorporateActionRate48.mmTaxCreditRate, CorporateActionRate49.mmTaxCreditRate, RateDetails14.mmTaxCreditRate, CorporateActionRate58.mmTaxCreditRate,
 					RateDetails18.mmTaxCreditRate, RateDetails21.mmTaxCreditRate, CorporateActionRate65.mmTaxCreditRate, RateDetails23.mmTaxCreditRate, CorporateActionRate69.mmTaxCreditRate, RateDetails22.mmTaxCreditRate,
 					CorporateActionRate72.mmTaxCreditRate, RateDetails24.mmTaxCreditRate, RateDetails25.mmTaxCreditRate, CorporateActionRate77.mmTaxCreditRate, CorporateActionRate75.mmTaxCreditRate, RateDetails26.mmTaxCreditRate,
-					RateDetails27.mmTaxCreditRate, RateDetails28.mmTaxCreditRate, RateDetails30.mmTaxCreditRate);
+					RateDetails27.mmTaxCreditRate, RateDetails28.mmTaxCreditRate, RateDetails30.mmTaxCreditRate, RateDetails31.mmTaxCreditRate, RateDetails32.mmTaxCreditRate, CorporateActionRate90.mmTaxCreditRate,
+					CorporateActionRate89.mmTaxCreditRate, CorporateActionRate93.mmTaxCreditRate, RateDetails33.mmTaxCreditRate, CorporateActionRate95.mmTaxCreditRate, RateDetails34.mmTaxCreditRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -646,6 +673,24 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmSundryOrOtherAmount
 	 * CorporateActionAmounts40.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmSundryOrOtherAmount
+	 * CorporateActionAmounts42.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmSundryOrOtherAmount
+	 * CorporateActionAmounts43.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmSundryOrOtherAmount
+	 * CorporateActionAmounts44.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmSundryOrOtherAmount
+	 * CorporateActionAmounts45.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmSundryOrOtherAmount
+	 * CorporateActionAmounts46.mmSundryOrOtherAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmSundryOrOtherAmount
+	 * CorporateActionAmounts47.mmSundryOrOtherAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -675,7 +720,8 @@ public class TaxVoucher {
 					CorporateActionAmounts1.mmSundryOrOtherAmount, CorporateActionAmounts29.mmSundryOrOtherAmount, CorporateActionAmounts27.mmSundryOrOtherAmount, CorporateActionAmounts28.mmSundryOrOtherAmount,
 					CorporateActionAmounts33.mmSundryOrOtherAmount, CorporateActionAmounts32.mmSundryOrOtherAmount, CorporateActionAmounts35.mmSundryOrOtherAmount, CorporateActionAmounts37.mmSundryOrOtherAmount,
 					CorporateActionAmounts36.mmSundryOrOtherAmount, CorporateActionAmounts38.mmSundryOrOtherAmount, CorporateActionAmounts39.mmSundryOrOtherAmount, CorporateActionAmounts41.mmSundryOrOtherAmount,
-					CorporateActionAmounts40.mmSundryOrOtherAmount);
+					CorporateActionAmounts40.mmSundryOrOtherAmount, CorporateActionAmounts42.mmSundryOrOtherAmount, CorporateActionAmounts43.mmSundryOrOtherAmount, CorporateActionAmounts44.mmSundryOrOtherAmount,
+					CorporateActionAmounts45.mmSundryOrOtherAmount, CorporateActionAmounts46.mmSundryOrOtherAmount, CorporateActionAmounts47.mmSundryOrOtherAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -819,6 +865,24 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmTaxCreditAmount
 	 * CorporateActionAmounts40.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmTaxCreditAmount
+	 * CorporateActionAmounts42.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmTaxCreditAmount
+	 * CorporateActionAmounts43.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmTaxCreditAmount
+	 * CorporateActionAmounts44.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmTaxCreditAmount
+	 * CorporateActionAmounts45.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmTaxCreditAmount
+	 * CorporateActionAmounts46.mmTaxCreditAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmTaxCreditAmount
+	 * CorporateActionAmounts47.mmTaxCreditAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -846,7 +910,8 @@ public class TaxVoucher {
 					CorporateActionAmounts14.mmTaxCreditAmount, CorporateActionAmounts15.mmTaxCreditAmount, CorporateActionAmounts18.mmTaxCreditAmount, CorporateActionAmounts21.mmTaxCreditAmount, CorporateActionAmounts26.mmTaxCreditAmount,
 					CorporateActionAmounts1.mmTaxCreditAmount, CorporateActionAmounts29.mmTaxCreditAmount, CorporateActionAmounts27.mmTaxCreditAmount, CorporateActionAmounts28.mmTaxCreditAmount, CorporateActionAmounts33.mmTaxCreditAmount,
 					CorporateActionAmounts32.mmTaxCreditAmount, CorporateActionAmounts35.mmTaxCreditAmount, CorporateActionAmounts37.mmTaxCreditAmount, CorporateActionAmounts36.mmTaxCreditAmount, CorporateActionAmounts38.mmTaxCreditAmount,
-					CorporateActionAmounts39.mmTaxCreditAmount, CorporateActionAmounts41.mmTaxCreditAmount, CorporateActionAmounts40.mmTaxCreditAmount);
+					CorporateActionAmounts39.mmTaxCreditAmount, CorporateActionAmounts41.mmTaxCreditAmount, CorporateActionAmounts40.mmTaxCreditAmount, CorporateActionAmounts42.mmTaxCreditAmount, CorporateActionAmounts43.mmTaxCreditAmount,
+					CorporateActionAmounts44.mmTaxCreditAmount, CorporateActionAmounts45.mmTaxCreditAmount, CorporateActionAmounts46.mmTaxCreditAmount, CorporateActionAmounts47.mmTaxCreditAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -918,6 +983,12 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmCashAmountBroughtForward
 	 * CorporateActionAmounts39.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmCashAmountBroughtForward
+	 * CorporateActionAmounts44.mmCashAmountBroughtForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmCashAmountBroughtForward
+	 * CorporateActionAmounts45.mmCashAmountBroughtForward}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -941,7 +1012,7 @@ public class TaxVoucher {
 			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmCashAmountBroughtForward, CorporateActionAmounts5.mmCashAmountBroughtForward, CorporateActionAmounts11.mmCashAmountBroughtForward,
 					CorporateActionAmounts12.mmCashAmountBroughtForward, CorporateActionAmounts17.mmCashAmountBroughtForward, CorporateActionAmounts20.mmCashAmountBroughtForward, CorporateActionAmounts23.mmCashAmountBroughtForward,
 					CorporateActionAmounts24.mmCashAmountBroughtForward, TaxVoucher1.mmCashAmountBroughtForward, CorporateActionAmounts29.mmCashAmountBroughtForward, CorporateActionAmounts35.mmCashAmountBroughtForward,
-					CorporateActionAmounts37.mmCashAmountBroughtForward, CorporateActionAmounts39.mmCashAmountBroughtForward);
+					CorporateActionAmounts37.mmCashAmountBroughtForward, CorporateActionAmounts39.mmCashAmountBroughtForward, CorporateActionAmounts44.mmCashAmountBroughtForward, CorporateActionAmounts45.mmCashAmountBroughtForward);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1013,6 +1084,12 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmCashAmountCarriedForward
 	 * CorporateActionAmounts39.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmCashAmountCarriedForward
+	 * CorporateActionAmounts44.mmCashAmountCarriedForward}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmCashAmountCarriedForward
+	 * CorporateActionAmounts45.mmCashAmountCarriedForward}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1036,7 +1113,7 @@ public class TaxVoucher {
 			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmCashAmountCarriedForward, CorporateActionAmounts5.mmCashAmountCarriedForward, CorporateActionAmounts11.mmCashAmountCarriedForward,
 					CorporateActionAmounts12.mmCashAmountCarriedForward, CorporateActionAmounts17.mmCashAmountCarriedForward, CorporateActionAmounts20.mmCashAmountCarriedForward, CorporateActionAmounts23.mmCashAmountCarriedForward,
 					CorporateActionAmounts24.mmCashAmountCarriedForward, TaxVoucher1.mmCashAmountCarriedForward, CorporateActionAmounts29.mmCashAmountCarriedForward, CorporateActionAmounts35.mmCashAmountCarriedForward,
-					CorporateActionAmounts37.mmCashAmountCarriedForward, CorporateActionAmounts39.mmCashAmountCarriedForward);
+					CorporateActionAmounts37.mmCashAmountCarriedForward, CorporateActionAmounts39.mmCashAmountCarriedForward, CorporateActionAmounts44.mmCashAmountCarriedForward, CorporateActionAmounts45.mmCashAmountCarriedForward);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1105,6 +1182,12 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts39#mmNotionalTaxAmount
 	 * CorporateActionAmounts39.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmNotionalTaxAmount
+	 * CorporateActionAmounts44.mmNotionalTaxAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmNotionalTaxAmount
+	 * CorporateActionAmounts45.mmNotionalTaxAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1128,7 +1211,8 @@ public class TaxVoucher {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionAmounts2.mmNotionalTaxAmount, CorporateActionAmounts5.mmNotionalTaxAmount, CorporateActionAmounts11.mmNotionalTaxAmount, CorporateActionAmounts12.mmNotionalTaxAmount,
 					CorporateActionAmounts17.mmNotionalTaxAmount, CorporateActionAmounts20.mmNotionalTaxAmount, CorporateActionAmounts23.mmNotionalTaxAmount, CorporateActionAmounts24.mmNotionalTaxAmount,
-					CorporateActionAmounts29.mmNotionalTaxAmount, CorporateActionAmounts35.mmNotionalTaxAmount, CorporateActionAmounts37.mmNotionalTaxAmount, CorporateActionAmounts39.mmNotionalTaxAmount);
+					CorporateActionAmounts29.mmNotionalTaxAmount, CorporateActionAmounts35.mmNotionalTaxAmount, CorporateActionAmounts37.mmNotionalTaxAmount, CorporateActionAmounts39.mmNotionalTaxAmount,
+					CorporateActionAmounts44.mmNotionalTaxAmount, CorporateActionAmounts45.mmNotionalTaxAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1216,6 +1300,12 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TaxVoucher3#mmIdentification
 	 * TaxVoucher3.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher4#mmIdentification
+	 * TaxVoucher4.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher5#mmIdentification
+	 * TaxVoucher5.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1236,7 +1326,7 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmIdentification, TaxVoucher3.mmIdentification);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmIdentification, TaxVoucher3.mmIdentification, TaxVoucher4.mmIdentification, TaxVoucher5.mmIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1274,6 +1364,10 @@ public class TaxVoucher {
 	 * TaxVoucher3.mmBargainDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher1#mmBargainDate
 	 * TaxVoucher1.mmBargainDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher4#mmBargainDate
+	 * TaxVoucher4.mmBargainDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher5#mmBargainDate
+	 * TaxVoucher5.mmBargainDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1293,7 +1387,7 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmBargainDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainDate, TaxVoucher3.mmBargainDate, TaxVoucher1.mmBargainDate);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainDate, TaxVoucher3.mmBargainDate, TaxVoucher1.mmBargainDate, TaxVoucher4.mmBargainDate, TaxVoucher5.mmBargainDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1334,6 +1428,12 @@ public class TaxVoucher {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TaxVoucher1#mmBargainSettlementDate
 	 * TaxVoucher1.mmBargainSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher4#mmBargainSettlementDate
+	 * TaxVoucher4.mmBargainSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher5#mmBargainSettlementDate
+	 * TaxVoucher5.mmBargainSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1353,7 +1453,7 @@ public class TaxVoucher {
 	 */
 	public static final MMBusinessAttribute mmBargainSettlementDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainSettlementDate, TaxVoucher3.mmBargainSettlementDate, TaxVoucher1.mmBargainSettlementDate);
+			derivation_lazy = () -> Arrays.asList(TaxVoucher2.mmBargainSettlementDate, TaxVoucher3.mmBargainSettlementDate, TaxVoucher1.mmBargainSettlementDate, TaxVoucher4.mmBargainSettlementDate, TaxVoucher5.mmBargainSettlementDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxVoucher.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1659,7 +1759,7 @@ public class TaxVoucher {
 						com.tools20022.repository.entity.TaxVoucher.mmBargainSettlementDate, com.tools20022.repository.entity.TaxVoucher.mmTaxVoucherRate, com.tools20022.repository.entity.TaxVoucher.mmRecordDateHolding,
 						com.tools20022.repository.entity.TaxVoucher.mmScripDividendReinvestmentPricePerShare, com.tools20022.repository.entity.TaxVoucher.mmAllotedSharesCost,
 						com.tools20022.repository.entity.TaxVoucher.mmForeignExchangeTransaction);
-				derivationComponent_lazy = () -> Arrays.asList(TaxVoucher2.mmObject(), TaxVoucher3.mmObject(), TaxVoucher1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(TaxVoucher2.mmObject(), TaxVoucher3.mmObject(), TaxVoucher1.mmObject(), TaxVoucher4.mmObject(), TaxVoucher5.mmObject());
 			}
 
 			@Override

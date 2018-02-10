@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice of formats for the source of the Foreign Account Tax Compliance Act
- * (FATCA)
+ * (FATCA).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "FATCASource1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats for the source of the Foreign Account Tax Compliance Act (FATCA) "
+ * "Choice of formats for the source of the Foreign Account Tax Compliance Act (FATCA)."
  * </li>
  * </ul>
  */
@@ -197,7 +197,7 @@ public class FATCASource1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FATCASource1Choice";
-				definition = "Choice of formats for the source of the Foreign Account Tax Compliance Act (FATCA) ";
+				definition = "Choice of formats for the source of the Foreign Account Tax Compliance Act (FATCA).";
 			}
 		});
 		return mmObject_lazy.get();

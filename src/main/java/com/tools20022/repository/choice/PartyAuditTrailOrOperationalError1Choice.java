@@ -64,6 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Used to report between the party reference data or an operational error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyAuditTrailOrOperationalError2Choice
+ * PartyAuditTrailOrOperationalError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +105,14 @@ public class PartyAuditTrailOrOperationalError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report information about party reference data."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyAuditTrailOrOperationalError2Choice#mmPartyAuditTrailReport
+	 * PartyAuditTrailOrOperationalError2Choice.mmPartyAuditTrailReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPartyAuditTrailReport = new MMMessageAssociationEnd() {
@@ -107,6 +123,7 @@ public class PartyAuditTrailOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyAuditTrailReport";
 			definition = "Report information about party reference data.";
+			nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailOrOperationalError2Choice.mmPartyAuditTrailReport);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> PartyAuditTrailReport1.mmObject();
@@ -138,6 +155,14 @@ public class PartyAuditTrailOrOperationalError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Operational error resulting from a rejection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyAuditTrailOrOperationalError2Choice#mmOperationalError
+	 * PartyAuditTrailOrOperationalError2Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
@@ -148,6 +173,7 @@ public class PartyAuditTrailOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
+			nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailOrOperationalError2Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -163,6 +189,7 @@ public class PartyAuditTrailOrOperationalError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyAuditTrailOrOperationalError1Choice";
 				definition = "Used to report between the party reference data or an operational error.";
+				nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailOrOperationalError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

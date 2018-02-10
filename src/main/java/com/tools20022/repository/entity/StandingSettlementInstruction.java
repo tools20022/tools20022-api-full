@@ -137,6 +137,12 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction12#mmSettlementStandingInstructionDatabase
  * StandingSettlementInstruction12.mmSettlementStandingInstructionDatabase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14#mmSettlementStandingInstructionDatabase
+ * StandingSettlementInstruction14.mmSettlementStandingInstructionDatabase}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction15#mmSettlementStandingInstructionDatabase
+ * StandingSettlementInstruction15.mmSettlementStandingInstructionDatabase}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -205,6 +211,12 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.choice.SettlementStandingInstructionDatabase5Choice
  * SettlementStandingInstructionDatabase5Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14
+ * StandingSettlementInstruction14}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction15
+ * StandingSettlementInstruction15}</li>
  * </ul>
  * </li>
  * <li>
@@ -814,7 +826,8 @@ public class StandingSettlementInstruction {
 						StandingSettlementInstruction7.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction2.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction3.mmSettlementStandingInstructionDatabase,
 						StandingSettlementInstruction6.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction9.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction5.mmSettlementStandingInstructionDatabase,
 						StandingSettlementInstruction8.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction11.mmSettlementStandingInstructionDatabase,
-						StandingSettlementInstruction12.mmSettlementStandingInstructionDatabase);
+						StandingSettlementInstruction12.mmSettlementStandingInstructionDatabase, StandingSettlementInstruction14.mmSettlementStandingInstructionDatabase,
+						StandingSettlementInstruction15.mmSettlementStandingInstructionDatabase);
 				subType_lazy = () -> Arrays.asList(AgentCorporateActionStandingInstruction.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlement, com.tools20022.repository.entity.StandingSettlementInstruction.mmFXStandingInstruction,
 						com.tools20022.repository.entity.StandingSettlementInstruction.mmSettlementStandingInstructionDatabase, com.tools20022.repository.entity.StandingSettlementInstruction.mmIdentification,
@@ -826,7 +839,7 @@ public class StandingSettlementInstruction {
 						StandingSettlementInstruction2.mmObject(), StandingSettlementInstruction3.mmObject(), StandingSettlementInstruction6.mmObject(), FXStandingInstruction3Choice.mmObject(),
 						SettlementStandingInstructionDatabase3Choice.mmObject(), StandingSettlementInstruction9.mmObject(), StandingSettlementInstruction5.mmObject(), StandingSettlementInstruction8.mmObject(),
 						StandingSettlementInstruction11.mmObject(), SettlementStandingInstructionDatabase4Choice.mmObject(), FXStandingInstruction4Choice.mmObject(), StandingSettlementInstruction12.mmObject(),
-						FXStandingInstruction5Choice.mmObject(), SettlementStandingInstructionDatabase5Choice.mmObject());
+						FXStandingInstruction5Choice.mmObject(), SettlementStandingInstructionDatabase5Choice.mmObject(), StandingSettlementInstruction14.mmObject(), StandingSettlementInstruction15.mmObject());
 			}
 
 			@Override

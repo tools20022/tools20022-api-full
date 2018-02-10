@@ -189,7 +189,7 @@ public class SecuritiesOptionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. "
+	 * "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * </ul>
 	 */
@@ -201,7 +201,7 @@ public class SecuritiesOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
-			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
+			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -238,7 +238,7 @@ public class SecuritiesOptionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema."
+	 * "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * </ul>
 	 */
@@ -250,7 +250,7 @@ public class SecuritiesOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Order"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
-			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema.";
+			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -287,7 +287,7 @@ public class SecuritiesOptionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Income classification of the cash proceeds for dividend reinvestment ."</li>
+	 * "Income classification of the cash proceeds for dividend reinvestment."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReinvestmentIncomeClassification = new MMMessageAttribute() {
@@ -298,7 +298,7 @@ public class SecuritiesOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reinvestment Income Classification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
-			definition = "Income classification of the cash proceeds for dividend reinvestment .";
+			definition = "Income classification of the cash proceeds for dividend reinvestment.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentIncomeClassification1Code.mmObject();
@@ -382,7 +382,7 @@ public class SecuritiesOptionSD2 {
 	 * name} = "PriceBasis"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Price is based on either base or disbursed security. "</li>
+	 * definition} = "Price is based on either base or disbursed security."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPriceBasis = new MMMessageAttribute() {
@@ -393,7 +393,7 @@ public class SecuritiesOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Price Basis"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceBasis";
-			definition = "Price is based on either base or disbursed security. ";
+			definition = "Price is based on either base or disbursed security.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCBaseDisbursed1Code.mmObject();
@@ -430,7 +430,7 @@ public class SecuritiesOptionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. "
+	 * "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares."
 	 * </li>
 	 * </ul>
 	 */
@@ -442,7 +442,7 @@ public class SecuritiesOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Exit Explanation Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitExplanationIndicator";
-			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. ";
+			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesExitReason1Code.mmObject();
@@ -577,7 +577,7 @@ public class SecuritiesOptionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the price from the offeror is estimated or final. "</li>
+	 * "Indicates whether the price from the offeror is estimated or final."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEstimatedPriceFlag = new MMMessageAttribute() {
@@ -588,7 +588,7 @@ public class SecuritiesOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Estimated Price Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedPriceFlag";
-			definition = "Indicates whether the price from the offeror is estimated or final. ";
+			definition = "Indicates whether the price from the offeror is estimated or final.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

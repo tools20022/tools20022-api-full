@@ -92,6 +92,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19
  * PostalAddress19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PostalAddress22
+ * PostalAddress22}</li>
  * </ul>
  * </li>
  * </ul>
@@ -139,6 +141,9 @@ public class PostalAddress6 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmAddressType
 	 * PostalAddress19.mmAddressType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmAddressType
+	 * PostalAddress22.mmAddressType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -152,7 +157,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressType";
 			definition = "Identifies the nature of the postal address.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmAddressType);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmAddressType, PostalAddress22.mmAddressType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AddressType2Code.mmObject();
@@ -196,6 +201,9 @@ public class PostalAddress6 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmDepartment
 	 * PostalAddress19.mmDepartment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmDepartment
+	 * PostalAddress22.mmDepartment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -209,7 +217,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Department";
 			definition = "Identification of a division of a large organisation or building.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmDepartment);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmDepartment, PostalAddress22.mmDepartment);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -253,6 +261,9 @@ public class PostalAddress6 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmSubDepartment
 	 * PostalAddress19.mmSubDepartment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmSubDepartment
+	 * PostalAddress22.mmSubDepartment}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -266,7 +277,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubDepartment";
 			definition = "Identification of a sub-division of a large organisation or building.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmSubDepartment);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmSubDepartment, PostalAddress22.mmSubDepartment);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -309,6 +320,9 @@ public class PostalAddress6 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmStreetName
 	 * PostalAddress19.mmStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmStreetName
+	 * PostalAddress22.mmStreetName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -322,7 +336,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetName";
 			definition = "Name of a street or thoroughfare.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmStreetName);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmStreetName, PostalAddress22.mmStreetName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -366,6 +380,9 @@ public class PostalAddress6 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmBuildingNumber
 	 * PostalAddress19.mmBuildingNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmBuildingNumber
+	 * PostalAddress22.mmBuildingNumber}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -379,7 +396,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuildingNumber";
 			definition = "Number that identifies the position of a building on a street.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmBuildingNumber);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmBuildingNumber, PostalAddress22.mmBuildingNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -423,6 +440,8 @@ public class PostalAddress6 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#mmPostCode
 	 * PostalAddress19.mmPostCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress22#mmPostCode
+	 * PostalAddress22.mmPostCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -436,7 +455,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostCode";
 			definition = "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmPostCode);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmPostCode, PostalAddress22.mmPostCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -480,6 +499,8 @@ public class PostalAddress6 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#mmTownName
 	 * PostalAddress19.mmTownName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress22#mmTownName
+	 * PostalAddress22.mmTownName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -493,7 +514,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TownName";
 			definition = "Name of a built-up area, with defined boundaries, and a local government.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmTownName);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmTownName, PostalAddress22.mmTownName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -537,6 +558,9 @@ public class PostalAddress6 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmCountrySubDivision
 	 * PostalAddress19.mmCountrySubDivision}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmCountrySubDivision
+	 * PostalAddress22.mmCountrySubDivision}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -550,7 +574,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountrySubDivision";
 			definition = "Identifies a subdivision of a country such as state, region, county.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmCountrySubDivision);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmCountrySubDivision, PostalAddress22.mmCountrySubDivision);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -592,6 +616,9 @@ public class PostalAddress6 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.PostalAddress19#mmCountry
 	 * PostalAddress19.mmCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmCountryCode
+	 * PostalAddress22.mmCountryCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -605,7 +632,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Nation with its own government.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmCountry);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmCountry, PostalAddress22.mmCountryCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -645,6 +672,9 @@ public class PostalAddress6 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PostalAddress19#mmAddressLine
 	 * PostalAddress19.mmAddressLine}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PostalAddress22#mmAddressLine
+	 * PostalAddress22.mmAddressLine}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -657,7 +687,7 @@ public class PostalAddress6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressLine";
 			definition = "Information that locates and identifies a specific address, as defined by postal services, presented in free format text.";
-			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmAddressLine);
+			nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmAddressLine, PostalAddress22.mmAddressLine);
 			maxOccurs = 7;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -676,7 +706,7 @@ public class PostalAddress6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PostalAddress6";
 				definition = "Information that locates and identifies a specific address, as defined by postal services.";
-				nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(PostalAddress19.mmObject(), PostalAddress22.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -71,6 +71,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of elements used to provide detailed information about the security."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityCharacteristics2
+ * SecurityCharacteristics2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +114,14 @@ public class SecurityCharacteristics1 {
 	 * definition} =
 	 * "Unique identification, as known by the account owner, to unambiguously identify the security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics2#mmIdentification
+	 * SecurityCharacteristics2.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIdentification = new MMMessageAssociationEnd() {
@@ -117,6 +132,7 @@ public class SecurityCharacteristics1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as known by the account owner, to unambiguously identify the security.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityCharacteristics2.mmIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecurityIdentification10Choice.mmObject();
@@ -148,6 +164,14 @@ public class SecurityCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the position for the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics2#mmPosition
+	 * SecurityCharacteristics2.mmPosition}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPosition = new MMMessageAssociationEnd() {
@@ -158,6 +182,7 @@ public class SecurityCharacteristics1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Position";
 			definition = "Specifies the position for the security.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityCharacteristics2.mmPosition);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesPosition1.mmObject();
@@ -192,6 +217,14 @@ public class SecurityCharacteristics1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the price of the security for valuation purposes."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics2#mmValuationPrice
+	 * SecurityCharacteristics2.mmValuationPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValuationPrice = new MMMessageAttribute() {
@@ -202,6 +235,7 @@ public class SecurityCharacteristics1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationPrice";
 			definition = "Specifies the price of the security for valuation purposes.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityCharacteristics2.mmValuationPrice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountPricePerFinancialInstrumentQuantity5.mmObject();
@@ -236,6 +270,14 @@ public class SecurityCharacteristics1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the value of the security for collateral purposes."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityCharacteristics2#mmCollateralValue
+	 * SecurityCharacteristics2.mmCollateralValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCollateralValue = new MMMessageAttribute() {
@@ -246,6 +288,7 @@ public class SecurityCharacteristics1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Specifies the value of the security for collateral purposes.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityCharacteristics2.mmCollateralValue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -261,6 +304,7 @@ public class SecurityCharacteristics1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCharacteristics1";
 				definition = "Set of elements used to provide detailed information about the security.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityCharacteristics2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

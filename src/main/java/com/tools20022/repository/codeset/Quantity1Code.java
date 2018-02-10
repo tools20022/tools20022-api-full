@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies quantity of a financial instrument
+ * Specifies quantity of a financial instrument.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Quantity1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies quantity of a financial instrument"</li>
+ * definition} = "Specifies quantity of a financial instrument."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -104,7 +104,7 @@ public class Quantity1Code extends MMCode {
 				example = Arrays.asList("QALL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity1Code";
-				definition = "Specifies quantity of a financial instrument";
+				definition = "Specifies quantity of a financial instrument.";
 				trace_lazy = () -> QuantityCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Quantity1Code.AllSecurities);
 			}

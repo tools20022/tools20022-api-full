@@ -82,6 +82,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Pricing component, such as a service, promotion, allowance or charge, for this line item."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3
+ * LineItemAllowanceCharge3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge1
@@ -127,6 +134,14 @@ public class LineItemAllowanceCharge2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indication of whether or not this allowance charge is a charge."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmChargeIndicator
+	 * LineItemAllowanceCharge3.mmChargeIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -143,6 +158,7 @@ public class LineItemAllowanceCharge2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeIndicator";
 			definition = "Indication of whether or not this allowance charge is a charge.";
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge3.mmChargeIndicator);
 			previousVersion_lazy = () -> LineItemAllowanceCharge1.mmChargeIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -182,6 +198,14 @@ public class LineItemAllowanceCharge2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Actual monetary value of this allowance charge."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmActualAmount
+	 * LineItemAllowanceCharge3.mmActualAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -198,6 +222,7 @@ public class LineItemAllowanceCharge2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
 			definition = "Actual monetary value of this allowance charge.";
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge3.mmActualAmount);
 			previousVersion_lazy = () -> LineItemAllowanceCharge1.mmActualAmount;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -235,6 +260,14 @@ public class LineItemAllowanceCharge2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity on which this allowance charge is based."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmBasisQuantity
+	 * LineItemAllowanceCharge3.mmBasisQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -251,6 +284,7 @@ public class LineItemAllowanceCharge2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasisQuantity";
 			definition = "Quantity on which this allowance charge is based.";
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge3.mmBasisQuantity);
 			previousVersion_lazy = () -> LineItemAllowanceCharge1.mmBasisQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -290,6 +324,14 @@ public class LineItemAllowanceCharge2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Percentage applied to calculate this allowance charge."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmCalculationPercent
+	 * LineItemAllowanceCharge3.mmCalculationPercent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -306,6 +348,7 @@ public class LineItemAllowanceCharge2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationPercent";
 			definition = "Percentage applied to calculate this allowance charge.";
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge3.mmCalculationPercent);
 			previousVersion_lazy = () -> LineItemAllowanceCharge1.mmCalculationPercent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -340,6 +383,14 @@ public class LineItemAllowanceCharge2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the order in which the allowance or charge is applied."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmSequenceNumber
+	 * LineItemAllowanceCharge3.mmSequenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -355,6 +406,7 @@ public class LineItemAllowanceCharge2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Specifies the order in which the allowance or charge is applied.";
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge3.mmSequenceNumber);
 			previousVersion_lazy = () -> LineItemAllowanceCharge1.mmSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -394,6 +446,14 @@ public class LineItemAllowanceCharge2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason, expressed as text, for this allowance charge."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmReason
+	 * LineItemAllowanceCharge3.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -410,6 +470,7 @@ public class LineItemAllowanceCharge2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason, expressed as text, for this allowance charge.";
+			nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge3.mmReason);
 			previousVersion_lazy = () -> LineItemAllowanceCharge1.mmReason;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -428,6 +489,7 @@ public class LineItemAllowanceCharge2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItemAllowanceCharge2";
 				definition = "Pricing component, such as a service, promotion, allowance or charge, for this line item.";
+				nextVersions_lazy = () -> Arrays.asList(LineItemAllowanceCharge3.mmObject());
 				previousVersion_lazy = () -> LineItemAllowanceCharge1.mmObject();
 			}
 		});

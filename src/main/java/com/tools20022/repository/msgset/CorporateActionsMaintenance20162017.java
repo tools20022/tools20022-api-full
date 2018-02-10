@@ -82,7 +82,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Corporate Actions Maintenance 2016 - 2017"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "This document describes the Corporate Actions message set. "</li>
+ * definition} = "This document describes the Corporate Actions message set."</li>
  * </ul>
  */
 public class CorporateActionsMaintenance20162017 {
@@ -95,7 +95,7 @@ public class CorporateActionsMaintenance20162017 {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Corporate Actions Maintenance 2016 - 2017";
-				definition = "This document describes the Corporate Actions message set. ";
+				definition = "This document describes the Corporate Actions message set.";
 				messageDefinition_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV07.mmObject(), CorporateActionNotificationV07.mmObject(), CorporateActionMovementConfirmationV08.mmObject(),
 						CorporateActionEventProcessingStatusAdviceV06.mmObject(), CorporateActionInstructionCancellationRequestV07.mmObject(), CorporateActionInstructionStatementReportV06.mmObject(),
 						CorporateActionMovementPreliminaryAdviceV08.mmObject(), CorporateActionMovementReversalAdviceV08.mmObject(), CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmObject(),

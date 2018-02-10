@@ -104,6 +104,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Information about the message reference of the message for which the status is requested and the business reference of the transfer instruction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11
+ * MessageAndBusinessReference11}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference7
@@ -147,6 +154,14 @@ public class MessageAndBusinessReference8 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reference to the message or communication that was previously sent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmReference
+	 * MessageAndBusinessReference11.mmReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -163,6 +178,7 @@ public class MessageAndBusinessReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the message or communication that was previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(MessageAndBusinessReference11.mmReference);
 			previousVersion_lazy = () -> MessageAndBusinessReference7.mmReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -204,6 +220,14 @@ public class MessageAndBusinessReference8 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmMasterReference
+	 * MessageAndBusinessReference11.mmMasterReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -220,6 +244,7 @@ public class MessageAndBusinessReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
+			nextVersions_lazy = () -> Arrays.asList(MessageAndBusinessReference11.mmMasterReference);
 			previousVersion_lazy = () -> MessageAndBusinessReference7.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -260,6 +285,14 @@ public class MessageAndBusinessReference8 {
 	 * definition} =
 	 * "Unique and unambiguous identification of a transfer, as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmTransferReference
+	 * MessageAndBusinessReference11.mmTransferReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -276,6 +309,7 @@ public class MessageAndBusinessReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identification of a transfer, as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(MessageAndBusinessReference11.mmTransferReference);
 			previousVersion_lazy = () -> MessageAndBusinessReference7.mmTransferReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -317,6 +351,14 @@ public class MessageAndBusinessReference8 {
 	 * definition} =
 	 * "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmClientReference
+	 * MessageAndBusinessReference11.mmClientReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -333,6 +375,7 @@ public class MessageAndBusinessReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
+			nextVersions_lazy = () -> Arrays.asList(MessageAndBusinessReference11.mmClientReference);
 			previousVersion_lazy = () -> MessageAndBusinessReference7.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -373,6 +416,14 @@ public class MessageAndBusinessReference8 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmCancellationReference
+	 * MessageAndBusinessReference11.mmCancellationReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -389,6 +440,7 @@ public class MessageAndBusinessReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(MessageAndBusinessReference11.mmCancellationReference);
 			previousVersion_lazy = () -> MessageAndBusinessReference7.mmCancellationReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -428,6 +480,14 @@ public class MessageAndBusinessReference8 {
 	 * definition} =
 	 * "Investment account information of the transfer message for which the status is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmInvestmentAccountDetails
+	 * MessageAndBusinessReference11.mmInvestmentAccountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -444,6 +504,7 @@ public class MessageAndBusinessReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountDetails";
 			definition = "Investment account information of the transfer message for which the status is requested.";
+			nextVersions_lazy = () -> Arrays.asList(MessageAndBusinessReference11.mmInvestmentAccountDetails);
 			previousVersion_lazy = () -> MessageAndBusinessReference7.mmInvestmentAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -466,6 +527,7 @@ public class MessageAndBusinessReference8 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageAndBusinessReference8";
 				definition = "Information about the message reference of the message for which the status is requested and the business reference of the transfer instruction.";
+				nextVersions_lazy = () -> Arrays.asList(MessageAndBusinessReference11.mmObject());
 				previousVersion_lazy = () -> MessageAndBusinessReference7.mmObject();
 			}
 		});

@@ -158,14 +158,14 @@ public class PresentationPartyCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Presentation made either to the issuer or other nominated party. "</li>
+	 * "Presentation made either to the issuer or other nominated party."</li>
 	 * </ul>
 	 */
 	public static final PresentationPartyCode IssuerOrOtherNominatatedParty = new PresentationPartyCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOrOtherNominatatedParty";
-			definition = "Presentation made either to the issuer or other nominated party. ";
+			definition = "Presentation made either to the issuer or other nominated party.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PresentationPartyCode.mmObject();
 			codeName = "ETHR";
 		}

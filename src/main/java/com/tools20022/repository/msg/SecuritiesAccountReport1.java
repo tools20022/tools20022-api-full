@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of elements used to report information about securities account reference data."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccountReport2
+ * SecuritiesAccountReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +105,14 @@ public class SecuritiesAccountReport1 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReport2#mmSecuritiesAccountIdentification
+	 * SecuritiesAccountReport2.mmSecuritiesAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountIdentification = new MMMessageAssociationEnd() {
@@ -108,6 +123,7 @@ public class SecuritiesAccountReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReport2.mmSecuritiesAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -143,6 +159,14 @@ public class SecuritiesAccountReport1 {
 	 * definition} =
 	 * "Identifies the returned securities account reference data or error information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReport2#mmSecuritiesAccountOrError
+	 * SecuritiesAccountReport2.mmSecuritiesAccountOrError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountOrError = new MMMessageAssociationEnd() {
@@ -153,6 +177,7 @@ public class SecuritiesAccountReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOrError";
 			definition = "Identifies the returned securities account reference data or error information.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReport2.mmSecuritiesAccountOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -168,6 +193,7 @@ public class SecuritiesAccountReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReport1";
 				definition = "Set of elements used to report information about securities account reference data.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

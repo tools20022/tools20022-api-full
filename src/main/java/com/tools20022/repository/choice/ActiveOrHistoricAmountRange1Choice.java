@@ -24,8 +24,11 @@ import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ActiveOrHistoricCurrencyAndAmountRange1;
 import com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -59,13 +62,22 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ActiveOrHistoricAmountRange1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between a range of amount values with or without the currency. "</li>
+ * "Choice between a range of amount values with or without the currency."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ActiveOrHistoricAmountRange2Choice
+ * ActiveOrHistoricAmountRange2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +118,14 @@ public class ActiveOrHistoricAmountRange1Choice {
 	 * definition} =
 	 * "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ActiveOrHistoricAmountRange2Choice#mmImpliedCurrencyAndAmountRange
+	 * ActiveOrHistoricAmountRange2Choice.mmImpliedCurrencyAndAmountRange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
@@ -117,6 +137,7 @@ public class ActiveOrHistoricAmountRange1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpliedCurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.";
+			nextVersions_lazy = () -> Arrays.asList(ActiveOrHistoricAmountRange2Choice.mmImpliedCurrencyAndAmountRange);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -156,6 +177,14 @@ public class ActiveOrHistoricAmountRange1Choice {
 	 * definition} =
 	 * "Expresses an amount or an amount range with the currency and where the credit/debit indicator is explicit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ActiveOrHistoricAmountRange2Choice#mmCurrencyAndAmountRange
+	 * ActiveOrHistoricAmountRange2Choice.mmCurrencyAndAmountRange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
@@ -167,6 +196,7 @@ public class ActiveOrHistoricAmountRange1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with the currency and where the credit/debit indicator is explicit.";
+			nextVersions_lazy = () -> Arrays.asList(ActiveOrHistoricAmountRange2Choice.mmCurrencyAndAmountRange);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,9 +211,17 @@ public class ActiveOrHistoricAmountRange1Choice {
 						com.tools20022.repository.choice.ActiveOrHistoricAmountRange1Choice.mmCurrencyAndAmountRange);
 				trace_lazy = () -> AmountRange.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "ActiveOrHistoricAmountRange1Choice";
-				definition = "Choice between a range of amount values with or without the currency. ";
+				definition = "Choice between a range of amount values with or without the currency.";
+				nextVersions_lazy = () -> Arrays.asList(ActiveOrHistoricAmountRange2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -266,7 +266,7 @@ public class CorporateActionNarrative1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provide  the new name of a company following a name change"</li>
+	 * "Provide the new name of a company following a name change."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNewCompanyName = new MMMessageAttribute() {
@@ -276,7 +276,7 @@ public class CorporateActionNarrative1 {
 			xmlTag = "NewCpnyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCompanyName";
-			definition = "Provide  the new name of a company following a name change";
+			definition = "Provide the new name of a company following a name change.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();

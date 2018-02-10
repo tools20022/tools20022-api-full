@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Settlement transaction numbering information
+ * Settlement transaction numbering information.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -71,7 +71,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TotalNumber1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Settlement transaction numbering information"</li>
+ * definition} = "Settlement transaction numbering information."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -183,7 +183,7 @@ public class TotalNumber1 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrentInstructionNumberRule.forTotalNumber1, com.tools20022.repository.constraints.ConstraintBlockTradeGuideline.forTotalNumber1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalNumber1";
-				definition = "Settlement transaction numbering information";
+				definition = "Settlement transaction numbering information.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.choice.References49Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
@@ -98,8 +98,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "TrfInstrStsRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.011.001.05}</li>
@@ -123,6 +123,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferInstructionStatusReport message to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer instruction.\r\nUsage\r\nThe TransferInstructionStatusReport message is used to report on the status of a transfer in or transfer out instruction. The reference of the transfer instruction for which the status is reported is identified in TransferReference.\r\nThe message identification of the transfer instruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\nOne of the following statuses can be reported:\r\n- an accepted status, or,\r\n- an already executed status, or,\r\n- a sent to next party status, or,\r\n- a matched status, or,\r\n- a settled status, or,\r\n- a pending settlement status and the reason for the status, or,\r\n- an unmatched status and the reason for the status, or,\r\n- an in-repair status and the reason for the status, or,\r\n- a rejected status and the reason for the status, or,\r\n- a failed settlement status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancellation pending status and the reason for the status."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06
+ * TransferInstructionStatusReportV06}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -158,7 +166,15 @@ public class TransferInstructionStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference that uniquely identifies a message from a business application standpoint. "
+	 * "Reference that uniquely identifies a message from a business application standpoint."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmMessageIdentification
+	 * TransferInstructionStatusReportV06.mmMessageIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -172,7 +188,8 @@ public class TransferInstructionStatusReportV05 {
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
-			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
+			definition = "Reference that uniquely identifies a message from a business application standpoint.";
+			nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV06.mmMessageIdentification);
 			previousVersion_lazy = () -> TransferInstructionStatusReportV04.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -212,6 +229,14 @@ public class TransferInstructionStatusReportV05 {
 	 * definition} =
 	 * "Unambiguous identification of the transfer allocated by the counterparty."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmCounterpartyReference
+	 * TransferInstructionStatusReportV06.mmCounterpartyReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -225,6 +250,7 @@ public class TransferInstructionStatusReportV05 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
+			nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV06.mmCounterpartyReference);
 			previousVersion_lazy = () -> TransferInstructionStatusReportV04.mmCounterpartyReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -264,6 +290,14 @@ public class TransferInstructionStatusReportV05 {
 	 * definition} =
 	 * "Reference to the message or communication that was previously received."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmReference
+	 * TransferInstructionStatusReportV06.mmReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -277,6 +311,7 @@ public class TransferInstructionStatusReportV05 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the message or communication that was previously received.";
+			nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV06.mmReference);
 			previousVersion_lazy = () -> TransferInstructionStatusReportV04.mmReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -314,6 +349,14 @@ public class TransferInstructionStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the transfer instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmStatusReport
+	 * TransferInstructionStatusReportV06.mmStatusReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -327,6 +370,7 @@ public class TransferInstructionStatusReportV05 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReport";
 			definition = "Status of the transfer instruction.";
+			nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV06.mmStatusReport);
 			previousVersion_lazy = () -> TransferInstructionStatusReportV04.mmStatusReport;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -365,6 +409,14 @@ public class TransferInstructionStatusReportV05 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the market practice to which the message conforms."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmMarketPracticeVersion
+	 * TransferInstructionStatusReportV06.mmMarketPracticeVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -378,6 +430,7 @@ public class TransferInstructionStatusReportV05 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
+			nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV06.mmMarketPracticeVersion);
 			previousVersion_lazy = () -> TransferInstructionStatusReportV04.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -416,6 +469,14 @@ public class TransferInstructionStatusReportV05 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmExtension
+	 * TransferInstructionStatusReportV06.mmExtension}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -429,6 +490,7 @@ public class TransferInstructionStatusReportV05 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV06.mmExtension);
 			previousVersion_lazy = () -> TransferInstructionStatusReportV04.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
@@ -451,11 +513,12 @@ public class TransferInstructionStatusReportV05 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferInstructionStatusReportV05";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferInstructionStatusReport message to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer instruction.\r\nUsage\r\nThe TransferInstructionStatusReport message is used to report on the status of a transfer in or transfer out instruction. The reference of the transfer instruction for which the status is reported is identified in TransferReference.\r\nThe message identification of the transfer instruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.\r\nOne of the following statuses can be reported:\r\n- an accepted status, or,\r\n- an already executed status, or,\r\n- a sent to next party status, or,\r\n- a matched status, or,\r\n- a settled status, or,\r\n- a pending settlement status and the reason for the status, or,\r\n- an unmatched status and the reason for the status, or,\r\n- an in-repair status and the reason for the status, or,\r\n- a rejected status and the reason for the status, or,\r\n- a failed settlement status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancelled status and the reason for the status, or,\r\n- a cancellation pending status and the reason for the status.";
+				nextVersions_lazy = () -> Arrays.asList(TransferInstructionStatusReportV06.mmObject());
 				previousVersion_lazy = () -> TransferInstructionStatusReportV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfInstrStsRpt";
-				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmMessageIdentification,
 						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmCounterpartyReference, com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmReference,
 						com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmStatusReport, com.tools20022.repository.area.sese.TransferInstructionStatusReportV05.mmMarketPracticeVersion,

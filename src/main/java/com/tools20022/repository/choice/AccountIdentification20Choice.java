@@ -68,6 +68,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Unique identification of the securities account or the cash account owned by the customer."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification38Choice
+ * AccountIdentification38Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +118,14 @@ public class AccountIdentification20Choice {
 	 * definition} =
 	 * "Unique identification of the securities account as assigned by the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification38Choice#mmSecuritiesAccountIdentification
+	 * AccountIdentification38Choice.mmSecuritiesAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
@@ -121,6 +137,7 @@ public class AccountIdentification20Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Unique identification of the securities account as assigned by the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification38Choice.mmSecuritiesAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecuritiesAccount13.mmObject();
@@ -161,6 +178,14 @@ public class AccountIdentification20Choice {
 	 * definition} =
 	 * "Unique identification of the cash account, as assigned by the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification38Choice#mmCashAccountIdentification
+	 * AccountIdentification38Choice.mmCashAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
@@ -172,6 +197,7 @@ public class AccountIdentification20Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Unique identification of the cash account, as assigned by the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification38Choice.mmCashAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.AccountIdentification4Choice.mmObject();
@@ -188,6 +214,7 @@ public class AccountIdentification20Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountIdentification20Choice";
 				definition = "Unique identification of the securities account or the cash account owned by the customer.";
+				nextVersions_lazy = () -> Arrays.asList(AccountIdentification38Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

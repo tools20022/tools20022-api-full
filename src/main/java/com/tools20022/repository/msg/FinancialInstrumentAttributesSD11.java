@@ -416,7 +416,7 @@ public class FinancialInstrumentAttributesSD11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Ticket symbol for the event security (underlying security). "</li>
+	 * "Ticket symbol for the event security (underlying security)."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -435,7 +435,7 @@ public class FinancialInstrumentAttributesSD11 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Ticker Symbol"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
-			definition = "Ticket symbol for the event security (underlying security). ";
+			definition = "Ticket symbol for the event security (underlying security).";
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD12.mmTickerSymbol);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -474,7 +474,7 @@ public class FinancialInstrumentAttributesSD11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. "
+	 * "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -494,7 +494,7 @@ public class FinancialInstrumentAttributesSD11 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Linked Security ID"), new DTCCSynonym(this, "Linked Security ID Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedSecurity";
-			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. ";
+			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security.";
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD12.mmLinkedSecurity);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -527,7 +527,7 @@ public class FinancialInstrumentAttributesSD11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP. "
+	 * "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -546,7 +546,7 @@ public class FinancialInstrumentAttributesSD11 {
 			xmlTag = "OrgtgSctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingSecurityIdentification";
-			definition = "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP. ";
+			definition = "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP.";
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD12.mmOriginatingSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -581,7 +581,7 @@ public class FinancialInstrumentAttributesSD11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Security description associated with DIVANN legacy system which contains additional values such as NTL for interest only notional. "
+	 * "Security description associated with DIVANN legacy system which contains additional values such as NTL for interest only notional."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -600,7 +600,7 @@ public class FinancialInstrumentAttributesSD11 {
 			xmlTag = "DIVANNSctyDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DIVANNSecurityDescription";
-			definition = "Security description associated with DIVANN legacy system which contains additional values such as NTL for interest only notional. ";
+			definition = "Security description associated with DIVANN legacy system which contains additional values such as NTL for interest only notional.";
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD12.mmDIVANNSecurityDescription);
 			maxOccurs = 1;
 			minOccurs = 0;

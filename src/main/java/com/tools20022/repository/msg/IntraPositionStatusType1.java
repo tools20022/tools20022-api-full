@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraPositionStatusType1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of the intra-position movement status type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionStatusType2
+ * IntraPositionStatusType2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +117,14 @@ public class IntraPositionStatusType1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides details on the processing status of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusType2#mmProcessingStatus
+	 * IntraPositionStatusType2.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
@@ -121,6 +136,7 @@ public class IntraPositionStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusType2.mmProcessingStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingStatus33Choice.mmObject();
 		}
@@ -157,7 +173,15 @@ public class IntraPositionStatusType1 {
 	 * name} = "SettlementStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides the settlement status of a transaction"</li>
+	 * definition} = "Provides the settlement status of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusType2#mmSettlementStatus
+	 * IntraPositionStatusType2.mmSettlementStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSettlementStatus = new MMMessageAttribute() {
@@ -168,7 +192,8 @@ public class IntraPositionStatusType1 {
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
-			definition = "Provides the settlement status of a transaction";
+			definition = "Provides the settlement status of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusType2.mmSettlementStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementStatus1Choice.mmObject();
 		}
@@ -204,6 +229,14 @@ public class IntraPositionStatusType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the state or the condition."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusType2#mmSettled
+	 * IntraPositionStatusType2.mmSettled}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
@@ -215,6 +248,7 @@ public class IntraPositionStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Specifies the state or the condition.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusType2.mmSettled);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -232,6 +266,7 @@ public class IntraPositionStatusType1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionStatusType1";
 				definition = "Choice of the intra-position movement status type.";
+				nextVersions_lazy = () -> Arrays.asList(IntraPositionStatusType2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

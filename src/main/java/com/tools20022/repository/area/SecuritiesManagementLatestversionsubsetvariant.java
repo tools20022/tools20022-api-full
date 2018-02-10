@@ -56,23 +56,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceCustodyReport002V09
  * SecuritiesBalanceCustodyReport002V09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08
- * SecuritiesTransactionPendingReport002V08}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06
- * IntraPositionMovementConfirmation002V06}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdvice002V05
  * IntraPositionMovementStatusAdvice002V05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06
- * IntraPositionMovementPostingReport002V06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06
- * SecuritiesSettlementTransactionAllegementReport002V06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07
- * SecuritiesTransactionPostingReport002V07}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,9 +89,7 @@ public class SecuritiesManagementLatestversionsubsetvariant {
 				name = "Securities Management - Latest version - subset / variant";
 				definition = "Messages that support post-settlement processes for securities (including reporting on securities movements, trades and balances), the processes required to protect beneficial owner's rights throughout settlement, plus any exceptions and investigations related to securities transactions.";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAuditTrailReport002V03.mmObject(), SecuritiesMessageCancellationAdvice002V05.mmObject(), SecuritiesBalanceAccountingReport002V09.mmObject(),
-						SecuritiesStatementQuery002V06.mmObject(), IntraPositionMovementInstruction002V04.mmObject(), SecuritiesBalanceCustodyReport002V09.mmObject(), SecuritiesTransactionPendingReport002V08.mmObject(),
-						IntraPositionMovementConfirmation002V06.mmObject(), IntraPositionMovementStatusAdvice002V05.mmObject(), IntraPositionMovementPostingReport002V06.mmObject(),
-						SecuritiesSettlementTransactionAllegementReport002V06.mmObject(), SecuritiesTransactionPostingReport002V07.mmObject());
+						SecuritiesStatementQuery002V06.mmObject(), IntraPositionMovementInstruction002V04.mmObject(), SecuritiesBalanceCustodyReport002V09.mmObject(), IntraPositionMovementStatusAdvice002V05.mmObject());
 				code = "semt";
 			}
 		});

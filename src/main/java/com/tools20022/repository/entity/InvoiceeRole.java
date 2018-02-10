@@ -67,6 +67,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation13#mmInvoicee
  * StructuredRemittanceInformation13.mmInvoicee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation14#mmInvoicee
+ * StructuredRemittanceInformation14.mmInvoicee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmInvoicee
+ * StructuredRemittanceInformation15.mmInvoicee}</li>
  * </ul>
  * </li>
  * <li>
@@ -98,7 +104,7 @@ public class InvoiceeRole extends InvoicePartyRole {
 				definition = "Party identified as the liable party on the face of a commercial invoice.";
 				derivationElement_lazy = () -> Arrays.asList(StructuredRemittanceInformation6.mmInvoicee, StructuredRemittanceInformation7.mmInvoicee, StructuredRemittanceInformation9.mmInvoicee,
 						StructuredRemittanceInformation8.mmInvoicee, StructuredRemittanceInformation2.mmInvoicee, TradeSettlement1.mmInvoicee, StructuredRemittanceInformation10.mmInvoicee, StructuredRemittanceInformation12.mmInvoicee,
-						StructuredRemittanceInformation13.mmInvoicee);
+						StructuredRemittanceInformation13.mmInvoicee, StructuredRemittanceInformation14.mmInvoicee, StructuredRemittanceInformation15.mmInvoicee);
 				superType_lazy = () -> InvoicePartyRole.mmObject();
 			}
 

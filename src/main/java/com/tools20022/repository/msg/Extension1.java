@@ -513,6 +513,39 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV06#mmExtension
  * AccountManagementStatusReportV06.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV08#mmExtension
+ * TransferInConfirmationV08.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08#mmExtension
+ * PortfolioTransferInstructionV08.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV08#mmExtension
+ * TransferInInstructionV08.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08#mmExtension
+ * PortfolioTransferConfirmationV08.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06#mmExtension
+ * AccountHoldingInformationV06.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmExtension
+ * TransferOutConfirmationV08.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV08#mmExtension
+ * TransferOutInstructionV08.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV06#mmExtension
+ * TransferCancellationStatusReportV06.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmExtension
+ * AccountHoldingInformationRequestV05.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06#mmExtension
+ * RequestForTransferStatusReportV06.mmExtension}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmExtension
+ * TransferInstructionStatusReportV06.mmExtension}</li>
  * </ul>
  * </li>
  * <li>
@@ -668,7 +701,10 @@ public class Extension1 {
 						RedemptionBulkOrderConfirmationV04.mmExtension, SwitchOrderConfirmationV04.mmExtension, RequestForOrderStatusReportV04.mmExtension, SubscriptionOrderConfirmationV04.mmExtension,
 						OrderCancellationStatusReportV04.mmExtension, SwitchOrderV04.mmExtension, RedemptionOrderConfirmationV04.mmExtension, OrderInstructionStatusReportV04.mmExtension,
 						RequestForOrderConfirmationStatusReportV02.mmExtension, SubscriptionBulkOrderV04.mmExtension, OrderConfirmationStatusReportV02.mmExtension, SubscriptionOrderV04.mmExtension,
-						AccountDetailsConfirmationV07.mmExtension, AccountModificationInstructionV07.mmExtension, AccountOpeningInstructionV07.mmExtension, AccountManagementStatusReportV06.mmExtension);
+						AccountDetailsConfirmationV07.mmExtension, AccountModificationInstructionV07.mmExtension, AccountOpeningInstructionV07.mmExtension, AccountManagementStatusReportV06.mmExtension,
+						TransferInConfirmationV08.mmExtension, PortfolioTransferInstructionV08.mmExtension, TransferInInstructionV08.mmExtension, PortfolioTransferConfirmationV08.mmExtension, AccountHoldingInformationV06.mmExtension,
+						TransferOutConfirmationV08.mmExtension, TransferOutInstructionV08.mmExtension, TransferCancellationStatusReportV06.mmExtension, AccountHoldingInformationRequestV05.mmExtension,
+						RequestForTransferStatusReportV06.mmExtension, TransferInstructionStatusReportV06.mmExtension);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExtensionRule.forExtension1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;

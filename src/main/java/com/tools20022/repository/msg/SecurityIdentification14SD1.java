@@ -148,7 +148,7 @@ public class SecurityIdentification14SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Abbreviated name of the underlying securities in the local language.\r\nNote that in case of non-listed securities, it will be a full local language securities name.\r\n銘柄名（銘柄略称）"
+	 * "Abbreviated name of the underlying securities in the local language.\r\nNote that in case of non-listed securities, it will be a full local language securities name.\r\n銘柄名（銘柄略称）."
 	 * </li>
 	 * </ul>
 	 */
@@ -159,7 +159,7 @@ public class SecurityIdentification14SD1 {
 			xmlTag = "AbbrvtdLclLangSctyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
-			definition = "Abbreviated name of the underlying securities in the local language.\r\nNote that in case of non-listed securities, it will be a full local language securities name.\r\n銘柄名（銘柄略称）";
+			definition = "Abbreviated name of the underlying securities in the local language.\r\nNote that in case of non-listed securities, it will be a full local language securities name.\r\n銘柄名（銘柄略称）.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();

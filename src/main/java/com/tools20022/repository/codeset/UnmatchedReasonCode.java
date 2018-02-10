@@ -1409,7 +1409,7 @@ public class UnmatchedReasonCode extends MMCode {
 		}
 	};
 	/**
-	 * Settlement amount does not match
+	 * Settlement amount does not match.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1426,14 +1426,14 @@ public class UnmatchedReasonCode extends MMCode {
 	 * name} = "SettlementAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Settlement amount does not match"</li>
+	 * definition} = "Settlement amount does not match."</li>
 	 * </ul>
 	 */
 	public static final UnmatchedReasonCode SettlementAmount = new UnmatchedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
-			definition = "Settlement amount does not match";
+			definition = "Settlement amount does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedReasonCode.mmObject();
 			codeName = "DMON";
 		}
@@ -1563,7 +1563,7 @@ public class UnmatchedReasonCode extends MMCode {
 	};
 	/**
 	 * Settlement transaction type does not match (relates to the settlement
-	 * transaction type codes available for field :22F::SETR.)
+	 * transaction type codes available for field: 22F:: SETR.).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1581,7 +1581,7 @@ public class UnmatchedReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Settlement transaction type does not match (relates to the settlement transaction type codes available for field :22F::SETR.)"
+	 * "Settlement transaction type does not match (relates to the settlement transaction type codes available for field: 22F:: SETR.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1589,7 +1589,7 @@ public class UnmatchedReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
-			definition = "Settlement transaction type does not match (relates to the settlement transaction type codes available for field :22F::SETR.)";
+			definition = "Settlement transaction type does not match (relates to the settlement transaction type codes available for field: 22F:: SETR.).";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedReasonCode.mmObject();
 			codeName = "SETR";
 		}
@@ -1630,7 +1630,7 @@ public class UnmatchedReasonCode extends MMCode {
 	};
 	/**
 	 * Financial instrument identification does not match, for example, ISIN,
-	 * financial instrument attributes differs...
+	 * financial instrument attributes differs.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1648,7 +1648,7 @@ public class UnmatchedReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Financial instrument identification does not match, for example, ISIN, financial instrument attributes differs..."
+	 * "Financial instrument identification does not match, for example, ISIN, financial instrument attributes differs."
 	 * </li>
 	 * </ul>
 	 */
@@ -1656,7 +1656,7 @@ public class UnmatchedReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
-			definition = "Financial instrument identification does not match, for example, ISIN, financial instrument attributes differs...";
+			definition = "Financial instrument identification does not match, for example, ISIN, financial instrument attributes differs.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedReasonCode.mmObject();
 			codeName = "DSEC";
 		}
@@ -1785,7 +1785,7 @@ public class UnmatchedReasonCode extends MMCode {
 		}
 	};
 	/**
-	 * Counterparty's instruction was too late for matching
+	 * Counterparty's instruction was too late for matching.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1802,14 +1802,14 @@ public class UnmatchedReasonCode extends MMCode {
 	 * name} = "CounterpartyTooLateForMatching"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Counterparty's instruction was too late for matching"</li>
+	 * definition} = "Counterparty's instruction was too late for matching."</li>
 	 * </ul>
 	 */
 	public static final UnmatchedReasonCode CounterpartyTooLateForMatching = new UnmatchedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyTooLateForMatching";
-			definition = "Counterparty's instruction was too late for matching";
+			definition = "Counterparty's instruction was too late for matching.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedReasonCode.mmObject();
 			codeName = "CLAT";
 		}
@@ -2774,7 +2774,7 @@ public class UnmatchedReasonCode extends MMCode {
 		}
 	};
 	/**
-	 * Place of listing does not match
+	 * Place of listing does not match.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2791,14 +2791,14 @@ public class UnmatchedReasonCode extends MMCode {
 	 * name} = "PlaceOfListing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Place of listing does not match"</li>
+	 * definition} = "Place of listing does not match."</li>
 	 * </ul>
 	 */
 	public static final UnmatchedReasonCode PlaceOfListing = new UnmatchedReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
-			definition = "Place of listing does not match";
+			definition = "Place of listing does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedReasonCode.mmObject();
 			codeName = "PLIS";
 		}

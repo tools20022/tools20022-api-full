@@ -37,53 +37,34 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageDefinition} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV01
- * ATMReconciliationAdviceV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV01
- * ATMReconciliationAcknowledgementV01}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.caam.HostToATMAcknowledgementV01
  * HostToATMAcknowledgementV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV01
- * ATMDiagnosticResponseV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV01
- * ATMDiagnosticRequestV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01
- * ATMKeyDownloadResponseV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV01
- * ATMDeviceReportV01}</li>
  * <li>{@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01
  * HostToATMRequestV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01
- * ATMKeyDownloadRequestV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV01
- * ATMDeviceControlV01}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.caam.ATMExceptionAcknowledgementV01
  * ATMExceptionAcknowledgementV01}</li>
  * <li>{@linkplain com.tools20022.repository.area.caam.ATMExceptionAdviceV01
  * ATMExceptionAdviceV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV02
- * ATMDeviceControlV02}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV02
  * ATMReconciliationAdviceV02}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAcknowledgementV02
  * ATMReconciliationAcknowledgementV02}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02
- * ATMDeviceReportV02}</li>
  * <li>{@linkplain com.tools20022.repository.area.caam.ATMDiagnosticResponseV02
  * ATMDiagnosticResponseV02}</li>
  * <li>{@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV02
  * ATMDiagnosticRequestV02}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02
- * ATMKeyDownloadRequestV02}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV03
+ * ATMDeviceControlV03}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV03
+ * ATMDeviceReportV03}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV03
+ * ATMKeyDownloadRequestV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02
- * ATMKeyDownloadResponseV02}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV03
+ * ATMKeyDownloadResponseV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -114,10 +95,9 @@ public class ATMManagementLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ATM Management - Latest version - master";
 				definition = "Messages that support card related terminal management services between an Automated Teller Machine (ATM) and an\r\nAcquirer.";
-				messageDefinition_lazy = () -> Arrays.asList(ATMReconciliationAdviceV01.mmObject(), ATMReconciliationAcknowledgementV01.mmObject(), HostToATMAcknowledgementV01.mmObject(), ATMDiagnosticResponseV01.mmObject(),
-						ATMDiagnosticRequestV01.mmObject(), ATMKeyDownloadResponseV01.mmObject(), ATMDeviceReportV01.mmObject(), HostToATMRequestV01.mmObject(), ATMKeyDownloadRequestV01.mmObject(), ATMDeviceControlV01.mmObject(),
-						ATMExceptionAcknowledgementV01.mmObject(), ATMExceptionAdviceV01.mmObject(), ATMDeviceControlV02.mmObject(), ATMReconciliationAdviceV02.mmObject(), ATMReconciliationAcknowledgementV02.mmObject(),
-						ATMDeviceReportV02.mmObject(), ATMDiagnosticResponseV02.mmObject(), ATMDiagnosticRequestV02.mmObject(), ATMKeyDownloadRequestV02.mmObject(), ATMKeyDownloadResponseV02.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(HostToATMAcknowledgementV01.mmObject(), HostToATMRequestV01.mmObject(), ATMExceptionAcknowledgementV01.mmObject(), ATMExceptionAdviceV01.mmObject(),
+						ATMReconciliationAdviceV02.mmObject(), ATMReconciliationAcknowledgementV02.mmObject(), ATMDiagnosticResponseV02.mmObject(), ATMDiagnosticRequestV02.mmObject(), ATMDeviceControlV03.mmObject(),
+						ATMDeviceReportV03.mmObject(), ATMKeyDownloadRequestV03.mmObject(), ATMKeyDownloadResponseV03.mmObject());
 				code = "caam";
 			}
 		});

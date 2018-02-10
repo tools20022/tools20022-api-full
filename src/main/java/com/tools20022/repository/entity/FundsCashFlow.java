@@ -465,7 +465,7 @@ public class FundsCashFlow {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the cash flow is exceptional , eg, extraordinary cash amounts in or out."
+	 * "Indicates whether the cash flow is exceptional, eg, extraordinary cash amounts in or out."
 	 * </li>
 	 * </ul>
 	 */
@@ -482,7 +482,7 @@ public class FundsCashFlow {
 			elementContext_lazy = () -> com.tools20022.repository.entity.FundsCashFlow.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExceptionalCashFlowIndicator";
-			definition = "Indicates whether the cash flow is exceptional , eg, extraordinary cash amounts in or out.";
+			definition = "Indicates whether the cash flow is exceptional, eg, extraordinary cash amounts in or out.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

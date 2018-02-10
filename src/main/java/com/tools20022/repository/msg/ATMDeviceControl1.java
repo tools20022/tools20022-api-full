@@ -74,6 +74,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMDeviceControl1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information related to the control of an ATM device."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDeviceControl2
+ * ATMDeviceControl2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +114,14 @@ public class ATMDeviceControl1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDeviceControl2#mmEnvironment
+	 * ATMDeviceControl2.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
@@ -117,6 +132,7 @@ public class ATMDeviceControl1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(ATMDeviceControl2.mmEnvironment);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -149,6 +165,14 @@ public class ATMDeviceControl1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Maintenance command the ATM must perform."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDeviceControl2#mmCommand
+	 * ATMDeviceControl2.mmCommand}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCommand = new MMMessageAssociationEnd() {
@@ -159,6 +183,7 @@ public class ATMDeviceControl1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Command";
 			definition = "Maintenance command the ATM must perform.";
+			nextVersions_lazy = () -> Arrays.asList(ATMDeviceControl2.mmCommand);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMCommand4.mmObject();
@@ -174,6 +199,7 @@ public class ATMDeviceControl1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDeviceControl1";
 				definition = "Information related to the control of an ATM device.";
+				nextVersions_lazy = () -> Arrays.asList(ATMDeviceControl2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

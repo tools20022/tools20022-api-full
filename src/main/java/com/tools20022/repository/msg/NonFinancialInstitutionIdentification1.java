@@ -179,7 +179,7 @@ public class NonFinancialInstitutionIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Global Location Number.  A non-significant reference number used to identify legal entities, functional entities or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information linked to it."
+	 * "Global Location Number. A non-significant reference number used to identify legal entities, functional entities or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information linked to it."
 	 * </li>
 	 * </ul>
 	 */
@@ -191,7 +191,7 @@ public class NonFinancialInstitutionIdentification1 {
 			xmlTag = "EANGLN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EANGLN";
-			definition = "Global Location Number.  A non-significant reference number used to identify legal entities, functional entities or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information linked to it.";
+			definition = "Global Location Number. A non-significant reference number used to identify legal entities, functional entities or physical entities according to the European Association for Numbering (EAN) numbering scheme rules. The number is used to retrieve detailed information linked to it.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EANGLNIdentifier.mmObject();

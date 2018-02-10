@@ -110,7 +110,7 @@ public class SystemSearch3 {
 	 * name} = "SystemIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of a particular cash clearing system. "</li>
+	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
@@ -121,7 +121,7 @@ public class SystemSearch3 {
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
-			definition = "Identification of a particular cash clearing system. ";
+			definition = "Identification of a particular cash clearing system.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ClearingSystemIdentification3Choice.mmObject();

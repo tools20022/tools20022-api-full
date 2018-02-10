@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MarketPracticeVersion1;
 import com.tools20022.repository.msg.MessageAndBusinessReference8;
@@ -77,8 +77,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "ReqForTrfStsRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.009.001.05}</li>
@@ -91,6 +91,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the RequestForTransferStatusReport to the executing party, for example, a transfer agent to request the status of a previously instructed transfer.\r\nUsage\r\nThe RequestForTransferStatusReport is used to request either:\r\n- the status of one or several transfer instructions or,\r\n- the status of one or several transfer cancellation instructions."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06
+ * RequestForTransferStatusReportV06}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -126,7 +134,15 @@ public class RequestForTransferStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference that uniquely identifies a message from a business application standpoint. "
+	 * "Reference that uniquely identifies a message from a business application standpoint."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06#mmMessageIdentification
+	 * RequestForTransferStatusReportV06.mmMessageIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -140,7 +156,8 @@ public class RequestForTransferStatusReportV05 {
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
-			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
+			definition = "Reference that uniquely identifies a message from a business application standpoint.";
+			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV06.mmMessageIdentification);
 			previousVersion_lazy = () -> RequestForTransferStatusReportV04.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -178,7 +195,15 @@ public class RequestForTransferStatusReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information to identify the transfer for which the status is requested.\n"
+	 * "Information to identify the transfer for which the status is requested.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06#mmRequestDetails
+	 * RequestForTransferStatusReportV06.mmRequestDetails}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -192,7 +217,8 @@ public class RequestForTransferStatusReportV05 {
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
-			definition = "Information to identify the transfer for which the status is requested.\n";
+			definition = "Information to identify the transfer for which the status is requested.\n.";
+			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV06.mmRequestDetails);
 			previousVersion_lazy = () -> RequestForTransferStatusReportV04.mmRequestDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference8.mmObject();
@@ -230,6 +256,14 @@ public class RequestForTransferStatusReportV05 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the market practice to which the message conforms."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06#mmMarketPracticeVersion
+	 * RequestForTransferStatusReportV06.mmMarketPracticeVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -243,6 +277,7 @@ public class RequestForTransferStatusReportV05 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
+			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV06.mmMarketPracticeVersion);
 			previousVersion_lazy = () -> RequestForTransferStatusReportV04.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -281,6 +316,14 @@ public class RequestForTransferStatusReportV05 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06#mmExtension
+	 * RequestForTransferStatusReportV06.mmExtension}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -294,6 +337,7 @@ public class RequestForTransferStatusReportV05 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV06.mmExtension);
 			previousVersion_lazy = () -> RequestForTransferStatusReportV04.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
@@ -314,11 +358,12 @@ public class RequestForTransferStatusReportV05 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestForTransferStatusReportV05";
 				definition = "Scope\r\nAn instructing party, for example, an investment manager or its authorised representative, sends the RequestForTransferStatusReport to the executing party, for example, a transfer agent to request the status of a previously instructed transfer.\r\nUsage\r\nThe RequestForTransferStatusReport is used to request either:\r\n- the status of one or several transfer instructions or,\r\n- the status of one or several transfer cancellation instructions.";
+				nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV06.mmObject());
 				previousVersion_lazy = () -> RequestForTransferStatusReportV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "ReqForTrfStsRpt";
-				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.RequestForTransferStatusReportV05.mmMessageIdentification,
 						com.tools20022.repository.area.sese.RequestForTransferStatusReportV05.mmRequestDetails, com.tools20022.repository.area.sese.RequestForTransferStatusReportV05.mmMarketPracticeVersion,
 						com.tools20022.repository.area.sese.RequestForTransferStatusReportV05.mmExtension);

@@ -63,6 +63,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Limits5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reports on limits."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits6 Limits6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Limits4 Limits4}
  * </li>
@@ -104,6 +110,13 @@ public class Limits5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report is given for a current risk management type limit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limits6#mmCurrentLimit
+	 * Limits6.mmCurrentLimit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -120,6 +133,7 @@ public class Limits5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentLimit";
 			definition = "Report is given for a current risk management type limit.";
+			nextVersions_lazy = () -> Arrays.asList(Limits6.mmCurrentLimit);
 			previousVersion_lazy = () -> Limits4.mmCurrentLimit;
 			minOccurs = 0;
 			isComposite = true;
@@ -157,6 +171,13 @@ public class Limits5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report is given for a default risk management type limit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limits6#mmDefaultLimit
+	 * Limits6.mmDefaultLimit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -173,6 +194,7 @@ public class Limits5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultLimit";
 			definition = "Report is given for a default risk management type limit.";
+			nextVersions_lazy = () -> Arrays.asList(Limits6.mmDefaultLimit);
 			previousVersion_lazy = () -> Limits4.mmDefaultLimit;
 			minOccurs = 0;
 			isComposite = true;
@@ -189,6 +211,7 @@ public class Limits5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Limits5";
 				definition = "Reports on limits.";
+				nextVersions_lazy = () -> Arrays.asList(Limits6.mmObject());
 				previousVersion_lazy = () -> Limits4.mmObject();
 			}
 		});

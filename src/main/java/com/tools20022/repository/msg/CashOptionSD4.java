@@ -179,7 +179,7 @@ public class CashOptionSD4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Income classification of the cash proceeds for dividend reinvestment ."</li>
+	 * "Income classification of the cash proceeds for dividend reinvestment."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReinvestmentIncomeClassification = new MMMessageAttribute() {
@@ -190,7 +190,7 @@ public class CashOptionSD4 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reinvestment Income Classification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
-			definition = "Income classification of the cash proceeds for dividend reinvestment .";
+			definition = "Income classification of the cash proceeds for dividend reinvestment.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentIncomeClassification1Code.mmObject();
@@ -225,7 +225,7 @@ public class CashOptionSD4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. "
+	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * </ul>
 	 */
@@ -237,7 +237,7 @@ public class CashOptionSD4 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
-			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
+			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3Text.mmObject();
@@ -509,7 +509,7 @@ public class CashOptionSD4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cash rate associated to the payout as declared  on the market by the issuer or offeror."
+	 * "Cash rate associated to the payout as declared on the market by the issuer or offeror."
 	 * </li>
 	 * </ul>
 	 */
@@ -521,7 +521,7 @@ public class CashOptionSD4 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Cash Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredCashRate";
-			definition = "Cash rate associated to the payout as declared  on the market by the issuer or offeror.";
+			definition = "Cash rate associated to the payout as declared on the market by the issuer or offeror.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat17Choice.mmObject();

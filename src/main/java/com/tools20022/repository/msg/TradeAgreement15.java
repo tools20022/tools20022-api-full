@@ -148,8 +148,7 @@ public class TradeAgreement15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date on which the trading parties agreed to amend or cancel the trade. "
-	 * </li>
+	 * "Date on which the trading parties agreed to amend or cancel the trade."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,7 +164,7 @@ public class TradeAgreement15 {
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			definition = "Date on which the trading parties agreed to amend or cancel the trade. ";
+			definition = "Date on which the trading parties agreed to amend or cancel the trade.";
 			previousVersion_lazy = () -> TradeAgreement11.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -199,7 +198,7 @@ public class TradeAgreement15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party. "
+	 * "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -215,7 +214,7 @@ public class TradeAgreement15 {
 			xmlTag = "OrgtrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorReference";
-			definition = "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party. ";
+			definition = "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party.";
 			previousVersion_lazy = () -> TradeAgreement11.mmOriginatorReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -255,7 +254,7 @@ public class TradeAgreement15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of a matching system reference by a choice between a matching system unique identification or the related reference. "
+	 * "Identification of a matching system reference by a choice between a matching system unique identification or the related reference."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -272,7 +271,7 @@ public class TradeAgreement15 {
 			xmlTag = "MtchgSysRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemReference";
-			definition = "Identification of a matching system reference by a choice between a matching system unique identification or the related reference. ";
+			definition = "Identification of a matching system reference by a choice between a matching system unique identification or the related reference.";
 			previousVersion_lazy = () -> TradeAgreement11.mmMatchingSystemReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -310,7 +309,7 @@ public class TradeAgreement15 {
 	 * name} = "CommonReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reference common to both parties of the trade. "</li>
+	 * definition} = "Reference common to both parties of the trade."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -326,7 +325,7 @@ public class TradeAgreement15 {
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			definition = "Reference common to both parties of the trade. ";
+			definition = "Reference common to both parties of the trade.";
 			previousVersion_lazy = () -> TradeAgreement11.mmCommonReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -415,7 +414,7 @@ public class TradeAgreement15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the type of  underlying transaction, for example cancellation (CANC)."
+	 * "Specifies the type of underlying transaction, for example cancellation (CANC)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -431,7 +430,7 @@ public class TradeAgreement15 {
 			xmlTag = "OprTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationType";
-			definition = "Specifies the type of  underlying transaction, for example cancellation (CANC).";
+			definition = "Specifies the type of underlying transaction, for example cancellation (CANC).";
 			previousVersion_lazy = () -> TradeAgreement11.mmOperationType;
 			maxOccurs = 1;
 			minOccurs = 0;

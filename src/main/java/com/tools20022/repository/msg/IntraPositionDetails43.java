@@ -22,7 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06;
+import com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.choice.CorporateActionEventType69Choice;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity15Choice;
@@ -90,7 +90,7 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06#mmIntraPositionDetails
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06#mmIntraPositionDetails
  * IntraPositionMovementConfirmation002V06.mmIntraPositionDetails}</li>
  * </ul>
  * </li>

@@ -73,7 +73,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AccountLinkStatus1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Business status of the party for processing in the system. "</li>
+ * definition} = "Business status of the party for processing in the system."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -188,7 +188,7 @@ public class AccountLinkStatus1 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forAccountLinkStatus1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLinkStatus1";
-				definition = "Business status of the party for processing in the system. ";
+				definition = "Business status of the party for processing in the system.";
 			}
 		});
 		return mmObject_lazy.get();

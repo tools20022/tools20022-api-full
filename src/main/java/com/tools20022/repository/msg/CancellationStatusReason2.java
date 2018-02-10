@@ -73,6 +73,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides further details on the status of the cancellation request."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ModificationStatusReason1
+ * ModificationStatusReason1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CancellationStatusReason3
+ * CancellationStatusReason3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +120,17 @@ public class CancellationStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that issues the cancellation status."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationStatusReason1#mmOriginator
+	 * ModificationStatusReason1.mmOriginator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusReason3#mmOriginator
+	 * CancellationStatusReason3.mmOriginator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
@@ -122,6 +142,7 @@ public class CancellationStatusReason2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Party that issues the cancellation status.";
+			nextVersions_lazy = () -> Arrays.asList(ModificationStatusReason1.mmOriginator, CancellationStatusReason3.mmOriginator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -160,6 +181,17 @@ public class CancellationStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reason for the status report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationStatusReason1#mmReason
+	 * ModificationStatusReason1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusReason3#mmReason
+	 * CancellationStatusReason3.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
@@ -171,6 +203,7 @@ public class CancellationStatusReason2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the status report.";
+			nextVersions_lazy = () -> Arrays.asList(ModificationStatusReason1.mmReason, CancellationStatusReason3.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -209,6 +242,17 @@ public class CancellationStatusReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further details on the cancellation status reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationStatusReason1#mmAdditionalInformation
+	 * ModificationStatusReason1.mmAdditionalInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusReason3#mmAdditionalInformation
+	 * CancellationStatusReason3.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
@@ -220,6 +264,7 @@ public class CancellationStatusReason2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the cancellation status reason.";
+			nextVersions_lazy = () -> Arrays.asList(ModificationStatusReason1.mmAdditionalInformation, CancellationStatusReason3.mmAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
@@ -235,6 +280,7 @@ public class CancellationStatusReason2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatusReason2";
 				definition = "Provides further details on the status of the cancellation request.";
+				nextVersions_lazy = () -> Arrays.asList(ModificationStatusReason1.mmObject(), CancellationStatusReason3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -331,6 +331,36 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmReceivingSettlementParties
  * SecuritiesSettlementTransactionDetails31.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14#mmOtherReceivingSettlementParties
+ * StandingSettlementInstruction14.mmOtherReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionDetails34.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionDetails33.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionDetails32.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmReceivingSettlementParties
+ * SecuritiesOption65.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmReceivingSettlementParties
+ * SecuritiesOption67.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction15#mmOtherReceivingSettlementParties
+ * StandingSettlementInstruction15.mmOtherReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionDetails35.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionDetails36.mmReceivingSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmReceivingSettlementParties
+ * SecuritiesSettlementTransactionDetails37.mmReceivingSettlementParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -495,7 +525,10 @@ public class ReceivingSettlementParty extends SecuritiesSettlementPartyRole {
 						SecuritiesFinancingTransactionDetails35.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails27.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails28.mmReceivingSettlementParties,
 						SecuritiesSettlementTransactionDetails26.mmReceivingSettlementParties, SettlementParties7Choice.mmReceivingSettlementParties, SecuritiesFinancingTransactionDetails36.mmReceivingSettlementParties,
 						SecuritiesSettlementTransactionDetails30.mmReceivingSettlementParties, SecuritiesOption63.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails29.mmReceivingSettlementParties,
-						SecuritiesSettlementTransactionDetails31.mmReceivingSettlementParties);
+						SecuritiesSettlementTransactionDetails31.mmReceivingSettlementParties, StandingSettlementInstruction14.mmOtherReceivingSettlementParties, SecuritiesSettlementTransactionDetails34.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails33.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails32.mmReceivingSettlementParties, SecuritiesOption65.mmReceivingSettlementParties,
+						SecuritiesOption67.mmReceivingSettlementParties, StandingSettlementInstruction15.mmOtherReceivingSettlementParties, SecuritiesSettlementTransactionDetails35.mmReceivingSettlementParties,
+						SecuritiesSettlementTransactionDetails36.mmReceivingSettlementParties, SecuritiesSettlementTransactionDetails37.mmReceivingSettlementParties);
 				subType_lazy = () -> Arrays.asList(ReceivingDepositoryRole.mmObject());
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ReceivingSettlementParty.mmReceivingSettlementParty, com.tools20022.repository.entity.ReceivingSettlementParty.mmNextParty);

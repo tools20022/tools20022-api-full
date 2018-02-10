@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "MarketIdentification87"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Identifies the market and purpose for the settlement. "</li>
+ * definition} = "Identifies the market and purpose for the settlement."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,7 +101,7 @@ public class MarketIdentification87 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Country in which the financial instrument is to be settled. "</li>
+	 * "Country in which the financial instrument is to be settled."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
@@ -111,7 +111,7 @@ public class MarketIdentification87 {
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
-			definition = "Country in which the financial instrument is to be settled. ";
+			definition = "Country in which the financial instrument is to be settled.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -186,7 +186,7 @@ public class MarketIdentification87 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Purpose of the instruction,  for example, whether for regular payments, margin payments related to a collateral movement, securities settlements , securities lending. "
+	 * "Purpose of the instruction, for example, whether for regular payments, margin payments related to a collateral movement, securities settlements, securities lending."
 	 * </li>
 	 * </ul>
 	 */
@@ -197,7 +197,7 @@ public class MarketIdentification87 {
 			xmlTag = "SttlmPurp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPurpose";
-			definition = "Purpose of the instruction,  for example, whether for regular payments, margin payments related to a collateral movement, securities settlements , securities lending. ";
+			definition = "Purpose of the instruction, for example, whether for regular payments, margin payments related to a collateral movement, securities settlements, securities lending.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -213,7 +213,7 @@ public class MarketIdentification87 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketIdentification87";
-				definition = "Identifies the market and purpose for the settlement. ";
+				definition = "Identifies the market and purpose for the settlement.";
 			}
 		});
 		return mmObject_lazy.get();

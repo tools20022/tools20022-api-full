@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Commercial agreement in which the buyer agrees to pay the seller an amount of
  * cash. Some aspects of the payment may be defined in the agreement, eg, the
- * method of the payment
+ * method of the payment .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PremiumAmount1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, eg, the method of the payment\n"
+ * "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, eg, the method of the payment\n."
  * </li>
  * </ul>
  */
@@ -261,7 +261,7 @@ public class PremiumAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that settles the premium amount on behalf of the paying party.  It may contain the BIC of a central settlement system, eg. CLSBUS33."
+	 * "Party that settles the premium amount on behalf of the paying party. It may contain the BIC of a central settlement system, eg. CLSBUS33."
 	 * </li>
 	 * </ul>
 	 */
@@ -273,7 +273,7 @@ public class PremiumAmount1 {
 			xmlTag = "SttlmPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParty";
-			definition = "Party that settles the premium amount on behalf of the paying party.  It may contain the BIC of a central settlement system, eg. CLSBUS33.";
+			definition = "Party that settles the premium amount on behalf of the paying party. It may contain the BIC of a central settlement system, eg. CLSBUS33.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -290,7 +290,7 @@ public class PremiumAmount1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PremiumAmount1";
-				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, eg, the method of the payment\n";
+				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, eg, the method of the payment\n.";
 			}
 		});
 		return mmObject_lazy.get();

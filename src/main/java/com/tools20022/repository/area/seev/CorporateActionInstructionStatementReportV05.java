@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
+import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.msg.AccountIdentification33;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.Statement47;
@@ -85,8 +85,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnInstrStmtRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
- * SecuritiesEventsPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.042.001.05}</li>
@@ -388,7 +388,7 @@ public class CorporateActionInstructionStatementReportV05 {
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStmtRpt";
-				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmPagination,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmStatementGeneralDetails,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmAccountAndStatementDetails, com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05.mmSupplementaryData);

@@ -56,6 +56,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#mmShippingFeesAmount
  * SecuritiesRelatedFees.mmShippingFeesAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees#mmResearchFee
+ * SecuritiesRelatedFees.mmResearchFee}</li>
  * </ul>
  * </li>
  * <li>
@@ -467,6 +470,42 @@ public class SecuritiesRelatedFees extends Charges {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OtherAmounts33#mmRegulatoryAmount
 	 * OtherAmounts33.mmRegulatoryAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmRegulatoryAmount
+	 * OtherAmounts41.mmRegulatoryAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmRegulatoryAmount
+	 * OtherAmounts39.mmRegulatoryAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmRegulatoryAmount
+	 * OtherAmounts40.mmRegulatoryAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmRegulatoryFeesAmount
+	 * CorporateActionAmounts42.mmRegulatoryFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmRegulatoryFeesAmount
+	 * CorporateActionAmounts43.mmRegulatoryFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmRegulatoryFeesAmount
+	 * CorporateActionAmounts44.mmRegulatoryFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmRegulatoryFeesAmount
+	 * CorporateActionAmounts45.mmRegulatoryFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmRegulatoryFeesAmount
+	 * CorporateActionAmounts46.mmRegulatoryFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmRegulatoryFeesAmount
+	 * CorporateActionAmounts47.mmRegulatoryFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmRegulatoryAmount
+	 * OtherAmounts42.mmRegulatoryAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmRegulatoryAmount
+	 * OtherAmounts43.mmRegulatoryAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmRegulatoryAmount
+	 * OtherAmounts44.mmRegulatoryAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -503,7 +542,9 @@ public class SecuritiesRelatedFees extends Charges {
 					CorporateActionAmounts32.mmRegulatoryFeesAmount, CorporateActionAmounts35.mmRegulatoryFeesAmount, OtherAmounts28.mmRegulatoryAmount, OtherAmounts30.mmRegulatoryAmount, OtherAmounts31.mmRegulatoryAmount,
 					OtherAmounts29.mmRegulatoryAmount, CorporateActionAmounts37.mmRegulatoryFeesAmount, CorporateActionAmounts36.mmRegulatoryFeesAmount, CorporateActionAmounts38.mmRegulatoryFeesAmount,
 					CorporateActionAmounts39.mmRegulatoryFeesAmount, CorporateActionAmounts41.mmRegulatoryFeesAmount, CorporateActionAmounts40.mmRegulatoryFeesAmount, OtherAmounts35.mmRegulatoryAmount, OtherAmounts34.mmRegulatoryAmount,
-					OtherAmounts38.mmRegulatoryAmount, OtherAmounts33.mmRegulatoryAmount);
+					OtherAmounts38.mmRegulatoryAmount, OtherAmounts33.mmRegulatoryAmount, OtherAmounts41.mmRegulatoryAmount, OtherAmounts39.mmRegulatoryAmount, OtherAmounts40.mmRegulatoryAmount,
+					CorporateActionAmounts42.mmRegulatoryFeesAmount, CorporateActionAmounts43.mmRegulatoryFeesAmount, CorporateActionAmounts44.mmRegulatoryFeesAmount, CorporateActionAmounts45.mmRegulatoryFeesAmount,
+					CorporateActionAmounts46.mmRegulatoryFeesAmount, CorporateActionAmounts47.mmRegulatoryFeesAmount, OtherAmounts42.mmRegulatoryAmount, OtherAmounts43.mmRegulatoryAmount, OtherAmounts44.mmRegulatoryAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -728,6 +769,42 @@ public class SecuritiesRelatedFees extends Charges {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OtherAmounts33#mmShippingAmount
 	 * OtherAmounts33.mmShippingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmShippingAmount
+	 * OtherAmounts41.mmShippingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmShippingAmount
+	 * OtherAmounts39.mmShippingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmShippingAmount
+	 * OtherAmounts40.mmShippingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmShippingFeesAmount
+	 * CorporateActionAmounts42.mmShippingFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmShippingFeesAmount
+	 * CorporateActionAmounts43.mmShippingFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmShippingFeesAmount
+	 * CorporateActionAmounts44.mmShippingFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmShippingFeesAmount
+	 * CorporateActionAmounts45.mmShippingFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmShippingFeesAmount
+	 * CorporateActionAmounts46.mmShippingFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmShippingFeesAmount
+	 * CorporateActionAmounts47.mmShippingFeesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmShippingAmount
+	 * OtherAmounts42.mmShippingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmShippingAmount
+	 * OtherAmounts43.mmShippingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmShippingAmount
+	 * OtherAmounts44.mmShippingAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -762,7 +839,10 @@ public class SecuritiesRelatedFees extends Charges {
 					CorporateActionAmounts28.mmShippingFeesAmount, CorporateActionAmounts33.mmShippingFeesAmount, CorporateActionAmounts32.mmShippingFeesAmount, CorporateActionAmounts35.mmShippingFeesAmount,
 					OtherAmounts28.mmShippingAmount, OtherAmounts30.mmShippingAmount, OtherAmounts31.mmShippingAmount, OtherAmounts29.mmShippingAmount, CorporateActionAmounts37.mmShippingFeesAmount,
 					CorporateActionAmounts36.mmShippingFeesAmount, CorporateActionAmounts38.mmShippingFeesAmount, CorporateActionAmounts39.mmShippingFeesAmount, CorporateActionAmounts41.mmShippingFeesAmount,
-					CorporateActionAmounts40.mmShippingFeesAmount, OtherAmounts35.mmShippingAmount, OtherAmounts34.mmShippingAmount, OtherAmounts38.mmShippingAmount, OtherAmounts33.mmShippingAmount);
+					CorporateActionAmounts40.mmShippingFeesAmount, OtherAmounts35.mmShippingAmount, OtherAmounts34.mmShippingAmount, OtherAmounts38.mmShippingAmount, OtherAmounts33.mmShippingAmount, OtherAmounts41.mmShippingAmount,
+					OtherAmounts39.mmShippingAmount, OtherAmounts40.mmShippingAmount, CorporateActionAmounts42.mmShippingFeesAmount, CorporateActionAmounts43.mmShippingFeesAmount, CorporateActionAmounts44.mmShippingFeesAmount,
+					CorporateActionAmounts45.mmShippingFeesAmount, CorporateActionAmounts46.mmShippingFeesAmount, CorporateActionAmounts47.mmShippingFeesAmount, OtherAmounts42.mmShippingAmount, OtherAmounts43.mmShippingAmount,
+					OtherAmounts44.mmShippingAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -781,6 +861,79 @@ public class SecuritiesRelatedFees extends Charges {
 			}
 		}
 	};
+	protected CurrencyAndAmount researchFee;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.CurrencyAndAmount
+	 * CurrencyAndAmount}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmResearchFee
+	 * OtherAmounts41.mmResearchFee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmResearchFee
+	 * OtherAmounts39.mmResearchFee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmResearchFee
+	 * OtherAmounts40.mmResearchFee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmResearchFee
+	 * OtherAmounts42.mmResearchFee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmResearchFee
+	 * OtherAmounts43.mmResearchFee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmResearchFee
+	 * OtherAmounts44.mmResearchFee}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.SecuritiesRelatedFees
+	 * SecuritiesRelatedFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ResearchFee"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Charge or commission paid by the investor to a distributor/intermediary or other service provider for the provision of financial research."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMBusinessAttribute mmResearchFee = new MMBusinessAttribute() {
+		{
+			derivation_lazy = () -> Arrays.asList(OtherAmounts41.mmResearchFee, OtherAmounts39.mmResearchFee, OtherAmounts40.mmResearchFee, OtherAmounts42.mmResearchFee, OtherAmounts43.mmResearchFee, OtherAmounts44.mmResearchFee);
+			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRelatedFees.mmObject();
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "ResearchFee";
+			definition = "Charge or commission paid by the investor to a distributor/intermediary or other service provider for the provision of financial research.";
+			maxOccurs = 1;
+			minOccurs = 1;
+			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return SecuritiesRelatedFees.class.getMethod("getResearchFee", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
@@ -792,7 +945,8 @@ public class SecuritiesRelatedFees extends Charges {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Security.mmFees);
 				superType_lazy = () -> Charges.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesRelatedFees.mmSecurity, com.tools20022.repository.entity.SecuritiesRelatedFees.mmPostageFeeAmount,
-						com.tools20022.repository.entity.SecuritiesRelatedFees.mmRegulatoryFeesAmount, com.tools20022.repository.entity.SecuritiesRelatedFees.mmShippingFeesAmount);
+						com.tools20022.repository.entity.SecuritiesRelatedFees.mmRegulatoryFeesAmount, com.tools20022.repository.entity.SecuritiesRelatedFees.mmShippingFeesAmount,
+						com.tools20022.repository.entity.SecuritiesRelatedFees.mmResearchFee);
 			}
 
 			@Override
@@ -836,6 +990,15 @@ public class SecuritiesRelatedFees extends Charges {
 
 	public SecuritiesRelatedFees setShippingFeesAmount(CurrencyAndAmount shippingFeesAmount) {
 		this.shippingFeesAmount = Objects.requireNonNull(shippingFeesAmount);
+		return this;
+	}
+
+	public CurrencyAndAmount getResearchFee() {
+		return researchFee;
+	}
+
+	public SecuritiesRelatedFees setResearchFee(CurrencyAndAmount researchFee) {
+		this.researchFee = Objects.requireNonNull(researchFee);
 		return this;
 	}
 }

@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ContractCollateral1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Further details on the contract collateral. "</li>
+ * definition} = "Further details on the contract collateral."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -222,7 +222,7 @@ public class ContractCollateral1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContractCollateral1";
-				definition = "Further details on the contract collateral. ";
+				definition = "Further details on the contract collateral.";
 			}
 		});
 		return mmObject_lazy.get();

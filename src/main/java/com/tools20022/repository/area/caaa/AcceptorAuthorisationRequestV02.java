@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorAuthorisationRequest message is sent by an acceptor (or its
- * agent) to the acquirer (or its agent) , to check with the issuer (or its
+ * agent) to the acquirer (or its agent), to check with the issuer (or its
  * agent) that the account associated to the card has the resources to fund the
  * payment. This checking will include validation of the card data and any
  * additional transaction data provided.
@@ -81,7 +81,7 @@ import javax.xml.bind.annotation.*;
  * "AcceptorAuthorisationRequestV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided."
+ * "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -266,7 +266,7 @@ public class AcceptorAuthorisationRequestV02 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorAuthorisationRequestV02";
-				definition = "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided.";
+				definition = "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequestV03.mmObject());
 				previousVersion_lazy = () -> AcceptorAuthorisationRequestV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());

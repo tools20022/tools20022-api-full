@@ -75,6 +75,12 @@ import javax.xml.bind.annotation.XmlType;
  * "FeeAndTax1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Amount of money associated with a service."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Fees1 Fees1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -115,6 +121,14 @@ public class FeeAndTax1 {
 	 * definition} =
 	 * "Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Fees1#mmCommercialAgreementReference
+	 * Fees1.mmCommercialAgreementReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCommercialAgreementReference = new MMMessageAttribute() {
@@ -126,6 +140,7 @@ public class FeeAndTax1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialAgreementReference";
 			definition = "Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.";
+			nextVersions_lazy = () -> Arrays.asList(Fees1.mmCommercialAgreementReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -160,6 +175,13 @@ public class FeeAndTax1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Individual fee (charge/commission)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fees1#mmIndividualFee
+	 * Fees1.mmIndividualFee}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -176,6 +198,7 @@ public class FeeAndTax1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndividualFee";
 			definition = "Individual fee (charge/commission).";
+			nextVersions_lazy = () -> Arrays.asList(Fees1.mmIndividualFee);
 			previousVersion_lazy = () -> TotalFeesAndTaxes40.mmIndividualFee;
 			minOccurs = 0;
 			isComposite = true;
@@ -245,6 +268,7 @@ public class FeeAndTax1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FeeAndTax1";
 				definition = "Amount of money associated with a service.";
+				nextVersions_lazy = () -> Arrays.asList(Fees1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

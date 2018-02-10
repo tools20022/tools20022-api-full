@@ -138,7 +138,7 @@ public class CommercialDataSet4 {
 	 * name} = "DataSetIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the commercial data set"</li>
+	 * definition} = "Identifies the commercial data set."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -161,7 +161,7 @@ public class CommercialDataSet4 {
 			xmlTag = "DataSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
-			definition = "Identifies the commercial data set";
+			definition = "Identifies the commercial data set.";
 			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet5.mmDataSetIdentification);
 			previousVersion_lazy = () -> CommercialDataSet3.mmDataSetIdentification;
 			maxOccurs = 1;
@@ -196,8 +196,7 @@ public class CommercialDataSet4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the identification of  the underlying commercial document."
-	 * </li>
+	 * "Reference to the identification of the underlying commercial document."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -220,7 +219,7 @@ public class CommercialDataSet4 {
 			xmlTag = "ComrclDocRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommercialDocumentReference";
-			definition = "Reference to the identification of  the underlying commercial document.";
+			definition = "Reference to the identification of the underlying commercial document.";
 			nextVersions_lazy = () -> Arrays.asList(CommercialDataSet5.mmCommercialDocumentReference);
 			previousVersion_lazy = () -> CommercialDataSet3.mmCommercialDocumentReference;
 			maxOccurs = 1;

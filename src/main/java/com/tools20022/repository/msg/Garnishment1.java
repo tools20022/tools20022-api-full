@@ -83,7 +83,13 @@ import javax.xml.bind.annotation.XmlType;
  * "Garnishment1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides remittance information about a payment for garnishment-related purposes. "
+ * "Provides remittance information about a payment for garnishment-related purposes."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Garnishment2 Garnishment2}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -122,6 +128,13 @@ public class Garnishment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of garnishment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Garnishment2#mmType
+	 * Garnishment2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -133,6 +146,7 @@ public class Garnishment1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of garnishment.";
+			nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -171,6 +185,13 @@ public class Garnishment1 {
 	 * definition} =
 	 * "Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the garnisher."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Garnishment2#mmGarnishee
+	 * Garnishment2.mmGarnishee}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmGarnishee = new MMMessageAssociationEnd() {
@@ -182,6 +203,7 @@ public class Garnishment1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Garnishee";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the garnisher.";
+			nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmGarnishee);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -220,6 +242,14 @@ public class Garnishment1 {
 	 * definition} =
 	 * "Party on the credit side of the transaction who administers the garnishment on behalf of the ultimate beneficiary."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Garnishment2#mmGarnishmentAdministrator
+	 * Garnishment2.mmGarnishmentAdministrator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmGarnishmentAdministrator = new MMMessageAssociationEnd() {
@@ -231,6 +261,7 @@ public class Garnishment1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GarnishmentAdministrator";
 			definition = "Party on the credit side of the transaction who administers the garnishment on behalf of the ultimate beneficiary.";
+			nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmGarnishmentAdministrator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -270,6 +301,14 @@ public class Garnishment1 {
 	 * definition} =
 	 * "Reference information that is specific to the agency receiving the garnishment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Garnishment2#mmReferenceNumber
+	 * Garnishment2.mmReferenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReferenceNumber = new MMMessageAttribute() {
@@ -281,6 +320,7 @@ public class Garnishment1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceNumber";
 			definition = "Reference information that is specific to the agency receiving the garnishment.";
+			nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmReferenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -317,6 +357,13 @@ public class Garnishment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date of payment which garnishment was taken from."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Garnishment2#mmDate
+	 * Garnishment2.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
@@ -328,6 +375,7 @@ public class Garnishment1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date of payment which garnishment was taken from.";
+			nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -365,6 +413,14 @@ public class Garnishment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money remitted for the referred document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Garnishment2#mmRemittedAmount
+	 * Garnishment2.mmRemittedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRemittedAmount = new MMMessageAttribute() {
@@ -376,6 +432,7 @@ public class Garnishment1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittedAmount";
 			definition = "Amount of money remitted for the referred document.";
+			nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmRemittedAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -413,7 +470,15 @@ public class Garnishment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available. "
+	 * "Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Garnishment2#mmFamilyMedicalInsuranceIndicator
+	 * Garnishment2.mmFamilyMedicalInsuranceIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -425,7 +490,8 @@ public class Garnishment1 {
 			xmlTag = "FmlyMdclInsrncInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FamilyMedicalInsuranceIndicator";
-			definition = "Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available. ";
+			definition = "Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available.";
+			nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmFamilyMedicalInsuranceIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -465,6 +531,14 @@ public class Garnishment1 {
 	 * definition} =
 	 * "Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Garnishment2#mmEmployeeTerminationIndicator
+	 * Garnishment2.mmEmployeeTerminationIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEmployeeTerminationIndicator = new MMMessageAttribute() {
@@ -476,6 +550,7 @@ public class Garnishment1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmployeeTerminationIndicator";
 			definition = "Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.";
+			nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmEmployeeTerminationIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -492,7 +567,8 @@ public class Garnishment1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Garnishment1";
-				definition = "Provides remittance information about a payment for garnishment-related purposes. ";
+				definition = "Provides remittance information about a payment for garnishment-related purposes.";
+				nextVersions_lazy = () -> Arrays.asList(Garnishment2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

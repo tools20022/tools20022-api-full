@@ -70,6 +70,14 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementTransactionStatusType1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of the securities settlement instruction status type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTransactionStatusType2
+ * SettlementTransactionStatusType2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,6 +113,14 @@ public class SettlementTransactionStatusType1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides details on the processing status of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTransactionStatusType2#mmProcessingStatus
+	 * SettlementTransactionStatusType2.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
@@ -115,6 +131,7 @@ public class SettlementTransactionStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementTransactionStatusType2.mmProcessingStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus30Choice.mmObject();
@@ -149,6 +166,14 @@ public class SettlementTransactionStatusType1 {
 	 * definition} =
 	 * "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTransactionStatusType2#mmInferredMatchingStatus
+	 * SettlementTransactionStatusType2.mmInferredMatchingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInferredMatchingStatus = new MMMessageAssociationEnd() {
@@ -159,6 +184,7 @@ public class SettlementTransactionStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as known by the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
+			nextVersions_lazy = () -> Arrays.asList(SettlementTransactionStatusType2.mmInferredMatchingStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus8Choice.mmObject();
@@ -191,6 +217,14 @@ public class SettlementTransactionStatusType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the matching status of the instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTransactionStatusType2#mmMatchingStatus
+	 * SettlementTransactionStatusType2.mmMatchingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMatchingStatus = new MMMessageAssociationEnd() {
@@ -201,6 +235,7 @@ public class SettlementTransactionStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementTransactionStatusType2.mmMatchingStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> MatchingStatus8Choice.mmObject();
@@ -233,6 +268,14 @@ public class SettlementTransactionStatusType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the settlement status of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTransactionStatusType2#mmSettlementStatus
+	 * SettlementTransactionStatusType2.mmSettlementStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
@@ -243,6 +286,7 @@ public class SettlementTransactionStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the settlement status of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementTransactionStatusType2.mmSettlementStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus1Choice.mmObject();
@@ -274,6 +318,14 @@ public class SettlementTransactionStatusType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines that the transaction has been settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTransactionStatusType2#mmSettled
+	 * SettlementTransactionStatusType2.mmSettled}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettled = new MMMessageAssociationEnd() {
@@ -284,6 +336,7 @@ public class SettlementTransactionStatusType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
 			definition = "Defines that the transaction has been settled.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementTransactionStatusType2.mmSettled);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -301,6 +354,7 @@ public class SettlementTransactionStatusType1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementTransactionStatusType1";
 				definition = "Choice of the securities settlement instruction status type.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementTransactionStatusType2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

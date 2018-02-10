@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "OptionParty1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for option party."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.OptionParty2Choice
+ * OptionParty2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +114,14 @@ public class OptionParty1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Option party expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionParty2Choice#mmCode
+	 * OptionParty2Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -118,6 +133,7 @@ public class OptionParty1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Option party expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(OptionParty2Choice.mmCode);
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionParty1Code.mmObject();
 		}
@@ -154,6 +170,14 @@ public class OptionParty1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Option party expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionParty2Choice#mmProprietary
+	 * OptionParty2Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -165,6 +189,7 @@ public class OptionParty1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Option party expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(OptionParty2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,6 +206,7 @@ public class OptionParty1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionParty1Choice";
 				definition = "Choice of format for option party.";
+				nextVersions_lazy = () -> Arrays.asList(OptionParty2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

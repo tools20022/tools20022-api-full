@@ -79,6 +79,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Statement36"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Characteristics of the report."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement58 Statement58}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -117,6 +123,14 @@ public class Statement36 {
 	 * definition} =
 	 * "Identification of the SecuritiesStatementQuery message sent to request this statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement58#mmQueryReference
+	 * Statement58.mmQueryReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryReference = new MMMessageAttribute() {
@@ -128,6 +142,7 @@ public class Statement36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the SecuritiesStatementQuery message sent to request this statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement58.mmQueryReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -159,6 +174,14 @@ public class Statement36 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference common to all pages of a report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement58#mmReportIdentification
+	 * Statement58.mmReportIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReportIdentification = new MMMessageAttribute() {
@@ -169,6 +192,7 @@ public class Statement36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
 			definition = "Reference common to all pages of a report.";
+			nextVersions_lazy = () -> Arrays.asList(Statement58.mmReportIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -206,6 +230,13 @@ public class Statement36 {
 	 * definition} =
 	 * "Specifies whether the data is either historical (true) or current (false)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement58#mmHistoricData
+	 * Statement58.mmHistoricData}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmHistoricData = new MMMessageAttribute() {
@@ -217,6 +248,7 @@ public class Statement36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricData";
 			definition = "Specifies whether the data is either historical (true) or current (false).";
+			nextVersions_lazy = () -> Arrays.asList(Statement58.mmHistoricData);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -254,6 +286,14 @@ public class Statement36 {
 	 * definition} =
 	 * "Indicates whether there is activity or information update reported in the statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement58#mmActivityIndicator
+	 * Statement58.mmActivityIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmActivityIndicator = new MMMessageAttribute() {
@@ -265,6 +305,7 @@ public class Statement36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement58.mmActivityIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -302,6 +343,14 @@ public class Statement36 {
 	 * definition} =
 	 * "Indicates whether the statement reports holdings at subsafekeeping account level."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement58#mmSubAccountIndicator
+	 * Statement58.mmSubAccountIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubAccountIndicator = new MMMessageAttribute() {
@@ -313,6 +362,7 @@ public class Statement36 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountIndicator";
 			definition = "Indicates whether the statement reports holdings at subsafekeeping account level.";
+			nextVersions_lazy = () -> Arrays.asList(Statement58.mmSubAccountIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -329,6 +379,7 @@ public class Statement36 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement36";
 				definition = "Characteristics of the report.";
+				nextVersions_lazy = () -> Arrays.asList(Statement58.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

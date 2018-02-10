@@ -213,7 +213,7 @@ public class InvoiceFinancingStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The result of the technical validation (e.g. Accepted, Reception error) executed on the  request message."
+	 * "The result of the technical validation (e.g. Accepted, Reception error) executed on the request message."
 	 * </li>
 	 * </ul>
 	 */
@@ -224,7 +224,7 @@ public class InvoiceFinancingStatus extends Status {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValidationStatus";
-			definition = "The result of the technical validation (e.g. Accepted, Reception error) executed on the  request message.";
+			definition = "The result of the technical validation (e.g. Accepted, Reception error) executed on the request message.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TechnicalValidationStatusCode.mmObject();
@@ -553,7 +553,7 @@ public class InvoiceFinancingStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "&lt;p&gt;Indicates the reasons that have determined the result of the single request.&lt;/p&gt;"
+	 * "&lt;p&gt;Indicates the reasons that have determined the result of the single request.&lt;/p&gt;."
 	 * </li>
 	 * </ul>
 	 */
@@ -564,7 +564,7 @@ public class InvoiceFinancingStatus extends Status {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancingStatusReason";
-			definition = "<p>Indicates the reasons that have determined the result of the single request.</p>";
+			definition = "<p>Indicates the reasons that have determined the result of the single request.</p>.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancingStatusReasonCode.mmObject();

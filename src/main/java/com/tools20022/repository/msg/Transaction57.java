@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08;
 import com.tools20022.repository.choice.Status23Choice;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.*;
@@ -96,7 +96,7 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08#mmTransactions
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08#mmTransactions
  * SecuritiesTransactionPendingReport002V08.mmTransactions}</li>
  * </ul>
  * </li>

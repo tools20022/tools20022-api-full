@@ -491,6 +491,63 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmCCPEligibility
 	 * SettlementDetails139.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmCCPEligibility
+	 * SettlementDetails140.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmCCPEligibility
+	 * SettlementDetails147.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmCCPEligibility
+	 * SettlementDetails142.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmCCPEligibility
+	 * SettlementDetails144.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmCCPEligibility
+	 * SettlementDetails148.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmCCPEligibility
+	 * SettlementDetails145.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmCCPEligibility
+	 * SettlementDetails146.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmCCPEligibility
+	 * SettlementDetails143.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmCCPEligibility
+	 * SettlementDetails149.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmCCPEligibility
+	 * SettlementDetails150.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmCCPEligibility
+	 * SettlementDetails151.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmCCPEligibility
+	 * SettlementDetails152.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmCCPEligibility
+	 * SettlementDetails155.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmCCPEligibility
+	 * SettlementDetails156.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmCCPEligibility
+	 * SettlementDetails157.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmCCPEligibility
+	 * SettlementDetails158.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmCCPEligibility
+	 * SettlementDetails160.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmCCPEligibility
+	 * SettlementDetails161.mmCCPEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmCCPEligibility
+	 * SettlementDetails162.mmCCPEligibility}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -535,7 +592,10 @@ public class SecuritiesDeliveryObligation extends Obligation {
 					SettlementDetails116.mmCCPEligibility, SettlementDetails113.mmCCPEligibility, SettlementDetails128.mmCCPEligibility, SettlementDetails120.mmCCPEligibility, SettlementDetails119.mmCCPEligibility,
 					SettlementDetails126.mmCCPEligibility, SettlementDetails122.mmCCPEligibility, SettlementDetails127.mmCCPEligibility, SettlementDetails121.mmCCPEligibility, SettlementDetails134.mmCCPEligibility,
 					SettlementDetails137.mmCCPEligibility, SettlementDetails132.mmCCPEligibility, SettlementDetails138.mmCCPEligibility, SettlementDetails130.mmCCPEligibility, SettlementDetails133.mmCCPEligibility,
-					SettlementDetails139.mmCCPEligibility);
+					SettlementDetails139.mmCCPEligibility, SettlementDetails140.mmCCPEligibility, SettlementDetails147.mmCCPEligibility, SettlementDetails142.mmCCPEligibility, SettlementDetails144.mmCCPEligibility,
+					SettlementDetails148.mmCCPEligibility, SettlementDetails145.mmCCPEligibility, SettlementDetails146.mmCCPEligibility, SettlementDetails143.mmCCPEligibility, SettlementDetails149.mmCCPEligibility,
+					SettlementDetails150.mmCCPEligibility, SettlementDetails151.mmCCPEligibility, SettlementDetails152.mmCCPEligibility, SettlementDetails155.mmCCPEligibility, SettlementDetails156.mmCCPEligibility,
+					SettlementDetails157.mmCCPEligibility, SettlementDetails158.mmCCPEligibility, SettlementDetails160.mmCCPEligibility, SettlementDetails161.mmCCPEligibility, SettlementDetails162.mmCCPEligibility);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -916,6 +976,63 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmNettingEligibility
 	 * SettlementDetails139.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmNettingEligibility
+	 * SettlementDetails140.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmNettingEligibility
+	 * SettlementDetails147.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmNettingEligibility
+	 * SettlementDetails142.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmNettingEligibility
+	 * SettlementDetails144.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmNettingEligibility
+	 * SettlementDetails148.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmNettingEligibility
+	 * SettlementDetails145.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmNettingEligibility
+	 * SettlementDetails146.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmNettingEligibility
+	 * SettlementDetails143.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmNettingEligibility
+	 * SettlementDetails149.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmNettingEligibility
+	 * SettlementDetails150.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmNettingEligibility
+	 * SettlementDetails151.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmNettingEligibility
+	 * SettlementDetails152.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmNettingEligibility
+	 * SettlementDetails155.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmNettingEligibility
+	 * SettlementDetails156.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmNettingEligibility
+	 * SettlementDetails157.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmNettingEligibility
+	 * SettlementDetails158.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmNettingEligibility
+	 * SettlementDetails160.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmNettingEligibility
+	 * SettlementDetails161.mmNettingEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmNettingEligibility
+	 * SettlementDetails162.mmNettingEligibility}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -960,7 +1077,11 @@ public class SecuritiesDeliveryObligation extends Obligation {
 					SettlementDetails116.mmNettingEligibility, NettingEligibility5Choice.mmIndicator, SettlementDetails113.mmNettingEligibility, SettlementDetails128.mmNettingEligibility, SettlementDetails120.mmNettingEligibility,
 					SettlementDetails119.mmNettingEligibility, SettlementDetails126.mmNettingEligibility, SettlementDetails122.mmNettingEligibility, SettlementDetails127.mmNettingEligibility, SettlementDetails121.mmNettingEligibility,
 					SettlementDetails134.mmNettingEligibility, SettlementDetails137.mmNettingEligibility, SettlementDetails132.mmNettingEligibility, SettlementDetails138.mmNettingEligibility, SettlementDetails130.mmNettingEligibility,
-					SettlementDetails133.mmNettingEligibility, SettlementDetails139.mmNettingEligibility);
+					SettlementDetails133.mmNettingEligibility, SettlementDetails139.mmNettingEligibility, SettlementDetails140.mmNettingEligibility, SettlementDetails147.mmNettingEligibility, SettlementDetails142.mmNettingEligibility,
+					SettlementDetails144.mmNettingEligibility, SettlementDetails148.mmNettingEligibility, SettlementDetails145.mmNettingEligibility, SettlementDetails146.mmNettingEligibility, SettlementDetails143.mmNettingEligibility,
+					SettlementDetails149.mmNettingEligibility, SettlementDetails150.mmNettingEligibility, SettlementDetails151.mmNettingEligibility, SettlementDetails152.mmNettingEligibility, SettlementDetails155.mmNettingEligibility,
+					SettlementDetails156.mmNettingEligibility, SettlementDetails157.mmNettingEligibility, SettlementDetails158.mmNettingEligibility, SettlementDetails160.mmNettingEligibility, SettlementDetails161.mmNettingEligibility,
+					SettlementDetails162.mmNettingEligibility);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1110,6 +1231,18 @@ public class SecuritiesDeliveryObligation extends Obligation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmTransferCurrency
 	 * FinancialInstrument46.mmTransferCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferCurrency
+	 * Transfer35.mmTransferCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer34#mmTransferCurrency
+	 * Transfer34.mmTransferCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmTransferCurrency
+	 * FinancialInstrument60.mmTransferCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65#mmTransferCurrency
+	 * FinancialInstrument65.mmTransferCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1133,7 +1266,8 @@ public class SecuritiesDeliveryObligation extends Obligation {
 		{
 			derivation_lazy = () -> Arrays.asList(Transfer18.mmTransferCurrency, Transfer26.mmTransferCurrency, Transfer13.mmTransferCurrency, Transfer23.mmTransferCurrency, Transfer11.mmTransferCurrency, Transfer19.mmTransferCurrency,
 					Transfer27.mmTransferCurrency, Transfer28.mmTransferCurrency, Transfer29.mmTransferCurrency, FinancialInstrument40.mmTransferCurrency, FinancialInstrument39.mmTransferCurrency, Transfer31.mmTransferCurrency,
-					Transfer30.mmTransferCurrency, Transfer33.mmTransferCurrency, FinancialInstrument48.mmTransferCurrency, FinancialInstrument46.mmTransferCurrency);
+					Transfer30.mmTransferCurrency, Transfer33.mmTransferCurrency, FinancialInstrument48.mmTransferCurrency, FinancialInstrument46.mmTransferCurrency, Transfer35.mmTransferCurrency, Transfer34.mmTransferCurrency,
+					FinancialInstrument60.mmTransferCurrency, FinancialInstrument65.mmTransferCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesDeliveryObligation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

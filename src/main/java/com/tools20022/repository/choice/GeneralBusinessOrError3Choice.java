@@ -71,6 +71,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "It is used to provide some or all of the members with information related to the processing of the system."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError5Choice
+ * GeneralBusinessOrError5Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError1Choice
@@ -110,6 +118,14 @@ public class GeneralBusinessOrError3Choice {
 	 * definition} =
 	 * "Indicates that an operational error has been issued during the processing of the related request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError5Choice#mmOperationalError
+	 * GeneralBusinessOrError5Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +141,7 @@ public class GeneralBusinessOrError3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError5Choice.mmOperationalError);
 			previousVersion_lazy = () -> GeneralBusinessOrError1Choice.mmOperationalError;
 			minOccurs = 1;
 			isComposite = true;
@@ -158,6 +175,14 @@ public class GeneralBusinessOrError3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reports either on the business information or on a business error."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError5Choice#mmBusinessReport
+	 * GeneralBusinessOrError5Choice.mmBusinessReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -173,6 +198,7 @@ public class GeneralBusinessOrError3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports either on the business information or on a business error.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError5Choice.mmBusinessReport);
 			previousVersion_lazy = () -> GeneralBusinessOrError1Choice.mmBusinessReport;
 			minOccurs = 1;
 			isComposite = true;
@@ -189,6 +215,7 @@ public class GeneralBusinessOrError3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessOrError3Choice";
 				definition = "It is used to provide some or all of the members with information related to the processing of the system.";
+				nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError5Choice.mmObject());
 				previousVersion_lazy = () -> GeneralBusinessOrError1Choice.mmObject();
 			}
 		});

@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Unique identifier of a the related Invoice
+ * Unique identifier of a the related Invoice.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -69,7 +69,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "BillingIdentification1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Unique identifier of a the related Invoice"</li>
+ * definition} = "Unique identifier of a the related Invoice."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingIdentification2
+ * BillingIdentification2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,7 +113,15 @@ public class BillingIdentification1 {
 	 * name} = "BillingIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unique reference of a the related Invoice"</li>
+	 * definition} = "Unique reference of a the related Invoice."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingIdentification2#mmBillingIdentification
+	 * BillingIdentification2.mmBillingIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
@@ -117,7 +132,8 @@ public class BillingIdentification1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingIdentification";
-			definition = "Unique reference of a the related Invoice";
+			definition = "Unique reference of a the related Invoice.";
+			nextVersions_lazy = () -> Arrays.asList(BillingIdentification2.mmBillingIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -139,7 +155,8 @@ public class BillingIdentification1 {
 					}
 				})).get();
 				name = "BillingIdentification1";
-				definition = "Unique identifier of a the related Invoice";
+				definition = "Unique identifier of a the related Invoice.";
+				nextVersions_lazy = () -> Arrays.asList(BillingIdentification2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

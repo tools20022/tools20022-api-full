@@ -20,10 +20,7 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.msg.InvestmentAccount24;
-import com.tools20022.repository.msg.InvestmentAccount41;
-import com.tools20022.repository.msg.InvestmentAccount55;
-import com.tools20022.repository.msg.InvestmentAccount57;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
@@ -140,6 +137,9 @@ public class ConstraintAccountIdentificationGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline#forInvestmentAccount57
 	 * ConstraintAccountIdentificationGuideline.forInvestmentAccount57}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline#forInvestmentAccount65
+	 * ConstraintAccountIdentificationGuideline.forInvestmentAccount65}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -155,7 +155,8 @@ public class ConstraintAccountIdentificationGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationGuideline";
 			definition = "It is recommended that AccountIdentification be used to identify an account.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount57);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount57,
+					com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount41;
 			owner_lazy = () -> InvestmentAccount55.mmObject();
 		}
@@ -179,6 +180,14 @@ public class ConstraintAccountIdentificationGuideline {
 	 * definition} =
 	 * "It is recommended that AccountIdentification be used to identify an account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline#forInvestmentAccount68
+	 * ConstraintAccountIdentificationGuideline.forInvestmentAccount68}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -192,8 +201,81 @@ public class ConstraintAccountIdentificationGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationGuideline";
 			definition = "It is recommended that AccountIdentification be used to identify an account.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount55;
 			owner_lazy = () -> InvestmentAccount57.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount65
+	 * InvestmentAccount65}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccountIdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that AccountIdentification be used to identify an account."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline#forInvestmentAccount55
+	 * ConstraintAccountIdentificationGuideline.forInvestmentAccount55}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount65> forInvestmentAccount65 = new MMConstraint<InvestmentAccount65>() {
+		{
+			validator = ConstraintAccountIdentificationGuideline::checkInvestmentAccount65;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AccountIdentificationGuideline";
+			definition = "It is recommended that AccountIdentification be used to identify an account.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount55;
+			owner_lazy = () -> InvestmentAccount65.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68
+	 * InvestmentAccount68}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccountIdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that AccountIdentification be used to identify an account."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline#forInvestmentAccount57
+	 * ConstraintAccountIdentificationGuideline.forInvestmentAccount57}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount68> forInvestmentAccount68 = new MMConstraint<InvestmentAccount68>() {
+		{
+			validator = ConstraintAccountIdentificationGuideline::checkInvestmentAccount68;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AccountIdentificationGuideline";
+			definition = "It is recommended that AccountIdentification be used to identify an account.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationGuideline.forInvestmentAccount57;
+			owner_lazy = () -> InvestmentAccount68.mmObject();
 		}
 	};
 
@@ -226,6 +308,22 @@ public class ConstraintAccountIdentificationGuideline {
 	 * account.
 	 */
 	public static void checkInvestmentAccount57(InvestmentAccount57 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that AccountIdentification be used to identify an
+	 * account.
+	 */
+	public static void checkInvestmentAccount65(InvestmentAccount65 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that AccountIdentification be used to identify an
+	 * account.
+	 */
+	public static void checkInvestmentAccount68(InvestmentAccount68 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

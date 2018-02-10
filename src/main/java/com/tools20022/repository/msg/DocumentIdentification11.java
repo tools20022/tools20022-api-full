@@ -189,6 +189,13 @@ import javax.xml.bind.annotation.XmlType;
  * "DocumentIdentification11"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification and creation date of a document."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DocumentIdentification50
+ * DocumentIdentification50}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -230,6 +237,14 @@ public class DocumentIdentification11 {
 	 * definition} =
 	 * "Unique identifier of the document (message) assigned by the sender of the document."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification50#mmIdentification
+	 * DocumentIdentification50.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -241,6 +256,7 @@ public class DocumentIdentification11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the document (message) assigned by the sender of the document.";
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification50.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -281,6 +297,14 @@ public class DocumentIdentification11 {
 	 * definition} =
 	 * "Date and time at which the document (message) was created by the sender."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification50#mmCreationDateTime
+	 * DocumentIdentification50.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -292,6 +316,7 @@ public class DocumentIdentification11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the document (message) was created by the sender.";
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification50.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -332,6 +357,14 @@ public class DocumentIdentification11 {
 	 * definition} =
 	 * "Specifies if this document is a copy, a duplicate, or a duplicate of a copy."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DocumentIdentification50#mmCopyDuplicate
+	 * DocumentIdentification50.mmCopyDuplicate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCopyDuplicate = new MMMessageAttribute() {
@@ -343,6 +376,7 @@ public class DocumentIdentification11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicate";
 			definition = "Specifies if this document is a copy, a duplicate, or a duplicate of a copy.";
+			nextVersions_lazy = () -> Arrays.asList(DocumentIdentification50.mmCopyDuplicate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CopyDuplicate1Code.mmObject();
@@ -371,6 +405,7 @@ public class DocumentIdentification11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DocumentIdentification11";
 				definition = "Identification and creation date of a document.";
+				nextVersions_lazy = () -> Arrays.asList(DocumentIdentification50.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

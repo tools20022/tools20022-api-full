@@ -105,7 +105,7 @@ public class ElementIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Refers to the identification number of  the document in which the mismatch was found"
+	 * "Refers to the identification number of the document in which the mismatch was found."
 	 * </li>
 	 * </ul>
 	 */
@@ -116,7 +116,7 @@ public class ElementIdentification1 {
 			xmlTag = "DocIndx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentIndex";
-			definition = "Refers to the identification number of  the document in which the mismatch was found";
+			definition = "Refers to the identification number of the document in which the mismatch was found.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -234,7 +234,7 @@ public class ElementIdentification1 {
 	 * name} = "ElementValue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Content of the element"</li>
+	 * definition} = "Content of the element."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmElementValue = new MMMessageAttribute() {
@@ -244,7 +244,7 @@ public class ElementIdentification1 {
 			xmlTag = "ElmtVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElementValue";
-			definition = "Content of the element";
+			definition = "Content of the element.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();

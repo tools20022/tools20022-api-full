@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent)
- * to the acquirer (or its agent) , to check the end-to-end communication, to
+ * to the acquirer (or its agent), to check the end-to-end communication, to
  * test the availability of this acquirer, or to validate the security
  * environment.
  * <p>
@@ -80,7 +80,7 @@ import javax.xml.bind.annotation.*;
  * "AcceptorDiagnosticRequestV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment."
+ * "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -265,7 +265,7 @@ public class AcceptorDiagnosticRequestV02 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticRequestV02";
-				definition = "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment.";
+				definition = "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment.";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV03.mmObject());
 				previousVersion_lazy = () -> AcceptorDiagnosticRequestV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());

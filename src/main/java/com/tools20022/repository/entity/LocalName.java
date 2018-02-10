@@ -236,6 +236,9 @@ public class LocalName {
 	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#mmFullName
 	 * SecurityInstrumentDescription11.mmFullName}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmISOSecurityLongName
+	 * CommonFinancialInstrumentAttributes4.mmISOSecurityLongName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument57#mmName
 	 * FinancialInstrument57.mmName}</li>
 	 * <li>
@@ -262,6 +265,21 @@ public class LocalName {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.HoldBackInformation3#mmFinancialInstrumentName
 	 * HoldBackInformation3.mmFinancialInstrumentName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmName
+	 * FinancialInstrument60.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument64#mmName
+	 * FinancialInstrument64.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmName
+	 * FinancialInstrument63.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmName
+	 * FinancialInstrument61.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65#mmName
+	 * FinancialInstrument65.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -288,8 +306,9 @@ public class LocalName {
 					CommonFinancialInstrumentAttributes1.mmISOSecurityLongName, FinancialInstrumentName1.mmISOLongName, FinancialInstrument37.mmName, FinancialInstrument35.mmName, FinancialInstrument34.mmName, FinancialInstrument36.mmName,
 					Fund2.mmName, Fund1.mmName, FinancialInstrument40.mmName, FinancialInstrument39.mmName, Fund3.mmName, Fund4.mmName, FinancialInstrument51.mmName, FinancialInstrument50.mmName, FinancialInstrument45.mmName,
 					FinancialInstrument49.mmName, FinancialInstrument48.mmName, FinancialInstrument47.mmName, FinancialInstrument46.mmName, SecurityInstrumentDescription9.mmFullName, SecurityInstrumentDescription11.mmFullName,
-					FinancialInstrument57.mmName, FinancialInstrument56.mmName, HoldBackInformation2.mmFinancialInstrumentName, FinancialInstrument55.mmName, TransparencyDataReport11.mmFullName, TransparencyDataReport12.mmFullName,
-					TransparencyDataReport10.mmFullName, TransparencyDataReport14.mmFullName, HoldBackInformation3.mmFinancialInstrumentName);
+					CommonFinancialInstrumentAttributes4.mmISOSecurityLongName, FinancialInstrument57.mmName, FinancialInstrument56.mmName, HoldBackInformation2.mmFinancialInstrumentName, FinancialInstrument55.mmName,
+					TransparencyDataReport11.mmFullName, TransparencyDataReport12.mmFullName, TransparencyDataReport10.mmFullName, TransparencyDataReport14.mmFullName, HoldBackInformation3.mmFinancialInstrumentName,
+					FinancialInstrument60.mmName, FinancialInstrument64.mmName, FinancialInstrument63.mmName, FinancialInstrument61.mmName, FinancialInstrument65.mmName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -400,6 +419,9 @@ public class LocalName {
 	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription9#mmShortName
 	 * SecurityInstrumentDescription9.mmShortName}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmISOSecurityShortName
+	 * CommonFinancialInstrumentAttributes4.mmISOSecurityShortName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument57#mmShortName
 	 * FinancialInstrument57.mmShortName}</li>
 	 * <li>
@@ -408,6 +430,21 @@ public class LocalName {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument55#mmShortName
 	 * FinancialInstrument55.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmShortName
+	 * FinancialInstrument60.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument64#mmShortName
+	 * FinancialInstrument64.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmShortName
+	 * FinancialInstrument63.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmShortName
+	 * FinancialInstrument61.mmShortName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65#mmShortName
+	 * FinancialInstrument65.mmShortName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -422,19 +459,20 @@ public class LocalName {
 	 * name} = "ShortName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Short name of the security"</li>
+	 * definition} = "Short name of the security."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmShortName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes1.mmISOSecurityShortName, FinancialInstrumentName1.mmISOShortName, FinancialInstrument51.mmShortName, FinancialInstrument50.mmShortName,
 					FinancialInstrument45.mmShortName, FinancialInstrument49.mmShortName, FinancialInstrument48.mmShortName, FinancialInstrument47.mmShortName, FinancialInstrument46.mmShortName, SecurityInstrumentDescription9.mmShortName,
-					FinancialInstrument57.mmShortName, FinancialInstrument56.mmShortName, FinancialInstrument55.mmShortName);
+					CommonFinancialInstrumentAttributes4.mmISOSecurityShortName, FinancialInstrument57.mmShortName, FinancialInstrument56.mmShortName, FinancialInstrument55.mmShortName, FinancialInstrument60.mmShortName,
+					FinancialInstrument64.mmShortName, FinancialInstrument63.mmShortName, FinancialInstrument61.mmShortName, FinancialInstrument65.mmShortName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LocalName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ShortName";
-			definition = "Short name of the security";
+			definition = "Short name of the security.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

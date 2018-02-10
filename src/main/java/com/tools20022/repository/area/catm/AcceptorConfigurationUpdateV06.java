@@ -25,7 +25,7 @@ import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.AcceptorConfiguration6;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header27;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017;
+import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -58,8 +58,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
- * CAPETerminalManagementMaintenance20162017}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
+ * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -82,6 +82,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Update of the acceptor configuration to be downloaded by the terminal management system."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV07
+ * AcceptorConfigurationUpdateV07}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -118,6 +126,14 @@ public class AcceptorConfigurationUpdateV06 {
 	 * definition} =
 	 * "Set of characteristics related to the transfer of the acceptor parameters."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV07#mmHeader
+	 * AcceptorConfigurationUpdateV07.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +147,7 @@ public class AcceptorConfigurationUpdateV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics related to the transfer of the acceptor parameters.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV07.mmHeader);
 			previousVersion_lazy = () -> AcceptorConfigurationUpdateV05.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -170,6 +187,14 @@ public class AcceptorConfigurationUpdateV06 {
 	 * definition} =
 	 * "Acceptor configuration to be downloaded from the terminal management system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV07#mmAcceptorConfiguration
+	 * AcceptorConfigurationUpdateV07.mmAcceptorConfiguration}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +208,7 @@ public class AcceptorConfigurationUpdateV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptorConfiguration";
 			definition = "Acceptor configuration to be downloaded from the terminal management system.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV07.mmAcceptorConfiguration);
 			previousVersion_lazy = () -> AcceptorConfigurationUpdateV05.mmAcceptorConfiguration;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -221,6 +247,14 @@ public class AcceptorConfigurationUpdateV06 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV07#mmSecurityTrailer
+	 * AcceptorConfigurationUpdateV07.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -234,6 +268,7 @@ public class AcceptorConfigurationUpdateV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV07.mmSecurityTrailer);
 			previousVersion_lazy = () -> AcceptorConfigurationUpdateV05.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -255,8 +290,9 @@ public class AcceptorConfigurationUpdateV06 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationUpdateV06";
 				definition = "Update of the acceptor configuration to be downloaded by the terminal management system.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV07.mmObject());
 				previousVersion_lazy = () -> AcceptorConfigurationUpdateV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPETerminalManagementMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCfgtnUpd";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

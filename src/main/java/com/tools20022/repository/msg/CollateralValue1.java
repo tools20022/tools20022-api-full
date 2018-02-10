@@ -76,6 +76,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CollateralValue1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides details of the collateral reference data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValue2
+ * CollateralValue2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,6 +123,14 @@ public class CollateralValue1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a security by an ISIN."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValue2#mmSecurityIdentification
+	 * CollateralValue2.mmSecurityIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
@@ -127,6 +142,7 @@ public class CollateralValue1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security by an ISIN.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValue2.mmSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
@@ -164,6 +180,14 @@ public class CollateralValue1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Valuation date for the price."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValue2#mmValuationDate
+	 * CollateralValue2.mmValuationDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValuationDate = new MMMessageAttribute() {
@@ -175,6 +199,7 @@ public class CollateralValue1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationDate";
 			definition = "Valuation date for the price.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValue2.mmValuationDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -213,6 +238,14 @@ public class CollateralValue1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides details of the currency of the valuation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValue2#mmValuationCurrency
+	 * CollateralValue2.mmValuationCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValuationCurrency = new MMMessageAttribute() {
@@ -224,6 +257,7 @@ public class CollateralValue1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationCurrency";
 			definition = "Provides details of the currency of the valuation.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValue2.mmValuationCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -262,6 +296,14 @@ public class CollateralValue1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides details of the price provided for the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValue2#mmValuationPrice
+	 * CollateralValue2.mmValuationPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValuationPrice = new MMMessageAttribute() {
@@ -273,6 +315,7 @@ public class CollateralValue1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuationPrice";
 			definition = "Provides details of the price provided for the security.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValue2.mmValuationPrice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountOrCoefficientPrice1Choice.mmObject();
@@ -289,6 +332,7 @@ public class CollateralValue1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValue1";
 				definition = "Provides details of the collateral reference data.";
+				nextVersions_lazy = () -> Arrays.asList(CollateralValue2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

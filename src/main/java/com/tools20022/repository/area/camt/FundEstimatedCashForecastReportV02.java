@@ -179,7 +179,7 @@ public class FundEstimatedCashForecastReportV02 {
 	 * name} = "PreviousReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reference to a linked message that was previously sent"</li>
+	 * definition} = "Reference to a linked message that was previously sent."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmPreviousReference = new MMMessageBuildingBlock() {
@@ -187,7 +187,7 @@ public class FundEstimatedCashForecastReportV02 {
 			xmlTag = "PrvsRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
-			definition = "Reference to a linked message that was previously sent";
+			definition = "Reference to a linked message that was previously sent.";
 			minOccurs = 0;
 			complexType_lazy = () -> AdditionalReference3.mmObject();
 		}
@@ -267,7 +267,7 @@ public class FundEstimatedCashForecastReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example,  subscriptions, redemptions or switch to/from a specified investment fund."
+	 * "Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switch to/from a specified investment fund."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +276,7 @@ public class FundEstimatedCashForecastReportV02 {
 			xmlTag = "EstmtdFndCshFcstDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedFundCashForecastDetails";
-			definition = "Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example,  subscriptions, redemptions or switch to/from a specified investment fund.";
+			definition = "Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switch to/from a specified investment fund.";
 			minOccurs = 1;
 			complexType_lazy = () -> EstimatedFundCashForecast1.mmObject();
 		}
@@ -311,7 +311,7 @@ public class FundEstimatedCashForecastReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information that can not be captured in the structured fields and/or any other specific block. "
+	 * "Additional information that can not be captured in the structured fields and/or any other specific block."
 	 * </li>
 	 * </ul>
 	 */
@@ -320,7 +320,7 @@ public class FundEstimatedCashForecastReportV02 {
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
-			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
+			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
 		}

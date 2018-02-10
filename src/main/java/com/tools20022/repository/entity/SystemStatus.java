@@ -19,7 +19,6 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
-import com.tools20022.repository.choice.ClosureReason2Choice;
 import com.tools20022.repository.choice.ClosureReasonChoice;
 import com.tools20022.repository.choice.SystemStatus2Choice;
 import com.tools20022.repository.codeset.MemberStatusCode;
@@ -91,6 +90,12 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent7#mmStatus
  * PointOfInteractionComponent7.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2#mmClosureInformation
+ * SystemAvailabilityAndEvents2.mmClosureInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8#mmStatus
+ * PointOfInteractionComponent8.mmStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -104,8 +109,6 @@ import java.util.Optional;
  * <li>{@linkplain com.tools20022.repository.msg.SystemStatus1Choice
  * SystemStatus1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SystemStatus1 SystemStatus1}</li>
- * <li>{@linkplain com.tools20022.repository.choice.ClosureReason2Choice
- * ClosureReason2Choice}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentStatus1
  * PointOfInteractionComponentStatus1}</li>
@@ -118,6 +121,7 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentStatus3
  * PointOfInteractionComponentStatus3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemStatus3 SystemStatus3}</li>
  * </ul>
  * </li>
  * <li>
@@ -181,6 +185,8 @@ public class SystemStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentStatus3#mmStatus
 	 * PointOfInteractionComponentStatus3.mmStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemStatus3#mmStatus
+	 * SystemStatus3.mmStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -212,7 +218,7 @@ public class SystemStatus extends Status {
 	public static final MMBusinessAttribute mmStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(SystemStatusDetails1.mmStatus, SystemStatus1Choice.mmCode, SystemStatus1Choice.mmProprietary, SystemStatus1.mmStatus, PointOfInteractionComponentStatus1.mmStatus, SystemStatus2.mmStatus,
-					SystemStatus2Choice.mmCode, SystemStatus2Choice.mmProprietary, PointOfInteractionComponentStatus2.mmStatus, PointOfInteractionComponentStatus3.mmStatus);
+					SystemStatus2Choice.mmCode, SystemStatus2Choice.mmProprietary, PointOfInteractionComponentStatus2.mmStatus, PointOfInteractionComponentStatus3.mmStatus, SystemStatus3.mmStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -256,6 +262,8 @@ public class SystemStatus extends Status {
 	 * MemberDetails.mmStatus}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Member1#mmStatus
 	 * Member1.mmStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Member4#mmStatus
+	 * Member4.mmStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -275,7 +283,7 @@ public class SystemStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmMemberStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(MemberDetails.mmStatus, Member1.mmStatus);
+			derivation_lazy = () -> Arrays.asList(MemberDetails.mmStatus, Member1.mmStatus, Member4.mmStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -397,12 +405,12 @@ public class SystemStatus extends Status {
 				definition = "Status of a system and the period of time during which the status is valid.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmStatus, com.tools20022.repository.entity.SystemMemberRole.mmMemberStatus);
 				derivationElement_lazy = () -> Arrays.asList(SystemAvailabilityAndEvents1.mmClosureInformation, PointOfInteractionComponent3.mmStatus, PointOfInteractionComponent4.mmStatus, PointOfInteractionComponent5.mmStatus,
-						PointOfInteractionComponent6.mmStatus, PointOfInteractionComponent7.mmStatus);
+						PointOfInteractionComponent6.mmStatus, PointOfInteractionComponent7.mmStatus, SystemAvailabilityAndEvents2.mmClosureInformation, PointOfInteractionComponent8.mmStatus);
 				superType_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemStatus.mmStatus, com.tools20022.repository.entity.SystemStatus.mmMemberStatus, com.tools20022.repository.entity.SystemStatus.mmSystem,
 						com.tools20022.repository.entity.SystemStatus.mmSystemMemberRole);
-				derivationComponent_lazy = () -> Arrays.asList(SystemStatusDetails1.mmObject(), ClosureReasonChoice.mmObject(), SystemStatus1Choice.mmObject(), SystemStatus1.mmObject(), ClosureReason2Choice.mmObject(),
-						PointOfInteractionComponentStatus1.mmObject(), SystemStatus2.mmObject(), SystemStatus2Choice.mmObject(), PointOfInteractionComponentStatus2.mmObject(), PointOfInteractionComponentStatus3.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(SystemStatusDetails1.mmObject(), ClosureReasonChoice.mmObject(), SystemStatus1Choice.mmObject(), SystemStatus1.mmObject(), PointOfInteractionComponentStatus1.mmObject(),
+						SystemStatus2.mmObject(), SystemStatus2Choice.mmObject(), PointOfInteractionComponentStatus2.mmObject(), PointOfInteractionComponentStatus3.mmObject(), SystemStatus3.mmObject());
 			}
 
 			@Override

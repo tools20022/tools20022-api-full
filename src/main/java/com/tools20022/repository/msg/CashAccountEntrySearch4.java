@@ -100,6 +100,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CashAccountEntrySearch4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to search for a cash entry."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5
+ * CashAccountEntrySearch5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch3
@@ -145,6 +152,14 @@ public class CashAccountEntrySearch4 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmAccountIdentification
+	 * CashAccountEntrySearch5.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -161,6 +176,7 @@ public class CashAccountEntrySearch4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmAccountIdentification);
 			previousVersion_lazy = () -> CashAccountEntrySearch3.mmAccountIdentification;
 			minOccurs = 0;
 			isComposite = true;
@@ -201,6 +217,14 @@ public class CashAccountEntrySearch4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the entry amount(s) on which the query is performed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmEntryAmount
+	 * CashAccountEntrySearch5.mmEntryAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -217,6 +241,7 @@ public class CashAccountEntrySearch4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmount";
 			definition = "Specifies the entry amount(s) on which the query is performed.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmEntryAmount);
 			previousVersion_lazy = () -> CashAccountEntrySearch3.mmEntryAmount;
 			minOccurs = 0;
 			complexType_lazy = () -> ActiveOrHistoricAmountRange1Choice.mmObject();
@@ -250,6 +275,14 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency of the entry amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmEntryAmountCurrency
+	 * CashAccountEntrySearch5.mmEntryAmountCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -265,6 +298,7 @@ public class CashAccountEntrySearch4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryAmountCurrency";
 			definition = "Currency of the entry amount.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmEntryAmountCurrency);
 			previousVersion_lazy = () -> CashAccountEntrySearch3.mmEntryAmountCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -303,6 +337,14 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether an entry is a credit or a debit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmCreditDebitIndicator
+	 * CashAccountEntrySearch5.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -319,6 +361,7 @@ public class CashAccountEntrySearch4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> CashAccountEntrySearch3.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -358,6 +401,14 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of an entry on the books of the account servicer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmEntryStatus
+	 * CashAccountEntrySearch5.mmEntryStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,6 +425,7 @@ public class CashAccountEntrySearch4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryStatus";
 			definition = "Status of an entry on the books of the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmEntryStatus);
 			previousVersion_lazy = () -> CashAccountEntrySearch3.mmEntryStatus;
 			minOccurs = 0;
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
@@ -414,6 +466,14 @@ public class CashAccountEntrySearch4 {
 	 * definition} =
 	 * "Date and time at which an entry is posted to an account on the account servicer's books."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmEntryDate
+	 * CashAccountEntrySearch5.mmEntryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -430,6 +490,7 @@ public class CashAccountEntrySearch4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntryDate";
 			definition = "Date and time at which an entry is posted to an account on the account servicer's books.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmEntryDate);
 			previousVersion_lazy = () -> CashAccountEntrySearch3.mmEntryDate;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
@@ -466,6 +527,14 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmAccountOwner
+	 * CashAccountEntrySearch5.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -482,6 +551,7 @@ public class CashAccountEntrySearch4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmAccountOwner);
 			previousVersion_lazy = () -> CashAccountEntrySearch3.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -521,7 +591,15 @@ public class CashAccountEntrySearch4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n"
+	 * "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmAccountServicer
+	 * CashAccountEntrySearch5.mmAccountServicer}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -538,7 +616,8 @@ public class CashAccountEntrySearch4 {
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
-			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n";
+			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmAccountServicer);
 			previousVersion_lazy = () -> CashAccountEntrySearch3.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -561,6 +640,7 @@ public class CashAccountEntrySearch4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountEntrySearch4";
 				definition = "Defines the criteria used to search for a cash entry.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccountEntrySearch5.mmObject());
 				previousVersion_lazy = () -> CashAccountEntrySearch3.mmObject();
 			}
 		});

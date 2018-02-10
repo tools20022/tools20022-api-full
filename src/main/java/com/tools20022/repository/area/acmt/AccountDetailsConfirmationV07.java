@@ -337,7 +337,7 @@ public class AccountDetailsConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information about the request or instruction which triggered this confirmation. "
+	 * "Information about the request or instruction which triggered this confirmation."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -351,7 +351,7 @@ public class AccountDetailsConfirmationV07 {
 			xmlTag = "ConfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDetails";
-			definition = "Information about the request or instruction which triggered this confirmation. ";
+			definition = "Information about the request or instruction which triggered this confirmation.";
 			previousVersion_lazy = () -> AccountDetailsConfirmationV06.mmConfirmationDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -491,7 +491,7 @@ public class AccountDetailsConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Confirmation of an intermediary or other party related to the management of the account. "
+	 * "Confirmation of an intermediary or other party related to the management of the account."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -505,7 +505,7 @@ public class AccountDetailsConfirmationV07 {
 			xmlTag = "Intrmies";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediaries";
-			definition = "Confirmation of an intermediary or other party related to the management of the account. ";
+			definition = "Confirmation of an intermediary or other party related to the management of the account.";
 			previousVersion_lazy = () -> AccountDetailsConfirmationV06.mmIntermediaries;
 			maxOccurs = 10;
 			minOccurs = 0;
@@ -747,7 +747,7 @@ public class AccountDetailsConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Confirmation of a cash settlement standing instruction associated to  transactions on the account."
+	 * "Confirmation of a cash settlement standing instruction associated to transactions on the account."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -761,7 +761,7 @@ public class AccountDetailsConfirmationV07 {
 			xmlTag = "CshSttlm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlement";
-			definition = "Confirmation of a cash settlement standing instruction associated to  transactions on the account.";
+			definition = "Confirmation of a cash settlement standing instruction associated to transactions on the account.";
 			previousVersion_lazy = () -> AccountDetailsConfirmationV06.mmCashSettlement;
 			maxOccurs = 8;
 			minOccurs = 0;
@@ -849,7 +849,7 @@ public class AccountDetailsConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information such as remarks or notes that must be conveyed about the party and or  limitations and restrictions."
+	 * "Additional information such as remarks or notes that must be conveyed about the party and or limitations and restrictions."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -863,7 +863,7 @@ public class AccountDetailsConfirmationV07 {
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
-			definition = "Additional information such as remarks or notes that must be conveyed about the party and or  limitations and restrictions.";
+			definition = "Additional information such as remarks or notes that must be conveyed about the party and or limitations and restrictions.";
 			previousVersion_lazy = () -> AccountDetailsConfirmationV06.mmAdditionalInformation;
 			minOccurs = 0;
 			complexType_lazy = () -> AdditiononalInformation12.mmObject();

@@ -27,7 +27,7 @@ import com.tools20022.repository.msg.SettlementInformation8;
  * ISO 20022 Rule: If SettlementMethod is equal to COVE then: -
  * SettlementAccount is not allowed; - Reimbursement agent(s) must be present; -
  * ClearingSystem is not allowed. Part 2 implements: If SettlementMethod is
- * equal to COVE then: - Reimbursement agent(s) must be present;
+ * equal to COVE then: - Reimbursement agent(s) must be present;.
  */
 public class ConstraintSettlementMethod2Part2Rule {
 
@@ -52,7 +52,7 @@ public class ConstraintSettlementMethod2Part2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;"
+	 * "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;."
 	 * </li>
 	 * </ul>
 	 */
@@ -61,7 +61,7 @@ public class ConstraintSettlementMethod2Part2Rule {
 			validator = ConstraintSettlementMethod2Part2Rule::checkSettlementInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod2Part2Rule";
-			definition = "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;";
+			definition = "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;.";
 			owner_lazy = () -> SettlementInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>CoverMethod</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -87,7 +87,7 @@ public class ConstraintSettlementMethod2Part2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;"
+	 * "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;."
 	 * </li>
 	 * </ul>
 	 */
@@ -96,7 +96,7 @@ public class ConstraintSettlementMethod2Part2Rule {
 			validator = ConstraintSettlementMethod2Part2Rule::checkSettlementInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod2Part2Rule";
-			definition = "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;";
+			definition = "ISO 20022 Rule:\nIf SettlementMethod is equal to COVE then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s) must be present;\n- ClearingSystem is not allowed.\nPart 2 implements: \nIf SettlementMethod is equal to COVE then:\n- Reimbursement agent(s) must be present;.";
 			owner_lazy = () -> SettlementInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>CoverMethod</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -107,7 +107,7 @@ public class ConstraintSettlementMethod2Part2Rule {
 	 * SettlementAccount is not allowed; - Reimbursement agent(s) must be
 	 * present; - ClearingSystem is not allowed. Part 2 implements: If
 	 * SettlementMethod is equal to COVE then: - Reimbursement agent(s) must be
-	 * present;
+	 * present;.
 	 */
 	public static void checkSettlementInformation6(SettlementInformation6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -118,7 +118,7 @@ public class ConstraintSettlementMethod2Part2Rule {
 	 * SettlementAccount is not allowed; - Reimbursement agent(s) must be
 	 * present; - ClearingSystem is not allowed. Part 2 implements: If
 	 * SettlementMethod is equal to COVE then: - Reimbursement agent(s) must be
-	 * present;
+	 * present;.
 	 */
 	public static void checkSettlementInformation8(SettlementInformation8 obj) throws Exception {
 		throw new NotImplementedConstraintException();

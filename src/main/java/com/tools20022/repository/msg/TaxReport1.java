@@ -383,7 +383,7 @@ public class TaxReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Structure to deliver link to external attachment or deliver base64-coded attachment inside message. "
+	 * "Structure to deliver link to external attachment or deliver base64-coded attachment inside message."
 	 * </li>
 	 * </ul>
 	 */
@@ -394,7 +394,7 @@ public class TaxReport1 {
 			xmlTag = "AddtlRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReference";
-			definition = "Structure to deliver link to external attachment or deliver base64-coded attachment inside message. ";
+			definition = "Structure to deliver link to external attachment or deliver base64-coded attachment inside message.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DocumentGeneralInformation2.mmObject();
@@ -425,7 +425,7 @@ public class TaxReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information that can not be captured in the structured fields and/or any other specific block. "
+	 * "Additional information that can not be captured in the structured fields and/or any other specific block."
 	 * </li>
 	 * </ul>
 	 */
@@ -436,7 +436,7 @@ public class TaxReport1 {
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
-			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
+			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();

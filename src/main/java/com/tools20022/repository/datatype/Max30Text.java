@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "Max30Text"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies a character string with a maximum length of 30  characters."</li>
+ * "Specifies a character string with a maximum length of 30 characters."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -59,7 +59,7 @@ public class Max30Text {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max30Text";
-				definition = "Specifies a character string with a maximum length of 30  characters.";
+				definition = "Specifies a character string with a maximum length of 30 characters.";
 				maxLength = 30;
 			}
 		});

@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyConversion16
+ * CurrencyConversion16}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CurrencyConversion7
@@ -109,6 +116,14 @@ public class CurrencyConversion11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Result of a requested currency conversion."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion16#mmResult
+	 * CurrencyConversion16.mmResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +139,7 @@ public class CurrencyConversion11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Result of a requested currency conversion.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion16.mmResult);
 			previousVersion_lazy = () -> CurrencyConversion7.mmResult;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -157,7 +173,15 @@ public class CurrencyConversion11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Plain text explaining the result of the  currency conversion request."</li>
+	 * "Plain text explaining the result of the currency conversion request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion16#mmResultReason
+	 * CurrencyConversion16.mmResultReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,7 +196,8 @@ public class CurrencyConversion11 {
 			xmlTag = "RsltRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultReason";
-			definition = "Plain text explaining the result of the  currency conversion request.";
+			definition = "Plain text explaining the result of the currency conversion request.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion16.mmResultReason);
 			previousVersion_lazy = () -> CurrencyConversion7.mmResultReason;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -205,6 +230,14 @@ public class CurrencyConversion11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information about the conversion of currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion16#mmConversionDetails
+	 * CurrencyConversion16.mmConversionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -220,6 +253,7 @@ public class CurrencyConversion11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionDetails";
 			definition = "Information about the conversion of currency.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion16.mmConversionDetails);
 			previousVersion_lazy = () -> CurrencyConversion7.mmConversionDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -237,6 +271,7 @@ public class CurrencyConversion11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion11";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.";
+				nextVersions_lazy = () -> Arrays.asList(CurrencyConversion16.mmObject());
 				previousVersion_lazy = () -> CurrencyConversion7.mmObject();
 			}
 		});

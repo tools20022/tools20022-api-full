@@ -116,7 +116,7 @@ public class ReservationStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * Reservation is not currently in effect.
+	 * Reservation is not currently in effect. .
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -133,14 +133,14 @@ public class ReservationStatusCode extends MMCode {
 	 * name} = "Disabled"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reservation is not currently in effect.\n"</li>
+	 * definition} = "Reservation is not currently in effect.\n."</li>
 	 * </ul>
 	 */
 	public static final ReservationStatusCode Disabled = new ReservationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disabled";
-			definition = "Reservation is not currently in effect.\n";
+			definition = "Reservation is not currently in effect.\n.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReservationStatusCode.mmObject();
 			codeName = "DISA";
 		}
@@ -176,7 +176,7 @@ public class ReservationStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * Reservation has been asked for and is not yet enabled.
+	 * Reservation has been asked for and is not yet enabled. .
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -193,14 +193,15 @@ public class ReservationStatusCode extends MMCode {
 	 * name} = "Requested"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reservation has been asked for and is not yet enabled.\n"</li>
+	 * definition} = "Reservation has been asked for and is not yet enabled.\n."
+	 * </li>
 	 * </ul>
 	 */
 	public static final ReservationStatusCode Requested = new ReservationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Requested";
-			definition = "Reservation has been asked for and is not yet enabled.\n";
+			definition = "Reservation has been asked for and is not yet enabled.\n.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReservationStatusCode.mmObject();
 			codeName = "REQD";
 		}

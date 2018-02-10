@@ -80,6 +80,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Physical and logical characteristics of a POI component (Point of Interaction)."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4
+ * PointOfInteractionComponentCharacteristics4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics2
@@ -119,6 +127,14 @@ public class PointOfInteractionComponentCharacteristics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Memory characteristics of the component."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4#mmMemory
+	 * PointOfInteractionComponentCharacteristics4.mmMemory}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -134,6 +150,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Memory";
 			definition = "Memory characteristics of the component.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics4.mmMemory);
 			previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics2.mmMemory;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.MemoryCharacteristics1.mmObject();
@@ -169,6 +186,14 @@ public class PointOfInteractionComponentCharacteristics3 {
 	 * definition} =
 	 * "Low level communication of the hardware or software component toward another component or an external entity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4#mmCommunication
+	 * PointOfInteractionComponentCharacteristics4.mmCommunication}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -184,6 +209,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Communication";
 			definition = "Low level communication of the hardware or software component toward another component or an external entity.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics4.mmCommunication);
 			previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics2.mmCommunication;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CommunicationCharacteristics3.mmObject();
@@ -216,6 +242,14 @@ public class PointOfInteractionComponentCharacteristics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of security access modules (SAM)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4#mmSecurityAccessModules
+	 * PointOfInteractionComponentCharacteristics4.mmSecurityAccessModules}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +265,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityAccessModules";
 			definition = "Number of security access modules (SAM).";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics4.mmSecurityAccessModules);
 			previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics2.mmSecurityAccessModules;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -264,6 +299,14 @@ public class PointOfInteractionComponentCharacteristics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of subscriber identity modules (SIM)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponentCharacteristics4#mmSubscriberIdentityModules
+	 * PointOfInteractionComponentCharacteristics4.mmSubscriberIdentityModules}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -279,6 +322,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriberIdentityModules";
 			definition = "Number of subscriber identity modules (SIM).";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics4.mmSubscriberIdentityModules);
 			previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics2.mmSubscriberIdentityModules;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -360,7 +404,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Sufficient characteristic information to identify the Key Encryption Key"
+	 * "Sufficient characteristic information to identify the Key Encryption Key."
 	 * </li>
 	 * </ul>
 	 */
@@ -371,7 +415,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 			xmlTag = "KeyChrtc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyCharacteristic";
-			definition = "Sufficient characteristic information to identify the Key Encryption Key";
+			definition = "Sufficient characteristic information to identify the Key Encryption Key.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -406,7 +450,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Use in DUKPT Key to carry last 5 bytes of derivation value"</li>
+	 * "Use in DUKPT Key to carry last 5 bytes of derivation value."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEncryptedKey = new MMMessageAttribute() {
@@ -416,7 +460,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 			xmlTag = "NcrptdKey";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKey";
-			definition = "Use in DUKPT Key to carry last 5 bytes of derivation value";
+			definition = "Use in DUKPT Key to carry last 5 bytes of derivation value.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
@@ -434,6 +478,7 @@ public class PointOfInteractionComponentCharacteristics3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponentCharacteristics3";
 				definition = "Physical and logical characteristics of a POI component (Point of Interaction).";
+				nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponentCharacteristics4.mmObject());
 				previousVersion_lazy = () -> PointOfInteractionComponentCharacteristics2.mmObject();
 			}
 		});

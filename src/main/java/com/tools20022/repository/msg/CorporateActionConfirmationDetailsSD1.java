@@ -70,6 +70,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action confirmation details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD2
+ * CorporateActionConfirmationDetailsSD2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,6 +112,14 @@ public class CorporateActionConfirmationDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD2#mmPlaceAndName
+	 * CorporateActionConfirmationDetailsSD2.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -114,6 +130,7 @@ public class CorporateActionConfirmationDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationDetailsSD2.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -149,6 +166,14 @@ public class CorporateActionConfirmationDetailsSD1 {
 	 * definition} =
 	 * "Indicates how fractional positions will be handled for events with prorated options."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD2#mmProrationRoundingIndicator
+	 * CorporateActionConfirmationDetailsSD2.mmProrationRoundingIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProrationRoundingIndicator = new MMMessageAttribute() {
@@ -159,6 +184,7 @@ public class CorporateActionConfirmationDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationRoundingIndicator";
 			definition = "Indicates how fractional positions will be handled for events with prorated options.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationDetailsSD2.mmProrationRoundingIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FractionDispositionType12Code.mmObject();
@@ -195,7 +221,15 @@ public class CorporateActionConfirmationDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Decimal above which numbers are rounded for prorated options.  (e.g., if the rounding factor is 0.5, numbers of 0.5 and above will be rounded up)."
+	 * "Decimal above which numbers are rounded for prorated options. (e.g., if the rounding factor is 0.5, numbers of 0.5 and above will be rounded up)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationDetailsSD2#mmProrationFraction
+	 * CorporateActionConfirmationDetailsSD2.mmProrationFraction}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -207,7 +241,8 @@ public class CorporateActionConfirmationDetailsSD1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Allocated Cash Value"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationFraction";
-			definition = "Decimal above which numbers are rounded for prorated options.  (e.g., if the rounding factor is 0.5, numbers of 0.5 and above will be rounded up).";
+			definition = "Decimal above which numbers are rounded for prorated options. (e.g., if the rounding factor is 0.5, numbers of 0.5 and above will be rounded up).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationDetailsSD2.mmProrationFraction);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -223,6 +258,7 @@ public class CorporateActionConfirmationDetailsSD1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionConfirmationDetailsSD1";
 				definition = "Provides additional information regarding corporate action confirmation details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationDetailsSD2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

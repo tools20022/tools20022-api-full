@@ -279,7 +279,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the market for the standing settlement instruction. "</li>
+	 * "Identifies the market for the standing settlement instruction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmMarketIdentification = new MMMessageBuildingBlock() {
@@ -287,7 +287,7 @@ public class StandingSettlementInstructionCancellationV01 {
 			xmlTag = "MktId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketIdentification";
-			definition = "Identifies the market for the standing settlement instruction. ";
+			definition = "Identifies the market for the standing settlement instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MarketIdentificationOrCashPurpose1Choice.mmObject();
@@ -324,7 +324,7 @@ public class StandingSettlementInstructionCancellationV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Settlement information that helps to identify the standing settlement  instruction for which the cancellation is sent."
+	 * "Settlement information that helps to identify the standing settlement instruction for which the cancellation is sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -333,7 +333,7 @@ public class StandingSettlementInstructionCancellationV01 {
 			xmlTag = "SttlmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
-			definition = "Settlement information that helps to identify the standing settlement  instruction for which the cancellation is sent.";
+			definition = "Settlement information that helps to identify the standing settlement instruction for which the cancellation is sent.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyOrCurrency1Choice.mmObject();

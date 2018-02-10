@@ -70,8 +70,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "AllocationStatusCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the  status of allocation of collateral to cover the instruction."
- * </li>
+ * "Specifies the status of allocation of collateral to cover the instruction."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -150,7 +149,7 @@ public class AllocationStatusCode extends MMCode {
 				example = Arrays.asList("AOLF");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AllocationStatusCode";
-				definition = "Specifies the  status of allocation of collateral to cover the instruction.";
+				definition = "Specifies the status of allocation of collateral to cover the instruction.";
 				derivation_lazy = () -> Arrays.asList(AllocationStatus1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AllocationStatusCode.FullyAllocated, com.tools20022.repository.codeset.AllocationStatusCode.PartiallyAllocated);
 			}

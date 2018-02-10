@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Settlement Instruction Generation Code
+ * Settlement Instruction Generation Code.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SettlementInstructionGeneration1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Settlement Instruction Generation Code"</li>
+ * definition} = "Settlement Instruction Generation Code."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -132,7 +132,7 @@ public class SettlementInstructionGeneration1Code extends MMCode {
 				example = Arrays.asList("GENS");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementInstructionGeneration1Code";
-				definition = "Settlement Instruction Generation Code";
+				definition = "Settlement Instruction Generation Code.";
 				trace_lazy = () -> SettlementInstructionGenerationCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionGeneration1Code.InstructionGenerationByETCProvider,
 						com.tools20022.repository.codeset.SettlementInstructionGeneration1Code.NotInstructionGenerationByETCProvider);

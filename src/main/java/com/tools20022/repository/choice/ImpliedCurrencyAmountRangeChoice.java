@@ -25,8 +25,11 @@ import com.tools20022.repository.entity.AmountRange;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AmountRangeBoundary1;
 import com.tools20022.repository.msg.FromToAmountRange;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -70,13 +73,22 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ImpliedCurrencyAmountRangeChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between ranges of values in which an amount is considered valid or a specified amount value which has to be matched or unmatched to be valid."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRange1Choice
+ * ImpliedCurrencyAmountRange1Choice}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -118,6 +130,14 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Lower boundary of a range of amount values."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRange1Choice#mmFromAmount
+	 * ImpliedCurrencyAmountRange1Choice.mmFromAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromAmount = new MMMessageAttribute() {
@@ -129,6 +149,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromAmount";
 			definition = "Lower boundary of a range of amount values.";
+			nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRange1Choice.mmFromAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountRangeBoundary1.mmObject();
@@ -167,6 +188,14 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Upper boundary of a range of amount values."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRange1Choice#mmToAmount
+	 * ImpliedCurrencyAmountRange1Choice.mmToAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmToAmount = new MMMessageAttribute() {
@@ -178,6 +207,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAmount";
 			definition = "Upper boundary of a range of amount values.";
+			nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRange1Choice.mmToAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountRangeBoundary1.mmObject();
@@ -215,6 +245,14 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Range of valid amount values."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRange1Choice#mmFromToAmount
+	 * ImpliedCurrencyAmountRange1Choice.mmFromToAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromToAmount = new MMMessageAttribute() {
@@ -226,6 +264,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToAmount";
 			definition = "Range of valid amount values.";
+			nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRange1Choice.mmFromToAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FromToAmountRange.mmObject();
@@ -264,6 +303,14 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Exact value an amount must match to be considered valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRange1Choice#mmEqualAmount
+	 * ImpliedCurrencyAmountRange1Choice.mmEqualAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEqualAmount = new MMMessageAttribute() {
@@ -275,6 +322,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualAmount";
 			definition = "Exact value an amount must match to be considered valid.";
+			nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRange1Choice.mmEqualAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -314,6 +362,14 @@ public class ImpliedCurrencyAmountRangeChoice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Value that an amount must not match to be considered valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ImpliedCurrencyAmountRange1Choice#mmNotEqualAmount
+	 * ImpliedCurrencyAmountRange1Choice.mmNotEqualAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNotEqualAmount = new MMMessageAttribute() {
@@ -325,6 +381,7 @@ public class ImpliedCurrencyAmountRangeChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqualAmount";
 			definition = "Value that an amount must not match to be considered valid.";
+			nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRange1Choice.mmNotEqualAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -339,9 +396,17 @@ public class ImpliedCurrencyAmountRangeChoice {
 						com.tools20022.repository.choice.ImpliedCurrencyAmountRangeChoice.mmNotEqualAmount);
 				trace_lazy = () -> AmountRange.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "ImpliedCurrencyAmountRangeChoice";
 				definition = "Choice between ranges of values in which an amount is considered valid or a specified amount value which has to be matched or unmatched to be valid.";
+				nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAmountRange1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

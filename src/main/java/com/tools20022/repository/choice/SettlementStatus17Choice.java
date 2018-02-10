@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryStatusAndReason6;
@@ -67,6 +68,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08#mmSettlementStatus
  * SecuritiesSettlementTransactionStatusAdviceV08.mmSettlementStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmSettlementStatus
+ * SecuritiesSettlementTransactionStatusAdviceV09.mmSettlementStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -288,7 +292,8 @@ public class SettlementStatus17Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.SettlementStatus17Choice.mmPending, com.tools20022.repository.choice.SettlementStatus17Choice.mmFailing,
 						com.tools20022.repository.choice.SettlementStatus17Choice.mmProprietary);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV07.mmSettlementStatus, SecuritiesSettlementTransactionStatusAdviceV08.mmSettlementStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV07.mmSettlementStatus, SecuritiesSettlementTransactionStatusAdviceV08.mmSettlementStatus,
+						SecuritiesSettlementTransactionStatusAdviceV09.mmSettlementStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forSettlementStatus17Choice);

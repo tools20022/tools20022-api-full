@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "RequestType2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the type of action to be performed in the request."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.RequestType4Choice
+ * RequestType4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +108,14 @@ public class RequestType2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Request type is a control command on a set of transactions."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RequestType4Choice#mmPaymentControl
+	 * RequestType4Choice.mmPaymentControl}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentControl = new MMMessageAttribute() {
@@ -111,6 +126,7 @@ public class RequestType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentControl";
 			definition = "Request type is a control command on a set of transactions.";
+			nextVersions_lazy = () -> Arrays.asList(RequestType4Choice.mmPaymentControl);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestType1Code.mmObject();
@@ -145,6 +161,14 @@ public class RequestType2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Request type is an enquiry on a position or a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RequestType4Choice#mmEnquiry
+	 * RequestType4Choice.mmEnquiry}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEnquiry = new MMMessageAttribute() {
@@ -155,6 +179,7 @@ public class RequestType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enquiry";
 			definition = "Request type is an enquiry on a position or a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestType4Choice.mmEnquiry);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestType2Code.mmObject();
@@ -188,6 +213,14 @@ public class RequestType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Request type is in proprietary format."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RequestType4Choice#mmProprietary
+	 * RequestType4Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -198,6 +231,7 @@ public class RequestType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Request type is in proprietary format.";
+			nextVersions_lazy = () -> Arrays.asList(RequestType4Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification1.mmObject();
@@ -213,6 +247,7 @@ public class RequestType2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestType2Choice";
 				definition = "Defines the type of action to be performed in the request.";
+				nextVersions_lazy = () -> Arrays.asList(RequestType4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.*;
  * covers one and only one instruction at a time. If several payment instruction
  * copies are needed by the case assignee, then multiple Request For Duplicate
  * messages must be sent - must be used exclusively between the case assignee
- * and its case creator/case assigner
+ * and its case creator/case assigner.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -85,7 +85,7 @@ import javax.xml.bind.annotation.*;
  * "RequestForDuplicateInstruction"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Scope\nThe Request For Duplicate message is sent by the case assignee to the case creator or case assigner.\nThis message is used to request a copy of the original payment instruction considered in the case.\nUsage\nThe Request For Duplicate message:\n- must be answered with a Duplicate message\n- must be used when a case assignee requests a copy of the original payment instruction. This occurs, for example, when the case assignee cannot trace the payment instruction based on the elements mentioned in the case assignment message\n- covers one and only one instruction at a time. If several payment instruction copies are needed by the case assignee, then multiple Request For Duplicate messages must be sent\n- must be used exclusively between the case assignee and its case creator/case assigner"
+ * "Scope\nThe Request For Duplicate message is sent by the case assignee to the case creator or case assigner.\nThis message is used to request a copy of the original payment instruction considered in the case.\nUsage\nThe Request For Duplicate message: \n- must be answered with a Duplicate message\n- must be used when a case assignee requests a copy of the original payment instruction. This occurs, for example, when the case assignee cannot trace the payment instruction based on the elements mentioned in the case assignment message\n- covers one and only one instruction at a time. If several payment instruction copies are needed by the case assignee, then multiple Request For Duplicate messages must be sent\n- must be used exclusively between the case assignee and its case creator/case assigner."
  * </li>
  * </ul>
  */
@@ -177,7 +177,7 @@ public class RequestForDuplicateInstruction {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestForDuplicateInstruction";
-				definition = "Scope\nThe Request For Duplicate message is sent by the case assignee to the case creator or case assigner.\nThis message is used to request a copy of the original payment instruction considered in the case.\nUsage\nThe Request For Duplicate message:\n- must be answered with a Duplicate message\n- must be used when a case assignee requests a copy of the original payment instruction. This occurs, for example, when the case assignee cannot trace the payment instruction based on the elements mentioned in the case assignment message\n- covers one and only one instruction at a time. If several payment instruction copies are needed by the case assignee, then multiple Request For Duplicate messages must be sent\n- must be used exclusively between the case assignee and its case creator/case assigner";
+				definition = "Scope\nThe Request For Duplicate message is sent by the case assignee to the case creator or case assigner.\nThis message is used to request a copy of the original payment instruction considered in the case.\nUsage\nThe Request For Duplicate message: \n- must be answered with a Duplicate message\n- must be used when a case assignee requests a copy of the original payment instruction. This occurs, for example, when the case assignee cannot trace the payment instruction based on the elements mentioned in the case assignment message\n- covers one and only one instruction at a time. If several payment instruction copies are needed by the case assignee, then multiple Request For Duplicate messages must be sent\n- must be used exclusively between the case assignee and its case creator/case assigner.";
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "camt.033.001.01";

@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOLatestversion;
@@ -105,8 +105,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "TrfOutConf"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.003.001.07}</li>
@@ -130,6 +130,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferOutConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to confirm the delivery of a financial instrument, free of payment, on a given date, to a specified party.\r\nThis message may also be used to confirm the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.\r\nUsage\r\nThe TransferOutConfirmation message is used to confirm the withdrawal of a financial instrument from the owner's account and its delivery to another own account, or to a third party, has taken place.\r\nThe reference of the transfer confirmation is identified in TransferConfirmationReference. The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferOutInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08
+ * TransferOutConfirmationV08}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -168,6 +176,14 @@ public class TransferOutConfirmationV07 {
 	 * definition} =
 	 * "Reference that uniquely identifies a message from a business application standpoint."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmMessageIdentification
+	 * TransferOutConfirmationV08.mmMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,6 +197,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Reference that uniquely identifies a message from a business application standpoint.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmMessageIdentification);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -218,6 +235,14 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Collective reference identifying a set of messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmPoolReference
+	 * TransferOutConfirmationV08.mmPoolReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +256,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmPoolReference);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -269,6 +295,14 @@ public class TransferOutConfirmationV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference of the linked message that was previously sent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmPreviousReference
+	 * TransferOutConfirmationV08.mmPreviousReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -282,6 +316,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference of the linked message that was previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmPreviousReference);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -320,6 +355,14 @@ public class TransferOutConfirmationV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reference to a linked message that was previously received."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmRelatedReference
+	 * TransferOutConfirmationV08.mmRelatedReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -333,6 +376,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmRelatedReference);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -371,6 +415,14 @@ public class TransferOutConfirmationV07 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmMasterReference
+	 * TransferOutConfirmationV08.mmMasterReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -384,6 +436,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmMasterReference);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -420,7 +473,14 @@ public class TransferOutConfirmationV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "General information related to the transfer of a financial instrument. "
+	 * "General information related to the transfer of a financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmTransferDetails
+	 * TransferOutConfirmationV08.mmTransferDetails}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -434,7 +494,8 @@ public class TransferOutConfirmationV07 {
 			xmlTag = "TrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
-			definition = "General information related to the transfer of a financial instrument. ";
+			definition = "General information related to the transfer of a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmTransferDetails);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmTransferDetails;
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer31.mmObject();
@@ -473,6 +534,14 @@ public class TransferOutConfirmationV07 {
 	 * definition} =
 	 * "Information related to the account from which the financial instrument was withdrawn."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmAccountDetails
+	 * TransferOutConfirmationV08.mmAccountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -486,6 +555,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "Information related to the account from which the financial instrument was withdrawn.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmAccountDetails);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -524,6 +594,14 @@ public class TransferOutConfirmationV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to the receiving side of the transfer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmSettlementDetails
+	 * TransferOutConfirmationV08.mmSettlementDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -537,6 +615,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetails";
 			definition = "Information related to the receiving side of the transfer.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmSettlementDetails);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmSettlementDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -575,6 +654,14 @@ public class TransferOutConfirmationV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the market practice to which the message conforms."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmMarketPracticeVersion
+	 * TransferOutConfirmationV08.mmMarketPracticeVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -588,6 +675,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmMarketPracticeVersion);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -626,6 +714,14 @@ public class TransferOutConfirmationV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information provided when the message is a copy of a previous message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmCopyDetails
+	 * TransferOutConfirmationV08.mmCopyDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -639,6 +735,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDetails";
 			definition = "Information provided when the message is a copy of a previous message.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmCopyDetails);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmCopyDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -677,6 +774,14 @@ public class TransferOutConfirmationV07 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmExtension
+	 * TransferOutConfirmationV08.mmExtension}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -690,6 +795,7 @@ public class TransferOutConfirmationV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmExtension);
 			previousVersion_lazy = () -> TransferOutConfirmationV06.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
@@ -712,11 +818,12 @@ public class TransferOutConfirmationV07 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferOutConfirmationV07";
 				definition = "Scope\r\nAn executing party, for example, a transfer agent, sends the TransferOutConfirmation message to the instructing party, for example, an investment manager or its authorised representative, to confirm the delivery of a financial instrument, free of payment, on a given date, to a specified party.\r\nThis message may also be used to confirm the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.\r\nUsage\r\nThe TransferOutConfirmation message is used to confirm the withdrawal of a financial instrument from the owner's account and its delivery to another own account, or to a third party, has taken place.\r\nThe reference of the transfer confirmation is identified in TransferConfirmationReference. The reference of the original transfer instruction is specified in TransferReference. The message identification of the TransferOutInstruction message in which the transfer instruction was conveyed may also be quoted in RelatedReference.";
+				nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV08.mmObject());
 				previousVersion_lazy = () -> TransferOutConfirmationV06.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfOutConf";
-				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmMessageIdentification, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmPoolReference,
 						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmPreviousReference, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmRelatedReference,
 						com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmMasterReference, com.tools20022.repository.area.sese.TransferOutConfirmationV07.mmTransferDetails,

@@ -62,6 +62,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CollateralValueCriteriaDefinition1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Definition of the collateral value query criteria."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CollateralValueCriteriaDefinition2Choice
+ * CollateralValueCriteriaDefinition2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +106,14 @@ public class CollateralValueCriteriaDefinition1Choice {
 	 * definition} =
 	 * "Recalls the criteria (search and return criteria) defined in a preceding query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralValueCriteriaDefinition2Choice#mmQueryName
+	 * CollateralValueCriteriaDefinition2Choice.mmQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
@@ -108,6 +124,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueCriteriaDefinition2Choice.mmQueryName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -140,6 +157,14 @@ public class CollateralValueCriteriaDefinition1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Explicitly defines the query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralValueCriteriaDefinition2Choice#mmNewCriteria
+	 * CollateralValueCriteriaDefinition2Choice.mmNewCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
@@ -150,6 +175,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Explicitly defines the query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueCriteriaDefinition2Choice.mmNewCriteria);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -165,6 +191,7 @@ public class CollateralValueCriteriaDefinition1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueCriteriaDefinition1Choice";
 				definition = "Definition of the collateral value query criteria.";
+				nextVersions_lazy = () -> Arrays.asList(CollateralValueCriteriaDefinition2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

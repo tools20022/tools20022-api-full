@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * "AllegementStatus3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the allegement status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PortfolioTransferStatus1Choice
+ * PortfolioTransferStatus1Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.AllegementStatus1Choice
@@ -113,6 +121,14 @@ public class AllegementStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the allegement reported."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PortfolioTransferStatus1Choice#mmCode
+	 * PortfolioTransferStatus1Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -130,6 +146,7 @@ public class AllegementStatus3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Status of the allegement reported.";
+			nextVersions_lazy = () -> Arrays.asList(PortfolioTransferStatus1Choice.mmCode);
 			previousVersion_lazy = () -> AllegementStatus1Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -172,6 +189,14 @@ public class AllegementStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the allegement reported."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PortfolioTransferStatus1Choice#mmProprietary
+	 * PortfolioTransferStatus1Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +214,7 @@ public class AllegementStatus3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status of the allegement reported.";
+			nextVersions_lazy = () -> Arrays.asList(PortfolioTransferStatus1Choice.mmProprietary);
 			previousVersion_lazy = () -> AllegementStatus1Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -205,6 +231,7 @@ public class AllegementStatus3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AllegementStatus3Choice";
 				definition = "Choice of format for the allegement status.";
+				nextVersions_lazy = () -> Arrays.asList(PortfolioTransferStatus1Choice.mmObject());
 				previousVersion_lazy = () -> AllegementStatus1Choice.mmObject();
 			}
 		});

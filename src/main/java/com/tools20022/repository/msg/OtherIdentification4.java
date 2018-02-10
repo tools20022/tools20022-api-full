@@ -167,7 +167,7 @@ public class OtherIdentification4 {
 	 * name} = "Type"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification source"</li>
+	 * definition} = "Identification source."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,7 +183,7 @@ public class OtherIdentification4 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Identification source";
+			definition = "Identification source.";
 			previousVersion_lazy = () -> OtherIdentification1.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;

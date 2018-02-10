@@ -170,6 +170,20 @@ public class CouponAttached {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmCouponDate
 	 * FinancialInstrumentAttributes78.mmCouponDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmNextCouponDate
+	 * Debt3.mmNextCouponDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmCouponDate
+	 * FinancialInstrumentAttributes91.mmCouponDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmCouponDate
+	 * FinancialInstrumentAttributes92.mmCouponDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmCouponDate
+	 * FinancialInstrumentAttributes95.mmCouponDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmCouponDate
+	 * FinancialInstrumentAttributes97.mmCouponDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -195,7 +209,8 @@ public class CouponAttached {
 					FinancialInstrumentAttributes36.mmCouponDate, FinancialInstrumentAttributes42.mmCouponDate, FinancialInstrumentAttributes27.mmCouponDate, FinancialInstrumentAttributes14.mmCouponDate,
 					FinancialInstrumentAttributes30.mmCouponDate, FinancialInstrumentAttributes28.mmCouponDate, Debt1.mmNextCouponDate, FinancialInstrumentAttributes31.mmCouponDate, FinancialInstrumentAttributes44.mmCouponDate,
 					FinancialInstrumentAttributes15.mmCouponDate, FinancialInstrumentAttributes29.mmCouponDate, Debt2.mmNextCouponDate, FinancialInstrumentAttributes2.mmCouponDate, FinancialInstrumentAttributes63.mmCouponDate,
-					FinancialInstrumentAttributes64.mmCouponDate, FinancialInstrumentAttributes75.mmCouponDate, FinancialInstrumentAttributes78.mmCouponDate);
+					FinancialInstrumentAttributes64.mmCouponDate, FinancialInstrumentAttributes75.mmCouponDate, FinancialInstrumentAttributes78.mmCouponDate, Debt3.mmNextCouponDate, FinancialInstrumentAttributes91.mmCouponDate,
+					FinancialInstrumentAttributes92.mmCouponDate, FinancialInstrumentAttributes95.mmCouponDate, FinancialInstrumentAttributes97.mmCouponDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -342,6 +357,27 @@ public class CouponAttached {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmCouponAttachedNumber
 	 * FinancialInstrumentAttributes78.mmCouponAttachedNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmCouponAttachedNumber
+	 * CommonFinancialInstrumentAttributes4.mmCouponAttachedNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmCouponAttachedNumber
+	 * FinancialInstrumentAttributes91.mmCouponAttachedNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmCouponAttachedNumber
+	 * FinancialInstrumentAttributes92.mmCouponAttachedNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmCouponNumber
+	 * CorporateAction41.mmCouponNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmCouponNumber
+	 * CorporateAction51.mmCouponNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmCouponAttachedNumber
+	 * FinancialInstrumentAttributes95.mmCouponAttachedNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmCouponAttachedNumber
+	 * FinancialInstrumentAttributes97.mmCouponAttachedNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -372,7 +408,9 @@ public class CouponAttached {
 					FinancialInstrumentAttributes15.mmCouponAttachedNumber, FinancialInstrumentAttributes29.mmCouponAttachedNumber, CommonFinancialInstrumentAttributes1.mmCouponAttachedNumber,
 					FinancialInstrumentAttributes2.mmCouponAttachedNumber, CorporateAction12.mmCouponNumber, CorporateAction17.mmCouponNumber, FinancialInstrumentAttributes63.mmCouponAttachedNumber,
 					FinancialInstrumentAttributes64.mmCouponAttachedNumber, CorporateAction31.mmCouponNumber, CorporateAction40.mmCouponNumber, FinancialInstrumentAttributes75.mmCouponAttachedNumber,
-					FinancialInstrumentAttributes78.mmCouponAttachedNumber);
+					FinancialInstrumentAttributes78.mmCouponAttachedNumber, CommonFinancialInstrumentAttributes4.mmCouponAttachedNumber, FinancialInstrumentAttributes91.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes92.mmCouponAttachedNumber, CorporateAction41.mmCouponNumber, CorporateAction51.mmCouponNumber, FinancialInstrumentAttributes95.mmCouponAttachedNumber,
+					FinancialInstrumentAttributes97.mmCouponAttachedNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CouponAttached.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

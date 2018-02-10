@@ -166,7 +166,7 @@ public class RegisteredNumberTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN. "
+	 * "ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN."
 	 * </li>
 	 * </ul>
 	 */
@@ -174,7 +174,7 @@ public class RegisteredNumberTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredBodyNumber";
-			definition = "ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN. ";
+			definition = "ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN.";
 			owner_lazy = () -> com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmObject();
 			codeName = "ARBN";
 		}
@@ -199,7 +199,7 @@ public class RegisteredNumberTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN. "
+	 * "ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN."
 	 * </li>
 	 * </ul>
 	 */
@@ -207,7 +207,7 @@ public class RegisteredNumberTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianRegisteredSchemeNumber";
-			definition = "ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN. ";
+			definition = "ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN.";
 			owner_lazy = () -> com.tools20022.repository.codeset.RegisteredNumberTypeCode.mmObject();
 			codeName = "ARSN";
 		}

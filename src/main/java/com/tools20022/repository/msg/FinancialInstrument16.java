@@ -758,7 +758,7 @@ public class FinancialInstrument16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,"
+	 * "Frequency with which the reinvestment takes place, This is the same or less than the dividend frequency."
 	 * </li>
 	 * </ul>
 	 */
@@ -770,7 +770,7 @@ public class FinancialInstrument16 {
 			xmlTag = "RinvstmtFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentFrequency";
-			definition = "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,";
+			definition = "Frequency with which the reinvestment takes place, This is the same or less than the dividend frequency.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency2Code.mmObject();
@@ -961,7 +961,7 @@ public class FinancialInstrument16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If a separate fee for switching between sub-funds of the same umbrella can be applied"
+	 * "If a separate fee for switching between sub-funds of the same umbrella can be applied."
 	 * </li>
 	 * </ul>
 	 */
@@ -973,7 +973,7 @@ public class FinancialInstrument16 {
 			xmlTag = "SwtchFeeInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFeeIndicator";
-			definition = "If a separate fee for switching between sub-funds of the same umbrella can be applied";
+			definition = "If a separate fee for switching between sub-funds of the same umbrella can be applied.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

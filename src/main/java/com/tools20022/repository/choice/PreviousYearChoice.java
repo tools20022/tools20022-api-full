@@ -24,11 +24,10 @@ import com.tools20022.repository.datatype.ISOYear;
 import com.tools20022.repository.datatype.PreviousAll;
 import com.tools20022.repository.entity.PortfolioTransfer;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.text.DateFormat;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
-import java.util.Objects;
+import java.util.function.Supplier;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -70,13 +69,21 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PreviousYearChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between selected investment plans issued during previous years or the entirety of the investment plans."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.PreviousYear2Choice
+ * PreviousYear2Choice}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -117,6 +124,14 @@ public class PreviousYearChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Selection ot the entirety of the investment plans."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreviousYear2Choice#mmAllPreviousYears
+	 * PreviousYear2Choice.mmAllPreviousYears}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAllPreviousYears = new MMMessageAttribute() {
@@ -128,6 +143,7 @@ public class PreviousYearChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllPreviousYears";
 			definition = "Selection ot the entirety of the investment plans.";
+			nextVersions_lazy = () -> Arrays.asList(PreviousYear2Choice.mmAllPreviousYears);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreviousAll.mmObject();
@@ -166,6 +182,14 @@ public class PreviousYearChoice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Selection of investment plans issued during previous years."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreviousYear2Choice#mmSpecificPreviousYears
+	 * PreviousYear2Choice.mmSpecificPreviousYears}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSpecificPreviousYears = new MMMessageAttribute() {
@@ -177,6 +201,7 @@ public class PreviousYearChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecificPreviousYears";
 			definition = "Selection of investment plans issued during previous years.";
+			nextVersions_lazy = () -> Arrays.asList(PreviousYear2Choice.mmSpecificPreviousYears);
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOYear.mmObject();
 		}
@@ -189,9 +214,17 @@ public class PreviousYearChoice {
 				trace_lazy = () -> PortfolioTransfer.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSpecificPreviousYearsGuideline.forPreviousYearChoice);
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "PreviousYearChoice";
 				definition = "Choice between selected investment plans issued during previous years or the entirety of the investment plans.";
+				nextVersions_lazy = () -> Arrays.asList(PreviousYear2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

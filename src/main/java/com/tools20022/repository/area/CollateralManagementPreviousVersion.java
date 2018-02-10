@@ -25,7 +25,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Messages that support collateral management actions
+ * Messages that support collateral management actions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -87,7 +87,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Collateral Management - Previous version - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Messages that support collateral management actions"</li>
+ * definition} = "Messages that support collateral management actions."</li>
  * </ul>
  */
 public class CollateralManagementPreviousVersion {
@@ -100,7 +100,7 @@ public class CollateralManagementPreviousVersion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Collateral Management - Previous version - master";
-				definition = "Messages that support collateral management actions";
+				definition = "Messages that support collateral management actions.";
 				messageDefinition_lazy = () -> Arrays.asList(CollateralSubstitutionRequestV03.mmObject(), InterestPaymentStatementV03.mmObject(), CollateralAndExposureReportV02.mmObject(), MarginCallResponseV03.mmObject(),
 						CollateralManagementCancellationStatusV03.mmObject(), MarginCallRequestV03.mmObject(), MarginCallDisputeNotificationV03.mmObject(), CollateralManagementCancellationRequestV03.mmObject(),
 						CollateralSubstitutionResponseV03.mmObject(), InterestPaymentResponseV03.mmObject(), InterestPaymentRequestV03.mmObject(), CollateralSubstitutionConfirmationV03.mmObject(), CollateralProposalV04.mmObject(),

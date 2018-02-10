@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "LimitIdentification1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -281,7 +281,7 @@ public class LimitIdentification1Choice {
 						com.tools20022.repository.choice.LimitIdentification1Choice.mmAllCurrent, com.tools20022.repository.choice.LimitIdentification1Choice.mmAllDefault);
 				trace_lazy = () -> RiskManagementLimit.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitIdentification1Choice";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
 			}

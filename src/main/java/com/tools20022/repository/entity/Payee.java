@@ -24,7 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Party to which a cheque is made payable.
+ * Party that receives funds as required by a transaction.
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -47,7 +47,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Payee"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Party to which a cheque is made payable."</li>
+ * definition} = "Party that receives funds as required by a transaction."</li>
  * </ul>
  */
 public class Payee extends ChequePartyRole {
@@ -60,7 +60,7 @@ public class Payee extends ChequePartyRole {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Payee";
-				definition = "Party to which a cheque is made payable.";
+				definition = "Party that receives funds as required by a transaction.";
 				superType_lazy = () -> ChequePartyRole.mmObject();
 			}
 

@@ -131,7 +131,7 @@ public class Resolution1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Numbering of the resolution as specified by the issuer or  its agent."</li>
+	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
@@ -142,7 +142,7 @@ public class Resolution1 {
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
-			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
+			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -421,7 +421,7 @@ public class Resolution1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the resolution has been submitted by the security holder. "
+	 * "Indicates whether the resolution has been submitted by the security holder."
 	 * </li>
 	 * </ul>
 	 */
@@ -433,7 +433,7 @@ public class Resolution1 {
 			xmlTag = "SubmittdBySctyHldr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmittedBySecurityHolder";
-			definition = "Indicates whether the resolution has been submitted by the security holder. ";
+			definition = "Indicates whether the resolution has been submitted by the security holder.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

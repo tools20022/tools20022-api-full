@@ -159,7 +159,7 @@ public class BaselineMatchReportV03 {
 	 * name} = "ReportIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the report. "</li>
+	 * definition} = "Identifies the report."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmReportIdentification = new MMMessageBuildingBlock() {
@@ -167,7 +167,7 @@ public class BaselineMatchReportV03 {
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
-			definition = "Identifies the report. ";
+			definition = "Identifies the report.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();
@@ -250,7 +250,7 @@ public class BaselineMatchReportV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification assigned by the matching application to the baseline when it is established. "
+	 * "Unique identification assigned by the matching application to the baseline when it is established."
 	 * </li>
 	 * </ul>
 	 */
@@ -259,7 +259,7 @@ public class BaselineMatchReportV03 {
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
-			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
+			definition = "Unique identification assigned by the matching application to the baseline when it is established.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
@@ -387,7 +387,7 @@ public class BaselineMatchReportV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that buys goods or services, or a financial instrument. "</li>
+	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmBuyer = new MMMessageBuildingBlock() {
@@ -395,7 +395,7 @@ public class BaselineMatchReportV03 {
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
-			definition = "Party that buys goods or services, or a financial instrument. ";
+			definition = "Party that buys goods or services, or a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
@@ -432,7 +432,7 @@ public class BaselineMatchReportV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that sells goods or services, or a financial instrument. "</li>
+	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmSeller = new MMMessageBuildingBlock() {
@@ -440,7 +440,7 @@ public class BaselineMatchReportV03 {
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
-			definition = "Party that sells goods or services, or a financial instrument. ";
+			definition = "Party that sells goods or services, or a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification26.mmObject();
@@ -477,7 +477,7 @@ public class BaselineMatchReportV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the buyer, uniquely identified by its BIC. "
+	 * "The financial institution of the buyer, uniquely identified by its BIC."
 	 * </li>
 	 * </ul>
 	 */
@@ -486,7 +486,7 @@ public class BaselineMatchReportV03 {
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
-			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
+			definition = "The financial institution of the buyer, uniquely identified by its BIC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -523,7 +523,7 @@ public class BaselineMatchReportV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the seller, uniquely identified by its BIC. "
+	 * "The financial institution of the seller, uniquely identified by its BIC."
 	 * </li>
 	 * </ul>
 	 */
@@ -532,7 +532,7 @@ public class BaselineMatchReportV03 {
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
-			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
+			definition = "The financial institution of the seller, uniquely identified by its BIC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> BICIdentification1.mmObject();
@@ -654,7 +654,7 @@ public class BaselineMatchReportV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Description of the differences between the two proposed baselines"</li>
+	 * "Description of the differences between the two proposed baselines."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmReport = new MMMessageBuildingBlock() {
@@ -662,7 +662,7 @@ public class BaselineMatchReportV03 {
 			xmlTag = "Rpt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Report";
-			definition = "Description of the differences between the two proposed baselines";
+			definition = "Description of the differences between the two proposed baselines.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MisMatchReport3.mmObject();

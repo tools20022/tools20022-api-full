@@ -208,7 +208,7 @@ public class Intermediary1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Set of  functions performed by an intermediary in a given situation."</li>
+	 * "Set of functions performed by an intermediary in a given situation."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRole = new MMMessageAttribute() {
@@ -219,7 +219,7 @@ public class Intermediary1 {
 			xmlTag = "Role";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
-			definition = "Set of  functions performed by an intermediary in a given situation.";
+			definition = "Set of functions performed by an intermediary in a given situation.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

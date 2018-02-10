@@ -105,6 +105,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Statement41"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Characteristics of the statement."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement64 Statement64}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Statement14
  * Statement14}</li>
@@ -145,6 +151,13 @@ public class Statement41 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Sequential number of the report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement64#mmReportNumber
+	 * Statement64.mmReportNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -161,6 +174,7 @@ public class Statement41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the report.";
+			nextVersions_lazy = () -> Arrays.asList(Statement64.mmReportNumber);
 			previousVersion_lazy = () -> Statement14.mmReportNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -198,6 +212,14 @@ public class Statement41 {
 	 * definition} =
 	 * "Identification of the statement query message sent to request this statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement64#mmQueryReference
+	 * Statement64.mmQueryReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -214,6 +236,7 @@ public class Statement41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReference";
 			definition = "Identification of the statement query message sent to request this statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement64.mmQueryReference);
 			previousVersion_lazy = () -> Statement14.mmQueryReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -246,6 +269,14 @@ public class Statement41 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference common to all pages of a statement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement64#mmStatementIdentification
+	 * Statement64.mmStatementIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -261,6 +292,7 @@ public class Statement41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Reference common to all pages of a statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement64.mmStatementIdentification);
 			previousVersion_lazy = () -> Statement14.mmStatementIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -297,6 +329,14 @@ public class Statement41 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time of the statement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement64#mmStatementDateTime
+	 * Statement64.mmStatementDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -313,6 +353,7 @@ public class Statement41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date and time of the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement64.mmStatementDateTime);
 			previousVersion_lazy = () -> Statement14.mmStatementDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -349,6 +390,13 @@ public class Statement41 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Frequency of the statement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement64#mmFrequency
+	 * Statement64.mmFrequency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -365,6 +413,7 @@ public class Statement41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement64.mmFrequency);
 			previousVersion_lazy = () -> Statement14.mmFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -400,6 +449,13 @@ public class Statement41 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the statement is complete or contains changes only."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement64#mmUpdateType
+	 * Statement64.mmUpdateType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -416,6 +472,7 @@ public class Statement41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the statement is complete or contains changes only.";
+			nextVersions_lazy = () -> Arrays.asList(Statement64.mmUpdateType);
 			previousVersion_lazy = () -> Statement14.mmUpdateType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -454,6 +511,14 @@ public class Statement41 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the statement is sorted by status or transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement64#mmStatementStructure
+	 * Statement64.mmStatementStructure}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -470,6 +535,7 @@ public class Statement41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementStructure";
 			definition = "Specifies whether the statement is sorted by status or transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Statement64.mmStatementStructure);
 			previousVersion_lazy = () -> Statement14.mmStatementStructure;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -508,6 +574,14 @@ public class Statement41 {
 	 * definition} =
 	 * "Indicates whether there is activity or information update reported in the statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement64#mmActivityIndicator
+	 * Statement64.mmActivityIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -524,6 +598,7 @@ public class Statement41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement64.mmActivityIndicator);
 			previousVersion_lazy = () -> Statement14.mmActivityIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -543,6 +618,7 @@ public class Statement41 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Statement41";
 				definition = "Characteristics of the statement.";
+				nextVersions_lazy = () -> Arrays.asList(Statement64.mmObject());
 				previousVersion_lazy = () -> Statement14.mmObject();
 			}
 		});

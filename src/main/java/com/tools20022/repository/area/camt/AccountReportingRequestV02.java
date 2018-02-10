@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.CashManagementPreviousVersion;
+import com.tools20022.repository.area.CashManagementArchive;
 import com.tools20022.repository.msg.GroupHeader43;
 import com.tools20022.repository.msg.ReportingRequest2;
 import com.tools20022.repository.msgset.ISOArchive;
@@ -72,8 +72,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AcctRptgReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.CashManagementPreviousVersion
- * CashManagementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.CashManagementArchive
+ * CashManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code camt.060.001.02}</li>
@@ -202,7 +202,7 @@ public class AccountReportingRequestV02 {
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctRptgReq";
-				businessArea_lazy = () -> CashManagementPreviousVersion.mmObject();
+				businessArea_lazy = () -> CashManagementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.camt.AccountReportingRequestV02.mmGroupHeader, com.tools20022.repository.area.camt.AccountReportingRequestV02.mmReportingRequest);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {
 					{

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionInstructionV06;
 import com.tools20022.repository.area.seev.CorporateActionInstructionV07;
+import com.tools20022.repository.area.seev.CorporateActionInstructionV08;
 import com.tools20022.repository.choice.PartyIdentification92Choice;
 import com.tools20022.repository.choice.SafekeepingPlaceFormat8Choice;
 import com.tools20022.repository.datatype.Max35Text;
@@ -75,6 +76,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#mmAccountDetails
  * CorporateActionInstructionV07.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08#mmAccountDetails
+ * CorporateActionInstructionV08.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -352,7 +356,7 @@ public class AccountAndBalance35 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance35.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance35.mmAccountOwner,
 						com.tools20022.repository.msg.AccountAndBalance35.mmSafekeepingPlace, com.tools20022.repository.msg.AccountAndBalance35.mmBalance);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmAccountDetails, CorporateActionInstructionV07.mmAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmAccountDetails, CorporateActionInstructionV07.mmAccountDetails, CorporateActionInstructionV08.mmAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceRule.forAccountAndBalance35);

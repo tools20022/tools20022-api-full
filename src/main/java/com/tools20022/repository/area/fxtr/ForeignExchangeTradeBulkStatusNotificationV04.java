@@ -102,7 +102,7 @@ import javax.xml.bind.annotation.*;
  * "ForeignExchangeTradeBulkStatusNotificationV04"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Scope\r\r\nThe ForeignExchangeTradeBulkStatusNotification message is sent by a central system to the participant to provide notification of the current status of one or more foreign exchange trades. "
+ * "Scope\r\r\nThe ForeignExchangeTradeBulkStatusNotification message is sent by a central system to the participant to provide notification of the current status of one or more foreign exchange trades."
  * </li>
  * </ul>
  */
@@ -296,7 +296,7 @@ public class ForeignExchangeTradeBulkStatusNotificationV04 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementSessionIdentifierRule.forForeignExchangeTradeBulkStatusNotificationV04);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ForeignExchangeTradeBulkStatusNotificationV04";
-				definition = "Scope\r\r\nThe ForeignExchangeTradeBulkStatusNotification message is sent by a central system to the participant to provide notification of the current status of one or more foreign exchange trades. ";
+				definition = "Scope\r\r\nThe ForeignExchangeTradeBulkStatusNotification message is sent by a central system to the participant to provide notification of the current status of one or more foreign exchange trades.";
 				messageSet_lazy = () -> Arrays.asList(PostTradeForeignExchangeISOLatestversion.mmObject(), PostTradeForeignExchangeMaintenance20162017.mmObject(), PostTradeForeignExchangeMaintenance20162017andSupplement.mmObject());
 				rootElement = "Document";
 				xmlTag = "FXTradBlkStsNtfctn";

@@ -155,7 +155,7 @@ public class Resolution2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Numbering of the resolution as specified by the issuer or  its agent."</li>
+	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -173,7 +173,7 @@ public class Resolution2 {
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
-			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
+			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			nextVersions_lazy = () -> Arrays.asList(Resolution3.mmIssuerLabel);
 			maxOccurs = 1;
 			minOccurs = 1;

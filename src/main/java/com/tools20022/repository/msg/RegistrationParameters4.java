@@ -114,6 +114,13 @@ import javax.xml.bind.annotation.XmlType;
  * "RegistrationParameters4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information related to registration of securities."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RegistrationParameters6
+ * RegistrationParameters6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.RegistrationParameters1
@@ -160,6 +167,14 @@ public class RegistrationParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification assigned to a deposit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters6#mmCertificationIdentification
+	 * RegistrationParameters6.mmCertificationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +192,7 @@ public class RegistrationParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIdentification";
 			definition = "Identification assigned to a deposit.";
+			nextVersions_lazy = () -> Arrays.asList(RegistrationParameters6.mmCertificationIdentification);
 			previousVersion_lazy = () -> RegistrationParameters1.mmCertificationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -221,6 +237,14 @@ public class RegistrationParameters4 {
 	 * definition} =
 	 * "Date/time at which the certificates in the deposit were validated by the agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters6#mmCertificationDateTime
+	 * RegistrationParameters6.mmCertificationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -238,6 +262,7 @@ public class RegistrationParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationDateTime";
 			definition = "Date/time at which the certificates in the deposit were validated by the agent.";
+			nextVersions_lazy = () -> Arrays.asList(RegistrationParameters6.mmCertificationDateTime);
 			previousVersion_lazy = () -> RegistrationParameters1.mmCertificationDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -280,6 +305,14 @@ public class RegistrationParameters4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Account at the registrar where financial instruments are registered."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters6#mmRegistrarAccount
+	 * RegistrationParameters6.mmRegistrarAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,6 +330,7 @@ public class RegistrationParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrarAccount";
 			definition = "Account at the registrar where financial instruments are registered.";
+			nextVersions_lazy = () -> Arrays.asList(RegistrationParameters6.mmRegistrarAccount);
 			previousVersion_lazy = () -> RegistrationParameters1.mmRegistrarAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -339,6 +373,14 @@ public class RegistrationParameters4 {
 	 * definition} =
 	 * "Unique and unambiguous identifier of a certificate assigned by the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters6#mmCertificateNumber
+	 * RegistrationParameters6.mmCertificateNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -356,6 +398,7 @@ public class RegistrationParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
 			definition = "Unique and unambiguous identifier of a certificate assigned by the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(RegistrationParameters6.mmCertificateNumber);
 			previousVersion_lazy = () -> RegistrationParameters1.mmCertificateNumber;
 			minOccurs = 0;
 			isComposite = true;
@@ -378,6 +421,7 @@ public class RegistrationParameters4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegistrationParameters4";
 				definition = "Information related to registration of securities.";
+				nextVersions_lazy = () -> Arrays.asList(RegistrationParameters6.mmObject());
 				previousVersion_lazy = () -> RegistrationParameters1.mmObject();
 			}
 		});

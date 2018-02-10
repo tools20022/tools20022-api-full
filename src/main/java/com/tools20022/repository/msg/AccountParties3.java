@@ -30,6 +30,8 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Any party who is related to an investment account.
+ * 
+ * .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -115,7 +117,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AccountParties3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Any party who is related to an investment account.\n\n"</li>
+ * definition} = "Any party who is related to an investment account.\n\n."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -452,7 +454,7 @@ public class AccountParties3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Entity that is not the primary owner when the ownership of the investment account is split among several owners. "
+	 * "Entity that is not the primary owner when the ownership of the investment account is split among several owners."
 	 * </li>
 	 * </ul>
 	 */
@@ -464,7 +466,7 @@ public class AccountParties3 {
 			xmlTag = "ScndryOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryOwner";
-			definition = "Entity that is not the primary owner when the ownership of the investment account is split among several owners. ";
+			definition = "Entity that is not the primary owner when the ownership of the investment account is split among several owners.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -605,7 +607,7 @@ public class AccountParties3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated. "
+	 * "Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated."
 	 * </li>
 	 * </ul>
 	 */
@@ -617,7 +619,7 @@ public class AccountParties3 {
 			xmlTag = "LglGuardn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalGuardian";
-			definition = "Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated. ";
+			definition = "Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -843,7 +845,7 @@ public class AccountParties3 {
 						com.tools20022.repository.constraints.ConstraintExtendedPartyRole2Rule.forAccountParties3, com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties3);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountParties3";
-				definition = "Any party who is related to an investment account.\n\n";
+				definition = "Any party who is related to an investment account.\n\n.";
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountParties3.AccountOwnerRule);
 			}
 		});

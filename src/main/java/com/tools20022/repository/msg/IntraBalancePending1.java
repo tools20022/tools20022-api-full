@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraBalancePending1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides the data for the pending intra-balance movements."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalancePending3
+ * IntraBalancePending3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +116,14 @@ public class IntraBalancePending1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status and status reason of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending3#mmStatusAndReason
+	 * IntraBalancePending3.mmStatusAndReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmStatusAndReason = new MMMessageAssociationEnd() {
@@ -120,6 +135,7 @@ public class IntraBalancePending1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and status reason of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalancePending3.mmStatusAndReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -156,6 +172,14 @@ public class IntraBalancePending1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the individual transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending3#mmMovement
+	 * IntraBalancePending3.mmMovement}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
@@ -167,6 +191,7 @@ public class IntraBalancePending1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Movement";
 			definition = "Identifies the individual transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalancePending3.mmMovement);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.IntraBalancePending2.mmObject();
@@ -183,6 +208,7 @@ public class IntraBalancePending1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalancePending1";
 				definition = "Provides the data for the pending intra-balance movements.";
+				nextVersions_lazy = () -> Arrays.asList(IntraBalancePending3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

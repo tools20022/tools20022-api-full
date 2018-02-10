@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides information about pending balance and pending transactions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingBalance5
+ * PendingBalance5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.PendingBalance1
  * PendingBalance1}</li>
@@ -114,6 +121,13 @@ public class PendingBalance3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Signed quantity of balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PendingBalance5#mmBalance
+	 * PendingBalance5.mmBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +145,7 @@ public class PendingBalance3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Signed quantity of balance.";
+			nextVersions_lazy = () -> Arrays.asList(PendingBalance5.mmBalance);
 			previousVersion_lazy = () -> PendingBalance1.mmBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -166,6 +181,14 @@ public class PendingBalance3 {
 	 * definition} =
 	 * "Overall process covering the trade and settlement transactions of financial instruments."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PendingBalance5#mmPendingTransactions
+	 * PendingBalance5.mmPendingTransactions}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,6 +204,7 @@ public class PendingBalance3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingTransactions";
 			definition = "Overall process covering the trade and settlement transactions of financial instruments.";
+			nextVersions_lazy = () -> Arrays.asList(PendingBalance5.mmPendingTransactions);
 			previousVersion_lazy = () -> PendingBalance1.mmPendingTransactions;
 			minOccurs = 0;
 			isComposite = true;
@@ -197,6 +221,7 @@ public class PendingBalance3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingBalance3";
 				definition = "Provides information about pending balance and pending transactions.";
+				nextVersions_lazy = () -> Arrays.asList(PendingBalance5.mmObject());
 				previousVersion_lazy = () -> PendingBalance1.mmObject();
 			}
 		});

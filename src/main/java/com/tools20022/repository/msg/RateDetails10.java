@@ -366,7 +366,7 @@ public class RateDetails10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Percentage of the gross dividend rate on which tax must be paid ."</li>
+	 * "Percentage of the gross dividend rate on which tax must be paid."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -385,7 +385,7 @@ public class RateDetails10 {
 			xmlTag = "TaxRltdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRate";
-			definition = "Percentage of the gross dividend rate on which tax must be paid .";
+			definition = "Percentage of the gross dividend rate on which tax must be paid.";
 			nextVersions_lazy = () -> Arrays.asList(RateDetails14.mmTaxRelatedRate);
 			minOccurs = 0;
 			isComposite = true;

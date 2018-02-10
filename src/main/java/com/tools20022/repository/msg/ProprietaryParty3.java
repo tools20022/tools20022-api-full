@@ -64,6 +64,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ProprietaryParty3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identifies a proprietary party."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty4
+ * ProprietaryParty4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +105,13 @@ public class ProprietaryParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of proprietary party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty4#mmType
+	 * ProprietaryParty4.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -108,6 +122,7 @@ public class ProprietaryParty3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of proprietary party.";
+			nextVersions_lazy = () -> Arrays.asList(ProprietaryParty4.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -144,6 +159,13 @@ public class ProprietaryParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryParty4#mmParty
+	 * ProprietaryParty4.mmParty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
@@ -155,6 +177,7 @@ public class ProprietaryParty3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Proprietary party.";
+			nextVersions_lazy = () -> Arrays.asList(ProprietaryParty4.mmParty);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -171,6 +194,7 @@ public class ProprietaryParty3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryParty3";
 				definition = "Identifies a proprietary party.";
+				nextVersions_lazy = () -> Arrays.asList(ProprietaryParty4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

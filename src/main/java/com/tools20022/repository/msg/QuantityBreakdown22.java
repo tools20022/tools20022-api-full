@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "QuantityBreakdown22"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of breakdown of a quantity."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown45
+ * QuantityBreakdown45}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.QuantityBreakdown9
@@ -129,6 +136,14 @@ public class QuantityBreakdown22 {
 	 * definition} =
 	 * "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown45#mmLotNumber
+	 * QuantityBreakdown45.mmLotNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLotNumber = new MMMessageAssociationEnd() {
@@ -141,6 +156,7 @@ public class QuantityBreakdown22 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown45.mmLotNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -183,6 +199,14 @@ public class QuantityBreakdown22 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Quantity of financial instruments that is part of the lot described."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown45#mmLotQuantity
+	 * QuantityBreakdown45.mmLotQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLotQuantity = new MMMessageAssociationEnd() {
@@ -195,6 +219,7 @@ public class QuantityBreakdown22 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown45.mmLotQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -235,6 +260,14 @@ public class QuantityBreakdown22 {
 	 * definition} =
 	 * "Specifies the securities sub balance type indicator (example restriction type for a market infrastructure)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown45#mmCashSubBalanceType
+	 * QuantityBreakdown45.mmCashSubBalanceType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCashSubBalanceType = new MMMessageAssociationEnd() {
@@ -246,6 +279,7 @@ public class QuantityBreakdown22 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSubBalanceType";
 			definition = "Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown45.mmCashSubBalanceType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -271,6 +305,7 @@ public class QuantityBreakdown22 {
 				})).get();
 				name = "QuantityBreakdown22";
 				definition = "Details of breakdown of a quantity.";
+				nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown45.mmObject());
 				previousVersion_lazy = () -> QuantityBreakdown9.mmObject();
 			}
 		});

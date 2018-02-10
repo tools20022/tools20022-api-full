@@ -25,8 +25,6 @@ import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.CertificateManagementRequest1;
 import com.tools20022.repository.msg.ContentInformationType13;
 import com.tools20022.repository.msg.Header29;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -65,12 +63,6 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
  * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016
- * CAPETerminalManagementMaintenance20152016}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
- * CAPETerminalManagementMaintenance20162017}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -92,7 +84,15 @@ import javax.xml.bind.annotation.*;
  * "CertificateManagementRequestV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The certificate management request message is sent by a POI terminal or any intermediary entity either to a terminal manager acting as a certificate authority for  managing X.509 certificate of a public key owned by the initiating party, or for requesting the inclusion or the removal of the POI to a white list of the terminal manager.\r\n"
+ * "The certificate management request message is sent by a POI terminal or any intermediary entity either to a terminal manager acting as a certificate authority for managing X.509 certificate of a public key owned by the initiating party, or for requesting the inclusion or the removal of the POI to a white list of the terminal manager.\r\n"
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV02
+ * CertificateManagementRequestV02}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -123,6 +123,14 @@ public class CertificateManagementRequestV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information related to the protocol management."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV02#mmHeader
+	 * CertificateManagementRequestV02.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
@@ -131,6 +139,7 @@ public class CertificateManagementRequestV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
+			nextVersions_lazy = () -> Arrays.asList(CertificateManagementRequestV02.mmHeader);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header29.mmObject();
@@ -168,6 +177,14 @@ public class CertificateManagementRequestV01 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to the request of certificate management."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV02#mmCertificateManagementRequest
+	 * CertificateManagementRequestV02.mmCertificateManagementRequest}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmCertificateManagementRequest = new MMMessageBuildingBlock() {
@@ -176,6 +193,7 @@ public class CertificateManagementRequestV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateManagementRequest";
 			definition = "Information related to the request of certificate management.";
+			nextVersions_lazy = () -> Arrays.asList(CertificateManagementRequestV02.mmCertificateManagementRequest);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CertificateManagementRequest1.mmObject();
@@ -213,6 +231,14 @@ public class CertificateManagementRequestV01 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV02#mmSecurityTrailer
+	 * CertificateManagementRequestV02.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
@@ -221,6 +247,7 @@ public class CertificateManagementRequestV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
+			nextVersions_lazy = () -> Arrays.asList(CertificateManagementRequestV02.mmSecurityTrailer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType13.mmObject();
@@ -240,8 +267,9 @@ public class CertificateManagementRequestV01 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateManagementRequestV01";
-				definition = "The certificate management request message is sent by a POI terminal or any intermediary entity either to a terminal manager acting as a certificate authority for  managing X.509 certificate of a public key owned by the initiating party, or for requesting the inclusion or the removal of the POI to a white list of the terminal manager.\r\n";
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPETerminalManagementMaintenance20152016.mmObject(), CAPETerminalManagementMaintenance20162017.mmObject());
+				definition = "The certificate management request message is sent by a POI terminal or any intermediary entity either to a terminal manager acting as a certificate authority for managing X.509 certificate of a public key owned by the initiating party, or for requesting the inclusion or the removal of the POI to a white list of the terminal manager.\r\n";
+				nextVersions_lazy = () -> Arrays.asList(CertificateManagementRequestV02.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CertMgmtReq";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

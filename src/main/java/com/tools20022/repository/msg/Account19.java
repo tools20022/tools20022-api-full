@@ -106,6 +106,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Account24 Account24}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Account15
  * Account15}</li>
@@ -149,6 +155,13 @@ public class Account19 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Account24#mmIdentification
+	 * Account24.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,6 +178,7 @@ public class Account19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(Account24.mmIdentification);
 			previousVersion_lazy = () -> Account15.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -204,6 +218,13 @@ public class Account19 {
 	 * definition} =
 	 * "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Account24#mmDesignation
+	 * Account24.mmDesignation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -220,6 +241,7 @@ public class Account19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Designation";
 			definition = "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.";
+			nextVersions_lazy = () -> Arrays.asList(Account24.mmDesignation);
 			previousVersion_lazy = () -> Account15.mmDesignation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -258,6 +280,13 @@ public class Account19 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Institution that maintains the records where the account is held."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Account24#mmServicer
+	 * Account24.mmServicer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -274,6 +303,7 @@ public class Account19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Institution that maintains the records where the account is held.";
+			nextVersions_lazy = () -> Arrays.asList(Account24.mmServicer);
 			previousVersion_lazy = () -> Account15.mmServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -294,6 +324,7 @@ public class Account19 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Account19";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
+				nextVersions_lazy = () -> Arrays.asList(Account24.mmObject());
 				previousVersion_lazy = () -> Account15.mmObject();
 			}
 		});

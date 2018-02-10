@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionNotificationV06;
 import com.tools20022.repository.area.seev.CorporateActionNotificationV07;
+import com.tools20022.repository.area.seev.CorporateActionNotificationV08;
 import com.tools20022.repository.choice.CorporateActionProcessingStatus5Choice;
 import com.tools20022.repository.codeset.CorporateActionNotificationType1Code;
 import com.tools20022.repository.datatype.YesNoIndicator;
@@ -74,6 +75,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07#mmNotificationGeneralInformation
  * CorporateActionNotificationV07.mmNotificationGeneralInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmNotificationGeneralInformation
+ * CorporateActionNotificationV08.mmNotificationGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -324,7 +328,8 @@ public class CorporateActionNotification5 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNotification5.mmNotificationType, com.tools20022.repository.msg.CorporateActionNotification5.mmProcessingStatus,
 						com.tools20022.repository.msg.CorporateActionNotification5.mmEligibleBalanceIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNotificationV06.mmNotificationGeneralInformation, CorporateActionNotificationV07.mmNotificationGeneralInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionNotificationV06.mmNotificationGeneralInformation, CorporateActionNotificationV07.mmNotificationGeneralInformation,
+						CorporateActionNotificationV08.mmNotificationGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNotificationTypeGuideline.forCorporateActionNotification5);

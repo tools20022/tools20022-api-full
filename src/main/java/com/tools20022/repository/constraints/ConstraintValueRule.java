@@ -312,6 +312,14 @@ public class ConstraintValueRule {
 	 * definition} =
 	 * "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintValueRule#forPriceInformation18
+	 * ConstraintValueRule.forPriceInformation18}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -325,6 +333,7 @@ public class ConstraintValueRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation6;
 			owner_lazy = () -> PriceInformation13.mmObject();
 		}
@@ -387,6 +396,72 @@ public class ConstraintValueRule {
 			name = "ValueRule";
 			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
 			owner_lazy = () -> PriceInformation14.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation18
+	 * PriceInformation18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ValueRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintValueRule#forPriceInformation13
+	 * ConstraintValueRule.forPriceInformation13}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PriceInformation18> forPriceInformation18 = new MMConstraint<PriceInformation18>() {
+		{
+			validator = ConstraintValueRule::checkPriceInformation18;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ValueRule";
+			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintValueRule.forPriceInformation13;
+			owner_lazy = () -> PriceInformation18.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation19
+	 * PriceInformation19}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ValueRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PriceInformation19> forPriceInformation19 = new MMConstraint<PriceInformation19>() {
+		{
+			validator = ConstraintValueRule::checkPriceInformation19;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ValueRule";
+			definition = "If TypeOfPriceCode is not MRKT, then Value\t may not be expressed with UnknownIndicator.";
+			owner_lazy = () -> PriceInformation19.mmObject();
 		}
 	};
 
@@ -475,6 +550,22 @@ public class ConstraintValueRule {
 	 * UnknownIndicator.
 	 */
 	public static void checkPriceInformation14(PriceInformation14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If TypeOfPriceCode is not MRKT, then Value may not be expressed with
+	 * UnknownIndicator.
+	 */
+	public static void checkPriceInformation18(PriceInformation18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If TypeOfPriceCode is not MRKT, then Value may not be expressed with
+	 * UnknownIndicator.
+	 */
+	public static void checkPriceInformation19(PriceInformation19 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

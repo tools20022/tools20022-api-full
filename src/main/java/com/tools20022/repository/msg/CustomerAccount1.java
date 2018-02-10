@@ -773,7 +773,7 @@ public class CustomerAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies how often statements (for audit purposes)  will be sent."</li>
+	 * "Specifies how often statements (for audit purposes) will be sent."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatementCycle = new MMMessageAttribute() {
@@ -784,7 +784,7 @@ public class CustomerAccount1 {
 			xmlTag = "StmtCycl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementCycle";
-			definition = "Specifies how often statements (for audit purposes)  will be sent.";
+			definition = "Specifies how often statements (for audit purposes) will be sent.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency3Code.mmObject();

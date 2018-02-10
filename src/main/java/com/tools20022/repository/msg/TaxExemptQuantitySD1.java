@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TaxExemptQuantitySD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Tax exempt election details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD2
+ * TaxExemptQuantitySD2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,6 +107,14 @@ public class TaxExemptQuantitySD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD2#mmPlaceAndName
+	 * TaxExemptQuantitySD2.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -110,6 +125,7 @@ public class TaxExemptQuantitySD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(TaxExemptQuantitySD2.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -145,6 +161,14 @@ public class TaxExemptQuantitySD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Tax control ID."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD2#mmControlIdentification
+	 * TaxExemptQuantitySD2.mmControlIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmControlIdentification = new MMMessageAttribute() {
@@ -156,6 +180,7 @@ public class TaxExemptQuantitySD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlIdentification";
 			definition = "Tax control ID.";
+			nextVersions_lazy = () -> Arrays.asList(TaxExemptQuantitySD2.mmControlIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6Text.mmObject();
@@ -191,7 +216,15 @@ public class TaxExemptQuantitySD1 {
 	 * name} = "Quantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Elected quantity. "</li>
+	 * definition} = "Elected quantity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxExemptQuantitySD2#mmQuantity
+	 * TaxExemptQuantitySD2.mmQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQuantity = new MMMessageAttribute() {
@@ -202,7 +235,8 @@ public class TaxExemptQuantitySD1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Tax Exempt Elected Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
-			definition = "Elected quantity. ";
+			definition = "Elected quantity.";
+			nextVersions_lazy = () -> Arrays.asList(TaxExemptQuantitySD2.mmQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
@@ -218,6 +252,7 @@ public class TaxExemptQuantitySD1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TaxExemptQuantitySD1";
 				definition = "Tax exempt election details.";
+				nextVersions_lazy = () -> Arrays.asList(TaxExemptQuantitySD2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "LimitReturnCriteria2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -254,7 +254,7 @@ public class LimitReturnCriteria2 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LimitReturnCriteria2.mmStartDateTimeIndicator, com.tools20022.repository.msg.LimitReturnCriteria2.mmStatusIndicator,
 						com.tools20022.repository.msg.LimitReturnCriteria2.mmUsedAmountIndicator, com.tools20022.repository.msg.LimitReturnCriteria2.mmUsedPercentageIndicator);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitReturnCriteria2";
 				definition = "Defines the criteria used to report on limit.";
 			}

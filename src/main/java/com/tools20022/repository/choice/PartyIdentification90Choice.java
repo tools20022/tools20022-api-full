@@ -76,6 +76,9 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.choice.PartyIdentification96Choice
  * PartyIdentification96Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PartyIdentification119Choice
+ * PartyIdentification119Choice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -128,6 +131,9 @@ public class PartyIdentification90Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#mmAnyBIC
 	 * PartyIdentification96Choice.mmAnyBIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification119Choice#mmAnyBIC
+	 * PartyIdentification119Choice.mmAnyBIC}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -141,7 +147,7 @@ public class PartyIdentification90Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnyBIC";
 			definition = "Identification of the party expressed as a BIC.";
-			nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmAnyBIC);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmAnyBIC, PartyIdentification119Choice.mmAnyBIC);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AnyBICIdentifier.mmObject();
@@ -188,6 +194,9 @@ public class PartyIdentification90Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.PartyIdentification96Choice#mmProprietaryIdentification
 	 * PartyIdentification96Choice.mmProprietaryIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyIdentification119Choice#mmProprietaryIdentification
+	 * PartyIdentification119Choice.mmProprietaryIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -206,7 +215,7 @@ public class PartyIdentification90Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to the party using a proprietary identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmProprietaryIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmProprietaryIdentification, PartyIdentification119Choice.mmProprietaryIdentification);
 			previousVersion_lazy = () -> PartyIdentification2Choice.mmProprietaryIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -287,7 +296,7 @@ public class PartyIdentification90Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification90Choice";
 				definition = "Choice of formats for the identification of a party.";
-				nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentification96Choice.mmObject(), PartyIdentification119Choice.mmObject());
 				previousVersion_lazy = () -> PartyIdentification2Choice.mmObject();
 			}
 		});

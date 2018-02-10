@@ -57,6 +57,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Parameters associated to a mask generator cryptographic function."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Parameter9 Parameter9}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Parameter3
  * Parameter3}</li>
@@ -94,6 +100,14 @@ public class Parameter5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Digest algorithm used in the mask generator function."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Parameter9#mmDigestAlgorithm
+	 * Parameter9.mmDigestAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -109,6 +123,7 @@ public class Parameter5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Digest algorithm used in the mask generator function.";
+			nextVersions_lazy = () -> Arrays.asList(Parameter9.mmDigestAlgorithm);
 			previousVersion_lazy = () -> Parameter3.mmDigestAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -124,6 +139,7 @@ public class Parameter5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Parameter5";
 				definition = "Parameters associated to a mask generator cryptographic function.";
+				nextVersions_lazy = () -> Arrays.asList(Parameter9.mmObject());
 				previousVersion_lazy = () -> Parameter3.mmObject();
 			}
 		});

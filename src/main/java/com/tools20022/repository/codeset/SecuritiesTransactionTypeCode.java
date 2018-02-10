@@ -586,8 +586,8 @@ public class SecuritiesTransactionTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Relates to the issue of medium and short term paper (CP, CD, MTN, notes
-	 * ...) under a program and without syndication arrangement.
+	 * Relates to the issue of medium and short term paper (CP, CD, MTN, notes.)
+	 * under a program and without syndication arrangement.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -605,7 +605,7 @@ public class SecuritiesTransactionTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Relates to the issue of medium and short term paper (CP, CD, MTN, notes ...) under a program and without syndication arrangement."
+	 * "Relates to the issue of medium and short term paper (CP, CD, MTN, notes.) under a program and without syndication arrangement."
 	 * </li>
 	 * </ul>
 	 */
@@ -613,7 +613,7 @@ public class SecuritiesTransactionTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonSyndicated";
-			definition = "Relates to the issue of medium and short term paper (CP, CD, MTN, notes ...) under a program and without syndication arrangement.";
+			definition = "Relates to the issue of medium and short term paper (CP, CD, MTN, notes.) under a program and without syndication arrangement.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionTypeCode.mmObject();
 			codeName = "NSYN";
 		}

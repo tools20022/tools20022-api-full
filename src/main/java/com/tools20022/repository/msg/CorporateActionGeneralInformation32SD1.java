@@ -152,7 +152,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time of notification via web service as reference information.\r\n通知日時  Notification date and time."
+	 * "Date and time of notification via web service as reference information.\r\n通知日時 Notification date and time."
 	 * </li>
 	 * </ul>
 	 */
@@ -164,7 +164,7 @@ public class CorporateActionGeneralInformation32SD1 {
 			xmlTag = "WebSvcNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WebServiceNotificationDate";
-			definition = "Date and time of notification via web service as reference information.\r\n通知日時  Notification date and time.";
+			definition = "Date and time of notification via web service as reference information.\r\n通知日時 Notification date and time.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -203,7 +203,7 @@ public class CorporateActionGeneralInformation32SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時"
+	 * "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時."
 	 * </li>
 	 * </ul>
 	 */
@@ -215,7 +215,7 @@ public class CorporateActionGeneralInformation32SD1 {
 			xmlTag = "PrvsWebSvcNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousWebServiceNotificationDate";
-			definition = "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時";
+			definition = "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();

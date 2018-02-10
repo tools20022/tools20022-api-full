@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesPaymentStatus4Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for securities payment status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus7Choice
+ * SecuritiesPaymentStatus7Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +115,14 @@ public class SecuritiesPaymentStatus4Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Securities payment status expressed as an ISO 20022 code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus7Choice#mmCode
+	 * SecuritiesPaymentStatus7Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -118,6 +134,7 @@ public class SecuritiesPaymentStatus4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Securities payment status expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesPaymentStatus7Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SecuritiesPaymentStatus1Code.mmObject();
@@ -155,7 +172,15 @@ public class SecuritiesPaymentStatus4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Securities payment status  expressed as a proprietary code."</li>
+	 * "Securities payment status expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus7Choice#mmProprietary
+	 * SecuritiesPaymentStatus7Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -166,7 +191,8 @@ public class SecuritiesPaymentStatus4Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Securities payment status  expressed as a proprietary code.";
+			definition = "Securities payment status expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesPaymentStatus7Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +209,7 @@ public class SecuritiesPaymentStatus4Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesPaymentStatus4Choice";
 				definition = "Choice of format for securities payment status.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesPaymentStatus7Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

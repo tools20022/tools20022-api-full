@@ -143,7 +143,7 @@ public class CardTransactionContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the transaction has been initiated by a card physically present or not. \r\nIt correspond to the ISO 8583:1993 field number 22-6."
+	 * "Indicates whether the transaction has been initiated by a card physically present or not. \r\nIt correspond to the ISO 8583: 1993 field number 22-6."
 	 * </li>
 	 * </ul>
 	 */
@@ -155,7 +155,7 @@ public class CardTransactionContext2 {
 			xmlTag = "CardPres";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardPresent";
-			definition = "Indicates whether the transaction has been initiated by a card physically present or not. \r\nIt correspond to the ISO 8583:1993 field number 22-6.";
+			definition = "Indicates whether the transaction has been initiated by a card physically present or not. \r\nIt correspond to the ISO 8583: 1993 field number 22-6.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -194,7 +194,7 @@ public class CardTransactionContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the transaction has been initiated in presence of the cardholder or not. \r\nIt correspond to the ISO 8583:1993 field number 22-5."
+	 * "Indicates whether the transaction has been initiated in presence of the cardholder or not. \r\nIt correspond to the ISO 8583: 1993 field number 22-5."
 	 * </li>
 	 * </ul>
 	 */
@@ -206,7 +206,7 @@ public class CardTransactionContext2 {
 			xmlTag = "CrdhldrPres";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardholderPresent";
-			definition = "Indicates whether the transaction has been initiated in presence of the cardholder or not. \r\nIt correspond to the ISO 8583:1993 field number 22-5.";
+			definition = "Indicates whether the transaction has been initiated in presence of the cardholder or not. \r\nIt correspond to the ISO 8583: 1993 field number 22-5.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -245,7 +245,7 @@ public class CardTransactionContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4."
+	 * "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583: 1993 field number 22-4."
 	 * </li>
 	 * </ul>
 	 */
@@ -257,7 +257,7 @@ public class CardTransactionContext2 {
 			xmlTag = "LctnCtgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocationCategory";
-			definition = "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4.";
+			definition = "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583: 1993 field number 22-4.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LocationCategory2Code.mmObject();
@@ -296,7 +296,7 @@ public class CardTransactionContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Human attendance at the terminal location during the transaction. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4."
+	 * "Human attendance at the terminal location during the transaction. \r\nIt correspond partially to the ISO 8583: 1993 field number 22-4."
 	 * </li>
 	 * </ul>
 	 */
@@ -308,7 +308,7 @@ public class CardTransactionContext2 {
 			xmlTag = "AttndncCntxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceContext";
-			definition = "Human attendance at the terminal location during the transaction. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4.";
+			definition = "Human attendance at the terminal location during the transaction. \r\nIt correspond partially to the ISO 8583: 1993 field number 22-4.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AttendanceContext1Code.mmObject();
@@ -391,7 +391,7 @@ public class CardTransactionContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the entity hosting the terminal performing the transaction. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4."
+	 * "Indicates the entity hosting the terminal performing the transaction. \r\nIt correspond partially to the ISO 8583: 1993 field number 22-4."
 	 * </li>
 	 * </ul>
 	 */
@@ -402,7 +402,7 @@ public class CardTransactionContext2 {
 			xmlTag = "HstgCtgy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostingCategory";
-			definition = "Indicates the entity hosting the terminal performing the transaction. \r\nIt correspond partially to the ISO 8583:1993 field number 22-4.";
+			definition = "Indicates the entity hosting the terminal performing the transaction. \r\nIt correspond partially to the ISO 8583: 1993 field number 22-4.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionEnvironment3Code.mmObject();
@@ -441,7 +441,7 @@ public class CardTransactionContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the type of the communication channels used by the cardholder to the acceptor system. \r\nIt correspond to the ISO 8583:1993 field number 22-5."
+	 * "Identifies the type of the communication channels used by the cardholder to the acceptor system. \r\nIt correspond to the ISO 8583: 1993 field number 22-5."
 	 * </li>
 	 * </ul>
 	 */
@@ -453,7 +453,7 @@ public class CardTransactionContext2 {
 			xmlTag = "TxChanl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannel";
-			definition = "Identifies the type of the communication channels used by the cardholder to the acceptor system. \r\nIt correspond to the ISO 8583:1993 field number 22-5.";
+			definition = "Identifies the type of the communication channels used by the cardholder to the acceptor system. \r\nIt correspond to the ISO 8583: 1993 field number 22-5.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TransactionChannel3Code.mmObject();
@@ -538,7 +538,7 @@ public class CardTransactionContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicator of a card entry mode fall-back. It correspond to the ISO 8583:2003 field number 22-1."
+	 * "Indicator of a card entry mode fall-back. It correspond to the ISO 8583: 2003 field number 22-1."
 	 * </li>
 	 * </ul>
 	 */
@@ -549,7 +549,7 @@ public class CardTransactionContext2 {
 			xmlTag = "FllbckInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FallbackIndicator";
-			definition = "Indicator of a card entry mode fall-back. It correspond to the ISO 8583:2003 field number 22-1.";
+			definition = "Indicator of a card entry mode fall-back. It correspond to the ISO 8583: 2003 field number 22-1.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardFallback1Code.mmObject();

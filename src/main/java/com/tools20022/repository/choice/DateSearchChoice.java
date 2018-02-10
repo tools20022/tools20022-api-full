@@ -24,8 +24,11 @@ import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.DatePeriodDetails;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -63,13 +66,21 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = August 8, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DateSearchChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between search criteria based on dates and date ranges."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.DatePeriodSearch1Choice
+ * DatePeriodSearch1Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +120,14 @@ public class DateSearchChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Start date of the range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriodSearch1Choice#mmFromDate
+	 * DatePeriodSearch1Choice.mmFromDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
@@ -120,6 +139,7 @@ public class DateSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDate";
 			definition = "Start date of the range.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriodSearch1Choice.mmFromDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -157,6 +177,14 @@ public class DateSearchChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "End date of the range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriodSearch1Choice#mmToDate
+	 * DatePeriodSearch1Choice.mmToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
@@ -168,6 +196,7 @@ public class DateSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDate";
 			definition = "End date of the range.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriodSearch1Choice.mmToDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -202,6 +231,14 @@ public class DateSearchChoice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Particular time span specified between a start date and an end date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriodSearch1Choice#mmFromToDate
+	 * DatePeriodSearch1Choice.mmFromToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
@@ -212,6 +249,7 @@ public class DateSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Particular time span specified between a start date and an end date.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriodSearch1Choice.mmFromToDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DatePeriodDetails.mmObject();
@@ -244,6 +282,14 @@ public class DateSearchChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specified date to match."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriodSearch1Choice#mmEqualDate
+	 * DatePeriodSearch1Choice.mmEqualDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEqualDate = new MMMessageAttribute() {
@@ -254,6 +300,7 @@ public class DateSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualDate";
 			definition = "Specified date to match.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriodSearch1Choice.mmEqualDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -286,6 +333,14 @@ public class DateSearchChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specified date to be excluded from the search."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriodSearch1Choice#mmNotEqualDate
+	 * DatePeriodSearch1Choice.mmNotEqualDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNotEqualDate = new MMMessageAttribute() {
@@ -296,6 +351,7 @@ public class DateSearchChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotEqualDate";
 			definition = "Specified date to be excluded from the search.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriodSearch1Choice.mmNotEqualDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -308,9 +364,17 @@ public class DateSearchChoice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.DateSearchChoice.mmFromDate, com.tools20022.repository.choice.DateSearchChoice.mmToDate,
 						com.tools20022.repository.choice.DateSearchChoice.mmFromToDate, com.tools20022.repository.choice.DateSearchChoice.mmEqualDate, com.tools20022.repository.choice.DateSearchChoice.mmNotEqualDate);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("August 8, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "DateSearchChoice";
 				definition = "Choice between search criteria based on dates and date ranges.";
+				nextVersions_lazy = () -> Arrays.asList(DatePeriodSearch1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

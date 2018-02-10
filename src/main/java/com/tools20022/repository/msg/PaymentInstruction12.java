@@ -73,6 +73,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentInstruction12"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides details on the payment instruction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction27
+ * PaymentInstruction27}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PaymentInstruction2
@@ -117,7 +124,15 @@ public class PaymentInstruction12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n"
+	 * "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction27#mmInstruction
+	 * PaymentInstruction27.mmInstruction}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -134,7 +149,8 @@ public class PaymentInstruction12 {
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
-			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n";
+			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction27.mmInstruction);
 			previousVersion_lazy = () -> PaymentInstruction2.mmInstruction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -175,6 +191,14 @@ public class PaymentInstruction12 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Type, or nature, of the payment, for example an express payment.\r\n"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction27#mmType
+	 * PaymentInstruction27.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -191,6 +215,7 @@ public class PaymentInstruction12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type, or nature, of the payment, for example an express payment.\r\n";
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction27.mmType);
 			previousVersion_lazy = () -> PaymentInstruction2.mmType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -230,7 +255,15 @@ public class PaymentInstruction12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n"
+	 * "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction27#mmPriority
+	 * PaymentInstruction27.mmPriority}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -247,7 +280,8 @@ public class PaymentInstruction12 {
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
-			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n";
+			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction27.mmPriority);
 			previousVersion_lazy = () -> PaymentInstruction2.mmPriority;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -287,7 +321,15 @@ public class PaymentInstruction12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time range within which the payment instruction must be processed.\n"
+	 * "Date and time range within which the payment instruction must be processed.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction27#mmProcessingValidityTime
+	 * PaymentInstruction27.mmProcessingValidityTime}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -304,7 +346,8 @@ public class PaymentInstruction12 {
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingValidityTime";
-			definition = "Date and time range within which the payment instruction must be processed.\n";
+			definition = "Date and time range within which the payment instruction must be processed.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction27.mmProcessingValidityTime);
 			previousVersion_lazy = () -> PaymentInstruction2.mmProcessingValidityTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -322,6 +365,7 @@ public class PaymentInstruction12 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstruction12";
 				definition = "Provides details on the payment instruction.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentInstruction27.mmObject());
 				previousVersion_lazy = () -> PaymentInstruction2.mmObject();
 			}
 		});

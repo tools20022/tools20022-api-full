@@ -281,7 +281,7 @@ public class SecuritiesOption55 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US."
+	 * "Specifies that the security identified is a temporary security identification used for processing reasons, for example, contra security used in the US."
 	 * </li>
 	 * </ul>
 	 */
@@ -294,7 +294,7 @@ public class SecuritiesOption55 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TEMP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
-			definition = "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US.";
+			definition = "Specifies that the security identified is a temporary security identification used for processing reasons, for example, contra security used in the US.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

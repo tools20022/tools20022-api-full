@@ -446,6 +446,7 @@ class ListBuilderForParty_03 {
 		list.add((T) OtherParties26.mmStockExchange);
 		list.add((T) OtherParties26.mmTradeRegulator);
 		list.add((T) Account18.mmAccountServicer);
+		list.add((T) Counterparty2.mmIdentification);
 		list.add((T) TradeParty2.mmPartyIdentification);
 		list.add((T) Linkages36.mmReferenceOwner);
 		list.add((T) Linkages37.mmReferenceOwner);
@@ -526,7 +527,6 @@ class ListBuilderForParty_03 {
 		list.add((T) AccountAndBalance35.mmAccountOwner);
 		list.add((T) AccountIdentification33.mmAccountOwner);
 		list.add((T) CorporateActionOption116.mmAccountOwner);
-		list.add((T) AccountIdentification31.mmAccountOwner);
 		ListBuilderForParty_04.addElems(list);
 		return list;
 	}

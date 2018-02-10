@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Extension to capture new to old ratio with extra digits
+ * Extension to capture new to old ratio with extra digits.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionRate19SD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Extension to capture new to old ratio with extra digits"</li>
+ * definition} = "Extension to capture new to old ratio with extra digits."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -164,7 +164,7 @@ public class CorporateActionRate19SD1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate19SD1";
-				definition = "Extension to capture new to old ratio with extra digits";
+				definition = "Extension to capture new to old ratio with extra digits.";
 			}
 		});
 		return mmObject_lazy.get();

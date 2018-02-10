@@ -84,6 +84,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TransferReference10"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reference of a transfer and of a transfer confirmation."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferReference12
+ * TransferReference12}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransferReference6
@@ -185,6 +192,14 @@ public class TransferReference10 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference12#mmTransferReference
+	 * TransferReference12.mmTransferReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -201,6 +216,7 @@ public class TransferReference10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReference12.mmTransferReference);
 			previousVersion_lazy = () -> TransferReference6.mmTransferReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -242,6 +258,14 @@ public class TransferReference10 {
 	 * definition} =
 	 * "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference12#mmClientReference
+	 * TransferReference12.mmClientReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -258,6 +282,7 @@ public class TransferReference10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReference12.mmClientReference);
 			previousVersion_lazy = () -> TransferReference6.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -293,6 +318,14 @@ public class TransferReference10 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference12#mmTransferConfirmationReference
+	 * TransferReference12.mmTransferConfirmationReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -308,6 +341,7 @@ public class TransferReference10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationReference";
 			definition = "Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReference12.mmTransferConfirmationReference);
 			previousVersion_lazy = () -> TransferReference6.mmTransferConfirmationReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -344,6 +378,14 @@ public class TransferReference10 {
 	 * definition} =
 	 * "Unambiguous identification of the transfer allocated by the counterparty."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference12#mmCounterpartyReference
+	 * TransferReference12.mmCounterpartyReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -359,6 +401,7 @@ public class TransferReference10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReference12.mmCounterpartyReference);
 			previousVersion_lazy = () -> TransferReference6.mmCounterpartyReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -378,6 +421,7 @@ public class TransferReference10 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferReference10";
 				definition = "Reference of a transfer and of a transfer confirmation.";
+				nextVersions_lazy = () -> Arrays.asList(TransferReference12.mmObject());
 				previousVersion_lazy = () -> TransferReference6.mmObject();
 			}
 		});

@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.XmlType;
  * "CollateralStatusReason1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Business status of the collateral data management request for processing in the system. "
+ * "Business status of the collateral data management request for processing in the system."
  * </li>
  * </ul>
  */
@@ -193,7 +193,7 @@ public class CollateralStatusReason1 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forCollateralStatusReason1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralStatusReason1";
-				definition = "Business status of the collateral data management request for processing in the system. ";
+				definition = "Business status of the collateral data management request for processing in the system.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -73,6 +73,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of transactions to capture, sharing common characteristics."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentDataSet19
+ * CardPaymentDataSet19}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet13
@@ -110,6 +117,14 @@ public class CardPaymentDataSet16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet19#mmDataSetIdentification
+	 * CardPaymentDataSet19.mmDataSetIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +140,7 @@ public class CardPaymentDataSet16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Identification of the data set.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet19.mmDataSetIdentification);
 			previousVersion_lazy = () -> CardPaymentDataSet13.mmDataSetIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -159,6 +175,14 @@ public class CardPaymentDataSet16 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of partners involved in the data set building."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet19#mmTraceability
+	 * CardPaymentDataSet19.mmTraceability}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -174,6 +198,7 @@ public class CardPaymentDataSet16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in the data set building.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet19.mmTraceability);
 			previousVersion_lazy = () -> CardPaymentDataSet13.mmTraceability;
 			minOccurs = 0;
 			isComposite = true;
@@ -207,6 +232,14 @@ public class CardPaymentDataSet16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Initiator of the data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet19#mmDataSetInitiator
+	 * CardPaymentDataSet19.mmDataSetInitiator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -222,6 +255,7 @@ public class CardPaymentDataSet16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetInitiator";
 			definition = "Initiator of the data set.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet19.mmDataSetInitiator);
 			previousVersion_lazy = () -> CardPaymentDataSet13.mmDataSetInitiator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -255,6 +289,14 @@ public class CardPaymentDataSet16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction totals of the data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet19#mmTransactionTotals
+	 * CardPaymentDataSet19.mmTransactionTotals}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,6 +312,7 @@ public class CardPaymentDataSet16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTotals";
 			definition = "Transaction totals of the data set.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet19.mmTransactionTotals);
 			previousVersion_lazy = () -> CardPaymentDataSet13.mmTransactionTotals;
 			minOccurs = 1;
 			isComposite = true;
@@ -302,6 +345,14 @@ public class CardPaymentDataSet16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data common to all transactions of the data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet19#mmCommonData
+	 * CardPaymentDataSet19.mmCommonData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -317,6 +368,7 @@ public class CardPaymentDataSet16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonData";
 			definition = "Data common to all transactions of the data set.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet19.mmCommonData);
 			previousVersion_lazy = () -> CardPaymentDataSet13.mmCommonData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -352,6 +404,14 @@ public class CardPaymentDataSet16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Set of transaction to Process."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSet19#mmTransaction
+	 * CardPaymentDataSet19.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -367,6 +427,7 @@ public class CardPaymentDataSet16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Set of transaction to Process.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet19.mmTransaction);
 			previousVersion_lazy = () -> CardPaymentDataSet13.mmTransaction;
 			minOccurs = 1;
 			complexType_lazy = () -> CardPaymentDataSetTransaction5Choice.mmObject();
@@ -383,6 +444,7 @@ public class CardPaymentDataSet16 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSet16";
 				definition = "Set of transactions to capture, sharing common characteristics.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSet19.mmObject());
 				previousVersion_lazy = () -> CardPaymentDataSet13.mmObject();
 			}
 		});

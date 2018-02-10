@@ -23,7 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.SwapLegIdentification2;
 
 /**
- * SwapIn or SwapOut must be present or both
+ * SwapIn or SwapOut must be present or both.
  */
 public class ConstraintSwapInOrSwapOutRule {
 
@@ -47,7 +47,7 @@ public class ConstraintSwapInOrSwapOutRule {
 	 * name} = "SwapInOrSwapOutRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "SwapIn or SwapOut must be present or both"</li>
+	 * definition} = "SwapIn or SwapOut must be present or both."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SwapLegIdentification2> forSwapLegIdentification2 = new MMConstraint<SwapLegIdentification2>() {
@@ -55,14 +55,14 @@ public class ConstraintSwapInOrSwapOutRule {
 			validator = ConstraintSwapInOrSwapOutRule::checkSwapLegIdentification2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwapInOrSwapOutRule";
-			definition = "SwapIn or SwapOut must be present or both";
+			definition = "SwapIn or SwapOut must be present or both.";
 			owner_lazy = () -> SwapLegIdentification2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SwapIn</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/SwapOut</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}
 	};
 
 	/**
-	 * SwapIn or SwapOut must be present or both
+	 * SwapIn or SwapOut must be present or both.
 	 */
 	public static void checkSwapLegIdentification2(SwapLegIdentification2 obj) throws Exception {
 		throw new NotImplementedConstraintException();

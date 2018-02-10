@@ -75,7 +75,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "WorkflowStatus1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the workflow status of the details of a specific level. "</li>
+ * "Specifies the workflow status of the details of a specific level."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -214,7 +214,7 @@ public class WorkflowStatus1Code extends MMCode {
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WorkflowStatus1Code";
-				definition = "Specifies the workflow status of the details of a specific level. ";
+				definition = "Specifies the workflow status of the details of a specific level.";
 				trace_lazy = () -> WorkflowStatusCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WorkflowStatus1Code.Complete, com.tools20022.repository.codeset.WorkflowStatus1Code.Conflict,
 						com.tools20022.repository.codeset.WorkflowStatus1Code.ConditionallyComplete, com.tools20022.repository.codeset.WorkflowStatus1Code.Incomplete, com.tools20022.repository.codeset.WorkflowStatus1Code.Deleted);

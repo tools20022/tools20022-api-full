@@ -25,7 +25,7 @@ import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header27;
 import com.tools20022.repository.msg.ManagementPlan6;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017;
+import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -57,8 +57,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
- * CAPETerminalManagementMaintenance20162017}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
+ * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -81,6 +81,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Terminal maintenance actions to be performed by a point of interaction (POI)."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV07
+ * ManagementPlanReplacementV07}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -116,6 +124,14 @@ public class ManagementPlanReplacementV06 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of characteristics related to the transfer of the management plan."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV07#mmHeader
+	 * ManagementPlanReplacementV07.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +145,7 @@ public class ManagementPlanReplacementV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Set of characteristics related to the transfer of the management plan.";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanReplacementV07.mmHeader);
 			previousVersion_lazy = () -> ManagementPlanReplacementV05.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -167,6 +184,14 @@ public class ManagementPlanReplacementV06 {
 	 * definition} =
 	 * "Sequence of terminal maintenance actions to be performed by a point of interaction (POI)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV07#mmManagementPlan
+	 * ManagementPlanReplacementV07.mmManagementPlan}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +205,7 @@ public class ManagementPlanReplacementV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManagementPlan";
 			definition = "Sequence of terminal maintenance actions to be performed by a point of interaction (POI).";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanReplacementV07.mmManagementPlan);
 			previousVersion_lazy = () -> ManagementPlanReplacementV05.mmManagementPlan;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -218,6 +244,14 @@ public class ManagementPlanReplacementV06 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV07#mmSecurityTrailer
+	 * ManagementPlanReplacementV07.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +265,7 @@ public class ManagementPlanReplacementV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlanReplacementV07.mmSecurityTrailer);
 			previousVersion_lazy = () -> ManagementPlanReplacementV05.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -252,8 +287,9 @@ public class ManagementPlanReplacementV06 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlanReplacementV06";
 				definition = "Terminal maintenance actions to be performed by a point of interaction (POI).";
+				nextVersions_lazy = () -> Arrays.asList(ManagementPlanReplacementV07.mmObject());
 				previousVersion_lazy = () -> ManagementPlanReplacementV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPETerminalManagementMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "MgmtPlanRplcmnt";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

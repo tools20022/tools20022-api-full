@@ -60,6 +60,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * definition} =
  * "Format of data before encryption, if the format is not plaintext or implicit."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.EncryptionFormat2Code
+ * EncryptionFormat2Code}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -80,12 +87,21 @@ public class EncryptionFormat1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TR31"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.EncryptionFormat2Code#TR31
+	 * EncryptionFormat2Code.TR31}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final EncryptionFormat1Code TR31 = new EncryptionFormat1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TR31";
+			nextVersions_lazy = () -> Arrays.asList(EncryptionFormat2Code.TR31);
 			owner_lazy = () -> com.tools20022.repository.codeset.EncryptionFormat1Code.mmObject();
 			codeName = EncryptionFormatCode.TR31.getCodeName().orElse(name);
 		}
@@ -104,12 +120,21 @@ public class EncryptionFormat1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TR34"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.EncryptionFormat2Code#TR34
+	 * EncryptionFormat2Code.TR34}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final EncryptionFormat1Code TR34 = new EncryptionFormat1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TR34";
+			nextVersions_lazy = () -> Arrays.asList(EncryptionFormat2Code.TR34);
 			owner_lazy = () -> com.tools20022.repository.codeset.EncryptionFormat1Code.mmObject();
 			codeName = EncryptionFormatCode.TR34.getCodeName().orElse(name);
 		}
@@ -126,6 +151,7 @@ public class EncryptionFormat1Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncryptionFormat1Code";
 				definition = "Format of data before encryption, if the format is not plaintext or implicit.";
+				nextVersions_lazy = () -> Arrays.asList(EncryptionFormat2Code.mmObject());
 				trace_lazy = () -> EncryptionFormatCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EncryptionFormat1Code.TR31, com.tools20022.repository.codeset.EncryptionFormat1Code.TR34);
 			}

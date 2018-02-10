@@ -344,7 +344,7 @@ public class TaxVoucher1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cash amount after any deductions and allowances have been made"</li>
+	 * "Cash amount after any deductions and allowances have been made."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNetAmount = new MMMessageAttribute() {
@@ -355,7 +355,7 @@ public class TaxVoucher1 {
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
-			definition = "Cash amount after any deductions and allowances have been made";
+			definition = "Cash amount after any deductions and allowances have been made.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -439,7 +439,7 @@ public class TaxVoucher1 {
 	 * name} = "TaxCreditRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Applicable tax rate on the tax credit amount"</li>
+	 * definition} = "Applicable tax rate on the tax credit amount."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTaxCreditRate = new MMMessageAttribute() {
@@ -450,7 +450,7 @@ public class TaxVoucher1 {
 			xmlTag = "TaxCdtRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate";
-			definition = "Applicable tax rate on the tax credit amount";
+			definition = "Applicable tax rate on the tax credit amount.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -534,7 +534,7 @@ public class TaxVoucher1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Rate of a cash distribution that wil be withheld by a tax authority"</li>
+	 * "Rate of a cash distribution that wil be withheld by a tax authority."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmWithholdingTaxRate = new MMMessageAttribute() {
@@ -545,7 +545,7 @@ public class TaxVoucher1 {
 			xmlTag = "WhldgTaxRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate";
-			definition = "Rate of a cash distribution that wil be withheld by a tax authority";
+			definition = "Rate of a cash distribution that wil be withheld by a tax authority.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();

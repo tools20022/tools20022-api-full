@@ -179,7 +179,7 @@ public class CashSettlementInstructionPartyRole extends SettlementPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification of the account used in the context of the party role such as instructing reimbursement agent account..."
+	 * "Unambiguous identification of the account used in the context of the party role such as instructing reimbursement agent account."
 	 * </li>
 	 * </ul>
 	 */
@@ -194,7 +194,7 @@ public class CashSettlementInstructionPartyRole extends SettlementPartyRole {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
-			definition = "Unambiguous identification of the account used in the context of the party role such as instructing reimbursement agent account...";
+			definition = "Unambiguous identification of the account used in the context of the party role such as instructing reimbursement agent account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmCashSettlementPartyRole;
 			aggregation = MMAggregation.NONE;

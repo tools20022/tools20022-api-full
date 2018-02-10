@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AmountRange2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between a range of amount values with or without the currency. "</li>
+ * "Choice between a range of amount values with or without the currency."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -193,7 +193,7 @@ public class AmountRange2Choice {
 					}
 				})).get();
 				name = "AmountRange2Choice";
-				definition = "Choice between a range of amount values with or without the currency. ";
+				definition = "Choice between a range of amount values with or without the currency.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -64,6 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Report between the static data audit trail or a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AuditTrailOrBusinessError2Choice
+ * AuditTrailOrBusinessError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +107,14 @@ public class AuditTrailOrBusinessError1Choice {
 	 * definition} =
 	 * "Choice between data concerning static data audit trail retrieved or business error."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AuditTrailOrBusinessError2Choice#mmAuditTrail
+	 * AuditTrailOrBusinessError2Choice.mmAuditTrail}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAuditTrail = new MMMessageAssociationEnd() {
@@ -109,6 +125,7 @@ public class AuditTrailOrBusinessError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuditTrail";
 			definition = "Choice between data concerning static data audit trail retrieved or business error.";
+			nextVersions_lazy = () -> Arrays.asList(AuditTrailOrBusinessError2Choice.mmAuditTrail);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> AuditTrail1.mmObject();
@@ -140,6 +157,14 @@ public class AuditTrailOrBusinessError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Business error resulting from a rejection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AuditTrailOrBusinessError2Choice#mmBusinessError
+	 * AuditTrailOrBusinessError2Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
@@ -150,6 +175,7 @@ public class AuditTrailOrBusinessError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Business error resulting from a rejection.";
+			nextVersions_lazy = () -> Arrays.asList(AuditTrailOrBusinessError2Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -164,6 +190,7 @@ public class AuditTrailOrBusinessError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AuditTrailOrBusinessError1Choice";
 				definition = "Report between the static data audit trail or a business error.";
+				nextVersions_lazy = () -> Arrays.asList(AuditTrailOrBusinessError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

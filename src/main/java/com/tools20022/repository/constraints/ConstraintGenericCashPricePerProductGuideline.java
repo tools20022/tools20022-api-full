@@ -2068,6 +2068,14 @@ public class ConstraintGenericCashPricePerProductGuideline {
 	 * definition} =
 	 * "GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are prices received or paid in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline#forCashOption56
+	 * ConstraintGenericCashPricePerProductGuideline.forCashOption56}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2081,6 +2089,7 @@ public class ConstraintGenericCashPricePerProductGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GenericCashPricePerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are prices received or paid in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline.forCashOption56);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline.forCashOption43;
 			owner_lazy = () -> CashOption50.mmObject();
 		}
@@ -2112,6 +2121,70 @@ public class ConstraintGenericCashPricePerProductGuideline {
 			name = "GenericCashPricePerProductGuideline";
 			definition = "GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are prices received or paid in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price, ETC.) is derived from the event type.";
 			owner_lazy = () -> CashOption53.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption56 CashOption56}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GenericCashPricePerProductGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are prices received or paid in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price.) is derived from the event type."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline#forCashOption50
+	 * ConstraintGenericCashPricePerProductGuideline.forCashOption50}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption56> forCashOption56 = new MMConstraint<CashOption56>() {
+		{
+			validator = ConstraintGenericCashPricePerProductGuideline::checkCashOption56;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GenericCashPricePerProductGuideline";
+			definition = "GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are prices received or paid in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price.) is derived from the event type.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGenericCashPricePerProductGuideline.forCashOption50;
+			owner_lazy = () -> CashOption56.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption63 CashOption63}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GenericCashPricePerProductGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are prices received or paid in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price.) is derived from the event type."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption63> forCashOption63 = new MMConstraint<CashOption63>() {
+		{
+			validator = ConstraintGenericCashPricePerProductGuideline::checkCashOption63;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GenericCashPricePerProductGuideline";
+			definition = "GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are prices received or paid in the course of an event. The specific meaning (redemption price, subscription price, reinvestment price.) is derived from the event type.";
+			owner_lazy = () -> CashOption63.mmObject();
 		}
 	};
 
@@ -2752,6 +2825,26 @@ public class ConstraintGenericCashPricePerProductGuideline {
 	 * derived from the event type.
 	 */
 	public static void checkCashOption53(CashOption53 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are
+	 * prices received or paid in the course of an event. The specific meaning
+	 * (redemption price, subscription price, reinvestment price.) is derived
+	 * from the event type.
+	 */
+	public static void checkCashOption56(CashOption56 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * GenericCashPriceReceivedPerProduct and GenericCashPricePaidPerProduct are
+	 * prices received or paid in the course of an event. The specific meaning
+	 * (redemption price, subscription price, reinvestment price.) is derived
+	 * from the event type.
+	 */
+	public static void checkCashOption63(CashOption63 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

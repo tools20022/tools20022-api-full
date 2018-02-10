@@ -64,6 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides the financial instruments details or the business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityOrBusinessError2Choice
+ * SecurityOrBusinessError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +105,14 @@ public class SecurityOrBusinessError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the financial instruments details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityOrBusinessError2Choice#mmSecurityReport
+	 * SecurityOrBusinessError2Choice.mmSecurityReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecurityReport = new MMMessageAssociationEnd() {
@@ -107,6 +123,7 @@ public class SecurityOrBusinessError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityReport";
 			definition = "Provides the financial instruments details.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityOrBusinessError2Choice.mmSecurityReport);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecurityAttributes3.mmObject();
@@ -138,6 +155,14 @@ public class SecurityOrBusinessError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the business error details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityOrBusinessError2Choice#mmBusinessError
+	 * SecurityOrBusinessError2Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
@@ -148,6 +173,7 @@ public class SecurityOrBusinessError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Provides the business error details.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityOrBusinessError2Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> BusinessError1.mmObject();
@@ -162,6 +188,7 @@ public class SecurityOrBusinessError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityOrBusinessError1Choice";
 				definition = "Provides the financial instruments details or the business error.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityOrBusinessError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

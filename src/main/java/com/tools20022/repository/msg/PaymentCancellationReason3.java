@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides further details on the reason of the cancellation request."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCancellationReason4
+ * PaymentCancellationReason4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PaymentCancellationReason2
@@ -112,6 +119,14 @@ public class PaymentCancellationReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that issues the cancellation request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCancellationReason4#mmOriginator
+	 * PaymentCancellationReason4.mmOriginator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -128,6 +143,7 @@ public class PaymentCancellationReason3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Party that issues the cancellation request.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCancellationReason4.mmOriginator);
 			previousVersion_lazy = () -> PaymentCancellationReason2.mmOriginator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -167,6 +183,14 @@ public class PaymentCancellationReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reason for the cancellation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCancellationReason4#mmReason
+	 * PaymentCancellationReason4.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +207,7 @@ public class PaymentCancellationReason3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the cancellation.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCancellationReason4.mmReason);
 			previousVersion_lazy = () -> PaymentCancellationReason2.mmReason;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -217,6 +242,14 @@ public class PaymentCancellationReason3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further details on the cancellation request reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCancellationReason4#mmAdditionalInformation
+	 * PaymentCancellationReason4.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -232,6 +265,7 @@ public class PaymentCancellationReason3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the cancellation request reason.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentCancellationReason4.mmAdditionalInformation);
 			previousVersion_lazy = () -> PaymentCancellationReason2.mmAdditionalInformation;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
@@ -248,6 +282,7 @@ public class PaymentCancellationReason3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCancellationReason3";
 				definition = "Provides further details on the reason of the cancellation request.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentCancellationReason4.mmObject());
 				previousVersion_lazy = () -> PaymentCancellationReason2.mmObject();
 			}
 		});

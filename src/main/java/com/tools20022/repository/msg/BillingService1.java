@@ -539,7 +539,7 @@ public class BillingService1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides tax related values for  tax calculation methods A, B or D."</li>
+	 * "Provides tax related values for tax calculation methods A, B or D."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -558,7 +558,7 @@ public class BillingService1 {
 			xmlTag = "TaxClctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCalculation";
-			definition = "Provides tax related values for  tax calculation methods A, B or D.";
+			definition = "Provides tax related values for tax calculation methods A, B or D.";
 			nextVersions_lazy = () -> Arrays.asList(BillingService2.mmTaxCalculation);
 			maxOccurs = 1;
 			minOccurs = 0;

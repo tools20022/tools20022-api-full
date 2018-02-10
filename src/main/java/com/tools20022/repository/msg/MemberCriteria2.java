@@ -107,7 +107,7 @@ public class MemberCriteria2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name of the query defined by the search criteria and return criteria. "</li>
+	 * "Name of the query defined by the search criteria and return criteria."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
@@ -117,7 +117,7 @@ public class MemberCriteria2 {
 			xmlTag = "NewQryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
-			definition = "Name of the query defined by the search criteria and return criteria. ";
+			definition = "Name of the query defined by the search criteria and return criteria.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

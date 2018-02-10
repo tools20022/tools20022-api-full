@@ -168,7 +168,7 @@ public class FundCashInBreakdown1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of the cash flow in,  expressed as a number of units."</li>
+	 * "Amount of the cash flow in, expressed as a number of units."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
@@ -179,7 +179,7 @@ public class FundCashInBreakdown1 {
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
-			definition = "Amount of the cash flow in,  expressed as a number of units.";
+			definition = "Amount of the cash flow in, expressed as a number of units.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();

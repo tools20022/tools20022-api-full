@@ -184,7 +184,7 @@ public class Fee2 {
 	 * name} = "Basis"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Method used to calculate the fee (charge/commission). "</li>
+	 * definition} = "Method used to calculate the fee (charge/commission)."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -199,7 +199,7 @@ public class Fee2 {
 			xmlTag = "Bsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
-			definition = "Method used to calculate the fee (charge/commission). ";
+			definition = "Method used to calculate the fee (charge/commission).";
 			previousVersion_lazy = () -> Fee1.mmBasis;
 			maxOccurs = 1;
 			minOccurs = 0;

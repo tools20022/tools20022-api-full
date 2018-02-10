@@ -301,6 +301,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.EmissionAllowanceProductType2Code
  * EmissionAllowanceProductType2Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AssetClassDetailedSubProductType16Code
+ * AssetClassDetailedSubProductType16Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -2520,7 +2523,7 @@ public class AssetClassDetailedSubProductTypeCode extends MMCode {
 				derivation_lazy = () -> Arrays.asList(AssetFXSubProductType1Code.mmObject(), AssetClassDetailedSubProductType6Code.mmObject(), AssetClassDetailedSubProductType8Code.mmObject(), EmissionAllowanceProductType1Code.mmObject(),
 						AssetClassDetailedSubProductType2Code.mmObject(), AssetClassDetailedSubProductType1Code.mmObject(), AssetClassDetailedSubProductType11Code.mmObject(), AssetClassDetailedSubProductType10Code.mmObject(),
 						AssetClassDetailedSubProductType4Code.mmObject(), AssetClassDetailedSubProductType5Code.mmObject(), AssetClassDetailedSubProductType7Code.mmObject(), AssetClassDetailedSubProductType14Code.mmObject(),
-						AssetClassDetailedSubProductType15Code.mmObject(), AssetClassDetailedSubProductType12Code.mmObject(), EmissionAllowanceProductType2Code.mmObject());
+						AssetClassDetailedSubProductType15Code.mmObject(), AssetClassDetailedSubProductType12Code.mmObject(), EmissionAllowanceProductType2Code.mmObject(), AssetClassDetailedSubProductType16Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode.ForeignExchangeCrossRate,
 						com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode.ForeignExchangeEmergingMarket, com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode.ForeignExchangeMajor,
 						com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode.FeedWheat, com.tools20022.repository.codeset.AssetClassDetailedSubProductTypeCode.BaseLoad,

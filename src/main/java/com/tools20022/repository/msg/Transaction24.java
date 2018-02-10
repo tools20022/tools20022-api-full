@@ -235,7 +235,7 @@ public class Transaction24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the payment transaction is a debit or credit transaction. \n"
+	 * "Indicates whether the payment transaction is a debit or credit transaction. \n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -255,7 +255,7 @@ public class Transaction24 {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the payment transaction is a debit or credit transaction. \n";
+			definition = "Indicates whether the payment transaction is a debit or credit transaction. \n.";
 			nextVersions_lazy = () -> Arrays.asList(Transaction33.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -292,7 +292,7 @@ public class Transaction24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n"
+	 * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -311,7 +311,7 @@ public class Transaction24 {
 			xmlTag = "Pmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
-			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
+			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n.";
 			nextVersions_lazy = () -> Arrays.asList(Transaction33.mmPayment);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -349,7 +349,7 @@ public class Transaction24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. "
+	 * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -369,7 +369,7 @@ public class Transaction24 {
 			xmlTag = "AcctNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountEntry";
-			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
+			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
 			nextVersions_lazy = () -> Arrays.asList(Transaction33.mmAccountEntry);
 			maxOccurs = 1;
 			minOccurs = 0;

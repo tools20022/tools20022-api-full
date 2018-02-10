@@ -142,14 +142,14 @@ public class ReportingWaiverTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Large-in-scale transactions.  Applicable for all instruments."</li>
+	 * "Large-in-scale transactions. Applicable for all instruments."</li>
 	 * </ul>
 	 */
 	public static final ReportingWaiverTypeCode LargeInScale = new ReportingWaiverTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LargeInScale";
-			definition = "Large-in-scale transactions.  Applicable for all instruments.";
+			definition = "Large-in-scale transactions. Applicable for all instruments.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverTypeCode.mmObject();
 			codeName = "LRGS";
 		}
@@ -504,7 +504,7 @@ public class ReportingWaiverTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Amendments
+	 * Amendments.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -521,14 +521,14 @@ public class ReportingWaiverTypeCode extends MMCode {
 	 * name} = "Amendments"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Amendments"</li>
+	 * definition} = "Amendments."</li>
 	 * </ul>
 	 */
 	public static final ReportingWaiverTypeCode Amendments = new ReportingWaiverTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amendments";
-			definition = "Amendments";
+			definition = "Amendments.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverTypeCode.mmObject();
 			codeName = "AMND";
 		}
@@ -598,7 +598,7 @@ public class ReportingWaiverTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Duplicative trade reports
+	 * Duplicative trade reports.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -615,14 +615,14 @@ public class ReportingWaiverTypeCode extends MMCode {
 	 * name} = "DuplicativeTradeReport"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Duplicative trade reports"</li>
+	 * definition} = "Duplicative trade reports."</li>
 	 * </ul>
 	 */
 	public static final ReportingWaiverTypeCode DuplicativeTradeReport = new ReportingWaiverTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicativeTradeReport";
-			definition = "Duplicative trade reports";
+			definition = "Duplicative trade reports.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverTypeCode.mmObject();
 			codeName = "DUPL";
 		}
@@ -659,7 +659,7 @@ public class ReportingWaiverTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Package transaction
+	 * Package transaction.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -676,14 +676,14 @@ public class ReportingWaiverTypeCode extends MMCode {
 	 * name} = "PackageTransaction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Package transaction"</li>
+	 * definition} = "Package transaction."</li>
 	 * </ul>
 	 */
 	public static final ReportingWaiverTypeCode PackageTransaction = new ReportingWaiverTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PackageTransaction";
-			definition = "Package transaction";
+			definition = "Package transaction.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverTypeCode.mmObject();
 			codeName = "TPAC";
 		}
@@ -708,7 +708,7 @@ public class ReportingWaiverTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Transaction where the contract  on a commodity is exchanged for the actual physical good."
+	 * "Transaction where the contract on a commodity is exchanged for the actual physical good."
 	 * </li>
 	 * </ul>
 	 */
@@ -716,7 +716,7 @@ public class ReportingWaiverTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeForPhysical";
-			definition = "Transaction where the contract  on a commodity is exchanged for the actual physical good.";
+			definition = "Transaction where the contract on a commodity is exchanged for the actual physical good.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReportingWaiverTypeCode.mmObject();
 			codeName = "XFPH";
 		}

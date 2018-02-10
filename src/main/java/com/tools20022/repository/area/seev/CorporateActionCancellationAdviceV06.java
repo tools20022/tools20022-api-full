@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
+import com.tools20022.repository.area.SecuritiesEventsArchive;
 import com.tools20022.repository.choice.AccountIdentification29Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.msg.CorporateAction34;
@@ -114,8 +114,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnCxlAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
- * SecuritiesEventsPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsArchive
+ * SecuritiesEventsArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.039.001.06}</li>
@@ -656,7 +656,7 @@ public class CorporateActionCancellationAdviceV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. "
+	 * "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -678,7 +678,7 @@ public class CorporateActionCancellationAdviceV06 {
 			xmlTag = "RsellngAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResellingAgent";
-			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner. ";
+			definition = "A broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV07.mmResellingAgent);
 			previousVersion_lazy = () -> CorporateActionCancellationAdviceV05.mmResellingAgent;
 			minOccurs = 0;
@@ -777,7 +777,7 @@ public class CorporateActionCancellationAdviceV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. "
+	 * "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -799,7 +799,7 @@ public class CorporateActionCancellationAdviceV06 {
 			xmlTag = "DrpAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DropAgent";
-			definition = "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. ";
+			definition = "A trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV07.mmDropAgent);
 			previousVersion_lazy = () -> CorporateActionCancellationAdviceV05.mmDropAgent;
 			maxOccurs = 1;
@@ -898,7 +898,7 @@ public class CorporateActionCancellationAdviceV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. "
+	 * "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -920,7 +920,7 @@ public class CorporateActionCancellationAdviceV06 {
 			xmlTag = "InfAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InformationAgent";
-			definition = "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation. ";
+			definition = "A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV07.mmInformationAgent);
 			previousVersion_lazy = () -> CorporateActionCancellationAdviceV05.mmInformationAgent;
 			maxOccurs = 1;
@@ -1008,7 +1008,7 @@ public class CorporateActionCancellationAdviceV06 {
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnCxlAdvc";
-				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmCancellationAdviceGeneralInformation,
 						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmCorporateActionGeneralInformation, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmAccountsDetails,
 						com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmCorporateActionDetails, com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06.mmIssuerAgent,

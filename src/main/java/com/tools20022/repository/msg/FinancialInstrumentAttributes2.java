@@ -614,7 +614,7 @@ public class FinancialInstrumentAttributes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc."
+	 * "Indicates the level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -626,7 +626,7 @@ public class FinancialInstrumentAttributes2 {
 			xmlTag = "PrefToIncm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreferenceToIncome";
-			definition = "Indicates the  level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
+			definition = "Indicates the level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PreferenceToIncome1Choice.mmObject();
@@ -716,7 +716,7 @@ public class FinancialInstrumentAttributes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies how an option can be exercised (American, European, Bermudan)"
+	 * "Specifies how an option can be exercised (American, European, Bermudan)."
 	 * </li>
 	 * </ul>
 	 */
@@ -728,7 +728,7 @@ public class FinancialInstrumentAttributes2 {
 			xmlTag = "OptnStyle";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStyle";
-			definition = "Specifies how an option can be exercised (American, European, Bermudan)";
+			definition = "Specifies how an option can be exercised (American, European, Bermudan).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OptionStyle2Choice.mmObject();
@@ -1813,7 +1813,7 @@ public class FinancialInstrumentAttributes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)"
+	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1825,7 +1825,7 @@ public class FinancialInstrumentAttributes2 {
 			xmlTag = "VrsnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VersionNumber";
-			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)";
+			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Number1Choice.mmObject();
@@ -2262,7 +2262,7 @@ public class FinancialInstrumentAttributes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Predetermined price at which the holder of a Future will have  to buy or sell the underlying instrument."
+	 * "Predetermined price at which the holder of a Future will have to buy or sell the underlying instrument."
 	 * </li>
 	 * </ul>
 	 */
@@ -2274,7 +2274,7 @@ public class FinancialInstrumentAttributes2 {
 			xmlTag = "ExrcPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
-			definition = "Predetermined price at which the holder of a Future will have  to buy or sell the underlying instrument.";
+			definition = "Predetermined price at which the holder of a Future will have to buy or sell the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

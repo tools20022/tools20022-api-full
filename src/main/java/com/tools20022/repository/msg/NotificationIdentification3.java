@@ -71,6 +71,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides information about the identification and the creation date of a notification."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.NotificationIdentification5
+ * NotificationIdentification5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.NotificationIdentification1
@@ -119,6 +126,14 @@ public class NotificationIdentification3 {
 	 * definition} =
 	 * "Unique identifier of the last notification document (message) assigned by the sender of the document."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationIdentification5#mmIdentification
+	 * NotificationIdentification5.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -136,6 +151,7 @@ public class NotificationIdentification3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identifier of the last notification document (message) assigned by the sender of the document.";
+			nextVersions_lazy = () -> Arrays.asList(NotificationIdentification5.mmIdentification);
 			previousVersion_lazy = () -> NotificationIdentification1.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -180,6 +196,14 @@ public class NotificationIdentification3 {
 	 * definition} =
 	 * "Date and time at which the last notification document (message) was created by the sender."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationIdentification5#mmCreationDateTime
+	 * NotificationIdentification5.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -197,6 +221,7 @@ public class NotificationIdentification3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the last notification document (message) was created by the sender.";
+			nextVersions_lazy = () -> Arrays.asList(NotificationIdentification5.mmCreationDateTime);
 			previousVersion_lazy = () -> NotificationIdentification1.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -213,6 +238,7 @@ public class NotificationIdentification3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NotificationIdentification3";
 				definition = "Provides information about the identification and the creation date of a notification.";
+				nextVersions_lazy = () -> Arrays.asList(NotificationIdentification5.mmObject());
 				previousVersion_lazy = () -> NotificationIdentification1.mmObject();
 			}
 		});

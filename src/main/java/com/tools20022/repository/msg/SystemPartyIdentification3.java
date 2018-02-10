@@ -20,6 +20,8 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PartyDeletionRequestV01;
+import com.tools20022.repository.area.reda.PartyModificationRequestV01;
 import com.tools20022.repository.datatype.BICFIIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.SystemPartyRole;
@@ -52,6 +54,18 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.SystemPartyRole
  * SystemPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyDeletionRequestV01#mmSystemPartyIdentification
+ * PartyDeletionRequestV01.mmSystemPartyIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyModificationRequestV01#mmSystemPartyIdentification
+ * PartyModificationRequestV01.mmSystemPartyIdentification}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -181,6 +195,7 @@ public class SystemPartyIdentification3 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemPartyIdentification3.mmRelatedPartyIdentification, com.tools20022.repository.msg.SystemPartyIdentification3.mmResponsiblePartyIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyDeletionRequestV01.mmSystemPartyIdentification, PartyModificationRequestV01.mmSystemPartyIdentification);
 				trace_lazy = () -> SystemPartyRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;

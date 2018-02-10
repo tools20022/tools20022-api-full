@@ -105,7 +105,7 @@ public class FractionalSecurityRuleCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Round Up x and above on the beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down."
+	 * "Round Up x and above on the beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down."
 	 * </li>
 	 * </ul>
 	 */
@@ -113,7 +113,7 @@ public class FractionalSecurityRuleCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerRoundUpXAndAbove";
-			definition = "Round Up x and above on the beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
+			definition = "Round Up x and above on the beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.";
 			owner_lazy = () -> com.tools20022.repository.codeset.FractionalSecurityRuleCode.mmObject();
 			codeName = "BORU";
 		}
@@ -136,14 +136,14 @@ public class FractionalSecurityRuleCode extends MMCode {
 	 * name} = "BeneficialOwnerCashInLieu"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Cash in Lieu on the beneficial owner fractions. "</li>
+	 * definition} = "Cash in Lieu on the beneficial owner fractions."</li>
 	 * </ul>
 	 */
 	public static final FractionalSecurityRuleCode BeneficialOwnerCashInLieu = new FractionalSecurityRuleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerCashInLieu";
-			definition = "Cash in Lieu on the beneficial owner fractions. ";
+			definition = "Cash in Lieu on the beneficial owner fractions.";
 			owner_lazy = () -> com.tools20022.repository.codeset.FractionalSecurityRuleCode.mmObject();
 			codeName = "BCIL";
 		}
@@ -170,7 +170,7 @@ public class FractionalSecurityRuleCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Round Down x and below beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down."
+	 * "Round Down x and below beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down."
 	 * </li>
 	 * </ul>
 	 */
@@ -178,7 +178,7 @@ public class FractionalSecurityRuleCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerRoundDownXAndBelow";
-			definition = "Round Down x and below beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
+			definition = "Round Down x and below beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.";
 			owner_lazy = () -> com.tools20022.repository.codeset.FractionalSecurityRuleCode.mmObject();
 			codeName = "BORD";
 		}

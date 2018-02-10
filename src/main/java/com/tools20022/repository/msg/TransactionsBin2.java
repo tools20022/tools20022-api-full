@@ -146,7 +146,7 @@ public class TransactionsBin2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total notional amount traded represented by all transactions executed on the reporting day which size lies in the bin's range, expressed in the currency as specified in the local regulation (except for emission allowances and emission allowance derivatives : tons of carbon dioxide). Transactions that have been cancelled should be excluded from the reported figure.\r\n"
+	 * "Total notional amount traded represented by all transactions executed on the reporting day which size lies in the bin's range, expressed in the currency as specified in the local regulation (except for emission allowances and emission allowance derivatives: tons of carbon dioxide). Transactions that have been cancelled should be excluded from the reported figure.\r\n"
 	 * </li>
 	 * </ul>
 	 */
@@ -157,7 +157,7 @@ public class TransactionsBin2 {
 			xmlTag = "TtlNtnlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalNotionalAmount";
-			definition = "Total notional amount traded represented by all transactions executed on the reporting day which size lies in the bin's range, expressed in the currency as specified in the local regulation (except for emission allowances and emission allowance derivatives : tons of carbon dioxide). Transactions that have been cancelled should be excluded from the reported figure.\r\n";
+			definition = "Total notional amount traded represented by all transactions executed on the reporting day which size lies in the bin's range, expressed in the currency as specified in the local regulation (except for emission allowances and emission allowance derivatives: tons of carbon dioxide). Transactions that have been cancelled should be excluded from the reported figure.\r\n";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -189,7 +189,7 @@ public class TransactionsBin2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specific range the quantitative data relates to.  Only allowed ranges must be used."
+	 * "Specific range the quantitative data relates to. Only allowed ranges must be used."
 	 * </li>
 	 * </ul>
 	 */
@@ -200,7 +200,7 @@ public class TransactionsBin2 {
 			xmlTag = "Rg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Range";
-			definition = "Specific range the quantitative data relates to.  Only allowed ranges must be used.";
+			definition = "Specific range the quantitative data relates to. Only allowed ranges must be used.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

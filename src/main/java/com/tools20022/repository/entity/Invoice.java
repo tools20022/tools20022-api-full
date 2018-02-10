@@ -160,6 +160,14 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.FinancialItemParameters1#mmRelatedItem
  * FinancialItemParameters1.mmRelatedItem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BillingReport2#mmRegulatoryData
+ * BillingReport2.mmRegulatoryData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport2#mmInvoiceTotals
+ * BillingReport2.mmInvoiceTotals}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BillingReport2#mmServiceCategoryTotals
+ * BillingReport2.mmServiceCategoryTotals}</li>
  * </ul>
  * </li>
  * <li>
@@ -196,6 +204,11 @@ import java.util.Objects;
  * FinancialItemParameters1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.BillingStatement2
  * BillingStatement2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingSearchCriteria2
+ * BillingSearchCriteria2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport2 BillingReport2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2
+ * ServiceCategoryTotals2}</li>
  * </ul>
  * </li>
  * <li>
@@ -557,6 +570,12 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BillingStatement2#mmFromToDate
 	 * BillingStatement2.mmFromToDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria2#mmBillingPeriod
+	 * BillingSearchCriteria2.mmBillingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport2#mmBillingPeriod
+	 * BillingReport2.mmBillingPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -579,7 +598,7 @@ public class Invoice extends FinancialDocument {
 	public static final MMBusinessAssociationEnd mmPeriodCovered = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmBillingPeriod, BillingStatement1.mmFromToDate, BillingReport1.mmBillingPeriod, BillingCancellationReport1.mmBillingPeriod, BillingSearchCriteria1.mmBillingPeriod,
-					BillingStatement2.mmFromToDate);
+					BillingStatement2.mmFromToDate, BillingSearchCriteria2.mmBillingPeriod, BillingReport2.mmBillingPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -816,6 +835,9 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#mmLineItem
 	 * CardPaymentInvoice2.mmLineItem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice3#mmLineItem
+	 * CardPaymentInvoice3.mmLineItem}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -831,7 +853,7 @@ public class Invoice extends FinancialDocument {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line item."
+	 * "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line item."
 	 * </li>
 	 * </ul>
 	 */
@@ -839,12 +861,12 @@ public class Invoice extends FinancialDocument {
 		{
 			derivation_lazy = () -> Arrays.asList(LineItem5.mmLineItemDetails, LineItem7.mmLineItemDetails, LineItem6.mmLineItemDetails, LineItem8.mmLineItemDetails, LineItem4.mmCommercialLineItems, LineItem9.mmCommercialLineItems,
 					CertificateDataSet1.mmLineItem, LineItem11.mmLineItemDetails, CertificateDataSet2.mmLineItem, LineItem12.mmCommercialLineItems, CardPaymentInvoice1.mmLineItem, LineItem14.mmLineItemDetails, LineItem13.mmLineItemDetails,
-					LineItem15.mmCommercialLineItems, CardPaymentInvoice2.mmLineItem);
+					LineItem15.mmCommercialLineItems, CardPaymentInvoice2.mmLineItem, CardPaymentInvoice3.mmLineItem);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Invoice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
-			definition = "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line item.";
+			definition = "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line item.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmInvoice;
 			aggregation = MMAggregation.NONE;
@@ -1464,7 +1486,7 @@ public class Invoice extends FinancialDocument {
 						com.tools20022.repository.entity.CommercialTradeSettlement.mmInvoice, com.tools20022.repository.entity.InvoiceStatus.mmInvoice);
 				derivationElement_lazy = () -> Arrays.asList(InvoiceLegalIssue1.mmInvoiceLegalStatement, BillingReport1.mmRegulatoryData, BillingReport1.mmInvoiceTotals, BillingReport1.mmServiceCategoryTotals,
 						BillingCancellationReport1.mmRegulatoryData, ReconciliationList1.mmParameters, ReconciliationList1.mmItem, FinancialItem1.mmItemContext, FinancialItem1.mmFinancialDocumentReference,
-						FinancialItemParameters1.mmRelatedItem);
+						FinancialItemParameters1.mmRelatedItem, BillingReport2.mmRegulatoryData, BillingReport2.mmInvoiceTotals, BillingReport2.mmServiceCategoryTotals);
 				superType_lazy = () -> FinancialDocument.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Invoice.mmCreditDebitNoteAmount, com.tools20022.repository.entity.Invoice.mmTotalTaxAmount, com.tools20022.repository.entity.Invoice.mmTotalInvoiceAmount,
 						com.tools20022.repository.entity.Invoice.mmInvoiceCurrency, com.tools20022.repository.entity.Invoice.mmPeriodCovered, com.tools20022.repository.entity.Invoice.mmTradeSettlement,
@@ -1475,7 +1497,8 @@ public class Invoice extends FinancialDocument {
 						com.tools20022.repository.entity.Invoice.mmPayment, com.tools20022.repository.entity.Invoice.mmCreditDebitIndicator);
 				derivationComponent_lazy = () -> Arrays.asList(InvoiceTotals1.mmObject(), OriginalInvoiceInformation1.mmObject(), InvoiceFinancingDetails1.mmObject(), SettlementMonetarySummation1.mmObject(),
 						InvoiceIdentification1.mmObject(), BillingCompensationType1Choice.mmObject(), BillingStatement1.mmObject(), InvoiceLegalIssue1.mmObject(), InvoiceTotals2.mmObject(), ServiceCategoryTotals1.mmObject(),
-						BillingReport1.mmObject(), BillingCancellationReport1.mmObject(), BillingSearchCriteria1.mmObject(), FinancingItemList1.mmObject(), FinancialItemParameters1.mmObject(), BillingStatement2.mmObject());
+						BillingReport1.mmObject(), BillingCancellationReport1.mmObject(), BillingSearchCriteria1.mmObject(), FinancingItemList1.mmObject(), FinancialItemParameters1.mmObject(), BillingStatement2.mmObject(),
+						BillingSearchCriteria2.mmObject(), BillingReport2.mmObject(), ServiceCategoryTotals2.mmObject());
 			}
 
 			@Override

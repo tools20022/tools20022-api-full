@@ -82,6 +82,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CommonData6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Data common to all transactions of a data set."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData7 CommonData7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.CommonData5
  * CommonData5}</li>
@@ -124,6 +130,13 @@ public class CommonData6 {
 	 * definition} =
 	 * "Data related to the environment of the transaction, common to a set of transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData7#mmEnvironment
+	 * CommonData7.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -140,6 +153,7 @@ public class CommonData6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Data related to the environment of the transaction, common to a set of transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CommonData7.mmEnvironment);
 			previousVersion_lazy = () -> CommonData5.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -179,6 +193,13 @@ public class CommonData6 {
 	 * definition} =
 	 * "Data related to the context of the transaction, common to a set of transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData7#mmContext
+	 * CommonData7.mmContext}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -195,6 +216,7 @@ public class CommonData6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Data related to the context of the transaction, common to a set of transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CommonData7.mmContext);
 			previousVersion_lazy = () -> CommonData5.mmContext;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -234,7 +256,15 @@ public class CommonData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of transaction being undertaken for the main service, common to a set of transaction.."
+	 * "Type of transaction being undertaken for the main service, common to a set of transaction."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonData7#mmTransactionType
+	 * CommonData7.mmTransactionType}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -251,7 +281,8 @@ public class CommonData6 {
 			xmlTag = "TxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
-			definition = "Type of transaction being undertaken for the main service, common to a set of transaction..";
+			definition = "Type of transaction being undertaken for the main service, common to a set of transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CommonData7.mmTransactionType);
 			previousVersion_lazy = () -> CommonData5.mmTransactionType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -290,6 +321,14 @@ public class CommonData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Service in addition to the main service."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonData7#mmAdditionalService
+	 * CommonData7.mmAdditionalService}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -306,6 +345,7 @@ public class CommonData6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalService";
 			definition = "Service in addition to the main service.";
+			nextVersions_lazy = () -> Arrays.asList(CommonData7.mmAdditionalService);
 			previousVersion_lazy = () -> CommonData5.mmAdditionalService;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType9Code.mmObject();
@@ -343,6 +383,14 @@ public class CommonData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional attribute of the service type."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonData7#mmServiceAttribute
+	 * CommonData7.mmServiceAttribute}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -359,6 +407,7 @@ public class CommonData6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceAttribute";
 			definition = "Additional attribute of the service type.";
+			nextVersions_lazy = () -> Arrays.asList(CommonData7.mmServiceAttribute);
 			previousVersion_lazy = () -> CommonData5.mmServiceAttribute;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -399,6 +448,14 @@ public class CommonData6 {
 	 * definition} =
 	 * "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonData7#mmMerchantCategoryCode
+	 * CommonData7.mmMerchantCategoryCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -415,6 +472,7 @@ public class CommonData6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantCategoryCode";
 			definition = "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CommonData7.mmMerchantCategoryCode);
 			previousVersion_lazy = () -> CommonData5.mmMerchantCategoryCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -454,6 +512,14 @@ public class CommonData6 {
 	 * definition} =
 	 * "Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonData7#mmReconciliationIdentification
+	 * CommonData7.mmReconciliationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -470,6 +536,7 @@ public class CommonData6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.";
+			nextVersions_lazy = () -> Arrays.asList(CommonData7.mmReconciliationIdentification);
 			previousVersion_lazy = () -> CommonData5.mmReconciliationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -507,6 +574,13 @@ public class CommonData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency associated with the set of transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData7#mmCurrency
+	 * CommonData7.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -523,6 +597,7 @@ public class CommonData6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency associated with the set of transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CommonData7.mmCurrency);
 			previousVersion_lazy = () -> CommonData5.mmCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -541,6 +616,7 @@ public class CommonData6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommonData6";
 				definition = "Data common to all transactions of a data set.";
+				nextVersions_lazy = () -> Arrays.asList(CommonData7.mmObject());
 				previousVersion_lazy = () -> CommonData5.mmObject();
 			}
 		});

@@ -40,8 +40,9 @@ import javax.xml.bind.annotation.*;
  * <b>Usage</b><br>
  * The FullPushThroughReport message can be sent by the matching application to
  * a party to convey<br>
- * - the details of an InitialBaselineSubmission message that it has obtained,or<br>
- * - the details of a BaselineResubmission message that it has obtained,or<br>
+ * - the details of an InitialBaselineSubmission message that it has obtained,
+ * or<br>
+ * - the details of a BaselineResubmission message that it has obtained, or<br>
  * - the details of a BaselineAmendmentRequest message that it has obtained.
  * <p>
  * <strong>Constant fields:</strong>
@@ -118,7 +119,7 @@ import javax.xml.bind.annotation.*;
  * "FullPushThroughReportV05"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Scope\r\nThe FullPushThroughReport message is sent by the matching application to a party involved in a transaction.\r\nThis message is used to pass on information that the matching application has received from the submitter. The forwarded information can originate from an InitialBaselineSubmission or BaselineReSubmission or BaselineAmendmentRequest message.\r\nUsage\r\nThe FullPushThroughReport message can be sent by the matching application to a party to convey\r\n- the details of an InitialBaselineSubmission message that it has obtained,or\r\n- the details of a BaselineResubmission message that it has obtained,or\r\n- the details of a BaselineAmendmentRequest message that it has obtained."
+ * "Scope\r\nThe FullPushThroughReport message is sent by the matching application to a party involved in a transaction.\r\nThis message is used to pass on information that the matching application has received from the submitter. The forwarded information can originate from an InitialBaselineSubmission or BaselineReSubmission or BaselineAmendmentRequest message.\r\nUsage\r\nThe FullPushThroughReport message can be sent by the matching application to a party to convey\r\n- the details of an InitialBaselineSubmission message that it has obtained, or\r\n- the details of a BaselineResubmission message that it has obtained, or\r\n- the details of a BaselineAmendmentRequest message that it has obtained."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -154,7 +155,7 @@ public class FullPushThroughReportV05 {
 	 * name} = "ReportIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the report. "</li>
+	 * definition} = "Identifies the report."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -167,7 +168,7 @@ public class FullPushThroughReportV05 {
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
-			definition = "Identifies the report. ";
+			definition = "Identifies the report.";
 			previousVersion_lazy = () -> FullPushThroughReportV04.mmReportIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -510,8 +511,7 @@ public class FullPushThroughReportV05 {
 	 * name} = "BuyerContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Person to be contacted in the organisation of the buyer. "
-	 * </li>
+	 * definition} = "Person to be contacted in the organisation of the buyer."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -524,7 +524,7 @@ public class FullPushThroughReportV05 {
 			xmlTag = "BuyrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerContactPerson";
-			definition = "Person to be contacted in the organisation of the buyer. ";
+			definition = "Person to be contacted in the organisation of the buyer.";
 			previousVersion_lazy = () -> FullPushThroughReportV04.mmBuyerContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
@@ -560,8 +560,8 @@ public class FullPushThroughReportV05 {
 	 * name} = "SellerContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Person to be contacted in the organisation of the seller. "</li>
+	 * definition} = "Person to be contacted in the organisation of the seller."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -574,7 +574,7 @@ public class FullPushThroughReportV05 {
 			xmlTag = "SellrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerContactPerson";
-			definition = "Person to be contacted in the organisation of the seller. ";
+			definition = "Person to be contacted in the organisation of the seller.";
 			previousVersion_lazy = () -> FullPushThroughReportV04.mmSellerContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
@@ -610,7 +610,7 @@ public class FullPushThroughReportV05 {
 	 * name} = "BuyerBankContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Person to be contacted in the buyer's bank. "</li>
+	 * definition} = "Person to be contacted in the buyer's bank."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -623,7 +623,7 @@ public class FullPushThroughReportV05 {
 			xmlTag = "BuyrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankContactPerson";
-			definition = "Person to be contacted in the buyer's bank. ";
+			definition = "Person to be contacted in the buyer's bank.";
 			previousVersion_lazy = () -> FullPushThroughReportV04.mmBuyerBankContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
@@ -659,7 +659,7 @@ public class FullPushThroughReportV05 {
 	 * name} = "SellerBankContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Person to be contacted in the seller's bank. "</li>
+	 * definition} = "Person to be contacted in the seller's bank."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -672,7 +672,7 @@ public class FullPushThroughReportV05 {
 			xmlTag = "SellrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankContactPerson";
-			definition = "Person to be contacted in the seller's bank. ";
+			definition = "Person to be contacted in the seller's bank.";
 			previousVersion_lazy = () -> FullPushThroughReportV04.mmSellerBankContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
@@ -793,7 +793,7 @@ public class FullPushThroughReportV05 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FullPushThroughReportV05";
-				definition = "Scope\r\nThe FullPushThroughReport message is sent by the matching application to a party involved in a transaction.\r\nThis message is used to pass on information that the matching application has received from the submitter. The forwarded information can originate from an InitialBaselineSubmission or BaselineReSubmission or BaselineAmendmentRequest message.\r\nUsage\r\nThe FullPushThroughReport message can be sent by the matching application to a party to convey\r\n- the details of an InitialBaselineSubmission message that it has obtained,or\r\n- the details of a BaselineResubmission message that it has obtained,or\r\n- the details of a BaselineAmendmentRequest message that it has obtained.";
+				definition = "Scope\r\nThe FullPushThroughReport message is sent by the matching application to a party involved in a transaction.\r\nThis message is used to pass on information that the matching application has received from the submitter. The forwarded information can originate from an InitialBaselineSubmission or BaselineReSubmission or BaselineAmendmentRequest message.\r\nUsage\r\nThe FullPushThroughReport message can be sent by the matching application to a party to convey\r\n- the details of an InitialBaselineSubmission message that it has obtained, or\r\n- the details of a BaselineResubmission message that it has obtained, or\r\n- the details of a BaselineAmendmentRequest message that it has obtained.";
 				previousVersion_lazy = () -> FullPushThroughReportV04.mmObject();
 				messageSet_lazy = () -> Arrays.asList(TradeServicesManagementISOLatestversion.mmObject());
 				rootElement = "Document";

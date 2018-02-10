@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
@@ -48,6 +49,54 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.msg.MessageHeader1#mmCreationDateTime
  * MessageHeader1.mmCreationDateTime}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ModifyMemberV03#mmMessageHeader
+ * ModifyMemberV03.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DeleteLimitV06#mmMessageHeader
+ * DeleteLimitV06.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.LiquidityDebitTransferV04#mmMessageHeader
+ * LiquidityDebitTransferV04.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ModifyLimitV06#mmMessageHeader
+ * ModifyLimitV06.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.GetGeneralBusinessInformationV03#mmMessageHeader
+ * GetGeneralBusinessInformationV03.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.BackupPaymentV06#mmMessageHeader
+ * BackupPaymentV06.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.BackupPaymentV06#mmOriginalMessageIdentification
+ * BackupPaymentV06.mmOriginalMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DeleteReservationV04#mmMessageHeader
+ * DeleteReservationV04.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ModifyReservationV04#mmMessageHeader
+ * ModifyReservationV04.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.LiquidityCreditTransferV04#mmMessageHeader
+ * LiquidityCreditTransferV04.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.GetCurrencyExchangeRateV03#mmMessageHeader
+ * GetCurrencyExchangeRateV03.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ModifyTransactionV07#mmMessageHeader
+ * ModifyTransactionV07.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ModifyStandingOrderV05#mmMessageHeader
+ * ModifyStandingOrderV05.mmMessageHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DeleteStandingOrderV02#mmMessageHeader
+ * DeleteStandingOrderV02.mmMessageHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -161,6 +210,9 @@ public class MessageHeader1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader1.mmMessageIdentification, com.tools20022.repository.msg.MessageHeader1.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ModifyMemberV03.mmMessageHeader, DeleteLimitV06.mmMessageHeader, LiquidityDebitTransferV04.mmMessageHeader, ModifyLimitV06.mmMessageHeader,
+						GetGeneralBusinessInformationV03.mmMessageHeader, BackupPaymentV06.mmMessageHeader, BackupPaymentV06.mmOriginalMessageIdentification, DeleteReservationV04.mmMessageHeader, ModifyReservationV04.mmMessageHeader,
+						LiquidityCreditTransferV04.mmMessageHeader, GetCurrencyExchangeRateV03.mmMessageHeader, ModifyTransactionV07.mmMessageHeader, ModifyStandingOrderV05.mmMessageHeader, DeleteStandingOrderV02.mmMessageHeader);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader1";

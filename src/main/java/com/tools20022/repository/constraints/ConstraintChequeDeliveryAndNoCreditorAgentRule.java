@@ -224,6 +224,9 @@ public class ConstraintChequeDeliveryAndNoCreditorAgentRule {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule#forPaymentInstruction22
 	 * ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction22}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule#forPaymentInstruction24
+	 * ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction24}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -239,7 +242,8 @@ public class ConstraintChequeDeliveryAndNoCreditorAgentRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeDeliveryAndNoCreditorAgentRule";
 			definition = "If PaymentMethod is CHK (Cheque) and CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is present and different from MLFA (MailToFinalAgent), CRFA (CourierToFinalAgent), RGFA (RegisteredMailToFinalAgent) or PUFA (PickUpByFinalAgent), then CreditTransferTransactionInformation/CreditorAgent is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction22);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction22,
+					com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction16;
 			owner_lazy = () -> PaymentInstruction20.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"NotWithInList\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod/Code</leftOperand><rightOperand>ChequeDelivery2Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
@@ -283,6 +287,47 @@ public class ConstraintChequeDeliveryAndNoCreditorAgentRule {
 			definition = "If PaymentMethod is CHK (Cheque) and CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is present and different from MLFA (MailToFinalAgent), CRFA (CourierToFinalAgent), RGFA (RegisteredMailToFinalAgent) or PUFA (PickUpByFinalAgent), then CreditTransferTransactionInformation/CreditorAgent is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction22.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"NotWithInList\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod/Code</leftOperand><rightOperand>ChequeDelivery2Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24
+	 * PaymentInstruction24}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/CreditorAgent&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/PaymentMethod&lt;/leftOperand&gt;&lt;rightOperand&gt;Cheque&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/ChequeInstruction&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"NotWithInList\"&gt;&lt;leftOperand&gt;/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;ChequeDelivery2Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChequeDeliveryAndNoCreditorAgentRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PaymentMethod is CHK (Cheque) and CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is present and different from MLFA (MailToFinalAgent), CRFA (CourierToFinalAgent), RGFA (RegisteredMailToFinalAgent) or PUFA (PickUpByFinalAgent), then CreditTransferTransactionInformation/CreditorAgent is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule#forPaymentInstruction20
+	 * ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction20}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction24> forPaymentInstruction24 = new MMConstraint<PaymentInstruction24>() {
+		{
+			validator = ConstraintChequeDeliveryAndNoCreditorAgentRule::checkPaymentInstruction24;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChequeDeliveryAndNoCreditorAgentRule";
+			definition = "If PaymentMethod is CHK (Cheque) and CreditTransferTransactionInformation/ChequeInstruction/DeliveryMethod/Code is present and different from MLFA (MailToFinalAgent), CRFA (CourierToFinalAgent), RGFA (RegisteredMailToFinalAgent) or PUFA (PickUpByFinalAgent), then CreditTransferTransactionInformation/CreditorAgent is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeDeliveryAndNoCreditorAgentRule.forPaymentInstruction20;
+			owner_lazy = () -> PaymentInstruction24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CreditTransferTransactionInformation[*]/CreditorAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentMethod</leftOperand><rightOperand>Cheque</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"NotWithInList\"><leftOperand>/CreditTransferTransactionInformation[*]/ChequeInstruction/DeliveryMethod/Code</leftOperand><rightOperand>ChequeDelivery2Code</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 	};
@@ -352,6 +397,18 @@ public class ConstraintChequeDeliveryAndNoCreditorAgentRule {
 	 * CreditTransferTransactionInformation/CreditorAgent is not allowed.
 	 */
 	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PaymentMethod is CHK (Cheque) and
+	 * CreditTransferTransactionInformation/
+	 * ChequeInstruction/DeliveryMethod/Code is present and different from MLFA
+	 * (MailToFinalAgent), CRFA (CourierToFinalAgent), RGFA
+	 * (RegisteredMailToFinalAgent) or PUFA (PickUpByFinalAgent), then
+	 * CreditTransferTransactionInformation/CreditorAgent is not allowed.
+	 */
+	public static void checkPaymentInstruction24(PaymentInstruction24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

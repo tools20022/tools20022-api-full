@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Characteristics and values set for a bilateral limit, including the
- * counterparty upon which the limit applies
+ * counterparty upon which the limit applies.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -79,7 +79,7 @@ import javax.xml.bind.annotation.XmlType;
  * "BilateralLimitDetails1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Characteristics and values set for a bilateral limit, including the counterparty upon which the limit applies"
+ * "Characteristics and values set for a bilateral limit, including the counterparty upon which the limit applies."
  * </li>
  * </ul>
  */
@@ -295,7 +295,7 @@ public class BilateralLimitDetails1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BilateralLimitDetails1";
-				definition = "Characteristics and values set for a bilateral limit, including the counterparty upon which the limit applies";
+				definition = "Characteristics and values set for a bilateral limit, including the counterparty upon which the limit applies.";
 			}
 		});
 		return mmObject_lazy.get();

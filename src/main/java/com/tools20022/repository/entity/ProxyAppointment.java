@@ -94,7 +94,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "ProxyAppointment"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies that a proxy has been appointed  to represent a party authorised to vote at a general meeting."
+ * "Specifies that a proxy has been appointed to represent a party authorised to vote at a general meeting."
  * </li>
  * </ul>
  */
@@ -369,7 +369,7 @@ public class ProxyAppointment {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProxyAppointment";
-				definition = "Specifies that a proxy has been appointed  to represent a party authorised to vote at a general meeting.";
+				definition = "Specifies that a proxy has been appointed to represent a party authorised to vote at a general meeting.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.VoteInstructionRequest.mmRelatedProxyAppointment, com.tools20022.repository.entity.InstructionForMeeting.mmProxyAppointment);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProxyAppointment.mmProxyType, com.tools20022.repository.entity.ProxyAppointment.mmRelatedMeetingInstruction,
 						com.tools20022.repository.entity.ProxyAppointment.mmIdentification, com.tools20022.repository.entity.ProxyAppointment.mmVote, com.tools20022.repository.entity.ProxyAppointment.mmAdditionalParticipationCost);

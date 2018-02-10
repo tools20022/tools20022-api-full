@@ -22,7 +22,11 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.semt.*;
+import com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06;
+import com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
+import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
+import com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V05;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
@@ -71,10 +75,10 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05#mmAccountOwner
  * IntraPositionMovementConfirmation002V05.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06#mmAccountOwner
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06#mmAccountOwner
  * IntraPositionMovementConfirmation002V06.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06#mmAccountOwner
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06#mmAccountOwner
  * IntraPositionMovementPostingReport002V06.mmAccountOwner}</li>
  * </ul>
  * </li>

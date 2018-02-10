@@ -72,6 +72,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Parameters related to the security of software application and application protocol."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters11
+ * SecurityParameters11}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SecurityParameters3
@@ -111,6 +118,14 @@ public class SecurityParameters6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of action for the configuration parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters11#mmActionType
+	 * SecurityParameters11.mmActionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
@@ -121,6 +136,7 @@ public class SecurityParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters11.mmActionType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
@@ -153,6 +169,14 @@ public class SecurityParameters6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the security parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters11#mmVersion
+	 * SecurityParameters11.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +192,7 @@ public class SecurityParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the security parameters.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters11.mmVersion);
 			previousVersion_lazy = () -> SecurityParameters3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -203,6 +228,14 @@ public class SecurityParameters6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Point of interaction challenge for cryptographic key injection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters11#mmPOIChallenge
+	 * SecurityParameters11.mmPOIChallenge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -218,6 +251,7 @@ public class SecurityParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIChallenge";
 			definition = "Point of interaction challenge for cryptographic key injection.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters11.mmPOIChallenge);
 			previousVersion_lazy = () -> SecurityParameters3.mmPOIChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -253,6 +287,14 @@ public class SecurityParameters6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Terminal manager challenge for cryptographic key injection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters11#mmTMChallenge
+	 * SecurityParameters11.mmTMChallenge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -268,6 +310,7 @@ public class SecurityParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters11.mmTMChallenge);
 			previousVersion_lazy = () -> SecurityParameters3.mmTMChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -304,6 +347,14 @@ public class SecurityParameters6 {
 	 * definition} =
 	 * "Key to inject in the point of interaction, protected by the temporary key previously sent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters11#mmSecurityElement
+	 * SecurityParameters11.mmSecurityElement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -319,6 +370,7 @@ public class SecurityParameters6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SymmetricKey";
 			definition = "Key to inject in the point of interaction, protected by the temporary key previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters11.mmSecurityElement);
 			previousVersion_lazy = () -> SecurityParameters3.mmSymmetricKey;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey5.mmObject();
@@ -334,6 +386,7 @@ public class SecurityParameters6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters6";
 				definition = "Parameters related to the security of software application and application protocol.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityParameters11.mmObject());
 				previousVersion_lazy = () -> SecurityParameters3.mmObject();
 			}
 		});

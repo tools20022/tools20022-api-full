@@ -911,7 +911,7 @@ public class CorporateActionOption3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required"
+	 * "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required."
 	 * </li>
 	 * </ul>
 	 */
@@ -924,7 +924,7 @@ public class CorporateActionOption3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::CERT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
-			definition = "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required";
+			definition = "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

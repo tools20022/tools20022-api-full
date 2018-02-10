@@ -177,6 +177,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.OtherParties31 OtherParties31}</li>
  * <li>{@linkplain com.tools20022.repository.msg.OtherParties30 OtherParties30}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TradeParty3 TradeParty3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionAgents4
+ * TransactionAgents4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeParty4 TradeParty4}</li>
  * </ul>
  * </li>
  * <li>
@@ -370,6 +373,9 @@ public class Role {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AccountParties16#mmProtector
 	 * AccountParties16.mmProtector}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary41#mmContactPerson
+	 * Intermediary41.mmContactPerson}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -397,7 +403,7 @@ public class Role {
 					MeetingContactPerson2.mmContactPerson, CorporateActionNarrative27.mmPartyContactNarrative, Intermediary34.mmContactPerson, CorporateActionNarrative30.mmPartyContactNarrative,
 					CorporateActionNarrative31.mmPartyContactNarrative, CorporateActionNarrative28.mmPartyContactNarrative, CorporateActionNarrative35.mmPartyContactNarrative, CorporateActionNarrative37.mmPartyContactNarrative,
 					CorporateActionNarrative34.mmPartyContactNarrative, CorporateActionNarrative41.mmPartyContactNarrative, AccountParties15.mmSeniorManagingOfficial, AccountParties15.mmProtector, AccountParties16.mmSeniorManagingOfficial,
-					AccountParties16.mmProtector);
+					AccountParties16.mmProtector, Intermediary41.mmContactPerson);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Role.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -496,6 +502,9 @@ public class Role {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccountOwnershipInformation14#mmCompanyLink
 	 * InvestmentAccountOwnershipInformation14.mmCompanyLink}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress1#mmRole
+	 * ContactIdentificationAndAddress1.mmRole}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -519,7 +528,7 @@ public class Role {
 					Role4Choice.mmCode, Role4Choice.mmProprietary, InvestmentPlan10.mmInstalmentManagerRole, Intermediary27.mmRole, InvestmentPlan11.mmInstalmentManagerRole, AccountRole1.mmOwnerType, Role5Choice.mmCode,
 					Role5Choice.mmProprietary, Role6Choice.mmCode, Role6Choice.mmProprietary, InvestmentPlan12.mmInstalmentManagerRole, InvestmentPlan13.mmInstalmentManagerRole, InvestmentAccountOwnershipInformation12.mmCompanyLink,
 					InvestmentAccountOwnershipInformation13.mmCompanyLink, Role7Choice.mmCode, Role7Choice.mmProprietary, InvestmentPlan14.mmInstalmentManagerRole, InvestmentPlan15.mmInstalmentManagerRole,
-					InvestmentAccountOwnershipInformation15.mmCompanyLink, InvestmentAccountOwnershipInformation14.mmCompanyLink);
+					InvestmentAccountOwnershipInformation15.mmCompanyLink, InvestmentAccountOwnershipInformation14.mmCompanyLink, ContactIdentificationAndAddress1.mmRole);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Role.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -653,7 +662,7 @@ public class Role {
 						OtherParties14.mmObject(), OtherParties15.mmObject(), OtherParties18.mmObject(), OtherParties1.mmObject(), TransactionAgents1.mmObject(), TransactionAgents2.mmObject(), TransactionAgents3.mmObject(),
 						OtherParties4.mmObject(), OtherParties10.mmObject(), OtherParties3.mmObject(), OtherParties11.mmObject(), OtherParties12.mmObject(), TradeParty1.mmObject(), OtherParties5.mmObject(), OtherParties16.mmObject(),
 						OtherParties17.mmObject(), OtherParties6.mmObject(), OtherParties13.mmObject(), Role4Choice.mmObject(), OtherParties27.mmObject(), OtherParties26.mmObject(), TradeParty2.mmObject(), OtherParties28.mmObject(),
-						OtherParties29.mmObject(), OtherParties31.mmObject(), OtherParties30.mmObject(), TradeParty3.mmObject());
+						OtherParties29.mmObject(), OtherParties31.mmObject(), OtherParties30.mmObject(), TradeParty3.mmObject(), TransactionAgents4.mmObject(), TradeParty4.mmObject());
 			}
 
 			@Override

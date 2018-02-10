@@ -151,7 +151,7 @@ public class TaxRecordCode extends MMCode {
 		}
 	};
 	/**
-	 * Tax record is related to the income payment details
+	 * Tax record is related to the income payment details.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -168,20 +168,20 @@ public class TaxRecordCode extends MMCode {
 	 * name} = "IncomePaymentDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax record is related to the income payment details"</li>
+	 * definition} = "Tax record is related to the income payment details."</li>
 	 * </ul>
 	 */
 	public static final TaxRecordCode IncomePaymentDetails = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePaymentDetails";
-			definition = "Tax record is related to the income payment details";
+			definition = "Tax record is related to the income payment details.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "INCP";
 		}
 	};
 	/**
-	 * Tax record is related to the total amount for income payments
+	 * Tax record is related to the total amount for income payments.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -199,20 +199,20 @@ public class TaxRecordCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Tax record is related to the total amount for income payments"</li>
+	 * "Tax record is related to the total amount for income payments."</li>
 	 * </ul>
 	 */
 	public static final TaxRecordCode TotalAmountForIncomePayments = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountForIncomePayments";
-			definition = "Tax record is related to the total amount for income payments";
+			definition = "Tax record is related to the total amount for income payments.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "TLAI";
 		}
 	};
 	/**
-	 * Tax record is related to the money payments details
+	 * Tax record is related to the money payments details.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -229,20 +229,20 @@ public class TaxRecordCode extends MMCode {
 	 * name} = "MoneyPaymentDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax record is related to the  money payments details"</li>
+	 * definition} = "Tax record is related to the money payments details."</li>
 	 * </ul>
 	 */
 	public static final TaxRecordCode MoneyPaymentDetails = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyPaymentDetails";
-			definition = "Tax record is related to the  money payments details";
+			definition = "Tax record is related to the money payments details.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "MONP";
 		}
 	};
 	/**
-	 * Tax record is related to the total amount for money payments
+	 * Tax record is related to the total amount for money payments.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -260,14 +260,14 @@ public class TaxRecordCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Tax record is related to the total amount for money payments"</li>
+	 * "Tax record is related to the total amount for money payments."</li>
 	 * </ul>
 	 */
 	public static final TaxRecordCode TotalAmountForMoneyPayments = new TaxRecordCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmountForMoneyPayments";
-			definition = "Tax record is related to the total amount for money payments";
+			definition = "Tax record is related to the total amount for money payments.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TaxRecordCode.mmObject();
 			codeName = "TLAM";
 		}

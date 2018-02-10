@@ -354,6 +354,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CurrencyConversionAdviceResponse
  * MessageFunctionCode.CurrencyConversionAdviceResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CardDebitRequest
+ * MessageFunctionCode.CardDebitRequest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CardDebitResponse
+ * MessageFunctionCode.CardDebitResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CardDebitAdvice
+ * MessageFunctionCode.CardDebitAdvice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode#CardDebitAdviceResponse
+ * MessageFunctionCode.CardDebitAdviceResponse}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -385,6 +397,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * MessageFunction12Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction13Code
  * MessageFunction13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction14Code
+ * MessageFunction14Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction15Code
+ * MessageFunction15Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -1744,14 +1760,14 @@ public class MessageFunctionCode extends MMCode {
 	 * name} = "FinancialNotification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Initiator requests the clearing of the transaction. "</li>
+	 * definition} = "Initiator requests the clearing of the transaction."</li>
 	 * </ul>
 	 */
 	public static final MessageFunctionCode FinancialNotification = new MessageFunctionCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialNotification";
-			definition = "Initiator requests the clearing of the transaction. ";
+			definition = "Initiator requests the clearing of the transaction.";
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunctionCode.mmObject();
 			codeName = "FNCN";
 		}
@@ -3644,6 +3660,126 @@ public class MessageFunctionCode extends MMCode {
 			codeName = "DCRR";
 		}
 	};
+	/**
+	 * Request to initiate a Card Direct Debit.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
+	 * MessageFunctionCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CDDR"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CardDebitRequest"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Request to initiate a Card Direct Debit."</li>
+	 * </ul>
+	 */
+	public static final MessageFunctionCode CardDebitRequest = new MessageFunctionCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CardDebitRequest";
+			definition = "Request to initiate a Card Direct Debit.";
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunctionCode.mmObject();
+			codeName = "CDDR";
+		}
+	};
+	/**
+	 * Response to a Card Direct Debit Request.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
+	 * MessageFunctionCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CDDP"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CardDebitResponse"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Response to a Card Direct Debit Request."</li>
+	 * </ul>
+	 */
+	public static final MessageFunctionCode CardDebitResponse = new MessageFunctionCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CardDebitResponse";
+			definition = "Response to a Card Direct Debit Request.";
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunctionCode.mmObject();
+			codeName = "CDDP";
+		}
+	};
+	/**
+	 * Advice for a Card Direct Debit.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
+	 * MessageFunctionCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CDDQ"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CardDebitAdvice"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Advice for a Card Direct Debit."</li>
+	 * </ul>
+	 */
+	public static final MessageFunctionCode CardDebitAdvice = new MessageFunctionCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CardDebitAdvice";
+			definition = "Advice for a Card Direct Debit.";
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunctionCode.mmObject();
+			codeName = "CDDQ";
+		}
+	};
+	/**
+	 * Response to a Card Direct Debit Advice.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunctionCode
+	 * MessageFunctionCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CDDK"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CardDebitAdviceResponse"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Response to a Card Direct Debit Advice."</li>
+	 * </ul>
+	 */
+	public static final MessageFunctionCode CardDebitAdviceResponse = new MessageFunctionCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CardDebitAdviceResponse";
+			definition = "Response to a Card Direct Debit Advice.";
+			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunctionCode.mmObject();
+			codeName = "CDDK";
+		}
+	};
 	final static private LinkedHashMap<String, MessageFunctionCode> codesByName = new LinkedHashMap<>();
 
 	protected MessageFunctionCode() {
@@ -3659,7 +3795,7 @@ public class MessageFunctionCode extends MMCode {
 				definition = "Type of process related to a specific message.";
 				derivation_lazy = () -> Arrays.asList(MessageFunction3Code.mmObject(), MessageFunction1Code.mmObject(), MessageFunction2Code.mmObject(), MessageFunction4Code.mmObject(), MessageFunction6Code.mmObject(),
 						MessageFunction5Code.mmObject(), MessageFunction7Code.mmObject(), MessageFunction8Code.mmObject(), MessageFunction9Code.mmObject(), MessageFunction10Code.mmObject(), MessageFunction11Code.mmObject(),
-						MessageFunction12Code.mmObject(), MessageFunction13Code.mmObject());
+						MessageFunction12Code.mmObject(), MessageFunction13Code.mmObject(), MessageFunction14Code.mmObject(), MessageFunction15Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunctionCode.AuthorisationRequest, com.tools20022.repository.codeset.MessageFunctionCode.AuthorisationResponse,
 						com.tools20022.repository.codeset.MessageFunctionCode.FinancialAuthorisationRequest, com.tools20022.repository.codeset.MessageFunctionCode.FinancialAuthorisationResponse,
 						com.tools20022.repository.codeset.MessageFunctionCode.CompletionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.CompletionAdviceResponse,
@@ -3712,7 +3848,9 @@ public class MessageFunctionCode extends MMCode {
 						com.tools20022.repository.codeset.MessageFunctionCode.ATMExceptionAdvice, com.tools20022.repository.codeset.MessageFunctionCode.ATMExceptionAcknowledgement,
 						com.tools20022.repository.codeset.MessageFunctionCode.ATMTransferRequest, com.tools20022.repository.codeset.MessageFunctionCode.ATMTransferResponse,
 						com.tools20022.repository.codeset.MessageFunctionCode.CountersReport, com.tools20022.repository.codeset.MessageFunctionCode.CurrencyConversionAdvice,
-						com.tools20022.repository.codeset.MessageFunctionCode.CurrencyConversionAdviceResponse);
+						com.tools20022.repository.codeset.MessageFunctionCode.CurrencyConversionAdviceResponse, com.tools20022.repository.codeset.MessageFunctionCode.CardDebitRequest,
+						com.tools20022.repository.codeset.MessageFunctionCode.CardDebitResponse, com.tools20022.repository.codeset.MessageFunctionCode.CardDebitAdvice,
+						com.tools20022.repository.codeset.MessageFunctionCode.CardDebitAdviceResponse);
 			}
 		});
 		return mmObject_lazy.get();
@@ -3825,6 +3963,10 @@ public class MessageFunctionCode extends MMCode {
 		codesByName.put(CountersReport.getCodeName().get(), CountersReport);
 		codesByName.put(CurrencyConversionAdvice.getCodeName().get(), CurrencyConversionAdvice);
 		codesByName.put(CurrencyConversionAdviceResponse.getCodeName().get(), CurrencyConversionAdviceResponse);
+		codesByName.put(CardDebitRequest.getCodeName().get(), CardDebitRequest);
+		codesByName.put(CardDebitResponse.getCodeName().get(), CardDebitResponse);
+		codesByName.put(CardDebitAdvice.getCodeName().get(), CardDebitAdvice);
+		codesByName.put(CardDebitAdviceResponse.getCodeName().get(), CardDebitAdviceResponse);
 	}
 
 	public static MessageFunctionCode valueOf(String codeName) {

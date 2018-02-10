@@ -183,6 +183,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmProceedsDefinition
  * CorporateActionEvent.mmProceedsDefinition}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.CorporateActionEvent#mmTaxOnNonDistributedProceedsIndicator
+ * CorporateActionEvent.mmTaxOnNonDistributedProceedsIndicator}</li>
  * </ul>
  * </li>
  * <li>
@@ -564,6 +567,66 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmRateDetails
  * SecuritiesOption63.mmRateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmDateDetails
+ * CorporateAction41.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmPeriodDetails
+ * CorporateAction41.mmPeriodDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmRateAndAmountDetails
+ * CorporateAction41.mmRateAndAmountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction43#mmDateDetails
+ * CorporateAction43.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction42#mmDateDetails
+ * CorporateAction42.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance13#mmGeneralInformation
+ * CorporateActionEventAndBalance13.mmGeneralInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmRateDetails
+ * SecuritiesOption64.mmRateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmRateDetails
+ * SecuritiesOption65.mmRateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction44#mmDateDetails
+ * CorporateAction44.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction45#mmDateDetails
+ * CorporateAction45.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction46#mmDateDetails
+ * CorporateAction46.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance14#mmGeneralInformation
+ * CorporateActionEventAndBalance14.mmGeneralInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction47#mmDateDetails
+ * CorporateAction47.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmRateDetails
+ * SecuritiesOption67.mmRateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction48#mmDateDetails
+ * CorporateAction48.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction49#mmDateDetails
+ * CorporateAction49.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmRateDetails
+ * SecuritiesOption68.mmRateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmDateDetails
+ * CorporateAction51.mmDateDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmPeriodDetails
+ * CorporateAction51.mmPeriodDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmRateAndAmountDetails
+ * CorporateAction51.mmRateAndAmountDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -577,7 +640,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} = List of 519 elements</li>
+ * derivationComponent} = List of 599 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -1365,6 +1428,108 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType58Choice#mmProprietary
 	 * CorporateActionEventType58Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent22Choice#mmCorporateActionEventType
+	 * SettlementOrCorporateActionEvent22Choice.mmCorporateActionEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType73Choice#mmCode
+	 * CorporateActionEventType73Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType73Choice#mmProprietary
+	 * CorporateActionEventType73Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent23Choice#mmCorporateActionEventType
+	 * SettlementOrCorporateActionEvent23Choice.mmCorporateActionEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmCorporateActionEventType
+	 * IntraPositionMovementDetails15.mmCorporateActionEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation127#mmEventType
+	 * CorporateActionGeneralInformation127.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation126#mmEventType
+	 * CorporateActionGeneralInformation126.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmEventType
+	 * CorporateActionGeneralInformation125.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation124#mmEventType
+	 * CorporateActionGeneralInformation124.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation128#mmEventType
+	 * CorporateActionGeneralInformation128.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType74Choice#mmCode
+	 * CorporateActionEventType74Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType74Choice#mmProprietary
+	 * CorporateActionEventType74Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType75Choice#mmCode
+	 * CorporateActionEventType75Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType75Choice#mmProprietary
+	 * CorporateActionEventType75Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType76Choice#mmCode
+	 * CorporateActionEventType76Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType76Choice#mmProprietary
+	 * CorporateActionEventType76Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmEventType
+	 * EventInformation11.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation129#mmEventType
+	 * CorporateActionGeneralInformation129.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType77Choice#mmCode
+	 * CorporateActionEventType77Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType77Choice#mmProprietary
+	 * CorporateActionEventType77Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation12#mmEventType
+	 * EventInformation12.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation130#mmEventType
+	 * CorporateActionGeneralInformation130.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType78Choice#mmCode
+	 * CorporateActionEventType78Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType78Choice#mmProprietary
+	 * CorporateActionEventType78Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation131#mmEventType
+	 * CorporateActionGeneralInformation131.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType79Choice#mmCode
+	 * CorporateActionEventType79Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType79Choice#mmProprietary
+	 * CorporateActionEventType79Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation132#mmEventType
+	 * CorporateActionGeneralInformation132.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation134#mmEventType
+	 * CorporateActionGeneralInformation134.mmEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType83Choice#mmCode
+	 * CorporateActionEventType83Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType83Choice#mmProprietary
+	 * CorporateActionEventType83Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails16#mmCorporateActionEventType
+	 * IntraPositionMovementDetails16.mmCorporateActionEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent24Choice#mmCorporateActionEventType
+	 * SettlementOrCorporateActionEvent24Choice.mmCorporateActionEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent25Choice#mmCorporateActionEventType
+	 * SettlementOrCorporateActionEvent25Choice.mmCorporateActionEventType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1448,7 +1613,15 @@ public class CorporateActionEvent {
 					CorporateActionEventType61Choice.mmCode, CorporateActionEventType61Choice.mmProprietary, EventInformation10.mmEventType, IntraPositionMovementDetails14.mmCorporateActionEventType,
 					SettlementOrCorporateActionEvent20Choice.mmCorporateActionEventType, CorporateActionEventType71Choice.mmCode, CorporateActionEventType71Choice.mmProprietary, CorporateActionEventType69Choice.mmCode,
 					CorporateActionEventType69Choice.mmProprietary, SettlementOrCorporateActionEvent21Choice.mmCorporateActionEventType, CorporateActionEventType57Choice.mmCode, CorporateActionEventType57Choice.mmProprietary,
-					CorporateActionEventType58Choice.mmCode, CorporateActionEventType58Choice.mmProprietary);
+					CorporateActionEventType58Choice.mmCode, CorporateActionEventType58Choice.mmProprietary, SettlementOrCorporateActionEvent22Choice.mmCorporateActionEventType, CorporateActionEventType73Choice.mmCode,
+					CorporateActionEventType73Choice.mmProprietary, SettlementOrCorporateActionEvent23Choice.mmCorporateActionEventType, IntraPositionMovementDetails15.mmCorporateActionEventType,
+					CorporateActionGeneralInformation127.mmEventType, CorporateActionGeneralInformation126.mmEventType, CorporateActionGeneralInformation125.mmEventType, CorporateActionGeneralInformation124.mmEventType,
+					CorporateActionGeneralInformation128.mmEventType, CorporateActionEventType74Choice.mmCode, CorporateActionEventType74Choice.mmProprietary, CorporateActionEventType75Choice.mmCode,
+					CorporateActionEventType75Choice.mmProprietary, CorporateActionEventType76Choice.mmCode, CorporateActionEventType76Choice.mmProprietary, EventInformation11.mmEventType, CorporateActionGeneralInformation129.mmEventType,
+					CorporateActionEventType77Choice.mmCode, CorporateActionEventType77Choice.mmProprietary, EventInformation12.mmEventType, CorporateActionGeneralInformation130.mmEventType, CorporateActionEventType78Choice.mmCode,
+					CorporateActionEventType78Choice.mmProprietary, CorporateActionGeneralInformation131.mmEventType, CorporateActionEventType79Choice.mmCode, CorporateActionEventType79Choice.mmProprietary,
+					CorporateActionGeneralInformation132.mmEventType, CorporateActionGeneralInformation134.mmEventType, CorporateActionEventType83Choice.mmCode, CorporateActionEventType83Choice.mmProprietary,
+					IntraPositionMovementDetails16.mmCorporateActionEventType, SettlementOrCorporateActionEvent24Choice.mmCorporateActionEventType, SettlementOrCorporateActionEvent25Choice.mmCorporateActionEventType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1688,6 +1861,36 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.EventInformation10#mmMandatoryVoluntaryEventType
 	 * EventInformation10.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation127#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation127.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation125.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation124#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation124.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation128#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation128.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmMandatoryVoluntaryEventType
+	 * EventInformation11.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation129#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation129.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation12#mmMandatoryVoluntaryEventType
+	 * EventInformation12.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation131#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation131.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation132#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation132.mmMandatoryVoluntaryEventType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation134#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation134.mmMandatoryVoluntaryEventType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1732,7 +1935,10 @@ public class CorporateActionEvent {
 					CorporateActionGeneralInformation112.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation105.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation106.mmMandatoryVoluntaryEventType,
 					CorporateActionGeneralInformation108.mmMandatoryVoluntaryEventType, EventInformation9.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation120.mmMandatoryVoluntaryEventType,
 					CorporateActionGeneralInformation123.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation117.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation113.mmMandatoryVoluntaryEventType,
-					EventInformation10.mmMandatoryVoluntaryEventType);
+					EventInformation10.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation127.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation125.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation124.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation128.mmMandatoryVoluntaryEventType, EventInformation11.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation129.mmMandatoryVoluntaryEventType, EventInformation12.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation131.mmMandatoryVoluntaryEventType,
+					CorporateActionGeneralInformation132.mmMandatoryVoluntaryEventType, CorporateActionGeneralInformation134.mmMandatoryVoluntaryEventType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2123,6 +2329,42 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmDateDetails
 	 * SecuritiesOption63.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmUnderlyingSecurity
+	 * CorporateActionGeneralInformation125.mmUnderlyingSecurity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation128#mmUnderlyingSecurity
+	 * CorporateActionGeneralInformation128.mmUnderlyingSecurity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance13#mmUnderlyingSecurity
+	 * CorporateActionEventAndBalance13.mmUnderlyingSecurity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmSecurityDetails
+	 * SecuritiesOption64.mmSecurityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmDateDetails
+	 * SecuritiesOption64.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmDateDetails
+	 * SecuritiesOption65.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance14#mmUnderlyingSecurity
+	 * CorporateActionEventAndBalance14.mmUnderlyingSecurity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmDateDetails
+	 * SecuritiesOption67.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation132#mmUnderlyingSecurity
+	 * CorporateActionGeneralInformation132.mmUnderlyingSecurity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmSecurityDetails
+	 * SecuritiesOption68.mmSecurityDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmDateDetails
+	 * SecuritiesOption68.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation134#mmUnderlyingSecurity
+	 * CorporateActionGeneralInformation134.mmUnderlyingSecurity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2170,7 +2412,10 @@ public class CorporateActionEvent {
 					SecuritiesOption57.mmSecurityDetails, SecuritiesOption57.mmDateDetails, CorporateActionEventAndBalance10.mmUnderlyingSecurity, CorporateActionGeneralInformation105.mmUnderlyingSecurity,
 					CorporateActionGeneralInformation107.mmUnderlyingSecurity, CorporateActionGeneralInformation106.mmUnderlyingSecurity, SecuritiesOption60.mmDateDetails, SecuritiesOption59.mmSecurityDetails,
 					SecuritiesOption59.mmDateDetails, CorporateActionEventAndBalance11.mmUnderlyingSecurity, CorporateActionGeneralInformation115.mmUnderlyingSecurity, CorporateActionGeneralInformation117.mmUnderlyingSecurity,
-					CorporateActionGeneralInformation113.mmUnderlyingSecurity, SecuritiesOption61.mmSecurityDetails, SecuritiesOption61.mmDateDetails, CorporateActionEventAndBalance12.mmUnderlyingSecurity, SecuritiesOption63.mmDateDetails);
+					CorporateActionGeneralInformation113.mmUnderlyingSecurity, SecuritiesOption61.mmSecurityDetails, SecuritiesOption61.mmDateDetails, CorporateActionEventAndBalance12.mmUnderlyingSecurity, SecuritiesOption63.mmDateDetails,
+					CorporateActionGeneralInformation125.mmUnderlyingSecurity, CorporateActionGeneralInformation128.mmUnderlyingSecurity, CorporateActionEventAndBalance13.mmUnderlyingSecurity, SecuritiesOption64.mmSecurityDetails,
+					SecuritiesOption64.mmDateDetails, SecuritiesOption65.mmDateDetails, CorporateActionEventAndBalance14.mmUnderlyingSecurity, SecuritiesOption67.mmDateDetails, CorporateActionGeneralInformation132.mmUnderlyingSecurity,
+					SecuritiesOption68.mmSecurityDetails, SecuritiesOption68.mmDateDetails, CorporateActionGeneralInformation134.mmUnderlyingSecurity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2646,6 +2891,66 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmPriceDetails
 	 * CashOption55.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmPriceDetails
+	 * CorporateActionOption140.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmPriceDetails
+	 * CorporateAction41.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmPriceDetails
+	 * CorporateActionOption138.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmPriceDetails
+	 * CorporateActionOption142.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmPriceDetails
+	 * CorporateActionOption139.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption56#mmPriceDetails
+	 * CashOption56.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmPriceDetails
+	 * CashOption57.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmPriceDetails
+	 * SecuritiesOption64.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmPriceDetails
+	 * SecuritiesOption65.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption58#mmPriceDetails
+	 * CashOption58.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmPriceDetails
+	 * CorporateActionOption146.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmPriceDetails
+	 * CorporateActionOption147.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmPriceDetails
+	 * SecuritiesOption67.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption60#mmPriceDetails
+	 * CashOption60.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmPriceDetails
+	 * CorporateActionOption148.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmPriceDetails
+	 * SecuritiesOption68.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption61#mmPriceDetails
+	 * CashOption61.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmPriceDetails
+	 * CorporateAction51.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmPriceDetails
+	 * CorporateActionOption150.mmPriceDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption63#mmPriceDetails
+	 * CashOption63.mmPriceDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2691,7 +2996,11 @@ public class CorporateActionEvent {
 					SecuritiesOption55.mmPriceDetails, CashOption49.mmPriceDetails, CashOption47.mmPriceDetails, SecuritiesOption57.mmPriceDetails, CorporateActionOption132.mmPriceDetails, CorporateActionOption130.mmPriceDetails,
 					CorporateActionOption131.mmPriceDetails, CorporateActionOption129.mmPriceDetails, CashOption52.mmPriceDetails, SecuritiesOption60.mmPriceDetails, CashOption51.mmPriceDetails, SecuritiesOption59.mmPriceDetails,
 					CashOption50.mmPriceDetails, CorporateActionOption134.mmPriceDetails, CorporateActionOption136.mmPriceDetails, CorporateActionOption135.mmPriceDetails, CorporateActionOption133.mmPriceDetails,
-					CashOption53.mmPriceDetails, SecuritiesOption61.mmPriceDetails, SecuritiesOption63.mmPriceDetails, CashOption54.mmPriceDetails, CashOption55.mmPriceDetails);
+					CashOption53.mmPriceDetails, SecuritiesOption61.mmPriceDetails, SecuritiesOption63.mmPriceDetails, CashOption54.mmPriceDetails, CashOption55.mmPriceDetails, CorporateActionOption140.mmPriceDetails,
+					CorporateAction41.mmPriceDetails, CorporateActionOption138.mmPriceDetails, CorporateActionOption142.mmPriceDetails, CorporateActionOption139.mmPriceDetails, CashOption56.mmPriceDetails, CashOption57.mmPriceDetails,
+					SecuritiesOption64.mmPriceDetails, SecuritiesOption65.mmPriceDetails, CashOption58.mmPriceDetails, CorporateActionOption146.mmPriceDetails, CorporateActionOption147.mmPriceDetails, SecuritiesOption67.mmPriceDetails,
+					CashOption60.mmPriceDetails, CorporateActionOption148.mmPriceDetails, SecuritiesOption68.mmPriceDetails, CashOption61.mmPriceDetails, CorporateAction51.mmPriceDetails, CorporateActionOption150.mmPriceDetails,
+					CashOption63.mmPriceDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2901,6 +3210,30 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmForeignExchangeDetails
 	 * CashOption55.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption56#mmForeignExchangeDetails
+	 * CashOption56.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmForeignExchangeDetails
+	 * CashOption57.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87#mmIssuerDeclaredExchangeRate
+	 * CorporateActionRate87.mmIssuerDeclaredExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption58#mmForeignExchangeDetails
+	 * CashOption58.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption60#mmForeignExchangeDetails
+	 * CashOption60.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption61#mmForeignExchangeDetails
+	 * CashOption61.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate97#mmIssuerDeclaredExchangeRate
+	 * CorporateActionRate97.mmIssuerDeclaredExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption63#mmForeignExchangeDetails
+	 * CashOption63.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2935,7 +3268,9 @@ public class CorporateActionEvent {
 					CorporateActionRate68.mmIssuerDeclaredExchangeRate, CashOption42.mmForeignExchangeDetails, CashOption43.mmForeignExchangeDetails, CorporateActionNarrative32.mmForeignExchangeInstructionsAdditionalInformation,
 					CashOption46.mmForeignExchangeDetails, CorporateActionRate79.mmIssuerDeclaredExchangeRate, CashOption49.mmForeignExchangeDetails, CashOption47.mmForeignExchangeDetails,
 					CorporateActionNarrative33.mmForeignExchangeInstructionsAdditionalInformation, CashOption52.mmForeignExchangeDetails, CashOption51.mmForeignExchangeDetails, CorporateActionRate80.mmIssuerDeclaredExchangeRate,
-					CashOption50.mmForeignExchangeDetails, CashOption53.mmForeignExchangeDetails, CorporateActionRate83.mmIssuerDeclaredExchangeRate, CashOption54.mmForeignExchangeDetails, CashOption55.mmForeignExchangeDetails);
+					CashOption50.mmForeignExchangeDetails, CashOption53.mmForeignExchangeDetails, CorporateActionRate83.mmIssuerDeclaredExchangeRate, CashOption54.mmForeignExchangeDetails, CashOption55.mmForeignExchangeDetails,
+					CashOption56.mmForeignExchangeDetails, CashOption57.mmForeignExchangeDetails, CorporateActionRate87.mmIssuerDeclaredExchangeRate, CashOption58.mmForeignExchangeDetails, CashOption60.mmForeignExchangeDetails,
+					CashOption61.mmForeignExchangeDetails, CorporateActionRate97.mmIssuerDeclaredExchangeRate, CashOption63.mmForeignExchangeDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3477,6 +3812,42 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat13Choice#mmProprietary
 	 * AdditionalBusinessProcessFormat13Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction41.mmAdditionalBusinessProcessIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction43#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction43.mmAdditionalBusinessProcessIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction42#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction42.mmAdditionalBusinessProcessIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat15Choice#mmCode
+	 * AdditionalBusinessProcessFormat15Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat15Choice#mmProprietary
+	 * AdditionalBusinessProcessFormat15Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction44#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction44.mmAdditionalBusinessProcessIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction46#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction46.mmAdditionalBusinessProcessIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction47#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction47.mmAdditionalBusinessProcessIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction49#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction49.mmAdditionalBusinessProcessIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction51.mmAdditionalBusinessProcessIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat16Choice#mmCode
+	 * AdditionalBusinessProcessFormat16Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AdditionalBusinessProcessFormat16Choice#mmProprietary
+	 * AdditionalBusinessProcessFormat16Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3519,7 +3890,11 @@ public class CorporateActionEvent {
 					CorporateAction31.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat10Choice.mmCode, AdditionalBusinessProcessFormat10Choice.mmProprietary, AdditionalBusinessProcessFormat11Choice.mmCode,
 					AdditionalBusinessProcessFormat11Choice.mmProprietary, AdditionalBusinessProcessFormat9Choice.mmCode, AdditionalBusinessProcessFormat9Choice.mmProprietary, CorporateAction36.mmAdditionalBusinessProcessIndicator,
 					CorporateAction38.mmAdditionalBusinessProcessIndicator, CorporateAction40.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat12Choice.mmCode, AdditionalBusinessProcessFormat12Choice.mmProprietary,
-					AdditionalBusinessProcessFormat14Choice.mmCode, AdditionalBusinessProcessFormat14Choice.mmProprietary, AdditionalBusinessProcessFormat13Choice.mmCode, AdditionalBusinessProcessFormat13Choice.mmProprietary);
+					AdditionalBusinessProcessFormat14Choice.mmCode, AdditionalBusinessProcessFormat14Choice.mmProprietary, AdditionalBusinessProcessFormat13Choice.mmCode, AdditionalBusinessProcessFormat13Choice.mmProprietary,
+					CorporateAction41.mmAdditionalBusinessProcessIndicator, CorporateAction43.mmAdditionalBusinessProcessIndicator, CorporateAction42.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat15Choice.mmCode,
+					AdditionalBusinessProcessFormat15Choice.mmProprietary, CorporateAction44.mmAdditionalBusinessProcessIndicator, CorporateAction46.mmAdditionalBusinessProcessIndicator,
+					CorporateAction47.mmAdditionalBusinessProcessIndicator, CorporateAction49.mmAdditionalBusinessProcessIndicator, CorporateAction51.mmAdditionalBusinessProcessIndicator, AdditionalBusinessProcessFormat16Choice.mmCode,
+					AdditionalBusinessProcessFormat16Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3569,6 +3944,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate52#mmTradingDate
 	 * CorporateActionDate52.mmTradingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate60#mmTradingDate
+	 * CorporateActionDate60.mmTradingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate68#mmTradingDate
+	 * CorporateActionDate68.mmTradingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3590,7 +3971,7 @@ public class CorporateActionEvent {
 	public static final MMBusinessAttribute mmTradingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmTradingDate, CorporateActionDate10.mmTradingDate, CorporateActionDate18.mmTradingDate, CorporateActionDate19.mmTradingDate, CorporateActionDate46.mmTradingDate,
-					CorporateActionDate52.mmTradingDate);
+					CorporateActionDate52.mmTradingDate, CorporateActionDate60.mmTradingDate, CorporateActionDate68.mmTradingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3745,6 +4126,30 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RateDetails30#mmChargesFees
 	 * RateDetails30.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31#mmChargesFees
+	 * RateDetails31.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmChargesFees
+	 * RateDetails32.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmChargesFees
+	 * CorporateActionRate90.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate89#mmChargesFees
+	 * CorporateActionRate89.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate93#mmChargesFees
+	 * CorporateActionRate93.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33#mmChargesFees
+	 * RateDetails33.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate95#mmChargesFees
+	 * CorporateActionRate95.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34#mmChargesFees
+	 * RateDetails34.mmChargesFees}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3772,7 +4177,8 @@ public class CorporateActionEvent {
 					RateDetails13.mmChargesFees, CorporateActionRate1.mmCharges, CorporateActionRate2.mmCharges, RateDetails15.mmChargesFees, CorporateActionRate48.mmChargesFees, CorporateActionRate49.mmChargesFees,
 					RateDetails14.mmChargesFees, CorporateActionRate58.mmChargesFees, RateDetails18.mmChargesFees, RateDetails21.mmChargesFees, CorporateActionRate65.mmChargesFees, RateDetails23.mmChargesFees,
 					CorporateActionRate69.mmChargesFees, RateDetails22.mmChargesFees, CorporateActionRate72.mmChargesFees, RateDetails24.mmChargesFees, RateDetails25.mmChargesFees, CorporateActionRate77.mmChargesFees,
-					CorporateActionRate75.mmChargesFees, RateDetails26.mmChargesFees, RateDetails27.mmChargesFees, RateDetails28.mmChargesFees, RateDetails30.mmChargesFees);
+					CorporateActionRate75.mmChargesFees, RateDetails26.mmChargesFees, RateDetails27.mmChargesFees, RateDetails28.mmChargesFees, RateDetails30.mmChargesFees, RateDetails31.mmChargesFees, RateDetails32.mmChargesFees,
+					CorporateActionRate90.mmChargesFees, CorporateActionRate89.mmChargesFees, CorporateActionRate93.mmChargesFees, RateDetails33.mmChargesFees, CorporateActionRate95.mmChargesFees, RateDetails34.mmChargesFees);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3843,6 +4249,18 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecurityDate13#mmPariPassuDate
 	 * SecurityDate13.mmPariPassuDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate15#mmPariPassuDate
+	 * SecurityDate15.mmPariPassuDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmPariPassuDate
+	 * SecurityDate16.mmPariPassuDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate17#mmPariPassuDate
+	 * SecurityDate17.mmPariPassuDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate18#mmPariPassuDate
+	 * SecurityDate18.mmPariPassuDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3867,7 +4285,8 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(SecurityDate1.mmPariPassuDate, SecurityDate3.mmPariPassuDate, SecurityDate6.mmPariPassuDate, SecurityDate7.mmPariPassuDate, SecurityDate2.mmPariPassuDate, SecurityDate4.mmPariPassuDate,
 					SecurityDate5.mmPariPassuDate, SecurityDate8.mmPariPassuDate, SecurityDate9.mmPariPassuDate, SecurityDate10.mmPariPassuDate, CorporateActionDate3.mmPariPassuDate, SecurityDate12.mmPariPassuDate,
-					SecurityDate11.mmPariPassuDate, SecurityDate14.mmPariPassuDate, SecurityDate13.mmPariPassuDate);
+					SecurityDate11.mmPariPassuDate, SecurityDate14.mmPariPassuDate, SecurityDate13.mmPariPassuDate, SecurityDate15.mmPariPassuDate, SecurityDate16.mmPariPassuDate, SecurityDate17.mmPariPassuDate,
+					SecurityDate18.mmPariPassuDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4049,6 +4468,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation118#mmFractionalQuantity
 	 * CorporateActionGeneralInformation118.mmFractionalQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation126#mmFractionalQuantity
+	 * CorporateActionGeneralInformation126.mmFractionalQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation130#mmFractionalQuantity
+	 * CorporateActionGeneralInformation130.mmFractionalQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4065,7 +4490,7 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Fractional quantity resulting from an event which will be paid with cash in lieu. "
+	 * "Fractional quantity resulting from an event which will be paid with cash in lieu."
 	 * </li>
 	 * </ul>
 	 */
@@ -4073,12 +4498,13 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionGeneralInformation50.mmFractionalQuantity, CorporateActionGeneralInformation62.mmFractionalQuantity, CorporateActionGeneralInformation79.mmFractionalQuantity,
 					CorporateActionGeneralInformation83.mmFractionalQuantity, CorporateActionGeneralInformation82.mmFractionalQuantity, CorporateActionGeneralInformation89.mmFractionalQuantity,
-					CorporateActionGeneralInformation98.mmFractionalQuantity, CorporateActionGeneralInformation111.mmFractionalQuantity, CorporateActionGeneralInformation118.mmFractionalQuantity);
+					CorporateActionGeneralInformation98.mmFractionalQuantity, CorporateActionGeneralInformation111.mmFractionalQuantity, CorporateActionGeneralInformation118.mmFractionalQuantity,
+					CorporateActionGeneralInformation126.mmFractionalQuantity, CorporateActionGeneralInformation130.mmFractionalQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FractionalQuantity";
-			definition = "Fractional quantity resulting from an event which will be paid with cash in lieu. ";
+			definition = "Fractional quantity resulting from an event which will be paid with cash in lieu.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesQuantity.mmRelatedEventForFractionalQuantity;
 			aggregation = MMAggregation.NONE;
@@ -4219,6 +4645,18 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation113#mmEventProcessingType
 	 * CorporateActionGeneralInformation113.mmEventProcessingType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmEventProcessingType
+	 * CorporateActionGeneralInformation125.mmEventProcessingType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation128#mmEventProcessingType
+	 * CorporateActionGeneralInformation128.mmEventProcessingType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation132#mmEventProcessingType
+	 * CorporateActionGeneralInformation132.mmEventProcessingType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation134#mmEventProcessingType
+	 * CorporateActionGeneralInformation134.mmEventProcessingType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4252,7 +4690,8 @@ public class CorporateActionEvent {
 					CorporateActionEventProcessingType2Choice.mmCode, CorporateActionEventProcessingType2Choice.mmProprietary, CorporateActionGeneralInformation100.mmEventProcessingType,
 					CorporateActionGeneralInformation103.mmEventProcessingType, CorporateActionEventProcessingType3Choice.mmCode, CorporateActionEventProcessingType3Choice.mmProprietary,
 					CorporateActionGeneralInformation105.mmEventProcessingType, CorporateActionGeneralInformation106.mmEventProcessingType, CorporateActionGeneralInformation117.mmEventProcessingType,
-					CorporateActionGeneralInformation113.mmEventProcessingType);
+					CorporateActionGeneralInformation113.mmEventProcessingType, CorporateActionGeneralInformation125.mmEventProcessingType, CorporateActionGeneralInformation128.mmEventProcessingType,
+					CorporateActionGeneralInformation132.mmEventProcessingType, CorporateActionGeneralInformation134.mmEventProcessingType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4412,6 +4851,15 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmAnnouncementDate
 	 * CorporateActionDate58.mmAnnouncementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Issuance3#mmAnnouncementDate
+	 * Issuance3.mmAnnouncementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmAnnouncementDate
+	 * CorporateActionDate61.mmAnnouncementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmAnnouncementDate
+	 * CorporateActionDate74.mmAnnouncementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4437,7 +4885,8 @@ public class CorporateActionEvent {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmAnnouncementDate, CorporateActionDate13.mmAnnouncementDate, CorporateActionDate14.mmAnnouncementDate, CorporateActionDate21.mmAnnouncementDate,
 					CorporateActionDate22.mmAnnouncementDate, CorporateActionDate25.mmAnnouncementDate, CorporateActionDate27.mmAnnouncementDate, CorporateActionDate28.mmAnnouncementDate, MeetingNotice1.mmAnnouncementDate,
 					MeetingNotice2.mmAnnouncementDate, MeetingNotice3.mmAnnouncementDate, CorporateActionNotification1.mmAnnouncementDate, Issuance1.mmAnnouncementDate, CorporateActionGeneralInformation32SD1.mmWebServiceNotificationDate,
-					CorporateActionGeneralInformation32SD1.mmPreviousWebServiceNotificationDate, MeetingNotice4.mmAnnouncementDate, CorporateActionDate44.mmAnnouncementDate, CorporateActionDate58.mmAnnouncementDate);
+					CorporateActionGeneralInformation32SD1.mmPreviousWebServiceNotificationDate, MeetingNotice4.mmAnnouncementDate, CorporateActionDate44.mmAnnouncementDate, CorporateActionDate58.mmAnnouncementDate,
+					Issuance3.mmAnnouncementDate, CorporateActionDate61.mmAnnouncementDate, CorporateActionDate74.mmAnnouncementDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4502,6 +4951,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmEffectiveDate
 	 * CorporateActionDate58.mmEffectiveDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmEffectiveDate
+	 * CorporateActionDate61.mmEffectiveDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmEffectiveDate
+	 * CorporateActionDate74.mmEffectiveDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4526,7 +4981,7 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmEffectiveDate, CorporateActionDate13.mmEffectiveDate, CorporateActionDate14.mmEffectiveDate, CorporateActionDate21.mmEffectiveDate,
 					CorporateActionDate22.mmEffectiveDate, CorporateActionDate25.mmEffectiveDate, CorporateActionDate27.mmEffectiveDate, CorporateActionDate28.mmEffectiveDate, CorporateActionDate2.mmEffectiveDate,
-					CorporateActionDate44.mmEffectiveDate, CorporateActionDate58.mmEffectiveDate);
+					CorporateActionDate44.mmEffectiveDate, CorporateActionDate58.mmEffectiveDate, CorporateActionDate61.mmEffectiveDate, CorporateActionDate74.mmEffectiveDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4591,6 +5046,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmFurtherDetailedAnnouncementDate
 	 * CorporateActionDate58.mmFurtherDetailedAnnouncementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmFurtherDetailedAnnouncementDate
+	 * CorporateActionDate61.mmFurtherDetailedAnnouncementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmFurtherDetailedAnnouncementDate
+	 * CorporateActionDate74.mmFurtherDetailedAnnouncementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4616,7 +5077,8 @@ public class CorporateActionEvent {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmFurtherDetailedAnnouncementDate, CorporateActionDate13.mmFurtherDetailedAnnouncementDate, CorporateActionDate14.mmFurtherDetailedAnnouncementDate,
 					CorporateActionDate21.mmFurtherDetailedAnnouncementDate, CorporateActionDate22.mmFurtherDetailedAnnouncementDate, CorporateActionDate25.mmFurtherDetailedAnnouncementDate,
 					CorporateActionDate27.mmFurtherDetailedAnnouncementDate, CorporateActionDate28.mmFurtherDetailedAnnouncementDate, CorporateActionNotification1.mmFurtherDetailedAnnouncementDate,
-					CorporateActionDate44.mmFurtherDetailedAnnouncementDate, CorporateActionDate58.mmFurtherDetailedAnnouncementDate);
+					CorporateActionDate44.mmFurtherDetailedAnnouncementDate, CorporateActionDate58.mmFurtherDetailedAnnouncementDate, CorporateActionDate61.mmFurtherDetailedAnnouncementDate,
+					CorporateActionDate74.mmFurtherDetailedAnnouncementDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4681,6 +5143,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmMarginFixingDate
 	 * CorporateActionDate58.mmMarginFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmMarginFixingDate
+	 * CorporateActionDate61.mmMarginFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmMarginFixingDate
+	 * CorporateActionDate74.mmMarginFixingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4696,19 +5164,19 @@ public class CorporateActionEvent {
 	 * name} = "MarginFixingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date/time at which the margin rate will be determined ."</li>
+	 * definition} = "Date/time at which the margin rate will be determined."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmMarginFixingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmMarginFixingDate, CorporateActionDate13.mmMarginFixingDate, CorporateActionDate14.mmMarginFixingDate, CorporateActionDate21.mmMarginFixingDate,
 					CorporateActionDate22.mmMarginFixingDate, CorporateActionDate25.mmMarginFixingDate, CorporateActionDate27.mmMarginFixingDate, CorporateActionDate28.mmMarginFixingDate, CorporateActionDate2.mmMarginFixingDate,
-					CorporateActionDate44.mmMarginFixingDate, CorporateActionDate58.mmMarginFixingDate);
+					CorporateActionDate44.mmMarginFixingDate, CorporateActionDate58.mmMarginFixingDate, CorporateActionDate61.mmMarginFixingDate, CorporateActionDate74.mmMarginFixingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarginFixingDate";
-			definition = "Date/time at which the margin rate will be determined .";
+			definition = "Date/time at which the margin rate will be determined.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -4780,6 +5248,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmResultsPublicationDate
 	 * CorporateActionDate58.mmResultsPublicationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmResultsPublicationDate
+	 * CorporateActionDate61.mmResultsPublicationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmResultsPublicationDate
+	 * CorporateActionDate74.mmResultsPublicationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4805,7 +5279,8 @@ public class CorporateActionEvent {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmResultsPublicationDate, CorporateActionDate13.mmResultsPublicationDate, CorporateActionDate14.mmResultsPublicationDate,
 					CorporateActionDate21.mmResultsPublicationDate, CorporateActionDate22.mmResultsPublicationDate, CorporateActionDate25.mmResultsPublicationDate, CorporateActionDate27.mmResultsPublicationDate,
 					CorporateActionDate28.mmResultsPublicationDate, MeetingNotice1.mmResultPublicationDate, MeetingNotice2.mmResultPublicationDate, MeetingNotice3.mmResultPublicationDate, CorporateActionDate2.mmResultsPublicationDate,
-					MeetingNotice4.mmResultPublicationDate, CorporateActionDate44.mmResultsPublicationDate, CorporateActionDate58.mmResultsPublicationDate);
+					MeetingNotice4.mmResultPublicationDate, CorporateActionDate44.mmResultsPublicationDate, CorporateActionDate58.mmResultsPublicationDate, CorporateActionDate61.mmResultsPublicationDate,
+					CorporateActionDate74.mmResultsPublicationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4870,6 +5345,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmUnconditionalDate
 	 * CorporateActionDate58.mmUnconditionalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmUnconditionalDate
+	 * CorporateActionDate61.mmUnconditionalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmUnconditionalDate
+	 * CorporateActionDate74.mmUnconditionalDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4894,7 +5375,7 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmUnconditionalDate, CorporateActionDate13.mmUnconditionalDate, CorporateActionDate14.mmUnconditionalDate, CorporateActionDate21.mmUnconditionalDate,
 					CorporateActionDate22.mmUnconditionalDate, CorporateActionDate25.mmUnconditionalDate, CorporateActionDate27.mmUnconditionalDate, CorporateActionDate28.mmUnconditionalDate, CorporateActionDate2.mmUnconditionalDate,
-					CorporateActionDate44.mmUnconditionalDate, CorporateActionDate58.mmUnconditionalDate);
+					CorporateActionDate44.mmUnconditionalDate, CorporateActionDate58.mmUnconditionalDate, CorporateActionDate61.mmUnconditionalDate, CorporateActionDate74.mmUnconditionalDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4959,6 +5440,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmWhollyUnconditionalDate
 	 * CorporateActionDate58.mmWhollyUnconditionalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmWhollyUnconditionalDate
+	 * CorporateActionDate61.mmWhollyUnconditionalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmWhollyUnconditionalDate
+	 * CorporateActionDate74.mmWhollyUnconditionalDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4983,7 +5470,8 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmWhollyUnconditionalDate, CorporateActionDate13.mmWhollyUnconditionalDate, CorporateActionDate14.mmWhollyUnconditionalDate,
 					CorporateActionDate21.mmWhollyUnconditionalDate, CorporateActionDate22.mmWhollyUnconditionalDate, CorporateActionDate25.mmWhollyUnconditionalDate, CorporateActionDate27.mmWhollyUnconditionalDate,
-					CorporateActionDate28.mmWhollyUnconditionalDate, CorporateActionDate2.mmWhollyUnconditionalDate, CorporateActionDate44.mmWhollyUnconditionalDate, CorporateActionDate58.mmWhollyUnconditionalDate);
+					CorporateActionDate28.mmWhollyUnconditionalDate, CorporateActionDate2.mmWhollyUnconditionalDate, CorporateActionDate44.mmWhollyUnconditionalDate, CorporateActionDate58.mmWhollyUnconditionalDate,
+					CorporateActionDate61.mmWhollyUnconditionalDate, CorporateActionDate74.mmWhollyUnconditionalDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5048,6 +5536,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmLapsedDate
 	 * CorporateActionDate58.mmLapsedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmLapsedDate
+	 * CorporateActionDate61.mmLapsedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmLapsedDate
+	 * CorporateActionDate74.mmLapsedDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5070,7 +5564,8 @@ public class CorporateActionEvent {
 	public static final MMBusinessAttribute mmLapsedDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmLapsedDate, CorporateActionDate13.mmLapsedDate, CorporateActionDate14.mmLapsedDate, CorporateActionDate21.mmLapsedDate, CorporateActionDate22.mmLapsedDate,
-					CorporateActionDate25.mmLapsedDate, CorporateActionDate27.mmLapsedDate, CorporateActionDate28.mmLapsedDate, CorporateActionDate2.mmLapsedDate, CorporateActionDate44.mmLapsedDate, CorporateActionDate58.mmLapsedDate);
+					CorporateActionDate25.mmLapsedDate, CorporateActionDate27.mmLapsedDate, CorporateActionDate28.mmLapsedDate, CorporateActionDate2.mmLapsedDate, CorporateActionDate44.mmLapsedDate, CorporateActionDate58.mmLapsedDate,
+					CorporateActionDate61.mmLapsedDate, CorporateActionDate74.mmLapsedDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5122,6 +5617,9 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmBookClosurePeriod
 	 * CorporateActionPeriod10.mmBookClosurePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmBookClosurePeriod
+	 * CorporateActionPeriod14.mmBookClosurePeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5144,7 +5642,8 @@ public class CorporateActionEvent {
 	 */
 	public static final MMBusinessAssociationEnd mmBookClosurePeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmBookClosurePeriod, CorporateActionPeriod6.mmBookClosurePeriod, CorporateActionPeriod8.mmBookClosurePeriod, CorporateActionPeriod10.mmBookClosurePeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmBookClosurePeriod, CorporateActionPeriod6.mmBookClosurePeriod, CorporateActionPeriod8.mmBookClosurePeriod, CorporateActionPeriod10.mmBookClosurePeriod,
+					CorporateActionPeriod14.mmBookClosurePeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5208,6 +5707,18 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#mmSecuritiesQuantity
 	 * CorporateAction40.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmSecuritiesQuantity
+	 * CorporateAction41.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction42#mmSecuritiesQuantity
+	 * CorporateAction42.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction49#mmSecuritiesQuantity
+	 * CorporateAction49.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmSecuritiesQuantity
+	 * CorporateAction51.mmSecuritiesQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5232,7 +5743,7 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmSecuritiesQuantity, CorporateAction4.mmSecuritiesQuantity, CorporateAction5.mmSecuritiesQuantity, CorporateAction6.mmSecuritiesQuantity,
 					CorporateAction10.mmSecuritiesQuantity, CorporateAction11.mmSecuritiesQuantity, CorporateAction12.mmSecuritiesQuantity, CorporateAction17.mmSecuritiesQuantity, CorporateAction31.mmSecuritiesQuantity,
-					CorporateAction40.mmSecuritiesQuantity);
+					CorporateAction40.mmSecuritiesQuantity, CorporateAction41.mmSecuritiesQuantity, CorporateAction42.mmSecuritiesQuantity, CorporateAction49.mmSecuritiesQuantity, CorporateAction51.mmSecuritiesQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5297,6 +5808,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#mmRestrictionIndicator
 	 * CorporateAction40.mmRestrictionIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmRestrictionIndicator
+	 * CorporateAction41.mmRestrictionIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmRestrictionIndicator
+	 * CorporateAction51.mmRestrictionIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5321,7 +5838,8 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmRestrictionIndicator, CorporateAction4.mmRestrictionIndicator, CorporateAction5.mmRestrictionIndicator, CorporateAction6.mmRestrictionIndicator,
 					CorporateAction7.mmRestrictionIndicator, CorporateAction8.mmRestrictionIndicator, CorporateAction10.mmRestrictionIndicator, CorporateAction11.mmRestrictionIndicator, CorporateAction2.mmRestrictionIndicator,
-					CorporateAction12.mmRestrictionIndicator, CorporateAction17.mmRestrictionIndicator, CorporateAction31.mmRestrictionIndicator, CorporateAction40.mmRestrictionIndicator);
+					CorporateAction12.mmRestrictionIndicator, CorporateAction17.mmRestrictionIndicator, CorporateAction31.mmRestrictionIndicator, CorporateAction40.mmRestrictionIndicator, CorporateAction41.mmRestrictionIndicator,
+					CorporateAction51.mmRestrictionIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5561,6 +6079,36 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventStage4Choice#mmProprietary
 	 * CorporateActionEventStage4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmEventStage
+	 * CorporateAction41.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction43#mmEventStage
+	 * CorporateAction43.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction42#mmEventStage
+	 * CorporateAction42.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction44#mmEventStage
+	 * CorporateAction44.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction45#mmEventStage
+	 * CorporateAction45.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction46#mmEventStage
+	 * CorporateAction46.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction47#mmEventStage
+	 * CorporateAction47.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction48#mmEventStage
+	 * CorporateAction48.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction49#mmEventStage
+	 * CorporateAction49.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmEventStage
+	 * CorporateAction51.mmEventStage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5595,7 +6143,9 @@ public class CorporateActionEvent {
 					CorporateAction31.mmEventStage, CorporateActionEventStageFormat14Choice.mmCode, CorporateActionEventStageFormat14Choice.mmProprietary, CorporateActionEventStageFormat13Choice.mmCode,
 					CorporateActionEventStageFormat13Choice.mmProprietary, CorporateAction34.mmEventStage, CorporateAction35.mmEventStage, CorporateAction36.mmEventStage, CorporateAction38.mmEventStage, CorporateAction40.mmEventStage,
 					CorporateActionEventStageFormat15Choice.mmCode, CorporateActionEventStageFormat15Choice.mmProprietary, CorporateActionEventStageFormat20Choice.mmCode, CorporateActionEventStageFormat20Choice.mmProprietary,
-					Status22Choice.mmCorporateActionEventStage, CorporateActionEventStage4Choice.mmCode, CorporateActionEventStage4Choice.mmProprietary);
+					Status22Choice.mmCorporateActionEventStage, CorporateActionEventStage4Choice.mmCode, CorporateActionEventStage4Choice.mmProprietary, CorporateAction41.mmEventStage, CorporateAction43.mmEventStage,
+					CorporateAction42.mmEventStage, CorporateAction44.mmEventStage, CorporateAction45.mmEventStage, CorporateAction46.mmEventStage, CorporateAction47.mmEventStage, CorporateAction48.mmEventStage,
+					CorporateAction49.mmEventStage, CorporateAction51.mmEventStage);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -6219,7 +6769,7 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides information on the meeting  related to the corporate event."</li>
+	 * "Provides information on the meeting related to the corporate event."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedMeeting = new MMBusinessAssociationEnd() {
@@ -6228,7 +6778,7 @@ public class CorporateActionEvent {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedMeeting";
-			definition = "Provides information on the meeting  related to the corporate event.";
+			definition = "Provides information on the meeting related to the corporate event.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmCorporateEvent;
 			aggregation = MMAggregation.NONE;
@@ -6496,6 +7046,18 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption61#mmTradingPeriod
 	 * SecuritiesOption61.mmTradingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmTradingPeriod
+	 * SecuritiesOption64.mmTradingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmTradingPeriod
+	 * FinancialInstrumentAttributes93.mmTradingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmTradingPeriod
+	 * SecuritiesOption68.mmTradingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes94#mmTradingPeriod
+	 * FinancialInstrumentAttributes94.mmTradingPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -6523,7 +7085,7 @@ public class CorporateActionEvent {
 					SecuritiesOption14.mmTradingPeriod, FinancialInstrumentAttributes25.mmTradingPeriod, SecuritiesOption22.mmTradingPeriod, SecuritiesOption25.mmTradingPeriod, SecuritiesOption30.mmTradingPeriod,
 					FinancialInstrumentAttributes46.mmTradingPeriod, FinancialInstrumentAttributes47.mmTradingPeriod, SecurityOption1.mmTradingPeriod, SecuritiesOption40.mmTradingPeriod, SecuritiesOption45.mmTradingPeriod,
 					FinancialInstrumentAttributes68.mmTradingPeriod, SecuritiesOption49.mmTradingPeriod, FinancialInstrumentAttributes73.mmTradingPeriod, SecuritiesOption57.mmTradingPeriod, SecuritiesOption59.mmTradingPeriod,
-					SecuritiesOption61.mmTradingPeriod);
+					SecuritiesOption61.mmTradingPeriod, SecuritiesOption64.mmTradingPeriod, FinancialInstrumentAttributes93.mmTradingPeriod, SecuritiesOption68.mmTradingPeriod, FinancialInstrumentAttributes94.mmTradingPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -6580,6 +7142,18 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate75#mmFinancialTransactionTaxRate
 	 * CorporateActionRate75.mmFinancialTransactionTaxRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmFinancialTransactionTaxRate
+	 * CorporateActionRate90.mmFinancialTransactionTaxRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate89#mmFinancialTransactionTaxRate
+	 * CorporateActionRate89.mmFinancialTransactionTaxRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate93#mmFinancialTransactionTaxRate
+	 * CorporateActionRate93.mmFinancialTransactionTaxRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate95#mmFinancialTransactionTaxRate
+	 * CorporateActionRate95.mmFinancialTransactionTaxRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -6602,7 +7176,8 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate48.mmFinancialTransactionTaxRate, CorporateActionRate49.mmFinancialTransactionTaxRate, CorporateActionRate58.mmFinancialTransactionTaxRate,
 					CorporateActionRate65.mmFinancialTransactionTaxRate, CorporateActionRate69.mmFinancialTransactionTaxRate, CorporateActionRate72.mmFinancialTransactionTaxRate, CorporateActionRate77.mmFinancialTransactionTaxRate,
-					CorporateActionRate75.mmFinancialTransactionTaxRate);
+					CorporateActionRate75.mmFinancialTransactionTaxRate, CorporateActionRate90.mmFinancialTransactionTaxRate, CorporateActionRate89.mmFinancialTransactionTaxRate, CorporateActionRate93.mmFinancialTransactionTaxRate,
+					CorporateActionRate95.mmFinancialTransactionTaxRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -6665,6 +7240,12 @@ public class CorporateActionEvent {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ConsentTypeFormat5Choice#mmProprietary
 	 * ConsentTypeFormat5Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmConsentType
+	 * CorporateAction41.mmConsentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmConsentType
+	 * CorporateAction51.mmConsentType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -6689,7 +7270,7 @@ public class CorporateActionEvent {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateAction12.mmConsentType, ConsentTypeFormat1Choice.mmCode, ConsentTypeFormat1Choice.mmProprietary, CorporateAction17.mmConsentType, ConsentTypeFormat3Choice.mmCode,
 					ConsentTypeFormat3Choice.mmProprietary, CorporateAction31.mmConsentType, ConsentTypeFormat4Choice.mmCode, ConsentTypeFormat4Choice.mmProprietary, CorporateAction40.mmConsentType, ConsentTypeFormat5Choice.mmCode,
-					ConsentTypeFormat5Choice.mmProprietary);
+					ConsentTypeFormat5Choice.mmProprietary, CorporateAction41.mmConsentType, CorporateAction51.mmConsentType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -6756,6 +7337,67 @@ public class CorporateActionEvent {
 			type_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 		}
 	};
+	protected GenericIdentification taxOnNonDistributedProceedsIndicator;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getComplexType
+	 * complexType} =
+	 * {@linkplain com.tools20022.repository.entity.GenericIdentification
+	 * GenericIdentification}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmTaxOnNonDistributedProceedsIndicator
+	 * CorporateAction41.mmTaxOnNonDistributedProceedsIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmTaxOnNonDistributedProceedsIndicator
+	 * CorporateAction51.mmTaxOnNonDistributedProceedsIndicator}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} =
+	 * {@linkplain com.tools20022.repository.entity.CorporateActionEvent
+	 * CorporateActionEvent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TaxOnNonDistributedProceedsIndicator"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Specifies the tax regulation being attributed to the non- distributed proceeds event."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMBusinessAttribute mmTaxOnNonDistributedProceedsIndicator = new MMBusinessAttribute() {
+		{
+			derivation_lazy = () -> Arrays.asList(CorporateAction41.mmTaxOnNonDistributedProceedsIndicator, CorporateAction51.mmTaxOnNonDistributedProceedsIndicator);
+			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEvent.mmObject();
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "TaxOnNonDistributedProceedsIndicator";
+			definition = "Specifies the tax regulation being attributed to the non- distributed proceeds event.";
+			maxOccurs = 1;
+			minOccurs = 1;
+			complexType_lazy = () -> com.tools20022.repository.entity.GenericIdentification.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return CorporateActionEvent.class.getMethod("getTaxOnNonDistributedProceedsIndicator", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
@@ -6793,32 +7435,35 @@ public class CorporateActionEvent {
 						CorporateAction31.mmPeriodDetails, CorporateAction31.mmRateAndAmountDetails, SecuritiesOption49.mmRateDetails, CorporateActionEventAndBalance9.mmGeneralInformation, SecuritiesOption50.mmRateDetails,
 						CorporateAction34.mmDateDetails, CorporateAction35.mmDateDetails, CorporateAction36.mmDateDetails, CorporateAction38.mmDateDetails, CorporateAction40.mmDateDetails, CorporateAction40.mmPeriodDetails,
 						CorporateAction40.mmRateAndAmountDetails, SecuritiesOption55.mmRateDetails, SecuritiesOption57.mmRateDetails, CorporateActionEventAndBalance10.mmGeneralInformation, SecuritiesOption60.mmRateDetails,
-						SecuritiesOption59.mmRateDetails, CorporateActionEventAndBalance11.mmGeneralInformation, SecuritiesOption61.mmRateDetails, CorporateActionEventAndBalance12.mmGeneralInformation, SecuritiesOption63.mmRateDetails);
+						SecuritiesOption59.mmRateDetails, CorporateActionEventAndBalance11.mmGeneralInformation, SecuritiesOption61.mmRateDetails, CorporateActionEventAndBalance12.mmGeneralInformation, SecuritiesOption63.mmRateDetails,
+						CorporateAction41.mmDateDetails, CorporateAction41.mmPeriodDetails, CorporateAction41.mmRateAndAmountDetails, CorporateAction43.mmDateDetails, CorporateAction42.mmDateDetails,
+						CorporateActionEventAndBalance13.mmGeneralInformation, SecuritiesOption64.mmRateDetails, SecuritiesOption65.mmRateDetails, CorporateAction44.mmDateDetails, CorporateAction45.mmDateDetails,
+						CorporateAction46.mmDateDetails, CorporateActionEventAndBalance14.mmGeneralInformation, CorporateAction47.mmDateDetails, SecuritiesOption67.mmRateDetails, CorporateAction48.mmDateDetails,
+						CorporateAction49.mmDateDetails, SecuritiesOption68.mmRateDetails, CorporateAction51.mmDateDetails, CorporateAction51.mmPeriodDetails, CorporateAction51.mmRateAndAmountDetails);
 				subType_lazy = () -> Arrays.asList(VoluntaryCorporateAction.mmObject(), MandatoryCorporateAction.mmObject());
-				element_lazy = () -> Arrays
-						.asList(com.tools20022.repository.entity.CorporateActionEvent.mmType, com.tools20022.repository.entity.CorporateActionEvent.mmMandatoryVoluntaryEventType,
-								com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice,
-								com.tools20022.repository.entity.CorporateActionEvent.mmExchangeRate, com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails,
-								com.tools20022.repository.entity.CorporateActionEvent.mmBasketOrIndexInformation, com.tools20022.repository.entity.CorporateActionEvent.mmDeadline,
-								com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess, com.tools20022.repository.entity.CorporateActionEvent.mmTradingDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionCharge, com.tools20022.repository.entity.CorporateActionEvent.mmPariPassuDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmInformationConditions, com.tools20022.repository.entity.CorporateActionEvent.mmFractionalQuantity,
-								com.tools20022.repository.entity.CorporateActionEvent.mmEventProcessingType, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus,
-								com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate, com.tools20022.repository.entity.CorporateActionEvent.mmEffectiveDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmFurtherDetailsAnnouncementDate, com.tools20022.repository.entity.CorporateActionEvent.mmMarginFixingDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmResultPublicationDate, com.tools20022.repository.entity.CorporateActionEvent.mmUnconditionalDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmWhollyUnconditionalDate, com.tools20022.repository.entity.CorporateActionEvent.mmLapsedDate,
-								com.tools20022.repository.entity.CorporateActionEvent.mmBookClosurePeriod, com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantity,
-								com.tools20022.repository.entity.CorporateActionEvent.mmRestrictionIndicator, com.tools20022.repository.entity.CorporateActionEvent.mmEventStage,
-								com.tools20022.repository.entity.CorporateActionEvent.mmDocumentationLocation, com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantitySought,
-								com.tools20022.repository.entity.CorporateActionEvent.mmPartialElectionIndicator, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPartyRole,
-								com.tools20022.repository.entity.CorporateActionEvent.mmMarketClaim, com.tools20022.repository.entity.CorporateActionEvent.mmBiddingConditions,
-								com.tools20022.repository.entity.CorporateActionEvent.mmRelatedClassAction, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionEventRegistration,
-								com.tools20022.repository.entity.CorporateActionEvent.mmSuspensionPeriod, com.tools20022.repository.entity.CorporateActionEvent.mmLottery, com.tools20022.repository.entity.CorporateActionEvent.mmMarginType,
-								com.tools20022.repository.entity.CorporateActionEvent.mmRelatedMeeting, com.tools20022.repository.entity.CorporateActionEvent.mmServices, com.tools20022.repository.entity.CorporateActionEvent.mmIssuance,
-								com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesModification, com.tools20022.repository.entity.CorporateActionEvent.mmTradingPeriod,
-								com.tools20022.repository.entity.CorporateActionEvent.mmTransactionTax, com.tools20022.repository.entity.CorporateActionEvent.mmConsentType,
-								com.tools20022.repository.entity.CorporateActionEvent.mmProceedsDefinition);
+				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmType, com.tools20022.repository.entity.CorporateActionEvent.mmMandatoryVoluntaryEventType,
+						com.tools20022.repository.entity.CorporateActionEvent.mmUnderlyingSecurity, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPrice,
+						com.tools20022.repository.entity.CorporateActionEvent.mmExchangeRate, com.tools20022.repository.entity.CorporateActionEvent.mmRegistrationDetails,
+						com.tools20022.repository.entity.CorporateActionEvent.mmBasketOrIndexInformation, com.tools20022.repository.entity.CorporateActionEvent.mmDeadline,
+						com.tools20022.repository.entity.CorporateActionEvent.mmAdditionalBusinessProcess, com.tools20022.repository.entity.CorporateActionEvent.mmTradingDate,
+						com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionCharge, com.tools20022.repository.entity.CorporateActionEvent.mmPariPassuDate,
+						com.tools20022.repository.entity.CorporateActionEvent.mmInformationConditions, com.tools20022.repository.entity.CorporateActionEvent.mmFractionalQuantity,
+						com.tools20022.repository.entity.CorporateActionEvent.mmEventProcessingType, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionStatus,
+						com.tools20022.repository.entity.CorporateActionEvent.mmAnnouncementDate, com.tools20022.repository.entity.CorporateActionEvent.mmEffectiveDate,
+						com.tools20022.repository.entity.CorporateActionEvent.mmFurtherDetailsAnnouncementDate, com.tools20022.repository.entity.CorporateActionEvent.mmMarginFixingDate,
+						com.tools20022.repository.entity.CorporateActionEvent.mmResultPublicationDate, com.tools20022.repository.entity.CorporateActionEvent.mmUnconditionalDate,
+						com.tools20022.repository.entity.CorporateActionEvent.mmWhollyUnconditionalDate, com.tools20022.repository.entity.CorporateActionEvent.mmLapsedDate,
+						com.tools20022.repository.entity.CorporateActionEvent.mmBookClosurePeriod, com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantity,
+						com.tools20022.repository.entity.CorporateActionEvent.mmRestrictionIndicator, com.tools20022.repository.entity.CorporateActionEvent.mmEventStage,
+						com.tools20022.repository.entity.CorporateActionEvent.mmDocumentationLocation, com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesQuantitySought,
+						com.tools20022.repository.entity.CorporateActionEvent.mmPartialElectionIndicator, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPartyRole,
+						com.tools20022.repository.entity.CorporateActionEvent.mmMarketClaim, com.tools20022.repository.entity.CorporateActionEvent.mmBiddingConditions,
+						com.tools20022.repository.entity.CorporateActionEvent.mmRelatedClassAction, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionEventRegistration,
+						com.tools20022.repository.entity.CorporateActionEvent.mmSuspensionPeriod, com.tools20022.repository.entity.CorporateActionEvent.mmLottery, com.tools20022.repository.entity.CorporateActionEvent.mmMarginType,
+						com.tools20022.repository.entity.CorporateActionEvent.mmRelatedMeeting, com.tools20022.repository.entity.CorporateActionEvent.mmServices, com.tools20022.repository.entity.CorporateActionEvent.mmIssuance,
+						com.tools20022.repository.entity.CorporateActionEvent.mmSecuritiesModification, com.tools20022.repository.entity.CorporateActionEvent.mmTradingPeriod,
+						com.tools20022.repository.entity.CorporateActionEvent.mmTransactionTax, com.tools20022.repository.entity.CorporateActionEvent.mmConsentType,
+						com.tools20022.repository.entity.CorporateActionEvent.mmProceedsDefinition, com.tools20022.repository.entity.CorporateActionEvent.mmTaxOnNonDistributedProceedsIndicator);
 				derivationComponent_lazy = () -> ListBuilderForCorporateActionEvent_00.addElems(new ArrayList<>());
 			}
 
@@ -7250,6 +7895,15 @@ public class CorporateActionEvent {
 
 	public CorporateActionEvent setProceedsDefinition(com.tools20022.repository.entity.ProceedsDefinition proceedsDefinition) {
 		this.proceedsDefinition = Objects.requireNonNull(proceedsDefinition);
+		return this;
+	}
+
+	public GenericIdentification getTaxOnNonDistributedProceedsIndicator() {
+		return taxOnNonDistributedProceedsIndicator;
+	}
+
+	public CorporateActionEvent setTaxOnNonDistributedProceedsIndicator(com.tools20022.repository.entity.GenericIdentification taxOnNonDistributedProceedsIndicator) {
+		this.taxOnNonDistributedProceedsIndicator = Objects.requireNonNull(taxOnNonDistributedProceedsIndicator);
 		return this;
 	}
 }

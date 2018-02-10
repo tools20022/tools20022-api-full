@@ -123,6 +123,15 @@ public class AccountReportedMovement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#mmMonthlyPaymentValue
 	 * CustomerAccount3.mmMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumMonthlyPaymentValue
+	 * CustomerAccount7.mmMinimumMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumMonthlyPaymentValue
+	 * CustomerAccount7.mmMaximumMonthlyPaymentValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount6#mmMonthlyPaymentValue
+	 * CustomerAccount6.mmMonthlyPaymentValue}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -146,7 +155,8 @@ public class AccountReportedMovement {
 	public static final MMBusinessAttribute mmMonthlyPaymentValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CustomerAccount1.mmMonthlyPaymentValue, CustomerAccount5.mmMonthlyPaymentValue, CustomerAccountModification1.mmMonthlyPaymentValue, CustomerAccount4.mmMonthlyPaymentValue,
-					CustomerAccount2.mmMinimumMonthlyPaymentValue, CustomerAccount2.mmMaximumMonthlyPaymentValue, CustomerAccount3.mmMonthlyPaymentValue);
+					CustomerAccount2.mmMinimumMonthlyPaymentValue, CustomerAccount2.mmMaximumMonthlyPaymentValue, CustomerAccount3.mmMonthlyPaymentValue, CustomerAccount7.mmMinimumMonthlyPaymentValue,
+					CustomerAccount7.mmMaximumMonthlyPaymentValue, CustomerAccount6.mmMonthlyPaymentValue);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -200,6 +210,15 @@ public class AccountReportedMovement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#mmMonthlyReceivedValue
 	 * CustomerAccount3.mmMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumMonthlyReceivedValue
+	 * CustomerAccount7.mmMinimumMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumMonthlyReceivedValue
+	 * CustomerAccount7.mmMaximumMonthlyReceivedValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount6#mmMonthlyReceivedValue
+	 * CustomerAccount6.mmMonthlyReceivedValue}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -223,7 +242,8 @@ public class AccountReportedMovement {
 	public static final MMBusinessAttribute mmMonthlyReceivedValue = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CustomerAccount1.mmMonthlyReceivedValue, CustomerAccount5.mmMonthlyReceivedValue, CustomerAccountModification1.mmMonthlyReceivedValue, CustomerAccount4.mmMonthlyReceivedValue,
-					CustomerAccount2.mmMinimumMonthlyReceivedValue, CustomerAccount2.mmMaximumMonthlyReceivedValue, CustomerAccount3.mmMonthlyReceivedValue);
+					CustomerAccount2.mmMinimumMonthlyReceivedValue, CustomerAccount2.mmMaximumMonthlyReceivedValue, CustomerAccount3.mmMonthlyReceivedValue, CustomerAccount7.mmMinimumMonthlyReceivedValue,
+					CustomerAccount7.mmMaximumMonthlyReceivedValue, CustomerAccount6.mmMonthlyReceivedValue);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -276,6 +296,15 @@ public class AccountReportedMovement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#mmMonthlyTransactionNumber
 	 * CustomerAccount3.mmMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumMonthlyTransactionNumber
+	 * CustomerAccount7.mmMinimumMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumMonthlyTransactionNumber
+	 * CustomerAccount7.mmMaximumMonthlyTransactionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount6#mmMonthlyTransactionNumber
+	 * CustomerAccount6.mmMonthlyTransactionNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -299,7 +328,8 @@ public class AccountReportedMovement {
 	public static final MMBusinessAttribute mmMonthlyTransactionNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CustomerAccount1.mmMonthlyTransactionNumber, CustomerAccount5.mmMonthlyTransactionNumber, CustomerAccountModification1.mmMonthlyTransactionNumber,
-					CustomerAccount4.mmMonthlyTransactionNumber, CustomerAccount2.mmMinimumMonthlyTransactionNumber, CustomerAccount2.mmMaximumMonthlyTransactionNumber, CustomerAccount3.mmMonthlyTransactionNumber);
+					CustomerAccount4.mmMonthlyTransactionNumber, CustomerAccount2.mmMinimumMonthlyTransactionNumber, CustomerAccount2.mmMaximumMonthlyTransactionNumber, CustomerAccount3.mmMonthlyTransactionNumber,
+					CustomerAccount7.mmMinimumMonthlyTransactionNumber, CustomerAccount7.mmMaximumMonthlyTransactionNumber, CustomerAccount6.mmMonthlyTransactionNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -353,6 +383,15 @@ public class AccountReportedMovement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CustomerAccount3#mmAverageBalance
 	 * CustomerAccount3.mmAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumAverageBalance
+	 * CustomerAccount7.mmMinimumAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumAverageBalance
+	 * CustomerAccount7.mmMaximumAverageBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount6#mmAverageBalance
+	 * CustomerAccount6.mmAverageBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -376,7 +415,8 @@ public class AccountReportedMovement {
 	public static final MMBusinessAttribute mmAverageBalance = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CustomerAccount1.mmAverageBalance, CustomerAccount5.mmAverageBalance, CustomerAccountModification1.mmAverageBalance, CustomerAccount4.mmAverageBalance,
-					CustomerAccount2.mmMinimumAverageBalance, CustomerAccount2.mmMaximumAverageBalance, CustomerAccount3.mmAverageBalance);
+					CustomerAccount2.mmMinimumAverageBalance, CustomerAccount2.mmMaximumAverageBalance, CustomerAccount3.mmAverageBalance, CustomerAccount7.mmMinimumAverageBalance, CustomerAccount7.mmMaximumAverageBalance,
+					CustomerAccount6.mmAverageBalance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountReportedMovement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

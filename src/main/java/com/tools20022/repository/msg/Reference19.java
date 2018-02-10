@@ -137,7 +137,7 @@ public class Reference19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "After netting, reference that is common to a net transaction to settle and all its underlying trades"
+	 * "After netting, reference that is common to a net transaction to settle and all its underlying trades."
 	 * </li>
 	 * </ul>
 	 */
@@ -148,7 +148,7 @@ public class Reference19 {
 			xmlTag = "NetPosId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPositionIdentification";
-			definition = "After netting, reference that is common to a net transaction to settle and all its underlying trades";
+			definition = "After netting, reference that is common to a net transaction to settle and all its underlying trades.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

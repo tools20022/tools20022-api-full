@@ -112,6 +112,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Type of component belonging to a POI (Point of Interaction) Terminal."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.POIComponentType5Code
+ * POIComponentType5Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.POIComponentType3Code
@@ -136,6 +143,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AcquirerProtocolParameters"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#AcquirerProtocolParameters
+	 * POIComponentType5Code.AcquirerProtocolParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -147,6 +162,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerProtocolParameters";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.AcquirerProtocolParameters);
 			previousVersion_lazy = () -> POIComponentType3Code.AcquirerProtocolParameters;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.AcquirerProtocolParameters.getCodeName().orElse(name);
@@ -166,6 +182,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ApplicationParameters"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#ApplicationParameters
+	 * POIComponentType5Code.ApplicationParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +201,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.ApplicationParameters);
 			previousVersion_lazy = () -> POIComponentType3Code.ApplicationParameters;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.ApplicationParameters.getCodeName().orElse(name);
@@ -196,6 +221,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TerminalParameters"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#TerminalParameters
+	 * POIComponentType5Code.TerminalParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -207,6 +240,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalParameters";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.TerminalParameters);
 			previousVersion_lazy = () -> POIComponentType3Code.TerminalParameters;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.TerminalParameters.getCodeName().orElse(name);
@@ -226,6 +260,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecurityParameters"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#SecurityParameters
+	 * POIComponentType5Code.SecurityParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,6 +279,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityParameters";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.SecurityParameters);
 			previousVersion_lazy = () -> POIComponentType3Code.SecurityParameters;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.SecurityParameters.getCodeName().orElse(name);
@@ -256,6 +299,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Server"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#Server
+	 * POIComponentType5Code.Server}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -267,6 +318,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Server";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.Server);
 			previousVersion_lazy = () -> POIComponentType3Code.Server;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.Server.getCodeName().orElse(name);
@@ -286,6 +338,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Terminal"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#Terminal
+	 * POIComponentType5Code.Terminal}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,6 +357,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Terminal";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.Terminal);
 			previousVersion_lazy = () -> POIComponentType3Code.Terminal;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.Terminal.getCodeName().orElse(name);
@@ -316,6 +377,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Device"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#Device
+	 * POIComponentType5Code.Device}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -327,6 +396,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Device";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.Device);
 			previousVersion_lazy = () -> POIComponentType3Code.Device;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.Device.getCodeName().orElse(name);
@@ -346,6 +416,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecureModule"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#SecureModule
+	 * POIComponentType5Code.SecureModule}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -357,6 +435,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecureModule";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.SecureModule);
 			previousVersion_lazy = () -> POIComponentType3Code.SecureModule;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.SecureModule.getCodeName().orElse(name);
@@ -376,6 +455,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PaymentApplication"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#PaymentApplication
+	 * POIComponentType5Code.PaymentApplication}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -387,6 +474,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentApplication";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.PaymentApplication);
 			previousVersion_lazy = () -> POIComponentType3Code.PaymentApplication;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.PaymentApplication.getCodeName().orElse(name);
@@ -406,6 +494,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EMVKernel"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#EMVKernel
+	 * POIComponentType5Code.EMVKernel}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -417,6 +513,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVKernel";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.EMVKernel);
 			previousVersion_lazy = () -> POIComponentType3Code.EMVKernel;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.EMVKernel.getCodeName().orElse(name);
@@ -436,6 +533,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EMVLevel1"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#EMVLevel1
+	 * POIComponentType5Code.EMVLevel1}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -447,6 +552,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMVLevel1";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.EMVLevel1);
 			previousVersion_lazy = () -> POIComponentType3Code.EMVLevel1;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.EMVLevel1.getCodeName().orElse(name);
@@ -466,6 +572,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Middleware"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#Middleware
+	 * POIComponentType5Code.Middleware}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -477,6 +591,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Middleware";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.Middleware);
 			previousVersion_lazy = () -> POIComponentType3Code.Middleware;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.Middleware.getCodeName().orElse(name);
@@ -496,6 +611,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Driver"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#Driver
+	 * POIComponentType5Code.Driver}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -507,6 +630,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Driver";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.Driver);
 			previousVersion_lazy = () -> POIComponentType3Code.Driver;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.Driver.getCodeName().orElse(name);
@@ -526,6 +650,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OperatingSystem"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#OperatingSystem
+	 * POIComponentType5Code.OperatingSystem}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -537,6 +669,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperatingSystem";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.OperatingSystem);
 			previousVersion_lazy = () -> POIComponentType3Code.OperatingSystem;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.OperatingSystem.getCodeName().orElse(name);
@@ -556,6 +689,14 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MerchantParameters"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#MerchantParameters
+	 * POIComponentType5Code.MerchantParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -567,6 +708,7 @@ public class POIComponentType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.MerchantParameters);
 			previousVersion_lazy = () -> POIComponentType3Code.MerchantParameters;
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.MerchantParameters.getCodeName().orElse(name);
@@ -586,12 +728,21 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificateParameters"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#CertificateParameters
+	 * POIComponentType5Code.CertificateParameters}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final POIComponentType4Code CertificateParameters = new POIComponentType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateParameters";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.CertificateParameters);
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.CertificateParameters.getCodeName().orElse(name);
 		}
@@ -610,12 +761,21 @@ public class POIComponentType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TMSProtocolParameters"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.POIComponentType5Code#TMSProtocolParameters
+	 * POIComponentType5Code.TMSProtocolParameters}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final POIComponentType4Code TMSProtocolParameters = new POIComponentType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolParameters";
+			nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.TMSProtocolParameters);
 			owner_lazy = () -> com.tools20022.repository.codeset.POIComponentType4Code.mmObject();
 			codeName = POIComponentTypeCode.TMSProtocolParameters.getCodeName().orElse(name);
 		}
@@ -633,6 +793,7 @@ public class POIComponentType4Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "POIComponentType4Code";
 				definition = "Type of component belonging to a POI (Point of Interaction) Terminal.";
+				nextVersions_lazy = () -> Arrays.asList(POIComponentType5Code.mmObject());
 				previousVersion_lazy = () -> POIComponentType3Code.mmObject();
 				trace_lazy = () -> POIComponentTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.POIComponentType4Code.AcquirerProtocolParameters, com.tools20022.repository.codeset.POIComponentType4Code.ApplicationParameters,

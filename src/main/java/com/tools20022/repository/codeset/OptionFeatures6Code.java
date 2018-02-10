@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OptionFeatures6Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the  feature of an option."</li>
+ * definition} = "Specifies the feature of an option."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.OptionFeatures1Code
@@ -280,7 +280,7 @@ public class OptionFeatures6Code extends MMCode {
 				example = Arrays.asList("COND");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionFeatures6Code";
-				definition = "Specifies the  feature of an option.";
+				definition = "Specifies the feature of an option.";
 				previousVersion_lazy = () -> OptionFeatures1Code.mmObject();
 				trace_lazy = () -> OptionFeaturesCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionFeatures6Code.Conditional, com.tools20022.repository.codeset.OptionFeatures6Code.MaximumCash,

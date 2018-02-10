@@ -102,6 +102,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification77
  * PartyIdentification77}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification125
+ * PartyIdentification125}</li>
  * </ul>
  * </li>
  * </ul>
@@ -151,6 +153,9 @@ public class PartyIdentification43 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification77#mmName
 	 * PartyIdentification77.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmName
+	 * PartyIdentification125.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -164,7 +169,7 @@ public class PartyIdentification43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
-			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmName);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmName, PartyIdentification125.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -209,6 +214,9 @@ public class PartyIdentification43 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification77#mmPostalAddress
 	 * PartyIdentification77.mmPostalAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmPostalAddress
+	 * PartyIdentification125.mmPostalAddress}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -222,7 +230,7 @@ public class PartyIdentification43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
-			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmPostalAddress);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmPostalAddress, PartyIdentification125.mmPostalAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -266,6 +274,9 @@ public class PartyIdentification43 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification77#mmIdentification
 	 * PartyIdentification77.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmIdentification
+	 * PartyIdentification125.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -279,7 +290,7 @@ public class PartyIdentification43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of a party.";
-			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmIdentification, PartyIdentification125.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -326,6 +337,9 @@ public class PartyIdentification43 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification77#mmCountryOfResidence
 	 * PartyIdentification77.mmCountryOfResidence}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmCountryOfResidence
+	 * PartyIdentification125.mmCountryOfResidence}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -339,7 +353,7 @@ public class PartyIdentification43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfResidence";
 			definition = "Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.";
-			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmCountryOfResidence);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmCountryOfResidence, PartyIdentification125.mmCountryOfResidence);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -383,6 +397,9 @@ public class PartyIdentification43 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification77#mmContactDetails
 	 * PartyIdentification77.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmContactDetails
+	 * PartyIdentification125.mmContactDetails}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -396,7 +413,7 @@ public class PartyIdentification43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactDetails";
 			definition = "Set of elements used to indicate how to contact the party.";
-			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmContactDetails);
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmContactDetails, PartyIdentification125.mmContactDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -416,7 +433,7 @@ public class PartyIdentification43 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification43";
 				definition = "Set of elements used to identify a person or an organisation.";
-				nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentification77.mmObject(), PartyIdentification125.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

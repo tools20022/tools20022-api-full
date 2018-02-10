@@ -205,7 +205,7 @@ public class InvoiceFinancingRequestStatusV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Set of summary information that unambiguously identifies the original invoice financing (or cancellation) request to which the status is referred. The status of the original request is also given in this block.\n"
+	 * "Set of summary information that unambiguously identifies the original invoice financing (or cancellation) request to which the status is referred. The status of the original request is also given in this block.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -214,7 +214,7 @@ public class InvoiceFinancingRequestStatusV01 {
 			xmlTag = "OrgnlReqInfAndSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestInformationAndStatus";
-			definition = "Set of summary information that unambiguously identifies the original invoice financing (or cancellation) request to which the status is referred. The status of the original request is also given in this block.\n";
+			definition = "Set of summary information that unambiguously identifies the original invoice financing (or cancellation) request to which the status is referred. The status of the original request is also given in this block.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> OriginalRequestInformation1.mmObject();

@@ -83,6 +83,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractType1Code
  * FinancialInstrumentContractType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.FinancialInstrumentContractType2Code
+ * FinancialInstrumentContractType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -364,14 +367,14 @@ public class FinancialInstrumentContractTypeCode extends MMCode {
 	 * name} = "Other"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Contract of other financial instrument contract type. "</li>
+	 * definition} = "Contract of other financial instrument contract type."</li>
 	 * </ul>
 	 */
 	public static final FinancialInstrumentContractTypeCode Other = new FinancialInstrumentContractTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			definition = "Contract of other financial instrument contract type. ";
+			definition = "Contract of other financial instrument contract type.";
 			owner_lazy = () -> com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.mmObject();
 			codeName = "OTHR";
 		}
@@ -508,7 +511,7 @@ public class FinancialInstrumentContractTypeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentContractTypeCode";
 				definition = "Specifies the contract type of a derivate financial instrument.";
-				derivation_lazy = () -> Arrays.asList(FinancialInstrumentContractType1Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(FinancialInstrumentContractType1Code.mmObject(), FinancialInstrumentContractType2Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.ContractForDifference, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.ForwardRateAgreement,
 						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Futures, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Forward,
 						com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Option, com.tools20022.repository.codeset.FinancialInstrumentContractTypeCode.Swap,

@@ -43,7 +43,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Security that is a sub-set of an investment fund, and is governed by the same
- * investment fund policy, for example,, dividend option or valuation currency.
+ * investment fund policy, for example, dividend option or valuation currency.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -103,7 +103,7 @@ import javax.xml.bind.annotation.XmlType;
  * "FinancialInstrument57"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example,, dividend option or valuation currency."
+ * "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -617,7 +617,7 @@ public class FinancialInstrument57 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIdentificationGuideline.forFinancialInstrument57);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument57";
-				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example,, dividend option or valuation currency.";
+				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.";
 				previousVersion_lazy = () -> FinancialInstrument10.mmObject();
 			}
 		});

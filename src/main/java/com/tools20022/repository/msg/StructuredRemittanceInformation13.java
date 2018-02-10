@@ -85,6 +85,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15
+ * StructuredRemittanceInformation15}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12
@@ -129,6 +137,14 @@ public class StructuredRemittanceInformation13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides the identification and the content of the referred document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmReferredDocumentInformation
+	 * StructuredRemittanceInformation15.mmReferredDocumentInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -145,6 +161,7 @@ public class StructuredRemittanceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentInformation";
 			definition = "Provides the identification and the content of the referred document.";
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmReferredDocumentInformation);
 			previousVersion_lazy = () -> StructuredRemittanceInformation12.mmReferredDocumentInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -183,6 +200,14 @@ public class StructuredRemittanceInformation13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides details on the amounts of the referred document."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmReferredDocumentAmount
+	 * StructuredRemittanceInformation15.mmReferredDocumentAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -199,6 +224,7 @@ public class StructuredRemittanceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentAmount";
 			definition = "Provides details on the amounts of the referred document.";
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmReferredDocumentAmount);
 			previousVersion_lazy = () -> StructuredRemittanceInformation12.mmReferredDocumentAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -240,6 +266,14 @@ public class StructuredRemittanceInformation13 {
 	 * definition} =
 	 * "Reference information provided by the creditor to allow the identification of the underlying documents."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmCreditorReferenceInformation
+	 * StructuredRemittanceInformation15.mmCreditorReferenceInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -256,6 +290,7 @@ public class StructuredRemittanceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorReferenceInformation";
 			definition = "Reference information provided by the creditor to allow the identification of the underlying documents.";
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmCreditorReferenceInformation);
 			previousVersion_lazy = () -> StructuredRemittanceInformation12.mmCreditorReferenceInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -296,6 +331,14 @@ public class StructuredRemittanceInformation13 {
 	 * definition} =
 	 * "Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmInvoicer
+	 * StructuredRemittanceInformation15.mmInvoicer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -312,6 +355,7 @@ public class StructuredRemittanceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicer";
 			definition = "Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.";
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmInvoicer);
 			previousVersion_lazy = () -> StructuredRemittanceInformation12.mmInvoicer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -351,6 +395,14 @@ public class StructuredRemittanceInformation13 {
 	 * definition} =
 	 * "Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmInvoicee
+	 * StructuredRemittanceInformation15.mmInvoicee}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -367,6 +419,7 @@ public class StructuredRemittanceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicee";
 			definition = "Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.";
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmInvoicee);
 			previousVersion_lazy = () -> StructuredRemittanceInformation12.mmInvoicee;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -407,6 +460,14 @@ public class StructuredRemittanceInformation13 {
 	 * definition} =
 	 * "Provides remittance information about a payment made for tax-related purposes."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmTaxRemittance
+	 * StructuredRemittanceInformation15.mmTaxRemittance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -423,6 +484,7 @@ public class StructuredRemittanceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRemittance";
 			definition = "Provides remittance information about a payment made for tax-related purposes.";
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmTaxRemittance);
 			previousVersion_lazy = () -> StructuredRemittanceInformation12.mmTaxRemittance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -460,7 +522,15 @@ public class StructuredRemittanceInformation13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides remittance information about a payment for garnishment-related purposes. "
+	 * "Provides remittance information about a payment for garnishment-related purposes."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmGarnishmentRemittance
+	 * StructuredRemittanceInformation15.mmGarnishmentRemittance}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -477,7 +547,8 @@ public class StructuredRemittanceInformation13 {
 			xmlTag = "GrnshmtRmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GarnishmentRemittance";
-			definition = "Provides remittance information about a payment for garnishment-related purposes. ";
+			definition = "Provides remittance information about a payment for garnishment-related purposes.";
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmGarnishmentRemittance);
 			previousVersion_lazy = () -> StructuredRemittanceInformation12.mmGarnishmentRemittance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -518,6 +589,14 @@ public class StructuredRemittanceInformation13 {
 	 * definition} =
 	 * "Additional information, in free text form, to complement the structured remittance information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmAdditionalRemittanceInformation
+	 * StructuredRemittanceInformation15.mmAdditionalRemittanceInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -534,6 +613,7 @@ public class StructuredRemittanceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRemittanceInformation";
 			definition = "Additional information, in free text form, to complement the structured remittance information.";
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmAdditionalRemittanceInformation);
 			previousVersion_lazy = () -> StructuredRemittanceInformation12.mmAdditionalRemittanceInformation;
 			maxOccurs = 3;
 			minOccurs = 0;
@@ -554,6 +634,7 @@ public class StructuredRemittanceInformation13 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StructuredRemittanceInformation13";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
+				nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation15.mmObject());
 				previousVersion_lazy = () -> StructuredRemittanceInformation12.mmObject();
 			}
 		});

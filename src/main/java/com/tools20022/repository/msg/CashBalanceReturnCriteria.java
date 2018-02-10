@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CashBalanceReturnCriteria"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to report on the cash balance."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria1
+ * CashBalanceReturnCriteria1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +108,14 @@ public class CashBalanceReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the balance type is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria1#mmTypeIndicator
+	 * CashBalanceReturnCriteria1.mmTypeIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
@@ -111,6 +126,7 @@ public class CashBalanceReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the balance type is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalanceReturnCriteria1.mmTypeIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -144,6 +160,14 @@ public class CashBalanceReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the balance status is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria1#mmStatusIndicator
+	 * CashBalanceReturnCriteria1.mmStatusIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatusIndicator = new MMMessageAttribute() {
@@ -154,6 +178,7 @@ public class CashBalanceReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIndicator";
 			definition = "Indicates whether the balance status is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalanceReturnCriteria1.mmStatusIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -187,6 +212,14 @@ public class CashBalanceReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the value date is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria1#mmValueDateIndicator
+	 * CashBalanceReturnCriteria1.mmValueDateIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValueDateIndicator = new MMMessageAttribute() {
@@ -197,6 +230,7 @@ public class CashBalanceReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDateIndicator";
 			definition = "Indicates whether the value date is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalanceReturnCriteria1.mmValueDateIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -230,6 +264,14 @@ public class CashBalanceReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the number of payment is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalanceReturnCriteria1#mmNumberOfPaymentsIndicator
+	 * CashBalanceReturnCriteria1.mmNumberOfPaymentsIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNumberOfPaymentsIndicator = new MMMessageAttribute() {
@@ -240,6 +282,7 @@ public class CashBalanceReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfPaymentsIndicator";
 			definition = "Indicates whether the number of payment is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalanceReturnCriteria1.mmNumberOfPaymentsIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -255,6 +298,7 @@ public class CashBalanceReturnCriteria {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashBalanceReturnCriteria";
 				definition = "Defines the criteria used to report on the cash balance.";
+				nextVersions_lazy = () -> Arrays.asList(CashBalanceReturnCriteria1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,7 @@ class ListBuilderForGeneratedRepository_10 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) ExchangeConfiguration3.mmObject());
 		list.add((T) AcquirerProtocolParameters4.mmObject());
 		list.add((T) AcquirerProtocolParameters3.mmObject());
 		list.add((T) ApplicationParameters2.mmObject());
@@ -524,7 +525,6 @@ class ListBuilderForGeneratedRepository_10 {
 		list.add((T) PendingSettlementStatusChoice.mmObject());
 		list.add((T) TransferUnmatchedStatusReason1.mmObject());
 		list.add((T) TransferUnmatchedStatus.mmObject());
-		list.add((T) InRepairStatusReason2.mmObject());
 		ListBuilderForGeneratedRepository_11.addElems(list);
 		return list;
 	}

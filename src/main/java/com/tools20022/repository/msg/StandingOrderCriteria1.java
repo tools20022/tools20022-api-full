@@ -74,6 +74,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the criteria which are used to search for a standing order and to report on standing orders. A name may be given to the new query."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingOrderCriteria2
+ * StandingOrderCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +116,14 @@ public class StandingOrderCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Name of the query defined by the search criteria and return criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderCriteria2#mmNewQueryName
+	 * StandingOrderCriteria2.mmNewQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
@@ -119,6 +134,7 @@ public class StandingOrderCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
 			definition = "Name of the query defined by the search criteria and return criteria.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderCriteria2.mmNewQueryName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -153,6 +169,14 @@ public class StandingOrderCriteria1 {
 	 * definition} =
 	 * "Defines the criteria to be used to extract the standing order information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderCriteria2#mmSearchCriteria
+	 * StandingOrderCriteria2.mmSearchCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
@@ -163,6 +187,7 @@ public class StandingOrderCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to be used to extract the standing order information.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderCriteria2.mmSearchCriteria);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.StandingOrderSearchCriteria1.mmObject();
@@ -195,6 +220,14 @@ public class StandingOrderCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the expected standing order report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderCriteria2#mmReturnCriteria
+	 * StandingOrderCriteria2.mmReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
@@ -205,6 +238,7 @@ public class StandingOrderCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the expected standing order report.";
+			nextVersions_lazy = () -> Arrays.asList(StandingOrderCriteria2.mmReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -222,6 +256,7 @@ public class StandingOrderCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "StandingOrderCriteria1";
 				definition = "Defines the criteria which are used to search for a standing order and to report on standing orders. A name may be given to the new query.";
+				nextVersions_lazy = () -> Arrays.asList(StandingOrderCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

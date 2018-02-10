@@ -498,6 +498,12 @@ class ListBuilderForSecurity_00 {
 		list.add((T) CorporateActionGeneralInformation104.mmFinancialInstrumentIdentification);
 		list.add((T) SecurityInstrumentDescription9.mmIdentification);
 		list.add((T) SecurityInstrumentDescription11.mmIdentification);
+		list.add((T) SecurityAttributes6.mmFinancialInstrumentIdentification);
+		list.add((T) AggregateBalanceInformation34.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails93.mmFinancialInstrumentIdentification);
+		list.add((T) IntraPositionQueryCriteria6.mmFinancialInstrumentIdentification);
+		list.add((T) IntraPosition5.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails94.mmFinancialInstrumentIdentification);
 		list.add((T) FinancialInstrument57.mmIdentification);
 		list.add((T) FinancialInstrument56.mmIdentification);
 		list.add((T) FinancialInstrument55.mmIdentification);
@@ -518,12 +524,6 @@ class ListBuilderForSecurity_00 {
 		list.add((T) FinancialInstrumentDetails24.mmFinancialInstrumentIdentification);
 		list.add((T) SecuritiesTradeDetails68.mmFinancialInstrumentIdentification);
 		list.add((T) TransactionDetails97.mmFinancialInstrumentIdentification);
-		list.add((T) IntraPositionDetails39.mmFinancialInstrumentIdentification);
-		list.add((T) AdditionalInformation13.mmFinancialInstrumentIdentification);
-		list.add((T) SecuritiesFinancingTransactionDetails35.mmFinancialInstrumentIdentification);
-		list.add((T) SecuritiesSettlementTransactionDetails28.mmFinancialInstrumentIdentification);
-		list.add((T) TransactionDetails96.mmFinancialInstrumentIdentification);
-		list.add((T) SecuritiesCollateral8.mmSecurityIdentification);
 		ListBuilderForSecurity_01.addElems(list);
 		return list;
 	}

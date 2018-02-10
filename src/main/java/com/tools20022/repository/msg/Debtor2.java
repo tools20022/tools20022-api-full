@@ -69,6 +69,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Debtor2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information about the debtor."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Debtor3 Debtor3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +116,13 @@ public class Debtor2 {
 	 * definition} =
 	 * "Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debtor3#mmDebtor
+	 * Debtor3.mmDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDebtor = new MMMessageAttribute() {
@@ -121,6 +134,7 @@ public class Debtor2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner.";
+			nextVersions_lazy = () -> Arrays.asList(Debtor3.mmDebtor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
@@ -160,6 +174,14 @@ public class Debtor2 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debtor3#mmAccountIdentification
+	 * Debtor3.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
@@ -171,6 +193,7 @@ public class Debtor2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(Debtor3.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.AccountIdentificationAndName3.mmObject();
@@ -236,6 +259,7 @@ public class Debtor2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Debtor2";
 				definition = "Information about the debtor.";
+				nextVersions_lazy = () -> Arrays.asList(Debtor3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

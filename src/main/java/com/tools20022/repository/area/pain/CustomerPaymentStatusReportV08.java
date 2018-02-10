@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.PaymentsInitiationLatestVersion;
+import com.tools20022.repository.area.PaymentsInitiationPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader52;
 import com.tools20022.repository.msg.OriginalGroupHeader7;
 import com.tools20022.repository.msg.OriginalPaymentInstruction23;
@@ -103,8 +103,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CstmrPmtStsRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationLatestVersion
- * PaymentsInitiationLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
+ * PaymentsInitiationPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.002.001.08}</li>
@@ -136,7 +136,15 @@ import javax.xml.bind.annotation.*;
  * "CustomerPaymentStatusReportV08"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Scope\r\nThe CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.\r\nThe CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (e.g. either the beneficiary is credited, or the transaction is rejected). "
+ * "Scope\r\nThe CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.\r\nThe CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (e.g. either the beneficiary is credited, or the transaction is rejected)."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV09
+ * CustomerPaymentStatusReportV09}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -173,6 +181,14 @@ public class CustomerPaymentStatusReportV08 {
 	 * definition} =
 	 * "Set of characteristics shared by all individual transactions included in the status report message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV09#mmGroupHeader
+	 * CustomerPaymentStatusReportV09.mmGroupHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -186,6 +202,7 @@ public class CustomerPaymentStatusReportV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the status report message.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV09.mmGroupHeader);
 			previousVersion_lazy = () -> CustomerPaymentStatusReportV07.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -225,6 +242,14 @@ public class CustomerPaymentStatusReportV08 {
 	 * definition} =
 	 * "Original group information concerning the group of transactions, to which the status report message refers to."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV09#mmOriginalGroupInformationAndStatus
+	 * CustomerPaymentStatusReportV09.mmOriginalGroupInformationAndStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -238,6 +263,7 @@ public class CustomerPaymentStatusReportV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndStatus";
 			definition = "Original group information concerning the group of transactions, to which the status report message refers to.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV09.mmOriginalGroupInformationAndStatus);
 			previousVersion_lazy = () -> CustomerPaymentStatusReportV07.mmOriginalGroupInformationAndStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -277,6 +303,14 @@ public class CustomerPaymentStatusReportV08 {
 	 * definition} =
 	 * "Information concerning the original payment information, to which the status report message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV09#mmOriginalPaymentInformationAndStatus
+	 * CustomerPaymentStatusReportV09.mmOriginalPaymentInformationAndStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -290,6 +324,7 @@ public class CustomerPaymentStatusReportV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndStatus";
 			definition = "Information concerning the original payment information, to which the status report message refers.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV09.mmOriginalPaymentInformationAndStatus);
 			previousVersion_lazy = () -> CustomerPaymentStatusReportV07.mmOriginalPaymentInformationAndStatus;
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInstruction23.mmObject();
@@ -328,6 +363,14 @@ public class CustomerPaymentStatusReportV08 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV09#mmSupplementaryData
+	 * CustomerPaymentStatusReportV09.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -341,6 +384,7 @@ public class CustomerPaymentStatusReportV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV09.mmSupplementaryData);
 			previousVersion_lazy = () -> CustomerPaymentStatusReportV07.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
@@ -363,12 +407,13 @@ public class CustomerPaymentStatusReportV08 {
 						com.tools20022.repository.constraints.ConstraintGroupStatusReceivedRule.forCustomerPaymentStatusReportV08, com.tools20022.repository.constraints.ConstraintSupplementaryDataRule.forCustomerPaymentStatusReportV08);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentStatusReportV08";
-				definition = "Scope\r\nThe CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.\r\nThe CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (e.g. either the beneficiary is credited, or the transaction is rejected). ";
+				definition = "Scope\r\nThe CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.\r\nUsage\r\nThe CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.\r\nThe CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.\r\nThe CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.\r\nThe CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (e.g. either the beneficiary is credited, or the transaction is rejected).";
+				nextVersions_lazy = () -> Arrays.asList(CustomerPaymentStatusReportV09.mmObject());
 				previousVersion_lazy = () -> CustomerPaymentStatusReportV07.mmObject();
 				messageSet_lazy = () -> Arrays.asList(PaymentsInitiationISOLatestversion.mmObject(), MX_Payment_Maintenance_2016_2017.mmObject(), PaymentsInitiationMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrPmtStsRpt";
-				businessArea_lazy = () -> PaymentsInitiationLatestVersion.mmObject();
+				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08.mmGroupHeader,
 						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08.mmOriginalGroupInformationAndStatus, com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08.mmOriginalPaymentInformationAndStatus,
 						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08.mmSupplementaryData);

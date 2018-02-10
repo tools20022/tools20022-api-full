@@ -167,7 +167,7 @@ public class SystemStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Period of time during which the status of the system is valid. "</li>
+	 * "Period of time during which the status of the system is valid."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -186,7 +186,7 @@ public class SystemStatus1 {
 			xmlTag = "VldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityTime";
-			definition = "Period of time during which the status of the system is valid. ";
+			definition = "Period of time during which the status of the system is valid.";
 			nextVersions_lazy = () -> Arrays.asList(SystemStatus2.mmValidityTime);
 			maxOccurs = 1;
 			minOccurs = 0;

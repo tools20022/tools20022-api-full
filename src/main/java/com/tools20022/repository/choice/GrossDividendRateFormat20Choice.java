@@ -75,6 +75,14 @@ import javax.xml.bind.annotation.XmlType;
  * "GrossDividendRateFormat20Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between an amount or an unspecified rate."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat30Choice
+ * GrossDividendRateFormat30Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -118,6 +126,14 @@ public class GrossDividendRateFormat20Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of monetary units specified in a currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat30Choice#mmAmount
+	 * GrossDividendRateFormat30Choice.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -130,6 +146,7 @@ public class GrossDividendRateFormat20Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Number of monetary units specified in a currency.";
+			nextVersions_lazy = () -> Arrays.asList(GrossDividendRateFormat30Choice.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -166,6 +183,14 @@ public class GrossDividendRateFormat20Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies an amount and a rate status."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat30Choice#mmAmountAndRateStatus
+	 * GrossDividendRateFormat30Choice.mmAmountAndRateStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAmountAndRateStatus = new MMMessageAssociationEnd() {
@@ -177,6 +202,7 @@ public class GrossDividendRateFormat20Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountAndRateStatus";
 			definition = "Specifies an amount and a rate status.";
+			nextVersions_lazy = () -> Arrays.asList(GrossDividendRateFormat30Choice.mmAmountAndRateStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -213,6 +239,14 @@ public class GrossDividendRateFormat20Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies different formats for the gross dividend rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat30Choice#mmRateTypeAndAmountAndRateStatus
+	 * GrossDividendRateFormat30Choice.mmRateTypeAndAmountAndRateStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRateTypeAndAmountAndRateStatus = new MMMessageAssociationEnd() {
@@ -224,6 +258,7 @@ public class GrossDividendRateFormat20Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateTypeAndAmountAndRateStatus";
 			definition = "Specifies different formats for the gross dividend rate.";
+			nextVersions_lazy = () -> Arrays.asList(GrossDividendRateFormat30Choice.mmRateTypeAndAmountAndRateStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -261,6 +296,14 @@ public class GrossDividendRateFormat20Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value of the rate not specified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.GrossDividendRateFormat30Choice#mmNotSpecifiedRate
+	 * GrossDividendRateFormat30Choice.mmNotSpecifiedRate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedRate = new MMMessageAttribute() {
@@ -272,6 +315,7 @@ public class GrossDividendRateFormat20Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedRate";
 			definition = "Value of the rate not specified.";
+			nextVersions_lazy = () -> Arrays.asList(GrossDividendRateFormat30Choice.mmNotSpecifiedRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RateType13Code.mmObject();
@@ -288,6 +332,7 @@ public class GrossDividendRateFormat20Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GrossDividendRateFormat20Choice";
 				definition = "Choice between an amount or an unspecified rate.";
+				nextVersions_lazy = () -> Arrays.asList(GrossDividendRateFormat30Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

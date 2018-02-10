@@ -150,7 +150,7 @@ public class DTCInstructionStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction waiting for position.  Instruction will subsequently either become “Made” or “Dropped” by end of day."
+	 * "Instruction waiting for position. Instruction will subsequently either become “Made” or “Dropped” by end of day."
 	 * </li>
 	 * </ul>
 	 */
@@ -158,7 +158,7 @@ public class DTCInstructionStatusCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recycle";
-			definition = "Instruction waiting for position.  Instruction will subsequently either become “Made” or “Dropped” by end of day.";
+			definition = "Instruction waiting for position. Instruction will subsequently either become “Made” or “Dropped” by end of day.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCInstructionStatusCode.mmObject();
 			codeName = "RECY";
 		}
@@ -335,7 +335,7 @@ public class DTCInstructionStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction for CD early redemption awaiting paperwork.  Instruction will become MADE when DTC releases instruction upon paperwork."
+	 * "Instruction for CD early redemption awaiting paperwork. Instruction will become MADE when DTC releases instruction upon paperwork."
 	 * </li>
 	 * </ul>
 	 */
@@ -343,7 +343,7 @@ public class DTCInstructionStatusCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDocumentation";
-			definition = "Instruction for CD early redemption awaiting paperwork.  Instruction will become MADE when DTC releases instruction upon paperwork.";
+			definition = "Instruction for CD early redemption awaiting paperwork. Instruction will become MADE when DTC releases instruction upon paperwork.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCInstructionStatusCode.mmObject();
 			codeName = "PDOC";
 		}
@@ -567,7 +567,7 @@ public class DTCInstructionStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * Client instruction withdrawn for events with withdrawal priviledge.
+	 * Client instruction withdrawn for events with withdrawal privilege.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -585,14 +585,14 @@ public class DTCInstructionStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Client instruction withdrawn for events with withdrawal priviledge."</li>
+	 * "Client instruction withdrawn for events with withdrawal privilege."</li>
 	 * </ul>
 	 */
 	public static final DTCInstructionStatusCode Withdrawn = new DTCInstructionStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withdrawn";
-			definition = "Client instruction withdrawn for events with withdrawal priviledge.";
+			definition = "Client instruction withdrawn for events with withdrawal privilege.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCInstructionStatusCode.mmObject();
 			codeName = "WITH";
 		}
@@ -677,7 +677,7 @@ public class DTCInstructionStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Protect instruction which has not been fully covered.  Will include partial covers."
+	 * "Protect instruction which has not been fully covered. Will include partial covers."
 	 * </li>
 	 * </ul>
 	 */
@@ -685,7 +685,7 @@ public class DTCInstructionStatusCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Open";
-			definition = "Protect instruction which has not been fully covered.  Will include partial covers.";
+			definition = "Protect instruction which has not been fully covered. Will include partial covers.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCInstructionStatusCode.mmObject();
 			codeName = "OPEN";
 		}

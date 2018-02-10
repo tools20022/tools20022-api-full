@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.TransferCancellationStatusReportV05;
 import com.tools20022.repository.area.sese.TransferInstructionStatusReportV05;
+import com.tools20022.repository.area.sese.TransferInstructionStatusReportV06;
 import com.tools20022.repository.choice.PartyIdentification97Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
@@ -69,6 +70,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV05#mmCounterpartyReference
  * TransferCancellationStatusReportV05.mmCounterpartyReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmCounterpartyReference
+ * TransferInstructionStatusReportV06.mmCounterpartyReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -260,7 +264,8 @@ public class AdditionalReference7 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReference7.mmReference, com.tools20022.repository.msg.AdditionalReference7.mmReferenceIssuer,
 						com.tools20022.repository.msg.AdditionalReference7.mmMessageName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInstructionStatusReportV05.mmCounterpartyReference, TransferCancellationStatusReportV05.mmCounterpartyReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(TransferInstructionStatusReportV05.mmCounterpartyReference, TransferCancellationStatusReportV05.mmCounterpartyReference,
+						TransferInstructionStatusReportV06.mmCounterpartyReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

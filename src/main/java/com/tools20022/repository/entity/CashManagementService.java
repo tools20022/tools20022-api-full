@@ -143,6 +143,12 @@ public class CashManagementService extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashAccount23#mmCurrentBilateralLimit
 	 * CashAccount23.mmCurrentBilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount35#mmCurrentMultilateralLimit
+	 * CashAccount35.mmCurrentMultilateralLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount35#mmCurrentBilateralLimit
+	 * CashAccount35.mmCurrentBilateralLimit}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -166,7 +172,8 @@ public class CashManagementService extends CashAccountService {
 	public static final MMBusinessAssociationEnd mmRiskManagementLimit = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashAccountDetails1.mmCurrentMultilateralLimit, CashAccountDetails1.mmCurrentBilateralLimit, CashAccountDetails3.mmCurrentMultilateralLimit, CashAccountDetails3.mmCurrentBilateralLimit,
-					CashAccountDetails4.mmCurrentMultilateralLimit, CashAccountDetails4.mmCurrentBilateralLimit, CashAccount23.mmCurrentMultilateralLimit, CashAccount23.mmCurrentBilateralLimit);
+					CashAccountDetails4.mmCurrentMultilateralLimit, CashAccountDetails4.mmCurrentBilateralLimit, CashAccount23.mmCurrentMultilateralLimit, CashAccount23.mmCurrentBilateralLimit, CashAccount35.mmCurrentMultilateralLimit,
+					CashAccount35.mmCurrentBilateralLimit);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -205,6 +212,9 @@ public class CashManagementService extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashAccount23#mmStandingOrder
 	 * CashAccount23.mmStandingOrder}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount35#mmStandingOrder
+	 * CashAccount35.mmStandingOrder}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -227,7 +237,7 @@ public class CashManagementService extends CashAccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmStandingOrder = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CashAccountDetails1.mmStandingOrder, CashAccount23.mmStandingOrder);
+			derivation_lazy = () -> Arrays.asList(CashAccountDetails1.mmStandingOrder, CashAccount23.mmStandingOrder, CashAccount35.mmStandingOrder);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -313,6 +323,9 @@ public class CashManagementService extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionType1#mmFloorLimit
 	 * TransactionType1.mmFloorLimit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionType2#mmFloorLimit
+	 * TransactionType2.mmFloorLimit}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -335,7 +348,7 @@ public class CashManagementService extends CashAccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmLiquidityManagementLimit = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(TransactionType1.mmFloorLimit);
+			derivation_lazy = () -> Arrays.asList(TransactionType1.mmFloorLimit, TransactionType2.mmFloorLimit);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashManagementService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

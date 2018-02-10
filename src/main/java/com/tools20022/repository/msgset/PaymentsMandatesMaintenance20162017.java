@@ -63,7 +63,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Payments Mandates - Maintenance 2016 - 2017"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "This document describes the Payments Mandate message set. "</li>
+ * definition} = "This document describes the Payments Mandate message set."</li>
  * </ul>
  */
 public class PaymentsMandatesMaintenance20162017 {
@@ -76,7 +76,7 @@ public class PaymentsMandatesMaintenance20162017 {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Payments Mandates - Maintenance 2016 - 2017";
-				definition = "This document describes the Payments Mandate message set. ";
+				definition = "This document describes the Payments Mandate message set.";
 				messageDefinition_lazy = () -> Arrays.asList(MandateAcceptanceReportV05.mmObject(), MandateAmendmentRequestV05.mmObject(), MandateInitiationRequestV05.mmObject(), MandateCancellationRequestV05.mmObject(),
 						MandateSuspensionRequestV01.mmObject(), MandateCopyRequestV01.mmObject());
 			}

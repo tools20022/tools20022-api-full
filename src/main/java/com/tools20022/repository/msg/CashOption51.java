@@ -112,6 +112,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CashOption51"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides information about the cash option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOption57 CashOption57}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.CashOption42
  * CashOption42}</li>
@@ -158,6 +164,14 @@ public class CashOption51 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the value is a debit or a credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmCreditDebitIndicator
+	 * CashOption57.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -175,6 +189,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> CashOption42.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -217,6 +232,14 @@ public class CashOption51 {
 	 * definition} =
 	 * "Indicates whether the cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer or upon receipt of proceeds from the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmContractualPaymentIndicator
+	 * CashOption57.mmContractualPaymentIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -234,6 +257,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractualPaymentIndicator";
 			definition = "Indicates whether the cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer or upon receipt of proceeds from the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmContractualPaymentIndicator);
 			previousVersion_lazy = () -> CashOption42.mmContractualPaymentIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -276,6 +300,14 @@ public class CashOption51 {
 	 * definition} =
 	 * "Specifies information regarding outturn resources that cannot be processed by the Central Securities Depository (CSD). Special delivery instruction is required from the account owner for the corporate action outcome to be credited."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmNonEligibleProceedsIndicator
+	 * CashOption57.mmNonEligibleProceedsIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -293,6 +325,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonEligibleProceedsIndicator";
 			definition = "Specifies information regarding outturn resources that cannot be processed by the Central Securities Depository (CSD). Special delivery instruction is required from the account owner for the corporate action outcome to be credited.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmNonEligibleProceedsIndicator);
 			previousVersion_lazy = () -> CashOption42.mmNonEligibleProceedsIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -334,6 +367,14 @@ public class CashOption51 {
 	 * definition} =
 	 * "Proceeds are taxable according to the information provided by the issuer / offeror."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmIssuerOfferorTaxabilityIndicator
+	 * CashOption57.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -350,6 +391,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicator";
 			definition = "Proceeds are taxable according to the information provided by the issuer / offeror.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmIssuerOfferorTaxabilityIndicator);
 			previousVersion_lazy = () -> CashOption42.mmIssuerOfferorTaxabilityIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -392,6 +434,13 @@ public class CashOption51 {
 	 * definition} =
 	 * "Specifies the type of income.\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption57#mmIncomeType
+	 * CashOption57.mmIncomeType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -409,6 +458,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeType";
 			definition = "Specifies the type of income.\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmIncomeType);
 			previousVersion_lazy = () -> CashOption42.mmIncomeType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -442,6 +492,14 @@ public class CashOption51 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the basis for the reduced rate of withholding."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmExemptionType
+	 * CashOption57.mmExemptionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -457,6 +515,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionType";
 			definition = "Specifies the basis for the reduced rate of withholding.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmExemptionType);
 			previousVersion_lazy = () -> CashOption42.mmExemptionType;
 			minOccurs = 0;
 			isComposite = true;
@@ -489,6 +548,14 @@ public class CashOption51 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the country from which the income originates."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmCountryOfIncomeSource
+	 * CashOption57.mmCountryOfIncomeSource}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -504,6 +571,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncomeSource";
 			definition = "Indicates the country from which the income originates.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmCountryOfIncomeSource);
 			previousVersion_lazy = () -> CashOption42.mmCountryOfIncomeSource;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -545,6 +613,14 @@ public class CashOption51 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the account in which cash is maintained."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmCashAccountIdentification
+	 * CashOption57.mmCashAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -562,6 +638,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Identification of the account in which cash is maintained.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmCashAccountIdentification);
 			previousVersion_lazy = () -> CashOption42.mmCashAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -604,6 +681,14 @@ public class CashOption51 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides information about the amounts related to a cash movement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmAmountDetails
+	 * CashOption57.mmAmountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -621,6 +706,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
 			definition = "Provides information about the amounts related to a cash movement.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmAmountDetails);
 			previousVersion_lazy = () -> CashOption42.mmAmountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -662,6 +748,13 @@ public class CashOption51 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides information about the dates related to a cash movement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption57#mmDateDetails
+	 * CashOption57.mmDateDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -679,6 +772,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a cash movement.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmDateDetails);
 			previousVersion_lazy = () -> CashOption42.mmDateDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -720,6 +814,14 @@ public class CashOption51 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Exchange rate between the amount and the resulting amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmForeignExchangeDetails
+	 * CashOption57.mmForeignExchangeDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -737,6 +839,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Exchange rate between the amount and the resulting amount.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmForeignExchangeDetails);
 			previousVersion_lazy = () -> CashOption42.mmForeignExchangeDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -774,6 +877,14 @@ public class CashOption51 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides information about the corporate action option."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmRateAndAmountDetails
+	 * CashOption57.mmRateAndAmountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -790,6 +901,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateAndAmountDetails";
 			definition = "Provides information about the corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmRateAndAmountDetails);
 			previousVersion_lazy = () -> CashOption42.mmRateAndAmountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -829,6 +941,14 @@ public class CashOption51 {
 	 * definition} =
 	 * "Provides information about the prices related to a corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmPriceDetails
+	 * CashOption57.mmPriceDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -845,6 +965,7 @@ public class CashOption51 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to a corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CashOption57.mmPriceDetails);
 			previousVersion_lazy = () -> CashOption42.mmPriceDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -868,6 +989,7 @@ public class CashOption51 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashOption51";
 				definition = "Provides information about the cash option.";
+				nextVersions_lazy = () -> Arrays.asList(CashOption57.mmObject());
 				previousVersion_lazy = () -> CashOption42.mmObject();
 			}
 		});

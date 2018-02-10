@@ -3648,7 +3648,7 @@ public class PendingFailingReasonV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Central securities depository sets the  instruction in a hold/frozen/preadvice mode."
+	 * "Central securities depository sets the instruction in a hold/frozen/preadvice mode."
 	 * </li>
 	 * </ul>
 	 */
@@ -3656,7 +3656,7 @@ public class PendingFailingReasonV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDHold";
-			definition = "Central securities depository sets the  instruction in a hold/frozen/preadvice mode.";
+			definition = "Central securities depository sets the instruction in a hold/frozen/preadvice mode.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PendingFailingReasonV2Code.mmObject();
 			codeName = "CSDH";
 		}

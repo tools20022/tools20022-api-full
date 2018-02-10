@@ -123,6 +123,8 @@ public class SecuritiesEntry extends Entry {
 	 * Unit3.mmAcquisitionDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Unit6#mmAcquisitionDate
 	 * Unit6.mmAcquisitionDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit8#mmAcquisitionDate
+	 * Unit8.mmAcquisitionDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -144,7 +146,7 @@ public class SecuritiesEntry extends Entry {
 	 */
 	public static final MMBusinessAttribute mmAcquisitionDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Unit1.mmAcquisitionDate, Unit3.mmAcquisitionDate, Unit6.mmAcquisitionDate);
+			derivation_lazy = () -> Arrays.asList(Unit1.mmAcquisitionDate, Unit3.mmAcquisitionDate, Unit6.mmAcquisitionDate, Unit8.mmAcquisitionDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -205,6 +207,9 @@ public class SecuritiesEntry extends Entry {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.EntryTransaction8#mmRelatedQuantities
 	 * EntryTransaction8.mmRelatedQuantities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedQuantities
+	 * EntryTransaction9.mmRelatedQuantities}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -226,7 +231,7 @@ public class SecuritiesEntry extends Entry {
 	public static final MMBusinessAssociationEnd mmFinancialInstrumentQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(EntryTransaction1.mmRelatedQuantities, EntryTransaction2.mmRelatedQuantities, EntryTransaction3.mmRelatedQuantities, EntryTransaction4.mmRelatedQuantities,
-					UnderlyingSecurityMovement1.mmSecuritiesQuantity, EntryTransaction7.mmRelatedQuantities, EntryTransaction8.mmRelatedQuantities);
+					UnderlyingSecurityMovement1.mmSecuritiesQuantity, EntryTransaction7.mmRelatedQuantities, EntryTransaction8.mmRelatedQuantities, EntryTransaction9.mmRelatedQuantities);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

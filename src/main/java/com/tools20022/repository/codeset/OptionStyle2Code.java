@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Defines how an option can be exercised
+ * Defines how an option can be exercised.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OptionStyle2Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Defines how an option can be exercised"</li>
+ * definition} = "Defines how an option can be exercised."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -130,7 +130,7 @@ public class OptionStyle2Code extends MMCode {
 				example = Arrays.asList("AMER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle2Code";
-				definition = "Defines how an option can be exercised";
+				definition = "Defines how an option can be exercised.";
 				trace_lazy = () -> OptionStyleCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle2Code.American, com.tools20022.repository.codeset.OptionStyle2Code.European);
 			}

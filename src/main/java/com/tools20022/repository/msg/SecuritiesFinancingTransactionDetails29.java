@@ -126,6 +126,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Details of the closing of the securities financing transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38
+ * SecuritiesFinancingTransactionDetails38}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails7
@@ -170,6 +178,15 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * definition} =
 	 * "Unambiguous identification of the underlying securities financing trade as assigned by the instructing party. The identification is common to all collateral pieces (one or many)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmSecuritiesFinancingTradeIdentification
+	 * SecuritiesFinancingTransactionDetails38.
+	 * mmSecuritiesFinancingTradeIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -187,6 +204,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesFinancingTradeIdentification";
 			definition = "Unambiguous identification of the underlying securities financing trade as assigned by the instructing party. The identification is common to all collateral pieces (one or many).";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmSecuritiesFinancingTradeIdentification);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmSecuritiesFinancingTradeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -225,6 +243,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * definition} =
 	 * "Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmClosingLegIdentification
+	 * SecuritiesFinancingTransactionDetails38.mmClosingLegIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -241,6 +267,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingLegIdentification";
 			definition = "Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmClosingLegIdentification);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmClosingLegIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -283,6 +310,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Closing date/time or maturity date/time of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails38.mmTerminationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -300,6 +335,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationDate";
 			definition = "Closing date/time or maturity date/time of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmTerminationDate);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmTerminationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -341,6 +377,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether the rate is fixed or variable."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmRateType
+	 * SecuritiesFinancingTransactionDetails38.mmRateType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -358,6 +402,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Specifies whether the rate is fixed or variable.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmRateType);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmRateType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -400,6 +445,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Legal framework of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmLegalFramework
+	 * SecuritiesFinancingTransactionDetails38.mmLegalFramework}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -417,6 +470,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalFramework";
 			definition = "Legal framework of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmLegalFramework);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmLegalFramework;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -462,6 +516,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * definition} =
 	 * "Specifies whether the maturity date of the securities financing transaction may be modified."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails38.mmMaturityDateModification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -479,6 +541,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDateModification";
 			definition = "Specifies whether the maturity date of the securities financing transaction may be modified.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmMaturityDateModification);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmMaturityDateModification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -523,6 +586,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * definition} =
 	 * "Specifies whether the interest is to be paid to the collateral taker. If set to no, the interest is paid to the collateral giver."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails38.mmInterestPayment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -540,6 +611,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
 			definition = "Specifies whether the interest is to be paid to the collateral taker. If set to no, the interest is paid to the collateral giver.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmInterestPayment);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmInterestPayment;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -581,6 +653,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * definition} =
 	 * "Index or support rate used together with the spread to calculate the\nrepurchase rate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails38.mmVariableRateSupport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -598,6 +678,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateSupport";
 			definition = "Index or support rate used together with the spread to calculate the\nrepurchase rate.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmVariableRateSupport);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmVariableRateSupport;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -638,6 +719,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Rate to be used to recalculate the repurchase amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails38.mmRepurchaseRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -655,6 +744,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseRate";
 			definition = "Rate to be used to recalculate the repurchase amount.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmRepurchaseRate);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmRepurchaseRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -700,6 +790,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * definition} =
 	 * "Minimum number of days' notice a counterparty needs for terminating the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails38.mmTransactionCallDelay}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -717,6 +815,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCallDelay";
 			definition = "Minimum number of days' notice a counterparty needs for terminating the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmTransactionCallDelay);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmTransactionCallDelay;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -758,6 +857,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Interest amount that has accrued in between coupon payment periods."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmAccruedInterestAmount
+	 * SecuritiesFinancingTransactionDetails38.mmAccruedInterestAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -775,6 +882,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmAccruedInterestAmount);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmAccruedInterestAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -817,6 +925,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Total amount of money to be settled to terminate the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails38.mmTerminationTransactionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -834,6 +950,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminationTransactionAmount";
 			definition = "Total amount of money to be settled to terminate the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmTerminationTransactionAmount);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmTerminationTransactionAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -873,6 +990,14 @@ public class SecuritiesFinancingTransactionDetails29 {
 	 * definition} =
 	 * "Provides additional information about the second leg in narrative form."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmSecondLegNarrative
+	 * SecuritiesFinancingTransactionDetails38.mmSecondLegNarrative}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -889,6 +1014,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLegNarrative";
 			definition = "Provides additional information about the second leg in narrative form.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmSecondLegNarrative);
 			previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmSecondLegNarrative;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -912,6 +1038,7 @@ public class SecuritiesFinancingTransactionDetails29 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesFinancingTransactionDetails29";
 				definition = "Details of the closing of the securities financing transaction.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails38.mmObject());
 				previousVersion_lazy = () -> SecuritiesFinancingTransactionDetails7.mmObject();
 			}
 		});

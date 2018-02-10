@@ -67,6 +67,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CancellationProcessingStatus3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of cancellation processing status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus9Choice
+ * CancellationProcessingStatus9Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +118,14 @@ public class CancellationProcessingStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of a cancellation request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus9Choice#mmCode
+	 * CancellationProcessingStatus9Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -122,6 +138,7 @@ public class CancellationProcessingStatus3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of a cancellation request.";
+			nextVersions_lazy = () -> Arrays.asList(CancellationProcessingStatus9Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CancellationProcessingStatus3Code.mmObject();
@@ -163,6 +180,14 @@ public class CancellationProcessingStatus3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of a cancellation request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus9Choice#mmProprietary
+	 * CancellationProcessingStatus9Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -175,6 +200,7 @@ public class CancellationProcessingStatus3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of a cancellation request.";
+			nextVersions_lazy = () -> Arrays.asList(CancellationProcessingStatus9Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -190,6 +216,7 @@ public class CancellationProcessingStatus3Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CancellationProcessingStatus3Choice";
 				definition = "Choice of cancellation processing status.";
+				nextVersions_lazy = () -> Arrays.asList(CancellationProcessingStatus9Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -77,7 +77,7 @@ public class ConstraintCurrentYearTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CurrentYearType or ExtendedCurrentYearType is not present, then PreviousYears is mandatory. If CurrentYearType  or ExtendedCurrentYearType  is present then PreviousYears is optional."
+	 * "If CurrentYearType or ExtendedCurrentYearType is not present, then PreviousYears is mandatory. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears is optional."
 	 * </li>
 	 * </ul>
 	 */
@@ -86,7 +86,7 @@ public class ConstraintCurrentYearTypeRule {
 			validator = ConstraintCurrentYearTypeRule::checkISAYearsOfIssue2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearTypeRule";
-			definition = "If CurrentYearType or ExtendedCurrentYearType is not present, then PreviousYears is mandatory. If CurrentYearType  or ExtendedCurrentYearType  is present then PreviousYears is optional.";
+			definition = "If CurrentYearType or ExtendedCurrentYearType is not present, then PreviousYears is mandatory. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears is optional.";
 			owner_lazy = () -> ISAYearsOfIssue2.mmObject();
 		}
 	};

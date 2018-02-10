@@ -75,7 +75,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "ProductDeliveryObligation"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Obligation for the seller  to deliver goods or services to the buyer."</li>
+ * "Obligation for the seller to deliver goods or services to the buyer."</li>
  * </ul>
  */
 public class ProductDeliveryObligation extends Obligation {
@@ -187,7 +187,7 @@ public class ProductDeliveryObligation extends Obligation {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductDeliveryObligation";
-				definition = "Obligation for the seller  to deliver goods or services to the buyer.";
+				definition = "Obligation for the seller to deliver goods or services to the buyer.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CommercialTrade.mmProductDeliveryObligation, com.tools20022.repository.entity.ProductDelivery.mmObligation);
 				superType_lazy = () -> Obligation.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductDeliveryObligation.mmProductDeliveryOffset, com.tools20022.repository.entity.ProductDeliveryObligation.mmCommercialTrade);

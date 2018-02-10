@@ -27,7 +27,7 @@ import com.tools20022.repository.area.seev.CorporateActionNotificationV01;
  * CorporateActionDetails/IntermediateSecuritiesDistributionType is not present,
  * then CorporateActionOptionDetails/IntermediateSecuritiesDistributionType must
  * be present in at least one occurrence of CorporateActionOptionDetails. (MT
- * 564 NVRC12)
+ * 564 NVRC12).
  */
 public class ConstraintIntermediateSecuritiesDistribution2Rule {
 
@@ -52,7 +52,7 @@ public class ConstraintIntermediateSecuritiesDistribution2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI and if CorporateActionDetails/IntermediateSecuritiesDistributionType is not present, then CorporateActionOptionDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionOptionDetails.\n(MT 564 NVRC12)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI and if CorporateActionDetails/IntermediateSecuritiesDistributionType is not present, then CorporateActionOptionDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionOptionDetails.\n(MT 564 NVRC12)."
 	 * </li>
 	 * </ul>
 	 */
@@ -61,7 +61,7 @@ public class ConstraintIntermediateSecuritiesDistribution2Rule {
 			validator = ConstraintIntermediateSecuritiesDistribution2Rule::checkCorporateActionNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistribution2Rule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI and if CorporateActionDetails/IntermediateSecuritiesDistributionType is not present, then CorporateActionOptionDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionOptionDetails.\n(MT 564 NVRC12)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI and if CorporateActionDetails/IntermediateSecuritiesDistributionType is not present, then CorporateActionOptionDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionOptionDetails.\n(MT 564 NVRC12).";
 			owner_lazy = () -> CorporateActionNotificationV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionOptionDetails[1]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/CorporateActionDetails/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -73,7 +73,7 @@ public class ConstraintIntermediateSecuritiesDistribution2Rule {
 	 * present, then
 	 * CorporateActionOptionDetails/IntermediateSecuritiesDistributionType must
 	 * be present in at least one occurrence of CorporateActionOptionDetails.
-	 * (MT 564 NVRC12)
+	 * (MT 564 NVRC12).
 	 */
 	public static void checkCorporateActionNotificationV01(CorporateActionNotificationV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();

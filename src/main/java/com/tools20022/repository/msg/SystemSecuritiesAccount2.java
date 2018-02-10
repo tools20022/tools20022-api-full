@@ -155,7 +155,7 @@ public class SystemSecuritiesAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Meaning when true : Account is in Hold status.\r\nMeaning when false : Account is in Release status."
+	 * "Meaning when true: Account is in Hold status.\r\nMeaning when false: Account is in Release status."
 	 * </li>
 	 * </ul>
 	 */
@@ -166,7 +166,7 @@ public class SystemSecuritiesAccount2 {
 			xmlTag = "HldInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
-			definition = "Meaning when true : Account is in Hold status.\r\nMeaning when false : Account is in Release status.";
+			definition = "Meaning when true: Account is in Hold status.\r\nMeaning when false: Account is in Release status.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();

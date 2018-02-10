@@ -517,6 +517,33 @@ public class InvestmentFundTransaction extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmClientReference
 	 * RedemptionExecution15.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer29#mmClientReference
+	 * ISATransfer29.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmClientReference
+	 * ReceiveInformation18.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmClientReference
+	 * Transfer35.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer34#mmClientReference
+	 * Transfer34.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmClientReference
+	 * DeliverInformation19.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmClientReference
+	 * ReceiveInformation19.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason4#mmClientReference
+	 * CancellationStatusAndReason4.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmClientReference
+	 * ISATransfer28.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmClientReference
+	 * DeliverInformation18.mmClientReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -556,7 +583,9 @@ public class InvestmentFundTransaction extends SecuritiesTrade {
 					DeliverInformation17.mmClientReference, Transfer33.mmClientReference, ISATransfer22.mmClientReference, InvestmentAccountOpening3.mmClientReference, InvestmentFundOrder11.mmClientReference,
 					SwitchExecution7.mmClientReference, InvestmentAccountModification3.mmClientReference, InvestmentFundOrder9.mmClientReference, SwitchOrder7.mmClientReference, AccountManagementConfirmation4.mmClientReference,
 					RedemptionOrder14.mmClientReference, SwitchOrderStatusAndReason2.mmClientReference, SubscriptionExecution13.mmClientReference, SubscriptionExecution12.mmClientReference, SubscriptionOrder15.mmClientReference,
-					RedemptionOrder15.mmClientReference, RedemptionExecution16.mmClientReference, SubscriptionOrder14.mmClientReference, InvestmentFundOrder8.mmClientReference, RedemptionExecution15.mmClientReference);
+					RedemptionOrder15.mmClientReference, RedemptionExecution16.mmClientReference, SubscriptionOrder14.mmClientReference, InvestmentFundOrder8.mmClientReference, RedemptionExecution15.mmClientReference,
+					ISATransfer29.mmClientReference, ReceiveInformation18.mmClientReference, Transfer35.mmClientReference, Transfer34.mmClientReference, DeliverInformation19.mmClientReference, ReceiveInformation19.mmClientReference,
+					CancellationStatusAndReason4.mmClientReference, ISATransfer28.mmClientReference, DeliverInformation18.mmClientReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -838,6 +867,8 @@ public class InvestmentFundTransaction extends SecuritiesTrade {
 	 * FundCashInBreakdown3.mmChargeDetails}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.FeeAndTax1#mmIndividualFee
 	 * FeeAndTax1.mmIndividualFee}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fees1#mmIndividualFee
+	 * Fees1.mmIndividualFee}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -867,7 +898,7 @@ public class InvestmentFundTransaction extends SecuritiesTrade {
 					SwitchSubscriptionLegOrder3.mmChargeDetails, SwitchRedemptionLegExecution2.mmChargeGeneralDetails, SwitchSubscriptionLegExecution2.mmChargeGeneralDetails, SwitchRedemptionLegExecution3.mmChargeGeneralDetails,
 					SwitchSubscriptionLegExecution3.mmChargeGeneralDetails, RedemptionExecution10.mmTotalCharges, RedemptionOrder9.mmChargeDetails, SubscriptionExecution7.mmTotalCharges, SubscriptionOrder9.mmChargeDetails,
 					RedemptionOrder11.mmChargeDetails, RedemptionExecution12.mmChargeGeneralDetails, SubscriptionOrder11.mmChargeDetails, SubscriptionExecution9.mmChargeGeneralDetails, FundCashOutBreakdown3.mmChargeDetails,
-					FundCashInBreakdown3.mmChargeDetails, FeeAndTax1.mmIndividualFee);
+					FundCashInBreakdown3.mmChargeDetails, FeeAndTax1.mmIndividualFee, Fees1.mmIndividualFee);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1153,6 +1184,9 @@ public class InvestmentFundTransaction extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SwitchLegReferences2#mmInvestmentAccountDetails
 	 * SwitchLegReferences2.mmInvestmentAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmInvestmentAccountDetails
+	 * MessageAndBusinessReference11.mmInvestmentAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1194,7 +1228,8 @@ public class InvestmentFundTransaction extends SecuritiesTrade {
 					RedemptionMultipleOrder6.mmInvestmentAccountDetails, SubscriptionMultipleOrder6.mmInvestmentAccountDetails, SwitchOrder7.mmInvestmentAccountDetails, SubscriptionMultipleExecution5.mmInvestmentAccountDetails,
 					SwitchSubscriptionLegOrder6.mmInvestmentAccountDetails, IndividualOrderStatusAndReason8.mmInvestmentAccountDetails, SubscriptionExecution12.mmInvestmentAccountDetails, SubscriptionOrder15.mmInvestmentAccountDetails,
 					FundOrderData5.mmInvestmentAccountDetails, SwitchRedemptionLegOrder6.mmInvestmentAccountDetails, RedemptionOrder15.mmInvestmentAccountDetails, RedemptionExecution16.mmInvestmentAccountDetails,
-					InvestmentFundOrder8.mmInvestmentAccountDetails, SwitchSubscriptionLegExecution4.mmInvestmentAccountDetails, SwitchRedemptionLegExecution4.mmInvestmentAccountDetails, SwitchLegReferences2.mmInvestmentAccountDetails);
+					InvestmentFundOrder8.mmInvestmentAccountDetails, SwitchSubscriptionLegExecution4.mmInvestmentAccountDetails, SwitchRedemptionLegExecution4.mmInvestmentAccountDetails, SwitchLegReferences2.mmInvestmentAccountDetails,
+					MessageAndBusinessReference11.mmInvestmentAccountDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

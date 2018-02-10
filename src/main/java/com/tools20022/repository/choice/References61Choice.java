@@ -20,6 +20,8 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.TransferCancellationStatusReportV06;
+import com.tools20022.repository.area.sese.TransferInstructionStatusReportV06;
 import com.tools20022.repository.area.setr.OrderCancellationStatusReportV04;
 import com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02;
 import com.tools20022.repository.area.setr.OrderInstructionStatusReportV04;
@@ -65,6 +67,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.setr.OrderConfirmationStatusReportV02#mmReference
  * OrderConfirmationStatusReportV02.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV06#mmReference
+ * TransferCancellationStatusReportV06.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmReference
+ * TransferInstructionStatusReportV06.mmReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -221,7 +229,8 @@ public class References61Choice {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.References61Choice.mmRelatedReference, com.tools20022.repository.choice.References61Choice.mmOtherReference);
-				messageBuildingBlock_lazy = () -> Arrays.asList(OrderCancellationStatusReportV04.mmReference, OrderInstructionStatusReportV04.mmReference, OrderConfirmationStatusReportV02.mmReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(OrderCancellationStatusReportV04.mmReference, OrderInstructionStatusReportV04.mmReference, OrderConfirmationStatusReportV02.mmReference,
+						TransferCancellationStatusReportV06.mmReference, TransferInstructionStatusReportV06.mmReference);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References61Choice";

@@ -422,6 +422,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CorporateActionOption116#mmCashAccount
  * CorporateActionOption116.mmCashAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NewAccount1#mmAccount
+ * NewAccount1.mmAccount}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msg.CashSettlement1#mmCashAccountDetails
  * CashSettlement1.mmCashAccountDetails}</li>
@@ -431,6 +433,29 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CorporateActionOption121#mmCashAccount
  * CorporateActionOption121.mmCashAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount7#mmType
+ * CustomerAccount7.mmType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount6#mmType
+ * CustomerAccount6.mmType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountStatement8#mmRelatedAccount
+ * AccountStatement8.mmRelatedAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountReport22#mmRelatedAccount
+ * AccountReport22.mmRelatedAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError3Choice#mmAccount
+ * AccountOrBusinessError3Choice.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Member4#mmAccount
+ * Member4.mmAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountAndEntry2#mmAccount
+ * CashAccountAndEntry2.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption141#mmCashAccount
+ * CorporateActionOption141.mmCashAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption144#mmCashAccount
+ * CorporateActionOption144.mmCashAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -544,6 +569,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.CardAccount13 CardAccount13}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CardAccount7 CardAccount7}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CardAccount12 CardAccount12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount7
+ * CustomerAccount7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount6
+ * CustomerAccount6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ConcentrationAccount1
+ * ConcentrationAccount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount201 CashAccount201}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountOrBusinessError3Choice
+ * AccountOrBusinessError3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6
+ * CashAccountSearchCriteria6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount35 CashAccount35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountAndEntry2
+ * CashAccountAndEntry2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount36 CashAccount36}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount14 CardAccount14}</li>
  * </ul>
  * </li>
  * <li>
@@ -650,6 +692,13 @@ public class CashAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashAccount33#mmCashAccountPurpose
 	 * CashAccount33.mmCashAccountPurpose}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmType
+	 * CashAccountSearchCriteria6.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount35#mmType
+	 * CashAccount35.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount36#mmType
+	 * CashAccount36.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -676,7 +725,8 @@ public class CashAccount extends Account {
 			derivation_lazy = () -> Arrays.asList(CashAccount22.mmAccountTypeDescription, CashAccount5.mmType, CashAccount12.mmType, CashAccount12.mmExtendedType, CashAccountSearchCriteria2.mmType, CashAccountSearchCriteria3.mmType,
 					CashAccountSearchCriteria4.mmType, CashAccountType2.mmCode, CashAccountType2.mmProprietary, CashAccountType2Choice.mmCode, CashAccountType2Choice.mmProprietary, CashAccountSearchCriteria5.mmType, CashAccount7.mmType,
 					CashAccount16.mmType, CashAccount24.mmType, AccountIdentificationDetails.mmType, StandingOrderIdentification1.mmAccountType, CashAccountDetails1.mmType, CashAccountDetails3.mmType, CashAccountDetails4.mmType,
-					CashAccount23.mmType, AccountCashEntryDetails3.mmAccountType, CashAccount13.mmType, CashAccount20.mmType, CashAccount25.mmType, CashAccount27.mmType, CashAccount3.mmType, CashAccount33.mmCashAccountPurpose);
+					CashAccount23.mmType, AccountCashEntryDetails3.mmAccountType, CashAccount13.mmType, CashAccount20.mmType, CashAccount25.mmType, CashAccount27.mmType, CashAccount3.mmType, CashAccount33.mmCashAccountPurpose,
+					CashAccountSearchCriteria6.mmType, CashAccount35.mmType, CashAccount36.mmType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":97A::CASH"), new ISO15022Synonym(this, ":97A::COMM"), new ISO15022Synonym(this, ":97A::TAXE"), new ISO15022Synonym(this, ":97A::CHAR"));
@@ -788,6 +838,12 @@ public class CashAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ReportingRequest3#mmRequestedTransactionType
 	 * ReportingRequest3.mmRequestedTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmRequestedTransactionType
+	 * ReportingRequest4.mmRequestedTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountAndEntry2#mmEntry
+	 * CashAccountAndEntry2.mmEntry}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -809,7 +865,8 @@ public class CashAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmCashEntry = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CashAccountAndEntry1.mmEntry, ReportingRequest1.mmRequestedTransactionType, ReportingRequest2.mmRequestedTransactionType, ReportingRequest3.mmRequestedTransactionType);
+			derivation_lazy = () -> Arrays.asList(CashAccountAndEntry1.mmEntry, ReportingRequest1.mmRequestedTransactionType, ReportingRequest2.mmRequestedTransactionType, ReportingRequest3.mmRequestedTransactionType,
+					ReportingRequest4.mmRequestedTransactionType, CashAccountAndEntry2.mmEntry);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -890,6 +947,15 @@ public class CashAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BillingStatement2#mmBalanceAdjustment
 	 * BillingStatement2.mmBalanceAdjustment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountSearchCriteria6#mmBalance
+	 * CashAccountSearchCriteria6.mmBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount35#mmMultilateralBalance
+	 * CashAccount35.mmMultilateralBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BilateralLimit2#mmBilateralBalance
+	 * BilateralLimit2.mmBilateralBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -914,7 +980,7 @@ public class CashAccount extends Account {
 			derivation_lazy = () -> Arrays.asList(CashAccountSearchCriteria2.mmBalance, CashAccountSearchCriteria3.mmBalance, CashAccountSearchCriteria4.mmBalance, CashAccountSearchCriteria5.mmBalance,
 					BilateralLimitDetails1.mmBilateralBalance, CashAccountDetails1.mmMultilateralBalance, BilateralLimitDetails2.mmBilateralBalance, CashAccountDetails3.mmMultilateralBalance, BilateralLimitDetails3.mmBilateralBalance,
 					CashAccountDetails4.mmMultilateralBalance, BilateralLimit1.mmBilateralBalance, CashAccount23.mmMultilateralBalance, BillingStatement1.mmBalance, BillingStatement1.mmBalanceAdjustment, BillingStatement2.mmBalance,
-					BillingStatement2.mmBalanceAdjustment);
+					BillingStatement2.mmBalanceAdjustment, CashAccountSearchCriteria6.mmBalance, CashAccount35.mmMultilateralBalance, BilateralLimit2.mmBilateralBalance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -957,7 +1023,7 @@ public class CashAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies each role linked to a payment and using a specific cash account in the payment context. "
+	 * "Specifies each role linked to a payment and using a specific cash account in the payment context."
 	 * </li>
 	 * </ul>
 	 */
@@ -967,7 +1033,7 @@ public class CashAccount extends Account {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentPartyRole";
-			definition = "Specifies each role linked to a payment and using a specific cash account in the payment context. ";
+			definition = "Specifies each role linked to a payment and using a specific cash account in the payment context.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmCashAccount;
@@ -1373,7 +1439,7 @@ public class CashAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies each role linked to a payment settlement and using a specific cash account in the payment context. "
+	 * "Specifies each role linked to a payment settlement and using a specific cash account in the payment context."
 	 * </li>
 	 * </ul>
 	 */
@@ -1383,7 +1449,7 @@ public class CashAccount extends Account {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashSettlementPartyRole";
-			definition = "Specifies each role linked to a payment settlement and using a specific cash account in the payment context. ";
+			definition = "Specifies each role linked to a payment settlement and using a specific cash account in the payment context.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmCashAccount;
@@ -2122,6 +2188,9 @@ public class CashAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FeeAndTax1#mmCommercialAgreementReference
 	 * FeeAndTax1.mmCommercialAgreementReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Fees1#mmCommercialAgreementReference
+	 * Fees1.mmCommercialAgreementReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2142,7 +2211,7 @@ public class CashAccount extends Account {
 	 */
 	public static final MMBusinessAssociationEnd mmCommission = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(FeeAndTax1.mmCommercialAgreementReference);
+			derivation_lazy = () -> Arrays.asList(FeeAndTax1.mmCommercialAgreementReference, Fees1.mmCommercialAgreementReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2190,8 +2259,9 @@ public class CashAccount extends Account {
 						AccountOrBusinessError2Choice.mmAccount, AccountAndParties2.mmAccount, AccountReport18.mmRelatedAccount, AccountStatement5.mmRelatedAccount, OriginalNotificationReference6.mmRelatedAccount,
 						OriginalItemReference3.mmRelatedAccount, OriginalNotificationReference5.mmRelatedAccount, NotificationItem5.mmRelatedAccount, AccountStatement6.mmRelatedAccount, AccountReport19.mmRelatedAccount,
 						CashAccountCharacteristics2.mmCashAccount, ParentCashAccount2.mmIdentification, OriginalNotificationReference8.mmRelatedAccount, OriginalItemReference4.mmRelatedAccount,
-						OriginalNotificationReference7.mmRelatedAccount, NotificationItem6.mmRelatedAccount, CorporateActionOption116.mmCashAccount, CashSettlement1.mmCashAccountDetails, CashSettlement2.mmCashAccountDetails,
-						CorporateActionOption121.mmCashAccount);
+						OriginalNotificationReference7.mmRelatedAccount, NotificationItem6.mmRelatedAccount, CorporateActionOption116.mmCashAccount, NewAccount1.mmAccount, CashSettlement1.mmCashAccountDetails,
+						CashSettlement2.mmCashAccountDetails, CorporateActionOption121.mmCashAccount, CustomerAccount7.mmType, CustomerAccount6.mmType, AccountStatement8.mmRelatedAccount, AccountReport22.mmRelatedAccount,
+						AccountOrBusinessError3Choice.mmAccount, Member4.mmAccount, CashAccountAndEntry2.mmAccount, CorporateActionOption141.mmCashAccount, CorporateActionOption144.mmCashAccount);
 				superType_lazy = () -> Account.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmCashAccountType, com.tools20022.repository.entity.CashAccount.mmRelatedInvestmentAccount,
 						com.tools20022.repository.entity.CashAccount.mmCashEntry, com.tools20022.repository.entity.CashAccount.mmCashBalance, com.tools20022.repository.entity.CashAccount.mmPaymentPartyRole,
@@ -2213,7 +2283,9 @@ public class CashAccount extends Account {
 						AccountAndParties1.mmObject(), ParentCashAccount1.mmObject(), CashAccountCharacteristics1.mmObject(), CashAccount10.mmObject(), CashAccount8.mmObject(), CustomerAccountReturnCriteria1.mmObject(),
 						CustomerAccount2.mmObject(), CustomerAccount3.mmObject(), AccountOrBusinessError2Choice.mmObject(), CashAccount29.mmObject(), CardAccount3.mmObject(), CardAccount1.mmObject(), CardAccount6.mmObject(),
 						CardAccount4.mmObject(), CardAccount5.mmObject(), CardAccount2.mmObject(), CashAccountCharacteristics2.mmObject(), ParentCashAccount2.mmObject(), CashAccount34.mmObject(), CashAccount32.mmObject(),
-						CashAccount33.mmObject(), CardAccount10.mmObject(), CardAccount9.mmObject(), CardAccount8.mmObject(), CardAccount11.mmObject(), CardAccount13.mmObject(), CardAccount7.mmObject(), CardAccount12.mmObject());
+						CashAccount33.mmObject(), CardAccount10.mmObject(), CardAccount9.mmObject(), CardAccount8.mmObject(), CardAccount11.mmObject(), CardAccount13.mmObject(), CardAccount7.mmObject(), CardAccount12.mmObject(),
+						CustomerAccount7.mmObject(), CustomerAccount6.mmObject(), ConcentrationAccount1.mmObject(), CashAccount201.mmObject(), AccountOrBusinessError3Choice.mmObject(), CashAccountSearchCriteria6.mmObject(),
+						CashAccount35.mmObject(), CashAccountAndEntry2.mmObject(), CashAccount36.mmObject(), CardAccount14.mmObject());
 			}
 
 			@Override

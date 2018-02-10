@@ -66,6 +66,12 @@ import javax.xml.bind.annotation.XmlType;
  * "SignedData4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Digital signatures of data from one or several signers."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SignedData5 SignedData5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.SignedData3
  * SignedData3}</li>
@@ -102,6 +108,13 @@ public class SignedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the data structure."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SignedData5#mmVersion
+	 * SignedData5.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -117,6 +130,7 @@ public class SignedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
+			nextVersions_lazy = () -> Arrays.asList(SignedData5.mmVersion);
 			previousVersion_lazy = () -> SignedData3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -150,6 +164,14 @@ public class SignedData4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of digest algorithm applied before signature."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData5#mmDigestAlgorithm
+	 * SignedData5.mmDigestAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,6 +187,7 @@ public class SignedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestAlgorithm";
 			definition = "Identification of digest algorithm applied before signature.";
+			nextVersions_lazy = () -> Arrays.asList(SignedData5.mmDigestAlgorithm);
 			previousVersion_lazy = () -> SignedData3.mmDigestAlgorithm;
 			minOccurs = 1;
 			isComposite = true;
@@ -196,6 +219,14 @@ public class SignedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data to sign."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SignedData5#mmEncapsulatedContent
+	 * SignedData5.mmEncapsulatedContent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -211,6 +242,7 @@ public class SignedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncapsulatedContent";
 			definition = "Data to sign.";
+			nextVersions_lazy = () -> Arrays.asList(SignedData5.mmEncapsulatedContent);
 			previousVersion_lazy = () -> SignedData3.mmEncapsulatedContent;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -245,6 +277,13 @@ public class SignedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Chain of X.509 certificates."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SignedData5#mmCertificate
+	 * SignedData5.mmCertificate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -260,6 +299,7 @@ public class SignedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Chain of X.509 certificates.";
+			nextVersions_lazy = () -> Arrays.asList(SignedData5.mmCertificate);
 			previousVersion_lazy = () -> SignedData3.mmCertificate;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
@@ -289,6 +329,13 @@ public class SignedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Digital signature and identification of a signer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SignedData5#mmSigner
+	 * SignedData5.mmSigner}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -304,6 +351,7 @@ public class SignedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Signer";
 			definition = "Digital signature and identification of a signer.";
+			nextVersions_lazy = () -> Arrays.asList(SignedData5.mmSigner);
 			previousVersion_lazy = () -> SignedData3.mmSigner;
 			minOccurs = 1;
 			isComposite = true;
@@ -320,6 +368,7 @@ public class SignedData4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SignedData4";
 				definition = "Digital signatures of data from one or several signers.";
+				nextVersions_lazy = () -> Arrays.asList(SignedData5.mmObject());
 				previousVersion_lazy = () -> SignedData3.mmObject();
 			}
 		});

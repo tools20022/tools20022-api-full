@@ -143,6 +143,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#mmBalanceForFinancialInstrument
  * AggregateHoldingBalance1.mmBalanceForFinancialInstrument}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralAccount4#mmAssetHolding
+ * CollateralAccount4.mmAssetHolding}</li>
  * </ul>
  * </li>
  * <li>
@@ -309,6 +312,12 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument47#mmAverageAcquisitionPrice
 	 * FinancialInstrument47.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmAverageAcquisitionPrice
+	 * FinancialInstrument61.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65#mmAverageAcquisitionPrice
+	 * FinancialInstrument65.mmAverageAcquisitionPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -337,7 +346,7 @@ public class AssetHolding {
 					AggregateBalanceInformation1.mmHoldingValue, AggregateBalancePerSafekeepingPlace3.mmHoldingValue, AggregateBalancePerSafekeepingPlace3.mmPreviousHoldingValue, AggregateBalanceInformation4.mmHoldingValue,
 					AggregateBalanceInformation4.mmPreviousHoldingValue, OtherTypeOfCollateral1.mmAmount, AggregateBalanceInformation5.mmHoldingValue, AggregateBalanceInformation5.mmPreviousHoldingValue,
 					FinancialInstrument37.mmAverageAcquisitionPrice, FinancialInstrument35.mmAverageAcquisitionPrice, FinancialInstrument40.mmAverageAcquisitionPrice, DebtInstrument2.mmNominalValuePerUnit,
-					FinancialInstrument48.mmAverageAcquisitionPrice, FinancialInstrument47.mmAverageAcquisitionPrice);
+					FinancialInstrument48.mmAverageAcquisitionPrice, FinancialInstrument47.mmAverageAcquisitionPrice, FinancialInstrument61.mmAverageAcquisitionPrice, FinancialInstrument65.mmAverageAcquisitionPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -560,6 +569,36 @@ public class AssetHolding {
 	 * OtherAmounts34.mmBookValue}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts38#mmBookValue
 	 * OtherAmounts38.mmBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmAveragePrice
+	 * TransferStatusAndReason5.mmAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmAveragePrice
+	 * Transfer35.mmAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmNewAveragePrice
+	 * Transfer35.mmNewAveragePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer34#mmAveragePrice
+	 * Transfer34.mmAveragePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmAverageAcquisitionPrice
+	 * FinancialInstrument60.mmAverageAcquisitionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmTotalBookValue
+	 * FinancialInstrument60.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmTotalBookValue
+	 * FinancialInstrument61.mmTotalBookValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65#mmTotalBookValue
+	 * FinancialInstrument65.mmTotalBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts41#mmBookValue
+	 * OtherAmounts41.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts40#mmBookValue
+	 * OtherAmounts40.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts42#mmBookValue
+	 * OtherAmounts42.mmBookValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts44#mmBookValue
+	 * OtherAmounts44.mmBookValue}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -596,7 +635,9 @@ public class AssetHolding {
 					FinancialInstrument37.mmTotalBookValue, FinancialInstrument35.mmTotalBookValue, FinancialInstrument34.mmAverageAcquisitionPrice, FinancialInstrument34.mmTotalBookValue, FinancialInstrument40.mmTotalBookValue,
 					FinancialInstrument39.mmAverageAcquisitionPrice, FinancialInstrument39.mmTotalBookValue, OtherAmounts30.mmBookValue, OtherAmounts31.mmBookValue, Transfer31.mmAveragePrice, Transfer31.mmNewAveragePrice,
 					Transfer30.mmAveragePrice, Transfer33.mmAveragePrice, Transfer33.mmNewAveragePrice, FinancialInstrument48.mmTotalBookValue, FinancialInstrument47.mmTotalBookValue, FinancialInstrument46.mmAverageAcquisitionPrice,
-					FinancialInstrument46.mmTotalBookValue, OtherAmounts34.mmBookValue, OtherAmounts38.mmBookValue);
+					FinancialInstrument46.mmTotalBookValue, OtherAmounts34.mmBookValue, OtherAmounts38.mmBookValue, TransferStatusAndReason5.mmAveragePrice, Transfer35.mmAveragePrice, Transfer35.mmNewAveragePrice,
+					Transfer34.mmAveragePrice, FinancialInstrument60.mmAverageAcquisitionPrice, FinancialInstrument60.mmTotalBookValue, FinancialInstrument61.mmTotalBookValue, FinancialInstrument65.mmTotalBookValue,
+					OtherAmounts41.mmBookValue, OtherAmounts40.mmBookValue, OtherAmounts42.mmBookValue, OtherAmounts44.mmBookValue);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::BOOK"));
@@ -733,6 +774,14 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#mmNominalValue
 	 * FinancialInstrumentQuantity25Choice.mmNominalValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmFaceAmount
+	 * Debt3.mmFaceAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity30Choice#mmNominalValue
+	 * FinancialInstrumentQuantity30Choice.mmNominalValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity31Choice#mmFaceAmount
+	 * FinancialInstrumentQuantity31Choice.mmFaceAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -765,7 +814,7 @@ public class AssetHolding {
 					FinancialInstrumentAttributes44.mmFaceAmount, UnitOrFaceAmount1Choice.mmFaceAmount, UnitOrFaceAmountOrCodeChoice.mmFaceAmount, UnitOrFaceAmountOrCode1Choice.mmFaceAmount, Debt2.mmFaceAmount,
 					FinancialInstrumentQuantitySearch1Choice.mmFaceAmount, FinancialInstrumentQuantitySearch1.mmFaceAmount, Quantity16Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities5.mmFaceAmount,
 					Quantity18Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities6.mmFaceAmount, Quantity23Choice.mmOriginalAndCurrentFaceAmount, OriginalAndCurrentQuantities7.mmFaceAmount,
-					FinancialInstrumentQuantity25Choice.mmNominalValue);
+					FinancialInstrumentQuantity25Choice.mmNominalValue, Debt3.mmFaceAmount, FinancialInstrumentQuantity30Choice.mmNominalValue, FinancialInstrumentQuantity31Choice.mmFaceAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "FAMT"));
@@ -865,6 +914,9 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity25Choice#mmMonetaryValue
 	 * FinancialInstrumentQuantity25Choice.mmMonetaryValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentQuantity30Choice#mmMonetaryValue
+	 * FinancialInstrumentQuantity30Choice.mmMonetaryValue}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -894,7 +946,7 @@ public class AssetHolding {
 					FinancialInstrumentQuantity14Choice.mmAmortisedValue, FinancialInstrumentQuantity16Choice.mmAmortisedValue, FinancialInstrumentQuantity17Choice.mmAmortisedValue, FinancialInstrumentQuantity19Choice.mmAmortisedValue,
 					FinancialInstrumentQuantity20Choice.mmAmortisedValue, FinancialInstrumentQuantity21Choice.mmAmortisedValue, FinancialInstrumentQuantity22Choice.mmAmortisedValue, FinancialInstrumentQuantityChoice.mmAmortisedValue,
 					OtherAmounts16.mmRemainingFaceValue, FinancialInstrumentQuantitySearch1Choice.mmAmortisedValue, FinancialInstrumentQuantitySearch1.mmAmortisedValue, OriginalAndCurrentQuantities5.mmAmortisedValue,
-					OriginalAndCurrentQuantities6.mmAmortisedValue, OriginalAndCurrentQuantities7.mmAmortisedValue, FinancialInstrumentQuantity25Choice.mmMonetaryValue);
+					OriginalAndCurrentQuantities6.mmAmortisedValue, OriginalAndCurrentQuantities7.mmAmortisedValue, FinancialInstrumentQuantity25Choice.mmMonetaryValue, FinancialInstrumentQuantity30Choice.mmMonetaryValue);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "AMOR"));
@@ -1004,6 +1056,14 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#mmMarketValue
 	 * SecuritiesCollateral8.mmMarketValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Commodity2#mmMarketValue
+	 * Commodity2.mmMarketValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmMarketPrice
+	 * FinancialInstrumentAttributes93.mmMarketPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes94#mmMarketPrice
+	 * FinancialInstrumentAttributes94.mmMarketPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1028,7 +1088,8 @@ public class AssetHolding {
 					FinancialInstrumentAttributes46.mmMarketPrice, FinancialInstrumentAttributes47.mmMarketPrice, OtherAmounts16.mmNetMarketValue, SecuritiesCollateral1.mmMarketValue, OtherCollateral1.mmMarketValue,
 					Collateral3.mmMarketValue, Collateral6.mmMarketValue, SecuritiesCollateral2.mmMarketValue, OtherCollateral2.mmMarketValue, SecuritiesCollateral3.mmMarketValue, OtherCollateral3.mmMarketValue,
 					OtherCollateral4.mmMarketValue, SecuritiesCollateral4.mmMarketValue, FinancialInstrumentAttributes68.mmMarketPrice, OtherCollateral7.mmMarketValue, OtherCollateral6.mmMarketValue, SecuritiesCollateral6.mmMarketValue,
-					SecuritiesCollateral5.mmMarketValue, OtherCollateral5.mmMarketValue, SecuritiesCollateral7.mmMarketValue, FinancialInstrumentAttributes73.mmMarketPrice, SecuritiesCollateral8.mmMarketValue);
+					SecuritiesCollateral5.mmMarketValue, OtherCollateral5.mmMarketValue, SecuritiesCollateral7.mmMarketValue, FinancialInstrumentAttributes73.mmMarketPrice, SecuritiesCollateral8.mmMarketValue, Commodity2.mmMarketValue,
+					FinancialInstrumentAttributes93.mmMarketPrice, FinancialInstrumentAttributes94.mmMarketPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1205,6 +1266,8 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Collateral17#mmOtherCollateral
 	 * Collateral17.mmOtherCollateral}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AssetHolding1#mmAssetType
+	 * AssetHolding1.mmAssetType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1225,7 +1288,7 @@ public class AssetHolding {
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(ProposalType1Choice.mmOtherCollateral, Collateral4.mmOtherCollateral, Collateral7.mmOtherCollateral, Collateral8.mmOtherCollateral, Collateral11.mmOtherCollateral,
-					Collateral12.mmOtherCollateral, Collateral16.mmOtherCollateral, Collateral17.mmOtherCollateral);
+					Collateral12.mmOtherCollateral, Collateral16.mmOtherCollateral, Collateral17.mmOtherCollateral, AssetHolding1.mmAssetType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1363,6 +1426,9 @@ public class AssetHolding {
 	 * <li>{@linkplain com.tools20022.repository.msg.Collateral14#mmHaircut
 	 * Collateral14.mmHaircut}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmValuationHaircutDetails
+	 * AggregateBalanceInformation34.mmValuationHaircutDetails}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmSecuritiesHaircut
 	 * SecuritiesFinancingTransactionDetails35.mmSecuritiesHaircut}</li>
 	 * <li>
@@ -1370,6 +1436,15 @@ public class AssetHolding {
 	 * SecuritiesFinancingTransactionDetails36.mmSecuritiesHaircut}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Collateral18#mmHaircut
 	 * Collateral18.mmHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AssetHolding1#mmPostHaircutValue
+	 * AssetHolding1.mmPostHaircutValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails37.mmSecuritiesHaircut}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmSecuritiesHaircut
+	 * SecuritiesFinancingTransactionDetails39.mmSecuritiesHaircut}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1401,8 +1476,9 @@ public class AssetHolding {
 					AggregateBalanceInformation28.mmValuationHaircutDetails, SecuritiesFinancingTransactionDetails25.mmSecuritiesHaircut, Collateral10.mmHaircut, AggregateBalanceInformation30.mmValuationHaircutDetails,
 					SecuritiesFinancingTransactionDetails26.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails28.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails27.mmSecuritiesHaircut,
 					SecuritiesFinancingTransactionDetails33.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails32.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails30.mmSecuritiesHaircut,
-					AggregateBalanceInformation33.mmValuationHaircutDetails, Collateral14.mmHaircut, SecuritiesFinancingTransactionDetails35.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails36.mmSecuritiesHaircut,
-					Collateral18.mmHaircut);
+					AggregateBalanceInformation33.mmValuationHaircutDetails, Collateral14.mmHaircut, AggregateBalanceInformation34.mmValuationHaircutDetails, SecuritiesFinancingTransactionDetails35.mmSecuritiesHaircut,
+					SecuritiesFinancingTransactionDetails36.mmSecuritiesHaircut, Collateral18.mmHaircut, AssetHolding1.mmPostHaircutValue, SecuritiesFinancingTransactionDetails37.mmSecuritiesHaircut,
+					SecuritiesFinancingTransactionDetails39.mmSecuritiesHaircut);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1550,6 +1626,21 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AssetClassAttributes1#mmForeignExchange
 	 * AssetClassAttributes1.mmForeignExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmExchangeRate
+	 * UnderlyingAttributes3.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmCurrency
+	 * TradeTransaction15.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmCurrency
+	 * TradeTransaction17.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmCurrency
+	 * TradeTransaction14.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmCurrency
+	 * TradeTransaction16.mmCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1559,7 +1650,7 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ExchangeRate"</li>
 	 * <li>
@@ -1573,10 +1664,11 @@ public class AssetHolding {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmExchangeRate, CashCollateral1.mmExchangeRate, OtherCollateral1.mmExchangeRate, UnderlyingAttributes2.mmExchangeRate, OtherCollateral2.mmExchangeRate,
 					CashCollateral3.mmExchangeRate, OtherCollateral3.mmExchangeRate, CashCollateral4.mmExchangeRate, CashCollateral2.mmExchangeRate, OtherCollateral4.mmExchangeRate, CashCollateral5.mmExchangeRate,
-					OtherCollateral7.mmExchangeRate, OtherCollateral6.mmExchangeRate, OtherCollateral5.mmExchangeRate, AssetClassAttributes1Choice.mmForeignExchange, AssetClassAttributes1.mmForeignExchange);
+					OtherCollateral7.mmExchangeRate, OtherCollateral6.mmExchangeRate, OtherCollateral5.mmExchangeRate, AssetClassAttributes1Choice.mmForeignExchange, AssetClassAttributes1.mmForeignExchange,
+					UnderlyingAttributes3.mmExchangeRate, TradeTransaction15.mmCurrency, TradeTransaction17.mmCurrency, TradeTransaction14.mmCurrency, TradeTransaction16.mmCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
-			registrationStatus = MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Specifies the exchange rate between the currency of the asset and the reporting currency.";
 			maxOccurs = 1;
@@ -1606,6 +1698,9 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmCapValue
 	 * UnderlyingAttributes2.mmCapValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCapValue
+	 * UnderlyingAttributes3.mmCapValue}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1626,7 +1721,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAttribute mmCapValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmCapValue, UnderlyingAttributes2.mmCapValue);
+			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmCapValue, UnderlyingAttributes2.mmCapValue, UnderlyingAttributes3.mmCapValue);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1967,6 +2062,9 @@ public class AssetHolding {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InterestRateDerivative5#mmInflationIndex
 	 * InterestRateDerivative5.mmInflationIndex}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClearedProduct1#mmOpenInterest
+	 * ClearedProduct1.mmOpenInterest}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1988,7 +2086,7 @@ public class AssetHolding {
 	 */
 	public static final MMBusinessAssociationEnd mmInterest = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(AssetClassAttributes1Choice.mmInterest, AssetClassAttributes1.mmInterest, InterestRateDerivative5.mmInflationIndex);
+			derivation_lazy = () -> Arrays.asList(AssetClassAttributes1Choice.mmInterest, AssetClassAttributes1.mmInterest, InterestRateDerivative5.mmInflationIndex, ClearedProduct1.mmOpenInterest);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetHolding.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2294,7 +2392,7 @@ public class AssetHolding {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmAssetValue, com.tools20022.repository.entity.Balance.mmAssetHolding, com.tools20022.repository.entity.Interest.mmRelatedAssetHolding,
 						com.tools20022.repository.entity.CurrencyExchange.mmCalculatedAssetValue, com.tools20022.repository.entity.Collateral.mmAssetHolding, com.tools20022.repository.entity.Collateral.mmVariationMarginAssetHolding,
 						com.tools20022.repository.entity.Collateral.mmSegregatedIndependentAmountAssetHolding, com.tools20022.repository.entity.HaircutValuation.mmAssetHolding);
-				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentAggregateBalance1.mmHoldings, AggregateHoldingBalance1.mmBalanceForFinancialInstrument);
+				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentAggregateBalance1.mmHoldings, AggregateHoldingBalance1.mmBalanceForFinancialInstrument, CollateralAccount4.mmAssetHolding);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetHolding.mmHoldingValue, com.tools20022.repository.entity.AssetHolding.mmBookValue, com.tools20022.repository.entity.AssetHolding.mmFaceAmount,
 						com.tools20022.repository.entity.AssetHolding.mmAmortisedFaceValue, com.tools20022.repository.entity.AssetHolding.mmMarketValue, com.tools20022.repository.entity.AssetHolding.mmBalance,
 						com.tools20022.repository.entity.AssetHolding.mmUnrealisedGainOrLoss, com.tools20022.repository.entity.AssetHolding.mmAsset, com.tools20022.repository.entity.AssetHolding.mmHaircut,

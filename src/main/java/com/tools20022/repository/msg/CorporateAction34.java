@@ -93,6 +93,15 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateAction34"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides information about the corporate action event."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateAction43
+ * CorporateAction43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateAction45
+ * CorporateAction45}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -133,6 +142,17 @@ public class CorporateAction34 {
 	 * definition} =
 	 * "Provides information about the dates related to a corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction43#mmDateDetails
+	 * CorporateAction43.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction45#mmDateDetails
+	 * CorporateAction45.mmDateDetails}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDateDetails = new MMMessageAssociationEnd() {
@@ -144,6 +164,7 @@ public class CorporateAction34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateAction43.mmDateDetails, CorporateAction45.mmDateDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -182,6 +203,17 @@ public class CorporateAction34 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Stage in the corporate action event life cycle."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction43#mmEventStage
+	 * CorporateAction43.mmEventStage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction45#mmEventStage
+	 * CorporateAction45.mmEventStage}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEventStage = new MMMessageAssociationEnd() {
@@ -193,6 +225,7 @@ public class CorporateAction34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStage";
 			definition = "Stage in the corporate action event life cycle.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateAction43.mmEventStage, CorporateAction45.mmEventStage);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -234,6 +267,17 @@ public class CorporateAction34 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of lottery announced."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction43#mmLotteryType
+	 * CorporateAction43.mmLotteryType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction45#mmLotteryType
+	 * CorporateAction45.mmLotteryType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLotteryType = new MMMessageAssociationEnd() {
@@ -246,6 +290,7 @@ public class CorporateAction34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateAction43.mmLotteryType, CorporateAction45.mmLotteryType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -265,6 +310,7 @@ public class CorporateAction34 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction34";
 				definition = "Provides information about the corporate action event.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateAction43.mmObject(), CorporateAction45.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -170,6 +170,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ChargeBasisType1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge2
  * LineItemAllowanceCharge2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3
+ * LineItemAllowanceCharge3}</li>
  * </ul>
  * </li>
  * <li>
@@ -1138,6 +1140,145 @@ public class Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#mmCompensationAmount
 	 * PaymentTransaction76.mmCompensationAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmAmount
+	 * Fee4.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmCompensationAmount
+	 * PaymentTransaction87.mmCompensationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmCompensationAmount
+	 * PaymentTransaction88.mmCompensationAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Compensation1#mmAmount
+	 * Compensation1.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmChargesFees
+	 * OtherAmounts41.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmExecutingBrokerAmount
+	 * OtherAmounts41.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmLocalBrokerCommission
+	 * OtherAmounts41.mmLocalBrokerCommission}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmChargesFees
+	 * OtherAmounts39.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmExecutingBrokerAmount
+	 * OtherAmounts39.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmLocalBrokerCommission
+	 * OtherAmounts39.mmLocalBrokerCommission}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmChargesFees
+	 * OtherAmounts40.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmExecutingBrokerAmount
+	 * OtherAmounts40.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmLocalBrokerCommission
+	 * OtherAmounts40.mmLocalBrokerCommission}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmExecutingBrokerAmount
+	 * CorporateActionAmounts42.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmPayingAgentCommissionAmount
+	 * CorporateActionAmounts42.mmPayingAgentCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmLocalBrokerCommissionAmount
+	 * CorporateActionAmounts42.mmLocalBrokerCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmChargesAmount
+	 * CorporateActionAmounts42.mmChargesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmExecutingBrokerAmount
+	 * CorporateActionAmounts43.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmPayingAgentCommissionAmount
+	 * CorporateActionAmounts43.mmPayingAgentCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmLocalBrokerCommissionAmount
+	 * CorporateActionAmounts43.mmLocalBrokerCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmChargesAmount
+	 * CorporateActionAmounts43.mmChargesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmExecutingBrokerAmount
+	 * CorporateActionAmounts44.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmPayingAgentCommissionAmount
+	 * CorporateActionAmounts44.mmPayingAgentCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmLocalBrokerCommissionAmount
+	 * CorporateActionAmounts44.mmLocalBrokerCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmChargesAmount
+	 * CorporateActionAmounts44.mmChargesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmExecutingBrokerAmount
+	 * CorporateActionAmounts45.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmPayingAgentCommissionAmount
+	 * CorporateActionAmounts45.mmPayingAgentCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmLocalBrokerCommissionAmount
+	 * CorporateActionAmounts45.mmLocalBrokerCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmChargesAmount
+	 * CorporateActionAmounts45.mmChargesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmExecutingBrokerAmount
+	 * CorporateActionAmounts46.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmPayingAgentCommissionAmount
+	 * CorporateActionAmounts46.mmPayingAgentCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmLocalBrokerCommissionAmount
+	 * CorporateActionAmounts46.mmLocalBrokerCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmChargesAmount
+	 * CorporateActionAmounts46.mmChargesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmExecutingBrokerAmount
+	 * CorporateActionAmounts47.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmPayingAgentCommissionAmount
+	 * CorporateActionAmounts47.mmPayingAgentCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmLocalBrokerCommissionAmount
+	 * CorporateActionAmounts47.mmLocalBrokerCommissionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmChargesAmount
+	 * CorporateActionAmounts47.mmChargesAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmChargesFees
+	 * OtherAmounts42.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmExecutingBrokerAmount
+	 * OtherAmounts42.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmLocalBrokerCommission
+	 * OtherAmounts42.mmLocalBrokerCommission}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmChargesFees
+	 * OtherAmounts43.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmExecutingBrokerAmount
+	 * OtherAmounts43.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmLocalBrokerCommission
+	 * OtherAmounts43.mmLocalBrokerCommission}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmChargesFees
+	 * OtherAmounts44.mmChargesFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmExecutingBrokerAmount
+	 * OtherAmounts44.mmExecutingBrokerAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmLocalBrokerCommission
+	 * OtherAmounts44.mmLocalBrokerCommission}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmActualAmount
+	 * LineItemAllowanceCharge3.mmActualAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1224,7 +1365,17 @@ public class Adjustment {
 					OtherAmounts35.mmExecutingBrokerAmount, OtherAmounts35.mmLocalBrokerCommission, OtherAmounts34.mmChargesFees, OtherAmounts34.mmExecutingBrokerAmount, OtherAmounts34.mmLocalBrokerCommission, OtherAmounts38.mmChargesFees,
 					OtherAmounts38.mmExecutingBrokerAmount, OtherAmounts38.mmLocalBrokerCommission, OtherAmounts36.mmChargesFees, OtherAmounts36.mmExecutingBrokerAmount, OtherAmounts36.mmLocalBrokerCommission, OtherAmounts33.mmChargesFees,
 					LineItemAllowanceCharge2.mmActualAmount, TotalFeesAndTaxes40.mmTotalOverheadApplied, Fee3.mmRepairedStandardAmount, Fee3.mmRepairedDiscountAmount, Fee3.mmRepairedRequestedAmount, Fee2.mmStandardAmount,
-					Fee2.mmAppliedAmount, Fee1.mmStandardAmount, Fee1.mmRequestedAmount, PaymentTransaction81.mmCompensationAmount, PaymentTransaction76.mmCompensationAmount);
+					Fee2.mmAppliedAmount, Fee1.mmStandardAmount, Fee1.mmRequestedAmount, PaymentTransaction81.mmCompensationAmount, PaymentTransaction76.mmCompensationAmount, Fee4.mmAmount, PaymentTransaction87.mmCompensationAmount,
+					PaymentTransaction88.mmCompensationAmount, Compensation1.mmAmount, OtherAmounts41.mmChargesFees, OtherAmounts41.mmExecutingBrokerAmount, OtherAmounts41.mmLocalBrokerCommission, OtherAmounts39.mmChargesFees,
+					OtherAmounts39.mmExecutingBrokerAmount, OtherAmounts39.mmLocalBrokerCommission, OtherAmounts40.mmChargesFees, OtherAmounts40.mmExecutingBrokerAmount, OtherAmounts40.mmLocalBrokerCommission,
+					CorporateActionAmounts42.mmExecutingBrokerAmount, CorporateActionAmounts42.mmPayingAgentCommissionAmount, CorporateActionAmounts42.mmLocalBrokerCommissionAmount, CorporateActionAmounts42.mmChargesAmount,
+					CorporateActionAmounts43.mmExecutingBrokerAmount, CorporateActionAmounts43.mmPayingAgentCommissionAmount, CorporateActionAmounts43.mmLocalBrokerCommissionAmount, CorporateActionAmounts43.mmChargesAmount,
+					CorporateActionAmounts44.mmExecutingBrokerAmount, CorporateActionAmounts44.mmPayingAgentCommissionAmount, CorporateActionAmounts44.mmLocalBrokerCommissionAmount, CorporateActionAmounts44.mmChargesAmount,
+					CorporateActionAmounts45.mmExecutingBrokerAmount, CorporateActionAmounts45.mmPayingAgentCommissionAmount, CorporateActionAmounts45.mmLocalBrokerCommissionAmount, CorporateActionAmounts45.mmChargesAmount,
+					CorporateActionAmounts46.mmExecutingBrokerAmount, CorporateActionAmounts46.mmPayingAgentCommissionAmount, CorporateActionAmounts46.mmLocalBrokerCommissionAmount, CorporateActionAmounts46.mmChargesAmount,
+					CorporateActionAmounts47.mmExecutingBrokerAmount, CorporateActionAmounts47.mmPayingAgentCommissionAmount, CorporateActionAmounts47.mmLocalBrokerCommissionAmount, CorporateActionAmounts47.mmChargesAmount,
+					OtherAmounts42.mmChargesFees, OtherAmounts42.mmExecutingBrokerAmount, OtherAmounts42.mmLocalBrokerCommission, OtherAmounts43.mmChargesFees, OtherAmounts43.mmExecutingBrokerAmount, OtherAmounts43.mmLocalBrokerCommission,
+					OtherAmounts44.mmChargesFees, OtherAmounts44.mmExecutingBrokerAmount, OtherAmounts44.mmLocalBrokerCommission, LineItemAllowanceCharge3.mmActualAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1341,6 +1492,12 @@ public class Adjustment {
 	 * Fee1.mmStandardRate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmRequestedRate
 	 * Fee1.mmRequestedRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount2#mmRate
+	 * ChargeOrCommissionDiscount2.mmRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmCalculationPercent
+	 * LineItemAllowanceCharge3.mmCalculationPercent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1366,7 +1523,7 @@ public class Adjustment {
 					Charge17.mmRate, Charge10.mmRate, Charge18.mmRate, PaymentTerms3.mmDiscountPercentRate, PaymentTerms3.mmPenaltyPercentRate, LineItemAllowanceCharge1.mmCalculationPercent, Adjustment3.mmRate, ChargesDetails1.mmRate,
 					PaymentObligation1.mmChargesPercentage, AmountRate1Choice.mmRate, Charge23.mmRate, Charge22.mmRate, Charges5.mmPercentage, AmountOrRate3Choice.mmRate, PaymentTerms6.mmDiscountPercentRate,
 					PaymentTerms6.mmPenaltyPercentRate, EarlyPayment1.mmDiscountPercent, LineItemAllowanceCharge2.mmCalculationPercent, Fee3.mmRepairedStandardRate, Fee3.mmRepairedDiscountRate, Fee3.mmRepairedRequestedRate,
-					Fee2.mmStandardRate, Fee2.mmAppliedRate, ChargeOrCommissionDiscount1.mmRate, Fee1.mmStandardRate, Fee1.mmRequestedRate);
+					Fee2.mmStandardRate, Fee2.mmAppliedRate, ChargeOrCommissionDiscount1.mmRate, Fee1.mmStandardRate, Fee1.mmRequestedRate, ChargeOrCommissionDiscount2.mmRate, LineItemAllowanceCharge3.mmCalculationPercent);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1438,6 +1595,7 @@ public class Adjustment {
 	 * ChargeBasis2Choice.mmProprietary}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmBasis Fee2.mmBasis}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmBasis Fee1.mmBasis}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmBasis Fee4.mmBasis}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1464,7 +1622,7 @@ public class Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(Charge4.mmChargeBasis, Charge20.mmChargeBasis, Charge20.mmExtendedChargeBasis, Charge8.mmChargeBasis, Charge17.mmChargeBasis, Charge17.mmExtendedChargeBasis, Charge10.mmChargeBasis,
 					Charge18.mmChargeBasis, Charge18.mmExtendedChargeBasis, CommissionBasis1Choice.mmCode, CommissionBasis1Choice.mmProprietary, Charge27.mmChargeBasis, Charge29.mmChargeBasis, ChargeBasis2Choice.mmCode,
-					ChargeBasis2Choice.mmProprietary, Fee2.mmBasis, Fee1.mmBasis);
+					ChargeBasis2Choice.mmProprietary, Fee2.mmBasis, Fee1.mmBasis, Fee4.mmBasis);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::CATB"));
@@ -1631,6 +1789,11 @@ public class Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge2#mmReason
 	 * LineItemAllowanceCharge2.mmReason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Compensation1#mmReason
+	 * Compensation1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmReason
+	 * LineItemAllowanceCharge3.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1650,7 +1813,8 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAttribute mmReason = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(DocumentAdjustment1.mmReason, SettlementAllowanceCharge1.mmReason, DocumentAdjustment2.mmReason, LineItemAllowanceCharge1.mmReason, LineItemAllowanceCharge2.mmReason);
+			derivation_lazy = () -> Arrays.asList(DocumentAdjustment1.mmReason, SettlementAllowanceCharge1.mmReason, DocumentAdjustment2.mmReason, LineItemAllowanceCharge1.mmReason, LineItemAllowanceCharge2.mmReason,
+					Compensation1.mmReason, LineItemAllowanceCharge3.mmReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1851,6 +2015,9 @@ public class Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge2#mmChargeIndicator
 	 * LineItemAllowanceCharge2.mmChargeIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItemAllowanceCharge3#mmChargeIndicator
+	 * LineItemAllowanceCharge3.mmChargeIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1871,7 +2038,7 @@ public class Adjustment {
 	 */
 	public static final MMBusinessAttribute mmChargeIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(LineItemAllowanceCharge1.mmChargeIndicator, LineItemAllowanceCharge2.mmChargeIndicator);
+			derivation_lazy = () -> Arrays.asList(LineItemAllowanceCharge1.mmChargeIndicator, LineItemAllowanceCharge2.mmChargeIndicator, LineItemAllowanceCharge3.mmChargeIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Adjustment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2333,7 +2500,7 @@ public class Adjustment {
 						com.tools20022.repository.entity.Adjustment.mmCurrencyExchange, com.tools20022.repository.entity.Adjustment.mmSecuritiesOrder, com.tools20022.repository.entity.Adjustment.mmTax);
 				derivationComponent_lazy = () -> Arrays.asList(ChargeTaxBasisType1Choice.mmObject(), DocumentAdjustment1.mmObject(), Adjustment5.mmObject(), DiscountOrChargeType1Choice.mmObject(), DocumentAdjustment2.mmObject(),
 						LineItemAllowanceCharge1.mmObject(), Adjustment4.mmObject(), Adjustment3.mmObject(), Adjustment6.mmObject(), Adjustment7.mmObject(), AdjustmentType1Choice.mmObject(), ChargeBasisType1Choice.mmObject(),
-						LineItemAllowanceCharge2.mmObject());
+						LineItemAllowanceCharge2.mmObject(), LineItemAllowanceCharge3.mmObject());
 			}
 
 			@Override

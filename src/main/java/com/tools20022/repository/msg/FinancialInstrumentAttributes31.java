@@ -713,7 +713,7 @@ public class FinancialInstrumentAttributes31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies how an option can be exercised (American, European, Bermudan)"
+	 * "Specifies how an option can be exercised (American, European, Bermudan)."
 	 * </li>
 	 * </ul>
 	 */
@@ -726,7 +726,7 @@ public class FinancialInstrumentAttributes31 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12B::OPST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStyle";
-			definition = "Specifies how an option can be exercised (American, European, Bermudan)";
+			definition = "Specifies how an option can be exercised (American, European, Bermudan).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> OptionStyle6Choice.mmObject();
@@ -1985,7 +1985,7 @@ public class FinancialInstrumentAttributes31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)"
+	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1997,7 +1997,7 @@ public class FinancialInstrumentAttributes31 {
 			xmlTag = "VrsnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VersionNumber";
-			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)";
+			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Number1Choice.mmObject();
@@ -2601,7 +2601,7 @@ public class FinancialInstrumentAttributes31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Price at which a given convertible security can be converted to common stock ."
+	 * "Price at which a given convertible security can be converted to common stock."
 	 * </li>
 	 * </ul>
 	 */
@@ -2614,7 +2614,7 @@ public class FinancialInstrumentAttributes31 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90a::EXER"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionPrice";
-			definition = "Price at which a given convertible security can be converted to common stock .";
+			definition = "Price at which a given convertible security can be converted to common stock.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

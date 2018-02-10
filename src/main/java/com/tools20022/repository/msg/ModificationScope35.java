@@ -162,7 +162,7 @@ public class ModificationScope35 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information such as remarks or notes that must be conveyed about the party and or  limitations and restrictions."
+	 * "Additional information such as remarks or notes that must be conveyed about the party and or limitations and restrictions."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -178,7 +178,7 @@ public class ModificationScope35 {
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
-			definition = "Additional information such as remarks or notes that must be conveyed about the party and or  limitations and restrictions.";
+			definition = "Additional information such as remarks or notes that must be conveyed about the party and or limitations and restrictions.";
 			previousVersion_lazy = () -> ModificationScope30.mmAdditionalInformation;
 			minOccurs = 1;
 			isComposite = true;

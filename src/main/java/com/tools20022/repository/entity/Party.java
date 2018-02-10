@@ -149,9 +149,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
- * <li>
- * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType1
- * CountryAndResidentialStatusType1}</li>
  * <li>{@linkplain com.tools20022.repository.choice.Party14Choice Party14Choice}
  * </li>
  * <li>
@@ -242,6 +239,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.repository.choice.Party32Choice Party32Choice}
  * </li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount156
+ * PartyIdentificationAndAccount156}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Counterparty11Choice
+ * Counterparty11Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Counterparty12Choice
+ * Counterparty12Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -387,11 +391,35 @@ public class Party extends RolePlayer {
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification112#mmContactDetails
 	 * PartyIdentification112.mmContactDetails}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation27#mmPrimaryCommunicationAddress
+	 * Organisation27.mmPrimaryCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation27#mmSecondaryCommunicationAddress
+	 * Organisation27.mmSecondaryCommunicationAddress}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification28#mmContactDetails
 	 * OrganisationIdentification28.mmContactDetails}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GeneralInformation5#mmContactInformation
 	 * GeneralInformation5.mmContactInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Member3#mmCommunicationAddress
+	 * Member3.mmCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress1#mmCommunicationAddress
+	 * ContactIdentificationAndAddress1.mmCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Member4#mmCommunicationAddress
+	 * Member4.mmCommunicationAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmContactDetails
+	 * PartyIdentification125.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification126#mmContactDetails
+	 * PartyIdentification126.mmContactDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmContactDetails
+	 * PartyIdentification129.mmContactDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -419,7 +447,9 @@ public class Party extends RolePlayer {
 					GeneralInformation1.mmContactInformation, GeneralInformation4.mmContactInformation, GeneralInformation2.mmContactInformation, PartyAndAccountIdentificationAndContactInformation1.mmContactInformation,
 					PartyIdentification45.mmContactDetails, ContactIdentificationAndAddress.mmCommunicationAddress, MemberDetails.mmCommunicationAddress, MemberDetails1.mmCommunicationAddress, ContactDetails3.mmPreferredMethod,
 					PartyIdentification58.mmContactDetails, AccountTax1.mmNonResidenceCountry, Intermediary16.mmCommunicationInformation, Member1.mmCommunicationAddress, Member2.mmCommunicationAddress,
-					PartyIdentification77.mmContactDetails, PartyIdentification112.mmContactDetails, OrganisationIdentification28.mmContactDetails, GeneralInformation5.mmContactInformation);
+					PartyIdentification77.mmContactDetails, PartyIdentification112.mmContactDetails, Organisation27.mmPrimaryCommunicationAddress, Organisation27.mmSecondaryCommunicationAddress,
+					OrganisationIdentification28.mmContactDetails, GeneralInformation5.mmContactInformation, Member3.mmCommunicationAddress, ContactIdentificationAndAddress1.mmCommunicationAddress, Member4.mmCommunicationAddress,
+					PartyIdentification125.mmContactDetails, PartyIdentification126.mmContactDetails, PartyIdentification129.mmContactDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -451,7 +481,7 @@ public class Party extends RolePlayer {
 	 * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
 	 * PartyIdentificationInformation}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 2363 elements</li>
+	 * derivation} = List of 2555 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Party
@@ -651,6 +681,8 @@ public class Party extends RolePlayer {
 	 * Tax30.mmCountry}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Tax31#mmCountry
 	 * Tax31.mmCountry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax34#mmCountry
+	 * Tax34.mmCountry}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -673,7 +705,7 @@ public class Party extends RolePlayer {
 	public static final MMBusinessAssociationEnd mmTaxationConditions = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(Tax8.mmCountry, Tax17.mmCountry, Tax16.mmCountry, Tax14.mmCountry, Tax18.mmCountry, Tax19.mmCountry, TaxIdentification1.mmTaxationCountry, TaxIdentification2.mmIssuerCountry,
-					Tax32.mmCountry, Tax30.mmCountry, Tax31.mmCountry);
+					Tax32.mmCountry, Tax30.mmCountry, Tax31.mmCountry, Tax34.mmCountry);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -712,6 +744,9 @@ public class Party extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BeneficialOwner2#mmDomicileCountry
 	 * BeneficialOwner2.mmDomicileCountry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OrganisationIdentification27#mmDomicile
+	 * OrganisationIdentification27.mmDomicile}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -733,7 +768,7 @@ public class Party extends RolePlayer {
 	 */
 	public static final MMBusinessAssociationEnd mmDomicile = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(BeneficialOwner1.mmDomicileCountry, BeneficialOwner2.mmDomicileCountry);
+			derivation_lazy = () -> Arrays.asList(BeneficialOwner1.mmDomicileCountry, BeneficialOwner2.mmDomicileCountry, OrganisationIdentification27.mmDomicile);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Party.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -965,14 +1000,14 @@ public class Party extends RolePlayer {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Party.mmContactPoint, com.tools20022.repository.entity.Party.mmIdentification, com.tools20022.repository.entity.Party.mmMoneyLaunderingCheck,
 						com.tools20022.repository.entity.Party.mmTaxationConditions, com.tools20022.repository.entity.Party.mmDomicile, com.tools20022.repository.entity.Party.mmResidence,
 						com.tools20022.repository.entity.Party.mmPowerOfAttorney, com.tools20022.repository.entity.Party.mmLocation, com.tools20022.repository.entity.Party.mmCloseLinkSecurity);
-				derivationComponent_lazy = () -> Arrays.asList(CountryAndResidentialStatusType1.mmObject(), Party14Choice.mmObject(), PartyIdentificationAndAccount93.mmObject(), Counterparty1Choice.mmObject(),
-						Counterparty4Choice.mmObject(), PartyIdentificationAndAccount81.mmObject(), PartyIdentificationAndAccount86.mmObject(), Counterparty7Choice.mmObject(), PartyIdentificationAndAccount88.mmObject(),
-						PartyIdentificationAndAccount92.mmObject(), Counterparty2Choice.mmObject(), Counterparty3Choice.mmObject(), Counterparty6Choice.mmObject(), TradingPartyCapacity1Choice.mmObject(),
-						TradingPartyCapacity2Choice.mmObject(), PartyAndSignature1.mmObject(), PartyAndAuthorisation1.mmObject(), PartyAndAuthorisation3.mmObject(), AddressOrParty1Choice.mmObject(), PartyAndType1.mmObject(),
-						Counterparty5Choice.mmObject(), PartyAndAccountIdentificationAndContactInformation1.mmObject(), Counterparty8Choice.mmObject(), Party15Choice.mmObject(), Party16Choice.mmObject(),
-						SingleQualifiedPartyIdentification1.mmObject(), Party24Choice.mmObject(), Party23Choice.mmObject(), Counterparty9Choice.mmObject(), PartyIdentificationAndAccount108.mmObject(),
-						PartyIdentificationAndAccount109.mmObject(), Party30Choice.mmObject(), Party31Choice.mmObject(), CountryAndResidentialStatusType2.mmObject(), PartyIdentificationAndAccount125.mmObject(),
-						PartyIdentificationAndAccount135.mmObject(), PartyIdentificationAndAccount137.mmObject(), Counterparty10Choice.mmObject(), Party33Choice.mmObject(), Party32Choice.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(Party14Choice.mmObject(), PartyIdentificationAndAccount93.mmObject(), Counterparty1Choice.mmObject(), Counterparty4Choice.mmObject(),
+						PartyIdentificationAndAccount81.mmObject(), PartyIdentificationAndAccount86.mmObject(), Counterparty7Choice.mmObject(), PartyIdentificationAndAccount88.mmObject(), PartyIdentificationAndAccount92.mmObject(),
+						Counterparty2Choice.mmObject(), Counterparty3Choice.mmObject(), Counterparty6Choice.mmObject(), TradingPartyCapacity1Choice.mmObject(), TradingPartyCapacity2Choice.mmObject(), PartyAndSignature1.mmObject(),
+						PartyAndAuthorisation1.mmObject(), PartyAndAuthorisation3.mmObject(), AddressOrParty1Choice.mmObject(), PartyAndType1.mmObject(), Counterparty5Choice.mmObject(),
+						PartyAndAccountIdentificationAndContactInformation1.mmObject(), Counterparty8Choice.mmObject(), Party15Choice.mmObject(), Party16Choice.mmObject(), SingleQualifiedPartyIdentification1.mmObject(),
+						Party24Choice.mmObject(), Party23Choice.mmObject(), Counterparty9Choice.mmObject(), PartyIdentificationAndAccount108.mmObject(), PartyIdentificationAndAccount109.mmObject(), Party30Choice.mmObject(),
+						Party31Choice.mmObject(), CountryAndResidentialStatusType2.mmObject(), PartyIdentificationAndAccount125.mmObject(), PartyIdentificationAndAccount135.mmObject(), PartyIdentificationAndAccount137.mmObject(),
+						Counterparty10Choice.mmObject(), Party33Choice.mmObject(), Party32Choice.mmObject(), PartyIdentificationAndAccount156.mmObject(), Counterparty11Choice.mmObject(), Counterparty12Choice.mmObject());
 			}
 
 			@Override

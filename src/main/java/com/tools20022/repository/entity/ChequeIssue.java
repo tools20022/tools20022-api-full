@@ -158,6 +158,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.choice.PaymentInstrument20Choice#mmBankersDraftDetails
  * PaymentInstrument20Choice.mmBankersDraftDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmChequeInstruction
+ * CreditTransferTransaction27.mmChequeInstruction}</li>
  * </ul>
  * </li>
  * <li>
@@ -440,7 +443,7 @@ public class ChequeIssue extends CreditInstrument {
 						PaymentInstrument10Choice.mmChequeDetails, PaymentInstrument8Choice.mmChequeDetails, PaymentInstrument12Choice.mmChequeDetails, PaymentInstrument12Choice.mmBankersDraftDetails,
 						CreditTransferTransaction20.mmChequeInstruction, CreditTransferTransaction21.mmChequeInstruction, CreditTransferTransaction26.mmChequeInstruction, CreditTransferTransaction22.mmChequeInstruction,
 						PaymentInstrument19Choice.mmChequeDetails, PaymentInstrument19Choice.mmBankersDraftDetails, PaymentInstrument21Choice.mmChequeDetails, PaymentInstrument21Choice.mmBankersDraftDetails,
-						PaymentInstrument20Choice.mmChequeDetails, PaymentInstrument20Choice.mmBankersDraftDetails);
+						PaymentInstrument20Choice.mmChequeDetails, PaymentInstrument20Choice.mmBankersDraftDetails, CreditTransferTransaction27.mmChequeInstruction);
 				superType_lazy = () -> CreditInstrument.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ChequeIssue.mmCheque, com.tools20022.repository.entity.ChequeIssue.mmDeliveryMethod, com.tools20022.repository.entity.ChequeIssue.mmDeliverTo,
 						com.tools20022.repository.entity.ChequeIssue.mmPrintLocation);

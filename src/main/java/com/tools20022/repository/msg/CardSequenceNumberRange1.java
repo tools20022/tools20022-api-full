@@ -94,7 +94,7 @@ public class CardSequenceNumberRange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "CardSequenceNumberRange1:FirstTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received."
+	 * "CardSequenceNumberRange1: FirstTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received."
 	 * </li>
 	 * </ul>
 	 */
@@ -105,7 +105,7 @@ public class CardSequenceNumberRange1 {
 			xmlTag = "FrstTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstTransaction";
-			definition = "CardSequenceNumberRange1:FirstTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.";
+			definition = "CardSequenceNumberRange1: FirstTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -138,7 +138,7 @@ public class CardSequenceNumberRange1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "CardSequenceNumberRange1:LastTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received."
+	 * "CardSequenceNumberRange1: LastTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received."
 	 * </li>
 	 * </ul>
 	 */
@@ -149,7 +149,7 @@ public class CardSequenceNumberRange1 {
 			xmlTag = "LastTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTransaction";
-			definition = "CardSequenceNumberRange1:LastTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.";
+			definition = "CardSequenceNumberRange1: LastTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

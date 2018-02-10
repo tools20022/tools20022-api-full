@@ -151,7 +151,7 @@ public class ATMTotals3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional identification of the type of transaction. The following values are predefined:  Vodaphone, TMobile, Verizon."
+	 * "Additional identification of the type of transaction. The following values are predefined: Vodaphone, TMobile, Verizon."
 	 * </li>
 	 * </ul>
 	 */
@@ -162,7 +162,7 @@ public class ATMTotals3 {
 			xmlTag = "AddtlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
-			definition = "Additional identification of the type of transaction. The following values are predefined:  Vodaphone, TMobile, Verizon.";
+			definition = "Additional identification of the type of transaction. The following values are predefined: Vodaphone, TMobile, Verizon.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();

@@ -21,6 +21,8 @@ import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.FeeAndTax1;
+import com.tools20022.repository.msg.Fees1;
+import java.util.Arrays;
 
 /**
  * One of the elements (CommercialAgreementReference, IndividualFee,
@@ -46,6 +48,14 @@ public class ConstraintFeeTaxElementRule {
 	 * definition} =
 	 * "One of the elements (CommercialAgreementReference, IndividualFee, IndividualTax) must be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFeeTaxElementRule#forFees1
+	 * ConstraintFeeTaxElementRule.forFees1}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<FeeAndTax1> forFeeAndTax1 = new MMConstraint<FeeAndTax1>() {
@@ -54,7 +64,43 @@ public class ConstraintFeeTaxElementRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FeeTaxElementRule";
 			definition = "One of the elements (CommercialAgreementReference, IndividualFee, IndividualTax) must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFeeTaxElementRule.forFees1);
 			owner_lazy = () -> FeeAndTax1.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Fees1 Fees1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "FeeTaxElementRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "One of the elements (CommercialAgreementReference, IndividualFee, IndividualTax) must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFeeTaxElementRule#forFeeAndTax1
+	 * ConstraintFeeTaxElementRule.forFeeAndTax1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Fees1> forFees1 = new MMConstraint<Fees1>() {
+		{
+			validator = ConstraintFeeTaxElementRule::checkFees1;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "FeeTaxElementRule";
+			definition = "One of the elements (CommercialAgreementReference, IndividualFee, IndividualTax) must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFeeTaxElementRule.forFeeAndTax1;
+			owner_lazy = () -> Fees1.mmObject();
 		}
 	};
 
@@ -63,6 +109,14 @@ public class ConstraintFeeTaxElementRule {
 	 * IndividualTax) must be present.
 	 */
 	public static void checkFeeAndTax1(FeeAndTax1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * One of the elements (CommercialAgreementReference, IndividualFee,
+	 * IndividualTax) must be present.
+	 */
+	public static void checkFees1(Fees1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

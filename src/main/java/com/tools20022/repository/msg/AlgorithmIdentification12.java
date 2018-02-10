@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Mask generator function cryptographic algorithm and parameters."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AlgorithmIdentification18
+ * AlgorithmIdentification18}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification8
@@ -102,6 +109,14 @@ public class AlgorithmIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Mask generator function cryptographic algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification18#mmAlgorithm
+	 * AlgorithmIdentification18.mmAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -117,6 +132,7 @@ public class AlgorithmIdentification12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Mask generator function cryptographic algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification18.mmAlgorithm);
 			previousVersion_lazy = () -> AlgorithmIdentification8.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -148,7 +164,15 @@ public class AlgorithmIdentification12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Parameters associated to the mask generator function cryptographic algorithm"
+	 * "Parameters associated to the mask generator function cryptographic algorithm."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification18#mmParameter
+	 * AlgorithmIdentification18.mmParameter}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -164,7 +188,8 @@ public class AlgorithmIdentification12 {
 			xmlTag = "Param";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
-			definition = "Parameters associated to the mask generator function cryptographic algorithm";
+			definition = "Parameters associated to the mask generator function cryptographic algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification18.mmParameter);
 			previousVersion_lazy = () -> AlgorithmIdentification8.mmParameter;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -181,6 +206,7 @@ public class AlgorithmIdentification12 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification12";
 				definition = "Mask generator function cryptographic algorithm and parameters.";
+				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification18.mmObject());
 				previousVersion_lazy = () -> AlgorithmIdentification8.mmObject();
 			}
 		});

@@ -73,7 +73,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReservationSearchCriteria2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -117,7 +117,7 @@ public class ReservationSearchCriteria2 {
 	 * name} = "SystemIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of a particular cash clearing system. "</li>
+	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
@@ -128,7 +128,7 @@ public class ReservationSearchCriteria2 {
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
-			definition = "Identification of a particular cash clearing system. ";
+			definition = "Identification of a particular cash clearing system.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
@@ -342,7 +342,7 @@ public class ReservationSearchCriteria2 {
 						com.tools20022.repository.msg.ReservationSearchCriteria2.mmAccountIdentification);
 				trace_lazy = () -> Reservation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationSearchCriteria2";
 				definition = "Defines the criteria used to search for a reservation.";
 			}

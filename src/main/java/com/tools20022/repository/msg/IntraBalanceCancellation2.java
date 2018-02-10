@@ -84,6 +84,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraBalanceCancellation2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides the details of the cancellation requests."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4
+ * IntraBalanceCancellation4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -123,6 +130,14 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmAccountOwner
+	 * IntraBalanceCancellation4.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -134,6 +149,7 @@ public class IntraBalanceCancellation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -171,6 +187,14 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a cash entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmCashAccount
+	 * IntraBalanceCancellation4.mmCashAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
@@ -182,6 +206,7 @@ public class IntraBalanceCancellation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmCashAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -223,6 +248,14 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status and status reason of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmProcessingStatus
+	 * IntraBalanceCancellation4.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
@@ -235,6 +268,7 @@ public class IntraBalanceCancellation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Status and status reason of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmProcessingStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -268,6 +302,14 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unambiguous identification of the cancellation request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmRequestReference
+	 * IntraBalanceCancellation4.mmRequestReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRequestReference = new MMMessageAttribute() {
@@ -278,6 +320,7 @@ public class IntraBalanceCancellation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestReference";
 			definition = "Unambiguous identification of the cancellation request.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmRequestReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -318,6 +361,14 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the status was assigned."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmStatusDate
+	 * IntraBalanceCancellation4.mmStatusDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatusDate = new MMMessageAttribute() {
@@ -330,6 +381,7 @@ public class IntraBalanceCancellation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusDate";
 			definition = "Date and time at which the status was assigned.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmStatusDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -372,6 +424,14 @@ public class IntraBalanceCancellation2 {
 	 * definition} =
 	 * "References of the transaction for which the intra-balance modification is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmTransactionIdentification
+	 * IntraBalanceCancellation4.mmTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
@@ -384,6 +444,7 @@ public class IntraBalanceCancellation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "References of the transaction for which the intra-balance modification is requested.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.References14.mmObject();
@@ -423,6 +484,14 @@ public class IntraBalanceCancellation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies additional details of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmUnderlyingIntraBalance
+	 * IntraBalanceCancellation4.mmUnderlyingIntraBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUnderlyingIntraBalance = new MMMessageAttribute() {
@@ -435,6 +504,7 @@ public class IntraBalanceCancellation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingIntraBalance";
 			definition = "Identifies additional details of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmUnderlyingIntraBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.IntraBalance1.mmObject();
@@ -453,6 +523,7 @@ public class IntraBalanceCancellation2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceCancellation2";
 				definition = "Provides the details of the cancellation requests.";
+				nextVersions_lazy = () -> Arrays.asList(IntraBalanceCancellation4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

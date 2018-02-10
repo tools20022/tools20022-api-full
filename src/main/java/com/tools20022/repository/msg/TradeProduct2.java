@@ -82,6 +82,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Tangible output or service produced by human or mechanical effort, or by a natural process for purposes of specifying a product."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeProduct3 TradeProduct3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.TradeProduct1
  * TradeProduct1}</li>
@@ -124,6 +130,14 @@ public class TradeProduct2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct3#mmIdentification
+	 * TradeProduct3.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -140,6 +154,7 @@ public class TradeProduct2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the product.";
+			nextVersions_lazy = () -> Arrays.asList(TradeProduct3.mmIdentification);
 			previousVersion_lazy = () -> TradeProduct1.mmIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> ProductIdentifier2Choice.mmObject();
@@ -176,6 +191,13 @@ public class TradeProduct2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Name of a product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeProduct3#mmName
+	 * TradeProduct3.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -192,6 +214,7 @@ public class TradeProduct2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of a product.";
+			nextVersions_lazy = () -> Arrays.asList(TradeProduct3.mmName);
 			previousVersion_lazy = () -> TradeProduct1.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -230,6 +253,14 @@ public class TradeProduct2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information about the goods and/or services of a trade transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct3#mmDescription
+	 * TradeProduct3.mmDescription}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -246,6 +277,7 @@ public class TradeProduct2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Description";
 			definition = "Information about the goods and/or services of a trade transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TradeProduct3.mmDescription);
 			previousVersion_lazy = () -> TradeProduct1.mmDescription;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -284,6 +316,14 @@ public class TradeProduct2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country of origin of the product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct3#mmCountryOfOrigin
+	 * TradeProduct3.mmCountryOfOrigin}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -300,6 +340,7 @@ public class TradeProduct2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfOrigin";
 			definition = "Country of origin of the product.";
+			nextVersions_lazy = () -> Arrays.asList(TradeProduct3.mmCountryOfOrigin);
 			previousVersion_lazy = () -> TradeProduct1.mmCountryOfOrigin;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CountryCodeAndName1.mmObject();
@@ -336,6 +377,14 @@ public class TradeProduct2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the characteristic of a product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct3#mmProductCharacteristics
+	 * TradeProduct3.mmProductCharacteristics}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -352,6 +401,7 @@ public class TradeProduct2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCharacteristics";
 			definition = "Identifies the characteristic of a product.";
+			nextVersions_lazy = () -> Arrays.asList(TradeProduct3.mmProductCharacteristics);
 			previousVersion_lazy = () -> TradeProduct1.mmProductCharacteristics;
 			minOccurs = 0;
 			isComposite = true;
@@ -390,6 +440,14 @@ public class TradeProduct2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Category of the product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct3#mmProductCategory
+	 * TradeProduct3.mmProductCategory}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -406,6 +464,7 @@ public class TradeProduct2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductCategory";
 			definition = "Category of the product.";
+			nextVersions_lazy = () -> Arrays.asList(TradeProduct3.mmProductCategory);
 			previousVersion_lazy = () -> TradeProduct1.mmProductCategory;
 			minOccurs = 0;
 			complexType_lazy = () -> ProductCategory1Choice.mmObject();
@@ -443,6 +502,14 @@ public class TradeProduct2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Unique global serial identifier for this product instance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct3#mmGlobalSerialIdentifier
+	 * TradeProduct3.mmGlobalSerialIdentifier}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -459,6 +526,7 @@ public class TradeProduct2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalSerialIdentifier";
 			definition = "Unique global serial identifier for this product instance.";
+			nextVersions_lazy = () -> Arrays.asList(TradeProduct3.mmGlobalSerialIdentifier);
 			previousVersion_lazy = () -> TradeProduct1.mmGlobalSerialIdentifier;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -476,6 +544,7 @@ public class TradeProduct2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeProduct2";
 				definition = "Tangible output or service produced by human or mechanical effort, or by a natural process for purposes of specifying a product.";
+				nextVersions_lazy = () -> Arrays.asList(TradeProduct3.mmObject());
 				previousVersion_lazy = () -> TradeProduct1.mmObject();
 			}
 		});

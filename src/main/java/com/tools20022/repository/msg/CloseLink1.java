@@ -67,6 +67,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides details of the close links as defined in the collateral reference data."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CloseLink2 CloseLink2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +112,14 @@ public class CloseLink1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a security by an ISIN."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CloseLink2#mmSecurityIdentification
+	 * CloseLink2.mmSecurityIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
@@ -117,6 +131,7 @@ public class CloseLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security by an ISIN.";
+			nextVersions_lazy = () -> Arrays.asList(CloseLink2.mmSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
@@ -150,6 +165,14 @@ public class CloseLink1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the party for which the close link is defined."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CloseLink2#mmPartyIdentification
+	 * CloseLink2.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
@@ -160,6 +183,7 @@ public class CloseLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the close link is defined.";
+			nextVersions_lazy = () -> Arrays.asList(CloseLink2.mmPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SystemPartyIdentification1Choice.mmObject();
@@ -175,6 +199,7 @@ public class CloseLink1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CloseLink1";
 				definition = "Provides details of the close links as defined in the collateral reference data.";
+				nextVersions_lazy = () -> Arrays.asList(CloseLink2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

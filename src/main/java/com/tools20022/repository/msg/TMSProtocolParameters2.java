@@ -91,6 +91,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Configuration parameters of the TMS protocol between a POI and a terminal manager."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSProtocolParameters3
+ * TMSProtocolParameters3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters1
@@ -131,6 +138,14 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of action for the configuration parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmActionType
+	 * TMSProtocolParameters3.mmActionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
@@ -141,6 +156,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmActionType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
@@ -174,6 +190,14 @@ public class TMSProtocolParameters2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the master terminal manager or the terminal manager."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmTerminalManagerIdentification
+	 * TMSProtocolParameters3.mmTerminalManagerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +213,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the master terminal manager or the terminal manager.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmTerminalManagerIdentification);
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmTerminalManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -224,6 +249,14 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Maintenance services provided by the terminal manager."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmMaintenanceService
+	 * TMSProtocolParameters3.mmMaintenanceService}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -239,6 +272,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceService";
 			definition = "Maintenance services provided by the terminal manager.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmMaintenanceService);
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmMaintenanceService;
 			minOccurs = 1;
 			simpleType_lazy = () -> DataSetCategory10Code.mmObject();
@@ -271,6 +305,14 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the TMS protocol parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmVersion
+	 * TMSProtocolParameters3.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -286,6 +328,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the TMS protocol parameters.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmVersion);
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -321,6 +364,14 @@ public class TMSProtocolParameters2 {
 	 * definition} =
 	 * "Identification of applications which may be managed by the TM, partially or globally."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmApplicationIdentification
+	 * TMSProtocolParameters3.mmApplicationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -336,6 +387,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of applications which may be managed by the TM, partially or globally.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmApplicationIdentification);
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmApplicationIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -368,6 +420,14 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the terminal manager host."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmHostIdentification
+	 * TMSProtocolParameters3.mmHostIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmHostIdentification = new MMMessageAttribute() {
@@ -378,6 +438,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostIdentification";
 			definition = "Identification of the terminal manager host.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmHostIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -410,6 +471,14 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "New identification of the POI for the terminal manager."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmPOIIdentification
+	 * TMSProtocolParameters3.mmPOIIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -425,6 +494,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "New identification of the POI for the terminal manager.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmPOIIdentification);
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmPOIIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -460,6 +530,14 @@ public class TMSProtocolParameters2 {
 	 * definition} =
 	 * "New identification of the initiating party to set in TMS messages with this terminal manager."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmInitiatingPartyIdentification
+	 * TMSProtocolParameters3.mmInitiatingPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -475,6 +553,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyIdentification";
 			definition = "New identification of the initiating party to set in TMS messages with this terminal manager.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmInitiatingPartyIdentification);
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmInitiatingPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -508,7 +587,15 @@ public class TMSProtocolParameters2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "New identification of the recipient party to set in TMS messages with this terminal manager"
+	 * "New identification of the recipient party to set in TMS messages with this terminal manager."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmRecipientPartyIdentification
+	 * TMSProtocolParameters3.mmRecipientPartyIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -524,7 +611,8 @@ public class TMSProtocolParameters2 {
 			xmlTag = "RcptPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientPartyIdentification";
-			definition = "New identification of the recipient party to set in TMS messages with this terminal manager";
+			definition = "New identification of the recipient party to set in TMS messages with this terminal manager.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmRecipientPartyIdentification);
 			previousVersion_lazy = () -> TMSProtocolParameters1.mmRecipientPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -561,6 +649,14 @@ public class TMSProtocolParameters2 {
 	 * definition} =
 	 * "Configuration parameters are exchanged per file transfer protocol rather than per message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSProtocolParameters3#mmFileTransfer
+	 * TMSProtocolParameters3.mmFileTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFileTransfer = new MMMessageAttribute() {
@@ -571,6 +667,7 @@ public class TMSProtocolParameters2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileTransfer";
 			definition = "Configuration parameters are exchanged per file transfer protocol rather than per message.";
+			nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmFileTransfer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -589,6 +686,7 @@ public class TMSProtocolParameters2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSProtocolParameters2";
 				definition = "Configuration parameters of the TMS protocol between a POI and a terminal manager.";
+				nextVersions_lazy = () -> Arrays.asList(TMSProtocolParameters3.mmObject());
 				previousVersion_lazy = () -> TMSProtocolParameters1.mmObject();
 			}
 		});

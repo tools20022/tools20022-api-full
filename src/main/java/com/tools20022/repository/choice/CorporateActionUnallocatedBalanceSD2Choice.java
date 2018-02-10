@@ -78,6 +78,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice amongst various balance types related to unallocated payment."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice
+ * CorporateActionUnallocatedBalanceSD3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD1Choice
@@ -121,6 +129,14 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice#mmTotalEligibleBalance
+	 * CorporateActionUnallocatedBalanceSD3Choice.mmTotalEligibleBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -137,6 +153,7 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3Choice.mmTotalEligibleBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmTotalEligibleBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -175,6 +192,14 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of securities in the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice#mmBorrowedBalance
+	 * CorporateActionUnallocatedBalanceSD3Choice.mmBorrowedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -191,6 +216,7 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowedBalance";
 			definition = "Quantity of securities in the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3Choice.mmBorrowedBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmBorrowedBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -228,6 +254,14 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of securities in the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice#mmCollateralInBalance
+	 * CorporateActionUnallocatedBalanceSD3Choice.mmCollateralInBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -244,6 +278,7 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralInBalance";
 			definition = "Quantity of securities in the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3Choice.mmCollateralInBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmCollateralInBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -281,6 +316,14 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of securities in the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice#mmCollateralOutBalance
+	 * CorporateActionUnallocatedBalanceSD3Choice.mmCollateralOutBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,6 +340,7 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOutBalance";
 			definition = "Quantity of securities in the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3Choice.mmCollateralOutBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmCollateralOutBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -335,6 +379,14 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of securities in the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice#mmOnLoanBalance
+	 * CorporateActionUnallocatedBalanceSD3Choice.mmOnLoanBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -351,6 +403,7 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoanBalance";
 			definition = "Quantity of securities in the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3Choice.mmOnLoanBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmOnLoanBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -388,6 +441,14 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of securities in the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice#mmPendingDeliveryBalance
+	 * CorporateActionUnallocatedBalanceSD3Choice.mmPendingDeliveryBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -404,6 +465,7 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryBalance";
 			definition = "Quantity of securities in the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3Choice.mmPendingDeliveryBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmPendingDeliveryBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -441,6 +503,14 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of securities in the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionUnallocatedBalanceSD3Choice#mmPendingReceiptBalance
+	 * CorporateActionUnallocatedBalanceSD3Choice.mmPendingReceiptBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -457,6 +527,7 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptBalance";
 			definition = "Quantity of securities in the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3Choice.mmPendingReceiptBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmPendingReceiptBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -475,6 +546,7 @@ public class CorporateActionUnallocatedBalanceSD2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD2Choice";
 				definition = "Choice amongst various balance types related to unallocated payment.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3Choice.mmObject());
 				previousVersion_lazy = () -> CorporateActionUnallocatedBalanceSD1Choice.mmObject();
 			}
 		});

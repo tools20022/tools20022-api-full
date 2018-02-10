@@ -60,6 +60,13 @@ import javax.xml.bind.annotation.XmlType;
  * "BusinessDayQuery1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the query criteria."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessDayQuery2
+ * BusinessDayQuery2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class BusinessDayQuery1 {
 	 * definition} =
 	 * "Specifies the type of matching items to be returned in the response to the query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDayQuery2#mmQueryType
+	 * BusinessDayQuery2.mmQueryType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class BusinessDayQuery1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDayQuery2.mmQueryType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
@@ -139,6 +155,14 @@ public class BusinessDayQuery1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the business day information query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDayQuery2#mmCriteria
+	 * BusinessDayQuery2.mmCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCriteria = new MMMessageAssociationEnd() {
@@ -149,6 +173,7 @@ public class BusinessDayQuery1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Criteria";
 			definition = "Defines the business day information query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDayQuery2.mmCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -164,6 +189,7 @@ public class BusinessDayQuery1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDayQuery1";
 				definition = "Defines the query criteria.";
+				nextVersions_lazy = () -> Arrays.asList(BusinessDayQuery2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

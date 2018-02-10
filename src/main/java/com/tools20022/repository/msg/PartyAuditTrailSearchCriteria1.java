@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyAuditTrailSearchCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Describes search criteria for party audit trail query."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyAuditTrailSearchCriteria2
+ * PartyAuditTrailSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -95,6 +102,14 @@ public class PartyAuditTrailSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Describes party to be queried."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAuditTrailSearchCriteria2#mmPartyIdentification
+	 * PartyAuditTrailSearchCriteria2.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
@@ -105,6 +120,7 @@ public class PartyAuditTrailSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Describes party to be queried.";
+			nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailSearchCriteria2.mmPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -139,6 +155,14 @@ public class PartyAuditTrailSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Describes date period for querying information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAuditTrailSearchCriteria2#mmDatePeriod
+	 * PartyAuditTrailSearchCriteria2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
@@ -149,6 +173,7 @@ public class PartyAuditTrailSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Describes date period for querying information.";
+			nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailSearchCriteria2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -163,6 +188,7 @@ public class PartyAuditTrailSearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for party audit trail query.";
+				nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

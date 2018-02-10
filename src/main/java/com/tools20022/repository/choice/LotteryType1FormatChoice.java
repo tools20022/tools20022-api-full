@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "LotteryType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the lottery type."</li>
+ * definition} = "Choice of formats to express the lottery type."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,7 +103,7 @@ public class LotteryType1FormatChoice {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Standard code to  specify the lottery type."</li>
+	 * definition} = "Standard code to specify the lottery type."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -114,7 +114,7 @@ public class LotteryType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the lottery type.";
+			definition = "Standard code to specify the lottery type.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LotteryType1Code.mmObject();
@@ -152,7 +152,7 @@ public class LotteryType1FormatChoice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Proprietary code to  express the lottery type."</li>
+	 * definition} = "Proprietary code to express the lottery type."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -163,7 +163,7 @@ public class LotteryType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the lottery type.";
+			definition = "Proprietary code to express the lottery type.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -178,7 +178,7 @@ public class LotteryType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LotteryType1FormatChoice";
-				definition = "Choice of formats to  express the lottery type.";
+				definition = "Choice of formats to express the lottery type.";
 			}
 		});
 		return mmObject_lazy.get();

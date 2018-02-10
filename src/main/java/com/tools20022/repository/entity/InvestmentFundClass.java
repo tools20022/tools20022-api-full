@@ -524,6 +524,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * AggregateBalanceInformation33.mmInvestmentFundsFinancialInstrumentAttributes}
  * </li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmInvestmentFundsFinancialInstrumentAttributes
+ * AggregateBalanceInformation34.mmInvestmentFundsFinancialInstrumentAttributes}
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.repository.msg.InvestmentPlan14#mmSecurityDetails
  * InvestmentPlan14.mmSecurityDetails}</li>
  * <li>
@@ -535,6 +539,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.FinancialInstrument56#mmBlockedHoldingDetails
  * FinancialInstrument56.mmBlockedHoldingDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer30#mmFinancialInstrumentAssetForTransfer
+ * ISATransfer30.mmFinancialInstrumentAssetForTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer29#mmFinancialInstrumentAssetForTransfer
+ * ISATransfer29.mmFinancialInstrumentAssetForTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transfer35#mmFinancialInstrumentDetails
+ * Transfer35.mmFinancialInstrumentDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transfer34#mmFinancialInstrumentDetails
+ * Transfer34.mmFinancialInstrumentDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmFinancialInstrumentAssetForTransfer
+ * ISATransfer28.mmFinancialInstrumentAssetForTransfer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ISATransfer31#mmFinancialInstrumentAssetForTransfer
+ * ISATransfer31.mmFinancialInstrumentAssetForTransfer}</li>
  * </ul>
  * </li>
  * <li>
@@ -646,6 +668,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * FinancialInstrument55}</li>
  * <li>{@linkplain com.tools20022.repository.msg.HoldBackInformation3
  * HoldBackInformation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument60
+ * FinancialInstrument60}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument64
+ * FinancialInstrument64}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument63
+ * FinancialInstrument63}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument61
+ * FinancialInstrument61}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument65
+ * FinancialInstrument65}</li>
  * </ul>
  * </li>
  * <li>
@@ -756,6 +788,9 @@ public class InvestmentFundClass extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument55#mmClassType
 	 * FinancialInstrument55.mmClassType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmClassType
+	 * FinancialInstrument63.mmClassType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -782,7 +817,7 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument29.mmClassType, FinancialInstrument3.mmClassType, FinancialInstrument5.mmClassType, FinancialInstrument8.mmClassType, FinancialInstrument13.mmClassType, FinancialInstrument21.mmClassType,
 					FinancialInstrument22.mmClassType, FinancialInstrument4.mmClassType, FinancialInstrument9.mmClassType, InvestmentFundTransactionsByFund1.mmClassType, InvestmentFundTransactionsByFund2.mmClassType,
 					InvestmentFund1.mmClassType, FinancialInstrument19.mmClassType, InvestmentFundTransactionsByFund3.mmClassType, FinancialInstrument51.mmClassType, FinancialInstrument45.mmClassType, FinancialInstrument49.mmClassType,
-					FinancialInstrument57.mmClassType, FinancialInstrument56.mmClassType, FinancialInstrument55.mmClassType);
+					FinancialInstrument57.mmClassType, FinancialInstrument56.mmClassType, FinancialInstrument55.mmClassType, FinancialInstrument63.mmClassType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -884,6 +919,9 @@ public class InvestmentFundClass extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument55#mmDistributionPolicy
 	 * FinancialInstrument55.mmDistributionPolicy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmDistributionPolicy
+	 * FinancialInstrument63.mmDistributionPolicy}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -910,7 +948,8 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument10.mmDistributionPolicy, FinancialInstrument29.mmDistributionPolicy, FinancialInstrument3.mmDistributionPolicy, FinancialInstrument5.mmDistributionPolicy, FinancialInstrument8.mmDistributionPolicy,
 					FinancialInstrument13.mmDistributionPolicy, FinancialInstrument21.mmDistributionPolicy, FinancialInstrument22.mmDistributionPolicy, FinancialInstrument4.mmDistributionPolicy, FinancialInstrument9.mmDistributionPolicy,
 					InvestmentFundTransactionsByFund1.mmDistributionPolicy, InvestmentFundTransactionsByFund2.mmDistributionPolicy, InvestmentFundTransactionsByFund3.mmDistributionPolicy, FinancialInstrument51.mmDistributionPolicy,
-					FinancialInstrument45.mmDistributionPolicy, FinancialInstrument49.mmDistributionPolicy, FinancialInstrument57.mmDistributionPolicy, FinancialInstrument56.mmDistributionPolicy, FinancialInstrument55.mmDistributionPolicy);
+					FinancialInstrument45.mmDistributionPolicy, FinancialInstrument49.mmDistributionPolicy, FinancialInstrument57.mmDistributionPolicy, FinancialInstrument56.mmDistributionPolicy, FinancialInstrument55.mmDistributionPolicy,
+					FinancialInstrument63.mmDistributionPolicy);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1527,7 +1566,7 @@ public class InvestmentFundClass extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether or not it is possible to hold bearer units/shares in this class in certified form"
+	 * "Indicates whether or not it is possible to hold bearer units/shares in this class in certified form."
 	 * </li>
 	 * </ul>
 	 */
@@ -1538,7 +1577,7 @@ public class InvestmentFundClass extends Security {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalBearerSecurities";
-			definition = "Indicates whether or not it is possible to hold bearer units/shares in this class in certified form";
+			definition = "Indicates whether or not it is possible to hold bearer units/shares in this class in certified form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1585,7 +1624,7 @@ public class InvestmentFundClass extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicate whether or not it is possible to hold bearer units/shares in paperless form"
+	 * "Indicate whether or not it is possible to hold bearer units/shares in paperless form."
 	 * </li>
 	 * </ul>
 	 */
@@ -1596,7 +1635,7 @@ public class InvestmentFundClass extends Security {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedBearerSecurities";
-			definition = "Indicate whether or not it is possible to hold bearer units/shares in paperless form";
+			definition = "Indicate whether or not it is possible to hold bearer units/shares in paperless form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1643,7 +1682,7 @@ public class InvestmentFundClass extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form"
+	 * "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form."
 	 * </li>
 	 * </ul>
 	 */
@@ -1654,7 +1693,7 @@ public class InvestmentFundClass extends Security {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PhysicalRegisteredSecurities";
-			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form";
+			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1701,7 +1740,7 @@ public class InvestmentFundClass extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form"
+	 * "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form."
 	 * </li>
 	 * </ul>
 	 */
@@ -1712,7 +1751,7 @@ public class InvestmentFundClass extends Security {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DematerialisedRegisteredSecurities";
-			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form";
+			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1779,7 +1818,7 @@ public class InvestmentFundClass extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Processing characteristics linked to the investment fund class, ie, not to  the market."
+	 * "Processing characteristics linked to the investment fund class, ie, not to the market."
 	 * </li>
 	 * </ul>
 	 */
@@ -1791,7 +1830,7 @@ public class InvestmentFundClass extends Security {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ProcessingCharacteristics";
-			definition = "Processing characteristics linked to the investment fund class, ie, not to  the market.";
+			definition = "Processing characteristics linked to the investment fund class, ie, not to the market.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmFundClass;
 			aggregation = MMAggregation.NONE;
@@ -1993,6 +2032,30 @@ public class InvestmentFundClass extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument46#mmSubAccountDetails
 	 * FinancialInstrument46.mmSubAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmTransfereeAccount
+	 * FinancialInstrument60.mmTransfereeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmSubAccountDetails
+	 * FinancialInstrument60.mmSubAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument64#mmTransfereeAccount
+	 * FinancialInstrument64.mmTransfereeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument64#mmSubAccountDetails
+	 * FinancialInstrument64.mmSubAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmTransfereeAccount
+	 * FinancialInstrument61.mmTransfereeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmSubAccountDetails
+	 * FinancialInstrument61.mmSubAccountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65#mmTransfereeAccount
+	 * FinancialInstrument65.mmTransfereeAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65#mmSubAccountDetails
+	 * FinancialInstrument65.mmSubAccountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2018,7 +2081,9 @@ public class InvestmentFundClass extends Security {
 					FinancialInstrument37.mmTransfereeAccount, FinancialInstrument37.mmSubAccountDetails, FinancialInstrument35.mmTransfereeAccount, FinancialInstrument35.mmSubAccountDetails, FinancialInstrument34.mmTransfereeAccount,
 					FinancialInstrument34.mmSubAccountDetails, FinancialInstrument36.mmTransfereeAccount, FinancialInstrument36.mmSubAccountDetails, FinancialInstrument40.mmTransfereeAccount, FinancialInstrument40.mmSubAccountDetails,
 					FinancialInstrument39.mmTransfereeAccount, FinancialInstrument39.mmSubAccountDetails, FinancialInstrument50.mmTransfereeAccount, FinancialInstrument50.mmSubAccountDetails, FinancialInstrument48.mmTransfereeAccount,
-					FinancialInstrument48.mmSubAccountDetails, FinancialInstrument47.mmTransfereeAccount, FinancialInstrument47.mmSubAccountDetails, FinancialInstrument46.mmTransfereeAccount, FinancialInstrument46.mmSubAccountDetails);
+					FinancialInstrument48.mmSubAccountDetails, FinancialInstrument47.mmTransfereeAccount, FinancialInstrument47.mmSubAccountDetails, FinancialInstrument46.mmTransfereeAccount, FinancialInstrument46.mmSubAccountDetails,
+					FinancialInstrument60.mmTransfereeAccount, FinancialInstrument60.mmSubAccountDetails, FinancialInstrument64.mmTransfereeAccount, FinancialInstrument64.mmSubAccountDetails, FinancialInstrument61.mmTransfereeAccount,
+					FinancialInstrument61.mmSubAccountDetails, FinancialInstrument65.mmTransfereeAccount, FinancialInstrument65.mmSubAccountDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClass.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2984,8 +3049,10 @@ public class InvestmentFundClass extends Security {
 						ISATransfer26.mmFinancialInstrumentAssetForTransfer, Transfer31.mmFinancialInstrumentDetails, Transfer30.mmFinancialInstrumentDetails, Transfer32.mmFinancialInstrumentDetails,
 						ISATransfer27.mmFinancialInstrumentAssetForTransfer, Transfer33.mmFinancialInstrumentDetails, ISATransfer22.mmFinancialInstrumentAssetForTransfer, FinancialInstrument51.mmBlockedHoldingDetails,
 						InvestmentPlan13.mmSecurityDetails, Repartition4.mmFinancialInstrument, BlockedHoldingDetails2.mmBlockedHolding, AggregateBalanceInformation32.mmInvestmentFundsFinancialInstrumentAttributes,
-						AggregateBalanceInformation33.mmInvestmentFundsFinancialInstrumentAttributes, InvestmentPlan14.mmSecurityDetails, InvestmentPlan15.mmSecurityDetails, Repartition5.mmFinancialInstrument,
-						FinancialInstrument56.mmBlockedHoldingDetails);
+						AggregateBalanceInformation33.mmInvestmentFundsFinancialInstrumentAttributes, AggregateBalanceInformation34.mmInvestmentFundsFinancialInstrumentAttributes, InvestmentPlan14.mmSecurityDetails,
+						InvestmentPlan15.mmSecurityDetails, Repartition5.mmFinancialInstrument, FinancialInstrument56.mmBlockedHoldingDetails, ISATransfer30.mmFinancialInstrumentAssetForTransfer,
+						ISATransfer29.mmFinancialInstrumentAssetForTransfer, Transfer35.mmFinancialInstrumentDetails, Transfer34.mmFinancialInstrumentDetails, ISATransfer28.mmFinancialInstrumentAssetForTransfer,
+						ISATransfer31.mmFinancialInstrumentAssetForTransfer);
 				superType_lazy = () -> Security.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmClassType, com.tools20022.repository.entity.InvestmentFundClass.mmDistributionPolicy,
 						com.tools20022.repository.entity.InvestmentFundClass.mmDividendPolicy, com.tools20022.repository.entity.InvestmentFundClass.mmDualFundIndicator,
@@ -3010,7 +3077,7 @@ public class InvestmentFundClass extends Security {
 						FinancialInstrument36.mmObject(), FinancialInstrument40.mmObject(), Repartition3.mmObject(), FinancialInstrument39.mmObject(), FinancialInstrument51.mmObject(), FinancialInstrument50.mmObject(),
 						Repartition4.mmObject(), FinancialInstrument45.mmObject(), FinancialInstrument49.mmObject(), FinancialInstrument48.mmObject(), BlockedHoldingDetails2.mmObject(), FinancialInstrument47.mmObject(),
 						FinancialInstrument46.mmObject(), Series1.mmObject(), FinancialInstrument57.mmObject(), Repartition5.mmObject(), FinancialInstrument56.mmObject(), HoldBackInformation2.mmObject(), FinancialInstrument55.mmObject(),
-						HoldBackInformation3.mmObject());
+						HoldBackInformation3.mmObject(), FinancialInstrument60.mmObject(), FinancialInstrument64.mmObject(), FinancialInstrument63.mmObject(), FinancialInstrument61.mmObject(), FinancialInstrument65.mmObject());
 			}
 
 			@Override

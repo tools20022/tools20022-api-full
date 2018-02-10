@@ -158,7 +158,7 @@ public class AlgorithmIdentification8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Parameters associated to the mask generator function cryptographic algorithm"
+	 * "Parameters associated to the mask generator function cryptographic algorithm."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -177,7 +177,7 @@ public class AlgorithmIdentification8 {
 			xmlTag = "Param";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
-			definition = "Parameters associated to the mask generator function cryptographic algorithm";
+			definition = "Parameters associated to the mask generator function cryptographic algorithm.";
 			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification12.mmParameter);
 			maxOccurs = 1;
 			minOccurs = 0;

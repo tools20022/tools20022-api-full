@@ -98,6 +98,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of elements used to provide information on the corrective payment initiation transaction, to which the resolution message refers."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3
+ * CorrectivePaymentInitiation3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation1
@@ -138,6 +145,14 @@ public class CorrectivePaymentInitiation2 {
 	 * definition} =
 	 * "Set of elements used to provide corrective information for the group header of the message under investigation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmGroupHeader
+	 * CorrectivePaymentInitiation3.mmGroupHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -153,6 +168,7 @@ public class CorrectivePaymentInitiation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of elements used to provide corrective information for the group header of the message under investigation.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation3.mmGroupHeader);
 			previousVersion_lazy = () -> CorrectivePaymentInitiation1.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -194,6 +210,14 @@ public class CorrectivePaymentInitiation2 {
 	 * definition} =
 	 * "Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmPaymentInformationIdentification
+	 * CorrectivePaymentInitiation3.mmPaymentInformationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -210,6 +234,7 @@ public class CorrectivePaymentInitiation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationIdentification";
 			definition = "Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation3.mmPaymentInformationIdentification);
 			previousVersion_lazy = () -> CorrectivePaymentInitiation1.mmPaymentInformationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -250,6 +275,14 @@ public class CorrectivePaymentInitiation2 {
 	 * definition} =
 	 * "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the instruction.\n\nUsage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmInstructionIdentification
+	 * CorrectivePaymentInitiation3.mmInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -266,6 +299,7 @@ public class CorrectivePaymentInitiation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the instruction.\n\nUsage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation3.mmInstructionIdentification);
 			previousVersion_lazy = () -> CorrectivePaymentInitiation1.mmInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -306,6 +340,14 @@ public class CorrectivePaymentInitiation2 {
 	 * definition} =
 	 * "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\n\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.\n\nUsage: In case there are technical limitations to pass on multiple references, the end-to-end identification must be passed on throughout the entire end-to-end chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmEndToEndIdentification
+	 * CorrectivePaymentInitiation3.mmEndToEndIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -322,6 +364,7 @@ public class CorrectivePaymentInitiation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\n\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.\n\nUsage: In case there are technical limitations to pass on multiple references, the end-to-end identification must be passed on throughout the entire end-to-end chain.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation3.mmEndToEndIdentification);
 			previousVersion_lazy = () -> CorrectivePaymentInitiation1.mmEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -363,6 +406,14 @@ public class CorrectivePaymentInitiation2 {
 	 * definition} =
 	 * "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmInstructedAmount
+	 * CorrectivePaymentInitiation3.mmInstructedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -379,6 +430,7 @@ public class CorrectivePaymentInitiation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation3.mmInstructedAmount);
 			previousVersion_lazy = () -> CorrectivePaymentInitiation1.mmInstructedAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -420,6 +472,14 @@ public class CorrectivePaymentInitiation2 {
 	 * definition} =
 	 * "Date or date time at which the initiating party requests the clearing agent to process the payment. \r\nUsage: This is the date or date time on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmRequestedExecutionDate
+	 * CorrectivePaymentInitiation3.mmRequestedExecutionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -436,6 +496,7 @@ public class CorrectivePaymentInitiation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date or date time at which the initiating party requests the clearing agent to process the payment. \r\nUsage: This is the date or date time on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation3.mmRequestedExecutionDate);
 			previousVersion_lazy = () -> CorrectivePaymentInitiation1.mmRequestedExecutionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -476,6 +537,14 @@ public class CorrectivePaymentInitiation2 {
 	 * definition} =
 	 * "Date at which the creditor requests the amount of money to be collected from the debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmRequestedCollectionDate
+	 * CorrectivePaymentInitiation3.mmRequestedCollectionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -492,6 +561,7 @@ public class CorrectivePaymentInitiation2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedCollectionDate";
 			definition = "Date at which the creditor requests the amount of money to be collected from the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation3.mmRequestedCollectionDate);
 			previousVersion_lazy = () -> CorrectivePaymentInitiation1.mmRequestedCollectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -513,6 +583,7 @@ public class CorrectivePaymentInitiation2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorrectivePaymentInitiation2";
 				definition = "Set of elements used to provide information on the corrective payment initiation transaction, to which the resolution message refers.";
+				nextVersions_lazy = () -> Arrays.asList(CorrectivePaymentInitiation3.mmObject());
 				previousVersion_lazy = () -> CorrectivePaymentInitiation1.mmObject();
 			}
 		});

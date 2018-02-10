@@ -150,7 +150,7 @@ public class CorporateActionRateSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * " Ordinary shares quantity of the American or Global Depository Receipt(s) per ordinary share(s)  ratio."
+	 * " Ordinary shares quantity of the American or Global Depository Receipt(s) per ordinary share(s) ratio."
 	 * </li>
 	 * </ul>
 	 */
@@ -162,7 +162,7 @@ public class CorporateActionRateSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Ordinary Share"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrdinaryShare";
-			definition = " Ordinary shares quantity of the American or Global Depository Receipt(s) per ordinary share(s)  ratio.";
+			definition = " Ordinary shares quantity of the American or Global Depository Receipt(s) per ordinary share(s) ratio.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();

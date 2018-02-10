@@ -42,7 +42,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Provides information about identification and account of the party .
+ * Provides information about identification and account of the party.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -96,7 +96,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyIdentificationAndAccount54"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides information about identification and account of the party ."</li>
+ * "Provides information about identification and account of the party."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -430,7 +430,7 @@ public class PartyIdentificationAndAccount54 {
 					}
 				})).get();
 				name = "PartyIdentificationAndAccount54";
-				definition = "Provides information about identification and account of the party .";
+				definition = "Provides information about identification and account of the party.";
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount101.mmObject());
 			}
 		});

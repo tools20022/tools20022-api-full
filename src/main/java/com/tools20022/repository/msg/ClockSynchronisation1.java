@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ClockSynchronisation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Parameters to synchronise a real time clock."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ClockSynchronisation2
+ * ClockSynchronisation2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +106,14 @@ public class ClockSynchronisation1 {
 	 * definition} =
 	 * "Name of the time zone where is located the POI (Point Of Interaction), as definined by the IANA (Internet Assigned Number Authority) time zone data base."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClockSynchronisation2#mmPOITimeZone
+	 * ClockSynchronisation2.mmPOITimeZone}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPOITimeZone = new MMMessageAttribute() {
@@ -109,6 +124,7 @@ public class ClockSynchronisation1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POITimeZone";
 			definition = "Name of the time zone where is located the POI (Point Of Interaction), as definined by the IANA (Internet Assigned Number Authority) time zone data base.";
+			nextVersions_lazy = () -> Arrays.asList(ClockSynchronisation2.mmPOITimeZone);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -140,6 +156,14 @@ public class ClockSynchronisation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Parameters to contact a time server."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClockSynchronisation2#mmSynchronisationServer
+	 * ClockSynchronisation2.mmSynchronisationServer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSynchronisationServer = new MMMessageAssociationEnd() {
@@ -150,6 +174,7 @@ public class ClockSynchronisation1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SynchronisationServer";
 			definition = "Parameters to contact a time server.";
+			nextVersions_lazy = () -> Arrays.asList(ClockSynchronisation2.mmSynchronisationServer);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.NetworkParameters2.mmObject();
@@ -164,6 +189,7 @@ public class ClockSynchronisation1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClockSynchronisation1";
 				definition = "Parameters to synchronise a real time clock.";
+				nextVersions_lazy = () -> Arrays.asList(ClockSynchronisation2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AmountType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the value of the amount."</li>
+ * definition} = "Choice of formats to express the value of the amount."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,7 +104,7 @@ public class AmountType1FormatChoice {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Standard code to  specify the value of the amount."</li>
+	 * definition} = "Standard code to specify the value of the amount."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -115,7 +115,7 @@ public class AmountType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the value of the amount.";
+			definition = "Standard code to specify the value of the amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AmountType1Code.mmObject();
@@ -153,7 +153,7 @@ public class AmountType1FormatChoice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Proprietary code to  express the value of the amount."</li>
+	 * definition} = "Proprietary code to express the value of the amount."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -164,7 +164,7 @@ public class AmountType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the value of the amount.";
+			definition = "Proprietary code to express the value of the amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -179,7 +179,7 @@ public class AmountType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AmountType1FormatChoice";
-				definition = "Choice of formats to  express the value of the amount.";
+				definition = "Choice of formats to express the value of the amount.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -80,6 +80,13 @@ import javax.xml.bind.annotation.XmlType;
  * "YieldCalculation3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Return provided by a financial instrument."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation5
+ * YieldCalculation5}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -123,6 +130,13 @@ public class YieldCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Result of the yield calculation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation5#mmValue
+	 * YieldCalculation5.mmValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValue = new MMMessageAttribute() {
@@ -135,6 +149,7 @@ public class YieldCalculation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Result of the yield calculation.";
+			nextVersions_lazy = () -> Arrays.asList(YieldCalculation5.mmValue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -176,6 +191,14 @@ public class YieldCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of calculation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmCalculationType
+	 * YieldCalculation5.mmCalculationType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCalculationType = new MMMessageAttribute() {
@@ -188,6 +211,7 @@ public class YieldCalculation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationType";
 			definition = "Specifies the type of calculation.";
+			nextVersions_lazy = () -> Arrays.asList(YieldCalculation5.mmCalculationType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> CalculationType2Choice.mmObject();
@@ -227,6 +251,14 @@ public class YieldCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Price to which the yield has been calculated."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmRedemptionPrice
+	 * YieldCalculation5.mmRedemptionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRedemptionPrice = new MMMessageAttribute() {
@@ -239,6 +271,7 @@ public class YieldCalculation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPrice";
 			definition = "Price to which the yield has been calculated.";
+			nextVersions_lazy = () -> Arrays.asList(YieldCalculation5.mmRedemptionPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
@@ -281,6 +314,14 @@ public class YieldCalculation3 {
 	 * definition} =
 	 * "Date/time on which the calculation is based, for example, valuation on October 1 (price date) based on price of September 19 ( value date)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmValueDate
+	 * YieldCalculation5.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
@@ -293,6 +334,7 @@ public class YieldCalculation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time on which the calculation is based, for example, valuation on October 1 (price date) based on price of September 19 ( value date).";
+			nextVersions_lazy = () -> Arrays.asList(YieldCalculation5.mmValueDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -334,6 +376,14 @@ public class YieldCalculation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period on which the calculation is based."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmValuePeriod
+	 * YieldCalculation5.mmValuePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValuePeriod = new MMMessageAttribute() {
@@ -346,6 +396,7 @@ public class YieldCalculation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValuePeriod";
 			definition = "Period on which the calculation is based.";
+			nextVersions_lazy = () -> Arrays.asList(YieldCalculation5.mmValuePeriod);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -388,6 +439,14 @@ public class YieldCalculation3 {
 	 * definition} =
 	 * "Clarifies yield irregularities associated with date, for example when it falls on a non-business day."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmCalculationDate
+	 * YieldCalculation5.mmCalculationDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCalculationDate = new MMMessageAttribute() {
@@ -400,6 +459,7 @@ public class YieldCalculation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CalculationDate";
 			definition = "Clarifies yield irregularities associated with date, for example when it falls on a non-business day.";
+			nextVersions_lazy = () -> Arrays.asList(YieldCalculation5.mmCalculationDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -417,6 +477,7 @@ public class YieldCalculation3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "YieldCalculation3";
 				definition = "Return provided by a financial instrument.";
+				nextVersions_lazy = () -> Arrays.asList(YieldCalculation5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

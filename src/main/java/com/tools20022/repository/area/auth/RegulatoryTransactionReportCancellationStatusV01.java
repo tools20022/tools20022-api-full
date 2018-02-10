@@ -274,7 +274,7 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the status of the entire RegulatoryTransactionReportCancellationRequest document that was previously sent by a reporting institution.\n\n"
+	 * "Provides the status of the entire RegulatoryTransactionReportCancellationRequest document that was previously sent by a reporting institution.\n\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -283,7 +283,7 @@ public class RegulatoryTransactionReportCancellationStatusV01 {
 			xmlTag = "RptCxlSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCancellationStatus";
-			definition = "Provides the status of the entire RegulatoryTransactionReportCancellationRequest document that was previously sent by a reporting institution.\n\n";
+			definition = "Provides the status of the entire RegulatoryTransactionReportCancellationRequest document that was previously sent by a reporting institution.\n\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportStatusAndReason2.mmObject();

@@ -96,7 +96,7 @@ public class IsabelLRCIPaymentInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, which allows the detection of an accidental or intentional change to the  visual representation of a particular payment file."
+	 * "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, which allows the detection of an accidental or intentional change to the visual representation of a particular payment file."
 	 * </li>
 	 * </ul>
 	 */
@@ -107,7 +107,7 @@ public class IsabelLRCIPaymentInformation1 {
 			xmlTag = "ImgHash";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImageHash";
-			definition = "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, which allows the detection of an accidental or intentional change to the  visual representation of a particular payment file.";
+			definition = "Arbitrary block of data defined as a fixed-size bit string, the (cryptographic) hash value, which allows the detection of an accidental or intentional change to the visual representation of a particular payment file.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max50Binary.mmObject();

@@ -77,6 +77,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Communication device number or electronic address used for communication."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress8
+ * CommunicationAddress8}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -119,6 +126,14 @@ public class CommunicationAddressDetails {
 	 * definition} =
 	 * "Information that locates and identifies a specific address, as defined by postal services."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress8#mmPostalAddress
+	 * CommunicationAddress8.mmPostalAddress}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPostalAddress = new MMMessageAttribute() {
@@ -130,6 +145,7 @@ public class CommunicationAddressDetails {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address, as defined by postal services.";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress8.mmPostalAddress);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> LongPostalAddress1Choice.mmObject();
@@ -169,6 +185,14 @@ public class CommunicationAddressDetails {
 	 * definition} =
 	 * "Collection of information that identifies a phone number, as defined by telecom services."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress8#mmPhoneNumber
+	 * CommunicationAddress8.mmPhoneNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPhoneNumber = new MMMessageAttribute() {
@@ -180,6 +204,7 @@ public class CommunicationAddressDetails {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhoneNumber";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress8.mmPhoneNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
@@ -219,6 +244,14 @@ public class CommunicationAddressDetails {
 	 * definition} =
 	 * "Collection of information that identifies a FAX number, as defined by telecom services."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress8#mmFaxNumber
+	 * CommunicationAddress8.mmFaxNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFaxNumber = new MMMessageAttribute() {
@@ -230,6 +263,7 @@ public class CommunicationAddressDetails {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaxNumber";
 			definition = "Collection of information that identifies a FAX number, as defined by telecom services.";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress8.mmFaxNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
@@ -267,6 +301,14 @@ public class CommunicationAddressDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Address for electronic mail (e-mail)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress8#mmEmailAddress
+	 * CommunicationAddress8.mmEmailAddress}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEmailAddress = new MMMessageAttribute() {
@@ -278,6 +320,7 @@ public class CommunicationAddressDetails {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmailAddress";
 			definition = "Address for electronic mail (e-mail).";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress8.mmEmailAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -294,6 +337,7 @@ public class CommunicationAddressDetails {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CommunicationAddressDetails";
 				definition = "Communication device number or electronic address used for communication.";
+				nextVersions_lazy = () -> Arrays.asList(CommunicationAddress8.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

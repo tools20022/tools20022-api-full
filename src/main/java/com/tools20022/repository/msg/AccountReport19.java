@@ -115,6 +115,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountReport19"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides further details of the account report."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport22
+ * AccountReport22}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.AccountReport18
  * AccountReport18}</li>
@@ -155,6 +162,14 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Unique identification, as assigned by the account servicer, to unambiguously identify the account report."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmIdentification
+	 * AccountReport22.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -170,6 +185,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account report.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmIdentification);
 			previousVersion_lazy = () -> AccountReport18.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -205,6 +221,14 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Provides details on the page number of the report.\r\n\r\nUsage: The pagination of the report is only allowed when agreed between the parties."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmReportPagination
+	 * AccountReport22.mmReportPagination}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -220,6 +244,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportPagination";
 			definition = "Provides details on the page number of the report.\r\n\r\nUsage: The pagination of the report is only allowed when agreed between the parties.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmReportPagination);
 			previousVersion_lazy = () -> AccountReport18.mmReportPagination;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -255,6 +280,14 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Sequential number of the report, as assigned by the account servicer. \nUsage: The sequential number is increased incrementally for each report sent electronically."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmElectronicSequenceNumber
+	 * AccountReport22.mmElectronicSequenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,6 +303,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSequenceNumber";
 			definition = "Sequential number of the report, as assigned by the account servicer. \nUsage: The sequential number is increased incrementally for each report sent electronically.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmElectronicSequenceNumber);
 			previousVersion_lazy = () -> AccountReport18.mmElectronicSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -305,6 +339,14 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Legal sequential number of the report, as assigned by the account servicer. It is increased incrementally for each report sent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmLegalSequenceNumber
+	 * AccountReport22.mmLegalSequenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -320,6 +362,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalSequenceNumber";
 			definition = "Legal sequential number of the report, as assigned by the account servicer. It is increased incrementally for each report sent.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmLegalSequenceNumber);
 			previousVersion_lazy = () -> AccountReport18.mmLegalSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -353,6 +396,14 @@ public class AccountReport19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmCreationDateTime
+	 * AccountReport22.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -368,6 +419,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmCreationDateTime);
 			previousVersion_lazy = () -> AccountReport18.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -402,6 +454,14 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Range of time between a start date and an end date for which the account report is issued."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmFromToDate
+	 * AccountReport22.mmFromToDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -417,6 +477,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for which the account report is issued.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmFromToDate);
 			previousVersion_lazy = () -> AccountReport18.mmFromToDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -454,6 +515,14 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Indicates whether the document is a copy, a duplicate, or a duplicate of a copy."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmCopyDuplicateIndicator
+	 * AccountReport22.mmCopyDuplicateIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -469,6 +538,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CopyDuplicateIndicator";
 			definition = "Indicates whether the document is a copy, a duplicate, or a duplicate of a copy.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmCopyDuplicateIndicator);
 			previousVersion_lazy = () -> AccountReport18.mmCopyDuplicateIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -503,6 +573,14 @@ public class AccountReport19 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the application used to generate the reporting."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmReportingSource
+	 * AccountReport22.mmReportingSource}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -518,6 +596,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingSource";
 			definition = "Specifies the application used to generate the reporting.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmReportingSource);
 			previousVersion_lazy = () -> AccountReport18.mmReportingSource;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -558,6 +637,13 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Unambiguous identification of the account to which credit and debit entries are made."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport22#mmAccount
+	 * AccountReport22.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -574,6 +660,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account to which credit and debit entries are made.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmAccount);
 			previousVersion_lazy = () -> AccountReport18.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -613,6 +700,14 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Identifies the parent account of the account for which the report has been issued."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmRelatedAccount
+	 * AccountReport22.mmRelatedAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -629,6 +724,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAccount";
 			definition = "Identifies the parent account of the account for which the report has been issued.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmRelatedAccount);
 			previousVersion_lazy = () -> AccountReport18.mmRelatedAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -669,6 +765,13 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Provides general interest information that applies to the account at a particular moment in time."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport22#mmInterest
+	 * AccountReport22.mmInterest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -685,6 +788,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Provides general interest information that applies to the account at a particular moment in time.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmInterest);
 			previousVersion_lazy = () -> AccountReport18.mmInterest;
 			minOccurs = 0;
 			isComposite = true;
@@ -723,6 +827,13 @@ public class AccountReport19 {
 	 * definition} =
 	 * "Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account at a specific point in time."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport22#mmBalance
+	 * AccountReport22.mmBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -739,6 +850,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account at a specific point in time.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmBalance);
 			previousVersion_lazy = () -> AccountReport18.mmBalance;
 			minOccurs = 0;
 			isComposite = true;
@@ -771,6 +883,14 @@ public class AccountReport19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides summary information on entries."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmTransactionsSummary
+	 * AccountReport22.mmTransactionsSummary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -786,6 +906,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsSummary";
 			definition = "Provides summary information on entries.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmTransactionsSummary);
 			previousVersion_lazy = () -> AccountReport18.mmTransactionsSummary;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -824,7 +945,14 @@ public class AccountReport19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies an entry in the report.\r\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).\r\n\r\nUsage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. \r\nFollowing elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:\r\nCreditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.\r\n"
+	 * "Specifies an entry in the report.\r\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).\r\n\r\nUsage Rule: In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. \r\nFollowing elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:\r\nCreditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.\r\n"
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport22#mmEntry
+	 * AccountReport22.mmEntry}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -841,7 +969,8 @@ public class AccountReport19 {
 			xmlTag = "Ntry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entry";
-			definition = "Specifies an entry in the report.\r\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).\r\n\r\nUsage Rule:  In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. \r\nFollowing elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:\r\nCreditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.\r\n";
+			definition = "Specifies an entry in the report.\r\nUsage: At least one reference must be provided to identify the entry and its underlying transaction(s).\r\n\r\nUsage Rule: In case of a Payments R-transaction the creditor / debtor referenced of the original payment initiation messages is also used for reporting of the R-transaction. The original debtor/creditor in the reporting of R-Transactions is not inverted. \r\nFollowing elements all defined in the TransactionDetails in RelatedParties or RelatedAgents are impacted by this usage rule:\r\nCreditor, UltimateCreditor, CreditorAccount, CreditorAgent, Debtor, UltimateDebtor, DebtorAccount and DebtorAgent.\r\n";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmEntry);
 			previousVersion_lazy = () -> AccountReport18.mmEntry;
 			minOccurs = 0;
 			isComposite = true;
@@ -875,6 +1004,14 @@ public class AccountReport19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further details of the account report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport22#mmAdditionalReportInformation
+	 * AccountReport22.mmAdditionalReportInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -890,6 +1027,7 @@ public class AccountReport19 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReportInformation";
 			definition = "Further details of the account report.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmAdditionalReportInformation);
 			previousVersion_lazy = () -> AccountReport18.mmAdditionalReportInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -912,6 +1050,7 @@ public class AccountReport19 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountReport19";
 				definition = "Provides further details of the account report.";
+				nextVersions_lazy = () -> Arrays.asList(AccountReport22.mmObject());
 				previousVersion_lazy = () -> AccountReport18.mmObject();
 			}
 		});

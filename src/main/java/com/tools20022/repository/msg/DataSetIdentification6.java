@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "DataSetIdentification6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification of a data set."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DataSetIdentification7
+ * DataSetIdentification7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.DataSetIdentification4
@@ -105,6 +112,14 @@ public class DataSetIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Name of the data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification7#mmName
+	 * DataSetIdentification7.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -120,6 +135,7 @@ public class DataSetIdentification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the data set.";
+			nextVersions_lazy = () -> Arrays.asList(DataSetIdentification7.mmName);
 			previousVersion_lazy = () -> DataSetIdentification4.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -154,6 +170,14 @@ public class DataSetIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Category of data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification7#mmType
+	 * DataSetIdentification7.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -169,6 +193,7 @@ public class DataSetIdentification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Category of data set.";
+			nextVersions_lazy = () -> Arrays.asList(DataSetIdentification7.mmType);
 			previousVersion_lazy = () -> DataSetIdentification4.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -202,6 +227,14 @@ public class DataSetIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification7#mmVersion
+	 * DataSetIdentification7.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -217,6 +250,7 @@ public class DataSetIdentification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data set.";
+			nextVersions_lazy = () -> Arrays.asList(DataSetIdentification7.mmVersion);
 			previousVersion_lazy = () -> DataSetIdentification4.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -250,6 +284,14 @@ public class DataSetIdentification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time of creation of the data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DataSetIdentification7#mmCreationDateTime
+	 * DataSetIdentification7.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -265,6 +307,7 @@ public class DataSetIdentification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time of creation of the data set.";
+			nextVersions_lazy = () -> Arrays.asList(DataSetIdentification7.mmCreationDateTime);
 			previousVersion_lazy = () -> DataSetIdentification4.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -281,6 +324,7 @@ public class DataSetIdentification6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DataSetIdentification6";
 				definition = "Identification of a data set.";
+				nextVersions_lazy = () -> Arrays.asList(DataSetIdentification7.mmObject());
 				previousVersion_lazy = () -> DataSetIdentification4.mmObject();
 			}
 		});

@@ -49,7 +49,7 @@ public class ConstraintDeltaIndicatorRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ForeignExchangeTradeProduct is equal to value 'SPOT'or'FORW', then DeltaIndicator Must be present. "
+	 * "If ForeignExchangeTradeProduct is equal to value 'SPOT'or'FORW', then DeltaIndicator Must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintDeltaIndicatorRule {
 			validator = ConstraintDeltaIndicatorRule::checkTrade2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaIndicatorRule";
-			definition = "If ForeignExchangeTradeProduct is equal to value 'SPOT'or'FORW', then DeltaIndicator Must be present. ";
+			definition = "If ForeignExchangeTradeProduct is equal to value 'SPOT'or'FORW', then DeltaIndicator Must be present.";
 			owner_lazy = () -> Trade2.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORWT' \r\nFollowing Must be True\r\n\t/DeltaIndicator Must be present";
 		}
@@ -83,7 +83,7 @@ public class ConstraintDeltaIndicatorRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORW', then DeltaIndicator Must be present. "
+	 * "If ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORW', then DeltaIndicator Must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -92,7 +92,7 @@ public class ConstraintDeltaIndicatorRule {
 			validator = ConstraintDeltaIndicatorRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeltaIndicatorRule";
-			definition = "If ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORW', then DeltaIndicator Must be present. ";
+			definition = "If ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORW', then DeltaIndicator Must be present.";
 			owner_lazy = () -> Trade1.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'SPOT' or 'FORWT' \r\nFollowing Must be True\r\n\t/DeltaIndicator Must be present";
 		}

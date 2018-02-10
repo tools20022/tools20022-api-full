@@ -156,7 +156,7 @@ public class IdentificationType1 {
 	 * name} = "AdditionalInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Additional information about the type of identification"</li>
+	 * definition} = "Additional information about the type of identification."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
@@ -166,7 +166,7 @@ public class IdentificationType1 {
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
-			definition = "Additional information about the type of identification";
+			definition = "Additional information about the type of identification.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();

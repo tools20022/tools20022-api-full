@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "NetDividendRateType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the type of net dividend rate."</li>
+ * definition} = "Choice of formats to express the type of net dividend rate."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,7 +103,7 @@ public class NetDividendRateType1FormatChoice {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Standard code to  specify the type of net dividend rate."</li>
+	 * definition} = "Standard code to specify the type of net dividend rate."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -114,7 +114,7 @@ public class NetDividendRateType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the type of net dividend rate.";
+			definition = "Standard code to specify the type of net dividend rate.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NetDividendRateType1Code.mmObject();
@@ -153,7 +153,7 @@ public class NetDividendRateType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the type of net dividend rate."</li>
+	 * "Proprietary code to express the type of net dividend rate."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -164,7 +164,7 @@ public class NetDividendRateType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the type of net dividend rate.";
+			definition = "Proprietary code to express the type of net dividend rate.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -179,7 +179,7 @@ public class NetDividendRateType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NetDividendRateType1FormatChoice";
-				definition = "Choice of formats to  express the type of net dividend rate.";
+				definition = "Choice of formats to express the type of net dividend rate.";
 			}
 		});
 		return mmObject_lazy.get();

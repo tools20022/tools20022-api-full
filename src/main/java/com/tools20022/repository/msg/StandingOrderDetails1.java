@@ -164,7 +164,7 @@ public class StandingOrderDetails1 {
 	 * name} = "CreditAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Cash account credited from a  standing order mechanism."</li>
+	 * definition} = "Cash account credited from a standing order mechanism."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditAccount = new MMMessageAssociationEnd() {
@@ -175,7 +175,7 @@ public class StandingOrderDetails1 {
 			xmlTag = "CdtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditAccount";
-			definition = "Cash account credited from a  standing order mechanism.";
+			definition = "Cash account credited from a standing order mechanism.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -141,7 +141,7 @@ public class InvestorProfile1 {
 	 * name} = "Status"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of the profile. "</li>
+	 * definition} = "Status of the profile."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmStatus = new MMMessageAssociationEnd() {
@@ -151,7 +151,7 @@ public class InvestorProfile1 {
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			definition = "Status of the profile. ";
+			definition = "Status of the profile.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -183,7 +183,7 @@ public class InvestorProfile1 {
 	 * name} = "Treasury"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information about the profile for treasury trading. "</li>
+	 * definition} = "Information about the profile for treasury trading."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTreasury = new MMMessageAssociationEnd() {
@@ -193,7 +193,7 @@ public class InvestorProfile1 {
 			xmlTag = "Trsr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Treasury";
-			definition = "Information about the profile for treasury trading. ";
+			definition = "Information about the profile for treasury trading.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -226,8 +226,8 @@ public class InvestorProfile1 {
 	 * name} = "HighFrequencyTrading"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Information about the profile for high frequency trading. "</li>
+	 * definition} = "Information about the profile for high frequency trading."
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmHighFrequencyTrading = new MMMessageAssociationEnd() {
@@ -237,7 +237,7 @@ public class InvestorProfile1 {
 			xmlTag = "HghFrqcyTradg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighFrequencyTrading";
-			definition = "Information about the profile for high frequency trading. ";
+			definition = "Information about the profile for high frequency trading.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -269,7 +269,7 @@ public class InvestorProfile1 {
 	 * name} = "MarketMaker"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information about the profile for a market marker. "</li>
+	 * definition} = "Information about the profile for a market marker."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMarketMaker = new MMMessageAssociationEnd() {
@@ -279,7 +279,7 @@ public class InvestorProfile1 {
 			xmlTag = "MktMakr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketMaker";
-			definition = "Information about the profile for a market marker. ";
+			definition = "Information about the profile for a market marker.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

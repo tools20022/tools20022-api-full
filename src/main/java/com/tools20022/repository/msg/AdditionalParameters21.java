@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.*;
@@ -83,6 +84,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06#mmAdditionalParameters
  * IntraPositionMovementConfirmationV06.mmAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07#mmAdditionalParameters
+ * IntraPositionMovementConfirmationV07.mmAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
@@ -593,7 +597,8 @@ public class AdditionalParameters21 {
 						com.tools20022.repository.msg.AdditionalParameters21.mmAccountOwnerTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters21.mmAccountServicerTransactionIdentification,
 						com.tools20022.repository.msg.AdditionalParameters21.mmPoolIdentification, com.tools20022.repository.msg.AdditionalParameters21.mmCorporateActionEventIdentification,
 						com.tools20022.repository.msg.AdditionalParameters21.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.msg.AdditionalParameters21.mmProcessorTransactionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementConfirmationV05.mmAdditionalParameters, IntraPositionMovementConfirmationV06.mmAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementConfirmationV05.mmAdditionalParameters, IntraPositionMovementConfirmationV06.mmAdditionalParameters,
+						IntraPositionMovementConfirmationV07.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

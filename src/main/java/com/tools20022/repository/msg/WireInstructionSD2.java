@@ -90,6 +90,13 @@ import javax.xml.bind.annotation.XmlType;
  * "WireInstructionSD2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Payment wire instruction details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.WireInstructionSD3
+ * WireInstructionSD3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.WireInstructionSD1
@@ -129,6 +136,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmPlaceAndName
+	 * WireInstructionSD3.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -139,6 +154,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -175,6 +191,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of securities concerned in this wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmWireQuantity
+	 * WireInstructionSD3.mmWireQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmWireQuantity = new MMMessageAttribute() {
@@ -186,6 +210,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WireQuantity";
 			definition = "Quantity of securities concerned in this wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmWireQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
@@ -221,6 +246,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Name of the recipient bank for the wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBankName
+	 * WireInstructionSD3.mmBankName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBankName = new MMMessageAttribute() {
@@ -232,6 +265,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankName";
 			definition = "Name of the recipient bank for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBankName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -267,6 +301,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Street address of the recipient bank for the wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBankAddress
+	 * WireInstructionSD3.mmBankAddress}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBankAddress = new MMMessageAttribute() {
@@ -278,6 +320,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankAddress";
 			definition = "Street address of the recipient bank for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBankAddress);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -313,6 +356,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "City of the recipient bank for the wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBankCity
+	 * WireInstructionSD3.mmBankCity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBankCity = new MMMessageAttribute() {
@@ -324,6 +375,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankCity";
 			definition = "City of the recipient bank for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBankCity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -359,6 +411,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country of the recipient bank for the wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBankCountry
+	 * WireInstructionSD3.mmBankCountry}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBankCountry = new MMMessageAttribute() {
@@ -370,6 +430,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankCountry";
 			definition = "Country of the recipient bank for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBankCountry);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -405,6 +466,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Responsible person in the recipient back for the wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBankAttentionTo
+	 * WireInstructionSD3.mmBankAttentionTo}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBankAttentionTo = new MMMessageAttribute() {
@@ -416,6 +485,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankAttentionTo";
 			definition = "Responsible person in the recipient back for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBankAttentionTo);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -451,6 +521,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Notes or comments for the recipient bank for the wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBankComments
+	 * WireInstructionSD3.mmBankComments}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBankComments = new MMMessageAttribute() {
@@ -462,6 +540,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankComments";
 			definition = "Notes or comments for the recipient bank for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBankComments);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max60Text.mmObject();
@@ -497,6 +576,14 @@ public class WireInstructionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account type at the recipient bank for the wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBeneficiaryAccount
+	 * WireInstructionSD3.mmBeneficiaryAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBeneficiaryAccount = new MMMessageAttribute() {
@@ -508,6 +595,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccount";
 			definition = "Account type at the recipient bank for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBeneficiaryAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -544,6 +632,14 @@ public class WireInstructionSD2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Account identification at the recipient bank for the wire."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBeneficiaryAccountIdentification
+	 * WireInstructionSD3.mmBeneficiaryAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBeneficiaryAccountIdentification = new MMMessageAttribute() {
@@ -555,6 +651,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccountIdentification";
 			definition = "Account identification at the recipient bank for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBeneficiaryAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -592,6 +689,14 @@ public class WireInstructionSD2 {
 	 * definition} =
 	 * "Notes or comments for the beneficiary account at the recipient bank for the wire."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.WireInstructionSD3#mmBeneficiaryAccountComments
+	 * WireInstructionSD3.mmBeneficiaryAccountComments}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBeneficiaryAccountComments = new MMMessageAttribute() {
@@ -603,6 +708,7 @@ public class WireInstructionSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryAccountComments";
 			definition = "Notes or comments for the beneficiary account at the recipient bank for the wire.";
+			nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmBeneficiaryAccountComments);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max30Text.mmObject();
@@ -621,6 +727,7 @@ public class WireInstructionSD2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "WireInstructionSD2";
 				definition = "Payment wire instruction details.";
+				nextVersions_lazy = () -> Arrays.asList(WireInstructionSD3.mmObject());
 				previousVersion_lazy = () -> WireInstructionSD1.mmObject();
 			}
 		});

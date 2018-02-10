@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Cryptographic algorithm and parameters for encryptions with a symmetric cryptographic key."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AlgorithmIdentification24
+ * AlgorithmIdentification24}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification6
@@ -104,6 +111,14 @@ public class AlgorithmIdentification14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the encryption algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification24#mmAlgorithm
+	 * AlgorithmIdentification24.mmAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class AlgorithmIdentification14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the encryption algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification24.mmAlgorithm);
 			previousVersion_lazy = () -> AlgorithmIdentification6.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -152,6 +168,14 @@ public class AlgorithmIdentification14 {
 	 * definition} =
 	 * "Parameters associated with the CBC (Chain Block Chaining) encryption algorithm."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification24#mmParameter
+	 * AlgorithmIdentification24.mmParameter}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -167,6 +191,7 @@ public class AlgorithmIdentification14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated with the CBC (Chain Block Chaining) encryption algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification24.mmParameter);
 			previousVersion_lazy = () -> AlgorithmIdentification6.mmParameter;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -183,6 +208,7 @@ public class AlgorithmIdentification14 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification14";
 				definition = "Cryptographic algorithm and parameters for encryptions with a symmetric cryptographic key.";
+				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification24.mmObject());
 				previousVersion_lazy = () -> AlgorithmIdentification6.mmObject();
 			}
 		});

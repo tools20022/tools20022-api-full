@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InvestorType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the  type of investor."</li>
+ * definition} = "Specifies the type of investor."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -184,7 +184,7 @@ public class InvestorType1Code extends MMCode {
 				example = Arrays.asList("RETL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestorType1Code";
-				definition = "Specifies the  type of investor.";
+				definition = "Specifies the type of investor.";
 				trace_lazy = () -> InvestorTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InvestorType1Code.Retail, com.tools20022.repository.codeset.InvestorType1Code.Professional, com.tools20022.repository.codeset.InvestorType1Code.Staff,
 						com.tools20022.repository.codeset.InvestorType1Code.PhysicalPerson);

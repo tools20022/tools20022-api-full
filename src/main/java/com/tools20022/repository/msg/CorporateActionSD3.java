@@ -262,7 +262,7 @@ public class CorporateActionSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer. "
+	 * "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer."
 	 * </li>
 	 * </ul>
 	 */
@@ -274,7 +274,7 @@ public class CorporateActionSD3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Cash Value"), new DTCCSynonym(this, "Currency (Event Cash Value)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCashValue";
-			definition = "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer. ";
+			definition = "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -1040,7 +1040,7 @@ public class CorporateActionSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement. "
+	 * "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement."
 	 * </li>
 	 * </ul>
 	 */
@@ -1052,7 +1052,7 @@ public class CorporateActionSD3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Surrender Shares to Agent Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurrenderSharesToAgentFlag";
-			definition = "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement. ";
+			definition = "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1281,8 +1281,7 @@ public class CorporateActionSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides details of certificates that have been  called  for redemption."
-	 * </li>
+	 * "Provides details of certificates that have been called for redemption."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCertificateDetails = new MMMessageAssociationEnd() {
@@ -1293,7 +1292,7 @@ public class CorporateActionSD3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Certificate Details"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateDetails";
-			definition = "Provides details of certificates that have been  called  for redemption.";
+			definition = "Provides details of certificates that have been called for redemption.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CorporateActionSD5.mmObject();

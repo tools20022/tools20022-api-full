@@ -44,7 +44,7 @@ public class ConstraintAvailabilityAndTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Type is equal to ForwardAvailable,  Availability is not allowed."</li>
+	 * "If Type is equal to ForwardAvailable, Availability is not allowed."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashBalance1> forCashBalance1 = new MMConstraint<CashBalance1>() {
@@ -52,7 +52,7 @@ public class ConstraintAvailabilityAndTypeRule {
 			validator = ConstraintAvailabilityAndTypeRule::checkCashBalance1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailabilityAndTypeRule";
-			definition = "If Type is equal to ForwardAvailable,  Availability is not allowed.";
+			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
 			owner_lazy = () -> CashBalance1.mmObject();
 		}
 	};
@@ -72,7 +72,7 @@ public class ConstraintAvailabilityAndTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Type is equal to ForwardAvailable,  Availability is not allowed."</li>
+	 * "If Type is equal to ForwardAvailable, Availability is not allowed."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashBalance2> forCashBalance2 = new MMConstraint<CashBalance2>() {
@@ -80,7 +80,7 @@ public class ConstraintAvailabilityAndTypeRule {
 			validator = ConstraintAvailabilityAndTypeRule::checkCashBalance2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailabilityAndTypeRule";
-			definition = "If Type is equal to ForwardAvailable,  Availability is not allowed.";
+			definition = "If Type is equal to ForwardAvailable, Availability is not allowed.";
 			owner_lazy = () -> CashBalance2.mmObject();
 		}
 	};

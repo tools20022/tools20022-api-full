@@ -55,7 +55,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ErrorHandling1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -185,7 +185,7 @@ public class ErrorHandling1Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ErrorHandling1Choice.mmCode, com.tools20022.repository.choice.ErrorHandling1Choice.mmProprietary);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ErrorHandling1Choice";
 				definition = "Specifies the choice between the listed and the proprietary error codes.";
 				nextVersions_lazy = () -> Arrays.asList(ErrorHandling2Choice.mmObject());

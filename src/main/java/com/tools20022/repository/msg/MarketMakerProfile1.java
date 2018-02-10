@@ -144,7 +144,7 @@ public class MarketMakerProfile1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the market maker is obligated to comply with the requirements of the contract it holds with the  exchange or is exempt from these obligations."
+	 * "Indicates whether the market maker is obligated to comply with the requirements of the contract it holds with the exchange or is exempt from these obligations."
 	 * </li>
 	 * </ul>
 	 */
@@ -155,7 +155,7 @@ public class MarketMakerProfile1 {
 			xmlTag = "Cmplc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Compliance";
-			definition = "Indicates whether the market maker is obligated to comply with the requirements of the contract it holds with the  exchange or is exempt from these obligations.";
+			definition = "Indicates whether the market maker is obligated to comply with the requirements of the contract it holds with the exchange or is exempt from these obligations.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

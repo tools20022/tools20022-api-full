@@ -247,7 +247,7 @@ public class CorporateActionOptionSD8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies whether the option is declared as default by the issuer / offeror,  and will be treated as default by the issuer / offeror if no elections is made."
+	 * "Identifies whether the option is declared as default by the issuer / offeror, and will be treated as default by the issuer / offeror if no elections is made."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -272,7 +272,7 @@ public class CorporateActionOptionSD8 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::DFLT"), new DTCCSynonym(this, "Issuer Default Option Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionFlag";
-			definition = "Identifies whether the option is declared as default by the issuer / offeror,  and will be treated as default by the issuer / offeror if no elections is made.";
+			definition = "Identifies whether the option is declared as default by the issuer / offeror, and will be treated as default by the issuer / offeror if no elections is made.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionOptionSD10.mmDefaultOptionFlag);
 			previousVersion_lazy = () -> CorporateActionOptionSD6.mmDefaultOptionFlag;
 			maxOccurs = 1;

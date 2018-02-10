@@ -133,6 +133,7 @@ import java.util.Objects;
  * <li>{@linkplain com.tools20022.repository.msg.OptionData3 OptionData3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.OptionData4 OptionData4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Option10 Option10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option14 Option14}</li>
  * </ul>
  * </li>
  * <li>
@@ -642,7 +643,7 @@ public class CurrencyOption extends TreasuryTrade {
 						com.tools20022.repository.entity.CurrencyOption.mmPremiumCalculation, com.tools20022.repository.entity.CurrencyOption.mmOptionDefinition, com.tools20022.repository.entity.CurrencyOption.mmPremiumSettlement,
 						com.tools20022.repository.entity.CurrencyOption.mmExercisedOption, com.tools20022.repository.entity.CurrencyOption.mmOptionSettlementCurrency, com.tools20022.repository.entity.CurrencyOption.mmStrikeRate);
 				derivationComponent_lazy = () -> Arrays.asList(AmountsAndValueDate2.mmObject(), Option2.mmObject(), Option3.mmObject(), OptionData1.mmObject(), OptionData2.mmObject(), AmountsAndValueDate3.mmObject(), Option4.mmObject(),
-						AmountsAndValueDate4.mmObject(), Option5.mmObject(), AmountsAndValueDate5.mmObject(), Option6.mmObject(), OptionData3.mmObject(), OptionData4.mmObject(), Option10.mmObject());
+						AmountsAndValueDate4.mmObject(), Option5.mmObject(), AmountsAndValueDate5.mmObject(), Option6.mmObject(), OptionData3.mmObject(), OptionData4.mmObject(), Option10.mmObject(), Option14.mmObject());
 			}
 
 			@Override

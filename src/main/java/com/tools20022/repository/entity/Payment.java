@@ -825,6 +825,66 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmOriginalTransactionReference
  * PaymentTransaction79.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmOriginalTransactionReference
+ * PaymentTransaction87.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalTransactionReference
+ * PaymentTransaction88.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction4Choice#mmInterbank
+ * UnderlyingTransaction4Choice.mmInterbank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction3Choice#mmInterbank
+ * CorrectiveTransaction3Choice.mmInterbank}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction90#mmOriginalTransactionReference
+ * PaymentTransaction90.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmOriginalTransactionReference
+ * PaymentTransaction91.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction85#mmOriginalTransactionReference
+ * PaymentTransaction85.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction89#mmOriginalTransactionReference
+ * PaymentTransaction89.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction26#mmOriginalGroupInformation
+ * OriginalPaymentInstruction26.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction26#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction26.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmOriginalTransactionReference
+ * PaymentTransaction84.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmOriginalTransactionReference
+ * UnderlyingPaymentInstruction4.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalTransactionReference
+ * UnderlyingPaymentTransaction3.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction28#mmTransactionInformation
+ * OriginalPaymentInstruction28.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmTransactionInformationAndStatus
+ * OriginalPaymentInstruction27.mmTransactionInformationAndStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction29#mmOriginalGroupInformation
+ * OriginalPaymentInstruction29.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction29#mmTransactionInformation
+ * OriginalPaymentInstruction29.mmTransactionInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction92#mmOriginalTransactionReference
+ * PaymentTransaction92.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction95#mmOriginalTransactionReference
+ * PaymentTransaction95.mmOriginalTransactionReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction93#mmOriginalTransactionReference
+ * PaymentTransaction93.mmOriginalTransactionReference}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -1472,6 +1532,52 @@ import java.util.concurrent.atomic.AtomicReference;
  * PaymentTransaction82}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction79
  * PaymentTransaction79}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction87
+ * PaymentTransaction87}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction88
+ * PaymentTransaction88}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.UnderlyingTransaction4Choice
+ * UnderlyingTransaction4Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction3Choice
+ * CorrectiveTransaction3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction90
+ * PaymentTransaction90}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction91
+ * PaymentTransaction91}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction85
+ * PaymentTransaction85}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalTransactionReference27
+ * OriginalTransactionReference27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction89
+ * PaymentTransaction89}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction26
+ * OriginalPaymentInstruction26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction84
+ * PaymentTransaction84}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction59 Transaction59}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Compensation1 Compensation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction28
+ * OriginalPaymentInstruction28}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction94
+ * PaymentTransaction94}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27
+ * OriginalPaymentInstruction27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction29
+ * OriginalPaymentInstruction29}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction92
+ * PaymentTransaction92}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction95
+ * PaymentTransaction95}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction93
+ * PaymentTransaction93}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader74 GroupHeader74}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader73 GroupHeader73}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader76 GroupHeader76}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalGroupInformation29
+ * OriginalGroupInformation29}</li>
  * </ul>
  * </li>
  * <li>
@@ -1739,6 +1845,20 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43#mmCurrency
 	 * CardPaymentTransactionDetails43.mmCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData7#mmCurrency
+	 * CommonData7.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection93#mmCurrency
+	 * AmountAndDirection93.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44#mmCurrency
+	 * CardPaymentTransactionDetails44.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails45#mmCurrency
+	 * CardPaymentTransactionDetails45.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails46#mmCurrency
+	 * CardPaymentTransactionDetails46.mmCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1772,7 +1892,8 @@ public class Payment extends ObligationFulfilment {
 					CardPaymentTransactionDetails28.mmCurrency, CardPaymentTransactionDetails29.mmCurrency, CardPaymentTransactionDetails30.mmCurrency, CardPaymentTransactionDetails27.mmCurrency, CardPaymentTransactionDetails31.mmCurrency,
 					CommonData5.mmCurrency, CardPaymentTransactionDetails35.mmCurrency, CardPaymentTransactionDetails34.mmCurrency, AutomatedTellerMachine10.mmBaseCurrency, CardPaymentTransactionDetails39.mmCurrency,
 					CardPaymentTransactionDetails38.mmCurrency, CardPaymentTransactionDetails41.mmCurrency, CardPaymentTransactionDetails37.mmCurrency, CommonData6.mmCurrency, CardPaymentTransactionDetails40.mmCurrency,
-					CardPaymentTransactionDetails42.mmCurrency, CardPaymentTransactionDetails43.mmCurrency);
+					CardPaymentTransactionDetails42.mmCurrency, CardPaymentTransactionDetails43.mmCurrency, CommonData7.mmCurrency, AmountAndDirection93.mmCurrency, CardPaymentTransactionDetails44.mmCurrency,
+					CardPaymentTransactionDetails45.mmCurrency, CardPaymentTransactionDetails46.mmCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1947,6 +2068,15 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancingAgreementItem1#mmPaymentInstrument
 	 * FinancingAgreementItem1.mmPaymentInstrument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction27#mmType
+	 * PaymentInstruction27.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAggregated2#mmTransactionCategory
+	 * CardAggregated2.mmTransactionCategory}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmType
+	 * PaymentInstruction26.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1966,10 +2096,12 @@ public class Payment extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(PaymentType2Choice.mmPaymentType, PaymentType2Choice.mmProprietaryPaymentType, PaymentType3Choice.mmCode, PaymentType3Choice.mmProprietary, PaymentInstruction3.mmPaymentType,
-					PaymentDetails2.mmPaymentType, PaymentDetails4.mmPaymentType, PaymentInstruction2.mmType, PaymentDetails5.mmPaymentType, PaymentDetails6.mmPaymentType, PaymentDetails7.mmPaymentType, PaymentInstruction1.mmType,
-					CardAggregated1.mmTransactionCategory, CardIndividualTransaction1.mmTransactionCategory, PaymentInstruction13.mmPaymentType, PaymentInstruction12.mmType, PaymentType4Choice.mmCode, PaymentType4Choice.mmProprietary,
-					PaymentInstruction14.mmType, CardIndividualTransaction2.mmTransactionCategory, FinancingAgreementItem1.mmPaymentInstrument);
+			derivation_lazy = () -> Arrays
+					.asList(PaymentType2Choice.mmPaymentType, PaymentType2Choice.mmProprietaryPaymentType, PaymentType3Choice.mmCode, PaymentType3Choice.mmProprietary, PaymentInstruction3.mmPaymentType, PaymentDetails2.mmPaymentType,
+							PaymentDetails4.mmPaymentType, PaymentInstruction2.mmType, PaymentDetails5.mmPaymentType, PaymentDetails6.mmPaymentType, PaymentDetails7.mmPaymentType, PaymentInstruction1.mmType,
+							CardAggregated1.mmTransactionCategory, CardIndividualTransaction1.mmTransactionCategory, PaymentInstruction13.mmPaymentType, PaymentInstruction12.mmType, PaymentType4Choice.mmCode,
+							PaymentType4Choice.mmProprietary, PaymentInstruction14.mmType, CardIndividualTransaction2.mmTransactionCategory, FinancingAgreementItem1.mmPaymentInstrument, PaymentInstruction27.mmType,
+							CardAggregated2.mmTransactionCategory, PaymentInstruction26.mmType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2573,6 +2705,9 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails34#mmTotalAmount
 	 * CardPaymentTransactionDetails34.mmTotalAmount}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInstructedAmount
+	 * PaymentSearch6.mmInstructedAmount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionBulkOrder5#mmTotalSettlementAmount
 	 * SubscriptionBulkOrder5.mmTotalSettlementAmount}</li>
 	 * <li>
@@ -2668,6 +2803,63 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43#mmTotalAmount
 	 * CardPaymentTransactionDetails43.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmAmount
+	 * CreditTransferTransaction27.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation7#mmAmount
+	 * PaymentComplementaryInformation7.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmReturnedInstructedAmount
+	 * PaymentTransaction87.mmReturnedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmReversedInstructedAmount
+	 * PaymentTransaction88.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmAmount
+	 * RequestedModification7.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmAmount
+	 * OriginalTransactionReference27.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmOriginalInstructedAmount
+	 * PaymentTransaction84.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmOriginalInstructedAmount
+	 * UnderlyingPaymentInstruction4.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmInstructedAmount
+	 * CorrectivePaymentInitiation3.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction32#mmInstructedAmount
+	 * CreditTransferTransaction32.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch7#mmInstructedAmount
+	 * PaymentSearch7.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmInstructedAmount
+	 * CreditTransferTransaction30.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmInstructedAmount
+	 * PaymentInstruction26.mmInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction95#mmOriginalInstructedAmount
+	 * PaymentTransaction95.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction93#mmOriginalInstructedAmount
+	 * PaymentTransaction93.mmOriginalInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction93#mmReversedInstructedAmount
+	 * PaymentTransaction93.mmReversedInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44#mmTotalAmount
+	 * CardPaymentTransactionDetails44.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails45#mmTotalAmount
+	 * CardPaymentTransactionDetails45.mmTotalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails46#mmTotalAmount
+	 * CardPaymentTransactionDetails46.mmTotalAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2734,15 +2926,20 @@ public class Payment extends ObligationFulfilment {
 					DirectDebitTransactionInformation19.mmInstructedAmount, PaymentTransaction66.mmOriginalInstructedAmount, CreditTransferTransaction22.mmAmount, PaymentTransaction64.mmOriginalInstructedAmount,
 					PaymentTransaction64.mmReversedInstructedAmount, CardPaymentTransactionDetails32.mmTotalAmount, CardPaymentTransactionDetails33.mmTotalAmount, CardPaymentTransactionDetails28.mmTotalAmount,
 					CardPaymentTransactionDetails29.mmTotalAmount, CardPaymentTransactionDetails30.mmTotalAmount, CardPaymentTransactionDetails27.mmTotalAmount, CardPaymentTransactionDetails31.mmTotalAmount,
-					CardPaymentTransactionDetails35.mmTotalAmount, CardPaymentTransactionDetails34.mmTotalAmount, SubscriptionBulkOrder5.mmTotalSettlementAmount, RedemptionBulkExecution5.mmTotalSettlementAmount,
-					RedemptionMultipleExecution5.mmTotalSettlementAmount, RedemptionMultipleOrder6.mmTotalSettlementAmount, SubscriptionMultipleOrder6.mmTotalSettlementAmount, SubscriptionBulkExecution4.mmTotalSettlementAmount,
-					RedemptionBulkOrder6.mmTotalSettlementAmount, SubscriptionMultipleExecution5.mmTotalSettlementAmount, FundOrderData5.mmSettlementAmount, RedemptionExecution16.mmSettlementAmount, FundOrderData6.mmSettlementAmount,
-					RedemptionExecution15.mmSettlementAmount, DirectDebitTransactionInformation21.mmInstructedAmount, PaymentTransaction81.mmReversedInstructedAmount, RequestedModification6.mmAmount,
-					PaymentTransaction76.mmReturnedInstructedAmount, PaymentTransaction78.mmOriginalInstructedAmount, OriginalTransactionReference24.mmAmount, PaymentTransaction74.mmOriginalInstructedAmount,
-					PaymentTransaction77.mmOriginalInstructedAmount, PaymentTransaction77.mmReversedInstructedAmount, DirectDebitTransactionInformation22.mmInstructedAmount, CorrectivePaymentInitiation2.mmInstructedAmount,
-					UnderlyingPaymentInstruction3.mmOriginalInstructedAmount, PaymentComplementaryInformation6.mmAmount, CardPaymentTransactionDetails39.mmTotalAmount, CardPaymentTransactionDetails38.mmTotalAmount,
-					CardPaymentTransactionDetails41.mmTotalAmount, CardPaymentTransactionDetails37.mmTotalAmount, CardPaymentTransactionDetails40.mmTotalAmount, CardPaymentTransactionDetails42.mmTotalAmount,
-					CardPaymentTransactionDetails43.mmTotalAmount);
+					CardPaymentTransactionDetails35.mmTotalAmount, CardPaymentTransactionDetails34.mmTotalAmount, PaymentSearch6.mmInstructedAmount, SubscriptionBulkOrder5.mmTotalSettlementAmount,
+					RedemptionBulkExecution5.mmTotalSettlementAmount, RedemptionMultipleExecution5.mmTotalSettlementAmount, RedemptionMultipleOrder6.mmTotalSettlementAmount, SubscriptionMultipleOrder6.mmTotalSettlementAmount,
+					SubscriptionBulkExecution4.mmTotalSettlementAmount, RedemptionBulkOrder6.mmTotalSettlementAmount, SubscriptionMultipleExecution5.mmTotalSettlementAmount, FundOrderData5.mmSettlementAmount,
+					RedemptionExecution16.mmSettlementAmount, FundOrderData6.mmSettlementAmount, RedemptionExecution15.mmSettlementAmount, DirectDebitTransactionInformation21.mmInstructedAmount,
+					PaymentTransaction81.mmReversedInstructedAmount, RequestedModification6.mmAmount, PaymentTransaction76.mmReturnedInstructedAmount, PaymentTransaction78.mmOriginalInstructedAmount,
+					OriginalTransactionReference24.mmAmount, PaymentTransaction74.mmOriginalInstructedAmount, PaymentTransaction77.mmOriginalInstructedAmount, PaymentTransaction77.mmReversedInstructedAmount,
+					DirectDebitTransactionInformation22.mmInstructedAmount, CorrectivePaymentInitiation2.mmInstructedAmount, UnderlyingPaymentInstruction3.mmOriginalInstructedAmount, PaymentComplementaryInformation6.mmAmount,
+					CardPaymentTransactionDetails39.mmTotalAmount, CardPaymentTransactionDetails38.mmTotalAmount, CardPaymentTransactionDetails41.mmTotalAmount, CardPaymentTransactionDetails37.mmTotalAmount,
+					CardPaymentTransactionDetails40.mmTotalAmount, CardPaymentTransactionDetails42.mmTotalAmount, CardPaymentTransactionDetails43.mmTotalAmount, CreditTransferTransaction27.mmAmount,
+					PaymentComplementaryInformation7.mmAmount, PaymentTransaction87.mmReturnedInstructedAmount, PaymentTransaction88.mmReversedInstructedAmount, RequestedModification7.mmAmount, OriginalTransactionReference27.mmAmount,
+					PaymentTransaction84.mmOriginalInstructedAmount, UnderlyingPaymentInstruction4.mmOriginalInstructedAmount, CorrectivePaymentInitiation3.mmInstructedAmount, CreditTransferTransaction32.mmInstructedAmount,
+					PaymentSearch7.mmInstructedAmount, CreditTransferTransaction30.mmInstructedAmount, PaymentInstruction26.mmInstructedAmount, PaymentTransaction95.mmOriginalInstructedAmount,
+					PaymentTransaction93.mmOriginalInstructedAmount, PaymentTransaction93.mmReversedInstructedAmount, CardPaymentTransactionDetails44.mmTotalAmount, CardPaymentTransactionDetails45.mmTotalAmount,
+					CardPaymentTransactionDetails46.mmTotalAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2820,6 +3017,18 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction14#mmPriority
 	 * PaymentInstruction14.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IntraBalance3#mmPriority
+	 * IntraBalance3.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch6#mmPriority
+	 * PaymentSearch6.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction27#mmPriority
+	 * PaymentInstruction27.mmPriority}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch7#mmPriority
+	 * PaymentSearch7.mmPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmPriority
+	 * PaymentInstruction26.mmPriority}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2835,7 +3044,7 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Urgency or order of importance that the originator would like the recipient of the payment  to apply to its processing."
+	 * "Urgency or order of importance that the originator would like the recipient of the payment to apply to its processing."
 	 * </li>
 	 * </ul>
 	 */
@@ -2843,12 +3052,13 @@ public class Payment extends ObligationFulfilment {
 		{
 			derivation_lazy = () -> Arrays.asList(PriorityCodeChoice.mmCode, PaymentSearch2.mmPriority, PaymentSearch3.mmPriority, PriorityCode2Choice.mmCode, PriorityCode2Choice.mmProprietary, PaymentSearch4.mmPriority,
 					PaymentInstruction2.mmPriority, PaymentInstruction1.mmPriority, Cheque5.mmInstructionPriority, Cheque6.mmInstructionPriority, Cheque7.mmInstructionPriority, IntraBalance1.mmPriority, PaymentInstruction12.mmPriority,
-					PaymentSearch5.mmPriority, PriorityCode3Choice.mmCode, PriorityCode3Choice.mmProprietary, PaymentInstruction14.mmPriority);
+					PaymentSearch5.mmPriority, PriorityCode3Choice.mmCode, PriorityCode3Choice.mmProprietary, PaymentInstruction14.mmPriority, IntraBalance3.mmPriority, PaymentSearch6.mmPriority, PaymentInstruction27.mmPriority,
+					PaymentSearch7.mmPriority, PaymentInstruction26.mmPriority);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Priority";
-			definition = "Urgency or order of importance that the originator would like the recipient of the payment  to apply to its processing.";
+			definition = "Urgency or order of importance that the originator would like the recipient of the payment to apply to its processing.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriorityCode.mmObject();
@@ -3357,6 +3567,36 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails99#mmExpectedValueDate
 	 * TransactionDetails99.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmExpectedValueDate
+	 * TransactionDetails105.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmExpectedValueDate
+	 * TransactionDetails104.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection87#mmValueDate
+	 * AmountAndDirection87.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmValueDate
+	 * AmountAndDirection88.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection89#mmValueDate
+	 * AmountAndDirection89.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection90#mmValueDate
+	 * AmountAndDirection90.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection92#mmValueDate
+	 * AmountAndDirection92.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection91#mmValueDate
+	 * AmountAndDirection91.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmExpectedValueDate
+	 * TransactionDetails110.mmExpectedValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmExpectedValueDate
+	 * TransactionDetails111.mmExpectedValueDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3371,7 +3611,7 @@ public class Payment extends ObligationFulfilment {
 	 * name} = "ValueDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date on which a payment must be executed"</li>
+	 * definition} = "Date on which a payment must be executed."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
@@ -3410,12 +3650,14 @@ public class Payment extends ObligationFulfilment {
 					AggregationTransaction2.mmLastPaymentDateTime, SwitchExecution7.mmCashSettlementDate, SwitchOrder7.mmCashSettlementDate, RedemptionOrder14.mmCashSettlementDate, SubscriptionExecution13.mmCashSettlementDate,
 					SubscriptionExecution12.mmCashSettlementDate, SubscriptionOrder15.mmCashSettlementDate, RedemptionOrder15.mmCashSettlementDate, RedemptionExecution16.mmCashSettlementDate, SubscriptionOrder14.mmCashSettlementDate,
 					RedemptionExecution15.mmCashSettlementDate, TransactionDetails97.mmExpectedValueDate, SecuritiesFinancingTransactionDetails35.mmExpectedValueDate, TransactionDetails96.mmExpectedValueDate,
-					SecuritiesFinancingTransactionDetails36.mmExpectedValueDate, TransactionDetails100.mmExpectedValueDate, TransactionDetails99.mmExpectedValueDate);
+					SecuritiesFinancingTransactionDetails36.mmExpectedValueDate, TransactionDetails100.mmExpectedValueDate, TransactionDetails99.mmExpectedValueDate, TransactionDetails105.mmExpectedValueDate,
+					TransactionDetails104.mmExpectedValueDate, AmountAndDirection87.mmValueDate, AmountAndDirection88.mmValueDate, AmountAndDirection89.mmValueDate, AmountAndDirection90.mmValueDate, AmountAndDirection92.mmValueDate,
+					AmountAndDirection91.mmValueDate, TransactionDetails110.mmExpectedValueDate, TransactionDetails111.mmExpectedValueDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ValueDate";
-			definition = "Date on which a payment must be executed";
+			definition = "Date on which a payment must be executed.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -3622,6 +3864,18 @@ public class Payment extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction69#mmTransactionStatus
 	 * PaymentTransaction69.mmTransactionStatus}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending3#mmStatusAndReason
+	 * IntraBalancePending3.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement3#mmStatusAndReason
+	 * IntraBalanceMovement3.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending4#mmStatusAndReason
+	 * IntraBalancePending4.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovements2#mmStatusAndReason
+	 * IntraBalanceMovements2.mmStatusAndReason}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction80#mmTransactionStatus
 	 * PaymentTransaction80.mmTransactionStatus}</li>
 	 * <li>
@@ -3636,6 +3890,30 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmTransactionCancellationStatus
 	 * PaymentTransaction79.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmTransactionStatus
+	 * PaymentTransaction91.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmReturnInformation
+	 * EntryTransaction9.mmReturnInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCommon3#mmCommonStatus
+	 * PaymentCommon3.mmCommonStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction85#mmTransactionCancellationStatus
+	 * PaymentTransaction85.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmTransactionCancellationStatus
+	 * PaymentTransaction84.mmTransactionCancellationStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmStatus
+	 * PaymentInstruction26.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction92#mmTransactionStatus
+	 * PaymentTransaction92.mmTransactionStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader11#mmReversalReasonInformation
+	 * OriginalGroupHeader11.mmReversalReasonInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3669,8 +3947,10 @@ public class Payment extends ObligationFulfilment {
 					PaymentInstruction14.mmStatus, PaymentTransaction52.mmTransactionStatus, PaymentTransaction54.mmTransactionCancellationStatus, PaymentTransaction53.mmTransactionCancellationStatus,
 					PaymentTransaction57.mmTransactionStatus, EntryTransaction7.mmReturnInformation, PaymentTransaction59.mmTransactionStatus, PaymentTransaction63.mmTransactionStatus, PaymentTransaction68.mmTransactionStatus,
 					PaymentTransaction66.mmTransactionCancellationStatus, PaymentTransaction67.mmTransactionCancellationStatus, EntryTransaction8.mmReturnInformation, PaymentTransaction69.mmTransactionStatus,
-					PaymentTransaction80.mmTransactionStatus, PaymentTransaction78.mmTransactionCancellationStatus, PaymentTransaction83.mmTransactionStatus, PaymentTransaction82.mmTransactionStatus,
-					PaymentTransaction79.mmTransactionCancellationStatus);
+					IntraBalancePending3.mmStatusAndReason, IntraBalanceMovement3.mmStatusAndReason, IntraBalancePending4.mmStatusAndReason, IntraBalanceMovements2.mmStatusAndReason, PaymentTransaction80.mmTransactionStatus,
+					PaymentTransaction78.mmTransactionCancellationStatus, PaymentTransaction83.mmTransactionStatus, PaymentTransaction82.mmTransactionStatus, PaymentTransaction79.mmTransactionCancellationStatus,
+					PaymentTransaction91.mmTransactionStatus, EntryTransaction9.mmReturnInformation, PaymentCommon3.mmCommonStatus, PaymentTransaction85.mmTransactionCancellationStatus, PaymentTransaction84.mmTransactionCancellationStatus,
+					PaymentInstruction26.mmStatus, PaymentTransaction92.mmTransactionStatus, OriginalGroupHeader11.mmReversalReasonInformation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3892,6 +4172,37 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmCashParties
 	 * SecuritiesSettlementTransactionDetails31.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedParties
+	 * EntryTransaction9.mmRelatedParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedAgents
+	 * EntryTransaction9.mmRelatedAgents}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmParties
+	 * PaymentInstruction26.mmParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmCashParties
+	 * SecuritiesSettlementTransactionDetails34.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmCashParties
+	 * SecuritiesSettlementTransactionDetails33.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmCashParties
+	 * SecuritiesSettlementTransactionDetails32.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption58#mmCashParties
+	 * CashOption58.mmCashParties}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption60#mmCashParties
+	 * CashOption60.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmCashParties
+	 * SecuritiesSettlementTransactionDetails35.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmCashParties
+	 * SecuritiesSettlementTransactionDetails36.mmCashParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmCashParties
+	 * SecuritiesSettlementTransactionDetails37.mmCashParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3927,7 +4238,10 @@ public class Payment extends ObligationFulfilment {
 					SecuritiesSettlementTransactionDetails22.mmCashParties, SecuritiesSettlementTransactionDetails20.mmCashParties, EntryTransaction8.mmRelatedParties, EntryTransaction8.mmRelatedAgents, CashOption44.mmCashParties,
 					CashOption46.mmCashParties, SecuritiesSettlementTransactionDetails23.mmCashParties, SecuritiesSettlementTransactionDetails25.mmCashParties, SecuritiesSettlementTransactionDetails24.mmCashParties,
 					CashOption52.mmCashParties, SecuritiesSettlementTransactionDetails27.mmCashParties, SecuritiesSettlementTransactionDetails28.mmCashParties, SecuritiesSettlementTransactionDetails26.mmCashParties,
-					SecuritiesSettlementTransactionDetails30.mmCashParties, CashOption55.mmCashParties, SecuritiesSettlementTransactionDetails29.mmCashParties, SecuritiesSettlementTransactionDetails31.mmCashParties);
+					SecuritiesSettlementTransactionDetails30.mmCashParties, CashOption55.mmCashParties, SecuritiesSettlementTransactionDetails29.mmCashParties, SecuritiesSettlementTransactionDetails31.mmCashParties,
+					EntryTransaction9.mmRelatedParties, EntryTransaction9.mmRelatedAgents, PaymentInstruction26.mmParties, SecuritiesSettlementTransactionDetails34.mmCashParties, SecuritiesSettlementTransactionDetails33.mmCashParties,
+					SecuritiesSettlementTransactionDetails32.mmCashParties, CashOption58.mmCashParties, CashOption60.mmCashParties, SecuritiesSettlementTransactionDetails35.mmCashParties,
+					SecuritiesSettlementTransactionDetails36.mmCashParties, SecuritiesSettlementTransactionDetails37.mmCashParties);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4046,6 +4360,20 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmTax
 	 * DirectDebitTransactionInformation22.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmTax
+	 * CreditTransferTransaction27.mmTax}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction9#mmTax
+	 * EntryTransaction9.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction32#mmTax
+	 * CreditTransferTransaction32.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmTax
+	 * CreditTransferTransaction30.mmTax}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation15#mmTaxRemittance
+	 * StructuredRemittanceInformation15.mmTaxRemittance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4070,7 +4398,8 @@ public class Payment extends ObligationFulfilment {
 					DirectDebitTransactionInformation11.mmTax, DirectDebitTransactionInformation13.mmTax, CreditTransferTransactionInformation14.mmTax, CreditTransferTransaction5.mmTax, CreditTransferTransaction10.mmTax,
 					StructuredRemittanceInformation10.mmTaxRemittance, CreditTransferTransaction19.mmTax, StructuredRemittanceInformation12.mmTaxRemittance, CreditTransferTransaction18.mmTax, DirectDebitTransactionInformation18.mmTax,
 					CreditTransferTransaction20.mmTax, EntryTransaction7.mmTax, CreditTransferTransaction21.mmTax, CreditTransferTransaction25.mmTax, CreditTransferTransaction24.mmTax, CreditTransferTransaction26.mmTax,
-					StructuredRemittanceInformation13.mmTaxRemittance, DirectDebitTransactionInformation19.mmTax, CreditTransferTransaction22.mmTax, EntryTransaction8.mmTax, DirectDebitTransactionInformation22.mmTax);
+					StructuredRemittanceInformation13.mmTaxRemittance, DirectDebitTransactionInformation19.mmTax, CreditTransferTransaction22.mmTax, EntryTransaction8.mmTax, DirectDebitTransactionInformation22.mmTax,
+					CreditTransferTransaction27.mmTax, EntryTransaction9.mmTax, CreditTransferTransaction32.mmTax, CreditTransferTransaction30.mmTax, StructuredRemittanceInformation15.mmTaxRemittance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4268,6 +4597,27 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmOriginalGroupInformation
 	 * PaymentTransaction79.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmOriginalGroupInformation
+	 * PaymentTransaction87.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalGroupInformation
+	 * PaymentTransaction88.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction3Choice#mmInitiation
+	 * CorrectiveTransaction3Choice.mmInitiation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction90#mmOriginalGroupInformation
+	 * PaymentTransaction90.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedDates
+	 * EntryTransaction9.mmRelatedDates}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction85#mmOriginalGroupInformation
+	 * PaymentTransaction85.mmOriginalGroupInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction89#mmOriginalGroupInformation
+	 * PaymentTransaction89.mmOriginalGroupInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4302,7 +4652,9 @@ public class Payment extends ObligationFulfilment {
 					PaymentTransaction65.mmOriginalGroupInformation, DirectDebitTransactionInformation20.mmPaymentTypeInformation, PaymentTransaction60.mmOriginalGroupInformation,
 					DirectDebitTransactionInformation19.mmPaymentTypeInformation, PaymentTransaction67.mmOriginalGroupInformation, PaymentTransaction62.mmOriginalGroupInformation, EntryTransaction8.mmRelatedDates,
 					DirectDebitTransactionInformation21.mmPaymentTypeInformation, PaymentTransaction81.mmOriginalGroupInformation, PaymentTransaction76.mmOriginalGroupInformation, CorrectiveTransaction2Choice.mmInitiation,
-					DirectDebitTransactionInformation22.mmPaymentTypeInformation, PaymentTransaction75.mmOriginalGroupInformation, PaymentTransaction79.mmOriginalGroupInformation);
+					DirectDebitTransactionInformation22.mmPaymentTypeInformation, PaymentTransaction75.mmOriginalGroupInformation, PaymentTransaction79.mmOriginalGroupInformation, PaymentTransaction87.mmOriginalGroupInformation,
+					PaymentTransaction88.mmOriginalGroupInformation, CorrectiveTransaction3Choice.mmInitiation, PaymentTransaction90.mmOriginalGroupInformation, EntryTransaction9.mmRelatedDates,
+					PaymentTransaction85.mmOriginalGroupInformation, PaymentTransaction89.mmOriginalGroupInformation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4372,6 +4724,12 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmPoolingAdjustmentDate
 	 * PaymentInstruction22.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmPoolingAdjustmentDate
+	 * PaymentInstruction24.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmPoolingAdjustmentDate
+	 * CreditTransferTransaction30.mmPoolingAdjustmentDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4397,7 +4755,7 @@ public class Payment extends ObligationFulfilment {
 					PaymentInstruction9.mmPoolingAdjustmentDate, CreditTransferTransactionInformation2.mmPoolingAdjustmentDate, CreditTransferTransactionInformation11.mmPoolingAdjustmentDate,
 					CreditTransferTransaction2.mmPoolingAdjustmentDate, CreditTransferTransaction7.mmPoolingAdjustmentDate, CreditTransferTransactionInformation7.mmPoolingAdjustmentDate,
 					CreditTransferTransactionInformation9.mmPoolingAdjustmentDate, PaymentInstruction16.mmPoolingAdjustmentDate, CreditTransferTransaction19.mmPoolingAdjustmentDate, CreditTransferTransaction25.mmPoolingAdjustmentDate,
-					PaymentInstruction20.mmPoolingAdjustmentDate, PaymentInstruction22.mmPoolingAdjustmentDate);
+					PaymentInstruction20.mmPoolingAdjustmentDate, PaymentInstruction22.mmPoolingAdjustmentDate, PaymentInstruction24.mmPoolingAdjustmentDate, CreditTransferTransaction30.mmPoolingAdjustmentDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4684,6 +5042,27 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice1#mmCurrencyConversionResult
 	 * AcceptorCurrencyConversionAdvice1.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrency2#mmCurrency
+	 * AmountAndCurrency2.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmExchangeRate
+	 * CreditTransferTransaction30.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5#mmCurrencyConversionResult
+	 * AcceptorCurrencyConversionResponse5.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice2#mmCurrencyConversionResult
+	 * AcceptorCurrencyConversionAdvice2.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmCurrencyConversionEligibility
+	 * CardPaymentTransaction84.mmCurrencyConversionEligibility}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44#mmCurrencyConversionResult
+	 * CardPaymentTransactionDetails44.mmCurrencyConversionResult}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction86#mmCurrencyConversion
+	 * CardPaymentTransaction86.mmCurrencyConversion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4699,7 +5078,7 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information on the exchange rate and amounts used in the payment"</li>
+	 * "Information on the exchange rate and amounts used in the payment."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmCurrencyExchange = new MMBusinessAssociationEnd() {
@@ -4718,12 +5097,14 @@ public class Payment extends ObligationFulfilment {
 					DetailedAmount18.mmCurrency, ATMTransaction13.mmCurrencyConversionResult, DetailedAmount16.mmCurrency, ATMTransaction21.mmCurrencyConversion, ATMTransaction21.mmCurrencyExchange, DetailedAmount17.mmCurrency,
 					OriginalPaymentInformation7.mmExchangeRateInformation, AcceptorCurrencyConversionResponse4.mmCurrencyConversionResult, CardPaymentTransactionDetails38.mmCurrencyConversionResult,
 					CardPaymentTransactionDetails41.mmCurrencyConversionResult, CardPaymentTransaction67.mmCurrencyConversionEligibility, CardPaymentTransaction73.mmCurrencyConversion,
-					CardPaymentTransactionDetails37.mmCurrencyConversionResult, AcceptorCurrencyConversionAdvice1.mmCurrencyConversionResult);
+					CardPaymentTransactionDetails37.mmCurrencyConversionResult, AcceptorCurrencyConversionAdvice1.mmCurrencyConversionResult, AmountAndCurrency2.mmCurrency, CreditTransferTransaction30.mmExchangeRate,
+					AcceptorCurrencyConversionResponse5.mmCurrencyConversionResult, AcceptorCurrencyConversionAdvice2.mmCurrencyConversionResult, CardPaymentTransaction84.mmCurrencyConversionEligibility,
+					CardPaymentTransactionDetails44.mmCurrencyConversionResult, CardPaymentTransaction86.mmCurrencyConversion);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CurrencyExchange";
-			definition = "Information on the exchange rate and amounts used in the payment";
+			definition = "Information on the exchange rate and amounts used in the payment.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmRelatedPayment;
 			aggregation = MMAggregation.NONE;
@@ -4894,6 +5275,24 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmInstructionForCreditorAgent
 	 * PaymentComplementaryInformation6.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction27.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation7#mmInstructionForCreditorAgent
+	 * PaymentComplementaryInformation7.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction31.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInstructionForCreditorAgent
+	 * RequestedModification7.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction32#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction32.mmInstructionForCreditorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmInstructionForCreditorAgent
+	 * CreditTransferTransaction30.mmInstructionForCreditorAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4930,7 +5329,9 @@ public class Payment extends ObligationFulfilment {
 					CreditTransferTransaction21.mmInstructionForCreditorAgent, CreditTransferTransaction23.mmInstructionForCreditorAgent, RequestedModification5.mmInstructionForCreditorAgent,
 					CreditTransferTransaction25.mmInstructionForCreditorAgent, PaymentComplementaryInformation5.mmInstructionForCreditorAgent, CreditTransferTransaction24.mmInstructionForCreditorAgent,
 					CreditTransferTransaction26.mmInstructionForCreditorAgent, DirectDebitTransactionInformation19.mmInstructionForCreditorAgent, CreditTransferTransaction22.mmInstructionForCreditorAgent,
-					RequestedModification6.mmInstructionForCreditorAgent, DirectDebitTransactionInformation22.mmInstructionForCreditorAgent, PaymentComplementaryInformation6.mmInstructionForCreditorAgent);
+					RequestedModification6.mmInstructionForCreditorAgent, DirectDebitTransactionInformation22.mmInstructionForCreditorAgent, PaymentComplementaryInformation6.mmInstructionForCreditorAgent,
+					CreditTransferTransaction27.mmInstructionForCreditorAgent, PaymentComplementaryInformation7.mmInstructionForCreditorAgent, CreditTransferTransaction31.mmInstructionForCreditorAgent,
+					RequestedModification7.mmInstructionForCreditorAgent, CreditTransferTransaction32.mmInstructionForCreditorAgent, CreditTransferTransaction30.mmInstructionForCreditorAgent);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5029,6 +5430,15 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmInstructionForDebtorAgent
 	 * PaymentComplementaryInformation6.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmInstructionForDebtorAgent
+	 * PaymentInstruction24.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation7#mmInstructionForDebtorAgent
+	 * PaymentComplementaryInformation7.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInstructionForDebtorAgent
+	 * RequestedModification7.mmInstructionForDebtorAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5044,25 +5454,26 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent.  \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction."
+	 * "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent. \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmInstructionForDebtorAgent = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(CreditTransferTransactionInformation1.mmInstructionForDebtorAgent, CreditTransferTransactionInformation10.mmInstructionForDebtorAgent, CreditTransferTransaction1.mmInstructionForDebtorAgent,
-							PaymentInstruction6.mmInstructionForDebtorAgent, CreditTransferTransaction6.mmInstructionForDebtorAgent, PaymentInstruction9.mmInstructionForDebtorAgent, RequestedModification2.mmInstructionForDebtorAgent,
-							PaymentComplementaryInformation2.mmInstructionForDebtorAgent, PaymentComplementaryInformation3.mmInstructionForDebtorAgent, RequestedModification3.mmInstructionForDebtorAgent,
-							DirectDebitTransactionInformation15.mmInstructionForDebtorAgent, PaymentInstruction16.mmInstructionForDebtorAgent, PaymentComplementaryInformation4.mmInstructionForDebtorAgent,
-							RequestedModification4.mmInstructionForDebtorAgent, CreditTransferTransaction20.mmInstructionForDebtorAgent, RequestedModification5.mmInstructionForDebtorAgent,
-							PaymentComplementaryInformation5.mmInstructionForDebtorAgent, PaymentInstruction20.mmInstructionForDebtorAgent, CreditTransferTransaction26.mmInstructionForDebtorAgent,
-							RequestedModification6.mmInstructionForDebtorAgent, PaymentInstruction22.mmInstructionForDebtorAgent, PaymentComplementaryInformation6.mmInstructionForDebtorAgent);
+			derivation_lazy = () -> Arrays.asList(CreditTransferTransactionInformation1.mmInstructionForDebtorAgent, CreditTransferTransactionInformation10.mmInstructionForDebtorAgent,
+					CreditTransferTransaction1.mmInstructionForDebtorAgent, PaymentInstruction6.mmInstructionForDebtorAgent, CreditTransferTransaction6.mmInstructionForDebtorAgent, PaymentInstruction9.mmInstructionForDebtorAgent,
+					RequestedModification2.mmInstructionForDebtorAgent, PaymentComplementaryInformation2.mmInstructionForDebtorAgent, PaymentComplementaryInformation3.mmInstructionForDebtorAgent,
+					RequestedModification3.mmInstructionForDebtorAgent, DirectDebitTransactionInformation15.mmInstructionForDebtorAgent, PaymentInstruction16.mmInstructionForDebtorAgent,
+					PaymentComplementaryInformation4.mmInstructionForDebtorAgent, RequestedModification4.mmInstructionForDebtorAgent, CreditTransferTransaction20.mmInstructionForDebtorAgent,
+					RequestedModification5.mmInstructionForDebtorAgent, PaymentComplementaryInformation5.mmInstructionForDebtorAgent, PaymentInstruction20.mmInstructionForDebtorAgent,
+					CreditTransferTransaction26.mmInstructionForDebtorAgent, RequestedModification6.mmInstructionForDebtorAgent, PaymentInstruction22.mmInstructionForDebtorAgent,
+					PaymentComplementaryInformation6.mmInstructionForDebtorAgent, PaymentInstruction24.mmInstructionForDebtorAgent, PaymentComplementaryInformation7.mmInstructionForDebtorAgent,
+					RequestedModification7.mmInstructionForDebtorAgent);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InstructionForDebtorAgent";
-			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent.  \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction.";
+			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the debtor's agent. \nUsage: The instruction can relate to a level of service, can be an instruction to be executed by the debtor's agent, or can be information required by the debtor's agent to process the instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionCode.mmObject();
@@ -5257,6 +5668,15 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmPaymentIdentification
 	 * DirectDebitTransactionInformation22.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmPaymentIdentification
+	 * CreditTransferTransaction27.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmPaymentIdentification
+	 * CreditTransferTransaction31.mmPaymentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmPaymentIdentification
+	 * CreditTransferTransaction30.mmPaymentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5294,7 +5714,7 @@ public class Payment extends ObligationFulfilment {
 					CreditTransferTransaction20.mmPaymentIdentification, CreditTransferTransaction21.mmPaymentIdentification, ReconciliationList1.mmPaymentReference, CreditTransferTransaction23.mmPaymentIdentification,
 					CreditTransferTransaction25.mmPaymentIdentification, DirectDebitTransactionInformation20.mmPaymentIdentification, CreditTransferTransaction26.mmPaymentIdentification,
 					DirectDebitTransactionInformation19.mmPaymentIdentification, CreditTransferTransaction22.mmPaymentIdentification, DirectDebitTransactionInformation21.mmPaymentIdentification, OriginalPaymentInformation7.mmReferences,
-					DirectDebitTransactionInformation22.mmPaymentIdentification);
+					DirectDebitTransactionInformation22.mmPaymentIdentification, CreditTransferTransaction27.mmPaymentIdentification, CreditTransferTransaction31.mmPaymentIdentification, CreditTransferTransaction30.mmPaymentIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5400,6 +5820,21 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmResolvedCase
 	 * PaymentTransaction79.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction90#mmResolvedCase
+	 * PaymentTransaction90.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction85#mmResolvedCase
+	 * PaymentTransaction85.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction89#mmCase
+	 * PaymentTransaction89.mmCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmResolvedCase
+	 * PaymentTransaction84.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction95#mmCase
+	 * PaymentTransaction95.mmCase}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5423,7 +5858,8 @@ public class Payment extends ObligationFulfilment {
 					PaymentTransaction38.mmCase, PaymentTransaction48.mmCase, PaymentTransactionInformation32.mmResolvedCase, OriginalPaymentInformation3.mmResolvedCase, PaymentTransactionInformation33.mmResolvedCase,
 					PaymentTransaction39.mmResolvedCase, PaymentTransaction40.mmResolvedCase, PaymentTransaction58.mmCase, PaymentTransaction54.mmResolvedCase, PaymentTransaction53.mmResolvedCase, PaymentTransaction55.mmCase,
 					PaymentTransaction61.mmCase, PaymentTransaction66.mmResolvedCase, PaymentTransaction67.mmResolvedCase, PaymentTransaction62.mmCase, PaymentTransaction78.mmResolvedCase, PaymentTransaction74.mmCase,
-					PaymentTransaction75.mmCase, PaymentTransaction79.mmResolvedCase);
+					PaymentTransaction75.mmCase, PaymentTransaction79.mmResolvedCase, PaymentTransaction90.mmResolvedCase, PaymentTransaction85.mmResolvedCase, PaymentTransaction89.mmCase, PaymentTransaction84.mmResolvedCase,
+					PaymentTransaction95.mmCase);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5503,6 +5939,12 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction25#mmSettlementTimeRequest
 	 * CreditTransferTransaction25.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmSettlementTimeRequest
+	 * CreditTransferTransaction31.mmSettlementTimeRequest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmSettlementTimeRequest
+	 * CreditTransferTransaction30.mmSettlementTimeRequest}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5527,7 +5969,8 @@ public class Payment extends ObligationFulfilment {
 					CreditTransferTransaction7.mmSettlementTimeRequest, CreditTransferTransactionInformation3.mmSettlementTimeRequest, CreditTransferTransactionInformation13.mmSettlementTimeRequest,
 					CreditTransferTransaction4.mmSettlementTimeRequest, CreditTransferTransaction8.mmSettlementTimeRequest, DirectDebitTransactionInformation15.mmSettlementTimeRequest,
 					CreditTransferTransactionInformation7.mmSettlementTimeRequest, CreditTransferTransactionInformation9.mmSettlementTimeRequest, CreditTransferTransaction17.mmSettlementTimeRequest,
-					CreditTransferTransaction19.mmSettlementTimeRequest, CreditTransferTransaction23.mmSettlementTimeRequest, CreditTransferTransaction25.mmSettlementTimeRequest);
+					CreditTransferTransaction19.mmSettlementTimeRequest, CreditTransferTransaction23.mmSettlementTimeRequest, CreditTransferTransaction25.mmSettlementTimeRequest, CreditTransferTransaction31.mmSettlementTimeRequest,
+					CreditTransferTransaction30.mmSettlementTimeRequest);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5746,6 +6189,9 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference26#mmAmount
 	 * OriginalTransactionReference26.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrency2#mmAmount
+	 * AmountAndCurrency2.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5777,7 +6223,7 @@ public class Payment extends ObligationFulfilment {
 					ATMTransaction17.mmBundlePresentedAmount, ATMTransaction17.mmTotalPresentedAmount, DetailedAmount18.mmAmount, ATMTransaction13.mmTotalRequestedAmount, ATMTransaction13.mmDetailedRequestedAmount,
 					ATMTransaction16.mmTotalAuthorisedAmount, ATMTransaction16.mmDetailedRequestedAmount, ATMTransaction19.mmTotalAuthorisedAmount, ATMTransaction19.mmDetailedRequestedAmount, DetailedAmount16.mmAmountToDeposit,
 					ATMTransaction15.mmTotalAmount, ATMTransaction15.mmDetailedRequestedAmount, ATMTransaction24.mmDetailedRequestedAmount, DetailedAmount17.mmAmountToTransfer, ATMTransaction23.mmDetailedRequestedAmount,
-					ATMTransaction29.mmTotalRequestedAmount, ATMTransaction29.mmDetailedRequestedAmount, OriginalTransactionReference26.mmAmount);
+					ATMTransaction29.mmTotalRequestedAmount, ATMTransaction29.mmDetailedRequestedAmount, OriginalTransactionReference26.mmAmount, AmountAndCurrency2.mmAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5928,7 +6374,7 @@ public class Payment extends ObligationFulfilment {
 	 * name} = "RelatedDebitAuthorisation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Payment which is the result of the debit authorisation"</li>
+	 * definition} = "Payment which is the result of the debit authorisation."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedDebitAuthorisation = new MMBusinessAssociationEnd() {
@@ -5937,7 +6383,7 @@ public class Payment extends ObligationFulfilment {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedDebitAuthorisation";
-			definition = "Payment which is the result of the debit authorisation";
+			definition = "Payment which is the result of the debit authorisation.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DebitAuthorisation.mmAuthorisedReturn;
@@ -6103,6 +6549,14 @@ public class Payment extends ObligationFulfilment {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.SecuritiesSettlement
 	 * SecuritiesSettlement}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction59#mmSecuritiesTransactionReferences
+	 * Transaction59.mmSecuritiesTransactionReferences}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Payment
@@ -6121,6 +6575,7 @@ public class Payment extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSecuritiesSettlement = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(Transaction59.mmSecuritiesTransactionReferences);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -6327,6 +6782,18 @@ public class Payment extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ATMTransaction29#mmAccountData
 	 * ATMTransaction29.mmAccountData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmAccountFrom
+	 * CardPaymentTransaction81.mmAccountFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmAccountTo
+	 * CardPaymentTransaction81.mmAccountTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction80#mmAccountFrom
+	 * CardPaymentTransaction80.mmAccountFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction80#mmAccountTo
+	 * CardPaymentTransaction80.mmAccountTo}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -6349,7 +6816,7 @@ public class Payment extends ObligationFulfilment {
 			derivation_lazy = () -> Arrays.asList(ATMTransaction1.mmAccountData, ATMTransaction2.mmAccountData, ATMTransaction7.mmAccountInformation, ATMTransaction3.mmAccountData, ATMTransaction6.mmAccountData,
 					CardTransactionDetail1.mmAccountFrom, CardTransactionDetail1.mmAccountTo, CardTransactionDetail3.mmAccountFrom, CardTransactionDetail3.mmAccountTo, ATMTransaction14.mmAccountData, ATMTransaction17.mmAccountData,
 					ATMTransaction13.mmAccountData, ATMTransaction16.mmAccountData, ATMTransaction19.mmAccountData, ATMTransaction15.mmAccountData, ATMTransaction21.mmAccountInformation, ATMTransaction24.mmAccountFrom,
-					ATMTransaction23.mmAccountFrom, ATMTransaction29.mmAccountData);
+					ATMTransaction23.mmAccountFrom, ATMTransaction29.mmAccountData, CardPaymentTransaction81.mmAccountFrom, CardPaymentTransaction81.mmAccountTo, CardPaymentTransaction80.mmAccountFrom, CardPaymentTransaction80.mmAccountTo);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Payment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -6551,7 +7018,12 @@ public class Payment extends ObligationFulfilment {
 						OriginalPaymentInstruction22.mmOriginalGroupInformation, OriginalPaymentInstruction22.mmTransactionInformationAndStatus, PaymentTransaction78.mmOriginalTransactionReference,
 						OriginalPaymentInstruction20.mmOriginalGroupInformation, OriginalPaymentInstruction20.mmTransactionInformation, PaymentTransaction74.mmOriginalTransactionReference, OriginalPaymentInformation7.mmAmount,
 						PaymentTransaction83.mmOriginalTransactionReference, PaymentTransaction77.mmOriginalTransactionReference, PaymentTransaction75.mmOriginalTransactionReference, PaymentTransaction82.mmOriginalTransactionReference,
-						PaymentTransaction79.mmOriginalTransactionReference);
+						PaymentTransaction79.mmOriginalTransactionReference, PaymentTransaction87.mmOriginalTransactionReference, PaymentTransaction88.mmOriginalTransactionReference, UnderlyingTransaction4Choice.mmInterbank,
+						CorrectiveTransaction3Choice.mmInterbank, PaymentTransaction90.mmOriginalTransactionReference, PaymentTransaction91.mmOriginalTransactionReference, PaymentTransaction85.mmOriginalTransactionReference,
+						PaymentTransaction89.mmOriginalTransactionReference, OriginalPaymentInstruction26.mmOriginalGroupInformation, OriginalPaymentInstruction26.mmTransactionInformationAndStatus,
+						PaymentTransaction84.mmOriginalTransactionReference, UnderlyingPaymentInstruction4.mmOriginalTransactionReference, UnderlyingPaymentTransaction3.mmOriginalTransactionReference,
+						OriginalPaymentInstruction28.mmTransactionInformation, OriginalPaymentInstruction27.mmTransactionInformationAndStatus, OriginalPaymentInstruction29.mmOriginalGroupInformation,
+						OriginalPaymentInstruction29.mmTransactionInformation, PaymentTransaction92.mmOriginalTransactionReference, PaymentTransaction95.mmOriginalTransactionReference, PaymentTransaction93.mmOriginalTransactionReference);
 				subType_lazy = () -> Arrays.asList(IndividualPayment.mmObject(), BulkPayment.mmObject());
 				superType_lazy = () -> ObligationFulfilment.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Payment.mmPaymentObligation, com.tools20022.repository.entity.Payment.mmCurrencyOfTransfer, com.tools20022.repository.entity.Payment.mmCreditMethod,
@@ -6624,7 +7096,11 @@ public class Payment extends ObligationFulfilment {
 						OriginalPaymentInstruction24.mmObject(), OriginalGroupInformation28.mmObject(), PaymentTransaction76.mmObject(), CorrectiveTransaction2Choice.mmObject(), MandateClassification1Choice.mmObject(),
 						OriginalPaymentInstruction22.mmObject(), PaymentTransaction78.mmObject(), OriginalTransactionReference24.mmObject(), OriginalPaymentInstruction20.mmObject(), PaymentTransaction74.mmObject(),
 						OriginalPaymentInformation7.mmObject(), PaymentTransaction83.mmObject(), OriginalTransactionReference26.mmObject(), PaymentTransaction77.mmObject(), PaymentTransaction75.mmObject(), PaymentTransaction82.mmObject(),
-						PaymentTransaction79.mmObject());
+						PaymentTransaction79.mmObject(), PaymentTransaction87.mmObject(), PaymentTransaction88.mmObject(), UnderlyingTransaction4Choice.mmObject(), CorrectiveTransaction3Choice.mmObject(), PaymentTransaction90.mmObject(),
+						PaymentTransaction91.mmObject(), PaymentTransaction85.mmObject(), OriginalTransactionReference27.mmObject(), PaymentTransaction89.mmObject(), OriginalPaymentInstruction26.mmObject(), PaymentTransaction84.mmObject(),
+						Transaction59.mmObject(), Compensation1.mmObject(), OriginalPaymentInstruction28.mmObject(), PaymentTransaction94.mmObject(), OriginalPaymentInstruction27.mmObject(), OriginalPaymentInstruction29.mmObject(),
+						PaymentTransaction92.mmObject(), PaymentTransaction95.mmObject(), PaymentTransaction93.mmObject(), GroupHeader74.mmObject(), GroupHeader73.mmObject(), GroupHeader75.mmObject(), GroupHeader76.mmObject(),
+						OriginalGroupInformation29.mmObject());
 			}
 
 			@Override

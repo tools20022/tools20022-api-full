@@ -78,6 +78,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the criteria to extract the reservation information and the expected reservation report. A name may be given to the new query."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReservationCriteria3
+ * ReservationCriteria3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -112,7 +119,15 @@ public class ReservationCriteria2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name of the query defined by the search criteria and return criteria. "</li>
+	 * "Name of the query defined by the search criteria and return criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationCriteria3#mmNewQueryName
+	 * ReservationCriteria3.mmNewQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
@@ -122,7 +137,8 @@ public class ReservationCriteria2 {
 			xmlTag = "NewQryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
-			definition = "Name of the query defined by the search criteria and return criteria. ";
+			definition = "Name of the query defined by the search criteria and return criteria.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationCriteria3.mmNewQueryName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -160,6 +176,14 @@ public class ReservationCriteria2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria to extract the reservation information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationCriteria3#mmSearchCriteria
+	 * ReservationCriteria3.mmSearchCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
@@ -171,6 +195,7 @@ public class ReservationCriteria2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to extract the reservation information.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationCriteria3.mmSearchCriteria);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ReservationSearchCriteria2.mmObject();
@@ -203,6 +228,14 @@ public class ReservationCriteria2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the expected reservation report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationCriteria3#mmReturnCriteria
+	 * ReservationCriteria3.mmReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReturnCriteria = new MMMessageAssociationEnd() {
@@ -213,6 +246,7 @@ public class ReservationCriteria2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnCriteria";
 			definition = "Defines the expected reservation report.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationCriteria3.mmReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -231,6 +265,7 @@ public class ReservationCriteria2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReservationCriteria2";
 				definition = "Defines the criteria to extract the reservation information and the expected reservation report. A name may be given to the new query.";
+				nextVersions_lazy = () -> Arrays.asList(ReservationCriteria3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

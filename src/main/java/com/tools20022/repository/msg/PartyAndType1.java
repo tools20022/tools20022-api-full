@@ -98,7 +98,7 @@ public class PartyAndType1 {
 	 * name} = "Type"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type of additional party. "</li>
+	 * definition} = "Type of additional party."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -109,7 +109,7 @@ public class PartyAndType1 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Type of additional party. ";
+			definition = "Type of additional party.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

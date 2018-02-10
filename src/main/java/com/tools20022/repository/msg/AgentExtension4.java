@@ -88,7 +88,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AgentExtension4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides additional information regarding new agent block component. "</li>
+ * "Provides additional information regarding new agent block component."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -260,7 +260,7 @@ public class AgentExtension4 {
 	 * name} = "AgentNameAndAddress"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Name and address of the agent.  "</li>
+	 * definition} = "Name and address of the agent."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAgentNameAndAddress = new MMMessageAttribute() {
@@ -271,7 +271,7 @@ public class AgentExtension4 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Agent Address"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentNameAndAddress";
-			definition = "Name and address of the agent.  ";
+			definition = "Name and address of the agent.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.NameAndAddress5.mmObject();
@@ -397,7 +397,7 @@ public class AgentExtension4 {
 	 * name} = "ContactInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Agent designated contact Information details. "</li>
+	 * definition} = "Agent designated contact Information details."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
@@ -408,7 +408,7 @@ public class AgentExtension4 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Contact Information Address"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
-			definition = "Agent designated contact Information details. ";
+			definition = "Agent designated contact Information details.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -426,7 +426,7 @@ public class AgentExtension4 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherAgentRule.forAgentExtension4);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AgentExtension4";
-				definition = "Provides additional information regarding new agent block component. ";
+				definition = "Provides additional information regarding new agent block component.";
 			}
 		});
 		return mmObject_lazy.get();

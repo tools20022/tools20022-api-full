@@ -61,6 +61,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Identifies the underlying transaction(s) and/or batched entries."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryDetails8 EntryDetails8}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.EntryDetails6
  * EntryDetails6}</li>
@@ -96,6 +102,13 @@ public class EntryDetails7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides details on batched transactions."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryDetails8#mmBatch
+	 * EntryDetails8.mmBatch}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -111,6 +124,7 @@ public class EntryDetails7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Batch";
 			definition = "Provides details on batched transactions.";
+			nextVersions_lazy = () -> Arrays.asList(EntryDetails8.mmBatch);
 			previousVersion_lazy = () -> EntryDetails6.mmBatch;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -147,6 +161,14 @@ public class EntryDetails7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides information on the underlying transaction(s)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryDetails8#mmTransactionDetails
+	 * EntryDetails8.mmTransactionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -163,6 +185,7 @@ public class EntryDetails7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Provides information on the underlying transaction(s).";
+			nextVersions_lazy = () -> Arrays.asList(EntryDetails8.mmTransactionDetails);
 			previousVersion_lazy = () -> EntryDetails6.mmTransactionDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -179,6 +202,7 @@ public class EntryDetails7 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryDetails7";
 				definition = "Identifies the underlying transaction(s) and/or batched entries.";
+				nextVersions_lazy = () -> Arrays.asList(EntryDetails8.mmObject());
 				previousVersion_lazy = () -> EntryDetails6.mmObject();
 			}
 		});

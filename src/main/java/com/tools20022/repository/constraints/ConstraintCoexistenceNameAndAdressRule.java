@@ -45,7 +45,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -54,7 +54,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification10Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification10Choice.mmObject();
 		}
 	};
@@ -75,7 +75,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -84,7 +84,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification14Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification14Choice.mmObject();
 		}
 	};
@@ -105,7 +105,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -114,7 +114,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification45Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification45Choice.mmObject();
 		}
 	};
@@ -135,7 +135,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -144,7 +144,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification37Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification37Choice.mmObject();
 		}
 	};
@@ -165,7 +165,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -174,7 +174,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification43Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification43Choice.mmObject();
 		}
 	};
@@ -195,7 +195,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -204,7 +204,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification30Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification30Choice.mmObject();
 		}
 	};
@@ -225,7 +225,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -234,7 +234,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification38Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification38Choice.mmObject();
 		}
 	};
@@ -255,7 +255,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -264,7 +264,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification62Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification62Choice.mmObject();
 		}
 	};
@@ -285,7 +285,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -294,7 +294,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification60Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification60Choice.mmObject();
 		}
 	};
@@ -315,7 +315,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -324,7 +324,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification65Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification65Choice.mmObject();
 		}
 	};
@@ -345,7 +345,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -354,7 +354,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification61Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification61Choice.mmObject();
 		}
 	};
@@ -375,7 +375,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
 	 * </ul>
 	 */
@@ -384,7 +384,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification16Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification16Choice.mmObject();
 		}
 	};
@@ -405,7 +405,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -414,7 +414,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification46Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification46Choice.mmObject();
 		}
 	};
@@ -435,7 +435,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -444,7 +444,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification56Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification56Choice.mmObject();
 		}
 	};
@@ -465,7 +465,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -474,7 +474,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification48Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification48Choice.mmObject();
 		}
 	};
@@ -495,7 +495,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -504,7 +504,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification52Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification52Choice.mmObject();
 		}
 	};
@@ -525,7 +525,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
 	 * </ul>
 	 */
@@ -534,7 +534,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification31Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification31Choice.mmObject();
 		}
 	};
@@ -555,7 +555,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -564,7 +564,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification40Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification40Choice.mmObject();
 		}
 	};
@@ -585,7 +585,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -594,7 +594,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification42Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification42Choice.mmObject();
 		}
 	};
@@ -615,7 +615,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -624,7 +624,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification54Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification54Choice.mmObject();
 		}
 	};
@@ -645,7 +645,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -654,7 +654,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification55Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification55Choice.mmObject();
 		}
 	};
@@ -675,7 +675,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -684,7 +684,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification47Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification47Choice.mmObject();
 		}
 	};
@@ -705,7 +705,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -714,7 +714,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification57Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification57Choice.mmObject();
 		}
 	};
@@ -735,7 +735,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -744,7 +744,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification49Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification49Choice.mmObject();
 		}
 	};
@@ -765,7 +765,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -774,7 +774,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification59Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification59Choice.mmObject();
 		}
 	};
@@ -795,7 +795,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -804,7 +804,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification63Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification63Choice.mmObject();
 		}
 	};
@@ -825,7 +825,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule."
 	 * </li>
 	 * </ul>
 	 */
@@ -834,7 +834,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification15Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140. In this message subset, a restricted data type was implemented to comply with this coexistence rule.";
 			owner_lazy = () -> PartyIdentification15Choice.mmObject();
 		}
 	};
@@ -855,7 +855,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -864,7 +864,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification66Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification66Choice.mmObject();
 		}
 	};
@@ -885,7 +885,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -894,7 +894,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification67Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification67Choice.mmObject();
 		}
 	};
@@ -915,7 +915,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -924,7 +924,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification89Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification89Choice.mmObject();
 		}
 	};
@@ -945,7 +945,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -954,7 +954,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification87Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification87Choice.mmObject();
 		}
 	};
@@ -975,7 +975,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140."
+	 * "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140."
 	 * </li>
 	 * </ul>
 	 */
@@ -984,7 +984,7 @@ public class ConstraintCoexistenceNameAndAdressRule {
 			validator = ConstraintCoexistenceNameAndAdressRule::checkPartyIdentification88Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoexistenceNameAndAdressRule";
-			definition = "During ISO 15022 – 20022 coexistence,  the total of characters used in NameAndAddress must not be greater than 140.";
+			definition = "During ISO 15022 – 20022 coexistence, the total of characters used in NameAndAddress must not be greater than 140.";
 			owner_lazy = () -> PartyIdentification88Choice.mmObject();
 		}
 	};

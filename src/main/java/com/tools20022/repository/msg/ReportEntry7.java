@@ -984,7 +984,7 @@ public class ReportEntry7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides information on the charges, pre-advised or included in the entry amount .\r\n\r\nUsage: This component is used on entry level in case of batch or aggregate bookings.\r\n"
+	 * "Provides information on the charges, pre-advised or included in the entry amount.\r\n\r\nUsage: This component is used on entry level in case of batch or aggregate bookings.\r\n"
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1008,7 +1008,7 @@ public class ReportEntry7 {
 			xmlTag = "Chrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
-			definition = "Provides information on the charges, pre-advised or included in the entry amount .\r\n\r\nUsage: This component is used on entry level in case of batch or aggregate bookings.\r\n";
+			definition = "Provides information on the charges, pre-advised or included in the entry amount.\r\n\r\nUsage: This component is used on entry level in case of batch or aggregate bookings.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(ReportEntry8.mmCharges);
 			previousVersion_lazy = () -> ReportEntry4.mmCharges;
 			maxOccurs = 1;
@@ -1167,7 +1167,7 @@ public class ReportEntry7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides details of the card transaction included in the entry amount, when globalised by the account servicer ."
+	 * "Provides details of the card transaction included in the entry amount, when globalised by the account servicer."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1192,7 +1192,7 @@ public class ReportEntry7 {
 			xmlTag = "CardTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardTransaction";
-			definition = "Provides details of the card transaction included in the entry amount, when globalised by the account servicer .";
+			definition = "Provides details of the card transaction included in the entry amount, when globalised by the account servicer.";
 			nextVersions_lazy = () -> Arrays.asList(ReportEntry8.mmCardTransaction);
 			previousVersion_lazy = () -> ReportEntry4.mmCardTransaction;
 			maxOccurs = 1;

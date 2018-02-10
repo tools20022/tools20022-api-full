@@ -26,13 +26,14 @@ import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AgreementConditions1;
 import com.tools20022.repository.msg.GeneralInformation5;
+import com.tools20022.repository.msg.MasterAgreement2;
 import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Agreement which defines the framework of a contract between two trading
- * parties in different domains such as collateral, derivatives, trade..
+ * parties in different domains such as collateral, derivatives, trade.
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -96,6 +97,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * AgreementFramework1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AgreementConditions1
  * AgreementConditions1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MasterAgreement2
+ * MasterAgreement2}</li>
  * </ul>
  * </li>
  * <li>
@@ -111,7 +114,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "MasterAgreement"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Agreement which defines the framework of a contract between two trading parties in different domains such as collateral, derivatives, trade.."
+ * "Agreement which defines the framework of a contract between two trading parties in different domains such as collateral, derivatives, trade."
  * </li>
  * </ul>
  */
@@ -191,6 +194,8 @@ public class MasterAgreement extends Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AgreementConditions1#mmAgreementCode
 	 * AgreementConditions1.mmAgreementCode}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.MasterAgreement2#mmType
+	 * MasterAgreement2.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -213,7 +218,7 @@ public class MasterAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmMasterAgreementType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmAgreementFramework, AgreementFramework1Choice.mmProprietaryIdentification, AgreementConditions1.mmAgreementCode);
+			derivation_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmAgreementFramework, AgreementFramework1Choice.mmProprietaryIdentification, AgreementConditions1.mmAgreementCode, MasterAgreement2.mmType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MasterAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -379,14 +384,14 @@ public class MasterAgreement extends Agreement {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MasterAgreement";
-				definition = "Agreement which defines the framework of a contract between two trading parties in different domains such as collateral, derivatives, trade..";
+				definition = "Agreement which defines the framework of a contract between two trading parties in different domains such as collateral, derivatives, trade.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Trade.mmGoverningDocument, com.tools20022.repository.entity.Contract.mmMasterAgreement,
 						com.tools20022.repository.entity.CollateralAgreement.mmAssociatedMasterAgreement);
 				derivationElement_lazy = () -> Arrays.asList(BPOApplicableRules1Choice.mmOtherRulesAndVersion, GeneralInformation5.mmAgreementDetails);
 				superType_lazy = () -> Agreement.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MasterAgreement.mmCollateralAgreement, com.tools20022.repository.entity.MasterAgreement.mmMasterAgreementType,
 						com.tools20022.repository.entity.MasterAgreement.mmGovernedTrades, com.tools20022.repository.entity.MasterAgreement.mmGovernedContract, com.tools20022.repository.entity.MasterAgreement.mmGoverningLaw);
-				derivationComponent_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmObject(), AgreementConditions1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(AgreementFramework1Choice.mmObject(), AgreementConditions1.mmObject(), MasterAgreement2.mmObject());
 			}
 
 			@Override

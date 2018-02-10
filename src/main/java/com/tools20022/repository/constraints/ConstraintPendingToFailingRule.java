@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.msg.StatusAndReason15;
+import com.tools20022.repository.msg.StatusAndReason31;
 import java.util.Arrays;
 
 /**
@@ -445,6 +446,14 @@ public class ConstraintPendingToFailingRule {
 	 * definition} =
 	 * "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPendingToFailingRule#forStatusAndReason31
+	 * ConstraintPendingToFailingRule.forStatusAndReason31}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<StatusAndReason15> forStatusAndReason15 = new MMConstraint<StatusAndReason15>() {
@@ -453,6 +462,7 @@ public class ConstraintPendingToFailingRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingToFailingRule";
 			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatusAndReason31);
 			owner_lazy = () -> StatusAndReason15.mmObject();
 		}
 	};
@@ -795,6 +805,42 @@ public class ConstraintPendingToFailingRule {
 			owner_lazy = () -> SettlementStatus22Choice.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason31
+	 * StatusAndReason31}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PendingToFailingRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPendingToFailingRule#forStatusAndReason15
+	 * ConstraintPendingToFailingRule.forStatusAndReason15}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<StatusAndReason31> forStatusAndReason31 = new MMConstraint<StatusAndReason31>() {
+		{
+			validator = ConstraintPendingToFailingRule::checkStatusAndReason31;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PendingToFailingRule";
+			definition = "A pending transaction (PEND) becomes a failing transaction (PENF) on the settlement date instructed in the message, during the end of day reporting.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPendingToFailingRule.forStatusAndReason15;
+			owner_lazy = () -> StatusAndReason31.mmObject();
+		}
+	};
 
 	/**
 	 * A pending transaction (PEND) becomes a failing transaction (PENF) on the
@@ -1000,6 +1046,15 @@ public class ConstraintPendingToFailingRule {
 	 * reporting.
 	 */
 	public static void checkSettlementStatus22Choice(SettlementStatus22Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * A pending transaction (PEND) becomes a failing transaction (PENF) on the
+	 * settlement date instructed in the message, during the end of day
+	 * reporting.
+	 */
+	public static void checkStatusAndReason31(StatusAndReason31 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

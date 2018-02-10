@@ -21,7 +21,9 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CardDirectDebit1;
 import com.tools20022.repository.msg.Debtor2;
+import com.tools20022.repository.msg.Debtor3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -40,10 +42,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
  * PaymentPartyRole}</li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardDirectDebit1#mmDebtorIdentification
+ * CardDirectDebit1.mmDebtorIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.Debtor2 Debtor2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Debtor3 Debtor3}</li>
  * </ul>
  * </li>
  * <li>
@@ -74,8 +86,9 @@ public class DebtorRole extends PaymentPartyRole {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebtorRole";
 				definition = "Party that owes an amount of money to the (ultimate) creditor. For example, as a result of receipt of goods, assets, services, gifts, or charity payments.";
+				derivationElement_lazy = () -> Arrays.asList(CardDirectDebit1.mmDebtorIdentification);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
-				derivationComponent_lazy = () -> Arrays.asList(Debtor2.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(Debtor2.mmObject(), Debtor3.mmObject());
 			}
 
 			@Override

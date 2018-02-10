@@ -235,7 +235,7 @@ public class SecuritiesOption56 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum multiple quantity of financial  instrument that may be instructed."
+	 * "Minimum multiple quantity of financial instrument that may be instructed."
 	 * </li>
 	 * </ul>
 	 */
@@ -248,7 +248,7 @@ public class SecuritiesOption56 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::MILT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMultipleQuantityToInstruct";
-			definition = "Minimum multiple quantity of financial  instrument that may be instructed.";
+			definition = "Minimum multiple quantity of financial instrument that may be instructed.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

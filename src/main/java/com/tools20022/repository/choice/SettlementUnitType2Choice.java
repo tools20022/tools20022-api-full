@@ -62,6 +62,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementUnitType2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for settlement unit type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.SettlementUnitType3Choice
+ * SettlementUnitType3Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class SettlementUnitType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Settlement unit type expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementUnitType3Choice#mmCode
+	 * SettlementUnitType3Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class SettlementUnitType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Settlement unit type expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementUnitType3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SettlementUnitType1Code.mmObject();
@@ -139,6 +155,14 @@ public class SettlementUnitType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Settlement unit type expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementUnitType3Choice#mmProprietary
+	 * SettlementUnitType3Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -149,6 +173,7 @@ public class SettlementUnitType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Settlement unit type expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementUnitType3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,6 +189,7 @@ public class SettlementUnitType2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementUnitType2Choice";
 				definition = "Choice of format for settlement unit type.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementUnitType3Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

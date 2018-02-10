@@ -367,6 +367,10 @@ public class RoundingParameters {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RedemptionExecution15#mmRounding
 	 * RedemptionExecution15.mmRounding}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmRounding
+	 * Transfer35.mmRounding}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer34#mmRounding
+	 * Transfer34.mmRounding}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -396,7 +400,7 @@ public class RoundingParameters {
 					SubscriptionExecution6.mmRounding, SubscriptionOrder8.mmRounding, InvestmentPlan9.mmRoundingDirection, InvestmentPlan8.mmRoundingDirection, Transfer27.mmRounding, Transfer28.mmRounding,
 					InvestmentPlan10.mmRoundingDirection, InvestmentPlan11.mmRoundingDirection, InvestmentPlan12.mmRoundingDirection, Transfer31.mmRounding, Transfer30.mmRounding, InvestmentPlan13.mmRoundingDirection,
 					InvestmentPlan14.mmRoundingDirection, RedemptionOrder14.mmRounding, InvestmentPlan15.mmRoundingDirection, SubscriptionExecution13.mmRounding, SubscriptionExecution12.mmRounding, SubscriptionOrder15.mmRounding,
-					RedemptionOrder15.mmRounding, RedemptionExecution16.mmRounding, SubscriptionOrder14.mmRounding, RedemptionExecution15.mmRounding);
+					RedemptionOrder15.mmRounding, RedemptionExecution16.mmRounding, SubscriptionOrder14.mmRounding, RedemptionExecution15.mmRounding, Transfer35.mmRounding, Transfer34.mmRounding);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.RoundingParameters.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

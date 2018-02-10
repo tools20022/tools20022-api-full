@@ -320,7 +320,7 @@ public class FinancialInvoiceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unit of information in this invoice showning the related  provision of products and/or services and monetary summations reported as a discrete line item.\r\n\r\n\r\n"
+	 * "Unit of information in this invoice showning the related provision of products and/or services and monetary summations reported as a discrete line item.\r\n\r\n\r\n"
 	 * </li>
 	 * </ul>
 	 */
@@ -329,7 +329,7 @@ public class FinancialInvoiceV01 {
 			xmlTag = "LineItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LineItem";
-			definition = "Unit of information in this invoice showning the related  provision of products and/or services and monetary summations reported as a discrete line item.\r\n\r\n\r\n";
+			definition = "Unit of information in this invoice showning the related provision of products and/or services and monetary summations reported as a discrete line item.\r\n\r\n\r\n";
 			minOccurs = 0;
 			complexType_lazy = () -> LineItem10.mmObject();
 		}

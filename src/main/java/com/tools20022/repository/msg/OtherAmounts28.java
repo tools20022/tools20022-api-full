@@ -145,6 +145,12 @@ import javax.xml.bind.annotation.XmlType;
  * "OtherAmounts28"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identifies other amounts pertaining to the transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts39 OtherAmounts39}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.OtherAmounts14
  * OtherAmounts14}</li>
@@ -188,6 +194,14 @@ public class OtherAmounts28 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Interest amount that has accrued in between coupon payment periods."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmAccruedInterestAmount
+	 * OtherAmounts39.mmAccruedInterestAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -204,6 +218,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmAccruedInterestAmount);
 			previousVersion_lazy = () -> OtherAmounts14.mmAccruedInterestAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -243,6 +258,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmChargesFees
+	 * OtherAmounts39.mmChargesFees}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -259,6 +282,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesFees";
 			definition = "Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmChargesFees);
 			previousVersion_lazy = () -> OtherAmounts14.mmChargesFees;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -297,6 +321,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Amount of country, national or federal tax charged by the jurisdiction in which the account servicer is located."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmCountryNationalFederalTax
+	 * OtherAmounts39.mmCountryNationalFederalTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -313,6 +345,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryNationalFederalTax";
 			definition = "Amount of country, national or federal tax charged by the jurisdiction in which the account servicer is located.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmCountryNationalFederalTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmCountryNationalFederalTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -351,6 +384,14 @@ public class OtherAmounts28 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Principal amount of a trade (price multiplied by quantity)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmTradeAmount
+	 * OtherAmounts39.mmTradeAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -367,6 +408,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmount";
 			definition = "Principal amount of a trade (price multiplied by quantity).";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmTradeAmount);
 			previousVersion_lazy = () -> OtherAmounts14.mmTradeAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -405,6 +447,14 @@ public class OtherAmounts28 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money paid to an executing broker as a commission."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmExecutingBrokerAmount
+	 * OtherAmounts39.mmExecutingBrokerAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -421,6 +471,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBrokerAmount";
 			definition = "Amount of money paid to an executing broker as a commission.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmExecutingBrokerAmount);
 			previousVersion_lazy = () -> OtherAmounts14.mmExecutingBrokerAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -460,6 +511,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Amount of money defined as a discount on a new issue or on a tranche of an existing issue."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmIssueDiscountAllowance
+	 * OtherAmounts39.mmIssueDiscountAllowance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -476,6 +535,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDiscountAllowance";
 			definition = "Amount of money defined as a discount on a new issue or on a tranche of an existing issue.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmIssueDiscountAllowance);
 			previousVersion_lazy = () -> OtherAmounts14.mmIssueDiscountAllowance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -512,6 +572,14 @@ public class OtherAmounts28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of payment levy tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmPaymentLevyTax
+	 * OtherAmounts39.mmPaymentLevyTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -528,6 +596,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentLevyTax";
 			definition = "Amount of payment levy tax.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmPaymentLevyTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmPaymentLevyTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -566,6 +635,13 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Tax charged by the jurisdiction in which the financial instrument settles."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts39#mmLocalTax
+	 * OtherAmounts39.mmLocalTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -582,6 +658,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTax";
 			definition = "Tax charged by the jurisdiction in which the financial instrument settles.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmLocalTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmLocalTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -618,6 +695,14 @@ public class OtherAmounts28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Local tax country specific."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmLocalTaxCountrySpecific
+	 * OtherAmounts39.mmLocalTaxCountrySpecific}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -634,6 +719,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalTaxCountrySpecific";
 			definition = "Local tax country specific.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmLocalTaxCountrySpecific);
 			previousVersion_lazy = () -> OtherAmounts14.mmLocalTaxCountrySpecific;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -671,6 +757,14 @@ public class OtherAmounts28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of commission paid to a local broker."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmLocalBrokerCommission
+	 * OtherAmounts39.mmLocalBrokerCommission}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -687,6 +781,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalBrokerCommission";
 			definition = "Amount of commission paid to a local broker.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmLocalBrokerCommission);
 			previousVersion_lazy = () -> OtherAmounts14.mmLocalBrokerCommission;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -725,6 +820,13 @@ public class OtherAmounts28 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money deposited by the trading party in a margin account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts39#mmMargin
+	 * OtherAmounts39.mmMargin}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -741,6 +843,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Margin";
 			definition = "Amount of money deposited by the trading party in a margin account.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmMargin);
 			previousVersion_lazy = () -> OtherAmounts14.mmMargin;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -774,6 +877,13 @@ public class OtherAmounts28 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "An amount that is not indicated by a known business denomination."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts39#mmOther
+	 * OtherAmounts39.mmOther}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -789,6 +899,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "An amount that is not indicated by a known business denomination.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmOther);
 			previousVersion_lazy = () -> OtherAmounts14.mmOther;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -828,6 +939,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Amount of money charged by a regulatory authority, for example, Securities and Exchange fees."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmRegulatoryAmount
+	 * OtherAmounts39.mmRegulatoryAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -844,6 +963,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryAmount";
 			definition = "Amount of money charged by a regulatory authority, for example, Securities and Exchange fees.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmRegulatoryAmount);
 			previousVersion_lazy = () -> OtherAmounts14.mmRegulatoryAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -883,6 +1003,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "All costs related to the physical delivery of documents such as stamps, postage, carrier fees, insurances or messenger services."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmShippingAmount
+	 * OtherAmounts39.mmShippingAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -899,6 +1027,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingAmount";
 			definition = "All costs related to the physical delivery of documents such as stamps, postage, carrier fees, insurances or messenger services.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmShippingAmount);
 			previousVersion_lazy = () -> OtherAmounts14.mmShippingAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -938,6 +1067,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Amount of drawdown or other reduction from or in addition to the deal price."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmSpecialConcession
+	 * OtherAmounts39.mmSpecialConcession}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -954,6 +1091,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialConcession";
 			definition = "Amount of drawdown or other reduction from or in addition to the deal price.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmSpecialConcession);
 			previousVersion_lazy = () -> OtherAmounts14.mmSpecialConcession;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -990,6 +1128,13 @@ public class OtherAmounts28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of stamp duty."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts39#mmStampDuty
+	 * OtherAmounts39.mmStampDuty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1006,6 +1151,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Amount of stamp duty.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmStampDuty);
 			previousVersion_lazy = () -> OtherAmounts14.mmStampDuty;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1042,6 +1188,14 @@ public class OtherAmounts28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of stock exchange tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmStockExchangeTax
+	 * OtherAmounts39.mmStockExchangeTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1058,6 +1212,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockExchangeTax";
 			definition = "Amount of stock exchange tax.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmStockExchangeTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmStockExchangeTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1097,6 +1252,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Amount of tax levied on a transfer of ownership of financial instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmTransferTax
+	 * OtherAmounts39.mmTransferTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1113,6 +1276,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferTax";
 			definition = "Amount of tax levied on a transfer of ownership of financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmTransferTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmTransferTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1149,6 +1313,14 @@ public class OtherAmounts28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of transaction tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmTransactionTax
+	 * OtherAmounts39.mmTransactionTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1165,6 +1337,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTax";
 			definition = "Amount of transaction tax.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmTransactionTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmTransactionTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1201,6 +1374,14 @@ public class OtherAmounts28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of value-added tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmValueAddedTax
+	 * OtherAmounts39.mmValueAddedTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1217,6 +1398,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueAddedTax";
 			definition = "Amount of value-added tax.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmValueAddedTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmValueAddedTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1254,6 +1436,14 @@ public class OtherAmounts28 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money that will be withheld by a tax authority."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmWithholdingTax
+	 * OtherAmounts39.mmWithholdingTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1270,6 +1460,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTax";
 			definition = "Amount of money that will be withheld by a tax authority.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmWithholdingTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmWithholdingTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1309,6 +1500,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Amount representing the difference between the cost and the current price of a security. In the context of securities settlement, it is the amount paid or received when the instructions are netted or paired off."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmNetGainLoss
+	 * OtherAmounts39.mmNetGainLoss}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1325,6 +1524,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetGainLoss";
 			definition = "Amount representing the difference between the cost and the current price of a security. In the context of securities settlement, it is the amount paid or received when the instructions are netted or paired off.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmNetGainLoss);
 			previousVersion_lazy = () -> OtherAmounts14.mmNetGainLoss;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1361,6 +1561,14 @@ public class OtherAmounts28 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of consumption tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmConsumptionTax
+	 * OtherAmounts39.mmConsumptionTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1377,6 +1585,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsumptionTax";
 			definition = "Amount of consumption tax.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmConsumptionTax);
 			previousVersion_lazy = () -> OtherAmounts14.mmConsumptionTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1416,6 +1625,14 @@ public class OtherAmounts28 {
 	 * definition} =
 	 * "Amount of unpaid interest (on bonds which have defaulted and have subsequently \nrestructured), which is capitalized and added to the original principal amount of the bond."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmAccruedCapitalisationAmount
+	 * OtherAmounts39.mmAccruedCapitalisationAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1432,6 +1649,7 @@ public class OtherAmounts28 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedCapitalisationAmount";
 			definition = "Amount of unpaid interest (on bonds which have defaulted and have subsequently \nrestructured), which is capitalized and added to the original principal amount of the bond.";
+			nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmAccruedCapitalisationAmount);
 			previousVersion_lazy = () -> OtherAmounts14.mmAccruedCapitalisationAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1460,6 +1678,7 @@ public class OtherAmounts28 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherAmounts28";
 				definition = "Identifies other amounts pertaining to the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(OtherAmounts39.mmObject());
 				previousVersion_lazy = () -> OtherAmounts14.mmObject();
 			}
 		});

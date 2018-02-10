@@ -60,6 +60,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Receipt1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides details on the request."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Receipt2 Receipt2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -93,6 +99,14 @@ public class Receipt1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the original request message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Receipt2#mmOriginalMessageIdentification
+	 * Receipt2.mmOriginalMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginalMessageIdentification = new MMMessageAssociationEnd() {
@@ -103,6 +117,7 @@ public class Receipt1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Identification of the original request message.";
+			nextVersions_lazy = () -> Arrays.asList(Receipt2.mmOriginalMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -134,6 +149,13 @@ public class Receipt1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Gives the status of the request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Receipt2#mmRequestHandling
+	 * Receipt2.mmRequestHandling}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRequestHandling = new MMMessageAssociationEnd() {
@@ -144,6 +166,7 @@ public class Receipt1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestHandling";
 			definition = "Gives the status of the request.";
+			nextVersions_lazy = () -> Arrays.asList(Receipt2.mmRequestHandling);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.RequestHandling.mmObject();
@@ -158,6 +181,7 @@ public class Receipt1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Receipt1";
 				definition = "Provides details on the request.";
+				nextVersions_lazy = () -> Arrays.asList(Receipt2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

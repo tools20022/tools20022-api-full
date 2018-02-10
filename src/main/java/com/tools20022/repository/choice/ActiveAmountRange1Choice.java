@@ -69,7 +69,14 @@ import javax.xml.bind.annotation.XmlType;
  * "ActiveAmountRange1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between a range of amount values with or without the currency. "</li>
+ * "Choice between a range of amount values with or without the currency."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ActiveAmountRange2Choice
+ * ActiveAmountRange2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +117,14 @@ public class ActiveAmountRange1Choice {
 	 * definition} =
 	 * "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ActiveAmountRange2Choice#mmImpliedCurrencyAndAmountRange
+	 * ActiveAmountRange2Choice.mmImpliedCurrencyAndAmountRange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmImpliedCurrencyAndAmountRange = new MMMessageAssociationEnd() {
@@ -121,6 +136,7 @@ public class ActiveAmountRange1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImpliedCurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.";
+			nextVersions_lazy = () -> Arrays.asList(ActiveAmountRange2Choice.mmImpliedCurrencyAndAmountRange);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -160,6 +176,14 @@ public class ActiveAmountRange1Choice {
 	 * definition} =
 	 * "Expresses an amount or an amount range with the currency and where the credit/debit indicator is explicit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ActiveAmountRange2Choice#mmCurrencyAndAmountRange
+	 * ActiveAmountRange2Choice.mmCurrencyAndAmountRange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyAndAmountRange = new MMMessageAssociationEnd() {
@@ -171,6 +195,7 @@ public class ActiveAmountRange1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyAndAmountRange";
 			definition = "Expresses an amount or an amount range with the currency and where the credit/debit indicator is explicit.";
+			nextVersions_lazy = () -> Arrays.asList(ActiveAmountRange2Choice.mmCurrencyAndAmountRange);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -193,7 +218,8 @@ public class ActiveAmountRange1Choice {
 					}
 				})).get();
 				name = "ActiveAmountRange1Choice";
-				definition = "Choice between a range of amount values with or without the currency. ";
+				definition = "Choice between a range of amount values with or without the currency.";
+				nextVersions_lazy = () -> Arrays.asList(ActiveAmountRange2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

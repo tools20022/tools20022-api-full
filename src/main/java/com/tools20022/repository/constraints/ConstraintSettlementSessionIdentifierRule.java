@@ -46,7 +46,7 @@ public class ConstraintSettlementSessionIdentifierRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SettlementSessionIdentifer must only be present in StatusDetails if all of the trades within the bulk sttaus report have been generated from a single settlement session. "
+	 * "SettlementSessionIdentifer must only be present in StatusDetails if all of the trades within the bulk sttaus report have been generated from a single settlement session."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,7 +55,7 @@ public class ConstraintSettlementSessionIdentifierRule {
 			validator = ConstraintSettlementSessionIdentifierRule::checkForeignExchangeTradeBulkStatusNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementSessionIdentifierRule";
-			definition = "SettlementSessionIdentifer must only be present in StatusDetails if all of the trades within the bulk sttaus report have been generated from a single settlement session. ";
+			definition = "SettlementSessionIdentifer must only be present in StatusDetails if all of the trades within the bulk sttaus report have been generated from a single settlement session.";
 			owner_lazy = () -> ForeignExchangeTradeBulkStatusNotificationV04.mmObject();
 		}
 	};

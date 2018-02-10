@@ -24,7 +24,7 @@ import com.tools20022.repository.msg.UnableToApplyIncorrect1;
 
 /**
  * If Code is equal to NARR (Narrative), then AdditionalIncorrectInformation
- * must be present
+ * must be present.
  */
 public class ConstraintAdditionalIncorrectInformationRule {
 
@@ -49,7 +49,7 @@ public class ConstraintAdditionalIncorrectInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Code is equal to NARR (Narrative), then AdditionalIncorrectInformation must be present"
+	 * "If Code is equal to NARR (Narrative), then AdditionalIncorrectInformation must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintAdditionalIncorrectInformationRule {
 			validator = ConstraintAdditionalIncorrectInformationRule::checkUnableToApplyIncorrect1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIncorrectInformationRule";
-			definition = "If Code is equal to NARR (Narrative), then AdditionalIncorrectInformation must be present";
+			definition = "If Code is equal to NARR (Narrative), then AdditionalIncorrectInformation must be present.";
 			owner_lazy = () -> UnableToApplyIncorrect1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalIncorrectInformation</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Code</leftOperand><rightOperand>Narrative</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -66,7 +66,7 @@ public class ConstraintAdditionalIncorrectInformationRule {
 
 	/**
 	 * If Code is equal to NARR (Narrative), then AdditionalIncorrectInformation
-	 * must be present
+	 * must be present.
 	 */
 	public static void checkUnableToApplyIncorrect1(UnableToApplyIncorrect1 obj) throws Exception {
 		throw new NotImplementedConstraintException();

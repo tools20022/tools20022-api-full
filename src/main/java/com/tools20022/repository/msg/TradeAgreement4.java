@@ -362,7 +362,7 @@ public class TradeAgreement4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the type of  underlying transaction, for example, option."</li>
+	 * "Specifies the type of underlying transaction, for example, option."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOperationType = new MMMessageAttribute() {
@@ -372,7 +372,7 @@ public class TradeAgreement4 {
 			xmlTag = "OprTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationType";
-			definition = "Specifies the type of  underlying transaction, for example, option.";
+			definition = "Specifies the type of underlying transaction, for example, option.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();

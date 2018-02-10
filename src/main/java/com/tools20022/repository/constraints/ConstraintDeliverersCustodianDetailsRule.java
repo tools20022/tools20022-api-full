@@ -693,6 +693,14 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliverInformation19
+	 * ConstraintDeliverersCustodianDetailsRule.forDeliverInformation19}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -706,6 +714,7 @@ public class ConstraintDeliverersCustodianDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation15;
 			owner_lazy = () -> DeliverInformation16.mmObject();
 		}
@@ -729,6 +738,14 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliverInformation18
+	 * ConstraintDeliverersCustodianDetailsRule.forDeliverInformation18}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -742,6 +759,7 @@ public class ConstraintDeliverersCustodianDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation14;
 			owner_lazy = () -> DeliverInformation17.mmObject();
 		}
@@ -769,6 +787,15 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 * definition} =
 	 * "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliveringPartiesAndAccount18
+	 * ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount18
+	 * }</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -783,6 +810,7 @@ public class ConstraintDeliverersCustodianDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount13;
 			owner_lazy = () -> DeliveringPartiesAndAccount14.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -818,6 +846,10 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliveringPartiesAndAccount14
 	 * ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount14
 	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliveringPartiesAndAccount17
+	 * ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount17
+	 * }</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -834,9 +866,166 @@ public class ConstraintDeliverersCustodianDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetailsRule";
 			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount14);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount14,
+					com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount17);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount9;
 			owner_lazy = () -> DeliveringPartiesAndAccount13.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19
+	 * DeliverInformation19}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliverInformation16
+	 * ConstraintDeliverersCustodianDetailsRule.forDeliverInformation16}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation19> forDeliverInformation19 = new MMConstraint<DeliverInformation19>() {
+		{
+			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation19;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersCustodianDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation16;
+			owner_lazy = () -> DeliverInformation19.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18
+	 * DeliverInformation18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliverInformation17
+	 * ConstraintDeliverersCustodianDetailsRule.forDeliverInformation17}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation18> forDeliverInformation18 = new MMConstraint<DeliverInformation18>() {
+		{
+			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliverInformation18;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersCustodianDetailsRule";
+			definition = "If PhysicalTransferDetails is present, then SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliverInformation17;
+			owner_lazy = () -> DeliverInformation18.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount18
+	 * DeliveringPartiesAndAccount18}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/DeliverersCustodianDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/DeliverersIntermediary1Details&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliveringPartiesAndAccount14
+	 * ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount14
+	 * }</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliveringPartiesAndAccount18> forDeliveringPartiesAndAccount18 = new MMConstraint<DeliveringPartiesAndAccount18>() {
+		{
+			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount18;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersCustodianDetailsRule";
+			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount14;
+			owner_lazy = () -> DeliveringPartiesAndAccount18.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17
+	 * DeliveringPartiesAndAccount17}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/DeliverersCustodianDetails&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/DeliverersIntermediary1Details&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DeliverersCustodianDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule#forDeliveringPartiesAndAccount13
+	 * ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount13
+	 * }</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliveringPartiesAndAccount17> forDeliveringPartiesAndAccount17 = new MMConstraint<DeliveringPartiesAndAccount17>() {
+		{
+			validator = ConstraintDeliverersCustodianDetailsRule::checkDeliveringPartiesAndAccount17;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DeliverersCustodianDetailsRule";
+			definition = "If DeliverersIntermediary1Details is present, then DeliverersCustodianDetails must also be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDeliverersCustodianDetailsRule.forDeliveringPartiesAndAccount13;
+			owner_lazy = () -> DeliveringPartiesAndAccount17.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersCustodianDetails</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DeliverersIntermediary1Details</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
@@ -1014,6 +1203,38 @@ public class ConstraintDeliverersCustodianDetailsRule {
 	 * DeliverersCustodianDetails must also be present.
 	 */
 	public static void checkDeliveringPartiesAndAccount13(DeliveringPartiesAndAccount13 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.
+	 */
+	public static void checkDeliverInformation19(DeliverInformation19 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransferDetails is present, then
+	 * SettlementPartiesDetails/DeliverersCustodianDetails is not allowed.
+	 */
+	public static void checkDeliverInformation18(DeliverInformation18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If DeliverersIntermediary1Details is present, then
+	 * DeliverersCustodianDetails must also be present.
+	 */
+	public static void checkDeliveringPartiesAndAccount18(DeliveringPartiesAndAccount18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If DeliverersIntermediary1Details is present, then
+	 * DeliverersCustodianDetails must also be present.
+	 */
+	public static void checkDeliveringPartiesAndAccount17(DeliveringPartiesAndAccount17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

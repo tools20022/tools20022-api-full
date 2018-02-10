@@ -86,20 +86,20 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdviceV05
  * IntraPositionMovementStatusAdviceV05}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV06
- * IntraPositionMovementPostingReportV06}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07
+ * IntraPositionMovementConfirmationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV06
- * SecuritiesSettlementTransactionAllegementReportV06}</li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV07
+ * IntraPositionMovementPostingReportV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV08
- * SecuritiesTransactionPendingReportV08}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV09
+ * SecuritiesTransactionPendingReportV09}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06
- * IntraPositionMovementConfirmationV06}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV07
+ * SecuritiesSettlementTransactionAllegementReportV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07
- * SecuritiesTransactionPostingReportV07}</li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV08
+ * SecuritiesTransactionPostingReportV08}</li>
  * </ul>
  * </li>
  * <li>
@@ -134,8 +134,8 @@ public class SecuritiesManagementLatestVersion {
 						TotalPortfolioValuationReportV01.mmObject(), StatementOfInvestmentFundTransactionsV03.mmObject(), SecuritiesMessageRejectionV03.mmObject(), StatementOfInvestmentFundTransactionsCancellationV03.mmObject(),
 						SecuritiesBalanceTransparencyReportStatusAdviceV01.mmObject(), SecuritiesBalanceCustodyReportV09.mmObject(), IntraPositionMovementInstructionV04.mmObject(), SecuritiesMessageCancellationAdviceV05.mmObject(),
 						SecuritiesStatementQueryV06.mmObject(), SecuritiesBalanceAccountingReportV09.mmObject(), SecuritiesSettlementTransactionAuditTrailReportV03.mmObject(), SecuritiesBalanceTransparencyReportV02.mmObject(),
-						IntraPositionMovementStatusAdviceV05.mmObject(), IntraPositionMovementPostingReportV06.mmObject(), SecuritiesSettlementTransactionAllegementReportV06.mmObject(), SecuritiesTransactionPendingReportV08.mmObject(),
-						IntraPositionMovementConfirmationV06.mmObject(), SecuritiesTransactionPostingReportV07.mmObject());
+						IntraPositionMovementStatusAdviceV05.mmObject(), IntraPositionMovementConfirmationV07.mmObject(), IntraPositionMovementPostingReportV07.mmObject(), SecuritiesTransactionPendingReportV09.mmObject(),
+						SecuritiesSettlementTransactionAllegementReportV07.mmObject(), SecuritiesTransactionPostingReportV08.mmObject());
 				code = "semt";
 			}
 		});

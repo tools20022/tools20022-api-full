@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PriceValueType5FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express  the value of a price."</li>
+ * definition} = "Choice of formats to express the value of a price."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -95,7 +95,7 @@ public class PriceValueType5FormatChoice {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Standard code to  specify the value of a price."</li>
+	 * definition} = "Standard code to specify the value of a price."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -105,7 +105,7 @@ public class PriceValueType5FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the value of a price.";
+			definition = "Standard code to specify the value of a price.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceValueType5Code.mmObject();
@@ -138,7 +138,7 @@ public class PriceValueType5FormatChoice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Proprietary code to  express  the value of a price."</li>
+	 * definition} = "Proprietary code to express the value of a price."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -148,7 +148,7 @@ public class PriceValueType5FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express  the value of a price.";
+			definition = "Proprietary code to express the value of a price.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -162,7 +162,7 @@ public class PriceValueType5FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceValueType5FormatChoice";
-				definition = "Choice of formats to  express  the value of a price.";
+				definition = "Choice of formats to express the value of a price.";
 			}
 		});
 		return mmObject_lazy.get();

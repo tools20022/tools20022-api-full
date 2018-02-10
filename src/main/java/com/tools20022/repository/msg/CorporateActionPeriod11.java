@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionPeriod11"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies periods."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPeriod13
+ * CorporateActionPeriod13}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod9
@@ -111,6 +118,14 @@ public class CorporateActionPeriod11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Period during which the price of a security is determined."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod13#mmPriceCalculationPeriod
+	 * CorporateActionPeriod13.mmPriceCalculationPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -127,6 +142,7 @@ public class CorporateActionPeriod11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod13.mmPriceCalculationPeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod9.mmPriceCalculationPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -166,6 +182,14 @@ public class CorporateActionPeriod11 {
 	 * definition} =
 	 * "Period during which the specified option, or all options of the event, remains valid, for example, offer period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod13#mmActionPeriod
+	 * CorporateActionPeriod13.mmActionPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +206,7 @@ public class CorporateActionPeriod11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option, or all options of the event, remains valid, for example, offer period.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod13.mmActionPeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod9.mmActionPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -221,6 +246,14 @@ public class CorporateActionPeriod11 {
 	 * definition} =
 	 * "Period during which both old and new equity may be traded simultaneously, for example, consolidation of equity or splitting of equity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod13#mmParallelTradingPeriod
+	 * CorporateActionPeriod13.mmParallelTradingPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,6 +270,7 @@ public class CorporateActionPeriod11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParallelTradingPeriod";
 			definition = "Period during which both old and new equity may be traded simultaneously, for example, consolidation of equity or splitting of equity.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod13.mmParallelTradingPeriod);
 			previousVersion_lazy = () -> CorporateActionPeriod9.mmParallelTradingPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -255,6 +289,7 @@ public class CorporateActionPeriod11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod11";
 				definition = "Specifies periods.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod13.mmObject());
 				previousVersion_lazy = () -> CorporateActionPeriod9.mmObject();
 			}
 		});

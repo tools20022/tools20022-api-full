@@ -413,7 +413,7 @@ public class PaymentStatusReasonCode5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Defines the reason that has been used by the Target2 SSP system to reject the transaction"
+	 * "Defines the reason that has been used by the Target2 SSP system to reject the transaction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -432,7 +432,7 @@ public class PaymentStatusReasonCode5Choice {
 			xmlTag = "PrtryRjctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryRejection";
-			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction";
+			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode6Choice.mmProprietaryRejection);
 			maxOccurs = 1;
 			minOccurs = 1;

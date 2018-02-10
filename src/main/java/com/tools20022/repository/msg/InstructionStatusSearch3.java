@@ -73,6 +73,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the criteria which are used to search for the status of the payment."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InstructionStatusSearch4
+ * InstructionStatusSearch4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -112,6 +119,14 @@ public class InstructionStatusSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of a transfer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch4#mmPaymentInstructionStatus
+	 * InstructionStatusSearch4.mmPaymentInstructionStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPaymentInstructionStatus = new MMMessageAssociationEnd() {
@@ -123,6 +138,7 @@ public class InstructionStatusSearch3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatus";
 			definition = "Status of a transfer.";
+			nextVersions_lazy = () -> Arrays.asList(InstructionStatusSearch4.mmPaymentInstructionStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -163,6 +179,14 @@ public class InstructionStatusSearch3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which the status was assigned to the transfer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch4#mmPaymentInstructionStatusDateTime
+	 * InstructionStatusSearch4.mmPaymentInstructionStatusDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusDateTime = new MMMessageAttribute() {
@@ -174,6 +198,7 @@ public class InstructionStatusSearch3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusDateTime";
 			definition = "Date and time at which the status was assigned to the transfer.";
+			nextVersions_lazy = () -> Arrays.asList(InstructionStatusSearch4.mmPaymentInstructionStatusDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -212,7 +237,15 @@ public class InstructionStatusSearch3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Defines the reason that has been used by the Target2 SSP system to reject the transaction"
+	 * "Defines the reason that has been used by the Target2 SSP system to reject the transaction."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch4#mmProprietaryStatusReason
+	 * InstructionStatusSearch4.mmProprietaryStatusReason}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -224,7 +257,8 @@ public class InstructionStatusSearch3 {
 			xmlTag = "PrtryStsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatusReason";
-			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction";
+			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(InstructionStatusSearch4.mmProprietaryStatusReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -241,6 +275,7 @@ public class InstructionStatusSearch3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionStatusSearch3";
 				definition = "Defines the criteria which are used to search for the status of the payment.";
+				nextVersions_lazy = () -> Arrays.asList(InstructionStatusSearch4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

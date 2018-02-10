@@ -196,7 +196,7 @@ public class NetworkParameters2 {
 	 * name} = "Delay"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Delay between two contacts of the server.."</li>
+	 * definition} = "Delay between two contacts of the server."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDelay = new MMMessageAttribute() {
@@ -206,7 +206,7 @@ public class NetworkParameters2 {
 			xmlTag = "Dely";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delay";
-			definition = "Delay between two contacts of the server..";
+			definition = "Delay between two contacts of the server.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOTime.mmObject();

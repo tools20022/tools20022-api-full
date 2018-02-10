@@ -124,6 +124,12 @@ import javax.xml.bind.annotation.XmlType;
  * "GroupHeader58"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides further details on the message."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader73 GroupHeader73}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -164,6 +170,14 @@ public class GroupHeader58 {
 	 * definition} =
 	 * "Point to point reference, as assigned by the account servicing institution, and sent to the account owner or the party authorised to receive the message, to unambiguously identify the message.\nUsage: The account servicing institution has to make sure that MessageIdentification is unique per account owner for a pre-agreed period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader73#mmMessageIdentification
+	 * GroupHeader73.mmMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
@@ -175,6 +189,7 @@ public class GroupHeader58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the account servicing institution, and sent to the account owner or the party authorised to receive the message, to unambiguously identify the message.\nUsage: The account servicing institution has to make sure that MessageIdentification is unique per account owner for a pre-agreed period.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader73.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -211,6 +226,14 @@ public class GroupHeader58 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader73#mmCreationDateTime
+	 * GroupHeader73.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -222,6 +245,7 @@ public class GroupHeader58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader73.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -254,6 +278,14 @@ public class GroupHeader58 {
 	 * definition} =
 	 * "Party authorised by the account owner to receive information about movements on the account.\nUsage: MessageRecipient should only be identified when different from the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader73#mmMessageRecipient
+	 * GroupHeader73.mmMessageRecipient}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMessageRecipient = new MMMessageAssociationEnd() {
@@ -264,6 +296,7 @@ public class GroupHeader58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageRecipient";
 			definition = "Party authorised by the account owner to receive information about movements on the account.\nUsage: MessageRecipient should only be identified when different from the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader73.mmMessageRecipient);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -296,6 +329,14 @@ public class GroupHeader58 {
 	 * definition} =
 	 * "Provides details on the page number of the message.\n\nUsage: The pagination of the message is only allowed when agreed between the parties."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader73#mmMessagePagination
+	 * GroupHeader73.mmMessagePagination}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMessagePagination = new MMMessageAssociationEnd() {
@@ -306,6 +347,7 @@ public class GroupHeader58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Provides details on the page number of the message.\n\nUsage: The pagination of the message is only allowed when agreed between the parties.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader73.mmMessagePagination);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -341,6 +383,14 @@ public class GroupHeader58 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original requestor, to unambiguously identify the business query message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader73#mmOriginalBusinessQuery
+	 * GroupHeader73.mmOriginalBusinessQuery}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalBusinessQuery = new MMMessageAttribute() {
@@ -351,6 +401,7 @@ public class GroupHeader58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBusinessQuery";
 			definition = "Unique identification, as assigned by the original requestor, to unambiguously identify the business query message.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader73.mmOriginalBusinessQuery);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.OriginalBusinessQuery1.mmObject();
@@ -382,6 +433,14 @@ public class GroupHeader58 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further details of the message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader73#mmAdditionalInformation
+	 * GroupHeader73.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
@@ -392,6 +451,7 @@ public class GroupHeader58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details of the message.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader73.mmAdditionalInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
@@ -413,6 +473,7 @@ public class GroupHeader58 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader58";
 				definition = "Provides further details on the message.";
+				nextVersions_lazy = () -> Arrays.asList(GroupHeader73.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

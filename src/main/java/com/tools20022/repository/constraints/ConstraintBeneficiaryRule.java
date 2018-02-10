@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 /**
  * If CustodianForMinor is present, then at least one occurrence of Beneficiary
- * must be present.
+ * must be present. .
  */
 public class ConstraintBeneficiaryRule {
 
@@ -46,7 +46,7 @@ public class ConstraintBeneficiaryRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.\n"
+	 * "If CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,7 +55,7 @@ public class ConstraintBeneficiaryRule {
 			validator = ConstraintBeneficiaryRule::checkAccountParties2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryRule";
-			definition = "If CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.\n";
+			definition = "If CustodianForMinor is present, then at least one occurrence of Beneficiary must be present.\n.";
 			owner_lazy = () -> AccountParties2.mmObject();
 		}
 	};
@@ -296,7 +296,7 @@ public class ConstraintBeneficiaryRule {
 
 	/**
 	 * If CustodianForMinor is present, then at least one occurrence of
-	 * Beneficiary must be present.
+	 * Beneficiary must be present. .
 	 */
 	public static void checkAccountParties2(AccountParties2 obj) throws Exception {
 		throw new NotImplementedConstraintException();

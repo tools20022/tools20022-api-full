@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between report on billing data, billing cancellation request details or operational error."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.BillingReportOrError2Choice
+ * BillingReportOrError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,6 +110,14 @@ public class BillingReportOrError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report on billing data."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BillingReportOrError2Choice#mmBillingReport
+	 * BillingReportOrError2Choice.mmBillingReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBillingReport = new MMMessageAssociationEnd() {
@@ -113,6 +128,7 @@ public class BillingReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingReport";
 			definition = "Report on billing data.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReportOrError2Choice.mmBillingReport);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -146,6 +162,14 @@ public class BillingReportOrError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report on cancelled billing data."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BillingReportOrError2Choice#mmCancellationReport
+	 * BillingReportOrError2Choice.mmCancellationReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCancellationReport = new MMMessageAssociationEnd() {
@@ -156,6 +180,7 @@ public class BillingReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReport";
 			definition = "Report on cancelled billing data.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReportOrError2Choice.mmCancellationReport);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -190,6 +215,14 @@ public class BillingReportOrError1Choice {
 	 * definition} =
 	 * "Indicates that an operational error has been issued during the processing of the related request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BillingReportOrError2Choice#mmOperationalError
+	 * BillingReportOrError2Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
@@ -200,6 +233,7 @@ public class BillingReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReportOrError2Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -215,6 +249,7 @@ public class BillingReportOrError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingReportOrError1Choice";
 				definition = "Choice between report on billing data, billing cancellation request details or operational error.";
+				nextVersions_lazy = () -> Arrays.asList(BillingReportOrError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

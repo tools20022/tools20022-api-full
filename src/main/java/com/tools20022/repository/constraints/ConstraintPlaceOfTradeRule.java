@@ -1418,6 +1418,9 @@ public class ConstraintPlaceOfTradeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails67
 	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails67}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails73
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails73}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1433,7 +1436,7 @@ public class ConstraintPlaceOfTradeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails67);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails67, com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails73);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails33;
 			owner_lazy = () -> SecuritiesTradeDetails51.mmObject();
 		}
@@ -1457,6 +1460,14 @@ public class ConstraintPlaceOfTradeRule {
 	 * definition} =
 	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails76
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails76}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1470,6 +1481,7 @@ public class ConstraintPlaceOfTradeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails76);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails31;
 			owner_lazy = () -> SecuritiesTradeDetails53.mmObject();
 		}
@@ -1493,6 +1505,14 @@ public class ConstraintPlaceOfTradeRule {
 	 * definition} =
 	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails74
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails74}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1506,6 +1526,7 @@ public class ConstraintPlaceOfTradeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails74);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails38;
 			owner_lazy = () -> SecuritiesTradeDetails55.mmObject();
 		}
@@ -1529,6 +1550,14 @@ public class ConstraintPlaceOfTradeRule {
 	 * definition} =
 	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails77
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails77}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1542,6 +1571,7 @@ public class ConstraintPlaceOfTradeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails77);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails37;
 			owner_lazy = () -> SecuritiesTradeDetails56.mmObject();
 		}
@@ -1565,6 +1595,14 @@ public class ConstraintPlaceOfTradeRule {
 	 * definition} =
 	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails80
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails80}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1578,6 +1616,7 @@ public class ConstraintPlaceOfTradeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails80);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails36;
 			owner_lazy = () -> SecuritiesTradeDetails54.mmObject();
 		}
@@ -1601,6 +1640,14 @@ public class ConstraintPlaceOfTradeRule {
 	 * definition} =
 	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails79
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails79}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1614,6 +1661,7 @@ public class ConstraintPlaceOfTradeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails79);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails34;
 			owner_lazy = () -> SecuritiesTradeDetails52.mmObject();
 		}
@@ -1637,6 +1685,14 @@ public class ConstraintPlaceOfTradeRule {
 	 * definition} =
 	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails78
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails78}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1650,6 +1706,7 @@ public class ConstraintPlaceOfTradeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails78);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails32;
 			owner_lazy = () -> SecuritiesTradeDetails50.mmObject();
 		}
@@ -1883,6 +1940,14 @@ public class ConstraintPlaceOfTradeRule {
 	 * definition} =
 	 * "If PlaceOfTrade is present and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails75
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails75}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1896,6 +1961,7 @@ public class ConstraintPlaceOfTradeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is present and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails75);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails51;
 			owner_lazy = () -> SecuritiesTradeDetails67.mmObject();
 		}
@@ -1928,6 +1994,534 @@ public class ConstraintPlaceOfTradeRule {
 			name = "PlaceOfTradeRule";
 			definition = "If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
 			owner_lazy = () -> SecuritiesTradeDetails70.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73
+	 * SecuritiesTradeDetails73}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails51
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails51}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails73> forSecuritiesTradeDetails73 = new MMConstraint<SecuritiesTradeDetails73>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails73;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails51;
+			owner_lazy = () -> SecuritiesTradeDetails73.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74
+	 * SecuritiesTradeDetails74}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails55
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails55}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails74> forSecuritiesTradeDetails74 = new MMConstraint<SecuritiesTradeDetails74>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails74;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails55;
+			owner_lazy = () -> SecuritiesTradeDetails74.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75
+	 * SecuritiesTradeDetails75}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is present and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails67
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails67}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails75> forSecuritiesTradeDetails75 = new MMConstraint<SecuritiesTradeDetails75>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails75;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is present and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails67;
+			owner_lazy = () -> SecuritiesTradeDetails75.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76
+	 * SecuritiesTradeDetails76}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails53
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails53}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails76> forSecuritiesTradeDetails76 = new MMConstraint<SecuritiesTradeDetails76>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails76;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails53;
+			owner_lazy = () -> SecuritiesTradeDetails76.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77
+	 * SecuritiesTradeDetails77}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails56
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails56}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails77> forSecuritiesTradeDetails77 = new MMConstraint<SecuritiesTradeDetails77>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails77;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails56;
+			owner_lazy = () -> SecuritiesTradeDetails77.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78
+	 * SecuritiesTradeDetails78}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails50
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails50}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails78> forSecuritiesTradeDetails78 = new MMConstraint<SecuritiesTradeDetails78>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails78;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails50;
+			owner_lazy = () -> SecuritiesTradeDetails78.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79
+	 * SecuritiesTradeDetails79}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails52
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails52}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails79> forSecuritiesTradeDetails79 = new MMConstraint<SecuritiesTradeDetails79>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails79;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails52;
+			owner_lazy = () -> SecuritiesTradeDetails79.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails80
+	 * SecuritiesTradeDetails80}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule#forSecuritiesTradeDetails54
+	 * ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails54}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails80> forSecuritiesTradeDetails80 = new MMConstraint<SecuritiesTradeDetails80>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails80;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfTradeRule.forSecuritiesTradeDetails54;
+			owner_lazy = () -> SecuritiesTradeDetails80.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82
+	 * SecuritiesTradeDetails82}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails82> forSecuritiesTradeDetails82 = new MMConstraint<SecuritiesTradeDetails82>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails82;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> SecuritiesTradeDetails82.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83
+	 * SecuritiesTradeDetails83}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails83> forSecuritiesTradeDetails83 = new MMConstraint<SecuritiesTradeDetails83>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails83;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> SecuritiesTradeDetails83.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails84
+	 * SecuritiesTradeDetails84}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails84> forSecuritiesTradeDetails84 = new MMConstraint<SecuritiesTradeDetails84>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails84;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> SecuritiesTradeDetails84.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86
+	 * SecuritiesTradeDetails86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails86> forSecuritiesTradeDetails86 = new MMConstraint<SecuritiesTradeDetails86>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails86;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> SecuritiesTradeDetails86.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87
+	 * SecuritiesTradeDetails87}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails87> forSecuritiesTradeDetails87 = new MMConstraint<SecuritiesTradeDetails87>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails87;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> SecuritiesTradeDetails87.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88
+	 * SecuritiesTradeDetails88}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails88> forSecuritiesTradeDetails88 = new MMConstraint<SecuritiesTradeDetails88>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails88;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> SecuritiesTradeDetails88.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89
+	 * SecuritiesTradeDetails89}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails89> forSecuritiesTradeDetails89 = new MMConstraint<SecuritiesTradeDetails89>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails89;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> SecuritiesTradeDetails89.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90
+	 * SecuritiesTradeDetails90}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfTradeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails90> forSecuritiesTradeDetails90 = new MMConstraint<SecuritiesTradeDetails90>() {
+		{
+			validator = ConstraintPlaceOfTradeRule::checkSecuritiesTradeDetails90;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfTradeRule";
+			definition = "If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be identified, then the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> SecuritiesTradeDetails90.mmObject();
 		}
 	};
 
@@ -2361,6 +2955,135 @@ public class ConstraintPlaceOfTradeRule {
 	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
 	 */
 	public static void checkSecuritiesTradeDetails70(SecuritiesTradeDetails70 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails73(SecuritiesTradeDetails73 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails74(SecuritiesTradeDetails74 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is present and an ISO 10383 MIC exists for the market to
+	 * be identified, then the ISO 10383 Market Identifier Code (MIC) must be
+	 * used.
+	 */
+	public static void checkSecuritiesTradeDetails75(SecuritiesTradeDetails75 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails76(SecuritiesTradeDetails76 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails77(SecuritiesTradeDetails77 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails78(SecuritiesTradeDetails78 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails79(SecuritiesTradeDetails79 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails80(SecuritiesTradeDetails80 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails82(SecuritiesTradeDetails82 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails83(SecuritiesTradeDetails83 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails84(SecuritiesTradeDetails84 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails86(SecuritiesTradeDetails86 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails87(SecuritiesTradeDetails87 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and an ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails88(SecuritiesTradeDetails88 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails89(SecuritiesTradeDetails89 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfTrade is used and a ISO 10383 MIC exists for the market to be
+	 * identified, then the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkSecuritiesTradeDetails90(SecuritiesTradeDetails90 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

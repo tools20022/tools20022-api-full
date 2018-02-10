@@ -183,6 +183,10 @@ import java.util.Optional;
  * AmountAndQuantityRatio4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio5
  * AmountAndQuantityRatio5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnsecuredAmount1
+ * UnsecuredAmount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Amount3 Amount3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmount1 OtherAmount1}</li>
  * </ul>
  * </li>
  * <li>
@@ -282,6 +286,18 @@ public class AmountAndQuantity {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmountAndQuantityRatio5#mmAmount
 	 * AmountAndQuantityRatio5.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredAmount1#mmDefaultedCounterpartyAmount
+	 * UnsecuredAmount1.mmDefaultedCounterpartyAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnsecuredAmount1#mmNotDefaultedCounterpartyAmount
+	 * UnsecuredAmount1.mmNotDefaultedCounterpartyAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Amount3#mmOriginalAmount
+	 * Amount3.mmOriginalAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Amount3#mmReportingAmount
+	 * Amount3.mmReportingAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.OtherAmount1#mmAmount
+	 * OtherAmount1.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -302,7 +318,8 @@ public class AmountAndQuantity {
 	 */
 	public static final MMBusinessAttribute mmAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmAmount, AmountAndQuantityRatio3.mmAmount, AmountAndQuantityRatio1.mmAmount, AmountAndQuantityRatio4.mmAmount, AmountAndQuantityRatio5.mmAmount);
+			derivation_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmAmount, AmountAndQuantityRatio3.mmAmount, AmountAndQuantityRatio1.mmAmount, AmountAndQuantityRatio4.mmAmount, AmountAndQuantityRatio5.mmAmount,
+					UnsecuredAmount1.mmDefaultedCounterpartyAmount, UnsecuredAmount1.mmNotDefaultedCounterpartyAmount, Amount3.mmOriginalAmount, Amount3.mmReportingAmount, OtherAmount1.mmAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AmountAndQuantity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -409,7 +426,7 @@ public class AmountAndQuantity {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AmountAndQuantity.mmSecuritiesPricing, com.tools20022.repository.entity.AmountAndQuantity.mmAmount,
 						com.tools20022.repository.entity.AmountAndQuantity.mmQuantity);
 				derivationComponent_lazy = () -> Arrays.asList(AmountAndQuantityRatio2.mmObject(), AmountAndQuantityRatio3.mmObject(), AmountAndQuantityRatio1.mmObject(), AmountAndQuantityRatio4.mmObject(),
-						AmountAndQuantityRatio5.mmObject());
+						AmountAndQuantityRatio5.mmObject(), UnsecuredAmount1.mmObject(), Amount3.mmObject(), OtherAmount1.mmObject());
 			}
 
 			@Override

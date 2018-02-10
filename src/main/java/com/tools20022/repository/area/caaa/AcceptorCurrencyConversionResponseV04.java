@@ -25,7 +25,7 @@ import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVer
 import com.tools20022.repository.msg.AcceptorCurrencyConversionResponse4;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header30;
-import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017;
+import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -59,8 +59,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
- * CAPEAcceptortoAcquirerMaintenance20162017}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOLatestversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -83,6 +83,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "The AcceptorCurrencyConversionResponse message is sent by currency conversion service provider to the card acceptor to return the result of a potential currency conversion for the cardholder.\r\n"
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV05
+ * AcceptorCurrencyConversionResponseV05}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -118,6 +126,14 @@ public class AcceptorCurrencyConversionResponseV04 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Currency conversion response message management information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV05#mmHeader
+	 * AcceptorCurrencyConversionResponseV05.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +147,7 @@ public class AcceptorCurrencyConversionResponseV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Currency conversion response message management information.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponseV05.mmHeader);
 			previousVersion_lazy = () -> AcceptorCurrencyConversionResponseV03.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -169,6 +186,14 @@ public class AcceptorCurrencyConversionResponseV04 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to the outcome of the currency conversion."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV05#mmCurrencyConversionResponse
+	 * AcceptorCurrencyConversionResponseV05.mmCurrencyConversionResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +207,7 @@ public class AcceptorCurrencyConversionResponseV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionResponse";
 			definition = "Information related to the outcome of the currency conversion.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponseV05.mmCurrencyConversionResponse);
 			previousVersion_lazy = () -> AcceptorCurrencyConversionResponseV03.mmCurrencyConversionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -220,6 +246,14 @@ public class AcceptorCurrencyConversionResponseV04 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Trailer of the message containing a MAC (message authentication code)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorCurrencyConversionResponseV05#mmSecurityTrailer
+	 * AcceptorCurrencyConversionResponseV05.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -233,6 +267,7 @@ public class AcceptorCurrencyConversionResponseV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC (message authentication code).";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponseV05.mmSecurityTrailer);
 			previousVersion_lazy = () -> AcceptorCurrencyConversionResponseV03.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -254,8 +289,9 @@ public class AcceptorCurrencyConversionResponseV04 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCurrencyConversionResponseV04";
 				definition = "The AcceptorCurrencyConversionResponse message is sent by currency conversion service provider to the card acceptor to return the result of a potential currency conversion for the cardholder.\r\n";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionResponseV05.mmObject());
 				previousVersion_lazy = () -> AcceptorCurrencyConversionResponseV03.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEAcceptortoAcquirerMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrCcyConvsRspn";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();

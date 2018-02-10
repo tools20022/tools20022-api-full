@@ -103,7 +103,7 @@ public class IsabelFile1 {
 	 * name} = "Identification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unique identification of the file.\t"</li>
+	 * definition} = "Unique identification of the file.\t."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -113,7 +113,7 @@ public class IsabelFile1 {
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
-			definition = "Unique identification of the file.\t";
+			definition = "Unique identification of the file.\t.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max14AlphaNumericText.mmObject();

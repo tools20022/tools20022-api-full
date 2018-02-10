@@ -68,7 +68,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ProprietaryStatusJustification"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Defines proprietary reason  to reject a transaction."</li>
+ * definition} = "Defines proprietary reason to reject a transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification1
+ * ProprietaryStatusJustification1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +119,14 @@ public class ProprietaryStatusJustification {
 	 * definition} =
 	 * "Defines the reason why the Target2 SSP system has rejected the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification1#mmProprietaryStatusReason
+	 * ProprietaryStatusJustification1.mmProprietaryStatusReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietaryStatusReason = new MMMessageAttribute() {
@@ -122,6 +138,7 @@ public class ProprietaryStatusJustification {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatusReason";
 			definition = "Defines the reason why the Target2 SSP system has rejected the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(ProprietaryStatusJustification1.mmProprietaryStatusReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -161,6 +178,14 @@ public class ProprietaryStatusJustification {
 	 * definition} =
 	 * "Provides detailed information about the reason why the Target2 SSP system has rejected the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification1#mmReason
+	 * ProprietaryStatusJustification1.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
@@ -172,6 +197,7 @@ public class ProprietaryStatusJustification {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Provides detailed information about the reason why the Target2 SSP system has rejected the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(ProprietaryStatusJustification1.mmReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -193,7 +219,8 @@ public class ProprietaryStatusJustification {
 					}
 				})).get();
 				name = "ProprietaryStatusJustification";
-				definition = "Defines proprietary reason  to reject a transaction.";
+				definition = "Defines proprietary reason to reject a transaction.";
+				nextVersions_lazy = () -> Arrays.asList(ProprietaryStatusJustification1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

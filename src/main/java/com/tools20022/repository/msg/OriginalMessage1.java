@@ -109,7 +109,7 @@ public class OriginalMessage1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "XML schema-instance namespace, for example \"tsin.008.001.01\" "</li>
+	 * "XML schema-instance namespace, for example \"tsin.008.001.01\"."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageDefinitionIdentifier = new MMMessageAttribute() {
@@ -119,7 +119,7 @@ public class OriginalMessage1 {
 			xmlTag = "MsgDefIdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageDefinitionIdentifier";
-			definition = "XML schema-instance namespace, for example \"tsin.008.001.01\" ";
+			definition = "XML schema-instance namespace, for example \"tsin.008.001.01\".";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

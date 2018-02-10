@@ -98,6 +98,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Reference information concerning the original payment initiation, to which the investigation message refers."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4
+ * UnderlyingPaymentInstruction4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction2
@@ -138,6 +145,14 @@ public class UnderlyingPaymentInstruction3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to provide information on the original message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmOriginalGroupInformation
+	 * UnderlyingPaymentInstruction4.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -153,6 +168,7 @@ public class UnderlyingPaymentInstruction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Set of elements used to provide information on the original message.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentInstruction4.mmOriginalGroupInformation);
 			previousVersion_lazy = () -> UnderlyingPaymentInstruction2.mmOriginalGroupInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -194,6 +210,15 @@ public class UnderlyingPaymentInstruction3 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmOriginalPaymentInformationIdentification
+	 * UnderlyingPaymentInstruction4.mmOriginalPaymentInformationIdentification}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -211,6 +236,7 @@ public class UnderlyingPaymentInstruction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationIdentification";
 			definition = "Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentInstruction4.mmOriginalPaymentInformationIdentification);
 			previousVersion_lazy = () -> UnderlyingPaymentInstruction2.mmOriginalPaymentInformationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -251,6 +277,14 @@ public class UnderlyingPaymentInstruction3 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmOriginalInstructionIdentification
+	 * UnderlyingPaymentInstruction4.mmOriginalInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -267,6 +301,7 @@ public class UnderlyingPaymentInstruction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructionIdentification";
 			definition = "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentInstruction4.mmOriginalInstructionIdentification);
 			previousVersion_lazy = () -> UnderlyingPaymentInstruction2.mmOriginalInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -307,6 +342,14 @@ public class UnderlyingPaymentInstruction3 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmOriginalEndToEndIdentification
+	 * UnderlyingPaymentInstruction4.mmOriginalEndToEndIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -323,6 +366,7 @@ public class UnderlyingPaymentInstruction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentInstruction4.mmOriginalEndToEndIdentification);
 			previousVersion_lazy = () -> UnderlyingPaymentInstruction2.mmOriginalEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -364,6 +408,14 @@ public class UnderlyingPaymentInstruction3 {
 	 * definition} =
 	 * "Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmOriginalInstructedAmount
+	 * UnderlyingPaymentInstruction4.mmOriginalInstructedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -380,6 +432,7 @@ public class UnderlyingPaymentInstruction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructedAmount";
 			definition = "Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentInstruction4.mmOriginalInstructedAmount);
 			previousVersion_lazy = () -> UnderlyingPaymentInstruction2.mmOriginalInstructedAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -421,6 +474,14 @@ public class UnderlyingPaymentInstruction3 {
 	 * definition} =
 	 * "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmRequestedExecutionDate
+	 * UnderlyingPaymentInstruction4.mmRequestedExecutionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -437,6 +498,7 @@ public class UnderlyingPaymentInstruction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentInstruction4.mmRequestedExecutionDate);
 			previousVersion_lazy = () -> UnderlyingPaymentInstruction2.mmRequestedExecutionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -477,6 +539,14 @@ public class UnderlyingPaymentInstruction3 {
 	 * definition} =
 	 * "Date at which the creditor requests the amount of money to be collected from the debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentInstruction4#mmRequestedCollectionDate
+	 * UnderlyingPaymentInstruction4.mmRequestedCollectionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -493,6 +563,7 @@ public class UnderlyingPaymentInstruction3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedCollectionDate";
 			definition = "Date at which the creditor requests the amount of money to be collected from the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentInstruction4.mmRequestedCollectionDate);
 			previousVersion_lazy = () -> UnderlyingPaymentInstruction2.mmRequestedCollectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -514,6 +585,7 @@ public class UnderlyingPaymentInstruction3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingPaymentInstruction3";
 				definition = "Reference information concerning the original payment initiation, to which the investigation message refers.";
+				nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentInstruction4.mmObject());
 				previousVersion_lazy = () -> UnderlyingPaymentInstruction2.mmObject();
 			}
 		});

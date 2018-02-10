@@ -262,7 +262,7 @@ public class MeetingReference1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the type of meeting for which  instructions are sent."</li>
+	 * "Specifies the type of meeting for which instructions are sent."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -273,7 +273,7 @@ public class MeetingReference1 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Specifies the type of meeting for which  instructions are sent.";
+			definition = "Specifies the type of meeting for which instructions are sent.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MeetingType1Code.mmObject();

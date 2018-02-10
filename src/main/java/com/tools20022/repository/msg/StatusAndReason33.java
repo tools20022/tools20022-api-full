@@ -20,7 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08;
 import com.tools20022.repository.choice.Status23Choice;
 import com.tools20022.repository.entity.Status;
 import com.tools20022.repository.GeneratedRepository;
@@ -58,7 +58,7 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08#mmStatus
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08#mmStatus
  * SecuritiesTransactionPendingReport002V08.mmStatus}</li>
  * </ul>
  * </li>

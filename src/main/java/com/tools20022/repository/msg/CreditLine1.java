@@ -100,7 +100,7 @@ public class CreditLine1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the credit line is included or not.\n\nUsage : if not present, credit line is not included in the balance amount."
+	 * "Indicates whether the credit line is included or not.\n\nUsage: if not present, credit line is not included in the balance amount."
 	 * </li>
 	 * </ul>
 	 */
@@ -111,7 +111,7 @@ public class CreditLine1 {
 			xmlTag = "Incl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Included";
-			definition = "Indicates whether the credit line is included or not.\n\nUsage : if not present, credit line is not included in the balance amount.";
+			definition = "Indicates whether the credit line is included or not.\n\nUsage: if not present, credit line is not included in the balance amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();

@@ -238,6 +238,24 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmGrossCashAmount
 	 * CorporateActionAmounts40.mmGrossCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmGrossCashAmount
+	 * CorporateActionAmounts42.mmGrossCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmGrossCashAmount
+	 * CorporateActionAmounts43.mmGrossCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmGrossCashAmount
+	 * CorporateActionAmounts44.mmGrossCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmGrossCashAmount
+	 * CorporateActionAmounts45.mmGrossCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmGrossCashAmount
+	 * CorporateActionAmounts46.mmGrossCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmGrossCashAmount
+	 * CorporateActionAmounts47.mmGrossCashAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -266,7 +284,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts14.mmGrossCashAmount, CorporateActionAmounts15.mmGrossCashAmount, CorporateActionAmounts18.mmGrossCashAmount, CorporateActionAmounts21.mmGrossCashAmount, CorporateActionAmounts26.mmGrossCashAmount,
 					CorporateActionAmounts1.mmGrossCashAmount, CorporateActionAmounts29.mmGrossCashAmount, CorporateActionAmounts27.mmGrossCashAmount, CorporateActionAmounts28.mmGrossCashAmount, CorporateActionAmounts33.mmGrossCashAmount,
 					CorporateActionAmounts32.mmGrossCashAmount, CorporateActionAmounts35.mmGrossCashAmount, CorporateActionAmounts37.mmGrossCashAmount, CorporateActionAmounts36.mmGrossCashAmount, CorporateActionAmounts38.mmGrossCashAmount,
-					CorporateActionAmounts39.mmGrossCashAmount, CorporateActionAmounts41.mmGrossCashAmount, CorporateActionAmounts40.mmGrossCashAmount);
+					CorporateActionAmounts39.mmGrossCashAmount, CorporateActionAmounts41.mmGrossCashAmount, CorporateActionAmounts40.mmGrossCashAmount, CorporateActionAmounts42.mmGrossCashAmount, CorporateActionAmounts43.mmGrossCashAmount,
+					CorporateActionAmounts44.mmGrossCashAmount, CorporateActionAmounts45.mmGrossCashAmount, CorporateActionAmounts46.mmGrossCashAmount, CorporateActionAmounts47.mmGrossCashAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -410,6 +429,24 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmNetCashAmount
 	 * CorporateActionAmounts40.mmNetCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmNetCashAmount
+	 * CorporateActionAmounts42.mmNetCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmNetCashAmount
+	 * CorporateActionAmounts43.mmNetCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmNetCashAmount
+	 * CorporateActionAmounts44.mmNetCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmNetCashAmount
+	 * CorporateActionAmounts45.mmNetCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmNetCashAmount
+	 * CorporateActionAmounts46.mmNetCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmNetCashAmount
+	 * CorporateActionAmounts47.mmNetCashAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -439,7 +476,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts14.mmNetCashAmount, CorporateActionAmounts15.mmNetCashAmount, CorporateActionAmounts18.mmNetCashAmount, CorporateActionAmounts21.mmNetCashAmount, CorporateActionAmounts26.mmNetCashAmount,
 					CorporateActionAmounts1.mmNetCashAmount, CorporateActionAmounts29.mmNetCashAmount, CorporateActionAmounts27.mmNetCashAmount, CorporateActionAmounts28.mmNetCashAmount, CorporateActionAmounts33.mmNetCashAmount,
 					CorporateActionAmounts32.mmNetCashAmount, CorporateActionAmounts35.mmNetCashAmount, CorporateActionAmounts37.mmNetCashAmount, CorporateActionAmounts36.mmNetCashAmount, CorporateActionAmounts38.mmNetCashAmount,
-					CorporateActionAmounts39.mmNetCashAmount, CorporateActionAmounts41.mmNetCashAmount, CorporateActionAmounts40.mmNetCashAmount);
+					CorporateActionAmounts39.mmNetCashAmount, CorporateActionAmounts41.mmNetCashAmount, CorporateActionAmounts40.mmNetCashAmount, CorporateActionAmounts42.mmNetCashAmount, CorporateActionAmounts43.mmNetCashAmount,
+					CorporateActionAmounts44.mmNetCashAmount, CorporateActionAmounts45.mmNetCashAmount, CorporateActionAmounts46.mmNetCashAmount, CorporateActionAmounts47.mmNetCashAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -586,6 +624,27 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OptionTransactionDetailsSD2#mmCashInLieuOfShare
 	 * OptionTransactionDetailsSD2.mmCashInLieuOfShare}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmCashInLieuOfShare
+	 * CorporateActionAmounts42.mmCashInLieuOfShare}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmCashInLieuOfShare
+	 * CorporateActionAmounts43.mmCashInLieuOfShare}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmCashInLieuOfShare
+	 * CorporateActionAmounts44.mmCashInLieuOfShare}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OptionTransactionDetailsSD4#mmCashInLieuOfShare
+	 * OptionTransactionDetailsSD4.mmCashInLieuOfShare}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmCashInLieuOfShare
+	 * CorporateActionAmounts45.mmCashInLieuOfShare}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmCashInLieuOfShare
+	 * CorporateActionAmounts46.mmCashInLieuOfShare}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmCashInLieuOfShare
+	 * CorporateActionAmounts47.mmCashInLieuOfShare}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -616,7 +675,9 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts1.mmCashInLieuOfShare, CorporateActionAmounts29.mmCashInLieuOfShare, CorporateActionAmounts27.mmCashInLieuOfShare, CorporateActionAmounts28.mmCashInLieuOfShare,
 					CorporateActionAmounts33.mmCashInLieuOfShare, CorporateActionAmounts32.mmCashInLieuOfShare, CorporateActionAmounts35.mmCashInLieuOfShare, CorporateActionAmounts37.mmCashInLieuOfShare,
 					CorporateActionAmounts36.mmCashInLieuOfShare, CorporateActionAmounts38.mmCashInLieuOfShare, CorporateActionAmounts39.mmCashInLieuOfShare, CorporateActionAmounts41.mmCashInLieuOfShare,
-					CorporateActionAmounts40.mmCashInLieuOfShare, OptionTransactionDetailsSD2.mmCashInLieuOfShare);
+					CorporateActionAmounts40.mmCashInLieuOfShare, OptionTransactionDetailsSD2.mmCashInLieuOfShare, CorporateActionAmounts42.mmCashInLieuOfShare, CorporateActionAmounts43.mmCashInLieuOfShare,
+					CorporateActionAmounts44.mmCashInLieuOfShare, OptionTransactionDetailsSD4.mmCashInLieuOfShare, CorporateActionAmounts45.mmCashInLieuOfShare, CorporateActionAmounts46.mmCashInLieuOfShare,
+					CorporateActionAmounts47.mmCashInLieuOfShare);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -760,6 +821,24 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmCapitalGain
 	 * CorporateActionAmounts40.mmCapitalGain}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmCapitalGain
+	 * CorporateActionAmounts42.mmCapitalGain}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmCapitalGain
+	 * CorporateActionAmounts43.mmCapitalGain}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmCapitalGain
+	 * CorporateActionAmounts44.mmCapitalGain}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmCapitalGain
+	 * CorporateActionAmounts45.mmCapitalGain}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmCapitalGain
+	 * CorporateActionAmounts46.mmCapitalGain}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmCapitalGain
+	 * CorporateActionAmounts47.mmCapitalGain}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -788,7 +867,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts14.mmCapitalGain, CorporateActionAmounts15.mmCapitalGain, CorporateActionAmounts18.mmCapitalGain, CorporateActionAmounts21.mmCapitalGain, CorporateActionAmounts26.mmCapitalGain,
 					CorporateActionAmounts1.mmCapitalGain, CorporateActionAmounts29.mmCapitalGain, CorporateActionAmounts27.mmCapitalGain, CorporateActionAmounts28.mmCapitalGain, CorporateActionAmounts33.mmCapitalGain,
 					CorporateActionAmounts32.mmCapitalGain, CorporateActionAmounts35.mmCapitalGain, CorporateActionAmounts37.mmCapitalGain, CorporateActionAmounts36.mmCapitalGain, CorporateActionAmounts38.mmCapitalGain,
-					CorporateActionAmounts39.mmCapitalGain, CorporateActionAmounts41.mmCapitalGain, CorporateActionAmounts40.mmCapitalGain);
+					CorporateActionAmounts39.mmCapitalGain, CorporateActionAmounts41.mmCapitalGain, CorporateActionAmounts40.mmCapitalGain, CorporateActionAmounts42.mmCapitalGain, CorporateActionAmounts43.mmCapitalGain,
+					CorporateActionAmounts44.mmCapitalGain, CorporateActionAmounts45.mmCapitalGain, CorporateActionAmounts46.mmCapitalGain, CorporateActionAmounts47.mmCapitalGain);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -899,6 +979,18 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmEntitledAmount
 	 * CorporateActionAmounts40.mmEntitledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmEntitledAmount
+	 * CorporateActionAmounts42.mmEntitledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmEntitledAmount
+	 * CorporateActionAmounts43.mmEntitledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmEntitledAmount
+	 * CorporateActionAmounts46.mmEntitledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmEntitledAmount
+	 * CorporateActionAmounts47.mmEntitledAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -926,7 +1018,8 @@ public class CorporateActionCashEntitlement extends CorporateActionEntitlement {
 					CorporateActionAmounts7.mmEntitledAmount, CorporateActionAmounts10.mmEntitledAmount, CorporateActionAmounts14.mmEntitledAmount, CorporateActionAmounts15.mmEntitledAmount, CorporateActionAmounts18.mmEntitledAmount,
 					CorporateActionAmounts21.mmEntitledAmount, CorporateActionAmounts26.mmEntitledAmount, CorporateActionAmounts1.mmEntitledAmount, CashEntitlement1.mmCashAmount, CorporateActionAmounts27.mmEntitledAmount,
 					CorporateActionAmounts28.mmEntitledAmount, CorporateActionAmounts33.mmEntitledAmount, CorporateActionAmounts32.mmEntitledAmount, CorporateActionAmounts36.mmEntitledAmount, CorporateActionAmounts38.mmEntitledAmount,
-					CorporateActionAmounts41.mmEntitledAmount, CorporateActionAmounts40.mmEntitledAmount);
+					CorporateActionAmounts41.mmEntitledAmount, CorporateActionAmounts40.mmEntitledAmount, CorporateActionAmounts42.mmEntitledAmount, CorporateActionAmounts43.mmEntitledAmount, CorporateActionAmounts46.mmEntitledAmount,
+					CorporateActionAmounts47.mmEntitledAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionCashEntitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

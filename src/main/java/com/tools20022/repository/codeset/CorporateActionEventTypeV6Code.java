@@ -271,6 +271,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#NonOfficialOffer
  * CorporateActionEventTypeV6Code.NonOfficialOffer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code#TaxOnNonDistributedProceeds
+ * CorporateActionEventTypeV6Code.TaxOnNonDistributedProceeds}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -291,6 +294,18 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType24Code
  * CorporateActionEventType24Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code
+ * CorporateActionEventType28Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType27Code
+ * CorporateActionEventType27Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType26Code
+ * CorporateActionEventType26Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType25Code
+ * CorporateActionEventType25Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -800,7 +815,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * Exchange of holdings for other securities and/or cash. The exchange can
 	 * be either mandatory or voluntary involving the exchange of outstanding
 	 * securities for different securities and/or cash. For example
-	 * "exchange offer", "capital reorganisation" or "funds separation" .
+	 * "exchange offer", "capital reorganisation" or "funds separation".
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -818,7 +833,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Exchange of holdings for other securities and/or cash. The exchange can be either mandatory or voluntary involving the exchange of outstanding securities for different securities and/or cash. For example \"exchange offer\", \"capital reorganisation\" or \"funds separation\" ."
+	 * "Exchange of holdings for other securities and/or cash. The exchange can be either mandatory or voluntary involving the exchange of outstanding securities for different securities and/or cash. For example \"exchange offer\", \"capital reorganisation\" or \"funds separation\"."
 	 * </li>
 	 * </ul>
 	 */
@@ -826,7 +841,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
-			definition = "Exchange of holdings for other securities and/or cash. The exchange can be either mandatory or voluntary involving the exchange of outstanding securities for different securities and/or cash. For example \"exchange offer\", \"capital reorganisation\" or \"funds separation\" .";
+			definition = "Exchange of holdings for other securities and/or cash. The exchange can be either mandatory or voluntary involving the exchange of outstanding securities for different securities and/or cash. For example \"exchange offer\", \"capital reorganisation\" or \"funds separation\".";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "EXOF";
 		}
@@ -904,9 +919,9 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		}
 	};
 	/**
-	 * Redemption of an entire issue outstanding of securities, eg, bonds,
-	 * preferred equity, funds, by the issuer or its agent, for example, asset
-	 * manager, at final maturity.
+	 * Redemption of an entire issue outstanding of securities, for example,
+	 * bonds, preferred equity, funds, by the issuer or its agent, for example,
+	 * asset manager, at final maturity.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -924,7 +939,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Redemption of an entire issue outstanding of securities, eg, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager, at final maturity."
+	 * "Redemption of an entire issue outstanding of securities, for example, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager, at final maturity."
 	 * </li>
 	 * </ul>
 	 */
@@ -932,7 +947,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalMaturity";
-			definition = "Redemption of an entire issue outstanding of securities, eg, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager, at final maturity.";
+			definition = "Redemption of an entire issue outstanding of securities, for example, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager, at final maturity.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "REDM";
 		}
@@ -1104,8 +1119,8 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		}
 	};
 	/**
-	 * Conversion of securities ( generally convertible bonds or preferred
-	 * shares) into another form of securities ( usually common shares) at a
+	 * Conversion of securities (generally convertible bonds or preferred
+	 * shares) into another form of securities (usually common shares) at a
 	 * pre-stated price/ratio.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -1124,7 +1139,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Conversion of securities ( generally convertible bonds or preferred shares) into another form of securities ( usually common shares) at a pre-stated price/ratio."
+	 * "Conversion of securities (generally convertible bonds or preferred shares) into another form of securities (usually common shares) at a pre-stated price/ratio."
 	 * </li>
 	 * </ul>
 	 */
@@ -1132,15 +1147,15 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
-			definition = "Conversion of securities ( generally convertible bonds or preferred shares) into another form of securities ( usually common shares) at a pre-stated price/ratio.";
+			definition = "Conversion of securities (generally convertible bonds or preferred shares) into another form of securities (usually common shares) at a pre-stated price/ratio.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CONV";
 		}
 	};
 	/**
 	 * Separation of components that comprise a security, for example, usually
-	 * units comprised of warrants and bond or warrants and equity . Units may
-	 * be broken up at the request of the security holder or based on market
+	 * units comprised of warrants and bond or warrants and equity. Units may be
+	 * broken up at the request of the security holder or based on market
 	 * convention.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -1159,7 +1174,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Separation of components that comprise a security, for example, usually units comprised of warrants and bond or warrants and equity . Units may be broken up at the request of the security holder or based on market convention."
+	 * "Separation of components that comprise a security, for example, usually units comprised of warrants and bond or warrants and equity. Units may be broken up at the request of the security holder or based on market convention."
 	 * </li>
 	 * </ul>
 	 */
@@ -1167,14 +1182,14 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detachment";
-			definition = "Separation of components that comprise a security, for example, usually units comprised of warrants and bond or warrants and equity . Units may be broken up at the request of the security holder or based on market convention.";
+			definition = "Separation of components that comprise a security, for example, usually units comprised of warrants and bond or warrants and equity. Units may be broken up at the request of the security holder or based on market convention.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "DETI";
 		}
 	};
 	/**
-	 * Trading in security has commenced or security has been re-activated after
-	 * a suspension in trading.
+	 * Trading in the security has commenced or security has been re-activated
+	 * after a suspension in trading.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1192,7 +1207,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Trading in security has commenced or security has been re-activated after a suspension in trading."
+	 * "Trading in the security has commenced or security has been re-activated after a suspension in trading."
 	 * </li>
 	 * </ul>
 	 */
@@ -1200,7 +1215,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveTradingStatus";
-			definition = "Trading in security has commenced or security has been re-activated after a suspension in trading.";
+			definition = "Trading in the security has commenced or security has been re-activated after a suspension in trading.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "ACTV";
 		}
@@ -1394,7 +1409,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Procedure that aims to obtain consent of holder  to a proposal by the issuer or a third party without convening a meeting. For example, consent to change the terms of a bond."
+	 * "Procedure that aims to obtain consent of holder to a proposal by the issuer or a third party without convening a meeting. For example, consent to change the terms of a bond."
 	 * </li>
 	 * </ul>
 	 */
@@ -1402,7 +1417,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
-			definition = "Procedure that aims to obtain consent of holder  to a proposal by the issuer or a third party without convening a meeting. For example, consent to change the terms of a bond.";
+			definition = "Procedure that aims to obtain consent of holder to a proposal by the issuer or a third party without convening a meeting. For example, consent to change the terms of a bond.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "CONS";
 		}
@@ -1648,9 +1663,9 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		}
 	};
 	/**
-	 * Redemption of an entire issue outstanding of securities, eg, bonds,
-	 * preferred equity, funds, by the issuer or its agent, for example, asset
-	 * manager,before final maturity.
+	 * Redemption of an entire issue outstanding of securities, for example,
+	 * bonds, preferred equity, funds, by the issuer or its agent, for example,
+	 * asset manager, before final maturity.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1668,7 +1683,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Redemption of an entire issue outstanding of securities, eg, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager,before final maturity."
+	 * "Redemption of an entire issue outstanding of securities, for example, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager, before final maturity."
 	 * </li>
 	 * </ul>
 	 */
@@ -1676,14 +1691,14 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullCall";
-			definition = "Redemption of an entire issue outstanding of securities, eg, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager,before final maturity.";
+			definition = "Redemption of an entire issue outstanding of securities, for example, bonds, preferred equity, funds, by the issuer or its agent, for example, asset manager, before final maturity.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "MCAL";
 		}
 	};
 	/**
 	 * Increase in the face value of a single security. The number of
-	 * circulating securities remains unchanged .
+	 * circulating securities remains unchanged.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1701,7 +1716,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Increase in the face value of a single security. The number of circulating securities remains unchanged ."
+	 * "Increase in the face value of a single security. The number of circulating securities remains unchanged."
 	 * </li>
 	 * </ul>
 	 */
@@ -1709,7 +1724,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseInValue";
-			definition = "Increase in the face value of a single security. The number of circulating securities remains unchanged .";
+			definition = "Increase in the face value of a single security. The number of circulating securities remains unchanged.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "INCR";
 		}
@@ -1981,7 +1996,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	/**
 	 * Occurs when securities with different characteristics, for example,
 	 * shares with different entitlements to dividend or voting rights, become
-	 * identical in all respects, for example , pari-passu or assimilation. May
+	 * identical in all respects, for example, pari-passu or assimilation. May
 	 * be scheduled in advance, for example, shares resulting from a bonus may
 	 * become fungible after a pre-set period of time, or may result from
 	 * outside events, for example, merger, reorganisation, issue of
@@ -2003,7 +2018,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Occurs when securities with different characteristics, for example, shares with different entitlements to dividend or voting rights, become identical in all respects, for example , pari-passu or assimilation. May be scheduled in advance, for example, shares resulting from a bonus may become fungible after a pre-set period of time, or may result from outside events, for example, merger, reorganisation, issue of supplementary tranches."
+	 * "Occurs when securities with different characteristics, for example, shares with different entitlements to dividend or voting rights, become identical in all respects, for example, pari-passu or assimilation. May be scheduled in advance, for example, shares resulting from a bonus may become fungible after a pre-set period of time, or may result from outside events, for example, merger, reorganisation, issue of supplementary tranches."
 	 * </li>
 	 * </ul>
 	 */
@@ -2011,7 +2026,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassu";
-			definition = "Occurs when securities with different characteristics, for example, shares with different entitlements to dividend or voting rights, become identical in all respects, for example , pari-passu or assimilation. May be scheduled in advance, for example, shares resulting from a bonus may become fungible after a pre-set period of time, or may result from outside events, for example, merger, reorganisation, issue of supplementary tranches.";
+			definition = "Occurs when securities with different characteristics, for example, shares with different entitlements to dividend or voting rights, become identical in all respects, for example, pari-passu or assimilation. May be scheduled in advance, for example, shares resulting from a bonus may become fungible after a pre-set period of time, or may result from outside events, for example, merger, reorganisation, issue of supplementary tranches.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "PARI";
 		}
@@ -2252,8 +2267,8 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		}
 	};
 	/**
-	 * Repurchase offer/Issuer bid/ Reverse rights. Offer to existing holders by
-	 * the issuing company to repurchase its own securities. The objective of
+	 * Repurchase offer / issuer bid / reverse rights. Offer to existing holders
+	 * by the issuing company to repurchase its own securities. The objective of
 	 * the offer is to reduce the number of outstanding securities.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -2272,7 +2287,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Repurchase offer/Issuer bid/ Reverse rights. Offer to existing holders by the issuing company to repurchase its own securities. The objective of the offer is to reduce the number of outstanding securities."
+	 * "Repurchase offer / issuer bid / reverse rights. Offer to existing holders by the issuing company to repurchase its own securities. The objective of the offer is to reduce the number of outstanding securities."
 	 * </li>
 	 * </ul>
 	 */
@@ -2280,7 +2295,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseOffer";
-			definition = "Repurchase offer/Issuer bid/ Reverse rights. Offer to existing holders by the issuing company to repurchase its own securities. The objective of the offer is to reduce the number of outstanding securities.";
+			definition = "Repurchase offer / issuer bid / reverse rights. Offer to existing holders by the issuing company to repurchase its own securities. The objective of the offer is to reduce the number of outstanding securities.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "BIDS";
 		}
@@ -2867,7 +2882,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Funds related event in which the income (for example accumulation units) that accrues during an accounting period is retained within the fund instead of being paid away to investors. The retained income is nonetheless deemed to have been distributed to investors for tax purposes. "
+	 * "Funds related event in which the income (for example accumulation units) that accrues during an accounting period is retained within the fund instead of being paid away to investors. The retained income is nonetheless deemed to have been distributed to investors for tax purposes."
 	 * </li>
 	 * </ul>
 	 */
@@ -2875,7 +2890,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accumulation";
-			definition = "Funds related event in which the income (for example accumulation units) that accrues during an accounting period is retained within the fund instead of being paid away to investors. The retained income is nonetheless deemed to have been distributed to investors for tax purposes. ";
+			definition = "Funds related event in which the income (for example accumulation units) that accrues during an accounting period is retained within the fund instead of being paid away to investors. The retained income is nonetheless deemed to have been distributed to investors for tax purposes.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
 			codeName = "ACCU";
 		}
@@ -2948,6 +2963,39 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 			codeName = "NOOF";
 		}
 	};
+	/**
+	 * Taxable component on non-distributed proceeds, for example, Australian
+	 * deemed income or US 871m income regulation.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventTypeV6Code
+	 * CorporateActionEventTypeV6Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "TNDP"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TaxOnNonDistributedProceeds"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Taxable component on non-distributed proceeds, for example, Australian deemed income or US 871m income regulation."
+	 * </li>
+	 * </ul>
+	 */
+	public static final CorporateActionEventTypeV6Code TaxOnNonDistributedProceeds = new CorporateActionEventTypeV6Code() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TaxOnNonDistributedProceeds";
+			definition = "Taxable component on non-distributed proceeds, for example, Australian deemed income or US 871m income regulation.";
+			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.mmObject();
+			codeName = "TNDP";
+		}
+	};
 	final static private LinkedHashMap<String, CorporateActionEventTypeV6Code> codesByName = new LinkedHashMap<>();
 
 	protected CorporateActionEventTypeV6Code() {
@@ -2962,7 +3010,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 				name = "CorporateActionEventTypeV6Code";
 				definition = "Specifies the corporate action event type.";
 				derivation_lazy = () -> Arrays.asList(CorporateActionEventType22Code.mmObject(), CorporateActionEventType20Code.mmObject(), CorporateActionEventType21Code.mmObject(), CorporateActionEventType23Code.mmObject(),
-						CorporateActionEventType24Code.mmObject());
+						CorporateActionEventType24Code.mmObject(), CorporateActionEventType28Code.mmObject(), CorporateActionEventType27Code.mmObject(), CorporateActionEventType26Code.mmObject(), CorporateActionEventType25Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.DividendReinvestment, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CapitalGainsDistribution,
 						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CashDividend, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.DividendOption,
 						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.StockDividend, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.LiquidationDividend,
@@ -3002,7 +3050,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CapitalDistribution, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CreditEvent,
 						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.SecuritiesHoldersMeeting, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.CashDistributionFromNonEligibleSecuritiesSales,
 						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Accumulation, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.Information,
-						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.NonOfficialOffer);
+						com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.NonOfficialOffer, com.tools20022.repository.codeset.CorporateActionEventTypeV6Code.TaxOnNonDistributedProceeds);
 			}
 		});
 		return mmObject_lazy.get();
@@ -3087,6 +3135,7 @@ public class CorporateActionEventTypeV6Code extends MMCode {
 		codesByName.put(Accumulation.getCodeName().get(), Accumulation);
 		codesByName.put(Information.getCodeName().get(), Information);
 		codesByName.put(NonOfficialOffer.getCodeName().get(), NonOfficialOffer);
+		codesByName.put(TaxOnNonDistributedProceeds.getCodeName().get(), TaxOnNonDistributedProceeds);
 	}
 
 	public static CorporateActionEventTypeV6Code valueOf(String codeName) {

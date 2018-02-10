@@ -64,6 +64,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ReportingPeriod1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the requested reporting period."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod2
+ * ReportingPeriod2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,6 +111,14 @@ public class ReportingPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies a date range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingPeriod2#mmFromToDate
+	 * ReportingPeriod2.mmFromToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
@@ -115,6 +130,7 @@ public class ReportingPeriod1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Specifies a date range.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingPeriod2.mmFromToDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails1.mmObject();
@@ -153,6 +169,14 @@ public class ReportingPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies a time range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingPeriod2#mmFromToTime
+	 * ReportingPeriod2.mmFromToTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromToTime = new MMMessageAttribute() {
@@ -164,6 +188,7 @@ public class ReportingPeriod1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToTime";
 			definition = "Specifies a time range.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingPeriod2.mmFromToTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.TimePeriodDetails1.mmObject();
@@ -199,6 +224,13 @@ public class ReportingPeriod1 {
 	 * definition} =
 	 * "Specifies whether all matching items need to be reported or only those items that are new or have changed since the last similar request was made."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod2#mmType
+	 * ReportingPeriod2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -209,6 +241,7 @@ public class ReportingPeriod1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies whether all matching items need to be reported or only those items that are new or have changed since the last similar request was made.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingPeriod2.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> QueryType3Code.mmObject();
@@ -224,6 +257,7 @@ public class ReportingPeriod1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingPeriod1";
 				definition = "Specifies the requested reporting period.";
+				nextVersions_lazy = () -> Arrays.asList(ReportingPeriod2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

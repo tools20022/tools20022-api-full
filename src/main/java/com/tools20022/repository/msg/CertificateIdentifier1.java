@@ -90,7 +90,7 @@ public class CertificateIdentifier1 {
 	 * name} = "IssuerAndSerialNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Certificate issuer name and serial number  (see X.509)."</li>
+	 * definition} = "Certificate issuer name and serial number (see X.509)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIssuerAndSerialNumber = new MMMessageAssociationEnd() {
@@ -100,7 +100,7 @@ public class CertificateIdentifier1 {
 			xmlTag = "IssrAndSrlNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAndSerialNumber";
-			definition = "Certificate issuer name and serial number  (see X.509).";
+			definition = "Certificate issuer name and serial number (see X.509).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

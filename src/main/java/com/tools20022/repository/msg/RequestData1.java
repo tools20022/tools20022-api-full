@@ -119,7 +119,7 @@ public class RequestData1 {
 	 * name} = "MessageIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unique identification of the message"</li>
+	 * definition} = "Unique identification of the message."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
@@ -129,7 +129,7 @@ public class RequestData1 {
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
-			definition = "Unique identification of the message";
+			definition = "Unique identification of the message.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

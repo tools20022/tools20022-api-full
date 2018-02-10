@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Trading Date Code
+ * Trading Date Code.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TradingDate1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Trading Date Code"</li>
+ * definition} = "Trading Date Code."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -104,7 +104,7 @@ public class TradingDate1Code extends MMCode {
 				example = Arrays.asList("VARI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingDate1Code";
-				definition = "Trading Date Code";
+				definition = "Trading Date Code.";
 				trace_lazy = () -> TradingDateCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingDate1Code.Various);
 			}

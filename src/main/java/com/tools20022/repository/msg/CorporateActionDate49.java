@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionDate49"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies corporate action dates."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDate59
+ * CorporateActionDate59}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionDate30
@@ -114,6 +121,14 @@ public class CorporateActionDate49 {
 	 * definition} =
 	 * "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate59#mmRecordDate
+	 * CorporateActionDate59.mmRecordDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +146,7 @@ public class CorporateActionDate49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate59.mmRecordDate);
 			previousVersion_lazy = () -> CorporateActionDate30.mmRecordDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -174,6 +190,14 @@ public class CorporateActionDate49 {
 	 * definition} =
 	 * "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate59#mmExDividendDate
+	 * CorporateActionDate59.mmExDividendDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -191,6 +215,7 @@ public class CorporateActionDate49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate59.mmExDividendDate);
 			previousVersion_lazy = () -> CorporateActionDate30.mmExDividendDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -208,6 +233,7 @@ public class CorporateActionDate49 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate49";
 				definition = "Specifies corporate action dates.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionDate59.mmObject());
 				previousVersion_lazy = () -> CorporateActionDate30.mmObject();
 			}
 		});

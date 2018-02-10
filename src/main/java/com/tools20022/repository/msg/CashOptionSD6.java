@@ -202,7 +202,7 @@ public class CashOptionSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. "
+	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -227,7 +227,7 @@ public class CashOptionSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
-			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
+			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDTCPayMethod);
 			previousVersion_lazy = () -> CashOptionSD1.mmDTCPayMethod;
 			maxOccurs = 1;
@@ -576,7 +576,7 @@ public class CashOptionSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cash rate associated to the payout as declared  on the market by the issuer or offeror."
+	 * "Cash rate associated to the payout as declared on the market by the issuer or offeror."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -601,7 +601,7 @@ public class CashOptionSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Cash Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredCashRate";
-			definition = "Cash rate associated to the payout as declared  on the market by the issuer or offeror.";
+			definition = "Cash rate associated to the payout as declared on the market by the issuer or offeror.";
 			nextVersions_lazy = () -> Arrays.asList(CashOptionSD8.mmDeclaredCashRate);
 			previousVersion_lazy = () -> CashOptionSD1.mmDeclaredCashRate;
 			maxOccurs = 1;

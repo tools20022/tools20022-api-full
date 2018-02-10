@@ -283,6 +283,7 @@ class ListBuilderForGeneratedRepository_01 {
 		list.add((T) Swaps.mmObject());
 		list.add((T) Commodity.mmObject());
 		list.add((T) CRSStatus.mmObject());
+		list.add((T) AccountSwitching.mmObject());
 		list.add((T) MessageIdentification1.mmObject());
 		list.add((T) UpdatedDate.mmObject());
 		list.add((T) AlternateSecurityIdentification3.mmObject());
@@ -525,7 +526,6 @@ class ListBuilderForGeneratedRepository_01 {
 		list.add((T) InvestmentFundCashSettlementInformation2.mmObject());
 		list.add((T) InvestmentFundCashSettlementInformation4.mmObject());
 		list.add((T) InvestmentPlan5.mmObject());
-		list.add((T) InvestmentPlan3.mmObject());
 		ListBuilderForGeneratedRepository_02.addElems(list);
 		return list;
 	}

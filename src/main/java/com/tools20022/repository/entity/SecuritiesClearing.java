@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Clearing;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -72,6 +73,31 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.entity.Novation#mmSecuritiesClearing
  * Novation.mmSecuritiesClearing}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmTradeClearing
+ * TradeTransaction15.mmTradeClearing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmTradeClearing
+ * TradeTransaction17.mmTradeClearing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmTradeClearing
+ * TradeTransaction14.mmTradeClearing}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmTradeClearing
+ * TradeTransaction16.mmTradeClearing}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeClearing2 TradeClearing2}</li>
  * </ul>
  * </li>
  * <li>
@@ -292,9 +318,11 @@ public class SecuritiesClearing extends Clearing {
 				definition = "Process of settling securities through a central system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.mmSecuritiesClearing, com.tools20022.repository.entity.BuyIn.mmRelatedSecuritiesClearingProcess,
 						com.tools20022.repository.entity.Netting.mmRelatedSecuritiesClearingProcess, com.tools20022.repository.entity.Novation.mmSecuritiesClearing);
+				derivationElement_lazy = () -> Arrays.asList(TradeTransaction15.mmTradeClearing, TradeTransaction17.mmTradeClearing, TradeTransaction14.mmTradeClearing, TradeTransaction16.mmTradeClearing);
 				superType_lazy = () -> Clearing.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesClearing.mmSecuritiesSettlement, com.tools20022.repository.entity.SecuritiesClearing.mmBuyIn,
 						com.tools20022.repository.entity.SecuritiesClearing.mmNovation, com.tools20022.repository.entity.SecuritiesClearing.mmNetting);
+				derivationComponent_lazy = () -> Arrays.asList(TradeClearing2.mmObject());
 			}
 
 			@Override

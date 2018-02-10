@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "TransactionEnvironment3Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Indicates the entity hosting the terminal performing the transaction. "</li>
+ * "Indicates the entity hosting the terminal performing the transaction."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -153,7 +153,7 @@ public class TransactionEnvironment3Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionEnvironment3Code";
-				definition = "Indicates the entity hosting the terminal performing the transaction. ";
+				definition = "Indicates the entity hosting the terminal performing the transaction.";
 				trace_lazy = () -> TransactionEnvironmentCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionEnvironment3Code.Branch, com.tools20022.repository.codeset.TransactionEnvironment3Code.Merchant,
 						com.tools20022.repository.codeset.TransactionEnvironment3Code.Other);

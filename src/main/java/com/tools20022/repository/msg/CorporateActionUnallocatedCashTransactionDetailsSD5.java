@@ -80,6 +80,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionUnallocatedCashTransactionDetailsSD5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Breakdown of unallocated cash transactions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD6
+ * CorporateActionUnallocatedCashTransactionDetailsSD6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD4
@@ -122,6 +130,15 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the value is a debit or a credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD6#mmCreditDebitIndicator
+	 * CorporateActionUnallocatedCashTransactionDetailsSD6.
+	 * mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +156,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedCashTransactionDetailsSD6.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -176,6 +194,14 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD6#mmReasonCode
+	 * CorporateActionUnallocatedCashTransactionDetailsSD6.mmReasonCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -192,6 +218,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Transaction reason.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedCashTransactionDetailsSD6.mmReasonCode);
 			previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmReasonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -229,6 +256,14 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Resulting cash amount concerned in this transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD6#mmTransactionAmount
+	 * CorporateActionUnallocatedCashTransactionDetailsSD6.mmTransactionAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -245,6 +280,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAmount";
 			definition = "Resulting cash amount concerned in this transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedCashTransactionDetailsSD6.mmTransactionAmount);
 			previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmTransactionAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -282,6 +318,15 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason for the unallocation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD6#mmUnallocatedReasonCode
+	 * CorporateActionUnallocatedCashTransactionDetailsSD6.
+	 * mmUnallocatedReasonCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -299,6 +344,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedReasonCode";
 			definition = "Reason for the unallocation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedCashTransactionDetailsSD6.mmUnallocatedReasonCode);
 			previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmUnallocatedReasonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -337,6 +383,15 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 	 * definition} =
 	 * "Transaction contra participant identification when shares are distributed / delivered to / from another participant."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD6#mmContraParticipantNumber
+	 * CorporateActionUnallocatedCashTransactionDetailsSD6.
+	 * mmContraParticipantNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -354,6 +409,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedCashTransactionDetailsSD6.mmContraParticipantNumber);
 			previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmContraParticipantNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -393,6 +449,15 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 	 * definition} =
 	 * "Date/time at which the movement was due to take place (cash and/or securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedCashTransactionDetailsSD6#mmEarliestPaymentDate
+	 * CorporateActionUnallocatedCashTransactionDetailsSD6.mmEarliestPaymentDate
+	 * }</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -410,6 +475,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedCashTransactionDetailsSD6.mmEarliestPaymentDate);
 			previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmEarliestPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -428,6 +494,7 @@ public class CorporateActionUnallocatedCashTransactionDetailsSD5 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionUnallocatedCashTransactionDetailsSD5";
 				definition = "Breakdown of unallocated cash transactions.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedCashTransactionDetailsSD6.mmObject());
 				previousVersion_lazy = () -> CorporateActionUnallocatedCashTransactionDetailsSD4.mmObject();
 			}
 		});

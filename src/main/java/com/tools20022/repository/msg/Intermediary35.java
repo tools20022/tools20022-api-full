@@ -72,6 +72,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Party that provides services to investors relating to financial products."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary42 Intermediary42}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Intermediary34
  * Intermediary34}</li>
@@ -114,6 +120,14 @@ public class Intermediary35 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique and unambiguous identifier of the intermediary."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary42#mmIdentification
+	 * Intermediary42.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -130,6 +144,7 @@ public class Intermediary35 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
+			nextVersions_lazy = () -> Arrays.asList(Intermediary42.mmIdentification);
 			previousVersion_lazy = () -> Intermediary34.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -167,6 +182,13 @@ public class Intermediary35 {
 	 * definition} =
 	 * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary42#mmAccount
+	 * Intermediary42.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +205,7 @@ public class Intermediary35 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(Intermediary42.mmAccount);
 			previousVersion_lazy = () -> Intermediary34.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -220,6 +243,13 @@ public class Intermediary35 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Function performed by the intermediary."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary42#mmRole
+	 * Intermediary42.mmRole}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -236,6 +266,7 @@ public class Intermediary35 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary.";
+			nextVersions_lazy = () -> Arrays.asList(Intermediary42.mmRole);
 			previousVersion_lazy = () -> Intermediary34.mmRole;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -253,6 +284,7 @@ public class Intermediary35 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Intermediary35";
 				definition = "Party that provides services to investors relating to financial products.";
+				nextVersions_lazy = () -> Arrays.asList(Intermediary42.mmObject());
 				previousVersion_lazy = () -> Intermediary34.mmObject();
 			}
 		});

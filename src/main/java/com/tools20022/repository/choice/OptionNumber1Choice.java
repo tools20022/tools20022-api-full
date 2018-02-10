@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Choice between an number and a option number in a code format.
+ * Choice between an number and an option number in a code format.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * "OptionNumber1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between an number and a option number in a code format."</li>
+ * "Choice between an number and an option number in a code format."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -169,7 +169,7 @@ public class OptionNumber1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionNumber1Choice";
-				definition = "Choice between an number and a option number in a code format.";
+				definition = "Choice between an number and an option number in a code format.";
 			}
 		});
 		return mmObject_lazy.get();

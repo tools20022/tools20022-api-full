@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.XmlType;
  * "TotalEligibleBalanceFormat4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Total eligible balance for the corporate action and full and part way period units. "
+ * "Total eligible balance for the corporate action and full and part way period units."
  * </li>
  * </ul>
  */
@@ -239,7 +239,7 @@ public class TotalEligibleBalanceFormat4 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TotalEligibleBalanceFormat4";
-				definition = "Total eligible balance for the corporate action and full and part way period units. ";
+				definition = "Total eligible balance for the corporate action and full and part way period units.";
 			}
 		});
 		return mmObject_lazy.get();

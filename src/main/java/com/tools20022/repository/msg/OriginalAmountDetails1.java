@@ -110,7 +110,7 @@ public class OriginalAmountDetails1 {
 	 * name} = "ActualAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Actual amount to be converted"</li>
+	 * definition} = "Actual amount to be converted."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmActualAmount = new MMMessageAttribute() {
@@ -121,7 +121,7 @@ public class OriginalAmountDetails1 {
 			xmlTag = "ActlAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualAmount";
-			definition = "Actual amount to be converted";
+			definition = "Actual amount to be converted.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -160,7 +160,7 @@ public class OriginalAmountDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum amount for conversion (in case of range of amounts)"</li>
+	 * "Minimum amount for conversion (in case of range of amounts)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumAmount = new MMMessageAttribute() {
@@ -171,7 +171,7 @@ public class OriginalAmountDetails1 {
 			xmlTag = "MinAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAmount";
-			definition = "Minimum amount for conversion (in case of range of amounts)";
+			definition = "Minimum amount for conversion (in case of range of amounts).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -210,7 +210,7 @@ public class OriginalAmountDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Maximum amount for conversion (in case of range of amounts)"</li>
+	 * "Maximum amount for conversion (in case of range of amounts)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumAmount = new MMMessageAttribute() {
@@ -221,7 +221,7 @@ public class OriginalAmountDetails1 {
 			xmlTag = "MaxAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmount";
-			definition = "Maximum amount for conversion (in case of range of amounts)";
+			definition = "Maximum amount for conversion (in case of range of amounts).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();

@@ -232,6 +232,14 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * definition} =
 	 * "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline#forTransaction59
+	 * ConstraintCreditDebitIndicatorGuideline.forTransaction59}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -245,8 +253,44 @@ public class ConstraintCreditDebitIndicatorGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicatorGuideline";
 			definition = "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline.forTransaction59);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline.forTransaction24;
 			owner_lazy = () -> Transaction33.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction59 Transaction59}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CreditDebitIndicatorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline#forTransaction33
+	 * ConstraintCreditDebitIndicatorGuideline.forTransaction33}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction59> forTransaction59 = new MMConstraint<Transaction59>() {
+		{
+			validator = ConstraintCreditDebitIndicatorGuideline::checkTransaction59;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CreditDebitIndicatorGuideline";
+			definition = "The CreditDebitIndicator may be omitted for optimisation reason if the CreditDebitIndicator is used in the search criteria of the related query.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCreditDebitIndicatorGuideline.forTransaction33;
+			owner_lazy = () -> Transaction59.mmObject();
 		}
 	};
 
@@ -303,6 +347,14 @@ public class ConstraintCreditDebitIndicatorGuideline {
 	 * CreditDebitIndicator is used in the search criteria of the related query.
 	 */
 	public static void checkTransaction33(Transaction33 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The CreditDebitIndicator may be omitted for optimisation reason if the
+	 * CreditDebitIndicator is used in the search criteria of the related query.
+	 */
+	public static void checkTransaction59(Transaction59 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

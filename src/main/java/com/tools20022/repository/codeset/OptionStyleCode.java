@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Defines how an option can be exercised
+ * Defines how an option can be exercised.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -62,6 +62,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * OptionStyle4Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle3Code
  * OptionStyle3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle5Code
+ * OptionStyle5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle6Code
+ * OptionStyle6Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.OptionStyle7Code
  * OptionStyle7Code}</li>
  * </ul>
@@ -84,7 +88,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OptionStyleCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Defines how an option can be exercised"</li>
+ * definition} = "Defines how an option can be exercised."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -302,8 +306,9 @@ public class OptionStyleCode extends MMCode {
 				example = Arrays.asList("AMER");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyleCode";
-				definition = "Defines how an option can be exercised";
-				derivation_lazy = () -> Arrays.asList(OptionStyle2Code.mmObject(), OptionStyle1Code.mmObject(), OptionStyle4Code.mmObject(), OptionStyle3Code.mmObject(), OptionStyle7Code.mmObject());
+				definition = "Defines how an option can be exercised.";
+				derivation_lazy = () -> Arrays.asList(OptionStyle2Code.mmObject(), OptionStyle1Code.mmObject(), OptionStyle4Code.mmObject(), OptionStyle3Code.mmObject(), OptionStyle5Code.mmObject(), OptionStyle6Code.mmObject(),
+						OptionStyle7Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyleCode.American, com.tools20022.repository.codeset.OptionStyleCode.European, com.tools20022.repository.codeset.OptionStyleCode.Bermudan,
 						com.tools20022.repository.codeset.OptionStyleCode.Asian, com.tools20022.repository.codeset.OptionStyleCode.Canary, com.tools20022.repository.codeset.OptionStyleCode.Other);
 			}

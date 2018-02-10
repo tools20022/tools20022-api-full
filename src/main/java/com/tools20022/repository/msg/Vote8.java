@@ -127,7 +127,7 @@ public class Vote8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Numbering of the resolution as specified by the issuer or  its agent."</li>
+	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -143,7 +143,7 @@ public class Vote8 {
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
-			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
+			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			previousVersion_lazy = () -> Vote4.mmIssuerLabel;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -231,7 +231,7 @@ public class Vote8 {
 	 * name} = "Against"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes against one resolution"</li>
+	 * definition} = "Number of votes against one resolution."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -247,7 +247,7 @@ public class Vote8 {
 			xmlTag = "Agnst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
-			definition = "Number of votes against one resolution";
+			definition = "Number of votes against one resolution.";
 			previousVersion_lazy = () -> Vote4.mmAgainst;
 			maxOccurs = 1;
 			minOccurs = 0;

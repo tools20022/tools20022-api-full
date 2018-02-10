@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Reports either on the collateral value report or on a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValueReport2
+ * CollateralValueReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +109,14 @@ public class CollateralValueReport1 {
 	 * definition} =
 	 * "Unique identification, as assigned by the account servicer, to unambiguously identify the account on which information is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueReport2#mmAccount
+	 * CollateralValueReport2.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
@@ -112,6 +127,7 @@ public class CollateralValueReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account on which information is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueReport2.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -146,6 +162,14 @@ public class CollateralValueReport1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Unique and unambiguous identification of the securities account owner."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueReport2#mmSecuritiesAccountOwner
+	 * CollateralValueReport2.mmSecuritiesAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountOwner = new MMMessageAssociationEnd() {
@@ -156,6 +180,7 @@ public class CollateralValueReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOwner";
 			definition = "Unique and unambiguous identification of the securities account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueReport2.mmSecuritiesAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -191,6 +216,14 @@ public class CollateralValueReport1 {
 	 * definition} =
 	 * "Party that manages the securities account on behalf of the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueReport2#mmSecuritiesAccountServicer
+	 * CollateralValueReport2.mmSecuritiesAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountServicer = new MMMessageAssociationEnd() {
@@ -201,6 +234,7 @@ public class CollateralValueReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountServicer";
 			definition = "Party that manages the securities account on behalf of the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueReport2.mmSecuritiesAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -236,6 +270,14 @@ public class CollateralValueReport1 {
 	 * definition} =
 	 * "Provides information specific to the report on collateral value positions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueReport2#mmCollateralValueReport
+	 * CollateralValueReport2.mmCollateralValueReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCollateralValueReport = new MMMessageAssociationEnd() {
@@ -246,6 +288,7 @@ public class CollateralValueReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValueReport";
 			definition = "Provides information specific to the report on collateral value positions.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueReport2.mmCollateralValueReport);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> CollateralValueReportOrError2Choice.mmObject();
@@ -261,6 +304,7 @@ public class CollateralValueReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReport1";
 				definition = "Reports either on the collateral value report or on a business error.";
+				nextVersions_lazy = () -> Arrays.asList(CollateralValueReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

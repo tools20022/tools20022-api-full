@@ -75,6 +75,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Overall process covering the trade and settlement transactions of financial instruments."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification25
+ * SettlementTypeAndIdentification25}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification2
@@ -122,6 +130,14 @@ public class SettlementTypeAndIdentification20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies how the transaction is to be settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification25#mmPayment
+	 * SettlementTypeAndIdentification25.mmPayment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +155,7 @@ public class SettlementTypeAndIdentification20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementTypeAndIdentification25.mmPayment);
 			previousVersion_lazy = () -> SettlementTypeAndIdentification2.mmPayment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -177,6 +194,14 @@ public class SettlementTypeAndIdentification20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification25#mmTransactionIdentification
+	 * SettlementTypeAndIdentification25.mmTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -193,6 +218,7 @@ public class SettlementTypeAndIdentification20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Reference of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementTypeAndIdentification25.mmTransactionIdentification);
 			previousVersion_lazy = () -> SettlementTypeAndIdentification2.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -235,6 +261,14 @@ public class SettlementTypeAndIdentification20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the intended settlement date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification25#mmSettlementDate
+	 * SettlementTypeAndIdentification25.mmSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -252,6 +286,7 @@ public class SettlementTypeAndIdentification20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Identifies the intended settlement date.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementTypeAndIdentification25.mmSettlementDate);
 			previousVersion_lazy = () -> SettlementTypeAndIdentification2.mmSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -269,6 +304,7 @@ public class SettlementTypeAndIdentification20 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementTypeAndIdentification20";
 				definition = "Overall process covering the trade and settlement transactions of financial instruments.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementTypeAndIdentification25.mmObject());
 				previousVersion_lazy = () -> SettlementTypeAndIdentification2.mmObject();
 			}
 		});

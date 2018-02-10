@@ -309,7 +309,7 @@ public class ConstraintGroupAndTransactionStatus3Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to RJCT, then TransactionInformationAndStatus/TransactionStatus must be different from ACTC, ACCP, ACSP, ACSC, ACCR, ACWC or PDNG. \n"
+	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to RJCT, then TransactionInformationAndStatus/TransactionStatus must be different from ACTC, ACCP, ACSP, ACSC, ACCR, ACWC or PDNG. \n."
 	 * </li>
 	 * </ul>
 	 */
@@ -318,7 +318,7 @@ public class ConstraintGroupAndTransactionStatus3Rule {
 			validator = ConstraintGroupAndTransactionStatus3Rule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus3Rule";
-			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to RJCT, then TransactionInformationAndStatus/TransactionStatus must be different from ACTC, ACCP, ACSP, ACSC, ACCR, ACWC or PDNG. \n";
+			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to RJCT, then TransactionInformationAndStatus/TransactionStatus must be different from ACTC, ACCP, ACSP, ACSC, ACCR, ACWC or PDNG. \n.";
 			owner_lazy = () -> com.tools20022.repository.area.pacs.PaymentStatusReportV02.mmObject();
 		}
 	};
@@ -389,7 +389,7 @@ public class ConstraintGroupAndTransactionStatus3Rule {
 	/**
 	 * If OriginalGroupInformationAndStatus/GroupStatus is present and is equal
 	 * to RJCT, then TransactionInformationAndStatus/TransactionStatus must be
-	 * different from ACTC, ACCP, ACSP, ACSC, ACCR, ACWC or PDNG.
+	 * different from ACTC, ACCP, ACSP, ACSC, ACCR, ACWC or PDNG. .
 	 */
 	public static void checkPaymentStatusReportV02(com.tools20022.repository.area.pacs.PaymentStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();

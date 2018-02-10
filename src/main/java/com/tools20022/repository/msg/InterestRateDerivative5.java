@@ -171,7 +171,7 @@ public class InterestRateDerivative5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Populated when the underlying type is a bond or a bond future.  Details the issuer and maturity date of the bond."
+	 * "Populated when the underlying type is a bond or a bond future. Details the issuer and maturity date of the bond."
 	 * </li>
 	 * </ul>
 	 */
@@ -183,7 +183,7 @@ public class InterestRateDerivative5 {
 			xmlTag = "UndrlygBd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingBond";
-			definition = "Populated when the underlying type is a bond or a bond future.  Details the issuer and maturity date of the bond.";
+			definition = "Populated when the underlying type is a bond or a bond future. Details the issuer and maturity date of the bond.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

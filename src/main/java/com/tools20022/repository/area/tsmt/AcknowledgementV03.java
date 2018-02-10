@@ -224,7 +224,7 @@ public class AcknowledgementV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification assigned by the matching application to the baseline when it is established. "
+	 * "Unique identification assigned by the matching application to the baseline when it is established."
 	 * </li>
 	 * </ul>
 	 */
@@ -233,7 +233,7 @@ public class AcknowledgementV03 {
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
-			definition = "Unique identification assigned by the matching application to the baseline when it is established. ";
+			definition = "Unique identification assigned by the matching application to the baseline when it is established.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification3.mmObject();
@@ -315,7 +315,7 @@ public class AcknowledgementV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the transaction for the financial institution that is the sender of the acknowledged message. "
+	 * "Reference to the transaction for the financial institution that is the sender of the acknowledged message."
 	 * </li>
 	 * </ul>
 	 */
@@ -324,7 +324,7 @@ public class AcknowledgementV03 {
 			xmlTag = "UsrTxRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UserTransactionReference";
-			definition = "Reference to the transaction for the financial institution that is the sender of the acknowledged message. ";
+			definition = "Reference to the transaction for the financial institution that is the sender of the acknowledged message.";
 			maxOccurs = 2;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification5.mmObject();

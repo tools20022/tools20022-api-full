@@ -120,7 +120,7 @@ public class OvernightIndexSwap3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the reason why no transactions are being reported for a money market reporting period. "
+	 * "Provides the reason why no transactions are being reported for a money market reporting period."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -139,7 +139,7 @@ public class OvernightIndexSwap3Choice {
 			xmlTag = "DataSetActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetAction";
-			definition = "Provides the reason why no transactions are being reported for a money market reporting period. ";
+			definition = "Provides the reason why no transactions are being reported for a money market reporting period.";
 			nextVersions_lazy = () -> Arrays.asList(OvernightIndexSwap4Choice.mmDataSetAction);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -173,7 +173,7 @@ public class OvernightIndexSwap3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the details of the secured market transaction as reported by the reporting agent"
+	 * "Provides the details of the secured market transaction as reported by the reporting agent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -192,7 +192,7 @@ public class OvernightIndexSwap3Choice {
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
-			definition = "Provides the details of the secured market transaction as reported by the reporting agent";
+			definition = "Provides the details of the secured market transaction as reported by the reporting agent.";
 			nextVersions_lazy = () -> Arrays.asList(OvernightIndexSwap4Choice.mmTransaction);
 			minOccurs = 1;
 			isComposite = true;

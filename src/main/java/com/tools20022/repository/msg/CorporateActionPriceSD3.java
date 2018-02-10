@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action details price details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPriceSD4
+ * CorporateActionPriceSD4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,6 +107,14 @@ public class CorporateActionPriceSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD4#mmPlaceAndName
+	 * CorporateActionPriceSD4.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -110,6 +125,7 @@ public class CorporateActionPriceSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPriceSD4.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -148,6 +164,14 @@ public class CorporateActionPriceSD3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Cost to subscribe to additional share(s) of the underlying security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD4#mmSubscriptionPrice
+	 * CorporateActionPriceSD4.mmSubscriptionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubscriptionPrice = new MMMessageAttribute() {
@@ -159,6 +183,7 @@ public class CorporateActionPriceSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Cost to subscribe to additional share(s) of the underlying security.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPriceSD4.mmSubscriptionPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -173,6 +198,7 @@ public class CorporateActionPriceSD3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPriceSD3";
 				definition = "Provides additional information regarding corporate action details price details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionPriceSD4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

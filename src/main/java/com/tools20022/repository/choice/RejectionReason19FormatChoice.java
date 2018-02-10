@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * "RejectionReason19FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the reason of a rejection of a global movement authorisation request."
+ * "Choice of formats to express the reason of a rejection of a global movement authorisation request."
  * </li>
  * </ul>
  */
@@ -161,7 +161,7 @@ public class RejectionReason19FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the reason of a rejection of a global movement authorisation request."
+	 * "Proprietary code to express the reason of a rejection of a global movement authorisation request."
 	 * </li>
 	 * </ul>
 	 */
@@ -173,7 +173,7 @@ public class RejectionReason19FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the reason of a rejection of a global movement authorisation request.";
+			definition = "Proprietary code to express the reason of a rejection of a global movement authorisation request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -188,7 +188,7 @@ public class RejectionReason19FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason19FormatChoice";
-				definition = "Choice of formats to  express the reason of a rejection of a global movement authorisation request.";
+				definition = "Choice of formats to express the reason of a rejection of a global movement authorisation request.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -69,7 +69,14 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountBalanceSD7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  "
+ * "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs)."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountBalanceSD10
+ * AccountBalanceSD10}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -109,6 +116,14 @@ public class AccountBalanceSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD10#mmPlaceAndName
+	 * AccountBalanceSD10.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +139,7 @@ public class AccountBalanceSD7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD10.mmPlaceAndName);
 			previousVersion_lazy = () -> AccountBalanceSD5.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -161,6 +177,14 @@ public class AccountBalanceSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Position that is concerned in transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD10#mmTransactionPosition
+	 * AccountBalanceSD10.mmTransactionPosition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +201,7 @@ public class AccountBalanceSD7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionPosition";
 			definition = "Position that is concerned in transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD10.mmTransactionPosition);
 			previousVersion_lazy = () -> AccountBalanceSD5.mmTransactionPosition;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -215,6 +240,14 @@ public class AccountBalanceSD7 {
 	 * definition} =
 	 * "Transaction contra participant identification for stock loans, repurchase agreements (REPOs)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD10#mmContraParticipantNumber
+	 * AccountBalanceSD10.mmContraParticipantNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +264,7 @@ public class AccountBalanceSD7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification for stock loans, repurchase agreements (REPOs).";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD10.mmContraParticipantNumber);
 			previousVersion_lazy = () -> AccountBalanceSD5.mmContraParticipantNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -246,7 +280,8 @@ public class AccountBalanceSD7 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountBalanceSD7";
-				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
+				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).";
+				nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD10.mmObject());
 				previousVersion_lazy = () -> AccountBalanceSD5.mmObject();
 			}
 		});

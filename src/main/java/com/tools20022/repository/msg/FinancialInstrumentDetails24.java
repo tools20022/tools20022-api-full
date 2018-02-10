@@ -76,6 +76,13 @@ import javax.xml.bind.annotation.XmlType;
  * "FinancialInstrumentDetails24"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reporting per financial instrument."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails29
+ * FinancialInstrumentDetails29}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails21
@@ -124,6 +131,14 @@ public class FinancialInstrumentDetails24 {
 	 * definition} =
 	 * "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails29#mmFinancialInstrumentIdentification
+	 * FinancialInstrumentDetails29.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -141,6 +156,7 @@ public class FinancialInstrumentDetails24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails29.mmFinancialInstrumentIdentification);
 			previousVersion_lazy = () -> FinancialInstrumentDetails21.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -182,6 +198,14 @@ public class FinancialInstrumentDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Elements characterising a financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails29#mmFinancialInstrumentAttributes
+	 * FinancialInstrumentDetails29.mmFinancialInstrumentAttributes}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -199,6 +223,7 @@ public class FinancialInstrumentDetails24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Elements characterising a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails29.mmFinancialInstrumentAttributes);
 			previousVersion_lazy = () -> FinancialInstrumentDetails21.mmFinancialInstrumentAttributes;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -240,6 +265,14 @@ public class FinancialInstrumentDetails24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails29#mmSubBalance
+	 * FinancialInstrumentDetails29.mmSubBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -257,6 +290,7 @@ public class FinancialInstrumentDetails24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalance";
 			definition = "Identification of the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails29.mmSubBalance);
 			previousVersion_lazy = () -> FinancialInstrumentDetails21.mmSubBalance;
 			minOccurs = 1;
 			isComposite = true;
@@ -275,6 +309,7 @@ public class FinancialInstrumentDetails24 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentDetails24";
 				definition = "Reporting per financial instrument.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails29.mmObject());
 				previousVersion_lazy = () -> FinancialInstrumentDetails21.mmObject();
 			}
 		});

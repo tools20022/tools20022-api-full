@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice to provide additional portfolio information or individual savings account information (UK government scheme provided by UK based financial institutions only)."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio4Choice
+ * ISAPortfolio4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class ISAPortfolio3Choice {
 	 * definition} =
 	 * "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \r\nThe Individual Savings Account (ISA) is provided only by UK based financial institutions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ISAPortfolio4Choice#mmISA
+	 * ISAPortfolio4Choice.mmISA}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmISA = new MMMessageAssociationEnd() {
@@ -119,6 +134,7 @@ public class ISAPortfolio3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISA";
 			definition = "UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. \r\nThe Individual Savings Account (ISA) is provided only by UK based financial institutions.";
+			nextVersions_lazy = () -> Arrays.asList(ISAPortfolio4Choice.mmISA);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -158,6 +174,14 @@ public class ISAPortfolio3Choice {
 	 * definition} =
 	 * "Wrapper for a specific product or a specific sub-product owned by a set of beneficial owners."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ISAPortfolio4Choice#mmPortfolio
+	 * ISAPortfolio4Choice.mmPortfolio}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPortfolio = new MMMessageAttribute() {
@@ -169,6 +193,7 @@ public class ISAPortfolio3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Portfolio";
 			definition = "Wrapper for a specific product or a specific sub-product owned by a set of beneficial owners.";
+			nextVersions_lazy = () -> Arrays.asList(ISAPortfolio4Choice.mmPortfolio);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Portfolio1.mmObject();
@@ -184,6 +209,7 @@ public class ISAPortfolio3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISAPortfolio3Choice";
 				definition = "Choice to provide additional portfolio information or individual savings account information (UK government scheme provided by UK based financial institutions only).";
+				nextVersions_lazy = () -> Arrays.asList(ISAPortfolio4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -106,6 +106,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14
  * DeliveringPartiesAndAccount14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17
+ * DeliveringPartiesAndAccount17}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -152,6 +154,14 @@ public class DeliveringPartiesAndAccount13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that sells goods or services, or a financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmDelivererDetails
+	 * DeliveringPartiesAndAccount17.mmDelivererDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +178,7 @@ public class DeliveringPartiesAndAccount13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelivererDetails";
 			definition = "Party that sells goods or services, or a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount17.mmDelivererDetails);
 			previousVersion_lazy = () -> DeliveringPartiesAndAccount9.mmDelivererDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -215,6 +226,9 @@ public class DeliveringPartiesAndAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14#mmDeliverersCustodianDetails
 	 * DeliveringPartiesAndAccount14.mmDeliverersCustodianDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmDeliverersCustodianDetails
+	 * DeliveringPartiesAndAccount17.mmDeliverersCustodianDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -233,7 +247,7 @@ public class DeliveringPartiesAndAccount13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersCustodianDetails";
 			definition = "Party that acts on behalf of the seller of securities when the seller does not have a direct relationship with the delivering agent.";
-			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmDeliverersCustodianDetails);
+			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmDeliverersCustodianDetails, DeliveringPartiesAndAccount17.mmDeliverersCustodianDetails);
 			previousVersion_lazy = () -> DeliveringPartiesAndAccount9.mmDeliverersCustodianDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -281,6 +295,9 @@ public class DeliveringPartiesAndAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14#mmDeliverersIntermediary1Details
 	 * DeliveringPartiesAndAccount14.mmDeliverersIntermediary1Details}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmDeliverersIntermediary1Details
+	 * DeliveringPartiesAndAccount17.mmDeliverersIntermediary1Details}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -299,7 +316,7 @@ public class DeliveringPartiesAndAccount13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersIntermediary1Details";
 			definition = "Party that the deliverer's custodian uses to effect the delivery of a security, when the deliverer's custodian does not have a direct relationship with the delivering agent.";
-			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmDeliverersIntermediary1Details);
+			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmDeliverersIntermediary1Details, DeliveringPartiesAndAccount17.mmDeliverersIntermediary1Details);
 			previousVersion_lazy = () -> DeliveringPartiesAndAccount9.mmDeliverersIntermediaryDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -345,6 +362,9 @@ public class DeliveringPartiesAndAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14#mmDeliverersIntermediary2Details
 	 * DeliveringPartiesAndAccount14.mmDeliverersIntermediary2Details}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmDeliverersIntermediary2Details
+	 * DeliveringPartiesAndAccount17.mmDeliverersIntermediary2Details}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -358,7 +378,7 @@ public class DeliveringPartiesAndAccount13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliverersIntermediary2Details";
 			definition = "Party that interacts with the deliverer's intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmDeliverersIntermediary2Details);
+			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmDeliverersIntermediary2Details, DeliveringPartiesAndAccount17.mmDeliverersIntermediary2Details);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -405,6 +425,9 @@ public class DeliveringPartiesAndAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14#mmDeliveringAgentDetails
 	 * DeliveringPartiesAndAccount14.mmDeliveringAgentDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmDeliveringAgentDetails
+	 * DeliveringPartiesAndAccount17.mmDeliveringAgentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -423,7 +446,7 @@ public class DeliveringPartiesAndAccount13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgentDetails";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, for example, central securities depository.";
-			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmDeliveringAgentDetails);
+			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmDeliveringAgentDetails, DeliveringPartiesAndAccount17.mmDeliveringAgentDetails);
 			previousVersion_lazy = () -> DeliveringPartiesAndAccount9.mmDeliveringAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -469,6 +492,9 @@ public class DeliveringPartiesAndAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14#mmSecuritiesSettlementSystem
 	 * DeliveringPartiesAndAccount14.mmSecuritiesSettlementSystem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmSecuritiesSettlementSystem
+	 * DeliveringPartiesAndAccount17.mmSecuritiesSettlementSystem}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -487,7 +513,7 @@ public class DeliveringPartiesAndAccount13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementSystem";
 			definition = "Identifies the securities settlement system to be used.";
-			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmSecuritiesSettlementSystem);
+			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmSecuritiesSettlementSystem, DeliveringPartiesAndAccount17.mmSecuritiesSettlementSystem);
 			previousVersion_lazy = () -> DeliveringPartiesAndAccount9.mmSecuritiesSettlementSystem;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -531,6 +557,9 @@ public class DeliveringPartiesAndAccount13 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount14#mmPlaceOfSettlementDetails
 	 * DeliveringPartiesAndAccount14.mmPlaceOfSettlementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmPlaceOfSettlementDetails
+	 * DeliveringPartiesAndAccount17.mmPlaceOfSettlementDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -549,7 +578,7 @@ public class DeliveringPartiesAndAccount13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSettlementDetails";
 			definition = "Place where settlement of the securities takes place.";
-			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmPlaceOfSettlementDetails);
+			nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmPlaceOfSettlementDetails, DeliveringPartiesAndAccount17.mmPlaceOfSettlementDetails);
 			previousVersion_lazy = () -> DeliveringPartiesAndAccount9.mmPlaceOfSettlementDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -572,7 +601,7 @@ public class DeliveringPartiesAndAccount13 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliveringPartiesAndAccount13";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
-				nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount14.mmObject(), DeliveringPartiesAndAccount17.mmObject());
 				previousVersion_lazy = () -> DeliveringPartiesAndAccount9.mmObject();
 			}
 		});

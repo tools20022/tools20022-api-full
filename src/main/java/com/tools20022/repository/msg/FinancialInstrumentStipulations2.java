@@ -1551,7 +1551,7 @@ public class FinancialInstrumentStipulations2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the market sector the security is classified as.  E.g. pharmacuticals, automobile, housing, etc."
+	 * "Indicates the market sector the security is classified as. E.g. pharmacuticals, automobile, housing, etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -1563,7 +1563,7 @@ public class FinancialInstrumentStipulations2 {
 			xmlTag = "Sctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
-			definition = "Indicates the market sector the security is classified as.  E.g. pharmacuticals, automobile, housing, etc.";
+			definition = "Indicates the market sector the security is classified as. E.g. pharmacuticals, automobile, housing, etc.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -1751,7 +1751,7 @@ public class FinancialInstrumentStipulations2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the Benchmark source price (eg. BB Generic, BB Fairvalue, Brokertec..)."
+	 * "Identifies the Benchmark source price (eg. BB Generic, BB Fairvalue, Brokertec.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1763,7 +1763,7 @@ public class FinancialInstrumentStipulations2 {
 			xmlTag = "PricSrc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceSource";
-			definition = "Identifies the Benchmark source price (eg. BB Generic, BB Fairvalue, Brokertec..).";
+			definition = "Identifies the Benchmark source price (eg. BB Generic, BB Fairvalue, Brokertec.).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

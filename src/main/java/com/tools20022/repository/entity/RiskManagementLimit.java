@@ -173,6 +173,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * Limits5.mmCurrentLimit}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Limits5#mmDefaultLimit
  * Limits5.mmDefaultLimit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.LimitStructure2#mmLimitIdentification
+ * LimitStructure2.mmLimitIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.LimitStructure2#mmNewLimitValueSet
+ * LimitStructure2.mmNewLimitValueSet}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits6#mmCurrentLimit
+ * Limits6.mmCurrentLimit}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits6#mmDefaultLimit
+ * Limits6.mmDefaultLimit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.LimitReport6#mmLimitIdentification
+ * LimitReport6.mmLimitIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -229,6 +242,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * LimitUtilisationJournalSearchCriteria1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.LimitReport5 LimitReport5}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Limits5 Limits5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitStructure2
+ * LimitStructure2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BilateralLimit2
+ * BilateralLimit2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Limits6 Limits6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport6 LimitReport6}</li>
  * </ul>
  * </li>
  * <li>
@@ -378,14 +397,15 @@ public class RiskManagementLimit extends Limit {
 						LimitStructure1.mmLimitIdentification, LimitStructure1.mmNewLimitValueSet, LimitReport1.mmLimitIdentification, LimitReport1.mmLimit, Limits1.mmCurrentLimit, Limits1.mmDefaultLimit,
 						LimitReport2.mmLimitIdentification, LimitReport2.mmLimit, Limits2.mmCurrentLimit, Limits2.mmDefaultLimit, LimitReport3.mmLimitIdentification, LimitReport3.mmLimit, Limits3.mmCurrentLimit, Limits3.mmDefaultLimit,
 						LimitReport4.mmLimitIdentification, Limits4.mmCurrentLimit, Limits4.mmDefaultLimit, CurrentLimitChoice.mmRiskManagementCurrentLimitIdentification, LimitReport5.mmLimitIdentification, Limits5.mmCurrentLimit,
-						Limits5.mmDefaultLimit);
+						Limits5.mmDefaultLimit, LimitStructure2.mmLimitIdentification, LimitStructure2.mmNewLimitValueSet, Limits6.mmCurrentLimit, Limits6.mmDefaultLimit, LimitReport6.mmLimitIdentification);
 				superType_lazy = () -> Limit.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RiskManagementLimit.mmCashManagementService, com.tools20022.repository.entity.RiskManagementLimit.mmCounterparty);
 				derivationComponent_lazy = () -> Arrays.asList(RiskManagementLimitIdentificationDetails.mmObject(), LimitIdentificationDetails1.mmObject(), LimitIdentificationDetails2.mmObject(), LimitDetailsStructure1.mmObject(),
 						LimitIdentificationDetails3.mmObject(), LimitDetailsStructure3.mmObject(), LimitType1Choice.mmObject(), LimitIdentification1.mmObject(), LimitIdentification2.mmObject(), LimitStructure1Choice.mmObject(),
 						LimitDetailsStructure2.mmObject(), LimitIdentification1Choice.mmObject(), LimitStructure1.mmObject(), BilateralLimitDetails1.mmObject(), BilateralLimitDetails2.mmObject(), BilateralLimitDetails3.mmObject(),
 						BilateralLimit1.mmObject(), LimitReport1.mmObject(), Limits1.mmObject(), LimitReport2.mmObject(), Limits2.mmObject(), LimitReport3.mmObject(), Limits3.mmObject(), LimitReport4.mmObject(), Limits4.mmObject(),
-						LimitIdentification4.mmObject(), LimitUtilisationJournalSearchCriteria1.mmObject(), LimitReport5.mmObject(), Limits5.mmObject());
+						LimitIdentification4.mmObject(), LimitUtilisationJournalSearchCriteria1.mmObject(), LimitReport5.mmObject(), Limits5.mmObject(), LimitStructure2.mmObject(), BilateralLimit2.mmObject(), Limits6.mmObject(),
+						LimitReport6.mmObject());
 			}
 
 			@Override

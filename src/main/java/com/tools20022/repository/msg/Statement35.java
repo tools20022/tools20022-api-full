@@ -63,6 +63,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the criteria used to report on the securities account positions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement57 Statement57}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +105,13 @@ public class Statement35 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date or period of the statement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement57#mmDateOrPeriod
+	 * Statement57.mmDateOrPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDateOrPeriod = new MMMessageAssociationEnd() {
@@ -110,6 +123,7 @@ public class Statement35 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOrPeriod";
 			definition = "Date or period of the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement57.mmDateOrPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -148,6 +162,13 @@ public class Statement35 {
 	 * definition} =
 	 * "Specifies whether the data is either historical (true) or current (false)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement57#mmHistoricData
+	 * Statement57.mmHistoricData}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmHistoricData = new MMMessageAttribute() {
@@ -159,6 +180,7 @@ public class Statement35 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HistoricData";
 			definition = "Specifies whether the data is either historical (true) or current (false).";
+			nextVersions_lazy = () -> Arrays.asList(Statement57.mmHistoricData);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -173,6 +195,7 @@ public class Statement35 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Statement35";
 				definition = "Defines the criteria used to report on the securities account positions.";
+				nextVersions_lazy = () -> Arrays.asList(Statement57.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -98,6 +98,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Details on the quantity, account and other related information involved in a transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityAndAccount68
+ * QuantityAndAccount68}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.QuantityAndAccount30
@@ -140,6 +147,14 @@ public class QuantityAndAccount43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of securities to be settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmSettlementQuantity
+	 * QuantityAndAccount68.mmSettlementQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -156,6 +171,7 @@ public class QuantityAndAccount43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount68.mmSettlementQuantity);
 			previousVersion_lazy = () -> QuantityAndAccount30.mmSettlementQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -196,6 +212,14 @@ public class QuantityAndAccount43 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Denomination of the security to be received or delivered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmDenominationChoice
+	 * QuantityAndAccount68.mmDenominationChoice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -212,6 +236,7 @@ public class QuantityAndAccount43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationChoice";
 			definition = "Denomination of the security to be received or delivered.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount68.mmDenominationChoice);
 			previousVersion_lazy = () -> QuantityAndAccount30.mmDenominationChoice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -249,6 +274,14 @@ public class QuantityAndAccount43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmAccountOwner
+	 * QuantityAndAccount68.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -265,6 +298,7 @@ public class QuantityAndAccount43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount68.mmAccountOwner);
 			previousVersion_lazy = () -> QuantityAndAccount30.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -303,6 +337,14 @@ public class QuantityAndAccount43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a securities entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmSafekeepingAccount
+	 * QuantityAndAccount68.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -319,6 +361,7 @@ public class QuantityAndAccount43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount68.mmSafekeepingAccount);
 			previousVersion_lazy = () -> QuantityAndAccount30.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -358,6 +401,14 @@ public class QuantityAndAccount43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a cash entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmCashAccount
+	 * QuantityAndAccount68.mmCashAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,6 +425,7 @@ public class QuantityAndAccount43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount68.mmCashAccount);
 			previousVersion_lazy = () -> QuantityAndAccount30.mmCashAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -412,7 +464,15 @@ public class QuantityAndAccount43 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmSafekeepingPlace
+	 * QuantityAndAccount68.mmSafekeepingPlace}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -429,7 +489,8 @@ public class QuantityAndAccount43 {
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
-			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount68.mmSafekeepingPlace);
 			previousVersion_lazy = () -> QuantityAndAccount30.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -470,6 +531,14 @@ public class QuantityAndAccount43 {
 	 * definition} =
 	 * "Breakdown of a quantity into lots such as tax lots, instrument series, etc."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmQuantityBreakdown
+	 * QuantityAndAccount68.mmQuantityBreakdown}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -486,6 +555,7 @@ public class QuantityAndAccount43 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount68.mmQuantityBreakdown);
 			previousVersion_lazy = () -> QuantityAndAccount30.mmQuantityBreakdown;
 			minOccurs = 0;
 			isComposite = true;
@@ -506,6 +576,7 @@ public class QuantityAndAccount43 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityAndAccount43";
 				definition = "Details on the quantity, account and other related information involved in a transaction.";
+				nextVersions_lazy = () -> Arrays.asList(QuantityAndAccount68.mmObject());
 				previousVersion_lazy = () -> QuantityAndAccount30.mmObject();
 			}
 		});

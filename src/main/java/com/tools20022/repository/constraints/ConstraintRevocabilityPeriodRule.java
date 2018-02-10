@@ -847,6 +847,14 @@ public class ConstraintRevocabilityPeriodRule {
 	 * definition} =
 	 * "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule#forCorporateActionOption138
+	 * ConstraintRevocabilityPeriodRule.forCorporateActionOption138}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -860,6 +868,7 @@ public class ConstraintRevocabilityPeriodRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevocabilityPeriodRule";
 			definition = "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule.forCorporateActionOption138);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule.forCorporateActionOption114;
 			owner_lazy = () -> CorporateActionOption130.mmObject();
 		}
@@ -883,6 +892,14 @@ public class ConstraintRevocabilityPeriodRule {
 	 * definition} =
 	 * "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule#forCorporateActionOption139
+	 * ConstraintRevocabilityPeriodRule.forCorporateActionOption139}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -896,6 +913,7 @@ public class ConstraintRevocabilityPeriodRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevocabilityPeriodRule";
 			definition = "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule.forCorporateActionOption139);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule.forCorporateActionOption115;
 			owner_lazy = () -> CorporateActionOption129.mmObject();
 		}
@@ -958,6 +976,138 @@ public class ConstraintRevocabilityPeriodRule {
 			name = "RevocabilityPeriodRule";
 			definition = "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed.";
 			owner_lazy = () -> CorporateActionOption133.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138
+	 * CorporateActionOption138}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RevocabilityPeriodRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule#forCorporateActionOption130
+	 * ConstraintRevocabilityPeriodRule.forCorporateActionOption130}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption138> forCorporateActionOption138 = new MMConstraint<CorporateActionOption138>() {
+		{
+			validator = ConstraintRevocabilityPeriodRule::checkCorporateActionOption138;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RevocabilityPeriodRule";
+			definition = "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule.forCorporateActionOption130;
+			owner_lazy = () -> CorporateActionOption138.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139
+	 * CorporateActionOption139}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RevocabilityPeriodRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule#forCorporateActionOption129
+	 * ConstraintRevocabilityPeriodRule.forCorporateActionOption129}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption139> forCorporateActionOption139 = new MMConstraint<CorporateActionOption139>() {
+		{
+			validator = ConstraintRevocabilityPeriodRule::checkCorporateActionOption139;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RevocabilityPeriodRule";
+			definition = "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintRevocabilityPeriodRule.forCorporateActionOption129;
+			owner_lazy = () -> CorporateActionOption139.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148
+	 * CorporateActionOption148}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RevocabilityPeriodRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption148> forCorporateActionOption148 = new MMConstraint<CorporateActionOption148>() {
+		{
+			validator = ConstraintRevocabilityPeriodRule::checkCorporateActionOption148;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RevocabilityPeriodRule";
+			definition = "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed.";
+			owner_lazy = () -> CorporateActionOption148.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150
+	 * CorporateActionOption150}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RevocabilityPeriodRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption150> forCorporateActionOption150 = new MMConstraint<CorporateActionOption150>() {
+		{
+			validator = ConstraintRevocabilityPeriodRule::checkCorporateActionOption150;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RevocabilityPeriodRule";
+			definition = "If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be present to indicate the period during which the change or withdrawal of instruction is allowed.";
+			owner_lazy = () -> CorporateActionOption150.mmObject();
 		}
 	};
 
@@ -1238,6 +1388,46 @@ public class ConstraintRevocabilityPeriodRule {
 	 * instruction is allowed.
 	 */
 	public static void checkCorporateActionOption133(CorporateActionOption133 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is
+	 * 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be
+	 * present to indicate the period during which the change or withdrawal of
+	 * instruction is allowed.
+	 */
+	public static void checkCorporateActionOption138(CorporateActionOption138 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is
+	 * 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be
+	 * present to indicate the period during which the change or withdrawal of
+	 * instruction is allowed.
+	 */
+	public static void checkCorporateActionOption139(CorporateActionOption139 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is
+	 * 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be
+	 * present to indicate the period during which the change or withdrawal of
+	 * instruction is allowed.
+	 */
+	public static void checkCorporateActionOption148(CorporateActionOption148 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If WithdrawalAllowedIndicator or ChangeAllowedIndicator is present and is
+	 * 'true' or '1' (Yes), then PeriodDetails/RevocabilityPeriod must be
+	 * present to indicate the period during which the change or withdrawal of
+	 * instruction is allowed.
+	 */
+	public static void checkCorporateActionOption150(CorporateActionOption150 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

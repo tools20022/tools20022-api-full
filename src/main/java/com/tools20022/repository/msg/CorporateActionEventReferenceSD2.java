@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionEventReferenceSD2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Provides additional information regarding linkage details. "</li>
+ * definition} = "Provides additional information regarding linkage details."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -271,7 +271,7 @@ public class CorporateActionEventReferenceSD2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionEventReferenceSD2";
-				definition = "Provides additional information regarding linkage details. ";
+				definition = "Provides additional information regarding linkage details.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -47,7 +47,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed."
+	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			validator = ConstraintPhysicalTransferDetailsRule::checkDeliverInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
-			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed.";
+			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation2.mmObject();
 		}
 	};
@@ -77,7 +77,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed."
+	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -86,7 +86,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			validator = ConstraintPhysicalTransferDetailsRule::checkDeliverInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
-			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed.";
+			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation4.mmObject();
 		}
 	};
@@ -137,7 +137,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed."
+	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -146,7 +146,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			validator = ConstraintPhysicalTransferDetailsRule::checkReceiveInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
-			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed.";
+			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation2.mmObject();
 		}
 	};
@@ -167,7 +167,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed."
+	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -176,7 +176,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			validator = ConstraintPhysicalTransferDetailsRule::checkReceiveInformation4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
-			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed.";
+			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation4.mmObject();
 		}
 	};
@@ -335,7 +335,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed."
+	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -344,7 +344,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			validator = ConstraintPhysicalTransferDetailsRule::checkDeliverInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
-			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed.";
+			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation1.mmObject();
 		}
 	};
@@ -365,7 +365,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed."
+	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -374,7 +374,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			validator = ConstraintPhysicalTransferDetailsRule::checkDeliverInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
-			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed.";
+			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed.";
 			owner_lazy = () -> DeliverInformation3.mmObject();
 		}
 	};
@@ -425,7 +425,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed."
+	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -434,7 +434,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			validator = ConstraintPhysicalTransferDetailsRule::checkReceiveInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
-			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed.";
+			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation1.mmObject();
 		}
 	};
@@ -455,7 +455,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed."
+	 * "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -464,7 +464,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			validator = ConstraintPhysicalTransferDetailsRule::checkReceiveInformation3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
-			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No),  then PhysicalTransferDetails is not allowed.";
+			definition = "If PhysicalTransferIndicator is \"true\" or \"1\" (Yes), then PhysicalTransferDetails must be present. If PhysicalTransferIndicator is \"false\" or \"0\" (No), then PhysicalTransferDetails is not allowed.";
 			owner_lazy = () -> ReceiveInformation3.mmObject();
 		}
 	};
@@ -1045,6 +1045,14 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forReceiveInformation18
+	 * ConstraintPhysicalTransferDetailsRule.forReceiveInformation18}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1058,6 +1066,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
 			definition = "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forReceiveInformation18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forReceiveInformation14;
 			owner_lazy = () -> ReceiveInformation17.mmObject();
 		}
@@ -1081,6 +1090,14 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forReceiveInformation19
+	 * ConstraintPhysicalTransferDetailsRule.forReceiveInformation19}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1094,6 +1111,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
 			definition = "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forReceiveInformation19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forReceiveInformation15;
 			owner_lazy = () -> ReceiveInformation16.mmObject();
 		}
@@ -1117,6 +1135,14 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forDeliverInformation19
+	 * ConstraintPhysicalTransferDetailsRule.forDeliverInformation19}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1130,6 +1156,7 @@ public class ConstraintPhysicalTransferDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
 			definition = "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forDeliverInformation19);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forDeliverInformation15;
 			owner_lazy = () -> DeliverInformation16.mmObject();
 		}
@@ -1153,6 +1180,14 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * definition} =
 	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forDeliverInformation18
+	 * ConstraintPhysicalTransferDetailsRule.forDeliverInformation18}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1166,8 +1201,153 @@ public class ConstraintPhysicalTransferDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetailsRule";
 			definition = "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forDeliverInformation18);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forDeliverInformation14;
 			owner_lazy = () -> DeliverInformation17.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18
+	 * ReceiveInformation18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhysicalTransferDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forReceiveInformation17
+	 * ConstraintPhysicalTransferDetailsRule.forReceiveInformation17}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceiveInformation18> forReceiveInformation18 = new MMConstraint<ReceiveInformation18>() {
+		{
+			validator = ConstraintPhysicalTransferDetailsRule::checkReceiveInformation18;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PhysicalTransferDetailsRule";
+			definition = "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forReceiveInformation17;
+			owner_lazy = () -> ReceiveInformation18.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19
+	 * DeliverInformation19}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhysicalTransferDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forDeliverInformation16
+	 * ConstraintPhysicalTransferDetailsRule.forDeliverInformation16}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation19> forDeliverInformation19 = new MMConstraint<DeliverInformation19>() {
+		{
+			validator = ConstraintPhysicalTransferDetailsRule::checkDeliverInformation19;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PhysicalTransferDetailsRule";
+			definition = "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forDeliverInformation16;
+			owner_lazy = () -> DeliverInformation19.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19
+	 * ReceiveInformation19}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhysicalTransferDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forReceiveInformation16
+	 * ConstraintPhysicalTransferDetailsRule.forReceiveInformation16}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReceiveInformation19> forReceiveInformation19 = new MMConstraint<ReceiveInformation19>() {
+		{
+			validator = ConstraintPhysicalTransferDetailsRule::checkReceiveInformation19;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PhysicalTransferDetailsRule";
+			definition = "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forReceiveInformation16;
+			owner_lazy = () -> ReceiveInformation19.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18
+	 * DeliverInformation18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhysicalTransferDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule#forDeliverInformation17
+	 * ConstraintPhysicalTransferDetailsRule.forDeliverInformation17}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<DeliverInformation18> forDeliverInformation18 = new MMConstraint<DeliverInformation18>() {
+		{
+			validator = ConstraintPhysicalTransferDetailsRule::checkDeliverInformation18;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PhysicalTransferDetailsRule";
+			definition = "If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must be present. If PhysicalTransfer is DEMT (Dematerialised), then PhysicalTransferDetails is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalTransferDetailsRule.forDeliverInformation17;
+			owner_lazy = () -> DeliverInformation18.mmObject();
 		}
 	};
 
@@ -1456,6 +1636,42 @@ public class ConstraintPhysicalTransferDetailsRule {
 	 * PhysicalTransferDetails is not allowed.
 	 */
 	public static void checkDeliverInformation17(DeliverInformation17 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must
+	 * be present. If PhysicalTransfer is DEMT (Dematerialised), then
+	 * PhysicalTransferDetails is not allowed.
+	 */
+	public static void checkReceiveInformation18(ReceiveInformation18 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must
+	 * be present. If PhysicalTransfer is DEMT (Dematerialised), then
+	 * PhysicalTransferDetails is not allowed.
+	 */
+	public static void checkDeliverInformation19(DeliverInformation19 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must
+	 * be present. If PhysicalTransfer is DEMT (Dematerialised), then
+	 * PhysicalTransferDetails is not allowed.
+	 */
+	public static void checkReceiveInformation19(ReceiveInformation19 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PhysicalTransfer is PHYS (Physical), then PhysicalTransferDetails must
+	 * be present. If PhysicalTransfer is DEMT (Dematerialised), then
+	 * PhysicalTransferDetails is not allowed.
+	 */
+	public static void checkDeliverInformation18(DeliverInformation18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

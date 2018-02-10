@@ -149,6 +149,14 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementInstructionQueryCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria based on which information is included."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2
+ * SettlementInstructionQueryCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -190,6 +198,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Collective reference identifying a set of messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmReferences
+	 * SettlementInstructionQueryCriteria2.mmReferences}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReferences = new MMMessageAttribute() {
@@ -201,6 +217,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Collective reference identifying a set of messages.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmReferences);
 			minOccurs = 0;
 			complexType_lazy = () -> References35Choice.mmObject();
 		}
@@ -233,6 +250,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of settlement of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmStatus
+	 * SettlementInstructionQueryCriteria2.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -243,6 +268,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Provides the status of settlement of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SettlementInstructionQueryStatus1.mmObject();
 		}
@@ -281,6 +307,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Specifies if the movement on a securities account results from a deliver or a receive instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSecuritiesMovementType
+	 * SettlementInstructionQueryCriteria2.mmSecuritiesMovementType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecuritiesMovementType = new MMMessageAttribute() {
@@ -292,6 +326,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSecuritiesMovementType);
 			minOccurs = 0;
 			simpleType_lazy = () -> ReceiveDelivery1Code.mmObject();
 		}
@@ -330,6 +365,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Specifies how the transaction is to be settled, for example, against payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmPayment
+	 * SettlementInstructionQueryCriteria2.mmPayment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPayment = new MMMessageAttribute() {
@@ -341,6 +384,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmPayment);
 			minOccurs = 0;
 			simpleType_lazy = () -> DeliveryReceiptType2Code.mmObject();
 		}
@@ -375,6 +419,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the type of securities transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSecuritiesTransactionType
+	 * SettlementInstructionQueryCriteria2.mmSecuritiesTransactionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesTransactionType = new MMMessageAssociationEnd() {
@@ -386,6 +438,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSecuritiesTransactionType);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SecuritiesTransactionType10Choice.mmObject();
@@ -423,6 +476,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmFinancialInstrumentIdentification
+	 * SettlementInstructionQueryCriteria2.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
@@ -434,6 +495,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmFinancialInstrumentIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -472,6 +534,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Specifies whether the transaction is to be executed with a high priority."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmPriority
+	 * SettlementInstructionQueryCriteria2.mmPriority}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
@@ -483,6 +553,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmPriority);
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
 		}
@@ -515,6 +586,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account where financial instruments are maintained."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSafekeepingAccount
+	 * SettlementInstructionQueryCriteria2.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSafekeepingAccount = new MMMessageAttribute() {
@@ -525,6 +604,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSafekeepingAccount);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
 		}
@@ -557,6 +637,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account in which cash is maintained."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmCashAccount
+	 * SettlementInstructionQueryCriteria2.mmCashAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
@@ -567,6 +655,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account in which cash is maintained.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmCashAccount);
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
@@ -602,6 +691,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmTradeDate
+	 * SettlementInstructionQueryCriteria2.mmTradeDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
@@ -613,6 +710,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmTradeDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
@@ -649,6 +747,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of securities to be settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSettlementQuantity
+	 * SettlementInstructionQueryCriteria2.mmSettlementQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSettlementQuantity = new MMMessageAttribute() {
@@ -660,6 +766,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementQuantity";
 			definition = "Total quantity of securities to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSettlementQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> QuantitySearch1Choice.mmObject();
@@ -696,6 +803,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of securities settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSettledQuantity
+	 * SettlementInstructionQueryCriteria2.mmSettledQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSettledQuantity = new MMMessageAttribute() {
@@ -707,6 +822,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Total quantity of securities settled.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSettledQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> QuantitySearch1Choice.mmObject();
@@ -744,6 +860,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Total amount of money to be paid or received in exchange for the securities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSettlementAmount
+	 * SettlementInstructionQueryCriteria2.mmSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAmount = new MMMessageAssociationEnd() {
@@ -755,6 +879,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSettlementAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -792,6 +917,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Total amount of money paid or received in exchange for the securities."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSettledAmount
+	 * SettlementInstructionQueryCriteria2.mmSettledAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettledAmount = new MMMessageAssociationEnd() {
@@ -803,6 +936,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledAmount";
 			definition = "Total amount of money paid or received in exchange for the securities.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSettledAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -842,6 +976,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Date on which a transaction is expected to settle. That is, the intended day on which transfer of cash or assets is completed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmIntendedSettlementDate
+	 * SettlementInstructionQueryCriteria2.mmIntendedSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIntendedSettlementDate = new MMMessageAttribute() {
@@ -853,6 +995,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntendedSettlementDate";
 			definition = "Date on which a transaction is expected to settle. That is, the intended day on which transfer of cash or assets is completed.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmIntendedSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
@@ -891,6 +1034,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Date and time at which a transaction is completed and cleared, that is a payment is effected and securities are delivered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmEffectiveSettlementDate
+	 * SettlementInstructionQueryCriteria2.mmEffectiveSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEffectiveSettlementDate = new MMMessageAttribute() {
@@ -902,6 +1053,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which a transaction is completed and cleared, that is a payment is effected and securities are delivered.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmEffectiveSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
@@ -935,6 +1087,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency in which the instructed amount is expressed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSettlementCurrency
+	 * SettlementInstructionQueryCriteria2.mmSettlementCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSettlementCurrency = new MMMessageAttribute() {
@@ -945,6 +1105,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrency";
 			definition = "Currency in which the instructed amount is expressed.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSettlementCurrency);
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
@@ -975,6 +1136,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSafekeepingAccountOwner
+	 * SettlementInstructionQueryCriteria2.mmSafekeepingAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccountOwner = new MMMessageAssociationEnd() {
@@ -985,6 +1154,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccountOwner";
 			definition = "Party that owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSafekeepingAccountOwner);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.PartyIdentification46.mmObject();
@@ -1018,6 +1188,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that originated the message, if other than the sender."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmMessageOriginator
+	 * SettlementInstructionQueryCriteria2.mmMessageOriginator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
@@ -1028,6 +1206,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmMessageOriginator);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
@@ -1059,6 +1238,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of counterparty settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmCounterpartSettlementParties
+	 * SettlementInstructionQueryCriteria2.mmCounterpartSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartSettlementParties = new MMMessageAssociationEnd() {
@@ -1069,6 +1256,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartSettlementParties";
 			definition = "Identifies the chain of counterparty settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmCounterpartSettlementParties);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
@@ -1103,6 +1291,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of delivering settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmDeliveringSettlementParties
+	 * SettlementInstructionQueryCriteria2.mmDeliveringSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDeliveringSettlementParties = new MMMessageAssociationEnd() {
@@ -1114,6 +1310,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmDeliveringSettlementParties);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
@@ -1148,6 +1345,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of receiving settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmReceivingSettlementParties
+	 * SettlementInstructionQueryCriteria2.mmReceivingSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReceivingSettlementParties = new MMMessageAssociationEnd() {
@@ -1159,6 +1364,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmReceivingSettlementParties);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SettlementParties13.mmObject();
@@ -1194,6 +1400,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Provides the conditions under which the order/trade is to be/was executed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmTradeTransactionCondition
+	 * SettlementInstructionQueryCriteria2.mmTradeTransactionCondition}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTradeTransactionCondition = new MMMessageAttribute() {
@@ -1204,6 +1418,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeTransactionCondition";
 			definition = "Provides the conditions under which the order/trade is to be/was executed.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmTradeTransactionCondition);
 			minOccurs = 0;
 			simpleType_lazy = () -> TradeTransactionCondition1Code.mmObject();
 		}
@@ -1237,6 +1452,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Indicates the conditions under which the order/trade is to be/was executed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmSecuritiesTransactionCondition
+	 * SettlementInstructionQueryCriteria2.mmSecuritiesTransactionCondition}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesTransactionCondition = new MMMessageAssociationEnd() {
@@ -1247,6 +1470,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionCondition";
 			definition = "Indicates the conditions under which the order/trade is to be/was executed.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmSecuritiesTransactionCondition);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementTransactionCondition12Choice.mmObject();
@@ -1285,6 +1509,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether partial settlement is allowed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmPartialSettlementIndicator
+	 * SettlementInstructionQueryCriteria2.mmPartialSettlementIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
@@ -1296,6 +1528,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmPartialSettlementIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SettlementTransactionCondition5Code.mmObject();
@@ -1331,6 +1564,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Specifies whether the transaction is under Conditional Securities Delivery (CoSD)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmConditionalSecuritiesDelivery
+	 * SettlementInstructionQueryCriteria2.mmConditionalSecuritiesDelivery}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmConditionalSecuritiesDelivery = new MMMessageAttribute() {
@@ -1341,6 +1582,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConditionalSecuritiesDelivery";
 			definition = "Specifies whether the transaction is under Conditional Securities Delivery (CoSD).";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmConditionalSecuritiesDelivery);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -1378,6 +1620,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Primary market or country where a security is issued by the issuer or its agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmCountryOfIssue
+	 * SettlementInstructionQueryCriteria2.mmCountryOfIssue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
@@ -1389,6 +1639,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Primary market or country where a security is issued by the issuer or its agent.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmCountryOfIssue);
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
 		}
@@ -1422,6 +1673,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * definition} =
 	 * "Central securities depository (CSD) in which financial instruments are issued (or immobilised). The issuer CSD opens accounts allowing investors (in a direct holding system) and/or intermediaries (including investor CSDs) to hold these financial instruments."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmIssuerCSD
+	 * SettlementInstructionQueryCriteria2.mmIssuerCSD}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIssuerCSD = new MMMessageAssociationEnd() {
@@ -1432,6 +1691,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerCSD";
 			definition = "Central securities depository (CSD) in which financial instruments are issued (or immobilised). The issuer CSD opens accounts allowing investors (in a direct holding system) and/or intermediaries (including investor CSDs) to hold these financial instruments.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmIssuerCSD);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -1466,6 +1726,14 @@ public class SettlementInstructionQueryCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the transaction is on hold, blocked or frozen."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmHoldIndicator
+	 * SettlementInstructionQueryCriteria2.mmHoldIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmHoldIndicator = new MMMessageAttribute() {
@@ -1476,6 +1744,7 @@ public class SettlementInstructionQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Specifies whether the transaction is on hold, blocked or frozen.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmHoldIndicator);
 			minOccurs = 0;
 			complexType_lazy = () -> Registration3Choice.mmObject();
 		}
@@ -1504,6 +1773,7 @@ public class SettlementInstructionQueryCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInstructionQueryCriteria1";
 				definition = "Defines the criteria based on which information is included.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

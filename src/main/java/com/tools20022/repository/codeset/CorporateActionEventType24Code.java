@@ -259,6 +259,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "CorporateActionEventType24Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the corporate action event type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code
+ * CorporateActionEventType28Code}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -279,12 +287,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ActiveTradingStatus"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#ActiveTradingStatus
+	 * CorporateActionEventType28Code.ActiveTradingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code ActiveTradingStatus = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveTradingStatus";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.ActiveTradingStatus);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.ActiveTradingStatus.getCodeName().orElse(name);
 		}
@@ -303,12 +320,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Attachment"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Attachment
+	 * CorporateActionEventType28Code.Attachment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Attachment = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Attachment";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Attachment);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Attachment.getCodeName().orElse(name);
 		}
@@ -327,12 +353,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Bankruptcy"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Bankruptcy
+	 * CorporateActionEventType28Code.Bankruptcy}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Bankruptcy = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Bankruptcy";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Bankruptcy);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Bankruptcy.getCodeName().orElse(name);
 		}
@@ -351,12 +386,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BondDefault"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#BondDefault
+	 * CorporateActionEventType28Code.BondDefault}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code BondDefault = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BondDefault";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.BondDefault);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.BondDefault.getCodeName().orElse(name);
 		}
@@ -375,12 +419,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BonusIssue"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#BonusIssue
+	 * CorporateActionEventType28Code.BonusIssue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code BonusIssue = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusIssue";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.BonusIssue);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.BonusIssue.getCodeName().orElse(name);
 		}
@@ -399,12 +452,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CallOnIntermediateSecurities"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#CallOnIntermediateSecurities
+	 * CorporateActionEventType28Code.CallOnIntermediateSecurities}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code CallOnIntermediateSecurities = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallOnIntermediateSecurities";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.CallOnIntermediateSecurities);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.CallOnIntermediateSecurities.getCodeName().orElse(name);
 		}
@@ -423,12 +485,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CapitalDistribution"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#CapitalDistribution
+	 * CorporateActionEventType28Code.CapitalDistribution}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code CapitalDistribution = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalDistribution";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.CapitalDistribution);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.CapitalDistribution.getCodeName().orElse(name);
 		}
@@ -447,12 +518,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CapitalGainsDistribution"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#CapitalGainsDistribution
+	 * CorporateActionEventType28Code.CapitalGainsDistribution}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code CapitalGainsDistribution = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapitalGainsDistribution";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.CapitalGainsDistribution);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.CapitalGainsDistribution.getCodeName().orElse(name);
 		}
@@ -471,12 +551,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Capitalisation"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Capitalisation
+	 * CorporateActionEventType28Code.Capitalisation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Capitalisation = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capitalisation";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Capitalisation);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Capitalisation.getCodeName().orElse(name);
 		}
@@ -495,12 +584,22 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashDistributionFromNonEligibleSecuritiesSales"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#CashDistributionFromNonEligibleSecuritiesSales
+	 * CorporateActionEventType28Code.
+	 * CashDistributionFromNonEligibleSecuritiesSales}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code CashDistributionFromNonEligibleSecuritiesSales = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDistributionFromNonEligibleSecuritiesSales";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.CashDistributionFromNonEligibleSecuritiesSales);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.CashDistributionFromNonEligibleSecuritiesSales.getCodeName().orElse(name);
 		}
@@ -519,12 +618,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashDividend"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#CashDividend
+	 * CorporateActionEventType28Code.CashDividend}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code CashDividend = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividend";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.CashDividend);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.CashDividend.getCodeName().orElse(name);
 		}
@@ -543,12 +651,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Change"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Change
+	 * CorporateActionEventType28Code.Change}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Change = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Change";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Change);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Change.getCodeName().orElse(name);
 		}
@@ -567,12 +684,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CompanyOption"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#CompanyOption
+	 * CorporateActionEventType28Code.CompanyOption}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code CompanyOption = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompanyOption";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.CompanyOption);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.CompanyOption.getCodeName().orElse(name);
 		}
@@ -591,12 +717,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClassActionProposedSettlement"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#ClassActionProposedSettlement
+	 * CorporateActionEventType28Code.ClassActionProposedSettlement}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code ClassActionProposedSettlement = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassActionProposedSettlement";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.ClassActionProposedSettlement);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.ClassActionProposedSettlement.getCodeName().orElse(name);
 		}
@@ -615,12 +750,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Consent"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Consent
+	 * CorporateActionEventType28Code.Consent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Consent = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Consent";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Consent);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Consent.getCodeName().orElse(name);
 		}
@@ -639,12 +783,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Conversion"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Conversion
+	 * CorporateActionEventType28Code.Conversion}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Conversion = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Conversion);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Conversion.getCodeName().orElse(name);
 		}
@@ -663,12 +816,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CreditEvent"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#CreditEvent
+	 * CorporateActionEventType28Code.CreditEvent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code CreditEvent = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditEvent";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.CreditEvent);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.CreditEvent.getCodeName().orElse(name);
 		}
@@ -687,12 +849,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DecreaseInValue"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#DecreaseInValue
+	 * CorporateActionEventType28Code.DecreaseInValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code DecreaseInValue = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DecreaseInValue";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.DecreaseInValue);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.DecreaseInValue.getCodeName().orElse(name);
 		}
@@ -711,12 +882,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Detachment"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Detachment
+	 * CorporateActionEventType28Code.Detachment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Detachment = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Detachment";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Detachment);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Detachment.getCodeName().orElse(name);
 		}
@@ -735,12 +915,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Disclosure"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Disclosure
+	 * CorporateActionEventType28Code.Disclosure}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Disclosure = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disclosure";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Disclosure);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Disclosure.getCodeName().orElse(name);
 		}
@@ -759,12 +948,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendOption"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#DividendOption
+	 * CorporateActionEventType28Code.DividendOption}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code DividendOption = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendOption";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.DividendOption);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.DividendOption.getCodeName().orElse(name);
 		}
@@ -783,12 +981,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendReinvestment"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#DividendReinvestment
+	 * CorporateActionEventType28Code.DividendReinvestment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code DividendReinvestment = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestment";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.DividendReinvestment);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.DividendReinvestment.getCodeName().orElse(name);
 		}
@@ -807,12 +1014,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Drawing"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Drawing
+	 * CorporateActionEventType28Code.Drawing}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Drawing = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Drawing";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Drawing);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Drawing.getCodeName().orElse(name);
 		}
@@ -831,12 +1047,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DutchAuction"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#DutchAuction
+	 * CorporateActionEventType28Code.DutchAuction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code DutchAuction = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DutchAuction";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.DutchAuction);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.DutchAuction.getCodeName().orElse(name);
 		}
@@ -855,12 +1080,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Exchange"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Exchange
+	 * CorporateActionEventType28Code.Exchange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Exchange = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Exchange";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Exchange);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Exchange.getCodeName().orElse(name);
 		}
@@ -879,12 +1113,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinalMaturity"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#FinalMaturity
+	 * CorporateActionEventType28Code.FinalMaturity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code FinalMaturity = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalMaturity";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.FinalMaturity);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.FinalMaturity.getCodeName().orElse(name);
 		}
@@ -903,12 +1146,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FullCall"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#FullCall
+	 * CorporateActionEventType28Code.FullCall}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code FullCall = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullCall";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.FullCall);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.FullCall.getCodeName().orElse(name);
 		}
@@ -927,12 +1179,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IncreaseInValue"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#IncreaseInValue
+	 * CorporateActionEventType28Code.IncreaseInValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code IncreaseInValue = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncreaseInValue";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.IncreaseInValue);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.IncreaseInValue.getCodeName().orElse(name);
 		}
@@ -951,12 +1212,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InstalmentCall"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#InstalmentCall
+	 * CorporateActionEventType28Code.InstalmentCall}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code InstalmentCall = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstalmentCall";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.InstalmentCall);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.InstalmentCall.getCodeName().orElse(name);
 		}
@@ -975,12 +1245,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterestPayment"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#InterestPayment
+	 * CorporateActionEventType28Code.InterestPayment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code InterestPayment = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPayment";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.InterestPayment);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.InterestPayment.getCodeName().orElse(name);
 		}
@@ -999,12 +1278,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InterestPaymentWithPrincipal"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#InterestPaymentWithPrincipal
+	 * CorporateActionEventType28Code.InterestPaymentWithPrincipal}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code InterestPaymentWithPrincipal = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPaymentWithPrincipal";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.InterestPaymentWithPrincipal);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.InterestPaymentWithPrincipal.getCodeName().orElse(name);
 		}
@@ -1023,12 +1311,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IntermediateSecuritiesDistribution"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#IntermediateSecuritiesDistribution
+	 * CorporateActionEventType28Code.IntermediateSecuritiesDistribution}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code IntermediateSecuritiesDistribution = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistribution";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.IntermediateSecuritiesDistribution);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.IntermediateSecuritiesDistribution.getCodeName().orElse(name);
 		}
@@ -1047,12 +1344,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LiquidationDividend"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#LiquidationDividend
+	 * CorporateActionEventType28Code.LiquidationDividend}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code LiquidationDividend = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LiquidationDividend";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.LiquidationDividend);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.LiquidationDividend.getCodeName().orElse(name);
 		}
@@ -1071,12 +1377,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MaturityExtension"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#MaturityExtension
+	 * CorporateActionEventType28Code.MaturityExtension}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code MaturityExtension = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityExtension";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.MaturityExtension);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.MaturityExtension.getCodeName().orElse(name);
 		}
@@ -1095,12 +1410,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Merger"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Merger
+	 * CorporateActionEventType28Code.Merger}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Merger = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merger";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Merger);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Merger.getCodeName().orElse(name);
 		}
@@ -1119,12 +1443,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonOfficialOffer"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#NonOfficialOffer
+	 * CorporateActionEventType28Code.NonOfficialOffer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code NonOfficialOffer = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonOfficialOffer";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.NonOfficialOffer);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.NonOfficialOffer.getCodeName().orElse(name);
 		}
@@ -1143,12 +1476,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NonUSTEFRADCertification"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#NonUSTEFRADCertification
+	 * CorporateActionEventType28Code.NonUSTEFRADCertification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code NonUSTEFRADCertification = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonUSTEFRADCertification";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.NonUSTEFRADCertification);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.NonUSTEFRADCertification.getCodeName().orElse(name);
 		}
@@ -1167,12 +1509,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OddLotSalePurchase"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#OddLotSalePurchase
+	 * CorporateActionEventType28Code.OddLotSalePurchase}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code OddLotSalePurchase = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OddLotSalePurchase";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.OddLotSalePurchase);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.OddLotSalePurchase.getCodeName().orElse(name);
 		}
@@ -1191,12 +1542,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OtherEvent"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#OtherEvent
+	 * CorporateActionEventType28Code.OtherEvent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code OtherEvent = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherEvent";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.OtherEvent);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.OtherEvent.getCodeName().orElse(name);
 		}
@@ -1215,12 +1575,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PariPassu"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#PariPassu
+	 * CorporateActionEventType28Code.PariPassu}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code PariPassu = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassu";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.PariPassu);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.PariPassu.getCodeName().orElse(name);
 		}
@@ -1239,12 +1608,22 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialRedemptionWithoutPoolFactorReduction"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#PartialRedemptionWithoutPoolFactorReduction
+	 * CorporateActionEventType28Code.
+	 * PartialRedemptionWithoutPoolFactorReduction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code PartialRedemptionWithoutPoolFactorReduction = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithoutPoolFactorReduction";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.PartialRedemptionWithoutPoolFactorReduction);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.PartialRedemptionWithoutPoolFactorReduction.getCodeName().orElse(name);
 		}
@@ -1263,12 +1642,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PartialRedemptionWithPoolFactorReduction"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#PartialRedemptionWithPoolFactorReduction
+	 * CorporateActionEventType28Code.PartialRedemptionWithPoolFactorReduction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code PartialRedemptionWithPoolFactorReduction = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialRedemptionWithPoolFactorReduction";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.PartialRedemptionWithPoolFactorReduction);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.PartialRedemptionWithPoolFactorReduction.getCodeName().orElse(name);
 		}
@@ -1287,12 +1675,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PayInKind"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#PayInKind
+	 * CorporateActionEventType28Code.PayInKind}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code PayInKind = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayInKind";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.PayInKind);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.PayInKind.getCodeName().orElse(name);
 		}
@@ -1311,12 +1708,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceOfIncorporation"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#PlaceOfIncorporation
+	 * CorporateActionEventType28Code.PlaceOfIncorporation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code PlaceOfIncorporation = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfIncorporation";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.PlaceOfIncorporation);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.PlaceOfIncorporation.getCodeName().orElse(name);
 		}
@@ -1335,12 +1741,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Prefunding"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Prefunding
+	 * CorporateActionEventType28Code.Prefunding}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Prefunding = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Prefunding";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Prefunding);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Prefunding.getCodeName().orElse(name);
 		}
@@ -1359,12 +1774,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PriorityIssue"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#PriorityIssue
+	 * CorporateActionEventType28Code.PriorityIssue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code PriorityIssue = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorityIssue";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.PriorityIssue);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.PriorityIssue.getCodeName().orElse(name);
 		}
@@ -1383,12 +1807,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PutRedemption"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#PutRedemption
+	 * CorporateActionEventType28Code.PutRedemption}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code PutRedemption = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutRedemption";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.PutRedemption);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.PutRedemption.getCodeName().orElse(name);
 		}
@@ -1407,12 +1840,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Redenomination"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Redenomination
+	 * CorporateActionEventType28Code.Redenomination}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Redenomination = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Redenomination";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Redenomination);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Redenomination.getCodeName().orElse(name);
 		}
@@ -1431,12 +1873,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RemarketingAgreement"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#RemarketingAgreement
+	 * CorporateActionEventType28Code.RemarketingAgreement}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code RemarketingAgreement = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemarketingAgreement";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.RemarketingAgreement);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.RemarketingAgreement.getCodeName().orElse(name);
 		}
@@ -1455,12 +1906,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RepurchaseOffer"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#RepurchaseOffer
+	 * CorporateActionEventType28Code.RepurchaseOffer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code RepurchaseOffer = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseOffer";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.RepurchaseOffer);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.RepurchaseOffer.getCodeName().orElse(name);
 		}
@@ -1479,12 +1939,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReverseStockSplit"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#ReverseStockSplit
+	 * CorporateActionEventType28Code.ReverseStockSplit}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code ReverseStockSplit = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReverseStockSplit";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.ReverseStockSplit);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.ReverseStockSplit.getCodeName().orElse(name);
 		}
@@ -1503,12 +1972,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RightsIssue"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#RightsIssue
+	 * CorporateActionEventType28Code.RightsIssue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code RightsIssue = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsIssue";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.RightsIssue);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.RightsIssue.getCodeName().orElse(name);
 		}
@@ -1527,12 +2005,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ScripDividend"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#ScripDividend
+	 * CorporateActionEventType28Code.ScripDividend}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code ScripDividend = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScripDividend";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.ScripDividend);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.ScripDividend.getCodeName().orElse(name);
 		}
@@ -1551,12 +2038,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SharesPremiumDividend"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#SharesPremiumDividend
+	 * CorporateActionEventType28Code.SharesPremiumDividend}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code SharesPremiumDividend = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharesPremiumDividend";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.SharesPremiumDividend);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.SharesPremiumDividend.getCodeName().orElse(name);
 		}
@@ -1575,12 +2071,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SmallestNegotiableUnit"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#SmallestNegotiableUnit
+	 * CorporateActionEventType28Code.SmallestNegotiableUnit}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code SmallestNegotiableUnit = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SmallestNegotiableUnit";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.SmallestNegotiableUnit);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.SmallestNegotiableUnit.getCodeName().orElse(name);
 		}
@@ -1599,12 +2104,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SpinOff"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#SpinOff
+	 * CorporateActionEventType28Code.SpinOff}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code SpinOff = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOff";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.SpinOff);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.SpinOff.getCodeName().orElse(name);
 		}
@@ -1623,12 +2137,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockDividend"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#StockDividend
+	 * CorporateActionEventType28Code.StockDividend}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code StockDividend = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.StockDividend);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.StockDividend.getCodeName().orElse(name);
 		}
@@ -1647,12 +2170,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "StockSplit"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#StockSplit
+	 * CorporateActionEventType28Code.StockSplit}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code StockSplit = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockSplit";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.StockSplit);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.StockSplit.getCodeName().orElse(name);
 		}
@@ -1671,12 +2203,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxReclaim"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#TaxReclaim
+	 * CorporateActionEventType28Code.TaxReclaim}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code TaxReclaim = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaim";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.TaxReclaim);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.TaxReclaim.getCodeName().orElse(name);
 		}
@@ -1695,12 +2236,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Tender"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Tender
+	 * CorporateActionEventType28Code.Tender}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Tender = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tender";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Tender);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Tender.getCodeName().orElse(name);
 		}
@@ -1719,12 +2269,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingStatusDelisted"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#TradingStatusDelisted
+	 * CorporateActionEventType28Code.TradingStatusDelisted}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code TradingStatusDelisted = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusDelisted";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.TradingStatusDelisted);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.TradingStatusDelisted.getCodeName().orElse(name);
 		}
@@ -1743,12 +2302,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TradingStatusSuspended"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#TradingStatusSuspended
+	 * CorporateActionEventType28Code.TradingStatusSuspended}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code TradingStatusSuspended = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingStatusSuspended";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.TradingStatusSuspended);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.TradingStatusSuspended.getCodeName().orElse(name);
 		}
@@ -1767,12 +2335,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WarrantExercise"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#WarrantExercise
+	 * CorporateActionEventType28Code.WarrantExercise}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code WarrantExercise = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantExercise";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.WarrantExercise);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.WarrantExercise.getCodeName().orElse(name);
 		}
@@ -1791,12 +2368,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithholdingTaxReliefCertification"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#WithholdingTaxReliefCertification
+	 * CorporateActionEventType28Code.WithholdingTaxReliefCertification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code WithholdingTaxReliefCertification = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxReliefCertification";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.WithholdingTaxReliefCertification);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.WithholdingTaxReliefCertification.getCodeName().orElse(name);
 		}
@@ -1815,12 +2401,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Worthless"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Worthless
+	 * CorporateActionEventType28Code.Worthless}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Worthless = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Worthless";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Worthless);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Worthless.getCodeName().orElse(name);
 		}
@@ -1839,12 +2434,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Accumulation"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Accumulation
+	 * CorporateActionEventType28Code.Accumulation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Accumulation = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Accumulation";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Accumulation);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Accumulation.getCodeName().orElse(name);
 		}
@@ -1863,12 +2467,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecuritiesHoldersMeeting"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#SecuritiesHoldersMeeting
+	 * CorporateActionEventType28Code.SecuritiesHoldersMeeting}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code SecuritiesHoldersMeeting = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesHoldersMeeting";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.SecuritiesHoldersMeeting);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.SecuritiesHoldersMeeting.getCodeName().orElse(name);
 		}
@@ -1887,12 +2500,21 @@ public class CorporateActionEventType24Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Information"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CorporateActionEventType28Code#Information
+	 * CorporateActionEventType28Code.Information}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CorporateActionEventType24Code Information = new CorporateActionEventType24Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Information";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.Information);
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventType24Code.mmObject();
 			codeName = CorporateActionEventTypeV6Code.Information.getCodeName().orElse(name);
 		}
@@ -1909,6 +2531,7 @@ public class CorporateActionEventType24Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventType24Code";
 				definition = "Specifies the corporate action event type.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionEventType28Code.mmObject());
 				trace_lazy = () -> CorporateActionEventTypeV6Code.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionEventType24Code.ActiveTradingStatus, com.tools20022.repository.codeset.CorporateActionEventType24Code.Attachment,
 						com.tools20022.repository.codeset.CorporateActionEventType24Code.Bankruptcy, com.tools20022.repository.codeset.CorporateActionEventType24Code.BondDefault,

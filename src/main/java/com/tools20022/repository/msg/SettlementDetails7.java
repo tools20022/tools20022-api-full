@@ -127,7 +127,7 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementDetails7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in."
+ * "Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in."
  * </li>
  * </ul>
  */
@@ -1127,7 +1127,7 @@ public class SettlementDetails7 {
 						.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails7, com.tools20022.repository.constraints.ConstraintCashClearingSystemRule.forSettlementDetails7);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDetails7";
-				definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
+				definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between a acquirer globalised card transaction or an individual card transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.CardTransaction3Choice
+ * CardTransaction3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.CardTransaction1Choice
@@ -111,6 +118,14 @@ public class CardTransaction2Choice {
 	 * definition} =
 	 * "Card transaction details, based on card transaction aggregated data performed by the card acquirer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CardTransaction3Choice#mmAggregated
+	 * CardTransaction3Choice.mmAggregated}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -127,6 +142,7 @@ public class CardTransaction2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Aggregated";
 			definition = "Card transaction details, based on card transaction aggregated data performed by the card acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(CardTransaction3Choice.mmAggregated);
 			previousVersion_lazy = () -> CardTransaction1Choice.mmAggregated;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -167,6 +183,14 @@ public class CardTransaction2Choice {
 	 * definition} =
 	 * "Card transaction details for the individual transaction, as recorded at the POI (point of interaction)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CardTransaction3Choice#mmIndividual
+	 * CardTransaction3Choice.mmIndividual}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +207,7 @@ public class CardTransaction2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Individual";
 			definition = "Card transaction details for the individual transaction, as recorded at the POI (point of interaction).";
+			nextVersions_lazy = () -> Arrays.asList(CardTransaction3Choice.mmIndividual);
 			previousVersion_lazy = () -> CardTransaction1Choice.mmIndividual;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -200,6 +225,7 @@ public class CardTransaction2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardTransaction2Choice";
 				definition = "Choice between a acquirer globalised card transaction or an individual card transaction.";
+				nextVersions_lazy = () -> Arrays.asList(CardTransaction3Choice.mmObject());
 				previousVersion_lazy = () -> CardTransaction1Choice.mmObject();
 			}
 		});

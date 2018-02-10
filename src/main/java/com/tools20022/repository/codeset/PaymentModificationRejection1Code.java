@@ -206,14 +206,14 @@ public class PaymentModificationRejection1Code extends MMCode {
 	 * name} = "UnableToModifyInstructionCode"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "InstructionCode  cannot be modified."</li>
+	 * definition} = "InstructionCode cannot be modified."</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejection1Code UnableToModifyInstructionCode = new PaymentModificationRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyInstructionCode";
-			definition = "InstructionCode  cannot be modified.";
+			definition = "InstructionCode cannot be modified.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmObject();
 			codeName = "UM03";
 		}
@@ -236,14 +236,14 @@ public class PaymentModificationRejection1Code extends MMCode {
 	 * name} = "UnableToModifyRequestedExecutionDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "RequestedExecutionDate  cannot be modified."</li>
+	 * definition} = "RequestedExecutionDate cannot be modified."</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejection1Code UnableToModifyRequestedExecutionDate = new PaymentModificationRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyRequestedExecutionDate";
-			definition = "RequestedExecutionDate  cannot be modified.";
+			definition = "RequestedExecutionDate cannot be modified.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmObject();
 			codeName = "UM04";
 		}
@@ -266,14 +266,14 @@ public class PaymentModificationRejection1Code extends MMCode {
 	 * name} = "UnableToModifyValueDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "ValueDate  cannot be modified."</li>
+	 * definition} = "ValueDate cannot be modified."</li>
 	 * </ul>
 	 */
 	public static final PaymentModificationRejection1Code UnableToModifyValueDate = new PaymentModificationRejection1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnableToModifyValueDate";
-			definition = "ValueDate  cannot be modified.";
+			definition = "ValueDate cannot be modified.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PaymentModificationRejection1Code.mmObject();
 			codeName = "UM05";
 		}

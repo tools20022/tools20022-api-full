@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  * "RejectionReason7FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the reason of a rejection cancellation request."
+ * "Choice of formats to express the reason of a rejection cancellation request."
  * </li>
  * </ul>
  */
@@ -160,7 +160,7 @@ public class RejectionReason7FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the reason of a rejection cancellation request."
+	 * "Proprietary code to express the reason of a rejection cancellation request."
 	 * </li>
 	 * </ul>
 	 */
@@ -172,7 +172,7 @@ public class RejectionReason7FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the reason of a rejection cancellation request.";
+			definition = "Proprietary code to express the reason of a rejection cancellation request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -187,7 +187,7 @@ public class RejectionReason7FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason7FormatChoice";
-				definition = "Choice of formats to  express the reason of a rejection cancellation request.";
+				definition = "Choice of formats to express the reason of a rejection cancellation request.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -64,8 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GeneralInformation3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "General Information, indicating the function of the  message."
- * </li>
+ * definition} = "General Information, indicating the function of the message."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -213,7 +212,7 @@ public class GeneralInformation3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralInformation3";
-				definition = "General Information, indicating the function of the  message.";
+				definition = "General Information, indicating the function of the message.";
 			}
 		});
 		return mmObject_lazy.get();

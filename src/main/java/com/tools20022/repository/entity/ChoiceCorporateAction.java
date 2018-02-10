@@ -126,6 +126,12 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails6#mmOptionDetails
 	 * InstructedBalanceDetails6.mmOptionDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails7#mmOptionDetails
+	 * InstructedBalanceDetails7.mmOptionDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails8#mmOptionDetails
+	 * InstructedBalanceDetails8.mmOptionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -147,7 +153,8 @@ public class ChoiceCorporateAction extends MandatoryCorporateAction {
 	public static final MMBusinessAssociationEnd mmCorporateActionOptionDefinition = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InstructedBalanceDetails1.mmOptionDetails, InstructedBalanceDetails2.mmOptionDetails, InstructedBalanceDetails3.mmOptionDetails, InstructedBalanceDetails4.mmOptionDetails,
-					CorporateActionDeactivationInstruction1.mmOptionDetails, InstructedBalanceDetails5.mmOptionDetails, InstructedBalanceDetails6.mmOptionDetails);
+					CorporateActionDeactivationInstruction1.mmOptionDetails, InstructedBalanceDetails5.mmOptionDetails, InstructedBalanceDetails6.mmOptionDetails, InstructedBalanceDetails7.mmOptionDetails,
+					InstructedBalanceDetails8.mmOptionDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ChoiceCorporateAction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

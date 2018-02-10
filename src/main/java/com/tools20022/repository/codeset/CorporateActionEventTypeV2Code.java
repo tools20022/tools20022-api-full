@@ -851,7 +851,7 @@ public class CorporateActionEventTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Event is a generic change. For example,  a change in the terms of an issue, a change in the identification of a security, change of a board lot, a change from global to definitive."
+	 * "Event is a generic change. For example, a change in the terms of an issue, a change in the identification of a security, change of a board lot, a change from global to definitive."
 	 * </li>
 	 * </ul>
 	 */
@@ -860,7 +860,7 @@ public class CorporateActionEventTypeV2Code extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CAEV//CHAN"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Change";
-			definition = "Event is a generic change. For example,  a change in the terms of an issue, a change in the identification of a security, change of a board lot, a change from global to definitive.";
+			definition = "Event is a generic change. For example, a change in the terms of an issue, a change in the identification of a security, change of a board lot, a change from global to definitive.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventTypeV2Code.mmObject();
 			codeName = "CHAN";
 		}

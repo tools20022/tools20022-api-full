@@ -67,6 +67,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Account25 Account25}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Account2
  * Account2}</li>
@@ -110,6 +116,13 @@ public class Account20 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Account25#mmIdentification
+	 * Account25.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -126,6 +139,7 @@ public class Account20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(Account25.mmIdentification);
 			previousVersion_lazy = () -> Account2.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -166,6 +180,14 @@ public class Account20 {
 	 * definition} =
 	 * "Institution servicing an account and assigning the account identifier to the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Account25#mmAccountServicer
+	 * Account25.mmAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +204,7 @@ public class Account20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Institution servicing an account and assigning the account identifier to the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(Account25.mmAccountServicer);
 			previousVersion_lazy = () -> Account2.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -198,6 +221,7 @@ public class Account20 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Account20";
 				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
+				nextVersions_lazy = () -> Arrays.asList(Account25.mmObject());
 				previousVersion_lazy = () -> Account2.mmObject();
 			}
 		});

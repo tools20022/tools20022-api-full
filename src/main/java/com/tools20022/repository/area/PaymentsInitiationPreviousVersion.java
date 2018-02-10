@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * Messages that support the initiation of a payment from the ordering customer
  * to a financial institution that services a cash account and reporting its
- * status
+ * status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -55,17 +55,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestV05
  * CreditorPaymentActivationRequestV05}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV06
- * CustomerPaymentReversalV06}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.pain.CustomerDirectDebitInitiationV06
  * CustomerDirectDebitInitiationV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07
- * CustomerPaymentStatusReportV07}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.pain.CreditorPaymentActivationRequestStatusReportV05
  * CreditorPaymentActivationRequestStatusReportV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentStatusReportV08
+ * CustomerPaymentStatusReportV08}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV07
+ * CustomerPaymentReversalV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,7 +81,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Payments Initiation - Previous version - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status"
+ * "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status."
  * </li>
  * </ul>
  */
@@ -95,10 +95,10 @@ public class PaymentsInitiationPreviousVersion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Payments Initiation - Previous version - master";
-				definition = "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status";
+				definition = "Messages that support the initiation of a payment from the ordering customer to a financial institution that services a cash account and reporting its status.";
 				messageDefinition_lazy = () -> Arrays.asList(MandateAmendmentRequestV04.mmObject(), MandateCancellationRequestV04.mmObject(), MandateAcceptanceReportV04.mmObject(), MandateInitiationRequestV04.mmObject(),
-						CustomerCreditTransferInitiationV07.mmObject(), CreditorPaymentActivationRequestV05.mmObject(), CustomerPaymentReversalV06.mmObject(), CustomerDirectDebitInitiationV06.mmObject(),
-						CustomerPaymentStatusReportV07.mmObject(), CreditorPaymentActivationRequestStatusReportV05.mmObject());
+						CustomerCreditTransferInitiationV07.mmObject(), CreditorPaymentActivationRequestV05.mmObject(), CustomerDirectDebitInitiationV06.mmObject(), CreditorPaymentActivationRequestStatusReportV05.mmObject(),
+						CustomerPaymentStatusReportV08.mmObject(), CustomerPaymentReversalV07.mmObject());
 				code = "pain";
 			}
 		});

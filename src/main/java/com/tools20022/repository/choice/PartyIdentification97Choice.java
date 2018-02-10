@@ -20,6 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.other.DerivativesTradeReportQueryV01;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.datatype.LEIIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
@@ -62,6 +63,15 @@ import javax.xml.bind.annotation.XmlType;
  * trace} =
  * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
  * PartyIdentificationInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.other.DerivativesTradeReportQueryV01#mmRequestingAuthority
+ * DerivativesTradeReportQueryV01.mmRequestingAuthority}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -311,6 +321,7 @@ public class PartyIdentification97Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification97Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification97Choice.mmLegalEntityIdentifier,
 						com.tools20022.repository.choice.PartyIdentification97Choice.mmNameAndAddress, com.tools20022.repository.choice.PartyIdentification97Choice.mmProprietaryIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DerivativesTradeReportQueryV01.mmRequestingAuthority);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

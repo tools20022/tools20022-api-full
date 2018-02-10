@@ -69,6 +69,10 @@ import javax.xml.bind.annotation.XmlType;
  * PersonIdentification7}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification10
  * PersonIdentification10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification13
+ * PersonIdentification13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PersonIdentification14
+ * PersonIdentification14}</li>
  * </ul>
  * </li>
  * </ul>
@@ -115,6 +119,12 @@ public class PersonIdentification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PersonIdentification7#mmDateAndPlaceOfBirth
 	 * PersonIdentification7.mmDateAndPlaceOfBirth}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification13#mmDateAndPlaceOfBirth
+	 * PersonIdentification13.mmDateAndPlaceOfBirth}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification14#mmDateAndPlaceOfBirth
+	 * PersonIdentification14.mmDateAndPlaceOfBirth}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -128,7 +138,7 @@ public class PersonIdentification5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateAndPlaceOfBirth";
 			definition = "Date and place of birth of a person.";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentification7.mmDateAndPlaceOfBirth);
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentification7.mmDateAndPlaceOfBirth, PersonIdentification13.mmDateAndPlaceOfBirth, PersonIdentification14.mmDateAndPlaceOfBirth);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -178,6 +188,12 @@ public class PersonIdentification5 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#mmOther
 	 * PersonIdentification10.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification13#mmOther
+	 * PersonIdentification13.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification14#mmOther
+	 * PersonIdentification14.mmOther}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -191,7 +207,7 @@ public class PersonIdentification5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Unique identification of a person, as assigned by an institution, using an identification scheme.";
-			nextVersions_lazy = () -> Arrays.asList(PersonIdentification7.mmOther, PersonIdentification10.mmOther);
+			nextVersions_lazy = () -> Arrays.asList(PersonIdentification7.mmOther, PersonIdentification10.mmOther, PersonIdentification13.mmOther, PersonIdentification14.mmOther);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericPersonIdentification1.mmObject();
@@ -207,7 +223,7 @@ public class PersonIdentification5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PersonIdentification5";
 				definition = "Unique and unambiguous way to identify a person.";
-				nextVersions_lazy = () -> Arrays.asList(PersonIdentification7.mmObject(), PersonIdentification10.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(PersonIdentification7.mmObject(), PersonIdentification10.mmObject(), PersonIdentification13.mmObject(), PersonIdentification14.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

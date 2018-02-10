@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Instrument that has or represents monetary value and is used to process a
- * payment instruction.
+ * payment instruction. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -80,7 +80,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentInstrument7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Instrument that has or represents monetary value and is used to process a payment instruction.\n"
+ * "Instrument that has or represents monetary value and is used to process a payment instruction.\n."
  * </li>
  * </ul>
  */
@@ -399,7 +399,7 @@ public class PaymentInstrument7 {
 					}
 				})).get();
 				name = "PaymentInstrument7";
-				definition = "Instrument that has or represents monetary value and is used to process a payment instruction.\n";
+				definition = "Instrument that has or represents monetary value and is used to process a payment instruction.\n.";
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstrument7.PaymentInstrumentRule);
 			}
 		});

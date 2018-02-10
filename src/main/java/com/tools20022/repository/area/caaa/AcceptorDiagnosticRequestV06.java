@@ -25,7 +25,7 @@ import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVer
 import com.tools20022.repository.msg.AcceptorDiagnosticRequest6;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header30;
-import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017;
+import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent)
- * to the acquirer (or its agent) , to check the end-to-end communication, to
+ * to the acquirer (or its agent), to check the end-to-end communication, to
  * test the availability of this acquirer, or to validate the security
  * environment.
  * <p>
@@ -60,8 +60,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
- * CAPEAcceptortoAcquirerMaintenance20162017}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOLatestversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -83,7 +83,15 @@ import javax.xml.bind.annotation.*;
  * "AcceptorDiagnosticRequestV06"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment."
+ * "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV07
+ * AcceptorDiagnosticRequestV07}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -118,6 +126,14 @@ public class AcceptorDiagnosticRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Diagnostic request message management information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV07#mmHeader
+	 * AcceptorDiagnosticRequestV07.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +147,7 @@ public class AcceptorDiagnosticRequestV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Diagnostic request message management information.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV07.mmHeader);
 			previousVersion_lazy = () -> AcceptorDiagnosticRequestV05.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -168,6 +185,14 @@ public class AcceptorDiagnosticRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information related to the diagnostic request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV07#mmDiagnosticRequest
+	 * AcceptorDiagnosticRequestV07.mmDiagnosticRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,6 +206,7 @@ public class AcceptorDiagnosticRequestV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticRequest";
 			definition = "Information related to the diagnostic request.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV07.mmDiagnosticRequest);
 			previousVersion_lazy = () -> AcceptorDiagnosticRequestV05.mmDiagnosticRequest;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -218,6 +244,14 @@ public class AcceptorDiagnosticRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Trailer of the message containing a MAC."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorDiagnosticRequestV07#mmSecurityTrailer
+	 * AcceptorDiagnosticRequestV07.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +265,7 @@ public class AcceptorDiagnosticRequestV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV07.mmSecurityTrailer);
 			previousVersion_lazy = () -> AcceptorDiagnosticRequestV05.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -251,9 +286,10 @@ public class AcceptorDiagnosticRequestV06 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticRequestV06";
-				definition = "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment.";
+				definition = "The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticRequestV07.mmObject());
 				previousVersion_lazy = () -> AcceptorDiagnosticRequestV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEAcceptortoAcquirerMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrDgnstcReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();

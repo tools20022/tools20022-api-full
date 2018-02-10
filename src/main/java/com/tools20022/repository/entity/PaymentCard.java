@@ -285,6 +285,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.PaymentCard25 PaymentCard25}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PaymentCard26 PaymentCard26}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PaymentCard27 PaymentCard27}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentCard28 PaymentCard28}</li>
  * </ul>
  * </li>
  * <li>
@@ -1065,6 +1066,8 @@ public class PaymentCard {
 	 * PaymentCard21.mmCardBrand}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCard26#mmCardBrand
 	 * PaymentCard26.mmCardBrand}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentCard28#mmCardBrand
+	 * PaymentCard28.mmCardBrand}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1085,7 +1088,7 @@ public class PaymentCard {
 	public static final MMBusinessAttribute mmCardBrand = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentCard4.mmCardBrand, TransactionData1.mmCardBrand, PaymentCard3.mmCardBrand, PaymentCard6.mmCardBrand, PaymentCard1.mmCardBrand, PaymentCard5.mmCardBrand, PaymentCard7.mmCardBrand,
-					PaymentCard8.mmCardBrand, PaymentCard9.mmCardBrand, PaymentCard11.mmCardBrand, PaymentCard20.mmCardBrand, PaymentCard21.mmCardBrand, PaymentCard26.mmCardBrand);
+					PaymentCard8.mmCardBrand, PaymentCard9.mmCardBrand, PaymentCard11.mmCardBrand, PaymentCard20.mmCardBrand, PaymentCard21.mmCardBrand, PaymentCard26.mmCardBrand, PaymentCard28.mmCardBrand);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1134,6 +1137,12 @@ public class PaymentCard {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardEntry2#mmPrePaidAccount
 	 * CardEntry2.mmPrePaidAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardTransaction16#mmPrePaidAccount
+	 * CardTransaction16.mmPrePaidAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardEntry3#mmPrePaidAccount
+	 * CardEntry3.mmPrePaidAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1153,7 +1162,7 @@ public class PaymentCard {
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(TransactionData1.mmPrePaidAccount, CardTransaction2.mmPrePaidAccount, CardEntry2.mmPrePaidAccount);
+			derivation_lazy = () -> Arrays.asList(TransactionData1.mmPrePaidAccount, CardTransaction2.mmPrePaidAccount, CardEntry2.mmPrePaidAccount, CardTransaction16.mmPrePaidAccount, CardEntry3.mmPrePaidAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1344,6 +1353,15 @@ public class PaymentCard {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43#mmAccountType
 	 * CardPaymentTransactionDetails43.mmAccountType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44#mmAccountType
+	 * CardPaymentTransactionDetails44.mmAccountType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails45#mmAccountType
+	 * CardPaymentTransactionDetails45.mmAccountType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount14#mmSelectedAccountType
+	 * CardAccount14.mmSelectedAccountType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1370,7 +1388,8 @@ public class PaymentCard {
 					CardPaymentTransactionDetails19.mmAccountType, CardPaymentTransactionDetails24.mmAccountType, CardAccount1.mmSelectedAccountType, CardAccount2.mmSelectedAccountType, CardPaymentTransactionDetails32.mmAccountType,
 					CardPaymentTransactionDetails28.mmAccountType, CardPaymentTransactionDetails29.mmAccountType, CardPaymentTransactionDetails30.mmAccountType, CardPaymentTransactionDetails27.mmAccountType,
 					CardPaymentTransactionDetails31.mmAccountType, CardPaymentTransactionDetails39.mmAccountType, CardPaymentTransactionDetails38.mmAccountType, CardPaymentTransactionDetails41.mmAccountType,
-					CardPaymentTransactionDetails37.mmAccountType, CardPaymentTransactionDetails42.mmAccountType, CardPaymentTransactionDetails43.mmAccountType);
+					CardPaymentTransactionDetails37.mmAccountType, CardPaymentTransactionDetails42.mmAccountType, CardPaymentTransactionDetails43.mmAccountType, CardPaymentTransactionDetails44.mmAccountType,
+					CardPaymentTransactionDetails45.mmAccountType, CardAccount14.mmSelectedAccountType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1691,6 +1710,9 @@ public class PaymentCard {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentCard26#mmCardCountryCode
 	 * PaymentCard26.mmCardCountryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmCardCountryCode
+	 * PaymentCard28.mmCardCountryCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1713,7 +1735,7 @@ public class PaymentCard {
 			derivation_lazy = () -> Arrays.asList(PaymentCard4.mmCardCountryCode, PaymentCard3.mmCardCountryCode, PaymentCard6.mmCardCountryCode, PaymentCard1.mmCardCountryCode, PaymentCard5.mmCardCountryCode,
 					PaymentCard7.mmCardCountryCode, PaymentCard8.mmCardCountryCode, PaymentCard9.mmCardCountryCode, PaymentCard11.mmCardCountryCode, PaymentCard12.mmCardCountryCode, PaymentCard14.mmCardCountryCode,
 					PaymentCard16.mmCardCountryCode, PaymentCard17.mmCardCountryCode, PaymentCard20.mmCardCountryCode, PaymentCard21.mmCardCountryCode, PaymentCard23.mmCardCountryCode, PaymentCard22.mmCardCountryCode,
-					PaymentCard26.mmCardCountryCode);
+					PaymentCard26.mmCardCountryCode, PaymentCard28.mmCardCountryCode);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1781,6 +1803,33 @@ public class PaymentCard {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction69#mmCardProgrammeApplied
 	 * CardPaymentTransaction69.mmCardProgrammeApplied}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentCard28#mmCardProductSubType
+	 * PaymentCard28.mmCardProductSubType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmCardProgrammeProposed
+	 * CardPaymentTransaction83.mmCardProgrammeProposed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmCardProgrammeApplied
+	 * CardPaymentTransaction83.mmCardProgrammeApplied}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmCardProgrammeProposed
+	 * CardPaymentTransaction81.mmCardProgrammeProposed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmCardProgrammeApplied
+	 * CardPaymentTransaction81.mmCardProgrammeApplied}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction82#mmCardProgrammeProposed
+	 * CardPaymentTransaction82.mmCardProgrammeProposed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction82#mmCardProgrammeApplied
+	 * CardPaymentTransaction82.mmCardProgrammeApplied}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction80#mmCardProgrammeProposed
+	 * CardPaymentTransaction80.mmCardProgrammeProposed}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction80#mmCardProgrammeApplied
+	 * CardPaymentTransaction80.mmCardProgrammeApplied}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1805,7 +1854,9 @@ public class PaymentCard {
 			derivation_lazy = () -> Arrays.asList(CardPaymentTransaction71.mmCardProgrammeProposed, CardPaymentTransaction71.mmCardProgrammeApplied, PaymentCard26.mmCardProductSubType, CardPaymentTransaction75.mmCardProgrammeProposed,
 					CardPaymentTransaction75.mmCardProgrammeApplied, PaymentCard27.mmCardProductSubType, CardPaymentTransaction74.mmCardProgrammeProposed, CardPaymentTransaction74.mmCardProgrammeApplied,
 					CardPaymentTransaction70.mmCardProgrammeProposed, CardPaymentTransaction70.mmCardProgrammeApplied, CardPaymentTransaction76.mmCardProgrammeProposed, CardPaymentTransaction76.mmCardProgrammeApplied,
-					CardPaymentTransaction69.mmCardProgrammeProposed, CardPaymentTransaction69.mmCardProgrammeApplied);
+					CardPaymentTransaction69.mmCardProgrammeProposed, CardPaymentTransaction69.mmCardProgrammeApplied, PaymentCard28.mmCardProductSubType, CardPaymentTransaction83.mmCardProgrammeProposed,
+					CardPaymentTransaction83.mmCardProgrammeApplied, CardPaymentTransaction81.mmCardProgrammeProposed, CardPaymentTransaction81.mmCardProgrammeApplied, CardPaymentTransaction82.mmCardProgrammeProposed,
+					CardPaymentTransaction82.mmCardProgrammeApplied, CardPaymentTransaction80.mmCardProgrammeProposed, CardPaymentTransaction80.mmCardProgrammeApplied);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentCard.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1855,7 +1906,7 @@ public class PaymentCard {
 						PaymentCard11.mmObject(), PlainCardData11.mmObject(), PlainCardData10.mmObject(), PaymentCard12.mmObject(), PlainCardData12.mmObject(), PaymentCard13.mmObject(), PaymentCard15.mmObject(), PaymentCard14.mmObject(),
 						PlainCardData8.mmObject(), PaymentCard16.mmObject(), PlainCardData14.mmObject(), PlainCardData13.mmObject(), PaymentCard17.mmObject(), PaymentCard18.mmObject(), PaymentCard20.mmObject(), PaymentCard19.mmObject(),
 						PlainCardData16.mmObject(), PlainCardData17.mmObject(), PlainCardData15.mmObject(), PaymentCard21.mmObject(), PaymentCard23.mmObject(), PaymentCard22.mmObject(), PlainCardData18.mmObject(),
-						PlainCardData19.mmObject(), PaymentCard25.mmObject(), PaymentCard26.mmObject(), PaymentCard27.mmObject());
+						PlainCardData19.mmObject(), PaymentCard25.mmObject(), PaymentCard26.mmObject(), PaymentCard27.mmObject(), PaymentCard28.mmObject());
 			}
 
 			@Override

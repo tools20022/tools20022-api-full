@@ -52,8 +52,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMWithdrawalRequestV02}</li>
  * <li>{@linkplain com.tools20022.repository.area.caam.ATMExceptionAdviceV01
  * ATMExceptionAdviceV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV02
- * ATMDeviceControlV02}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.caam.ATMReconciliationAdviceV02
  * ATMReconciliationAdviceV02}</li>
@@ -72,8 +70,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.catp.ATMDepositCompletionAcknowledgementV01
  * ATMDepositCompletionAcknowledgementV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02
- * ATMDeviceReportV02}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV02
  * ATMPINManagementRequestV02}</li>
@@ -83,8 +79,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMDiagnosticResponseV02}</li>
  * <li>{@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV02
  * ATMDiagnosticRequestV02}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02
- * ATMKeyDownloadRequestV02}</li>
  * <li>{@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV02
  * ATMWithdrawalResponseV02}</li>
  * <li>
@@ -107,9 +101,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMCompletionAdviceV02}</li>
  * <li>{@linkplain com.tools20022.repository.area.catp.ATMTransferResponseV01
  * ATMTransferResponseV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV03
+ * ATMDeviceControlV03}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV03
+ * ATMDeviceReportV03}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV03
+ * ATMKeyDownloadRequestV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02
- * ATMKeyDownloadResponseV02}</li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV03
+ * ATMKeyDownloadResponseV03}</li>
  * </ul>
  * </li>
  * <li>
@@ -142,11 +142,11 @@ public class ATMInterfaceforTransactionProcessingandATMManagementISOLatestversio
 				name = "ATM Interface for Transaction Processing and ATM Management - ISO - Latest version";
 				definition = "Messages that support any card related Automated Teller Machine (ATM) transactions, card related terminal management services and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions. It includes the new candidate versions of the MessageDefinitions that have been impacted by the unscheduled maintenance (CR #0533) and were approved by the Cards Standards Evaluation Group as ISO 20022 MessageDefinitions on 6 April 2016.";
 				messageDefinition_lazy = () -> Arrays.asList(HostToATMAcknowledgementV01.mmObject(), HostToATMRequestV01.mmObject(), ATMExceptionAcknowledgementV01.mmObject(), ATMWithdrawalRequestV02.mmObject(),
-						ATMExceptionAdviceV01.mmObject(), ATMDeviceControlV02.mmObject(), ATMReconciliationAdviceV02.mmObject(), ATMReconciliationAcknowledgementV02.mmObject(), ATMDepositResponseV01.mmObject(),
-						ATMDepositRequestV01.mmObject(), ATMWithdrawalCompletionAdviceV02.mmObject(), ATMInquiryResponseV02.mmObject(), ATMDepositCompletionAcknowledgementV01.mmObject(), ATMDeviceReportV02.mmObject(),
-						ATMPINManagementRequestV02.mmObject(), ATMTransferRequestV01.mmObject(), ATMDiagnosticResponseV02.mmObject(), ATMDiagnosticRequestV02.mmObject(), ATMKeyDownloadRequestV02.mmObject(),
-						ATMWithdrawalResponseV02.mmObject(), ATMWithdrawalCompletionAcknowledgementV02.mmObject(), ATMPINManagementResponseV02.mmObject(), ATMDepositCompletionAdviceV01.mmObject(), ATMRejectV02.mmObject(),
-						ATMInquiryRequestV02.mmObject(), ATMCompletionAcknowledgementV02.mmObject(), ATMCompletionAdviceV02.mmObject(), ATMTransferResponseV01.mmObject(), ATMKeyDownloadResponseV02.mmObject());
+						ATMExceptionAdviceV01.mmObject(), ATMReconciliationAdviceV02.mmObject(), ATMReconciliationAcknowledgementV02.mmObject(), ATMDepositResponseV01.mmObject(), ATMDepositRequestV01.mmObject(),
+						ATMWithdrawalCompletionAdviceV02.mmObject(), ATMInquiryResponseV02.mmObject(), ATMDepositCompletionAcknowledgementV01.mmObject(), ATMPINManagementRequestV02.mmObject(), ATMTransferRequestV01.mmObject(),
+						ATMDiagnosticResponseV02.mmObject(), ATMDiagnosticRequestV02.mmObject(), ATMWithdrawalResponseV02.mmObject(), ATMWithdrawalCompletionAcknowledgementV02.mmObject(), ATMPINManagementResponseV02.mmObject(),
+						ATMDepositCompletionAdviceV01.mmObject(), ATMRejectV02.mmObject(), ATMInquiryRequestV02.mmObject(), ATMCompletionAcknowledgementV02.mmObject(), ATMCompletionAdviceV02.mmObject(), ATMTransferResponseV01.mmObject(),
+						ATMDeviceControlV03.mmObject(), ATMDeviceReportV03.mmObject(), ATMKeyDownloadRequestV03.mmObject(), ATMKeyDownloadResponseV03.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

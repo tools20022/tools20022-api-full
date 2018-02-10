@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Status of the ATM
+ * Status of the ATM.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -57,7 +57,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ATMStatus1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Status of the ATM"</li>
+ * definition} = "Status of the ATM."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -123,7 +123,7 @@ public class ATMStatus1Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMStatus1Code";
-				definition = "Status of the ATM";
+				definition = "Status of the ATM.";
 				trace_lazy = () -> ATMStatusCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMStatus1Code.InService, com.tools20022.repository.codeset.ATMStatus1Code.OutOfService);
 			}

@@ -1042,7 +1042,7 @@ public class CorporateActionOption114 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Whether or not certification/breakdown is required from the account owner. \r\nYes: certification required \r\nNo: no certification required"
+	 * "Whether or not certification/breakdown is required from the account owner. \r\nYes: certification required \r\nNo: no certification required."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1068,7 +1068,7 @@ public class CorporateActionOption114 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::CERT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationBreakdownIndicator";
-			definition = "Whether or not certification/breakdown is required from the account owner. \r\nYes: certification required \r\nNo: no certification required";
+			definition = "Whether or not certification/breakdown is required from the account owner. \r\nYes: certification required \r\nNo: no certification required.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption130.mmCertificationBreakdownIndicator);
 			previousVersion_lazy = () -> CorporateActionOption101.mmCertificationBreakdownIndicator;
 			maxOccurs = 1;

@@ -149,7 +149,7 @@ public class CorporateActionNotificationExtension3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file. "
+	 * "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file."
 	 * </li>
 	 * </ul>
 	 */
@@ -161,7 +161,7 @@ public class CorporateActionNotificationExtension3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Customer Internal Security ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerInternalSecurityIdentification";
-			definition = "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file. ";
+			definition = "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();

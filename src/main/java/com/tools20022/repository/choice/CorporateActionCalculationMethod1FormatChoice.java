@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionCalculationMethod1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the calculation method for drawings."</li>
+ * "Choice of formats to express the calculation method for drawings."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,7 +97,7 @@ public class CorporateActionCalculationMethod1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to  specify the calculation method for drawings."</li>
+	 * "Standard code to specify the calculation method for drawings."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -107,7 +107,7 @@ public class CorporateActionCalculationMethod1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the calculation method for drawings.";
+			definition = "Standard code to specify the calculation method for drawings.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionCalculationMethod1Code.mmObject();
@@ -141,7 +141,7 @@ public class CorporateActionCalculationMethod1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the calculation method for drawings."</li>
+	 * "Proprietary code to express the calculation method for drawings."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -151,7 +151,7 @@ public class CorporateActionCalculationMethod1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the calculation method for drawings.";
+			definition = "Proprietary code to express the calculation method for drawings.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -165,7 +165,7 @@ public class CorporateActionCalculationMethod1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCalculationMethod1FormatChoice";
-				definition = "Choice of formats to  express the calculation method for drawings.";
+				definition = "Choice of formats to express the calculation method for drawings.";
 			}
 		});
 		return mmObject_lazy.get();

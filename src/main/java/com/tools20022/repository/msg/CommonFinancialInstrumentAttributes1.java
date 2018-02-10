@@ -221,6 +221,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CommonFinancialInstrumentAttributes1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Tangible items of value to a business."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4
+ * CommonFinancialInstrumentAttributes4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -973,7 +981,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Original Date/time at which the security is listed at the specific exchange or trading venue.."
+	 * "Original Date/time at which the security is listed at the specific exchange or trading venue."
 	 * </li>
 	 * </ul>
 	 */
@@ -985,7 +993,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			xmlTag = "ListgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ListingDate";
-			definition = "Original Date/time at which the security is listed at the specific exchange or trading venue..";
+			definition = "Original Date/time at which the security is listed at the specific exchange or trading venue.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -2355,7 +2363,7 @@ public class CommonFinancialInstrumentAttributes1 {
 	 * name} = "FinancialInstrumentForm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indicates the form of the financial Instrument"</li>
+	 * definition} = "Indicates the form of the financial Instrument."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentForm = new MMMessageAssociationEnd() {
@@ -2365,7 +2373,7 @@ public class CommonFinancialInstrumentAttributes1 {
 			xmlTag = "FinInstrmForm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentForm";
-			definition = "Indicates the form of the financial Instrument";
+			definition = "Indicates the form of the financial Instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2678,6 +2686,7 @@ public class CommonFinancialInstrumentAttributes1 {
 				})).get();
 				name = "CommonFinancialInstrumentAttributes1";
 				definition = "Tangible items of value to a business.";
+				nextVersions_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

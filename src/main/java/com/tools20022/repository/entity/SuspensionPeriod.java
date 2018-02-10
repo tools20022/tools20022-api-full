@@ -172,6 +172,9 @@ public class SuspensionPeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod2#mmPrivilegeSuspensionPeriod
 	 * CorporateActionPeriod2.mmPrivilegeSuspensionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmPrivilegeSuspensionPeriod
+	 * CorporateActionPeriod12.mmPrivilegeSuspensionPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -194,7 +197,8 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmPrivilegeSuspensionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmPrivilegeSuspensionPeriod, CorporateActionPeriod7.mmPrivilegeSuspensionPeriod, CorporateActionPeriod2.mmPrivilegeSuspensionPeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmPrivilegeSuspensionPeriod, CorporateActionPeriod7.mmPrivilegeSuspensionPeriod, CorporateActionPeriod2.mmPrivilegeSuspensionPeriod,
+					CorporateActionPeriod12.mmPrivilegeSuspensionPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -234,6 +238,9 @@ public class SuspensionPeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod7#mmDepositorySuspensionPeriodForWithdrawal
 	 * CorporateActionPeriod7.mmDepositorySuspensionPeriodForWithdrawal}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmDepositorySuspensionPeriodForWithdrawal
+	 * CorporateActionPeriod12.mmDepositorySuspensionPeriodForWithdrawal}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -256,7 +263,8 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawal = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmDepositorySuspensionPeriodForWithdrawal, CorporateActionPeriod7.mmDepositorySuspensionPeriodForWithdrawal);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmDepositorySuspensionPeriodForWithdrawal, CorporateActionPeriod7.mmDepositorySuspensionPeriodForWithdrawal,
+					CorporateActionPeriod12.mmDepositorySuspensionPeriodForWithdrawal);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -303,6 +311,10 @@ public class SuspensionPeriod {
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmDepositorySuspensionPeriodForBookEntryTransfer
 	 * CorporateActionPeriod10.mmDepositorySuspensionPeriodForBookEntryTransfer}
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForBookEntryTransfer
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForBookEntryTransfer}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -325,8 +337,10 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForBookEntryTransfer = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod6.mmDepositorySuspensionPeriodForBookEntryTransfer,
-					CorporateActionPeriod8.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod10.mmDepositorySuspensionPeriodForBookEntryTransfer);
+			derivation_lazy = () -> Arrays
+					.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod6.mmDepositorySuspensionPeriodForBookEntryTransfer,
+							CorporateActionPeriod8.mmDepositorySuspensionPeriodForBookEntryTransfer, CorporateActionPeriod10.mmDepositorySuspensionPeriodForBookEntryTransfer,
+							CorporateActionPeriod14.mmDepositorySuspensionPeriodForBookEntryTransfer);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -372,6 +386,9 @@ public class SuspensionPeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmDepositorySuspensionPeriodForDepositAtAgent
 	 * CorporateActionPeriod10.mmDepositorySuspensionPeriodForDepositAtAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForDepositAtAgent
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForDepositAtAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -395,7 +412,7 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForDepositAtAgent = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForDepositAtAgent, CorporateActionPeriod6.mmDepositorySuspensionPeriodForDepositAtAgent,
-					CorporateActionPeriod8.mmDepositorySuspensionPeriodForDepositAtAgent, CorporateActionPeriod10.mmDepositorySuspensionPeriodForDepositAtAgent);
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForDepositAtAgent, CorporateActionPeriod10.mmDepositorySuspensionPeriodForDepositAtAgent, CorporateActionPeriod14.mmDepositorySuspensionPeriodForDepositAtAgent);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -441,6 +458,9 @@ public class SuspensionPeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmDepositorySuspensionPeriodForDeposit
 	 * CorporateActionPeriod10.mmDepositorySuspensionPeriodForDeposit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForDeposit
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForDeposit}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -464,7 +484,7 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForDeposit = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForDeposit, CorporateActionPeriod6.mmDepositorySuspensionPeriodForDeposit, CorporateActionPeriod8.mmDepositorySuspensionPeriodForDeposit,
-					CorporateActionPeriod10.mmDepositorySuspensionPeriodForDeposit);
+					CorporateActionPeriod10.mmDepositorySuspensionPeriodForDeposit, CorporateActionPeriod14.mmDepositorySuspensionPeriodForDeposit);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -510,6 +530,9 @@ public class SuspensionPeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmDepositorySuspensionPeriodForPledge
 	 * CorporateActionPeriod10.mmDepositorySuspensionPeriodForPledge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForPledge
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForPledge}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -533,7 +556,7 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForPledge = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForPledge, CorporateActionPeriod6.mmDepositorySuspensionPeriodForPledge, CorporateActionPeriod8.mmDepositorySuspensionPeriodForPledge,
-					CorporateActionPeriod10.mmDepositorySuspensionPeriodForPledge);
+					CorporateActionPeriod10.mmDepositorySuspensionPeriodForPledge, CorporateActionPeriod14.mmDepositorySuspensionPeriodForPledge);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -579,6 +602,9 @@ public class SuspensionPeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmDepositorySuspensionPeriodForSegregation
 	 * CorporateActionPeriod10.mmDepositorySuspensionPeriodForSegregation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForSegregation
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForSegregation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -602,7 +628,7 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForSegregation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForSegregation, CorporateActionPeriod6.mmDepositorySuspensionPeriodForSegregation,
-					CorporateActionPeriod8.mmDepositorySuspensionPeriodForSegregation, CorporateActionPeriod10.mmDepositorySuspensionPeriodForSegregation);
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForSegregation, CorporateActionPeriod10.mmDepositorySuspensionPeriodForSegregation, CorporateActionPeriod14.mmDepositorySuspensionPeriodForSegregation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -649,6 +675,10 @@ public class SuspensionPeriod {
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmDepositorySuspensionPeriodForWithdrawalAtAgent
 	 * CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalAtAgent}
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForWithdrawalAtAgent
+	 * CorporateActionPeriod14.mmDepositorySuspensionPeriodForWithdrawalAtAgent}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -671,8 +701,10 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawalAtAgent = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalAtAgent,
-					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalAtAgent);
+			derivation_lazy = () -> Arrays
+					.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalAtAgent,
+							CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalAtAgent, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalAtAgent,
+							CorporateActionPeriod14.mmDepositorySuspensionPeriodForWithdrawalAtAgent);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -722,6 +754,10 @@ public class SuspensionPeriod {
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmDepositorySuspensionPeriodForWithdrawalInNomineeName
 	 * CorporateActionPeriod10.
 	 * mmDepositorySuspensionPeriodForWithdrawalInNomineeName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForWithdrawalInNomineeName
+	 * CorporateActionPeriod14.
+	 * mmDepositorySuspensionPeriodForWithdrawalInNomineeName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -745,7 +781,8 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawalInNomineeName = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
-					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInNomineeName);
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInNomineeName, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInNomineeName,
+					CorporateActionPeriod14.mmDepositorySuspensionPeriodForWithdrawalInNomineeName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -795,6 +832,10 @@ public class SuspensionPeriod {
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmDepositorySuspensionPeriodForWithdrawalInStreetName
 	 * CorporateActionPeriod10.
 	 * mmDepositorySuspensionPeriodForWithdrawalInStreetName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmDepositorySuspensionPeriodForWithdrawalInStreetName
+	 * CorporateActionPeriod14.
+	 * mmDepositorySuspensionPeriodForWithdrawalInStreetName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -818,7 +859,8 @@ public class SuspensionPeriod {
 	public static final MMBusinessAssociationEnd mmDepositorySuspensionPeriodForWithdrawalInStreetName = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmDepositorySuspensionPeriodForWithdrawalInStreetName, CorporateActionPeriod6.mmDepositorySuspensionPeriodForWithdrawalInStreetName,
-					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInStreetName, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInStreetName);
+					CorporateActionPeriod8.mmDepositorySuspensionPeriodForWithdrawalInStreetName, CorporateActionPeriod10.mmDepositorySuspensionPeriodForWithdrawalInStreetName,
+					CorporateActionPeriod14.mmDepositorySuspensionPeriodForWithdrawalInStreetName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -858,6 +900,9 @@ public class SuspensionPeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmCoDepositoriesSuspensionPeriod
 	 * CorporateActionPeriod10.mmCoDepositoriesSuspensionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmCoDepositoriesSuspensionPeriod
+	 * CorporateActionPeriod14.mmCoDepositoriesSuspensionPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -880,7 +925,7 @@ public class SuspensionPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmCoDepositoriesSuspensionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod8.mmCoDepositoriesSuspensionPeriod, CorporateActionPeriod10.mmCoDepositoriesSuspensionPeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod8.mmCoDepositoriesSuspensionPeriod, CorporateActionPeriod10.mmCoDepositoriesSuspensionPeriod, CorporateActionPeriod14.mmCoDepositoriesSuspensionPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SuspensionPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

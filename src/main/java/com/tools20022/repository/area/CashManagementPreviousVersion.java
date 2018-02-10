@@ -55,49 +55,33 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.camt.FundEstimatedCashForecastReportV03
  * FundEstimatedCashForecastReportV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV02
- * AccountReportingRequestV02}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03
- * RequestToModifyPaymentV03}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AccountReportingRequestV03
+ * AccountReportingRequestV03}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.NotificationOfCaseAssignmentV03
  * NotificationOfCaseAssignmentV03}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.RejectInvestigationV03
- * RejectInvestigationV03}</li>
  * <li>{@linkplain com.tools20022.repository.area.camt.CancelCaseAssignmentV02
  * CancelCaseAssignmentV02}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.RequestForDuplicateV03
- * RequestForDuplicateV03}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV03
- * DuplicateV03}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV02
- * ProprietaryFormatInvestigationV02}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV02
- * DebitAuthorisationResponseV02}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.CaseStatusReportRequestV02
  * CaseStatusReportRequestV02}</li>
  * <li>{@linkplain com.tools20022.repository.area.camt.CaseStatusReportV03
  * CaseStatusReportV03}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV04
- * UnableToApplyV04}</li>
- * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV04
- * ClaimNonReceiptV04}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.RejectInvestigationV04
+ * RejectInvestigationV04}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.RequestForDuplicateV04
+ * RequestForDuplicateV04}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.DuplicateV04
+ * DuplicateV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV04
- * DebitAuthorisationRequestV04}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ProprietaryFormatInvestigationV03
+ * ProprietaryFormatInvestigationV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationResponseV03
+ * DebitAuthorisationResponseV03}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.BankServicesBillingStatementV01
  * BankServicesBillingStatementV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV05
- * BankToCustomerStatementV05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV05
- * BankToCustomerAccountReportV05}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.NotificationToReceiveCancellationAdviceV04
  * NotificationToReceiveCancellationAdviceV04}</li>
@@ -107,23 +91,36 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.area.camt.NotificationToReceiveV04
  * NotificationToReceiveV04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV05
- * BankToCustomerDebitCreditNotificationV05}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerAccountReportV06
+ * BankToCustomerAccountReportV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV06
- * AdditionalPaymentInformationV06}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerStatementV06
+ * BankToCustomerStatementV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV05
- * FIToFIPaymentCancellationRequestV05}</li>
+ * {@linkplain com.tools20022.repository.area.camt.BankToCustomerDebitCreditNotificationV06
+ * BankToCustomerDebitCreditNotificationV06}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.UnableToApplyV05
+ * UnableToApplyV05}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV03
- * RequestToModifyPaymentV03}</li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV06
+ * CustomerPaymentCancellationRequestV06}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV06
- * ResolutionOfInvestigationV06}</li>
+ * {@linkplain com.tools20022.repository.area.camt.AdditionalPaymentInformationV07
+ * AdditionalPaymentInformationV07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV05
- * CustomerPaymentCancellationRequestV05}</li>
+ * {@linkplain com.tools20022.repository.area.camt.ResolutionOfInvestigationV07
+ * ResolutionOfInvestigationV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06
+ * FIToFIPaymentCancellationRequestV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05
+ * DebitAuthorisationRequestV05}</li>
+ * <li>{@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05
+ * ClaimNonReceiptV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.RequestToModifyPaymentV04
+ * RequestToModifyPaymentV04}</li>
  * </ul>
  * </li>
  * <li>
@@ -155,13 +152,12 @@ public class CashManagementPreviousVersion {
 				name = "Cash Management - Previous version - master";
 				definition = "Messages that support the reporting and advicing of the cash side of any financial transactions, including cash movements, transactions and balances, plus any exceptions and investigations related to cash transactions.";
 				messageDefinition_lazy = () -> Arrays.asList(FundConfirmedCashForecastReportCancellationV02.mmObject(), FundConfirmedCashForecastReportV03.mmObject(), FundDetailedConfirmedCashForecastReportCancellationV02.mmObject(),
-						FundDetailedConfirmedCashForecastReportV03.mmObject(), FundDetailedEstimatedCashForecastReportV03.mmObject(), FundEstimatedCashForecastReportV03.mmObject(), AccountReportingRequestV02.mmObject(),
-						RequestToModifyPaymentV03.mmObject(), NotificationOfCaseAssignmentV03.mmObject(), RejectInvestigationV03.mmObject(), CancelCaseAssignmentV02.mmObject(), RequestForDuplicateV03.mmObject(), DuplicateV03.mmObject(),
-						ProprietaryFormatInvestigationV02.mmObject(), DebitAuthorisationResponseV02.mmObject(), CaseStatusReportRequestV02.mmObject(), CaseStatusReportV03.mmObject(), UnableToApplyV04.mmObject(),
-						ClaimNonReceiptV04.mmObject(), DebitAuthorisationRequestV04.mmObject(), BankServicesBillingStatementV01.mmObject(), BankToCustomerStatementV05.mmObject(), BankToCustomerAccountReportV05.mmObject(),
-						NotificationToReceiveCancellationAdviceV04.mmObject(), NotificationToReceiveStatusReportV04.mmObject(), NotificationToReceiveV04.mmObject(), BankToCustomerDebitCreditNotificationV05.mmObject(),
-						AdditionalPaymentInformationV06.mmObject(), FIToFIPaymentCancellationRequestV05.mmObject(), RequestToModifyPaymentV03.mmObject(), ResolutionOfInvestigationV06.mmObject(),
-						CustomerPaymentCancellationRequestV05.mmObject());
+						FundDetailedConfirmedCashForecastReportV03.mmObject(), FundDetailedEstimatedCashForecastReportV03.mmObject(), FundEstimatedCashForecastReportV03.mmObject(), AccountReportingRequestV03.mmObject(),
+						NotificationOfCaseAssignmentV03.mmObject(), CancelCaseAssignmentV02.mmObject(), CaseStatusReportRequestV02.mmObject(), CaseStatusReportV03.mmObject(), RejectInvestigationV04.mmObject(),
+						RequestForDuplicateV04.mmObject(), DuplicateV04.mmObject(), ProprietaryFormatInvestigationV03.mmObject(), DebitAuthorisationResponseV03.mmObject(), BankServicesBillingStatementV01.mmObject(),
+						NotificationToReceiveCancellationAdviceV04.mmObject(), NotificationToReceiveStatusReportV04.mmObject(), NotificationToReceiveV04.mmObject(), BankToCustomerAccountReportV06.mmObject(),
+						BankToCustomerStatementV06.mmObject(), BankToCustomerDebitCreditNotificationV06.mmObject(), UnableToApplyV05.mmObject(), CustomerPaymentCancellationRequestV06.mmObject(), AdditionalPaymentInformationV07.mmObject(),
+						ResolutionOfInvestigationV07.mmObject(), FIToFIPaymentCancellationRequestV06.mmObject(), DebitAuthorisationRequestV05.mmObject(), ClaimNonReceiptV05.mmObject(), RequestToModifyPaymentV04.mmObject());
 				code = "camt";
 			}
 		});

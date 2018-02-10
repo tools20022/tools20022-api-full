@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionInstructionV06;
 import com.tools20022.repository.area.seev.CorporateActionInstructionV07;
+import com.tools20022.repository.area.seev.CorporateActionInstructionV08;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
 import com.tools20022.repository.entity.Role;
@@ -70,6 +71,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#mmAdditionalInformation
  * CorporateActionInstructionV07.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08#mmAdditionalInformation
+ * CorporateActionInstructionV08.mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -267,7 +271,7 @@ public class CorporateActionNarrative30 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionNarrative30.mmRegistrationDetails, com.tools20022.repository.msg.CorporateActionNarrative30.mmPartyContactNarrative,
 						com.tools20022.repository.msg.CorporateActionNarrative30.mmCertificationBreakdown);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmAdditionalInformation, CorporateActionInstructionV07.mmAdditionalInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmAdditionalInformation, CorporateActionInstructionV07.mmAdditionalInformation, CorporateActionInstructionV08.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

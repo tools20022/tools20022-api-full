@@ -106,6 +106,9 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.TransactionReferences4
  * TransactionReferences4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReferences1
+ * SecuritiesTransactionReferences1}</li>
  * </ul>
  * </li>
  * </ul>
@@ -622,6 +625,15 @@ public class TransactionReferences3 {
 	 * definition} =
 	 * "Unambiguous identification of the securities transaction as known by the securities account owner (or the instructing party managing the account)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReferences1#mmAccountOwnerTransactionIdentification
+	 * SecuritiesTransactionReferences1.mmAccountOwnerTransactionIdentification}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountOwnerTransactionIdentification = new MMMessageAttribute() {
@@ -634,6 +646,7 @@ public class TransactionReferences3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the securities transaction as known by the securities account owner (or the instructing party managing the account).";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionReferences1.mmAccountOwnerTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -676,6 +689,15 @@ public class TransactionReferences3 {
 	 * definition} =
 	 * "Unambiguous identification of the securities transaction as known by the securities account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReferences1#mmAccountServicerTransactionIdentification
+	 * SecuritiesTransactionReferences1.
+	 * mmAccountServicerTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountServicerTransactionIdentification = new MMMessageAttribute() {
@@ -688,6 +710,7 @@ public class TransactionReferences3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the securities transaction as known by the securities account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionReferences1.mmAccountServicerTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -731,6 +754,15 @@ public class TransactionReferences3 {
 	 * definition} =
 	 * "Identification of a securities transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReferences1#mmMarketInfrastructureTransactionIdentification
+	 * SecuritiesTransactionReferences1.
+	 * mmMarketInfrastructureTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMarketInfrastructureTransactionIdentification = new MMMessageAttribute() {
@@ -743,6 +775,7 @@ public class TransactionReferences3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a securities transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionReferences1.mmMarketInfrastructureTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -777,6 +810,14 @@ public class TransactionReferences3 {
 	 * definition} =
 	 * "Identification of the securities transaction assigned by the processor of the instruction other than the securities account owner, the securities account servicer and the market infrastructure."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReferences1#mmProcessingIdentification
+	 * SecuritiesTransactionReferences1.mmProcessingIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProcessingIdentification = new MMMessageAttribute() {
@@ -787,6 +828,7 @@ public class TransactionReferences3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Identification of the securities transaction assigned by the processor of the instruction other than the securities account owner, the securities account servicer and the market infrastructure.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionReferences1.mmProcessingIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -850,7 +892,7 @@ public class TransactionReferences3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReferences3";
 				definition = "Identifies the underlying transaction.";
-				nextVersions_lazy = () -> Arrays.asList(TransactionReferences4.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(TransactionReferences4.mmObject(), SecuritiesTransactionReferences1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

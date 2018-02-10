@@ -60,6 +60,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TerminationDate4Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the termination date."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TerminationDate6Choice
+ * TerminationDate6Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.TerminationDate2Choice
@@ -103,6 +110,14 @@ public class TerminationDate4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date in ISO format."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TerminationDate6Choice#mmDate
+	 * TerminationDate6Choice.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class TerminationDate4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
+			nextVersions_lazy = () -> Arrays.asList(TerminationDate6Choice.mmDate);
 			previousVersion_lazy = () -> TerminationDate2Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -158,6 +174,14 @@ public class TerminationDate4Choice {
 	 * definition} =
 	 * "Closing date/time or maturity date/time of the transaction expressed as an ISO 20022 code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TerminationDate6Choice#mmCode
+	 * TerminationDate6Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -174,6 +198,7 @@ public class TerminationDate4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Closing date/time or maturity date/time of the transaction expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(TerminationDate6Choice.mmCode);
 			previousVersion_lazy = () -> TerminationDate2Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -189,6 +214,7 @@ public class TerminationDate4Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminationDate4Choice";
 				definition = "Choice of format for the termination date.";
+				nextVersions_lazy = () -> Arrays.asList(TerminationDate6Choice.mmObject());
 				previousVersion_lazy = () -> TerminationDate2Choice.mmObject();
 			}
 		});

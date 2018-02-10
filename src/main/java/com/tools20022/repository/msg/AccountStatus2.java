@@ -149,7 +149,7 @@ public class AccountStatus2 {
 	 * name} = "Enabled"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account can be used for its intended purpose. "</li>
+	 * definition} = "Account can be used for its intended purpose."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEnabled = new MMMessageAssociationEnd() {
@@ -160,7 +160,7 @@ public class AccountStatus2 {
 			xmlTag = "Nbld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Enabled";
-			definition = "Account can be used for its intended purpose. ";
+			definition = "Account can be used for its intended purpose.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

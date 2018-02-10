@@ -221,6 +221,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CommonFinancialInstrumentAttributes2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Tangible items of value to a business."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes5
+ * CommonFinancialInstrumentAttributes5}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -2279,7 +2287,7 @@ public class CommonFinancialInstrumentAttributes2 {
 	 * name} = "FinancialInstrumentForm"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indicates the form of the financial Instrument"</li>
+	 * definition} = "Indicates the form of the financial Instrument."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentForm = new MMMessageAssociationEnd() {
@@ -2289,7 +2297,7 @@ public class CommonFinancialInstrumentAttributes2 {
 			xmlTag = "FinInstrmForm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentForm";
-			definition = "Indicates the form of the financial Instrument";
+			definition = "Indicates the form of the financial Instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -2602,6 +2610,7 @@ public class CommonFinancialInstrumentAttributes2 {
 				})).get();
 				name = "CommonFinancialInstrumentAttributes2";
 				definition = "Tangible items of value to a business.";
+				nextVersions_lazy = () -> Arrays.asList(CommonFinancialInstrumentAttributes5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -80,6 +80,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMDeviceReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information related to the report from an ATM device."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMDeviceReport2
+ * ATMDeviceReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,6 +120,14 @@ public class ATMDeviceReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDeviceReport2#mmEnvironment
+	 * ATMDeviceReport2.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
@@ -123,6 +138,7 @@ public class ATMDeviceReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(ATMDeviceReport2.mmEnvironment);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -154,6 +170,14 @@ public class ATMDeviceReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Global status of the ATM."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDeviceReport2#mmATMGlobalStatus
+	 * ATMDeviceReport2.mmATMGlobalStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmATMGlobalStatus = new MMMessageAssociationEnd() {
@@ -164,6 +188,7 @@ public class ATMDeviceReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMGlobalStatus";
 			definition = "Global status of the ATM.";
+			nextVersions_lazy = () -> Arrays.asList(ATMDeviceReport2.mmATMGlobalStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -196,6 +221,14 @@ public class ATMDeviceReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Result of a maintenance command performed by the ATM."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDeviceReport2#mmCommandResult
+	 * ATMDeviceReport2.mmCommandResult}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCommandResult = new MMMessageAssociationEnd() {
@@ -206,6 +239,7 @@ public class ATMDeviceReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandResult";
 			definition = "Result of a maintenance command performed by the ATM.";
+			nextVersions_lazy = () -> Arrays.asList(ATMDeviceReport2.mmCommandResult);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMCommand2.mmObject();
@@ -238,6 +272,14 @@ public class ATMDeviceReport1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Maintenance command which has requested the device report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDeviceReport2#mmCommandContext
+	 * ATMDeviceReport2.mmCommandContext}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCommandContext = new MMMessageAssociationEnd() {
@@ -248,6 +290,7 @@ public class ATMDeviceReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandContext";
 			definition = "Maintenance command which has requested the device report.";
+			nextVersions_lazy = () -> Arrays.asList(ATMDeviceReport2.mmCommandContext);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -280,6 +323,14 @@ public class ATMDeviceReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information related to security commands."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMDeviceReport2#mmATMSecurityContext
+	 * ATMDeviceReport2.mmATMSecurityContext}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmATMSecurityContext = new MMMessageAssociationEnd() {
@@ -290,6 +341,7 @@ public class ATMDeviceReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMSecurityContext";
 			definition = "Information related to security commands.";
+			nextVersions_lazy = () -> Arrays.asList(ATMDeviceReport2.mmATMSecurityContext);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -307,6 +359,7 @@ public class ATMDeviceReport1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDeviceReport1";
 				definition = "Information related to the report from an ATM device.";
+				nextVersions_lazy = () -> Arrays.asList(ATMDeviceReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

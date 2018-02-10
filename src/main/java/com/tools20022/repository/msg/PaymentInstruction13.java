@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.BackupPaymentV06;
 import com.tools20022.repository.choice.PaymentType4Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.entity.Payment;
@@ -37,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Instruction to pay an amount of money to an ultimate beneficiary, on behalf
  * of an originator. This instruction may have to be forwarded several times to
- * complete the settlement chain.
+ * complete the settlement chain. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -57,6 +58,15 @@ import javax.xml.bind.annotation.XmlType;
  * trace} = {@linkplain com.tools20022.repository.entity.PaymentInstruction
  * PaymentInstruction}</li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.BackupPaymentV06#mmInstructionInformation
+ * BackupPaymentV06.mmInstructionInformation}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -69,7 +79,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentInstruction13"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n"
+ * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -114,7 +124,7 @@ public class PaymentInstruction13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date at which the initiating party requests that the payment instruction be processed. \n"
+	 * "Date at which the initiating party requests that the payment instruction be processed. \n."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -131,7 +141,7 @@ public class PaymentInstruction13 {
 			xmlTag = "ReqdExctnDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDateTime";
-			definition = "Date at which the initiating party requests that the payment instruction be processed. \n";
+			definition = "Date at which the initiating party requests that the payment instruction be processed. \n.";
 			previousVersion_lazy = () -> PaymentInstruction3.mmRequestedExecutionDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -199,11 +209,12 @@ public class PaymentInstruction13 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PaymentInstruction13.mmRequestedExecutionDateTime, com.tools20022.repository.msg.PaymentInstruction13.mmPaymentType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BackupPaymentV06.mmInstructionInformation);
 				trace_lazy = () -> PaymentInstruction.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstruction13";
-				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
+				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n.";
 				previousVersion_lazy = () -> PaymentInstruction3.mmObject();
 			}
 		});

@@ -211,7 +211,7 @@ public class UndertakingAdvice2 {
 	 * name} = "Obligor"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party obligated to reimburse the issuer. "</li>
+	 * definition} = "Party obligated to reimburse the issuer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmObligor = new MMMessageAssociationEnd() {
@@ -222,7 +222,7 @@ public class UndertakingAdvice2 {
 			xmlTag = "Oblgr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Obligor";
-			definition = "Party obligated to reimburse the issuer. ";
+			definition = "Party obligated to reimburse the issuer.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

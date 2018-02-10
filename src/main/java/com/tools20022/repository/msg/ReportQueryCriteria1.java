@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the criteria which are used to search for generated report."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportQueryCriteria2
+ * ReportQueryCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,7 +104,15 @@ public class ReportQueryCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name of the query defined by the search criteria and return criteria. "</li>
+	 * "Name of the query defined by the search criteria and return criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQueryCriteria2#mmNewQueryName
+	 * ReportQueryCriteria2.mmNewQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNewQueryName = new MMMessageAttribute() {
@@ -107,7 +122,8 @@ public class ReportQueryCriteria1 {
 			xmlTag = "NewQryNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewQueryName";
-			definition = "Name of the query defined by the search criteria and return criteria. ";
+			definition = "Name of the query defined by the search criteria and return criteria.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQueryCriteria2.mmNewQueryName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -141,6 +157,14 @@ public class ReportQueryCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria to be used to extract the account information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportQueryCriteria2#mmSearchCriteria
+	 * ReportQueryCriteria2.mmSearchCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSearchCriteria = new MMMessageAssociationEnd() {
@@ -151,6 +175,7 @@ public class ReportQueryCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SearchCriteria";
 			definition = "Defines the criteria to be used to extract the account information.";
+			nextVersions_lazy = () -> Arrays.asList(ReportQueryCriteria2.mmSearchCriteria);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,6 +191,7 @@ public class ReportQueryCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ReportQueryCriteria1";
 				definition = "Defines the criteria which are used to search for generated report.";
+				nextVersions_lazy = () -> Arrays.asList(ReportQueryCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

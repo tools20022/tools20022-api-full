@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * "LimitJournal1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Record where all transactions are originally entered.  The journal details which transactions occurred and what accounts were affected."
+ * "Record where all transactions are originally entered. The journal details which transactions occurred and what accounts were affected."
  * </li>
  * </ul>
  */
@@ -99,7 +99,7 @@ public class LimitJournal1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit. "
+	 * "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit."
 	 * </li>
 	 * </ul>
 	 */
@@ -110,7 +110,7 @@ public class LimitJournal1 {
 			xmlTag = "Lmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
-			definition = "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit. ";
+			definition = "Maximum value used for risk containment in a system or towards counterparts. The limit may be a current limit or a default limit.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -208,7 +208,7 @@ public class LimitJournal1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournal1";
-				definition = "Record where all transactions are originally entered.  The journal details which transactions occurred and what accounts were affected.";
+				definition = "Record where all transactions are originally entered. The journal details which transactions occurred and what accounts were affected.";
 			}
 		});
 		return mmObject_lazy.get();

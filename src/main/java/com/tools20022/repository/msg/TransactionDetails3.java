@@ -622,7 +622,7 @@ public class TransactionDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the trading capacity of the firm reporting the transaction, eg  Agent or Principal."
+	 * "Identifies the trading capacity of the firm reporting the transaction, eg Agent or Principal."
 	 * </li>
 	 * </ul>
 	 */
@@ -634,7 +634,7 @@ public class TransactionDetails3 {
 			xmlTag = "Cpcty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capacity";
-			definition = "Identifies the trading capacity of the firm reporting the transaction, eg  Agent or Principal.";
+			definition = "Identifies the trading capacity of the firm reporting the transaction, eg Agent or Principal.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradingCapacity3Code.mmObject();

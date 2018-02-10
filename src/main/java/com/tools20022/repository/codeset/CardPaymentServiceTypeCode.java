@@ -222,6 +222,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#RemoveWhiteList
  * CardPaymentServiceTypeCode.RemoveWhiteList}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode#CardInitiatingDirectDebit
+ * CardPaymentServiceTypeCode.CardInitiatingDirectDebit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -257,6 +260,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType10Code
  * CardPaymentServiceType10Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code
+ * CardPaymentServiceType12Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -1922,7 +1928,7 @@ public class CardPaymentServiceTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Instant transaction
+	 * Instant transaction.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1939,14 +1945,14 @@ public class CardPaymentServiceTypeCode extends MMCode {
 	 * name} = "Instant"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Instant transaction"</li>
+	 * definition} = "Instant transaction."</li>
 	 * </ul>
 	 */
 	public static final CardPaymentServiceTypeCode Instant = new CardPaymentServiceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instant";
-			definition = "Instant transaction";
+			definition = "Instant transaction.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
 			codeName = "INST";
 		}
@@ -2167,6 +2173,36 @@ public class CardPaymentServiceTypeCode extends MMCode {
 			codeName = "WLSR";
 		}
 	};
+	/**
+	 * Direct Debit initiated by Card.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceTypeCode
+	 * CardPaymentServiceTypeCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CIDD"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CardInitiatingDirectDebit"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Direct Debit initiated by Card."</li>
+	 * </ul>
+	 */
+	public static final CardPaymentServiceTypeCode CardInitiatingDirectDebit = new CardPaymentServiceTypeCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CardInitiatingDirectDebit";
+			definition = "Direct Debit initiated by Card.";
+			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceTypeCode.mmObject();
+			codeName = "CIDD";
+		}
+	};
 	final static private LinkedHashMap<String, CardPaymentServiceTypeCode> codesByName = new LinkedHashMap<>();
 
 	protected CardPaymentServiceTypeCode() {
@@ -2182,7 +2218,7 @@ public class CardPaymentServiceTypeCode extends MMCode {
 				definition = "Service provided by a card payment transaction.";
 				derivation_lazy = () -> Arrays.asList(CardPaymentServiceType2Code.mmObject(), CardPaymentServiceType1Code.mmObject(), CardPaymentServiceType3Code.mmObject(), CardPaymentServiceType4Code.mmObject(),
 						CardPaymentServiceType5Code.mmObject(), CardPaymentServiceType6Code.mmObject(), CardPaymentServiceType7Code.mmObject(), CardPaymentServiceType8Code.mmObject(), CardPaymentServiceType9Code.mmObject(),
-						CardPaymentServiceType10Code.mmObject());
+						CardPaymentServiceType10Code.mmObject(), CardPaymentServiceType12Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardsFundTransfer, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.OriginalCredit,
 						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardPayment, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CashBack,
 						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CashAdvance, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CashDeposit,
@@ -2212,7 +2248,7 @@ public class CardPaymentServiceTypeCode extends MMCode {
 						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CreditAdjustement, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.DebitAdjustement,
 						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CreateCertificate, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.RenewCerificate,
 						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.RevokeCertificate, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.AddWhiteList,
-						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.RemoveWhiteList);
+						com.tools20022.repository.codeset.CardPaymentServiceTypeCode.RemoveWhiteList, com.tools20022.repository.codeset.CardPaymentServiceTypeCode.CardInitiatingDirectDebit);
 			}
 		});
 		return mmObject_lazy.get();
@@ -2281,6 +2317,7 @@ public class CardPaymentServiceTypeCode extends MMCode {
 		codesByName.put(RevokeCertificate.getCodeName().get(), RevokeCertificate);
 		codesByName.put(AddWhiteList.getCodeName().get(), AddWhiteList);
 		codesByName.put(RemoveWhiteList.getCodeName().get(), RemoveWhiteList);
+		codesByName.put(CardInitiatingDirectDebit.getCodeName().get(), CardInitiatingDirectDebit);
 	}
 
 	public static CardPaymentServiceTypeCode valueOf(String codeName) {

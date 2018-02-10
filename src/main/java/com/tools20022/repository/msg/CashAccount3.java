@@ -261,7 +261,7 @@ public class CashAccount3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name of the account, assigned by the account servicing institution in agreement with the account owner in order to provide an additional means of identification of the account.\n\nUsage : the account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number."
+	 * "Name of the account, assigned by the account servicing institution in agreement with the account owner in order to provide an additional means of identification of the account.\n\nUsage: the account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number."
 	 * </li>
 	 * </ul>
 	 */
@@ -273,7 +273,7 @@ public class CashAccount3 {
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
-			definition = "Name of the account, assigned by the account servicing institution in agreement with the account owner in order to provide an additional means of identification of the account.\n\nUsage : the account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number.";
+			definition = "Name of the account, assigned by the account servicing institution in agreement with the account owner in order to provide an additional means of identification of the account.\n\nUsage: the account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();

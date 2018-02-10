@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.AuthoritiesLatestVersion;
+import com.tools20022.repository.area.AuthoritiesPreviousVersion;
 import com.tools20022.repository.choice.ForeignExchangeSwap2Choice;
 import com.tools20022.repository.msg.MoneyMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
@@ -71,8 +71,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "MnyMktFXSwpsSttstclRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.AuthoritiesPreviousVersion
+ * AuthoritiesPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.014.001.01}</li>
@@ -84,7 +84,7 @@ import javax.xml.bind.annotation.*;
  * "MoneyMarketForeignExchangeSwapsStatisticalReportV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents  to the relevant competent authority, to report all daily Foreign Exchange Swaps (FX Swaps) transactions."
+ * "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all daily Foreign Exchange Swaps (FX Swaps) transactions."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -270,12 +270,12 @@ public class MoneyMarketForeignExchangeSwapsStatisticalReportV01 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketForeignExchangeSwapsStatisticalReportV01";
-				definition = "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents  to the relevant competent authority, to report all daily Foreign Exchange Swaps (FX Swaps) transactions.";
+				definition = "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all daily Foreign Exchange Swaps (FX Swaps) transactions.";
 				nextVersions_lazy = () -> Arrays.asList(MoneyMarketForeignExchangeSwapsStatisticalReportV02.mmObject());
 				messageSet_lazy = () -> Arrays.asList(MoneyMarketStatisticalReportingISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "MnyMktFXSwpsSttstclRpt";
-				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
+				businessArea_lazy = () -> AuthoritiesPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmReportHeader,
 						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmForeignExchangeSwapsReport,
 						com.tools20022.repository.area.auth.MoneyMarketForeignExchangeSwapsStatisticalReportV01.mmSupplementaryData);

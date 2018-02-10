@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CRSFormType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the type of Common Reporting Standard  (CRS) form."</li>
+ * definition} = "Specifies the type of Common Reporting Standard (CRS) form."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -287,7 +287,7 @@ public class CRSFormType1Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CRSFormType1Code";
-				definition = "Specifies the type of Common Reporting Standard  (CRS) form.";
+				definition = "Specifies the type of Common Reporting Standard (CRS) form.";
 				trace_lazy = () -> CRSFormTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CRSFormType1Code.CertificateIdentificationGovernment, com.tools20022.repository.codeset.CRSFormType1Code.CertificateOfResidence,
 						com.tools20022.repository.codeset.CRSFormType1Code.OfficialDocumentGovernmentForEntity, com.tools20022.repository.codeset.CRSFormType1Code.OtherDocumentOrReport,

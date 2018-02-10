@@ -82,6 +82,8 @@ import java.util.Objects;
  * AccountDesignation1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.InvestorCapacity5Choice
  * InvestorCapacity5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.InvestorType3Choice
+ * InvestorType3Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -386,6 +388,48 @@ public class InvestorRole extends TradePartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmInvestorCapacity
 	 * SecuritiesTradeDetails70.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmInvestorCapacity
+	 * SecuritiesTradeDetails73.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74#mmInvestorCapacity
+	 * SecuritiesTradeDetails74.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmInvestorCapacity
+	 * SecuritiesTradeDetails75.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmInvestorCapacity
+	 * SecuritiesTradeDetails76.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77#mmInvestorCapacity
+	 * SecuritiesTradeDetails77.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmInvestorCapacity
+	 * SecuritiesTradeDetails78.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmInvestorCapacity
+	 * SecuritiesTradeDetails79.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82#mmInvestorCapacity
+	 * SecuritiesTradeDetails82.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83#mmInvestorCapacity
+	 * SecuritiesTradeDetails83.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmInvestorCapacity
+	 * SecuritiesTradeDetails86.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmInvestorCapacity
+	 * SecuritiesTradeDetails87.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmInvestorCapacity
+	 * SecuritiesTradeDetails88.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmInvestorCapacity
+	 * SecuritiesTradeDetails89.mmInvestorCapacity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmInvestorCapacity
+	 * SecuritiesTradeDetails90.mmInvestorCapacity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -419,7 +463,10 @@ public class InvestorRole extends TradePartyRole {
 					InvestorCapacity4Choice.mmProprietary, SecuritiesTradeDetails52.mmInvestorCapacity, SecuritiesTradeDetails50.mmInvestorCapacity, SecuritiesTradeDetails59.mmInvestorCapacity, SecuritiesTradeDetails58.mmInvestorCapacity,
 					SecuritiesTradeDetails63.mmInvestorCapacity, SecuritiesTradeDetails62.mmInvestorCapacity, InvestorCapacity5Choice.mmCode, InvestorCapacity5Choice.mmProprietary, SecuritiesTradeDetails65.mmInvestorCapacity,
 					SecuritiesTradeDetails66.mmInvestorCapacity, Intermediary39.mmOrderOriginatorEligibility, Intermediary40.mmOrderOriginatorEligibility, SecuritiesTradeDetails67.mmInvestorCapacity,
-					SecuritiesTradeDetails70.mmInvestorCapacity);
+					SecuritiesTradeDetails70.mmInvestorCapacity, SecuritiesTradeDetails73.mmInvestorCapacity, SecuritiesTradeDetails74.mmInvestorCapacity, SecuritiesTradeDetails75.mmInvestorCapacity,
+					SecuritiesTradeDetails76.mmInvestorCapacity, SecuritiesTradeDetails77.mmInvestorCapacity, SecuritiesTradeDetails78.mmInvestorCapacity, SecuritiesTradeDetails79.mmInvestorCapacity,
+					SecuritiesTradeDetails82.mmInvestorCapacity, SecuritiesTradeDetails83.mmInvestorCapacity, SecuritiesTradeDetails86.mmInvestorCapacity, SecuritiesTradeDetails87.mmInvestorCapacity,
+					SecuritiesTradeDetails88.mmInvestorCapacity, SecuritiesTradeDetails89.mmInvestorCapacity, SecuritiesTradeDetails90.mmInvestorCapacity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -518,6 +565,12 @@ public class InvestorRole extends TradePartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.InvestorType2Choice#mmProprietary
 	 * InvestorType2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorType3Choice#mmCode
+	 * InvestorType3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorType3Choice#mmProprietary
+	 * InvestorType3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -533,17 +586,17 @@ public class InvestorRole extends TradePartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies whether the investor is a corporate or an individual"</li>
+	 * "Specifies whether the investor is a corporate or an individual."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(InvestorType2Choice.mmCode, InvestorType2Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(InvestorType2Choice.mmCode, InvestorType2Choice.mmProprietary, InvestorType3Choice.mmCode, InvestorType3Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestorRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
-			definition = "Specifies whether the investor is a corporate or an individual";
+			definition = "Specifies whether the investor is a corporate or an individual.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestorTypeCode.mmObject();
@@ -569,7 +622,7 @@ public class InvestorRole extends TradePartyRole {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestorRole.mmIndividualInvestor, com.tools20022.repository.entity.InvestorRole.mmCorporateInvestor,
 						com.tools20022.repository.entity.InvestorRole.mmCapacity, com.tools20022.repository.entity.InvestorRole.mmInvestorProtectionAssociationMembership, com.tools20022.repository.entity.InvestorRole.mmType);
 				derivationComponent_lazy = () -> Arrays.asList(InvestorCapacity1Choice.mmObject(), InvestorCapacity2Choice.mmObject(), InvestorCapacity3Choice.mmObject(), InvestorType2Choice.mmObject(), InvestorCapacity4Choice.mmObject(),
-						AccountDesignation1Choice.mmObject(), InvestorCapacity5Choice.mmObject());
+						AccountDesignation1Choice.mmObject(), InvestorCapacity5Choice.mmObject(), InvestorType3Choice.mmObject());
 			}
 
 			@Override

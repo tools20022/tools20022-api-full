@@ -89,6 +89,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "ATMCommand2Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Type of command performed by the ATM."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.rATMCommand6Code
+ * rATMCommand6Code}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -109,12 +116,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ATMBalance"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#ATMBalance
+	 * rATMCommand6Code.ATMBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code ATMBalance = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMBalance";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.ATMBalance);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.ATMBalance.getCodeName().orElse(name);
 		}
@@ -133,12 +149,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ATMStatusUpdate"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#ATMStatusUpdate
+	 * rATMCommand6Code.ATMStatusUpdate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code ATMStatusUpdate = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMStatusUpdate";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.ATMStatusUpdate);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.ATMStatusUpdate.getCodeName().orElse(name);
 		}
@@ -157,12 +182,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConfigurationUpdate"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#ConfigurationUpdate
+	 * rATMCommand6Code.ConfigurationUpdate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code ConfigurationUpdate = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfigurationUpdate";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.ConfigurationUpdate);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.ConfigurationUpdate.getCodeName().orElse(name);
 		}
@@ -181,12 +215,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CountersInquiry"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#CountersInquiry
+	 * rATMCommand6Code.CountersInquiry}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code CountersInquiry = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountersInquiry";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.CountersInquiry);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.CountersInquiry.getCodeName().orElse(name);
 		}
@@ -205,12 +248,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Disconnect"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#Disconnect
+	 * rATMCommand6Code.Disconnect}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code Disconnect = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Disconnect";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.Disconnect);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.Disconnect.getCodeName().orElse(name);
 		}
@@ -229,12 +281,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KeyActivation"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#KeyActivation
+	 * rATMCommand6Code.KeyActivation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code KeyActivation = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyActivation";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.KeyActivation);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.KeyActivation.getCodeName().orElse(name);
 		}
@@ -253,12 +314,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KeyDeactivation"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#KeyDeactivation
+	 * rATMCommand6Code.KeyDeactivation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code KeyDeactivation = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyDeactivation";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.KeyDeactivation);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.KeyDeactivation.getCodeName().orElse(name);
 		}
@@ -277,12 +347,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KeyDownload"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#KeyDownload
+	 * rATMCommand6Code.KeyDownload}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code KeyDownload = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyDownload";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.KeyDownload);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.KeyDownload.getCodeName().orElse(name);
 		}
@@ -301,12 +380,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KeyRemove"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#KeyRemove
+	 * rATMCommand6Code.KeyRemove}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code KeyRemove = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyRemove";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.KeyRemove);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.KeyRemove.getCodeName().orElse(name);
 		}
@@ -325,12 +413,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecurityDeviceConfigurationUpdate"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#SecurityDeviceConfigurationUpdate
+	 * rATMCommand6Code.SecurityDeviceConfigurationUpdate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code SecurityDeviceConfigurationUpdate = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceConfigurationUpdate";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.SecurityDeviceConfigurationUpdate);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.SecurityDeviceConfigurationUpdate.getCodeName().orElse(name);
 		}
@@ -349,12 +446,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecurityDeviceSchemeUpdate"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#SecurityDeviceSchemeUpdate
+	 * rATMCommand6Code.SecurityDeviceSchemeUpdate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code SecurityDeviceSchemeUpdate = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceSchemeUpdate";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.SecurityDeviceSchemeUpdate);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.SecurityDeviceSchemeUpdate.getCodeName().orElse(name);
 		}
@@ -373,12 +479,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SecurityDeviceStatusUpdate"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#SecurityDeviceStatusUpdate
+	 * rATMCommand6Code.SecurityDeviceStatusUpdate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code SecurityDeviceStatusUpdate = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDeviceStatusUpdate";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.SecurityDeviceStatusUpdate);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.SecurityDeviceStatusUpdate.getCodeName().orElse(name);
 		}
@@ -397,12 +512,21 @@ public class ATMCommand2Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SendMessage"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.rATMCommand6Code#SendMessage
+	 * rATMCommand6Code.SendMessage}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMCommand2Code SendMessage = new ATMCommand2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendMessage";
+			nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.SendMessage);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMCommand2Code.mmObject();
 			codeName = ATMCommandCode.SendMessage.getCodeName().orElse(name);
 		}
@@ -419,6 +543,7 @@ public class ATMCommand2Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand2Code";
 				definition = "Type of command performed by the ATM.";
+				nextVersions_lazy = () -> Arrays.asList(rATMCommand6Code.mmObject());
 				trace_lazy = () -> ATMCommandCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMCommand2Code.ATMBalance, com.tools20022.repository.codeset.ATMCommand2Code.ATMStatusUpdate,
 						com.tools20022.repository.codeset.ATMCommand2Code.ConfigurationUpdate, com.tools20022.repository.codeset.ATMCommand2Code.CountersInquiry, com.tools20022.repository.codeset.ATMCommand2Code.Disconnect,

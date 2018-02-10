@@ -120,6 +120,10 @@ import java.util.Objects;
  * BorrowerLendingDeadline1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline2
  * BorrowerLendingDeadline2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline3
+ * BorrowerLendingDeadline3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline4
+ * BorrowerLendingDeadline4}</li>
  * </ul>
  * </li>
  * <li>
@@ -169,6 +173,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod2#mmRevocabilityPeriod
 	 * CorporateActionPeriod2.mmRevocabilityPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmRevocabilityPeriod
+	 * CorporateActionPeriod12.mmRevocabilityPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmAccountServicerRevocabilityPeriod
+	 * CorporateActionPeriod12.mmAccountServicerRevocabilityPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -192,7 +202,7 @@ public class CorporateActionDeadline extends Deadline {
 	public static final MMBusinessAttribute mmRevocabilityPeriod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod5.mmRevocabilityPeriod, CorporateActionPeriod5.mmAccountServicerRevocabilityPeriod, CorporateActionPeriod7.mmRevocabilityPeriod,
-					CorporateActionPeriod7.mmAccountServicerRevocabilityPeriod, CorporateActionPeriod2.mmRevocabilityPeriod);
+					CorporateActionPeriod7.mmAccountServicerRevocabilityPeriod, CorporateActionPeriod2.mmRevocabilityPeriod, CorporateActionPeriod12.mmRevocabilityPeriod, CorporateActionPeriod12.mmAccountServicerRevocabilityPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -269,6 +279,18 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmProtectDate
 	 * CorporateActionDate55.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate60#mmProtectDate
+	 * CorporateActionDate60.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmProtectDate
+	 * CorporateActionDate64.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate68#mmProtectDate
+	 * CorporateActionDate68.mmProtectDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmProtectDate
+	 * CorporateActionDate71.mmProtectDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -293,7 +315,8 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmProtectDate, CorporateActionDate10.mmProtectDate, CorporateActionDate18.mmProtectDate, CorporateActionDate19.mmProtectDate, CorporateActionDate8.mmProtectDate,
 					CorporateActionDate11.mmProtectDate, CorporateActionDate15.mmProtectDate, CorporateActionDate16.mmProtectDate, CorporateActionDate2.mmProtectDate, CorporateActionDate29.mmProtectDate,
-					CorporateActionDate33.mmProtectDate, CorporateActionDate46.mmProtectDate, CorporateActionDate48.mmProtectDate, CorporateActionDate52.mmProtectDate, CorporateActionDate55.mmProtectDate);
+					CorporateActionDate33.mmProtectDate, CorporateActionDate46.mmProtectDate, CorporateActionDate48.mmProtectDate, CorporateActionDate52.mmProtectDate, CorporateActionDate55.mmProtectDate,
+					CorporateActionDate60.mmProtectDate, CorporateActionDate64.mmProtectDate, CorporateActionDate68.mmProtectDate, CorporateActionDate71.mmProtectDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -358,6 +381,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmTradingSuspendedDate
 	 * CorporateActionDate58.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmTradingSuspendedDate
+	 * CorporateActionDate61.mmTradingSuspendedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmTradingSuspendedDate
+	 * CorporateActionDate74.mmTradingSuspendedDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -382,7 +411,8 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmTradingSuspendedDate, CorporateActionDate13.mmTradingSuspendedDate, CorporateActionDate14.mmTradingSuspendedDate, CorporateActionDate21.mmTradingSuspendedDate,
 					CorporateActionDate22.mmTradingSuspendedDate, CorporateActionDate25.mmTradingSuspendedDate, CorporateActionDate27.mmTradingSuspendedDate, CorporateActionDate28.mmTradingSuspendedDate,
-					CorporateActionDate2.mmTradingSuspendedDate, CorporateActionDate44.mmTradingSuspendedDate, CorporateActionDate58.mmTradingSuspendedDate);
+					CorporateActionDate2.mmTradingSuspendedDate, CorporateActionDate44.mmTradingSuspendedDate, CorporateActionDate58.mmTradingSuspendedDate, CorporateActionDate61.mmTradingSuspendedDate,
+					CorporateActionDate74.mmTradingSuspendedDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -444,6 +474,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmThirdPartyDeadline
 	 * CorporateActionDate58.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmThirdPartyDeadline
+	 * CorporateActionDate61.mmThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmThirdPartyDeadline
+	 * CorporateActionDate74.mmThirdPartyDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -468,7 +504,7 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmThirdPartyDeadline, CorporateActionDate13.mmThirdPartyDeadline, CorporateActionDate14.mmThirdPartyDeadline, CorporateActionDate21.mmThirdPartyDeadline,
 					CorporateActionDate22.mmThirdPartyDeadline, CorporateActionDate25.mmThirdPartyDeadline, CorporateActionDate27.mmThirdPartyDeadline, CorporateActionDate28.mmThirdPartyDeadline, CorporateActionDate44.mmThirdPartyDeadline,
-					CorporateActionDate58.mmThirdPartyDeadline);
+					CorporateActionDate58.mmThirdPartyDeadline, CorporateActionDate61.mmThirdPartyDeadline, CorporateActionDate74.mmThirdPartyDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -533,6 +569,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmCertificationDeadline
 	 * CorporateActionDate58.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmCertificationDeadline
+	 * CorporateActionDate61.mmCertificationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmCertificationDeadline
+	 * CorporateActionDate74.mmCertificationDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -557,7 +599,8 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmCertificationDeadline, CorporateActionDate13.mmCertificationDeadline, CorporateActionDate14.mmCertificationDeadline, CorporateActionDate21.mmCertificationDeadline,
 					CorporateActionDate22.mmCertificationDeadline, CorporateActionDate25.mmCertificationDeadline, CorporateActionDate27.mmCertificationDeadline, CorporateActionDate28.mmCertificationDeadline,
-					CorporateActionDate2.mmCertificationDeadline, CorporateActionDate44.mmCertificationDeadline, CorporateActionDate58.mmCertificationDeadline);
+					CorporateActionDate2.mmCertificationDeadline, CorporateActionDate44.mmCertificationDeadline, CorporateActionDate58.mmCertificationDeadline, CorporateActionDate61.mmCertificationDeadline,
+					CorporateActionDate74.mmCertificationDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -622,6 +665,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmDeadlineToSplit
 	 * CorporateActionDate58.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmDeadlineToSplit
+	 * CorporateActionDate61.mmDeadlineToSplit}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmDeadlineToSplit
+	 * CorporateActionDate74.mmDeadlineToSplit}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -646,7 +695,7 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmDeadlineToSplit, CorporateActionDate13.mmDeadlineToSplit, CorporateActionDate14.mmDeadlineToSplit, CorporateActionDate21.mmDeadlineToSplit,
 					CorporateActionDate22.mmDeadlineToSplit, CorporateActionDate25.mmDeadlineToSplit, CorporateActionDate27.mmDeadlineToSplit, CorporateActionDate28.mmDeadlineToSplit, CorporateActionDate4.mmDeadlineToSplit,
-					CorporateActionDate44.mmDeadlineToSplit, CorporateActionDate58.mmDeadlineToSplit);
+					CorporateActionDate44.mmDeadlineToSplit, CorporateActionDate58.mmDeadlineToSplit, CorporateActionDate61.mmDeadlineToSplit, CorporateActionDate74.mmDeadlineToSplit);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -711,6 +760,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmSpecialExDate
 	 * CorporateActionDate58.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmSpecialExDate
+	 * CorporateActionDate61.mmSpecialExDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmSpecialExDate
+	 * CorporateActionDate74.mmSpecialExDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -727,7 +782,7 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively,  for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets."
+	 * "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively, for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets."
 	 * </li>
 	 * </ul>
 	 */
@@ -735,12 +790,12 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmSpecialExDate, CorporateActionDate13.mmSpecialExDate, CorporateActionDate14.mmSpecialExDate, CorporateActionDate21.mmSpecialExDate,
 					CorporateActionDate22.mmSpecialExDate, CorporateActionDate25.mmSpecialExDate, CorporateActionDate27.mmSpecialExDate, CorporateActionDate28.mmSpecialExDate, CorporateActionDate2.mmSpecialExDate,
-					CorporateActionDate44.mmSpecialExDate, CorporateActionDate58.mmSpecialExDate);
+					CorporateActionDate44.mmSpecialExDate, CorporateActionDate58.mmSpecialExDate, CorporateActionDate61.mmSpecialExDate, CorporateActionDate74.mmSpecialExDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpecialExDate";
-			definition = "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively,  for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets.";
+			definition = "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively, for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -800,6 +855,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmDeadlineForTaxBreakdownInstruction
 	 * CorporateActionDate58.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate61.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate74.mmDeadlineForTaxBreakdownInstruction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -824,7 +885,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate13.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate14.mmDeadlineForTaxBreakdownInstruction,
 					CorporateActionDate21.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate22.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate25.mmDeadlineForTaxBreakdownInstruction,
 					CorporateActionDate27.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate28.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate2.mmDeadlineForTaxBreakdownInstruction,
-					CorporateActionDate44.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate58.mmDeadlineForTaxBreakdownInstruction);
+					CorporateActionDate44.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate58.mmDeadlineForTaxBreakdownInstruction, CorporateActionDate61.mmDeadlineForTaxBreakdownInstruction,
+					CorporateActionDate74.mmDeadlineForTaxBreakdownInstruction);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -889,6 +951,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmEarlyClosingDate
 	 * CorporateActionDate58.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmEarlyClosingDate
+	 * CorporateActionDate61.mmEarlyClosingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmEarlyClosingDate
+	 * CorporateActionDate74.mmEarlyClosingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -913,7 +981,7 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmEarlyClosingDate, CorporateActionDate13.mmEarlyClosingDate, CorporateActionDate14.mmEarlyClosingDate, CorporateActionDate21.mmEarlyClosingDate,
 					CorporateActionDate22.mmEarlyClosingDate, CorporateActionDate25.mmEarlyClosingDate, CorporateActionDate27.mmEarlyClosingDate, CorporateActionDate28.mmEarlyClosingDate, CorporateActionDate2.mmEarlyClosingDate,
-					CorporateActionDate44.mmEarlyClosingDate, CorporateActionDate58.mmEarlyClosingDate);
+					CorporateActionDate44.mmEarlyClosingDate, CorporateActionDate58.mmEarlyClosingDate, CorporateActionDate61.mmEarlyClosingDate, CorporateActionDate74.mmEarlyClosingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1017,6 +1085,27 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmRecordDate
 	 * CorporateActionDate58.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmRecordDate
+	 * CommonFinancialInstrumentAttributes4.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate59#mmRecordDate
+	 * CorporateActionDate59.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmRecordDate
+	 * CorporateActionDate61.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate63#mmRecordDate
+	 * CorporateActionDate63.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate66#mmRecordDate
+	 * CorporateActionDate66.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate70#mmRecordDate
+	 * CorporateActionDate70.mmRecordDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmRecordDate
+	 * CorporateActionDate74.mmRecordDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1043,7 +1132,8 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate25.mmRecordDate, CorporateActionDate27.mmRecordDate, CorporateActionDate28.mmRecordDate, EntitlementAssessment.mmRecordDate, EligibilityDates.mmRecordDate, CorporateActionDate2.mmRecordDate,
 					EntitlementAdvice1.mmRecordDate, GlobalDistributionRequest1.mmRecordDate, CommonFinancialInstrumentAttributes1.mmRecordDate, CorporateActionDate30.mmRecordDate, CorporateActionDate34.mmRecordDate,
 					CorporateActionDate41.mmRecordDate, CorporateActionDate43.mmRecordDate, CorporateActionDate49.mmRecordDate, CorporateActionDate45.mmRecordDate, CorporateActionDate44.mmRecordDate, CorporateActionDate54.mmRecordDate,
-					CorporateActionDate50.mmRecordDate, CorporateActionDate58.mmRecordDate);
+					CorporateActionDate50.mmRecordDate, CorporateActionDate58.mmRecordDate, CommonFinancialInstrumentAttributes4.mmRecordDate, CorporateActionDate59.mmRecordDate, CorporateActionDate61.mmRecordDate,
+					CorporateActionDate63.mmRecordDate, CorporateActionDate66.mmRecordDate, CorporateActionDate70.mmRecordDate, CorporateActionDate74.mmRecordDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1120,6 +1210,18 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmCoverExpirationDate
 	 * CorporateActionDate55.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate60#mmCoverExpirationDate
+	 * CorporateActionDate60.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmCoverExpirationDate
+	 * CorporateActionDate64.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate68#mmCoverExpirationDate
+	 * CorporateActionDate68.mmCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmCoverExpirationDate
+	 * CorporateActionDate71.mmCoverExpirationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1145,7 +1247,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmCoverExpirationDate, CorporateActionDate10.mmCoverExpirationDate, CorporateActionDate18.mmCoverExpirationDate, CorporateActionDate19.mmCoverExpirationDate,
 					CorporateActionDate8.mmCoverExpirationDate, CorporateActionDate11.mmCoverExpirationDate, CorporateActionDate15.mmCoverExpirationDate, CorporateActionDate16.mmCoverExpirationDate,
 					CorporateActionDate2.mmCoverExpirationDate, CorporateActionDate29.mmCoverExpirationDate, CorporateActionDate33.mmCoverExpirationDate, CorporateActionDate46.mmCoverExpirationDate,
-					CorporateActionDate48.mmCoverExpirationDate, CorporateActionDate52.mmCoverExpirationDate, CorporateActionDate55.mmCoverExpirationDate);
+					CorporateActionDate48.mmCoverExpirationDate, CorporateActionDate52.mmCoverExpirationDate, CorporateActionDate55.mmCoverExpirationDate, CorporateActionDate60.mmCoverExpirationDate,
+					CorporateActionDate64.mmCoverExpirationDate, CorporateActionDate68.mmCoverExpirationDate, CorporateActionDate71.mmCoverExpirationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1216,6 +1319,18 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmElectionToCounterpartyResponseDeadline
 	 * CorporateActionDate58.mmElectionToCounterpartyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmElectionToCounterpartyMarketDeadline
+	 * CorporateActionDate61.mmElectionToCounterpartyMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmElectionToCounterpartyResponseDeadline
+	 * CorporateActionDate61.mmElectionToCounterpartyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmElectionToCounterpartyMarketDeadline
+	 * CorporateActionDate74.mmElectionToCounterpartyMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmElectionToCounterpartyResponseDeadline
+	 * CorporateActionDate74.mmElectionToCounterpartyResponseDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1242,7 +1357,8 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate21.mmElectionToCounterpartyDeadline, CorporateActionDate22.mmElectionToCounterpartyDeadline, CorporateActionDate25.mmElectionToCounterpartyDeadline,
 					CorporateActionDate27.mmElectionToCounterpartyDeadline, CorporateActionDate28.mmElectionToCounterpartyDeadline, CorporateActionDate2.mmElectionToCounterpartyDeadline,
 					CorporateActionDate44.mmElectionToCounterpartyMarketDeadline, CorporateActionDate44.mmElectionToCounterpartyResponseDeadline, CorporateActionDate58.mmElectionToCounterpartyMarketDeadline,
-					CorporateActionDate58.mmElectionToCounterpartyResponseDeadline);
+					CorporateActionDate58.mmElectionToCounterpartyResponseDeadline, CorporateActionDate61.mmElectionToCounterpartyMarketDeadline, CorporateActionDate61.mmElectionToCounterpartyResponseDeadline,
+					CorporateActionDate74.mmElectionToCounterpartyMarketDeadline, CorporateActionDate74.mmElectionToCounterpartyResponseDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1319,6 +1435,18 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmExpiryDate
 	 * CorporateActionDate55.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate60#mmExpiryDate
+	 * CorporateActionDate60.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmExpiryDate
+	 * CorporateActionDate64.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate68#mmExpiryDate
+	 * CorporateActionDate68.mmExpiryDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmExpiryDate
+	 * CorporateActionDate71.mmExpiryDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1341,7 +1469,8 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmExpiryDate, CorporateActionDate10.mmExpiryDate, CorporateActionDate18.mmExpiryDate, CorporateActionDate19.mmExpiryDate, CorporateActionDate8.mmExpiryDate,
 					CorporateActionDate11.mmExpiryDate, CorporateActionDate15.mmExpiryDate, CorporateActionDate16.mmExpiryDate, CorporateActionDate4.mmExpiryDate, CorporateActionDate29.mmExpiryDate, CorporateActionDate33.mmExpiryDate,
-					CorporateActionDate46.mmExpiryDate, CorporateActionDate48.mmExpiryDate, CorporateActionDate52.mmExpiryDate, CorporateActionDate55.mmExpiryDate);
+					CorporateActionDate46.mmExpiryDate, CorporateActionDate48.mmExpiryDate, CorporateActionDate52.mmExpiryDate, CorporateActionDate55.mmExpiryDate, CorporateActionDate60.mmExpiryDate, CorporateActionDate64.mmExpiryDate,
+					CorporateActionDate68.mmExpiryDate, CorporateActionDate71.mmExpiryDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1445,6 +1574,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmDepositoryCoverExpirationDate
 	 * CorporateActionDate55.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate64.mmDepositoryCoverExpirationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate71.mmDepositoryCoverExpirationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1469,7 +1604,7 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate8.mmDepositoryCoverExpirationDate, CorporateActionDate11.mmDepositoryCoverExpirationDate, CorporateActionDate15.mmDepositoryCoverExpirationDate,
 					CorporateActionDate16.mmDepositoryCoverExpirationDate, CorporateActionDate29.mmDepositoryCoverExpirationDate, CorporateActionDate33.mmDepositoryCoverExpirationDate, CorporateActionDate48.mmDepositoryCoverExpirationDate,
-					CorporateActionDate55.mmDepositoryCoverExpirationDate);
+					CorporateActionDate55.mmDepositoryCoverExpirationDate, CorporateActionDate64.mmDepositoryCoverExpirationDate, CorporateActionDate71.mmDepositoryCoverExpirationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1549,6 +1684,24 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmResponseDeadline
 	 * CorporateActionDate55.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventDeadlines1#mmResponseDeadline
+	 * CorporateActionEventDeadlines1.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate60#mmResponseDeadline
+	 * CorporateActionDate60.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmResponseDeadline
+	 * CorporateActionDate64.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate68#mmResponseDeadline
+	 * CorporateActionDate68.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmResponseDeadline
+	 * CorporateActionDate71.mmResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventDeadlines2#mmResponseDeadline
+	 * CorporateActionEventDeadlines2.mmResponseDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1574,7 +1727,8 @@ public class CorporateActionDeadline extends Deadline {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate6.mmResponseDeadline, CorporateActionDate10.mmResponseDeadline, CorporateActionDate18.mmResponseDeadline, CorporateActionDate19.mmResponseDeadline,
 					CorporateActionDate8.mmResponseDeadline, CorporateActionDate11.mmResponseDeadline, CorporateActionDate15.mmResponseDeadline, CorporateActionDate16.mmResponseDeadline, CorporateActionDate4.mmResponseDeadline,
 					CorporateActionOption11.mmResponseDeadline, CorporateActionDate29.mmResponseDeadline, CorporateActionDate33.mmResponseDeadline, CorporateActionDate46.mmResponseDeadline, CorporateActionDate48.mmResponseDeadline,
-					CorporateActionDate52.mmResponseDeadline, CorporateActionDate55.mmResponseDeadline);
+					CorporateActionDate52.mmResponseDeadline, CorporateActionDate55.mmResponseDeadline, CorporateActionEventDeadlines1.mmResponseDeadline, CorporateActionDate60.mmResponseDeadline, CorporateActionDate64.mmResponseDeadline,
+					CorporateActionDate68.mmResponseDeadline, CorporateActionDate71.mmResponseDeadline, CorporateActionEventDeadlines2.mmResponseDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1696,6 +1850,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmRegistrationDeadline
 	 * CorporateActionDate58.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmRegistrationDeadline
+	 * CorporateActionDate61.mmRegistrationDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmRegistrationDeadline
+	 * CorporateActionDate74.mmRegistrationDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1720,7 +1880,8 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmRegistrationDeadline, CorporateActionDate13.mmRegistrationDeadline, CorporateActionDate14.mmRegistrationDeadline, CorporateActionDate21.mmRegistrationDeadline,
 					CorporateActionDate22.mmRegistrationDeadline, CorporateActionDate25.mmRegistrationDeadline, CorporateActionDate27.mmRegistrationDeadline, CorporateActionDate28.mmRegistrationDeadline,
-					CorporateActionDate2.mmRegistrationDeadline, CorporateActionDate44.mmRegistrationDeadline, CorporateActionDate58.mmRegistrationDeadline);
+					CorporateActionDate2.mmRegistrationDeadline, CorporateActionDate44.mmRegistrationDeadline, CorporateActionDate58.mmRegistrationDeadline, CorporateActionDate61.mmRegistrationDeadline,
+					CorporateActionDate74.mmRegistrationDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1770,6 +1931,18 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline2#mmStockLendingDeadline
 	 * BorrowerLendingDeadline2.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmStockLendingDeadline
+	 * CorporateActionDate64.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline3#mmStockLendingDeadline
+	 * BorrowerLendingDeadline3.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmStockLendingDeadline
+	 * CorporateActionDate71.mmStockLendingDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline4#mmStockLendingDeadline
+	 * BorrowerLendingDeadline4.mmStockLendingDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1786,19 +1959,20 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date or date and time that the account servicer has set as the deadline to respond with instructions to an event for which the underlying security is out on loan. "
+	 * "Date or date and time that the account servicer has set as the deadline to respond with instructions to an event for which the underlying security is out on loan."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmStockLendingDeadline = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate29.mmStockLendingDeadline, CorporateActionDate33.mmStockLendingDeadline, CorporateActionDate48.mmStockLendingDeadline, BorrowerLendingDeadline1.mmStockLendingDeadline,
-					CorporateActionDate55.mmStockLendingDeadline, BorrowerLendingDeadline2.mmStockLendingDeadline);
+					CorporateActionDate55.mmStockLendingDeadline, BorrowerLendingDeadline2.mmStockLendingDeadline, CorporateActionDate64.mmStockLendingDeadline, BorrowerLendingDeadline3.mmStockLendingDeadline,
+					CorporateActionDate71.mmStockLendingDeadline, BorrowerLendingDeadline4.mmStockLendingDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "StockLendingDeadline";
-			definition = "Date or date and time that the account servicer has set as the deadline to respond with instructions to an event for which the underlying security is out on loan. ";
+			definition = "Date or date and time that the account servicer has set as the deadline to respond with instructions to an event for which the underlying security is out on loan.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -1936,6 +2110,24 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmEarlyThirdPartyDeadline
 	 * CorporateActionDate58.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventDeadlines1#mmEarlyResponseDeadline
+	 * CorporateActionEventDeadlines1.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate61.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmEarlyResponseDeadline
+	 * CorporateActionDate64.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmEarlyResponseDeadline
+	 * CorporateActionDate71.mmEarlyResponseDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate74.mmEarlyThirdPartyDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventDeadlines2#mmEarlyResponseDeadline
+	 * CorporateActionEventDeadlines2.mmEarlyResponseDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1962,7 +2154,8 @@ public class CorporateActionDeadline extends Deadline {
 					CorporateActionDate1.mmEarlyThirdPartyDeadline, CorporateActionDate13.mmEarlyThirdPartyDeadline, CorporateActionDate14.mmEarlyThirdPartyDeadline, CorporateActionDate21.mmEarlyThirdPartyDeadline,
 					CorporateActionDate22.mmEarlyThirdPartyDeadline, CorporateActionDate25.mmEarlyThirdPartyDeadline, CorporateActionDate27.mmEarlyThirdPartyDeadline, CorporateActionDate28.mmEarlyThirdPartyDeadline,
 					CorporateActionDate29.mmEarlyResponseDeadline, CorporateActionDate33.mmEarlyResponseDeadline, CorporateActionDate48.mmEarlyResponseDeadline, CorporateActionDate44.mmEarlyThirdPartyDeadline,
-					CorporateActionDate55.mmEarlyResponseDeadline, CorporateActionDate58.mmEarlyThirdPartyDeadline);
+					CorporateActionDate55.mmEarlyResponseDeadline, CorporateActionDate58.mmEarlyThirdPartyDeadline, CorporateActionEventDeadlines1.mmEarlyResponseDeadline, CorporateActionDate61.mmEarlyThirdPartyDeadline,
+					CorporateActionDate64.mmEarlyResponseDeadline, CorporateActionDate71.mmEarlyResponseDeadline, CorporateActionDate74.mmEarlyThirdPartyDeadline, CorporateActionEventDeadlines2.mmEarlyResponseDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2027,6 +2220,12 @@ public class CorporateActionDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmGuaranteedParticipationDate
 	 * CorporateActionDate58.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmGuaranteedParticipationDate
+	 * CorporateActionDate61.mmGuaranteedParticipationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmGuaranteedParticipationDate
+	 * CorporateActionDate74.mmGuaranteedParticipationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2051,7 +2250,8 @@ public class CorporateActionDeadline extends Deadline {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmGuaranteedParticipationDate, CorporateActionDate13.mmGuaranteedParticipationDate, CorporateActionDate14.mmGuaranteedParticipationDate,
 					CorporateActionDate21.mmGuaranteedParticipationDate, CorporateActionDate22.mmGuaranteedParticipationDate, CorporateActionDate25.mmGuaranteedParticipationDate, CorporateActionDate27.mmGuaranteedParticipationDate,
-					CorporateActionDate28.mmGuaranteedParticipationDate, CorporateActionDate2.mmGuaranteedParticipationDate, CorporateActionDate44.mmGuaranteedParticipationDate, CorporateActionDate58.mmGuaranteedParticipationDate);
+					CorporateActionDate28.mmGuaranteedParticipationDate, CorporateActionDate2.mmGuaranteedParticipationDate, CorporateActionDate44.mmGuaranteedParticipationDate, CorporateActionDate58.mmGuaranteedParticipationDate,
+					CorporateActionDate61.mmGuaranteedParticipationDate, CorporateActionDate74.mmGuaranteedParticipationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2090,7 +2290,7 @@ public class CorporateActionDeadline extends Deadline {
 						com.tools20022.repository.entity.CorporateActionDeadline.mmConsentExpirationDate, com.tools20022.repository.entity.CorporateActionDeadline.mmRegistrationDeadline,
 						com.tools20022.repository.entity.CorporateActionDeadline.mmStockLendingDeadline, com.tools20022.repository.entity.CorporateActionDeadline.mmConsentRecordDate,
 						com.tools20022.repository.entity.CorporateActionDeadline.mmEarlyResponseDeadline, com.tools20022.repository.entity.CorporateActionDeadline.mmGuaranteedParticipationDate);
-				derivationComponent_lazy = () -> Arrays.asList(BorrowerLendingDeadline1.mmObject(), BorrowerLendingDeadline2.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(BorrowerLendingDeadline1.mmObject(), BorrowerLendingDeadline2.mmObject(), BorrowerLendingDeadline3.mmObject(), BorrowerLendingDeadline4.mmObject());
 			}
 
 			@Override

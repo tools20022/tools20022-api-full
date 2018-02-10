@@ -166,6 +166,12 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#mmInstalment
  * CardPaymentTransactionDetails37.mmInstalment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44#mmInstalment
+ * CardPaymentTransactionDetails44.mmInstalment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails45#mmInstalment
+ * CardPaymentTransactionDetails45.mmInstalment}</li>
  * </ul>
  * </li>
  * <li>
@@ -810,7 +816,7 @@ public class Instalment extends PaymentObligation {
 						CardPaymentTransactionDetails21.mmInstalment, CardPaymentTransactionDetails19.mmInstalment, CardPaymentTransactionDetails24.mmInstalment, FinancingItemList1.mmFinancingInstalment,
 						FinancialItem1.mmInstalmentInformation, CardTransactionDetail1.mmInstalment, CardTransactionDetail3.mmInstalment, CardPaymentTransactionDetails29.mmInstalment, CardPaymentTransactionDetails30.mmInstalment,
 						CardPaymentTransactionDetails27.mmInstalment, CardPaymentTransactionDetails31.mmInstalment, CardPaymentTransactionDetails39.mmInstalment, CardPaymentTransactionDetails38.mmInstalment,
-						CardPaymentTransactionDetails41.mmInstalment, CardPaymentTransactionDetails37.mmInstalment);
+						CardPaymentTransactionDetails41.mmInstalment, CardPaymentTransactionDetails37.mmInstalment, CardPaymentTransactionDetails44.mmInstalment, CardPaymentTransactionDetails45.mmInstalment);
 				superType_lazy = () -> PaymentObligation.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Instalment.mmInitialNumberOfInstalment, com.tools20022.repository.entity.Instalment.mmTotalNumberOfInstalment,
 						com.tools20022.repository.entity.Instalment.mmPeriodUnit, com.tools20022.repository.entity.Instalment.mmNumberOfUnits, com.tools20022.repository.entity.Instalment.mmSequenceIdentification,

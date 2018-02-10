@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV07;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.codeset.PreConfirmation1Code;
 import com.tools20022.repository.datatype.Max35Text;
@@ -72,6 +73,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06#mmAdditionalParameters
  * SecuritiesSettlementTransactionReversalAdviceV06.mmAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV07#mmAdditionalParameters
+ * SecuritiesSettlementTransactionReversalAdviceV07.mmAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
@@ -349,7 +353,7 @@ public class AdditionalParameters30 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters30.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters30.mmPartialSettlement,
 						com.tools20022.repository.msg.AdditionalParameters30.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
 						com.tools20022.repository.msg.AdditionalParameters30.mmClientTripartyCollateralTransactionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV06.mmAdditionalParameters, SecuritiesSettlementTransactionReversalAdviceV07.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

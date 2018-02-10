@@ -73,7 +73,14 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountBalanceSD8"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  "
+ * "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs)."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountBalanceSD12
+ * AccountBalanceSD12}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -109,6 +116,14 @@ public class AccountBalanceSD8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD12#mmPlaceAndName
+	 * AccountBalanceSD12.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -119,6 +134,7 @@ public class AccountBalanceSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD12.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -151,6 +167,14 @@ public class AccountBalanceSD8 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance of all uncovered protect instructions across all options."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD12#mmUncoveredProtectBalance
+	 * AccountBalanceSD12.mmUncoveredProtectBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUncoveredProtectBalance = new MMMessageAssociationEnd() {
@@ -161,6 +185,7 @@ public class AccountBalanceSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UncoveredProtectBalance";
 			definition = "Balance of all uncovered protect instructions across all options.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD12.mmUncoveredProtectBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -195,6 +220,14 @@ public class AccountBalanceSD8 {
 	 * definition} =
 	 * "Position held in DTC segregated account also called account 18. This position is not eligible for instruction processing but will be eligible for payment on mandatory events."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD12#mmInvestmentUnpledgedBalance
+	 * AccountBalanceSD12.mmInvestmentUnpledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
@@ -205,6 +238,7 @@ public class AccountBalanceSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Position held in DTC segregated account also called account 18. This position is not eligible for instruction processing but will be eligible for payment on mandatory events.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD12.mmInvestmentUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -237,7 +271,15 @@ public class AccountBalanceSD8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Position held in DTC segregated account also called account 22. This position is not eligible for instruction processing but will be eligible for payment on mandatory events.  "
+	 * "Position held in DTC segregated account also called account 22. This position is not eligible for instruction processing but will be eligible for payment on mandatory events."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD12#mmInvestmentPledgedBalance
+	 * AccountBalanceSD12.mmInvestmentPledgedBalance}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -248,7 +290,8 @@ public class AccountBalanceSD8 {
 			xmlTag = "InvstmtPldgdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
-			definition = "Position held in DTC segregated account also called account 22. This position is not eligible for instruction processing but will be eligible for payment on mandatory events.  ";
+			definition = "Position held in DTC segregated account also called account 22. This position is not eligible for instruction processing but will be eligible for payment on mandatory events.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD12.mmInvestmentPledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -283,6 +326,14 @@ public class AccountBalanceSD8 {
 	 * definition} =
 	 * "Position held in DTC memo segregated account. This position is eligible for payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountBalanceSD12#mmMemoSegregationBalance
+	 * AccountBalanceSD12.mmMemoSegregationBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMemoSegregationBalance = new MMMessageAssociationEnd() {
@@ -293,6 +344,7 @@ public class AccountBalanceSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemoSegregationBalance";
 			definition = "Position held in DTC memo segregated account. This position is eligible for payment.";
+			nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD12.mmMemoSegregationBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -309,7 +361,8 @@ public class AccountBalanceSD8 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountBalanceSD8";
-				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
+				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).";
+				nextVersions_lazy = () -> Arrays.asList(AccountBalanceSD12.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

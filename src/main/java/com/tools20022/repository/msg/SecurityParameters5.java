@@ -62,6 +62,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecurityParameters5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Security parameters of the host downloading the key."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters8
+ * SecurityParameters8}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SecurityParameters4
@@ -101,6 +108,14 @@ public class SecurityParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Random value from the host."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters8#mmHostChallenge
+	 * SecurityParameters8.mmHostChallenge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -116,6 +131,7 @@ public class SecurityParameters5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostChallenge";
 			definition = "Random value from the host.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters8.mmHostChallenge);
 			previousVersion_lazy = () -> SecurityParameters4.mmATMChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -150,6 +166,13 @@ public class SecurityParameters5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cryptographic key used to store in the ATM."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters8#mmKey
+	 * SecurityParameters8.mmKey}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,6 +188,7 @@ public class SecurityParameters5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Cryptographic key used to store in the ATM.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters8.mmKey);
 			previousVersion_lazy = () -> SecurityParameters4.mmKey;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CryptographicKey8.mmObject();
@@ -231,6 +255,7 @@ public class SecurityParameters5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters5";
 				definition = "Security parameters of the host downloading the key.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityParameters8.mmObject());
 				previousVersion_lazy = () -> SecurityParameters4.mmObject();
 			}
 		});

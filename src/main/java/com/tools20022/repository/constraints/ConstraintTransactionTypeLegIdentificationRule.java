@@ -49,7 +49,7 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TransactionType is SWII or SWIO, then LegIdentification is mandatory.  If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed."
+	 * "If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintTransactionTypeLegIdentificationRule {
 			validator = ConstraintTransactionTypeLegIdentificationRule::checkInvestmentFundTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegIdentificationRule";
-			definition = "If TransactionType is SWII or SWIO, then LegIdentification is mandatory.  If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed.";
+			definition = "If TransactionType is SWII or SWIO, then LegIdentification is mandatory. If TransactionType is not SWII and not SWIO, then LegIdentification is not allowed.";
 			owner_lazy = () -> InvestmentFundTransaction2.mmObject();
 		}
 	};

@@ -146,7 +146,7 @@ public class FinancialInstrumentAttributesSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Matching security identifier for  the disbursed security that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference."
+	 * "Matching security identifier for the disbursed security that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference."
 	 * </li>
 	 * </ul>
 	 */
@@ -158,7 +158,7 @@ public class FinancialInstrumentAttributesSD5 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Disbursed Security SOI Matching Security ID"), new DTCCSynonym(this, "Disbursed Security SOI Matching Security ID Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityOfInterestMatchingSecurity";
-			definition = "Matching security identifier for  the disbursed security that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
+			definition = "Matching security identifier for the disbursed security that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();

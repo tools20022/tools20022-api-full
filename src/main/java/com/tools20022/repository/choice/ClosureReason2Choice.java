@@ -22,7 +22,6 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.SystemClosureReason1Code;
 import com.tools20022.repository.datatype.Max35Text;
-import com.tools20022.repository.entity.SystemStatus;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -48,9 +47,6 @@ import javax.xml.bind.annotation.XmlType;
  * ClosureReason2Choice.mmProprietary}</li>
  * </ul>
  * </li>
- * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
- * trace} = {@linkplain com.tools20022.repository.entity.SystemStatus
- * SystemStatus}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -164,7 +160,6 @@ public class ClosureReason2Choice {
 		mmObject_lazy.compareAndSet(null, new MMChoiceComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.ClosureReason2Choice.mmCode, com.tools20022.repository.choice.ClosureReason2Choice.mmProprietary);
-				trace_lazy = () -> SystemStatus.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ClosureReason2Choice";

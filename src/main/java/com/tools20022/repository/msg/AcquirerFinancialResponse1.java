@@ -107,7 +107,7 @@ public class AcquirerFinancialResponse1 {
 	 * name} = "Environment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Environment of the transaction"</li>
+	 * definition} = "Environment of the transaction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
@@ -117,7 +117,7 @@ public class AcquirerFinancialResponse1 {
 			xmlTag = "Envt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
-			definition = "Environment of the transaction";
+			definition = "Environment of the transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

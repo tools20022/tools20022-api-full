@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies when date is unknown
+ * Specifies when date is unknown.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DateType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies when date is unknown"</li>
+ * definition} = "Specifies when date is unknown."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -103,7 +103,7 @@ public class DateType1Code extends MMCode {
 				example = Arrays.asList("UKWN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateType1Code";
-				definition = "Specifies when date is unknown";
+				definition = "Specifies when date is unknown.";
 				trace_lazy = () -> DateTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType1Code.Unknown);
 			}

@@ -280,6 +280,18 @@ public class SecuritiesModification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmChangeType
 	 * CorporateActionOption134.mmChangeType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmChangeType
+	 * CorporateAction41.mmChangeType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmChangeType
+	 * CorporateActionOption142.mmChangeType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmChangeType
+	 * CorporateActionOption146.mmChangeType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmChangeType
+	 * CorporateAction51.mmChangeType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -309,7 +321,7 @@ public class SecuritiesModification {
 					CorporateAction17.mmChangeType, CorporateActionOption118.mmChangeType, CorporateAction31.mmChangeType, CorporateActionChangeTypeFormat5Choice.mmCode, CorporateActionChangeTypeFormat5Choice.mmProprietary,
 					CorporateActionChangeTypeFormat6Choice.mmCode, CorporateActionChangeTypeFormat6Choice.mmProprietary, CorporateActionOption123.mmChangeType, CorporateAction40.mmChangeType, CorporateActionChangeTypeFormat8Choice.mmCode,
 					CorporateActionChangeTypeFormat8Choice.mmProprietary, CorporateActionChangeTypeFormat7Choice.mmCode, CorporateActionChangeTypeFormat7Choice.mmProprietary, CorporateActionOption131.mmChangeType,
-					CorporateActionOption134.mmChangeType);
+					CorporateActionOption134.mmChangeType, CorporateAction41.mmChangeType, CorporateActionOption142.mmChangeType, CorporateActionOption146.mmChangeType, CorporateAction51.mmChangeType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -388,6 +400,12 @@ public class SecuritiesModification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#mmNewPlaceOfIncorporation
 	 * CorporateAction40.mmNewPlaceOfIncorporation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmNewPlaceOfIncorporation
+	 * CorporateAction41.mmNewPlaceOfIncorporation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmNewPlaceOfIncorporation
+	 * CorporateAction51.mmNewPlaceOfIncorporation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -411,7 +429,7 @@ public class SecuritiesModification {
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmNewPlaceOfIncorporation, CorporateAction4.mmNewPlaceOfIncorporation, CorporateAction5.mmNewPlaceOfIncorporation, CorporateAction6.mmNewPlaceOfIncorporation,
 					CorporateAction7.mmNewPlaceOfIncorporation, CorporateAction8.mmNewPlaceOfIncorporation, CorporateAction10.mmNewPlaceOfIncorporation, CorporateAction11.mmNewPlaceOfIncorporation,
 					CorporateAction2.mmNewPlaceOfIncorporation, CorporateAction12.mmNewPlaceOfIncorporation, CorporateAction17.mmNewPlaceOfIncorporation, CorporateAction31.mmNewPlaceOfIncorporation,
-					CorporateAction40.mmNewPlaceOfIncorporation);
+					CorporateAction40.mmNewPlaceOfIncorporation, CorporateAction41.mmNewPlaceOfIncorporation, CorporateAction51.mmNewPlaceOfIncorporation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -546,7 +564,7 @@ public class SecuritiesModification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The number of shares the issuer is creating as part of the event"</li>
+	 * "The number of shares the issuer is creating as part of the event."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmNumberOfSharesIssued = new MMBusinessAttribute() {
@@ -555,7 +573,7 @@ public class SecuritiesModification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesModification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfSharesIssued";
-			definition = "The number of shares the issuer is creating as part of the event";
+			definition = "The number of shares the issuer is creating as part of the event.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();

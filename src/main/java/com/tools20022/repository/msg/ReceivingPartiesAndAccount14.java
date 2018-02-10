@@ -97,6 +97,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18
+ * ReceivingPartiesAndAccount18}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount13
@@ -142,6 +149,14 @@ public class ReceivingPartiesAndAccount14 {
 	 * definition} =
 	 * "Party that acts on behalf of the buyer of securities when the buyer does not have a direct relationship with the receiving agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18#mmReceiversCustodianDetails
+	 * ReceivingPartiesAndAccount18.mmReceiversCustodianDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -158,6 +173,7 @@ public class ReceivingPartiesAndAccount14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversCustodianDetails";
 			definition = "Party that acts on behalf of the buyer of securities when the buyer does not have a direct relationship with the receiving agent.";
+			nextVersions_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount18.mmReceiversCustodianDetails);
 			previousVersion_lazy = () -> ReceivingPartiesAndAccount13.mmReceiversCustodianDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -199,6 +215,14 @@ public class ReceivingPartiesAndAccount14 {
 	 * definition} =
 	 * "Party that the receiver's custodian uses to effect the receipt of a security, when the receiver's custodian does not have a direct relationship with the receiving agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18#mmReceiversIntermediary1Details
+	 * ReceivingPartiesAndAccount18.mmReceiversIntermediary1Details}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -215,6 +239,7 @@ public class ReceivingPartiesAndAccount14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary1Details";
 			definition = "Party that the receiver's custodian uses to effect the receipt of a security, when the receiver's custodian does not have a direct relationship with the receiving agent.";
+			nextVersions_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount18.mmReceiversIntermediary1Details);
 			previousVersion_lazy = () -> ReceivingPartiesAndAccount13.mmReceiversIntermediary1Details;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -254,6 +279,14 @@ public class ReceivingPartiesAndAccount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that interacts with the receiver’s intermediary."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18#mmReceiversIntermediary2Details
+	 * ReceivingPartiesAndAccount18.mmReceiversIntermediary2Details}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,6 +303,7 @@ public class ReceivingPartiesAndAccount14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiversIntermediary2Details";
 			definition = "Party that interacts with the receiver’s intermediary.";
+			nextVersions_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount18.mmReceiversIntermediary2Details);
 			previousVersion_lazy = () -> ReceivingPartiesAndAccount13.mmReceiversIntermediary2Details;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -311,6 +345,14 @@ public class ReceivingPartiesAndAccount14 {
 	 * definition} =
 	 * "Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18#mmReceivingAgentDetails
+	 * ReceivingPartiesAndAccount18.mmReceivingAgentDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -327,6 +369,7 @@ public class ReceivingPartiesAndAccount14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgentDetails";
 			definition = "Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.";
+			nextVersions_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount18.mmReceivingAgentDetails);
 			previousVersion_lazy = () -> ReceivingPartiesAndAccount13.mmReceivingAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -366,6 +409,14 @@ public class ReceivingPartiesAndAccount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the securities settlement system to be used."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18#mmSecuritiesSettlementSystem
+	 * ReceivingPartiesAndAccount18.mmSecuritiesSettlementSystem}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -382,6 +433,7 @@ public class ReceivingPartiesAndAccount14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementSystem";
 			definition = "Identifies the securities settlement system to be used.";
+			nextVersions_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount18.mmSecuritiesSettlementSystem);
 			previousVersion_lazy = () -> ReceivingPartiesAndAccount13.mmSecuritiesSettlementSystem;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -419,6 +471,14 @@ public class ReceivingPartiesAndAccount14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Place where settlement of the securities takes place."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18#mmPlaceOfSettlementDetails
+	 * ReceivingPartiesAndAccount18.mmPlaceOfSettlementDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -435,6 +495,7 @@ public class ReceivingPartiesAndAccount14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSettlementDetails";
 			definition = "Place where settlement of the securities takes place.";
+			nextVersions_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount18.mmPlaceOfSettlementDetails);
 			previousVersion_lazy = () -> ReceivingPartiesAndAccount13.mmPlaceOfSettlementDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -456,6 +517,7 @@ public class ReceivingPartiesAndAccount14 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceivingPartiesAndAccount14";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
+				nextVersions_lazy = () -> Arrays.asList(ReceivingPartiesAndAccount18.mmObject());
 				previousVersion_lazy = () -> ReceivingPartiesAndAccount13.mmObject();
 			}
 		});

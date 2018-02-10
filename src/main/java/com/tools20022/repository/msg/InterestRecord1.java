@@ -82,6 +82,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides transaction specific interest information that applies to the underlying transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InterestRecord2
+ * InterestRecord2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -122,6 +129,13 @@ public class InterestRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of interest included in the entry amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.InterestRecord2#mmAmount
+	 * InterestRecord2.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -133,6 +147,7 @@ public class InterestRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of interest included in the entry amount.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -173,6 +188,14 @@ public class InterestRecord1 {
 	 * definition} =
 	 * "Indicates whether the interest amount included in the entry is credit or debit amount.\r\nUsage: A zero amount is considered to be a credit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRecord2#mmCreditDebitIndicator
+	 * InterestRecord2.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
@@ -184,6 +207,7 @@ public class InterestRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the interest amount included in the entry is credit or debit amount.\r\nUsage: A zero amount is considered to be a credit.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -220,6 +244,13 @@ public class InterestRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of interest."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.InterestRecord2#mmType
+	 * InterestRecord2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -231,6 +262,7 @@ public class InterestRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of interest.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -267,6 +299,13 @@ public class InterestRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Set of elements used to qualify the interest rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.InterestRecord2#mmRate
+	 * InterestRecord2.mmRate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
@@ -278,6 +317,7 @@ public class InterestRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Set of elements used to qualify the interest rate.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -317,6 +357,14 @@ public class InterestRecord1 {
 	 * definition} =
 	 * "Range of time between a start date and an end date for the calculation of the interest."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRecord2#mmFromToDate
+	 * InterestRecord2.mmFromToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
@@ -328,6 +376,7 @@ public class InterestRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for the calculation of the interest.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmFromToDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -361,6 +410,13 @@ public class InterestRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reason for the interest."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.InterestRecord2#mmReason
+	 * InterestRecord2.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
@@ -371,6 +427,7 @@ public class InterestRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the interest.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -408,6 +465,13 @@ public class InterestRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides details on the tax applied to charges."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.InterestRecord2#mmTax
+	 * InterestRecord2.mmTax}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTax = new MMMessageAttribute() {
@@ -419,6 +483,7 @@ public class InterestRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Provides details on the tax applied to charges.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmTax);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.TaxCharges2.mmObject();
@@ -436,6 +501,7 @@ public class InterestRecord1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRecord1";
 				definition = "Provides transaction specific interest information that applies to the underlying transaction.";
+				nextVersions_lazy = () -> Arrays.asList(InterestRecord2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

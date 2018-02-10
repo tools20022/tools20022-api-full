@@ -156,7 +156,7 @@ public class InstructionForFinalAgent {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction to the final agent that is specific to a user community and is required for use within that user community.\n\nUsage : The proprietary element should only be used when the coded element does not provide sufficient codes or when the selected code in the coded element needs to be supplemented by additional information such as a passport number or telephone number."
+	 * "Instruction to the final agent that is specific to a user community and is required for use within that user community.\n\nUsage: The proprietary element should only be used when the coded element does not provide sufficient codes or when the selected code in the coded element needs to be supplemented by additional information such as a passport number or telephone number."
 	 * </li>
 	 * </ul>
 	 */
@@ -168,7 +168,7 @@ public class InstructionForFinalAgent {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Instruction to the final agent that is specific to a user community and is required for use within that user community.\n\nUsage : The proprietary element should only be used when the coded element does not provide sufficient codes or when the selected code in the coded element needs to be supplemented by additional information such as a passport number or telephone number.";
+			definition = "Instruction to the final agent that is specific to a user community and is required for use within that user community.\n\nUsage: The proprietary element should only be used when the coded element does not provide sufficient codes or when the selected code in the coded element needs to be supplemented by additional information such as a passport number or telephone number.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();

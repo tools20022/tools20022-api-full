@@ -77,6 +77,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Environment of the transaction given in a response to a request."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69
+ * CardPaymentEnvironment69}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment46
@@ -119,6 +126,14 @@ public class CardPaymentEnvironment65 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Acquirer involved in the card payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69#mmAcquirerIdentification
+	 * CardPaymentEnvironment69.mmAcquirerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -135,6 +150,7 @@ public class CardPaymentEnvironment65 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerIdentification";
 			definition = "Acquirer involved in the card payment.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment69.mmAcquirerIdentification);
 			previousVersion_lazy = () -> CardPaymentEnvironment46.mmAcquirerIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -174,6 +190,14 @@ public class CardPaymentEnvironment65 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the merchant."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69#mmMerchantIdentification
+	 * CardPaymentEnvironment69.mmMerchantIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -190,6 +214,7 @@ public class CardPaymentEnvironment65 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantIdentification";
 			definition = "Identification of the merchant.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment69.mmMerchantIdentification);
 			previousVersion_lazy = () -> CardPaymentEnvironment46.mmMerchantIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -231,6 +256,14 @@ public class CardPaymentEnvironment65 {
 	 * definition} =
 	 * "Identification of the POI (Point Of Interaction) performing the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69#mmPOIIdentification
+	 * CardPaymentEnvironment69.mmPOIIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -247,6 +280,7 @@ public class CardPaymentEnvironment65 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the POI (Point Of Interaction) performing the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment69.mmPOIIdentification);
 			previousVersion_lazy = () -> CardPaymentEnvironment46.mmPOIIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -280,6 +314,14 @@ public class CardPaymentEnvironment65 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Card performing the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69#mmCard
+	 * CardPaymentEnvironment69.mmCard}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -295,6 +337,7 @@ public class CardPaymentEnvironment65 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "Card performing the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment69.mmCard);
 			previousVersion_lazy = () -> CardPaymentEnvironment46.mmCard;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -328,6 +371,14 @@ public class CardPaymentEnvironment65 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Payment token information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69#mmPaymentToken
+	 * CardPaymentEnvironment69.mmPaymentToken}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -343,6 +394,7 @@ public class CardPaymentEnvironment65 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentToken";
 			definition = "Payment token information.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment69.mmPaymentToken);
 			previousVersion_lazy = () -> CardPaymentEnvironment46.mmPaymentToken;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -361,6 +413,7 @@ public class CardPaymentEnvironment65 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentEnvironment65";
 				definition = "Environment of the transaction given in a response to a request.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment69.mmObject());
 				previousVersion_lazy = () -> CardPaymentEnvironment46.mmObject();
 			}
 		});

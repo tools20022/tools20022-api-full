@@ -62,6 +62,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PreferenceToIncome4Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for Preference to income."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.PreferenceToIncome5Choice
+ * PreferenceToIncome5Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class PreferenceToIncome4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Preference to income expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome5Choice#mmCode
+	 * PreferenceToIncome5Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class PreferenceToIncome4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Preference to income expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(PreferenceToIncome5Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreferenceToIncome1Code.mmObject();
@@ -139,6 +155,14 @@ public class PreferenceToIncome4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Preference to income expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PreferenceToIncome5Choice#mmProprietary
+	 * PreferenceToIncome5Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -149,6 +173,7 @@ public class PreferenceToIncome4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Preference to income expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(PreferenceToIncome5Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,6 +189,7 @@ public class PreferenceToIncome4Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PreferenceToIncome4Choice";
 				definition = "Choice of format for Preference to income.";
+				nextVersions_lazy = () -> Arrays.asList(PreferenceToIncome5Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

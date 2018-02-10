@@ -482,6 +482,10 @@ class ListBuilderForSecuritiesSettlement_00 {
 		list.add((T) QuantityAndAccount54.mmObject());
 		list.add((T) SettlementTransactionCondition29Choice.mmObject());
 		list.add((T) SecuritiesTransactionType22Choice.mmObject());
+		list.add((T) RequestDetails17.mmObject());
+		list.add((T) SecuritiesSettlementTransactions2.mmObject());
+		list.add((T) RequestDetails18.mmObject());
+		list.add((T) SettlementInstructionQueryCriteria2.mmObject());
 		list.add((T) FundSettlementParameters11.mmObject());
 		list.add((T) FundSettlementParameters12.mmObject());
 		list.add((T) SettlementTransactionCondition30Choice.mmObject());
@@ -521,10 +525,6 @@ class ListBuilderForSecuritiesSettlement_00 {
 		list.add((T) SecuritiesTransactionType35Choice.mmObject());
 		list.add((T) SettlementDetails133.mmObject());
 		list.add((T) SecuritiesSettlementTransactionDetails29.mmObject());
-		list.add((T) SecuritiesSettlementTransactionDetails31.mmObject());
-		list.add((T) SettlementDetails139.mmObject());
-		list.add((T) QuantityAndAccount57.mmObject());
-		list.add((T) QuantityAndAccount58.mmObject());
 		ListBuilderForSecuritiesSettlement_01.addElems(list);
 		return list;
 	}

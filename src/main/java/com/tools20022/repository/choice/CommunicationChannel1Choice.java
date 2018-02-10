@@ -137,7 +137,7 @@ public class CommunicationChannel1Choice {
 	 * name} = "TerminalIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "CBRF identification of the terminal. "</li>
+	 * definition} = "CBRF identification of the terminal."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTerminalIdentification = new MMMessageAttribute() {
@@ -147,7 +147,7 @@ public class CommunicationChannel1Choice {
 			xmlTag = "TermnlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalIdentification";
-			definition = "CBRF identification of the terminal. ";
+			definition = "CBRF identification of the terminal.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

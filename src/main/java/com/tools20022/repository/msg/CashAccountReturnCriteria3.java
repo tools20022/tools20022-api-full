@@ -85,6 +85,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CashAccountReturnCriteria3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to report on an account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4
+ * CashAccountReturnCriteria4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -121,6 +128,14 @@ public class CashAccountReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the account name is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmNameIndicator
+	 * CashAccountReturnCriteria4.mmNameIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNameIndicator = new MMMessageAttribute() {
@@ -131,6 +146,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameIndicator";
 			definition = "Indicates whether the account name is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmNameIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -164,6 +180,14 @@ public class CashAccountReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the account currency is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmCurrencyIndicator
+	 * CashAccountReturnCriteria4.mmCurrencyIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrencyIndicator = new MMMessageAttribute() {
@@ -174,6 +198,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyIndicator";
 			definition = "Indicates whether the account currency is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmCurrencyIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -207,6 +232,14 @@ public class CashAccountReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the account type is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmTypeIndicator
+	 * CashAccountReturnCriteria4.mmTypeIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTypeIndicator = new MMMessageAttribute() {
@@ -217,6 +250,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeIndicator";
 			definition = "Indicates whether the account type is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmTypeIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -250,6 +284,14 @@ public class CashAccountReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the multilateral limit is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmMultilateralLimitIndicator
+	 * CashAccountReturnCriteria4.mmMultilateralLimitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMultilateralLimitIndicator = new MMMessageAttribute() {
@@ -260,6 +302,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralLimitIndicator";
 			definition = "Indicates whether the multilateral limit is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmMultilateralLimitIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -293,6 +336,14 @@ public class CashAccountReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria used to report on a multilateral balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmMultilateralBalanceReturnCriteria
+	 * CashAccountReturnCriteria4.mmMultilateralBalanceReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMultilateralBalanceReturnCriteria = new MMMessageAssociationEnd() {
@@ -303,6 +354,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultilateralBalanceReturnCriteria";
 			definition = "Defines the criteria used to report on a multilateral balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmMultilateralBalanceReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -337,6 +389,14 @@ public class CashAccountReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the bilateral limit is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmBilateralLimitIndicator
+	 * CashAccountReturnCriteria4.mmBilateralLimitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBilateralLimitIndicator = new MMMessageAttribute() {
@@ -347,6 +407,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitIndicator";
 			definition = "Indicates whether the bilateral limit is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmBilateralLimitIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -380,6 +441,14 @@ public class CashAccountReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria used to report on a bilateral balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmBilateralBalanceReturnCriteria
+	 * CashAccountReturnCriteria4.mmBilateralBalanceReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBilateralBalanceReturnCriteria = new MMMessageAssociationEnd() {
@@ -390,6 +459,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalanceReturnCriteria";
 			definition = "Defines the criteria used to report on a bilateral balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmBilateralBalanceReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -425,6 +495,14 @@ public class CashAccountReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the account standing order is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmStandingOrderIndicator
+	 * CashAccountReturnCriteria4.mmStandingOrderIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStandingOrderIndicator = new MMMessageAttribute() {
@@ -435,6 +513,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingOrderIndicator";
 			definition = "Indicates whether the account standing order is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmStandingOrderIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -469,6 +548,14 @@ public class CashAccountReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the account owner information is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmAccountOwnerIndicator
+	 * CashAccountReturnCriteria4.mmAccountOwnerIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountOwnerIndicator = new MMMessageAttribute() {
@@ -479,6 +566,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerIndicator";
 			definition = "Indicates whether the account owner information is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmAccountOwnerIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -513,6 +601,14 @@ public class CashAccountReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the account servicer information is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountReturnCriteria4#mmAccountServicerIndicator
+	 * CashAccountReturnCriteria4.mmAccountServicerIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountServicerIndicator = new MMMessageAttribute() {
@@ -523,6 +619,7 @@ public class CashAccountReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerIndicator";
 			definition = "Indicates whether the account servicer information is requested.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmAccountServicerIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -541,6 +638,7 @@ public class CashAccountReturnCriteria3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountReturnCriteria3";
 				definition = "Defines the criteria used to report on an account.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccountReturnCriteria4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -139,6 +139,30 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04#mmCopyDetails
  * SubscriptionOrderV04.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV08#mmCopyDetails
+ * ReversalOfTransferOutConfirmationV08.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV08#mmCopyDetails
+ * TransferInConfirmationV08.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV08#mmCopyDetails
+ * TransferOutCancellationRequestV08.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV08#mmCopyDetails
+ * TransferInInstructionV08.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmCopyDetails
+ * TransferOutConfirmationV08.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV08#mmCopyDetails
+ * TransferInCancellationRequestV08.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV08#mmCopyDetails
+ * TransferOutInstructionV08.mmCopyDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08#mmCopyDetails
+ * ReversalOfTransferInConfirmationV08.mmCopyDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -276,7 +300,9 @@ public class CopyInformation4 {
 						RedemptionBulkOrderCancellationRequestV04.mmCopyDetails, SwitchOrderConfirmationV04.mmCopyDetails, SubscriptionOrderConfirmationV04.mmCopyDetails,
 						SubscriptionOrderConfirmationCancellationInstructionV02.mmCopyDetails, SwitchOrderCancellationRequestV04.mmCopyDetails, SwitchOrderV04.mmCopyDetails,
 						RedemptionOrderConfirmationCancellationInstructionV02.mmCopyDetails, RedemptionOrderConfirmationV04.mmCopyDetails, SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmCopyDetails,
-						RedemptionOrderCancellationRequestV04.mmCopyDetails, SubscriptionBulkOrderV04.mmCopyDetails, SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails, SubscriptionOrderV04.mmCopyDetails);
+						RedemptionOrderCancellationRequestV04.mmCopyDetails, SubscriptionBulkOrderV04.mmCopyDetails, SwitchOrderConfirmationCancellationInstructionV02.mmCopyDetails, SubscriptionOrderV04.mmCopyDetails,
+						ReversalOfTransferOutConfirmationV08.mmCopyDetails, TransferInConfirmationV08.mmCopyDetails, TransferOutCancellationRequestV08.mmCopyDetails, TransferInInstructionV08.mmCopyDetails,
+						TransferOutConfirmationV08.mmCopyDetails, TransferInCancellationRequestV08.mmCopyDetails, TransferOutInstructionV08.mmCopyDetails, ReversalOfTransferInConfirmationV08.mmCopyDetails);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CopyInformation4";

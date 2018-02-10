@@ -208,7 +208,7 @@ public class FundCashInBreakdown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of the cash flow in,  expressed as a number of units."</li>
+	 * "Amount of the cash flow in, expressed as a number of units."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -227,7 +227,7 @@ public class FundCashInBreakdown2 {
 			xmlTag = "UnitsNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
-			definition = "Amount of the cash flow in,  expressed as a number of units.";
+			definition = "Amount of the cash flow in, expressed as a number of units.";
 			nextVersions_lazy = () -> Arrays.asList(FundCashInBreakdown3.mmUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 0;

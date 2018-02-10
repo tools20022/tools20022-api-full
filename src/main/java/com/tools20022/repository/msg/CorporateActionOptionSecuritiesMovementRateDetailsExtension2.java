@@ -201,7 +201,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Action used to clarify calculation of the security rate: old shares * new shares or old shares/ new shares used by DTC (The Depository Trust Corporation). Used in conjunction with DTC Security Rate element to determine entitlement. "
+	 * "Action used to clarify calculation of the security rate: old shares * new shares or old shares/ new shares used by DTC (The Depository Trust Corporation). Used in conjunction with DTC Security Rate element to determine entitlement."
 	 * </li>
 	 * </ul>
 	 */
@@ -213,7 +213,7 @@ public class CorporateActionOptionSecuritiesMovementRateDetailsExtension2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Multiply/ Divide Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCMultiplyDivideIndicator";
-			definition = "Action used to clarify calculation of the security rate: old shares * new shares or old shares/ new shares used by DTC (The Depository Trust Corporation). Used in conjunction with DTC Security Rate element to determine entitlement. ";
+			definition = "Action used to clarify calculation of the security rate: old shares * new shares or old shares/ new shares used by DTC (The Depository Trust Corporation). Used in conjunction with DTC Security Rate element to determine entitlement.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCMultiplyDivide1Code.mmObject();

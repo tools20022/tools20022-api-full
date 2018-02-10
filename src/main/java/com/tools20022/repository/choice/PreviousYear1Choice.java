@@ -108,7 +108,7 @@ public class PreviousYear1Choice {
 	 * name} = "AllPreviousYears"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Selection ot the entirety of the investment plans."</li>
+	 * definition} = "Selection of all investment plans."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAllPreviousYears = new MMMessageAttribute() {
@@ -119,7 +119,7 @@ public class PreviousYear1Choice {
 			xmlTag = "AllPrvsYrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllPreviousYears";
-			definition = "Selection ot the entirety of the investment plans.";
+			definition = "Selection of all investment plans.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PreviousAll.mmObject();

@@ -557,6 +557,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails24#mmSettlementParameters
  * SecuritiesSettlementTransactionDetails24.mmSettlementParameters}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestDetails18#mmUnilateralSplit
+ * RequestDetails18.mmUnilateralSplit}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails35#mmSettlementParameters
  * SecuritiesFinancingTransactionDetails35.mmSettlementParameters}</li>
  * <li>
@@ -622,11 +625,71 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmSettlementParameters
  * SecuritiesSettlementTransactionDetails31.mmSettlementParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmSettlementTypeAndAdditionalParameters
+ * SecuritiesSettlementTransactionDetails34.
+ * mmSettlementTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmQuantityAndAccountDetails
+ * SecuritiesSettlementTransactionDetails34.mmQuantityAndAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmSettlementParameters
+ * SecuritiesSettlementTransactionDetails34.mmSettlementParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmSettlementTypeAndAdditionalParameters
+ * SecuritiesSettlementTransactionDetails33.
+ * mmSettlementTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmQuantityAndAccountDetails
+ * SecuritiesSettlementTransactionDetails33.mmQuantityAndAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmSettlementParameters
+ * SecuritiesSettlementTransactionDetails33.mmSettlementParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmSettlementTypeAndAdditionalParameters
+ * SecuritiesSettlementTransactionDetails32.
+ * mmSettlementTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmQuantityAndAccountDetails
+ * SecuritiesSettlementTransactionDetails32.mmQuantityAndAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmSettlementParameters
+ * SecuritiesSettlementTransactionDetails32.mmSettlementParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmSettlementTypeAndAdditionalParameters
+ * SecuritiesSettlementTransactionDetails35.
+ * mmSettlementTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmQuantityAndAccountDetails
+ * SecuritiesSettlementTransactionDetails35.mmQuantityAndAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmSettlementParameters
+ * SecuritiesSettlementTransactionDetails35.mmSettlementParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmSettlementTypeAndAdditionalParameters
+ * SecuritiesSettlementTransactionDetails36.
+ * mmSettlementTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmQuantityAndAccountDetails
+ * SecuritiesSettlementTransactionDetails36.mmQuantityAndAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmSettlementParameters
+ * SecuritiesSettlementTransactionDetails36.mmSettlementParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmSettlementTypeAndAdditionalParameters
+ * SecuritiesSettlementTransactionDetails37.
+ * mmSettlementTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmQuantityAndAccountDetails
+ * SecuritiesSettlementTransactionDetails37.mmQuantityAndAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmSettlementParameters
+ * SecuritiesSettlementTransactionDetails37.mmSettlementParameters}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} = List of 505 elements</li>
+ * derivationComponent} = List of 567 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -1052,6 +1115,15 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3#mmSettlementDate
 	 * SecuredMarketTransaction3.mmSettlementDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmEffectiveSettlementDate
+	 * TransactionDetails93.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria6#mmEffectiveSettlementDate
+	 * IntraPositionQueryCriteria6.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition5#mmSettlementDate
+	 * IntraPosition5.mmSettlementDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails41#mmSettlementDate
 	 * IntraPositionDetails41.mmSettlementDate}</li>
 	 * <li>
@@ -1081,6 +1153,63 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmSettlementDate
 	 * UnsecuredMarketTransaction4.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmSettlementDate
+	 * TradeTransaction15.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmSettlementDate
+	 * TradeTransaction17.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmSettlementDate
+	 * TradeTransaction14.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmSettlementDate
+	 * TradeTransaction18.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmSettlementDate
+	 * TradeTransaction16.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmEffectiveSettlementDate
+	 * TransactionDetails102.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmEffectiveSettlementDate
+	 * ReceiveInformation18.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmEffectiveSettlementDate
+	 * Transfer35.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmEffectiveSettlementDate
+	 * DeliverInformation18.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails46#mmSettlementDate
+	 * IntraPositionDetails46.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmEffectiveSettlementDate
+	 * TransactionDetails103.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74#mmEffectiveSettlementDate
+	 * SecuritiesTradeDetails74.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmEffectiveSettlementDate
+	 * SecuritiesTradeDetails76.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification25#mmSettlementDate
+	 * SettlementTypeAndIdentification25.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification26#mmSettlementDate
+	 * SettlementTypeAndIdentification26.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails47#mmSettlementDate
+	 * IntraPositionDetails47.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82#mmEffectiveSettlementDate
+	 * SecuritiesTradeDetails82.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmEffectiveSettlementDate
+	 * SecuritiesTradeDetails86.mmEffectiveSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmEffectiveSettlementDate
+	 * TransactionDetails112.mmEffectiveSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1130,9 +1259,14 @@ public class SecuritiesSettlement extends Settlement {
 					DeliverInformation17.mmEffectiveSettlementDate, Transfer33.mmEffectiveSettlementDate, SettlementTypeAndIdentification21.mmSettlementDate, AdditionalInformation12.mmEffectiveDate,
 					SecuritiesTradeDetails58.mmEffectiveSettlementDate, IntraPositionDetails35.mmSettlementDate, IntraPositionDetails36.mmSettlementDate, IntraPositionDetails38.mmSettlementDate,
 					SecuritiesTradeDetails62.mmEffectiveSettlementDate, TransactionDetails91.mmEffectiveSettlementDate, UnsecuredMarketTransaction2.mmSettlementDate, SecuredMarketTransaction2.mmSettlementDate,
-					UnsecuredMarketTransaction3.mmSettlementDate, SecuredMarketTransaction3.mmSettlementDate, IntraPositionDetails41.mmSettlementDate, IntraPositionDetails39.mmSettlementDate, AdditionalInformation13.mmEffectiveDate,
-					TransactionDetails95.mmEffectiveSettlementDate, IntraPositionDetails43.mmSettlementDate, IntraPositionDetails42.mmSettlementDate, AdditionalInformation14.mmEffectiveDate, TransactionDetails98.mmEffectiveSettlementDate,
-					SecuredMarketTransaction4.mmSettlementDate, UnsecuredMarketTransaction4.mmSettlementDate);
+					UnsecuredMarketTransaction3.mmSettlementDate, SecuredMarketTransaction3.mmSettlementDate, TransactionDetails93.mmEffectiveSettlementDate, IntraPositionQueryCriteria6.mmEffectiveSettlementDate,
+					IntraPosition5.mmSettlementDate, IntraPositionDetails41.mmSettlementDate, IntraPositionDetails39.mmSettlementDate, AdditionalInformation13.mmEffectiveDate, TransactionDetails95.mmEffectiveSettlementDate,
+					IntraPositionDetails43.mmSettlementDate, IntraPositionDetails42.mmSettlementDate, AdditionalInformation14.mmEffectiveDate, TransactionDetails98.mmEffectiveSettlementDate, SecuredMarketTransaction4.mmSettlementDate,
+					UnsecuredMarketTransaction4.mmSettlementDate, TradeTransaction15.mmSettlementDate, TradeTransaction17.mmSettlementDate, TradeTransaction14.mmSettlementDate, TradeTransaction18.mmSettlementDate,
+					TradeTransaction16.mmSettlementDate, TransactionDetails102.mmEffectiveSettlementDate, ReceiveInformation18.mmEffectiveSettlementDate, Transfer35.mmEffectiveSettlementDate, DeliverInformation18.mmEffectiveSettlementDate,
+					IntraPositionDetails46.mmSettlementDate, TransactionDetails103.mmEffectiveSettlementDate, SecuritiesTradeDetails74.mmEffectiveSettlementDate, SecuritiesTradeDetails76.mmEffectiveSettlementDate,
+					SettlementTypeAndIdentification25.mmSettlementDate, SettlementTypeAndIdentification26.mmSettlementDate, IntraPositionDetails47.mmSettlementDate, SecuritiesTradeDetails82.mmEffectiveSettlementDate,
+					SecuritiesTradeDetails86.mmEffectiveSettlementDate, TransactionDetails112.mmEffectiveSettlementDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::ESET"));
@@ -1862,6 +1996,18 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails90#mmReceivingSettlementParties
 	 * TransactionDetails90.mmReceivingSettlementParties}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmDeliveringSettlementParties
+	 * TransactionDetails93.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmReceivingSettlementParties
+	 * TransactionDetails93.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails94#mmDeliveringSettlementParties
+	 * TransactionDetails94.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails94#mmReceivingSettlementParties
+	 * TransactionDetails94.mmReceivingSettlementParties}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FundSettlementParameters11#mmReceivingSideDetails
 	 * FundSettlementParameters11.mmReceivingSideDetails}</li>
 	 * <li>
@@ -1924,6 +2070,105 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmReceivingSettlementParties
 	 * TransactionDetails98.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmDeliveringSettlementParties
+	 * TransactionDetails102.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmReceivingSettlementParties
+	 * TransactionDetails102.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmSettlementPartiesDetails
+	 * ReceiveInformation18.mmSettlementPartiesDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount67#mmSettlementPartiesDetails
+	 * InvestmentAccount67.mmSettlementPartiesDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmSettlementPartiesDetails
+	 * DeliverInformation19.mmSettlementPartiesDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmSettlementPartiesDetails
+	 * ReceiveInformation19.mmSettlementPartiesDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmSettlementPartiesDetails
+	 * DeliverInformation18.mmSettlementPartiesDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60#mmSettlementPartiesReceivingSideDetails
+	 * FinancialInstrument60.mmSettlementPartiesReceivingSideDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65#mmSettlementPartiesReceivingSideDetails
+	 * FinancialInstrument65.mmSettlementPartiesReceivingSideDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmDeliveringSettlementParties
+	 * SecuritiesTradeDetails71.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmReceivingSettlementParties
+	 * SecuritiesTradeDetails71.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmReceivingSettlementParties
+	 * TransactionDetails105.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmDeliveringSettlementParties
+	 * TransactionDetails105.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmDeliveringSettlementParties
+	 * SecuritiesTradeDetails72.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmReceivingSettlementParties
+	 * SecuritiesTradeDetails72.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmDeliveringSettlementParties
+	 * TransactionDetails104.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmReceivingSettlementParties
+	 * TransactionDetails104.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmDeliveringSettlementParties
+	 * TransactionDetails103.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmReceivingSettlementParties
+	 * TransactionDetails103.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails107#mmDeliveringSettlementParties
+	 * TransactionDetails107.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails107#mmReceivingSettlementParties
+	 * TransactionDetails107.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmDeliveringSettlementParties
+	 * SecuritiesTradeDetails81.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmReceivingSettlementParties
+	 * SecuritiesTradeDetails81.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmDeliveringSettlementParties
+	 * SecuritiesTradeDetails85.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmReceivingSettlementParties
+	 * SecuritiesTradeDetails85.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails109#mmDeliveringSettlementParties
+	 * TransactionDetails109.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails109#mmReceivingSettlementParties
+	 * TransactionDetails109.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmReceivingSettlementParties
+	 * TransactionDetails110.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmDeliveringSettlementParties
+	 * TransactionDetails110.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmDeliveringSettlementParties
+	 * TransactionDetails111.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmReceivingSettlementParties
+	 * TransactionDetails111.mmReceivingSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmDeliveringSettlementParties
+	 * TransactionDetails112.mmDeliveringSettlementParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmReceivingSettlementParties
+	 * TransactionDetails112.mmReceivingSettlementParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2005,12 +2250,21 @@ public class SecuritiesSettlement extends Settlement {
 					TransactionDetails92.mmDeliveringSettlementParties, TransactionDetails92.mmReceivingSettlementParties, TransactionDetails84.mmDeliveringSettlementParties, TransactionDetails84.mmReceivingSettlementParties,
 					TransactionDetails83.mmDeliveringSettlementParties, TransactionDetails83.mmReceivingSettlementParties, TransactionDetails87.mmReceivingSettlementParties, TransactionDetails87.mmDeliveringSettlementParties,
 					TransactionDetails91.mmDeliveringSettlementParties, TransactionDetails91.mmReceivingSettlementParties, TransactionDetails90.mmDeliveringSettlementParties, TransactionDetails90.mmReceivingSettlementParties,
+					TransactionDetails93.mmDeliveringSettlementParties, TransactionDetails93.mmReceivingSettlementParties, TransactionDetails94.mmDeliveringSettlementParties, TransactionDetails94.mmReceivingSettlementParties,
 					FundSettlementParameters11.mmReceivingSideDetails, FundSettlementParameters11.mmDeliveringSideDetails, FundSettlementParameters12.mmReceivingSideDetails, FundSettlementParameters12.mmDeliveringSideDetails,
 					SecuritiesTradeDetails68.mmDeliveringSettlementParties, SecuritiesTradeDetails68.mmReceivingSettlementParties, TransactionDetails97.mmReceivingSettlementParties, TransactionDetails97.mmDeliveringSettlementParties,
 					TransactionDetails96.mmDeliveringSettlementParties, TransactionDetails96.mmReceivingSettlementParties, TransactionDetails95.mmDeliveringSettlementParties, TransactionDetails95.mmReceivingSettlementParties,
 					SettlementDetails118.mmSettlementParties, SecuritiesTradeDetails69.mmDeliveringSettlementParties, SecuritiesTradeDetails69.mmReceivingSettlementParties, TransactionDetails100.mmReceivingSettlementParties,
 					TransactionDetails100.mmDeliveringSettlementParties, TransactionDetails99.mmDeliveringSettlementParties, TransactionDetails99.mmReceivingSettlementParties, TransactionDetails98.mmDeliveringSettlementParties,
-					TransactionDetails98.mmReceivingSettlementParties);
+					TransactionDetails98.mmReceivingSettlementParties, TransactionDetails102.mmDeliveringSettlementParties, TransactionDetails102.mmReceivingSettlementParties, ReceiveInformation18.mmSettlementPartiesDetails,
+					InvestmentAccount67.mmSettlementPartiesDetails, DeliverInformation19.mmSettlementPartiesDetails, ReceiveInformation19.mmSettlementPartiesDetails, DeliverInformation18.mmSettlementPartiesDetails,
+					FinancialInstrument60.mmSettlementPartiesReceivingSideDetails, FinancialInstrument65.mmSettlementPartiesReceivingSideDetails, SecuritiesTradeDetails71.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails71.mmReceivingSettlementParties, TransactionDetails105.mmReceivingSettlementParties, TransactionDetails105.mmDeliveringSettlementParties, SecuritiesTradeDetails72.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails72.mmReceivingSettlementParties, TransactionDetails104.mmDeliveringSettlementParties, TransactionDetails104.mmReceivingSettlementParties, TransactionDetails103.mmDeliveringSettlementParties,
+					TransactionDetails103.mmReceivingSettlementParties, TransactionDetails107.mmDeliveringSettlementParties, TransactionDetails107.mmReceivingSettlementParties, SecuritiesTradeDetails81.mmDeliveringSettlementParties,
+					SecuritiesTradeDetails81.mmReceivingSettlementParties, SecuritiesTradeDetails85.mmDeliveringSettlementParties, SecuritiesTradeDetails85.mmReceivingSettlementParties, TransactionDetails109.mmDeliveringSettlementParties,
+					TransactionDetails109.mmReceivingSettlementParties, TransactionDetails110.mmReceivingSettlementParties, TransactionDetails110.mmDeliveringSettlementParties, TransactionDetails111.mmDeliveringSettlementParties,
+					TransactionDetails111.mmReceivingSettlementParties, TransactionDetails112.mmDeliveringSettlementParties, TransactionDetails112.mmReceivingSettlementParties);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2781,6 +3035,21 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection67#mmAmount
 	 * AmountAndDirection67.mmAmount}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmSettlementAmount
+	 * TransactionDetails93.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmSettledAmount
+	 * TransactionDetails93.mmSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmPreviouslySettledAmount
+	 * TransactionDetails93.mmPreviouslySettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmRemainingSettlementAmount
+	 * TransactionDetails93.mmRemainingSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails94#mmSettlementAmount
+	 * TransactionDetails94.mmSettlementAmount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7#mmSettlementAmount
 	 * SwitchExecution7.mmSettlementAmount}</li>
 	 * <li>
@@ -2858,6 +3127,108 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount62#mmRemainingToBeSettledAmount
 	 * QuantityAndAccount62.mmRemainingToBeSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmSettlementAmount
+	 * TransactionDetails102.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmSettledAmount
+	 * TransactionDetails102.mmSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmPreviouslySettledAmount
+	 * TransactionDetails102.mmPreviouslySettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmRemainingSettlementAmount
+	 * TransactionDetails102.mmRemainingSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmSettlementAmount
+	 * ReceiveInformation18.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmSettlementAmount
+	 * DeliverInformation19.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmSettlementAmount
+	 * ReceiveInformation19.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmSettlementAmount
+	 * DeliverInformation18.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails46#mmRemainingToBeSettledQuantity
+	 * IntraPositionDetails46.mmRemainingToBeSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmPreviouslySettledAmount
+	 * QuantityAndAccount64.mmPreviouslySettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmRemainingToBeSettledAmount
+	 * QuantityAndAccount64.mmRemainingToBeSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmSettlementAmount
+	 * TransactionDetails105.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmSettlementAmount
+	 * SecuritiesSettlementTransactionDetails34.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmPostingAmount
+	 * TransactionDetails104.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmSettlementAmount
+	 * SecuritiesSettlementTransactionDetails33.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmSettlementAmount
+	 * SecuritiesSettlementTransactionDetails32.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmPostingAmount
+	 * TransactionDetails103.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails107#mmSettlementAmount
+	 * TransactionDetails107.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection87#mmAmount
+	 * AmountAndDirection87.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmAmount
+	 * AmountAndDirection88.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection89#mmAmount
+	 * AmountAndDirection89.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails47#mmRemainingToBeSettledQuantity
+	 * IntraPositionDetails47.mmRemainingToBeSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection90#mmAmount
+	 * AmountAndDirection90.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection92#mmAmount
+	 * AmountAndDirection92.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmPreviouslySettledAmount
+	 * QuantityAndAccount72.mmPreviouslySettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmRemainingToBeSettledAmount
+	 * QuantityAndAccount72.mmRemainingToBeSettledAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails109#mmSettlementAmount
+	 * TransactionDetails109.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmSettlementAmount
+	 * SecuritiesSettlementTransactionDetails35.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection91#mmAmount
+	 * AmountAndDirection91.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmSettlementAmount
+	 * SecuritiesSettlementTransactionDetails36.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmSettlementAmount
+	 * SecuritiesSettlementTransactionDetails37.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmSettlementAmount
+	 * TransactionDetails110.mmSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmPostingAmount
+	 * TransactionDetails111.mmPostingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmPostingAmount
+	 * TransactionDetails112.mmPostingAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2930,14 +3301,23 @@ public class SecuritiesSettlement extends Settlement {
 					TransactionDetails84.mmSettlementAmount, IntraPositionDetails35.mmRemainingToBeSettledQuantity, TransactionDetails83.mmSettlementAmount, QuantityAndAccount51.mmPreviouslySettledAmount,
 					QuantityAndAccount51.mmRemainingToBeSettledAmount, TransactionDetails87.mmSettlementAmount, AmountAndDirection71.mmAmount, AmountAndDirection57.mmAmount, AmountAndDirection85.mmAmount, AmountAndDirection55.mmAmount,
 					SecuritiesSettlementTransactionDetails23.mmSettlementAmount, SecuritiesSettlementTransactionDetails25.mmSettlementAmount, SecuritiesSettlementTransactionDetails24.mmSettlementAmount, AmountAndDirection59.mmAmount,
-					TransactionDetails91.mmPostingAmount, AmountAndDirection58.mmAmount, AmountAndDirection72.mmAmount, TransactionDetails90.mmPostingAmount, AmountAndDirection67.mmAmount, SwitchExecution7.mmSettlementAmount,
+					TransactionDetails91.mmPostingAmount, AmountAndDirection58.mmAmount, AmountAndDirection72.mmAmount, TransactionDetails90.mmPostingAmount, AmountAndDirection67.mmAmount, TransactionDetails93.mmSettlementAmount,
+					TransactionDetails93.mmSettledAmount, TransactionDetails93.mmPreviouslySettledAmount, TransactionDetails93.mmRemainingSettlementAmount, TransactionDetails94.mmSettlementAmount, SwitchExecution7.mmSettlementAmount,
 					SwitchOrder7.mmSettlementAmount, RedemptionOrder14.mmSettlementAmount, SubscriptionExecution13.mmSettlementAmount, SubscriptionExecution12.mmSettlementAmount, SubscriptionOrder15.mmSettlementAmount,
 					RedemptionOrder15.mmSettlementAmount, SubscriptionOrder14.mmSettlementAmount, IntraPositionDetails41.mmRemainingToBeSettledQuantity, TransactionDetails97.mmSettlementAmount,
 					SecuritiesSettlementTransactionDetails27.mmSettlementAmount, SecuritiesSettlementTransactionDetails28.mmSettlementAmount, SecuritiesSettlementTransactionDetails26.mmSettlementAmount,
 					TransactionDetails96.mmPostingAmount, TransactionDetails95.mmPostingAmount, IntraPositionDetails43.mmRemainingToBeSettledQuantity, SecuritiesSettlementTransactionDetails30.mmSettlementAmount,
 					SecuritiesSettlementTransactionDetails29.mmSettlementAmount, SecuritiesSettlementTransactionDetails31.mmSettlementAmount, TransactionDetails100.mmSettlementAmount, TransactionDetails99.mmPostingAmount,
 					TransactionDetails98.mmPostingAmount, QuantityAndAccount57.mmPreviouslySettledAmount, QuantityAndAccount57.mmRemainingToBeSettledAmount, QuantityAndAccount62.mmPreviouslySettledAmount,
-					QuantityAndAccount62.mmRemainingToBeSettledAmount);
+					QuantityAndAccount62.mmRemainingToBeSettledAmount, TransactionDetails102.mmSettlementAmount, TransactionDetails102.mmSettledAmount, TransactionDetails102.mmPreviouslySettledAmount,
+					TransactionDetails102.mmRemainingSettlementAmount, ReceiveInformation18.mmSettlementAmount, DeliverInformation19.mmSettlementAmount, ReceiveInformation19.mmSettlementAmount, DeliverInformation18.mmSettlementAmount,
+					IntraPositionDetails46.mmRemainingToBeSettledQuantity, QuantityAndAccount64.mmPreviouslySettledAmount, QuantityAndAccount64.mmRemainingToBeSettledAmount, TransactionDetails105.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails34.mmSettlementAmount, TransactionDetails104.mmPostingAmount, SecuritiesSettlementTransactionDetails33.mmSettlementAmount,
+					SecuritiesSettlementTransactionDetails32.mmSettlementAmount, TransactionDetails103.mmPostingAmount, TransactionDetails107.mmSettlementAmount, AmountAndDirection87.mmAmount, AmountAndDirection88.mmAmount,
+					AmountAndDirection89.mmAmount, IntraPositionDetails47.mmRemainingToBeSettledQuantity, AmountAndDirection90.mmAmount, AmountAndDirection92.mmAmount, QuantityAndAccount72.mmPreviouslySettledAmount,
+					QuantityAndAccount72.mmRemainingToBeSettledAmount, TransactionDetails109.mmSettlementAmount, SecuritiesSettlementTransactionDetails35.mmSettlementAmount, AmountAndDirection91.mmAmount,
+					SecuritiesSettlementTransactionDetails36.mmSettlementAmount, SecuritiesSettlementTransactionDetails37.mmSettlementAmount, TransactionDetails110.mmSettlementAmount, TransactionDetails111.mmPostingAmount,
+					TransactionDetails112.mmPostingAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3038,6 +3418,12 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmHoldingsPlanType
 	 * Transfer33.mmHoldingsPlanType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmHoldingsPlanType
+	 * Transfer35.mmHoldingsPlanType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer34#mmHoldingsPlanType
+	 * Transfer34.mmHoldingsPlanType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3063,7 +3449,7 @@ public class SecuritiesSettlement extends Settlement {
 			derivation_lazy = () -> Arrays.asList(Transfer17.mmHoldingsPlanType, Transfer14.mmHoldingsPlanType, Transfer24.mmHoldingsPlanType, Transfer25.mmHoldingsPlanType, Transfer16.mmHoldingsPlanType, Transfer12.mmHoldingsPlanType,
 					Transfer20.mmHoldingsPlanType, Transfer22.mmHoldingsPlanType, Transfer18.mmHoldingsPlanType, Transfer26.mmHoldingsPlanType, Transfer15.mmHoldingsPlanType, Transfer21.mmHoldingsPlanType, Transfer13.mmHoldingsPlanType,
 					Transfer23.mmHoldingsPlanType, Transfer11.mmHoldingsPlanType, Transfer19.mmHoldingsPlanType, Transfer27.mmHoldingsPlanType, Transfer28.mmHoldingsPlanType, Transfer29.mmHoldingsPlanType, Transfer31.mmHoldingsPlanType,
-					Transfer30.mmHoldingsPlanType, Transfer32.mmHoldingsPlanType, Transfer33.mmHoldingsPlanType);
+					Transfer30.mmHoldingsPlanType, Transfer32.mmHoldingsPlanType, Transfer33.mmHoldingsPlanType, Transfer35.mmHoldingsPlanType, Transfer34.mmHoldingsPlanType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3475,6 +3861,9 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification22#mmSecuritiesMovementType
 	 * SettlementTypeAndIdentification22.mmSecuritiesMovementType}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmSecuritiesMovementType
+	 * TransactionDetails93.mmSecuritiesMovementType}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19#mmSecuritiesMovementType
 	 * SettlementTypeAndAdditionalParameters19.mmSecuritiesMovementType}</li>
 	 * <li>
@@ -3516,6 +3905,39 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmSecuritiesMovementType
 	 * TransactionDetails98.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmSecuritiesMovementType
+	 * TransactionDetails102.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmSecuritiesMovementType
+	 * SecuritiesTradeDetails71.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmSecuritiesMovementType
+	 * TransactionDetails105.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmSecuritiesMovementType
+	 * SecuritiesTradeDetails72.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmSecuritiesMovementType
+	 * TransactionDetails104.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmSecuritiesMovementType
+	 * TransactionDetails103.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmSecuritiesMovementType
+	 * SecuritiesTradeDetails81.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmSecuritiesMovementType
+	 * SecuritiesTradeDetails85.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmSecuritiesMovementType
+	 * TransactionDetails110.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmSecuritiesMovementType
+	 * TransactionDetails111.mmSecuritiesMovementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmSecuritiesMovementType
+	 * TransactionDetails112.mmSecuritiesMovementType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3577,11 +3999,15 @@ public class SecuritiesSettlement extends Settlement {
 					TransactionTypeAndAdditionalParameters12.mmSecuritiesMovementType, SecuritiesTradeDetails61.mmSecuritiesMovementType, TransactionDetails92.mmSecuritiesMovementType, TransactionDetails84.mmSecuritiesMovementType,
 					SettlementTypeAndAdditionalParameters16.mmSecuritiesMovementType, SettlementTypeAndIdentification24.mmSecuritiesMovementType, TransactionDetails87.mmSecuritiesMovementType,
 					SettlementTypeAndAdditionalParameters15.mmSecuritiesMovementType, TransactionDetails91.mmSecuritiesMovementType, TransactionDetails90.mmSecuritiesMovementType,
-					SettlementTypeAndAdditionalParameters18.mmSecuritiesMovementType, SettlementTypeAndIdentification22.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters19.mmSecuritiesMovementType,
-					SecuritiesTradeDetails68.mmSecuritiesMovementType, TransactionDetails97.mmSecuritiesMovementType, TransactionTypeAndAdditionalParameters16.mmSecuritiesMovementType,
-					SecuritiesFinancingTransactionDetails35.mmSecuritiesMovementType, TransactionDetails96.mmSecuritiesMovementType, TransactionDetails95.mmSecuritiesMovementType,
-					TransactionTypeAndAdditionalParameters19.mmSecuritiesMovementType, SecuritiesTradeDetails69.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails36.mmSecuritiesMovementType,
-					SettlementTypeAndAdditionalParameters20.mmSecuritiesMovementType, TransactionDetails100.mmSecuritiesMovementType, TransactionDetails99.mmSecuritiesMovementType, TransactionDetails98.mmSecuritiesMovementType);
+					SettlementTypeAndAdditionalParameters18.mmSecuritiesMovementType, SettlementTypeAndIdentification22.mmSecuritiesMovementType, TransactionDetails93.mmSecuritiesMovementType,
+					SettlementTypeAndAdditionalParameters19.mmSecuritiesMovementType, SecuritiesTradeDetails68.mmSecuritiesMovementType, TransactionDetails97.mmSecuritiesMovementType,
+					TransactionTypeAndAdditionalParameters16.mmSecuritiesMovementType, SecuritiesFinancingTransactionDetails35.mmSecuritiesMovementType, TransactionDetails96.mmSecuritiesMovementType,
+					TransactionDetails95.mmSecuritiesMovementType, TransactionTypeAndAdditionalParameters19.mmSecuritiesMovementType, SecuritiesTradeDetails69.mmSecuritiesMovementType,
+					SecuritiesFinancingTransactionDetails36.mmSecuritiesMovementType, SettlementTypeAndAdditionalParameters20.mmSecuritiesMovementType, TransactionDetails100.mmSecuritiesMovementType,
+					TransactionDetails99.mmSecuritiesMovementType, TransactionDetails98.mmSecuritiesMovementType, TransactionDetails102.mmSecuritiesMovementType, SecuritiesTradeDetails71.mmSecuritiesMovementType,
+					TransactionDetails105.mmSecuritiesMovementType, SecuritiesTradeDetails72.mmSecuritiesMovementType, TransactionDetails104.mmSecuritiesMovementType, TransactionDetails103.mmSecuritiesMovementType,
+					SecuritiesTradeDetails81.mmSecuritiesMovementType, SecuritiesTradeDetails85.mmSecuritiesMovementType, TransactionDetails110.mmSecuritiesMovementType, TransactionDetails111.mmSecuritiesMovementType,
+					TransactionDetails112.mmSecuritiesMovementType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::REDE"), new ISO15022Synonym(this, ":22F::PAYM"));
@@ -4160,6 +4586,21 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#mmRemainingToBeSettledQuantity
 	 * IntraPositionMovementDetails12.mmRemainingToBeSettledQuantity}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmSettlementQuantity
+	 * TransactionDetails93.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmSettledQuantity
+	 * TransactionDetails93.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmPreviouslySettledQuantity
+	 * TransactionDetails93.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmRemainingToBeSettledQuantity
+	 * TransactionDetails93.mmRemainingToBeSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails94#mmSettlementQuantity
+	 * TransactionDetails94.mmSettlementQuantity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails97#mmSettlementQuantity
 	 * TransactionDetails97.mmSettlementQuantity}</li>
 	 * <li>
@@ -4219,6 +4660,96 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount60#mmSettlementQuantity
 	 * QuantityAndAccount60.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmSettlementQuantity
+	 * TransactionDetails102.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmSettledQuantity
+	 * TransactionDetails102.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmPreviouslySettledQuantity
+	 * TransactionDetails102.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmRemainingToBeSettledQuantity
+	 * TransactionDetails102.mmRemainingToBeSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmSettledQuantity
+	 * QuantityAndAccount64.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmPreviouslySettledQuantity
+	 * QuantityAndAccount64.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmRemainingToBeSettledQuantity
+	 * QuantityAndAccount64.mmRemainingToBeSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmSettlementQuantity
+	 * TransactionDetails105.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount63#mmSettlementQuantity
+	 * QuantityAndAccount63.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmPostingQuantity
+	 * TransactionDetails104.mmPostingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmPostingQuantity
+	 * TransactionDetails103.mmPostingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmRemainingToBeSettledQuantity
+	 * IntraPositionMovementDetails15.mmRemainingToBeSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails107#mmSettlementQuantity
+	 * TransactionDetails107.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount65#mmSettlementQuantity
+	 * QuantityAndAccount65.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity14#mmSettlementQuantity
+	 * Quantity14.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount67#mmSettlementQuantity
+	 * QuantityAndAccount67.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmSettlementQuantity
+	 * QuantityAndAccount68.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails16#mmRemainingToBeSettledQuantity
+	 * IntraPositionMovementDetails16.mmRemainingToBeSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity15#mmSettlementQuantity
+	 * Quantity15.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount69#mmSettlementQuantity
+	 * QuantityAndAccount69.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount70#mmSettlementQuantity
+	 * QuantityAndAccount70.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount71#mmSettlementQuantity
+	 * QuantityAndAccount71.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmSettledQuantity
+	 * QuantityAndAccount72.mmSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmPreviouslySettledQuantity
+	 * QuantityAndAccount72.mmPreviouslySettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmRemainingToBeSettledQuantity
+	 * QuantityAndAccount72.mmRemainingToBeSettledQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails109#mmSettlementQuantity
+	 * TransactionDetails109.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount76#mmSettlementQuantity
+	 * QuantityAndAccount76.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmSettlementQuantity
+	 * TransactionDetails110.mmSettlementQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmPostingQuantity
+	 * TransactionDetails111.mmPostingQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmPostingQuantity
+	 * TransactionDetails112.mmPostingQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4284,11 +4815,20 @@ public class SecuritiesSettlement extends Settlement {
 					TransactionDetails84.mmSettlementQuantity, TransactionDetails83.mmSettlementQuantity, QuantityAndAccount51.mmSettledQuantity, QuantityAndAccount51.mmPreviouslySettledQuantity,
 					QuantityAndAccount51.mmRemainingToBeSettledQuantity, TransactionDetails87.mmSettlementQuantity, QuantityAndAccount49.mmSettlementQuantity, Quantity12.mmSettlementQuantity, TransactionDetails91.mmPostingQuantity,
 					QuantityAndAccount50.mmSettlementQuantity, TransactionDetails90.mmPostingQuantity, QuantityAndAccount55.mmSettlementQuantity, IntraPositionMovementDetails12.mmRemainingToBeSettledQuantity,
-					TransactionDetails97.mmSettlementQuantity, SecuritiesFinancingTransactionDetails35.mmSettlementQuantity, TransactionDetails96.mmPostingQuantity, IntraPositionMovementDetails13.mmRemainingToBeSettledQuantity,
-					TransactionDetails95.mmPostingQuantity, SecuritiesFinancingTransactionDetails36.mmSettlementQuantity, IntraPositionMovementDetails14.mmRemainingToBeSettledQuantity, TransactionDetails100.mmSettlementQuantity,
-					TransactionDetails99.mmPostingQuantity, TransactionDetails98.mmPostingQuantity, QuantityAndAccount57.mmSettledQuantity, QuantityAndAccount57.mmPreviouslySettledQuantity,
-					QuantityAndAccount57.mmRemainingToBeSettledQuantity, QuantityAndAccount58.mmSettlementQuantity, QuantityAndAccount56.mmSettlementQuantity, QuantityAndAccount61.mmSettlementQuantity,
-					QuantityAndAccount62.mmSettledQuantity, QuantityAndAccount62.mmPreviouslySettledQuantity, QuantityAndAccount62.mmRemainingToBeSettledQuantity, QuantityAndAccount60.mmSettlementQuantity);
+					TransactionDetails93.mmSettlementQuantity, TransactionDetails93.mmSettledQuantity, TransactionDetails93.mmPreviouslySettledQuantity, TransactionDetails93.mmRemainingToBeSettledQuantity,
+					TransactionDetails94.mmSettlementQuantity, TransactionDetails97.mmSettlementQuantity, SecuritiesFinancingTransactionDetails35.mmSettlementQuantity, TransactionDetails96.mmPostingQuantity,
+					IntraPositionMovementDetails13.mmRemainingToBeSettledQuantity, TransactionDetails95.mmPostingQuantity, SecuritiesFinancingTransactionDetails36.mmSettlementQuantity,
+					IntraPositionMovementDetails14.mmRemainingToBeSettledQuantity, TransactionDetails100.mmSettlementQuantity, TransactionDetails99.mmPostingQuantity, TransactionDetails98.mmPostingQuantity,
+					QuantityAndAccount57.mmSettledQuantity, QuantityAndAccount57.mmPreviouslySettledQuantity, QuantityAndAccount57.mmRemainingToBeSettledQuantity, QuantityAndAccount58.mmSettlementQuantity,
+					QuantityAndAccount56.mmSettlementQuantity, QuantityAndAccount61.mmSettlementQuantity, QuantityAndAccount62.mmSettledQuantity, QuantityAndAccount62.mmPreviouslySettledQuantity,
+					QuantityAndAccount62.mmRemainingToBeSettledQuantity, QuantityAndAccount60.mmSettlementQuantity, TransactionDetails102.mmSettlementQuantity, TransactionDetails102.mmSettledQuantity,
+					TransactionDetails102.mmPreviouslySettledQuantity, TransactionDetails102.mmRemainingToBeSettledQuantity, QuantityAndAccount64.mmSettledQuantity, QuantityAndAccount64.mmPreviouslySettledQuantity,
+					QuantityAndAccount64.mmRemainingToBeSettledQuantity, TransactionDetails105.mmSettlementQuantity, QuantityAndAccount63.mmSettlementQuantity, TransactionDetails104.mmPostingQuantity,
+					TransactionDetails103.mmPostingQuantity, IntraPositionMovementDetails15.mmRemainingToBeSettledQuantity, TransactionDetails107.mmSettlementQuantity, QuantityAndAccount65.mmSettlementQuantity,
+					Quantity14.mmSettlementQuantity, QuantityAndAccount67.mmSettlementQuantity, QuantityAndAccount68.mmSettlementQuantity, IntraPositionMovementDetails16.mmRemainingToBeSettledQuantity, Quantity15.mmSettlementQuantity,
+					QuantityAndAccount69.mmSettlementQuantity, QuantityAndAccount70.mmSettlementQuantity, QuantityAndAccount71.mmSettlementQuantity, QuantityAndAccount72.mmSettledQuantity, QuantityAndAccount72.mmPreviouslySettledQuantity,
+					QuantityAndAccount72.mmRemainingToBeSettledQuantity, TransactionDetails109.mmSettlementQuantity, QuantityAndAccount76.mmSettlementQuantity, TransactionDetails110.mmSettlementQuantity,
+					TransactionDetails111.mmPostingQuantity, TransactionDetails112.mmPostingQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::SETT"));
@@ -4410,6 +4950,12 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmCurrencyToBuy
 	 * CorporateActionOption134.mmCurrencyToBuy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmCurrencyToBuy
+	 * CorporateActionOption142.mmCurrencyToBuy}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmCurrencyToBuy
+	 * CorporateActionOption146.mmCurrencyToBuy}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4435,7 +4981,7 @@ public class SecuritiesSettlement extends Settlement {
 			derivation_lazy = () -> Arrays.asList(CurrencyToBuyOrSell1Choice.mmCurrencyToBuy, CorporateActionOption5.mmCurrencyToBuy, CorporateActionOption13.mmCurrencyToBuy, CorporateActionOption25.mmCurrencyToBuy,
 					CorporateActionOption30.mmCurrencyToBuy, CorporateActionOption38.mmCurrencyToBuy, CorporateActionOption47.mmCurrencyToBuy, CorporateActionOption57.mmCurrencyToBuy, CorporateActionOption58.mmCurrencyToBuy,
 					CorporateActionOption103.mmCurrencyToBuy, CorporateActionOption107.mmCurrencyToBuy, CorporateActionOption118.mmCurrencyToBuy, CorporateActionOption123.mmCurrencyToBuy, CorporateActionOption131.mmCurrencyToBuy,
-					CorporateActionOption134.mmCurrencyToBuy);
+					CorporateActionOption134.mmCurrencyToBuy, CorporateActionOption142.mmCurrencyToBuy, CorporateActionOption146.mmCurrencyToBuy);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4512,6 +5058,12 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmCurrencyToSell
 	 * CorporateActionOption134.mmCurrencyToSell}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmCurrencyToSell
+	 * CorporateActionOption142.mmCurrencyToSell}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmCurrencyToSell
+	 * CorporateActionOption146.mmCurrencyToSell}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4537,7 +5089,7 @@ public class SecuritiesSettlement extends Settlement {
 			derivation_lazy = () -> Arrays.asList(CurrencyToBuyOrSell1Choice.mmCurrencyToSell, CorporateActionOption5.mmCurrencyToSell, CorporateActionOption13.mmCurrencyToSell, CorporateActionOption25.mmCurrencyToSell,
 					CorporateActionOption30.mmCurrencyToSell, CorporateActionOption38.mmCurrencyToSell, CorporateActionOption47.mmCurrencyToSell, CorporateActionOption57.mmCurrencyToSell, CorporateActionOption58.mmCurrencyToSell,
 					CorporateActionOption103.mmCurrencyToSell, CorporateActionOption107.mmCurrencyToSell, CorporateActionOption118.mmCurrencyToSell, CorporateActionOption123.mmCurrencyToSell, CorporateActionOption131.mmCurrencyToSell,
-					CorporateActionOption134.mmCurrencyToSell);
+					CorporateActionOption134.mmCurrencyToSell, CorporateActionOption142.mmCurrencyToSell, CorporateActionOption146.mmCurrencyToSell);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4722,6 +5274,48 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount60#mmDenominationChoice
 	 * QuantityAndAccount60.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmDenominationChoice
+	 * QuantityAndAccount64.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount63#mmDenominationChoice
+	 * QuantityAndAccount63.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount65#mmDenominationChoice
+	 * QuantityAndAccount65.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount66#mmDenominationChoice
+	 * QuantityAndAccount66.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity14#mmDenominationChoice
+	 * Quantity14.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount67#mmDenominationChoice
+	 * QuantityAndAccount67.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmDenominationChoice
+	 * QuantityAndAccount68.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Quantity15#mmDenominationChoice
+	 * Quantity15.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount69#mmDenominationChoice
+	 * QuantityAndAccount69.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount70#mmDenominationChoice
+	 * QuantityAndAccount70.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount71#mmDenominationChoice
+	 * QuantityAndAccount71.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmDenominationChoice
+	 * QuantityAndAccount72.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount75#mmDenominationChoice
+	 * QuantityAndAccount75.mmDenominationChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount76#mmDenominationChoice
+	 * QuantityAndAccount76.mmDenominationChoice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4757,7 +5351,10 @@ public class SecuritiesSettlement extends Settlement {
 					QuantityAndAccount42.mmDenominationChoice, QuantityAndAccount43.mmDenominationChoice, Quantity11.mmDenominationChoice, QuantityAndAccount45.mmDenominationChoice, QuantityAndAccount44.mmDenominationChoice,
 					QuantityAndAccount47.mmDenominationChoice, QuantityAndAccount51.mmDenominationChoice, QuantityAndAccount49.mmDenominationChoice, Quantity12.mmDenominationChoice, QuantityAndAccount50.mmDenominationChoice,
 					QuantityAndAccount55.mmDenominationChoice, QuantityAndAccount54.mmDenominationChoice, QuantityAndAccount57.mmDenominationChoice, QuantityAndAccount58.mmDenominationChoice, QuantityAndAccount56.mmDenominationChoice,
-					QuantityAndAccount59.mmDenominationChoice, QuantityAndAccount60.mmDenominationChoice);
+					QuantityAndAccount59.mmDenominationChoice, QuantityAndAccount60.mmDenominationChoice, QuantityAndAccount64.mmDenominationChoice, QuantityAndAccount63.mmDenominationChoice, QuantityAndAccount65.mmDenominationChoice,
+					QuantityAndAccount66.mmDenominationChoice, Quantity14.mmDenominationChoice, QuantityAndAccount67.mmDenominationChoice, QuantityAndAccount68.mmDenominationChoice, Quantity15.mmDenominationChoice,
+					QuantityAndAccount69.mmDenominationChoice, QuantityAndAccount70.mmDenominationChoice, QuantityAndAccount71.mmDenominationChoice, QuantityAndAccount72.mmDenominationChoice, QuantityAndAccount75.mmDenominationChoice,
+					QuantityAndAccount76.mmDenominationChoice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70a::DENC"));
@@ -5494,6 +6091,12 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.choice.SettlementTransactionCondition29Choice#mmProprietary
 	 * SettlementTransactionCondition29Choice.mmProprietary}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18#mmPartialSettlementIndicator
+	 * RequestDetails18.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryCriteria2#mmPartialSettlementIndicator
+	 * SettlementInstructionQueryCriteria2.mmPartialSettlementIndicator}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FundSettlementParameters11#mmSettlementTransactionCondition
 	 * FundSettlementParameters11.mmSettlementTransactionCondition}</li>
 	 * <li>
@@ -5601,6 +6204,126 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmPartialSettlementIndicator
 	 * SettlementDetails139.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmSettlementTransactionCondition
+	 * SettlementDetails140.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmPartialSettlementIndicator
+	 * SettlementDetails140.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmSettlementTransactionCondition
+	 * SettlementDetails147.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmPartialSettlementIndicator
+	 * SettlementDetails147.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmSettlementTransactionCondition
+	 * SettlementDetails142.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmPartialSettlementIndicator
+	 * SettlementDetails142.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmSettlementTransactionCondition
+	 * SettlementDetails144.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmPartialSettlementIndicator
+	 * SettlementDetails144.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmSettlementTransactionCondition
+	 * SettlementDetails148.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmPartialSettlementIndicator
+	 * SettlementDetails148.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmSettlementTransactionCondition
+	 * SettlementDetails141.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmPartialSettlementIndicator
+	 * SettlementDetails141.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmSettlementTransactionCondition
+	 * SettlementDetails145.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmPartialSettlementIndicator
+	 * SettlementDetails145.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmSettlementTransactionCondition
+	 * SettlementDetails146.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmSettlementTransactionCondition
+	 * SettlementDetails143.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmPartialSettlementIndicator
+	 * SettlementDetails143.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmSettlementTransactionCondition
+	 * SettlementDetails149.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmPartialSettlementIndicator
+	 * SettlementDetails149.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmSettlementTransactionCondition
+	 * SettlementDetails150.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmPartialSettlementIndicator
+	 * SettlementDetails150.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmSettlementTransactionCondition
+	 * SettlementDetails151.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmPartialSettlementIndicator
+	 * SettlementDetails151.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmSettlementTransactionCondition
+	 * SettlementDetails152.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmPartialSettlementIndicator
+	 * SettlementDetails152.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmSettlementTransactionCondition
+	 * SettlementDetails153.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmPartialSettlementIndicator
+	 * SettlementDetails153.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmSettlementTransactionCondition
+	 * SettlementDetails155.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmPartialSettlementIndicator
+	 * SettlementDetails155.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmSettlementTransactionCondition
+	 * SettlementDetails156.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmPartialSettlementIndicator
+	 * SettlementDetails156.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmSettlementTransactionCondition
+	 * SettlementDetails157.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmPartialSettlementIndicator
+	 * SettlementDetails157.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmSettlementTransactionCondition
+	 * SettlementDetails158.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmSettlementTransactionCondition
+	 * SettlementDetails160.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmPartialSettlementIndicator
+	 * SettlementDetails160.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmSettlementTransactionCondition
+	 * SettlementDetails161.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmPartialSettlementIndicator
+	 * SettlementDetails161.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmSettlementTransactionCondition
+	 * SettlementDetails162.mmSettlementTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmPartialSettlementIndicator
+	 * SettlementDetails162.mmPartialSettlementIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5683,16 +6406,26 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementTransactionCondition21Choice.mmProprietary, SettlementTransactionCondition28Choice.mmCode, SettlementTransactionCondition28Choice.mmProprietary, SettlementDetails117.mmSettlementTransactionCondition,
 					SettlementDetails117.mmPartialSettlementIndicator, SettlementDetails116.mmSettlementTransactionCondition, SettlementDetails116.mmPartialSettlementIndicator, SettlementTransactionCondition22Choice.mmCode,
 					SettlementTransactionCondition22Choice.mmProprietary, SettlementDetails113.mmSettlementTransactionCondition, SettlementTransactionCondition29Choice.mmCode, SettlementTransactionCondition29Choice.mmProprietary,
-					FundSettlementParameters11.mmSettlementTransactionCondition, FundSettlementParameters12.mmSettlementTransactionCondition, SettlementTransactionCondition30Choice.mmCode,
-					SettlementTransactionCondition30Choice.mmProprietary, TradeTransactionCondition8Choice.mmCode, TradeTransactionCondition8Choice.mmProprietary, SettlementDetails128.mmSettlementTransactionCondition,
-					SettlementDetails128.mmPartialSettlementIndicator, SettlementDetails120.mmSettlementTransactionCondition, SettlementDetails120.mmPartialSettlementIndicator, SettlementDetails119.mmSettlementTransactionCondition,
-					SettlementDetails119.mmPartialSettlementIndicator, SettlementDetails125.mmSettlementTransactionCondition, SettlementDetails125.mmPartialSettlementIndicator, SettlementDetails126.mmSettlementTransactionCondition,
-					SettlementDetails126.mmPartialSettlementIndicator, SettlementDetails122.mmSettlementTransactionCondition, SettlementDetails127.mmSettlementTransactionCondition, SettlementDetails127.mmPartialSettlementIndicator,
-					SettlementDetails121.mmSettlementTransactionCondition, SettlementDetails121.mmPartialSettlementIndicator, SettlementDetails134.mmSettlementTransactionCondition, SettlementDetails134.mmPartialSettlementIndicator,
-					SettlementDetails137.mmSettlementTransactionCondition, SettlementDetails137.mmPartialSettlementIndicator, SettlementDetails132.mmSettlementTransactionCondition, SettlementDetails132.mmPartialSettlementIndicator,
-					SettlementDetails138.mmSettlementTransactionCondition, SettlementDetails130.mmSettlementTransactionCondition, SettlementDetails130.mmPartialSettlementIndicator, SettlementDetails131.mmSettlementTransactionCondition,
-					SettlementDetails131.mmPartialSettlementIndicator, SettlementDetails133.mmSettlementTransactionCondition, SettlementDetails133.mmPartialSettlementIndicator, SettlementDetails139.mmSettlementTransactionCondition,
-					SettlementDetails139.mmPartialSettlementIndicator);
+					RequestDetails18.mmPartialSettlementIndicator, SettlementInstructionQueryCriteria2.mmPartialSettlementIndicator, FundSettlementParameters11.mmSettlementTransactionCondition,
+					FundSettlementParameters12.mmSettlementTransactionCondition, SettlementTransactionCondition30Choice.mmCode, SettlementTransactionCondition30Choice.mmProprietary, TradeTransactionCondition8Choice.mmCode,
+					TradeTransactionCondition8Choice.mmProprietary, SettlementDetails128.mmSettlementTransactionCondition, SettlementDetails128.mmPartialSettlementIndicator, SettlementDetails120.mmSettlementTransactionCondition,
+					SettlementDetails120.mmPartialSettlementIndicator, SettlementDetails119.mmSettlementTransactionCondition, SettlementDetails119.mmPartialSettlementIndicator, SettlementDetails125.mmSettlementTransactionCondition,
+					SettlementDetails125.mmPartialSettlementIndicator, SettlementDetails126.mmSettlementTransactionCondition, SettlementDetails126.mmPartialSettlementIndicator, SettlementDetails122.mmSettlementTransactionCondition,
+					SettlementDetails127.mmSettlementTransactionCondition, SettlementDetails127.mmPartialSettlementIndicator, SettlementDetails121.mmSettlementTransactionCondition, SettlementDetails121.mmPartialSettlementIndicator,
+					SettlementDetails134.mmSettlementTransactionCondition, SettlementDetails134.mmPartialSettlementIndicator, SettlementDetails137.mmSettlementTransactionCondition, SettlementDetails137.mmPartialSettlementIndicator,
+					SettlementDetails132.mmSettlementTransactionCondition, SettlementDetails132.mmPartialSettlementIndicator, SettlementDetails138.mmSettlementTransactionCondition, SettlementDetails130.mmSettlementTransactionCondition,
+					SettlementDetails130.mmPartialSettlementIndicator, SettlementDetails131.mmSettlementTransactionCondition, SettlementDetails131.mmPartialSettlementIndicator, SettlementDetails133.mmSettlementTransactionCondition,
+					SettlementDetails133.mmPartialSettlementIndicator, SettlementDetails139.mmSettlementTransactionCondition, SettlementDetails139.mmPartialSettlementIndicator, SettlementDetails140.mmSettlementTransactionCondition,
+					SettlementDetails140.mmPartialSettlementIndicator, SettlementDetails147.mmSettlementTransactionCondition, SettlementDetails147.mmPartialSettlementIndicator, SettlementDetails142.mmSettlementTransactionCondition,
+					SettlementDetails142.mmPartialSettlementIndicator, SettlementDetails144.mmSettlementTransactionCondition, SettlementDetails144.mmPartialSettlementIndicator, SettlementDetails148.mmSettlementTransactionCondition,
+					SettlementDetails148.mmPartialSettlementIndicator, SettlementDetails141.mmSettlementTransactionCondition, SettlementDetails141.mmPartialSettlementIndicator, SettlementDetails145.mmSettlementTransactionCondition,
+					SettlementDetails145.mmPartialSettlementIndicator, SettlementDetails146.mmSettlementTransactionCondition, SettlementDetails143.mmSettlementTransactionCondition, SettlementDetails143.mmPartialSettlementIndicator,
+					SettlementDetails149.mmSettlementTransactionCondition, SettlementDetails149.mmPartialSettlementIndicator, SettlementDetails150.mmSettlementTransactionCondition, SettlementDetails150.mmPartialSettlementIndicator,
+					SettlementDetails151.mmSettlementTransactionCondition, SettlementDetails151.mmPartialSettlementIndicator, SettlementDetails152.mmSettlementTransactionCondition, SettlementDetails152.mmPartialSettlementIndicator,
+					SettlementDetails153.mmSettlementTransactionCondition, SettlementDetails153.mmPartialSettlementIndicator, SettlementDetails155.mmSettlementTransactionCondition, SettlementDetails155.mmPartialSettlementIndicator,
+					SettlementDetails156.mmSettlementTransactionCondition, SettlementDetails156.mmPartialSettlementIndicator, SettlementDetails157.mmSettlementTransactionCondition, SettlementDetails157.mmPartialSettlementIndicator,
+					SettlementDetails158.mmSettlementTransactionCondition, SettlementDetails160.mmSettlementTransactionCondition, SettlementDetails160.mmPartialSettlementIndicator, SettlementDetails161.mmSettlementTransactionCondition,
+					SettlementDetails161.mmPartialSettlementIndicator, SettlementDetails162.mmSettlementTransactionCondition, SettlementDetails162.mmPartialSettlementIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::STCO"));
@@ -6110,6 +6843,69 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmBeneficialOwnership
 	 * SettlementDetails139.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmBeneficialOwnership
+	 * SettlementDetails140.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmBeneficialOwnership
+	 * SettlementDetails147.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmBeneficialOwnership
+	 * SettlementDetails142.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmBeneficialOwnership
+	 * SettlementDetails144.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmBeneficialOwnership
+	 * SettlementDetails148.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmBeneficialOwnership
+	 * SettlementDetails141.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmBeneficialOwnership
+	 * SettlementDetails145.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmBeneficialOwnership
+	 * SettlementDetails146.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmBeneficialOwnership
+	 * SettlementDetails143.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmBeneficialOwnership
+	 * SettlementDetails149.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmBeneficialOwnership
+	 * SettlementDetails150.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmBeneficialOwnership
+	 * SettlementDetails151.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmBeneficialOwnership
+	 * SettlementDetails152.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmBeneficialOwnership
+	 * SettlementDetails153.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmBeneficialOwnership
+	 * SettlementDetails155.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmBeneficialOwnership
+	 * SettlementDetails156.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmBeneficialOwnership
+	 * SettlementDetails157.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmBeneficialOwnership
+	 * SettlementDetails158.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmBeneficialOwnership
+	 * SettlementDetails160.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmBeneficialOwnership
+	 * SettlementDetails161.mmBeneficialOwnership}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmBeneficialOwnership
+	 * SettlementDetails162.mmBeneficialOwnership}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -6159,7 +6955,11 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails117.mmBeneficialOwnership, SettlementDetails116.mmBeneficialOwnership, SettlementDetails113.mmBeneficialOwnership, SettlementDetails128.mmBeneficialOwnership, SettlementDetails120.mmBeneficialOwnership,
 					SettlementDetails119.mmBeneficialOwnership, SettlementDetails125.mmBeneficialOwnership, SettlementDetails126.mmBeneficialOwnership, SettlementDetails122.mmBeneficialOwnership, SettlementDetails127.mmBeneficialOwnership,
 					SettlementDetails121.mmBeneficialOwnership, SettlementDetails134.mmBeneficialOwnership, SettlementDetails137.mmBeneficialOwnership, SettlementDetails132.mmBeneficialOwnership, SettlementDetails138.mmBeneficialOwnership,
-					SettlementDetails130.mmBeneficialOwnership, SettlementDetails131.mmBeneficialOwnership, SettlementDetails133.mmBeneficialOwnership, SettlementDetails139.mmBeneficialOwnership);
+					SettlementDetails130.mmBeneficialOwnership, SettlementDetails131.mmBeneficialOwnership, SettlementDetails133.mmBeneficialOwnership, SettlementDetails139.mmBeneficialOwnership, SettlementDetails140.mmBeneficialOwnership,
+					SettlementDetails147.mmBeneficialOwnership, SettlementDetails142.mmBeneficialOwnership, SettlementDetails144.mmBeneficialOwnership, SettlementDetails148.mmBeneficialOwnership, SettlementDetails141.mmBeneficialOwnership,
+					SettlementDetails145.mmBeneficialOwnership, SettlementDetails146.mmBeneficialOwnership, SettlementDetails143.mmBeneficialOwnership, SettlementDetails149.mmBeneficialOwnership, SettlementDetails150.mmBeneficialOwnership,
+					SettlementDetails151.mmBeneficialOwnership, SettlementDetails152.mmBeneficialOwnership, SettlementDetails153.mmBeneficialOwnership, SettlementDetails155.mmBeneficialOwnership, SettlementDetails156.mmBeneficialOwnership,
+					SettlementDetails157.mmBeneficialOwnership, SettlementDetails158.mmBeneficialOwnership, SettlementDetails160.mmBeneficialOwnership, SettlementDetails161.mmBeneficialOwnership, SettlementDetails162.mmBeneficialOwnership);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::BENE"));
@@ -6577,6 +7377,81 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmMarketClientSide
 	 * SettlementDetails139.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmMarketClientSide
+	 * SettlementDetails140.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmMarketClientSide
+	 * SettlementDetails147.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmMarketClientSide
+	 * SettlementDetails142.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmMarketClientSide
+	 * SettlementDetails144.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmMarketClientSide
+	 * SettlementDetails148.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmMarketClientSide
+	 * SettlementDetails141.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmMarketClientSide
+	 * SettlementDetails145.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmMarketClientSide
+	 * SettlementDetails146.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketClientSide6Choice#mmCode
+	 * MarketClientSide6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketClientSide6Choice#mmProprietary
+	 * MarketClientSide6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmMarketClientSide
+	 * SettlementDetails143.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmMarketClientSide
+	 * SettlementDetails149.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmMarketClientSide
+	 * SettlementDetails150.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmMarketClientSide
+	 * SettlementDetails151.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketClientSide7Choice#mmCode
+	 * MarketClientSide7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MarketClientSide7Choice#mmProprietary
+	 * MarketClientSide7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmMarketClientSide
+	 * SettlementDetails152.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmMarketClientSide
+	 * SettlementDetails153.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmMarketClientSide
+	 * SettlementDetails155.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmMarketClientSide
+	 * SettlementDetails156.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmMarketClientSide
+	 * SettlementDetails157.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmMarketClientSide
+	 * SettlementDetails158.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmMarketClientSide
+	 * SettlementDetails160.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmMarketClientSide
+	 * SettlementDetails161.mmMarketClientSide}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmMarketClientSide
+	 * SettlementDetails162.mmMarketClientSide}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -6627,7 +7502,12 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails116.mmMarketClientSide, SettlementDetails113.mmMarketClientSide, SettlementDetails128.mmMarketClientSide, SettlementDetails120.mmMarketClientSide, SettlementDetails119.mmMarketClientSide,
 					SettlementDetails125.mmMarketClientSide, SettlementDetails126.mmMarketClientSide, SettlementDetails122.mmMarketClientSide, SettlementDetails127.mmMarketClientSide, SettlementDetails121.mmMarketClientSide,
 					SettlementDetails134.mmMarketClientSide, SettlementDetails137.mmMarketClientSide, SettlementDetails132.mmMarketClientSide, SettlementDetails138.mmMarketClientSide, SettlementDetails130.mmMarketClientSide,
-					SettlementDetails131.mmMarketClientSide, SettlementDetails133.mmMarketClientSide, SettlementDetails139.mmMarketClientSide);
+					SettlementDetails131.mmMarketClientSide, SettlementDetails133.mmMarketClientSide, SettlementDetails139.mmMarketClientSide, SettlementDetails140.mmMarketClientSide, SettlementDetails147.mmMarketClientSide,
+					SettlementDetails142.mmMarketClientSide, SettlementDetails144.mmMarketClientSide, SettlementDetails148.mmMarketClientSide, SettlementDetails141.mmMarketClientSide, SettlementDetails145.mmMarketClientSide,
+					SettlementDetails146.mmMarketClientSide, MarketClientSide6Choice.mmCode, MarketClientSide6Choice.mmProprietary, SettlementDetails143.mmMarketClientSide, SettlementDetails149.mmMarketClientSide,
+					SettlementDetails150.mmMarketClientSide, SettlementDetails151.mmMarketClientSide, MarketClientSide7Choice.mmCode, MarketClientSide7Choice.mmProprietary, SettlementDetails152.mmMarketClientSide,
+					SettlementDetails153.mmMarketClientSide, SettlementDetails155.mmMarketClientSide, SettlementDetails156.mmMarketClientSide, SettlementDetails157.mmMarketClientSide, SettlementDetails158.mmMarketClientSide,
+					SettlementDetails160.mmMarketClientSide, SettlementDetails161.mmMarketClientSide, SettlementDetails162.mmMarketClientSide);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::MACL"));
@@ -6775,6 +7655,33 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmTracking
 	 * SettlementDetails138.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmTracking
+	 * SettlementDetails140.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmTracking
+	 * SettlementDetails142.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmTracking
+	 * SettlementDetails148.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmTracking
+	 * SettlementDetails145.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmTracking
+	 * SettlementDetails146.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmTracking
+	 * SettlementDetails152.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmTracking
+	 * SettlementDetails156.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmTracking
+	 * SettlementDetails157.mmTracking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmTracking
+	 * SettlementDetails158.mmTracking}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -6801,7 +7708,8 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails68.mmTracking, SettlementDetails72.mmTracking, SettlementDetails81.mmTracking, SettlementDetails78.mmTracking, SettlementDetails77.mmTracking, SettlementDetails83.mmTracking,
 					SettlementDetails93.mmTracking, SettlementDetails97.mmTracking, SettlementDetails94.mmTracking, SettlementDetails101.mmTracking, SettlementDetails105.mmTracking, SettlementDetails106.mmTracking,
 					SettlementDetails111.mmTracking, SettlementDetails112.mmTracking, SettlementDetails113.mmTracking, SettlementDetails120.mmTracking, SettlementDetails119.mmTracking, SettlementDetails122.mmTracking,
-					SettlementDetails137.mmTracking, SettlementDetails132.mmTracking, SettlementDetails138.mmTracking);
+					SettlementDetails137.mmTracking, SettlementDetails132.mmTracking, SettlementDetails138.mmTracking, SettlementDetails140.mmTracking, SettlementDetails142.mmTracking, SettlementDetails148.mmTracking,
+					SettlementDetails145.mmTracking, SettlementDetails146.mmTracking, SettlementDetails152.mmTracking, SettlementDetails156.mmTracking, SettlementDetails157.mmTracking, SettlementDetails158.mmTracking);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -7098,6 +8006,51 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmLetterOfGuarantee
 	 * SettlementDetails139.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmLetterOfGuarantee
+	 * SettlementDetails140.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmLetterOfGuarantee
+	 * SettlementDetails142.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmLetterOfGuarantee
+	 * SettlementDetails144.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmLetterOfGuarantee
+	 * SettlementDetails145.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmLetterOfGuarantee
+	 * SettlementDetails146.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmLetterOfGuarantee
+	 * SettlementDetails143.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmLetterOfGuarantee
+	 * SettlementDetails149.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmLetterOfGuarantee
+	 * SettlementDetails150.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmLetterOfGuarantee
+	 * SettlementDetails155.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmLetterOfGuarantee
+	 * SettlementDetails156.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmLetterOfGuarantee
+	 * SettlementDetails157.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmLetterOfGuarantee
+	 * SettlementDetails158.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmLetterOfGuarantee
+	 * SettlementDetails160.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmLetterOfGuarantee
+	 * SettlementDetails161.mmLetterOfGuarantee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmLetterOfGuarantee
+	 * SettlementDetails162.mmLetterOfGuarantee}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -7137,7 +8090,10 @@ public class SecuritiesSettlement extends Settlement {
 					LetterOfGuarantee5Choice.mmIndicator, LetterOfGuarantee5Choice.mmProprietary, SettlementDetails117.mmLetterOfGuarantee, SettlementDetails116.mmLetterOfGuarantee, SettlementDetails113.mmLetterOfGuarantee,
 					SettlementDetails128.mmLetterOfGuarantee, SettlementDetails120.mmLetterOfGuarantee, SettlementDetails119.mmLetterOfGuarantee, SettlementDetails126.mmLetterOfGuarantee, SettlementDetails122.mmLetterOfGuarantee,
 					SettlementDetails127.mmLetterOfGuarantee, SettlementDetails121.mmLetterOfGuarantee, SettlementDetails134.mmLetterOfGuarantee, SettlementDetails137.mmLetterOfGuarantee, SettlementDetails132.mmLetterOfGuarantee,
-					SettlementDetails138.mmLetterOfGuarantee, SettlementDetails130.mmLetterOfGuarantee, SettlementDetails133.mmLetterOfGuarantee, SettlementDetails139.mmLetterOfGuarantee);
+					SettlementDetails138.mmLetterOfGuarantee, SettlementDetails130.mmLetterOfGuarantee, SettlementDetails133.mmLetterOfGuarantee, SettlementDetails139.mmLetterOfGuarantee, SettlementDetails140.mmLetterOfGuarantee,
+					SettlementDetails142.mmLetterOfGuarantee, SettlementDetails144.mmLetterOfGuarantee, SettlementDetails145.mmLetterOfGuarantee, SettlementDetails146.mmLetterOfGuarantee, SettlementDetails143.mmLetterOfGuarantee,
+					SettlementDetails149.mmLetterOfGuarantee, SettlementDetails150.mmLetterOfGuarantee, SettlementDetails155.mmLetterOfGuarantee, SettlementDetails156.mmLetterOfGuarantee, SettlementDetails157.mmLetterOfGuarantee,
+					SettlementDetails158.mmLetterOfGuarantee, SettlementDetails160.mmLetterOfGuarantee, SettlementDetails161.mmLetterOfGuarantee, SettlementDetails162.mmLetterOfGuarantee);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -7464,6 +8420,57 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#mmEligibleForCollateral
 	 * SettlementDetails133.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmEligibleForCollateral
+	 * SettlementDetails140.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmEligibleForCollateral
+	 * SettlementDetails147.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmEligibleForCollateral
+	 * SettlementDetails142.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmEligibleForCollateral
+	 * SettlementDetails144.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmEligibleForCollateral
+	 * SettlementDetails148.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmEligibleForCollateral
+	 * SettlementDetails145.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmEligibleForCollateral
+	 * SettlementDetails146.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmEligibleForCollateral
+	 * SettlementDetails143.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmEligibleForCollateralIndicator
+	 * CorporateActionOption142.mmEligibleForCollateralIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmEligibleForCollateralIndicator
+	 * CorporateActionOption146.mmEligibleForCollateralIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmEligibleForCollateral
+	 * SettlementDetails151.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmEligibleForCollateral
+	 * SettlementDetails152.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmEligibleForCollateral
+	 * SettlementDetails155.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmEligibleForCollateral
+	 * SettlementDetails156.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmEligibleForCollateral
+	 * SettlementDetails157.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmEligibleForCollateral
+	 * SettlementDetails158.mmEligibleForCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmEligibleForCollateral
+	 * SettlementDetails160.mmEligibleForCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -7511,7 +8518,11 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails113.mmEligibleForCollateral, CorporateActionOption131.mmEligibleForCollateralIndicator, SettlementDetails128.mmEligibleForCollateral, SettlementDetails120.mmEligibleForCollateral,
 					SettlementDetails119.mmEligibleForCollateral, SettlementDetails122.mmEligibleForCollateral, SettlementDetails121.mmEligibleForCollateral, CorporateActionOption134.mmEligibleForCollateralIndicator,
 					SettlementDetails134.mmEligibleForCollateral, SettlementDetails137.mmEligibleForCollateral, SettlementDetails132.mmEligibleForCollateral, SettlementDetails138.mmEligibleForCollateral,
-					SettlementDetails133.mmEligibleForCollateral);
+					SettlementDetails133.mmEligibleForCollateral, SettlementDetails140.mmEligibleForCollateral, SettlementDetails147.mmEligibleForCollateral, SettlementDetails142.mmEligibleForCollateral,
+					SettlementDetails144.mmEligibleForCollateral, SettlementDetails148.mmEligibleForCollateral, SettlementDetails145.mmEligibleForCollateral, SettlementDetails146.mmEligibleForCollateral,
+					SettlementDetails143.mmEligibleForCollateral, CorporateActionOption142.mmEligibleForCollateralIndicator, CorporateActionOption146.mmEligibleForCollateralIndicator, SettlementDetails151.mmEligibleForCollateral,
+					SettlementDetails152.mmEligibleForCollateral, SettlementDetails155.mmEligibleForCollateral, SettlementDetails156.mmEligibleForCollateral, SettlementDetails157.mmEligibleForCollateral,
+					SettlementDetails158.mmEligibleForCollateral, SettlementDetails160.mmEligibleForCollateral);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -7619,6 +8630,24 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection85#mmAccruedInterestIndicator
 	 * AmountAndDirection85.mmAccruedInterestIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection87#mmAccruedInterestIndicator
+	 * AmountAndDirection87.mmAccruedInterestIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection89#mmAccruedInterestIndicator
+	 * AmountAndDirection89.mmAccruedInterestIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmAccruedInterestIndicator
+	 * CorporateAction41.mmAccruedInterestIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmAccruedInterestIndicator
+	 * CorporateAction51.mmAccruedInterestIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection90#mmAccruedInterestIndicator
+	 * AmountAndDirection90.mmAccruedInterestIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection91#mmAccruedInterestIndicator
+	 * AmountAndDirection91.mmAccruedInterestIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -7650,7 +8679,8 @@ public class SecuritiesSettlement extends Settlement {
 					AmountAndDirection28.mmAccruedInterestIndicator, AmountAndDirection36.mmAccruedInterestIndicator, AmountAndDirection37.mmAccruedInterestIndicator, CorporateAction12.mmAccruedInterestIndicator,
 					CorporateAction17.mmAccruedInterestIndicator, AmountAndDirection38.mmAccruedInterestIndicator, AmountAndDirection40.mmAccruedInterestIndicator, AmountAndDirection46.mmAccruedInterestIndicator,
 					AmountAndDirection45.mmAccruedInterestIndicator, CorporateAction31.mmAccruedInterestIndicator, CorporateAction40.mmAccruedInterestIndicator, AmountAndDirection60.mmAccruedInterestIndicator,
-					AmountAndDirection85.mmAccruedInterestIndicator);
+					AmountAndDirection85.mmAccruedInterestIndicator, AmountAndDirection87.mmAccruedInterestIndicator, AmountAndDirection89.mmAccruedInterestIndicator, CorporateAction41.mmAccruedInterestIndicator,
+					CorporateAction51.mmAccruedInterestIndicator, AmountAndDirection90.mmAccruedInterestIndicator, AmountAndDirection91.mmAccruedInterestIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":17B::ACRU"));
@@ -8183,6 +9213,9 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#mmSecuritiesRTGS
 	 * SettlementDetails116.mmSecuritiesRTGS}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18#mmSecuritiesRTGS
+	 * RequestDetails18.mmSecuritiesRTGS}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmSecuritiesRTGS
 	 * SettlementDetails128.mmSecuritiesRTGS}</li>
 	 * <li>
@@ -8224,6 +9257,63 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmSecuritiesRTGS
 	 * SettlementDetails139.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmSecuritiesRTGS
+	 * SettlementDetails140.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmSecuritiesRTGS
+	 * SettlementDetails147.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmSecuritiesRTGS
+	 * SettlementDetails142.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmSecuritiesRTGS
+	 * SettlementDetails144.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmSecuritiesRTGS
+	 * SettlementDetails148.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmSecuritiesRTGS
+	 * SettlementDetails141.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmSecuritiesRTGS
+	 * SettlementDetails145.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmSecuritiesRTGS
+	 * SettlementDetails143.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmSecuritiesRTGS
+	 * SettlementDetails149.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmSecuritiesRTGS
+	 * SettlementDetails150.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmSecuritiesRTGS
+	 * SettlementDetails151.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmSecuritiesRTGS
+	 * SettlementDetails152.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmSecuritiesRTGS
+	 * SettlementDetails153.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmSecuritiesRTGS
+	 * SettlementDetails155.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmSecuritiesRTGS
+	 * SettlementDetails156.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmSecuritiesRTGS
+	 * SettlementDetails157.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmSecuritiesRTGS
+	 * SettlementDetails160.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmSecuritiesRTGS
+	 * SettlementDetails161.mmSecuritiesRTGS}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmSecuritiesRTGS
+	 * SettlementDetails162.mmSecuritiesRTGS}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -8273,9 +9363,13 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails101.mmSecuritiesRTGS, SettlementDetails105.mmSecuritiesRTGS, SettlementDetails106.mmSecuritiesRTGS, SettlementDetails104.mmSecuritiesRTGS, SettlementDetails111.mmSecuritiesRTGS,
 					RequestDetails16.mmSecuritiesRTGS, SettlementDetails112.mmSecuritiesRTGS, SettlementDetails110.mmSecuritiesRTGS, SettlementDetails108.mmSecuritiesRTGS, SettlementDetails103.mmSecuritiesRTGS,
 					SettlementDetails107.mmSecuritiesRTGS, SettlementDetails115.mmSecuritiesRTGS, SettlementDetails117.mmSecuritiesRTGS, SecuritiesRTGS5Choice.mmIndicator, SecuritiesRTGS5Choice.mmProprietary,
-					SettlementDetails116.mmSecuritiesRTGS, SettlementDetails128.mmSecuritiesRTGS, SettlementDetails120.mmSecuritiesRTGS, SettlementDetails119.mmSecuritiesRTGS, SettlementDetails125.mmSecuritiesRTGS,
-					SettlementDetails126.mmSecuritiesRTGS, SettlementDetails127.mmSecuritiesRTGS, SettlementDetails121.mmSecuritiesRTGS, SettlementDetails134.mmSecuritiesRTGS, SettlementDetails137.mmSecuritiesRTGS,
-					SettlementDetails132.mmSecuritiesRTGS, SettlementDetails130.mmSecuritiesRTGS, SettlementDetails131.mmSecuritiesRTGS, SettlementDetails133.mmSecuritiesRTGS, SettlementDetails139.mmSecuritiesRTGS);
+					SettlementDetails116.mmSecuritiesRTGS, RequestDetails18.mmSecuritiesRTGS, SettlementDetails128.mmSecuritiesRTGS, SettlementDetails120.mmSecuritiesRTGS, SettlementDetails119.mmSecuritiesRTGS,
+					SettlementDetails125.mmSecuritiesRTGS, SettlementDetails126.mmSecuritiesRTGS, SettlementDetails127.mmSecuritiesRTGS, SettlementDetails121.mmSecuritiesRTGS, SettlementDetails134.mmSecuritiesRTGS,
+					SettlementDetails137.mmSecuritiesRTGS, SettlementDetails132.mmSecuritiesRTGS, SettlementDetails130.mmSecuritiesRTGS, SettlementDetails131.mmSecuritiesRTGS, SettlementDetails133.mmSecuritiesRTGS,
+					SettlementDetails139.mmSecuritiesRTGS, SettlementDetails140.mmSecuritiesRTGS, SettlementDetails147.mmSecuritiesRTGS, SettlementDetails142.mmSecuritiesRTGS, SettlementDetails144.mmSecuritiesRTGS,
+					SettlementDetails148.mmSecuritiesRTGS, SettlementDetails141.mmSecuritiesRTGS, SettlementDetails145.mmSecuritiesRTGS, SettlementDetails143.mmSecuritiesRTGS, SettlementDetails149.mmSecuritiesRTGS,
+					SettlementDetails150.mmSecuritiesRTGS, SettlementDetails151.mmSecuritiesRTGS, SettlementDetails152.mmSecuritiesRTGS, SettlementDetails153.mmSecuritiesRTGS, SettlementDetails155.mmSecuritiesRTGS,
+					SettlementDetails156.mmSecuritiesRTGS, SettlementDetails157.mmSecuritiesRTGS, SettlementDetails160.mmSecuritiesRTGS, SettlementDetails161.mmSecuritiesRTGS, SettlementDetails162.mmSecuritiesRTGS);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::RTGS"));
@@ -8642,6 +9736,57 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmBlockTrade
 	 * SettlementDetails139.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmBlockTrade
+	 * SettlementDetails140.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmBlockTrade
+	 * SettlementDetails147.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmBlockTrade
+	 * SettlementDetails142.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmBlockTrade
+	 * SettlementDetails144.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmBlockTrade
+	 * SettlementDetails148.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmBlockTrade
+	 * SettlementDetails145.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmBlockTrade
+	 * SettlementDetails143.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmBlockTrade
+	 * SettlementDetails149.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmBlockTrade
+	 * SettlementDetails150.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmBlockTrade
+	 * SettlementDetails151.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmBlockTrade
+	 * SettlementDetails152.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmBlockTrade
+	 * SettlementDetails155.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmBlockTrade
+	 * SettlementDetails156.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmBlockTrade
+	 * SettlementDetails157.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmBlockTrade
+	 * SettlementDetails160.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmBlockTrade
+	 * SettlementDetails161.mmBlockTrade}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmBlockTrade
+	 * SettlementDetails162.mmBlockTrade}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -8682,7 +9827,10 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails111.mmBlockTrade, SettlementDetails112.mmBlockTrade, SettlementDetails110.mmBlockTrade, SettlementDetails107.mmBlockTrade, SettlementDetails115.mmBlockTrade, SettlementDetails117.mmBlockTrade,
 					BlockTrade5Choice.mmCode, BlockTrade5Choice.mmProprietary, SettlementDetails116.mmBlockTrade, SettlementDetails128.mmBlockTrade, SettlementDetails120.mmBlockTrade, SettlementDetails119.mmBlockTrade,
 					SettlementDetails126.mmBlockTrade, SettlementDetails127.mmBlockTrade, SettlementDetails121.mmBlockTrade, SettlementDetails134.mmBlockTrade, SettlementDetails137.mmBlockTrade, SettlementDetails132.mmBlockTrade,
-					SettlementDetails130.mmBlockTrade, SettlementDetails133.mmBlockTrade, SettlementDetails139.mmBlockTrade);
+					SettlementDetails130.mmBlockTrade, SettlementDetails133.mmBlockTrade, SettlementDetails139.mmBlockTrade, SettlementDetails140.mmBlockTrade, SettlementDetails147.mmBlockTrade, SettlementDetails142.mmBlockTrade,
+					SettlementDetails144.mmBlockTrade, SettlementDetails148.mmBlockTrade, SettlementDetails145.mmBlockTrade, SettlementDetails143.mmBlockTrade, SettlementDetails149.mmBlockTrade, SettlementDetails150.mmBlockTrade,
+					SettlementDetails151.mmBlockTrade, SettlementDetails152.mmBlockTrade, SettlementDetails155.mmBlockTrade, SettlementDetails156.mmBlockTrade, SettlementDetails157.mmBlockTrade, SettlementDetails160.mmBlockTrade,
+					SettlementDetails161.mmBlockTrade, SettlementDetails162.mmBlockTrade);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -9066,6 +10214,57 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmSettlementSystemMethod
 	 * SettlementDetails139.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmSettlementSystemMethod
+	 * SettlementDetails140.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmSettlementSystemMethod
+	 * SettlementDetails147.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmSettlementSystemMethod
+	 * SettlementDetails142.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmSettlementSystemMethod
+	 * SettlementDetails144.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmSettlementSystemMethod
+	 * SettlementDetails148.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmSettlementSystemMethod
+	 * SettlementDetails145.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmSettlementSystemMethod
+	 * SettlementDetails143.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmSettlementSystemMethod
+	 * SettlementDetails149.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmSettlementSystemMethod
+	 * SettlementDetails150.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmSettlementSystemMethod
+	 * SettlementDetails151.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmSettlementSystemMethod
+	 * SettlementDetails152.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmSettlementSystemMethod
+	 * SettlementDetails155.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmSettlementSystemMethod
+	 * SettlementDetails156.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmSettlementSystemMethod
+	 * SettlementDetails157.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmSettlementSystemMethod
+	 * SettlementDetails160.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmSettlementSystemMethod
+	 * SettlementDetails161.mmSettlementSystemMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmSettlementSystemMethod
+	 * SettlementDetails162.mmSettlementSystemMethod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -9117,7 +10316,11 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails116.mmSettlementSystemMethod, SettlementDetails128.mmSettlementSystemMethod, SettlementDetails120.mmSettlementSystemMethod, SettlementDetails119.mmSettlementSystemMethod,
 					SettlementDetails126.mmSettlementSystemMethod, SettlementDetails127.mmSettlementSystemMethod, SettlementDetails121.mmSettlementSystemMethod, SettlementDetails134.mmSettlementSystemMethod,
 					SettlementDetails137.mmSettlementSystemMethod, SettlementDetails132.mmSettlementSystemMethod, SettlementDetails130.mmSettlementSystemMethod, SettlementDetails133.mmSettlementSystemMethod,
-					SettlementDetails139.mmSettlementSystemMethod);
+					SettlementDetails139.mmSettlementSystemMethod, SettlementDetails140.mmSettlementSystemMethod, SettlementDetails147.mmSettlementSystemMethod, SettlementDetails142.mmSettlementSystemMethod,
+					SettlementDetails144.mmSettlementSystemMethod, SettlementDetails148.mmSettlementSystemMethod, SettlementDetails145.mmSettlementSystemMethod, SettlementDetails143.mmSettlementSystemMethod,
+					SettlementDetails149.mmSettlementSystemMethod, SettlementDetails150.mmSettlementSystemMethod, SettlementDetails151.mmSettlementSystemMethod, SettlementDetails152.mmSettlementSystemMethod,
+					SettlementDetails155.mmSettlementSystemMethod, SettlementDetails156.mmSettlementSystemMethod, SettlementDetails157.mmSettlementSystemMethod, SettlementDetails160.mmSettlementSystemMethod,
+					SettlementDetails161.mmSettlementSystemMethod, SettlementDetails162.mmSettlementSystemMethod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -9388,6 +10591,9 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.choice.AutomaticBorrowing11Choice#mmProprietary
 	 * AutomaticBorrowing11Choice.mmProprietary}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18#mmAutomaticBorrowing
+	 * RequestDetails18.mmAutomaticBorrowing}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmAutomaticBorrowing
 	 * SettlementDetails128.mmAutomaticBorrowing}</li>
 	 * <li>
@@ -9405,6 +10611,39 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails132#mmAutomaticBorrowing
 	 * SettlementDetails132.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmAutomaticBorrowing
+	 * SettlementDetails140.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147#mmAutomaticBorrowing
+	 * SettlementDetails147.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmAutomaticBorrowing
+	 * SettlementDetails142.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmAutomaticBorrowing
+	 * SettlementDetails144.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmAutomaticBorrowing
+	 * SettlementDetails148.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmAutomaticBorrowing
+	 * SettlementDetails145.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151#mmAutomaticBorrowing
+	 * SettlementDetails151.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmAutomaticBorrowing
+	 * SettlementDetails152.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmAutomaticBorrowing
+	 * SettlementDetails155.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmAutomaticBorrowing
+	 * SettlementDetails156.mmAutomaticBorrowing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmAutomaticBorrowing
+	 * SettlementDetails157.mmAutomaticBorrowing}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -9444,8 +10683,10 @@ public class SecuritiesSettlement extends Settlement {
 					AutomaticBorrowing6Choice.mmProprietary, AutomaticBorrowing7Choice.mmCode, AutomaticBorrowing7Choice.mmProprietary, SettlementDetails101.mmAutomaticBorrowing, SettlementDetails105.mmAutomaticBorrowing,
 					SettlementDetails106.mmAutomaticBorrowing, SettlementDetails104.mmAutomaticBorrowing, SettlementDetails111.mmAutomaticBorrowing, RequestDetails16.mmAutomaticBorrowing, SettlementDetails112.mmAutomaticBorrowing,
 					SettlementDetails110.mmAutomaticBorrowing, AutomaticBorrowing8Choice.mmCode, AutomaticBorrowing8Choice.mmProprietary, AutomaticBorrowing11Choice.mmCode, AutomaticBorrowing11Choice.mmProprietary,
-					SettlementDetails128.mmAutomaticBorrowing, SettlementDetails120.mmAutomaticBorrowing, SettlementDetails119.mmAutomaticBorrowing, SettlementDetails134.mmAutomaticBorrowing, SettlementDetails137.mmAutomaticBorrowing,
-					SettlementDetails132.mmAutomaticBorrowing);
+					RequestDetails18.mmAutomaticBorrowing, SettlementDetails128.mmAutomaticBorrowing, SettlementDetails120.mmAutomaticBorrowing, SettlementDetails119.mmAutomaticBorrowing, SettlementDetails134.mmAutomaticBorrowing,
+					SettlementDetails137.mmAutomaticBorrowing, SettlementDetails132.mmAutomaticBorrowing, SettlementDetails140.mmAutomaticBorrowing, SettlementDetails147.mmAutomaticBorrowing, SettlementDetails142.mmAutomaticBorrowing,
+					SettlementDetails144.mmAutomaticBorrowing, SettlementDetails148.mmAutomaticBorrowing, SettlementDetails145.mmAutomaticBorrowing, SettlementDetails151.mmAutomaticBorrowing, SettlementDetails152.mmAutomaticBorrowing,
+					SettlementDetails155.mmAutomaticBorrowing, SettlementDetails156.mmAutomaticBorrowing, SettlementDetails157.mmAutomaticBorrowing);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::BORR"));
@@ -9569,6 +10810,9 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RequestDetails10#mmPartialSettlementIndicator
 	 * RequestDetails10.mmPartialSettlementIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmPartialSettlementIndicator
+	 * RequestDetails17.mmPartialSettlementIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -9596,7 +10840,7 @@ public class SecuritiesSettlement extends Settlement {
 					SettlementDetails11.mmPartialSettlementIndicator, SettlementDetails7.mmPartialSettlementIndicator, SettlementDetails12.mmPartialSettlementIndicator, SettlementDetails2.mmPartialSettlementIndicator,
 					SettlementDetails13.mmPartialSettlementIndicator, SettlementDetails43.mmPartialSettlementIndicator, SettlementDetails10.mmPartialSettlementIndicator, SettlementDetails29.mmPartialSettlementIndicator,
 					SettlementDetails5.mmPartialSettlementIndicator, SettlementDetails25.mmPartialSettlementIndicator, SettlementDetails14.mmPartialSettlementIndicator, SettlementDetails41.mmPartialSettlementIndicator,
-					SettlementDetails15.mmPartialSettlementIndicator, SettlementDetails34.mmPartialSettlementIndicator, RequestDetails10.mmPartialSettlementIndicator);
+					SettlementDetails15.mmPartialSettlementIndicator, SettlementDetails34.mmPartialSettlementIndicator, RequestDetails10.mmPartialSettlementIndicator, RequestDetails17.mmPartialSettlementIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -9873,6 +11117,9 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails116#mmHoldIndicator
 	 * SettlementDetails116.mmHoldIndicator}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18#mmHoldIndicator
+	 * RequestDetails18.mmHoldIndicator}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails120#mmHoldIndicator
 	 * SettlementDetails120.mmHoldIndicator}</li>
 	 * <li>
@@ -9902,6 +11149,45 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails133#mmHoldIndicator
 	 * SettlementDetails133.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmHoldIndicator
+	 * SettlementDetails140.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmHoldIndicator
+	 * SettlementDetails142.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmHoldIndicator
+	 * SettlementDetails148.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmHoldIndicator
+	 * SettlementDetails141.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmHoldIndicator
+	 * SettlementDetails145.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmHoldIndicator
+	 * SettlementDetails143.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmHoldIndicator
+	 * SettlementDetails149.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmHoldIndicator
+	 * SettlementDetails152.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmHoldIndicator
+	 * SettlementDetails153.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmHoldIndicator
+	 * SettlementDetails156.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmHoldIndicator
+	 * SettlementDetails157.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmHoldIndicator
+	 * SettlementDetails160.mmHoldIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmHoldIndicator
+	 * SettlementDetails161.mmHoldIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -9938,9 +11224,11 @@ public class SecuritiesSettlement extends Settlement {
 					RequestDetails15.mmHoldIndicator, SettlementDetails97.mmHoldIndicator, SettlementDetails99.mmHoldIndicator, SettlementDetails95.mmHoldIndicator, SettlementDetails92.mmHoldIndicator, HoldIndicator6.mmIndicator,
 					SettlementDetails98.mmHoldIndicator, SettlementDetails101.mmHoldIndicator, SettlementDetails105.mmHoldIndicator, SettlementDetails106.mmHoldIndicator, SettlementDetails111.mmHoldIndicator,
 					RequestDetails16.mmHoldIndicator, SettlementDetails112.mmHoldIndicator, SettlementDetails108.mmHoldIndicator, SettlementDetails107.mmHoldIndicator, SettlementDetails115.mmHoldIndicator, HoldIndicator7.mmIndicator,
-					SettlementDetails116.mmHoldIndicator, SettlementDetails120.mmHoldIndicator, SettlementDetails119.mmHoldIndicator, SettlementDetails125.mmHoldIndicator, SettlementDetails127.mmHoldIndicator,
-					SettlementDetails121.mmHoldIndicator, SettlementDetails137.mmHoldIndicator, SettlementDetails132.mmHoldIndicator, SettlementDetails130.mmHoldIndicator, SettlementDetails131.mmHoldIndicator,
-					SettlementDetails133.mmHoldIndicator);
+					SettlementDetails116.mmHoldIndicator, RequestDetails18.mmHoldIndicator, SettlementDetails120.mmHoldIndicator, SettlementDetails119.mmHoldIndicator, SettlementDetails125.mmHoldIndicator,
+					SettlementDetails127.mmHoldIndicator, SettlementDetails121.mmHoldIndicator, SettlementDetails137.mmHoldIndicator, SettlementDetails132.mmHoldIndicator, SettlementDetails130.mmHoldIndicator,
+					SettlementDetails131.mmHoldIndicator, SettlementDetails133.mmHoldIndicator, SettlementDetails140.mmHoldIndicator, SettlementDetails142.mmHoldIndicator, SettlementDetails148.mmHoldIndicator,
+					SettlementDetails141.mmHoldIndicator, SettlementDetails145.mmHoldIndicator, SettlementDetails143.mmHoldIndicator, SettlementDetails149.mmHoldIndicator, SettlementDetails152.mmHoldIndicator,
+					SettlementDetails153.mmHoldIndicator, SettlementDetails156.mmHoldIndicator, SettlementDetails157.mmHoldIndicator, SettlementDetails160.mmHoldIndicator, SettlementDetails161.mmHoldIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -10429,6 +11717,30 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmFinancialInstrumentAttributes
 	 * SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentAttributes}
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmFinancialInstrumentAttributes
+	 * SecuritiesSettlementTransactionDetails34.mmFinancialInstrumentAttributes}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmFinancialInstrumentAttributes
+	 * SecuritiesSettlementTransactionDetails33.mmFinancialInstrumentAttributes}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmFinancialInstrumentAttributes
+	 * SecuritiesSettlementTransactionDetails32.mmFinancialInstrumentAttributes}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmFinancialInstrumentAttributes
+	 * SecuritiesSettlementTransactionDetails35.mmFinancialInstrumentAttributes}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmFinancialInstrumentAttributes
+	 * SecuritiesSettlementTransactionDetails36.mmFinancialInstrumentAttributes}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmFinancialInstrumentAttributes
+	 * SecuritiesSettlementTransactionDetails37.mmFinancialInstrumentAttributes}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -10462,7 +11774,10 @@ public class SecuritiesSettlement extends Settlement {
 					SecuritiesSettlementTransactionDetails25.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails24.mmFinancialInstrumentAttributes,
 					SecuritiesSettlementTransactionDetails27.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails28.mmFinancialInstrumentAttributes,
 					SecuritiesSettlementTransactionDetails26.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails30.mmFinancialInstrumentAttributes,
-					SecuritiesSettlementTransactionDetails29.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentAttributes);
+					SecuritiesSettlementTransactionDetails29.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails31.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails34.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails33.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails32.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails35.mmFinancialInstrumentAttributes,
+					SecuritiesSettlementTransactionDetails36.mmFinancialInstrumentAttributes, SecuritiesSettlementTransactionDetails37.mmFinancialInstrumentAttributes);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -11198,6 +12513,9 @@ public class SecuritiesSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification22#mmPayment
 	 * SettlementTypeAndIdentification22.mmPayment}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmPayment
+	 * TransactionDetails93.mmPayment}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SwitchExecution7#mmSettlementMethod
 	 * SwitchExecution7.mmSettlementMethod}</li>
 	 * <li>
@@ -11284,6 +12602,45 @@ public class SecuritiesSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmPayment
 	 * TransactionDetails98.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmPayment
+	 * TransactionDetails102.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmPayment
+	 * SecuritiesTradeDetails71.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmPayment
+	 * TransactionDetails105.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmPayment
+	 * SecuritiesTradeDetails72.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmPayment
+	 * TransactionDetails104.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmPayment
+	 * TransactionDetails103.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification25#mmPayment
+	 * SettlementTypeAndIdentification25.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification26#mmPayment
+	 * SettlementTypeAndIdentification26.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmPayment
+	 * SecuritiesTradeDetails81.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmPayment
+	 * SecuritiesTradeDetails85.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmPayment
+	 * TransactionDetails110.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmPayment
+	 * TransactionDetails111.mmPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmPayment
+	 * TransactionDetails112.mmPayment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -11340,12 +12697,15 @@ public class SecuritiesSettlement extends Settlement {
 					SecuritiesFinancingTransactionDetails33.mmPayment, TransactionTypeAndAdditionalParameters14.mmPayment, TransactionTypeAndAdditionalParameters12.mmPayment, SecuritiesTradeDetails61.mmPayment,
 					TransactionDetails92.mmPayment, TransactionDetails84.mmPayment, SettlementTypeAndAdditionalParameters16.mmPayment, SettlementTypeAndIdentification24.mmPayment, TransactionDetails87.mmPayment,
 					SettlementTypeAndAdditionalParameters15.mmPayment, TransactionDetails91.mmPayment, TransactionDetails90.mmPayment, SettlementTypeAndAdditionalParameters18.mmPayment, SettlementTypeAndIdentification22.mmPayment,
-					SwitchExecution7.mmSettlementMethod, SwitchOrder7.mmSettlementMethod, RedemptionOrder14.mmSettlementMethod, SubscriptionExecution13.mmSettlementMethod, SubscriptionExecution12.mmSettlementMethod,
-					SubscriptionOrder15.mmSettlementMethod, RedemptionOrder15.mmSettlementMethod, RedemptionExecution16.mmSettlementMethod, SubscriptionOrder14.mmSettlementMethod, FundOrderData6.mmSettlementMethod,
-					RedemptionExecution15.mmSettlementMethod, SettlementTypeAndAdditionalParameters19.mmPayment, SecuritiesTradeDetails68.mmPayment, TransactionDetails97.mmPayment, TransactionTypeAndAdditionalParameters15.mmPayment,
-					TransactionTypeAndAdditionalParameters17.mmPayment, TransactionTypeAndAdditionalParameters16.mmPayment, SecuritiesFinancingTransactionDetails35.mmPayment, TransactionDetails96.mmPayment, TransactionDetails95.mmPayment,
-					TransactionTypeAndAdditionalParameters19.mmPayment, SecuritiesTradeDetails69.mmPayment, TransactionTypeAndAdditionalParameters20.mmPayment, TransactionTypeAndAdditionalParameters18.mmPayment,
-					SecuritiesFinancingTransactionDetails36.mmPayment, SettlementTypeAndAdditionalParameters20.mmPayment, TransactionDetails100.mmPayment, TransactionDetails99.mmPayment, TransactionDetails98.mmPayment);
+					TransactionDetails93.mmPayment, SwitchExecution7.mmSettlementMethod, SwitchOrder7.mmSettlementMethod, RedemptionOrder14.mmSettlementMethod, SubscriptionExecution13.mmSettlementMethod,
+					SubscriptionExecution12.mmSettlementMethod, SubscriptionOrder15.mmSettlementMethod, RedemptionOrder15.mmSettlementMethod, RedemptionExecution16.mmSettlementMethod, SubscriptionOrder14.mmSettlementMethod,
+					FundOrderData6.mmSettlementMethod, RedemptionExecution15.mmSettlementMethod, SettlementTypeAndAdditionalParameters19.mmPayment, SecuritiesTradeDetails68.mmPayment, TransactionDetails97.mmPayment,
+					TransactionTypeAndAdditionalParameters15.mmPayment, TransactionTypeAndAdditionalParameters17.mmPayment, TransactionTypeAndAdditionalParameters16.mmPayment, SecuritiesFinancingTransactionDetails35.mmPayment,
+					TransactionDetails96.mmPayment, TransactionDetails95.mmPayment, TransactionTypeAndAdditionalParameters19.mmPayment, SecuritiesTradeDetails69.mmPayment, TransactionTypeAndAdditionalParameters20.mmPayment,
+					TransactionTypeAndAdditionalParameters18.mmPayment, SecuritiesFinancingTransactionDetails36.mmPayment, SettlementTypeAndAdditionalParameters20.mmPayment, TransactionDetails100.mmPayment, TransactionDetails99.mmPayment,
+					TransactionDetails98.mmPayment, TransactionDetails102.mmPayment, SecuritiesTradeDetails71.mmPayment, TransactionDetails105.mmPayment, SecuritiesTradeDetails72.mmPayment, TransactionDetails104.mmPayment,
+					TransactionDetails103.mmPayment, SettlementTypeAndIdentification25.mmPayment, SettlementTypeAndIdentification26.mmPayment, SecuritiesTradeDetails81.mmPayment, SecuritiesTradeDetails85.mmPayment,
+					TransactionDetails110.mmPayment, TransactionDetails111.mmPayment, TransactionDetails112.mmPayment);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesSettlement.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::PAYM"));
@@ -11418,8 +12778,8 @@ public class SecuritiesSettlement extends Settlement {
 						SecuritiesSettlementTransactionDetails23.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails23.mmSettlementParameters,
 						SecuritiesSettlementTransactionDetails25.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails25.mmQuantityAndAccountDetails,
 						SecuritiesSettlementTransactionDetails25.mmSettlementParameters, SecuritiesSettlementTransactionDetails24.mmSettlementTypeAndAdditionalParameters,
-						SecuritiesSettlementTransactionDetails24.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails24.mmSettlementParameters, SecuritiesFinancingTransactionDetails35.mmSettlementParameters,
-						SecuritiesSettlementTransactionDetails27.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails27.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails24.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails24.mmSettlementParameters, RequestDetails18.mmUnilateralSplit,
+						SecuritiesFinancingTransactionDetails35.mmSettlementParameters, SecuritiesSettlementTransactionDetails27.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails27.mmQuantityAndAccountDetails,
 						SecuritiesSettlementTransactionDetails27.mmSettlementParameters, SecuritiesSettlementTransactionDetails28.mmSettlementTypeAndAdditionalParameters,
 						SecuritiesSettlementTransactionDetails28.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails28.mmSettlementParameters,
 						SecuritiesSettlementTransactionDetails26.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails26.mmQuantityAndAccountDetails,
@@ -11427,7 +12787,16 @@ public class SecuritiesSettlement extends Settlement {
 						SecuritiesSettlementTransactionDetails30.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails30.mmSettlementParameters,
 						SecuritiesSettlementTransactionDetails29.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails29.mmQuantityAndAccountDetails,
 						SecuritiesSettlementTransactionDetails29.mmSettlementParameters, SecuritiesSettlementTransactionDetails31.mmSettlementTypeAndAdditionalParameters,
-						SecuritiesSettlementTransactionDetails31.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails31.mmSettlementParameters);
+						SecuritiesSettlementTransactionDetails31.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails31.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails34.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails34.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails34.mmSettlementParameters, SecuritiesSettlementTransactionDetails33.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails33.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails33.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails32.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails32.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails32.mmSettlementParameters, SecuritiesSettlementTransactionDetails35.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails35.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails35.mmSettlementParameters,
+						SecuritiesSettlementTransactionDetails36.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionDetails36.mmQuantityAndAccountDetails,
+						SecuritiesSettlementTransactionDetails36.mmSettlementParameters, SecuritiesSettlementTransactionDetails37.mmSettlementTypeAndAdditionalParameters,
+						SecuritiesSettlementTransactionDetails37.mmQuantityAndAccountDetails, SecuritiesSettlementTransactionDetails37.mmSettlementParameters);
 				superType_lazy = () -> Settlement.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlement.mmTransferOperation, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementDate,
 						com.tools20022.repository.entity.SecuritiesSettlement.mmPartyRole, com.tools20022.repository.entity.SecuritiesSettlement.mmSettlementAmount, com.tools20022.repository.entity.SecuritiesSettlement.mmHoldingsPlanType,

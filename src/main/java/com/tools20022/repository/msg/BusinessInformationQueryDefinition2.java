@@ -62,6 +62,14 @@ import javax.xml.bind.annotation.XmlType;
  * "BusinessInformationQueryDefinition2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the query criteria."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BusinessInformationQueryDefinition3
+ * BusinessInformationQueryDefinition3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +107,14 @@ public class BusinessInformationQueryDefinition2 {
 	 * definition} =
 	 * "Specifies the type of matching items to be returned in the response to the query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessInformationQueryDefinition3#mmQueryType
+	 * BusinessInformationQueryDefinition3.mmQueryType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryType = new MMMessageAttribute() {
@@ -109,6 +125,7 @@ public class BusinessInformationQueryDefinition2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessInformationQueryDefinition3.mmQueryType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> QueryType2Code.mmObject();
@@ -141,6 +158,15 @@ public class BusinessInformationQueryDefinition2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the general business information query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessInformationQueryDefinition3#mmGeneralBusinessInformationCriteria
+	 * BusinessInformationQueryDefinition3.mmGeneralBusinessInformationCriteria}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmGeneralBusinessInformationCriteria = new MMMessageAssociationEnd() {
@@ -151,6 +177,7 @@ public class BusinessInformationQueryDefinition2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralBusinessInformationCriteria";
 			definition = "Defines the general business information query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessInformationQueryDefinition3.mmGeneralBusinessInformationCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -167,6 +194,7 @@ public class BusinessInformationQueryDefinition2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessInformationQueryDefinition2";
 				definition = "Defines the query criteria.";
+				nextVersions_lazy = () -> Arrays.asList(BusinessInformationQueryDefinition3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

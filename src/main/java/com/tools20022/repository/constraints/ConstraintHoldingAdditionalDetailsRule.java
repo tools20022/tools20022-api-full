@@ -1045,7 +1045,7 @@ public class ConstraintHoldingAdditionalDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unless bilaterally agreed between the sender and receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field. "
+	 * "Unless bilaterally agreed between the sender and receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field."
 	 * </li>
 	 * </ul>
 	 */
@@ -1054,7 +1054,7 @@ public class ConstraintHoldingAdditionalDetailsRule {
 			validator = ConstraintHoldingAdditionalDetailsRule::checkAggregateBalancePerSafekeepingPlace19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingAdditionalDetailsRule";
-			definition = "Unless bilaterally agreed between the sender and receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field. ";
+			definition = "Unless bilaterally agreed between the sender and receiver, if HoldingAdditionnalDetails is present, then it must not contain information that can be provided in a structured field.";
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace19.mmObject();
 		}
 	};

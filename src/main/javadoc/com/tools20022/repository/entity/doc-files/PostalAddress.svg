@@ -45,7 +45,7 @@ Party -[hidden]-> InvestmentFund
 class CorporateActionEvent [[../CorporateActionEvent.html{An event determined by a corporation's board of directors, that changes the existing corporate capital structure or financial condition.}]] #EEEEEE {
 }
 CorporateActionEvent -[hidden]-> Party
-class ReportingService [[../ReportingService.html{Specifies the reporting parameters that are included in the account contract which specifies the services linked to the account..}]] #EEEEEE {
+class ReportingService [[../ReportingService.html{Specifies the reporting parameters that are included in the account contract which specifies the services linked to the account.}]] #EEEEEE {
 }
 ReportingService -[hidden]-> CorporateActionEvent
 class Document [[../Document.html{General information that unambiguously identifies a document, such as identification number and issue date time.}]] #EEEEEE {
@@ -57,7 +57,7 @@ PaymentObligation -[hidden]-> Document
 class ProxyAppointmentCondition [[../ProxyAppointmentCondition.html{Conditions that must be met to appoint a proxy.}]] #EEEEEE {
 }
 ProxyAppointmentCondition -[hidden]-> PaymentObligation
-class Meeting [[../Meeting.html{Specifies the physical parameters of a general meeting. Several dates and places can be defined for a  meeting.}]] #EEEEEE {
+class Meeting [[../Meeting.html{Specifies the physical parameters of a general meeting. Several dates and places can be defined for a meeting.}]] #EEEEEE {
 }
 Meeting -[hidden]-> ProxyAppointmentCondition
 class VotingCondition [[../VotingCondition.html{Specifies the different voting types, channels and premium.}]] #EEEEEE {
@@ -70,7 +70,7 @@ class AttendanceCard [[../AttendanceCard.html{Information about the attendance c
 The instructing party can specify which information must be indicated on the attendance card and to which location the attendance card must be delivered.}]] #EEEEEE {
 }
 AttendanceCard -[hidden]-> PaymentProcessing
-class InvestmentFundClassProcessingCharacteristics [[../InvestmentFundClassProcessingCharacteristics.html{Processing characteristics linked to the instrument, ie, not to  the market.}]] #EEEEEE {
+class InvestmentFundClassProcessingCharacteristics [[../InvestmentFundClassProcessingCharacteristics.html{Processing characteristics linked to the instrument, ie, not to the market.}]] #EEEEEE {
 }
 InvestmentFundClassProcessingCharacteristics -[hidden]-> AttendanceCard
 }

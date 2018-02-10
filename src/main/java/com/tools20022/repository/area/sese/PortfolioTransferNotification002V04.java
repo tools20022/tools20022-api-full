@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
@@ -101,8 +101,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "PrtflTrfNtfctn"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
- * SecuritiesSettlementLatestversionsubsetvariant}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant
+ * SecuritiesSettlementPreviousversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.037.002.04}</li>
@@ -198,7 +198,7 @@ public class PortfolioTransferNotification002V04 {
 	 * name} = "StatementGeneralDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides general information on the notification"</li>
+	 * definition} = "Provides general information on the notification."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmStatementGeneralDetails = new MMMessageBuildingBlock() {
@@ -206,7 +206,7 @@ public class PortfolioTransferNotification002V04 {
 			xmlTag = "StmtGnlDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementGeneralDetails";
-			definition = "Provides general information on the notification";
+			definition = "Provides general information on the notification.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Statement50.mmObject();
@@ -363,7 +363,7 @@ public class PortfolioTransferNotification002V04 {
 						SettlementAndReconciliationISO15022VariantsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "PrtflTrfNtfctn";
-				businessArea_lazy = () -> SecuritiesSettlementLatestversionsubsetvariant.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousversionsubsetvariant.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmPagination,
 						com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmStatementGeneralDetails, com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmAccountOwner,
 						com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmSafekeepingAccount, com.tools20022.repository.area.sese.PortfolioTransferNotification002V04.mmTransferNotificationDetails);

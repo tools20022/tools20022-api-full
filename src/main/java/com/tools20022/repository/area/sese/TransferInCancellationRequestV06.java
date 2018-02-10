@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
+import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.Cancellation9Choice;
 import com.tools20022.repository.msg.CopyInformation2;
 import com.tools20022.repository.msg.MarketPracticeVersion1;
@@ -90,8 +90,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "TrfInCxlReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
- * SecuritiesSettlementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.006.001.06}</li>
@@ -435,7 +435,7 @@ public class TransferInCancellationRequestV06 {
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfInCxlReq";
-				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInCancellationRequestV06.mmMessageIdentification,
 						com.tools20022.repository.area.sese.TransferInCancellationRequestV06.mmReferences, com.tools20022.repository.area.sese.TransferInCancellationRequestV06.mmCancellation,
 						com.tools20022.repository.area.sese.TransferInCancellationRequestV06.mmMarketPracticeVersion, com.tools20022.repository.area.sese.TransferInCancellationRequestV06.mmCopyDetails);

@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  * "DataSetSubmissionReferences1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides references to the submitted data set both for the TSU and for the user.  Also specifies whether the submission is the last one for the underlying transaction."
+ * "Provides references to the submitted data set both for the TSU and for the user. Also specifies whether the submission is the last one for the underlying transaction."
  * </li>
  * </ul>
  */
@@ -219,7 +219,7 @@ public class DataSetSubmissionReferences1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DataSetSubmissionReferences1";
-				definition = "Provides references to the submitted data set both for the TSU and for the user.  Also specifies whether the submission is the last one for the underlying transaction.";
+				definition = "Provides references to the submitted data set both for the TSU and for the user. Also specifies whether the submission is the last one for the underlying transaction.";
 			}
 		});
 		return mmObject_lazy.get();

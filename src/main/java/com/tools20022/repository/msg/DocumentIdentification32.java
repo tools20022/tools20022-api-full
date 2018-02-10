@@ -93,6 +93,21 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#mmOtherDocumentIdentification
  * CorporateActionInstructionV07.mmOtherDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmOtherDocumentIdentification
+ * CorporateActionMovementReversalAdviceV09.mmOtherDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmOtherDocumentIdentification
+ * CorporateActionNotificationV08.mmOtherDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08#mmOtherDocumentIdentification
+ * CorporateActionInstructionV08.mmOtherDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09#mmOtherDocumentIdentification
+ * CorporateActionMovementConfirmationV09.mmOtherDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmOtherDocumentIdentification
+ * CorporateActionMovementPreliminaryAdviceV09.mmOtherDocumentIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -265,7 +280,7 @@ public class DocumentIdentification32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies when this document is to be processed relative to an other referred document."
+	 * "Specifies when this document is to be processed relative to another referred document.\r\n"
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -282,7 +297,7 @@ public class DocumentIdentification32 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LINK"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
-			definition = "Specifies when this document is to be processed relative to an other referred document.";
+			definition = "Specifies when this document is to be processed relative to another referred document.\r\n";
 			previousVersion_lazy = () -> DocumentIdentification13.mmLinkageType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -299,7 +314,9 @@ public class DocumentIdentification32 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV07.mmOtherDocumentIdentification,
 						CorporateActionMovementConfirmationV07.mmOtherDocumentIdentification, CorporateActionNotificationV06.mmOtherDocumentIdentification, CorporateActionMovementReversalAdviceV07.mmOtherDocumentIdentification,
 						CorporateActionNotificationV07.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV08.mmOtherDocumentIdentification, CorporateActionMovementPreliminaryAdviceV08.mmOtherDocumentIdentification,
-						CorporateActionMovementReversalAdviceV08.mmOtherDocumentIdentification, CorporateActionInstructionV07.mmOtherDocumentIdentification);
+						CorporateActionMovementReversalAdviceV08.mmOtherDocumentIdentification, CorporateActionInstructionV07.mmOtherDocumentIdentification, CorporateActionMovementReversalAdviceV09.mmOtherDocumentIdentification,
+						CorporateActionNotificationV08.mmOtherDocumentIdentification, CorporateActionInstructionV08.mmOtherDocumentIdentification, CorporateActionMovementConfirmationV09.mmOtherDocumentIdentification,
+						CorporateActionMovementPreliminaryAdviceV09.mmOtherDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -213,7 +213,7 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to the acknowledgement  of an ATM withdrawal transaction from the ATM manager."
+	 * "Information related to the acknowledgement of an ATM withdrawal transaction from the ATM manager."
 	 * </li>
 	 * </ul>
 	 */
@@ -222,7 +222,7 @@ public class ATMWithdrawalCompletionAcknowledgementV02 {
 			xmlTag = "ATMWdrwlCmpltnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalCompletionAcknowledgement";
-			definition = "Information related to the acknowledgement  of an ATM withdrawal transaction from the ATM manager.";
+			definition = "Information related to the acknowledgement of an ATM withdrawal transaction from the ATM manager.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ATMWithdrawalCompletionAcknowledgement2.mmObject();

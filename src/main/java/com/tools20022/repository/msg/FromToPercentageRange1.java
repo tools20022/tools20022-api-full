@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.entity.RateAndAmount;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -44,6 +45,9 @@ import javax.xml.bind.annotation.XmlType;
  * FromToPercentageRange1.mmTo}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.RateAndAmount
+ * RateAndAmount}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -52,7 +56,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "FromToPercentageRange1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -76,6 +80,11 @@ public class FromToPercentageRange1 {
 	 * {@linkplain com.tools20022.repository.msg.PercentageRangeBoundary1
 	 * PercentageRangeBoundary1}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount RateAndAmount}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.FromToPercentageRange1
@@ -95,6 +104,7 @@ public class FromToPercentageRange1 {
 	 */
 	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FromToPercentageRange1.mmObject();
 			isDerived = false;
 			xmlTag = "Fr";
@@ -119,6 +129,11 @@ public class FromToPercentageRange1 {
 	 * {@linkplain com.tools20022.repository.msg.PercentageRangeBoundary1
 	 * PercentageRangeBoundary1}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessComponentTrace
+	 * businessComponentTrace} =
+	 * {@linkplain com.tools20022.repository.entity.RateAndAmount RateAndAmount}
+	 * </li>
+	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
 	 * {@linkplain com.tools20022.repository.msg.FromToPercentageRange1
@@ -138,6 +153,7 @@ public class FromToPercentageRange1 {
 	 */
 	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
 		{
+			businessComponentTrace_lazy = () -> RateAndAmount.mmObject();
 			componentContext_lazy = () -> com.tools20022.repository.msg.FromToPercentageRange1.mmObject();
 			isDerived = false;
 			xmlTag = "To";
@@ -155,8 +171,9 @@ public class FromToPercentageRange1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FromToPercentageRange1.mmFrom, com.tools20022.repository.msg.FromToPercentageRange1.mmTo);
+				trace_lazy = () -> RateAndAmount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FromToPercentageRange1";
 				definition = "Range of percentage rates.";
 			}

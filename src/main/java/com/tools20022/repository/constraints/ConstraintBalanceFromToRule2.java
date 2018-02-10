@@ -496,6 +496,14 @@ public class ConstraintBalanceFromToRule2 {
 	 * definition} =
 	 * "BalanceFrom/Code must be different from the IntraPositionMovement/BalanceTo/Code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule2#forIntraPositionDetails45
+	 * ConstraintBalanceFromToRule2.forIntraPositionDetails45}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -509,6 +517,7 @@ public class ConstraintBalanceFromToRule2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule2";
 			definition = "BalanceFrom/Code must be different from the IntraPositionMovement/BalanceTo/Code.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceFromToRule2.forIntraPositionDetails45);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule2.forIntraPositionDetails32;
 			owner_lazy = () -> IntraPositionDetails40.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -546,6 +555,82 @@ public class ConstraintBalanceFromToRule2 {
 			name = "BalanceFromToRule2";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails44.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails45
+	 * IntraPositionDetails45}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"DifferentFromNode\"&gt;&lt;leftOperand&gt;/IntraPositionMovement[*]/BalanceTo/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;/BalanceFrom/Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/IntraPositionMovement[*]/BalanceTo/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/BalanceFrom/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceFromToRule2"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "BalanceFrom/Code must be different from the IntraPositionMovement/BalanceTo/Code."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule2#forIntraPositionDetails40
+	 * ConstraintBalanceFromToRule2.forIntraPositionDetails40}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionDetails45> forIntraPositionDetails45 = new MMConstraint<IntraPositionDetails45>() {
+		{
+			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails45;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceFromToRule2";
+			definition = "BalanceFrom/Code must be different from the IntraPositionMovement/BalanceTo/Code.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule2.forIntraPositionDetails40;
+			owner_lazy = () -> IntraPositionDetails45.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails48
+	 * IntraPositionDetails48}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"DifferentFromNode\"&gt;&lt;leftOperand&gt;/IntraPositionMovement[*]/BalanceTo/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;/BalanceFrom/Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/IntraPositionMovement[*]/BalanceTo/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/BalanceFrom/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceFromToRule2"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionDetails48> forIntraPositionDetails48 = new MMConstraint<IntraPositionDetails48>() {
+		{
+			validator = ConstraintBalanceFromToRule2::checkIntraPositionDetails48;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceFromToRule2";
+			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
+			owner_lazy = () -> IntraPositionDetails48.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand><rightOperand>/BalanceFrom/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/IntraPositionMovement[*]/BalanceTo/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
@@ -659,6 +744,22 @@ public class ConstraintBalanceFromToRule2 {
 	 * SecuritiesBalanceType of BalanceTo.
 	 */
 	public static void checkIntraPositionDetails44(IntraPositionDetails44 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * BalanceFrom/Code must be different from the
+	 * IntraPositionMovement/BalanceTo/Code.
+	 */
+	public static void checkIntraPositionDetails45(IntraPositionDetails45 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The SecuritiesBalanceType of BalanceFrom must be different from the
+	 * SecuritiesBalanceType of BalanceTo.
+	 */
+	public static void checkIntraPositionDetails48(IntraPositionDetails48 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

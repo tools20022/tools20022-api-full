@@ -366,7 +366,7 @@ public class TaxExemptReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Mini Insurance Individual Savings Account (ISA). Account is an ISA  with an ISA manager that may only contain life insurance investments up to the prescribed annual subscription limit (required for UK)."
+	 * "Mini Insurance Individual Savings Account (ISA). Account is an ISA with an ISA manager that may only contain life insurance investments up to the prescribed annual subscription limit (required for UK)."
 	 * </li>
 	 * </ul>
 	 */
@@ -374,7 +374,7 @@ public class TaxExemptReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MiniInsuranceISA";
-			definition = "Mini Insurance Individual Savings Account (ISA). Account is an ISA  with an ISA manager that may only contain life insurance investments up to the prescribed annual subscription limit (required for UK).";
+			definition = "Mini Insurance Individual Savings Account (ISA). Account is an ISA with an ISA manager that may only contain life insurance investments up to the prescribed annual subscription limit (required for UK).";
 			owner_lazy = () -> com.tools20022.repository.codeset.TaxExemptReasonCode.mmObject();
 			codeName = "IISA";
 		}
@@ -1170,7 +1170,7 @@ public class TaxExemptReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Education Individual Retirement Account Non-Prototype (also known as an Education Savings Account).  Account is a savings plan open to anyone under the age of 18. When the account owner withdraws money to pay for qualified higher education expenses, the withdrawals are generally tax-free (required in the US)."
+	 * "Education Individual Retirement Account Non-Prototype (also known as an Education Savings Account). Account is a savings plan open to anyone under the age of 18. When the account owner withdraws money to pay for qualified higher education expenses, the withdrawals are generally tax-free (required in the US)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1178,7 +1178,7 @@ public class TaxExemptReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EducationIRANonPrototype";
-			definition = "Education Individual Retirement Account Non-Prototype (also known as an Education Savings Account).  Account is a savings plan open to anyone under the age of 18. When the account owner withdraws money to pay for qualified higher education expenses, the withdrawals are generally tax-free (required in the US).";
+			definition = "Education Individual Retirement Account Non-Prototype (also known as an Education Savings Account). Account is a savings plan open to anyone under the age of 18. When the account owner withdraws money to pay for qualified higher education expenses, the withdrawals are generally tax-free (required in the US).";
 			owner_lazy = () -> com.tools20022.repository.codeset.TaxExemptReasonCode.mmObject();
 			codeName = "EIOP";
 		}
@@ -1245,7 +1245,7 @@ public class TaxExemptReasonCode extends MMCode {
 		}
 	};
 	/**
-	 * Exemption due to incapacitation
+	 * Exemption due to incapacitation.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1262,14 +1262,14 @@ public class TaxExemptReasonCode extends MMCode {
 	 * name} = "Incapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Exemption due to incapacitation "</li>
+	 * definition} = "Exemption due to incapacitation."</li>
 	 * </ul>
 	 */
 	public static final TaxExemptReasonCode Incapacity = new TaxExemptReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incapacity";
-			definition = "Exemption due to incapacitation ";
+			definition = "Exemption due to incapacitation.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TaxExemptReasonCode.mmObject();
 			codeName = "INCA";
 		}

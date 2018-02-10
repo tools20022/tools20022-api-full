@@ -149,7 +149,7 @@ public class Resolution3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Numbering of the resolution as specified by the issuer or  its agent."</li>
+	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,7 +165,7 @@ public class Resolution3 {
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
-			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
+			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			previousVersion_lazy = () -> Resolution2.mmIssuerLabel;
 			maxOccurs = 1;
 			minOccurs = 1;

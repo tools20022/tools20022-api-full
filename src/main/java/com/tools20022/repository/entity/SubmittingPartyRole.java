@@ -63,6 +63,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmSubmittingParty
  * SecuritiesTransactionReport4.mmSubmittingParty}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeCounterpartyReport5#mmSubmittingAgent
+ * TradeCounterpartyReport5.mmSubmittingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeCounterpartyReport6#mmSubmittingAgent
+ * TradeCounterpartyReport6.mmSubmittingAgent}</li>
  * </ul>
  * </li>
  * <li>
@@ -102,7 +108,8 @@ public class SubmittingPartyRole extends SystemPartyRole {
 				name = "SubmittingPartyRole";
 				definition = "Specifies the party which submits trade data sets to a system or to a counterparty.";
 				derivationElement_lazy = () -> Arrays.asList(TradePartyIdentification2.mmSubmittingParty, TradePartyIdentification3.mmSubmittingParty, TradePartyIdentification5.mmSubmittingParty,
-						TradePartyIdentification1.mmSubmittingParty, TradePartyIdentification4.mmSubmittingParty, SecuritiesTransactionReport2.mmSubmittingParty, SecuritiesTransactionReport4.mmSubmittingParty);
+						TradePartyIdentification1.mmSubmittingParty, TradePartyIdentification4.mmSubmittingParty, SecuritiesTransactionReport2.mmSubmittingParty, SecuritiesTransactionReport4.mmSubmittingParty,
+						TradeCounterpartyReport5.mmSubmittingAgent, TradeCounterpartyReport6.mmSubmittingAgent);
 				superType_lazy = () -> SystemPartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(RequiredSubmission2.mmObject());
 			}

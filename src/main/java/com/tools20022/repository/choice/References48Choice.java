@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice of references used to reference a previous transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.References63Choice
+ * References63Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.References39Choice
@@ -109,6 +116,14 @@ public class References48Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference to a linked message that was previously sent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References63Choice#mmPreviousReference
+	 * References63Choice.mmPreviousReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +140,7 @@ public class References48Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(References63Choice.mmPreviousReference);
 			previousVersion_lazy = () -> References39Choice.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -165,6 +181,14 @@ public class References48Choice {
 	 * definition} =
 	 * "Reference to a linked message sent in a proprietary way or the reference of a system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References63Choice#mmOtherReference
+	 * References63Choice.mmOtherReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,6 +205,7 @@ public class References48Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReference";
 			definition = "Reference to a linked message sent in a proprietary way or the reference of a system.";
+			nextVersions_lazy = () -> Arrays.asList(References63Choice.mmOtherReference);
 			previousVersion_lazy = () -> References39Choice.mmOtherReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -198,6 +223,7 @@ public class References48Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "References48Choice";
 				definition = "Choice of references used to reference a previous transaction.";
+				nextVersions_lazy = () -> Arrays.asList(References63Choice.mmObject());
 				previousVersion_lazy = () -> References39Choice.mmObject();
 			}
 		});

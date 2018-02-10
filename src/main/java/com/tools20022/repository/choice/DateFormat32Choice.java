@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between an ISODate or ISODateTime format or a date code or a date code and a time."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat44Choice
+ * DateFormat44Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.DateFormat20Choice
@@ -107,6 +114,14 @@ public class DateFormat32Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date expressed as a calendar date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat44Choice#mmDate
+	 * DateFormat44Choice.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -123,6 +138,7 @@ public class DateFormat32Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat44Choice.mmDate);
 			previousVersion_lazy = () -> DateFormat20Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -155,7 +171,15 @@ public class DateFormat32Choice {
 	 * name} = "DateCodeAndTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies  a date code and a time."</li>
+	 * definition} = "Specifies a date code and a time."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat44Choice#mmDateCodeAndTime
+	 * DateFormat44Choice.mmDateCodeAndTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -170,7 +194,8 @@ public class DateFormat32Choice {
 			xmlTag = "DtCdAndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCodeAndTime";
-			definition = "Specifies  a date code and a time.";
+			definition = "Specifies a date code and a time.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat44Choice.mmDateCodeAndTime);
 			previousVersion_lazy = () -> DateFormat20Choice.mmDateCodeAndTime;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -207,6 +232,14 @@ public class DateFormat32Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat44Choice#mmDateCode
+	 * DateFormat44Choice.mmDateCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -223,6 +256,7 @@ public class DateFormat32Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat44Choice.mmDateCode);
 			previousVersion_lazy = () -> DateFormat20Choice.mmDateCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -240,6 +274,7 @@ public class DateFormat32Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat32Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code or a date code and a time.";
+				nextVersions_lazy = () -> Arrays.asList(DateFormat44Choice.mmObject());
 				previousVersion_lazy = () -> DateFormat20Choice.mmObject();
 			}
 		});

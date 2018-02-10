@@ -30,7 +30,7 @@ import java.util.Arrays;
  * participant of the depository (Party1) and the client of Party1 (Party2).<br>
  * The data format for the identification of Party1 depends on the market. If no
  * country specific requirement is available, BIC is recommended.<br>
- * For more details, see the relevant market practice document on www.smpg.info
+ * For more details, see the relevant market practice document on www.smpg.info.
  */
 public class ConstraintSettlementChainGuideline {
 
@@ -51,7 +51,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -60,7 +60,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties5.mmObject();
 		}
 	};
@@ -81,7 +81,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -90,7 +90,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties11.mmObject();
 		}
 	};
@@ -111,7 +111,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -120,7 +120,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties26.mmObject();
 		}
 	};
@@ -141,7 +141,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -150,7 +150,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties18.mmObject();
 		}
 	};
@@ -171,7 +171,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -180,7 +180,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties27.mmObject();
 		}
 	};
@@ -201,7 +201,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -210,7 +210,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties7.mmObject();
 		}
 	};
@@ -231,7 +231,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -248,7 +248,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementChainGuideline.forSettlementParties36);
 			owner_lazy = () -> SettlementParties10.mmObject();
 		}
@@ -270,7 +270,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -279,7 +279,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties17.mmObject();
 		}
 	};
@@ -300,7 +300,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -309,7 +309,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties14.mmObject();
 		}
 	};
@@ -330,7 +330,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -339,7 +339,7 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties20.mmObject();
 		}
 	};
@@ -360,7 +360,15 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementChainGuideline#forSettlementParties62
+	 * ConstraintSettlementChainGuideline.forSettlementParties62}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -374,7 +382,8 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementChainGuideline.forSettlementParties62);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementChainGuideline.forSettlementParties10;
 			owner_lazy = () -> SettlementParties36.mmObject();
 		}
@@ -396,7 +405,7 @@ public class ConstraintSettlementChainGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -405,8 +414,74 @@ public class ConstraintSettlementChainGuideline {
 			validator = ConstraintSettlementChainGuideline::checkSettlementParties44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementChainGuideline";
-			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties44.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties62
+	 * SettlementParties62}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementChainGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementChainGuideline#forSettlementParties36
+	 * ConstraintSettlementChainGuideline.forSettlementParties36}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementParties62> forSettlementParties62 = new MMConstraint<SettlementParties62>() {
+		{
+			validator = ConstraintSettlementChainGuideline::checkSettlementParties62;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementChainGuideline";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementChainGuideline.forSettlementParties36;
+			owner_lazy = () -> SettlementParties62.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties64
+	 * SettlementParties64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementChainGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementParties64> forSettlementParties64 = new MMConstraint<SettlementParties64>() {
+		{
+			validator = ConstraintSettlementChainGuideline::checkSettlementParties64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementChainGuideline";
+			definition = "SMPG recommends that at least three settlement parties be instructed in equity or fixed income receive\r\nfree or against payment settlement instructions; the depository, the participant of the depository (Party1) and the client of Party1 (Party2).\r\nThe data format for the identification of Party1 depends on the market. If no country specific requirement is available, BIC is recommended.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementParties64.mmObject();
 		}
 	};
 
@@ -418,7 +493,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties5(SettlementParties5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -432,7 +507,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties11(SettlementParties11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -446,7 +521,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties26(SettlementParties26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -460,7 +535,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties18(SettlementParties18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -474,7 +549,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties27(SettlementParties27 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -488,7 +563,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties7(SettlementParties7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -502,7 +577,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties10(SettlementParties10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -516,7 +591,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties17(SettlementParties17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -530,7 +605,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties14(SettlementParties14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -544,7 +619,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties20(SettlementParties20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -558,7 +633,7 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties36(SettlementParties36 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -572,9 +647,37 @@ public class ConstraintSettlementChainGuideline {
 	 * The data format for the identification of Party1 depends on the market.
 	 * If no country specific requirement is available, BIC is recommended.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties44(SettlementParties44 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * SMPG recommends that at least three settlement parties be instructed in
+	 * equity or fixed income receive<br>
+	 * free or against payment settlement instructions; the depository, the
+	 * participant of the depository (Party1) and the client of Party1 (Party2).<br>
+	 * The data format for the identification of Party1 depends on the market.
+	 * If no country specific requirement is available, BIC is recommended.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkSettlementParties62(SettlementParties62 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * SMPG recommends that at least three settlement parties be instructed in
+	 * equity or fixed income receive<br>
+	 * free or against payment settlement instructions; the depository, the
+	 * participant of the depository (Party1) and the client of Party1 (Party2).<br>
+	 * The data format for the identification of Party1 depends on the market.
+	 * If no country specific requirement is available, BIC is recommended.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkSettlementParties64(SettlementParties64 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

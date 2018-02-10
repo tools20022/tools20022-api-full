@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * "FromToAmountRange"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Range of amount values."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FromToAmountRange1
+ * FromToAmountRange1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +108,14 @@ public class FromToAmountRange {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Lower boundary of a range of amount values."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FromToAmountRange1#mmFromAmount
+	 * FromToAmountRange1.mmFromAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromAmount = new MMMessageAttribute() {
@@ -112,6 +127,7 @@ public class FromToAmountRange {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromAmount";
 			definition = "Lower boundary of a range of amount values.";
+			nextVersions_lazy = () -> Arrays.asList(FromToAmountRange1.mmFromAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountRangeBoundary1.mmObject();
@@ -150,6 +166,14 @@ public class FromToAmountRange {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Upper boundary of a range of amount values."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FromToAmountRange1#mmToAmount
+	 * FromToAmountRange1.mmToAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmToAmount = new MMMessageAttribute() {
@@ -161,6 +185,7 @@ public class FromToAmountRange {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToAmount";
 			definition = "Upper boundary of a range of amount values.";
+			nextVersions_lazy = () -> Arrays.asList(FromToAmountRange1.mmToAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountRangeBoundary1.mmObject();
@@ -176,6 +201,7 @@ public class FromToAmountRange {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FromToAmountRange";
 				definition = "Range of amount values.";
+				nextVersions_lazy = () -> Arrays.asList(FromToAmountRange1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

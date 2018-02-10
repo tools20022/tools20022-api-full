@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CommunicationAddress5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Communication information."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress9
+ * CommunicationAddress9}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CommunicationAddress3
@@ -121,6 +128,14 @@ public class CommunicationAddress5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Postal address of the entity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmPostalAddress
+	 * CommunicationAddress9.mmPostalAddress}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPostalAddress = new MMMessageAssociationEnd() {
@@ -132,6 +147,7 @@ public class CommunicationAddress5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Postal address of the entity.";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress9.mmPostalAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -170,6 +186,14 @@ public class CommunicationAddress5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Address for electronic mail (e-mail)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmEmail
+	 * CommunicationAddress9.mmEmail}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -186,6 +210,7 @@ public class CommunicationAddress5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Email";
 			definition = "Address for electronic mail (e-mail).";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress9.mmEmail);
 			previousVersion_lazy = () -> CommunicationAddress3.mmEmail;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -226,6 +251,14 @@ public class CommunicationAddress5 {
 	 * definition} =
 	 * "Address for the Universal Resource Locator (URL), for example used over the www (HTTP) service."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmURLAddress
+	 * CommunicationAddress9.mmURLAddress}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -242,6 +275,7 @@ public class CommunicationAddress5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URLAddress";
 			definition = "Address for the Universal Resource Locator (URL), for example used over the www (HTTP) service.";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress9.mmURLAddress);
 			previousVersion_lazy = () -> CommunicationAddress3.mmURLAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -282,6 +316,14 @@ public class CommunicationAddress5 {
 	 * definition} =
 	 * "Collection of information that identifies a phone number, as defined by telecom services."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmPhone
+	 * CommunicationAddress9.mmPhone}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -298,6 +340,7 @@ public class CommunicationAddress5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Phone";
 			definition = "Collection of information that identifies a phone number, as defined by telecom services.";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress9.mmPhone);
 			previousVersion_lazy = () -> CommunicationAddress3.mmPhone;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -336,6 +379,14 @@ public class CommunicationAddress5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Phone number of the customer service."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmCustomerService
+	 * CommunicationAddress9.mmCustomerService}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCustomerService = new MMMessageAttribute() {
@@ -347,6 +398,7 @@ public class CommunicationAddress5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerService";
 			definition = "Phone number of the customer service.";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress9.mmCustomerService);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
@@ -381,6 +433,14 @@ public class CommunicationAddress5 {
 	 * definition} =
 	 * "Additional information used to facilitate contact with the card acceptor, for instance sales agent name, dispute manager name."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmAdditionalContactInformation
+	 * CommunicationAddress9.mmAdditionalContactInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalContactInformation = new MMMessageAttribute() {
@@ -391,6 +451,7 @@ public class CommunicationAddress5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalContactInformation";
 			definition = "Additional information used to facilitate contact with the card acceptor, for instance sales agent name, dispute manager name.";
+			nextVersions_lazy = () -> Arrays.asList(CommunicationAddress9.mmAdditionalContactInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -408,6 +469,7 @@ public class CommunicationAddress5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CommunicationAddress5";
 				definition = "Communication information.";
+				nextVersions_lazy = () -> Arrays.asList(CommunicationAddress9.mmObject());
 				previousVersion_lazy = () -> CommunicationAddress3.mmObject();
 			}
 		});

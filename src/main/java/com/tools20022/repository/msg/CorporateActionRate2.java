@@ -1003,7 +1003,7 @@ public class CorporateActionRate2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Percentage of the gross dividend rate on which tax must be paid ."</li>
+	 * "Percentage of the gross dividend rate on which tax must be paid."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRelatedTax = new MMMessageAttribute() {
@@ -1014,7 +1014,7 @@ public class CorporateActionRate2 {
 			xmlTag = "RltdTax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedTax";
-			definition = "Percentage of the gross dividend rate on which tax must be paid .";
+			definition = "Percentage of the gross dividend rate on which tax must be paid.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.RelatedTaxType1.mmObject();

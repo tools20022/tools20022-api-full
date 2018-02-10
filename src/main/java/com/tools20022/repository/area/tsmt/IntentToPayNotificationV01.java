@@ -304,7 +304,7 @@ public class IntentToPayNotificationV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the buyer, uniquely identified by its BIC. \n"
+	 * "The financial institution of the buyer, uniquely identified by its BIC. \n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -321,7 +321,7 @@ public class IntentToPayNotificationV01 {
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
-			definition = "The financial institution of the buyer, uniquely identified by its BIC. \n";
+			definition = "The financial institution of the buyer, uniquely identified by its BIC. \n.";
 			nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmBuyerBank);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -359,7 +359,7 @@ public class IntentToPayNotificationV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the seller, uniquely identified by its BIC. \n"
+	 * "The financial institution of the seller, uniquely identified by its BIC. \n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -376,7 +376,7 @@ public class IntentToPayNotificationV01 {
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
-			definition = "The financial institution of the seller, uniquely identified by its BIC. \n";
+			definition = "The financial institution of the seller, uniquely identified by its BIC. \n.";
 			nextVersions_lazy = () -> Arrays.asList(IntentToPayNotificationV02.mmSellerBank);
 			maxOccurs = 1;
 			minOccurs = 1;

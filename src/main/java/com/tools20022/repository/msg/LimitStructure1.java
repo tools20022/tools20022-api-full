@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Limit details of one particular limit set by the member and managed by the transaction administrator."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitStructure2
+ * LimitStructure2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +113,14 @@ public class LimitStructure1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the default limit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitStructure2#mmLimitIdentification
+	 * LimitStructure2.mmLimitIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLimitIdentification = new MMMessageAssociationEnd() {
@@ -117,6 +132,7 @@ public class LimitStructure1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the default limit.";
+			nextVersions_lazy = () -> Arrays.asList(LimitStructure2.mmLimitIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -153,6 +169,14 @@ public class LimitStructure1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "New limit values."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitStructure2#mmNewLimitValueSet
+	 * LimitStructure2.mmNewLimitValueSet}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNewLimitValueSet = new MMMessageAssociationEnd() {
@@ -164,6 +188,7 @@ public class LimitStructure1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewLimitValueSet";
 			definition = "New limit values.";
+			nextVersions_lazy = () -> Arrays.asList(LimitStructure2.mmNewLimitValueSet);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,6 +205,7 @@ public class LimitStructure1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitStructure1";
 				definition = "Limit details of one particular limit set by the member and managed by the transaction administrator.";
+				nextVersions_lazy = () -> Arrays.asList(LimitStructure2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

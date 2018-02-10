@@ -21,6 +21,9 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportRequestV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestV01;
 import com.tools20022.repository.choice.DateFormat18Choice;
 import com.tools20022.repository.entity.DateTimePeriod;
 import com.tools20022.repository.GeneratedRepository;
@@ -51,6 +54,21 @@ import javax.xml.bind.annotation.XmlType;
  * trace} = {@linkplain com.tools20022.repository.entity.DateTimePeriod
  * DateTimePeriod}</li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01#mmQueryPeriod
+ * ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmQueryPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestV01#mmQueryPeriod
+ * ForeignExchangeTradeConfirmationRequestV01.mmQueryPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportRequestV01#mmQueryPeriod
+ * ForeignExchangeTradeCaptureReportRequestV01.mmQueryPeriod}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -64,6 +82,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Time span defined by a start date and time, and an end date and time."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Period11 Period11}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +125,13 @@ public class Period4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the range starts."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period11#mmStartDate
+	 * Period11.mmStartDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmStartDate = new MMMessageAssociationEnd() {
@@ -112,6 +143,7 @@ public class Period4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Date and time at which the range starts.";
+			nextVersions_lazy = () -> Arrays.asList(Period11.mmStartDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -151,6 +183,13 @@ public class Period4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the range ends."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period11#mmEndDate
+	 * Period11.mmEndDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEndDate = new MMMessageAssociationEnd() {
@@ -163,6 +202,7 @@ public class Period4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "Date and time at which the range ends.";
+			nextVersions_lazy = () -> Arrays.asList(Period11.mmEndDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -174,11 +214,14 @@ public class Period4 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Period4.mmStartDate, com.tools20022.repository.msg.Period4.mmEndDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmQueryPeriod, ForeignExchangeTradeConfirmationRequestV01.mmQueryPeriod,
+						ForeignExchangeTradeCaptureReportRequestV01.mmQueryPeriod);
 				trace_lazy = () -> DateTimePeriod.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Period4";
 				definition = "Time span defined by a start date and time, and an end date and time.";
+				nextVersions_lazy = () -> Arrays.asList(Period11.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

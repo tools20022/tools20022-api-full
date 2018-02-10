@@ -95,6 +95,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Fee1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Amount of money associated with a service."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee4 Fee4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Charge17
  * Charge17}</li>
@@ -140,6 +146,7 @@ public class Fee1 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmType Fee2.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmType Fee4.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -153,7 +160,7 @@ public class Fee1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(Fee2.mmType);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmType, Fee4.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ChargeType5Choice.mmObject();
@@ -189,11 +196,12 @@ public class Fee1 {
 	 * name} = "Basis"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Method used to calculate the fee (charge/commission). "</li>
+	 * definition} = "Method used to calculate the fee (charge/commission)."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmBasis Fee2.mmBasis}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmBasis Fee4.mmBasis}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -206,8 +214,8 @@ public class Fee1 {
 			xmlTag = "Bsis";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
-			definition = "Method used to calculate the fee (charge/commission). ";
-			nextVersions_lazy = () -> Arrays.asList(Fee2.mmBasis);
+			definition = "Method used to calculate the fee (charge/commission).";
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmBasis, Fee4.mmBasis);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ChargeBasis2Choice.mmObject();
@@ -251,6 +259,8 @@ public class Fee1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmStandardAmount
 	 * Fee2.mmStandardAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmAmount
+	 * Fee4.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -264,7 +274,7 @@ public class Fee1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardAmount";
 			definition = "Standard fee (charge/commission) amount as specified in the fund prospectus or agreed for the account.";
-			nextVersions_lazy = () -> Arrays.asList(Fee2.mmStandardAmount);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmStandardAmount, Fee4.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -357,6 +367,13 @@ public class Fee1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Discount or waiver applied to the fee (charge/commission)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmDiscountDetails
+	 * Fee4.mmDiscountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDiscountDetails = new MMMessageAssociationEnd() {
@@ -368,6 +385,7 @@ public class Fee1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiscountDetails";
 			definition = "Discount or waiver applied to the fee (charge/commission).";
+			nextVersions_lazy = () -> Arrays.asList(Fee4.mmDiscountDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -561,6 +579,9 @@ public class Fee1 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Fee2#mmRecipientIdentification
 	 * Fee2.mmRecipientIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Fee4#mmRecipientIdentification
+	 * Fee4.mmRecipientIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -574,7 +595,7 @@ public class Fee1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party entitled to the amount of money resulting from a fee (charge/commission).";
-			nextVersions_lazy = () -> Arrays.asList(Fee2.mmRecipientIdentification);
+			nextVersions_lazy = () -> Arrays.asList(Fee2.mmRecipientIdentification, Fee4.mmRecipientIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification113.mmObject();
@@ -594,6 +615,7 @@ public class Fee1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Fee1";
 				definition = "Amount of money associated with a service.";
+				nextVersions_lazy = () -> Arrays.asList(Fee4.mmObject());
 				previousVersion_lazy = () -> Charge17.mmObject();
 			}
 		});

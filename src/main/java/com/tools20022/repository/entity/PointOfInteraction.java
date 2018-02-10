@@ -146,6 +146,12 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.StatusReportContent6#mmPOICapabilities
  * StatusReportContent6.mmPOICapabilities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmPOICapabilities
+ * StatusReportContent7.mmPOICapabilities}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmCapabilities
+ * PointOfInteraction8.mmCapabilities}</li>
  * </ul>
  * </li>
  * <li>
@@ -196,6 +202,8 @@ import java.util.Optional;
  * PointOfInteractionCapabilities7}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction7
  * PointOfInteraction7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction8
+ * PointOfInteraction8}</li>
  * </ul>
  * </li>
  * <li>
@@ -678,6 +686,12 @@ public class PointOfInteraction extends System {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StatusReportContent6#mmPOIComponent
 	 * StatusReportContent6.mmPOIComponent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmPOIComponent
+	 * StatusReportContent7.mmPOIComponent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmComponent
+	 * PointOfInteraction8.mmComponent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -700,7 +714,7 @@ public class PointOfInteraction extends System {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteraction1.mmComponent, StatusReportContent1.mmPOIComponent, StatusReportContent2.mmPOIComponent, PointOfInteraction2.mmComponent, PointOfInteraction3.mmComponent,
 					StatusReportContent3.mmPOIComponent, PointOfInteraction4.mmComponent, StatusReportContent4.mmPOIComponent, StatusReportContent5.mmPOIComponent, PointOfInteraction5.mmComponent, PointOfInteraction7.mmComponent,
-					StatusReportContent6.mmPOIComponent);
+					StatusReportContent6.mmPOIComponent, StatusReportContent7.mmPOIComponent, PointOfInteraction8.mmComponent);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PointOfInteraction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1074,7 +1088,8 @@ public class PointOfInteraction extends System {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentAcquiring.mmPointOfInteraction, com.tools20022.repository.entity.TerminalManagementSystem.mmControlledPointOfInteraction);
 				derivationElement_lazy = () -> Arrays.asList(PointOfInteraction1.mmCapabilities, StatusReportContent1.mmPOICapabilities, StatusReportContent2.mmPOICapabilities, PointOfInteraction2.mmCapabilities,
 						PointOfInteraction3.mmCapabilities, StatusReportContent3.mmPOICapabilities, PointOfInteraction4.mmCapabilities, StatusReportContent4.mmPOICapabilities, ATMCommandIdentification1.mmOrigin,
-						StatusReportContent5.mmPOICapabilities, PointOfInteraction5.mmCapabilities, PointOfInteraction7.mmCapabilities, StatusReportContent6.mmPOICapabilities);
+						StatusReportContent5.mmPOICapabilities, PointOfInteraction5.mmCapabilities, PointOfInteraction7.mmCapabilities, StatusReportContent6.mmPOICapabilities, StatusReportContent7.mmPOICapabilities,
+						PointOfInteraction8.mmCapabilities);
 				superType_lazy = () -> System.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PointOfInteraction.mmCardPaymentAcquiring, com.tools20022.repository.entity.PointOfInteraction.mmCardReadingCapabilities,
 						com.tools20022.repository.entity.PointOfInteraction.mmCardholderVerificationCapabilities, com.tools20022.repository.entity.PointOfInteraction.mmOnLineCapabilities,
@@ -1085,7 +1100,7 @@ public class PointOfInteraction extends System {
 				derivationComponent_lazy = () -> Arrays.asList(PointOfInteractionCapabilities1.mmObject(), PointOfInteractionComponent1.mmObject(), PointOfInteraction1.mmObject(), PointOfInteractionComponent2.mmObject(),
 						PointOfInteractionComponentIdentification1.mmObject(), PointOfInteraction2.mmObject(), PointOfInteraction3.mmObject(), PointOfInteractionCapabilities2.mmObject(), PointOfInteraction4.mmObject(),
 						PointOfInteractionCapabilities3.mmObject(), PointOfInteractionCapabilities4.mmObject(), ATMCommandIdentification1.mmObject(), PointOfInteractionCapabilities5.mmObject(), CardAcceptorTerminal1.mmObject(),
-						PointOfInteractionCapabilities6.mmObject(), PointOfInteraction5.mmObject(), PointOfInteractionCapabilities7.mmObject(), PointOfInteraction7.mmObject());
+						PointOfInteractionCapabilities6.mmObject(), PointOfInteraction5.mmObject(), PointOfInteractionCapabilities7.mmObject(), PointOfInteraction7.mmObject(), PointOfInteraction8.mmObject());
 			}
 
 			@Override

@@ -22,8 +22,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07;
 import com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07;
 import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V06#mmStatementGeneralDetails
  * SecuritiesTransactionPostingReport002V06.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07#mmStatementGeneralDetails
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07#mmStatementGeneralDetails
  * SecuritiesTransactionPostingReport002V07.mmStatementGeneralDetails}</li>
  * </ul>
  * </li>

@@ -108,6 +108,15 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 * definition} =
 	 * "All settlement condition modification request types do not apply to all account servicers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule#forRequestDetails18
+	 * ConstraintSettlementConditionModificationApplicabilityRule.
+	 * forRequestDetails18}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestDetails6> forRequestDetails6 = new MMConstraint<RequestDetails6>() {
@@ -116,6 +125,7 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementConditionModificationApplicabilityRule";
 			definition = "All settlement condition modification request types do not apply to all account servicers.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails18);
 			owner_lazy = () -> RequestDetails6.mmObject();
 		}
 	};
@@ -423,6 +433,43 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 			owner_lazy = () -> RequestDetails16.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18
+	 * RequestDetails18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementConditionModificationApplicabilityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All settlement condition modification request types do not apply to all account servicers."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule#forRequestDetails6
+	 * ConstraintSettlementConditionModificationApplicabilityRule.
+	 * forRequestDetails6}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails18> forRequestDetails18 = new MMConstraint<RequestDetails18>() {
+		{
+			validator = ConstraintSettlementConditionModificationApplicabilityRule::checkRequestDetails18;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementConditionModificationApplicabilityRule";
+			definition = "All settlement condition modification request types do not apply to all account servicers.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails6;
+			owner_lazy = () -> RequestDetails18.mmObject();
+		}
+	};
 
 	/**
 	 * All settlement condition modification request types do not apply to all
@@ -517,6 +564,14 @@ public class ConstraintSettlementConditionModificationApplicabilityRule {
 	 * account servicers.
 	 */
 	public static void checkRequestDetails16(RequestDetails16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * All settlement condition modification request types do not apply to all
+	 * account servicers.
+	 */
+	public static void checkRequestDetails18(RequestDetails18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -107,6 +107,10 @@ import java.util.Optional;
  * NotificationIdentification4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CorporateActionNotification6
  * CorporateActionNotification6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NotificationIdentification5
+ * NotificationIdentification5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.NotificationIdentification6
+ * NotificationIdentification6}</li>
  * </ul>
  * </li>
  * <li>
@@ -205,6 +209,12 @@ public class CorporateActionNotification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.NotificationIdentification4#mmIdentification
 	 * NotificationIdentification4.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationIdentification5#mmIdentification
+	 * NotificationIdentification5.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationIdentification6#mmIdentification
+	 * NotificationIdentification6.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -225,7 +235,8 @@ public class CorporateActionNotification {
 	 */
 	public static final MMBusinessAttribute mmCorporateActionNotificationIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(NotificationIdentification1.mmIdentification, NotificationIdentification2.mmIdentification, NotificationIdentification3.mmIdentification, NotificationIdentification4.mmIdentification);
+			derivation_lazy = () -> Arrays.asList(NotificationIdentification1.mmIdentification, NotificationIdentification2.mmIdentification, NotificationIdentification3.mmIdentification, NotificationIdentification4.mmIdentification,
+					NotificationIdentification5.mmIdentification, NotificationIdentification6.mmIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -344,6 +355,12 @@ public class CorporateActionNotification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.NotificationIdentification4#mmCreationDateTime
 	 * NotificationIdentification4.mmCreationDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationIdentification5#mmCreationDateTime
+	 * NotificationIdentification5.mmCreationDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NotificationIdentification6#mmCreationDateTime
+	 * NotificationIdentification6.mmCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -366,7 +383,7 @@ public class CorporateActionNotification {
 	public static final MMBusinessAttribute mmCreationDateTime = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(NotificationIdentification1.mmCreationDateTime, NotificationIdentification2.mmCreationDateTime, NotificationIdentification3.mmCreationDateTime,
-					NotificationIdentification4.mmCreationDateTime);
+					NotificationIdentification4.mmCreationDateTime, NotificationIdentification5.mmCreationDateTime, NotificationIdentification6.mmCreationDateTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionNotification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -399,7 +416,8 @@ public class CorporateActionNotification {
 				derivationComponent_lazy = () -> Arrays.asList(CorporateActionCancellation1.mmObject(), CorporateActionCancellation2.mmObject(), NotificationIdentification1.mmObject(), NotificationIdentification2.mmObject(),
 						CorporateActionPreliminaryAdviceType1.mmObject(), CorporateActionNotification2.mmObject(), CorporateActionNotification3.mmObject(), CorporateActionNotification1.mmObject(),
 						CorporateActionNotificationAdvice1.mmObject(), CorporateActionCancellation3.mmObject(), CorporateActionPreliminaryAdviceType2.mmObject(), CorporateActionNotification4.mmObject(),
-						CorporateActionCancellation4.mmObject(), CorporateActionNotification5.mmObject(), NotificationIdentification3.mmObject(), NotificationIdentification4.mmObject(), CorporateActionNotification6.mmObject());
+						CorporateActionCancellation4.mmObject(), CorporateActionNotification5.mmObject(), NotificationIdentification3.mmObject(), NotificationIdentification4.mmObject(), CorporateActionNotification6.mmObject(),
+						NotificationIdentification5.mmObject(), NotificationIdentification6.mmObject());
 			}
 
 			@Override

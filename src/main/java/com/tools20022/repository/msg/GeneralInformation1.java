@@ -422,7 +422,7 @@ public class GeneralInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "This field specifies additional information for the Receiver and applies to the whole message"
+	 * "This field specifies additional information for the Receiver and applies to the whole message."
 	 * </li>
 	 * </ul>
 	 */
@@ -433,7 +433,7 @@ public class GeneralInformation1 {
 			xmlTag = "SndrToRcvrInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SenderToReceiverInformation";
-			definition = "This field specifies additional information for the Receiver and applies to the whole message";
+			definition = "This field specifies additional information for the Receiver and applies to the whole message.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();

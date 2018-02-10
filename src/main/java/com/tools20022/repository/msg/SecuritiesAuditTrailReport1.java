@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesAuditTrailReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Report information about securities reference data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport2
+ * SecuritiesAuditTrailReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +109,14 @@ public class SecuritiesAuditTrailReport1 {
 	 * definition} =
 	 * "Identifies the returned securities reference data or error information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport2#mmSecuritiesAuditTrailOrError
+	 * SecuritiesAuditTrailReport2.mmSecuritiesAuditTrailOrError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAuditTrailOrError = new MMMessageAssociationEnd() {
@@ -112,6 +127,7 @@ public class SecuritiesAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAuditTrailOrError";
 			definition = "Identifies the returned securities reference data or error information.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAuditTrailReport2.mmSecuritiesAuditTrailOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -146,6 +162,14 @@ public class SecuritiesAuditTrailReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period in dates for which the audit trail is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport2#mmDatePeriod
+	 * SecuritiesAuditTrailReport2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
@@ -156,6 +180,7 @@ public class SecuritiesAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Period in dates for which the audit trail is provided.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAuditTrailReport2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -190,6 +215,14 @@ public class SecuritiesAuditTrailReport1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the securities for which the audit trail is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAuditTrailReport2#mmFinancialInstrumentIdentification
+	 * SecuritiesAuditTrailReport2.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
@@ -200,6 +233,7 @@ public class SecuritiesAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identifies the securities for which the audit trail is provided.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAuditTrailReport2.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -215,6 +249,7 @@ public class SecuritiesAuditTrailReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAuditTrailReport1";
 				definition = "Report information about securities reference data.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAuditTrailReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the opening and valuation conditions for the non deliverable
- * forward
+ * forward.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -76,7 +76,7 @@ import javax.xml.bind.annotation.XmlType;
  * "NonDeliverableForwardConditions2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the opening and valuation conditions for the non deliverable forward"
+ * "Specifies the opening and valuation conditions for the non deliverable forward."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -198,7 +198,7 @@ public class NonDeliverableForwardConditions2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "NonDeliverableForwardConditions2";
-				definition = "Specifies the opening and valuation conditions for the non deliverable forward";
+				definition = "Specifies the opening and valuation conditions for the non deliverable forward.";
 				previousVersion_lazy = () -> NonDeliverableForwardConditions1.mmObject();
 			}
 		});

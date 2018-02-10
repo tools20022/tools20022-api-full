@@ -855,7 +855,7 @@ public class TradeStatusCode extends MMCode {
 	/**
 	 * For NDF instructions, if a party has submitted both the open and fix
 	 * confirmations and the counterparty is yet to submit the open and fix
-	 * confirmation the instruction is updated to ‘Fix Unmatched’ Status
+	 * confirmation the instruction is updated to ‘Fix Unmatched’ Status.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -873,7 +873,7 @@ public class TradeStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For NDF instructions, if a party has submitted both the open and fix confirmations and the counterparty is yet to submit the open and fix confirmation the instruction is updated to ‘Fix Unmatched’ Status"
+	 * "For NDF instructions, if a party has submitted both the open and fix confirmations and the counterparty is yet to submit the open and fix confirmation the instruction is updated to ‘Fix Unmatched’ Status."
 	 * </li>
 	 * </ul>
 	 */
@@ -881,7 +881,7 @@ public class TradeStatusCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixUnmatched";
-			definition = "For NDF instructions, if a party has submitted both the open and fix confirmations and the counterparty is yet to submit the open and fix confirmation the instruction is updated to ‘Fix Unmatched’ Status";
+			definition = "For NDF instructions, if a party has submitted both the open and fix confirmations and the counterparty is yet to submit the open and fix confirmation the instruction is updated to ‘Fix Unmatched’ Status.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradeStatusCode.mmObject();
 			codeName = "FUMT";
 		}

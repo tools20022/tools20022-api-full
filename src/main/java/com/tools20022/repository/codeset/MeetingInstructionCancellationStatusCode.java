@@ -165,14 +165,14 @@ public class MeetingInstructionCancellationStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cancellation will not be executed due to business reasons. "</li>
+	 * "Cancellation will not be executed due to business reasons."</li>
 	 * </ul>
 	 */
 	public static final MeetingInstructionCancellationStatusCode CancellationDenied = new MeetingInstructionCancellationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationDenied";
-			definition = "Cancellation will not be executed due to business reasons. ";
+			definition = "Cancellation will not be executed due to business reasons.";
 			owner_lazy = () -> com.tools20022.repository.codeset.MeetingInstructionCancellationStatusCode.mmObject();
 			codeName = "DEND";
 		}

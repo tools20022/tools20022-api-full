@@ -333,7 +333,7 @@ public class MaintenanceDelegateAction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Data set  on which the delegated action has to be performed."</li>
+	 * "Data set on which the delegated action has to be performed."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -351,7 +351,7 @@ public class MaintenanceDelegateAction1 {
 			xmlTag = "DataSetId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
-			definition = "Data set  on which the delegated action has to be performed.";
+			definition = "Data set on which the delegated action has to be performed.";
 			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegateAction2.mmDataSetIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;

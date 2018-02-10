@@ -163,7 +163,7 @@ public class NameOrSector1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Represents the counterparty institutional section (such as non-financial corporation, central bank, ...)."
+	 * "Represents the counterparty institutional section (such as non-financial corporation, central bank.)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -180,7 +180,7 @@ public class NameOrSector1Choice {
 			xmlTag = "Sctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
-			definition = "Represents the counterparty institutional section (such as non-financial corporation, central bank, ...).";
+			definition = "Represents the counterparty institutional section (such as non-financial corporation, central bank.).";
 			previousVersion_lazy = () -> SectorAndLocation1.mmSector;
 			maxOccurs = 1;
 			minOccurs = 1;

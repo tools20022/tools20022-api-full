@@ -265,7 +265,7 @@ public class TradeData7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the unique system identification assigned to the trade  by the central matching system."
+	 * "Reference to the unique system identification assigned to the trade by the central matching system."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -285,7 +285,7 @@ public class TradeData7 {
 			xmlTag = "MtchgSysUnqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
-			definition = "Reference to the unique system identification assigned to the trade  by the central matching system.";
+			definition = "Reference to the unique system identification assigned to the trade by the central matching system.";
 			nextVersions_lazy = () -> Arrays.asList(TradeData15.mmMatchingSystemUniqueReference);
 			maxOccurs = 1;
 			minOccurs = 1;

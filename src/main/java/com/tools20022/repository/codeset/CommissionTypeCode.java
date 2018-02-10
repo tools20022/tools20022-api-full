@@ -258,7 +258,7 @@ public class CommissionTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Commission for redeeming  an investment, when an investor redeems an investment fund within a certain period of time."
+	 * "Commission for redeeming an investment, when an investor redeems an investment fund within a certain period of time."
 	 * </li>
 	 * </ul>
 	 */
@@ -266,7 +266,7 @@ public class CommissionTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BackEnd";
-			definition = "Commission for redeeming  an investment, when an investor redeems an investment fund within a certain period of time.";
+			definition = "Commission for redeeming an investment, when an investor redeems an investment fund within a certain period of time.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "BEND";
 		}
@@ -537,7 +537,7 @@ public class CommissionTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount or percentage that is added to an offer price when an investor buys from a broker or market maker.  In this case, the price is adjusted to reflect changing market conditions."
+	 * "Amount or percentage that is added to an offer price when an investor buys from a broker or market maker. In this case, the price is adjusted to reflect changing market conditions."
 	 * </li>
 	 * </ul>
 	 */
@@ -545,7 +545,7 @@ public class CommissionTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Markup";
-			definition = "Amount or percentage that is added to an offer price when an investor buys from a broker or market maker.  In this case, the price is adjusted to reflect changing market conditions.";
+			definition = "Amount or percentage that is added to an offer price when an investor buys from a broker or market maker. In this case, the price is adjusted to reflect changing market conditions.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CommissionTypeCode.mmObject();
 			codeName = "MARK";
 		}

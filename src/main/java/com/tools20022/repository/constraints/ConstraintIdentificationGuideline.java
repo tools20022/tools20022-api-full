@@ -20,9 +20,7 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.msg.FinancialInstrument55;
-import com.tools20022.repository.msg.FinancialInstrument56;
-import com.tools20022.repository.msg.FinancialInstrument57;
+import com.tools20022.repository.msg.*;
 
 /**
  * It is recommended that ISIN is used in Identification.<br>
@@ -141,6 +139,184 @@ public class ConstraintIdentificationGuideline {
 			owner_lazy = () -> FinancialInstrument55.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument60
+	 * FinancialInstrument60}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument46
+	 * ConstraintFinancialInstrumentIdentificationGuideline.
+	 * forFinancialInstrument46}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrument60> forFinancialInstrument60 = new MMConstraint<FinancialInstrument60>() {
+		{
+			validator = ConstraintIdentificationGuideline::checkFinancialInstrument60;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationGuideline";
+			definition = "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument46;
+			owner_lazy = () -> FinancialInstrument60.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument64
+	 * FinancialInstrument64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrument64> forFinancialInstrument64 = new MMConstraint<FinancialInstrument64>() {
+		{
+			validator = ConstraintIdentificationGuideline::checkFinancialInstrument64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationGuideline";
+			definition = "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used.";
+			owner_lazy = () -> FinancialInstrument64.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63
+	 * FinancialInstrument63}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument49
+	 * ConstraintFinancialInstrumentIdentificationGuideline.
+	 * forFinancialInstrument49}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrument63> forFinancialInstrument63 = new MMConstraint<FinancialInstrument63>() {
+		{
+			validator = ConstraintIdentificationGuideline::checkFinancialInstrument63;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationGuideline";
+			definition = "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument49;
+			owner_lazy = () -> FinancialInstrument63.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61
+	 * FinancialInstrument61}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument47
+	 * ConstraintFinancialInstrumentIdentificationGuideline.
+	 * forFinancialInstrument47}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrument61> forFinancialInstrument61 = new MMConstraint<FinancialInstrument61>() {
+		{
+			validator = ConstraintIdentificationGuideline::checkFinancialInstrument61;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationGuideline";
+			definition = "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument47;
+			owner_lazy = () -> FinancialInstrument61.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument65
+	 * FinancialInstrument65}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IdentificationGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline#forFinancialInstrument48
+	 * ConstraintFinancialInstrumentIdentificationGuideline.
+	 * forFinancialInstrument48}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrument65> forFinancialInstrument65 = new MMConstraint<FinancialInstrument65>() {
+		{
+			validator = ConstraintIdentificationGuideline::checkFinancialInstrument65;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IdentificationGuideline";
+			definition = "It is recommended that ISIN is used in Identification.\r\nWhen an ISIN code exists, it is strongly recommended that the ISIN be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFinancialInstrumentIdentificationGuideline.forFinancialInstrument48;
+			owner_lazy = () -> FinancialInstrument65.mmObject();
+		}
+	};
 
 	/**
 	 * It is recommended that ISIN is used in Identification.<br>
@@ -166,6 +342,51 @@ public class ConstraintIdentificationGuideline {
 	 * used.
 	 */
 	public static void checkFinancialInstrument55(FinancialInstrument55 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that ISIN is used in Identification.<br>
+	 * When an ISIN code exists, it is strongly recommended that the ISIN be
+	 * used.
+	 */
+	public static void checkFinancialInstrument60(FinancialInstrument60 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that ISIN is used in Identification.<br>
+	 * When an ISIN code exists, it is strongly recommended that the ISIN be
+	 * used.
+	 */
+	public static void checkFinancialInstrument64(FinancialInstrument64 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that ISIN is used in Identification.<br>
+	 * When an ISIN code exists, it is strongly recommended that the ISIN be
+	 * used.
+	 */
+	public static void checkFinancialInstrument63(FinancialInstrument63 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that ISIN is used in Identification.<br>
+	 * When an ISIN code exists, it is strongly recommended that the ISIN be
+	 * used.
+	 */
+	public static void checkFinancialInstrument61(FinancialInstrument61 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * It is recommended that ISIN is used in Identification.<br>
+	 * When an ISIN code exists, it is strongly recommended that the ISIN be
+	 * used.
+	 */
+	public static void checkFinancialInstrument65(FinancialInstrument65 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -94,6 +94,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Account information and detailed account holdings information report for corporate action events."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountIdentification43
+ * AccountIdentification43}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AccountIdentification33
@@ -140,6 +147,14 @@ public class AccountIdentification40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account where financial instruments are maintained."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification43#mmSafekeepingAccount
+	 * AccountIdentification43.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -157,6 +172,7 @@ public class AccountIdentification40 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification43.mmSafekeepingAccount);
 			previousVersion_lazy = () -> AccountIdentification33.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -198,6 +214,14 @@ public class AccountIdentification40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification43#mmAccountOwner
+	 * AccountIdentification43.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -215,6 +239,7 @@ public class AccountIdentification40 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification43.mmAccountOwner);
 			previousVersion_lazy = () -> AccountIdentification33.mmAccountOwner;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -258,6 +283,14 @@ public class AccountIdentification40 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Location where the financial instruments are/will be safekept."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification43#mmSafekeepingPlace
+	 * AccountIdentification43.mmSafekeepingPlace}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -275,6 +308,7 @@ public class AccountIdentification40 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are/will be safekept.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification43.mmSafekeepingPlace);
 			previousVersion_lazy = () -> AccountIdentification33.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -316,6 +350,14 @@ public class AccountIdentification40 {
 	 * definition} =
 	 * "Detailed account holdings information report for a corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountIdentification43#mmCorporateActionEventAndBalance
+	 * AccountIdentification43.mmCorporateActionEventAndBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -332,6 +374,7 @@ public class AccountIdentification40 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventAndBalance";
 			definition = "Detailed account holdings information report for a corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification43.mmCorporateActionEventAndBalance);
 			previousVersion_lazy = () -> AccountIdentification33.mmCorporateActionEventAndBalance;
 			minOccurs = 0;
 			isComposite = true;
@@ -351,6 +394,7 @@ public class AccountIdentification40 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification40";
 				definition = "Account information and detailed account holdings information report for corporate action events.";
+				nextVersions_lazy = () -> Arrays.asList(AccountIdentification43.mmObject());
 				previousVersion_lazy = () -> AccountIdentification33.mmObject();
 			}
 		});

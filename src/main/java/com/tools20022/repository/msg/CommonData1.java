@@ -228,7 +228,7 @@ public class CommonData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of transaction being undertaken for the main service, common to a set of transaction.."
+	 * "Type of transaction being undertaken for the main service, common to a set of transaction."
 	 * </li>
 	 * </ul>
 	 */
@@ -240,7 +240,7 @@ public class CommonData1 {
 			xmlTag = "TxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
-			definition = "Type of transaction being undertaken for the main service, common to a set of transaction..";
+			definition = "Type of transaction being undertaken for the main service, common to a set of transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType1Code.mmObject();

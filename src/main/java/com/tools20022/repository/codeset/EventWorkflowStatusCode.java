@@ -133,7 +133,7 @@ public class EventWorkflowStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "All of the required data has been populated. Any conflicting data has been resolved. Either all information was in agreement (STP) or if manual validation was necessary  authorised review and changes/updates were performed."
+	 * "All of the required data has been populated. Any conflicting data has been resolved. Either all information was in agreement (STP) or if manual validation was necessary authorised review and changes/updates were performed."
 	 * </li>
 	 * </ul>
 	 */
@@ -141,7 +141,7 @@ public class EventWorkflowStatusCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Approved";
-			definition = "All of the required data has been populated. Any conflicting data has been resolved. Either all information was in agreement (STP) or if manual validation was necessary  authorised review and changes/updates were performed.";
+			definition = "All of the required data has been populated. Any conflicting data has been resolved. Either all information was in agreement (STP) or if manual validation was necessary authorised review and changes/updates were performed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.EventWorkflowStatusCode.mmObject();
 			codeName = "WSAP";
 		}

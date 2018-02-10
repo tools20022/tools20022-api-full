@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * "InvestorRestrictionType2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for investor restriction type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InvestorRestrictionType3Choice
+ * InvestorRestrictionType3Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +115,14 @@ public class InvestorRestrictionType2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Investor restriction type expressed as an ISO 20022 code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorRestrictionType3Choice#mmCode
+	 * InvestorRestrictionType3Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -118,6 +134,7 @@ public class InvestorRestrictionType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Investor restriction type expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(InvestorRestrictionType3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestorRestrictionType1Code.mmObject();
@@ -156,6 +173,14 @@ public class InvestorRestrictionType2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Investor restriction type expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorRestrictionType3Choice#mmProprietary
+	 * InvestorRestrictionType3Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -167,6 +192,7 @@ public class InvestorRestrictionType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Investor restriction type expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(InvestorRestrictionType3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +209,7 @@ public class InvestorRestrictionType2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestorRestrictionType2Choice";
 				definition = "Choice of format for investor restriction type.";
+				nextVersions_lazy = () -> Arrays.asList(InvestorRestrictionType3Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -75,6 +75,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action general information."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD31
+ * CorporateActionGeneralInformationSD31}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD20
@@ -113,6 +121,14 @@ public class CorporateActionGeneralInformationSD26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD31#mmPlaceAndName
+	 * CorporateActionGeneralInformationSD31.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -128,6 +144,7 @@ public class CorporateActionGeneralInformationSD26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD31.mmPlaceAndName);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD20.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -165,6 +182,14 @@ public class CorporateActionGeneralInformationSD26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD31#mmSecurityIdentification
+	 * CorporateActionGeneralInformationSD31.mmSecurityIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,6 +206,7 @@ public class CorporateActionGeneralInformationSD26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD31.mmSecurityIdentification);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD20.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -219,6 +245,14 @@ public class CorporateActionGeneralInformationSD26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account where financial instruments are maintained."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD31#mmSafekeepingAccount
+	 * CorporateActionGeneralInformationSD31.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -235,6 +269,7 @@ public class CorporateActionGeneralInformationSD26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account where financial instruments are maintained.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD31.mmSafekeepingAccount);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD20.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -271,6 +306,14 @@ public class CorporateActionGeneralInformationSD26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional information about the corporate action event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD31#mmUnallocatedDetails
+	 * CorporateActionGeneralInformationSD31.mmUnallocatedDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -287,6 +330,7 @@ public class CorporateActionGeneralInformationSD26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDetails";
 			definition = "Additional information about the corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD31.mmUnallocatedDetails);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD20.mmUnallocatedDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -303,6 +347,7 @@ public class CorporateActionGeneralInformationSD26 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD26";
 				definition = "Provides additional information regarding corporate action general information.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD31.mmObject());
 				previousVersion_lazy = () -> CorporateActionGeneralInformationSD20.mmObject();
 			}
 		});

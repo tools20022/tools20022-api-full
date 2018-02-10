@@ -1384,7 +1384,7 @@ public class FinancialInstrumentAttributes79 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the ratio between the quantity of warrants and the quantity of underlying securities. "
+	 * "Provides the ratio between the quantity of warrants and the quantity of underlying securities."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1401,7 +1401,7 @@ public class FinancialInstrumentAttributes79 {
 			xmlTag = "WarrtParity";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantParity";
-			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities. ";
+			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities.";
 			previousVersion_lazy = () -> FinancialInstrumentAttributes66.mmWarrantParity;
 			maxOccurs = 1;
 			minOccurs = 0;

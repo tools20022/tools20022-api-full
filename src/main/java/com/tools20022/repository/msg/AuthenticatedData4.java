@@ -71,6 +71,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Message authentication code (MAC), computed on the data to protect with an encryption key."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AuthenticatedData5
+ * AuthenticatedData5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AuthenticatedData3
@@ -109,6 +116,14 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the data structure."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData5#mmVersion
+	 * AuthenticatedData5.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +139,7 @@ public class AuthenticatedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData5.mmVersion);
 			previousVersion_lazy = () -> AuthenticatedData3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -157,6 +173,14 @@ public class AuthenticatedData4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Session key or protection key identification used by the recipient."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData5#mmRecipient
+	 * AuthenticatedData5.mmRecipient}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,6 +196,7 @@ public class AuthenticatedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Recipient";
 			definition = "Session key or protection key identification used by the recipient.";
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData5.mmRecipient);
 			previousVersion_lazy = () -> AuthenticatedData3.mmRecipient;
 			minOccurs = 1;
 			isComposite = true;
@@ -205,6 +230,14 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Algorithm to compute message authentication code (MAC)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData5#mmMACAlgorithm
+	 * AuthenticatedData5.mmMACAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -220,6 +253,7 @@ public class AuthenticatedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MACAlgorithm";
 			definition = "Algorithm to compute message authentication code (MAC).";
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData5.mmMACAlgorithm);
 			previousVersion_lazy = () -> AuthenticatedData3.mmMACAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -253,6 +287,14 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data to authenticate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AuthenticatedData5#mmEncapsulatedContent
+	 * AuthenticatedData5.mmEncapsulatedContent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -268,6 +310,7 @@ public class AuthenticatedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncapsulatedContent";
 			definition = "Data to authenticate.";
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData5.mmEncapsulatedContent);
 			previousVersion_lazy = () -> AuthenticatedData3.mmEncapsulatedContent;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -303,6 +346,13 @@ public class AuthenticatedData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Message authentication code value."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AuthenticatedData5#mmMAC
+	 * AuthenticatedData5.mmMAC}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -318,6 +368,7 @@ public class AuthenticatedData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MAC";
 			definition = "Message authentication code value.";
+			nextVersions_lazy = () -> Arrays.asList(AuthenticatedData5.mmMAC);
 			previousVersion_lazy = () -> AuthenticatedData3.mmMAC;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -334,6 +385,7 @@ public class AuthenticatedData4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AuthenticatedData4";
 				definition = "Message authentication code (MAC), computed on the data to protect with an encryption key.";
+				nextVersions_lazy = () -> Arrays.asList(AuthenticatedData5.mmObject());
 				previousVersion_lazy = () -> AuthenticatedData3.mmObject();
 			}
 		});

@@ -54,6 +54,28 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV01
  * TerminalManagementRejectionV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV02
+ * TerminalManagementRejectionV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03
+ * AcceptorConfigurationUpdateV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV03
+ * ManagementPlanReplacementV03}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV03
+ * StatusReportV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04
+ * AcceptorConfigurationUpdateV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV04
+ * ManagementPlanReplacementV04}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV04
+ * StatusReportV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01
+ * MaintenanceDelegationRequestV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -85,7 +107,9 @@ public class TerminalManagementArchive {
 				name = "Terminal Management - Archive - master";
 				definition = "Messages that support any card related terminal management services between a Terminal Management System (TMS) and a Point of Interaction (POI) system.";
 				messageDefinition_lazy = () -> Arrays.asList(ManagementPlanReplacementV01.mmObject(), ManagementPlanReplacementV02.mmObject(), StatusReportV01.mmObject(), StatusReportV02.mmObject(),
-						AcceptorConfigurationUpdateV01.mmObject(), AcceptorConfigurationUpdateV02.mmObject(), TerminalManagementRejectionV01.mmObject());
+						AcceptorConfigurationUpdateV01.mmObject(), AcceptorConfigurationUpdateV02.mmObject(), TerminalManagementRejectionV01.mmObject(), TerminalManagementRejectionV02.mmObject(), AcceptorConfigurationUpdateV03.mmObject(),
+						ManagementPlanReplacementV03.mmObject(), StatusReportV03.mmObject(), AcceptorConfigurationUpdateV04.mmObject(), ManagementPlanReplacementV04.mmObject(), StatusReportV04.mmObject(),
+						MaintenanceDelegationRequestV01.mmObject());
 				code = "catm";
 			}
 		});

@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Sets of elements to identify a name of the identification scheme
+ * Sets of elements to identify a name of the identification scheme.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountSchemeName1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Sets of elements to identify a name of the identification scheme"</li>
+ * "Sets of elements to identify a name of the identification scheme."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -180,7 +180,7 @@ public class AccountSchemeName1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountSchemeName1Choice";
-				definition = "Sets of elements to identify a name of the identification scheme";
+				definition = "Sets of elements to identify a name of the identification scheme.";
 			}
 		});
 		return mmObject_lazy.get();

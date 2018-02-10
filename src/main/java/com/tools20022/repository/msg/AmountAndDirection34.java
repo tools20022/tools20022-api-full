@@ -68,6 +68,8 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection54
+ * AmountAndDirection54}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection53
  * AmountAndDirection53}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection61
@@ -120,6 +122,9 @@ public class AmountAndDirection34 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection54#mmAmount
+	 * AmountAndDirection54.mmAmount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection53#mmAmount
 	 * AmountAndDirection53.mmAmount}</li>
 	 * <li>
@@ -138,7 +143,7 @@ public class AmountAndDirection34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money that results in an increase (positively signed) or decrease (negatively signed), with specification of the currency.";
-			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection53.mmAmount, AmountAndDirection61.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection54.mmAmount, AmountAndDirection53.mmAmount, AmountAndDirection61.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -176,6 +181,9 @@ public class AmountAndDirection34 {
 	 * nextVersions} =
 	 * <ul>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection54#mmSign
+	 * AmountAndDirection54.mmSign}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection53#mmSign
 	 * AmountAndDirection53.mmSign}</li>
 	 * <li>
@@ -193,7 +201,7 @@ public class AmountAndDirection34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Indicates that the amount value is positive or negative.";
-			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection53.mmSign, AmountAndDirection61.mmSign);
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection54.mmSign, AmountAndDirection53.mmSign, AmountAndDirection61.mmSign);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
@@ -209,7 +217,7 @@ public class AmountAndDirection34 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection34";
 				definition = "Amount of money expressed with an optional currency code and debit/credit indicator.";
-				nextVersions_lazy = () -> Arrays.asList(AmountAndDirection53.mmObject(), AmountAndDirection61.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(AmountAndDirection54.mmObject(), AmountAndDirection53.mmObject(), AmountAndDirection61.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

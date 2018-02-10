@@ -72,6 +72,13 @@ import javax.xml.bind.annotation.XmlType;
  * "RateTypeAndAmountAndStatus22"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the value expressed as a rate and an amount."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus38
+ * RateTypeAndAmountAndStatus38}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus15
@@ -117,6 +124,14 @@ public class RateTypeAndAmountAndStatus22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value expressed as a rate type."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus38#mmRateType
+	 * RateTypeAndAmountAndStatus38.mmRateType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -134,6 +149,7 @@ public class RateTypeAndAmountAndStatus22 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateType";
 			definition = "Value expressed as a rate type.";
+			nextVersions_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus38.mmRateType);
 			previousVersion_lazy = () -> RateTypeAndAmountAndStatus15.mmRateType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -174,6 +190,14 @@ public class RateTypeAndAmountAndStatus22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value expressed as an amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus38#mmAmount
+	 * RateTypeAndAmountAndStatus38.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -190,6 +214,7 @@ public class RateTypeAndAmountAndStatus22 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Value expressed as an amount.";
+			nextVersions_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus38.mmAmount);
 			previousVersion_lazy = () -> RateTypeAndAmountAndStatus15.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -227,6 +252,14 @@ public class RateTypeAndAmountAndStatus22 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value expressed as a rate status."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus38#mmRateStatus
+	 * RateTypeAndAmountAndStatus38.mmRateStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -243,6 +276,7 @@ public class RateTypeAndAmountAndStatus22 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateStatus";
 			definition = "Value expressed as a rate status.";
+			nextVersions_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus38.mmRateStatus);
 			previousVersion_lazy = () -> RateTypeAndAmountAndStatus15.mmRateStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -261,6 +295,7 @@ public class RateTypeAndAmountAndStatus22 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateTypeAndAmountAndStatus22";
 				definition = "Specifies the value expressed as a rate and an amount.";
+				nextVersions_lazy = () -> Arrays.asList(RateTypeAndAmountAndStatus38.mmObject());
 				previousVersion_lazy = () -> RateTypeAndAmountAndStatus15.mmObject();
 			}
 		});

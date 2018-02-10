@@ -158,7 +158,7 @@ public class SystemEvent2 {
 	 * name} = "ScheduledTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date and time at which the event is foreseen to occur. "</li>
+	 * definition} = "Date and time at which the event is foreseen to occur."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmScheduledTime = new MMMessageAttribute() {
@@ -169,7 +169,7 @@ public class SystemEvent2 {
 			xmlTag = "SchdldTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduledTime";
-			definition = "Date and time at which the event is foreseen to occur. ";
+			definition = "Date and time at which the event is foreseen to occur.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -205,8 +205,8 @@ public class SystemEvent2 {
 	 * name} = "EffectiveTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Date and time at which the event effectively takes place. "</li>
+	 * definition} = "Date and time at which the event effectively takes place."
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEffectiveTime = new MMMessageAttribute() {
@@ -217,7 +217,7 @@ public class SystemEvent2 {
 			xmlTag = "FctvTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTime";
-			definition = "Date and time at which the event effectively takes place. ";
+			definition = "Date and time at which the event effectively takes place.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();

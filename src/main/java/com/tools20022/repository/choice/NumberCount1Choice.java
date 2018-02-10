@@ -160,6 +160,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07#mmNumberCounts
  * SecuritiesSettlementTransactionGenerationNotification002V07.mmNumberCounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08#mmNumberCounts
+ * SecuritiesSettlementTransactionGenerationNotificationV08.mmNumberCounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV08#mmNumberCounts
+ * SecuritiesFinancingInstructionV08.mmNumberCounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08#mmNumberCounts
+ * SecuritiesSettlementTransactionInstructionV08.mmNumberCounts}</li>
  * </ul>
  * </li>
  * <li>
@@ -302,7 +311,8 @@ public class NumberCount1Choice {
 						SecuritiesSettlementTransactionGenerationNotificationV06.mmNumberCounts, IntraPositionMovementInstruction002V04.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotification002V06.mmNumberCounts,
 						SecuritiesSettlementTransactionInstruction002V06.mmNumberCounts, SecuritiesFinancingInstruction002V06.mmNumberCounts, SecuritiesFinancingInstructionV07.mmNumberCounts,
 						SecuritiesSettlementTransactionGenerationNotificationV07.mmNumberCounts, SecuritiesSettlementTransactionInstructionV07.mmNumberCounts, SecuritiesSettlementTransactionInstruction002V07.mmNumberCounts,
-						SecuritiesFinancingInstruction002V07.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotification002V07.mmNumberCounts);
+						SecuritiesFinancingInstruction002V07.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotification002V07.mmNumberCounts, SecuritiesSettlementTransactionGenerationNotificationV08.mmNumberCounts,
+						SecuritiesFinancingInstructionV08.mmNumberCounts, SecuritiesSettlementTransactionInstructionV08.mmNumberCounts);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrentInstructionNumberRule.forNumberCount1Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;

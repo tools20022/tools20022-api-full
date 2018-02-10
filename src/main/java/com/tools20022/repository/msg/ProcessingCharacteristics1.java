@@ -84,7 +84,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessingCharacteristics1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Processing characteristics linked to the instrument, ie, not to  the market."
+ * "Processing characteristics linked to the instrument, ie, not to the market."
  * </li>
  * </ul>
  */
@@ -126,7 +126,7 @@ public class ProcessingCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether a subscription or  a redemption can be instructed by amount."
+	 * "Indicates whether a subscription or a redemption can be instructed by amount."
 	 * </li>
 	 * </ul>
 	 */
@@ -138,7 +138,7 @@ public class ProcessingCharacteristics1 {
 			xmlTag = "AmtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountIndicator";
-			definition = "Indicates whether a subscription or  a redemption can be instructed by amount.";
+			definition = "Indicates whether a subscription or a redemption can be instructed by amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -399,7 +399,7 @@ public class ProcessingCharacteristics1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProcessingCharacteristics1";
-				definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
+				definition = "Processing characteristics linked to the instrument, ie, not to the market.";
 			}
 		});
 		return mmObject_lazy.get();

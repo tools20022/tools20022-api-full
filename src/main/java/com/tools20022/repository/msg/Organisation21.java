@@ -138,6 +138,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Organisation31 Organisation31}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Organisation4
  * Organisation4}</li>
@@ -181,6 +187,13 @@ public class Organisation21 {
 	 * definition} =
 	 * "Name by which a party is known and which is usually used to identify that party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation31#mmName
+	 * Organisation31.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -197,6 +210,7 @@ public class Organisation21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmName);
 			previousVersion_lazy = () -> Organisation4.mmName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -235,6 +249,14 @@ public class Organisation21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique and unambiguous identifier for the organisation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmIdentification
+	 * Organisation31.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -251,6 +273,7 @@ public class Organisation21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier for the organisation.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmIdentification);
 			previousVersion_lazy = () -> Organisation4.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -287,7 +310,14 @@ public class Organisation21 {
 	 * name} = "Purpose"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Purpose of the organisation, for example,, charity."</li>
+	 * definition} = "Purpose of the organisation, for example, charity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Organisation31#mmPurpose
+	 * Organisation31.mmPurpose}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -303,7 +333,8 @@ public class Organisation21 {
 			xmlTag = "Purp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
-			definition = "Purpose of the organisation, for example,, charity.";
+			definition = "Purpose of the organisation, for example, charity.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmPurpose);
 			previousVersion_lazy = () -> Organisation4.mmPurpose;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -341,6 +372,14 @@ public class Organisation21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country of taxation of an organisation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmTaxationCountry
+	 * Organisation31.mmTaxationCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -357,6 +396,7 @@ public class Organisation21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxationCountry";
 			definition = "Country of taxation of an organisation.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmTaxationCountry);
 			previousVersion_lazy = () -> Organisation4.mmTaxationCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -394,6 +434,14 @@ public class Organisation21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country in which the organisation is registered."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmRegistrationCountry
+	 * Organisation31.mmRegistrationCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -410,6 +458,7 @@ public class Organisation21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationCountry";
 			definition = "Country in which the organisation is registered.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmRegistrationCountry);
 			previousVersion_lazy = () -> Organisation4.mmRegistrationCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -448,6 +497,14 @@ public class Organisation21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which a given organisation was officially registered."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmRegistrationDate
+	 * Organisation31.mmRegistrationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -464,6 +521,7 @@ public class Organisation21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDate";
 			definition = "Date and time at which a given organisation was officially registered.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmRegistrationDate);
 			previousVersion_lazy = () -> Organisation4.mmRegistrationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -501,6 +559,14 @@ public class Organisation21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number assigned by a tax authority to an entity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmTaxIdentificationNumber
+	 * Organisation31.mmTaxIdentificationNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -517,6 +583,7 @@ public class Organisation21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxIdentificationNumber";
 			definition = "Number assigned by a tax authority to an entity.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmTaxIdentificationNumber);
 			previousVersion_lazy = () -> Organisation4.mmTaxIdentificationNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -555,6 +622,14 @@ public class Organisation21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Number assigned by a national registration authority to an entity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmNationalRegistrationNumber
+	 * Organisation31.mmNationalRegistrationNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -571,6 +646,7 @@ public class Organisation21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NationalRegistrationNumber";
 			definition = "Number assigned by a national registration authority to an entity.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmNationalRegistrationNumber);
 			previousVersion_lazy = () -> Organisation4.mmNationalRegistrationNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -607,6 +683,14 @@ public class Organisation21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Postal address of a party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation31#mmCorporateInvestorAddress
+	 * Organisation31.mmCorporateInvestorAddress}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -623,6 +707,7 @@ public class Organisation21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateInvestorAddress";
 			definition = "Postal address of a party.";
+			nextVersions_lazy = () -> Arrays.asList(Organisation31.mmCorporateInvestorAddress);
 			previousVersion_lazy = () -> Organisation4.mmCorporateInvestorAddress;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -648,6 +733,7 @@ public class Organisation21 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Organisation21";
 				definition = "Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.";
+				nextVersions_lazy = () -> Arrays.asList(Organisation31.mmObject());
 				previousVersion_lazy = () -> Organisation4.mmObject();
 			}
 		});

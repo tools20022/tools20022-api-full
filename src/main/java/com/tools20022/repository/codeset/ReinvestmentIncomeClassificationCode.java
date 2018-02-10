@@ -265,7 +265,7 @@ public class ReinvestmentIncomeClassificationCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cash proceeds being reinvested is classified as cash dividend at the exempt rate elected through the DTC (the Depository Trust Company)  Foreign Tax Payment service."
+	 * "Cash proceeds being reinvested is classified as cash dividend at the exempt rate elected through the DTC (the Depository Trust Company) Foreign Tax Payment service."
 	 * </li>
 	 * </ul>
 	 */
@@ -273,7 +273,7 @@ public class ReinvestmentIncomeClassificationCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividendTaxExempt";
-			definition = "Cash proceeds being reinvested is classified as cash dividend at the exempt rate elected through the DTC (the Depository Trust Company)  Foreign Tax Payment service.";
+			definition = "Cash proceeds being reinvested is classified as cash dividend at the exempt rate elected through the DTC (the Depository Trust Company) Foreign Tax Payment service.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmObject();
 			codeName = "CDEX";
 		}
@@ -297,15 +297,14 @@ public class ReinvestmentIncomeClassificationCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cash proceeds being reinvested is classified as special cash dividend. "
-	 * </li>
+	 * "Cash proceeds being reinvested is classified as special cash dividend."</li>
 	 * </ul>
 	 */
 	public static final ReinvestmentIncomeClassificationCode CashDividendSpecial = new ReinvestmentIncomeClassificationCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDividendSpecial";
-			definition = "Cash proceeds being reinvested is classified as special cash dividend. ";
+			definition = "Cash proceeds being reinvested is classified as special cash dividend.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ReinvestmentIncomeClassificationCode.mmObject();
 			codeName = "CDPS";
 		}

@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AssignmentMethod1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for assignment method."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.AssignmentMethod2Choice
+ * AssignmentMethod2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,6 +112,14 @@ public class AssignmentMethod1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Assignment method expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AssignmentMethod2Choice#mmCode
+	 * AssignmentMethod2Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -116,6 +131,7 @@ public class AssignmentMethod1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Assignment method expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(AssignmentMethod2Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssignmentMethod1Code.mmObject();
@@ -153,6 +169,14 @@ public class AssignmentMethod1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Assignment method expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AssignmentMethod2Choice#mmProprietary
+	 * AssignmentMethod2Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -164,6 +188,7 @@ public class AssignmentMethod1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Assignment method expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(AssignmentMethod2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,6 +205,7 @@ public class AssignmentMethod1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AssignmentMethod1Choice";
 				definition = "Choice of format for assignment method.";
+				nextVersions_lazy = () -> Arrays.asList(AssignmentMethod2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

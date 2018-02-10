@@ -137,6 +137,9 @@ public class ProductIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradeProduct2#mmGlobalSerialIdentifier
 	 * TradeProduct2.mmGlobalSerialIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeProduct3#mmGlobalSerialIdentifier
+	 * TradeProduct3.mmGlobalSerialIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -158,7 +161,7 @@ public class ProductIdentification {
 	public static final MMBusinessAttribute mmIdentifier = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Product2.mmProductCode, Product1.mmProductCode, ProductIdentifier2.mmIdentifier, TradeProduct1.mmGlobalSerialIdentifier, Product3.mmProductCode, Product4.mmProductCode,
-					Product5.mmProductCode, TradeProduct2.mmGlobalSerialIdentifier);
+					Product5.mmProductCode, TradeProduct2.mmGlobalSerialIdentifier, TradeProduct3.mmGlobalSerialIdentifier);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

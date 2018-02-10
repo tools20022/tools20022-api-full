@@ -180,6 +180,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * definition} =
  * "Specifies DTCC (The Depository Trust and Clearing Corporation) defined sub event types."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code
+ * DTCCSubEventType6Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType4Code
@@ -204,6 +211,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OptOut"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#OptOut
+	 * DTCCSubEventType6Code.OptOut}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -215,6 +230,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptOut";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.OptOut);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.OptOut;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.OptOut.getCodeName().orElse(name);
@@ -234,6 +250,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendReinvestmentByDTC"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#DividendReinvestmentByDTC
+	 * DTCCSubEventType6Code.DividendReinvestmentByDTC}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -245,6 +269,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentByDTC";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.DividendReinvestmentByDTC);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.DividendReinvestmentByDTC;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.DividendReinvestmentByDTC.getCodeName().orElse(name);
@@ -264,6 +289,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PlaceOfListing"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#PlaceOfListing
+	 * DTCCSubEventType6Code.PlaceOfListing}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -275,6 +308,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.PlaceOfListing);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.PlaceOfListing;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.PlaceOfListing.getCodeName().orElse(name);
@@ -294,6 +328,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BoardLot"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#BoardLot
+	 * DTCCSubEventType6Code.BoardLot}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -305,6 +347,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardLot";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.BoardLot);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.BoardLot;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.BoardLot.getCodeName().orElse(name);
@@ -324,6 +367,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Remarketing"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#Remarketing
+	 * DTCCSubEventType6Code.Remarketing}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -335,6 +386,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Remarketing";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.Remarketing);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.Remarketing;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.Remarketing.getCodeName().orElse(name);
@@ -354,6 +406,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Unwind"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#Unwind
+	 * DTCCSubEventType6Code.Unwind}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -365,6 +425,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unwind";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.Unwind);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.Unwind;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.Unwind.getCodeName().orElse(name);
@@ -384,6 +445,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ShareExchange"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#ShareExchange
+	 * DTCCSubEventType6Code.ShareExchange}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -395,6 +464,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareExchange";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.ShareExchange);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.ShareExchange;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.ShareExchange.getCodeName().orElse(name);
@@ -414,6 +484,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Standard"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#Standard
+	 * DTCCSubEventType6Code.Standard}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -425,6 +503,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Standard";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.Standard);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.Standard;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.Standard.getCodeName().orElse(name);
@@ -444,6 +523,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Transfer"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#Transfer
+	 * DTCCSubEventType6Code.Transfer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -455,6 +542,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transfer";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.Transfer);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.Transfer;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.Transfer.getCodeName().orElse(name);
@@ -474,6 +562,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SurvivorOptions"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#SurvivorOptions
+	 * DTCCSubEventType6Code.SurvivorOptions}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -485,6 +581,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurvivorOptions";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.SurvivorOptions);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.SurvivorOptions;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.SurvivorOptions.getCodeName().orElse(name);
@@ -504,6 +601,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MortgageBacked"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#MortgageBacked
+	 * DTCCSubEventType6Code.MortgageBacked}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -515,6 +620,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MortgageBacked";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.MortgageBacked);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.MortgageBacked;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.MortgageBacked.getCodeName().orElse(name);
@@ -534,6 +640,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SaleOfAssets"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#SaleOfAssets
+	 * DTCCSubEventType6Code.SaleOfAssets}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -545,6 +659,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleOfAssets";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.SaleOfAssets);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.SaleOfAssets;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.SaleOfAssets.getCodeName().orElse(name);
@@ -564,6 +679,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PhysicalRightsNotIssued"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#PhysicalRightsNotIssued
+	 * DTCCSubEventType6Code.PhysicalRightsNotIssued}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -575,6 +698,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalRightsNotIssued";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.PhysicalRightsNotIssued);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.PhysicalRightsNotIssued;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.PhysicalRightsNotIssued.getCodeName().orElse(name);
@@ -594,6 +718,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PoisonPill"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#PoisonPill
+	 * DTCCSubEventType6Code.PoisonPill}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -605,6 +737,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoisonPill";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.PoisonPill);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.PoisonPill;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.PoisonPill.getCodeName().orElse(name);
@@ -624,6 +757,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendReinvestmentByIssuer"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#DividendReinvestmentByIssuer
+	 * DTCCSubEventType6Code.DividendReinvestmentByIssuer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -635,6 +776,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentByIssuer";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.DividendReinvestmentByIssuer);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.DividendReinvestmentByIssuer;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.DividendReinvestmentByIssuer.getCodeName().orElse(name);
@@ -654,6 +796,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MandatoryRedemptionOfShares"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#MandatoryRedemptionOfShares
+	 * DTCCSubEventType6Code.MandatoryRedemptionOfShares}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -665,6 +815,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryRedemptionOfShares";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.MandatoryRedemptionOfShares);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.MandatoryRedemptionOfShares;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.MandatoryRedemptionOfShares.getCodeName().orElse(name);
@@ -684,6 +835,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SharePurchasePlan"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#SharePurchasePlan
+	 * DTCCSubEventType6Code.SharePurchasePlan}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -695,6 +854,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharePurchasePlan";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.SharePurchasePlan);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.SharePurchasePlan;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.SharePurchasePlan.getCodeName().orElse(name);
@@ -714,6 +874,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OpenOffer"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#OpenOffer
+	 * DTCCSubEventType6Code.OpenOffer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -725,6 +893,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOffer";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.OpenOffer);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.OpenOffer;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.OpenOffer.getCodeName().orElse(name);
@@ -744,6 +913,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TenderWithRights"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#TenderWithRights
+	 * DTCCSubEventType6Code.TenderWithRights}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -755,6 +932,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderWithRights";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.TenderWithRights);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.TenderWithRights;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.TenderWithRights.getCodeName().orElse(name);
@@ -774,6 +952,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashinLieu"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#CashinLieu
+	 * DTCCSubEventType6Code.CashinLieu}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -785,6 +971,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashinLieu";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.CashinLieu);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.CashinLieu;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.CashinLieu.getCodeName().orElse(name);
@@ -804,6 +991,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BidTenderSealedTender"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#BidTenderSealedTender
+	 * DTCCSubEventType6Code.BidTenderSealedTender}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -815,6 +1010,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidTenderSealedTender";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.BidTenderSealedTender);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.BidTenderSealedTender;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.BidTenderSealedTender.getCodeName().orElse(name);
@@ -834,6 +1030,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OfferToPurchase"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#OfferToPurchase
+	 * DTCCSubEventType6Code.OfferToPurchase}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -845,6 +1049,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferToPurchase";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.OfferToPurchase);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.OfferToPurchase;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.OfferToPurchase.getCodeName().orElse(name);
@@ -864,6 +1069,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ADR"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#ADR
+	 * DTCCSubEventType6Code.ADR}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -875,6 +1088,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADR";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.ADR);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.ADR;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.ADR.getCodeName().orElse(name);
@@ -894,6 +1108,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithPayout"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#WithPayout
+	 * DTCCSubEventType6Code.WithPayout}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -905,6 +1127,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithPayout";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.WithPayout);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.WithPayout;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.WithPayout.getCodeName().orElse(name);
@@ -924,6 +1147,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WithoutPayout"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#WithoutPayout
+	 * DTCCSubEventType6Code.WithoutPayout}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -935,6 +1166,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithoutPayout";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.WithoutPayout);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.WithoutPayout;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.WithoutPayout.getCodeName().orElse(name);
@@ -954,6 +1186,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TaxCredit"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#TaxCredit
+	 * DTCCSubEventType6Code.TaxCredit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -965,6 +1205,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCredit";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.TaxCredit);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.TaxCredit;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.TaxCredit.getCodeName().orElse(name);
@@ -984,6 +1225,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "USLegal144A"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#USLegal144A
+	 * DTCCSubEventType6Code.USLegal144A}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -995,6 +1244,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USLegal144A";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.USLegal144A);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.USLegal144A;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.USLegal144A.getCodeName().orElse(name);
@@ -1014,6 +1264,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAndSecurities"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#CashAndSecurities
+	 * DTCCSubEventType6Code.CashAndSecurities}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1025,6 +1283,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAndSecurities";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.CashAndSecurities);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.CashAndSecurities;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.CashAndSecurities.getCodeName().orElse(name);
@@ -1044,6 +1303,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "RegulationS"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#RegulationS
+	 * DTCCSubEventType6Code.RegulationS}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1055,6 +1322,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulationS";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.RegulationS);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.RegulationS;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.RegulationS.getCodeName().orElse(name);
@@ -1074,6 +1342,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ImportantNotice"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#ImportantNotice
+	 * DTCCSubEventType6Code.ImportantNotice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1085,6 +1361,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ImportantNotice";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.ImportantNotice);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.ImportantNotice;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.ImportantNotice.getCodeName().orElse(name);
@@ -1104,6 +1381,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BasedOnRecordDateHoldings"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#BasedOnRecordDateHoldings
+	 * DTCCSubEventType6Code.BasedOnRecordDateHoldings}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1115,6 +1400,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BasedOnRecordDateHoldings";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.BasedOnRecordDateHoldings);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.BasedOnRecordDateHoldings;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.BasedOnRecordDateHoldings.getCodeName().orElse(name);
@@ -1134,6 +1420,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Cash"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#Cash
+	 * DTCCSubEventType6Code.Cash}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1145,6 +1439,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cash";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.Cash);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.Cash;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.Cash.getCodeName().orElse(name);
@@ -1164,6 +1459,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PresentationRequired"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#PresentationRequired
+	 * DTCCSubEventType6Code.PresentationRequired}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1175,6 +1478,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PresentationRequired";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.PresentationRequired);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.PresentationRequired;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.PresentationRequired.getCodeName().orElse(name);
@@ -1194,6 +1498,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Securities"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#Securities
+	 * DTCCSubEventType6Code.Securities}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1205,6 +1517,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Securities";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.Securities);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.Securities;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.Securities.getCodeName().orElse(name);
@@ -1224,6 +1537,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConvertAndTender"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#ConvertAndTender
+	 * DTCCSubEventType6Code.ConvertAndTender}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1235,6 +1556,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConvertAndTender";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.ConvertAndTender);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.ConvertAndTender;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.ConvertAndTender.getCodeName().orElse(name);
@@ -1254,6 +1576,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MiniTender"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#MiniTender
+	 * DTCCSubEventType6Code.MiniTender}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1265,6 +1595,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiniTender";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.MiniTender);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.MiniTender;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.MiniTender.getCodeName().orElse(name);
@@ -1284,6 +1615,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SelfTender"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#SelfTender
+	 * DTCCSubEventType6Code.SelfTender}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1295,6 +1634,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfTender";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.SelfTender);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.SelfTender;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.SelfTender.getCodeName().orElse(name);
@@ -1314,6 +1654,14 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GDR"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#GDR
+	 * DTCCSubEventType6Code.GDR}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1325,6 +1673,7 @@ public class DTCCSubEventType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GDR";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.GDR);
 			previousVersion_lazy = () -> DTCCSubEventType4Code.GDR;
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.GDR.getCodeName().orElse(name);
@@ -1344,12 +1693,21 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DividendEquivalentPayment871M"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#DividendEquivalentPayment871M
+	 * DTCCSubEventType6Code.DividendEquivalentPayment871M}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final DTCCSubEventType5Code DividendEquivalentPayment871M = new DTCCSubEventType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendEquivalentPayment871M";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.DividendEquivalentPayment871M);
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.DividendEquivalentPayment871M.getCodeName().orElse(name);
 		}
@@ -1368,12 +1726,21 @@ public class DTCCSubEventType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeemedDividend305C"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code#DeemedDividend305C
+	 * DTCCSubEventType6Code.DeemedDividend305C}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final DTCCSubEventType5Code DeemedDividend305C = new DTCCSubEventType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedDividend305C";
+			nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.DeemedDividend305C);
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventType5Code.mmObject();
 			codeName = DTCCSubEventTypeCode.DeemedDividend305C.getCodeName().orElse(name);
 		}
@@ -1391,6 +1758,7 @@ public class DTCCSubEventType5Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DTCCSubEventType5Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined sub event types.";
+				nextVersions_lazy = () -> Arrays.asList(DTCCSubEventType6Code.mmObject());
 				previousVersion_lazy = () -> DTCCSubEventType4Code.mmObject();
 				trace_lazy = () -> DTCCSubEventTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventType5Code.OptOut, com.tools20022.repository.codeset.DTCCSubEventType5Code.DividendReinvestmentByDTC,

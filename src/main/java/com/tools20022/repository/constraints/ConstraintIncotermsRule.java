@@ -49,7 +49,7 @@ public class ConstraintIncotermsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails.  If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails."
+	 * "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintIncotermsRule {
 			validator = ConstraintIncotermsRule::checkLineItem5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsRule";
-			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails.  If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
+			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
 			owner_lazy = () -> LineItem5.mmObject();
 		}
 	};
@@ -78,7 +78,7 @@ public class ConstraintIncotermsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails.  If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails."
+	 * "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -95,7 +95,7 @@ public class ConstraintIncotermsRule {
 			validator = ConstraintIncotermsRule::checkLineItem7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsRule";
-			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails.  If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
+			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIncotermsRule.forLineItem11);
 			owner_lazy = () -> LineItem7.mmObject();
 		}
@@ -116,7 +116,7 @@ public class ConstraintIncotermsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails.  If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails."
+	 * "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -138,7 +138,7 @@ public class ConstraintIncotermsRule {
 			validator = ConstraintIncotermsRule::checkLineItem11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsRule";
-			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails.  If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
+			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIncotermsRule.forLineItem13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIncotermsRule.forLineItem7;
 			owner_lazy = () -> LineItem11.mmObject();
@@ -160,7 +160,7 @@ public class ConstraintIncotermsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails.  If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails."
+	 * "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -174,7 +174,7 @@ public class ConstraintIncotermsRule {
 			validator = ConstraintIncotermsRule::checkLineItem13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncotermsRule";
-			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails.  If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
+			definition = "If Incoterms is present, then Incoterms is not allowed within each occurrence of LineItemDetails. If Incoterms is not present, then Incoterms is allowed within each occurrence of LineItemDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIncotermsRule.forLineItem11;
 			owner_lazy = () -> LineItem13.mmObject();
 		}

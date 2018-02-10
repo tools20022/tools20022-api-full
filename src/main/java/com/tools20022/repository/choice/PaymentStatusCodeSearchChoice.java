@@ -69,8 +69,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentStatusCodeSearchChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between a list of pending statuses, final statuses or all statuses. "
- * </li>
+ * "Choice between a list of pending statuses, final statuses or all statuses."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -235,7 +234,7 @@ public class PaymentStatusCodeSearchChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatusCodeSearchChoice";
-				definition = "Choice between a list of pending statuses, final statuses or all statuses. ";
+				definition = "Choice between a list of pending statuses, final statuses or all statuses.";
 			}
 		});
 		return mmObject_lazy.get();

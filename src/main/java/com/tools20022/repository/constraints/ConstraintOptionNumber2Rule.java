@@ -703,6 +703,14 @@ public class ConstraintOptionNumber2Rule {
 	 * definition} =
 	 * "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumber2Rule#forCorporateActionOption142
+	 * ConstraintOptionNumber2Rule.forCorporateActionOption142}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -716,6 +724,7 @@ public class ConstraintOptionNumber2Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption142);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption118;
 			owner_lazy = () -> CorporateActionOption131.mmObject();
 		}
@@ -748,6 +757,72 @@ public class ConstraintOptionNumber2Rule {
 			name = "OptionNumber2Rule";
 			definition = "When the CorporateActionInstruction is unsolicited, ie, the instruction has not been preceded by an Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
 			owner_lazy = () -> CorporateActionOption134.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142
+	 * CorporateActionOption142}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumber2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When the CorporateActionInstruction is unsolicited, that is, the instruction has not been preceded by a Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumber2Rule#forCorporateActionOption131
+	 * ConstraintOptionNumber2Rule.forCorporateActionOption131}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption142> forCorporateActionOption142 = new MMConstraint<CorporateActionOption142>() {
+		{
+			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption142;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumber2Rule";
+			definition = "When the CorporateActionInstruction is unsolicited, that is, the instruction has not been preceded by a Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumber2Rule.forCorporateActionOption131;
+			owner_lazy = () -> CorporateActionOption142.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146
+	 * CorporateActionOption146}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumber2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When the CorporateActionInstruction is unsolicited, that is, the instruction has not been preceded by a Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption146> forCorporateActionOption146 = new MMConstraint<CorporateActionOption146>() {
+		{
+			validator = ConstraintOptionNumber2Rule::checkCorporateActionOption146;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumber2Rule";
+			definition = "When the CorporateActionInstruction is unsolicited, that is, the instruction has not been preceded by a Corporate ActionNotification, then OptionNumber/code must be UNSO (unsolicited).";
+			owner_lazy = () -> CorporateActionOption146.mmObject();
 		}
 	};
 
@@ -946,6 +1021,24 @@ public class ConstraintOptionNumber2Rule {
 	 * OptionNumber/code must be UNSO (unsolicited).
 	 */
 	public static void checkCorporateActionOption134(CorporateActionOption134 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When the CorporateActionInstruction is unsolicited, that is, the
+	 * instruction has not been preceded by a Corporate ActionNotification, then
+	 * OptionNumber/code must be UNSO (unsolicited).
+	 */
+	public static void checkCorporateActionOption142(CorporateActionOption142 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When the CorporateActionInstruction is unsolicited, that is, the
+	 * instruction has not been preceded by a Corporate ActionNotification, then
+	 * OptionNumber/code must be UNSO (unsolicited).
+	 */
+	public static void checkCorporateActionOption146(CorporateActionOption146 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

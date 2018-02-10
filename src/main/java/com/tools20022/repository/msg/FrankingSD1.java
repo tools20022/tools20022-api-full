@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Franking details
+ * Franking details.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -83,7 +83,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "FrankingSD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Franking details"</li>
+ * definition} = "Franking details."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -118,7 +118,7 @@ public class FrankingSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. "
+	 * "Unambiguous reference to the location where the supplementary data must be inserted in the message instance."
 	 * </li>
 	 * </ul>
 	 */
@@ -129,7 +129,7 @@ public class FrankingSD1 {
 			xmlTag = "PlcAndNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
-			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance. ";
+			definition = "Unambiguous reference to the location where the supplementary data must be inserted in the message instance.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -487,7 +487,7 @@ public class FrankingSD1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FrankingSD1";
-				definition = "Franking details";
+				definition = "Franking details.";
 			}
 		});
 		return mmObject_lazy.get();

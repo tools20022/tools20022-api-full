@@ -108,6 +108,15 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides further details related to a direct debit mandate signed between the creditor and the debtor."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateRelatedInformation12
+ * MandateRelatedInformation12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateRelatedInformation13
+ * MandateRelatedInformation13}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation10
@@ -154,6 +163,17 @@ public class MandateRelatedInformation11 {
 	 * definition} =
 	 * "Unique identification, as assigned by the creditor, to unambiguously identify the mandate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmMandateIdentification
+	 * MandateRelatedInformation12.mmMandateIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation13#mmMandateIdentification
+	 * MandateRelatedInformation13.mmMandateIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -170,6 +190,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateIdentification";
 			definition = "Unique identification, as assigned by the creditor, to unambiguously identify the mandate.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmMandateIdentification, MandateRelatedInformation13.mmMandateIdentification);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmMandateIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -209,6 +230,17 @@ public class MandateRelatedInformation11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on which the direct debit mandate has been signed by the debtor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmDateOfSignature
+	 * MandateRelatedInformation12.mmDateOfSignature}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation13#mmDateOfSignature
+	 * MandateRelatedInformation13.mmDateOfSignature}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -225,6 +257,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfSignature";
 			definition = "Date on which the direct debit mandate has been signed by the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmDateOfSignature, MandateRelatedInformation13.mmDateOfSignature);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmDateOfSignature;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -265,6 +298,14 @@ public class MandateRelatedInformation11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicator notifying whether the underlying mandate is amended or not."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmAmendmentIndicator
+	 * MandateRelatedInformation12.mmAmendmentIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -281,6 +322,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentIndicator";
 			definition = "Indicator notifying whether the underlying mandate is amended or not.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmAmendmentIndicator);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmAmendmentIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -319,6 +361,14 @@ public class MandateRelatedInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "List of mandate elements that have been modified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmAmendmentInformationDetails
+	 * MandateRelatedInformation12.mmAmendmentInformationDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -335,6 +385,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmendmentInformationDetails";
 			definition = "List of mandate elements that have been modified.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmAmendmentInformationDetails);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmAmendmentInformationDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -376,6 +427,14 @@ public class MandateRelatedInformation11 {
 	 * definition} =
 	 * "Additional security provisions, such as a digital signature, as provided by the debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmElectronicSignature
+	 * MandateRelatedInformation12.mmElectronicSignature}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -392,6 +451,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectronicSignature";
 			definition = "Additional security provisions, such as a digital signature, as provided by the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmElectronicSignature);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmElectronicSignature;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -431,6 +491,14 @@ public class MandateRelatedInformation11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date of the first collection of a direct debit as per the mandate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmFirstCollectionDate
+	 * MandateRelatedInformation12.mmFirstCollectionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -447,6 +515,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstCollectionDate";
 			definition = "Date of the first collection of a direct debit as per the mandate.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmFirstCollectionDate);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmFirstCollectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -486,6 +555,14 @@ public class MandateRelatedInformation11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date of the final collection of a direct debit as per the mandate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmFinalCollectionDate
+	 * MandateRelatedInformation12.mmFinalCollectionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -502,6 +579,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalCollectionDate";
 			definition = "Date of the final collection of a direct debit as per the mandate.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmFinalCollectionDate);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmFinalCollectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -543,6 +621,14 @@ public class MandateRelatedInformation11 {
 	 * definition} =
 	 * "Regularity with which direct debit instructions are to be created and processed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmFrequency
+	 * MandateRelatedInformation12.mmFrequency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -559,6 +645,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Regularity with which direct debit instructions are to be created and processed.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmFrequency);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -599,6 +686,14 @@ public class MandateRelatedInformation11 {
 	 * definition} =
 	 * "Reason for the direct debit mandate to allow the user to distinguish between different mandates for the same creditor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmReason
+	 * MandateRelatedInformation12.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -615,6 +710,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason for the direct debit mandate to allow the user to distinguish between different mandates for the same creditor.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmReason);
 			previousVersion_lazy = () -> MandateRelatedInformation10.mmReason;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -657,6 +753,14 @@ public class MandateRelatedInformation11 {
 	 * definition} =
 	 * "Specifies the number of days the direct debit instruction must be tracked."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmTrackingDays
+	 * MandateRelatedInformation12.mmTrackingDays}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTrackingDays = new MMMessageAttribute() {
@@ -668,6 +772,7 @@ public class MandateRelatedInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TrackingDays";
 			definition = "Specifies the number of days the direct debit instruction must be tracked.";
+			nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmTrackingDays);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Exact2NumericText.mmObject();
@@ -689,6 +794,7 @@ public class MandateRelatedInformation11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MandateRelatedInformation11";
 				definition = "Provides further details related to a direct debit mandate signed between the creditor and the debtor.";
+				nextVersions_lazy = () -> Arrays.asList(MandateRelatedInformation12.mmObject(), MandateRelatedInformation13.mmObject());
 				previousVersion_lazy = () -> MandateRelatedInformation10.mmObject();
 			}
 		});

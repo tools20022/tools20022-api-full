@@ -33,7 +33,7 @@ import java.util.concurrent.atomic.AtomicReference;
 import java.util.Objects;
 
 /**
- * Requestor of the quote
+ * Requestor of the quote.
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -65,7 +65,7 @@ import java.util.Objects;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "QuoteRequestor"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Requestor of the quote"</li>
+ * definition} = "Requestor of the quote."</li>
  * </ul>
  */
 public class QuoteRequestor extends InformationPartyRole {
@@ -144,7 +144,7 @@ public class QuoteRequestor extends InformationPartyRole {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuoteRequestor";
-				definition = "Requestor of the quote";
+				definition = "Requestor of the quote.";
 				superType_lazy = () -> InformationPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.QuoteRequestor.mmRequestorEligibility);
 			}

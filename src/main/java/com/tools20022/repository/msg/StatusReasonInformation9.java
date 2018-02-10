@@ -86,6 +86,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.ValidationStatusReason1
  * ValidationStatusReason1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReasonInformation11
+ * StatusReasonInformation11}</li>
  * </ul>
  * </li>
  * </ul>
@@ -132,6 +134,9 @@ public class StatusReasonInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ValidationStatusReason1#mmOriginator
 	 * ValidationStatusReason1.mmOriginator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReasonInformation11#mmOriginator
+	 * StatusReasonInformation11.mmOriginator}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -145,7 +150,7 @@ public class StatusReasonInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Party that issues the status.";
-			nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmOriginator);
+			nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmOriginator, StatusReasonInformation11.mmOriginator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -189,6 +194,9 @@ public class StatusReasonInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ValidationStatusReason1#mmReason
 	 * ValidationStatusReason1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReasonInformation11#mmReason
+	 * StatusReasonInformation11.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -202,7 +210,7 @@ public class StatusReasonInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the status report.";
-			nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmReason);
+			nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmReason, StatusReasonInformation11.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -249,6 +257,9 @@ public class StatusReasonInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ValidationStatusReason1#mmAdditionalInformation
 	 * ValidationStatusReason1.mmAdditionalInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReasonInformation11#mmAdditionalInformation
+	 * StatusReasonInformation11.mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -262,7 +273,7 @@ public class StatusReasonInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the status reason.\n\nUsage: Additional information can be used for several purposes such as the reporting of repaired information.";
-			nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmAdditionalInformation);
+			nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmAdditionalInformation, StatusReasonInformation11.mmAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
@@ -279,7 +290,7 @@ public class StatusReasonInformation9 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReasonInformation9";
 				definition = "Set of elements used to provide information on the status reason of the transaction.";
-				nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(ValidationStatusReason1.mmObject(), StatusReasonInformation11.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

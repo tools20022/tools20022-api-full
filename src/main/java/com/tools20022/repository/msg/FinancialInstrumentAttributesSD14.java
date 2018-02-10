@@ -94,6 +94,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding underlying security details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15
+ * FinancialInstrumentAttributesSD15}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD12
@@ -133,6 +141,14 @@ public class FinancialInstrumentAttributesSD14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmPlaceAndName
+	 * FinancialInstrumentAttributesSD15.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -148,6 +164,7 @@ public class FinancialInstrumentAttributesSD14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmPlaceAndName);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -184,6 +201,14 @@ public class FinancialInstrumentAttributesSD14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country of source income for the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmIncomeSourceCountry
+	 * FinancialInstrumentAttributesSD15.mmIncomeSourceCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -200,6 +225,7 @@ public class FinancialInstrumentAttributesSD14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeSourceCountry";
 			definition = "Country of source income for the security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmIncomeSourceCountry);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmIncomeSourceCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -239,6 +265,14 @@ public class FinancialInstrumentAttributesSD14 {
 	 * definition} =
 	 * "Classification of instruments into asset classes at DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmDTCAssetClass
+	 * FinancialInstrumentAttributesSD15.mmDTCAssetClass}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -255,6 +289,7 @@ public class FinancialInstrumentAttributesSD14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetClass";
 			definition = "Classification of instruments into asset classes at DTC (The Depository Trust Corporation).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmDTCAssetClass);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmDTCAssetClass;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -294,6 +329,14 @@ public class FinancialInstrumentAttributesSD14 {
 	 * definition} =
 	 * "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmDTCAssetType
+	 * FinancialInstrumentAttributesSD15.mmDTCAssetType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -310,6 +353,7 @@ public class FinancialInstrumentAttributesSD14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCAssetType";
 			definition = "Further classification of instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmDTCAssetType);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmDTCAssetType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -348,6 +392,14 @@ public class FinancialInstrumentAttributesSD14 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the security is eligible for holding at DTC."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmSecurityEligibilityIndicator
+	 * FinancialInstrumentAttributesSD15.mmSecurityEligibilityIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -364,6 +416,7 @@ public class FinancialInstrumentAttributesSD14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityEligibilityIndicator";
 			definition = "Indicates whether the security is eligible for holding at DTC.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmSecurityEligibilityIndicator);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmSecurityEligibilityIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -400,7 +453,15 @@ public class FinancialInstrumentAttributesSD14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Ticket symbol for the event security (underlying security). "</li>
+	 * "Ticket symbol for the event security (underlying security)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmTickerSymbol
+	 * FinancialInstrumentAttributesSD15.mmTickerSymbol}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -416,7 +477,8 @@ public class FinancialInstrumentAttributesSD14 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Ticker Symbol"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
-			definition = "Ticket symbol for the event security (underlying security). ";
+			definition = "Ticket symbol for the event security (underlying security).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmTickerSymbol);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmTickerSymbol;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -455,7 +517,15 @@ public class FinancialInstrumentAttributesSD14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. "
+	 * "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmLinkedSecurity
+	 * FinancialInstrumentAttributesSD15.mmLinkedSecurity}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -472,7 +542,8 @@ public class FinancialInstrumentAttributesSD14 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Linked Security ID"), new DTCCSynonym(this, "Linked Security ID Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedSecurity";
-			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. ";
+			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmLinkedSecurity);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmLinkedSecurity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -505,7 +576,15 @@ public class FinancialInstrumentAttributesSD14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP. "
+	 * "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmOriginatingSecurityIdentification
+	 * FinancialInstrumentAttributesSD15.mmOriginatingSecurityIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -521,7 +600,8 @@ public class FinancialInstrumentAttributesSD14 {
 			xmlTag = "OrgtgSctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatingSecurityIdentification";
-			definition = "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP. ";
+			definition = "Represents the 'original' security identifier of the event. It is used in the scenarios like \"partial call\" where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmOriginatingSecurityIdentification);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmOriginatingSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -556,7 +636,15 @@ public class FinancialInstrumentAttributesSD14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Security description associated with DIVANN legacy system which contains additional values such as NTL for interest only notional. "
+	 * "Security description associated with DIVANN legacy system which contains additional values such as NTL for interest only notional."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmDIVANNSecurityDescription
+	 * FinancialInstrumentAttributesSD15.mmDIVANNSecurityDescription}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -572,7 +660,8 @@ public class FinancialInstrumentAttributesSD14 {
 			xmlTag = "DIVANNSctyDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DIVANNSecurityDescription";
-			definition = "Security description associated with DIVANN legacy system which contains additional values such as NTL for interest only notional. ";
+			definition = "Security description associated with DIVANN legacy system which contains additional values such as NTL for interest only notional.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmDIVANNSecurityDescription);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmDIVANNSecurityDescription;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -607,7 +696,15 @@ public class FinancialInstrumentAttributesSD14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the event security is a foreign issue.  This field will be initially used for CD Early Redemptions AC63."
+	 * "Indicates whether the event security is a foreign issue. This field will be initially used for CD Early Redemptions AC63."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD15#mmForeignIssueFlag
+	 * FinancialInstrumentAttributesSD15.mmForeignIssueFlag}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -618,7 +715,8 @@ public class FinancialInstrumentAttributesSD14 {
 			xmlTag = "FrgnIsseFlg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignIssueFlag";
-			definition = "Indicates whether the event security is a foreign issue.  This field will be initially used for CD Early Redemptions AC63.";
+			definition = "Indicates whether the event security is a foreign issue. This field will be initially used for CD Early Redemptions AC63.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmForeignIssueFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -637,6 +735,7 @@ public class FinancialInstrumentAttributesSD14 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD14";
 				definition = "Provides additional information regarding underlying security details.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD15.mmObject());
 				previousVersion_lazy = () -> FinancialInstrumentAttributesSD12.mmObject();
 			}
 		});

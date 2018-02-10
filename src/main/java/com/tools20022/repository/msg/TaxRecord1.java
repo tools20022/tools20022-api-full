@@ -80,6 +80,12 @@ import javax.xml.bind.annotation.XmlType;
  * "TaxRecord1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of elements used to define the tax record."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxRecord2 TaxRecord2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -118,6 +124,13 @@ public class TaxRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "High level code to identify the type of tax details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxRecord2#mmType
+	 * TaxRecord2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -129,6 +142,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "High level code to identify the type of tax details.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -166,6 +180,13 @@ public class TaxRecord1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the tax code as published by the tax authority."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxRecord2#mmCategory
+	 * TaxRecord2.mmCategory}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCategory = new MMMessageAttribute() {
@@ -177,6 +198,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Category";
 			definition = "Specifies the tax code as published by the tax authority.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmCategory);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -208,6 +230,14 @@ public class TaxRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides further details of the category tax code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxRecord2#mmCategoryDetails
+	 * TaxRecord2.mmCategoryDetails}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCategoryDetails = new MMMessageAttribute() {
@@ -218,6 +248,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CategoryDetails";
 			definition = "Provides further details of the category tax code.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmCategoryDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -256,6 +287,13 @@ public class TaxRecord1 {
 	 * definition} =
 	 * "Code provided by local authority to identify the status of the party that has drawn up the settlement document."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxRecord2#mmDebtorStatus
+	 * TaxRecord2.mmDebtorStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDebtorStatus = new MMMessageAttribute() {
@@ -267,6 +305,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorStatus";
 			definition = "Code provided by local authority to identify the status of the party that has drawn up the settlement document.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmDebtorStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -305,6 +344,14 @@ public class TaxRecord1 {
 	 * definition} =
 	 * "Identification number of the tax report as assigned by the taxing authority."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxRecord2#mmCertificateIdentification
+	 * TaxRecord2.mmCertificateIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCertificateIdentification = new MMMessageAttribute() {
@@ -316,6 +363,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateIdentification";
 			definition = "Identification number of the tax report as assigned by the taxing authority.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmCertificateIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -354,6 +402,13 @@ public class TaxRecord1 {
 	 * definition} =
 	 * "Identifies, in a coded form, on which template the tax report is to be provided."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxRecord2#mmFormsCode
+	 * TaxRecord2.mmFormsCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFormsCode = new MMMessageAttribute() {
@@ -365,6 +420,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormsCode";
 			definition = "Identifies, in a coded form, on which template the tax report is to be provided.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmFormsCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -401,6 +457,13 @@ public class TaxRecord1 {
 	 * definition} =
 	 * "Set of elements used to provide details on the period of time related to the tax payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxRecord2#mmPeriod
+	 * TaxRecord2.mmPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
@@ -412,6 +475,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Set of elements used to provide details on the period of time related to the tax payment.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -449,6 +513,13 @@ public class TaxRecord1 {
 	 * definition} =
 	 * "Set of elements used to provide information on the amount of the tax record."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxRecord2#mmTaxAmount
+	 * TaxRecord2.mmTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTaxAmount = new MMMessageAssociationEnd() {
@@ -460,6 +531,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAmount";
 			definition = "Set of elements used to provide information on the amount of the tax record.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmTaxAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -492,6 +564,14 @@ public class TaxRecord1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further details of the tax record."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxRecord2#mmAdditionalInformation
+	 * TaxRecord2.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
@@ -502,6 +582,7 @@ public class TaxRecord1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details of the tax record.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmAdditionalInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -519,6 +600,7 @@ public class TaxRecord1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxRecord1";
 				definition = "Set of elements used to define the tax record.";
+				nextVersions_lazy = () -> Arrays.asList(TaxRecord2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

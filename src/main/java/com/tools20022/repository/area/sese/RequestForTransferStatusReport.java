@@ -122,7 +122,7 @@ public class RequestForTransferStatusReport {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information to identify the transfer for which the status is requested.\n"
+	 * "Information to identify the transfer for which the status is requested.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -131,7 +131,7 @@ public class RequestForTransferStatusReport {
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
-			definition = "Information to identify the transfer for which the status is requested.\n";
+			definition = "Information to identify the transfer for which the status is requested.\n.";
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference1.mmObject();
 		}

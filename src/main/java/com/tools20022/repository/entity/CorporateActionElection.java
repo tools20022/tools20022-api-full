@@ -171,6 +171,12 @@ public class CorporateActionElection {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption134#mmExecutionRequestedDateTime
 	 * CorporateActionOption134.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmExecutionRequestedDateTime
+	 * CorporateActionOption142.mmExecutionRequestedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmExecutionRequestedDateTime
+	 * CorporateActionOption146.mmExecutionRequestedDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -196,7 +202,8 @@ public class CorporateActionElection {
 			derivation_lazy = () -> Arrays.asList(CorporateActionOption5.mmExecutionRequestedDateTime, CorporateActionOption13.mmExecutionRequestedDateTime, CorporateActionOption25.mmExecutionRequestedDateTime,
 					CorporateActionOption30.mmExecutionRequestedDateTime, CorporateActionOption38.mmExecutionRequestedDateTime, CorporateActionOption47.mmExecutionRequestedDateTime, CorporateActionOption57.mmExecutionRequestedDateTime,
 					CorporateActionOption58.mmExecutionRequestedDateTime, CorporateActionOption103.mmExecutionRequestedDateTime, CorporateActionOption107.mmExecutionRequestedDateTime, CorporateActionOption118.mmExecutionRequestedDateTime,
-					CorporateActionOption123.mmExecutionRequestedDateTime, CorporateActionOption131.mmExecutionRequestedDateTime, CorporateActionOption134.mmExecutionRequestedDateTime);
+					CorporateActionOption123.mmExecutionRequestedDateTime, CorporateActionOption131.mmExecutionRequestedDateTime, CorporateActionOption134.mmExecutionRequestedDateTime, CorporateActionOption142.mmExecutionRequestedDateTime,
+					CorporateActionOption146.mmExecutionRequestedDateTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -328,6 +335,14 @@ public class CorporateActionElection {
 	 * CashOption52.mmAccount}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CashOption55#mmAccount
 	 * CashOption55.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption58#mmAccount
+	 * CashOption58.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption59#mmAccount
+	 * CashOption59.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption60#mmAccount
+	 * CashOption60.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption62#mmAccount
+	 * CashOption62.mmAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -352,7 +367,7 @@ public class CorporateActionElection {
 		{
 			derivation_lazy = () -> Arrays.asList(CashOption2.mmAccount, CashOption9.mmAccount, CashOption12.mmAccount, CashOption13.mmAccount, CashOption18.mmAccount, CashOption22.mmAccount, CashOption26.mmAccount, CashOption27.mmAccount,
 					CashOption5.mmAccount, CashOption7.mmAccount, CashOption19.mmAccount, CashOption23.mmAccount, CashOption30.mmAccount, CashOption38.mmAccount, CashOption39.mmAccount, CashOption41.mmAccount, CashOption44.mmAccount,
-					CashOption45.mmAccount, CashOption46.mmAccount, CashOption48.mmAccount, CashOption52.mmAccount, CashOption55.mmAccount);
+					CashOption45.mmAccount, CashOption46.mmAccount, CashOption48.mmAccount, CashOption52.mmAccount, CashOption55.mmAccount, CashOption58.mmAccount, CashOption59.mmAccount, CashOption60.mmAccount, CashOption62.mmAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -441,6 +456,12 @@ public class CorporateActionElection {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ElectionTypeFormat4Choice#mmProprietary
 	 * ElectionTypeFormat4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmElectionType
+	 * CorporateAction41.mmElectionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmElectionType
+	 * CorporateAction51.mmElectionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -466,7 +487,7 @@ public class CorporateActionElection {
 			derivation_lazy = () -> Arrays.asList(ElectionTypeFormat1Choice.mmCode, ElectionTypeFormat1Choice.mmProprietary, CorporateAction3.mmElectionType, ElectionTypeFormat2Choice.mmCode, ElectionTypeFormat2Choice.mmProprietary,
 					CorporateAction4.mmElectionType, CorporateAction5.mmElectionType, CorporateAction6.mmElectionType, CorporateAction7.mmElectionType, CorporateAction8.mmElectionType, CorporateAction10.mmElectionType,
 					CorporateAction11.mmElectionType, CorporateAction2.mmElectionType, CorporateAction12.mmElectionType, CorporateAction17.mmElectionType, CorporateAction31.mmElectionType, ElectionTypeFormat3Choice.mmCode,
-					ElectionTypeFormat3Choice.mmProprietary, CorporateAction40.mmElectionType, ElectionTypeFormat4Choice.mmCode, ElectionTypeFormat4Choice.mmProprietary);
+					ElectionTypeFormat3Choice.mmProprietary, CorporateAction40.mmElectionType, ElectionTypeFormat4Choice.mmCode, ElectionTypeFormat4Choice.mmProprietary, CorporateAction41.mmElectionType, CorporateAction51.mmElectionType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionElection.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

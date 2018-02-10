@@ -71,6 +71,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding the corporate action event."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD6
+ * CorporateActionUnallocatedDetailsSD6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD4
@@ -115,6 +123,14 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * definition} =
 	 * "Type of Participants positions distribution balance concerned in unallocated payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD6#mmUnallocatedDistributionBalance
+	 * CorporateActionUnallocatedDetailsSD6.mmUnallocatedDistributionBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +147,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedDistributionBalance";
 			definition = "Type of Participants positions distribution balance concerned in unallocated payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedDetailsSD6.mmUnallocatedDistributionBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmUnallocatedDistributionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -167,6 +184,14 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * definition} =
 	 * "Type of Participants positions redemption balance concerned in unallocated payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD6#mmUnallocatedRedemptionBalance
+	 * CorporateActionUnallocatedDetailsSD6.mmUnallocatedRedemptionBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +207,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedRedemptionBalance";
 			definition = "Type of Participants positions redemption balance concerned in unallocated payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedDetailsSD6.mmUnallocatedRedemptionBalance);
 			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmUnallocatedRedemptionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -218,6 +244,14 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * definition} =
 	 * "Type of participants positions reorganisation balance concerned in unallocated payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD6#mmUnallocatedReorganisationBalance
+	 * CorporateActionUnallocatedDetailsSD6.mmUnallocatedReorganisationBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUnallocatedReorganisationBalance = new MMMessageAssociationEnd() {
@@ -228,6 +262,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedReorganisationBalance";
 			definition = "Type of participants positions reorganisation balance concerned in unallocated payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedDetailsSD6.mmUnallocatedReorganisationBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -266,6 +301,15 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * definition} =
 	 * "Details of the securities transactions concerned in unallocated payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD6#mmUnallocatedSecuritiesTransactionDetails
+	 * CorporateActionUnallocatedDetailsSD6.
+	 * mmUnallocatedSecuritiesTransactionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -283,6 +327,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedSecuritiesTransactionDetails";
 			definition = "Details of the securities transactions concerned in unallocated payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedDetailsSD6.mmUnallocatedSecuritiesTransactionDetails);
 			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmUnallocatedSecuritiesTransactionDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -320,6 +365,15 @@ public class CorporateActionUnallocatedDetailsSD5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Details of the cash transactions concerned in unallocated payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedDetailsSD6#mmUnallocatedCashTransactionDetails
+	 * CorporateActionUnallocatedDetailsSD6.mmUnallocatedCashTransactionDetails}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -337,6 +391,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedCashTransactionDetails";
 			definition = "Details of the cash transactions concerned in unallocated payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedDetailsSD6.mmUnallocatedCashTransactionDetails);
 			previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmUnallocatedCashTransactionDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -354,6 +409,7 @@ public class CorporateActionUnallocatedDetailsSD5 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionUnallocatedDetailsSD5";
 				definition = "Provides additional information regarding the corporate action event.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedDetailsSD6.mmObject());
 				previousVersion_lazy = () -> CorporateActionUnallocatedDetailsSD4.mmObject();
 			}
 		});

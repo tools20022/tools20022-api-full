@@ -123,7 +123,7 @@ public class TimeFrame3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame"
+	 * "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame."
 	 * </li>
 	 * </ul>
 	 */
@@ -135,7 +135,7 @@ public class TimeFrame3 {
 			xmlTag = "OthrTmFrameDesc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTimeFrameDescription";
-			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame";
+			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -172,7 +172,7 @@ public class TimeFrame3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\n\nWhere = T is the date that the price is applied to a transaction,"
+	 * "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\n\nWhere = T is the date that the price is applied to a transaction."
 	 * </li>
 	 * </ul>
 	 */
@@ -184,7 +184,7 @@ public class TimeFrame3 {
 			xmlTag = "TMns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeMinus";
-			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\n\nWhere = T is the date that the price is applied to a transaction,";
+			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\n\nWhere = T is the date that the price is applied to a transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -265,7 +265,7 @@ public class TimeFrame3 {
 	 * name} = "ReferToOrderDesk"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Refer to Order Desk"</li>
+	 * definition} = "Refer to Order Desk."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReferToOrderDesk = new MMMessageAttribute() {
@@ -275,7 +275,7 @@ public class TimeFrame3 {
 			xmlTag = "RefrToOrdrDsk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferToOrderDesk";
-			definition = "Refer to Order Desk";
+			definition = "Refer to Order Desk.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReferToFundOrderDesk1Code.mmObject();

@@ -95,6 +95,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection88
+ * AmountAndDirection88}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AmountAndDirection22
@@ -142,6 +149,14 @@ public class AmountAndDirection48 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money in the cash entry."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmAmount
+	 * AmountAndDirection88.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -159,6 +174,7 @@ public class AmountAndDirection48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection88.mmAmount);
 			previousVersion_lazy = () -> AmountAndDirection22.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -201,6 +217,14 @@ public class AmountAndDirection48 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether an entry is a credit or a debit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmCreditDebitIndicator
+	 * AmountAndDirection88.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -218,6 +242,7 @@ public class AmountAndDirection48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether an entry is a credit or a debit.";
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection88.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> AmountAndDirection22.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -262,6 +287,14 @@ public class AmountAndDirection48 {
 	 * definition} =
 	 * "Posting/settlement amount in its original currency when conversion from/into another currency has occurred."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection88.mmOriginalCurrencyAndOrderedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -279,6 +312,7 @@ public class AmountAndDirection48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAndOrderedAmount";
 			definition = "Posting/settlement amount in its original currency when conversion from/into another currency has occurred.";
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection88.mmOriginalCurrencyAndOrderedAmount);
 			previousVersion_lazy = () -> AmountAndDirection22.mmOriginalCurrencyAndOrderedAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -320,6 +354,14 @@ public class AmountAndDirection48 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information needed to process a currency exchange or conversion."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmForeignExchangeDetails
+	 * AmountAndDirection88.mmForeignExchangeDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -337,6 +379,7 @@ public class AmountAndDirection48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Information needed to process a currency exchange or conversion.";
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection88.mmForeignExchangeDetails);
 			previousVersion_lazy = () -> AmountAndDirection22.mmForeignExchangeDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -381,6 +424,14 @@ public class AmountAndDirection48 {
 	 * definition} =
 	 * "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmValueDate
+	 * AmountAndDirection88.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -398,6 +449,7 @@ public class AmountAndDirection48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.";
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection88.mmValueDate);
 			previousVersion_lazy = () -> AmountAndDirection22.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -418,6 +470,7 @@ public class AmountAndDirection48 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection48";
 				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
+				nextVersions_lazy = () -> Arrays.asList(AmountAndDirection88.mmObject());
 				previousVersion_lazy = () -> AmountAndDirection22.mmObject();
 			}
 		});

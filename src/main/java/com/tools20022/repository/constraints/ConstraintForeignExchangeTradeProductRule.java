@@ -74,7 +74,7 @@ public class ConstraintForeignExchangeTradeProductRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ForeignExchangeTradeProduct is present,then TradingCurrency SettlementCurrency TradingMode and PlaceOfConfirmation must be present."
+	 * "If ForeignExchangeTradeProduct is present, then TradingCurrency SettlementCurrency TradingMode and PlaceOfConfirmation must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -83,7 +83,7 @@ public class ConstraintForeignExchangeTradeProductRule {
 			validator = ConstraintForeignExchangeTradeProductRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeTradeProductRule";
-			definition = "If ForeignExchangeTradeProduct is present,then TradingCurrency SettlementCurrency TradingMode and PlaceOfConfirmation must be present.";
+			definition = "If ForeignExchangeTradeProduct is present, then TradingCurrency SettlementCurrency TradingMode and PlaceOfConfirmation must be present.";
 			owner_lazy = () -> Trade1.mmObject();
 		}
 	};
@@ -97,7 +97,7 @@ public class ConstraintForeignExchangeTradeProductRule {
 	}
 
 	/**
-	 * If ForeignExchangeTradeProduct is present,then TradingCurrency
+	 * If ForeignExchangeTradeProduct is present, then TradingCurrency
 	 * SettlementCurrency TradingMode and PlaceOfConfirmation must be present.
 	 */
 	public static void checkTrade1(Trade1 obj) throws Exception {

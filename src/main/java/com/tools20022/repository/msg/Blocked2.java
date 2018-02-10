@@ -217,7 +217,7 @@ public class Blocked2 {
 	 * name} = "Reason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the reason the account is blocked. "</li>
+	 * definition} = "Specifies the reason the account is blocked."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -233,7 +233,7 @@ public class Blocked2 {
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
-			definition = "Specifies the reason the account is blocked. ";
+			definition = "Specifies the reason the account is blocked.";
 			previousVersion_lazy = () -> Blocked1.mmReason;
 			maxOccurs = 1;
 			minOccurs = 0;

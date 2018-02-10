@@ -64,6 +64,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ReservationReport4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reports either on the reservation or on a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReservationReport5
+ * ReservationReport5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ReservationReport3
@@ -107,6 +114,14 @@ public class ReservationReport4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the reservation on which information is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationReport5#mmReservationIdentification
+	 * ReservationReport5.mmReservationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -123,6 +138,7 @@ public class ReservationReport4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationIdentification";
 			definition = "Identification of the reservation on which information is requested.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationReport5.mmReservationIdentification);
 			previousVersion_lazy = () -> ReservationReport3.mmReservationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -157,6 +173,14 @@ public class ReservationReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested information on the limit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReservationReport5#mmReservationOrError
+	 * ReservationReport5.mmReservationOrError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,6 +196,7 @@ public class ReservationReport4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReservationOrError";
 			definition = "Requested information on the limit.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationReport5.mmReservationOrError);
 			previousVersion_lazy = () -> ReservationReport3.mmReservationOrError;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -189,6 +214,7 @@ public class ReservationReport4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationReport4";
 				definition = "Reports either on the reservation or on a business error.";
+				nextVersions_lazy = () -> Arrays.asList(ReservationReport5.mmObject());
 				previousVersion_lazy = () -> ReservationReport3.mmObject();
 			}
 		});

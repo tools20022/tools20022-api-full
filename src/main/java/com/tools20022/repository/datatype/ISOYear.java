@@ -24,7 +24,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Year represented by YYYY (ISO 8601)
+ * Year represented by YYYY (ISO 8601).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -46,7 +46,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ISOYear"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Year represented by YYYY (ISO 8601)"</li>
+ * definition} = "Year represented by YYYY (ISO 8601)."</li>
  * </ul>
  */
 public class ISOYear {
@@ -60,7 +60,7 @@ public class ISOYear {
 				example = Arrays.asList("2000");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISOYear";
-				definition = "Year represented by YYYY (ISO 8601)";
+				definition = "Year represented by YYYY (ISO 8601).";
 			}
 		});
 		return mmObject_lazy.get();

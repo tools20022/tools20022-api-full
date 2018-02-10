@@ -71,6 +71,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2
  * CurrencyDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails3
+ * CurrencyDetails3}</li>
  * </ul>
  * </li>
  * </ul>
@@ -114,6 +116,9 @@ public class CurrencyDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails2#mmAlphaCode
 	 * CurrencyDetails2.mmAlphaCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails3#mmAlphaCode
+	 * CurrencyDetails3.mmAlphaCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -126,7 +131,7 @@ public class CurrencyDetails1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlphaCode";
 			definition = "Alpha currency code (ISO 4217, 3 alphanumeric characters).";
-			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmAlphaCode);
+			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmAlphaCode, CurrencyDetails3.mmAlphaCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyCode.mmObject();
@@ -166,6 +171,9 @@ public class CurrencyDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails2#mmNumericCode
 	 * CurrencyDetails2.mmNumericCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyDetails3#mmNumericCode
+	 * CurrencyDetails3.mmNumericCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -178,7 +186,7 @@ public class CurrencyDetails1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumericCode";
 			definition = "Numeric currency code (ISO 4217, 3 numeric characters).";
-			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmNumericCode);
+			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmNumericCode, CurrencyDetails3.mmNumericCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3NumericText.mmObject();
@@ -217,6 +225,8 @@ public class CurrencyDetails1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#mmDecimal
 	 * CurrencyDetails2.mmDecimal}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails3#mmDecimal
+	 * CurrencyDetails3.mmDecimal}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -229,7 +239,7 @@ public class CurrencyDetails1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Decimal";
 			definition = "Maximal number of digits after the decimal separator for the currency.";
-			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmDecimal);
+			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmDecimal, CurrencyDetails3.mmDecimal);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -267,6 +277,8 @@ public class CurrencyDetails1 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails2#mmName
 	 * CurrencyDetails2.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CurrencyDetails3#mmName
+	 * CurrencyDetails3.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -279,7 +291,7 @@ public class CurrencyDetails1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Full name of the currency.";
-			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmName);
+			nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmName, CurrencyDetails3.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -295,7 +307,7 @@ public class CurrencyDetails1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyDetails1";
 				definition = "Details of a currency.";
-				nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(CurrencyDetails2.mmObject(), CurrencyDetails3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -64,6 +64,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides the amount in the reporting currency and optionally in the original currency."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Amount3 Amount3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +104,13 @@ public class Amount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount expressed in the original currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Amount3#mmOriginalAmount
+	 * Amount3.mmOriginalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalCurrencyAmount = new MMMessageAttribute() {
@@ -108,6 +121,7 @@ public class Amount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCurrencyAmount";
 			definition = "Amount expressed in the original currency.";
+			nextVersions_lazy = () -> Arrays.asList(Amount3.mmOriginalAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -164,6 +178,7 @@ public class Amount2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amount2";
 				definition = "Provides the amount in the reporting currency and optionally in the original currency.";
+				nextVersions_lazy = () -> Arrays.asList(Amount3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

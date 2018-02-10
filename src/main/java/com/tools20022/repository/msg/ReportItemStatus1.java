@@ -161,7 +161,7 @@ public class ReportItemStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional  information about the reason for the status that cannot be provided in a structured field."
+	 * "Additional information about the reason for the status that cannot be provided in a structured field."
 	 * </li>
 	 * </ul>
 	 */
@@ -173,7 +173,7 @@ public class ReportItemStatus1 {
 			xmlTag = "AddtlRsnInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
-			definition = "Additional  information about the reason for the status that cannot be provided in a structured field.";
+			definition = "Additional information about the reason for the status that cannot be provided in a structured field.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();

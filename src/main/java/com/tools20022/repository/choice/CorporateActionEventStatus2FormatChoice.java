@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionEventStatus2FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the status of the CA option."</li>
+ * definition} = "Choice of formats to express the status of the CA option."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -153,8 +153,7 @@ public class CorporateActionEventStatus2FormatChoice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Proprietary code to  express the status of the CA option."
-	 * </li>
+	 * definition} = "Proprietary code to express the status of the CA option."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -165,7 +164,7 @@ public class CorporateActionEventStatus2FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the status of the CA option.";
+			definition = "Proprietary code to express the status of the CA option.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -180,7 +179,7 @@ public class CorporateActionEventStatus2FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventStatus2FormatChoice";
-				definition = "Choice of formats to  express the status of the CA option.";
+				definition = "Choice of formats to express the status of the CA option.";
 			}
 		});
 		return mmObject_lazy.get();

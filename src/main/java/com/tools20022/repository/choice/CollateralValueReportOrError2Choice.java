@@ -61,6 +61,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CollateralValueReportOrError2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Business Report on collateral value or on business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError4Choice
+ * CollateralValueReportOrError4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -94,6 +102,14 @@ public class CollateralValueReportOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason the requested business information is not given."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError4Choice#mmBusinessError
+	 * CollateralValueReportOrError4Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
@@ -104,6 +120,7 @@ public class CollateralValueReportOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueReportOrError4Choice.mmBusinessError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -139,6 +156,14 @@ public class CollateralValueReportOrError2Choice {
 	 * definition} =
 	 * "Requested information on the value of the position for collateral purposes."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError4Choice#mmCollateralValue
+	 * CollateralValueReportOrError4Choice.mmCollateralValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCollateralValue = new MMMessageAssociationEnd() {
@@ -149,6 +174,7 @@ public class CollateralValueReportOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralValue";
 			definition = "Requested information on the value of the position for collateral purposes.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueReportOrError4Choice.mmCollateralValue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,6 +190,7 @@ public class CollateralValueReportOrError2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReportOrError2Choice";
 				definition = "Business Report on collateral value or on business error.";
+				nextVersions_lazy = () -> Arrays.asList(CollateralValueReportOrError4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

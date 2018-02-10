@@ -40,8 +40,8 @@ public class ConstraintInvestorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
-	 * PortfolioTransferInstructionV07}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08
+	 * PortfolioTransferInstructionV08}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -56,6 +56,158 @@ public class ConstraintInvestorRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV07
+	 * ConstraintInvestorRule.forPortfolioTransferInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferInstructionV08> forPortfolioTransferInstructionV08 = new MMConstraint<PortfolioTransferInstructionV08>() {
+		{
+			validator = ConstraintInvestorRule::checkPortfolioTransferInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorRule";
+			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV07;
+			owner_lazy = () -> PortfolioTransferInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08
+	 * PortfolioTransferConfirmationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferConfirmationV07
+	 * ConstraintInvestorRule.forPortfolioTransferConfirmationV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferConfirmationV08> forPortfolioTransferConfirmationV08 = new MMConstraint<PortfolioTransferConfirmationV08>() {
+		{
+			validator = ConstraintInvestorRule::checkPortfolioTransferConfirmationV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorRule";
+			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV07;
+			owner_lazy = () -> PortfolioTransferConfirmationV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06
+	 * AccountHoldingInformationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationV05
+	 * ConstraintInvestorRule.forAccountHoldingInformationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationV06> forAccountHoldingInformationV06 = new MMConstraint<AccountHoldingInformationV06>() {
+		{
+			validator = ConstraintInvestorRule::checkAccountHoldingInformationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorRule";
+			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationV05;
+			owner_lazy = () -> AccountHoldingInformationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05
+	 * AccountHoldingInformationRequestV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationRequestV04
+	 * ConstraintInvestorRule.forAccountHoldingInformationRequestV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationRequestV05> forAccountHoldingInformationRequestV05 = new MMConstraint<AccountHoldingInformationRequestV05>() {
+		{
+			validator = ConstraintInvestorRule::checkAccountHoldingInformationRequestV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorRule";
+			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationRequestV04;
+			owner_lazy = () -> AccountHoldingInformationRequestV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
+	 * PortfolioTransferInstructionV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV08
+	 * ConstraintInvestorRule.forPortfolioTransferInstructionV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV06
 	 * ConstraintInvestorRule.forPortfolioTransferInstructionV06}</li>
 	 * </ul>
@@ -66,6 +218,7 @@ public class ConstraintInvestorRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorRule";
 			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV06;
 			owner_lazy = () -> PortfolioTransferInstructionV07.mmObject();
 		}
@@ -89,6 +242,14 @@ public class ConstraintInvestorRule {
 	 * definition} =
 	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationV06
+	 * ConstraintInvestorRule.forAccountHoldingInformationV06}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -102,6 +263,7 @@ public class ConstraintInvestorRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorRule";
 			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationV04;
 			owner_lazy = () -> AccountHoldingInformationV05.mmObject();
 		}
@@ -125,6 +287,14 @@ public class ConstraintInvestorRule {
 	 * definition} =
 	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferConfirmationV08
+	 * ConstraintInvestorRule.forPortfolioTransferConfirmationV08}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -138,6 +308,7 @@ public class ConstraintInvestorRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorRule";
 			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV06;
 			owner_lazy = () -> PortfolioTransferConfirmationV07.mmObject();
 		}
@@ -161,6 +332,14 @@ public class ConstraintInvestorRule {
 	 * definition} =
 	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationRequestV05
+	 * ConstraintInvestorRule.forAccountHoldingInformationRequestV05}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -174,188 +353,9 @@ public class ConstraintInvestorRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorRule";
 			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationRequestV03;
 			owner_lazy = () -> AccountHoldingInformationRequestV04.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03
-	 * AccountHoldingInformationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationRequestV04
-	 * ConstraintInvestorRule.forAccountHoldingInformationRequestV04}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationRequestV02
-	 * ConstraintInvestorRule.forAccountHoldingInformationRequestV02}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountHoldingInformationRequestV03> forAccountHoldingInformationRequestV03 = new MMConstraint<AccountHoldingInformationRequestV03>() {
-		{
-			validator = ConstraintInvestorRule::checkAccountHoldingInformationRequestV03;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InvestorRule";
-			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationRequestV04);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationRequestV02;
-			owner_lazy = () -> AccountHoldingInformationRequestV03.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04
-	 * AccountHoldingInformationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationV05
-	 * ConstraintInvestorRule.forAccountHoldingInformationV05}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationV03
-	 * ConstraintInvestorRule.forAccountHoldingInformationV03}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountHoldingInformationV04> forAccountHoldingInformationV04 = new MMConstraint<AccountHoldingInformationV04>() {
-		{
-			validator = ConstraintInvestorRule::checkAccountHoldingInformationV04;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InvestorRule";
-			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationV05);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationV03;
-			owner_lazy = () -> AccountHoldingInformationV04.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06
-	 * PortfolioTransferConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferConfirmationV07
-	 * ConstraintInvestorRule.forPortfolioTransferConfirmationV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferConfirmationV05
-	 * ConstraintInvestorRule.forPortfolioTransferConfirmationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferConfirmationV06> forPortfolioTransferConfirmationV06 = new MMConstraint<PortfolioTransferConfirmationV06>() {
-		{
-			validator = ConstraintInvestorRule::checkPortfolioTransferConfirmationV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InvestorRule";
-			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV05;
-			owner_lazy = () -> PortfolioTransferConfirmationV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06
-	 * PortfolioTransferInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "InvestorRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV07
-	 * ConstraintInvestorRule.forPortfolioTransferInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV05
-	 * ConstraintInvestorRule.forPortfolioTransferInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferInstructionV06> forPortfolioTransferInstructionV06 = new MMConstraint<PortfolioTransferInstructionV06>() {
-		{
-			validator = ConstraintInvestorRule::checkPortfolioTransferInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "InvestorRule";
-			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV05;
-			owner_lazy = () -> PortfolioTransferInstructionV06.mmObject();
 		}
 	};
 	/**
@@ -730,6 +730,96 @@ public class ConstraintInvestorRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03
+	 * AccountHoldingInformationRequestV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationRequestV04
+	 * ConstraintInvestorRule.forAccountHoldingInformationRequestV04}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationRequestV02
+	 * ConstraintInvestorRule.forAccountHoldingInformationRequestV02}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationRequestV03> forAccountHoldingInformationRequestV03 = new MMConstraint<AccountHoldingInformationRequestV03>() {
+		{
+			validator = ConstraintInvestorRule::checkAccountHoldingInformationRequestV03;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorRule";
+			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationRequestV04);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationRequestV02;
+			owner_lazy = () -> AccountHoldingInformationRequestV03.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04
+	 * AccountHoldingInformationV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationV05
+	 * ConstraintInvestorRule.forAccountHoldingInformationV05}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forAccountHoldingInformationV03
+	 * ConstraintInvestorRule.forAccountHoldingInformationV03}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationV04> forAccountHoldingInformationV04 = new MMConstraint<AccountHoldingInformationV04>() {
+		{
+			validator = ConstraintInvestorRule::checkAccountHoldingInformationV04;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorRule";
+			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\n\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forAccountHoldingInformationV03;
+			owner_lazy = () -> AccountHoldingInformationV04.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05
 	 * PortfolioTransferInstructionV05}</li>
 	 * <li>
@@ -812,6 +902,96 @@ public class ConstraintInvestorRule {
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV04;
 			owner_lazy = () -> PortfolioTransferConfirmationV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06
+	 * PortfolioTransferConfirmationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferConfirmationV07
+	 * ConstraintInvestorRule.forPortfolioTransferConfirmationV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferConfirmationV05
+	 * ConstraintInvestorRule.forPortfolioTransferConfirmationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferConfirmationV06> forPortfolioTransferConfirmationV06 = new MMConstraint<PortfolioTransferConfirmationV06>() {
+		{
+			validator = ConstraintInvestorRule::checkPortfolioTransferConfirmationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorRule";
+			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferConfirmationV05;
+			owner_lazy = () -> PortfolioTransferConfirmationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06
+	 * PortfolioTransferInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV07
+	 * ConstraintInvestorRule.forPortfolioTransferInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorRule#forPortfolioTransferInstructionV05
+	 * ConstraintInvestorRule.forPortfolioTransferInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferInstructionV06> forPortfolioTransferInstructionV06 = new MMConstraint<PortfolioTransferInstructionV06>() {
+		{
+			validator = ConstraintInvestorRule::checkPortfolioTransferInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorRule";
+			definition = "If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then SecondaryIndividualInvestor is not allowed.\r\nIf PrimaryIndividualInvestor is present, then OtherIndividualInvestor may be present. If PrimaryIndividualInvestor is not present, then OtherIndividualInvestor is not allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorRule.forPortfolioTransferInstructionV05;
+			owner_lazy = () -> PortfolioTransferInstructionV06.mmObject();
 		}
 	};
 	/**
@@ -1044,6 +1224,56 @@ public class ConstraintInvestorRule {
 	 * be present. If PrimaryIndividualInvestor is not present, then
 	 * OtherIndividualInvestor is not allowed.
 	 */
+	public static void checkPortfolioTransferInstructionV08(PortfolioTransferInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
+	 * may be present. If PrimaryIndividualInvestor is not present, then
+	 * SecondaryIndividualInvestor is not allowed.<br>
+	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
+	 * be present. If PrimaryIndividualInvestor is not present, then
+	 * OtherIndividualInvestor is not allowed.
+	 */
+	public static void checkPortfolioTransferConfirmationV08(PortfolioTransferConfirmationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
+	 * may be present. If PrimaryIndividualInvestor is not present, then
+	 * SecondaryIndividualInvestor is not allowed.
+	 * 
+	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
+	 * be present. If PrimaryIndividualInvestor is not present, then
+	 * OtherIndividualInvestor is not allowed.
+	 */
+	public static void checkAccountHoldingInformationV06(AccountHoldingInformationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
+	 * may be present. If PrimaryIndividualInvestor is not present, then
+	 * SecondaryIndividualInvestor is not allowed.
+	 * 
+	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
+	 * be present. If PrimaryIndividualInvestor is not present, then
+	 * OtherIndividualInvestor is not allowed.
+	 */
+	public static void checkAccountHoldingInformationRequestV05(AccountHoldingInformationRequestV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
+	 * may be present. If PrimaryIndividualInvestor is not present, then
+	 * SecondaryIndividualInvestor is not allowed.<br>
+	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
+	 * be present. If PrimaryIndividualInvestor is not present, then
+	 * OtherIndividualInvestor is not allowed.
+	 */
 	public static void checkPortfolioTransferInstructionV07(PortfolioTransferInstructionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -1083,56 +1313,6 @@ public class ConstraintInvestorRule {
 	 * OtherIndividualInvestor is not allowed.
 	 */
 	public static void checkAccountHoldingInformationRequestV04(AccountHoldingInformationRequestV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
-	 * may be present. If PrimaryIndividualInvestor is not present, then
-	 * SecondaryIndividualInvestor is not allowed.
-	 * 
-	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
-	 * be present. If PrimaryIndividualInvestor is not present, then
-	 * OtherIndividualInvestor is not allowed.
-	 */
-	public static void checkAccountHoldingInformationRequestV03(AccountHoldingInformationRequestV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
-	 * may be present. If PrimaryIndividualInvestor is not present, then
-	 * SecondaryIndividualInvestor is not allowed.
-	 * 
-	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
-	 * be present. If PrimaryIndividualInvestor is not present, then
-	 * OtherIndividualInvestor is not allowed.
-	 */
-	public static void checkAccountHoldingInformationV04(AccountHoldingInformationV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
-	 * may be present. If PrimaryIndividualInvestor is not present, then
-	 * SecondaryIndividualInvestor is not allowed.<br>
-	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
-	 * be present. If PrimaryIndividualInvestor is not present, then
-	 * OtherIndividualInvestor is not allowed.
-	 */
-	public static void checkPortfolioTransferConfirmationV06(PortfolioTransferConfirmationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
-	 * may be present. If PrimaryIndividualInvestor is not present, then
-	 * SecondaryIndividualInvestor is not allowed.<br>
-	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
-	 * be present. If PrimaryIndividualInvestor is not present, then
-	 * OtherIndividualInvestor is not allowed.
-	 */
-	public static void checkPortfolioTransferInstructionV06(PortfolioTransferInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1288,6 +1468,32 @@ public class ConstraintInvestorRule {
 	 * be present. If PrimaryIndividualInvestor is not present, then
 	 * OtherIndividualInvestor is not allowed.
 	 */
+	public static void checkAccountHoldingInformationRequestV03(AccountHoldingInformationRequestV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
+	 * may be present. If PrimaryIndividualInvestor is not present, then
+	 * SecondaryIndividualInvestor is not allowed.
+	 * 
+	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
+	 * be present. If PrimaryIndividualInvestor is not present, then
+	 * OtherIndividualInvestor is not allowed.
+	 */
+	public static void checkAccountHoldingInformationV04(AccountHoldingInformationV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
+	 * may be present. If PrimaryIndividualInvestor is not present, then
+	 * SecondaryIndividualInvestor is not allowed.
+	 * 
+	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
+	 * be present. If PrimaryIndividualInvestor is not present, then
+	 * OtherIndividualInvestor is not allowed.
+	 */
 	public static void checkPortfolioTransferInstructionV05(PortfolioTransferInstructionV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -1302,6 +1508,30 @@ public class ConstraintInvestorRule {
 	 * OtherIndividualInvestor is not allowed.
 	 */
 	public static void checkPortfolioTransferConfirmationV05(PortfolioTransferConfirmationV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
+	 * may be present. If PrimaryIndividualInvestor is not present, then
+	 * SecondaryIndividualInvestor is not allowed.<br>
+	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
+	 * be present. If PrimaryIndividualInvestor is not present, then
+	 * OtherIndividualInvestor is not allowed.
+	 */
+	public static void checkPortfolioTransferConfirmationV06(PortfolioTransferConfirmationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PrimaryIndividualInvestor is present, then SecondaryIndividualInvestor
+	 * may be present. If PrimaryIndividualInvestor is not present, then
+	 * SecondaryIndividualInvestor is not allowed.<br>
+	 * If PrimaryIndividualInvestor is present, then OtherIndividualInvestor may
+	 * be present. If PrimaryIndividualInvestor is not present, then
+	 * OtherIndividualInvestor is not allowed.
+	 */
+	public static void checkPortfolioTransferInstructionV06(PortfolioTransferInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

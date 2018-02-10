@@ -46,7 +46,7 @@ public class ConstraintMailingIndicatorRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\"  or \"1\"."
+	 * "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\"."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -63,7 +63,7 @@ public class ConstraintMailingIndicatorRule {
 			validator = ConstraintMailingIndicatorRule::checkPostalAddress3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailingIndicatorRule";
-			definition = "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\"  or \"1\".";
+			definition = "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\".";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMailingIndicatorRule.forPostalAddress21);
 			owner_lazy = () -> PostalAddress3.mmObject();
 		}
@@ -85,7 +85,7 @@ public class ConstraintMailingIndicatorRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\"  or \"1\"."
+	 * "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\"."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -99,7 +99,7 @@ public class ConstraintMailingIndicatorRule {
 			validator = ConstraintMailingIndicatorRule::checkPostalAddress21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MailingIndicatorRule";
-			definition = "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\"  or \"1\".";
+			definition = "If RegistrationAddressIndicator is \"true\" or \"1\" (Yes), then MailingIndicator must be \"true\" or \"1\".";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMailingIndicatorRule.forPostalAddress3;
 			owner_lazy = () -> PostalAddress21.mmObject();
 		}

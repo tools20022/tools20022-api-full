@@ -169,6 +169,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * CancelledCompleteReason1.mmAdditionalReasonInformation}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ProprietaryReason5#mmReason
  * ProprietaryReason5.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reason4#mmReason
+ * Reason4.mmReason}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reason18Choice#mmReason
+ * Reason18Choice.mmReason}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ClosedStatusReason1#mmCode
  * ClosedStatusReason1.mmCode}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ProformaStatusReason1#mmCode
@@ -182,6 +186,17 @@ import java.util.concurrent.atomic.AtomicReference;
  * SuspendedStatusReason4.mmReason}</li>
  * <li>{@linkplain com.tools20022.repository.msg.InRepairStatusReason4#mmReason
  * InRepairStatusReason4.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason4#mmStatus
+ * CancellationStatusAndReason4.mmStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransferReference12#mmReversalReason
+ * TransferReference12.mmReversalReason}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentReturnReason4#mmReason
+ * PaymentReturnReason4.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReversalReason8#mmReason
+ * PaymentReversalReason8.mmReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -301,6 +316,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * ProprietaryReason5}</li>
  * <li>{@linkplain com.tools20022.repository.choice.SystemEventType3Choice
  * SystemEventType3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reason4 Reason4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Reason18Choice
+ * Reason18Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ClosedStatusReason1
  * ClosedStatusReason1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ProformaStatusReason1
@@ -324,6 +342,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * PendingOpeningStatusReason1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ClosurePendingStatusReason1
  * ClosurePendingStatusReason1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification1
+ * ProprietaryStatusJustification1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentReturnReason4
+ * PaymentReturnReason4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentReversalReason8
+ * PaymentReversalReason8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentReturnReason3
+ * PaymentReturnReason3}</li>
  * </ul>
  * </li>
  * <li>
@@ -1579,6 +1606,15 @@ public class StatusReason {
 	 * {@linkplain com.tools20022.repository.choice.SystemEventType3Choice#mmProprietary
 	 * SystemEventType3Choice.mmProprietary}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason32#mmAdditionalReasonInformation
+	 * RejectionOrRepairReason32.mmAdditionalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason33#mmAdditionalReasonInformation
+	 * RejectionOrRepairReason33.mmAdditionalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason34#mmAdditionalReasonInformation
+	 * RejectionOrRepairReason34.mmAdditionalReasonInformation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CancelledStatusReason16#mmAdditionalInformation
 	 * CancelledStatusReason16.mmAdditionalInformation}</li>
 	 * <li>
@@ -1617,6 +1653,24 @@ public class StatusReason {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason15#mmAdditionalReasonInformation
 	 * PendingStatusReason15.mmAdditionalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusReason3#mmAdditionalInformation
+	 * CancellationStatusReason3.mmAdditionalInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification1#mmProprietaryStatusReason
+	 * ProprietaryStatusJustification1.mmProprietaryStatusReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProprietaryStatusJustification1#mmReason
+	 * ProprietaryStatusJustification1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationStatusReason1#mmAdditionalInformation
+	 * ModificationStatusReason1.mmAdditionalInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReversalReason8#mmAdditionalInformation
+	 * PaymentReversalReason8.mmAdditionalInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnReason3#mmReason
+	 * PaymentReturnReason3.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1730,10 +1784,13 @@ public class StatusReason {
 					UnmatchedReason20.mmAdditionalReasonInformation, PendingReason24.mmAdditionalReasonInformation, AcknowledgementReason13.mmAdditionalReasonInformation, RejectionOrRepairReason27.mmAdditionalReasonInformation,
 					RejectionReason39.mmAdditionalReasonInformation, UnmatchedReason18.mmAdditionalReasonInformation, AcknowledgementReason15.mmAdditionalReasonInformation, DeniedReason13.mmAdditionalReasonInformation,
 					DeniedReason16.mmAdditionalReasonInformation, PendingReason21.mmAdditionalReasonInformation, AcknowledgementReason19.mmAdditionalReasonInformation, CancellationReason19.mmCorporateActionEventIdentification,
-					DeniedReason17.mmAdditionalReasonInformation, SystemEventType3Choice.mmCode, SystemEventType3Choice.mmProprietary, CancelledStatusReason16.mmAdditionalInformation, RejectedStatus9.mmAdditionalInformation,
+					DeniedReason17.mmAdditionalReasonInformation, SystemEventType3Choice.mmCode, SystemEventType3Choice.mmProprietary, RejectionOrRepairReason32.mmAdditionalReasonInformation,
+					RejectionOrRepairReason33.mmAdditionalReasonInformation, RejectionOrRepairReason34.mmAdditionalReasonInformation, CancelledStatusReason16.mmAdditionalInformation, RejectedStatus9.mmAdditionalInformation,
 					PartiallySettledStatus10.mmAdditionalInformation, BlockedReason2Choice.mmCode, BlockedReason2Choice.mmProprietary, RejectedStatus10.mmAdditionalInformation,
 					PendingCancellationStatusReason7.mmAdditionalReasonInformation, RejectedStatusReason21.mmAdditionalReasonInformation, PendingStatusReason13.mmAdditionalReasonInformation, TradeAgreement15.mmAmendOrCancelReason,
-					RejectedStatusReason22.mmAdditionalReasonInformation, PendingCancellationStatusReason8.mmAdditionalReasonInformation, PendingStatusReason15.mmAdditionalReasonInformation);
+					RejectedStatusReason22.mmAdditionalReasonInformation, PendingCancellationStatusReason8.mmAdditionalReasonInformation, PendingStatusReason15.mmAdditionalReasonInformation,
+					CancellationStatusReason3.mmAdditionalInformation, ProprietaryStatusJustification1.mmProprietaryStatusReason, ProprietaryStatusJustification1.mmReason, ModificationStatusReason1.mmAdditionalInformation,
+					PaymentReversalReason8.mmAdditionalInformation, PaymentReturnReason3.mmReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2704,6 +2761,18 @@ public class StatusReason {
 	 * {@linkplain com.tools20022.repository.choice.PendingStatus47Choice#mmNoSpecifiedReason
 	 * PendingStatus47Choice.mmNoSpecifiedReason}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus39Choice#mmNoSpecifiedReason
+	 * RejectionOrRepairStatus39Choice.mmNoSpecifiedReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus38Choice#mmNoSpecifiedReason
+	 * RejectionOrRepairStatus38Choice.mmNoSpecifiedReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Reason18Choice#mmNoSpecifiedReason
+	 * Reason18Choice.mmNoSpecifiedReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus40Choice#mmNoSpecifiedReason
+	 * RejectionOrRepairStatus40Choice.mmNoSpecifiedReason}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.SuspendedStatusReason4Choice#mmNoSpecifiedReason
 	 * SuspendedStatusReason4Choice.mmNoSpecifiedReason}</li>
 	 * <li>
@@ -2827,7 +2896,8 @@ public class StatusReason {
 					RepairStatus16Choice.mmNoSpecifiedReason, RejectionOrRepairStatus33Choice.mmNoSpecifiedReason, AcknowledgedAcceptedStatus25Choice.mmNoSpecifiedReason, UnmatchedStatus20Choice.mmNoSpecifiedReason,
 					PendingStatus50Choice.mmNoSpecifiedReason, AcknowledgedAcceptedStatus27Choice.mmNoSpecifiedReason, RejectionOrRepairStatus37Choice.mmNoSpecifiedReason, DeniedStatus18Choice.mmNoSpecifiedReason,
 					CancellationStatus17Choice.mmNoSpecifiedReason, DeniedStatus19Choice.mmNoSpecifiedReason, FailingStatus12Choice.mmNoSpecifiedReason, PendingProcessingStatus14Choice.mmNoSpecifiedReason,
-					PendingStatus47Choice.mmNoSpecifiedReason, SuspendedStatusReason4Choice.mmNoSpecifiedReason, ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason, InRepairStatusReason4Choice.mmNoSpecifiedReason,
+					PendingStatus47Choice.mmNoSpecifiedReason, RejectionOrRepairStatus39Choice.mmNoSpecifiedReason, RejectionOrRepairStatus38Choice.mmNoSpecifiedReason, Reason18Choice.mmNoSpecifiedReason,
+					RejectionOrRepairStatus40Choice.mmNoSpecifiedReason, SuspendedStatusReason4Choice.mmNoSpecifiedReason, ConditionallyAcceptedStatus3Choice.mmNoSpecifiedReason, InRepairStatusReason4Choice.mmNoSpecifiedReason,
 					CancelledReason12Choice.mmNoSpecifiedReason, PendingCancellationStatus7Choice.mmNotSpecifiedReason, RejectedStatus23Choice.mmNoSpecifiedReason, PendingStatus52Choice.mmNoSpecifiedReason,
 					PendingCancellationStatus8Choice.mmNotSpecifiedReason, RejectedStatus24Choice.mmNoSpecifiedReason, PendingStatus53Choice.mmNoSpecifiedReason);
 			isDerived = false;
@@ -4130,6 +4200,15 @@ public class StatusReason {
 	 * {@linkplain com.tools20022.repository.msg.CancellationReason19#mmCode
 	 * CancellationReason19.mmCode}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus69Choice#mmCancelled
+	 * ProcessingStatus69Choice.mmCancelled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus67Choice#mmCancelled
+	 * ProcessingStatus67Choice.mmCancelled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus66Choice#mmCancelled
+	 * ProcessingStatus66Choice.mmCancelled}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.CancellationReason31Choice#mmCode
 	 * CancellationReason31Choice.mmCode}</li>
 	 * <li>
@@ -4162,6 +4241,15 @@ public class StatusReason {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.InstructionProcessingStatus30Choice#mmCancelled
 	 * InstructionProcessingStatus30Choice.mmCancelled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference11#mmCancellationReason
+	 * TransferReference11.mmCancellationReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference13#mmCancellationReason
+	 * TransferReference13.mmCancellationReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice#mmCancelled
+	 * PaymentStatusReasonCode7Choice.mmCancelled}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4229,9 +4317,11 @@ public class StatusReason {
 					CancellationReason30Choice.mmProprietary, CancellationReason18.mmCode, ProcessingStatus59Choice.mmCancelled, CancelledStatus16Choice.mmReason, CancellationReason28Choice.mmCode, CancellationReason28Choice.mmProprietary,
 					CancellationReason16.mmCode, CancellationReason16.mmAdditionalReasonInformation, CancellationReason26Choice.mmCode, CancellationReason26Choice.mmProprietary, InstructionProcessingStatus27Choice.mmCancellationRequested,
 					InstructionProcessingStatus27Choice.mmCancelled, ProcessingStatus61Choice.mmCancelled, CancellationReason25Choice.mmCode, CancellationReason25Choice.mmProprietary, ProcessingStatus60Choice.mmCancelled,
-					CancellationStatus17Choice.mmReason, CancellationReason19.mmCode, CancellationReason31Choice.mmCode, CancellationReason31Choice.mmProprietary, CancelledStatusReason16.mmReason, CancelledReason12Choice.mmCode,
-					CancelledReason12Choice.mmProprietary, CancellationReason32Choice.mmCode, CancellationReason32Choice.mmProprietary, InstructionCancellationRequestStatus11Choice.mmCancellationCompleted,
-					InstructionProcessingStatus29Choice.mmCancelled, InstructionCancellationRequestStatus12Choice.mmCancellationCompleted, InstructionProcessingStatus30Choice.mmCancelled);
+					CancellationStatus17Choice.mmReason, CancellationReason19.mmCode, ProcessingStatus69Choice.mmCancelled, ProcessingStatus67Choice.mmCancelled, ProcessingStatus66Choice.mmCancelled, CancellationReason31Choice.mmCode,
+					CancellationReason31Choice.mmProprietary, CancelledStatusReason16.mmReason, CancelledReason12Choice.mmCode, CancelledReason12Choice.mmProprietary, CancellationReason32Choice.mmCode,
+					CancellationReason32Choice.mmProprietary, InstructionCancellationRequestStatus11Choice.mmCancellationCompleted, InstructionProcessingStatus29Choice.mmCancelled,
+					InstructionCancellationRequestStatus12Choice.mmCancellationCompleted, InstructionProcessingStatus30Choice.mmCancelled, TransferReference11.mmCancellationReason, TransferReference13.mmCancellationReason,
+					PaymentStatusReasonCode7Choice.mmCancelled);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5385,6 +5475,15 @@ public class StatusReason {
 	 * <li>{@linkplain com.tools20022.repository.msg.PendingReason21#mmCode
 	 * PendingReason21.mmCode}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmPendingProcessing
+	 * ProcessingStatus72Choice.mmPendingProcessing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus71Choice#mmPending
+	 * ProcessingStatus71Choice.mmPending}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus69Choice#mmPendingCancellation
+	 * ProcessingStatus69Choice.mmPendingCancellation}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PendingStatusReason14#mmCode
 	 * PendingStatusReason14.mmCode}</li>
 	 * <li>
@@ -5538,11 +5637,11 @@ public class StatusReason {
 					PendingProcessingReason13.mmCode, PendingStatus45Choice.mmReason, ModificationProcessingStatus8Choice.mmPendingProcessing, ProcessingStatus61Choice.mmPendingCancellation, PendingStatus51Choice.mmReason,
 					PendingReason24.mmCode, PendingReason41Choice.mmCode, PendingReason41Choice.mmProprietary, PendingStatus50Choice.mmReason, PendingProcessingReason15Choice.mmCode, PendingProcessingReason15Choice.mmProprietary,
 					PendingReason38Choice.mmCode, PendingReason38Choice.mmProprietary, ProcessingStatus60Choice.mmPendingProcessing, ProcessingStatus60Choice.mmPendingCancellation, PendingProcessingStatus14Choice.mmReason,
-					PendingStatus47Choice.mmReason, PendingReason21.mmCode, PendingStatusReason14.mmCode, PendingOpeningStatusReason1.mmCode, ClosurePendingStatusReason1.mmCode,
-					InstructionCancellationRequestStatus11Choice.mmPendingCancellation, InstructionProcessingStatus29Choice.mmPending, PendingCancellationStatus7Choice.mmReason, PendingReason48Choice.mmCode,
-					PendingReason48Choice.mmProprietary, PendingStatus52Choice.mmReason, PendingCancellationStatusReason7.mmReasonCode, PendingStatusReason13.mmReasonCode, InstructionCancellationRequestStatus12Choice.mmPendingCancellation,
-					InstructionProcessingStatus30Choice.mmPending, PendingCancellationStatus8Choice.mmReason, PendingCancellationStatusReason8.mmReasonCode, PendingStatus53Choice.mmReason, PendingReason49Choice.mmCode,
-					PendingReason49Choice.mmProprietary, PendingStatusReason15.mmReasonCode);
+					PendingStatus47Choice.mmReason, PendingReason21.mmCode, ProcessingStatus72Choice.mmPendingProcessing, ProcessingStatus71Choice.mmPending, ProcessingStatus69Choice.mmPendingCancellation, PendingStatusReason14.mmCode,
+					PendingOpeningStatusReason1.mmCode, ClosurePendingStatusReason1.mmCode, InstructionCancellationRequestStatus11Choice.mmPendingCancellation, InstructionProcessingStatus29Choice.mmPending,
+					PendingCancellationStatus7Choice.mmReason, PendingReason48Choice.mmCode, PendingReason48Choice.mmProprietary, PendingStatus52Choice.mmReason, PendingCancellationStatusReason7.mmReasonCode,
+					PendingStatusReason13.mmReasonCode, InstructionCancellationRequestStatus12Choice.mmPendingCancellation, InstructionProcessingStatus30Choice.mmPending, PendingCancellationStatus8Choice.mmReason,
+					PendingCancellationStatusReason8.mmReasonCode, PendingStatus53Choice.mmReason, PendingReason49Choice.mmCode, PendingReason49Choice.mmProprietary, PendingStatusReason15.mmReasonCode);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -6660,6 +6759,36 @@ public class StatusReason {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason27Choice#mmProprietary
 	 * RejectionAndRepairReason27Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmRejected
+	 * ProcessingStatus72Choice.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus71Choice#mmRejected
+	 * ProcessingStatus71Choice.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus69Choice#mmRejected
+	 * ProcessingStatus69Choice.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus67Choice#mmRejected
+	 * ProcessingStatus67Choice.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason32Choice#mmCode
+	 * RejectionAndRepairReason32Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason32Choice#mmProprietary
+	 * RejectionAndRepairReason32Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason34Choice#mmCode
+	 * RejectionAndRepairReason34Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason34Choice#mmProprietary
+	 * RejectionAndRepairReason34Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason33Choice#mmCode
+	 * RejectionAndRepairReason33Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason33Choice#mmProprietary
+	 * RejectionAndRepairReason33Choice.mmProprietary}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus9#mmReason
 	 * RejectedStatus9.mmReason}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.RejectedStatus10#mmReason
@@ -6807,7 +6936,9 @@ public class StatusReason {
 					RejectionReason30Choice.mmCode, RejectionReason30Choice.mmProprietary, RejectionAndRepairReason31Choice.mmCode, RejectionAndRepairReason31Choice.mmProprietary, RejectionStatus26Choice.mmReason,
 					RejectionReason28Choice.mmCode, RejectionReason28Choice.mmProprietary, ModificationProcessingStatus8Choice.mmRejected, RejectionStatus24Choice.mmReason, ProcessingStatus61Choice.mmRejected, RejectionReason39.mmCode,
 					RejectionReason33Choice.mmCode, RejectionReason33Choice.mmProprietary, RejectionReason29Choice.mmCode, RejectionReason29Choice.mmProprietary, ProcessingStatus60Choice.mmRejected, RejectionAndRepairReason28Choice.mmCode,
-					RejectionAndRepairReason28Choice.mmProprietary, RejectionAndRepairReason27Choice.mmCode, RejectionAndRepairReason27Choice.mmProprietary, RejectedStatus9.mmReason, RejectedStatus10.mmReason,
+					RejectionAndRepairReason28Choice.mmProprietary, RejectionAndRepairReason27Choice.mmCode, RejectionAndRepairReason27Choice.mmProprietary, ProcessingStatus72Choice.mmRejected, ProcessingStatus71Choice.mmRejected,
+					ProcessingStatus69Choice.mmRejected, ProcessingStatus67Choice.mmRejected, RejectionAndRepairReason32Choice.mmCode, RejectionAndRepairReason32Choice.mmProprietary, RejectionAndRepairReason34Choice.mmCode,
+					RejectionAndRepairReason34Choice.mmProprietary, RejectionAndRepairReason33Choice.mmCode, RejectionAndRepairReason33Choice.mmProprietary, RejectedStatus9.mmReason, RejectedStatus10.mmReason,
 					SwitchLegReferences2.mmLegRejectionReason, InstructionCancellationRequestStatus11Choice.mmRejected, InstructionProcessingStatus29Choice.mmRejected, PendingCancellationReason5Choice.mmCode,
 					PendingCancellationReason5Choice.mmProprietary, RejectedStatusReason21.mmReasonCode, RejectedReason22Choice.mmCode, RejectedReason22Choice.mmProprietary, OtherCollateralResponse2.mmRejectionReason,
 					CashCollateralResponse2.mmRejectionReason, InstructionCancellationRequestStatus12Choice.mmRejected, InstructionProcessingStatus30Choice.mmRejected, RejectedStatusReason22.mmReasonCode, RejectedReason23Choice.mmCode,
@@ -7391,6 +7522,21 @@ public class StatusReason {
 	 * {@linkplain com.tools20022.repository.msg.AcknowledgementReason19#mmCode
 	 * AcknowledgementReason19.mmCode}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus72Choice.mmAcknowledgedAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus71Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus71Choice.mmAcknowledgedAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus69Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus69Choice.mmAcknowledgedAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus67Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus67Choice.mmAcknowledgedAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus66Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus66Choice.mmAcknowledgedAccepted}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ConditionallyAcceptedStatusReason3#mmReason
 	 * ConditionallyAcceptedStatusReason3.mmReason}</li>
 	 * </ul>
@@ -7454,7 +7600,8 @@ public class StatusReason {
 					AcceptedReason12Choice.mmCode, AcceptedReason12Choice.mmProprietary, ModificationProcessingStatus8Choice.mmAcknowledgedAccepted, ProcessingStatus61Choice.mmAcknowledgedAccepted,
 					AcknowledgedAcceptedStatus31Choice.mmReason, AcknowledgementReason13.mmCode, AcknowledgementReason16Choice.mmCode, AcknowledgementReason16Choice.mmProprietary, AcknowledgedAcceptedStatus25Choice.mmReason,
 					AcknowledgedAcceptedStatus27Choice.mmReason, ProcessingStatus60Choice.mmAcknowledgedAccepted, AcknowledgementReason22Choice.mmCode, AcknowledgementReason22Choice.mmProprietary, AcknowledgementReason19.mmCode,
-					ConditionallyAcceptedStatusReason3.mmReason);
+					ProcessingStatus72Choice.mmAcknowledgedAccepted, ProcessingStatus71Choice.mmAcknowledgedAccepted, ProcessingStatus69Choice.mmAcknowledgedAccepted, ProcessingStatus67Choice.mmAcknowledgedAccepted,
+					ProcessingStatus66Choice.mmAcknowledgedAccepted, ConditionallyAcceptedStatusReason3.mmReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -7503,7 +7650,7 @@ public class StatusReason {
 	 * name} = "RelatedClosureReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Related reason of closure of the contract. "</li>
+	 * definition} = "Related reason of closure of the contract."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedClosureReason = new MMBusinessAssociationEnd() {
@@ -7512,7 +7659,7 @@ public class StatusReason {
 			elementContext_lazy = () -> com.tools20022.repository.entity.StatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedClosureReason";
-			definition = "Related reason of closure of the contract. ";
+			definition = "Related reason of closure of the contract.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmClosureReason;
@@ -7535,8 +7682,9 @@ public class StatusReason {
 						TransferUnmatchedStatus.mmReason, TransferUnmatchedStatus2.mmReason, TransferUnmatchedStatus2.mmExtendedReason, FailedSettlementStatus1.mmDataSourceScheme, RejectionReason1Choice.mmGlobalRejectionReason,
 						ReturnReason3Choice.mmCode, ReturnReason3Choice.mmProprietary, ReturnReason4Choice.mmCode, ReturnReason4Choice.mmProprietary, Reason3.mmReason, Reason3Choice.mmReason, ProprietaryReason4.mmReason,
 						CancellationStatusAndReason3.mmStatus, TransferUnmatchedStatus3Choice.mmReason, TransferUnmatchedStatus3Choice.mmExtendedReason, FailedSettlementStatus2Choice.mmDataSourceScheme, Status21Choice.mmRejected,
-						Status21Choice.mmComplete, CancelledCompleteReason1.mmAdditionalReasonInformation, ProprietaryReason5.mmReason, ClosedStatusReason1.mmCode, ProformaStatusReason1.mmCode, DisabledStatusReason1.mmCode,
-						EnabledStatusReason1.mmCode, SuspendedStatusReason4.mmReason, InRepairStatusReason4.mmReason);
+						Status21Choice.mmComplete, CancelledCompleteReason1.mmAdditionalReasonInformation, ProprietaryReason5.mmReason, Reason4.mmReason, Reason18Choice.mmReason, ClosedStatusReason1.mmCode, ProformaStatusReason1.mmCode,
+						DisabledStatusReason1.mmCode, EnabledStatusReason1.mmCode, SuspendedStatusReason4.mmReason, InRepairStatusReason4.mmReason, CancellationStatusAndReason4.mmStatus, TransferReference12.mmReversalReason,
+						PaymentReturnReason4.mmReason, PaymentReversalReason8.mmReason);
 				subType_lazy = () -> Arrays.asList(SecuritiesTradeStatusReason.mmObject(), CorporateActionStatusReason.mmObject(), UndertakingStatusReason.mmObject(), MeetingStatusReason.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.StatusReason.mmStatus, com.tools20022.repository.entity.StatusReason.mmReason, com.tools20022.repository.entity.StatusReason.mmNoSpecifiedReason,
 						com.tools20022.repository.entity.StatusReason.mmDataSourceScheme, com.tools20022.repository.entity.StatusReason.mmRejectedStatusReason, com.tools20022.repository.entity.StatusReason.mmFailingReason,
@@ -7550,9 +7698,10 @@ public class StatusReason {
 						Reason2.mmObject(), RejectionReason1Choice.mmObject(), ReturnReason3Choice.mmObject(), ReturnReason4Choice.mmObject(), ProprietaryReason3.mmObject(), Reason3.mmObject(), Reason3Choice.mmObject(),
 						RejectionReason4.mmObject(), RejectionReason3Choice.mmObject(), RejectedReason4Choice.mmObject(), TechnicalError1Choice.mmObject(), ProprietaryReason4.mmObject(), TransferUnmatchedStatus3Choice.mmObject(),
 						FailedSettlementStatus2Choice.mmObject(), CancellationPendingStatus7Choice.mmObject(), RejectedReason17Choice.mmObject(), CancelledCompleteReason1.mmObject(), RejectedReason16Choice.mmObject(),
-						RejectedReason15Choice.mmObject(), ProprietaryReason5.mmObject(), SystemEventType3Choice.mmObject(), ClosedStatusReason1.mmObject(), ProformaStatusReason1.mmObject(), DisabledStatusReason1.mmObject(),
-						EnabledStatusReason1.mmObject(), SuspendedStatusReason4.mmObject(), BlockedReason2Choice.mmObject(), ConditionallyAcceptedStatusReason3.mmObject(), InRepairStatusReason4.mmObject(), PendingStatusReason14.mmObject(),
-						PendingOpeningStatusReason1.mmObject(), ClosurePendingStatusReason1.mmObject());
+						RejectedReason15Choice.mmObject(), ProprietaryReason5.mmObject(), SystemEventType3Choice.mmObject(), Reason4.mmObject(), Reason18Choice.mmObject(), ClosedStatusReason1.mmObject(), ProformaStatusReason1.mmObject(),
+						DisabledStatusReason1.mmObject(), EnabledStatusReason1.mmObject(), SuspendedStatusReason4.mmObject(), BlockedReason2Choice.mmObject(), ConditionallyAcceptedStatusReason3.mmObject(), InRepairStatusReason4.mmObject(),
+						PendingStatusReason14.mmObject(), PendingOpeningStatusReason1.mmObject(), ClosurePendingStatusReason1.mmObject(), ProprietaryStatusJustification1.mmObject(), PaymentReturnReason4.mmObject(),
+						PaymentReversalReason8.mmObject(), PaymentReturnReason3.mmObject());
 			}
 
 			@Override

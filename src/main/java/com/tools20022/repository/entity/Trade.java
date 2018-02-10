@@ -168,6 +168,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradingDateCode1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.TradeDate4Choice
  * TradeDate4Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonTradeDataReport21
+ * CommonTradeDataReport21}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonTradeDataReport20
+ * CommonTradeDataReport20}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeAdditionalQueryCriteria3
+ * TradeAdditionalQueryCriteria3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonTradeDataReport23
+ * CommonTradeDataReport23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonTradeDataReport22
+ * CommonTradeDataReport22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonTradeDataReport24
+ * CommonTradeDataReport24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonTradeDataReport19
+ * CommonTradeDataReport19}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InterestRateLegs5
+ * InterestRateLegs5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonTradeDataReport25
+ * CommonTradeDataReport25}</li>
  * </ul>
  * </li>
  * <li>
@@ -1071,6 +1089,12 @@ public class Trade {
 	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3#mmTradeDate
 	 * SecuredMarketTransaction3.mmTradeDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmTradeDate
+	 * TransactionDetails93.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails94#mmTradeDate
+	 * TransactionDetails94.mmTradeDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SubscriptionExecution13#mmTradeDateTime
 	 * SubscriptionExecution13.mmTradeDateTime}</li>
 	 * <li>
@@ -1169,6 +1193,127 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmTradeDate
 	 * UnsecuredMarketTransaction4.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmExecutionDateTime
+	 * TradeTransaction15.mmExecutionDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmExecutionDateTime
+	 * TradeTransaction17.mmExecutionDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmExecutionDateTime
+	 * TradeTransaction14.mmExecutionDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmExecutionDateTime
+	 * TradeTransaction18.mmExecutionDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmExecutionDateTime
+	 * TradeTransaction16.mmExecutionDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmTradeDate
+	 * TransactionDetails102.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmTradeDate
+	 * TransferStatusAndReason5.mmTradeDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmTradeDate
+	 * Transfer35.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferOrderDateForm
+	 * Transfer35.mmTransferOrderDateForm}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer34#mmTransferOrderDateForm
+	 * Transfer34.mmTransferOrderDateForm}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmTradeDate
+	 * TransactionDates3.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmTransactionDateTime
+	 * TransactionDates3.mmTransactionDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmTradeDate
+	 * SecuritiesTradeDetails71.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmTradeDate
+	 * TransactionDetails105.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmTradeDate
+	 * SecuritiesTradeDetails72.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmTradeDate
+	 * TransactionDetails104.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmTradeDate
+	 * TransactionDetails103.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmTradeDate
+	 * SecuritiesTradeDetails73.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74#mmTradeDate
+	 * SecuritiesTradeDetails74.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmTradeDate
+	 * SecuritiesTradeDetails75.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTradeDate
+	 * SecuritiesTradeDetails76.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77#mmTradeDate
+	 * SecuritiesTradeDetails77.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails107#mmTradeDate
+	 * TransactionDetails107.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmTradeDate
+	 * SecuritiesTradeDetails78.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmTradeDate
+	 * SecuritiesTradeDetails79.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails80#mmTradeDate
+	 * SecuritiesTradeDetails80.mmTradeDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Garnishment2#mmDate
+	 * Garnishment2.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmTradeDate
+	 * SecuritiesTradeDetails81.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82#mmTradeDate
+	 * SecuritiesTradeDetails82.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83#mmTradeDate
+	 * SecuritiesTradeDetails83.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails84#mmTradeDate
+	 * SecuritiesTradeDetails84.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmTradeDate
+	 * SecuritiesTradeDetails85.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmTradeDate
+	 * SecuritiesTradeDetails86.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmTradeDate
+	 * SecuritiesTradeDetails87.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmTradeDate
+	 * SecuritiesTradeDetails88.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails109#mmTradeDate
+	 * TransactionDetails109.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmTradeDate
+	 * SecuritiesTradeDetails89.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmTradeDate
+	 * SecuritiesTradeDetails90.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmTradeDate
+	 * TransactionDetails110.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmTradeDate
+	 * TransactionDetails111.mmTradeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmTradeDate
+	 * TransactionDetails112.mmTradeDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1244,13 +1389,21 @@ public class Trade {
 					TransactionDetails84.mmTradeDate, SecuritiesTradeDetails63.mmTradeDate, TransactionDetails83.mmTradeDate, SecuritiesTradeDetails62.mmTradeDate, TransactionDetails87.mmTradeDate, SecuritiesTradeDetails60.mmTradeDate,
 					TransactionDetails91.mmTradeDate, TransactionDetails90.mmTradeDate, SecuritiesTradeDetails65.mmTradeDate, SecuritiesTradeDetails66.mmTradeDate, UnsecuredMarketTransaction2.mmTradeDate,
 					ForeignExchangeSwapTransaction2.mmTradeDate, SecuredMarketTransaction2.mmTradeDate, UnsecuredMarketTransaction3.mmTradeDate, OvernightIndexSwapTransaction3.mmTradeDate, SecuredMarketTransaction3.mmTradeDate,
-					SubscriptionExecution13.mmTradeDateTime, SubscriptionExecution12.mmTradeDateTime, ExpectedExecutionDetails4.mmExpectedTradeDateTime, RedemptionExecution16.mmTradeDateTime,
-					SwitchSubscriptionLegExecution4.mmTradeDateTime, RedemptionExecution15.mmTradeDateTime, SwitchRedemptionLegExecution4.mmTradeDateTime, TransparencyDataReport11.mmReportingDate, TransparencyDataReport13.mmReportingDate,
-					TransparencyDataReport15.mmReportingDate, TransparencyDataReport10.mmReportingDate, RegulatoryReporting6.mmExecutionTimestamp, RegulatoryReporting6.mmConfirmationDateAndTimestamp, TradeAgreement15.mmTradeDate,
-					TradeAgreement14.mmTradeDate, SecuritiesTradeDetails67.mmTradeDate, SecuritiesTradeDetails68.mmTradeDate, TransactionDetails97.mmTradeDate, SecuritiesFinancingTransactionDetails35.mmTradeDate,
-					TransactionDetails96.mmTradeDate, TransactionDetails95.mmTradeDate, SettlementDetails118.mmTradeDate, SecuritiesTradeDetails69.mmTradeDate, SecuritiesTradeDetails70.mmTradeDate,
-					SecuritiesFinancingTransactionDetails36.mmTradeDate, TransactionDetails100.mmTradeDate, TransactionDetails99.mmTradeDate, TransactionDetails98.mmTradeDate, FixingConditions1.mmTradeDate,
-					SecuredMarketTransaction4.mmTradeDate, ForeignExchangeSwapTransaction3.mmTradeDate, OvernightIndexSwapTransaction4.mmTradeDate, UnsecuredMarketTransaction4.mmTradeDate);
+					TransactionDetails93.mmTradeDate, TransactionDetails94.mmTradeDate, SubscriptionExecution13.mmTradeDateTime, SubscriptionExecution12.mmTradeDateTime, ExpectedExecutionDetails4.mmExpectedTradeDateTime,
+					RedemptionExecution16.mmTradeDateTime, SwitchSubscriptionLegExecution4.mmTradeDateTime, RedemptionExecution15.mmTradeDateTime, SwitchRedemptionLegExecution4.mmTradeDateTime, TransparencyDataReport11.mmReportingDate,
+					TransparencyDataReport13.mmReportingDate, TransparencyDataReport15.mmReportingDate, TransparencyDataReport10.mmReportingDate, RegulatoryReporting6.mmExecutionTimestamp,
+					RegulatoryReporting6.mmConfirmationDateAndTimestamp, TradeAgreement15.mmTradeDate, TradeAgreement14.mmTradeDate, SecuritiesTradeDetails67.mmTradeDate, SecuritiesTradeDetails68.mmTradeDate,
+					TransactionDetails97.mmTradeDate, SecuritiesFinancingTransactionDetails35.mmTradeDate, TransactionDetails96.mmTradeDate, TransactionDetails95.mmTradeDate, SettlementDetails118.mmTradeDate,
+					SecuritiesTradeDetails69.mmTradeDate, SecuritiesTradeDetails70.mmTradeDate, SecuritiesFinancingTransactionDetails36.mmTradeDate, TransactionDetails100.mmTradeDate, TransactionDetails99.mmTradeDate,
+					TransactionDetails98.mmTradeDate, FixingConditions1.mmTradeDate, SecuredMarketTransaction4.mmTradeDate, ForeignExchangeSwapTransaction3.mmTradeDate, OvernightIndexSwapTransaction4.mmTradeDate,
+					UnsecuredMarketTransaction4.mmTradeDate, TradeTransaction15.mmExecutionDateTime, TradeTransaction17.mmExecutionDateTime, TradeTransaction14.mmExecutionDateTime, TradeTransaction18.mmExecutionDateTime,
+					TradeTransaction16.mmExecutionDateTime, TransactionDetails102.mmTradeDate, TransferStatusAndReason5.mmTradeDate, Transfer35.mmTradeDate, Transfer35.mmTransferOrderDateForm, Transfer34.mmTransferOrderDateForm,
+					TransactionDates3.mmTradeDate, TransactionDates3.mmTransactionDateTime, SecuritiesTradeDetails71.mmTradeDate, TransactionDetails105.mmTradeDate, SecuritiesTradeDetails72.mmTradeDate, TransactionDetails104.mmTradeDate,
+					TransactionDetails103.mmTradeDate, SecuritiesTradeDetails73.mmTradeDate, SecuritiesTradeDetails74.mmTradeDate, SecuritiesTradeDetails75.mmTradeDate, SecuritiesTradeDetails76.mmTradeDate,
+					SecuritiesTradeDetails77.mmTradeDate, TransactionDetails107.mmTradeDate, SecuritiesTradeDetails78.mmTradeDate, SecuritiesTradeDetails79.mmTradeDate, SecuritiesTradeDetails80.mmTradeDate, Garnishment2.mmDate,
+					SecuritiesTradeDetails81.mmTradeDate, SecuritiesTradeDetails82.mmTradeDate, SecuritiesTradeDetails83.mmTradeDate, SecuritiesTradeDetails84.mmTradeDate, SecuritiesTradeDetails85.mmTradeDate,
+					SecuritiesTradeDetails86.mmTradeDate, SecuritiesTradeDetails87.mmTradeDate, SecuritiesTradeDetails88.mmTradeDate, TransactionDetails109.mmTradeDate, SecuritiesTradeDetails89.mmTradeDate,
+					SecuritiesTradeDetails90.mmTradeDate, TransactionDetails110.mmTradeDate, TransactionDetails111.mmTradeDate, TransactionDetails112.mmTradeDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::TRAD"), new FIXSynonym(this, "75"));
@@ -1630,6 +1783,9 @@ public class Trade {
 	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction2#mmSpotValueDate
 	 * ForeignExchangeSwapTransaction2.mmSpotValueDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmValueDate
+	 * TransactionDetails93.mmValueDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#mmClearingTimestamp
 	 * RegulatoryReporting6.mmClearingTimestamp}</li>
 	 * <li>
@@ -1641,6 +1797,15 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#mmSpotValueDate
 	 * ForeignExchangeSwapTransaction3.mmSpotValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmValueDate
+	 * TransactionDetails102.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmValueDate
+	 * TransactionDetails103.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmValueDate
+	 * TransactionDetails112.mmValueDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1665,7 +1830,8 @@ public class Trade {
 					TransactionDetails48.mmValueDate, TransactionDetails57.mmValueDate, TransactionDetails60.mmValueDate, TradingDateCode1Choice.mmProprietary, TradeData8.mmCurrentSettlementDate, TradeData8.mmNewSettlementDate,
 					AmountsAndValueDate1.mmSettlementDate, TransactionDetails51.mmValueDate, TransactionDetails63.mmValueDate, TransactionDetails68.mmValueDate, TradeData11.mmCurrentSettlementDate, TradeData11.mmNewSettlementDate,
 					ForeignExchangeSwapTransaction1.mmSpotValueDate, TransactionDetails78.mmValueDate, Option10.mmValuationRate, TransactionDetails91.mmValueDate, ForeignExchangeSwapTransaction2.mmSpotValueDate,
-					RegulatoryReporting6.mmClearingTimestamp, TransactionDetails95.mmValueDate, TransactionDetails98.mmValueDate, ForeignExchangeSwapTransaction3.mmSpotValueDate);
+					TransactionDetails93.mmValueDate, RegulatoryReporting6.mmClearingTimestamp, TransactionDetails95.mmValueDate, TransactionDetails98.mmValueDate, ForeignExchangeSwapTransaction3.mmSpotValueDate,
+					TransactionDetails102.mmValueDate, TransactionDetails103.mmValueDate, TransactionDetails112.mmValueDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1712,6 +1878,9 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradeContract1#mmMaturityDate
 	 * TradeContract1.mmMaturityDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmEndDate
+	 * TransactionDates3.mmEndDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1732,7 +1901,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAttribute mmEndDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClosingDate1Choice.mmDate, ClosingDate1Choice.mmCode, TransactionDates1.mmEndDate, TransactionDates2.mmEndDate, TradeContract1.mmMaturityDate);
+			derivation_lazy = () -> Arrays.asList(ClosingDate1Choice.mmDate, ClosingDate1Choice.mmCode, TransactionDates1.mmEndDate, TransactionDates2.mmEndDate, TradeContract1.mmMaturityDate, TransactionDates3.mmEndDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1808,6 +1977,9 @@ public class Trade {
 	 * {@linkplain com.tools20022.repository.choice.Cancellation10Choice#mmReferences
 	 * Cancellation10Choice.mmReferences}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmTransactionIdentification
+	 * IntraBalanceCancellation4.mmTransactionIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GeneralInformation5#mmRelatedTradeReference
 	 * GeneralInformation5.mmRelatedTradeReference}</li>
 	 * <li>
@@ -1841,8 +2013,8 @@ public class Trade {
 		{
 			derivation_lazy = () -> Arrays.asList(Cancellation1Choice.mmReference, RegulatoryReporting1.mmCounterpartySideUniqueTransactionIdentifier, IntraBalanceCancellation2.mmTransactionIdentification, Cancellation5Choice.mmReferences,
 					Cancellation4Choice.mmReferences, CounterpartySideTransactionReporting1.mmCounterpartySideUniqueTransactionIdentifier, TradingSideTransactionReporting1.mmTradingSideUniqueTransactionIdentifier,
-					Cancellation9Choice.mmReferences, Cancellation8Choice.mmReferences, Cancellation12Choice.mmReferences, Cancellation10Choice.mmReferences, GeneralInformation5.mmRelatedTradeReference,
-					TradeData12.mmLinkedReportIdentification, NetObligation1.mmCounterpartyNettingIdentification, FixingConditions1.mmRelatedReference);
+					Cancellation9Choice.mmReferences, Cancellation8Choice.mmReferences, Cancellation12Choice.mmReferences, Cancellation10Choice.mmReferences, IntraBalanceCancellation4.mmTransactionIdentification,
+					GeneralInformation5.mmRelatedTradeReference, TradeData12.mmLinkedReportIdentification, NetObligation1.mmCounterpartyNettingIdentification, FixingConditions1.mmRelatedReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2367,7 +2539,7 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the trade which originates the obligation to deliver a product, cash or securities.."
+	 * "Specifies the trade which originates the obligation to deliver a product, cash or securities."
 	 * </li>
 	 * </ul>
 	 */
@@ -2377,7 +2549,7 @@ public class Trade {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Obligation";
-			definition = "Specifies the trade which originates the obligation to deliver a product, cash or securities..";
+			definition = "Specifies the trade which originates the obligation to deliver a product, cash or securities.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Obligation.mmTrade;
 			aggregation = MMAggregation.NONE;
@@ -2462,6 +2634,21 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#mmTradeAgreement
 	 * CardPaymentInvoice2.mmTradeAgreement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmMasterAgreement
+	 * TradeTransaction15.mmMasterAgreement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmMasterAgreement
+	 * TradeTransaction17.mmMasterAgreement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmMasterAgreement
+	 * TradeTransaction14.mmMasterAgreement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmMasterAgreement
+	 * TradeTransaction16.mmMasterAgreement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice3#mmTradeAgreement
+	 * CardPaymentInvoice3.mmTradeAgreement}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2481,7 +2668,8 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmGoverningDocument = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(PaymentObligation2.mmApplicableRules, CardPaymentInvoice1.mmTradeAgreement, CardPaymentInvoice2.mmTradeAgreement);
+			derivation_lazy = () -> Arrays.asList(PaymentObligation2.mmApplicableRules, CardPaymentInvoice1.mmTradeAgreement, CardPaymentInvoice2.mmTradeAgreement, TradeTransaction15.mmMasterAgreement, TradeTransaction17.mmMasterAgreement,
+					TradeTransaction14.mmMasterAgreement, TradeTransaction16.mmMasterAgreement, CardPaymentInvoice3.mmTradeAgreement);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2535,6 +2723,9 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OvernightIndexSwapTransaction4#mmStartDate
 	 * OvernightIndexSwapTransaction4.mmStartDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmStartDate
+	 * TransactionDates3.mmStartDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2557,7 +2748,8 @@ public class Trade {
 	public static final MMBusinessAttribute mmStartDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Order16.mmProcessingDate, Order14.mmProcessingDate, TransactionDates1.mmStartDate, TransactionDates2.mmStartDate, Order17.mmProcessingDate, Order18.mmProcessingDate,
-					OvernightIndexSwapTransaction1.mmStartDate, TradeContract1.mmStartDate, OvernightIndexSwapTransaction3.mmStartDate, TradeSettlement2.mmBillingPeriod, OvernightIndexSwapTransaction4.mmStartDate);
+					OvernightIndexSwapTransaction1.mmStartDate, TradeContract1.mmStartDate, OvernightIndexSwapTransaction3.mmStartDate, TradeSettlement2.mmBillingPeriod, OvernightIndexSwapTransaction4.mmStartDate,
+					TransactionDates3.mmStartDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2639,6 +2831,20 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmCommodity
+	 * TradeTransaction17.mmCommodity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmCommodity
+	 * TradeTransaction14.mmCommodity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmCommodity
+	 * TradeTransaction16.mmCommodity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
@@ -2656,6 +2862,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(TradeTransaction17.mmCommodity, TradeTransaction14.mmCommodity, TradeTransaction16.mmCommodity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2695,6 +2902,9 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialItemParameters1#mmTradeMarket
 	 * FinancialItemParameters1.mmTradeMarket}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAdditionalQueryCriteria3#mmExecutionVenue
+	 * TradeAdditionalQueryCriteria3.mmExecutionVenue}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2714,7 +2924,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmMarket = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(NetPosition2.mmPlaceOfTrade, NetPosition3.mmPlaceOfTrade, FinancialItemParameters1.mmTradeMarket);
+			derivation_lazy = () -> Arrays.asList(NetPosition2.mmPlaceOfTrade, NetPosition3.mmPlaceOfTrade, FinancialItemParameters1.mmTradeMarket, TradeAdditionalQueryCriteria3.mmExecutionVenue);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2891,6 +3101,17 @@ public class Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Leg Leg}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRateLegs5#mmFirstLeg
+	 * InterestRateLegs5.mmFirstLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRateLegs5#mmSecondLeg
+	 * InterestRateLegs5.mmSecondLeg}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} = {@linkplain com.tools20022.repository.entity.Trade
@@ -2909,6 +3130,7 @@ public class Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmLeg = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(InterestRateLegs5.mmFirstLeg, InterestRateLegs5.mmSecondLeg);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Trade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3039,7 +3261,9 @@ public class Trade {
 						com.tools20022.repository.entity.Trade.mmGoverningDocument, com.tools20022.repository.entity.Trade.mmStartDate, com.tools20022.repository.entity.Trade.mmSystem, com.tools20022.repository.entity.Trade.mmAsset,
 						com.tools20022.repository.entity.Trade.mmMarket, com.tools20022.repository.entity.Trade.mmGuarantee, com.tools20022.repository.entity.Trade.mmSettlement, com.tools20022.repository.entity.Trade.mmOrder,
 						com.tools20022.repository.entity.Trade.mmLeg, com.tools20022.repository.entity.Trade.mmFinancialTransaction, com.tools20022.repository.entity.Trade.mmReconciliation);
-				derivationComponent_lazy = () -> Arrays.asList(DateAndDateTime1Choice.mmObject(), TradingDateCode1Choice.mmObject(), TradeDate4Choice.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(DateAndDateTime1Choice.mmObject(), TradingDateCode1Choice.mmObject(), TradeDate4Choice.mmObject(), CommonTradeDataReport21.mmObject(), CommonTradeDataReport20.mmObject(),
+						TradeAdditionalQueryCriteria3.mmObject(), CommonTradeDataReport23.mmObject(), CommonTradeDataReport22.mmObject(), CommonTradeDataReport24.mmObject(), CommonTradeDataReport19.mmObject(), InterestRateLegs5.mmObject(),
+						CommonTradeDataReport25.mmObject());
 			}
 
 			@Override

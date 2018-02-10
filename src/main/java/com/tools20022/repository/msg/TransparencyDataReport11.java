@@ -445,7 +445,7 @@ public class TransparencyDataReport11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For shares and depositary receipts, the total number of outstanding instruments. \r\nFor ETFs, the number of units issued for trading. "
+	 * "For shares and depositary receipts, the total number of outstanding instruments. \r\nFor ETFs, the number of units issued for trading."
 	 * </li>
 	 * </ul>
 	 */
@@ -456,7 +456,7 @@ public class TransparencyDataReport11 {
 			xmlTag = "NbOutsdngInstrms";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOutstandingInstruments";
-			definition = "For shares and depositary receipts, the total number of outstanding instruments. \r\nFor ETFs, the number of units issued for trading. ";
+			definition = "For shares and depositary receipts, the total number of outstanding instruments. \r\nFor ETFs, the number of units issued for trading.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();
@@ -495,7 +495,7 @@ public class TransparencyDataReport11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The total number of shares corresponding to holdings exceeding 5% of total voting rights of the issuer unless such a holding is held by a collective investment undertaking or a pension fund.  This field is to be populated only when actual information is known."
+	 * "The total number of shares corresponding to holdings exceeding 5% of total voting rights of the issuer unless such a holding is held by a collective investment undertaking or a pension fund. This field is to be populated only when actual information is known."
 	 * </li>
 	 * </ul>
 	 */
@@ -507,7 +507,7 @@ public class TransparencyDataReport11 {
 			xmlTag = "HldgsExcdgTtlVtngRghtThrshld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsExceedingTotalVotingRightThreshold";
-			definition = "The total number of shares corresponding to holdings exceeding 5% of total voting rights of the issuer unless such a holding is held by a collective investment undertaking or a pension fund.  This field is to be populated only when actual information is known.";
+			definition = "The total number of shares corresponding to holdings exceeding 5% of total voting rights of the issuer unless such a holding is held by a collective investment undertaking or a pension fund. This field is to be populated only when actual information is known.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumberFraction5.mmObject();

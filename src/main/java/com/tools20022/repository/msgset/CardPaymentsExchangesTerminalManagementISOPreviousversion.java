@@ -35,22 +35,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageDefinition} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV04
- * AcceptorConfigurationUpdateV04}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV04
- * ManagementPlanReplacementV04}</li>
- * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV04
- * StatusReportV04}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01
  * MaintenanceDelegationResponseV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV01
- * MaintenanceDelegationRequestV01}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV03
  * TerminalManagementRejectionV03}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02
+ * MaintenanceDelegationRequestV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05
+ * AcceptorConfigurationUpdateV05}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV05
+ * StatusReportV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV05
+ * ManagementPlanReplacementV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -81,8 +81,8 @@ public class CardPaymentsExchangesTerminalManagementISOPreviousversion {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Card Payments Exchanges - Terminal Management - ISO - Previous version";
 				definition = "Set of messages that support card-related, terminal management services between a Terminal Management System (TMS) and a Point of Interaction (POI) system.";
-				messageDefinition_lazy = () -> Arrays.asList(AcceptorConfigurationUpdateV04.mmObject(), ManagementPlanReplacementV04.mmObject(), StatusReportV04.mmObject(), MaintenanceDelegationResponseV01.mmObject(),
-						MaintenanceDelegationRequestV01.mmObject(), TerminalManagementRejectionV03.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV01.mmObject(), TerminalManagementRejectionV03.mmObject(), MaintenanceDelegationRequestV02.mmObject(), AcceptorConfigurationUpdateV05.mmObject(),
+						StatusReportV05.mmObject(), ManagementPlanReplacementV05.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

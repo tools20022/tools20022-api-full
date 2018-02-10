@@ -74,6 +74,42 @@ public class ConstraintOptionTypeRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08
+	 * CorporateActionInstructionV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV07
+	 * ConstraintOptionTypeRule.forCorporateActionInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionV08> forCorporateActionInstructionV08 = new MMConstraint<CorporateActionInstructionV08>() {
+		{
+			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionTypeRule";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV07;
+			owner_lazy = () -> CorporateActionInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07
 	 * CorporateActionInstructionV07}</li>
 	 * <li>
@@ -85,7 +121,15 @@ public class ConstraintOptionTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction),  then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV08
+	 * ConstraintOptionTypeRule.forCorporateActionInstructionV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -99,7 +143,8 @@ public class ConstraintOptionTypeRule {
 			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction),  then at least one occurrence of BeneficialOwnerDetails must be present.";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV06;
 			owner_lazy = () -> CorporateActionInstructionV07.mmObject();
 		}
@@ -121,7 +166,7 @@ public class ConstraintOptionTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction),  then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -130,53 +175,8 @@ public class ConstraintOptionTypeRule {
 			validator = ConstraintOptionTypeRule::checkCorporateActionInstruction002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction),  then at least one occurrence of BeneficialOwnerDetails must be present.";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
 			owner_lazy = () -> CorporateActionInstruction002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
-	 * CorporateActionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "OptionTypeRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction),  then at least one occurrence of BeneficialOwnerDetails must be present."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV07
-	 * ConstraintOptionTypeRule.forCorporateActionInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV05
-	 * ConstraintOptionTypeRule.forCorporateActionInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstructionV06> forCorporateActionInstructionV06 = new MMConstraint<CorporateActionInstructionV06>() {
-		{
-			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction),  then at least one occurrence of BeneficialOwnerDetails must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV05;
-			owner_lazy = () -> CorporateActionInstructionV06.mmObject();
 		}
 	};
 	/**
@@ -196,7 +196,7 @@ public class ConstraintOptionTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -205,7 +205,7 @@ public class ConstraintOptionTypeRule {
 			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present.";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			owner_lazy = () -> CorporateActionInstructionV01.mmObject();
 		}
 	};
@@ -226,7 +226,7 @@ public class ConstraintOptionTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -235,7 +235,7 @@ public class ConstraintOptionTypeRule {
 			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present.";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			owner_lazy = () -> CorporateActionInstructionV02.mmObject();
 		}
 	};
@@ -256,7 +256,7 @@ public class ConstraintOptionTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -265,7 +265,7 @@ public class ConstraintOptionTypeRule {
 			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present.";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			owner_lazy = () -> CorporateActionInstructionV03.mmObject();
 		}
 	};
@@ -286,7 +286,7 @@ public class ConstraintOptionTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -303,7 +303,7 @@ public class ConstraintOptionTypeRule {
 			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present.";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV05);
 			owner_lazy = () -> CorporateActionInstructionV04.mmObject();
 		}
@@ -325,7 +325,7 @@ public class ConstraintOptionTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -347,10 +347,55 @@ public class ConstraintOptionTypeRule {
 			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeRule";
-			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI,  then at least one occurrence of BeneficialOwnerDetails must be present.";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI, then at least one occurrence of BeneficialOwnerDetails must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV04;
 			owner_lazy = () -> CorporateActionInstructionV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
+	 * CorporateActionInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV07
+	 * ConstraintOptionTypeRule.forCorporateActionInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeRule#forCorporateActionInstructionV05
+	 * ConstraintOptionTypeRule.forCorporateActionInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionV06> forCorporateActionInstructionV06 = new MMConstraint<CorporateActionInstructionV06>() {
+		{
+			validator = ConstraintOptionTypeRule::checkCorporateActionInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionTypeRule";
+			definition = "If CorporateActionInstruction/OptionType/Code value is TAXI (Tax Instruction), then at least one occurrence of BeneficialOwnerDetails must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeRule.forCorporateActionInstructionV05;
+			owner_lazy = () -> CorporateActionInstructionV06.mmObject();
 		}
 	};
 	/**
@@ -735,6 +780,15 @@ public class ConstraintOptionTypeRule {
 	 * Instruction), then at least one occurrence of BeneficialOwnerDetails must
 	 * be present.
 	 */
+	public static void checkCorporateActionInstructionV08(CorporateActionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionInstruction/OptionType/Code value is TAXI (Tax
+	 * Instruction), then at least one occurrence of BeneficialOwnerDetails must
+	 * be present.
+	 */
 	public static void checkCorporateActionInstructionV07(CorporateActionInstructionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -745,15 +799,6 @@ public class ConstraintOptionTypeRule {
 	 * be present.
 	 */
 	public static void checkCorporateActionInstruction002V07(CorporateActionInstruction002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CorporateActionInstruction/OptionType/Code value is TAXI (Tax
-	 * Instruction), then at least one occurrence of BeneficialOwnerDetails must
-	 * be present.
-	 */
-	public static void checkCorporateActionInstructionV06(CorporateActionInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -794,6 +839,15 @@ public class ConstraintOptionTypeRule {
 	 * least one occurrence of BeneficialOwnerDetails must be present.
 	 */
 	public static void checkCorporateActionInstructionV05(CorporateActionInstructionV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionInstruction/OptionType/Code value is TAXI (Tax
+	 * Instruction), then at least one occurrence of BeneficialOwnerDetails must
+	 * be present.
+	 */
+	public static void checkCorporateActionInstructionV06(CorporateActionInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

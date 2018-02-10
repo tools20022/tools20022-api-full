@@ -49,7 +49,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received."
+	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -64,7 +64,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionCancellationRequestV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.";
+			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionCancellationRequestV06;
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV07.mmObject();
 		}
@@ -75,8 +75,8 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07
-	 * CorporateActionInstructionV07}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08
+	 * CorporateActionInstructionV08}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -86,54 +86,24 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n"
+	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV06
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV07
 	 * ConstraintChangeInstructionIndicatorGuideline.
-	 * forCorporateActionInstructionV06}</li>
+	 * forCorporateActionInstructionV07}</li>
 	 * </ul>
 	 */
-	public static final MMConstraint<CorporateActionInstructionV07> forCorporateActionInstructionV07 = new MMConstraint<CorporateActionInstructionV07>() {
+	public static final MMConstraint<CorporateActionInstructionV08> forCorporateActionInstructionV08 = new MMConstraint<CorporateActionInstructionV08>() {
 		{
-			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV07;
+			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n";
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV06;
-			owner_lazy = () -> CorporateActionInstructionV07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07
-	 * CorporateActionInstruction002V07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChangeInstructionIndicatorGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n"
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstruction002V07> forCorporateActionInstruction002V07 = new MMConstraint<CorporateActionInstruction002V07>() {
-		{
-			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstruction002V07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChangeInstructionIndicatorGuideline";
-			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n";
-			owner_lazy = () -> CorporateActionInstruction002V07.mmObject();
+			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV07;
+			owner_lazy = () -> CorporateActionInstructionV08.mmObject();
 		}
 	};
 	/**
@@ -153,7 +123,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received."
+	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * </ul>
 	 */
@@ -162,55 +132,8 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionCancellationRequest002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.";
+			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequest002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
-	 * CorporateActionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "ChangeInstructionIndicatorGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n"
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV07
-	 * ConstraintChangeInstructionIndicatorGuideline.
-	 * forCorporateActionInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV05
-	 * ConstraintChangeInstructionIndicatorGuideline.
-	 * forCorporateActionInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstructionV06> forCorporateActionInstructionV06 = new MMConstraint<CorporateActionInstructionV06>() {
-		{
-			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "ChangeInstructionIndicatorGuideline";
-			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV05;
-			owner_lazy = () -> CorporateActionInstructionV06.mmObject();
 		}
 	};
 	/**
@@ -230,7 +153,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received."
+	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -254,10 +177,87 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionCancellationRequestV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.";
+			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionCancellationRequestV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionCancellationRequestV05;
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07
+	 * CorporateActionInstructionV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChangeInstructionIndicatorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n"
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV08
+	 * ConstraintChangeInstructionIndicatorGuideline.
+	 * forCorporateActionInstructionV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV06
+	 * ConstraintChangeInstructionIndicatorGuideline.
+	 * forCorporateActionInstructionV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionV07> forCorporateActionInstructionV07 = new MMConstraint<CorporateActionInstructionV07>() {
+		{
+			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChangeInstructionIndicatorGuideline";
+			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV06;
+			owner_lazy = () -> CorporateActionInstructionV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstruction002V07
+	 * CorporateActionInstruction002V07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChangeInstructionIndicatorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n"
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstruction002V07> forCorporateActionInstruction002V07 = new MMConstraint<CorporateActionInstruction002V07>() {
+		{
+			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstruction002V07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChangeInstructionIndicatorGuideline";
+			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n";
+			owner_lazy = () -> CorporateActionInstruction002V07.mmObject();
 		}
 	};
 	/**
@@ -277,7 +277,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n"
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -286,7 +286,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n.";
 			owner_lazy = () -> CorporateActionInstructionV01.mmObject();
 		}
 	};
@@ -307,7 +307,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n"
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -316,7 +316,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n.";
 			owner_lazy = () -> CorporateActionInstructionV02.mmObject();
 		}
 	};
@@ -337,7 +337,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n"
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -346,7 +346,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n.";
 			owner_lazy = () -> CorporateActionInstructionV03.mmObject();
 		}
 	};
@@ -367,7 +367,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n"
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -385,7 +385,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV05);
 			owner_lazy = () -> CorporateActionInstructionV04.mmObject();
 		}
@@ -407,7 +407,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * </ul>
 	 */
@@ -416,7 +416,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV01.mmObject();
 		}
 	};
@@ -437,7 +437,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * </ul>
 	 */
@@ -446,7 +446,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionCancellationRequestV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV02.mmObject();
 		}
 	};
@@ -467,7 +467,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * </ul>
 	 */
@@ -476,7 +476,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionCancellationRequestV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV03.mmObject();
 		}
 	};
@@ -497,7 +497,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -515,7 +515,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionCancellationRequestV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionCancellationRequestV05);
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV04.mmObject();
 		}
@@ -537,7 +537,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n"
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -561,7 +561,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and  if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.\n.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV04;
 			owner_lazy = () -> CorporateActionInstructionV05.mmObject();
@@ -584,7 +584,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
+	 * "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -608,10 +608,57 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionCancellationRequestV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChangeInstructionIndicatorGuideline";
-			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if  CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
+			definition = "Identification/ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No (False) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes (True) in the CorporateActionNotification message previously received.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionCancellationRequestV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionCancellationRequestV04;
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
+	 * CorporateActionInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChangeInstructionIndicatorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n"
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV07
+	 * ConstraintChangeInstructionIndicatorGuideline.
+	 * forCorporateActionInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline#forCorporateActionInstructionV05
+	 * ConstraintChangeInstructionIndicatorGuideline.
+	 * forCorporateActionInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionV06> forCorporateActionInstructionV06 = new MMConstraint<CorporateActionInstructionV06>() {
+		{
+			validator = ConstraintChangeInstructionIndicatorGuideline::checkCorporateActionInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChangeInstructionIndicatorGuideline";
+			definition = "ChangeInstructionIndicator may only be used if CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to 'false' or '0' (No) in the CorporateActionNotification message previously received and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to 'true' or '1' (Yes) in the CorporateActionNotification message previously received.\r\n";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChangeInstructionIndicatorGuideline.forCorporateActionInstructionV05;
+			owner_lazy = () -> CorporateActionInstructionV06.mmObject();
 		}
 	};
 
@@ -624,6 +671,42 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * previously received.
 	 */
 	public static void checkCorporateActionInstructionCancellationRequestV07(CorporateActionInstructionCancellationRequestV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ChangeInstructionIndicator may only be used if
+	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to
+	 * 'false' or '0' (No) in the CorporateActionNotification message previously
+	 * received and if CorporateActionOptionDetails/ChangeAllowedIndicator was
+	 * set to 'true' or '1' (Yes) in the CorporateActionNotification message
+	 * previously received.
+	 */
+	public static void checkCorporateActionInstructionV08(CorporateActionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ChangeInstructionIndicator may only be used if
+	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to
+	 * 'false' or '0' (No) in the CorporateActionNotification message previously
+	 * received and if CorporateActionOptionDetails/ChangeAllowedIndicator was
+	 * set to 'true' or '1' (Yes) in the CorporateActionNotification message
+	 * previously received.
+	 */
+	public static void checkCorporateActionInstructionCancellationRequest002V07(CorporateActionInstructionCancellationRequest002V07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ChangeInstructionIndicator may only be used if
+	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to
+	 * 'false' or '0' (No) in the CorporateActionNotification message previously
+	 * received and if CorporateActionOptionDetails/ChangeAllowedIndicator was
+	 * set to 'true' or '1' (Yes) in the CorporateActionNotification message
+	 * previously received.
+	 */
+	public static void checkCorporateActionInstructionCancellationRequestV06(CorporateActionInstructionCancellationRequestV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -652,47 +735,11 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	}
 
 	/**
-	 * ChangeInstructionIndicator may only be used if
-	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to
-	 * 'false' or '0' (No) in the CorporateActionNotification message previously
-	 * received and if CorporateActionOptionDetails/ChangeAllowedIndicator was
-	 * set to 'true' or '1' (Yes) in the CorporateActionNotification message
-	 * previously received.
-	 */
-	public static void checkCorporateActionInstructionCancellationRequest002V07(CorporateActionInstructionCancellationRequest002V07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ChangeInstructionIndicator may only be used if
-	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to
-	 * 'false' or '0' (No) in the CorporateActionNotification message previously
-	 * received and if CorporateActionOptionDetails/ChangeAllowedIndicator was
-	 * set to 'true' or '1' (Yes) in the CorporateActionNotification message
-	 * previously received.<br>
-	 */
-	public static void checkCorporateActionInstructionV06(CorporateActionInstructionV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * ChangeInstructionIndicator may only be used if
-	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to
-	 * 'false' or '0' (No) in the CorporateActionNotification message previously
-	 * received and if CorporateActionOptionDetails/ChangeAllowedIndicator was
-	 * set to 'true' or '1' (Yes) in the CorporateActionNotification message
-	 * previously received.
-	 */
-	public static void checkCorporateActionInstructionCancellationRequestV06(CorporateActionInstructionCancellationRequestV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
 	 * Identification/ChangeInstructionIndicator may only be used if
 	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No
 	 * (False) in the CorporateActionNotification message previously received
 	 * and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes
-	 * (True) in the CorporateActionNotification message previously received.
+	 * (True) in the CorporateActionNotification message previously received. .
 	 */
 	public static void checkCorporateActionInstructionV01(CorporateActionInstructionV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -703,7 +750,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No
 	 * (False) in the CorporateActionNotification message previously received
 	 * and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes
-	 * (True) in the CorporateActionNotification message previously received.
+	 * (True) in the CorporateActionNotification message previously received. .
 	 */
 	public static void checkCorporateActionInstructionV02(CorporateActionInstructionV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -714,7 +761,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No
 	 * (False) in the CorporateActionNotification message previously received
 	 * and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes
-	 * (True) in the CorporateActionNotification message previously received.
+	 * (True) in the CorporateActionNotification message previously received. .
 	 */
 	public static void checkCorporateActionInstructionV03(CorporateActionInstructionV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -725,7 +772,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No
 	 * (False) in the CorporateActionNotification message previously received
 	 * and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes
-	 * (True) in the CorporateActionNotification message previously received.
+	 * (True) in the CorporateActionNotification message previously received. .
 	 */
 	public static void checkCorporateActionInstructionV04(CorporateActionInstructionV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -780,7 +827,7 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to No
 	 * (False) in the CorporateActionNotification message previously received
 	 * and if CorporateActionOptionDetails/ChangeAllowedIndicator was set to Yes
-	 * (True) in the CorporateActionNotification message previously received.
+	 * (True) in the CorporateActionNotification message previously received. .
 	 */
 	public static void checkCorporateActionInstructionV05(CorporateActionInstructionV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -794,6 +841,18 @@ public class ConstraintChangeInstructionIndicatorGuideline {
 	 * (True) in the CorporateActionNotification message previously received.
 	 */
 	public static void checkCorporateActionInstructionCancellationRequestV05(CorporateActionInstructionCancellationRequestV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ChangeInstructionIndicator may only be used if
+	 * CorporateActionOptionDetails/WithdrawalAllowedIndicator was set to
+	 * 'false' or '0' (No) in the CorporateActionNotification message previously
+	 * received and if CorporateActionOptionDetails/ChangeAllowedIndicator was
+	 * set to 'true' or '1' (Yes) in the CorporateActionNotification message
+	 * previously received.<br>
+	 */
+	public static void checkCorporateActionInstructionV06(CorporateActionInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

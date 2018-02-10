@@ -147,7 +147,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Settlement and Reconciliation - Maintenance 2016-2017"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This document describes the Settlement and Reconciliation message set. "</li>
+ * "This document describes the Settlement and Reconciliation message set."</li>
  * </ul>
  */
 public class SettlementandReconciliationMaintenance20162017 {
@@ -160,7 +160,7 @@ public class SettlementandReconciliationMaintenance20162017 {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Settlement and Reconciliation - Maintenance 2016-2017";
-				definition = "This document describes the Settlement and Reconciliation message set. ";
+				definition = "This document describes the Settlement and Reconciliation message set.";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesBalanceCustodyReportV09.mmObject(), IntraPositionMovementInstructionV04.mmObject(), PortfolioTransferNotificationV04.mmObject(),
 						SecuritiesStatusOrStatementQueryStatusAdviceV04.mmObject(), SecuritiesMessageCancellationAdviceV05.mmObject(), SecuritiesStatementQueryV06.mmObject(),
 						SecuritiesSettlementTransactionModificationRequestStatusAdviceV04.mmObject(), SecuritiesSettlementConditionModificationStatusAdviceV07.mmObject(), SecuritiesTransactionStatusQueryV04.mmObject(),

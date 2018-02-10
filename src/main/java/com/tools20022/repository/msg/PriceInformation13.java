@@ -86,6 +86,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PriceInformation18
+ * PriceInformation18}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PriceInformation6
@@ -134,6 +141,13 @@ public class PriceInformation13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the type of price and information about the price."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PriceInformation18#mmType
+	 * PriceInformation18.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -151,6 +165,7 @@ public class PriceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of price and information about the price.";
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation18.mmType);
 			previousVersion_lazy = () -> PriceInformation6.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -193,6 +208,14 @@ public class PriceInformation13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of value in which the price is expressed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation18#mmValueType
+	 * PriceInformation18.mmValueType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -210,6 +233,7 @@ public class PriceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueType";
 			definition = "Type of value in which the price is expressed.";
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation18.mmValueType);
 			previousVersion_lazy = () -> PriceInformation6.mmValueType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -252,6 +276,13 @@ public class PriceInformation13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PriceInformation18#mmValue
+	 * PriceInformation18.mmValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -269,6 +300,7 @@ public class PriceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, eg, as a currency and value.";
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation18.mmValue);
 			previousVersion_lazy = () -> PriceInformation6.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -309,6 +341,14 @@ public class PriceInformation13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Place from which the price was obtained."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation18#mmSourceOfPrice
+	 * PriceInformation18.mmSourceOfPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -326,6 +366,7 @@ public class PriceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceOfPrice";
 			definition = "Place from which the price was obtained.";
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation18.mmSourceOfPrice);
 			previousVersion_lazy = () -> PriceInformation6.mmSourceOfPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -371,6 +412,14 @@ public class PriceInformation13 {
 	 * definition} =
 	 * "Date on which the price is obtained. With an investment fund, this is as stated in the prospectus."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation18#mmQuotationDate
+	 * PriceInformation18.mmQuotationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -388,6 +437,7 @@ public class PriceInformation13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDate";
 			definition = "Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.";
+			nextVersions_lazy = () -> Arrays.asList(PriceInformation18.mmQuotationDate);
 			previousVersion_lazy = () -> PriceInformation6.mmQuotationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -406,6 +456,7 @@ public class PriceInformation13 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceInformation13";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
+				nextVersions_lazy = () -> Arrays.asList(PriceInformation18.mmObject());
 				previousVersion_lazy = () -> PriceInformation6.mmObject();
 			}
 		});

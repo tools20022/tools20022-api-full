@@ -18,10 +18,7 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
-import com.tools20022.repository.choice.BalanceSubType1Choice;
-import com.tools20022.repository.choice.BalanceType5Choice;
-import com.tools20022.repository.choice.BillingBalanceType1Choice;
-import com.tools20022.repository.choice.CashBalanceType1FormatType;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.codeset.BalanceAdjustmentTypeCode;
 import com.tools20022.repository.codeset.BalanceCounterpartyCode;
 import com.tools20022.repository.datatype.CurrencyAndAmount;
@@ -129,6 +126,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * AccountStatement6.mmBalance}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AccountReport19#mmBalance
  * AccountReport19.mmBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalance4#mmCashSubBalanceIdentification
+ * IntraBalance4.mmCashSubBalanceIdentification}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatement8#mmBalance
+ * AccountStatement8.mmBalance}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport22#mmBalance
+ * AccountReport22.mmBalance}</li>
  * </ul>
  * </li>
  * <li>
@@ -228,6 +232,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.AccountNotification12
  * AccountNotification12}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CashBalance7 CashBalance7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountStatement8
+ * AccountStatement8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountNotification15
+ * AccountNotification15}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.BalanceType10Choice
+ * BalanceType10Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceType13 BalanceType13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport22
+ * AccountReport22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance8 CashBalance8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance10 CashBalance10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance9 CashBalance9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance11 CashBalance11}</li>
  * </ul>
  * </li>
  * <li>
@@ -367,6 +384,17 @@ public class CashBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AccountNotification12#mmRelatedAccount
 	 * AccountNotification12.mmRelatedAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountStatement8#mmAccount
+	 * AccountStatement8.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification15#mmAccount
+	 * AccountNotification15.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification15#mmRelatedAccount
+	 * AccountNotification15.mmRelatedAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport22#mmAccount
+	 * AccountReport22.mmAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -391,7 +419,8 @@ public class CashBalance extends Balance {
 					AccountStatement1.mmAccount, AccountStatement2.mmAccount, AccountStatement3.mmAccount, AccountStatement4.mmAccount, AccountNotification3.mmAccount, AccountNotification3.mmRelatedAccount, AccountNotification4.mmAccount,
 					AccountNotification4.mmRelatedAccount, AccountNotification6.mmAccount, AccountNotification6.mmRelatedAccount, AccountReport18.mmAccount, AccountStatement5.mmAccount, AccountNotification10.mmAccount,
 					AccountNotification10.mmRelatedAccount, AccountNotification11.mmAccount, AccountNotification11.mmRelatedAccount, AccountStatement6.mmAccount, AccountReport19.mmAccount, AccountNotification13.mmAccount,
-					AccountNotification13.mmRelatedAccount, AccountNotification12.mmAccount, AccountNotification12.mmRelatedAccount);
+					AccountNotification13.mmRelatedAccount, AccountNotification12.mmAccount, AccountNotification12.mmRelatedAccount, AccountStatement8.mmAccount, AccountNotification15.mmAccount, AccountNotification15.mmRelatedAccount,
+					AccountReport22.mmAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -429,6 +458,9 @@ public class CashBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashBalance4#mmCounterpartyType
 	 * CashBalance4.mmCounterpartyType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance9#mmCounterpartyType
+	 * CashBalance9.mmCounterpartyType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -450,7 +482,7 @@ public class CashBalance extends Balance {
 	 */
 	public static final MMBusinessAttribute mmCalculationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmCounterpartyType, BalanceDetails3.mmCounterpartyType, BalanceDetails4.mmCounterpartyType, CashBalance4.mmCounterpartyType);
+			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmCounterpartyType, BalanceDetails3.mmCounterpartyType, BalanceDetails4.mmCounterpartyType, CashBalance4.mmCounterpartyType, CashBalance9.mmCounterpartyType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -502,6 +534,9 @@ public class CashBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashBalance4#mmCounterpartyIdentification
 	 * CashBalance4.mmCounterpartyIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance9#mmCounterpartyIdentification
+	 * CashBalance9.mmCounterpartyIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -517,18 +552,19 @@ public class CashBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party against which a balance is calculated (from the point of view of the account owner).  A bilateral balance is calculated against one other party; a multilateral balance is calculated against a group of parties."
+	 * "Party against which a balance is calculated (from the point of view of the account owner). A bilateral balance is calculated against one other party; a multilateral balance is calculated against a group of parties."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmCounterparty = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmCounterpartyIdentification, BalanceDetails3.mmCounterpartyIdentification, BalanceDetails4.mmCounterpartyIdentification, CashBalance4.mmCounterpartyIdentification);
+			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmCounterpartyIdentification, BalanceDetails3.mmCounterpartyIdentification, BalanceDetails4.mmCounterpartyIdentification, CashBalance4.mmCounterpartyIdentification,
+					CashBalance9.mmCounterpartyIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Counterparty";
-			definition = "Party against which a balance is calculated (from the point of view of the account owner).  A bilateral balance is calculated against one other party; a multilateral balance is calculated against a group of parties.";
+			definition = "Party against which a balance is calculated (from the point of view of the account owner). A bilateral balance is calculated against one other party; a multilateral balance is calculated against a group of parties.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.SystemMemberRole.mmCashBalance;
 			aggregation = MMAggregation.NONE;
@@ -627,6 +663,18 @@ public class CashBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction67#mmBalance
 	 * CardPaymentTransaction67.mmBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConcentrationAccount1#mmEndOfDay
+	 * ConcentrationAccount1.mmEndOfDay}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance8#mmAmount
+	 * CashBalance8.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance10#mmAmount
+	 * CashBalance10.mmAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance11#mmAmount
+	 * CashBalance11.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction84#mmBalance
+	 * CardPaymentTransaction84.mmBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -650,7 +698,8 @@ public class CashBalance extends Balance {
 					CashBalance5.mmAmount, CashBalance6.mmAmount, CashBalance1.mmAmount, CashBalance3.mmAmount, CashBalance2.mmAmount, PayInCallItem.mmAmount, ReportData1.mmPayInCallAmount, BalanceStatus.mmBalance,
 					BalanceStatus2.mmBalance, CardPaymentTransaction9.mmBalance, CardPaymentTransaction18.mmBalance, BalanceDetails6.mmAmount, BalanceDetails5.mmAmount, BillingService1.mmBalanceRequiredAccountAmount,
 					BalanceAdjustment1.mmBalanceAmount, BalanceAdjustment1.mmAverageAmount, BillingServiceAdjustment1.mmBalanceRequiredAmount, CardPaymentTransaction24.mmBalance, CardPaymentTransaction39.mmBalance,
-					ContractBalance1.mmAmount, CashBalance7.mmAmount, BillingService2.mmBalanceRequiredAccountAmount, CardPaymentTransaction54.mmBalance, CardPaymentTransaction67.mmBalance);
+					ContractBalance1.mmAmount, CashBalance7.mmAmount, BillingService2.mmBalanceRequiredAccountAmount, CardPaymentTransaction54.mmBalance, CardPaymentTransaction67.mmBalance, ConcentrationAccount1.mmEndOfDay,
+					CashBalance8.mmAmount, CashBalance10.mmAmount, CashBalance11.mmAmount, CardPaymentTransaction84.mmBalance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -723,6 +772,15 @@ public class CashBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode4#mmAvailability
 	 * TotalsPerBankTransactionCode4.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance8#mmAvailability
+	 * CashBalance8.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry9#mmAvailability
+	 * ReportEntry9.mmAvailability}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmAvailability
+	 * TotalsPerBankTransactionCode5.mmAvailability}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -745,7 +803,8 @@ public class CashBalance extends Balance {
 	public static final MMBusinessAssociationEnd mmAvailability = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashBalance1.mmAvailability, ReportEntry1.mmAvailability, CashBalance3.mmAvailability, TotalsPerBankTransactionCode3.mmAvailability, ReportEntry4.mmAvailability,
-					CashBalance2.mmAvailability, StatementEntry1.mmAvailability, ReportEntry7.mmAvailability, CashBalance7.mmAvailability, ReportEntry8.mmAvailability, TotalsPerBankTransactionCode4.mmAvailability);
+					CashBalance2.mmAvailability, StatementEntry1.mmAvailability, ReportEntry7.mmAvailability, CashBalance7.mmAvailability, ReportEntry8.mmAvailability, TotalsPerBankTransactionCode4.mmAvailability,
+					CashBalance8.mmAvailability, ReportEntry9.mmAvailability, TotalsPerBankTransactionCode5.mmAvailability);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -840,6 +899,13 @@ public class CashBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AccountNotification12#mmEntry
 	 * AccountNotification12.mmEntry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountStatement8#mmEntry
+	 * AccountStatement8.mmEntry}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountNotification15#mmEntry
+	 * AccountNotification15.mmEntry}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport22#mmEntry
+	 * AccountReport22.mmEntry}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -862,7 +928,7 @@ public class CashBalance extends Balance {
 			derivation_lazy = () -> Arrays.asList(AccountReport9.mmEntry, AccountReport11.mmEntry, AccountReport12.mmEntry, AccountReport16.mmEntry, AccountNotification1.mmEntry, AccountNotification2.mmEntry, AccountNotification5.mmEntry,
 					AccountNotification7.mmEntry, AccountStatement1.mmEntry, AccountStatement2.mmEntry, AccountStatement3.mmEntry, AccountStatement4.mmEntry, ReportData5.mmAccountValue, AccountNotification3.mmItem,
 					AccountNotification4.mmItem, AccountNotification6.mmItem, BillingBalance1.mmValue, AccountReport18.mmEntry, AccountStatement5.mmEntry, AccountNotification10.mmItem, AccountNotification11.mmEntry,
-					AccountStatement6.mmEntry, AccountReport19.mmEntry, AccountNotification13.mmItem, AccountNotification12.mmEntry);
+					AccountStatement6.mmEntry, AccountReport19.mmEntry, AccountNotification13.mmItem, AccountNotification12.mmEntry, AccountStatement8.mmEntry, AccountNotification15.mmEntry, AccountReport22.mmEntry);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1093,7 +1159,8 @@ public class CashBalance extends Balance {
 						com.tools20022.repository.entity.SystemMemberRole.mmCashBalance, com.tools20022.repository.entity.CashAvailability.mmCashBalance, com.tools20022.repository.entity.CardPaymentValidation.mmBalance,
 						com.tools20022.repository.entity.RegisteredContract.mmContractBalance);
 				derivationElement_lazy = () -> Arrays.asList(AccountReport9.mmBalance, AccountReport11.mmBalance, AccountReport12.mmBalance, AccountReport16.mmBalance, AccountStatement1.mmBalance, AccountStatement2.mmBalance,
-						AccountStatement3.mmBalance, AccountStatement4.mmBalance, IntraBalance2.mmCashSubBalanceIdentification, AccountReport18.mmBalance, AccountStatement5.mmBalance, AccountStatement6.mmBalance, AccountReport19.mmBalance);
+						AccountStatement3.mmBalance, AccountStatement4.mmBalance, IntraBalance2.mmCashSubBalanceIdentification, AccountReport18.mmBalance, AccountStatement5.mmBalance, AccountStatement6.mmBalance, AccountReport19.mmBalance,
+						IntraBalance4.mmCashSubBalanceIdentification, AccountStatement8.mmBalance, AccountReport22.mmBalance);
 				superType_lazy = () -> Balance.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashBalance.mmCashAccount, com.tools20022.repository.entity.CashBalance.mmCalculationType, com.tools20022.repository.entity.CashBalance.mmCounterparty,
 						com.tools20022.repository.entity.CashBalance.mmAmount, com.tools20022.repository.entity.CashBalance.mmAvailability, com.tools20022.repository.entity.CashBalance.mmCashBalanceEntry,
@@ -1106,7 +1173,9 @@ public class CashBalance extends Balance {
 						AccountStatement2.mmObject(), AccountStatement3.mmObject(), AccountStatement4.mmObject(), PayInCallItem.mmObject(), ReportData1.mmObject(), ReportData5.mmObject(), ReportData2.mmObject(), BalanceStatus.mmObject(),
 						ReportData3.mmObject(), BalanceStatus2.mmObject(), ReportData4.mmObject(), CashBalanceType1FormatType.mmObject(), AccountNotification3.mmObject(), AccountNotification4.mmObject(), AccountNotification6.mmObject(),
 						BillingBalanceType1Choice.mmObject(), BillingBalance1.mmObject(), BalanceAdjustment1.mmObject(), AccountReport18.mmObject(), AccountStatement5.mmObject(), AccountNotification10.mmObject(),
-						AccountNotification11.mmObject(), ContractBalance1.mmObject(), AccountStatement6.mmObject(), AccountReport19.mmObject(), AccountNotification13.mmObject(), AccountNotification12.mmObject(), CashBalance7.mmObject());
+						AccountNotification11.mmObject(), ContractBalance1.mmObject(), AccountStatement6.mmObject(), AccountReport19.mmObject(), AccountNotification13.mmObject(), AccountNotification12.mmObject(), CashBalance7.mmObject(),
+						AccountStatement8.mmObject(), AccountNotification15.mmObject(), BalanceType10Choice.mmObject(), BalanceType13.mmObject(), AccountReport22.mmObject(), CashBalance8.mmObject(), CashBalance10.mmObject(),
+						CashBalance9.mmObject(), CashBalance11.mmObject());
 			}
 
 			@Override

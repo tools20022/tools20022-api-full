@@ -75,6 +75,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Contractual details related to the agreement between parties."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement16
+ * TradeAgreement16}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.TradeAgreement6
  * TradeAgreement6}</li>
@@ -116,6 +123,13 @@ public class TradeAgreement13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that is specified as the buyer for this trade agreement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement16#mmBuyer
+	 * TradeAgreement16.mmBuyer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -132,6 +146,7 @@ public class TradeAgreement13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that is specified as the buyer for this trade agreement.";
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement16.mmBuyer);
 			previousVersion_lazy = () -> TradeAgreement6.mmBuyer;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -170,6 +185,13 @@ public class TradeAgreement13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that is specified as the seller for this trade agreement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement16#mmSeller
+	 * TradeAgreement16.mmSeller}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -186,6 +208,7 @@ public class TradeAgreement13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that is specified as the seller for this trade agreement.";
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement16.mmSeller);
 			previousVersion_lazy = () -> TradeAgreement6.mmSeller;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -226,6 +249,14 @@ public class TradeAgreement13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quotation document referenced from this trade agreement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmQuotationDocumentIdentification
+	 * TradeAgreement16.mmQuotationDocumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -242,6 +273,7 @@ public class TradeAgreement13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuotationDocumentIdentification";
 			definition = "Quotation document referenced from this trade agreement.";
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement16.mmQuotationDocumentIdentification);
 			previousVersion_lazy = () -> TradeAgreement6.mmQuotationDocumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -281,6 +313,14 @@ public class TradeAgreement13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Contract document referenced from this trade agreement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmContractDocumentIdentification
+	 * TradeAgreement16.mmContractDocumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,6 +337,7 @@ public class TradeAgreement13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDocumentIdentification";
 			definition = "Contract document referenced from this trade agreement.";
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement16.mmContractDocumentIdentification);
 			previousVersion_lazy = () -> TradeAgreement6.mmContractDocumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -337,6 +378,14 @@ public class TradeAgreement13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Buyer order document referenced from this trade agreement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmBuyerOrderIdentificationDocument
+	 * TradeAgreement16.mmBuyerOrderIdentificationDocument}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -353,6 +402,7 @@ public class TradeAgreement13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerOrderIdentificationDocument";
 			definition = "Buyer order document referenced from this trade agreement.";
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement16.mmBuyerOrderIdentificationDocument);
 			previousVersion_lazy = () -> TradeAgreement6.mmBuyerOrderIdentificationDocument;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -391,6 +441,14 @@ public class TradeAgreement13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional document referenced from this trade agreement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmAdditionalReferenceDocument
+	 * TradeAgreement16.mmAdditionalReferenceDocument}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -407,6 +465,7 @@ public class TradeAgreement13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReferenceDocument";
 			definition = "Additional document referenced from this trade agreement.";
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement16.mmAdditionalReferenceDocument);
 			previousVersion_lazy = () -> TradeAgreement6.mmAdditionalReferenceDocument;
 			minOccurs = 0;
 			isComposite = true;
@@ -444,6 +503,14 @@ public class TradeAgreement13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the applicable Incoterm and associated location."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmIncoterms
+	 * TradeAgreement16.mmIncoterms}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -460,6 +527,7 @@ public class TradeAgreement13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incoterms";
 			definition = "Specifies the applicable Incoterm and associated location.";
+			nextVersions_lazy = () -> Arrays.asList(TradeAgreement16.mmIncoterms);
 			previousVersion_lazy = () -> TradeAgreement6.mmIncoterms;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -480,6 +548,7 @@ public class TradeAgreement13 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeAgreement13";
 				definition = "Contractual details related to the agreement between parties.";
+				nextVersions_lazy = () -> Arrays.asList(TradeAgreement16.mmObject());
 				previousVersion_lazy = () -> TradeAgreement6.mmObject();
 			}
 		});

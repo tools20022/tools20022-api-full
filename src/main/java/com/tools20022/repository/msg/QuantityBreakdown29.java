@@ -80,6 +80,13 @@ import javax.xml.bind.annotation.XmlType;
  * "QuantityBreakdown29"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of breakdown of a quantity."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown47
+ * QuantityBreakdown47}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.QuantityBreakdown16
@@ -128,6 +135,14 @@ public class QuantityBreakdown29 {
 	 * definition} =
 	 * "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmLotNumber
+	 * QuantityBreakdown47.mmLotNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -145,6 +160,7 @@ public class QuantityBreakdown29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
 			definition = "Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown47.mmLotNumber);
 			previousVersion_lazy = () -> QuantityBreakdown16.mmLotNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -188,6 +204,14 @@ public class QuantityBreakdown29 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Quantity of financial instruments that is part of the lot described."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmLotQuantity
+	 * QuantityBreakdown47.mmLotQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -205,6 +229,7 @@ public class QuantityBreakdown29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotQuantity";
 			definition = "Quantity of financial instruments that is part of the lot described.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown47.mmLotQuantity);
 			previousVersion_lazy = () -> QuantityBreakdown16.mmLotQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -246,6 +271,14 @@ public class QuantityBreakdown29 {
 	 * definition} =
 	 * "Specifies the securities sub balance type indicator (example restriction type for a market infrastructure)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmSecuritiesSubBalanceType
+	 * QuantityBreakdown47.mmSecuritiesSubBalanceType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -262,6 +295,7 @@ public class QuantityBreakdown29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSubBalanceType";
 			definition = "Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown47.mmSecuritiesSubBalanceType);
 			previousVersion_lazy = () -> QuantityBreakdown16.mmSecuritiesSubBalanceType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -304,6 +338,14 @@ public class QuantityBreakdown29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date/time at which the lot was purchased."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmLotDateTime
+	 * QuantityBreakdown47.mmLotDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -321,6 +363,7 @@ public class QuantityBreakdown29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotDateTime";
 			definition = "Date/time at which the lot was purchased.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown47.mmLotDateTime);
 			previousVersion_lazy = () -> QuantityBreakdown16.mmLotDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -361,6 +404,14 @@ public class QuantityBreakdown29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Price at which the lot was purchased."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmLotPrice
+	 * QuantityBreakdown47.mmLotPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -378,6 +429,7 @@ public class QuantityBreakdown29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotPrice";
 			definition = "Price at which the lot was purchased.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown47.mmLotPrice);
 			previousVersion_lazy = () -> QuantityBreakdown16.mmLotPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -420,6 +472,14 @@ public class QuantityBreakdown29 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the type of price and information about the price."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmTypeOfPrice
+	 * QuantityBreakdown47.mmTypeOfPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -437,6 +497,7 @@ public class QuantityBreakdown29 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfPrice";
 			definition = "Specifies the type of price and information about the price.";
+			nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown47.mmTypeOfPrice);
 			previousVersion_lazy = () -> QuantityBreakdown16.mmTypeOfPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -456,6 +517,7 @@ public class QuantityBreakdown29 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QuantityBreakdown29";
 				definition = "Details of breakdown of a quantity.";
+				nextVersions_lazy = () -> Arrays.asList(QuantityBreakdown47.mmObject());
 				previousVersion_lazy = () -> QuantityBreakdown16.mmObject();
 			}
 		});

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionInstructionV07;
+import com.tools20022.repository.area.seev.CorporateActionInstructionV08;
 import com.tools20022.repository.choice.CorporateActionEventType52Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CorporateActionEvent;
@@ -71,6 +72,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#mmCorporateActionGeneralInformation
  * CorporateActionInstructionV07.mmCorporateActionGeneralInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08#mmCorporateActionGeneralInformation
+ * CorporateActionInstructionV08.mmCorporateActionGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -357,7 +361,7 @@ public class CorporateActionGeneralInformation107 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionGeneralInformation107.mmCorporateActionEventIdentification,
 						com.tools20022.repository.msg.CorporateActionGeneralInformation107.mmOfficialCorporateActionEventIdentification, com.tools20022.repository.msg.CorporateActionGeneralInformation107.mmEventType,
 						com.tools20022.repository.msg.CorporateActionGeneralInformation107.mmUnderlyingSecurity);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV07.mmCorporateActionGeneralInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV07.mmCorporateActionGeneralInformation, CorporateActionInstructionV08.mmCorporateActionGeneralInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation107,

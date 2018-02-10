@@ -137,7 +137,13 @@ import javax.xml.bind.annotation.XmlType;
  * "LineItem16"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line items."
+ * "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem17 LineItem17}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.LineItem10
@@ -182,6 +188,14 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "The unique identification of this invoice line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmIdentification
+	 * LineItem17.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -198,6 +212,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "The unique identification of this invoice line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmIdentification);
 			previousVersion_lazy = () -> LineItem10.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -236,6 +251,13 @@ public class LineItem16 {
 	 * definition} =
 	 * "Something that is produced and sold as the result of an industrial process."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmTradeProduct
+	 * LineItem17.mmTradeProduct}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -252,6 +274,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeProduct";
 			definition = "Something that is produced and sold as the result of an industrial process.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmTradeProduct);
 			previousVersion_lazy = () -> LineItem10.mmTradeProduct;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -288,6 +311,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Purchase order reference assigned by the buyer related to the provision of products and/or services for this line item."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmBuyerOrderIdentification
+	 * LineItem17.mmBuyerOrderIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -303,6 +334,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerOrderIdentification";
 			definition = "Purchase order reference assigned by the buyer related to the provision of products and/or services for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmBuyerOrderIdentification);
 			previousVersion_lazy = () -> LineItem10.mmBuyerOrderIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -338,6 +370,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Contract reference related to the provision of products and/or services for this line item."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmContractIdentification
+	 * LineItem17.mmContractIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -353,6 +393,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractIdentification";
 			definition = "Contract reference related to the provision of products and/or services for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmContractIdentification);
 			previousVersion_lazy = () -> LineItem10.mmContractIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -391,6 +432,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Specific purchase account for recording debits and credits for accounting purposes."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmPurchaseAccountingAccount
+	 * LineItem17.mmPurchaseAccountingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -407,6 +456,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurchaseAccountingAccount";
 			definition = "Specific purchase account for recording debits and credits for accounting purposes.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmPurchaseAccountingAccount);
 			previousVersion_lazy = () -> LineItem10.mmPurchaseAccountingAccount;
 			minOccurs = 0;
 			isComposite = true;
@@ -445,6 +495,13 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value of the price, eg, as a currency and value."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmNetPrice
+	 * LineItem17.mmNetPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -461,6 +518,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPrice";
 			definition = "Value of the price, eg, as a currency and value.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmNetPrice);
 			previousVersion_lazy = () -> LineItem10.mmNetPrice;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -499,6 +557,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Quantity and conversion factor on which the net price is based for this line item product and/or service."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmNetPriceQuantity
+	 * LineItem17.mmNetPriceQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -515,6 +581,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPriceQuantity";
 			definition = "Quantity and conversion factor on which the net price is based for this line item product and/or service.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmNetPriceQuantity);
 			previousVersion_lazy = () -> LineItem10.mmNetPriceQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -553,6 +620,14 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Allowance or charge applied to the net price."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmNetPriceAllowanceCharge
+	 * LineItem17.mmNetPriceAllowanceCharge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -569,6 +644,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetPriceAllowanceCharge";
 			definition = "Allowance or charge applied to the net price.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmNetPriceAllowanceCharge);
 			previousVersion_lazy = () -> LineItem10.mmNetPriceAllowanceCharge;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.LineItemAllowanceCharge2.mmObject();
@@ -605,6 +681,13 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Net weight of the product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmNetWeight
+	 * LineItem17.mmNetWeight}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -621,6 +704,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetWeight";
 			definition = "Net weight of the product.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmNetWeight);
 			previousVersion_lazy = () -> LineItem10.mmNetWeight;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -659,6 +743,13 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Gross price of the product and/or service."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmGrossPrice
+	 * LineItem17.mmGrossPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -675,6 +766,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossPrice";
 			definition = "Gross price of the product and/or service.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmGrossPrice);
 			previousVersion_lazy = () -> LineItem10.mmGrossPrice;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -713,6 +805,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Quantity and conversion factor on which the gross price is based for this line item product and/or service."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmGrossPriceQuantity
+	 * LineItem17.mmGrossPriceQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -729,6 +829,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossPriceQuantity";
 			definition = "Quantity and conversion factor on which the gross price is based for this line item product and/or service.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmGrossPriceQuantity);
 			previousVersion_lazy = () -> LineItem10.mmGrossPriceQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -766,6 +867,13 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Gross weight of the product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmGrossWeight
+	 * LineItem17.mmGrossWeight}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -782,6 +890,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossWeight";
 			definition = "Gross weight of the product.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmGrossWeight);
 			previousVersion_lazy = () -> LineItem10.mmGrossWeight;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -819,6 +928,14 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Logistics service charge for this line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmLogisticsCharge
+	 * LineItem17.mmLogisticsCharge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -835,6 +952,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LogisticsCharge";
 			definition = "Logistics service charge for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmLogisticsCharge);
 			previousVersion_lazy = () -> LineItem10.mmLogisticsCharge;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ChargesDetails4.mmObject();
@@ -872,6 +990,13 @@ public class LineItem16 {
 	 * definition} =
 	 * "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmTax
+	 * LineItem17.mmTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -888,6 +1013,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmTax);
 			previousVersion_lazy = () -> LineItem10.mmTax;
 			minOccurs = 0;
 			isComposite = true;
@@ -925,6 +1051,14 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Allowance or charge specified for this line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmAllowanceCharge
+	 * LineItem17.mmAllowanceCharge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -941,6 +1075,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllowanceCharge";
 			definition = "Allowance or charge specified for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmAllowanceCharge);
 			previousVersion_lazy = () -> LineItem10.mmAllowanceCharge;
 			minOccurs = 0;
 			isComposite = true;
@@ -978,7 +1113,15 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Modification on the value of goods and / or services. For example: rebate, discount, surcharge"
+	 * "Modification on the value of goods and / or services. For example: rebate, discount, surcharge."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmFinancialAdjustment
+	 * LineItem17.mmFinancialAdjustment}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -995,7 +1138,8 @@ public class LineItem16 {
 			xmlTag = "FinAdjstmnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAdjustment";
-			definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
+			definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmFinancialAdjustment);
 			previousVersion_lazy = () -> LineItem10.mmFinancialAdjustment;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Adjustment6.mmObject();
@@ -1032,6 +1176,14 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity billed for this line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmBilledQuantity
+	 * LineItem17.mmBilledQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1048,6 +1200,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilledQuantity";
 			definition = "Quantity billed for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmBilledQuantity);
 			previousVersion_lazy = () -> LineItem10.mmBilledQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1086,6 +1239,14 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of product packages delivered."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmPackageQuantity
+	 * LineItem17.mmPackageQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1102,6 +1263,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PackageQuantity";
 			definition = "Number of product packages delivered.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmPackageQuantity);
 			previousVersion_lazy = () -> LineItem10.mmPackageQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1141,6 +1303,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Number of units per package in this line item for a supply chain trade delivery."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmPerPackageUnitQuantity
+	 * LineItem17.mmPerPackageUnitQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1157,6 +1327,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PerPackageUnitQuantity";
 			definition = "Number of units per package in this line item for a supply chain trade delivery.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmPerPackageUnitQuantity);
 			previousVersion_lazy = () -> LineItem10.mmPerPackageUnitQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1192,6 +1363,13 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Physical packaging of the product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmPackaging
+	 * LineItem17.mmPackaging}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1208,6 +1386,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Packaging";
 			definition = "Physical packaging of the product.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmPackaging);
 			previousVersion_lazy = () -> LineItem10.mmPackaging;
 			minOccurs = 0;
 			isComposite = true;
@@ -1245,6 +1424,14 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity that is free of charge for this line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmChargeFreeQuantity
+	 * LineItem17.mmChargeFreeQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1261,6 +1448,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeFreeQuantity";
 			definition = "Quantity that is free of charge for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmChargeFreeQuantity);
 			previousVersion_lazy = () -> LineItem10.mmChargeFreeQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1300,6 +1488,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Quantity value on which the quantity measurement started for a line item. For instance the start amount of a meter reading for an electricity supplier."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmMeasureQuantityStart
+	 * LineItem17.mmMeasureQuantityStart}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1316,6 +1512,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureQuantityStart";
 			definition = "Quantity value on which the quantity measurement started for a line item. For instance the start amount of a meter reading for an electricity supplier.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmMeasureQuantityStart);
 			previousVersion_lazy = () -> LineItem10.mmMeasureQuantityStart;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1355,6 +1552,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Quantity value on which the quantity measurement ended for a line item. For instance the end amount of a meter reading for an electricity supplier."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmMeasureQuantityEnd
+	 * LineItem17.mmMeasureQuantityEnd}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1371,6 +1576,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureQuantityEnd";
 			definition = "Quantity value on which the quantity measurement ended for a line item. For instance the end amount of a meter reading for an electricity supplier.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmMeasureQuantityEnd);
 			previousVersion_lazy = () -> LineItem10.mmMeasureQuantityEnd;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1409,6 +1615,14 @@ public class LineItem16 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time on which the clock time measure started for a line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmMeasureDateTimeStart
+	 * LineItem17.mmMeasureDateTimeStart}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1425,6 +1639,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureDateTimeStart";
 			definition = "Date/time on which the clock time measure started for a line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmMeasureDateTimeStart);
 			previousVersion_lazy = () -> LineItem10.mmMeasureDateTimeStart;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1463,6 +1678,14 @@ public class LineItem16 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time on which the clock time measure ended for a line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmMeasureDateTimeEnd
+	 * LineItem17.mmMeasureDateTimeEnd}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1479,6 +1702,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeasureDateTimeEnd";
 			definition = "Date/time on which the clock time measure ended for a line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmMeasureDateTimeEnd);
 			previousVersion_lazy = () -> LineItem10.mmMeasureDateTimeEnd;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1514,6 +1738,13 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party to whom the goods must be delivered in the end."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmShipTo
+	 * LineItem17.mmShipTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1530,6 +1761,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShipTo";
 			definition = "Party to whom the goods must be delivered in the end.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmShipTo);
 			previousVersion_lazy = () -> LineItem10.mmShipTo;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1569,6 +1801,13 @@ public class LineItem16 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the applicable Incoterm and associated location."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmIncoterms
+	 * LineItem17.mmIncoterms}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1585,6 +1824,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incoterms";
 			definition = "Specifies the applicable Incoterm and associated location.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmIncoterms);
 			previousVersion_lazy = () -> LineItem10.mmIncoterms;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1624,6 +1864,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Actual delivery date/time of the products and/or services for this line item."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmDeliveryDateTime
+	 * LineItem17.mmDeliveryDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1640,6 +1888,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryDateTime";
 			definition = "Actual delivery date/time of the products and/or services for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmDeliveryDateTime);
 			previousVersion_lazy = () -> LineItem10.mmDeliveryDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1680,6 +1929,14 @@ public class LineItem16 {
 	 * definition} =
 	 * "Delivery note related to the delivery of the products and/or services for this line item."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmDeliveryNoteIdentification
+	 * LineItem17.mmDeliveryNoteIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1696,6 +1953,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveryNoteIdentification";
 			definition = "Delivery note related to the delivery of the products and/or services for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmDeliveryNoteIdentification);
 			previousVersion_lazy = () -> LineItem10.mmDeliveryNoteIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1728,6 +1986,14 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Monetary totals for this line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmMonetarySummation
+	 * LineItem17.mmMonetarySummation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1743,6 +2009,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MonetarySummation";
 			definition = "Monetary totals for this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmMonetarySummation);
 			previousVersion_lazy = () -> LineItem10.mmMonetarySummation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1777,6 +2044,13 @@ public class LineItem16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Note included in this line item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmIncludedNote
+	 * LineItem17.mmIncludedNote}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1792,6 +2066,7 @@ public class LineItem16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncludedNote";
 			definition = "Note included in this line item.";
+			nextVersions_lazy = () -> Arrays.asList(LineItem17.mmIncludedNote);
 			previousVersion_lazy = () -> LineItem10.mmIncludedNote;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalInformation1.mmObject();
@@ -1816,7 +2091,8 @@ public class LineItem16 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LineItem16";
-				definition = "Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line items.";
+				definition = "Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line items.";
+				nextVersions_lazy = () -> Arrays.asList(LineItem17.mmObject());
 				previousVersion_lazy = () -> LineItem10.mmObject();
 			}
 		});

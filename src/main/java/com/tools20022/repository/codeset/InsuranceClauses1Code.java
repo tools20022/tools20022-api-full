@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 /**
  * List of standards insurance clauses. (standard policy wordings issued by the
  * Institute of London Underwriters or the American Institute of Marine
- * Underwriters)
+ * Underwriters).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -95,7 +95,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "InsuranceClauses1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+ * "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
  * </li>
  * </ul>
  */
@@ -379,7 +379,7 @@ public class InsuranceClauses1Code extends MMCode {
 				example = Arrays.asList("ICCA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceClauses1Code";
-				definition = "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+				definition = "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 				trace_lazy = () -> InsuranceClausesCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteCargoClauseA, com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteCargoClauseB,
 						com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteCargoClauseC, com.tools20022.repository.codeset.InsuranceClauses1Code.InstituteCargoClauseAir,

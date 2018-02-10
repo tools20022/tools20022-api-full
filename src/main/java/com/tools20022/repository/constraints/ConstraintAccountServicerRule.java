@@ -49,7 +49,7 @@ public class ConstraintAccountServicerRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either AccountServicer or Item/AccountServicer may be present  but not both."
+	 * "Either AccountServicer or Item/AccountServicer may be present but not both."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintAccountServicerRule {
 			validator = ConstraintAccountServicerRule::checkAccountNotification4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerRule";
-			definition = "Either AccountServicer or Item/AccountServicer may be present  but not both.";
+			definition = "Either AccountServicer or Item/AccountServicer may be present but not both.";
 			owner_lazy = () -> AccountNotification4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Item[*]/AccountServicer</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicer</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -154,7 +154,7 @@ public class ConstraintAccountServicerRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either AccountServicer or Item/AccountServicer may be present  but not both."
+	 * "Either AccountServicer or Item/AccountServicer may be present but not both."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -171,7 +171,7 @@ public class ConstraintAccountServicerRule {
 			validator = ConstraintAccountServicerRule::checkAccountNotification6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerRule";
-			definition = "Either AccountServicer or Item/AccountServicer may be present  but not both.";
+			definition = "Either AccountServicer or Item/AccountServicer may be present but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountServicerRule.forAccountNotification10);
 			owner_lazy = () -> AccountNotification6.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Item[*]/AccountServicer</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicer</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -286,7 +286,7 @@ public class ConstraintAccountServicerRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either AccountServicer or Item/AccountServicer may be present  but not both."
+	 * "Either AccountServicer or Item/AccountServicer may be present but not both."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -308,7 +308,7 @@ public class ConstraintAccountServicerRule {
 			validator = ConstraintAccountServicerRule::checkAccountNotification10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerRule";
-			definition = "Either AccountServicer or Item/AccountServicer may be present  but not both.";
+			definition = "Either AccountServicer or Item/AccountServicer may be present but not both.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountServicerRule.forAccountNotification13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountServicerRule.forAccountNotification6;
 			owner_lazy = () -> AccountNotification10.mmObject();
@@ -436,7 +436,7 @@ public class ConstraintAccountServicerRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either AccountServicer or Item/AccountServicer may be present  but not both."
+	 * "Either AccountServicer or Item/AccountServicer may be present but not both."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -450,7 +450,7 @@ public class ConstraintAccountServicerRule {
 			validator = ConstraintAccountServicerRule::checkAccountNotification13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerRule";
-			definition = "Either AccountServicer or Item/AccountServicer may be present  but not both.";
+			definition = "Either AccountServicer or Item/AccountServicer may be present but not both.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountServicerRule.forAccountNotification10;
 			owner_lazy = () -> AccountNotification13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/Item[*]/AccountServicer</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AccountServicer</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";

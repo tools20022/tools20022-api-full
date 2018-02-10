@@ -293,6 +293,35 @@ public class ConstraintReferenceGuideline {
 			owner_lazy = () -> ReportEntry8.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ReportEntry9 ReportEntry9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReferenceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one reference should be present to identify the underlying transaction(s)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReportEntry9> forReportEntry9 = new MMConstraint<ReportEntry9>() {
+		{
+			validator = ConstraintReferenceGuideline::checkReportEntry9;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReferenceGuideline";
+			definition = "At least one reference should be present to identify the underlying transaction(s).";
+			owner_lazy = () -> ReportEntry9.mmObject();
+		}
+	};
 
 	/**
 	 * At least one reference should present to identify the underlying
@@ -355,6 +384,14 @@ public class ConstraintReferenceGuideline {
 	 * transaction(s).
 	 */
 	public static void checkReportEntry8(ReportEntry8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one reference should be present to identify the underlying
+	 * transaction(s).
+	 */
+	public static void checkReportEntry9(ReportEntry9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

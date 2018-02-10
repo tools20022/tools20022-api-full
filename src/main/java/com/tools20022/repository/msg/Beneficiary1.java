@@ -144,7 +144,7 @@ public class Beneficiary1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information concerning the amended beneficiary details. "</li>
+	 * "Additional information concerning the amended beneficiary details."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
@@ -154,7 +154,7 @@ public class Beneficiary1 {
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
-			definition = "Additional information concerning the amended beneficiary details. ";
+			definition = "Additional information concerning the amended beneficiary details.";
 			maxOccurs = 5;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();

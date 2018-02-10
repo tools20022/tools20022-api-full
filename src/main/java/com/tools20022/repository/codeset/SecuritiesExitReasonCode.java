@@ -78,7 +78,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "SecuritiesExitReasonCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the reason for DTC (The Depository Trust Company) to exit the shares. "
+ * "Specifies the reason for DTC (The Depository Trust Company) to exit the shares."
  * </li>
  * </ul>
  */
@@ -189,7 +189,7 @@ public class SecuritiesExitReasonCode extends MMCode {
 				example = Arrays.asList("REST");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesExitReasonCode";
-				definition = "Specifies the reason for DTC (The Depository Trust Company) to exit the shares. ";
+				definition = "Specifies the reason for DTC (The Depository Trust Company) to exit the shares.";
 				derivation_lazy = () -> Arrays.asList(SecuritiesExitReason1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SecuritiesExitReasonCode.Restricted, com.tools20022.repository.codeset.SecuritiesExitReasonCode.NonTransferable,
 						com.tools20022.repository.codeset.SecuritiesExitReasonCode.Other);

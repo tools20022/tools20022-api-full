@@ -131,6 +131,13 @@ import javax.xml.bind.annotation.XmlType;
  * "DeliverInformation16"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DeliverInformation19
+ * DeliverInformation19}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.DeliverInformation15
@@ -172,6 +179,14 @@ public class DeliverInformation16 {
 	 * definition} =
 	 * "Party that delivers (transferor) securities to the receiving agent (transferee)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmTransferor
+	 * DeliverInformation19.mmTransferor}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransferor = new MMMessageAssociationEnd() {
@@ -182,6 +197,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferor";
 			definition = "Party that delivers (transferor) securities to the receiving agent (transferee).";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmTransferor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -213,6 +229,14 @@ public class DeliverInformation16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account from which the securities are to be delivered."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmTransferorRegisteredAccount
+	 * DeliverInformation19.mmTransferorRegisteredAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransferorRegisteredAccount = new MMMessageAssociationEnd() {
@@ -223,6 +247,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorRegisteredAccount";
 			definition = "Account from which the securities are to be delivered.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmTransferorRegisteredAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -260,6 +285,14 @@ public class DeliverInformation16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a related party or intermediary."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmIntermediaryInformation
+	 * DeliverInformation19.mmIntermediaryInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryInformation = new MMMessageAssociationEnd() {
@@ -271,6 +304,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryInformation";
 			definition = "Identification of a related party or intermediary.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmIntermediaryInformation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary34.mmObject();
@@ -310,6 +344,14 @@ public class DeliverInformation16 {
 	 * definition} =
 	 * "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmRequestedSettlementDate
+	 * DeliverInformation19.mmRequestedSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -326,6 +368,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmRequestedSettlementDate);
 			previousVersion_lazy = () -> DeliverInformation15.mmRequestedSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -367,6 +410,14 @@ public class DeliverInformation16 {
 	 * definition} =
 	 * "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmSettlementAmount
+	 * DeliverInformation19.mmSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -383,6 +434,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmSettlementAmount);
 			previousVersion_lazy = () -> DeliverInformation15.mmSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -424,6 +476,14 @@ public class DeliverInformation16 {
 	 * definition} =
 	 * "Indicates whether the settlement amount includes the stamp duty amount."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmStampDuty
+	 * DeliverInformation19.mmStampDuty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -440,6 +500,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Indicates whether the settlement amount includes the stamp duty amount.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmStampDuty);
 			previousVersion_lazy = () -> DeliverInformation15.mmStampDuty;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -479,6 +540,14 @@ public class DeliverInformation16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Deal amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmNetAmount
+	 * DeliverInformation19.mmNetAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -495,6 +564,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Deal amount.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmNetAmount);
 			previousVersion_lazy = () -> DeliverInformation15.mmNetAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -534,6 +604,14 @@ public class DeliverInformation16 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Chain of parties involved in the settlement of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmSettlementPartiesDetails
+	 * DeliverInformation19.mmSettlementPartiesDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -550,6 +628,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPartiesDetails";
 			definition = "Chain of parties involved in the settlement of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmSettlementPartiesDetails);
 			previousVersion_lazy = () -> DeliverInformation15.mmSettlementPartiesDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -749,6 +828,14 @@ public class DeliverInformation16 {
 	 * definition} =
 	 * "Specifies foreign exchange details applied to the payment of charges, taxes and commissions as a result of the transfer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmForeignExchangeDetails
+	 * DeliverInformation19.mmForeignExchangeDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -765,6 +852,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Specifies foreign exchange details applied to the payment of charges, taxes and commissions as a result of the transfer.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmForeignExchangeDetails);
 			previousVersion_lazy = () -> DeliverInformation15.mmForeignExchangeDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -806,6 +894,14 @@ public class DeliverInformation16 {
 	 * definition} =
 	 * "Indicates whether the financial instrument is to be physically delivered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmPhysicalTransfer
+	 * DeliverInformation19.mmPhysicalTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -822,6 +918,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransfer";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmPhysicalTransfer);
 			previousVersion_lazy = () -> DeliverInformation15.mmPhysicalTransfer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -859,6 +956,14 @@ public class DeliverInformation16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Parameters of a physical delivery."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmPhysicalTransferDetails
+	 * DeliverInformation19.mmPhysicalTransferDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -875,6 +980,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetails";
 			definition = "Parameters of a physical delivery.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmPhysicalTransferDetails);
 			previousVersion_lazy = () -> DeliverInformation15.mmPhysicalTransferDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -915,6 +1021,14 @@ public class DeliverInformation16 {
 	 * definition} =
 	 * "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmClientReference
+	 * DeliverInformation19.mmClientReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -931,6 +1045,7 @@ public class DeliverInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
+			nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmClientReference);
 			previousVersion_lazy = () -> DeliverInformation15.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -957,6 +1072,7 @@ public class DeliverInformation16 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DeliverInformation16";
 				definition = "Parameters applied to the settlement of a security transfer.";
+				nextVersions_lazy = () -> Arrays.asList(DeliverInformation19.mmObject());
 				previousVersion_lazy = () -> DeliverInformation15.mmObject();
 			}
 		});

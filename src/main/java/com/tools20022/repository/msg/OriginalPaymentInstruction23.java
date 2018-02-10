@@ -118,6 +118,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides details information on the original transactions, to which the status report message refers."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27
+ * OriginalPaymentInstruction27}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction18
@@ -164,6 +171,14 @@ public class OriginalPaymentInstruction23 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmOriginalPaymentInformationIdentification
+	 * OriginalPaymentInstruction27.mmOriginalPaymentInformationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +195,7 @@ public class OriginalPaymentInstruction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationIdentification";
 			definition = "Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction27.mmOriginalPaymentInformationIdentification);
 			previousVersion_lazy = () -> OriginalPaymentInstruction18.mmOriginalPaymentInformationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -216,6 +232,14 @@ public class OriginalPaymentInstruction23 {
 	 * definition} =
 	 * "Number of individual transactions contained in the original payment information group."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmOriginalNumberOfTransactions
+	 * OriginalPaymentInstruction27.mmOriginalNumberOfTransactions}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +255,7 @@ public class OriginalPaymentInstruction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNumberOfTransactions";
 			definition = "Number of individual transactions contained in the original payment information group.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction27.mmOriginalNumberOfTransactions);
 			previousVersion_lazy = () -> OriginalPaymentInstruction18.mmOriginalNumberOfTransactions;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -267,6 +292,14 @@ public class OriginalPaymentInstruction23 {
 	 * definition} =
 	 * "Total of all individual amounts included in the original payment information group, irrespective of currencies."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmOriginalControlSum
+	 * OriginalPaymentInstruction27.mmOriginalControlSum}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -282,6 +315,7 @@ public class OriginalPaymentInstruction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalControlSum";
 			definition = "Total of all individual amounts included in the original payment information group, irrespective of currencies.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction27.mmOriginalControlSum);
 			previousVersion_lazy = () -> OriginalPaymentInstruction18.mmOriginalControlSum;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -321,6 +355,14 @@ public class OriginalPaymentInstruction23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the status of the payment information group."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmPaymentInformationStatus
+	 * OriginalPaymentInstruction27.mmPaymentInformationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -337,6 +379,7 @@ public class OriginalPaymentInstruction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationStatus";
 			definition = "Specifies the status of the payment information group.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction27.mmPaymentInformationStatus);
 			previousVersion_lazy = () -> OriginalPaymentInstruction18.mmPaymentInformationStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -375,6 +418,14 @@ public class OriginalPaymentInstruction23 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides detailed information on the status reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmStatusReasonInformation
+	 * OriginalPaymentInstruction27.mmStatusReasonInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -391,6 +442,7 @@ public class OriginalPaymentInstruction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformation";
 			definition = "Provides detailed information on the status reason.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction27.mmStatusReasonInformation);
 			previousVersion_lazy = () -> OriginalPaymentInstruction18.mmStatusReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -426,6 +478,14 @@ public class OriginalPaymentInstruction23 {
 	 * definition} =
 	 * "Detailed information on the number of transactions for each identical transaction status."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmNumberOfTransactionsPerStatus
+	 * OriginalPaymentInstruction27.mmNumberOfTransactionsPerStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -441,6 +501,7 @@ public class OriginalPaymentInstruction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerStatus";
 			definition = "Detailed information on the number of transactions for each identical transaction status.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction27.mmNumberOfTransactionsPerStatus);
 			previousVersion_lazy = () -> OriginalPaymentInstruction18.mmNumberOfTransactionsPerStatus;
 			minOccurs = 0;
 			isComposite = true;
@@ -479,6 +540,14 @@ public class OriginalPaymentInstruction23 {
 	 * definition} =
 	 * "Provides information on the original transactions to which the status report message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmTransactionInformationAndStatus
+	 * OriginalPaymentInstruction27.mmTransactionInformationAndStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -495,6 +564,7 @@ public class OriginalPaymentInstruction23 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformationAndStatus";
 			definition = "Provides information on the original transactions to which the status report message refers.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction27.mmTransactionInformationAndStatus);
 			previousVersion_lazy = () -> OriginalPaymentInstruction18.mmTransactionInformationAndStatus;
 			minOccurs = 0;
 			isComposite = true;
@@ -519,6 +589,7 @@ public class OriginalPaymentInstruction23 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalPaymentInstruction23";
 				definition = "Provides details information on the original transactions, to which the status report message refers.";
+				nextVersions_lazy = () -> Arrays.asList(OriginalPaymentInstruction27.mmObject());
 				previousVersion_lazy = () -> OriginalPaymentInstruction18.mmObject();
 			}
 		});

@@ -527,7 +527,7 @@ public class CardTransactionEnvironment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cardholder involved in the card transaction. \r\nIt correspond partially to the ISO 8583:2003, field number 49-71."
+	 * "Cardholder involved in the card transaction. \r\nIt correspond partially to the ISO 8583: 2003, field number 49-71."
 	 * </li>
 	 * </ul>
 	 */
@@ -538,7 +538,7 @@ public class CardTransactionEnvironment1 {
 			xmlTag = "Crdhldr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cardholder";
-			definition = "Cardholder involved in the card transaction. \r\nIt correspond partially to the ISO 8583:2003, field number 49-71.";
+			definition = "Cardholder involved in the card transaction. \r\nIt correspond partially to the ISO 8583: 2003, field number 49-71.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

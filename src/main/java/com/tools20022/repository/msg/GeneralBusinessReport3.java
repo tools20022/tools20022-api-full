@@ -114,7 +114,7 @@ public class GeneralBusinessReport3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator. "
+	 * "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -134,7 +134,7 @@ public class GeneralBusinessReport3 {
 			xmlTag = "BizInfRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessInformationReference";
-			definition = "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator. ";
+			definition = "Unique and unambiguous identification of a general business information system, as assigned by the system transaction administrator.";
 			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessReport4.mmBusinessInformationReference);
 			maxOccurs = 1;
 			minOccurs = 1;

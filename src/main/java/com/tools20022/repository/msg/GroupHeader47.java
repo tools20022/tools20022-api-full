@@ -365,7 +365,7 @@ public class GroupHeader47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Agent that instructs the next party in the chain to carry out an instruction.\n\nUsage Rule:\nIn case of amendment and cancellation request messages, the instructing agent is the party sending the amendment and cancellation request message and not the party that sent the original mandate initiation request message.\nIn case of acceptance report message, the instructing agent is the party sending the acceptance report message and not the party that sent the original mandate request message."
+	 * "Agent that instructs the next party in the chain to carry out an instruction.\n\nUsage Rule: \nIn case of amendment and cancellation request messages, the instructing agent is the party sending the amendment and cancellation request message and not the party that sent the original mandate initiation request message.\nIn case of acceptance report message, the instructing agent is the party sending the acceptance report message and not the party that sent the original mandate request message."
 	 * </li>
 	 * </ul>
 	 */
@@ -377,7 +377,7 @@ public class GroupHeader47 {
 			xmlTag = "InstgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
-			definition = "Agent that instructs the next party in the chain to carry out an instruction.\n\nUsage Rule:\nIn case of amendment and cancellation request messages, the instructing agent is the party sending the amendment and cancellation request message and not the party that sent the original mandate initiation request message.\nIn case of acceptance report message, the instructing agent is the party sending the acceptance report message and not the party that sent the original mandate request message.";
+			definition = "Agent that instructs the next party in the chain to carry out an instruction.\n\nUsage Rule: \nIn case of amendment and cancellation request messages, the instructing agent is the party sending the amendment and cancellation request message and not the party that sent the original mandate initiation request message.\nIn case of acceptance report message, the instructing agent is the party sending the acceptance report message and not the party that sent the original mandate request message.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -415,7 +415,7 @@ public class GroupHeader47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Agent that is instructed by the previous party in the chain to carry out an instruction.\n\nUsage Rule:\nIn case of amendment and cancellation request messages, the instructed agent is the party receiving the amendment and cancellation request message and not the party that received the original mandate initiation request message.\nIn case of acceptance report message, the instructed agent is the party receiving the acceptance report message and not the party that received the original mandate request message."
+	 * "Agent that is instructed by the previous party in the chain to carry out an instruction.\n\nUsage Rule: \nIn case of amendment and cancellation request messages, the instructed agent is the party receiving the amendment and cancellation request message and not the party that received the original mandate initiation request message.\nIn case of acceptance report message, the instructed agent is the party receiving the acceptance report message and not the party that received the original mandate request message."
 	 * </li>
 	 * </ul>
 	 */
@@ -427,7 +427,7 @@ public class GroupHeader47 {
 			xmlTag = "InstdAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
-			definition = "Agent that is instructed by the previous party in the chain to carry out an instruction.\n\nUsage Rule:\nIn case of amendment and cancellation request messages, the instructed agent is the party receiving the amendment and cancellation request message and not the party that received the original mandate initiation request message.\nIn case of acceptance report message, the instructed agent is the party receiving the acceptance report message and not the party that received the original mandate request message.";
+			definition = "Agent that is instructed by the previous party in the chain to carry out an instruction.\n\nUsage Rule: \nIn case of amendment and cancellation request messages, the instructed agent is the party receiving the amendment and cancellation request message and not the party that received the original mandate initiation request message.\nIn case of acceptance report message, the instructed agent is the party receiving the acceptance report message and not the party that received the original mandate request message.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

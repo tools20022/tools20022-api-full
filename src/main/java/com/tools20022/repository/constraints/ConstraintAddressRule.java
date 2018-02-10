@@ -283,7 +283,7 @@ public class ConstraintAddressRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/.../Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/..../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)."
+	 * "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/./Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -297,7 +297,7 @@ public class ConstraintAddressRule {
 			validator = ConstraintAddressRule::checkAccountParties16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AddressRule";
-			definition = "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/.../Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/..../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/.../ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet).";
+			definition = "If ModificationScopeIndication is INSE (InsertNewDataSet), then one of the following must be present:\r\nPrincipalAccountParty/./Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nCustodianForMinor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nBeneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nPowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nLegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSuccessorOnDeath/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nAdministrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nOtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nGranter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSettlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nSeniorManagingOfficial/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet)\r\nProtector/./ModifiedPostalAddress/ModificationScopeIndication/INSE (InsertNewDataSet).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAddressRule.forAccountParties14;
 			owner_lazy = () -> AccountParties16.mmObject();
 		}
@@ -531,31 +531,31 @@ public class ConstraintAddressRule {
 	/**
 	 * If ModificationScopeIndication is INSE (InsertNewDataSet), then one of
 	 * the following must be present:<br>
-	 * PrincipalAccountParty/.../Party/.../ModifiedPostalAddress/
+	 * PrincipalAccountParty/./Party/./ModifiedPostalAddress/
 	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * CustodianForMinor/Party/.../ModifiedPostalAddress/
+	 * CustodianForMinor/Party/./ModifiedPostalAddress/
 	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * SecondaryOwner/Party/.../ModifiedPostalAddress/
-	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * Beneficiary/Party/.../ModifiedPostalAddress/ModificationScopeIndication/
+	 * SecondaryOwner/Party/./ModifiedPostalAddress/ModificationScopeIndication/
 	 * INSE (InsertNewDataSet)<br>
-	 * PowerOfAttorney/Party/.../ModifiedPostalAddress/
-	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * LegalGuardian/Party/.../ModifiedPostalAddress/ModificationScopeIndication
+	 * Beneficiary/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+	 * INSE (InsertNewDataSet)<br>
+	 * PowerOfAttorney/Party/./ModifiedPostalAddress/ModificationScopeIndication
 	 * /INSE (InsertNewDataSet)<br>
-	 * SuccessorOnDeath/Party/.../ModifiedPostalAddress/
+	 * LegalGuardian/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+	 * INSE (InsertNewDataSet)<br>
+	 * SuccessorOnDeath/Party/./ModifiedPostalAddress/
 	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * Administrator/Party/.../ModifiedPostalAddress/ModificationScopeIndication
-	 * /INSE (InsertNewDataSet)<br>
-	 * OtherParty/OtherPartyDetails/Party/..../ModifiedPostalAddress/
+	 * Administrator/Party/./ModifiedPostalAddress/ModificationScopeIndication/
+	 * INSE (InsertNewDataSet)<br>
+	 * OtherParty/OtherPartyDetails/Party/./ModifiedPostalAddress/
 	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * Granter/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE
+	 * Granter/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
 	 * (InsertNewDataSet)<br>
-	 * Settlor/Party/.../ModifiedPostalAddress/ModificationScopeIndication/INSE
+	 * Settlor/Party/./ModifiedPostalAddress/ModificationScopeIndication/INSE
 	 * (InsertNewDataSet)<br>
-	 * SeniorManagingOfficial/.../ModifiedPostalAddress/
+	 * SeniorManagingOfficial/./ModifiedPostalAddress/
 	 * ModificationScopeIndication/INSE (InsertNewDataSet)<br>
-	 * Protector/.../ModifiedPostalAddress/ModificationScopeIndication/INSE
+	 * Protector/./ModifiedPostalAddress/ModificationScopeIndication/INSE
 	 * (InsertNewDataSet).
 	 */
 	public static void checkAccountParties16(AccountParties16 obj) throws Exception {

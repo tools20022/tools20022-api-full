@@ -74,6 +74,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorReconciliationRequest6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reconciliation request from an acceptor."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest7
+ * AcceptorReconciliationRequest7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest5
@@ -117,6 +124,14 @@ public class AcceptorReconciliationRequest6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest7#mmEnvironment
+	 * AcceptorReconciliationRequest7.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -133,6 +148,7 @@ public class AcceptorReconciliationRequest6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationRequest7.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorReconciliationRequest5.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -173,6 +189,14 @@ public class AcceptorReconciliationRequest6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reconciliation transaction between an acceptor an acquirer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest7#mmTransaction
+	 * AcceptorReconciliationRequest7.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +213,7 @@ public class AcceptorReconciliationRequest6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Reconciliation transaction between an acceptor an acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationRequest7.mmTransaction);
 			previousVersion_lazy = () -> AcceptorReconciliationRequest5.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -207,6 +232,7 @@ public class AcceptorReconciliationRequest6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorReconciliationRequest6";
 				definition = "Reconciliation request from an acceptor.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationRequest7.mmObject());
 				previousVersion_lazy = () -> AcceptorReconciliationRequest5.mmObject();
 			}
 		});

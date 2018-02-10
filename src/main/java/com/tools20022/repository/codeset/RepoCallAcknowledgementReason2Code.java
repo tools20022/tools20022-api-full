@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Specifies additional information about the repurchase agreement call
- * processed instruction
+ * processed instruction.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -70,7 +70,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "RepoCallAcknowledgementReason2Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies additional information about the repurchase agreement call processed instruction"
+ * "Specifies additional information about the repurchase agreement call processed instruction."
  * </li>
  * </ul>
  */
@@ -162,7 +162,7 @@ public class RepoCallAcknowledgementReason2Code extends MMCode {
 				example = Arrays.asList("CALD");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepoCallAcknowledgementReason2Code";
-				definition = "Specifies additional information about the repurchase agreement call processed instruction";
+				definition = "Specifies additional information about the repurchase agreement call processed instruction.";
 				trace_lazy = () -> RepoCallAcknowledgementReasonCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.InProcess, com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.Processed,
 						com.tools20022.repository.codeset.RepoCallAcknowledgementReason2Code.AccountServicerDeadlineMissed);

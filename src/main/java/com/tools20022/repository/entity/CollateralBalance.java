@@ -147,7 +147,7 @@ public class CollateralBalance {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Describes the collateral included in the collateral balance,"</li>
+	 * "Describes the collateral included in the collateral balance."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmCollateralDescription = new MMBusinessAssociationEnd() {
@@ -156,7 +156,7 @@ public class CollateralBalance {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralDescription";
-			definition = "Describes the collateral included in the collateral balance,";
+			definition = "Describes the collateral included in the collateral balance.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Collateral.mmCollateralBalance;
 			aggregation = MMAggregation.NONE;

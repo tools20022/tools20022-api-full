@@ -112,6 +112,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "TerminalManagementActionResult3Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Final result of the processed terminal management action."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code
+ * TerminalManagementActionResult4Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult1Code
@@ -136,6 +144,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AccessDenied"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#AccessDenied
+	 * TerminalManagementActionResult4Code.AccessDenied}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -147,6 +163,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccessDenied";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.AccessDenied);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.AccessDenied;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.AccessDenied.getCodeName().orElse(name);
@@ -166,6 +183,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ConnectionError"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#ConnectionError
+	 * TerminalManagementActionResult4Code.ConnectionError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +202,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConnectionError";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.ConnectionError);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.ConnectionError;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.ConnectionError.getCodeName().orElse(name);
@@ -196,6 +222,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FormatError"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#FormatError
+	 * TerminalManagementActionResult4Code.FormatError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -207,6 +241,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FormatError";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.FormatError);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.FormatError;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.FormatError.getCodeName().orElse(name);
@@ -226,6 +261,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvalidContent"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#InvalidContent
+	 * TerminalManagementActionResult4Code.InvalidContent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,6 +280,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidContent";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.InvalidContent);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.InvalidContent;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.InvalidContent.getCodeName().orElse(name);
@@ -256,6 +300,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LengthError"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#LengthError
+	 * TerminalManagementActionResult4Code.LengthError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -267,6 +319,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LengthError";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.LengthError);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.LengthError;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.LengthError.getCodeName().orElse(name);
@@ -286,6 +339,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MemoryOverflow"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#MemoryOverflow
+	 * TerminalManagementActionResult4Code.MemoryOverflow}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,6 +358,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemoryOverflow";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.MemoryOverflow);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.MemoryOverflow;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.MemoryOverflow.getCodeName().orElse(name);
@@ -316,6 +378,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MissingFile"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#MissingFile
+	 * TerminalManagementActionResult4Code.MissingFile}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -327,6 +397,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingFile";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.MissingFile);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.MissingFile;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.MissingFile.getCodeName().orElse(name);
@@ -346,6 +417,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "NotSupported"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#NotSupported
+	 * TerminalManagementActionResult4Code.NotSupported}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -357,6 +436,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSupported";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.NotSupported);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.NotSupported;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.NotSupported.getCodeName().orElse(name);
@@ -376,6 +456,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SignatureError"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#SignatureError
+	 * TerminalManagementActionResult4Code.SignatureError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -387,6 +475,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureError";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.SignatureError);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.SignatureError;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.SignatureError.getCodeName().orElse(name);
@@ -406,6 +495,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Success"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#Success
+	 * TerminalManagementActionResult4Code.Success}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -417,6 +514,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Success";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.Success);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.Success;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.Success.getCodeName().orElse(name);
@@ -436,6 +534,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SyntaxError"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#SyntaxError
+	 * TerminalManagementActionResult4Code.SyntaxError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -447,6 +553,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyntaxError";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.SyntaxError);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.SyntaxError;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.SyntaxError.getCodeName().orElse(name);
@@ -466,6 +573,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Timeout"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#Timeout
+	 * TerminalManagementActionResult4Code.Timeout}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -477,6 +592,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Timeout";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.Timeout);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.Timeout;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.Timeout.getCodeName().orElse(name);
@@ -496,6 +612,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnknownData"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#UnknownData
+	 * TerminalManagementActionResult4Code.UnknownData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -507,6 +631,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownData";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.UnknownData);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.UnknownData;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.UnknownData.getCodeName().orElse(name);
@@ -526,6 +651,14 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UnknownKeyReference"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#UnknownKeyReference
+	 * TerminalManagementActionResult4Code.UnknownKeyReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -537,6 +670,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnknownKeyReference";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.UnknownKeyReference);
 			previousVersion_lazy = () -> TerminalManagementActionResult1Code.UnknownKeyReference;
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.UnknownKeyReference.getCodeName().orElse(name);
@@ -556,12 +690,21 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvalidDelegationProof"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#InvalidDelegationProof
+	 * TerminalManagementActionResult4Code.InvalidDelegationProof}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final TerminalManagementActionResult3Code InvalidDelegationProof = new TerminalManagementActionResult3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDelegationProof";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.InvalidDelegationProof);
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.InvalidDelegationProof.getCodeName().orElse(name);
 		}
@@ -580,12 +723,21 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "InvalidDelegationInManagementPlan"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#InvalidDelegationInManagementPlan
+	 * TerminalManagementActionResult4Code.InvalidDelegationInManagementPlan}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final TerminalManagementActionResult3Code InvalidDelegationInManagementPlan = new TerminalManagementActionResult3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvalidDelegationInManagementPlan";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.InvalidDelegationInManagementPlan);
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.InvalidDelegationInManagementPlan.getCodeName().orElse(name);
 		}
@@ -604,12 +756,22 @@ public class TerminalManagementActionResult3Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DelegationParametersReceivedUnauthorized"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.TerminalManagementActionResult4Code#DelegationParametersReceivedUnauthorized
+	 * TerminalManagementActionResult4Code.
+	 * DelegationParametersReceivedUnauthorized}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final TerminalManagementActionResult3Code DelegationParametersReceivedUnauthorized = new TerminalManagementActionResult3Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationParametersReceivedUnauthorized";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.DelegationParametersReceivedUnauthorized);
 			owner_lazy = () -> com.tools20022.repository.codeset.TerminalManagementActionResult3Code.mmObject();
 			codeName = TerminalManagementActionResultCode.DelegationParametersReceivedUnauthorized.getCodeName().orElse(name);
 		}
@@ -627,6 +789,7 @@ public class TerminalManagementActionResult3Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementActionResult3Code";
 				definition = "Final result of the processed terminal management action.";
+				nextVersions_lazy = () -> Arrays.asList(TerminalManagementActionResult4Code.mmObject());
 				previousVersion_lazy = () -> TerminalManagementActionResult1Code.mmObject();
 				trace_lazy = () -> TerminalManagementActionResultCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TerminalManagementActionResult3Code.AccessDenied, com.tools20022.repository.codeset.TerminalManagementActionResult3Code.ConnectionError,

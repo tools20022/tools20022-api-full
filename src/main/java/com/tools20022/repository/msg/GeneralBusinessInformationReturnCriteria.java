@@ -22,8 +22,11 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -57,12 +60,21 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GeneralBusinessInformationReturnCriteria"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to report on business information."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria1
+ * GeneralBusinessInformationReturnCriteria1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +110,14 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the qualifier is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria1#mmQualifierIndicator
+	 * GeneralBusinessInformationReturnCriteria1.mmQualifierIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQualifierIndicator = new MMMessageAttribute() {
@@ -108,6 +128,7 @@ public class GeneralBusinessInformationReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QualifierIndicator";
 			definition = "Indicates whether the qualifier is requested.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformationReturnCriteria1.mmQualifierIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -141,6 +162,14 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the subject is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria1#mmSubjectIndicator
+	 * GeneralBusinessInformationReturnCriteria1.mmSubjectIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubjectIndicator = new MMMessageAttribute() {
@@ -151,6 +180,7 @@ public class GeneralBusinessInformationReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectIndicator";
 			definition = "Indicates whether the subject is requested.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformationReturnCriteria1.mmSubjectIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -184,6 +214,14 @@ public class GeneralBusinessInformationReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the subject details are requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria1#mmSubjectDetailsIndicator
+	 * GeneralBusinessInformationReturnCriteria1.mmSubjectDetailsIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubjectDetailsIndicator = new MMMessageAttribute() {
@@ -194,6 +232,7 @@ public class GeneralBusinessInformationReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectDetailsIndicator";
 			definition = "Indicates whether the subject details are requested.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformationReturnCriteria1.mmSubjectDetailsIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -206,9 +245,17 @@ public class GeneralBusinessInformationReturnCriteria {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmQualifierIndicator,
 						com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmSubjectIndicator, com.tools20022.repository.msg.GeneralBusinessInformationReturnCriteria.mmSubjectDetailsIndicator);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "GeneralBusinessInformationReturnCriteria";
 				definition = "Defines the criteria used to report on business information.";
+				nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformationReturnCriteria1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

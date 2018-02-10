@@ -86,6 +86,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of elements used to provide information on the dates related to the underlying individual transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDates3
+ * TransactionDates3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -127,6 +134,14 @@ public class TransactionDates2 {
 	 * definition} =
 	 * "Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmAcceptanceDateTime
+	 * TransactionDates3.mmAcceptanceDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAcceptanceDateTime = new MMMessageAttribute() {
@@ -138,6 +153,7 @@ public class TransactionDates2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceDateTime";
 			definition = "Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmAcceptanceDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -177,6 +193,14 @@ public class TransactionDates2 {
 	 * definition} =
 	 * "Identifies when an amount of money should have contractually been credited or debited the account versus when the amount of money was actually settled (debited/credited) on the cash account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmTradeActivityContractualSettlementDate
+	 * TransactionDates3.mmTradeActivityContractualSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTradeActivityContractualSettlementDate = new MMMessageAttribute() {
@@ -188,6 +212,7 @@ public class TransactionDates2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeActivityContractualSettlementDate";
 			definition = "Identifies when an amount of money should have contractually been credited or debited the account versus when the amount of money was actually settled (debited/credited) on the cash account.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmTradeActivityContractualSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -225,6 +250,14 @@ public class TransactionDates2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which the trade was executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmTradeDate
+	 * TransactionDates3.mmTradeDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
@@ -236,6 +269,7 @@ public class TransactionDates2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date on which the trade was executed.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmTradeDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -275,6 +309,14 @@ public class TransactionDates2 {
 	 * definition} =
 	 * "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmInterbankSettlementDate
+	 * TransactionDates3.mmInterbankSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementDate = new MMMessageAttribute() {
@@ -286,6 +328,7 @@ public class TransactionDates2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmInterbankSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -325,6 +368,14 @@ public class TransactionDates2 {
 	 * definition} =
 	 * "Start date of the underlying transaction, such as a treasury transaction, an investment plan."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmStartDate
+	 * TransactionDates3.mmStartDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStartDate = new MMMessageAttribute() {
@@ -336,6 +387,7 @@ public class TransactionDates2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartDate";
 			definition = "Start date of the underlying transaction, such as a treasury transaction, an investment plan.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmStartDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -375,6 +427,14 @@ public class TransactionDates2 {
 	 * definition} =
 	 * "End date of the underlying transaction, such as a treasury transaction, an investment plan."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmEndDate
+	 * TransactionDates3.mmEndDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEndDate = new MMMessageAttribute() {
@@ -386,6 +446,7 @@ public class TransactionDates2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndDate";
 			definition = "End date of the underlying transaction, such as a treasury transaction, an investment plan.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmEndDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -423,6 +484,14 @@ public class TransactionDates2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time of the underlying transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmTransactionDateTime
+	 * TransactionDates3.mmTransactionDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransactionDateTime = new MMMessageAttribute() {
@@ -434,6 +503,7 @@ public class TransactionDates2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDateTime";
 			definition = "Date and time of the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmTransactionDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -465,6 +535,14 @@ public class TransactionDates2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary date related to the underlying transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmProprietary
+	 * TransactionDates3.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -475,6 +553,7 @@ public class TransactionDates2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary date related to the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmProprietary);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ProprietaryDate2.mmObject();
@@ -492,6 +571,7 @@ public class TransactionDates2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionDates2";
 				definition = "Set of elements used to provide information on the dates related to the underlying individual transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionDates3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

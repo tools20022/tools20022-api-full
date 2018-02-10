@@ -391,7 +391,7 @@ public class OrderStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Order with an Order Cancel Request pending, used to confirm receipt of an Order Cancel Request.  Does not indicate that the order has been cancelled."
+	 * "Order with an Order Cancel Request pending, used to confirm receipt of an Order Cancel Request. Does not indicate that the order has been cancelled."
 	 * </li>
 	 * </ul>
 	 */
@@ -400,7 +400,7 @@ public class OrderStatusCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingCancel";
-			definition = "Order with an Order Cancel Request pending, used to confirm receipt of an Order Cancel Request.  Does not indicate that the order has been cancelled.";
+			definition = "Order with an Order Cancel Request pending, used to confirm receipt of an Order Cancel Request. Does not indicate that the order has been cancelled.";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CANP";
 		}
@@ -466,7 +466,7 @@ public class OrderStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Order has been rejected by sell-side.  NOTE:  An order can be rejected subsequent to order acknowledgment, i.e. an order can pass from New to Rejected status."
+	 * "Order has been rejected by sell-side. NOTE: An order can be rejected subsequent to order acknowledgment, i.e. an order can pass from New to Rejected status."
 	 * </li>
 	 * </ul>
 	 */
@@ -475,7 +475,7 @@ public class OrderStatusCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Rejected";
-			definition = "Order has been rejected by sell-side.  NOTE:  An order can be rejected subsequent to order acknowledgment, i.e. an order can pass from New to Rejected status.";
+			definition = "Order has been rejected by sell-side. NOTE: An order can be rejected subsequent to order acknowledgment, i.e. an order can pass from New to Rejected status.";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "REJT";
 		}
@@ -539,7 +539,7 @@ public class OrderStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Order has been received by sell-side system but not yet accepted for execution.  An execution message with this status will only be sent in response to a Status Request message."
+	 * "Order has been received by sell-side system but not yet accepted for execution. An execution message with this status will only be sent in response to a Status Request message."
 	 * </li>
 	 * </ul>
 	 */
@@ -548,7 +548,7 @@ public class OrderStatusCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PendingNew";
-			definition = "Order has been received by sell-side system but not yet accepted for execution.  An execution message with this status will only be sent in response to a Status Request message.";
+			definition = "Order has been received by sell-side system but not yet accepted for execution. An execution message with this status will only be sent in response to a Status Request message.";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "PENN";
 		}
@@ -577,7 +577,7 @@ public class OrderStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Order has been completed for the day (either filled or done for day).  Commission or currency settlement details have been calculated and reported in this execution message."
+	 * "Order has been completed for the day (either filled or done for day). Commission or currency settlement details have been calculated and reported in this execution message."
 	 * </li>
 	 * </ul>
 	 */
@@ -586,7 +586,7 @@ public class OrderStatusCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "FIX 39"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Calculated";
-			definition = "Order has been completed for the day (either filled or done for day).  Commission or currency settlement details have been calculated and reported in this execution message.";
+			definition = "Order has been completed for the day (either filled or done for day). Commission or currency settlement details have been calculated and reported in this execution message.";
 			owner_lazy = () -> com.tools20022.repository.codeset.OrderStatusCode.mmObject();
 			codeName = "CALC";
 		}

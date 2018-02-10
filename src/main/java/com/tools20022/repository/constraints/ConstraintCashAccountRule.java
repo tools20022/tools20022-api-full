@@ -20,9 +20,8 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.msg.IntraBalanceCancellation1;
-import com.tools20022.repository.msg.IntraBalanceModification1;
-import com.tools20022.repository.msg.IntraBalanceMovements1;
+import com.tools20022.repository.msg.*;
+import java.util.Arrays;
 
 /**
  * CashAccount must be present or Cancellation(*)/CashAccount must be present,
@@ -49,6 +48,14 @@ public class ConstraintCashAccountRule {
 	 * definition} =
 	 * "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountRule#forIntraBalanceCancellation3
+	 * ConstraintCashAccountRule.forIntraBalanceCancellation3}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraBalanceCancellation1> forIntraBalanceCancellation1 = new MMConstraint<IntraBalanceCancellation1>() {
@@ -57,6 +64,7 @@ public class ConstraintCashAccountRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceCancellation3);
 			owner_lazy = () -> IntraBalanceCancellation1.mmObject();
 		}
 	};
@@ -79,6 +87,14 @@ public class ConstraintCashAccountRule {
 	 * definition} =
 	 * "CashAccount must be present or Movement(*)/CashAccount must be present, but not both."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountRule#forIntraBalanceMovements2
+	 * ConstraintCashAccountRule.forIntraBalanceMovements2}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraBalanceMovements1> forIntraBalanceMovements1 = new MMConstraint<IntraBalanceMovements1>() {
@@ -87,6 +103,7 @@ public class ConstraintCashAccountRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Movement(*)/CashAccount must be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceMovements2);
 			owner_lazy = () -> IntraBalanceMovements1.mmObject();
 		}
 	};
@@ -109,6 +126,14 @@ public class ConstraintCashAccountRule {
 	 * definition} =
 	 * "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountRule#forIntraBalanceModification3
+	 * ConstraintCashAccountRule.forIntraBalanceModification3}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraBalanceModification1> forIntraBalanceModification1 = new MMConstraint<IntraBalanceModification1>() {
@@ -117,7 +142,116 @@ public class ConstraintCashAccountRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountRule";
 			definition = "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceModification3);
 			owner_lazy = () -> IntraBalanceModification1.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation3
+	 * IntraBalanceCancellation3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashAccountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountRule#forIntraBalanceCancellation1
+	 * ConstraintCashAccountRule.forIntraBalanceCancellation1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraBalanceCancellation3> forIntraBalanceCancellation3 = new MMConstraint<IntraBalanceCancellation3>() {
+		{
+			validator = ConstraintCashAccountRule::checkIntraBalanceCancellation3;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashAccountRule";
+			definition = "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceCancellation1;
+			owner_lazy = () -> IntraBalanceCancellation3.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovements2
+	 * IntraBalanceMovements2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashAccountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CashAccount must be present or Movement(*)/CashAccount must be present, but not both."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountRule#forIntraBalanceMovements1
+	 * ConstraintCashAccountRule.forIntraBalanceMovements1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraBalanceMovements2> forIntraBalanceMovements2 = new MMConstraint<IntraBalanceMovements2>() {
+		{
+			validator = ConstraintCashAccountRule::checkIntraBalanceMovements2;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashAccountRule";
+			definition = "CashAccount must be present or Movement(*)/CashAccount must be present, but not both.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceMovements1;
+			owner_lazy = () -> IntraBalanceMovements2.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification3
+	 * IntraBalanceModification3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashAccountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCashAccountRule#forIntraBalanceModification1
+	 * ConstraintCashAccountRule.forIntraBalanceModification1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraBalanceModification3> forIntraBalanceModification3 = new MMConstraint<IntraBalanceModification3>() {
+		{
+			validator = ConstraintCashAccountRule::checkIntraBalanceModification3;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashAccountRule";
+			definition = "CashAccount must be present or Cancellation(*)/CashAccount must be present, but not both.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCashAccountRule.forIntraBalanceModification1;
+			owner_lazy = () -> IntraBalanceModification3.mmObject();
 		}
 	};
 
@@ -142,6 +276,30 @@ public class ConstraintCashAccountRule {
 	 * present, but not both.
 	 */
 	public static void checkIntraBalanceModification1(IntraBalanceModification1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * CashAccount must be present or Cancellation(*)/CashAccount must be
+	 * present, but not both.
+	 */
+	public static void checkIntraBalanceCancellation3(IntraBalanceCancellation3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * CashAccount must be present or Movement(*)/CashAccount must be present,
+	 * but not both.
+	 */
+	public static void checkIntraBalanceMovements2(IntraBalanceMovements2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * CashAccount must be present or Cancellation(*)/CashAccount must be
+	 * present, but not both.
+	 */
+	public static void checkIntraBalanceModification3(IntraBalanceModification3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -306,7 +306,7 @@ public class NRATaxCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Tax category for fully exempt dividends  on municipal  type mutual funds. "
+	 * "Tax category for fully exempt dividends on municipal type mutual funds."
 	 * </li>
 	 * </ul>
 	 */
@@ -314,7 +314,7 @@ public class NRATaxCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendsFullyExempt";
-			definition = "Tax category for fully exempt dividends  on municipal  type mutual funds. ";
+			definition = "Tax category for fully exempt dividends on municipal type mutual funds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T014";
 		}
@@ -510,14 +510,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "LimitedPubliclyTradedPartnership"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for  limited publicly traded partnership."</li>
+	 * definition} = "Tax category for limited publicly traded partnership."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode LimitedPubliclyTradedPartnership = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedPubliclyTradedPartnership";
-			definition = "Tax category for  limited publicly traded partnership.";
+			definition = "Tax category for limited publicly traded partnership.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T026";
 		}
@@ -783,14 +783,14 @@ public class NRATaxCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Tax category for U.S. government interest on GNMA 1 &amp; 2 proceeds. "</li>
+	 * "Tax category for U.S. government interest on GNMA 1 &amp; 2 proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode USGovernmentInterestOnGNMA1And2 = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "USGovernmentInterestOnGNMA1And2";
-			definition = "Tax category for U.S. government interest on GNMA 1 & 2 proceeds. ";
+			definition = "Tax category for U.S. government interest on GNMA 1 & 2 proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T046";
 		}
@@ -1112,14 +1112,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "FederalBackUpDividends"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for federal backup dividends proceeds. "</li>
+	 * definition} = "Tax category for federal backup dividends proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode FederalBackUpDividends = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FederalBackUpDividends";
-			definition = "Tax category for federal backup dividends proceeds. ";
+			definition = "Tax category for federal backup dividends proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T062";
 		}
@@ -1201,14 +1201,14 @@ public class NRATaxCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Tax category for foreign tax withheld at source interest proceeds. "</li>
+	 * "Tax category for foreign tax withheld at source interest proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode ForeignTaxWithheldAtSourceInterest = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignTaxWithheldAtSourceInterest";
-			definition = "Tax category for foreign tax withheld at source interest proceeds. ";
+			definition = "Tax category for foreign tax withheld at source interest proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T065";
 		}
@@ -1259,14 +1259,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "InterestOnBalances"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for interest on balances proceeds. "</li>
+	 * definition} = "Tax category for interest on balances proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode InterestOnBalances = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOnBalances";
-			definition = "Tax category for interest on balances proceeds. ";
+			definition = "Tax category for interest on balances proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T071";
 		}
@@ -1289,14 +1289,14 @@ public class NRATaxCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Tax category for interest on series E or H bonds proceeds. "</li>
+	 * "Tax category for interest on series E or H bonds proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode InterestOnSeriesEOrHBonds = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestOnSeriesEOrHBonds";
-			definition = "Tax category for interest on series E or H bonds proceeds. ";
+			definition = "Tax category for interest on series E or H bonds proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T072";
 		}
@@ -1318,14 +1318,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "RoyaltyPayments"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for royalty payments proceeds. "</li>
+	 * definition} = "Tax category for royalty payments proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode RoyaltyPayments = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoyaltyPayments";
-			definition = "Tax category for royalty payments proceeds. ";
+			definition = "Tax category for royalty payments proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T073";
 		}
@@ -1347,14 +1347,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "OtherTaxableIncome"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for other taxable income proceeds. "</li>
+	 * definition} = "Tax category for other taxable income proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode OtherTaxableIncome = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherTaxableIncome";
-			definition = "Tax category for other taxable income proceeds. ";
+			definition = "Tax category for other taxable income proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T074";
 		}
@@ -1376,14 +1376,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "OtherNonTaxableIncome"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for other non-taxable income proceeds. "</li>
+	 * definition} = "Tax category for other non-taxable income proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode OtherNonTaxableIncome = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherNonTaxableIncome";
-			definition = "Tax category for other non-taxable income proceeds. ";
+			definition = "Tax category for other non-taxable income proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T075";
 		}
@@ -1405,14 +1405,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "MiscellaneousPayments"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for miscellaneous payments proceeds. "</li>
+	 * definition} = "Tax category for miscellaneous payments proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode MiscellaneousPayments = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MiscellaneousPayments";
-			definition = "Tax category for miscellaneous payments proceeds. ";
+			definition = "Tax category for miscellaneous payments proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T076";
 		}
@@ -1435,14 +1435,14 @@ public class NRATaxCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Tax category for Cash-in-Lieu of fractional shares proceeds. "</li>
+	 * "Tax category for Cash-in-Lieu of fractional shares proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode CashInLieuOfFractionalShares = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfFractionalShares";
-			definition = "Tax category for Cash-in-Lieu of fractional shares proceeds. ";
+			definition = "Tax category for Cash-in-Lieu of fractional shares proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T024";
 		}
@@ -1464,14 +1464,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "StockSplit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for stock split proceeds. "</li>
+	 * definition} = "Tax category for stock split proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode StockSplit = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockSplit";
-			definition = "Tax category for stock split proceeds. ";
+			definition = "Tax category for stock split proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T077";
 		}
@@ -1493,14 +1493,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "StockDividend"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for stock dividend proceeds. "</li>
+	 * definition} = "Tax category for stock dividend proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode StockDividend = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockDividend";
-			definition = "Tax category for stock dividend proceeds. ";
+			definition = "Tax category for stock dividend proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T078";
 		}
@@ -1522,14 +1522,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "CashOnIncreasedShares"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for cash on increased shares proceeds. "</li>
+	 * definition} = "Tax category for cash on increased shares proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode CashOnIncreasedShares = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOnIncreasedShares";
-			definition = "Tax category for cash on increased shares proceeds. ";
+			definition = "Tax category for cash on increased shares proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T079";
 		}
@@ -1551,14 +1551,14 @@ public class NRATaxCode extends MMCode {
 	 * name} = "SpinOff"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax category for  spin off proceeds. "</li>
+	 * definition} = "Tax category for spin off proceeds."</li>
 	 * </ul>
 	 */
 	public static final NRATaxCode SpinOff = new NRATaxCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpinOff";
-			definition = "Tax category for  spin off proceeds. ";
+			definition = "Tax category for spin off proceeds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NRATaxCode.mmObject();
 			codeName = "T080";
 		}

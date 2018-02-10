@@ -62,6 +62,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between an ISODate or ISODateTime format or a date code."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat48Choice
+ * DateFormat48Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +106,14 @@ public class DateFormat28Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date expressed as a calendar date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat48Choice#mmDate
+	 * DateFormat48Choice.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDate = new MMMessageAssociationEnd() {
@@ -110,6 +125,7 @@ public class DateFormat28Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a calendar date.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat48Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -147,6 +163,14 @@ public class DateFormat28Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat48Choice#mmDateCode
+	 * DateFormat48Choice.mmDateCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDateCode = new MMMessageAttribute() {
@@ -158,6 +182,7 @@ public class DateFormat28Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Specifies the type of date.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat48Choice.mmDateCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType8Code.mmObject();
@@ -172,6 +197,7 @@ public class DateFormat28Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat28Choice";
 				definition = "Choice between an ISODate or ISODateTime format or a date code.";
+				nextVersions_lazy = () -> Arrays.asList(DateFormat48Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

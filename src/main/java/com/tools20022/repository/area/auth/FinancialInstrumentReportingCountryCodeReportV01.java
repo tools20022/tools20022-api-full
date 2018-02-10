@@ -80,7 +80,7 @@ import javax.xml.bind.annotation.*;
  * "FinancialInstrumentReportingCountryCodeReportV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The FinancialInstrumentReportingCountryCodeReport message  provides the details of the two character country codes and is created by ESMA for distribution to national competent authorities."
+ * "The FinancialInstrumentReportingCountryCodeReport message provides the details of the two character country codes and is created by ESMA for distribution to national competent authorities."
  * </li>
  * </ul>
  */
@@ -184,7 +184,7 @@ public class FinancialInstrumentReportingCountryCodeReportV01 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentReportingCountryCodeReportV01";
-				definition = "The FinancialInstrumentReportingCountryCodeReport message  provides the details of the two character country codes and is created by ESMA for distribution to national competent authorities.";
+				definition = "The FinancialInstrumentReportingCountryCodeReport message provides the details of the two character country codes and is created by ESMA for distribution to national competent authorities.";
 				messageSet_lazy = () -> Arrays.asList(FinancialInstrumentsandTransactionsRegulatoryReportingTransactionsandFinancialInstrumentsDataReporting.mmObject());
 				rootElement = "Document";
 				xmlTag = "FinInstrmRptgCtryCdRpt";

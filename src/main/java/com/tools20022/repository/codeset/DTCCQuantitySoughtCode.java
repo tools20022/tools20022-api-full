@@ -110,7 +110,8 @@ public class DTCCQuantitySoughtCode extends MMCode {
 		}
 	};
 	/**
-	 * Check Quantity Sought Comments for quantity sought (irregular expression)
+	 * Check Quantity Sought Comments for quantity sought (irregular
+	 * expression).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -128,7 +129,7 @@ public class DTCCQuantitySoughtCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Check Quantity Sought Comments for quantity sought (irregular expression)"
+	 * "Check Quantity Sought Comments for quantity sought (irregular expression)."
 	 * </li>
 	 * </ul>
 	 */
@@ -136,7 +137,7 @@ public class DTCCQuantitySoughtCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CheckComments";
-			definition = "Check Quantity Sought Comments for quantity sought (irregular expression)";
+			definition = "Check Quantity Sought Comments for quantity sought (irregular expression).";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCQuantitySoughtCode.mmObject();
 			codeName = "CHCO";
 		}

@@ -171,6 +171,48 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmTradeOriginatorRole
  * SecuritiesTradeDetails70.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmTradeOriginatorRole
+ * SecuritiesTradeDetails73.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74#mmTradeOriginatorRole
+ * SecuritiesTradeDetails74.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmTradeOriginatorRole
+ * SecuritiesTradeDetails75.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTradeOriginatorRole
+ * SecuritiesTradeDetails76.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77#mmTradeOriginatorRole
+ * SecuritiesTradeDetails77.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmTradeOriginatorRole
+ * SecuritiesTradeDetails78.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmTradeOriginatorRole
+ * SecuritiesTradeDetails79.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82#mmTradeOriginatorRole
+ * SecuritiesTradeDetails82.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83#mmTradeOriginatorRole
+ * SecuritiesTradeDetails83.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmTradeOriginatorRole
+ * SecuritiesTradeDetails86.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmTradeOriginatorRole
+ * SecuritiesTradeDetails87.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmTradeOriginatorRole
+ * SecuritiesTradeDetails88.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmTradeOriginatorRole
+ * SecuritiesTradeDetails89.mmTradeOriginatorRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmTradeOriginatorRole
+ * SecuritiesTradeDetails90.mmTradeOriginatorRole}</li>
  * </ul>
  * </li>
  * <li>
@@ -302,7 +344,11 @@ public class TradeOriginatorRole extends TradePartyRole {
 						SecuritiesTradeDetails47.mmTradeOriginatorRole, SecuritiesTradeDetails51.mmTradeOriginatorRole, SecuritiesTradeDetails53.mmTradeOriginatorRole, SecuritiesTradeDetails55.mmTradeOriginatorRole,
 						SecuritiesTradeDetails56.mmTradeOriginatorRole, SecuritiesTradeDetails52.mmTradeOriginatorRole, SecuritiesTradeDetails50.mmTradeOriginatorRole, SecuritiesTradeDetails59.mmTradeOriginatorRole,
 						SecuritiesTradeDetails58.mmTradeOriginatorRole, SecuritiesTradeDetails63.mmTradeOriginatorRole, SecuritiesTradeDetails62.mmTradeOriginatorRole, SecuritiesTradeDetails65.mmTradeOriginatorRole,
-						SecuritiesTradeDetails66.mmTradeOriginatorRole, SecuritiesTradeDetails67.mmTradeOriginatorRole, SecuritiesTradeDetails70.mmTradeOriginatorRole);
+						SecuritiesTradeDetails66.mmTradeOriginatorRole, SecuritiesTradeDetails67.mmTradeOriginatorRole, SecuritiesTradeDetails70.mmTradeOriginatorRole, SecuritiesTradeDetails73.mmTradeOriginatorRole,
+						SecuritiesTradeDetails74.mmTradeOriginatorRole, SecuritiesTradeDetails75.mmTradeOriginatorRole, SecuritiesTradeDetails76.mmTradeOriginatorRole, SecuritiesTradeDetails77.mmTradeOriginatorRole,
+						SecuritiesTradeDetails78.mmTradeOriginatorRole, SecuritiesTradeDetails79.mmTradeOriginatorRole, SecuritiesTradeDetails82.mmTradeOriginatorRole, SecuritiesTradeDetails83.mmTradeOriginatorRole,
+						SecuritiesTradeDetails86.mmTradeOriginatorRole, SecuritiesTradeDetails87.mmTradeOriginatorRole, SecuritiesTradeDetails88.mmTradeOriginatorRole, SecuritiesTradeDetails89.mmTradeOriginatorRole,
+						SecuritiesTradeDetails90.mmTradeOriginatorRole);
 				superType_lazy = () -> TradePartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradeOriginatorRole.mmOriginatorRole);
 				derivationComponent_lazy = () -> Arrays.asList(TradeOriginator1Choice.mmObject(), TradeOriginator2Choice.mmObject(), TradeOriginator3Choice.mmObject(), TradeOriginator4Choice.mmObject());

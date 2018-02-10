@@ -73,6 +73,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Specifies the details about the system availability and the related system events that might impact the availability."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2
+ * SystemAvailabilityAndEvents2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -115,6 +122,14 @@ public class SystemAvailabilityAndEvents1 {
 	 * definition} =
 	 * "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2#mmSystemCurrency
+	 * SystemAvailabilityAndEvents2.mmSystemCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
@@ -126,6 +141,7 @@ public class SystemAvailabilityAndEvents1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCurrency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
+			nextVersions_lazy = () -> Arrays.asList(SystemAvailabilityAndEvents2.mmSystemCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -164,6 +180,14 @@ public class SystemAvailabilityAndEvents1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Time window of system activity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2#mmSessionPeriod
+	 * SystemAvailabilityAndEvents2.mmSessionPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSessionPeriod = new MMMessageAttribute() {
@@ -175,6 +199,7 @@ public class SystemAvailabilityAndEvents1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionPeriod";
 			definition = "Time window of system activity.";
+			nextVersions_lazy = () -> Arrays.asList(SystemAvailabilityAndEvents2.mmSessionPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.TimePeriodDetails.mmObject();
@@ -213,6 +238,14 @@ public class SystemAvailabilityAndEvents1 {
 	 * definition} =
 	 * "Detailed information about an event occurring on a system, whether planned, such as the cut-off time for a specific type of eligible transfer, or unplanned (an unsolicited failure), as stipulated in the specifications of the system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2#mmEvent
+	 * SystemAvailabilityAndEvents2.mmEvent}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEvent = new MMMessageAssociationEnd() {
@@ -224,6 +257,7 @@ public class SystemAvailabilityAndEvents1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Detailed information about an event occurring on a system, whether planned, such as the cut-off time for a specific type of eligible transfer, or unplanned (an unsolicited failure), as stipulated in the specifications of the system.";
+			nextVersions_lazy = () -> Arrays.asList(SystemAvailabilityAndEvents2.mmEvent);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemEvent2.mmObject();
@@ -259,6 +293,14 @@ public class SystemAvailabilityAndEvents1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information regarding the closure time of a system."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2#mmClosureInformation
+	 * SystemAvailabilityAndEvents2.mmClosureInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmClosureInformation = new MMMessageAssociationEnd() {
@@ -270,6 +312,7 @@ public class SystemAvailabilityAndEvents1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosureInformation";
 			definition = "Information regarding the closure time of a system.";
+			nextVersions_lazy = () -> Arrays.asList(SystemAvailabilityAndEvents2.mmClosureInformation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemClosure1.mmObject();
@@ -286,6 +329,7 @@ public class SystemAvailabilityAndEvents1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SystemAvailabilityAndEvents1";
 				definition = "Specifies the details about the system availability and the related system events that might impact the availability.";
+				nextVersions_lazy = () -> Arrays.asList(SystemAvailabilityAndEvents2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -25,6 +25,7 @@ class ListBuilderForGeneratedRepository_19 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) ATMTransactionAmounts4.mmObject());
 		list.add((T) Acquirer7.mmObject());
 		list.add((T) ATMStatus1.mmObject());
 		list.add((T) TerminalHosting1.mmObject());
@@ -267,6 +268,7 @@ class ListBuilderForGeneratedRepository_19 {
 		list.add((T) TransactionDetails78.mmObject());
 		list.add((T) Account18.mmObject());
 		list.add((T) IdentificationType42Choice.mmObject());
+		list.add((T) AlternateIdentification3.mmObject());
 		list.add((T) SafekeepingPlaceFormat8Choice.mmObject());
 		list.add((T) GenericIdentification78.mmObject());
 		list.add((T) SafekeepingPlaceTypeAndText6.mmObject());
@@ -294,6 +296,19 @@ class ListBuilderForGeneratedRepository_19 {
 		list.add((T) EnergyCommodityNaturalGas1.mmObject());
 		list.add((T) EnergyCommodityElectricity1.mmObject());
 		list.add((T) AgriculturalCommoditySoft1.mmObject());
+		list.add((T) ContractModification1.mmObject());
+		list.add((T) Counterparty2.mmObject());
+		list.add((T) SecuritiesTradeVenueCriteria1Choice.mmObject());
+		list.add((T) ProductClassificationCriteria1.mmObject());
+		list.add((T) TradePartyIdentificationQuery4.mmObject());
+		list.add((T) SecurityIdentificationQueryCriteria1.mmObject());
+		list.add((T) TradeNonConfirmation1.mmObject());
+		list.add((T) ProductClassification1Choice.mmObject());
+		list.add((T) TradeConfirmation1Choice.mmObject());
+		list.add((T) TradeConfirmation2.mmObject());
+		list.add((T) SecurityIdentification18Choice.mmObject());
+		list.add((T) SecurityIdentification19Choice.mmObject());
+		list.add((T) AssetClassCommodity2Choice.mmObject());
 		list.add((T) AgriculturalCommodityOilSeed1.mmObject());
 		list.add((T) SecuritiesTransactionPrice2Choice.mmObject());
 		list.add((T) Frequency22Choice.mmObject());
@@ -510,21 +525,6 @@ class ListBuilderForGeneratedRepository_19 {
 		list.add((T) TypeOfPrice30Choice.mmObject());
 		list.add((T) Linkages38.mmObject());
 		list.add((T) SecuritiesTradeDetails52.mmObject());
-		list.add((T) SettlementDetails94.mmObject());
-		list.add((T) SettlementTypeAndAdditionalParameters14.mmObject());
-		list.add((T) AmountAndDirection45.mmObject());
-		list.add((T) AcceptedStatus7Choice.mmObject());
-		list.add((T) AcceptedStatusReason8.mmObject());
-		list.add((T) AmountAndDirection51.mmObject());
-		list.add((T) PartyIdentification93Choice.mmObject());
-		list.add((T) RepairStatus12Choice.mmObject());
-		list.add((T) RejectionReason22Choice.mmObject());
-		list.add((T) RejectionReason23Choice.mmObject());
-		list.add((T) CancellationStatus16Choice.mmObject());
-		list.add((T) CancellationReason12.mmObject());
-		list.add((T) MatchingStatus27Choice.mmObject());
-		list.add((T) ResponseStatus5Choice.mmObject());
-		list.add((T) StatementType5Choice.mmObject());
 		ListBuilderForGeneratedRepository_20.addElems(list);
 		return list;
 	}

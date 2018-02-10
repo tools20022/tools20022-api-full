@@ -98,6 +98,9 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmBlockingPeriod
 	 * CorporateActionPeriod10.mmBlockingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmBlockingPeriod
+	 * CorporateActionPeriod14.mmBlockingPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -121,7 +124,7 @@ public class SecuritiesBlockingDeadline extends Deadline {
 	public static final MMBusinessAttribute mmBlockingPeriod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmBlockingPeriod, CorporateActionPeriod6.mmBlockingPeriod, CorporateActionPeriod8.mmBlockingPeriod, EligibilityDates.mmBlockingPeriod,
-					CorporateActionPeriod1.mmBlockingPeriod, CorporateActionPeriod10.mmBlockingPeriod);
+					CorporateActionPeriod1.mmBlockingPeriod, CorporateActionPeriod10.mmBlockingPeriod, CorporateActionPeriod14.mmBlockingPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBlockingDeadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

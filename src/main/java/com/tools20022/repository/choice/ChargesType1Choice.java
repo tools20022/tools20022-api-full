@@ -150,7 +150,7 @@ public class ChargesType1Choice {
 	 * name} = "OtherChargesType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the type of charge by means of a free text"</li>
+	 * definition} = "Specifies the type of charge by means of a free text."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOtherChargesType = new MMMessageAttribute() {
@@ -161,7 +161,7 @@ public class ChargesType1Choice {
 			xmlTag = "OthrChrgsTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherChargesType";
-			definition = "Specifies the type of charge by means of a free text";
+			definition = "Specifies the type of charge by means of a free text.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

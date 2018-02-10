@@ -489,7 +489,7 @@ public class SecuritiesEntryTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance of securities that is unclassified, ie, is  not identified with one of the existing sub-balance types."
+	 * "Balance of securities that is unclassified, ie, is not identified with one of the existing sub-balance types."
 	 * </li>
 	 * </ul>
 	 */
@@ -498,7 +498,7 @@ public class SecuritiesEntryTypeCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::OTHR"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unclassified";
-			definition = "Balance of securities that is unclassified, ie, is  not identified with one of the existing sub-balance types.";
+			definition = "Balance of securities that is unclassified, ie, is not identified with one of the existing sub-balance types.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesEntryTypeCode.mmObject();
 			codeName = "OTHR";
 		}
@@ -782,7 +782,7 @@ public class SecuritiesEntryTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Balance of securities representing only settled transactions
+	 * Balance of securities representing only settled transactions.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -800,20 +800,20 @@ public class SecuritiesEntryTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance of securities representing only settled transactions"</li>
+	 * "Balance of securities representing only settled transactions."</li>
 	 * </ul>
 	 */
 	public static final SecuritiesEntryTypeCode Settled = new SecuritiesEntryTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Settled";
-			definition = "Balance of securities representing only settled transactions";
+			definition = "Balance of securities representing only settled transactions.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesEntryTypeCode.mmObject();
 			codeName = "SETD";
 		}
 	};
 	/**
-	 * Balance of securities representing traded transactions
+	 * Balance of securities representing traded transactions.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -830,14 +830,14 @@ public class SecuritiesEntryTypeCode extends MMCode {
 	 * name} = "Traded"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Balance of securities representing traded transactions"</li>
+	 * definition} = "Balance of securities representing traded transactions."</li>
 	 * </ul>
 	 */
 	public static final SecuritiesEntryTypeCode Traded = new SecuritiesEntryTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traded";
-			definition = "Balance of securities representing traded transactions";
+			definition = "Balance of securities representing traded transactions.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesEntryTypeCode.mmObject();
 			codeName = "TRAD";
 		}

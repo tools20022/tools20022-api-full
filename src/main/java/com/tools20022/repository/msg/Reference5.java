@@ -233,7 +233,7 @@ public class Reference5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identifier for order as assigned by the buy-side ( institution, broker, intermediary..)."
+	 * "Unique identifier for order as assigned by the buy-side ( institution, broker, intermediary.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -245,7 +245,7 @@ public class Reference5 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "11"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
-			definition = "Unique identifier for order as assigned by the buy-side ( institution, broker, intermediary..).";
+			definition = "Unique identifier for order as assigned by the buy-side ( institution, broker, intermediary.).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

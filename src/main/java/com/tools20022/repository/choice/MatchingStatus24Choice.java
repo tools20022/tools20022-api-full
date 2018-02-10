@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09;
 import com.tools20022.repository.entity.SecuritiesTradeStatus;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.ProprietaryReason4;
@@ -73,6 +74,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08#mmMatchingStatus
  * SecuritiesSettlementTransactionStatusAdviceV08.mmMatchingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmInferredMatchingStatus
+ * SecuritiesSettlementTransactionStatusAdviceV09.mmInferredMatchingStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmMatchingStatus
+ * SecuritiesSettlementTransactionStatusAdviceV09.mmMatchingStatus}</li>
  * </ul>
  * </li>
  * <li>
@@ -270,7 +277,8 @@ public class MatchingStatus24Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.MatchingStatus24Choice.mmMatched, com.tools20022.repository.choice.MatchingStatus24Choice.mmUnmatched,
 						com.tools20022.repository.choice.MatchingStatus24Choice.mmProprietary);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV07.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdviceV07.mmMatchingStatus,
-						SecuritiesSettlementTransactionStatusAdviceV08.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdviceV08.mmMatchingStatus);
+						SecuritiesSettlementTransactionStatusAdviceV08.mmInferredMatchingStatus, SecuritiesSettlementTransactionStatusAdviceV08.mmMatchingStatus, SecuritiesSettlementTransactionStatusAdviceV09.mmInferredMatchingStatus,
+						SecuritiesSettlementTransactionStatusAdviceV09.mmMatchingStatus);
 				trace_lazy = () -> SecuritiesTradeStatus.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

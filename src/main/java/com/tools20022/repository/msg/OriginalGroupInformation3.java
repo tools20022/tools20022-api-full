@@ -78,6 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.OriginalMessage2
  * OriginalMessage2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalGroupInformation29
+ * OriginalGroupInformation29}</li>
  * </ul>
  * </li>
  * </ul>
@@ -127,6 +129,9 @@ public class OriginalGroupInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalMessageIdentification
 	 * OriginalMessage2.mmOriginalMessageIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation29#mmOriginalMessageIdentification
+	 * OriginalGroupInformation29.mmOriginalMessageIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -140,7 +145,7 @@ public class OriginalGroupInformation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.";
-			nextVersions_lazy = () -> Arrays.asList(OriginalMessage2.mmOriginalMessageIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OriginalMessage2.mmOriginalMessageIdentification, OriginalGroupInformation29.mmOriginalMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -181,6 +186,9 @@ public class OriginalGroupInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalMessageNameIdentification
 	 * OriginalMessage2.mmOriginalMessageNameIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation29#mmOriginalMessageNameIdentification
+	 * OriginalGroupInformation29.mmOriginalMessageNameIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -193,7 +201,7 @@ public class OriginalGroupInformation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers, eg, pacs.003.001.01 or MT103.";
-			nextVersions_lazy = () -> Arrays.asList(OriginalMessage2.mmOriginalMessageNameIdentification);
+			nextVersions_lazy = () -> Arrays.asList(OriginalMessage2.mmOriginalMessageNameIdentification, OriginalGroupInformation29.mmOriginalMessageNameIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -237,6 +245,9 @@ public class OriginalGroupInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OriginalMessage2#mmOriginalCreationDateTime
 	 * OriginalMessage2.mmOriginalCreationDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupInformation29#mmOriginalCreationDateTime
+	 * OriginalGroupInformation29.mmOriginalCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -250,7 +261,7 @@ public class OriginalGroupInformation3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Original date and time at which the message was created.";
-			nextVersions_lazy = () -> Arrays.asList(OriginalMessage2.mmOriginalCreationDateTime);
+			nextVersions_lazy = () -> Arrays.asList(OriginalMessage2.mmOriginalCreationDateTime, OriginalGroupInformation29.mmOriginalCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -267,7 +278,7 @@ public class OriginalGroupInformation3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupInformation3";
 				definition = "Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.";
-				nextVersions_lazy = () -> Arrays.asList(OriginalMessage2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(OriginalMessage2.mmObject(), OriginalGroupInformation29.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

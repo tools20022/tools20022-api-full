@@ -323,7 +323,7 @@ public class NetworkAccess {
 	 * name} = "AccessCode"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Password authenticating the user"</li>
+	 * definition} = "Password authenticating the user."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmAccessCode = new MMBusinessAttribute() {
@@ -333,7 +333,7 @@ public class NetworkAccess {
 			elementContext_lazy = () -> com.tools20022.repository.entity.NetworkAccess.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AccessCode";
-			definition = "Password authenticating the user";
+			definition = "Password authenticating the user.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

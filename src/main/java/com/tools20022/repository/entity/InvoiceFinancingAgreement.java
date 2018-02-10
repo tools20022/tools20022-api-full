@@ -491,7 +491,7 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the amount financed which is derived from the applied percentage and the invoice amount.."
+	 * "Specifies the amount financed which is derived from the applied percentage and the invoice amount."
 	 * </li>
 	 * </ul>
 	 */
@@ -502,7 +502,7 @@ public class InvoiceFinancingAgreement extends Agreement {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancedAmount";
-			definition = "Specifies the amount financed which is derived from the applied percentage and the invoice amount..";
+			definition = "Specifies the amount financed which is derived from the applied percentage and the invoice amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();
@@ -815,7 +815,7 @@ public class InvoiceFinancingAgreement extends Agreement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to the crediting of the amount financed, such as dates, amount, charges..."
+	 * "Information related to the crediting of the amount financed, such as dates, amount, charges."
 	 * </li>
 	 * </ul>
 	 */
@@ -825,7 +825,7 @@ public class InvoiceFinancingAgreement extends Agreement {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvoiceFinancingAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ResultingCashEntry";
-			definition = "Information related to the crediting of the amount financed, such as dates, amount, charges...";
+			definition = "Information related to the crediting of the amount financed, such as dates, amount, charges.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashEntry.mmRelatedInvoiceFinancingTransaction;

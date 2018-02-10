@@ -420,7 +420,7 @@ public class TransparencyDataReport15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Aggregated quantitative data on the non-equity instrument being reported.  Details aggregated against the specific range that is defined. Transactions that have been cancelled should be excluded from the reported figure."
+	 * "Aggregated quantitative data on the non-equity instrument being reported. Details aggregated against the specific range that is defined. Transactions that have been cancelled should be excluded from the reported figure."
 	 * </li>
 	 * </ul>
 	 */
@@ -431,7 +431,7 @@ public class TransparencyDataReport15 {
 			xmlTag = "AggtdQttvData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatedQuantitativeData";
-			definition = "Aggregated quantitative data on the non-equity instrument being reported.  Details aggregated against the specific range that is defined. Transactions that have been cancelled should be excluded from the reported figure.";
+			definition = "Aggregated quantitative data on the non-equity instrument being reported. Details aggregated against the specific range that is defined. Transactions that have been cancelled should be excluded from the reported figure.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransactionsBin2.mmObject();

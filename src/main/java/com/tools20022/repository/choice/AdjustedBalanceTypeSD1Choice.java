@@ -171,7 +171,7 @@ public class AdjustedBalanceTypeSD1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. "
+	 * "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -191,7 +191,7 @@ public class AdjustedBalanceTypeSD1Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "REPO"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repo";
-			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time. ";
+			definition = "Repurchase agreement (REPO) between a seller and a buyer whereby the seller agrees to repurchase the securities at an agreed upon price, and usually at a stated time.";
 			nextVersions_lazy = () -> Arrays.asList(AdjustedBalanceTypeSD3Choice.mmRepo);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -229,7 +229,7 @@ public class AdjustedBalanceTypeSD1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Securities undelivered (FAIL) transaction position.  FAIL occurs due to the failure of selling clients to deliver the securities to their brokers so the latter can deliver them to the buying brokers.  "
+	 * "Securities undelivered (FAIL) transaction position. FAIL occurs due to the failure of selling clients to deliver the securities to their brokers so the latter can deliver them to the buying brokers.  ."
 	 * </li>
 	 * </ul>
 	 */
@@ -241,7 +241,7 @@ public class AdjustedBalanceTypeSD1Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Fail"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Fail";
-			definition = "Securities undelivered (FAIL) transaction position.  FAIL occurs due to the failure of selling clients to deliver the securities to their brokers so the latter can deliver them to the buying brokers.  ";
+			definition = "Securities undelivered (FAIL) transaction position. FAIL occurs due to the failure of selling clients to deliver the securities to their brokers so the latter can deliver them to the buying brokers.  .";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SignedQuantityFormat4.mmObject();

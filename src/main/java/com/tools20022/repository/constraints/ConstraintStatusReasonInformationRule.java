@@ -203,7 +203,7 @@ public class ConstraintStatusReasonInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as:\nIf GroupStatus is present and different from RJCT and PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed."
+	 * "ISO20022 Rule: \nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as: \nIf GroupStatus is present and different from RJCT and PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -212,7 +212,7 @@ public class ConstraintStatusReasonInformationRule {
 			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
-			definition = "ISO20022 Rule:\nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as:\nIf GroupStatus is present and different from RJCT and PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed.";
+			definition = "ISO20022 Rule: \nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as: \nIf GroupStatus is present and different from RJCT and PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed.";
 			owner_lazy = () -> OriginalGroupInformation15.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/StatusReasonInformation[*]/AdditionalStatusReasonInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -238,7 +238,7 @@ public class ConstraintStatusReasonInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as:\nIf GroupStatus is present and different from RJCT or PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed."
+	 * "ISO20022 Rule: \nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as: \nIf GroupStatus is present and different from RJCT or PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -247,7 +247,7 @@ public class ConstraintStatusReasonInformationRule {
 			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
-			definition = "ISO20022 Rule:\nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as:\nIf GroupStatus is present and different from RJCT or PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed.";
+			definition = "ISO20022 Rule: \nStatusReasonInformation/AdditionalStatusReasonInformation may only be present when GroupStatus is present and is equal to RJCT or PNDG.\n\nImplemented as: \nIf GroupStatus is present and different from RJCT or PNDG, then OriginalGroupInformationAndStatus/StatusReasonInformation/AdditionalStatusReasonInformation is not allowed.";
 			owner_lazy = () -> OriginalGroupInformation19.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/StatusReasonInformation[*]/AdditionalStatusReasonInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -275,6 +275,14 @@ public class ConstraintStatusReasonInformationRule {
 	 * definition} =
 	 * "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule#forOriginalGroupHeader13
+	 * ConstraintStatusReasonInformationRule.forOriginalGroupHeader13}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -288,6 +296,7 @@ public class ConstraintStatusReasonInformationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformationRule";
 			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupHeader13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupHeader1;
 			owner_lazy = () -> OriginalGroupHeader7.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -331,6 +340,47 @@ public class ConstraintStatusReasonInformationRule {
 			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupInformation25;
 			owner_lazy = () -> OriginalGroupInformation28.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13
+	 * OriginalGroupHeader13}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;OR&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/GroupStatus&lt;/leftOperand&gt;&lt;rightOperand&gt;Pending&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/GroupStatus&lt;/leftOperand&gt;&lt;rightOperand&gt;Rejected&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/StatusReasonInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/StatusReasonInformation[*]/AdditionalInformation[*]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/GroupStatus&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatusReasonInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule#forOriginalGroupHeader7
+	 * ConstraintStatusReasonInformationRule.forOriginalGroupHeader7}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OriginalGroupHeader13> forOriginalGroupHeader13 = new MMConstraint<OriginalGroupHeader13>() {
+		{
+			validator = ConstraintStatusReasonInformationRule::checkOriginalGroupHeader13;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "StatusReasonInformationRule";
+			definition = "If GroupStatus is present and is different from RJCT or PDNG then StatusReasonInformation/AdditionalInformation must be absent.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusReasonInformationRule.forOriginalGroupHeader7;
+			owner_lazy = () -> OriginalGroupHeader13.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Pending</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/GroupStatus</leftOperand><rightOperand>Rejected</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/StatusReasonInformation[*]/AdditionalInformation[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/GroupStatus</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
@@ -406,6 +456,14 @@ public class ConstraintStatusReasonInformationRule {
 	 * StatusReasonInformation/AdditionalInformation must be absent.
 	 */
 	public static void checkOriginalGroupInformation28(OriginalGroupInformation28 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If GroupStatus is present and is different from RJCT or PDNG then
+	 * StatusReasonInformation/AdditionalInformation must be absent.
+	 */
+	public static void checkOriginalGroupHeader13(OriginalGroupHeader13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

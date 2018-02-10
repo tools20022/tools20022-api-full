@@ -32,7 +32,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
- * Established constraints under which a market operates
+ * Established constraints under which a market operates.
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -126,7 +126,7 @@ import java.util.Optional;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TradingSession"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Established constraints under which a market operates"</li>
+ * definition} = "Established constraints under which a market operates."</li>
  * </ul>
  */
 public class TradingSession {
@@ -286,7 +286,7 @@ public class TradingSession {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Market for which trading session information is specified.."</li>
+	 * "Market for which trading session information is specified."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmMarket = new MMBusinessAssociationEnd() {
@@ -296,7 +296,7 @@ public class TradingSession {
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradingSession.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Market";
-			definition = "Market for which trading session information is specified..";
+			definition = "Market for which trading session information is specified.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmTradingSession;
@@ -615,7 +615,7 @@ public class TradingSession {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingSession";
-				definition = "Established constraints under which a market operates";
+				definition = "Established constraints under which a market operates.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TradingMarket.mmTradingSession, com.tools20022.repository.entity.DateTimePeriod.mmTradingSession,
 						com.tools20022.repository.entity.SecuritiesOrder.mmSecuritiesOrderTradingSession, com.tools20022.repository.entity.ListTrading.mmListTradingSession,
 						com.tools20022.repository.entity.SecuritiesQuoteVariable.mmQuoteTradingSession);

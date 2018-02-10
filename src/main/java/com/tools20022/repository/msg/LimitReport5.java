@@ -64,6 +64,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Reports either on the risk management limit or on a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitReport6 LimitReport6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.LimitReport4
  * LimitReport4}</li>
@@ -105,6 +111,14 @@ public class LimitReport5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the limit on which information is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitReport6#mmLimitIdentification
+	 * LimitReport6.mmLimitIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -121,6 +135,7 @@ public class LimitReport5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitIdentification";
 			definition = "Identification of the limit on which information is requested.";
+			nextVersions_lazy = () -> Arrays.asList(LimitReport6.mmLimitIdentification);
 			previousVersion_lazy = () -> LimitReport4.mmLimitIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -155,6 +170,14 @@ public class LimitReport5 {
 	 * definition} =
 	 * "Requested information on the limit or business error report when information has not been found."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitReport6#mmLimitOrError
+	 * LimitReport6.mmLimitOrError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -170,6 +193,7 @@ public class LimitReport5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitOrError";
 			definition = "Requested information on the limit or business error report when information has not been found.";
+			nextVersions_lazy = () -> Arrays.asList(LimitReport6.mmLimitOrError);
 			previousVersion_lazy = () -> LimitReport4.mmLimitOrError;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -187,6 +211,7 @@ public class LimitReport5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitReport5";
 				definition = "Reports either on the risk management limit or on a business error.";
+				nextVersions_lazy = () -> Arrays.asList(LimitReport6.mmObject());
 				previousVersion_lazy = () -> LimitReport4.mmObject();
 			}
 		});

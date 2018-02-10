@@ -130,6 +130,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmAdditionalInformation
  * CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmAdditionalInformation
+ * CorporateActionInstructionStatusAdviceV09.mmAdditionalInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV08#mmAdditionalInformation
+ * CorporateActionInstructionCancellationRequestStatusAdviceV08.
+ * mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -267,7 +274,8 @@ public class CorporateActionNarrative10 {
 						CorporateActionInstructionCancellationRequestStatusAdviceV05.mmAdditionalInformation, CorporateActionInstructionStatusAdviceV06.mmAdditionalInformation,
 						CorporateActionInstructionCancellationRequestStatusAdviceV06.mmAdditionalInformation, CorporateActionEventProcessingStatusAdviceV05.mmAdditionalInformation,
 						CorporateActionInstructionStatusAdviceV07.mmAdditionalInformation, CorporateActionEventProcessingStatusAdviceV06.mmAdditionalInformation,
-						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmAdditionalInformation, CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation);
+						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmAdditionalInformation, CorporateActionInstructionStatusAdviceV08.mmAdditionalInformation,
+						CorporateActionInstructionStatusAdviceV09.mmAdditionalInformation, CorporateActionInstructionCancellationRequestStatusAdviceV08.mmAdditionalInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

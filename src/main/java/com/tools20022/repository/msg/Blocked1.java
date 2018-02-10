@@ -223,7 +223,7 @@ public class Blocked1 {
 	 * name} = "Reason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the reason the account is blocked. "</li>
+	 * definition} = "Specifies the reason the account is blocked."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -241,7 +241,7 @@ public class Blocked1 {
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
-			definition = "Specifies the reason the account is blocked. ";
+			definition = "Specifies the reason the account is blocked.";
 			nextVersions_lazy = () -> Arrays.asList(Blocked2.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;

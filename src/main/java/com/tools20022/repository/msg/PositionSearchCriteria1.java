@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PositionSearchCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the securities account position query criteria."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PositionSearchCriteria2
+ * PositionSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,6 +123,14 @@ public class PositionSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria2#mmAccountOwner
+	 * PositionSearchCriteria2.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
@@ -126,6 +141,7 @@ public class PositionSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(PositionSearchCriteria2.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -161,6 +177,14 @@ public class PositionSearchCriteria1 {
 	 * definition} =
 	 * "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria2#mmAccountServicer
+	 * PositionSearchCriteria2.mmAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
@@ -171,6 +195,7 @@ public class PositionSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
+			nextVersions_lazy = () -> Arrays.asList(PositionSearchCriteria2.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -203,6 +228,14 @@ public class PositionSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a securities entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria2#mmSafekeepingAccount
+	 * PositionSearchCriteria2.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
@@ -213,6 +246,7 @@ public class PositionSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(PositionSearchCriteria2.mmSafekeepingAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -248,6 +282,14 @@ public class PositionSearchCriteria1 {
 	 * definition} =
 	 * "Financial instrument representing a sum of rights of the investor vis-à-vis the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria2#mmFinancialInstrument
+	 * PositionSearchCriteria2.mmFinancialInstrument}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrument = new MMMessageAssociationEnd() {
@@ -258,6 +300,7 @@ public class PositionSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrument";
 			definition = "Financial instrument representing a sum of rights of the investor vis-à-vis the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(PositionSearchCriteria2.mmFinancialInstrument);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -291,6 +334,14 @@ public class PositionSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country where the security is issued."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria2#mmCountryOfIssue
+	 * PositionSearchCriteria2.mmCountryOfIssue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
@@ -301,6 +352,7 @@ public class PositionSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Country where the security is issued.";
+			nextVersions_lazy = () -> Arrays.asList(PositionSearchCriteria2.mmCountryOfIssue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -333,7 +385,15 @@ public class PositionSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Defines specific restriction characteristics for a securities position. "
+	 * "Defines specific restriction characteristics for a securities position."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria2#mmSubBalanceType
+	 * PositionSearchCriteria2.mmSubBalanceType}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -344,7 +404,8 @@ public class PositionSearchCriteria1 {
 			xmlTag = "SubBalTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubBalanceType";
-			definition = "Defines specific restriction characteristics for a securities position. ";
+			definition = "Defines specific restriction characteristics for a securities position.";
+			nextVersions_lazy = () -> Arrays.asList(PositionSearchCriteria2.mmSubBalanceType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -378,7 +439,15 @@ public class PositionSearchCriteria1 {
 	 * name} = "ReturnZeroPosition"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Option to provide output zero position in the results. "</li>
+	 * definition} = "Option to provide output zero position in the results."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PositionSearchCriteria2#mmReturnZeroPosition
+	 * PositionSearchCriteria2.mmReturnZeroPosition}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReturnZeroPosition = new MMMessageAttribute() {
@@ -388,7 +457,8 @@ public class PositionSearchCriteria1 {
 			xmlTag = "RtrZeroPos";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnZeroPosition";
-			definition = "Option to provide output zero position in the results. ";
+			definition = "Option to provide output zero position in the results.";
+			nextVersions_lazy = () -> Arrays.asList(PositionSearchCriteria2.mmReturnZeroPosition);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -406,6 +476,7 @@ public class PositionSearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PositionSearchCriteria1";
 				definition = "Defines the securities account position query criteria.";
+				nextVersions_lazy = () -> Arrays.asList(PositionSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

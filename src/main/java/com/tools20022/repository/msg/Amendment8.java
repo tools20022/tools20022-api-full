@@ -243,7 +243,7 @@ public class Amendment8 {
 	 * name} = "Issuer"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party that issues the undertaking. "</li>
+	 * definition} = "Party that issues the undertaking."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIssuer = new MMMessageAssociationEnd() {
@@ -254,7 +254,7 @@ public class Amendment8 {
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
-			definition = "Party that issues the undertaking. ";
+			definition = "Party that issues the undertaking.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

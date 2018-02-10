@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "InterestRateContractTerm2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Describes how interest rates are reported."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InterestRateContractTerm3
+ * InterestRateContractTerm3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm1
@@ -110,6 +117,14 @@ public class InterestRateContractTerm2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unit for the rate basis."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm3#mmUnit
+	 * InterestRateContractTerm3.mmUnit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -126,6 +141,7 @@ public class InterestRateContractTerm2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Unit for the rate basis.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRateContractTerm3.mmUnit);
 			previousVersion_lazy = () -> InterestRateContractTerm1.mmUnit;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -164,6 +180,14 @@ public class InterestRateContractTerm2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value of the contract term in number of units."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InterestRateContractTerm3#mmValue
+	 * InterestRateContractTerm3.mmValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +204,7 @@ public class InterestRateContractTerm2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the contract term in number of units.";
+			nextVersions_lazy = () -> Arrays.asList(InterestRateContractTerm3.mmValue);
 			previousVersion_lazy = () -> InterestRateContractTerm1.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -196,6 +221,7 @@ public class InterestRateContractTerm2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestRateContractTerm2";
 				definition = "Describes how interest rates are reported.";
+				nextVersions_lazy = () -> Arrays.asList(InterestRateContractTerm3.mmObject());
 				previousVersion_lazy = () -> InterestRateContractTerm1.mmObject();
 			}
 		});

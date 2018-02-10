@@ -76,7 +76,7 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementSubTotalCalculatedTax1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies  the subtotal calculated tax applicable for this settlement."</li>
+ * "Specifies the subtotal calculated tax applicable for this settlement."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -388,7 +388,7 @@ public class SettlementSubTotalCalculatedTax1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementSubTotalCalculatedTax1";
-				definition = "Specifies  the subtotal calculated tax applicable for this settlement.";
+				definition = "Specifies the subtotal calculated tax applicable for this settlement.";
 			}
 		});
 		return mmObject_lazy.get();

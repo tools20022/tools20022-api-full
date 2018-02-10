@@ -82,6 +82,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides information about the corporate action security option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption66
+ * SecuritiesOption66}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SecuritiesOption27
@@ -128,6 +135,14 @@ public class SecuritiesOption53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmFinancialInstrumentIdentification
+	 * SecuritiesOption66.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -145,6 +160,7 @@ public class SecuritiesOption53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption66.mmFinancialInstrumentIdentification);
 			previousVersion_lazy = () -> SecuritiesOption27.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -188,6 +204,14 @@ public class SecuritiesOption53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmCreditDebitIndicator
+	 * SecuritiesOption66.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -205,6 +229,7 @@ public class SecuritiesOption53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption66.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> SecuritiesOption27.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -247,6 +272,14 @@ public class SecuritiesOption53 {
 	 * definition} =
 	 * "Quantity of securities that have been posted (credit or debit) to the safekeeping account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmPostingQuantity
+	 * SecuritiesOption66.mmPostingQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -264,6 +297,7 @@ public class SecuritiesOption53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Quantity of securities that have been posted (credit or debit) to the safekeeping account.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption66.mmPostingQuantity);
 			previousVersion_lazy = () -> SecuritiesOption27.mmPostingQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -306,6 +340,14 @@ public class SecuritiesOption53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date of the posting (credit or debit) to the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmPostingDate
+	 * SecuritiesOption66.mmPostingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -323,6 +365,7 @@ public class SecuritiesOption53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date of the posting (credit or debit) to the account.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption66.mmPostingDate);
 			previousVersion_lazy = () -> SecuritiesOption27.mmPostingDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -364,6 +407,14 @@ public class SecuritiesOption53 {
 	 * definition} =
 	 * "Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmOriginalPostingDate
+	 * SecuritiesOption66.mmOriginalPostingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -380,6 +431,7 @@ public class SecuritiesOption53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account that was initially communicated in the confirmation.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption66.mmOriginalPostingDate);
 			previousVersion_lazy = () -> SecuritiesOption27.mmOriginalPostingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -398,6 +450,7 @@ public class SecuritiesOption53 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOption53";
 				definition = "Provides information about the corporate action security option.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesOption66.mmObject());
 				previousVersion_lazy = () -> SecuritiesOption27.mmObject();
 			}
 		});

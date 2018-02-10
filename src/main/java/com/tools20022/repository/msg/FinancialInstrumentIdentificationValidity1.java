@@ -71,6 +71,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Specifies the date from which the financial instrument identification is valid."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity2
+ * FinancialInstrumentIdentificationValidity2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +118,15 @@ public class FinancialInstrumentIdentificationValidity1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Way(s) of identifying the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity2#mmFinancialInstrumentIdentification
+	 * FinancialInstrumentIdentificationValidity2.
+	 * mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
@@ -121,6 +138,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Way(s) of identifying the security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentIdentificationValidity2.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -161,6 +179,14 @@ public class FinancialInstrumentIdentificationValidity1 {
 	 * definition} =
 	 * "Defines the date from which the instrument code is valid. This date can be before the actual issue date of an instrument for 'when-issued' securities, but may not be a date in the future for a new security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity2#mmISINValidFrom
+	 * FinancialInstrumentIdentificationValidity2.mmISINValidFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmISINValidFrom = new MMMessageAttribute() {
@@ -172,6 +198,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINValidFrom";
 			definition = "Defines the date from which the instrument code is valid. This date can be before the actual issue date of an instrument for 'when-issued' securities, but may not be a date in the future for a new security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentIdentificationValidity2.mmISINValidFrom);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -188,6 +215,7 @@ public class FinancialInstrumentIdentificationValidity1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentIdentificationValidity1";
 				definition = "Specifies the date from which the financial instrument identification is valid.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentIdentificationValidity2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -107,6 +107,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action confirmation securities movement details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6
+ * CorporateActionConfirmationSecuritiesMovementDetailsSD6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD4
@@ -146,6 +154,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmPlaceAndName
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -161,6 +177,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmPlaceAndName);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -198,6 +215,15 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the value is a debit or a credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmCreditDebitIndicator
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.
+	 * mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -215,6 +241,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -249,7 +276,15 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the type of payout associated with the event (for example:  principal, long term capital gain)."
+	 * "Specifies the type of payout associated with the event (for example: principal, long term capital gain)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmPayoutType
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmPayoutType}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -265,7 +300,8 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			xmlTag = "PyoutTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
-			definition = "Specifies the type of payout associated with the event (for example:  principal, long term capital gain).";
+			definition = "Specifies the type of payout associated with the event (for example: principal, long term capital gain).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmPayoutType);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPayoutType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -304,6 +340,15 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Resulting quantity of securities concerned in this transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmTransactionQuantity
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.
+	 * mmTransactionQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -321,6 +366,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionQuantity";
 			definition = "Resulting quantity of securities concerned in this transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmTransactionQuantity);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmTransactionQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -358,6 +404,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmReasonCode
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmReasonCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,6 +428,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Transaction reason.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmReasonCode);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmReasonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -408,6 +463,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction sub reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmSubReasonCode
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmSubReasonCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -423,6 +486,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubReasonCode";
 			definition = "Transaction sub reason.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmSubReasonCode);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmSubReasonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -461,6 +525,15 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * definition} =
 	 * "Transaction contra participant identification when shares are distributed / delivered to / from another participant."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmContraParticipantNumber
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.
+	 * mmContraParticipantNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -478,6 +551,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmContraParticipantNumber);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmContraParticipantNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -521,6 +595,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * definition} =
 	 * "Date on which a financial instrument becomes due and assets are to be repaid."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmMaturityDate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmMaturityDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -538,6 +620,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Date on which a financial instrument becomes due and assets are to be repaid.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmMaturityDate);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmMaturityDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -576,6 +659,14 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/Time on which the posting /draft of the securities took place."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmPostingDate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmPostingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -592,6 +683,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date/Time on which the posting /draft of the securities took place.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmPostingDate);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmPostingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -628,6 +720,15 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * definition} =
 	 * "Set of the DTC legacy sub reason codes representing tax rate. Used with reason codes ‘TJXD’ ‘TJXF’ ‘TJXI’ ‘TJXL’ ‘TJXR’ ‘TJXT’ ‘TJXU’ to identify the correct tax rate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmTaxAdjustmentRate
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.
+	 * mmTaxAdjustmentRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -644,6 +745,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxAdjustmentRate";
 			definition = "Set of the DTC legacy sub reason codes representing tax rate. Used with reason codes ‘TJXD’ ‘TJXF’ ‘TJXI’ ‘TJXL’ ‘TJXR’ ‘TJXT’ ‘TJXU’ to identify the correct tax rate.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmTaxAdjustmentRate);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmTaxAdjustmentRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -678,7 +780,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  "
+	 * "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmRDPReferenceNumber
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.
+	 * mmRDPReferenceNumber}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -695,7 +806,8 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			xmlTag = "RDPRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
-			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  ";
+			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmRDPReferenceNumber);
 			previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmRDPReferenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -733,7 +845,16 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down."
+	 * "Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionConfirmationSecuritiesMovementDetailsSD6#mmRoundingFactor
+	 * CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmRoundingFactor}
+	 * </li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -745,7 +866,8 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Rounding Factor"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundingFactor";
-			definition = "Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and  less than 6 will be rounded down.";
+			definition = "Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmRoundingFactor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -766,6 +888,7 @@ public class CorporateActionConfirmationSecuritiesMovementDetailsSD5 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionConfirmationSecuritiesMovementDetailsSD5";
 				definition = "Provides additional information regarding corporate action confirmation securities movement details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionConfirmationSecuritiesMovementDetailsSD6.mmObject());
 				previousVersion_lazy = () -> CorporateActionConfirmationSecuritiesMovementDetailsSD4.mmObject();
 			}
 		});

@@ -24,8 +24,7 @@ import com.tools20022.repository.codeset.TerminationTypeCode;
 import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.entity.Agreement;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.Agreement1;
-import com.tools20022.repository.msg.Agreement3;
+import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -283,6 +282,18 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 * Agreement3.mmDeliveryType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Agreement1#mmDeliveryType
 	 * Agreement1.mmDeliveryType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmDeliveryType
+	 * TradeTransaction15.mmDeliveryType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmDeliveryType
+	 * TradeTransaction17.mmDeliveryType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmDeliveryType
+	 * TradeTransaction14.mmDeliveryType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmDeliveryType
+	 * TradeTransaction16.mmDeliveryType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -303,7 +314,8 @@ public class SecuritiesFinancingAgreement extends Agreement {
 	 */
 	public static final MMBusinessAttribute mmDeliveryType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Agreement3.mmDeliveryType, Agreement1.mmDeliveryType);
+			derivation_lazy = () -> Arrays.asList(Agreement3.mmDeliveryType, Agreement1.mmDeliveryType, TradeTransaction15.mmDeliveryType, TradeTransaction17.mmDeliveryType, TradeTransaction14.mmDeliveryType,
+					TradeTransaction16.mmDeliveryType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancingAgreement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

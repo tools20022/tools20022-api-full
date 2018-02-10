@@ -162,7 +162,7 @@ public class PlaceOfPresentation1 {
 	 * name} = "Country"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Country where a presentation is to be made. "</li>
+	 * definition} = "Country where a presentation is to be made."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCountry = new MMMessageAttribute() {
@@ -173,7 +173,7 @@ public class PlaceOfPresentation1 {
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
-			definition = "Country where a presentation is to be made. ";
+			definition = "Country where a presentation is to be made.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();

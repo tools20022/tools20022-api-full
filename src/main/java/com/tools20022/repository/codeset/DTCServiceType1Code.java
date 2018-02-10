@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "DTCServiceType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Indicates the type of DTC (The Depository Trust Company) service  for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc."
+ * "Indicates the type of DTC (The Depository Trust Company) service for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc."
  * </li>
  * </ul>
  */
@@ -161,7 +161,7 @@ public class DTCServiceType1Code extends MMCode {
 				example = Arrays.asList("CILR");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCServiceType1Code";
-				definition = "Indicates the type of DTC (The Depository Trust Company) service  for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc.";
+				definition = "Indicates the type of DTC (The Depository Trust Company) service for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc.";
 				trace_lazy = () -> DTCServiceType.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCServiceType1Code.CashInLieuRoundUp, com.tools20022.repository.codeset.DTCServiceType1Code.USTaxWithholding,
 						com.tools20022.repository.codeset.DTCServiceType1Code.ForeignTaxRelief);

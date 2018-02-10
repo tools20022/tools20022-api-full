@@ -312,7 +312,7 @@ public class AmountRatio {
 	 * name} = "Amount2"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Denominator of the quotient of amounts"</li>
+	 * definition} = "Denominator of the quotient of amounts."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmAmount2 = new MMBusinessAttribute() {
@@ -322,7 +322,7 @@ public class AmountRatio {
 			elementContext_lazy = () -> com.tools20022.repository.entity.AmountRatio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Amount2";
-			definition = "Denominator of the quotient of amounts";
+			definition = "Denominator of the quotient of amounts.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

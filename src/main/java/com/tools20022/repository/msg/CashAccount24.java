@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.acmt.AccountOpeningAmendmentRequestV02;
 import com.tools20022.repository.area.acmt.AccountOpeningRequestV02;
+import com.tools20022.repository.area.camt.CancelTransactionV07;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.choice.CashAccountType2Choice;
 import com.tools20022.repository.codeset.ActiveOrHistoricCurrencyCode;
@@ -72,6 +73,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.acmt.AccountOpeningRequestV02#mmReferenceAccount
  * AccountOpeningRequestV02.mmReferenceAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.CancelTransactionV07#mmCashAccount
+ * CancelTransactionV07.mmCashAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -297,7 +301,7 @@ public class CashAccount24 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashAccount24.mmIdentification, com.tools20022.repository.msg.CashAccount24.mmType, com.tools20022.repository.msg.CashAccount24.mmCurrency,
 						com.tools20022.repository.msg.CashAccount24.mmName);
-				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningAmendmentRequestV02.mmReferenceAccount, AccountOpeningRequestV02.mmReferenceAccount);
+				messageBuildingBlock_lazy = () -> Arrays.asList(AccountOpeningAmendmentRequestV02.mmReferenceAccount, AccountOpeningRequestV02.mmReferenceAccount, CancelTransactionV07.mmCashAccount);
 				trace_lazy = () -> CashAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

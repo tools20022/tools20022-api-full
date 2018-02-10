@@ -121,7 +121,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CollateralManagement"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -440,7 +440,7 @@ public class CollateralManagement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Calculation of the  variation margin and independent amount needed to cover the risk exposure of one party versus another."
+	 * "Calculation of the variation margin and independent amount needed to cover the risk exposure of one party versus another."
 	 * </li>
 	 * </ul>
 	 */
@@ -450,7 +450,7 @@ public class CollateralManagement {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginCall";
-			definition = "Calculation of the  variation margin and independent amount needed to cover the risk exposure of one party versus another.";
+			definition = "Calculation of the variation margin and independent amount needed to cover the risk exposure of one party versus another.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.MarginCall.mmRelatedManagementProcess;
 			aggregation = MMAggregation.NONE;
@@ -611,7 +611,7 @@ public class CollateralManagement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Collateral"</li>
 	 * <li>
@@ -626,7 +626,7 @@ public class CollateralManagement {
 			derivation_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmCollateral, SecuredMarketTransaction2.mmCollateral, SecuredMarketTransaction3.mmCollateral, SecuredMarketTransaction4.mmCollateral);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CollateralManagement.mmObject();
-			registrationStatus = MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Collateral";
 			definition = "Description of the collateral which is related to the different management processes.";
 			minOccurs = 0;
@@ -739,7 +739,7 @@ public class CollateralManagement {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
 			{
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralManagement";
 				definition = "Set of operations relative to the management of collateral, variation margins, default fund participation and independent amount.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Adjustment.mmCollateralManagement, com.tools20022.repository.entity.ClearingSystem.mmCollateralManagement,

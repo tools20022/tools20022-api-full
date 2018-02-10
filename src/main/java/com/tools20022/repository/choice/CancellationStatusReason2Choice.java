@@ -68,6 +68,17 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the reason for the transaction cancellation status."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CancellationStatusReason3Choice
+ * CancellationStatusReason3Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationStatusReason1Choice
+ * ModificationStatusReason1Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +119,17 @@ public class CancellationStatusReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason for the cancellation status, in a coded form."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationStatusReason3Choice#mmCode
+	 * CancellationStatusReason3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationStatusReason1Choice#mmCode
+	 * ModificationStatusReason1Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -119,6 +141,7 @@ public class CancellationStatusReason2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Reason for the cancellation status, in a coded form.";
+			nextVersions_lazy = () -> Arrays.asList(CancellationStatusReason3Choice.mmCode, ModificationStatusReason1Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentCancellationRejection2Code.mmObject();
@@ -156,6 +179,17 @@ public class CancellationStatusReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason for the status, in a proprietary form."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationStatusReason3Choice#mmProprietary
+	 * CancellationStatusReason3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationStatusReason1Choice#mmProprietary
+	 * ModificationStatusReason1Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -167,6 +201,7 @@ public class CancellationStatusReason2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Reason for the status, in a proprietary form.";
+			nextVersions_lazy = () -> Arrays.asList(CancellationStatusReason3Choice.mmProprietary, ModificationStatusReason1Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -182,6 +217,7 @@ public class CancellationStatusReason2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationStatusReason2Choice";
 				definition = "Specifies the reason for the transaction cancellation status.";
+				nextVersions_lazy = () -> Arrays.asList(CancellationStatusReason3Choice.mmObject(), ModificationStatusReason1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

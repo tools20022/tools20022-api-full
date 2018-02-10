@@ -195,6 +195,15 @@ public class FixingCondition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OpeningConditions1#mmValuationDate
 	 * OpeningConditions1.mmValuationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate62#mmForeignExchangeRateFixingDate
+	 * CorporateActionDate62.mmForeignExchangeRateFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmForeignExchangeRateFixingDate
+	 * CorporateActionDate65.mmForeignExchangeRateFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate72#mmForeignExchangeRateFixingDate
+	 * CorporateActionDate72.mmForeignExchangeRateFixingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -218,7 +227,8 @@ public class FixingCondition {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate7.mmForeignExchangeRateFixingDate, CorporateActionDate24.mmForeignExchangeRateFixingDate, CorporateActionDate9.mmForeignExchangeRateFixingDate,
 					CorporateActionDate12.mmForeignExchangeRateFixingDate, CorporateActionDate17.mmForeignExchangeRateFixingDate, CorporateActionDate20.mmForeignExchangeRateFixingDate, CorporateActionDate23.mmForeignExchangeRateFixingDate,
 					CorporateActionDate26.mmForeignExchangeRateFixingDate, CorporateActionDate5.mmForeignExchangeRateFixingDate, NonDeliverableForwardValuationConditions1.mmValuationDate,
-					NonDeliverableForwardValuationConditions2.mmValuationDate, CorporateActionDate47.mmForeignExchangeRateFixingDate, CorporateActionDate56.mmForeignExchangeRateFixingDate, OpeningConditions1.mmValuationDate);
+					NonDeliverableForwardValuationConditions2.mmValuationDate, CorporateActionDate47.mmForeignExchangeRateFixingDate, CorporateActionDate56.mmForeignExchangeRateFixingDate, OpeningConditions1.mmValuationDate,
+					CorporateActionDate62.mmForeignExchangeRateFixingDate, CorporateActionDate65.mmForeignExchangeRateFixingDate, CorporateActionDate72.mmForeignExchangeRateFixingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.FixingCondition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

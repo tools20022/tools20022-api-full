@@ -56,7 +56,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionFrequencyType4Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the frequency type of a corporate action event. "</li>
+ * definition} = "Specifies the frequency type of a corporate action event."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -98,7 +98,7 @@ public class CorporateActionFrequencyType4Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFrequencyType4Code";
-				definition = "Specifies the frequency type of a corporate action event. ";
+				definition = "Specifies the frequency type of a corporate action event.";
 				trace_lazy = () -> CorporateActionFrequencyTypeV2Code.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionFrequencyType4Code.SpecialDividendWithReinvestment);
 			}

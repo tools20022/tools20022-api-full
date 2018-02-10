@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionMandatoryVoluntary1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express whether the event is mandatory, mandatory with options or voluntary."
+ * "Choice of formats to express whether the event is mandatory, mandatory with options or voluntary."
  * </li>
  * </ul>
  */
@@ -108,7 +108,7 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to  specify whether the event is mandatory, mandatory with options or voluntary."
+	 * "Standard code to specify whether the event is mandatory, mandatory with options or voluntary."
 	 * </li>
 	 * </ul>
 	 */
@@ -120,7 +120,7 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify whether the event is mandatory, mandatory with options or voluntary.";
+			definition = "Standard code to specify whether the event is mandatory, mandatory with options or voluntary.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionMandatoryVoluntary1Code.mmObject();
@@ -159,7 +159,7 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express whether the event is mandatory, mandatory with options or voluntary."
+	 * "Proprietary code to express whether the event is mandatory, mandatory with options or voluntary."
 	 * </li>
 	 * </ul>
 	 */
@@ -171,7 +171,7 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express whether the event is mandatory, mandatory with options or voluntary.";
+			definition = "Proprietary code to express whether the event is mandatory, mandatory with options or voluntary.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -187,7 +187,7 @@ public class CorporateActionMandatoryVoluntary1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMandatoryVoluntary1FormatChoice";
-				definition = "Choice of formats to  express whether the event is mandatory, mandatory with options or voluntary.";
+				definition = "Choice of formats to express whether the event is mandatory, mandatory with options or voluntary.";
 			}
 		});
 		return mmObject_lazy.get();

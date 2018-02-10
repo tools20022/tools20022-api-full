@@ -100,7 +100,7 @@ import javax.xml.bind.annotation.*;
  * "InformationRequestOpeningV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to request account and other banking and financial information. Requested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts.\r\n\r\nRequests are underpinned by specific legal texts. "
+ * "This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to request account and other banking and financial information. Requested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts.\r\n\r\nRequests are underpinned by specific legal texts."
  * </li>
  * </ul>
  */
@@ -430,7 +430,7 @@ public class InformationRequestOpeningV01 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationRequestOpeningV01";
-				definition = "This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to request account and other banking and financial information. Requested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts.\r\n\r\nRequests are underpinned by specific legal texts. ";
+				definition = "This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to request account and other banking and financial information. Requested information can relate to accounts, their signatories and beneficiaries and co-owners as well as movements plus positions on these accounts.\r\n\r\nRequests are underpinned by specific legal texts.";
 				messageSet_lazy = () -> Arrays.asList(AuthoritiesFinancialInvestigationsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "InfReqOpng";

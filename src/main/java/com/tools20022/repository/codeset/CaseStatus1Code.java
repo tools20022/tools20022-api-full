@@ -51,6 +51,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * CaseStatus1Code.Unknown}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.CaseStatusCode CaseStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -106,6 +108,7 @@ public class CaseStatus1Code extends MMCode {
 			definition = "Case has been closed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CaseStatus1Code.mmObject();
 			codeName = "CLOSE";
+			codeName = CaseStatusCode.Closed.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -136,6 +139,7 @@ public class CaseStatus1Code extends MMCode {
 			definition = "Case has been assigned to another party.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CaseStatus1Code.mmObject();
 			codeName = "ASGN";
+			codeName = CaseStatusCode.Assigned.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,6 +170,7 @@ public class CaseStatus1Code extends MMCode {
 			definition = "Case is currently under investigation.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CaseStatus1Code.mmObject();
 			codeName = "INVE";
+			codeName = CaseStatusCode.UnderInvestigation.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -196,6 +201,7 @@ public class CaseStatus1Code extends MMCode {
 			definition = "Case has never been assigned before.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CaseStatus1Code.mmObject();
 			codeName = "UKNW";
+			codeName = CaseStatusCode.Unknown.getCodeName().orElse(name);
 		}
 	};
 	final static private LinkedHashMap<String, CaseStatus1Code> codesByName = new LinkedHashMap<>();
@@ -211,6 +217,7 @@ public class CaseStatus1Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseStatus1Code";
 				definition = "Specifies the status of an investigation case.\n\nNote: \nThe Cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown.";
+				trace_lazy = () -> CaseStatusCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseStatus1Code.Closed, com.tools20022.repository.codeset.CaseStatus1Code.Assigned, com.tools20022.repository.codeset.CaseStatus1Code.UnderInvestigation,
 						com.tools20022.repository.codeset.CaseStatus1Code.Unknown);
 			}

@@ -227,8 +227,7 @@ public class RejectionReason23 {
 	 * name} = "LinkedMessage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of the invalid or unrecognised reference. "
-	 * </li>
+	 * definition} = "Identification of the invalid or unrecognised reference."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLinkedMessage = new MMMessageAssociationEnd() {
@@ -238,7 +237,7 @@ public class RejectionReason23 {
 			xmlTag = "LkdMsg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedMessage";
-			definition = "Identification of the invalid or unrecognised reference. ";
+			definition = "Identification of the invalid or unrecognised reference.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Standard code to specify
+ * Standard code to specify.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -71,7 +71,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PendingCancellationReason4Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Standard code to specify"</li>
+ * definition} = "Standard code to specify."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -186,7 +186,7 @@ public class PendingCancellationReason4Code extends MMCode {
 				example = Arrays.asList("ADEA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PendingCancellationReason4Code";
-				definition = "Standard code to specify";
+				definition = "Standard code to specify.";
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PendingCancellationReason4Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason4Code.QuantityRejection,
 						com.tools20022.repository.codeset.PendingCancellationReason4Code.MarketDeadlineMissed, com.tools20022.repository.codeset.PendingCancellationReason4Code.Other);

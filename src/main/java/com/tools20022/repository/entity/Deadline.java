@@ -75,6 +75,12 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmBorrowerStockLendingDeadline
  * CorporateActionDate55.mmBorrowerStockLendingDeadline}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmBorrowerStockLendingDeadline
+ * CorporateActionDate64.mmBorrowerStockLendingDeadline}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmBorrowerStockLendingDeadline
+ * CorporateActionDate71.mmBorrowerStockLendingDeadline}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -331,6 +337,24 @@ public class Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate55#mmMarketDeadline
 	 * CorporateActionDate55.mmMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventDeadlines1#mmMarketDeadline
+	 * CorporateActionEventDeadlines1.mmMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate60#mmMarketDeadline
+	 * CorporateActionDate60.mmMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmMarketDeadline
+	 * CorporateActionDate64.mmMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate68#mmMarketDeadline
+	 * CorporateActionDate68.mmMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate71#mmMarketDeadline
+	 * CorporateActionDate71.mmMarketDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventDeadlines2#mmMarketDeadline
+	 * CorporateActionEventDeadlines2.mmMarketDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -346,7 +370,7 @@ public class Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date by which the action should have been completed.  This deadline is set by the issuer."
+	 * "Date by which the action should have been completed. This deadline is set by the issuer."
 	 * </li>
 	 * </ul>
 	 */
@@ -365,12 +389,13 @@ public class Deadline {
 					EntitlementAssessment3.mmSecuritiesBlockingMarketDeadline, EntitlementAssessment3.mmRegistrationSecuritiesMarketDeadline, EntitlementAssessment3.mmRegistrationParticipationMarketDeadline,
 					VoteParameters4.mmVoteMarketDeadline, VoteParameters4.mmRevocabilityMarketDeadline, VoteParameters4.mmVoteWithPremiumMarketDeadline, MeetingNotice4.mmAttendanceConfirmationMarketDeadline,
 					ProxyAppointmentInformation3.mmMarketDeadline, AdditionalRights2.mmAdditionalRightMarketDeadline, CorporateActionDate46.mmMarketDeadline, CorporateActionDate48.mmMarketDeadline, CorporateActionDate52.mmMarketDeadline,
-					CorporateActionDate55.mmMarketDeadline);
+					CorporateActionDate55.mmMarketDeadline, CorporateActionEventDeadlines1.mmMarketDeadline, CorporateActionDate60.mmMarketDeadline, CorporateActionDate64.mmMarketDeadline, CorporateActionDate68.mmMarketDeadline,
+					CorporateActionDate71.mmMarketDeadline, CorporateActionEventDeadlines2.mmMarketDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MarketDeadline";
-			definition = "Date by which the action should have been completed.  This deadline is set by the issuer.";
+			definition = "Date by which the action should have been completed. This deadline is set by the issuer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -655,7 +680,7 @@ public class Deadline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date by which the action should have been completed. This deadline is set by the issuer. (STP or Electronic mode)"
+	 * "Date by which the action should have been completed. This deadline is set by the issuer. (STP or Electronic mode)."
 	 * </li>
 	 * </ul>
 	 */
@@ -673,7 +698,7 @@ public class Deadline {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Deadline.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "STPDeadline";
-			definition = "Date by which the action should have been completed. This deadline is set by the issuer. (STP or Electronic mode)";
+			definition = "Date by which the action should have been completed. This deadline is set by the issuer. (STP or Electronic mode).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -742,7 +767,8 @@ public class Deadline {
 				name = "Deadline";
 				definition = "Specifies the different deadlines available for the different processes related to corporate action processes.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionEvent.mmDeadline, com.tools20022.repository.entity.Meeting.mmDeadline);
-				derivationElement_lazy = () -> Arrays.asList(CorporateActionDate48.mmBorrowerStockLendingDeadline, CorporateActionDate55.mmBorrowerStockLendingDeadline);
+				derivationElement_lazy = () -> Arrays.asList(CorporateActionDate48.mmBorrowerStockLendingDeadline, CorporateActionDate55.mmBorrowerStockLendingDeadline, CorporateActionDate64.mmBorrowerStockLendingDeadline,
+						CorporateActionDate71.mmBorrowerStockLendingDeadline);
 				subType_lazy = () -> Arrays.asList(SecuritiesBlockingDeadline.mmObject(), SecuritiesRegistrationDeadline.mmObject(), MeetingDeadline.mmObject(), CorporateActionDeadline.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Deadline.mmRelatedCorporateActionEvent, com.tools20022.repository.entity.Deadline.mmMarketDeadline,
 						com.tools20022.repository.entity.Deadline.mmIntermediaryDeadline, com.tools20022.repository.entity.Deadline.mmSTPDeadline, com.tools20022.repository.entity.Deadline.mmRelatedMeeting);

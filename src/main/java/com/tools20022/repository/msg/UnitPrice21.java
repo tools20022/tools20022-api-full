@@ -83,6 +83,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Amount of money for which goods or services are offered, sold, or bought."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.UnitPrice23 UnitPrice23}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.UnitPrice12
  * UnitPrice12}</li>
@@ -125,6 +131,13 @@ public class UnitPrice21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type and information about a price."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.UnitPrice23#mmType
+	 * UnitPrice23.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -141,6 +154,7 @@ public class UnitPrice21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type and information about a price.";
+			nextVersions_lazy = () -> Arrays.asList(UnitPrice23.mmType);
 			previousVersion_lazy = () -> UnitPrice12.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -179,6 +193,13 @@ public class UnitPrice21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value of the price, for example, as a currency and value."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.UnitPrice23#mmValue
+	 * UnitPrice23.mmValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -195,6 +216,7 @@ public class UnitPrice21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Value";
 			definition = "Value of the price, for example, as a currency and value.";
+			nextVersions_lazy = () -> Arrays.asList(UnitPrice23.mmValue);
 			previousVersion_lazy = () -> UnitPrice12.mmValue;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -233,6 +255,13 @@ public class UnitPrice21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of pricing calculation method."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.UnitPrice23#mmPriceMethod
+	 * UnitPrice23.mmPriceMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -249,6 +278,7 @@ public class UnitPrice21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceMethod";
 			definition = "Type of pricing calculation method.";
+			nextVersions_lazy = () -> Arrays.asList(UnitPrice23.mmPriceMethod);
 			previousVersion_lazy = () -> UnitPrice12.mmPriceMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -289,6 +319,14 @@ public class UnitPrice21 {
 	 * definition} =
 	 * "Interest that has accumulated between the most recent payment of interest and the sale of the financial instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnitPrice23#mmAccruedInterestNAV
+	 * UnitPrice23.mmAccruedInterestNAV}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -305,6 +343,7 @@ public class UnitPrice21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestNAV";
 			definition = "Interest that has accumulated between the most recent payment of interest and the sale of the financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(UnitPrice23.mmAccruedInterestNAV);
 			previousVersion_lazy = () -> UnitPrice12.mmAccruedInterestNAV;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -347,6 +386,14 @@ public class UnitPrice21 {
 	 * definition} =
 	 * "Specifies the number of days used for calculating the accrued interest amount."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnitPrice23#mmNumberOfDaysAccrued
+	 * UnitPrice23.mmNumberOfDaysAccrued}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -364,6 +411,7 @@ public class UnitPrice21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Specifies the number of days used for calculating the accrued interest amount.";
+			nextVersions_lazy = () -> Arrays.asList(UnitPrice23.mmNumberOfDaysAccrued);
 			previousVersion_lazy = () -> UnitPrice12.mmNumberOfDaysAccrued;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -404,6 +452,14 @@ public class UnitPrice21 {
 	 * definition} =
 	 * "Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnitPrice23#mmTaxableIncomePerShare
+	 * UnitPrice23.mmTaxableIncomePerShare}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -420,6 +476,7 @@ public class UnitPrice21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableIncomePerShare";
 			definition = "Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.";
+			nextVersions_lazy = () -> Arrays.asList(UnitPrice23.mmTaxableIncomePerShare);
 			previousVersion_lazy = () -> UnitPrice12.mmTaxableIncomePerShare;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -437,6 +494,7 @@ public class UnitPrice21 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitPrice21";
 				definition = "Amount of money for which goods or services are offered, sold, or bought.";
+				nextVersions_lazy = () -> Arrays.asList(UnitPrice23.mmObject());
 				previousVersion_lazy = () -> UnitPrice12.mmObject();
 			}
 		});

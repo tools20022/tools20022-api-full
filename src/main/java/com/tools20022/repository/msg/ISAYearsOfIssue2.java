@@ -271,7 +271,7 @@ public class ISAYearsOfIssue2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either CurrentYearType  or ExtendedCurrentYearType  may be present, but not both."
+	 * "Either CurrentYearType or ExtendedCurrentYearType may be present, but not both."
 	 * </li>
 	 * </ul>
 	 */
@@ -279,7 +279,7 @@ public class ISAYearsOfIssue2 {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearTypeOrExtendedCurrentYearTypeRule";
-			definition = "Either CurrentYearType  or ExtendedCurrentYearType  may be present, but not both.";
+			definition = "Either CurrentYearType or ExtendedCurrentYearType may be present, but not both.";
 			messageComponent_lazy = () -> com.tools20022.repository.msg.ISAYearsOfIssue2.mmObject();
 			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ISAYearsOfIssue2.mmCurrentYearType, com.tools20022.repository.msg.ISAYearsOfIssue2.mmExtendedCurrentYearType);
 		}

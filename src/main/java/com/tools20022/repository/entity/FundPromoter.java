@@ -24,7 +24,7 @@ import com.tools20022.repository.GeneratedRepository;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Fund Promoter
+ * Fund Promoter.
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -47,7 +47,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "FundPromoter"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Fund Promoter"</li>
+ * definition} = "Fund Promoter."</li>
  * </ul>
  */
 public class FundPromoter extends FundManagerRole {
@@ -60,7 +60,7 @@ public class FundPromoter extends FundManagerRole {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FundPromoter";
-				definition = "Fund Promoter";
+				definition = "Fund Promoter.";
 				superType_lazy = () -> FundManagerRole.mmObject();
 			}
 

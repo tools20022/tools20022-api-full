@@ -70,7 +70,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InflationIndex1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of an inflation index identification. "</li>
+ * definition} = "Choice of an inflation index identification."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -185,7 +185,7 @@ public class InflationIndex1Choice {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintValidISINRule.forInflationIndex1Choice);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InflationIndex1Choice";
-				definition = "Choice of an inflation index identification. ";
+				definition = "Choice of an inflation index identification.";
 			}
 		});
 		return mmObject_lazy.get();

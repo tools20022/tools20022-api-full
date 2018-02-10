@@ -257,7 +257,7 @@ public class AccountModificationInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provide detailed information about the application modification instruction. "
+	 * "Provide detailed information about the application modification instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -266,7 +266,7 @@ public class AccountModificationInstructionV02 {
 			xmlTag = "InstrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
-			definition = "Provide detailed information about the application modification instruction. ";
+			definition = "Provide detailed information about the application modification instruction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> InvestmentAccountModificationDetails.mmObject();
@@ -303,7 +303,7 @@ public class AccountModificationInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Investment account selection information used to identify the account for which the information is modified.."
+	 * "Investment account selection information used to identify the account for which the information is modified."
 	 * </li>
 	 * </ul>
 	 */
@@ -312,7 +312,7 @@ public class AccountModificationInstructionV02 {
 			xmlTag = "InvstmtAcctSelctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountSelection";
-			definition = "Investment account selection information used to identify the account for which the information is modified..";
+			definition = "Investment account selection information used to identify the account for which the information is modified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> InvestmentAccountSelection2.mmObject();
@@ -715,7 +715,7 @@ public class AccountModificationInstructionV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to documents to be added, deleted or updated.\n"</li>
+	 * "Information related to documents to be added, deleted or updated.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmModifiedServiceLevelAgreement = new MMMessageBuildingBlock() {
@@ -723,7 +723,7 @@ public class AccountModificationInstructionV02 {
 			xmlTag = "ModfdSvcLvlAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedServiceLevelAgreement";
-			definition = "Information related to documents to be added, deleted or updated.\n";
+			definition = "Information related to documents to be added, deleted or updated.\n.";
 			maxOccurs = 30;
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationScope10.mmObject();

@@ -271,7 +271,7 @@ public class InstrumentLeg6 {
 	 * name} = "LegLastPrice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Execution price of trade leg. "</li>
+	 * definition} = "Execution price of trade leg."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLegLastPrice = new MMMessageAttribute() {
@@ -281,7 +281,7 @@ public class InstrumentLeg6 {
 			xmlTag = "LegLastPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegLastPrice";
-			definition = "Execution price of trade leg. ";
+			definition = "Execution price of trade leg.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -410,7 +410,7 @@ public class InstrumentLeg6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Forward points added to last spot rate . May be a negative value. Expressed in decimal form."
+	 * "Forward points added to last spot rate. May be a negative value. Expressed in decimal form."
 	 * </li>
 	 * </ul>
 	 */
@@ -421,7 +421,7 @@ public class InstrumentLeg6 {
 			xmlTag = "LegFwdPts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegForwardPoints";
-			definition = "Forward points added to last spot rate . May be a negative value. Expressed in decimal form.";
+			definition = "Forward points added to last spot rate. May be a negative value. Expressed in decimal form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();
@@ -498,7 +498,7 @@ public class InstrumentLeg6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Measurement of the leg trade values in terms of a currency (for example,the amount of trade in US dollars)"
+	 * "Measurement of the leg trade values in terms of a currency (for example, the amount of trade in US dollars)."
 	 * </li>
 	 * </ul>
 	 */
@@ -509,7 +509,7 @@ public class InstrumentLeg6 {
 			xmlTag = "LegRskAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegRiskAmount";
-			definition = "Measurement of the leg trade values in terms of a currency (for example,the amount of trade in US dollars)";
+			definition = "Measurement of the leg trade values in terms of a currency (for example, the amount of trade in US dollars).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

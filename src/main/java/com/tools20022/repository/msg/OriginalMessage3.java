@@ -117,7 +117,7 @@ public class OriginalMessage3 {
 	 * name} = "OriginalSender"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Original message sender used to identify the message. "</li>
+	 * definition} = "Original message sender used to identify the message."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -133,7 +133,7 @@ public class OriginalMessage3 {
 			xmlTag = "OrgnlSndr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalSender";
-			definition = "Original message sender used to identify the message. ";
+			definition = "Original message sender used to identify the message.";
 			previousVersion_lazy = () -> OriginalMessage2.mmOriginalSender;
 			maxOccurs = 1;
 			minOccurs = 0;

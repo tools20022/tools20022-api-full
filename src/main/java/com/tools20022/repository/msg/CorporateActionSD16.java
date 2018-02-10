@@ -72,6 +72,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding corporate action details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionSD20
+ * CorporateActionSD20}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionSD10
@@ -110,6 +117,14 @@ public class CorporateActionSD16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD20#mmPlaceAndName
+	 * CorporateActionSD20.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +140,7 @@ public class CorporateActionSD16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD20.mmPlaceAndName);
 			previousVersion_lazy = () -> CorporateActionSD10.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -161,6 +177,14 @@ public class CorporateActionSD16 {
 	 * definition} =
 	 * "DTC generated number to distinguish between the series of lotteries run against a particular redemption."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD20#mmLotterySequenceNumber
+	 * CorporateActionSD20.mmLotterySequenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -176,6 +200,7 @@ public class CorporateActionSD16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotterySequenceNumber";
 			definition = "DTC generated number to distinguish between the series of lotteries run against a particular redemption.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD20.mmLotterySequenceNumber);
 			previousVersion_lazy = () -> CorporateActionSD10.mmLotterySequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -219,6 +244,14 @@ public class CorporateActionSD16 {
 	 * definition} =
 	 * "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD20#mmLotteryDate
+	 * CorporateActionSD20.mmLotteryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -236,6 +269,7 @@ public class CorporateActionSD16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD20.mmLotteryDate);
 			previousVersion_lazy = () -> CorporateActionSD10.mmLotteryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -271,6 +305,14 @@ public class CorporateActionSD16 {
 	 * definition} =
 	 * "For Reorganization events, date at which instructions will be accepted by agent for payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD20#mmProcessToDate
+	 * CorporateActionSD20.mmProcessToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProcessToDate = new MMMessageAttribute() {
@@ -281,6 +323,7 @@ public class CorporateActionSD16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessToDate";
 			definition = "For Reorganization events, date at which instructions will be accepted by agent for payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD20.mmProcessToDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -296,6 +339,7 @@ public class CorporateActionSD16 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionSD16";
 				definition = "Provides additional information regarding corporate action details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionSD20.mmObject());
 				previousVersion_lazy = () -> CorporateActionSD10.mmObject();
 			}
 		});

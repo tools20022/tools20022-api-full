@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.SecuritiesAccount;
@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07#mmSubAccountDetails
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07#mmSubAccountDetails
  * SecuritiesTransactionPostingReport002V07.mmSubAccountDetails}</li>
  * </ul>
  * </li>

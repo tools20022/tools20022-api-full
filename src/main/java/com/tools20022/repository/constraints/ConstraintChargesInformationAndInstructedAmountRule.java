@@ -340,7 +340,7 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present."
+	 * "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -349,7 +349,7 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 			validator = ConstraintChargesInformationAndInstructedAmountRule::checkCreditTransferTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndInstructedAmountRule";
-			definition = "ISO20022 Rule:\nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present.";
+			definition = "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present.";
 			owner_lazy = () -> CreditTransferTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -375,7 +375,7 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present."
+	 * "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -384,7 +384,7 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 			validator = ConstraintChargesInformationAndInstructedAmountRule::checkCreditTransferTransactionInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndInstructedAmountRule";
-			definition = "ISO20022 Rule:\nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present.";
+			definition = "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present.";
 			owner_lazy = () -> CreditTransferTransactionInformation9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -410,7 +410,7 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present."
+	 * "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -419,7 +419,7 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 			validator = ConstraintChargesInformationAndInstructedAmountRule::checkDirectDebitTransactionInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndInstructedAmountRule";
-			definition = "ISO20022 Rule:\nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present.";
+			definition = "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present.";
 			owner_lazy = () -> DirectDebitTransactionInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -445,7 +445,7 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present."
+	 * "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -454,7 +454,7 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 			validator = ConstraintChargesInformationAndInstructedAmountRule::checkDirectDebitTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformationAndInstructedAmountRule";
-			definition = "ISO20022 Rule:\nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present.";
+			definition = "ISO20022 Rule: \nIf ChargesInformation/ChargesAmount is present, then InstructedAmount must be present.";
 			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]/ChargesAmount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -699,6 +699,41 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30
+	 * CreditTransferTransaction30}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/InstructedAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ChargesInformation[*]/Amount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesInformationAndInstructedAmountRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesInformation is present, then InstructedAmount must be present."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransaction30> forCreditTransferTransaction30 = new MMConstraint<CreditTransferTransaction30>() {
+		{
+			validator = ConstraintChargesInformationAndInstructedAmountRule::checkCreditTransferTransaction30;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesInformationAndInstructedAmountRule";
+			definition = "If ChargesInformation is present, then InstructedAmount must be present.";
+			owner_lazy = () -> CreditTransferTransaction30.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/InstructedAmount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/ChargesInformation[*]/Amount</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+	};
 
 	/**
 	 * If ChargesInformation/ChargesAmount is present, then InstructedAmount
@@ -822,6 +857,13 @@ public class ConstraintChargesInformationAndInstructedAmountRule {
 	 * If ChargesInformation is present, then InstructedAmount must be present.
 	 */
 	public static void checkDirectDebitTransactionInformation21(DirectDebitTransactionInformation21 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then InstructedAmount must be present.
+	 */
+	public static void checkCreditTransferTransaction30(CreditTransferTransaction30 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

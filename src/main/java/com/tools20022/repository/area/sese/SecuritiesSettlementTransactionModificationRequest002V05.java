@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant;
 import com.tools20022.repository.choice.UpdateType26Choice;
 import com.tools20022.repository.msg.TransactionDetails101;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOLatestversion;
@@ -90,8 +90,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "SctiesSttlmTxModReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestversionsubsetvariant
- * SecuritiesSettlementLatestversionsubsetvariant}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant
+ * SecuritiesSettlementPreviousversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.038.002.05}</li>
@@ -236,7 +236,7 @@ public class SecuritiesSettlementTransactionModificationRequest002V05 {
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISO15022VariantsISOLatestversion.mmObject(), SettlementandReconciliationMaintenance20162017ISO15022Variants.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxModReq";
-				businessArea_lazy = () -> SecuritiesSettlementLatestversionsubsetvariant.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousversionsubsetvariant.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V05.mmModifiedTransactionDetails,
 						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V05.mmUpdateType);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

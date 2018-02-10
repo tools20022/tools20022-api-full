@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMAggregation;
 import com.tools20022.metamodel.MMBusinessAssociationEnd;
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.CounterpartyTradeNature4Choice;
+import com.tools20022.repository.choice.CounterpartyTradeNature5Choice;
 import com.tools20022.repository.entity.System;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.*;
@@ -68,6 +70,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.entity.CentralClearingCounterpartyRole#mmSystem
  * CentralClearingCounterpartyRole.mmSystem}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CounterpartyTradeNature5Choice#mmCentralCounterParty
+ * CounterpartyTradeNature5Choice.mmCentralCounterParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -162,6 +173,14 @@ public class ClearingSystem extends System {
 	 * type} =
 	 * {@linkplain com.tools20022.repository.entity.CentralClearingCounterpartyRole
 	 * CentralClearingCounterpartyRole}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CounterpartyTradeNature4Choice#mmCentralCounterParty
+	 * CounterpartyTradeNature4Choice.mmCentralCounterParty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -181,6 +200,7 @@ public class ClearingSystem extends System {
 	 */
 	public static final MMBusinessAssociationEnd mmCentralClearingCounterparty = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(CounterpartyTradeNature4Choice.mmCentralCounterParty);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClearingSystem.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -301,6 +321,7 @@ public class ClearingSystem extends System {
 				definition = "Specifies the system which plays a role in the clearing process.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Clearing.mmClearingSystem, com.tools20022.repository.entity.CollateralManagement.mmClearingSystem,
 						com.tools20022.repository.entity.DefaultFund.mmClearingSystem, com.tools20022.repository.entity.CentralClearingCounterpartyRole.mmSystem);
+				derivationElement_lazy = () -> Arrays.asList(CounterpartyTradeNature5Choice.mmCentralCounterParty);
 				subType_lazy = () -> Arrays.asList(CashClearingSystem.mmObject());
 				superType_lazy = () -> System.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingSystem.mmClearing, com.tools20022.repository.entity.ClearingSystem.mmCentralClearingCounterparty,

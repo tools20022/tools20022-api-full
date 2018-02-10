@@ -69,6 +69,14 @@ import javax.xml.bind.annotation.XmlType;
  * "FinancialInstitutionIdentification10"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification of a financial institution."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification15
+ * FinancialInstitutionIdentification15}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification8Choice
@@ -112,6 +120,14 @@ public class FinancialInstitutionIdentification10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identification of the party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification15#mmParty
+	 * FinancialInstitutionIdentification15.mmParty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
@@ -123,6 +139,7 @@ public class FinancialInstitutionIdentification10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Unique identification of the party.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification15.mmParty);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,6 +181,14 @@ public class FinancialInstitutionIdentification10 {
 	 * definition} =
 	 * "Legal entity identification as an alternate identification for the party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification15#mmLEI
+	 * FinancialInstitutionIdentification15.mmLEI}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
@@ -175,6 +200,7 @@ public class FinancialInstitutionIdentification10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for the party.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification15.mmLEI);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -190,6 +216,7 @@ public class FinancialInstitutionIdentification10 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitutionIdentification10";
 				definition = "Identification of a financial institution.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification15.mmObject());
 				previousVersion_lazy = () -> FinancialInstitutionIdentification8Choice.mmObject();
 			}
 		});

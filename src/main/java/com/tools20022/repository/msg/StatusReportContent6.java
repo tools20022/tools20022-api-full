@@ -77,6 +77,13 @@ import javax.xml.bind.annotation.XmlType;
  * "StatusReportContent6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Content of the status report."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReportContent7
+ * StatusReportContent7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.StatusReportContent5
@@ -122,6 +129,14 @@ public class StatusReportContent6 {
 	 * definition} =
 	 * "Capabilities of the POI (Point Of Interaction) performing the status report."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmPOICapabilities
+	 * StatusReportContent7.mmPOICapabilities}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -138,6 +153,7 @@ public class StatusReportContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POICapabilities";
 			definition = "Capabilities of the POI (Point Of Interaction) performing the status report.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReportContent7.mmPOICapabilities);
 			previousVersion_lazy = () -> StatusReportContent5.mmPOICapabilities;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -179,6 +195,14 @@ public class StatusReportContent6 {
 	 * definition} =
 	 * "Data related to a component of the POI (Point Of Interaction) performing the status report."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmPOIComponent
+	 * StatusReportContent7.mmPOIComponent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -195,6 +219,7 @@ public class StatusReportContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIComponent";
 			definition = "Data related to a component of the POI (Point Of Interaction) performing the status report.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReportContent7.mmPOIComponent);
 			previousVersion_lazy = () -> StatusReportContent5.mmPOIComponent;
 			minOccurs = 0;
 			isComposite = true;
@@ -236,6 +261,14 @@ public class StatusReportContent6 {
 	 * definition} =
 	 * "Human attendance at the POI (Point Of Interaction) location during transactions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmAttendanceContext
+	 * StatusReportContent7.mmAttendanceContext}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -252,6 +285,7 @@ public class StatusReportContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AttendanceContext";
 			definition = "Human attendance at the POI (Point Of Interaction) location during transactions.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReportContent7.mmAttendanceContext);
 			previousVersion_lazy = () -> StatusReportContent5.mmAttendanceContext;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -287,6 +321,14 @@ public class StatusReportContent6 {
 	 * definition} =
 	 * "System date time of the point of interaction (POI) sending the status report."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmPOIDateTime
+	 * StatusReportContent7.mmPOIDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -302,6 +344,7 @@ public class StatusReportContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIDateTime";
 			definition = "System date time of the point of interaction (POI) sending the status report.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReportContent7.mmPOIDateTime);
 			previousVersion_lazy = () -> StatusReportContent5.mmPOIDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -337,6 +380,14 @@ public class StatusReportContent6 {
 	 * definition} =
 	 * "Request the terminal management system to answer with the identified data set."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmDataSetRequired
+	 * StatusReportContent7.mmDataSetRequired}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -352,6 +403,7 @@ public class StatusReportContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetRequired";
 			definition = "Request the terminal management system to answer with the identified data set.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReportContent7.mmDataSetRequired);
 			previousVersion_lazy = () -> StatusReportContent5.mmDataSetRequired;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -386,6 +438,14 @@ public class StatusReportContent6 {
 	 * definition} =
 	 * "Result of an individual terminal management action by the point of interaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmEvent
+	 * StatusReportContent7.mmEvent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -401,6 +461,7 @@ public class StatusReportContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Event";
 			definition = "Result of an individual terminal management action by the point of interaction.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReportContent7.mmEvent);
 			previousVersion_lazy = () -> StatusReportContent5.mmEvent;
 			minOccurs = 0;
 			isComposite = true;
@@ -435,6 +496,14 @@ public class StatusReportContent6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Error log of the point of interaction since the last status report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReportContent7#mmErrors
+	 * StatusReportContent7.mmErrors}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -450,6 +519,7 @@ public class StatusReportContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Errors";
 			definition = "Error log of the point of interaction since the last status report.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReportContent7.mmErrors);
 			previousVersion_lazy = () -> StatusReportContent5.mmErrors;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -466,6 +536,7 @@ public class StatusReportContent6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReportContent6";
 				definition = "Content of the status report.";
+				nextVersions_lazy = () -> Arrays.asList(StatusReportContent7.mmObject());
 				previousVersion_lazy = () -> StatusReportContent5.mmObject();
 			}
 		});

@@ -24,9 +24,9 @@ import com.tools20022.repository.other.SignatureEnvelopeReference;
 
 /**
  * The XML Signature namespace ("http://www.w3.org/2000/09/xmldsig#") allows for
- * different XML elements to be root elements . This means the user has to
- * choose amongst these global elements which one to use as the root element.
- * Only the XML element Reference is allowed.
+ * different XML elements to be root elements. This means the user has to choose
+ * amongst these global elements which one to use as the root element. Only the
+ * XML element Reference is allowed.
  */
 public class ConstraintOnlyReferenceElement {
 
@@ -47,7 +47,7 @@ public class ConstraintOnlyReferenceElement {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The XML Signature namespace (\"http://www.w3.org/2000/09/xmldsig#\") allows for different XML elements to be root elements . This means the user has to choose amongst these global elements which one to use as the root element. Only the XML element Reference is allowed."
+	 * "The XML Signature namespace (\"http://www.w3.org/2000/09/xmldsig#\") allows for different XML elements to be root elements. This means the user has to choose amongst these global elements which one to use as the root element. Only the XML element Reference is allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,14 +56,14 @@ public class ConstraintOnlyReferenceElement {
 			validator = ConstraintOnlyReferenceElement::checkSignatureEnvelopeReference;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnlyReferenceElement";
-			definition = "The XML Signature namespace (\"http://www.w3.org/2000/09/xmldsig#\") allows for different XML elements to be root elements . This means the user has to choose amongst these global elements which one to use as the root element. Only the XML element Reference is allowed.";
+			definition = "The XML Signature namespace (\"http://www.w3.org/2000/09/xmldsig#\") allows for different XML elements to be root elements. This means the user has to choose amongst these global elements which one to use as the root element. Only the XML element Reference is allowed.";
 			owner_lazy = () -> SignatureEnvelopeReference.mmObject();
 		}
 	};
 
 	/**
 	 * The XML Signature namespace ("http://www.w3.org/2000/09/xmldsig#") allows
-	 * for different XML elements to be root elements . This means the user has
+	 * for different XML elements to be root elements. This means the user has
 	 * to choose amongst these global elements which one to use as the root
 	 * element. Only the XML element Reference is allowed.
 	 */

@@ -471,8 +471,7 @@ public class TransferOutConfirmationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "General information related to the transfer of a financial instrument. "
-	 * </li>
+	 * "General information related to the transfer of a financial instrument."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -493,7 +492,7 @@ public class TransferOutConfirmationV05 {
 			xmlTag = "TrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
-			definition = "General information related to the transfer of a financial instrument. ";
+			definition = "General information related to the transfer of a financial instrument.";
 			nextVersions_lazy = () -> Arrays.asList(TransferOutConfirmationV06.mmTransferDetails);
 			previousVersion_lazy = () -> TransferOutConfirmationV04.mmTransferDetails;
 			minOccurs = 1;

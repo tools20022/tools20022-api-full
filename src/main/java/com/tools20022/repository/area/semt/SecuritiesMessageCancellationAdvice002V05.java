@@ -152,7 +152,7 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the message advised to be cancelled by the account servicer"
+	 * "Reference to the message advised to be cancelled by the account servicer."
 	 * </li>
 	 * </ul>
 	 */
@@ -161,7 +161,7 @@ public class SecuritiesMessageCancellationAdvice002V05 {
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
-			definition = "Reference to the message advised to be cancelled by the account servicer";
+			definition = "Reference to the message advised to be cancelled by the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> References53Choice.mmObject();

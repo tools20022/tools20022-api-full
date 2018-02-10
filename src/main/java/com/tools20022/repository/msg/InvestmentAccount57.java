@@ -115,6 +115,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount68
+ * InvestmentAccount68}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.InvestmentAccount55
@@ -160,6 +167,14 @@ public class InvestmentAccount57 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmOwnerIdentification
+	 * InvestmentAccount68.mmOwnerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -176,6 +191,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnerIdentification";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmOwnerIdentification);
 			previousVersion_lazy = () -> InvestmentAccount55.mmOwnerIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification70Choice.mmObject();
@@ -215,6 +231,14 @@ public class InvestmentAccount57 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmAccountIdentification
+	 * InvestmentAccount68.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +255,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmAccountIdentification);
 			previousVersion_lazy = () -> InvestmentAccount55.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -271,6 +296,14 @@ public class InvestmentAccount57 {
 	 * definition} =
 	 * "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmAccountName
+	 * InvestmentAccount68.mmAccountName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -287,6 +320,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountName";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmAccountName);
 			previousVersion_lazy = () -> InvestmentAccount55.mmAccountName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -327,6 +361,14 @@ public class InvestmentAccount57 {
 	 * definition} =
 	 * "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmAccountDesignation
+	 * InvestmentAccount68.mmAccountDesignation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -343,6 +385,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDesignation";
 			definition = "Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmAccountDesignation);
 			previousVersion_lazy = () -> InvestmentAccount55.mmAccountDesignation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -382,6 +425,14 @@ public class InvestmentAccount57 {
 	 * definition} =
 	 * "Party that provides services relating to financial products to investors, for example, advice on products and placement of orders for the investment fund."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmIntermediaryInformation
+	 * InvestmentAccount68.mmIntermediaryInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryInformation = new MMMessageAssociationEnd() {
@@ -393,6 +444,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryInformation";
 			definition = "Party that provides services relating to financial products to investors, for example, advice on products and placement of orders for the investment fund.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmIntermediaryInformation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary35.mmObject();
@@ -433,6 +485,14 @@ public class InvestmentAccount57 {
 	 * definition} =
 	 * "Form, that is, ownership, of the security, that is, registered or bearer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmSecuritiesForm
+	 * InvestmentAccount68.mmSecuritiesForm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -449,6 +509,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesForm";
 			definition = "Form, that is, ownership, of the security, that is, registered or bearer.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmSecuritiesForm);
 			previousVersion_lazy = () -> InvestmentAccount55.mmSecuritiesForm;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -490,6 +551,14 @@ public class InvestmentAccount57 {
 	 * definition} =
 	 * "Indicates whether a security exists only as an electronic record, that is, there is no physical document representing the security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmDematerialisedIndicator
+	 * InvestmentAccount68.mmDematerialisedIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -506,6 +575,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DematerialisedIndicator";
 			definition = "Indicates whether a security exists only as an electronic record, that is, there is no physical document representing the security.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmDematerialisedIndicator);
 			previousVersion_lazy = () -> InvestmentAccount55.mmDematerialisedIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -547,6 +617,14 @@ public class InvestmentAccount57 {
 	 * definition} =
 	 * "Dividend option chosen by the account owner based on the options offered in the prospectus."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmIncomePreference
+	 * InvestmentAccount68.mmIncomePreference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -563,6 +641,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomePreference";
 			definition = "Dividend option chosen by the account owner based on the options offered in the prospectus.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmIncomePreference);
 			previousVersion_lazy = () -> InvestmentAccount55.mmIncomePreference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -604,6 +683,14 @@ public class InvestmentAccount57 {
 	 * definition} =
 	 * "Beneficial owner or its designated agent certifies that it complies with any holding or investment restrictions or requirements of the fund."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmBeneficiaryCertificationCompletion
+	 * InvestmentAccount68.mmBeneficiaryCertificationCompletion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -620,6 +707,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficiaryCertificationCompletion";
 			definition = "Beneficial owner or its designated agent certifies that it complies with any holding or investment restrictions or requirements of the fund.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmBeneficiaryCertificationCompletion);
 			previousVersion_lazy = () -> InvestmentAccount55.mmBeneficiaryCertificationCompletion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -659,6 +747,14 @@ public class InvestmentAccount57 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Place requested as the place of safekeeping."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmSafekeepingPlace
+	 * InvestmentAccount68.mmSafekeepingPlace}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSafekeepingPlace = new MMMessageAttribute() {
@@ -670,6 +766,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Place requested as the place of safekeeping.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmSafekeepingPlace);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SafekeepingPlaceFormat8Choice.mmObject();
@@ -709,6 +806,14 @@ public class InvestmentAccount57 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Institution that maintains the records where the account is held."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmAccountServicer
+	 * InvestmentAccount68.mmAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -725,6 +830,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Institution that maintains the records where the account is held.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmAccountServicer);
 			previousVersion_lazy = () -> InvestmentAccount55.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -763,6 +869,14 @@ public class InvestmentAccount57 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Sub-accounts that are grouped in a master or omnibus account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmSubAccountDetails
+	 * InvestmentAccount68.mmSubAccountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -779,6 +893,7 @@ public class InvestmentAccount57 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-accounts that are grouped in a master or omnibus account.";
+			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmSubAccountDetails);
 			previousVersion_lazy = () -> InvestmentAccount55.mmSubAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -802,6 +917,7 @@ public class InvestmentAccount57 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentAccount57";
 				definition = "Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
+				nextVersions_lazy = () -> Arrays.asList(InvestmentAccount68.mmObject());
 				previousVersion_lazy = () -> InvestmentAccount55.mmObject();
 			}
 		});

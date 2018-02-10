@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessedStatus3FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the processing status of an advice, a request or a movement."
+ * "Choice of formats to express the processing status of an advice, a request or a movement."
  * </li>
  * </ul>
  */
@@ -159,7 +159,7 @@ public class ProcessedStatus3FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the processing status of an advice, a request or a movement."
+	 * "Proprietary code to express the processing status of an advice, a request or a movement."
 	 * </li>
 	 * </ul>
 	 */
@@ -171,7 +171,7 @@ public class ProcessedStatus3FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the processing status of an advice, a request or a movement.";
+			definition = "Proprietary code to express the processing status of an advice, a request or a movement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -186,7 +186,7 @@ public class ProcessedStatus3FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus3FormatChoice";
-				definition = "Choice of formats to  express the processing status of an advice, a request or a movement.";
+				definition = "Choice of formats to express the processing status of an advice, a request or a movement.";
 			}
 		});
 		return mmObject_lazy.get();

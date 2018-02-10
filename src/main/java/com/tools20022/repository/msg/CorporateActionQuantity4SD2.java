@@ -171,7 +171,7 @@ public class CorporateActionQuantity4SD2 {
 	 * name} = "PlannedQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Planned number of shares to be purchased.\r\n 買付予定株式数"</li>
+	 * definition} = "Planned number of shares to be purchased.\r\n 買付予定株式数."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlannedQuantity = new MMMessageAttribute() {
@@ -181,7 +181,7 @@ public class CorporateActionQuantity4SD2 {
 			xmlTag = "PlandQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlannedQuantity";
-			definition = "Planned number of shares to be purchased.\r\n 買付予定株式数";
+			definition = "Planned number of shares to be purchased.\r\n 買付予定株式数.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PlannedQuantity1Choice.mmObject();
@@ -259,7 +259,7 @@ public class CorporateActionQuantity4SD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TSE/JASDEC code for the minimum number of shares to be purchased when the corporate action event type code  is TEND or BIDS.\r\n買付株数に係る下限設定が「下限設定あり」「未定」"
+	 * "TSE/JASDEC code for the minimum number of shares to be purchased when the corporate action event type code is TEND or BIDS.\r\n買付株数に係る下限設定が「下限設定あり」「未定」."
 	 * </li>
 	 * </ul>
 	 */
@@ -270,7 +270,7 @@ public class CorporateActionQuantity4SD2 {
 			xmlTag = "MinQtyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumQuantityCode";
-			definition = "TSE/JASDEC code for the minimum number of shares to be purchased when the corporate action event type code  is TEND or BIDS.\r\n買付株数に係る下限設定が「下限設定あり」「未定」";
+			definition = "TSE/JASDEC code for the minimum number of shares to be purchased when the corporate action event type code is TEND or BIDS.\r\n買付株数に係る下限設定が「下限設定あり」「未定」.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesQuantity1Code.mmObject();
@@ -304,7 +304,7 @@ public class CorporateActionQuantity4SD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TSE/JASDEC code for the maximum number of shares to be purchased when the corporate action event type code is TEND or BIDS.\r\n 買付株数に係る上限設定が「上限設定あり」「未定」"
+	 * "TSE/JASDEC code for the maximum number of shares to be purchased when the corporate action event type code is TEND or BIDS.\r\n 買付株数に係る上限設定が「上限設定あり」「未定」."
 	 * </li>
 	 * </ul>
 	 */
@@ -315,7 +315,7 @@ public class CorporateActionQuantity4SD2 {
 			xmlTag = "MaxQtyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumQuantityCode";
-			definition = "TSE/JASDEC code for the maximum number of shares to be purchased when the corporate action event type code is TEND or BIDS.\r\n 買付株数に係る上限設定が「上限設定あり」「未定」";
+			definition = "TSE/JASDEC code for the maximum number of shares to be purchased when the corporate action event type code is TEND or BIDS.\r\n 買付株数に係る上限設定が「上限設定あり」「未定」.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> SecuritiesQuantity1Code.mmObject();

@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between business day information details or a business error when the requested data cannot be retrieved."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError8Choice
+ * BusinessDayReportOrError8Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError2Choice
@@ -103,6 +111,14 @@ public class BusinessDayReportOrError6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested system details for a specific business day."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError8Choice#mmBusinessDayInformation
+	 * BusinessDayReportOrError8Choice.mmBusinessDayInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -118,6 +134,7 @@ public class BusinessDayReportOrError6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessDayInformation";
 			definition = "Requested system details for a specific business day.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError8Choice.mmBusinessDayInformation);
 			previousVersion_lazy = () -> BusinessDayReportOrError2Choice.mmBusinessDayInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -150,7 +167,15 @@ public class BusinessDayReportOrError6Choice {
 	 * name} = "BusinessError"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reason the requested business information is not given. "</li>
+	 * definition} = "Reason the requested business information is not given."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError8Choice#mmBusinessError
+	 * BusinessDayReportOrError8Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,7 +190,8 @@ public class BusinessDayReportOrError6Choice {
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
-			definition = "Reason the requested business information is not given. ";
+			definition = "Reason the requested business information is not given.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError8Choice.mmBusinessError);
 			previousVersion_lazy = () -> BusinessDayReportOrError2Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,6 +207,7 @@ public class BusinessDayReportOrError6Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessDayReportOrError6Choice";
 				definition = "Choice between business day information details or a business error when the requested data cannot be retrieved.";
+				nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError8Choice.mmObject());
 				previousVersion_lazy = () -> BusinessDayReportOrError2Choice.mmObject();
 			}
 		});

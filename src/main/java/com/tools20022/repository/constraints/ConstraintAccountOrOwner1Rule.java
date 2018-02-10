@@ -49,7 +49,7 @@ public class ConstraintAccountOrOwner1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If AccountIdentification is not present, then OwnerIdentification must be present. Both AccountIdentification and  OwnerIdentification may be present."
+	 * "If AccountIdentification is not present, then OwnerIdentification must be present. Both AccountIdentification and OwnerIdentification may be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintAccountOrOwner1Rule {
 			validator = ConstraintAccountOrOwner1Rule::checkInvestmentAccount42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOrOwner1Rule";
-			definition = "If AccountIdentification is not present, then OwnerIdentification must be present. Both AccountIdentification and  OwnerIdentification may be present.";
+			definition = "If AccountIdentification is not present, then OwnerIdentification must be present. Both AccountIdentification and OwnerIdentification may be present.";
 			owner_lazy = () -> InvestmentAccount42.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/OwnerIdentification</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/AccountIdentification</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}

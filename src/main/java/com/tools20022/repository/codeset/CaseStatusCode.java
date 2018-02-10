@@ -54,6 +54,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus2Code
  * CaseStatus2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CaseStatus1Code
+ * CaseStatus1Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -244,7 +246,7 @@ public class CaseStatusCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CaseStatusCode";
 				definition = "Specifies the status of an investigation case.";
-				derivation_lazy = () -> Arrays.asList(CaseStatus2Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(CaseStatus2Code.mmObject(), CaseStatus1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CaseStatusCode.Closed, com.tools20022.repository.codeset.CaseStatusCode.Assigned, com.tools20022.repository.codeset.CaseStatusCode.UnderInvestigation,
 						com.tools20022.repository.codeset.CaseStatusCode.Unknown, com.tools20022.repository.codeset.CaseStatusCode.Overdue);
 			}

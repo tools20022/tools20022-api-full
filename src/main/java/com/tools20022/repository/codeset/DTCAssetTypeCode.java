@@ -346,7 +346,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "DTCAssetTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies  DTC (The Depository Trust Company) security sub-issue type."</li>
+ * "Specifies DTC (The Depository Trust Company) security sub-issue type."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -1062,14 +1062,14 @@ public class DTCAssetTypeCode extends MMCode {
 	 * name} = "MunicipalAuctionRateNoteARN"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Municipal Auction Rate Note  (ARN)."</li>
+	 * definition} = "Municipal Auction Rate Note (ARN)."</li>
 	 * </ul>
 	 */
 	public static final DTCAssetTypeCode MunicipalAuctionRateNoteARN = new DTCAssetTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalAuctionRateNoteARN";
-			definition = "Municipal Auction Rate Note  (ARN).";
+			definition = "Municipal Auction Rate Note (ARN).";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetTypeCode.mmObject();
 			codeName = "S312";
 		}
@@ -1092,14 +1092,14 @@ public class DTCAssetTypeCode extends MMCode {
 	 * name} = "MunicipalVariableModeObligationVMO"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Municipal Variable Mode Obligation  (VMO)."</li>
+	 * definition} = "Municipal Variable Mode Obligation (VMO)."</li>
 	 * </ul>
 	 */
 	public static final DTCAssetTypeCode MunicipalVariableModeObligationVMO = new DTCAssetTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MunicipalVariableModeObligationVMO";
-			definition = "Municipal Variable Mode Obligation  (VMO).";
+			definition = "Municipal Variable Mode Obligation (VMO).";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAssetTypeCode.mmObject();
 			codeName = "S313";
 		}
@@ -3218,7 +3218,7 @@ public class DTCAssetTypeCode extends MMCode {
 				example = Arrays.asList("S005");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCAssetTypeCode";
-				definition = "Specifies  DTC (The Depository Trust Company) security sub-issue type.";
+				definition = "Specifies DTC (The Depository Trust Company) security sub-issue type.";
 				derivation_lazy = () -> Arrays.asList(DTCAssetType1Code.mmObject(), DTCAssetType2Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCAssetTypeCode.Equity, com.tools20022.repository.codeset.DTCAssetTypeCode.CommonStock,
 						com.tools20022.repository.codeset.DTCAssetTypeCode.ConvertibleCommonStock, com.tools20022.repository.codeset.DTCAssetTypeCode.CommonStockREIT, com.tools20022.repository.codeset.DTCAssetTypeCode.PreferredStock,

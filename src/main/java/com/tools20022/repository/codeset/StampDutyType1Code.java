@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies if the stamp duty is applicable
+ * Specifies if the stamp duty is applicable.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -70,7 +70,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "StampDutyType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies if the stamp duty is applicable"</li>
+ * definition} = "Specifies if the stamp duty is applicable."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -185,7 +185,7 @@ public class StampDutyType1Code extends MMCode {
 				example = Arrays.asList("SDRU");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StampDutyType1Code";
-				definition = "Specifies if the stamp duty is applicable";
+				definition = "Specifies if the stamp duty is applicable.";
 				trace_lazy = () -> StampDutyTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.StampDutyType1Code.OutsideCSD, com.tools20022.repository.codeset.StampDutyType1Code.Paid, com.tools20022.repository.codeset.StampDutyType1Code.NotApplicable,
 						com.tools20022.repository.codeset.StampDutyType1Code.Exemption);

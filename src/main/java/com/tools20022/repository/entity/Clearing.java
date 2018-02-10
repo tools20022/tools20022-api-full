@@ -142,6 +142,9 @@ public class Clearing extends ObligationFulfilment {
 	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting4#mmClearingThresholdIndicator
 	 * RegulatoryReporting4.mmClearingThresholdIndicator}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.NonFinancialInstitutionSector1#mmClearingThreshold
+	 * NonFinancialInstitutionSector1.mmClearingThreshold}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RegulatoryReporting6#mmClearingThresholdIndicator
 	 * RegulatoryReporting6.mmClearingThresholdIndicator}</li>
 	 * </ul>
@@ -165,7 +168,8 @@ public class Clearing extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAttribute mmClearingThresholdIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmClearingThresholdIndicator, RegulatoryReporting4.mmClearingThresholdIndicator, RegulatoryReporting6.mmClearingThresholdIndicator);
+			derivation_lazy = () -> Arrays.asList(RegulatoryReporting1.mmClearingThresholdIndicator, RegulatoryReporting4.mmClearingThresholdIndicator, NonFinancialInstitutionSector1.mmClearingThreshold,
+					RegulatoryReporting6.mmClearingThresholdIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Clearing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

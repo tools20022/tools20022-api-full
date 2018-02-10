@@ -78,6 +78,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMCommandParameters2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specific parameters attached to an ATM command."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ATMCommandParameters3Choice
+ * ATMCommandParameters3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.ATMCommandParameters1Choice
@@ -118,6 +125,14 @@ public class ATMCommandParameters2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Required status of the ATM, parameters of the status update command."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters3Choice#mmATMRequiredGlobalStatus
+	 * ATMCommandParameters3Choice.mmATMRequiredGlobalStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -133,6 +148,7 @@ public class ATMCommandParameters2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMRequiredGlobalStatus";
 			definition = "Required status of the ATM, parameters of the status update command.";
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters3Choice.mmATMRequiredGlobalStatus);
 			previousVersion_lazy = () -> ATMCommandParameters1Choice.mmATMRequiredGlobalStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -167,6 +183,14 @@ public class ATMCommandParameters2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Message to send for the send message command."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters3Choice#mmExpectedMessageFunction
+	 * ATMCommandParameters3Choice.mmExpectedMessageFunction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +206,7 @@ public class ATMCommandParameters2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedMessageFunction";
 			definition = "Message to send for the send message command.";
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters3Choice.mmExpectedMessageFunction);
 			previousVersion_lazy = () -> ATMCommandParameters1Choice.mmExpectedMessageFunction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -216,6 +241,14 @@ public class ATMCommandParameters2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Parameters to be used by the configuration update command."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters3Choice#mmRequiredConfigurationParameter
+	 * ATMCommandParameters3Choice.mmRequiredConfigurationParameter}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +264,7 @@ public class ATMCommandParameters2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredConfigurationParameter";
 			definition = "Parameters to be used by the configuration update command.";
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters3Choice.mmRequiredConfigurationParameter);
 			previousVersion_lazy = () -> ATMCommandParameters1Choice.mmRequiredConfigurationParameter;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -267,6 +301,14 @@ public class ATMCommandParameters2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Parameters to be used by the security scheme update command."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters3Choice#mmRequiredSecurityScheme
+	 * ATMCommandParameters3Choice.mmRequiredSecurityScheme}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRequiredSecurityScheme = new MMMessageAttribute() {
@@ -277,6 +319,7 @@ public class ATMCommandParameters2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredSecurityScheme";
 			definition = "Parameters to be used by the security scheme update command.";
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters3Choice.mmRequiredSecurityScheme);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMSecurityScheme2Code.mmObject();
@@ -310,6 +353,14 @@ public class ATMCommandParameters2Choice {
 	 * definition} =
 	 * "Parameters to be used to update the configuration or the status security device."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters3Choice#mmSecurityDevice
+	 * ATMCommandParameters3Choice.mmSecurityDevice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecurityDevice = new MMMessageAssociationEnd() {
@@ -320,6 +371,7 @@ public class ATMCommandParameters2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityDevice";
 			definition = "Parameters to be used to update the configuration or the status security device.";
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters3Choice.mmSecurityDevice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -354,6 +406,14 @@ public class ATMCommandParameters2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Parameters to be used by the various cryptographic key commands."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ATMCommandParameters3Choice#mmKey
+	 * ATMCommandParameters3Choice.mmKey}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmKey = new MMMessageAssociationEnd() {
@@ -364,6 +424,7 @@ public class ATMCommandParameters2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Parameters to be used by the various cryptographic key commands.";
+			nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters3Choice.mmKey);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -381,6 +442,7 @@ public class ATMCommandParameters2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommandParameters2Choice";
 				definition = "Specific parameters attached to an ATM command.";
+				nextVersions_lazy = () -> Arrays.asList(ATMCommandParameters3Choice.mmObject());
 				previousVersion_lazy = () -> ATMCommandParameters1Choice.mmObject();
 			}
 		});

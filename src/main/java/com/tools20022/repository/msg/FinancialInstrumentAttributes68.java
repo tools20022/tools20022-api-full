@@ -111,6 +111,14 @@ import javax.xml.bind.annotation.XmlType;
  * "FinancialInstrumentAttributes68"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Description of the financial instrument."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93
+ * FinancialInstrumentAttributes93}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes46
@@ -158,6 +166,14 @@ public class FinancialInstrumentAttributes68 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmSecurityIdentification
+	 * FinancialInstrumentAttributes93.mmSecurityIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -175,6 +191,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identifies the financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmSecurityIdentification);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -220,6 +237,14 @@ public class FinancialInstrumentAttributes68 {
 	 * definition} =
 	 * "Quantity of entitled intermediate securities based on the balance of underlying securities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmQuantity
+	 * FinancialInstrumentAttributes93.mmQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,6 +262,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of entitled intermediate securities based on the balance of underlying securities.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmQuantity);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -280,6 +306,14 @@ public class FinancialInstrumentAttributes68 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether terms of the event allow resale of the rights."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmRenounceableEntitlementStatusType
+	 * FinancialInstrumentAttributes93.mmRenounceableEntitlementStatusType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,6 +331,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RenounceableEntitlementStatusType";
 			definition = "Specifies whether terms of the event allow resale of the rights.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmRenounceableEntitlementStatusType);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmRenounceableEntitlementStatusType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -341,6 +376,14 @@ public class FinancialInstrumentAttributes68 {
 	 * definition} =
 	 * "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmFractionDisposition
+	 * FinancialInstrumentAttributes93.mmFractionDisposition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -358,6 +401,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmFractionDisposition);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmFractionDisposition;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -402,6 +446,15 @@ public class FinancialInstrumentAttributes68 {
 	 * definition} =
 	 * "Quantity of intermediate securities awarded for a given quantity of underlying security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmIntermediateSecuritiesToUnderlyingRatio
+	 * FinancialInstrumentAttributes93.mmIntermediateSecuritiesToUnderlyingRatio
+	 * }</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -420,6 +473,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesToUnderlyingRatio";
 			definition = "Quantity of intermediate securities awarded for a given quantity of underlying security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmIntermediateSecuritiesToUnderlyingRatio);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmIntermediateSecuritiesToUnderlyingRatio;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -462,6 +516,14 @@ public class FinancialInstrumentAttributes68 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Last reported/known price of a financial instrument in a market."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmMarketPrice
+	 * FinancialInstrumentAttributes93.mmMarketPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -479,6 +541,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPrice";
 			definition = "Last reported/known price of a financial instrument in a market.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmMarketPrice);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmMarketPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -522,6 +585,14 @@ public class FinancialInstrumentAttributes68 {
 	 * definition} =
 	 * "Date on which an order expires or at which a privilege or offer terminates."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmExpiryDate
+	 * FinancialInstrumentAttributes93.mmExpiryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -539,6 +610,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which an order expires or at which a privilege or offer terminates.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmExpiryDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmExpiryDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -580,6 +652,14 @@ public class FinancialInstrumentAttributes68 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date of the posting (credit or debit) to the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmPostingDate
+	 * FinancialInstrumentAttributes93.mmPostingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -597,6 +677,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date of the posting (credit or debit) to the account.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmPostingDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmPostingDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -639,6 +720,14 @@ public class FinancialInstrumentAttributes68 {
 	 * definition} =
 	 * "Period during which intermediate or outturn securities are tradable in a secondary market."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmTradingPeriod
+	 * FinancialInstrumentAttributes93.mmTradingPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -656,6 +745,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingPeriod";
 			definition = "Period during which intermediate or outturn securities are tradable in a secondary market.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmTradingPeriod);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmTradingPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -698,6 +788,14 @@ public class FinancialInstrumentAttributes68 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of uninstructed position."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmUninstructedBalance
+	 * FinancialInstrumentAttributes93.mmUninstructedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -715,6 +813,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Balance of uninstructed position.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmUninstructedBalance);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmUninstructedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -757,6 +856,14 @@ public class FinancialInstrumentAttributes68 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of instructed position."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmInstructedBalance
+	 * FinancialInstrumentAttributes93.mmInstructedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -774,6 +881,7 @@ public class FinancialInstrumentAttributes68 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedBalance";
 			definition = "Balance of instructed position.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmInstructedBalance);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmInstructedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -797,6 +905,7 @@ public class FinancialInstrumentAttributes68 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributes68";
 				definition = "Description of the financial instrument.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes93.mmObject());
 				previousVersion_lazy = () -> FinancialInstrumentAttributes46.mmObject();
 			}
 		});

@@ -322,7 +322,7 @@ public class AccountModificationInstructionV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides detailed information about the application modification instruction. "
+	 * "Provides detailed information about the application modification instruction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -344,7 +344,7 @@ public class AccountModificationInstructionV04 {
 			xmlTag = "InstrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
-			definition = "Provides detailed information about the application modification instruction. ";
+			definition = "Provides detailed information about the application modification instruction.";
 			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV05.mmInstructionDetails);
 			previousVersion_lazy = () -> AccountModificationInstructionV03.mmInstructionDetails;
 			maxOccurs = 1;
@@ -930,7 +930,7 @@ public class AccountModificationInstructionV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to documents to be added, deleted or updated.\n"</li>
+	 * "Information related to documents to be added, deleted or updated.\n."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -951,7 +951,7 @@ public class AccountModificationInstructionV04 {
 			xmlTag = "ModfdSvcLvlAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedServiceLevelAgreement";
-			definition = "Information related to documents to be added, deleted or updated.\n";
+			definition = "Information related to documents to be added, deleted or updated.\n.";
 			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV05.mmModifiedServiceLevelAgreement);
 			previousVersion_lazy = () -> AccountModificationInstructionV03.mmModifiedServiceLevelAgreement;
 			maxOccurs = 30;

@@ -50,7 +50,7 @@ public class ConstraintSEPAOriginalCreditorSchemeIdentificationNameRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SEPA TVS 3.x rule:\nIf OriginalCreditorSchemeIdentification/Name field is present, the new name must be specified under Creditor."
+	 * "SEPA TVS 3.x rule: \nIf OriginalCreditorSchemeIdentification/Name field is present, the new name must be specified under Creditor."
 	 * </li>
 	 * </ul>
 	 */
@@ -59,7 +59,7 @@ public class ConstraintSEPAOriginalCreditorSchemeIdentificationNameRule {
 			validator = ConstraintSEPAOriginalCreditorSchemeIdentificationNameRule::checkDirectDebitTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalCreditorSchemeIdentificationNameRule";
-			definition = "SEPA TVS 3.x rule:\nIf OriginalCreditorSchemeIdentification/Name field is present, the new name must be specified under Creditor.";
+			definition = "SEPA TVS 3.x rule: \nIf OriginalCreditorSchemeIdentification/Name field is present, the new name must be specified under Creditor.";
 			owner_lazy = () -> DirectDebitTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalCreditorSchemeIdentification/Name</leftOperand><rightOperand>/Creditor/Name</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalCreditorSchemeIdentification/Name</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -85,7 +85,7 @@ public class ConstraintSEPAOriginalCreditorSchemeIdentificationNameRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SEPA TVS 3.x rule:\nIf OriginalCreditorSchemeIdentification/Name field is present, the new name must be specified under Creditor."
+	 * "SEPA TVS 3.x rule: \nIf OriginalCreditorSchemeIdentification/Name field is present, the new name must be specified under Creditor."
 	 * </li>
 	 * </ul>
 	 */
@@ -94,7 +94,7 @@ public class ConstraintSEPAOriginalCreditorSchemeIdentificationNameRule {
 			validator = ConstraintSEPAOriginalCreditorSchemeIdentificationNameRule::checkDirectDebitTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPAOriginalCreditorSchemeIdentificationNameRule";
-			definition = "SEPA TVS 3.x rule:\nIf OriginalCreditorSchemeIdentification/Name field is present, the new name must be specified under Creditor.";
+			definition = "SEPA TVS 3.x rule: \nIf OriginalCreditorSchemeIdentification/Name field is present, the new name must be specified under Creditor.";
 			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalCreditorSchemeIdentification/Name</leftOperand><rightOperand>/Creditor/Name</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalCreditorSchemeIdentification/Name</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}

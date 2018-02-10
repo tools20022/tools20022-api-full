@@ -209,7 +209,7 @@ public class ATMDepositCompletionAcknowledgementV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to the acknowledgement  of an ATM deposit transaction from the ATM manager."
+	 * "Information related to the acknowledgement of an ATM deposit transaction from the ATM manager."
 	 * </li>
 	 * </ul>
 	 */
@@ -218,7 +218,7 @@ public class ATMDepositCompletionAcknowledgementV01 {
 			xmlTag = "ATMDpstCmpltnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMDepositCompletionAcknowledgement";
-			definition = "Information related to the acknowledgement  of an ATM deposit transaction from the ATM manager.";
+			definition = "Information related to the acknowledgement of an ATM deposit transaction from the ATM manager.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ATMDepositCompletionAcknowledgement1.mmObject();

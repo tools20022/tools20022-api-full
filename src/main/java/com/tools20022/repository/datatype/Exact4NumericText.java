@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies a numeric string with an exact length of 4 digits
+ * Specifies a numeric string with an exact length of 4 digits.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -45,7 +45,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Exact4NumericText"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies a numeric string with an exact length of 4 digits"</li>
+ * definition} = "Specifies a numeric string with an exact length of 4 digits."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -60,7 +60,7 @@ public class Exact4NumericText {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Exact4NumericText";
-				definition = "Specifies a numeric string with an exact length of 4 digits";
+				definition = "Specifies a numeric string with an exact length of 4 digits.";
 				pattern = "[0-9]{4}";
 			}
 		});

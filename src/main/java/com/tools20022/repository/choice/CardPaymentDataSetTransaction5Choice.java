@@ -72,6 +72,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Card payment transaction choice between cancellation, authorisation request and authorisation response."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice
+ * CardPaymentDataSetTransaction6Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction4Choice
@@ -111,6 +119,14 @@ public class CardPaymentDataSetTransaction5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Completed card payment transaction to be captured."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice#mmCompletion
+	 * CardPaymentDataSetTransaction6Choice.mmCompletion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -126,6 +142,7 @@ public class CardPaymentDataSetTransaction5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completion";
 			definition = "Completed card payment transaction to be captured.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction6Choice.mmCompletion);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction4Choice.mmCompletion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -160,6 +177,14 @@ public class CardPaymentDataSetTransaction5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cancelled card payment transaction to be captured."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice#mmCancellation
+	 * CardPaymentDataSetTransaction6Choice.mmCancellation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -175,6 +200,7 @@ public class CardPaymentDataSetTransaction5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation";
 			definition = "Cancelled card payment transaction to be captured.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction6Choice.mmCancellation);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction4Choice.mmCancellation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -210,6 +236,14 @@ public class CardPaymentDataSetTransaction5Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Card payment transaction including an authorisation request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice#mmAuthorisationRequest
+	 * CardPaymentDataSetTransaction6Choice.mmAuthorisationRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -225,6 +259,7 @@ public class CardPaymentDataSetTransaction5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationRequest";
 			definition = "Card payment transaction including an authorisation request.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction6Choice.mmAuthorisationRequest);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction4Choice.mmAuthorisationRequest;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -260,6 +295,14 @@ public class CardPaymentDataSetTransaction5Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Card payment transaction including an authorisation response."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CardPaymentDataSetTransaction6Choice#mmAuthorisationResponse
+	 * CardPaymentDataSetTransaction6Choice.mmAuthorisationResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -275,6 +318,7 @@ public class CardPaymentDataSetTransaction5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResponse";
 			definition = "Card payment transaction including an authorisation response.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction6Choice.mmAuthorisationResponse);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction4Choice.mmAuthorisationResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -291,6 +335,7 @@ public class CardPaymentDataSetTransaction5Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction5Choice";
 				definition = "Card payment transaction choice between cancellation, authorisation request and authorisation response.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction6Choice.mmObject());
 				previousVersion_lazy = () -> CardPaymentDataSetTransaction4Choice.mmObject();
 			}
 		});

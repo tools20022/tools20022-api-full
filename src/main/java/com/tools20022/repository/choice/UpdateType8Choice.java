@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * "UpdateType8Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between action to request on a security."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType23Choice
+ * UpdateType23Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -94,6 +101,14 @@ public class UpdateType8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Request to add, modify or delete datas of a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType23Choice#mmUpdateType
+	 * UpdateType23Choice.mmUpdateType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUpdateType = new MMMessageAssociationEnd() {
@@ -104,6 +119,7 @@ public class UpdateType8Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Request to add, modify or delete datas of a security.";
+			nextVersions_lazy = () -> Arrays.asList(UpdateType23Choice.mmUpdateType);
 			maxOccurs = 3;
 			minOccurs = 1;
 			isComposite = true;
@@ -136,6 +152,14 @@ public class UpdateType8Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Request to replace all present data of a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType23Choice#mmReplace
+	 * UpdateType23Choice.mmReplace}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReplace = new MMMessageAssociationEnd() {
@@ -146,6 +170,7 @@ public class UpdateType8Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Replace";
 			definition = "Request to replace all present data of a security.";
+			nextVersions_lazy = () -> Arrays.asList(UpdateType23Choice.mmReplace);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -161,6 +186,7 @@ public class UpdateType8Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType8Choice";
 				definition = "Choice between action to request on a security.";
+				nextVersions_lazy = () -> Arrays.asList(UpdateType23Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

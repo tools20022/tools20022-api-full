@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraBalanceQueryCriteria3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria based on which information is included."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6
+ * IntraBalanceQueryCriteria6}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -118,6 +125,14 @@ public class IntraBalanceQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Collective reference identifying a set of messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6#mmModificationRequestIdentification
+	 * IntraBalanceQueryCriteria6.mmModificationRequestIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmModificationRequestIdentification = new MMMessageAttribute() {
@@ -129,6 +144,7 @@ public class IntraBalanceQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequestIdentification";
 			definition = "Collective reference identifying a set of messages.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmModificationRequestIdentification);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -161,6 +177,14 @@ public class IntraBalanceQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of settlement of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6#mmProcessingStatus
+	 * IntraBalanceQueryCriteria6.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProcessingStatus = new MMMessageAttribute() {
@@ -171,6 +195,7 @@ public class IntraBalanceQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides the status of settlement of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmProcessingStatus);
 			minOccurs = 0;
 			complexType_lazy = () -> ModificationProcessingStatus1Choice.mmObject();
 		}
@@ -208,6 +233,14 @@ public class IntraBalanceQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account in which cash is maintained."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6#mmCashAccount
+	 * IntraBalanceQueryCriteria6.mmCashAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCashAccount = new MMMessageAttribute() {
@@ -219,6 +252,7 @@ public class IntraBalanceQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account in which cash is maintained.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmCashAccount);
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentificationSearchCriteria2Choice.mmObject();
 		}
@@ -255,6 +289,14 @@ public class IntraBalanceQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6#mmCashAccountOwner
+	 * IntraBalanceQueryCriteria6.mmCashAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountOwner = new MMMessageAssociationEnd() {
@@ -266,6 +308,7 @@ public class IntraBalanceQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountOwner";
 			definition = "Party that owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmCashAccountOwner);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
@@ -299,6 +342,14 @@ public class IntraBalanceQueryCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that originated the message, if other than the sender."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6#mmMessageOriginator
+	 * IntraBalanceQueryCriteria6.mmMessageOriginator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
@@ -309,6 +360,7 @@ public class IntraBalanceQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmMessageOriginator);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
@@ -346,6 +398,14 @@ public class IntraBalanceQueryCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the creation date/time of the intra-balance movement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6#mmCreationDateTime
+	 * IntraBalanceQueryCriteria6.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -357,6 +417,7 @@ public class IntraBalanceQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-balance movement.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
@@ -374,6 +435,7 @@ public class IntraBalanceQueryCriteria3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalanceQueryCriteria3";
 				definition = "Defines the criteria based on which information is included.";
+				nextVersions_lazy = () -> Arrays.asList(IntraBalanceQueryCriteria6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

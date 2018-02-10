@@ -308,7 +308,7 @@ public class ConstraintGroupAndTransactionStatus4Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to RCVD, then TransactionInformationAndStatus/TransactionStatus is not allowed.\n"
+	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to RCVD, then TransactionInformationAndStatus/TransactionStatus is not allowed.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -317,7 +317,7 @@ public class ConstraintGroupAndTransactionStatus4Rule {
 			validator = ConstraintGroupAndTransactionStatus4Rule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus4Rule";
-			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to RCVD, then TransactionInformationAndStatus/TransactionStatus is not allowed.\n";
+			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to RCVD, then TransactionInformationAndStatus/TransactionStatus is not allowed.\n.";
 			owner_lazy = () -> com.tools20022.repository.area.pacs.PaymentStatusReportV02.mmObject();
 		}
 	};
@@ -388,7 +388,7 @@ public class ConstraintGroupAndTransactionStatus4Rule {
 	/**
 	 * If OriginalGroupInformationAndStatus/GroupStatus is present and is equal
 	 * to RCVD, then TransactionInformationAndStatus/TransactionStatus is not
-	 * allowed.
+	 * allowed. .
 	 */
 	public static void checkPaymentStatusReportV02(com.tools20022.repository.area.pacs.PaymentStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();

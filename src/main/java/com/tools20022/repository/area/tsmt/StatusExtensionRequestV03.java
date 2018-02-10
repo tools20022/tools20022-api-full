@@ -174,7 +174,7 @@ public class StatusExtensionRequestV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n"
+	 * "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -183,7 +183,7 @@ public class StatusExtensionRequestV03 {
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
-			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
+			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -265,7 +265,7 @@ public class StatusExtensionRequestV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the status of the transaction by means of a code. "</li>
+	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmStatusToBeExtended = new MMMessageBuildingBlock() {
@@ -273,7 +273,7 @@ public class StatusExtensionRequestV03 {
 			xmlTag = "StsToBeXtnded";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusToBeExtended";
-			definition = "Identifies the status of the transaction by means of a code. ";
+			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus5.mmObject();

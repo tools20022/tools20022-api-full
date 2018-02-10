@@ -251,7 +251,7 @@ public class CorporateActionEventStageV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cancellation and re-run of a supplemental lottery only.  A subsequent new supplemental lottery will be performed under the original event."
+	 * "Cancellation and re-run of a supplemental lottery only. A subsequent new supplemental lottery will be performed under the original event."
 	 * </li>
 	 * </ul>
 	 */
@@ -259,7 +259,7 @@ public class CorporateActionEventStageV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellationAndReRun";
-			definition = "Cancellation and re-run of a supplemental lottery only.  A subsequent new supplemental lottery will be performed under the original event.";
+			definition = "Cancellation and re-run of a supplemental lottery only. A subsequent new supplemental lottery will be performed under the original event.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmObject();
 			codeName = "PART";
 		}
@@ -317,7 +317,7 @@ public class CorporateActionEventStageV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A supplemental lottery is being cancelled by the issuer. No subsequent lottery will be performed. "
+	 * "A supplemental lottery is being cancelled by the issuer. No subsequent lottery will be performed."
 	 * </li>
 	 * </ul>
 	 */
@@ -325,7 +325,7 @@ public class CorporateActionEventStageV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementalCancellation";
-			definition = "A supplemental lottery is being cancelled by the issuer. No subsequent lottery will be performed. ";
+			definition = "A supplemental lottery is being cancelled by the issuer. No subsequent lottery will be performed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionEventStageV2Code.mmObject();
 			codeName = "RESC";
 		}

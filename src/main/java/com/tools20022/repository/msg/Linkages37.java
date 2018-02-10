@@ -84,6 +84,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#mmLinkages
  * SecuritiesSettlementTransactionInstructionV07.mmLinkages}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08#mmLinkages
+ * SecuritiesSettlementTransactionGenerationNotificationV08.mmLinkages}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV08#mmLinkages
+ * SecuritiesFinancingInstructionV08.mmLinkages}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08#mmLinkages
+ * SecuritiesSettlementTransactionInstructionV08.mmLinkages}</li>
  * </ul>
  * </li>
  * <li>
@@ -403,7 +412,8 @@ public class Linkages37 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Linkages37.mmProcessingPosition, com.tools20022.repository.msg.Linkages37.mmMessageNumber, com.tools20022.repository.msg.Linkages37.mmReference,
 						com.tools20022.repository.msg.Linkages37.mmLinkedQuantity, com.tools20022.repository.msg.Linkages37.mmReferenceOwner);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionInstructionV06.mmLinkages, SecuritiesFinancingInstructionV06.mmLinkages, SecuritiesSettlementTransactionGenerationNotificationV06.mmLinkages,
-						SecuritiesFinancingInstructionV07.mmLinkages, SecuritiesSettlementTransactionGenerationNotificationV07.mmLinkages, SecuritiesSettlementTransactionInstructionV07.mmLinkages);
+						SecuritiesFinancingInstructionV07.mmLinkages, SecuritiesSettlementTransactionGenerationNotificationV07.mmLinkages, SecuritiesSettlementTransactionInstructionV07.mmLinkages,
+						SecuritiesSettlementTransactionGenerationNotificationV08.mmLinkages, SecuritiesFinancingInstructionV08.mmLinkages, SecuritiesSettlementTransactionInstructionV08.mmLinkages);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkedQuantityRule.forLinkages37);

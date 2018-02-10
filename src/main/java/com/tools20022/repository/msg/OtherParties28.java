@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
@@ -70,6 +71,10 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06#mmOtherBusinessParties
  * SecuritiesSettlementTransactionAllegementNotificationV06.
+ * mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionAllegementNotificationV07.
  * mmOtherBusinessParties}</li>
  * </ul>
  * </li>
@@ -447,7 +452,8 @@ public class OtherParties28 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OtherParties28.mmInvestor, com.tools20022.repository.msg.OtherParties28.mmQualifiedForeignIntermediary,
 						com.tools20022.repository.msg.OtherParties28.mmStockExchange, com.tools20022.repository.msg.OtherParties28.mmTradeRegulator, com.tools20022.repository.msg.OtherParties28.mmTripartyAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherBusinessParties, SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherBusinessParties);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherBusinessParties, SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherBusinessParties,
+						SecuritiesSettlementTransactionAllegementNotificationV07.mmOtherBusinessParties);
 				trace_lazy = () -> Role.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties28);

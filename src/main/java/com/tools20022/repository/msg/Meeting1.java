@@ -80,7 +80,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Meeting1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the physical parameters of a general meeting. Several dates and places can be defined for a  meeting."
+ * "Specifies the physical parameters of a general meeting. Several dates and places can be defined for a meeting."
  * </li>
  * </ul>
  */
@@ -422,7 +422,7 @@ public class Meeting1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Meeting1";
-				definition = "Specifies the physical parameters of a general meeting. Several dates and places can be defined for a  meeting.";
+				definition = "Specifies the physical parameters of a general meeting. Several dates and places can be defined for a meeting.";
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting1.QuorumQuantityOrPercentage);
 			}
 		});

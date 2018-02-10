@@ -75,6 +75,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Linkages26"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information related to a linked transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages51 Linkages51}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -114,6 +120,14 @@ public class Linkages26 {
 	 * definition} =
 	 * "When the transaction is to be executed relative to a linked transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages51#mmProcessingPosition
+	 * Linkages51.mmProcessingPosition}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProcessingPosition = new MMMessageAttribute() {
@@ -125,6 +139,7 @@ public class Linkages26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingPosition";
 			definition = "When the transaction is to be executed relative to a linked transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Linkages51.mmProcessingPosition);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ProcessingPosition1Choice.mmObject();
@@ -161,6 +176,13 @@ public class Linkages26 {
 	 * definition} =
 	 * "Message type number/message identifier of the message referenced in the linkage sequence."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Linkages51#mmMessageNumber
+	 * Linkages51.mmMessageNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMessageNumber = new MMMessageAssociationEnd() {
@@ -172,6 +194,7 @@ public class Linkages26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageNumber";
 			definition = "Message type number/message identifier of the message referenced in the linkage sequence.";
+			nextVersions_lazy = () -> Arrays.asList(Linkages51.mmMessageNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -211,6 +234,13 @@ public class Linkages26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference to the linked transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Linkages51#mmReference
+	 * Linkages51.mmReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
@@ -223,6 +253,7 @@ public class Linkages26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Reference to the linked transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Linkages51.mmReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -260,6 +291,14 @@ public class Linkages26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party responsible for generating the reference."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Linkages51#mmReferenceOwner
+	 * Linkages51.mmReferenceOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReferenceOwner = new MMMessageAssociationEnd() {
@@ -271,6 +310,7 @@ public class Linkages26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOwner";
 			definition = "Party responsible for generating the reference.";
+			nextVersions_lazy = () -> Arrays.asList(Linkages51.mmReferenceOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -288,6 +328,7 @@ public class Linkages26 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Linkages26";
 				definition = "Information related to a linked transaction.";
+				nextVersions_lazy = () -> Arrays.asList(Linkages51.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

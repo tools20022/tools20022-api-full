@@ -25,6 +25,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV05;
 import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06;
 import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07;
+import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08;
 import com.tools20022.repository.codeset.CorporateActionCancellationReason1Code;
 import com.tools20022.repository.datatype.Max140Text;
 import com.tools20022.repository.entity.CorporateActionNotification;
@@ -77,6 +78,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07#mmCancellationAdviceGeneralInformation
  * CorporateActionCancellationAdviceV07.mmCancellationAdviceGeneralInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmCancellationAdviceGeneralInformation
+ * CorporateActionCancellationAdviceV08.mmCancellationAdviceGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -288,7 +292,7 @@ public class CorporateActionCancellation3 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionCancellation3.mmCancellationReasonCode, com.tools20022.repository.msg.CorporateActionCancellation3.mmCancellationReason,
 						com.tools20022.repository.msg.CorporateActionCancellation3.mmProcessingStatus);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionCancellationAdviceV05.mmCancellationAdviceGeneralInformation, CorporateActionCancellationAdviceV06.mmCancellationAdviceGeneralInformation,
-						CorporateActionCancellationAdviceV07.mmCancellationAdviceGeneralInformation);
+						CorporateActionCancellationAdviceV07.mmCancellationAdviceGeneralInformation, CorporateActionCancellationAdviceV08.mmCancellationAdviceGeneralInformation);
 				trace_lazy = () -> CorporateActionNotification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

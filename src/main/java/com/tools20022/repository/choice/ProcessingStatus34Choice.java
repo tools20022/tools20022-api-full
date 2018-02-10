@@ -74,6 +74,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessingStatus34Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the processing status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ProcessingStatus66Choice
+ * ProcessingStatus66Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -117,6 +124,14 @@ public class ProcessingStatus34Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Instruction has been acknowledged by the account servicer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus66Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus66Choice.mmAcknowledgedAccepted}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAcknowledgedAccepted = new MMMessageAssociationEnd() {
@@ -129,6 +144,7 @@ public class ProcessingStatus34Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged by the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus66Choice.mmAcknowledgedAccepted);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -170,6 +186,14 @@ public class ProcessingStatus34Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Instruction or request is accepted but in repair."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus66Choice#mmRepair
+	 * ProcessingStatus66Choice.mmRepair}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRepair = new MMMessageAssociationEnd() {
@@ -182,6 +206,7 @@ public class ProcessingStatus34Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Repair";
 			definition = "Instruction or request is accepted but in repair.";
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus66Choice.mmRepair);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -225,6 +250,14 @@ public class ProcessingStatus34Choice {
 	 * definition} =
 	 * "Instruction has been cancelled. The status on the processing of a cancellation request must be provided using a cancellation request report message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus66Choice#mmCancelled
+	 * ProcessingStatus66Choice.mmCancelled}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCancelled = new MMMessageAssociationEnd() {
@@ -237,6 +270,7 @@ public class ProcessingStatus34Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Instruction has been cancelled. The status on the processing of a cancellation request must be provided using a cancellation request report message.";
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus66Choice.mmCancelled);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -280,6 +314,14 @@ public class ProcessingStatus34Choice {
 	 * definition} =
 	 * "Specifies a choice of status for the processing of an intra-balance movement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus66Choice#mmProprietary
+	 * ProcessingStatus66Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -292,6 +334,7 @@ public class ProcessingStatus34Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies a choice of status for the processing of an intra-balance movement.";
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus66Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -309,6 +352,7 @@ public class ProcessingStatus34Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProcessingStatus34Choice";
 				definition = "Choice of format for the processing status.";
+				nextVersions_lazy = () -> Arrays.asList(ProcessingStatus66Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -21,10 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV06;
-import com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV07;
-import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV06;
-import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.entity.AccountIdentification;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.AccountIdentification10;
@@ -78,6 +75,13 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmAccountDetails
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.
  * mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmAccountDetails
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.
+ * mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmAccountsDetails
+ * CorporateActionCancellationAdviceV08.mmAccountsDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -232,7 +236,8 @@ public class AccountIdentification29Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.AccountIdentification29Choice.mmForAllAccounts, com.tools20022.repository.choice.AccountIdentification29Choice.mmAccountsList);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmAccountDetails, CorporateActionCancellationAdviceV06.mmAccountsDetails,
-						CorporateActionCancellationAdviceV07.mmAccountsDetails, CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmAccountDetails);
+						CorporateActionCancellationAdviceV07.mmAccountsDetails, CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmAccountDetails, CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmAccountDetails,
+						CorporateActionCancellationAdviceV08.mmAccountsDetails);
 				trace_lazy = () -> AccountIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

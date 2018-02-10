@@ -25,7 +25,7 @@ import com.tools20022.repository.area.AcceptortoAcquirerCardTransactionLatestVer
 import com.tools20022.repository.msg.AcceptorAuthorisationRequest6;
 import com.tools20022.repository.msg.ContentInformationType15;
 import com.tools20022.repository.msg.Header30;
-import com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017;
+import com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorAuthorisationRequest message is sent by an acceptor (or its
- * agent) to the acquirer (or its agent) , to check with the issuer (or its
+ * agent) to the acquirer (or its agent), to check with the issuer (or its
  * agent) that the account associated to the card has the resources to fund the
  * payment. This checking will include validation of the card data and any
  * additional transaction data provided.
@@ -61,8 +61,8 @@ import javax.xml.bind.annotation.*;
  * messageSet} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPEAcceptortoAcquirerMaintenance20162017
- * CAPEAcceptortoAcquirerMaintenance20162017}</li>
+ * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesAcceptortoAcquirerISOLatestversion
+ * CardPaymentsExchangesAcceptortoAcquirerISOLatestversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -84,7 +84,15 @@ import javax.xml.bind.annotation.*;
  * "AcceptorAuthorisationRequestV06"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided."
+ * "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV07
+ * AcceptorAuthorisationRequestV07}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -119,6 +127,14 @@ public class AcceptorAuthorisationRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Authorisation request message management information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV07#mmHeader
+	 * AcceptorAuthorisationRequestV07.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -132,6 +148,7 @@ public class AcceptorAuthorisationRequestV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Authorisation request message management information.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequestV07.mmHeader);
 			previousVersion_lazy = () -> AcceptorAuthorisationRequestV05.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -169,6 +186,14 @@ public class AcceptorAuthorisationRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information related to the authorisation request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV07#mmAuthorisationRequest
+	 * AcceptorAuthorisationRequestV07.mmAuthorisationRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +207,7 @@ public class AcceptorAuthorisationRequestV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationRequest";
 			definition = "Information related to the authorisation request.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequestV07.mmAuthorisationRequest);
 			previousVersion_lazy = () -> AcceptorAuthorisationRequestV05.mmAuthorisationRequest;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -219,6 +245,14 @@ public class AcceptorAuthorisationRequestV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Trailer of the message containing a MAC."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.caaa.AcceptorAuthorisationRequestV07#mmSecurityTrailer
+	 * AcceptorAuthorisationRequestV07.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -232,6 +266,7 @@ public class AcceptorAuthorisationRequestV06 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequestV07.mmSecurityTrailer);
 			previousVersion_lazy = () -> AcceptorAuthorisationRequestV05.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -252,9 +287,10 @@ public class AcceptorAuthorisationRequestV06 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorAuthorisationRequestV06";
-				definition = "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided.";
+				definition = "The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequestV07.mmObject());
 				previousVersion_lazy = () -> AcceptorAuthorisationRequestV05.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CAPEAcceptortoAcquirerMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesAcceptortoAcquirerISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AccptrAuthstnReq";
 				businessArea_lazy = () -> AcceptortoAcquirerCardTransactionLatestVersion.mmObject();

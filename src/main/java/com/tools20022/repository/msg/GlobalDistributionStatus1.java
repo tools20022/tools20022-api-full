@@ -116,7 +116,7 @@ public class GlobalDistributionStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides information about the processing status of the global movement"
+	 * "Provides information about the processing status of the global movement."
 	 * </li>
 	 * </ul>
 	 */
@@ -127,7 +127,7 @@ public class GlobalDistributionStatus1 {
 			xmlTag = "PrcdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedStatus";
-			definition = "Provides information about the processing status of the global movement";
+			definition = "Provides information about the processing status of the global movement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

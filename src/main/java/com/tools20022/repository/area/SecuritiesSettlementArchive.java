@@ -374,6 +374,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesTransactionCancellationRequestStatusAdviceV03
  * SecuritiesTransactionCancellationRequestStatusAdviceV03}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotificationV03
+ * PortfolioTransferNotificationV03}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdviceV01
  * SecuritiesSettlementTransactionModificationRequestStatusAdviceV01}</li>
  * <li>
@@ -383,11 +386,23 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV05
  * TransferInConfirmationV05}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV04
+ * TransferInstructionStatusReportV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03
+ * AccountHoldingInformationRequestV03}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV05
  * TransferOutInstructionV05}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04
+ * AccountHoldingInformationV04}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV05
  * PortfolioTransferCancellationRequestV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV04
+ * TransferCancellationStatusReportV04}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05
  * PortfolioTransferInstructionV05}</li>
@@ -402,6 +417,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV05
  * TransferOutConfirmationV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV04
+ * RequestForTransferStatusReportV04}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV05
  * ReversalOfTransferOutConfirmationV05}</li>
@@ -451,11 +469,70 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV03
  * SecuritiesSettlementTransactionModificationRequestV03}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV06
+ * PortfolioTransferCancellationRequestV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06
+ * PortfolioTransferConfirmationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06
+ * PortfolioTransferInstructionV06}</li>
+ * <li>{@linkplain com.tools20022.repository.area.sese.TransferInInstructionV06
+ * TransferInInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV06
+ * TransferOutConfirmationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV06
+ * TransferOutInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV06
+ * TransferOutCancellationRequestV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV06
+ * TransferInConfirmationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV06
+ * ReversalOfTransferOutConfirmationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV06
+ * TransferInCancellationRequestV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV06
+ * ReversalOfTransferInConfirmationV06}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdviceV05
  * SecuritiesFinancingStatusAdviceV05}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV06
  * SecuritiesSettlementTransactionStatusAdviceV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
+ * SecuritiesSettlementTransactionInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06
+ * SecuritiesSettlementTransactionConfirmationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV06
+ * SecuritiesFinancingInstructionV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07
+ * SecuritiesSettlementTransactionStatusAdviceV07}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06
+ * SecuritiesSettlementTransactionGenerationNotificationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05
+ * SecuritiesSettlementTransactionReversalAdviceV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06
+ * SecuritiesFinancingConfirmationV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04
+ * SecuritiesSettlementTransactionModificationRequestV04}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05
+ * SecuritiesSettlementTransactionAllegementNotificationV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -517,15 +594,22 @@ public class SecuritiesSettlementArchive {
 						SecuritiesTransactionCancellationRequestStatusAdviceV01.mmObject(), SecuritiesTransactionCancellationRequestStatusAdviceV02.mmObject(), SecuritiesTransactionCancellationRequestV01.mmObject(),
 						SecuritiesTransactionCancellationRequestV02.mmObject(), SecuritiesTransactionStatusQueryV01.mmObject(), SecuritiesTransactionStatusQueryV02.mmObject(), SecuritiesFinancingModificationInstructionV03.mmObject(),
 						SecuritiesFinancingStatusAdviceV03.mmObject(), SecuritiesSettlementTransactionAllegementNotificationV03.mmObject(), SecuritiesSettlementTransactionReversalAdviceV03.mmObject(),
-						SecuritiesTransactionCancellationRequestV03.mmObject(), SecuritiesTransactionCancellationRequestStatusAdviceV03.mmObject(), SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.mmObject(),
-						ReversalOfTransferInConfirmationV05.mmObject(), TransferInConfirmationV05.mmObject(), TransferOutInstructionV05.mmObject(), PortfolioTransferCancellationRequestV05.mmObject(),
-						PortfolioTransferInstructionV05.mmObject(), TransferInInstructionV05.mmObject(), TransferInCancellationRequestV05.mmObject(), PortfolioTransferConfirmationV05.mmObject(), TransferOutConfirmationV05.mmObject(),
-						ReversalOfTransferOutConfirmationV05.mmObject(), TransferOutCancellationRequestV05.mmObject(), SecuritiesSettlementTransactionAllegementNotificationV04.mmObject(), SecuritiesFinancingStatusAdviceV04.mmObject(),
-						SecuritiesFinancingConfirmationV05.mmObject(), SecuritiesSettlementTransactionGenerationNotificationV05.mmObject(), SecuritiesSettlementTransactionReversalAdviceV04.mmObject(),
-						SecuritiesFinancingInstructionV05.mmObject(), SecuritiesSettlementTransactionInstructionV05.mmObject(), SecuritiesSettlementTransactionConfirmationV05.mmObject(),
-						SecuritiesSettlementConditionModificationStatusAdviceV05.mmObject(), SecuritiesFinancingModificationInstructionV04.mmObject(), SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.mmObject(),
-						SecuritiesSettlementConditionsModificationRequestV05.mmObject(), SecuritiesSettlementTransactionStatusAdviceV05.mmObject(), SecuritiesSettlementTransactionModificationRequestV03.mmObject(),
-						SecuritiesFinancingStatusAdviceV05.mmObject(), SecuritiesSettlementTransactionStatusAdviceV06.mmObject());
+						SecuritiesTransactionCancellationRequestV03.mmObject(), SecuritiesTransactionCancellationRequestStatusAdviceV03.mmObject(), PortfolioTransferNotificationV03.mmObject(),
+						SecuritiesSettlementTransactionModificationRequestStatusAdviceV01.mmObject(), ReversalOfTransferInConfirmationV05.mmObject(), TransferInConfirmationV05.mmObject(), TransferInstructionStatusReportV04.mmObject(),
+						AccountHoldingInformationRequestV03.mmObject(), TransferOutInstructionV05.mmObject(), AccountHoldingInformationV04.mmObject(), PortfolioTransferCancellationRequestV05.mmObject(),
+						TransferCancellationStatusReportV04.mmObject(), PortfolioTransferInstructionV05.mmObject(), TransferInInstructionV05.mmObject(), TransferInCancellationRequestV05.mmObject(),
+						PortfolioTransferConfirmationV05.mmObject(), TransferOutConfirmationV05.mmObject(), RequestForTransferStatusReportV04.mmObject(), ReversalOfTransferOutConfirmationV05.mmObject(),
+						TransferOutCancellationRequestV05.mmObject(), SecuritiesSettlementTransactionAllegementNotificationV04.mmObject(), SecuritiesFinancingStatusAdviceV04.mmObject(), SecuritiesFinancingConfirmationV05.mmObject(),
+						SecuritiesSettlementTransactionGenerationNotificationV05.mmObject(), SecuritiesSettlementTransactionReversalAdviceV04.mmObject(), SecuritiesFinancingInstructionV05.mmObject(),
+						SecuritiesSettlementTransactionInstructionV05.mmObject(), SecuritiesSettlementTransactionConfirmationV05.mmObject(), SecuritiesSettlementConditionModificationStatusAdviceV05.mmObject(),
+						SecuritiesFinancingModificationInstructionV04.mmObject(), SecuritiesSettlementTransactionModificationRequestStatusAdviceV02.mmObject(), SecuritiesSettlementConditionsModificationRequestV05.mmObject(),
+						SecuritiesSettlementTransactionStatusAdviceV05.mmObject(), SecuritiesSettlementTransactionModificationRequestV03.mmObject(), PortfolioTransferCancellationRequestV06.mmObject(),
+						PortfolioTransferConfirmationV06.mmObject(), PortfolioTransferInstructionV06.mmObject(), TransferInInstructionV06.mmObject(), TransferOutConfirmationV06.mmObject(), TransferOutInstructionV06.mmObject(),
+						TransferOutCancellationRequestV06.mmObject(), TransferInConfirmationV06.mmObject(), ReversalOfTransferOutConfirmationV06.mmObject(), TransferInCancellationRequestV06.mmObject(),
+						ReversalOfTransferInConfirmationV06.mmObject(), SecuritiesFinancingStatusAdviceV05.mmObject(), SecuritiesSettlementTransactionStatusAdviceV06.mmObject(), SecuritiesSettlementTransactionInstructionV06.mmObject(),
+						SecuritiesSettlementTransactionConfirmationV06.mmObject(), SecuritiesFinancingInstructionV06.mmObject(), SecuritiesSettlementTransactionStatusAdviceV07.mmObject(),
+						SecuritiesSettlementTransactionGenerationNotificationV06.mmObject(), SecuritiesSettlementTransactionReversalAdviceV05.mmObject(), SecuritiesFinancingConfirmationV06.mmObject(),
+						SecuritiesSettlementTransactionModificationRequestV04.mmObject(), SecuritiesSettlementTransactionAllegementNotificationV05.mmObject());
 				code = "sese";
 			}
 		});

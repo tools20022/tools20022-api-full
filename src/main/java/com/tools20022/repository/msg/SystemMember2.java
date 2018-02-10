@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.BackupPaymentV06;
 import com.tools20022.repository.choice.MemberIdentification2Choice;
 import com.tools20022.repository.choice.SystemIdentification2Choice;
 import com.tools20022.repository.entity.CashClearingSystem;
@@ -55,6 +56,21 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.SystemMemberRole
  * SystemMemberRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.BackupPaymentV06#mmCreditor
+ * BackupPaymentV06.mmCreditor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.BackupPaymentV06#mmCreditorAgent
+ * BackupPaymentV06.mmCreditorAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.BackupPaymentV06#mmDebtorAgent
+ * BackupPaymentV06.mmDebtorAgent}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -107,7 +123,7 @@ public class SystemMember2 {
 	 * name} = "SystemIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of a particular cash clearing system. "</li>
+	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
@@ -118,7 +134,7 @@ public class SystemMember2 {
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
-			definition = "Identification of a particular cash clearing system. ";
+			definition = "Identification of a particular cash clearing system.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
@@ -179,6 +195,7 @@ public class SystemMember2 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SystemMember2.mmSystemIdentification, com.tools20022.repository.msg.SystemMember2.mmMemberIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(BackupPaymentV06.mmCreditor, BackupPaymentV06.mmCreditorAgent, BackupPaymentV06.mmDebtorAgent);
 				trace_lazy = () -> SystemMemberRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

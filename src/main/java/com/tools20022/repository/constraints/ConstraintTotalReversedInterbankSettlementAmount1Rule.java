@@ -47,7 +47,7 @@ public class ConstraintTotalReversedInterbankSettlementAmount1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of  GroupHeader/TotalReversedInterbankSettlementAmount."
+	 * "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintTotalReversedInterbankSettlementAmount1Rule {
 			validator = ConstraintTotalReversedInterbankSettlementAmount1Rule::checkFIToFIPaymentReversalV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReversedInterbankSettlementAmount1Rule";
-			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of  GroupHeader/TotalReversedInterbankSettlementAmount.";
+			definition = "If GroupHeader/TotalReversedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReversedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReversedInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFIPaymentReversalV01.mmObject();
 		}
 	};

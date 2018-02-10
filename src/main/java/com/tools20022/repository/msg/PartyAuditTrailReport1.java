@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyAuditTrailReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Report information about party reference data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyAuditTrailReport2
+ * PartyAuditTrailReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +108,14 @@ public class PartyAuditTrailReport1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the returned party reference data or error information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport2#mmPartyAuditTrailOrError
+	 * PartyAuditTrailReport2.mmPartyAuditTrailOrError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPartyAuditTrailOrError = new MMMessageAssociationEnd() {
@@ -111,6 +126,7 @@ public class PartyAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyAuditTrailOrError";
 			definition = "Identifies the returned party reference data or error information.";
+			nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailReport2.mmPartyAuditTrailOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -145,6 +161,14 @@ public class PartyAuditTrailReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period in dates for which the audit trail is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport2#mmDatePeriod
+	 * PartyAuditTrailReport2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
@@ -155,6 +179,7 @@ public class PartyAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Period in dates for which the audit trail is provided.";
+			nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailReport2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -188,6 +213,14 @@ public class PartyAuditTrailReport1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the party for which the audit trail is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyAuditTrailReport2#mmPartyIdentification
+	 * PartyAuditTrailReport2.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPartyIdentification = new MMMessageAssociationEnd() {
@@ -198,6 +231,7 @@ public class PartyAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the audit trail is provided.";
+			nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailReport2.mmPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -214,6 +248,7 @@ public class PartyAuditTrailReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyAuditTrailReport1";
 				definition = "Report information about party reference data.";
+				nextVersions_lazy = () -> Arrays.asList(PartyAuditTrailReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

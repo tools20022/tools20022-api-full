@@ -477,7 +477,7 @@ public class ATMDeviceCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Device accepting in-out of items as  coupons, documents, bills and coins."
+	 * "Device accepting in-out of items as coupons, documents, bills and coins."
 	 * </li>
 	 * </ul>
 	 */
@@ -485,7 +485,7 @@ public class ATMDeviceCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInModule";
-			definition = "Device accepting in-out of items as  coupons, documents, bills and coins.";
+			definition = "Device accepting in-out of items as coupons, documents, bills and coins.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMDeviceCode.mmObject();
 			codeName = "CSHI";
 		}

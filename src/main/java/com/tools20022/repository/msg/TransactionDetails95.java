@@ -148,6 +148,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TransactionDetails95"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the details of the transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails103
+ * TransactionDetails103}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransactionDetails78
@@ -194,6 +201,14 @@ public class TransactionDetails95 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the type of activity to which this instruction relates."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmTransactionActivity
+	 * TransactionDetails103.mmTransactionActivity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -210,6 +225,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionActivity";
 			definition = "Specifies the type of activity to which this instruction relates.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmTransactionActivity);
 			previousVersion_lazy = () -> TransactionDetails78.mmTransactionActivity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -244,6 +260,14 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Choice of type for the transaction reported."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmSettlementTransactionOrCorporateActionEventType
+	 * TransactionDetails103.mmSettlementTransactionOrCorporateActionEventType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -259,6 +283,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionOrCorporateActionEventType";
 			definition = "Choice of type for the transaction reported.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmSettlementTransactionOrCorporateActionEventType);
 			previousVersion_lazy = () -> TransactionDetails78.mmSettlementTransactionOrCorporateActionEventType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -301,6 +326,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Specifies if the movement on a securities account results from a deliver or a receive instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmSecuritiesMovementType
+	 * TransactionDetails103.mmSecuritiesMovementType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -317,6 +350,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementType";
 			definition = "Specifies if the movement on a securities account results from a deliver or a receive instruction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmSecuritiesMovementType);
 			previousVersion_lazy = () -> TransactionDetails78.mmSecuritiesMovementType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -358,6 +392,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Specifies how the transaction is to be settled, for example, against payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmPayment
+	 * TransactionDetails103.mmPayment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,6 +416,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
 			definition = "Specifies how the transaction is to be settled, for example, against payment.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmPayment);
 			previousVersion_lazy = () -> TransactionDetails78.mmPayment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -412,6 +455,14 @@ public class TransactionDetails95 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Parameters applied to the settlement of a security transfer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmSettlementParameters
+	 * TransactionDetails103.mmSettlementParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -428,6 +479,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
 			definition = "Parameters applied to the settlement of a security transfer.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmSettlementParameters);
 			previousVersion_lazy = () -> TransactionDetails78.mmSettlementParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -467,6 +519,14 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Market in which a trade transaction has been executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmPlaceOfTrade
+	 * TransactionDetails103.mmPlaceOfTrade}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -483,6 +543,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which a trade transaction has been executed.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmPlaceOfTrade);
 			previousVersion_lazy = () -> TransactionDetails78.mmPlaceOfTrade;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -521,7 +582,15 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmSafekeepingPlace
+	 * TransactionDetails103.mmSafekeepingPlace}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -538,7 +607,8 @@ public class TransactionDetails95 {
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
-			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmSafekeepingPlace);
 			previousVersion_lazy = () -> TransactionDetails78.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -581,6 +651,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Infrastructure which may be a component of a clearing house and which facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmPlaceOfClearing
+	 * TransactionDetails103.mmPlaceOfClearing}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -597,6 +675,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfClearing";
 			definition = "Infrastructure which may be a component of a clearing house and which facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmPlaceOfClearing);
 			previousVersion_lazy = () -> TransactionDetails78.mmPlaceOfClearing;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -636,6 +715,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Quantity of financial instrument (to be) posted to the safekeeping account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmPostingQuantity
+	 * TransactionDetails103.mmPostingQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -652,6 +739,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Quantity of financial instrument (to be) posted to the safekeeping account.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmPostingQuantity);
 			previousVersion_lazy = () -> TransactionDetails78.mmPostingQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -693,6 +781,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Number of days on which the interest rate accrues (daily accrual note)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmNumberOfDaysAccrued
+	 * TransactionDetails103.mmNumberOfDaysAccrued}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -709,6 +805,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Number of days on which the interest rate accrues (daily accrual note).";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmNumberOfDaysAccrued);
 			previousVersion_lazy = () -> TransactionDetails78.mmNumberOfDaysAccrued;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -746,6 +843,14 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money that is to be/was posted to the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmPostingAmount
+	 * TransactionDetails103.mmPostingAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -762,6 +867,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingAmount";
 			definition = "Amount of money that is to be/was posted to the account.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmPostingAmount);
 			previousVersion_lazy = () -> TransactionDetails78.mmPostingAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -801,6 +907,14 @@ public class TransactionDetails95 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Interest amount that has accrued in between coupon payment periods."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmAccruedInterestAmount
+	 * TransactionDetails103.mmAccruedInterestAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -817,6 +931,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
 			definition = "Interest amount that has accrued in between coupon payment periods.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmAccruedInterestAmount);
 			previousVersion_lazy = () -> TransactionDetails78.mmAccruedInterestAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -855,6 +970,14 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmTradeDate
+	 * TransactionDetails103.mmTradeDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -871,6 +994,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmTradeDate);
 			previousVersion_lazy = () -> TransactionDetails78.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -912,6 +1036,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Date and time at which a transaction is completed and cleared, that is, payment is effected and securities are delivered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmEffectiveSettlementDate
+	 * TransactionDetails103.mmEffectiveSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -928,6 +1060,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which a transaction is completed and cleared, that is, payment is effected and securities are delivered.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmEffectiveSettlementDate);
 			previousVersion_lazy = () -> TransactionDetails78.mmEffectiveSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -968,6 +1101,14 @@ public class TransactionDetails95 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which the securities are to be delivered or received."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmSettlementDate
+	 * TransactionDetails103.mmSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -984,6 +1125,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmSettlementDate);
 			previousVersion_lazy = () -> TransactionDetails78.mmSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1025,6 +1167,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmValueDate
+	 * TransactionDetails103.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1041,6 +1191,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmValueDate);
 			previousVersion_lazy = () -> TransactionDetails78.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1075,6 +1226,14 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Time stamp on when the transaction is acknowledged."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmAcknowledgedStatusTimeStamp
+	 * TransactionDetails103.mmAcknowledgedStatusTimeStamp}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAcknowledgedStatusTimeStamp = new MMMessageAttribute() {
@@ -1085,6 +1244,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedStatusTimeStamp";
 			definition = "Time stamp on when the transaction is acknowledged.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmAcknowledgedStatusTimeStamp);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -1117,6 +1277,14 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Time stamp on when the transaction is matched."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmMatchedStatusTimeStamp
+	 * TransactionDetails103.mmMatchedStatusTimeStamp}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMatchedStatusTimeStamp = new MMMessageAttribute() {
@@ -1127,6 +1295,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchedStatusTimeStamp";
 			definition = "Time stamp on when the transaction is matched.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmMatchedStatusTimeStamp);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -1163,6 +1332,14 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of delivering settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmDeliveringSettlementParties
+	 * TransactionDetails103.mmDeliveringSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1179,6 +1356,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmDeliveringSettlementParties);
 			previousVersion_lazy = () -> TransactionDetails78.mmDeliveringSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1217,6 +1395,14 @@ public class TransactionDetails95 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of receiving settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmReceivingSettlementParties
+	 * TransactionDetails103.mmReceivingSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1233,6 +1419,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmReceivingSettlementParties);
 			previousVersion_lazy = () -> TransactionDetails78.mmReceivingSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1270,6 +1457,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Specifies whether it is the reversal of a previously reported movement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmReversalIndicator
+	 * TransactionDetails103.mmReversalIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1285,6 +1480,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalIndicator";
 			definition = "Specifies whether it is the reversal of a previously reported movement.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmReversalIndicator);
 			previousVersion_lazy = () -> TransactionDetails78.mmReversalIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1320,6 +1516,14 @@ public class TransactionDetails95 {
 	 * definition} =
 	 * "Provides additional details on the transaction which can not be included within the structured fields of the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmTransactionAdditionalDetails
+	 * TransactionDetails103.mmTransactionAdditionalDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1335,6 +1539,7 @@ public class TransactionDetails95 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionAdditionalDetails";
 			definition = "Provides additional details on the transaction which can not be included within the structured fields of the message.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmTransactionAdditionalDetails);
 			previousVersion_lazy = () -> TransactionDetails78.mmTransactionAdditionalDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1362,6 +1567,7 @@ public class TransactionDetails95 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionDetails95";
 				definition = "Specifies the details of the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionDetails103.mmObject());
 				previousVersion_lazy = () -> TransactionDetails78.mmObject();
 			}
 		});

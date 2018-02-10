@@ -291,7 +291,7 @@ public class PaymentStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Payment initiation or individual transaction included in the payment initiation is pending.  Further checks and status update will be performed."
+	 * "Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed."
 	 * </li>
 	 * </ul>
 	 */
@@ -299,7 +299,7 @@ public class PaymentStatusCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Pending";
-			definition = "Payment initiation or individual transaction included in the payment initiation is pending.  Further checks and status update will be performed.";
+			definition = "Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PaymentStatusCode.mmObject();
 			codeName = "PDNG";
 		}
@@ -374,10 +374,10 @@ public class PaymentStatusCode extends MMCode {
 	/**
 	 * Settlement on the debtor's account has been completed.
 	 * 
-	 * Usage : this can be used by the first agent to report to the debtor that
-	 * the transaction has been completed. Warning : this status is provided for
+	 * Usage: this can be used by the first agent to report to the debtor that
+	 * the transaction has been completed. Warning: this status is provided for
 	 * transaction status reasons, not for financial information. It can only be
-	 * used after bilateral agreement
+	 * used after bilateral agreement.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -395,7 +395,7 @@ public class PaymentStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Settlement on the debtor's account has been completed. \n\nUsage : this can be used by the first agent to report to the debtor that the transaction has been completed. Warning : this status is provided for transaction status reasons, not for financial information. It can only be used after bilateral agreement"
+	 * "Settlement on the debtor's account has been completed. \n\nUsage: this can be used by the first agent to report to the debtor that the transaction has been completed. Warning: this status is provided for transaction status reasons, not for financial information. It can only be used after bilateral agreement."
 	 * </li>
 	 * </ul>
 	 */
@@ -403,7 +403,7 @@ public class PaymentStatusCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AcceptedSettlementCompleted";
-			definition = "Settlement on the debtor's account has been completed. \n\nUsage : this can be used by the first agent to report to the debtor that the transaction has been completed. Warning : this status is provided for transaction status reasons, not for financial information. It can only be used after bilateral agreement";
+			definition = "Settlement on the debtor's account has been completed. \n\nUsage: this can be used by the first agent to report to the debtor that the transaction has been completed. Warning: this status is provided for transaction status reasons, not for financial information. It can only be used after bilateral agreement.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PaymentStatusCode.mmObject();
 			codeName = "ACSC";
 		}
@@ -469,7 +469,7 @@ public class PaymentStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * Cancellation request is rejected
+	 * Cancellation request is rejected.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -486,14 +486,14 @@ public class PaymentStatusCode extends MMCode {
 	 * name} = "RejectedCancellationRequest"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Cancellation request is rejected"</li>
+	 * definition} = "Cancellation request is rejected."</li>
 	 * </ul>
 	 */
 	public static final PaymentStatusCode RejectedCancellationRequest = new PaymentStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RejectedCancellationRequest";
-			definition = "Cancellation request is rejected";
+			definition = "Cancellation request is rejected.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PaymentStatusCode.mmObject();
 			codeName = "RJCR";
 		}

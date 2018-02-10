@@ -78,6 +78,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Acceptor configuration to be downloaded from the terminal management system."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorConfiguration7
+ * AcceptorConfiguration7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration5
@@ -123,6 +130,14 @@ public class AcceptorConfiguration6 {
 	 * definition} =
 	 * "Identification of the terminal management system (TMS) sending the acceptor parameters."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration7#mmTerminalManagerIdentification
+	 * AcceptorConfiguration7.mmTerminalManagerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +154,7 @@ public class AcceptorConfiguration6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) sending the acceptor parameters.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfiguration7.mmTerminalManagerIdentification);
 			previousVersion_lazy = () -> AcceptorConfiguration5.mmTerminalManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -175,6 +191,14 @@ public class AcceptorConfiguration6 {
 	 * definition} =
 	 * "Data set containing the acceptor parameters of a point of interaction (POI)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration7#mmDataSet
+	 * AcceptorConfiguration7.mmDataSet}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -190,6 +214,7 @@ public class AcceptorConfiguration6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data set containing the acceptor parameters of a point of interaction (POI).";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfiguration7.mmDataSet);
 			previousVersion_lazy = () -> AcceptorConfiguration5.mmDataSet;
 			minOccurs = 1;
 			isComposite = true;
@@ -207,6 +232,7 @@ public class AcceptorConfiguration6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfiguration6";
 				definition = "Acceptor configuration to be downloaded from the terminal management system.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorConfiguration7.mmObject());
 				previousVersion_lazy = () -> AcceptorConfiguration5.mmObject();
 			}
 		});

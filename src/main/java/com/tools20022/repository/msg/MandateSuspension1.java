@@ -114,7 +114,7 @@ public class MandateSuspension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification, as assigned by the initiating party, to unambiguously identify the suspension request. "
+	 * "Unique identification, as assigned by the initiating party, to unambiguously identify the suspension request."
 	 * </li>
 	 * </ul>
 	 */
@@ -125,7 +125,7 @@ public class MandateSuspension1 {
 			xmlTag = "SspnsnReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SuspensionRequestIdentification";
-			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the suspension request. ";
+			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the suspension request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

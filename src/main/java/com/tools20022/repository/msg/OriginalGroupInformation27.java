@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01;
+import com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV02;
 import com.tools20022.repository.datatype.DecimalNumber;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max15NumericText;
@@ -74,6 +75,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV01#mmOriginalGroupInformation
  * FIToFIPaymentStatusRequestV01.mmOriginalGroupInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.FIToFIPaymentStatusRequestV02#mmOriginalGroupInformation
+ * FIToFIPaymentStatusRequestV02.mmOriginalGroupInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -336,7 +340,7 @@ public class OriginalGroupInformation27 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalGroupInformation27.mmOriginalMessageIdentification,
 						com.tools20022.repository.msg.OriginalGroupInformation27.mmOriginalMessageNameIdentification, com.tools20022.repository.msg.OriginalGroupInformation27.mmOriginalCreationDateTime,
 						com.tools20022.repository.msg.OriginalGroupInformation27.mmOriginalNumberOfTransactions, com.tools20022.repository.msg.OriginalGroupInformation27.mmOriginalControlSum);
-				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentStatusRequestV01.mmOriginalGroupInformation);
+				messageBuildingBlock_lazy = () -> Arrays.asList(FIToFIPaymentStatusRequestV01.mmOriginalGroupInformation, FIToFIPaymentStatusRequestV02.mmOriginalGroupInformation);
 				trace_lazy = () -> Payment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -264,7 +264,7 @@ public class FinancingAllowedSummary1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total amount financed, defined as the entire financed amount of the  requests."
+	 * "Total amount financed, defined as the entire financed amount of the requests."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +276,7 @@ public class FinancingAllowedSummary1 {
 			xmlTag = "TtlFincdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalFinancedAmount";
-			definition = "Total amount financed, defined as the entire financed amount of the  requests.";
+			definition = "Total amount financed, defined as the entire financed amount of the requests.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

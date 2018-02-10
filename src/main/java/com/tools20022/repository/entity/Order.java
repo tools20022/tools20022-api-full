@@ -498,6 +498,15 @@ public class Order {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InvestmentFundOrder8#mmMasterReference
 	 * InvestmentFundOrder8.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmMasterReference
+	 * TransferStatusAndReason5.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusAndReason4#mmMasterReference
+	 * CancellationStatusAndReason4.mmMasterReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmMasterReference
+	 * MessageAndBusinessReference11.mmMasterReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -519,33 +528,31 @@ public class Order {
 	 */
 	public static final MMBusinessAttribute mmMasterIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(InvestmentFundOrder4.mmMasterReference, PEPISATransfer6.mmMasterReference, ISATransfer4.mmMasterReference, ISATransfer6.mmMasterReference, PEPISATransfer8.mmMasterReference, TransferReference3.mmMasterReference,
-							ISATransfer3.mmMasterReference, ISATransfer8.mmMasterReference, PEPISATransfer4.mmMasterReference, ISATransfer2.mmMasterReference, ISATransfer10.mmMasterReference, PEPISATransfer3.mmMasterReference,
-							ISATransfer1.mmMasterReference, ISATransfer7.mmMasterReference, TransferReference2.mmMasterReference, Transfer7.mmMasterReference, Transfer10.mmMasterReference, TransferReference1.mmMasterReference,
-							Transfer6.mmMasterReference, Transfer9.mmMasterReference, Transfer5.mmMasterReference, Transfer8.mmMasterReference, Identification2.mmMasterIdentification, OrderStatusAndReason8.mmMasterReference,
-							IndividualOrderStatusAndReason4.mmMasterReference, IndividualOrderConfirmationStatusAndReason1.mmMasterReference, OrderStatusAndReason7.mmMasterReference, IndividualOrderStatusAndReason2.mmMasterReference,
-							SwitchOrderStatusAndReason1.mmMasterReference, InvestmentFundOrder1.mmMasterReference, RedemptionBulkOrder3.mmMasterReference, RedemptionBulkExecution3.mmMasterReference,
-							InvestmentFundOrderExecution1.mmMasterReference, RedemptionBulkOrder4.mmMasterReference, RedemptionMultipleOrder3.mmMasterReference, RedemptionMultipleExecution3.mmMasterReference,
-							RedemptionMultipleOrder4.mmMasterReference, InvestmentFundOrder3.mmMasterReference, InvestmentFundOrder2.mmMasterReference, InvestmentFundTransaction2.mmMasterReference,
-							InvestmentFundTransaction3.mmMasterReference, SubscriptionBulkOrder3.mmMasterReference, SubscriptionBulkExecution3.mmMasterReference, SubscriptionBulkOrder4.mmMasterReference,
-							SubscriptionMultipleOrder3.mmMasterReference, SubscriptionMultipleExecution3.mmMasterReference, SubscriptionMultipleOrder4.mmMasterReference, SwitchOrder3.mmMasterReference, SwitchExecution4.mmMasterReference,
-							SwitchOrder4.mmMasterReference, MessageAndBusinessReference6.mmMasterReference, CancellationStatusAndReason2.mmMasterReference, TransferStatusAndReason2.mmMasterReference, PEPISATransfer5.mmMasterReference,
-							ISATransfer5.mmMasterReference, Identification7.mmMasterIdentification, Identification6.mmMasterIdentification, Identification5.mmMasterIdentification, Identification8.mmMasterIdentification,
-							Identification11.mmMasterIdentification, Identification13.mmMasterIdentification, Identification9.mmMasterIdentification, IndividualOrderStatusAndReason3.mmMasterReference,
-							RedemptionExecution10.mmMasterReference, RedemptionOrder9.mmMasterReference, SubscriptionExecution7.mmMasterReference, SubscriptionOrder9.mmMasterReference, InvestmentFundOrderExecution3.mmMasterReference,
-							InvestmentFundOrder6.mmMasterReference, IndividualOrderStatusAndReason5.mmMasterReference, RedemptionMultipleOrder5.mmMasterReference, RedemptionMultipleExecution4.mmMasterReference,
-							SubscriptionMultipleOrder5.mmMasterReference, SubscriptionMultipleExecution4.mmMasterReference, Identification3.mmMasterIdentification, TransferIn10.mmMasterReference, TransferIn9.mmMasterReference,
-							TransferOut11.mmMasterReference, TransferOut12.mmMasterReference, MessageAndBusinessReference7.mmMasterReference, ISATransfer16.mmMasterReference, ISATransfer13.mmMasterReference,
-							TransferStatusAndReason3.mmMasterReference, TransferReference5.mmMasterReference, TransferReference6.mmMasterReference, TransferReference7.mmMasterReference, InvestmentFundTransaction4.mmMasterReference,
-							TransferIn13.mmMasterReference, TransferOut14.mmMasterReference, TransferIn12.mmMasterReference, TransferOut15.mmMasterReference, Identification15.mmMasterIdentification,
-							CancellationStatusAndReason3.mmMasterReference, MessageAndBusinessReference8.mmMasterReference, TransferStatusAndReason4.mmMasterReference, TransferOut17.mmMasterReference, TransferReference9.mmMasterReference,
-							TransferIn14.mmMasterReference, TransferReference10.mmMasterReference, TransferIn15.mmMasterReference, TransferOut16.mmMasterReference, Identification24.mmMasterIdentification,
-							IndividualOrderConfirmationStatusAndReason2.mmMasterReference, SwitchExecution7.mmMasterReference, SubscriptionBulkOrder5.mmMasterReference, RedemptionBulkExecution5.mmMasterReference,
-							RedemptionMultipleExecution5.mmMasterReference, RedemptionMultipleOrder6.mmMasterReference, SubscriptionMultipleOrder6.mmMasterReference, SubscriptionBulkExecution4.mmMasterReference,
-							SwitchOrder7.mmMasterReference, RedemptionBulkOrder6.mmMasterReference, SubscriptionMultipleExecution5.mmMasterReference, IndividualOrderStatusAndReason7.mmMasterReference,
-							SwitchOrderStatusAndReason2.mmMasterReference, OrderStatusAndReason10.mmMasterReference, OrderStatusAndReason9.mmMasterReference, IndividualOrderStatusAndReason8.mmMasterReference,
-							InvestmentFundOrder8.mmMasterReference);
+			derivation_lazy = () -> Arrays.asList(InvestmentFundOrder4.mmMasterReference, PEPISATransfer6.mmMasterReference, ISATransfer4.mmMasterReference, ISATransfer6.mmMasterReference, PEPISATransfer8.mmMasterReference,
+					TransferReference3.mmMasterReference, ISATransfer3.mmMasterReference, ISATransfer8.mmMasterReference, PEPISATransfer4.mmMasterReference, ISATransfer2.mmMasterReference, ISATransfer10.mmMasterReference,
+					PEPISATransfer3.mmMasterReference, ISATransfer1.mmMasterReference, ISATransfer7.mmMasterReference, TransferReference2.mmMasterReference, Transfer7.mmMasterReference, Transfer10.mmMasterReference,
+					TransferReference1.mmMasterReference, Transfer6.mmMasterReference, Transfer9.mmMasterReference, Transfer5.mmMasterReference, Transfer8.mmMasterReference, Identification2.mmMasterIdentification,
+					OrderStatusAndReason8.mmMasterReference, IndividualOrderStatusAndReason4.mmMasterReference, IndividualOrderConfirmationStatusAndReason1.mmMasterReference, OrderStatusAndReason7.mmMasterReference,
+					IndividualOrderStatusAndReason2.mmMasterReference, SwitchOrderStatusAndReason1.mmMasterReference, InvestmentFundOrder1.mmMasterReference, RedemptionBulkOrder3.mmMasterReference,
+					RedemptionBulkExecution3.mmMasterReference, InvestmentFundOrderExecution1.mmMasterReference, RedemptionBulkOrder4.mmMasterReference, RedemptionMultipleOrder3.mmMasterReference,
+					RedemptionMultipleExecution3.mmMasterReference, RedemptionMultipleOrder4.mmMasterReference, InvestmentFundOrder3.mmMasterReference, InvestmentFundOrder2.mmMasterReference, InvestmentFundTransaction2.mmMasterReference,
+					InvestmentFundTransaction3.mmMasterReference, SubscriptionBulkOrder3.mmMasterReference, SubscriptionBulkExecution3.mmMasterReference, SubscriptionBulkOrder4.mmMasterReference,
+					SubscriptionMultipleOrder3.mmMasterReference, SubscriptionMultipleExecution3.mmMasterReference, SubscriptionMultipleOrder4.mmMasterReference, SwitchOrder3.mmMasterReference, SwitchExecution4.mmMasterReference,
+					SwitchOrder4.mmMasterReference, MessageAndBusinessReference6.mmMasterReference, CancellationStatusAndReason2.mmMasterReference, TransferStatusAndReason2.mmMasterReference, PEPISATransfer5.mmMasterReference,
+					ISATransfer5.mmMasterReference, Identification7.mmMasterIdentification, Identification6.mmMasterIdentification, Identification5.mmMasterIdentification, Identification8.mmMasterIdentification,
+					Identification11.mmMasterIdentification, Identification13.mmMasterIdentification, Identification9.mmMasterIdentification, IndividualOrderStatusAndReason3.mmMasterReference, RedemptionExecution10.mmMasterReference,
+					RedemptionOrder9.mmMasterReference, SubscriptionExecution7.mmMasterReference, SubscriptionOrder9.mmMasterReference, InvestmentFundOrderExecution3.mmMasterReference, InvestmentFundOrder6.mmMasterReference,
+					IndividualOrderStatusAndReason5.mmMasterReference, RedemptionMultipleOrder5.mmMasterReference, RedemptionMultipleExecution4.mmMasterReference, SubscriptionMultipleOrder5.mmMasterReference,
+					SubscriptionMultipleExecution4.mmMasterReference, Identification3.mmMasterIdentification, TransferIn10.mmMasterReference, TransferIn9.mmMasterReference, TransferOut11.mmMasterReference, TransferOut12.mmMasterReference,
+					MessageAndBusinessReference7.mmMasterReference, ISATransfer16.mmMasterReference, ISATransfer13.mmMasterReference, TransferStatusAndReason3.mmMasterReference, TransferReference5.mmMasterReference,
+					TransferReference6.mmMasterReference, TransferReference7.mmMasterReference, InvestmentFundTransaction4.mmMasterReference, TransferIn13.mmMasterReference, TransferOut14.mmMasterReference, TransferIn12.mmMasterReference,
+					TransferOut15.mmMasterReference, Identification15.mmMasterIdentification, CancellationStatusAndReason3.mmMasterReference, MessageAndBusinessReference8.mmMasterReference, TransferStatusAndReason4.mmMasterReference,
+					TransferOut17.mmMasterReference, TransferReference9.mmMasterReference, TransferIn14.mmMasterReference, TransferReference10.mmMasterReference, TransferIn15.mmMasterReference, TransferOut16.mmMasterReference,
+					Identification24.mmMasterIdentification, IndividualOrderConfirmationStatusAndReason2.mmMasterReference, SwitchExecution7.mmMasterReference, SubscriptionBulkOrder5.mmMasterReference,
+					RedemptionBulkExecution5.mmMasterReference, RedemptionMultipleExecution5.mmMasterReference, RedemptionMultipleOrder6.mmMasterReference, SubscriptionMultipleOrder6.mmMasterReference,
+					SubscriptionBulkExecution4.mmMasterReference, SwitchOrder7.mmMasterReference, RedemptionBulkOrder6.mmMasterReference, SubscriptionMultipleExecution5.mmMasterReference, IndividualOrderStatusAndReason7.mmMasterReference,
+					SwitchOrderStatusAndReason2.mmMasterReference, OrderStatusAndReason10.mmMasterReference, OrderStatusAndReason9.mmMasterReference, IndividualOrderStatusAndReason8.mmMasterReference,
+					InvestmentFundOrder8.mmMasterReference, TransferStatusAndReason5.mmMasterReference, CancellationStatusAndReason4.mmMasterReference, MessageAndBusinessReference11.mmMasterReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Order.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

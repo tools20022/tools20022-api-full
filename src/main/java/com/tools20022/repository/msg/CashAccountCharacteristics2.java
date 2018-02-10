@@ -644,7 +644,7 @@ public class CashAccountCharacteristics2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Currency used to specify the account's settlement currency"</li>
+	 * "Currency used to specify the account's settlement currency."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -660,7 +660,7 @@ public class CashAccountCharacteristics2 {
 			xmlTag = "SttlmCcyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyCode";
-			definition = "Currency used to specify the account's settlement currency";
+			definition = "Currency used to specify the account's settlement currency.";
 			previousVersion_lazy = () -> CashAccountCharacteristics1.mmSettlementCurrencyCode;
 			maxOccurs = 1;
 			minOccurs = 0;

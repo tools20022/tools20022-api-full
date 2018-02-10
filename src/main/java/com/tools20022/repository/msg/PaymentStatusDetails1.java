@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Information about the status of a transfer.
+ * Information about the status of a transfer. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PaymentStatusDetails1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Information about the status of a transfer.\n"</li>
+ * definition} = "Information about the status of a transfer.\n."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,7 +109,7 @@ public class PaymentStatusDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Status of a transfer, in coded form, as  assigned by the transaction administrator."
+	 * "Status of a transfer, in coded form, as assigned by the transaction administrator."
 	 * </li>
 	 * </ul>
 	 */
@@ -121,7 +121,7 @@ public class PaymentStatusDetails1 {
 			xmlTag = "PmtInstrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatus";
-			definition = "Status of a transfer, in coded form, as  assigned by the transaction administrator.";
+			definition = "Status of a transfer, in coded form, as assigned by the transaction administrator.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentStatusCode2Choice.mmObject();
@@ -229,7 +229,7 @@ public class PaymentStatusDetails1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PaymentStatusDetails1";
-				definition = "Information about the status of a transfer.\n";
+				definition = "Information about the status of a transfer.\n.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -432,7 +432,7 @@ public class AccountReport1 {
 	 * name} = "TransferAccountServicerIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of  the transfer account servicer."</li>
+	 * definition} = "Identification of the transfer account servicer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransferAccountServicerIdentification = new MMMessageAssociationEnd() {
@@ -443,7 +443,7 @@ public class AccountReport1 {
 			xmlTag = "TrfAcctSvcrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAccountServicerIdentification";
-			definition = "Identification of  the transfer account servicer.";
+			definition = "Identification of the transfer account servicer.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

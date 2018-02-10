@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Extension to identify an underlying security by proprietary or domestic
- * identification scheme
+ * identification scheme.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -72,7 +72,7 @@ import javax.xml.bind.annotation.XmlType;
  * "OtherIdentification2SD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Extension to  identify an underlying security by proprietary or domestic identification scheme"
+ * "Extension to identify an underlying security by proprietary or domestic identification scheme."
  * </li>
  * </ul>
  */
@@ -201,7 +201,7 @@ public class OtherIdentification2SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Abbreviated name of underlying securities in the local language. \r\nIn case of non-listed securities, it will be a full local language security name.\r\n 銘柄名（銘柄略称"
+	 * "Abbreviated name of underlying securities in the local language. \r\nIn case of non-listed securities, it will be a full local language security name.\r\n 銘柄名（銘柄略称."
 	 * </li>
 	 * </ul>
 	 */
@@ -212,7 +212,7 @@ public class OtherIdentification2SD1 {
 			xmlTag = "AbbrvtdLclLangSctyNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AbbreviatedLocalLanguageSecurityName";
-			definition = "Abbreviated name of underlying securities in the local language. \r\nIn case of non-listed securities, it will be a full local language security name.\r\n 銘柄名（銘柄略称";
+			definition = "Abbreviated name of underlying securities in the local language. \r\nIn case of non-listed securities, it will be a full local language security name.\r\n 銘柄名（銘柄略称.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max240Text.mmObject();
@@ -228,7 +228,7 @@ public class OtherIdentification2SD1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OtherIdentification2SD1";
-				definition = "Extension to  identify an underlying security by proprietary or domestic identification scheme";
+				definition = "Extension to identify an underlying security by proprietary or domestic identification scheme.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -93,7 +93,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Option2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "List of elements which provide the parameters of an option trade. "</li>
+ * "List of elements which provide the parameters of an option trade."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -131,7 +131,7 @@ public class Option2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the call and the put amount of the underlying foreign exchange trade. "
+	 * "Specifies the call and the put amount of the underlying foreign exchange trade."
 	 * </li>
 	 * </ul>
 	 */
@@ -143,7 +143,7 @@ public class Option2 {
 			xmlTag = "OptnAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionAmounts";
-			definition = "Specifies the call and the put amount of the underlying foreign exchange trade. ";
+			definition = "Specifies the call and the put amount of the underlying foreign exchange trade.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -374,7 +374,7 @@ public class Option2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date on which a privilege (eg, option, right, warrant,...) expires. If it is an European option, the option holder can only exercise the right or let it lapse on expiry date. If it is an American option, the option holder can exercise the right up to the expiry date."
+	 * "Date on which a privilege (eg, option, right, warrant.) expires. If it is an European option, the option holder can only exercise the right or let it lapse on expiry date. If it is an American option, the option holder can exercise the right up to the expiry date."
 	 * </li>
 	 * </ul>
 	 */
@@ -386,7 +386,7 @@ public class Option2 {
 			xmlTag = "XpryDtAndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDateAndTime";
-			definition = "Date on which a privilege (eg, option, right, warrant,...) expires. If it is an European option, the option holder can only exercise the right or let it lapse on expiry date. If it is an American option, the option holder can exercise the right up to the expiry date.";
+			definition = "Date on which a privilege (eg, option, right, warrant.) expires. If it is an European option, the option holder can only exercise the right or let it lapse on expiry date. If it is an American option, the option holder can exercise the right up to the expiry date.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -544,7 +544,7 @@ public class Option2 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEarliestExerciseDateRule.forOption2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Option2";
-				definition = "List of elements which provide the parameters of an option trade. ";
+				definition = "List of elements which provide the parameters of an option trade.";
 			}
 		});
 		return mmObject_lazy.get();

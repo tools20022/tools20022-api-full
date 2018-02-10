@@ -76,6 +76,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of elements used to identify a person or an organisation."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification129
+ * PartyIdentification129}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PartyIdentification45
@@ -122,6 +129,14 @@ public class PartyIdentification112 {
 	 * definition} =
 	 * "Unique identification, as assigned by an organisation, to unambiguously identify a party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmIdentification
+	 * PartyIdentification129.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -138,6 +153,7 @@ public class PartyIdentification112 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification129.mmIdentification);
 			previousVersion_lazy = () -> PartyIdentification45.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -178,6 +194,14 @@ public class PartyIdentification112 {
 	 * definition} =
 	 * "Name by which a party is known and which is usually used to identify that party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmName
+	 * PartyIdentification129.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -194,6 +218,7 @@ public class PartyIdentification112 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name by which a party is known and which is usually used to identify that party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification129.mmName);
 			previousVersion_lazy = () -> PartyIdentification45.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -233,6 +258,14 @@ public class PartyIdentification112 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information that locates and identifies a specific address."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmPostalAddress
+	 * PartyIdentification129.mmPostalAddress}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -249,6 +282,7 @@ public class PartyIdentification112 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostalAddress";
 			definition = "Information that locates and identifies a specific address.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification129.mmPostalAddress);
 			previousVersion_lazy = () -> PartyIdentification45.mmPostalAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -289,6 +323,14 @@ public class PartyIdentification112 {
 	 * definition} =
 	 * "Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmCountryOfResidence
+	 * PartyIdentification129.mmCountryOfResidence}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -305,6 +347,7 @@ public class PartyIdentification112 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfResidence";
 			definition = "Country in which a person resides (the place of a person's home). In the case of a company, it is the country from which the affairs of that company are directed.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification129.mmCountryOfResidence);
 			previousVersion_lazy = () -> PartyIdentification45.mmCountryOfResidence;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -341,6 +384,14 @@ public class PartyIdentification112 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Contact defined for this party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmContactDetails
+	 * PartyIdentification129.mmContactDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -357,6 +408,7 @@ public class PartyIdentification112 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactDetails";
 			definition = "Contact defined for this party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification129.mmContactDetails);
 			previousVersion_lazy = () -> PartyIdentification45.mmContactDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -374,6 +426,7 @@ public class PartyIdentification112 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification112";
 				definition = "Set of elements used to identify a person or an organisation.";
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentification129.mmObject());
 				previousVersion_lazy = () -> PartyIdentification45.mmObject();
 			}
 		});

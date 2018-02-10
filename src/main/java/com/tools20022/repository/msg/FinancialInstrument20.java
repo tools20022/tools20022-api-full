@@ -158,7 +158,7 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicate whether or note it is possible to hold bearer units/shares in this class in certified form"
+	 * "Indicate whether or note it is possible to hold bearer units/shares in this class in certified form."
 	 * </li>
 	 * </ul>
 	 */
@@ -170,7 +170,7 @@ public class FinancialInstrument20 {
 			xmlTag = "PhysBrScties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalBearerSecurities";
-			definition = "Indicate whether or note it is possible to hold bearer units/shares in this class in certified form";
+			definition = "Indicate whether or note it is possible to hold bearer units/shares in this class in certified form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -209,7 +209,7 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicate whether or not it is possible to hold bearer units/shares in paperless form"
+	 * "Indicate whether or not it is possible to hold bearer units/shares in paperless form."
 	 * </li>
 	 * </ul>
 	 */
@@ -221,7 +221,7 @@ public class FinancialInstrument20 {
 			xmlTag = "DmtrlsdBrScties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DematerialisedBearerSecurities";
-			definition = "Indicate whether or not it is possible to hold bearer units/shares in paperless form";
+			definition = "Indicate whether or not it is possible to hold bearer units/shares in paperless form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -260,7 +260,7 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form"
+	 * "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form."
 	 * </li>
 	 * </ul>
 	 */
@@ -272,7 +272,7 @@ public class FinancialInstrument20 {
 			xmlTag = "PhysRegdScties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalRegisteredSecurities";
-			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form";
+			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -311,7 +311,7 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form"
+	 * "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form."
 	 * </li>
 	 * </ul>
 	 */
@@ -323,7 +323,7 @@ public class FinancialInstrument20 {
 			xmlTag = "DmtrlsdRegdScties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DematerialisedRegisteredSecurities";
-			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form";
+			definition = "Indicate whether or not it is possible to hold registered units/shares in this class in paperless form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -512,7 +512,7 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,"
+	 * "Frequency with which the reinvestment takes place, This is the same or less than the dividend frequency."
 	 * </li>
 	 * </ul>
 	 */
@@ -524,7 +524,7 @@ public class FinancialInstrument20 {
 			xmlTag = "RinvstmtFrqcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentFrequency";
-			definition = "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,";
+			definition = "Frequency with which the reinvestment takes place, This is the same or less than the dividend frequency.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EventFrequency5Code.mmObject();
@@ -664,7 +664,7 @@ public class FinancialInstrument20 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If a separate fee for switching between sub-funds of the same umbrella can be applied"
+	 * "If a separate fee for switching between sub-funds of the same umbrella can be applied."
 	 * </li>
 	 * </ul>
 	 */
@@ -676,7 +676,7 @@ public class FinancialInstrument20 {
 			xmlTag = "SwtchFee";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchFee";
-			definition = "If a separate fee for switching between sub-funds of the same umbrella can be applied";
+			definition = "If a separate fee for switching between sub-funds of the same umbrella can be applied.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

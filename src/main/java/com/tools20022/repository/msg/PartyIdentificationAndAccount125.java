@@ -69,6 +69,14 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyIdentificationAndAccount125"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Party involved in the settlement chain."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount156
+ * PartyIdentificationAndAccount156}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount93
@@ -113,6 +121,14 @@ public class PartyIdentificationAndAccount125 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount156#mmPartyIdentification
+	 * PartyIdentificationAndAccount156.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +145,7 @@ public class PartyIdentificationAndAccount125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount156.mmPartyIdentification);
 			previousVersion_lazy = () -> PartyIdentificationAndAccount93.mmPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -167,6 +184,14 @@ public class PartyIdentificationAndAccount125 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the account owned by the party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount156#mmAccountIdentification
+	 * PartyIdentificationAndAccount156.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +208,7 @@ public class PartyIdentificationAndAccount125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Identification of the account owned by the party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount156.mmAccountIdentification);
 			previousVersion_lazy = () -> PartyIdentificationAndAccount93.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -222,6 +248,14 @@ public class PartyIdentificationAndAccount125 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Place where settlement of the securities takes place."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount156#mmPlaceOfSettlement
+	 * PartyIdentificationAndAccount156.mmPlaceOfSettlement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -238,6 +272,7 @@ public class PartyIdentificationAndAccount125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfSettlement";
 			definition = "Place where settlement of the securities takes place.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount156.mmPlaceOfSettlement);
 			previousVersion_lazy = () -> PartyIdentificationAndAccount93.mmPlaceOfSettlement;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -255,6 +290,7 @@ public class PartyIdentificationAndAccount125 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount125";
 				definition = "Party involved in the settlement chain.";
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentificationAndAccount156.mmObject());
 				previousVersion_lazy = () -> PartyIdentificationAndAccount93.mmObject();
 			}
 		});

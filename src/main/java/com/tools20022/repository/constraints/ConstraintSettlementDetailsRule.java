@@ -2607,6 +2607,9 @@ public class ConstraintSettlementDetailsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails119
 	 * ConstraintSettlementDetailsRule.forSettlementDetails119}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails140
+	 * ConstraintSettlementDetailsRule.forSettlementDetails140}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2623,7 +2626,7 @@ public class ConstraintSettlementDetailsRule {
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails101,
-					com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails119);
+					com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails119, com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails140);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails67;
 			owner_lazy = () -> SettlementDetails93.mmObject();
 		}
@@ -2692,6 +2695,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails147
+	 * ConstraintSettlementDetailsRule.forSettlementDetails147}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2705,6 +2716,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails147);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails71;
 			owner_lazy = () -> SettlementDetails96.mmObject();
 		}
@@ -2728,6 +2740,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails148
+	 * ConstraintSettlementDetailsRule.forSettlementDetails148}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2741,6 +2761,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails148);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails72;
 			owner_lazy = () -> SettlementDetails97.mmObject();
 		}
@@ -3421,6 +3442,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails144
+	 * ConstraintSettlementDetailsRule.forSettlementDetails144}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3434,6 +3463,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails144);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails90;
 			owner_lazy = () -> SettlementDetails128.mmObject();
 		}
@@ -3457,6 +3487,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails145
+	 * ConstraintSettlementDetailsRule.forSettlementDetails145}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3470,6 +3508,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails145);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails101;
 			owner_lazy = () -> SettlementDetails120.mmObject();
 		}
@@ -3493,6 +3532,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails142
+	 * ConstraintSettlementDetailsRule.forSettlementDetails142}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3506,6 +3553,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails142);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails93;
 			owner_lazy = () -> SettlementDetails119.mmObject();
 		}
@@ -3529,6 +3577,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails141
+	 * ConstraintSettlementDetailsRule.forSettlementDetails141}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3542,6 +3598,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails141);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails99;
 			owner_lazy = () -> SettlementDetails125.mmObject();
 		}
@@ -3565,6 +3622,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails150
+	 * ConstraintSettlementDetailsRule.forSettlementDetails150}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3578,6 +3643,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails150);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails91;
 			owner_lazy = () -> SettlementDetails126.mmObject();
 		}
@@ -3601,6 +3667,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails149
+	 * ConstraintSettlementDetailsRule.forSettlementDetails149}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3614,6 +3688,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails149);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails92;
 			owner_lazy = () -> SettlementDetails127.mmObject();
 		}
@@ -3637,6 +3712,14 @@ public class ConstraintSettlementDetailsRule {
 	 * definition} =
 	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails143
+	 * ConstraintSettlementDetailsRule.forSettlementDetails143}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3650,6 +3733,7 @@ public class ConstraintSettlementDetailsRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails143);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails95;
 			owner_lazy = () -> SettlementDetails121.mmObject();
 		}
@@ -3862,6 +3946,636 @@ public class ConstraintSettlementDetailsRule {
 			name = "SettlementDetailsRule";
 			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
 			owner_lazy = () -> SettlementDetails139.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140
+	 * SettlementDetails140}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails93
+	 * ConstraintSettlementDetailsRule.forSettlementDetails93}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails140> forSettlementDetails140 = new MMConstraint<SettlementDetails140>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails140;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails93;
+			owner_lazy = () -> SettlementDetails140.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails147
+	 * SettlementDetails147}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails96
+	 * ConstraintSettlementDetailsRule.forSettlementDetails96}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails147> forSettlementDetails147 = new MMConstraint<SettlementDetails147>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails147;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails96;
+			owner_lazy = () -> SettlementDetails147.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142
+	 * SettlementDetails142}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails119
+	 * ConstraintSettlementDetailsRule.forSettlementDetails119}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails142> forSettlementDetails142 = new MMConstraint<SettlementDetails142>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails142;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails119;
+			owner_lazy = () -> SettlementDetails142.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144
+	 * SettlementDetails144}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails128
+	 * ConstraintSettlementDetailsRule.forSettlementDetails128}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails144> forSettlementDetails144 = new MMConstraint<SettlementDetails144>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails144;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails128;
+			owner_lazy = () -> SettlementDetails144.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148
+	 * SettlementDetails148}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails97
+	 * ConstraintSettlementDetailsRule.forSettlementDetails97}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails148> forSettlementDetails148 = new MMConstraint<SettlementDetails148>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails148;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails97;
+			owner_lazy = () -> SettlementDetails148.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141
+	 * SettlementDetails141}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails125
+	 * ConstraintSettlementDetailsRule.forSettlementDetails125}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails141> forSettlementDetails141 = new MMConstraint<SettlementDetails141>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails141;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails125;
+			owner_lazy = () -> SettlementDetails141.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145
+	 * SettlementDetails145}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails120
+	 * ConstraintSettlementDetailsRule.forSettlementDetails120}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails145> forSettlementDetails145 = new MMConstraint<SettlementDetails145>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails145;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails120;
+			owner_lazy = () -> SettlementDetails145.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143
+	 * SettlementDetails143}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails121
+	 * ConstraintSettlementDetailsRule.forSettlementDetails121}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails143> forSettlementDetails143 = new MMConstraint<SettlementDetails143>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails143;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails121;
+			owner_lazy = () -> SettlementDetails143.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149
+	 * SettlementDetails149}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails127
+	 * ConstraintSettlementDetailsRule.forSettlementDetails127}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails149> forSettlementDetails149 = new MMConstraint<SettlementDetails149>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails149;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails127;
+			owner_lazy = () -> SettlementDetails149.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150
+	 * SettlementDetails150}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSettlementDetailsRule#forSettlementDetails126
+	 * ConstraintSettlementDetailsRule.forSettlementDetails126}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails150> forSettlementDetails150 = new MMConstraint<SettlementDetails150>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails150;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSettlementDetailsRule.forSettlementDetails126;
+			owner_lazy = () -> SettlementDetails150.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails151
+	 * SettlementDetails151}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails151> forSettlementDetails151 = new MMConstraint<SettlementDetails151>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails151;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails151.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152
+	 * SettlementDetails152}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails152> forSettlementDetails152 = new MMConstraint<SettlementDetails152>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails152;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails152.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153
+	 * SettlementDetails153}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails153> forSettlementDetails153 = new MMConstraint<SettlementDetails153>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails153;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails153.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155
+	 * SettlementDetails155}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails155> forSettlementDetails155 = new MMConstraint<SettlementDetails155>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails155;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails155.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156
+	 * SettlementDetails156}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails156> forSettlementDetails156 = new MMConstraint<SettlementDetails156>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails156;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails156.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157
+	 * SettlementDetails157}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails157> forSettlementDetails157 = new MMConstraint<SettlementDetails157>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails157;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails157.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160
+	 * SettlementDetails160}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails160> forSettlementDetails160 = new MMConstraint<SettlementDetails160>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails160;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails160.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161
+	 * SettlementDetails161}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails161> forSettlementDetails161 = new MMConstraint<SettlementDetails161>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails161;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails161.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162
+	 * SettlementDetails162}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementDetailsRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementDetails162> forSettlementDetails162 = new MMConstraint<SettlementDetails162>() {
+		{
+			validator = ConstraintSettlementDetailsRule::checkSettlementDetails162;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementDetailsRule";
+			definition = "If SettlementDetails elements are used, then their conditions of use must be pre-agreed between account owner and account servicer.";
+			owner_lazy = () -> SettlementDetails162.mmObject();
 		}
 	};
 
@@ -4782,6 +5496,158 @@ public class ConstraintSettlementDetailsRule {
 	 * be pre-agreed between account owner and account servicer.
 	 */
 	public static void checkSettlementDetails139(SettlementDetails139 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails140(SettlementDetails140 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails147(SettlementDetails147 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails142(SettlementDetails142 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails144(SettlementDetails144 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails148(SettlementDetails148 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails141(SettlementDetails141 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails145(SettlementDetails145 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails143(SettlementDetails143 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails149(SettlementDetails149 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails150(SettlementDetails150 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails151(SettlementDetails151 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails152(SettlementDetails152 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails153(SettlementDetails153 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails155(SettlementDetails155 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails156(SettlementDetails156 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails157(SettlementDetails157 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails160(SettlementDetails160 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails161(SettlementDetails161 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SettlementDetails elements are used, then their conditions of use must
+	 * be pre-agreed between account owner and account servicer.
+	 */
+	public static void checkSettlementDetails162(SettlementDetails162 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

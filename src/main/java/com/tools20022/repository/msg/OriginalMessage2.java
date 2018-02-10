@@ -131,7 +131,7 @@ public class OriginalMessage2 {
 	 * name} = "OriginalSender"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Original message sender used to identify the message. "</li>
+	 * definition} = "Original message sender used to identify the message."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -150,7 +150,7 @@ public class OriginalMessage2 {
 			xmlTag = "OrgnlSndr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalSender";
-			definition = "Original message sender used to identify the message. ";
+			definition = "Original message sender used to identify the message.";
 			nextVersions_lazy = () -> Arrays.asList(OriginalMessage3.mmOriginalSender);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -416,7 +416,7 @@ public class OriginalMessage2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the identification of original entry, instruction or record within the package. "
+	 * "Specifies the identification of original entry, instruction or record within the package."
 	 * </li>
 	 * </ul>
 	 */
@@ -427,7 +427,7 @@ public class OriginalMessage2 {
 			xmlTag = "OrgnlRcrdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRecordIdentification";
-			definition = "Specifies the identification of original entry, instruction or record within the package. ";
+			definition = "Specifies the identification of original entry, instruction or record within the package.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

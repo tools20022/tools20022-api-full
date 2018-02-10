@@ -121,7 +121,7 @@ public class FinancialInstrument15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the financial instrument using a choice of either ISIN,  local code, or a description of the instrument. ISIN is the preferred format."
+	 * "Identifies the financial instrument using a choice of either ISIN, local code, or a description of the instrument. ISIN is the preferred format."
 	 * </li>
 	 * </ul>
 	 */
@@ -133,7 +133,7 @@ public class FinancialInstrument15 {
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
-			definition = "Identifies the financial instrument using a choice of either ISIN,  local code, or a description of the instrument. ISIN is the preferred format.";
+			definition = "Identifies the financial instrument using a choice of either ISIN, local code, or a description of the instrument. ISIN is the preferred format.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

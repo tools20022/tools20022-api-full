@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Provides information about identification of the party .
+ * Provides information about identification of the party.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -87,7 +87,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PartyIdentification35"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Provides information about identification of the party ."</li>
+ * definition} = "Provides information about identification of the party."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -315,7 +315,7 @@ public class PartyIdentification35 {
 					}
 				})).get();
 				name = "PartyIdentification35";
-				definition = "Provides information about identification of the party .";
+				definition = "Provides information about identification of the party.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -131,7 +131,7 @@ public class BankRoleCode extends MMCode {
 		}
 	};
 	/**
-	 * Obligor bank
+	 * Obligor bank.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -147,14 +147,14 @@ public class BankRoleCode extends MMCode {
 	 * name} = "ObligorBank"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Obligor bank"</li>
+	 * definition} = "Obligor bank."</li>
 	 * </ul>
 	 */
 	public static final BankRoleCode ObligorBank = new BankRoleCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligorBank";
-			definition = "Obligor bank";
+			definition = "Obligor bank.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BankRoleCode.mmObject();
 			codeName = "OBLB";
 		}

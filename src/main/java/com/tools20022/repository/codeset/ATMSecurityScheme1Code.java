@@ -83,6 +83,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * definition} =
  * "Key exchange security scheme in activation on the ATM for the host manager."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code
+ * ATMSecurityScheme3Code}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -103,12 +110,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ApplicationRemoteKeyLoading"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#ApplicationRemoteKeyLoading
+	 * ATMSecurityScheme3Code.ApplicationRemoteKeyLoading}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code ApplicationRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationRemoteKeyLoading";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.ApplicationRemoteKeyLoading);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.ApplicationRemoteKeyLoading.getCodeName().orElse(name);
 		}
@@ -127,12 +143,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificateRemoteKeyLoading"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#CertificateRemoteKeyLoading
+	 * ATMSecurityScheme3Code.CertificateRemoteKeyLoading}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code CertificateRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateRemoteKeyLoading";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.CertificateRemoteKeyLoading);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.CertificateRemoteKeyLoading.getCodeName().orElse(name);
 		}
@@ -151,12 +176,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FrenchRemoteKeyLoading"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#FrenchRemoteKeyLoading
+	 * ATMSecurityScheme3Code.FrenchRemoteKeyLoading}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code FrenchRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FrenchRemoteKeyLoading";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.FrenchRemoteKeyLoading);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.FrenchRemoteKeyLoading.getCodeName().orElse(name);
 		}
@@ -175,12 +209,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GermanRemoteKeyLoading"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#GermanRemoteKeyLoading
+	 * ATMSecurityScheme3Code.GermanRemoteKeyLoading}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code GermanRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GermanRemoteKeyLoading";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.GermanRemoteKeyLoading);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.GermanRemoteKeyLoading.getCodeName().orElse(name);
 		}
@@ -199,12 +242,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "LuxemburgRemoteKeyLoading"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#LuxemburgRemoteKeyLoading
+	 * ATMSecurityScheme3Code.LuxemburgRemoteKeyLoading}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code LuxemburgRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LuxemburgRemoteKeyLoading";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.LuxemburgRemoteKeyLoading);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.LuxemburgRemoteKeyLoading.getCodeName().orElse(name);
 		}
@@ -223,12 +275,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ManualKeyEntry"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#ManualKeyEntry
+	 * ATMSecurityScheme3Code.ManualKeyEntry}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code ManualKeyEntry = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ManualKeyEntry";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.ManualKeyEntry);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.ManualKeyEntry.getCodeName().orElse(name);
 		}
@@ -247,12 +308,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PKIKeyDownload"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#PKIKeyDownload
+	 * ATMSecurityScheme3Code.PKIKeyDownload}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code PKIKeyDownload = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PKIKeyDownload";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.PKIKeyDownload);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.PKIKeyDownload.getCodeName().orElse(name);
 		}
@@ -271,12 +341,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SignatureRemoteKeyLoading"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#SignatureRemoteKeyLoading
+	 * ATMSecurityScheme3Code.SignatureRemoteKeyLoading}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code SignatureRemoteKeyLoading = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignatureRemoteKeyLoading";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.SignatureRemoteKeyLoading);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.SignatureRemoteKeyLoading.getCodeName().orElse(name);
 		}
@@ -295,12 +374,21 @@ public class ATMSecurityScheme1Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Unitialised"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code#Unitialised
+	 * ATMSecurityScheme3Code.Unitialised}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ATMSecurityScheme1Code Unitialised = new ATMSecurityScheme1Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unitialised";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.Unitialised);
 			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecurityScheme1Code.mmObject();
 			codeName = ATMSecuritySchemeCode.Unitialised.getCodeName().orElse(name);
 		}
@@ -317,6 +405,7 @@ public class ATMSecurityScheme1Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityScheme1Code";
 				definition = "Key exchange security scheme in activation on the ATM for the host manager.";
+				nextVersions_lazy = () -> Arrays.asList(ATMSecurityScheme3Code.mmObject());
 				trace_lazy = () -> ATMSecuritySchemeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMSecurityScheme1Code.ApplicationRemoteKeyLoading, com.tools20022.repository.codeset.ATMSecurityScheme1Code.CertificateRemoteKeyLoading,
 						com.tools20022.repository.codeset.ATMSecurityScheme1Code.FrenchRemoteKeyLoading, com.tools20022.repository.codeset.ATMSecurityScheme1Code.GermanRemoteKeyLoading,

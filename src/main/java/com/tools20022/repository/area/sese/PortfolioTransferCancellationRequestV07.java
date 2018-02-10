@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.choice.Cancellation11Choice;
 import com.tools20022.repository.msg.AdditionalReference6;
 import com.tools20022.repository.msg.MarketPracticeVersion1;
@@ -94,8 +94,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "PrtflTrfCxlReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.014.001.07}</li>
@@ -108,6 +108,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee), sends the PortfolioTransferCancellationRequest message to the executing party, for example, a (old) plan manager (Transferor), to request the cancellation of a previously sent PortfolioTransferInstruction.\r\nUsage\r\nThe PortfolioTransferCancellationRequest message is used to request the cancellation of an entire PortfolioTransferInstruction message, that is, all the product transfers that it contained. The cancellation request can be specified either by:\r\n- quoting the transfer references of all the product transfers listed in the PortfolioTransferInstruction message, or,\r\n- quoting the details of all the product transfers (this includes TransferReference) listed in PortfolioTransferInstruction message.\r\nThe message identification of the PortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PortfolioTransferInstruction by just quoting its message identification in PreviousReference."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08
+ * PortfolioTransferCancellationRequestV08}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -143,6 +151,14 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08#mmMessageReference
+	 * PortfolioTransferCancellationRequestV08.mmMessageReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -156,6 +172,7 @@ public class PortfolioTransferCancellationRequestV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Identifies the message.";
+			nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV08.mmMessageReference);
 			previousVersion_lazy = () -> PortfolioTransferCancellationRequestV06.mmMessageReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -193,6 +210,14 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Collective reference identifying a set of messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08#mmPoolReference
+	 * PortfolioTransferCancellationRequestV08.mmPoolReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -206,6 +231,7 @@ public class PortfolioTransferCancellationRequestV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
+			nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV08.mmPoolReference);
 			previousVersion_lazy = () -> PortfolioTransferCancellationRequestV06.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -243,6 +269,14 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference to a linked message that was previously sent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08#mmPreviousReference
+	 * PortfolioTransferCancellationRequestV08.mmPreviousReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -256,6 +290,7 @@ public class PortfolioTransferCancellationRequestV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV08.mmPreviousReference);
 			previousVersion_lazy = () -> PortfolioTransferCancellationRequestV06.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -294,6 +329,14 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reference to a linked message that was previously received."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08#mmRelatedReference
+	 * PortfolioTransferCancellationRequestV08.mmRelatedReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -307,6 +350,7 @@ public class PortfolioTransferCancellationRequestV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
+			nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV08.mmRelatedReference);
 			previousVersion_lazy = () -> PortfolioTransferCancellationRequestV06.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -396,6 +440,14 @@ public class PortfolioTransferCancellationRequestV07 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the market practice to which the message conforms."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08#mmMarketPracticeVersion
+	 * PortfolioTransferCancellationRequestV08.mmMarketPracticeVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -409,6 +461,7 @@ public class PortfolioTransferCancellationRequestV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
+			nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV08.mmMarketPracticeVersion);
 			previousVersion_lazy = () -> PortfolioTransferCancellationRequestV06.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -430,11 +483,12 @@ public class PortfolioTransferCancellationRequestV07 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PortfolioTransferCancellationRequestV07";
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee), sends the PortfolioTransferCancellationRequest message to the executing party, for example, a (old) plan manager (Transferor), to request the cancellation of a previously sent PortfolioTransferInstruction.\r\nUsage\r\nThe PortfolioTransferCancellationRequest message is used to request the cancellation of an entire PortfolioTransferInstruction message, that is, all the product transfers that it contained. The cancellation request can be specified either by:\r\n- quoting the transfer references of all the product transfers listed in the PortfolioTransferInstruction message, or,\r\n- quoting the details of all the product transfers (this includes TransferReference) listed in PortfolioTransferInstruction message.\r\nThe message identification of the PortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PortfolioTransferInstruction by just quoting its message identification in PreviousReference.";
+				nextVersions_lazy = () -> Arrays.asList(PortfolioTransferCancellationRequestV08.mmObject());
 				previousVersion_lazy = () -> PortfolioTransferCancellationRequestV06.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "PrtflTrfCxlReq";
-				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmMessageReference,
 						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmPoolReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmPreviousReference,
 						com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmRelatedReference, com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV07.mmCancellation,

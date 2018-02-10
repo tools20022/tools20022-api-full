@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PartyQueryV01;
 import com.tools20022.repository.choice.RequestType2Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
@@ -54,6 +55,15 @@ import javax.xml.bind.annotation.XmlType;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyQueryV01#mmMessageIdentification
+ * PartyQueryV01.mmMessageIdentification}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -67,6 +77,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of characteristics, such as the identification or the creation date and time, specific to the message."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageHeader9 MessageHeader9}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -101,7 +117,15 @@ public class MessageHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Point to point reference, as assigned by the sender,, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period."
+	 * "Point to point reference, as assigned by the sender, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageHeader9#mmMessageIdentification
+	 * MessageHeader9.mmMessageIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -112,7 +136,8 @@ public class MessageHeader2 {
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
-			definition = "Point to point reference, as assigned by the sender,, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.";
+			definition = "Point to point reference, as assigned by the sender, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader9.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -144,6 +169,14 @@ public class MessageHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageHeader9#mmCreationDateTime
+	 * MessageHeader9.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -154,6 +187,7 @@ public class MessageHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader9.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -186,6 +220,14 @@ public class MessageHeader2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specific actions to be executed through the request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageHeader9#mmRequestType
+	 * MessageHeader9.mmRequestType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
@@ -196,6 +238,7 @@ public class MessageHeader2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestType";
 			definition = "Specific actions to be executed through the request.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader9.mmRequestType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RequestType2Choice.mmObject();
@@ -207,10 +250,12 @@ public class MessageHeader2 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MessageHeader2.mmMessageIdentification, com.tools20022.repository.msg.MessageHeader2.mmCreationDateTime,
 						com.tools20022.repository.msg.MessageHeader2.mmRequestType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyQueryV01.mmMessageIdentification);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader2";
 				definition = "Set of characteristics, such as the identification or the creation date and time, specific to the message.";
+				nextVersions_lazy = () -> Arrays.asList(MessageHeader9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmOtherDocumentIdentification
  * CorporateActionInstructionStatusAdviceV08.mmOtherDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmOtherDocumentIdentification
+ * CorporateActionInstructionStatusAdviceV09.mmOtherDocumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV08#mmOtherDocumentIdentification
+ * CorporateActionInstructionCancellationRequestStatusAdviceV08.
+ * mmOtherDocumentIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -226,7 +233,8 @@ public class DocumentIdentification33 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DocumentIdentification33.mmIdentification, com.tools20022.repository.msg.DocumentIdentification33.mmDocumentNumber);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionCancellationRequestStatusAdviceV06.mmOtherDocumentIdentification, CorporateActionEventProcessingStatusAdviceV05.mmOtherDocumentIdentification,
 						CorporateActionInstructionStatusAdviceV07.mmOtherDocumentIdentification, CorporateActionEventProcessingStatusAdviceV06.mmOtherDocumentIdentification,
-						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmOtherDocumentIdentification, CorporateActionInstructionStatusAdviceV08.mmOtherDocumentIdentification);
+						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmOtherDocumentIdentification, CorporateActionInstructionStatusAdviceV08.mmOtherDocumentIdentification,
+						CorporateActionInstructionStatusAdviceV09.mmOtherDocumentIdentification, CorporateActionInstructionCancellationRequestStatusAdviceV08.mmOtherDocumentIdentification);
 				trace_lazy = () -> Document.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

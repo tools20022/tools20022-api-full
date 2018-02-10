@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Modification on the value of goods and / or services. For example: rebate,
- * discount, surcharge
+ * discount, surcharge.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Adjustment6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Modification on the value of goods and / or services. For example: rebate, discount, surcharge"
+ * "Modification on the value of goods and / or services. For example: rebate, discount, surcharge."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -277,7 +277,7 @@ public class Adjustment6 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Adjustment6";
-				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
+				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge.";
 				nextVersions_lazy = () -> Arrays.asList(Adjustment7.mmObject());
 				previousVersion_lazy = () -> Adjustment4.mmObject();
 			}

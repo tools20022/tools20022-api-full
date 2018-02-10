@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant;
+import com.tools20022.repository.area.SecuritiesSettlementArchivesubsetsvariants;
 import com.tools20022.repository.choice.UpdateType22Choice;
 import com.tools20022.repository.msg.TransactionDetails85;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
@@ -86,8 +86,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "SctiesSttlmTxModReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant
- * SecuritiesSettlementPreviousversionsubsetvariant}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchivesubsetsvariants
+ * SecuritiesSettlementArchivesubsetsvariants}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.038.002.04}</li>
@@ -236,7 +236,7 @@ public class SecuritiesSettlementTransactionModificationRequest002V04 {
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISO15022VariantsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxModReq";
-				businessArea_lazy = () -> SecuritiesSettlementPreviousversionsubsetvariant.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementArchivesubsetsvariants.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04.mmModifiedTransactionDetails,
 						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04.mmUpdateType);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

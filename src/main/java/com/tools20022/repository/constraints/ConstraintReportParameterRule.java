@@ -107,7 +107,7 @@ public class ConstraintReportParameterRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either FinancialInstrumentDetails or  ValuationDateTime must be present. Both FinancialInstrumentDetails and  ValuationDateTime may be present."
+	 * "Either FinancialInstrumentDetails or ValuationDateTime must be present. Both FinancialInstrumentDetails and ValuationDateTime may be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -116,7 +116,7 @@ public class ConstraintReportParameterRule {
 			validator = ConstraintReportParameterRule::checkFundParameters3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportParameterRule";
-			definition = "Either FinancialInstrumentDetails or  ValuationDateTime must be present. Both FinancialInstrumentDetails and  ValuationDateTime may be present.";
+			definition = "Either FinancialInstrumentDetails or ValuationDateTime must be present. Both FinancialInstrumentDetails and ValuationDateTime may be present.";
 			owner_lazy = () -> FundParameters3.mmObject();
 		}
 	};

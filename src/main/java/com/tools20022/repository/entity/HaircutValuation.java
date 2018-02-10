@@ -236,6 +236,8 @@ public class HaircutValuation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral7#mmHaircut
 	 * SecuritiesCollateral7.mmHaircut}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmHaircut
+	 * Debt3.mmHaircut}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesCollateral8#mmHaircut
 	 * SecuritiesCollateral8.mmHaircut}</li>
@@ -266,7 +268,7 @@ public class HaircutValuation {
 					CollateralValuation1.mmCurrencyHaircut, SecuritiesFinancingTransactionDetails6.mmSecuritiesHaircut, SecuritiesFinancingTransactionDetails10.mmSecuritiesHaircut, Debt2.mmHaircut, CollateralValuation2.mmCurrencyHaircut,
 					SecuritiesCollateral2.mmHaircut, OtherCollateral2.mmHaircut, CashCollateral3.mmHaircut, SecuritiesCollateral3.mmHaircut, OtherCollateral3.mmHaircut, CashCollateral4.mmHaircut, CashCollateral2.mmHaircut,
 					OtherCollateral4.mmHaircut, SecuritiesCollateral4.mmHaircut, CashCollateral5.mmHaircut, OtherCollateral7.mmHaircut, CollateralValuation5.mmCurrencyHaircut, OtherCollateral6.mmHaircut, SecuritiesCollateral6.mmHaircut,
-					SecuritiesCollateral5.mmHaircut, OtherCollateral5.mmHaircut, SecuritiesCollateral7.mmHaircut, SecuritiesCollateral8.mmHaircut);
+					SecuritiesCollateral5.mmHaircut, OtherCollateral5.mmHaircut, SecuritiesCollateral7.mmHaircut, Debt3.mmHaircut, SecuritiesCollateral8.mmHaircut);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -310,7 +312,7 @@ public class HaircutValuation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "One of the following PlusOrMinusIndicator values must be used:\r\nMeaningWhenTrue: Plus (the haircut is added)\r\nMeaningWhenFalse: Minus (the haircut is deducted)"
+	 * "One of the following PlusOrMinusIndicator values must be used:\r\nMeaningWhenTrue: Plus (the haircut is added)\r\nMeaningWhenFalse: Minus (the haircut is deducted)."
 	 * </li>
 	 * </ul>
 	 */
@@ -320,7 +322,7 @@ public class HaircutValuation {
 			elementContext_lazy = () -> com.tools20022.repository.entity.HaircutValuation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sign";
-			definition = "One of the following PlusOrMinusIndicator values must be used:\r\nMeaningWhenTrue: Plus (the haircut is added)\r\nMeaningWhenFalse: Minus (the haircut is deducted)";
+			definition = "One of the following PlusOrMinusIndicator values must be used:\r\nMeaningWhenTrue: Plus (the haircut is added)\r\nMeaningWhenFalse: Minus (the haircut is deducted).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();

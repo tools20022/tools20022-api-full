@@ -169,7 +169,7 @@ public class RemittanceLocationAdviceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides information related to location and/or delivery of the remittance information.  This information is used to enable the matching of an entry with the items that the associated payment is intended to settle."
+	 * "Provides information related to location and/or delivery of the remittance information. This information is used to enable the matching of an entry with the items that the associated payment is intended to settle."
 	 * </li>
 	 * </ul>
 	 */
@@ -178,7 +178,7 @@ public class RemittanceLocationAdviceV01 {
 			xmlTag = "RmtLctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceLocation";
-			definition = "Provides information related to location and/or delivery of the remittance information.  This information is used to enable the matching of an entry with the items that the associated payment is intended to settle.";
+			definition = "Provides information related to location and/or delivery of the remittance information. This information is used to enable the matching of an entry with the items that the associated payment is intended to settle.";
 			minOccurs = 1;
 			complexType_lazy = () -> RemittanceLocation3.mmObject();
 		}
@@ -214,7 +214,7 @@ public class RemittanceLocationAdviceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information that cannot be  captured in the structured elements and/or any other specific block."
+	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
 	 * </ul>
 	 */
@@ -223,7 +223,7 @@ public class RemittanceLocationAdviceV01 {
 			xmlTag = "SplmtryData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
-			definition = "Additional information that cannot be  captured in the structured elements and/or any other specific block.";
+			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
 		}

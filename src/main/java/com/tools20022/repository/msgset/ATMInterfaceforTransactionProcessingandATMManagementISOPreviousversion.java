@@ -49,17 +49,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ATMDiagnosticResponseV01}</li>
  * <li>{@linkplain com.tools20022.repository.area.caam.ATMDiagnosticRequestV01
  * ATMDiagnosticRequestV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV01
- * ATMKeyDownloadResponseV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV01
- * ATMDeviceReportV01}</li>
  * <li>{@linkplain com.tools20022.repository.area.caam.HostToATMRequestV01
  * HostToATMRequestV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV01
- * ATMKeyDownloadRequestV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV01
- * ATMDeviceControlV01}</li>
  * <li>{@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01
  * ATMInquiryResponseV01}</li>
  * <li>{@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV01
@@ -87,6 +78,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV01
  * ATMPINManagementResponseV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV02
+ * ATMDeviceControlV02}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV02
+ * ATMDeviceReportV02}</li>
+ * <li>{@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV02
+ * ATMKeyDownloadRequestV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02
+ * ATMKeyDownloadResponseV02}</li>
  * </ul>
  * </li>
  * <li>
@@ -119,9 +119,9 @@ public class ATMInterfaceforTransactionProcessingandATMManagementISOPreviousvers
 				name = "ATM Interface for Transaction Processing and ATM Management - ISO - Previous version";
 				definition = "Messages that support any card related Automated Teller Machine (ATM) transactions, card related terminal management services and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions.";
 				messageDefinition_lazy = () -> Arrays.asList(ATMReconciliationAdviceV01.mmObject(), ATMReconciliationAcknowledgementV01.mmObject(), HostToATMAcknowledgementV01.mmObject(), ATMDiagnosticResponseV01.mmObject(),
-						ATMDiagnosticRequestV01.mmObject(), ATMKeyDownloadResponseV01.mmObject(), ATMDeviceReportV01.mmObject(), HostToATMRequestV01.mmObject(), ATMKeyDownloadRequestV01.mmObject(), ATMDeviceControlV01.mmObject(),
-						ATMInquiryResponseV01.mmObject(), ATMInquiryRequestV01.mmObject(), ATMCompletionAdviceV01.mmObject(), ATMWithdrawalResponseV01.mmObject(), ATMRejectV01.mmObject(), ATMCompletionAcknowledgementV01.mmObject(),
-						ATMWithdrawalCompletionAdviceV01.mmObject(), ATMWithdrawalCompletionAcknowledgementV01.mmObject(), ATMWithdrawalRequestV01.mmObject(), ATMPINManagementRequestV01.mmObject(), ATMPINManagementResponseV01.mmObject());
+						ATMDiagnosticRequestV01.mmObject(), HostToATMRequestV01.mmObject(), ATMInquiryResponseV01.mmObject(), ATMInquiryRequestV01.mmObject(), ATMCompletionAdviceV01.mmObject(), ATMWithdrawalResponseV01.mmObject(),
+						ATMRejectV01.mmObject(), ATMCompletionAcknowledgementV01.mmObject(), ATMWithdrawalCompletionAdviceV01.mmObject(), ATMWithdrawalCompletionAcknowledgementV01.mmObject(), ATMWithdrawalRequestV01.mmObject(),
+						ATMPINManagementRequestV01.mmObject(), ATMPINManagementResponseV01.mmObject(), ATMDeviceControlV02.mmObject(), ATMDeviceReportV02.mmObject(), ATMKeyDownloadRequestV02.mmObject(), ATMKeyDownloadResponseV02.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

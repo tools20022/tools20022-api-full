@@ -409,7 +409,7 @@ public class AccountOpeningInstructionV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Detailed information about the investment account to be opened"</li>
+	 * "Detailed information about the investment account to be opened."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -425,7 +425,7 @@ public class AccountOpeningInstructionV03 {
 			xmlTag = "InvstmtAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccount";
-			definition = "Detailed information about the investment account to be opened";
+			definition = "Detailed information about the investment account to be opened.";
 			nextVersions_lazy = () -> Arrays.asList(AccountOpeningInstructionV04.mmInvestmentAccount);
 			maxOccurs = 1;
 			minOccurs = 1;

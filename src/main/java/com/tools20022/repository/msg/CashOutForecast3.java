@@ -360,7 +360,7 @@ public class CashOutForecast3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Breakdown of cash out amounts, eg,  by transaction or order type."</li>
+	 * "Breakdown of cash out amounts, eg, by transaction or order type."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -379,7 +379,7 @@ public class CashOutForecast3 {
 			xmlTag = "CshOutBrkdwnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutBreakdownDetails";
-			definition = "Breakdown of cash out amounts, eg,  by transaction or order type.";
+			definition = "Breakdown of cash out amounts, eg, by transaction or order type.";
 			nextVersions_lazy = () -> Arrays.asList(CashOutForecast5.mmCashOutBreakdownDetails);
 			minOccurs = 0;
 			isComposite = true;

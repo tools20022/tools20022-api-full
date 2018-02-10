@@ -75,6 +75,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Cryptographic algorithms for the protection of transported keys."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm18Code
+ * Algorithm18Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.Algorithm9Code Algorithm9Code}</li>
@@ -98,6 +105,14 @@ public class Algorithm13Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AES128CBC"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm18Code#AES128CBC
+	 * Algorithm18Code.AES128CBC}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -109,6 +124,7 @@ public class Algorithm13Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES128CBC";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm18Code.AES128CBC);
 			previousVersion_lazy = () -> Algorithm9Code.AES128CBC;
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm13Code.mmObject();
 			codeName = AlgorithmCode.AES128CBC.getCodeName().orElse(name);
@@ -128,6 +144,14 @@ public class Algorithm13Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DES112CBC"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm18Code#DES112CBC
+	 * Algorithm18Code.DES112CBC}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +163,7 @@ public class Algorithm13Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DES112CBC";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm18Code.DES112CBC);
 			previousVersion_lazy = () -> Algorithm9Code.DES112CBC;
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm13Code.mmObject();
 			codeName = AlgorithmCode.DES112CBC.getCodeName().orElse(name);
@@ -158,6 +183,14 @@ public class Algorithm13Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DUKPT2009"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm18Code#DUKPT2009
+	 * Algorithm18Code.DUKPT2009}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -169,6 +202,7 @@ public class Algorithm13Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DUKPT2009";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm18Code.DUKPT2009);
 			previousVersion_lazy = () -> Algorithm9Code.DUKPT2009;
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm13Code.mmObject();
 			codeName = AlgorithmCode.DUKPT2009.getCodeName().orElse(name);
@@ -188,6 +222,13 @@ public class Algorithm13Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UKPT"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.codeset.Algorithm18Code#UKPT
+	 * Algorithm18Code.UKPT}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -199,6 +240,7 @@ public class Algorithm13Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPT";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm18Code.UKPT);
 			previousVersion_lazy = () -> Algorithm9Code.UKPT;
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm13Code.mmObject();
 			codeName = AlgorithmCode.UKPT.getCodeName().orElse(name);
@@ -218,6 +260,14 @@ public class Algorithm13Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "UKPTwithAES128"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm18Code#UKPTwithAES128
+	 * Algorithm18Code.UKPTwithAES128}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -229,6 +279,7 @@ public class Algorithm13Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UKPTwithAES128";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm18Code.UKPTwithAES128);
 			previousVersion_lazy = () -> Algorithm9Code.UKPTwithAES128;
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm13Code.mmObject();
 			codeName = AlgorithmCode.UKPTwithAES128.getCodeName().orElse(name);
@@ -248,12 +299,21 @@ public class Algorithm13Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AES192CBC"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm18Code#AES192CBC
+	 * Algorithm18Code.AES192CBC}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final Algorithm13Code AES192CBC = new Algorithm13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES192CBC";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm18Code.AES192CBC);
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm13Code.mmObject();
 			codeName = AlgorithmCode.AES192CBC.getCodeName().orElse(name);
 		}
@@ -272,12 +332,21 @@ public class Algorithm13Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AES256CBC"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.Algorithm18Code#AES256CBC
+	 * Algorithm18Code.AES256CBC}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final Algorithm13Code AES256CBC = new Algorithm13Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AES256CBC";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm18Code.AES256CBC);
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm13Code.mmObject();
 			codeName = AlgorithmCode.AES256CBC.getCodeName().orElse(name);
 		}
@@ -295,6 +364,7 @@ public class Algorithm13Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm13Code";
 				definition = "Cryptographic algorithms for the protection of transported keys.";
+				nextVersions_lazy = () -> Arrays.asList(Algorithm18Code.mmObject());
 				previousVersion_lazy = () -> Algorithm9Code.mmObject();
 				trace_lazy = () -> AlgorithmCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm13Code.AES128CBC, com.tools20022.repository.codeset.Algorithm13Code.DES112CBC, com.tools20022.repository.codeset.Algorithm13Code.DUKPT2009,

@@ -613,7 +613,7 @@ public class ConfirmationParties2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party responsible for executing an order (for example, an executing or give-up broker).  Usually a commission is charged to the client for executing an order."
+	 * "Party responsible for executing an order (for example, an executing or give-up broker). Usually a commission is charged to the client for executing an order."
 	 * </li>
 	 * </ul>
 	 */
@@ -625,7 +625,7 @@ public class ConfirmationParties2 {
 			xmlTag = "ExctgBrkr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBroker";
-			definition = "Party responsible for executing an order (for example, an executing or give-up broker).  Usually a commission is charged to the client for executing an order.";
+			definition = "Party responsible for executing an order (for example, an executing or give-up broker). Usually a commission is charged to the client for executing an order.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails5.mmObject();
@@ -704,7 +704,7 @@ public class ConfirmationParties2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Actual business unit of the counterparty to the sender of the  message to the CMU (Central Matching Utility) as known to the CMU (Central Matching Utility)."
+	 * "Actual business unit of the counterparty to the sender of the message to the CMU (Central Matching Utility) as known to the CMU (Central Matching Utility)."
 	 * </li>
 	 * </ul>
 	 */
@@ -715,7 +715,7 @@ public class ConfirmationParties2 {
 			xmlTag = "CMUCtrPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CMUCounterparty";
-			definition = "Actual business unit of the counterparty to the sender of the  message to the CMU (Central Matching Utility) as known to the CMU (Central Matching Utility).";
+			definition = "Actual business unit of the counterparty to the sender of the message to the CMU (Central Matching Utility) as known to the CMU (Central Matching Utility).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails1.mmObject();
@@ -805,7 +805,7 @@ public class ConfirmationParties2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party involved  in a legal proceeding, agreement or other transaction."</li>
+	 * "Party involved in a legal proceeding, agreement or other transaction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTradeBeneficiaryParty = new MMMessageAttribute() {
@@ -816,7 +816,7 @@ public class ConfirmationParties2 {
 			xmlTag = "TradBnfcryPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeBeneficiaryParty";
-			definition = "Party involved  in a legal proceeding, agreement or other transaction.";
+			definition = "Party involved in a legal proceeding, agreement or other transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();

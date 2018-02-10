@@ -175,7 +175,7 @@ public class BaselineReportV04 {
 	 * name} = "ReportIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the report. "</li>
+	 * definition} = "Identifies the report."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -188,7 +188,7 @@ public class BaselineReportV04 {
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
-			definition = "Identifies the report. ";
+			definition = "Identifies the report.";
 			previousVersion_lazy = () -> BaselineReportV03.mmReportIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -327,7 +327,7 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n"
+	 * "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -341,7 +341,7 @@ public class BaselineReportV04 {
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
-			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
+			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n.";
 			previousVersion_lazy = () -> BaselineReportV03.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -379,7 +379,7 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification assigned by the matching application to the baseline when it is established.  "
+	 * "Unique identification assigned by the matching application to the baseline when it is established."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -393,7 +393,7 @@ public class BaselineReportV04 {
 			xmlTag = "EstblishdBaselnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstablishedBaselineIdentification";
-			definition = "Unique identification assigned by the matching application to the baseline when it is established.  ";
+			definition = "Unique identification assigned by the matching application to the baseline when it is established.";
 			previousVersion_lazy = () -> BaselineReportV03.mmEstablishedBaselineIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -534,7 +534,7 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that buys goods or services, or a financial instrument. "</li>
+	 * "Party that buys goods or services, or a financial instrument."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -547,7 +547,7 @@ public class BaselineReportV04 {
 			xmlTag = "Buyr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
-			definition = "Party that buys goods or services, or a financial instrument. ";
+			definition = "Party that buys goods or services, or a financial instrument.";
 			previousVersion_lazy = () -> BaselineReportV03.mmBuyer;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -585,7 +585,7 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that sells goods or services, or a financial instrument. "</li>
+	 * "Party that sells goods or services, or a financial instrument."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -598,7 +598,7 @@ public class BaselineReportV04 {
 			xmlTag = "Sellr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
-			definition = "Party that sells goods or services, or a financial instrument. ";
+			definition = "Party that sells goods or services, or a financial instrument.";
 			previousVersion_lazy = () -> BaselineReportV03.mmSeller;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -636,7 +636,7 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the buyer, uniquely identified by its BIC. "
+	 * "The financial institution of the buyer, uniquely identified by its BIC."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -650,7 +650,7 @@ public class BaselineReportV04 {
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
-			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
+			definition = "The financial institution of the buyer, uniquely identified by its BIC.";
 			previousVersion_lazy = () -> BaselineReportV03.mmBuyerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -688,7 +688,7 @@ public class BaselineReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the seller, uniquely identified by its BIC. "
+	 * "The financial institution of the seller, uniquely identified by its BIC."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -702,7 +702,7 @@ public class BaselineReportV04 {
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
-			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
+			definition = "The financial institution of the seller, uniquely identified by its BIC.";
 			previousVersion_lazy = () -> BaselineReportV03.mmSellerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -738,7 +738,7 @@ public class BaselineReportV04 {
 	 * name} = "ReportedLineItem"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information on the goods"</li>
+	 * definition} = "Information on the goods."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -751,7 +751,7 @@ public class BaselineReportV04 {
 			xmlTag = "RptdLineItm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportedLineItem";
-			definition = "Information on the goods";
+			definition = "Information on the goods.";
 			previousVersion_lazy = () -> BaselineReportV03.mmReportedLineItem;
 			maxOccurs = 1;
 			minOccurs = 1;

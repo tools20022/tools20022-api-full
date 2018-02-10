@@ -63,6 +63,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ATMSecuritySchemeCode#Unitialised
  * ATMSecuritySchemeCode.Unitialised}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMSecuritySchemeCode#TR34
+ * ATMSecuritySchemeCode.TR34}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -72,6 +74,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * ATMSecurityScheme2Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ATMSecurityScheme1Code
  * ATMSecurityScheme1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMSecurityScheme3Code
+ * ATMSecurityScheme3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ATMSecurityScheme4Code
+ * ATMSecurityScheme4Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -376,6 +382,39 @@ public class ATMSecuritySchemeCode extends MMCode {
 			codeName = "NONE";
 		}
 	};
+	/**
+	 * ANSI X9 TR34 2012 scheme for the distribution of the symmetric public
+	 * keys and the initial master key.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.ATMSecuritySchemeCode
+	 * ATMSecuritySchemeCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "TR34"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TR34"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ANSI X9 TR34 2012 scheme for the distribution of the symmetric public keys and the initial master key."
+	 * </li>
+	 * </ul>
+	 */
+	public static final ATMSecuritySchemeCode TR34 = new ATMSecuritySchemeCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TR34";
+			definition = "ANSI X9 TR34 2012 scheme for the distribution of the symmetric public keys and the initial master key.";
+			owner_lazy = () -> com.tools20022.repository.codeset.ATMSecuritySchemeCode.mmObject();
+			codeName = "TR34";
+		}
+	};
 	final static private LinkedHashMap<String, ATMSecuritySchemeCode> codesByName = new LinkedHashMap<>();
 
 	protected ATMSecuritySchemeCode() {
@@ -388,12 +427,12 @@ public class ATMSecuritySchemeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecuritySchemeCode";
 				definition = "Key exchange security scheme on an ATM for the host manager.";
-				derivation_lazy = () -> Arrays.asList(ATMSecurityScheme2Code.mmObject(), ATMSecurityScheme1Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(ATMSecurityScheme2Code.mmObject(), ATMSecurityScheme1Code.mmObject(), ATMSecurityScheme3Code.mmObject(), ATMSecurityScheme4Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ATMSecuritySchemeCode.ApplicationRemoteKeyLoading, com.tools20022.repository.codeset.ATMSecuritySchemeCode.CertificateRemoteKeyLoading,
 						com.tools20022.repository.codeset.ATMSecuritySchemeCode.GermanRemoteKeyLoading, com.tools20022.repository.codeset.ATMSecuritySchemeCode.FrenchRemoteKeyLoading,
 						com.tools20022.repository.codeset.ATMSecuritySchemeCode.LuxemburgRemoteKeyLoading, com.tools20022.repository.codeset.ATMSecuritySchemeCode.ManualKeyEntry,
 						com.tools20022.repository.codeset.ATMSecuritySchemeCode.PKIKeyDownload, com.tools20022.repository.codeset.ATMSecuritySchemeCode.SignatureRemoteKeyLoading,
-						com.tools20022.repository.codeset.ATMSecuritySchemeCode.Unitialised);
+						com.tools20022.repository.codeset.ATMSecuritySchemeCode.Unitialised, com.tools20022.repository.codeset.ATMSecuritySchemeCode.TR34);
 			}
 		});
 		return mmObject_lazy.get();
@@ -409,6 +448,7 @@ public class ATMSecuritySchemeCode extends MMCode {
 		codesByName.put(PKIKeyDownload.getCodeName().get(), PKIKeyDownload);
 		codesByName.put(SignatureRemoteKeyLoading.getCodeName().get(), SignatureRemoteKeyLoading);
 		codesByName.put(Unitialised.getCodeName().get(), Unitialised);
+		codesByName.put(TR34.getCodeName().get(), TR34);
 	}
 
 	public static ATMSecuritySchemeCode valueOf(String codeName) {

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.NameOrSector1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.CorporateSectorCriteria3;
 import com.tools20022.repository.msg.NameAndLocation1;
 import com.tools20022.repository.msg.ReportedPartyIdentification1;
 import com.tools20022.repository.msg.SectorAndLocation1;
@@ -67,6 +68,14 @@ import java.util.Objects;
  * Scheme.mmSector}</li>
  * <li>{@linkplain com.tools20022.repository.entity.SectorStrategy#mmSector
  * SectorStrategy.mmSector}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateSectorCriteria3
+ * CorporateSectorCriteria3}</li>
  * </ul>
  * </li>
  * <li>
@@ -254,6 +263,12 @@ public class Sector {
 	 * ReportedPartyIdentification1.mmNameOrSector}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.NameAndLocation1#mmName
 	 * NameAndLocation1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateSectorCriteria3#mmFinancialInstitutionSector
+	 * CorporateSectorCriteria3.mmFinancialInstitutionSector}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateSectorCriteria3#mmNonFinancialInstitutionSector
+	 * CorporateSectorCriteria3.mmNonFinancialInstitutionSector}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -274,7 +289,8 @@ public class Sector {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(SectorAndLocation1.mmSector, NameOrSector1Choice.mmName, NameOrSector1Choice.mmSector, ReportedPartyIdentification1.mmNameOrSector, NameAndLocation1.mmName);
+			derivation_lazy = () -> Arrays.asList(SectorAndLocation1.mmSector, NameOrSector1Choice.mmName, NameOrSector1Choice.mmSector, ReportedPartyIdentification1.mmNameOrSector, NameAndLocation1.mmName,
+					CorporateSectorCriteria3.mmFinancialInstitutionSector, CorporateSectorCriteria3.mmNonFinancialInstitutionSector);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Sector.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -351,6 +367,7 @@ public class Sector {
 						com.tools20022.repository.entity.SectorStrategy.mmSector);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Sector.mmSecurity, com.tools20022.repository.entity.Sector.mmScheme, com.tools20022.repository.entity.Sector.mmOrganisation,
 						com.tools20022.repository.entity.Sector.mmIdentification, com.tools20022.repository.entity.Sector.mmStrategy);
+				derivationComponent_lazy = () -> Arrays.asList(CorporateSectorCriteria3.mmObject());
 			}
 
 			@Override

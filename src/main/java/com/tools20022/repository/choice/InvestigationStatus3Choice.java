@@ -100,6 +100,13 @@ import javax.xml.bind.annotation.XmlType;
  * "InvestigationStatus3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the status of an investigation case."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.InvestigationStatus4Choice
+ * InvestigationStatus4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -141,6 +148,14 @@ public class InvestigationStatus3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the status of the investigation, in a coded form."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestigationStatus4Choice#mmConfirmation
+	 * InvestigationStatus4Choice.mmConfirmation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmConfirmation = new MMMessageAttribute() {
@@ -152,6 +167,7 @@ public class InvestigationStatus3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Confirmation";
 			definition = "Specifies the status of the investigation, in a coded form.";
+			nextVersions_lazy = () -> Arrays.asList(InvestigationStatus4Choice.mmConfirmation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestigationExecutionConfirmation3Code.mmObject();
@@ -191,6 +207,14 @@ public class InvestigationStatus3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reason for the rejection of a modification request, in a coded form."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestigationStatus4Choice#mmRejectedModification
+	 * InvestigationStatus4Choice.mmRejectedModification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRejectedModification = new MMMessageAttribute() {
@@ -202,6 +226,7 @@ public class InvestigationStatus3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectedModification";
 			definition = "Reason for the rejection of a modification request, in a coded form.";
+			nextVersions_lazy = () -> Arrays.asList(InvestigationStatus4Choice.mmRejectedModification);
 			minOccurs = 1;
 			simpleType_lazy = () -> ModificationRejection2Code.mmObject();
 		}
@@ -238,6 +263,14 @@ public class InvestigationStatus3Choice {
 	 * definition} =
 	 * "Indicates a duplicated case. \nUsage: When present, the case identified in the message must be closed. The case identified as duplicated (in this component) will be pursued."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestigationStatus4Choice#mmDuplicateOf
+	 * InvestigationStatus4Choice.mmDuplicateOf}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDuplicateOf = new MMMessageAssociationEnd() {
@@ -249,6 +282,7 @@ public class InvestigationStatus3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DuplicateOf";
 			definition = "Indicates a duplicated case. \nUsage: When present, the case identified in the message must be closed. The case identified as duplicated (in this component) will be pursued.";
+			nextVersions_lazy = () -> Arrays.asList(InvestigationStatus4Choice.mmDuplicateOf);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -290,6 +324,14 @@ public class InvestigationStatus3Choice {
 	 * definition} =
 	 * "Indicates whether the cancellation of the assignment is confirmed or rejected.\nUsage: If yes, the cancellation of the assignment is confirmed.\nIf no, the cancellation of the assignment is rejected and the investigation process will continue."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestigationStatus4Choice#mmAssignmentCancellationConfirmation
+	 * InvestigationStatus4Choice.mmAssignmentCancellationConfirmation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAssignmentCancellationConfirmation = new MMMessageAttribute() {
@@ -301,6 +343,7 @@ public class InvestigationStatus3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AssignmentCancellationConfirmation";
 			definition = "Indicates whether the cancellation of the assignment is confirmed or rejected.\nUsage: If yes, the cancellation of the assignment is confirmed.\nIf no, the cancellation of the assignment is rejected and the investigation process will continue.";
+			nextVersions_lazy = () -> Arrays.asList(InvestigationStatus4Choice.mmAssignmentCancellationConfirmation);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -318,6 +361,7 @@ public class InvestigationStatus3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationStatus3Choice";
 				definition = "Specifies the status of an investigation case.";
+				nextVersions_lazy = () -> Arrays.asList(InvestigationStatus4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

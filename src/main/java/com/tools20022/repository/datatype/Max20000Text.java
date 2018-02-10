@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies a character string with a maximum length of 20,000 characters.
+ * Specifies a character string with a maximum length of 20, 000 characters.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -44,7 +44,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "Max20000Text"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies a character string with a maximum length of 20,000 characters."</li>
+ * "Specifies a character string with a maximum length of 20, 000 characters."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -59,7 +59,7 @@ public class Max20000Text {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max20000Text";
-				definition = "Specifies a character string with a maximum length of 20,000 characters.";
+				definition = "Specifies a character string with a maximum length of 20, 000 characters.";
 				minLength = 1;
 				maxLength = 20000;
 			}

@@ -3206,6 +3206,14 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionEventType76Choice
+	 * ConstraintEventTypeRule.forCorporateActionEventType76Choice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3219,6 +3227,7 @@ public class ConstraintEventTypeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType76Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType33Choice;
 			owner_lazy = () -> CorporateActionEventType51Choice.mmObject();
 		}
@@ -3278,6 +3287,14 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionEventType75Choice
+	 * ConstraintEventTypeRule.forCorporateActionEventType75Choice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3291,6 +3308,7 @@ public class ConstraintEventTypeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType75Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType34Choice;
 			owner_lazy = () -> CorporateActionEventType54Choice.mmObject();
 		}
@@ -3314,6 +3332,14 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionEventType74Choice
+	 * ConstraintEventTypeRule.forCorporateActionEventType74Choice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3327,6 +3353,7 @@ public class ConstraintEventTypeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType74Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType31Choice;
 			owner_lazy = () -> CorporateActionEventType53Choice.mmObject();
 		}
@@ -3350,6 +3377,14 @@ public class ConstraintEventTypeRule {
 	 * definition} =
 	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionEventType73Choice
+	 * ConstraintEventTypeRule.forCorporateActionEventType73Choice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3363,6 +3398,7 @@ public class ConstraintEventTypeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventTypeRule";
 			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType73Choice);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType30Choice;
 			owner_lazy = () -> CorporateActionEventType56Choice.mmObject();
 		}
@@ -3695,6 +3731,270 @@ public class ConstraintEventTypeRule {
 			name = "EventTypeRule";
 			definition = "If Code is present, the code OTHR must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM must only be used when the redemption is decided by the issuer and not by the securities holders.";
 			owner_lazy = () -> CorporateActionEventType58Choice.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType73Choice
+	 * CorporateActionEventType73Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EventTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionEventType56Choice
+	 * ConstraintEventTypeRule.forCorporateActionEventType56Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionEventType73Choice> forCorporateActionEventType73Choice = new MMConstraint<CorporateActionEventType73Choice>() {
+		{
+			validator = ConstraintEventTypeRule::checkCorporateActionEventType73Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EventTypeRule";
+			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType56Choice;
+			owner_lazy = () -> CorporateActionEventType73Choice.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType74Choice
+	 * CorporateActionEventType74Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EventTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionEventType53Choice
+	 * ConstraintEventTypeRule.forCorporateActionEventType53Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionEventType74Choice> forCorporateActionEventType74Choice = new MMConstraint<CorporateActionEventType74Choice>() {
+		{
+			validator = ConstraintEventTypeRule::checkCorporateActionEventType74Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EventTypeRule";
+			definition = "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType53Choice;
+			owner_lazy = () -> CorporateActionEventType74Choice.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType75Choice
+	 * CorporateActionEventType75Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EventTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionEventType54Choice
+	 * ConstraintEventTypeRule.forCorporateActionEventType54Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionEventType75Choice> forCorporateActionEventType75Choice = new MMConstraint<CorporateActionEventType75Choice>() {
+		{
+			validator = ConstraintEventTypeRule::checkCorporateActionEventType75Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EventTypeRule";
+			definition = "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType54Choice;
+			owner_lazy = () -> CorporateActionEventType75Choice.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType76Choice
+	 * CorporateActionEventType76Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EventTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Code is present, the code OTHR (Other) must only be used if no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used if no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used if the redemption is decided by the issuer and not by the securities holders."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEventTypeRule#forCorporateActionEventType51Choice
+	 * ConstraintEventTypeRule.forCorporateActionEventType51Choice}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionEventType76Choice> forCorporateActionEventType76Choice = new MMConstraint<CorporateActionEventType76Choice>() {
+		{
+			validator = ConstraintEventTypeRule::checkCorporateActionEventType76Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EventTypeRule";
+			definition = "If Code is present, the code OTHR (Other) must only be used if no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used if no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used if the redemption is decided by the issuer and not by the securities holders.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionEventType51Choice;
+			owner_lazy = () -> CorporateActionEventType76Choice.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType77Choice
+	 * CorporateActionEventType77Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EventTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Code is present, the code OTHR (Other) must only be used if no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used if no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used if the redemption is decided by the issuer and not by the securities holders."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionEventType77Choice> forCorporateActionEventType77Choice = new MMConstraint<CorporateActionEventType77Choice>() {
+		{
+			validator = ConstraintEventTypeRule::checkCorporateActionEventType77Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EventTypeRule";
+			definition = "If Code is present, the code OTHR (Other) must only be used if no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used if no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used if the redemption is decided by the issuer and not by the securities holders.";
+			owner_lazy = () -> CorporateActionEventType77Choice.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType78Choice
+	 * CorporateActionEventType78Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EventTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionEventType78Choice> forCorporateActionEventType78Choice = new MMConstraint<CorporateActionEventType78Choice>() {
+		{
+			validator = ConstraintEventTypeRule::checkCorporateActionEventType78Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EventTypeRule";
+			definition = "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders.";
+			owner_lazy = () -> CorporateActionEventType78Choice.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType79Choice
+	 * CorporateActionEventType79Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EventTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionEventType79Choice> forCorporateActionEventType79Choice = new MMConstraint<CorporateActionEventType79Choice>() {
+		{
+			validator = ConstraintEventTypeRule::checkCorporateActionEventType79Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EventTypeRule";
+			definition = "If Code is present, the code OTHR (Other) must only be used in case no other corporate action event code is appropriate. \r\n\r\nIf Code is present, the code CHAN (Change) must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change. \r\n\r\nIf Code is present, the code REDM (Final Maturity) must only be used when the redemption is decided by the issuer and not by the securities holders.";
+			owner_lazy = () -> CorporateActionEventType79Choice.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionEventType83Choice
+	 * CorporateActionEventType83Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EventTypeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\n\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\n\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\n\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionEventType83Choice> forCorporateActionEventType83Choice = new MMConstraint<CorporateActionEventType83Choice>() {
+		{
+			validator = ConstraintEventTypeRule::checkCorporateActionEventType83Choice;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EventTypeRule";
+			definition = "The use of a specific corporate action event type code is allowed only if this specific event triggers a securities movement as per the Event Interpretation Grid published by the Securities Market Practice Group (SMPG).\r\n\r\nThe corporate action event indicator code OTHR must only be used in case no other corporate action event code is appropriate.\r\n\r\nThe corporate action event indicator code CHAN must only be used in case no other corporate action event code is appropriate and only for an event which relates to a change.\r\n\r\nThe corporate action event indicator code REDM must only be used when the redemption is decided by the issuer and not by the holders.";
+			owner_lazy = () -> CorporateActionEventType83Choice.mmObject();
 		}
 	};
 
@@ -5093,6 +5393,139 @@ public class ConstraintEventTypeRule {
 	 * is decided by the issuer and not by the securities holders.
 	 */
 	public static void checkCorporateActionEventType58Choice(CorporateActionEventType58Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The use of a specific corporate action event type code is allowed only if
+	 * this specific event triggers a securities movement as per the Event
+	 * Interpretation Grid published by the Securities Market Practice Group
+	 * (SMPG).<br>
+	 * The corporate action event indicator code OTHR must only be used in case
+	 * no other corporate action event code is appropriate.<br>
+	 * The corporate action event indicator code CHAN must only be used in case
+	 * no other corporate action event code is appropriate and only for an event
+	 * which relates to a change.<br>
+	 * The corporate action event indicator code REDM must only be used when the
+	 * redemption is decided by the issuer and not by the holders.
+	 */
+	public static void checkCorporateActionEventType73Choice(CorporateActionEventType73Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Code is present, the code OTHR (Other) must only be used in case no
+	 * other corporate action event code is appropriate. <br>
+	 * <br>
+	 * If Code is present, the code CHAN (Change) must only be used in case no
+	 * other corporate action event code is appropriate and only for an event
+	 * which relates to a change. <br>
+	 * <br>
+	 * If Code is present, the code REDM (Final Maturity) must only be used when
+	 * the redemption is decided by the issuer and not by the securities
+	 * holders.
+	 */
+	public static void checkCorporateActionEventType74Choice(CorporateActionEventType74Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Code is present, the code OTHR (Other) must only be used in case no
+	 * other corporate action event code is appropriate. <br>
+	 * <br>
+	 * If Code is present, the code CHAN (Change) must only be used in case no
+	 * other corporate action event code is appropriate and only for an event
+	 * which relates to a change. <br>
+	 * <br>
+	 * If Code is present, the code REDM (Final Maturity) must only be used when
+	 * the redemption is decided by the issuer and not by the securities
+	 * holders.
+	 */
+	public static void checkCorporateActionEventType75Choice(CorporateActionEventType75Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Code is present, the code OTHR (Other) must only be used if no other
+	 * corporate action event code is appropriate. <br>
+	 * <br>
+	 * If Code is present, the code CHAN (Change) must only be used if no other
+	 * corporate action event code is appropriate and only for an event which
+	 * relates to a change. <br>
+	 * <br>
+	 * If Code is present, the code REDM (Final Maturity) must only be used if
+	 * the redemption is decided by the issuer and not by the securities
+	 * holders.
+	 */
+	public static void checkCorporateActionEventType76Choice(CorporateActionEventType76Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Code is present, the code OTHR (Other) must only be used if no other
+	 * corporate action event code is appropriate. <br>
+	 * <br>
+	 * If Code is present, the code CHAN (Change) must only be used if no other
+	 * corporate action event code is appropriate and only for an event which
+	 * relates to a change. <br>
+	 * <br>
+	 * If Code is present, the code REDM (Final Maturity) must only be used if
+	 * the redemption is decided by the issuer and not by the securities
+	 * holders.
+	 */
+	public static void checkCorporateActionEventType77Choice(CorporateActionEventType77Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Code is present, the code OTHR (Other) must only be used in case no
+	 * other corporate action event code is appropriate. <br>
+	 * <br>
+	 * If Code is present, the code CHAN (Change) must only be used in case no
+	 * other corporate action event code is appropriate and only for an event
+	 * which relates to a change. <br>
+	 * <br>
+	 * If Code is present, the code REDM (Final Maturity) must only be used when
+	 * the redemption is decided by the issuer and not by the securities
+	 * holders.
+	 */
+	public static void checkCorporateActionEventType78Choice(CorporateActionEventType78Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Code is present, the code OTHR (Other) must only be used in case no
+	 * other corporate action event code is appropriate. <br>
+	 * <br>
+	 * If Code is present, the code CHAN (Change) must only be used in case no
+	 * other corporate action event code is appropriate and only for an event
+	 * which relates to a change. <br>
+	 * <br>
+	 * If Code is present, the code REDM (Final Maturity) must only be used when
+	 * the redemption is decided by the issuer and not by the securities
+	 * holders.
+	 */
+	public static void checkCorporateActionEventType79Choice(CorporateActionEventType79Choice obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The use of a specific corporate action event type code is allowed only if
+	 * this specific event triggers a securities movement as per the Event
+	 * Interpretation Grid published by the Securities Market Practice Group
+	 * (SMPG).<br>
+	 * <br>
+	 * The corporate action event indicator code OTHR must only be used in case
+	 * no other corporate action event code is appropriate.<br>
+	 * <br>
+	 * The corporate action event indicator code CHAN must only be used in case
+	 * no other corporate action event code is appropriate and only for an event
+	 * which relates to a change.<br>
+	 * <br>
+	 * The corporate action event indicator code REDM must only be used when the
+	 * redemption is decided by the issuer and not by the holders.
+	 */
+	public static void checkCorporateActionEventType83Choice(CorporateActionEventType83Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

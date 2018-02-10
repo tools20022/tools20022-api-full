@@ -96,14 +96,14 @@ public class DTCMultiplyDivideCode extends MMCode {
 	 * name} = "Multiply"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Positions multiplied by rate. "</li>
+	 * definition} = "Positions multiplied by rate."</li>
 	 * </ul>
 	 */
 	public static final DTCMultiplyDivideCode Multiply = new DTCMultiplyDivideCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Multiply";
-			definition = "Positions multiplied by rate. ";
+			definition = "Positions multiplied by rate.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCMultiplyDivideCode.mmObject();
 			codeName = "MULT";
 		}

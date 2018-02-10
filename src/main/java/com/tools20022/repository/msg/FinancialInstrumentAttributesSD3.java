@@ -411,7 +411,7 @@ public class FinancialInstrumentAttributesSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the disbursed security is eligible at CSD (for example in the US -  DTC, The Depository Trust Corporation)."
+	 * "Indicates whether the disbursed security is eligible at CSD (for example in the US - DTC, The Depository Trust Corporation)."
 	 * </li>
 	 * </ul>
 	 */
@@ -423,7 +423,7 @@ public class FinancialInstrumentAttributesSD3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Disbursed Security Eligibility Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DisbursedSecurityEligibilityFlag";
-			definition = "Indicates whether the disbursed security is eligible at CSD (for example in the US -  DTC, The Depository Trust Corporation).";
+			definition = "Indicates whether the disbursed security is eligible at CSD (for example in the US - DTC, The Depository Trust Corporation).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

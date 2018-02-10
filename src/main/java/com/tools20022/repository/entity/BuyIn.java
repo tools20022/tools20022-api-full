@@ -313,7 +313,7 @@ public class BuyIn extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Fees related to a cash compensation or to a securities compensation in a buy-in process"
+	 * "Fees related to a cash compensation or to a securities compensation in a buy-in process."
 	 * </li>
 	 * </ul>
 	 */
@@ -324,7 +324,7 @@ public class BuyIn extends ObligationFulfilment {
 			elementContext_lazy = () -> com.tools20022.repository.entity.BuyIn.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Fees";
-			definition = "Fees related to a cash compensation or to a securities compensation in a buy-in process";
+			definition = "Fees related to a cash compensation or to a securities compensation in a buy-in process.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

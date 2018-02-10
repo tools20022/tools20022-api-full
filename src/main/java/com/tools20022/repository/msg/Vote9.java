@@ -104,7 +104,7 @@ public class Vote9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Numbering of the resolution as specified by the issuer or  its agent."</li>
+	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -120,7 +120,7 @@ public class Vote9 {
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
-			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
+			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			previousVersion_lazy = () -> Vote3.mmIssuerLabel;
 			maxOccurs = 1;
 			minOccurs = 1;

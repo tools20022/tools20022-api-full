@@ -78,6 +78,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action instructed balance details at option level."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2
+ * CorporateActionInstructedBalanceOptionBalanceDetailsSD2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -112,6 +120,14 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2#mmPlaceAndName
+	 * CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -122,6 +138,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -154,6 +171,15 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance of uncovered protect transactions at an option level."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2#mmOptionUncoveredProtectBalance
+	 * CorporateActionInstructedBalanceOptionBalanceDetailsSD2.
+	 * mmOptionUncoveredProtectBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOptionUncoveredProtectBalance = new MMMessageAssociationEnd() {
@@ -164,6 +190,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionUncoveredProtectBalance";
 			definition = "Balance of uncovered protect transactions at an option level.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmOptionUncoveredProtectBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -196,7 +223,16 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Daily total of instructions for a given option.  Balance will include only made instructions.  "
+	 * "Daily total of instructions for a given option. Balance will include only made instructions."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2#mmOptionDailyInstructedBalance
+	 * CorporateActionInstructedBalanceOptionBalanceDetailsSD2.
+	 * mmOptionDailyInstructedBalance}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -207,7 +243,8 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			xmlTag = "OptnDalyInstdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDailyInstructedBalance";
-			definition = "Daily total of instructions for a given option.  Balance will include only made instructions.  ";
+			definition = "Daily total of instructions for a given option. Balance will include only made instructions.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmOptionDailyInstructedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -240,7 +277,16 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For rights subscription events, total number of oversubscribed units.  When there is an oversubscription priviledge, this quantity will be included within the Instructed quantityin the core message."
+	 * "For rights subscription events, total number of oversubscribed units. When there is an oversubscription priviledge, this quantity will be included within the Instructed quantityin the core message."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2#mmOptionOversubscriptionQuantity
+	 * CorporateActionInstructedBalanceOptionBalanceDetailsSD2.
+	 * mmOptionOversubscriptionQuantity}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -251,7 +297,8 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			xmlTag = "OptnOvrsbcptQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionOversubscriptionQuantity";
-			definition = "For rights subscription events, total number of oversubscribed units.  When there is an oversubscription priviledge, this quantity will be included within the Instructed quantityin the core message.";
+			definition = "For rights subscription events, total number of oversubscribed units. When there is an oversubscription priviledge, this quantity will be included within the Instructed quantityin the core message.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmOptionOversubscriptionQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -286,6 +333,15 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 	 * definition} =
 	 * "For election merger events, the balance that is being moved into another option number for payment due to the proration of the original option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionBalanceDetailsSD2#mmOptionUnacceptedBalance
+	 * CorporateActionInstructedBalanceOptionBalanceDetailsSD2.
+	 * mmOptionUnacceptedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOptionUnacceptedBalance = new MMMessageAssociationEnd() {
@@ -296,6 +352,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionUnacceptedBalance";
 			definition = "For election merger events, the balance that is being moved into another option number for payment due to the proration of the original option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmOptionUnacceptedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -315,6 +372,7 @@ public class CorporateActionInstructedBalanceOptionBalanceDetailsSD1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructedBalanceOptionBalanceDetailsSD1";
 				definition = "Provides additional information regarding corporate action instructed balance details at option level.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionBalanceDetailsSD2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

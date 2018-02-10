@@ -64,6 +64,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Particular time span specified between a start time and an end time. The time period cannot exceed 24 hours."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TimePeriod1 TimePeriod1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,6 +109,13 @@ public class TimePeriodDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Time at which the time span starts."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TimePeriod1#mmFromTime
+	 * TimePeriod1.mmFromTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromTime = new MMMessageAttribute() {
@@ -114,6 +127,7 @@ public class TimePeriodDetails {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromTime";
 			definition = "Time at which the time span starts.";
+			nextVersions_lazy = () -> Arrays.asList(TimePeriod1.mmFromTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
@@ -151,6 +165,13 @@ public class TimePeriodDetails {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Time at which the time span ends."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TimePeriod1#mmToTime
+	 * TimePeriod1.mmToTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmToTime = new MMMessageAttribute() {
@@ -162,6 +183,7 @@ public class TimePeriodDetails {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToTime";
 			definition = "Time at which the time span ends.";
+			nextVersions_lazy = () -> Arrays.asList(TimePeriod1.mmToTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();
@@ -177,6 +199,7 @@ public class TimePeriodDetails {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TimePeriodDetails";
 				definition = "Particular time span specified between a start time and an end time. The time period cannot exceed 24 hours.";
+				nextVersions_lazy = () -> Arrays.asList(TimePeriod1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

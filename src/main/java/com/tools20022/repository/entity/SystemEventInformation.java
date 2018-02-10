@@ -78,6 +78,9 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CutOff1#mmCutOffUpdateIdentification
  * CutOff1.mmCutOffUpdateIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2#mmEvent
+ * SystemAvailabilityAndEvents2.mmEvent}</li>
  * </ul>
  * </li>
  * <li>
@@ -313,7 +316,7 @@ public class SystemEventInformation {
 				name = "SystemEventInformation";
 				definition = "Detailed information about an event occurring on a system, whether planned, for example, cut-off time for a specific type of eligible transfer, or unplanned, for example, an unsolicited failure, as stipulated in the specifications of the system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmEvent);
-				derivationElement_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmEvent, SystemAvailabilityAndEvents1.mmEvent, CutOff1.mmCutOffUpdateIdentification);
+				derivationElement_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmEvent, SystemAvailabilityAndEvents1.mmEvent, CutOff1.mmCutOffUpdateIdentification, SystemAvailabilityAndEvents2.mmEvent);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemEventInformation.mmType, com.tools20022.repository.entity.SystemEventInformation.mmTime,
 						com.tools20022.repository.entity.SystemEventInformation.mmSystem);
 				derivationComponent_lazy = () -> Arrays.asList(SystemEvent1.mmObject(), SystemEvent2.mmObject(), ParticipantAndStatus1.mmObject(), ServiceAvailability1.mmObject());

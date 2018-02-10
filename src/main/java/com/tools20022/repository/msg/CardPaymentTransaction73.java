@@ -75,6 +75,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CardPaymentTransaction73"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification of the original transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction86
+ * CardPaymentTransaction86}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction65
@@ -114,6 +121,14 @@ public class CardPaymentTransaction73 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Global reference of the sale transaction for the sale system."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction86#mmSaleReferenceIdentification
+	 * CardPaymentTransaction86.mmSaleReferenceIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +144,7 @@ public class CardPaymentTransaction73 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReferenceIdentification";
 			definition = "Global reference of the sale transaction for the sale system.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction86.mmSaleReferenceIdentification);
 			previousVersion_lazy = () -> CardPaymentTransaction65.mmSaleReferenceIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -168,6 +184,14 @@ public class CardPaymentTransaction73 {
 	 * definition} =
 	 * "Unique identification of the transaction assigned by the POI (Point Of Interaction)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction86#mmTransactionIdentification
+	 * CardPaymentTransaction86.mmTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -184,6 +208,7 @@ public class CardPaymentTransaction73 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification of the transaction assigned by the POI (Point Of Interaction).";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction86.mmTransactionIdentification);
 			previousVersion_lazy = () -> CardPaymentTransaction65.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -225,6 +250,14 @@ public class CardPaymentTransaction73 {
 	 * definition} =
 	 * "Identification of the POI (Point Of Interaction) performing the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction86#mmPOIIdentification
+	 * CardPaymentTransaction86.mmPOIIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -241,6 +274,7 @@ public class CardPaymentTransaction73 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the POI (Point Of Interaction) performing the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction86.mmPOIIdentification);
 			previousVersion_lazy = () -> CardPaymentTransaction65.mmPOIIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -279,6 +313,14 @@ public class CardPaymentTransaction73 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Link to a previous currency conversion."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction86#mmCurrencyConversion
+	 * CardPaymentTransaction86.mmCurrencyConversion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -295,6 +337,7 @@ public class CardPaymentTransaction73 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversion";
 			definition = "Link to a previous currency conversion.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction86.mmCurrencyConversion);
 			previousVersion_lazy = () -> CardPaymentTransaction65.mmCurrencyConversion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -313,6 +356,7 @@ public class CardPaymentTransaction73 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction73";
 				definition = "Identification of the original transaction.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction86.mmObject());
 				previousVersion_lazy = () -> CardPaymentTransaction65.mmObject();
 			}
 		});

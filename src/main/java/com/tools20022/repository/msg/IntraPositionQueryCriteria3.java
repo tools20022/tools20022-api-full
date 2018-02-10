@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraPositionQueryCriteria3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria based on which information is included."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria4
+ * IntraPositionQueryCriteria4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,6 +123,14 @@ public class IntraPositionQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Collective reference identifying a set of messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria4#mmModificationRequestIdentification
+	 * IntraPositionQueryCriteria4.mmModificationRequestIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmModificationRequestIdentification = new MMMessageAttribute() {
@@ -127,6 +142,7 @@ public class IntraPositionQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModificationRequestIdentification";
 			definition = "Collective reference identifying a set of messages.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryCriteria4.mmModificationRequestIdentification);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -161,6 +177,14 @@ public class IntraPositionQueryCriteria3 {
 	 * definition} =
 	 * "Type of underlying transaction to be modified, such as an settlement instruction or an intra-position movement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria4#mmInstructionQueryType
+	 * IntraPositionQueryCriteria4.mmInstructionQueryType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInstructionQueryType = new MMMessageAttribute() {
@@ -171,6 +195,7 @@ public class IntraPositionQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionQueryType";
 			definition = "Type of underlying transaction to be modified, such as an settlement instruction or an intra-position movement.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryCriteria4.mmInstructionQueryType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InstructionQueryType1Code.mmObject();
@@ -203,6 +228,14 @@ public class IntraPositionQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of settlement of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria4#mmProcessingStatus
+	 * IntraPositionQueryCriteria4.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
@@ -213,6 +246,7 @@ public class IntraPositionQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides the status of settlement of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryCriteria4.mmProcessingStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ModificationProcessingStatus1Choice.mmObject();
@@ -244,6 +278,14 @@ public class IntraPositionQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a securities entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria4#mmSafekeepingAccount
+	 * IntraPositionQueryCriteria4.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
@@ -254,6 +296,7 @@ public class IntraPositionQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryCriteria4.mmSafekeepingAccount);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
@@ -286,6 +329,14 @@ public class IntraPositionQueryCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria4#mmAccountOwner
+	 * IntraPositionQueryCriteria4.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -296,6 +347,7 @@ public class IntraPositionQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryCriteria4.mmAccountOwner);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
@@ -329,6 +381,14 @@ public class IntraPositionQueryCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that originated the message, if other than the sender."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria4#mmMessageOriginator
+	 * IntraPositionQueryCriteria4.mmMessageOriginator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMessageOriginator = new MMMessageAssociationEnd() {
@@ -339,6 +399,7 @@ public class IntraPositionQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageOriginator";
 			definition = "Party that originated the message, if other than the sender.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryCriteria4.mmMessageOriginator);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemPartyIdentification5.mmObject();
@@ -376,6 +437,14 @@ public class IntraPositionQueryCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the creation date/time of the intra-position movement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria4#mmCreationDateTime
+	 * IntraPositionQueryCriteria4.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -387,6 +456,7 @@ public class IntraPositionQueryCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Specifies the creation date/time of the intra-position movement.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryCriteria4.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearch2Choice.mmObject();
@@ -404,6 +474,7 @@ public class IntraPositionQueryCriteria3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionQueryCriteria3";
 				definition = "Defines the criteria based on which information is included.";
+				nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryCriteria4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

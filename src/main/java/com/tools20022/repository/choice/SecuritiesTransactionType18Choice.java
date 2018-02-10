@@ -67,6 +67,14 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesTransactionType18Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the repair reason."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType36Choice
+ * SecuritiesTransactionType36Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType10Choice
@@ -115,6 +123,14 @@ public class SecuritiesTransactionType18Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Securities transaction type expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType36Choice#mmCode
+	 * SecuritiesTransactionType36Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -132,6 +148,7 @@ public class SecuritiesTransactionType18Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Securities transaction type expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionType36Choice.mmCode);
 			previousVersion_lazy = () -> SecuritiesTransactionType10Choice.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -175,6 +192,14 @@ public class SecuritiesTransactionType18Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Securities transaction type expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType36Choice#mmProprietary
+	 * SecuritiesTransactionType36Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -192,6 +217,7 @@ public class SecuritiesTransactionType18Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Securities transaction type expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionType36Choice.mmProprietary);
 			previousVersion_lazy = () -> SecuritiesTransactionType10Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -208,6 +234,7 @@ public class SecuritiesTransactionType18Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTransactionType18Choice";
 				definition = "Choice of format for the repair reason.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesTransactionType36Choice.mmObject());
 				previousVersion_lazy = () -> SecuritiesTransactionType10Choice.mmObject();
 			}
 		});

@@ -207,7 +207,7 @@ public class LegDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only for multileg instrument - Currency associated with a particular Leg's quantity ."
+	 * "Only for multileg instrument - Currency associated with a particular Leg's quantity."
 	 * </li>
 	 * </ul>
 	 */
@@ -219,7 +219,7 @@ public class LegDetails1 {
 			xmlTag = "Ccy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
-			definition = "Only for multileg instrument - Currency associated with a particular Leg's quantity .";
+			definition = "Only for multileg instrument - Currency associated with a particular Leg's quantity.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CurrencyCode.mmObject();

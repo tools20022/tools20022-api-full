@@ -115,7 +115,7 @@ public class ServiceItemTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies a classification for the service items such as  query, report, securities account, etc…"
+	 * "Specifies a classification for the service items such as query, report, securities account, etc…."
 	 * </li>
 	 * </ul>
 	 */
@@ -127,7 +127,7 @@ public class ServiceItemTotals1 {
 			xmlTag = "ItmTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ItemType";
-			definition = "Specifies a classification for the service items such as  query, report, securities account, etc…";
+			definition = "Specifies a classification for the service items such as query, report, securities account, etc….";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();

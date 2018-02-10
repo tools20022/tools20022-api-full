@@ -76,7 +76,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "OrderOriginatorEligibilityCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies  the type of the counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties."
+ * "Specifies the type of the counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties."
  * </li>
  * </ul>
  */
@@ -198,7 +198,7 @@ public class OrderOriginatorEligibilityCode extends MMCode {
 				example = Arrays.asList("ELIG");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderOriginatorEligibilityCode";
-				definition = "Specifies  the type of the counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
+				definition = "Specifies the type of the counterparties eligibility as defined by article 24 of the EU MiFID Directive applicable to transactions executed by investment firms for eligible counterparties.";
 				derivation_lazy = () -> Arrays.asList(OrderOriginatorEligibility1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderOriginatorEligibilityCode.Eligible, com.tools20022.repository.codeset.OrderOriginatorEligibilityCode.Retail,
 						com.tools20022.repository.codeset.OrderOriginatorEligibilityCode.Professional);

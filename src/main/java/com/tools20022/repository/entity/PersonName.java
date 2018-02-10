@@ -70,11 +70,22 @@ import java.util.Optional;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmInitials
+ * IndividualPersonNameLong1.mmInitials}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.choice.NamePrefix1Choice
  * NamePrefix1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1
+ * IndividualPersonNameLong1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PersonalInformation1
  * PersonalInformation1}</li>
  * </ul>
@@ -314,6 +325,9 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmNamePrefix
 	 * IndividualPerson24.mmNamePrefix}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmNamePrefix
+	 * IndividualPersonNameLong1.mmNamePrefix}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmNamePrefix
 	 * IndividualPerson28.mmNamePrefix}</li>
 	 * <li>
@@ -351,7 +365,8 @@ public class PersonName extends PartyName {
 					NamePrefix1Choice.mmProprietary, IndividualPerson20.mmNamePrefix, IndividualPerson3.mmNamePrefix, IndividualPerson8.mmNamePrefix, IndividualPerson6.mmNamePrefix, IndividualPerson6.mmExtendedNamePrefix,
 					IndividualPerson11.mmNamePrefix, IndividualPerson11.mmExtendedNamePrefix, ContactDetails2.mmNamePrefix, ContactIdentification2.mmNamePrefix, ContactIdentification1.mmNamePrefix, Contacts3.mmNamePrefix,
 					ContactIdentification4.mmNamePrefix, ContactIdentification3.mmNamePrefix, ContactDetails3.mmNamePrefix, IndividualPerson21.mmNamePrefix, IndividualPerson22.mmNamePrefix, IndividualPerson23.mmNamePrefix,
-					IndividualPerson24.mmNamePrefix, IndividualPerson28.mmNamePrefix, IndividualPerson27.mmNamePrefix, IndividualPerson29.mmNamePrefix, IndividualPerson33.mmNamePrefix, IndividualPerson34.mmNamePrefix);
+					IndividualPerson24.mmNamePrefix, IndividualPersonNameLong1.mmNamePrefix, IndividualPerson28.mmNamePrefix, IndividualPerson27.mmNamePrefix, IndividualPerson29.mmNamePrefix, IndividualPerson33.mmNamePrefix,
+					IndividualPerson34.mmNamePrefix);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -474,6 +489,9 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#mmFirstName
 	 * PersonIdentification10.mmFirstName}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmGivenName
+	 * IndividualPersonNameLong1.mmGivenName}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson30#mmGivenName
 	 * IndividualPerson30.mmGivenName}</li>
 	 * <li>
@@ -503,6 +521,8 @@ public class PersonName extends PartyName {
 	 * IndividualPerson34.mmGivenName}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder12#mmName
 	 * Cardholder12.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder13#mmName
+	 * Cardholder13.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -526,9 +546,9 @@ public class PersonName extends PartyName {
 					IndividualPerson6.mmGivenName, IndividualPerson11.mmGivenName, ContactIdentification2.mmGivenName, ContactIdentification1.mmGivenName, Cardholder2.mmName, Cardholder4.mmName, Cardholder1.mmName, Cardholder3.mmName,
 					IndividualPerson7.mmGivenName, IndividualPerson14.mmGivenName, IndividualPerson16.mmGivenName, IndividualPerson13.mmGivenName, IndividualPerson17.mmGivenName, ContactIdentification4.mmGivenName,
 					ContactIdentification3.mmGivenName, IndividualPerson21.mmGivenName, IndividualPerson22.mmGivenName, Cardholder5.mmName, Cardholder6.mmName, IndividualPerson23.mmGivenName, IndividualPerson24.mmGivenName,
-					IndividualPerson25.mmGivenName, IndividualPerson26.mmGivenName, Cardholder8.mmName, Cardholder7.mmName, Cardholder9.mmName, PersonIdentification10.mmFirstName, IndividualPerson30.mmGivenName,
-					IndividualPerson28.mmGivenName, IndividualPerson27.mmGivenName, PersonalInformation1.mmNameOfPartner, IndividualPerson29.mmGivenName, Cardholder11.mmName, Cardholder10.mmName, IndividualPerson33.mmGivenName,
-					IndividualPerson35.mmGivenName, IndividualPerson34.mmGivenName, Cardholder12.mmName);
+					IndividualPerson25.mmGivenName, IndividualPerson26.mmGivenName, Cardholder8.mmName, Cardholder7.mmName, Cardholder9.mmName, PersonIdentification10.mmFirstName, IndividualPersonNameLong1.mmGivenName,
+					IndividualPerson30.mmGivenName, IndividualPerson28.mmGivenName, IndividualPerson27.mmGivenName, PersonalInformation1.mmNameOfPartner, IndividualPerson29.mmGivenName, Cardholder11.mmName, Cardholder10.mmName,
+					IndividualPerson33.mmGivenName, IndividualPerson35.mmGivenName, IndividualPerson34.mmGivenName, Cardholder12.mmName, Cardholder13.mmName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -698,6 +718,9 @@ public class PersonName extends PartyName {
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmNameSuffix
 	 * IndividualPerson24.mmNameSuffix}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmNameSuffix
+	 * IndividualPersonNameLong1.mmNameSuffix}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmNameSuffix
 	 * IndividualPerson28.mmNameSuffix}</li>
 	 * <li>
@@ -732,7 +755,7 @@ public class PersonName extends PartyName {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmNameSuffix, IndividualPerson10.mmNameSuffix, IndividualPerson20.mmNameSuffix, IndividualPerson3.mmNameSuffix, IndividualPerson8.mmNameSuffix,
 					IndividualPerson6.mmNameSuffix, IndividualPerson11.mmNameSuffix, IndividualPerson21.mmNameSuffix, IndividualPerson22.mmNameSuffix, IndividualPerson23.mmNameSuffix, IndividualPerson24.mmNameSuffix,
-					IndividualPerson28.mmNameSuffix, IndividualPerson27.mmNameSuffix, IndividualPerson33.mmNameSuffix, IndividualPerson34.mmNameSuffix);
+					IndividualPersonNameLong1.mmNameSuffix, IndividualPerson28.mmNameSuffix, IndividualPerson27.mmNameSuffix, IndividualPerson33.mmNameSuffix, IndividualPerson34.mmNameSuffix);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PersonName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -808,10 +831,11 @@ public class PersonName extends PartyName {
 				name = "PersonName";
 				definition = "Name by which a person is known and that is usually used to identify that person.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonIdentification.mmPersonName);
+				derivationElement_lazy = () -> Arrays.asList(IndividualPersonNameLong1.mmInitials);
 				superType_lazy = () -> PartyName.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PersonName.mmBirthName, com.tools20022.repository.entity.PersonName.mmNamePrefix, com.tools20022.repository.entity.PersonName.mmGivenName,
 						com.tools20022.repository.entity.PersonName.mmMiddleName, com.tools20022.repository.entity.PersonName.mmNameSuffix, com.tools20022.repository.entity.PersonName.mmIdentification);
-				derivationComponent_lazy = () -> Arrays.asList(NamePrefix1Choice.mmObject(), PersonalInformation1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(NamePrefix1Choice.mmObject(), IndividualPersonNameLong1.mmObject(), PersonalInformation1.mmObject());
 			}
 
 			@Override

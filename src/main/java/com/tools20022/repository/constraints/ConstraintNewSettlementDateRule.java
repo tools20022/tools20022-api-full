@@ -47,7 +47,7 @@ public class ConstraintNewSettlementDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The New Settlement Date element is only to be used when there has been an amendment to the Settlement Date. For example, when there has been a currency calendar amendment or a settlement deferral event. "
+	 * "The New Settlement Date element is only to be used when there has been an amendment to the Settlement Date. For example, when there has been a currency calendar amendment or a settlement deferral event."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -64,7 +64,7 @@ public class ConstraintNewSettlementDateRule {
 			validator = ConstraintNewSettlementDateRule::checkTradeData8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSettlementDateRule";
-			definition = "The New Settlement Date element is only to be used when there has been an amendment to the Settlement Date. For example, when there has been a currency calendar amendment or a settlement deferral event. ";
+			definition = "The New Settlement Date element is only to be used when there has been an amendment to the Settlement Date. For example, when there has been a currency calendar amendment or a settlement deferral event.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNewSettlementDateRule.forTradeData11);
 			owner_lazy = () -> TradeData8.mmObject();
 		}
@@ -85,7 +85,7 @@ public class ConstraintNewSettlementDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event. "
+	 * "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -99,7 +99,7 @@ public class ConstraintNewSettlementDateRule {
 			validator = ConstraintNewSettlementDateRule::checkTradeData11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSettlementDateRule";
-			definition = "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event. ";
+			definition = "New Settlement Date is only to be used when there has been an amendment to the settlement date. For example, when there has been a currency calendar amendment or a settlement deferral event.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNewSettlementDateRule.forTradeData8;
 			owner_lazy = () -> TradeData11.mmObject();
 		}

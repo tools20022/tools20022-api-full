@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorDiagnosticResponse4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Diagnostic response from the acquirer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse5
+ * AcceptorDiagnosticResponse5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse3
@@ -121,6 +128,14 @@ public class AcceptorDiagnosticResponse4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse5#mmEnvironment
+	 * AcceptorDiagnosticResponse5.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -137,6 +152,7 @@ public class AcceptorDiagnosticResponse4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse5.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorDiagnosticResponse3.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -176,6 +192,14 @@ public class AcceptorDiagnosticResponse4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Instructions for contacting the terminal management host."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse5#mmTMSTrigger
+	 * AcceptorDiagnosticResponse5.mmTMSTrigger}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -192,6 +216,7 @@ public class AcceptorDiagnosticResponse4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSTrigger";
 			definition = "Instructions for contacting the terminal management host.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse5.mmTMSTrigger);
 			previousVersion_lazy = () -> AcceptorDiagnosticResponse3.mmTMSTrigger;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -210,6 +235,7 @@ public class AcceptorDiagnosticResponse4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorDiagnosticResponse4";
 				definition = "Diagnostic response from the acquirer.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorDiagnosticResponse5.mmObject());
 				previousVersion_lazy = () -> AcceptorDiagnosticResponse3.mmObject();
 			}
 		});

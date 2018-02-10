@@ -34,9 +34,9 @@ import javax.xml.bind.annotation.*;
 
 /**
  * The AcceptorCancellationRequest message is sent by an acceptor (or its agent)
- * to the acquirer (or its agent) , to request the cancellation of a
- * successfully completed transaction. Cancellation should only occur before the
- * transaction has been cleared.<br>
+ * to the acquirer (or its agent), to request the cancellation of a successfully
+ * completed transaction. Cancellation should only occur before the transaction
+ * has been cleared.<br>
  * <br>
  * <p>
  * <strong>Constant fields:</strong>
@@ -81,7 +81,7 @@ import javax.xml.bind.annotation.*;
  * "AcceptorCancellationRequestV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AcceptorCancellationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to request the cancellation of a successfully completed transaction. Cancellation should only occur before the transaction has been cleared.\r\n\r\n"
+ * "The AcceptorCancellationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to request the cancellation of a successfully completed transaction. Cancellation should only occur before the transaction has been cleared.\r\n\r\n"
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -266,7 +266,7 @@ public class AcceptorCancellationRequestV02 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationRequestV02";
-				definition = "The AcceptorCancellationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent) , to request the cancellation of a successfully completed transaction. Cancellation should only occur before the transaction has been cleared.\r\n\r\n";
+				definition = "The AcceptorCancellationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to request the cancellation of a successfully completed transaction. Cancellation should only occur before the transaction has been cleared.\r\n\r\n";
 				nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationRequestV03.mmObject());
 				previousVersion_lazy = () -> AcceptorCancellationRequestV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());

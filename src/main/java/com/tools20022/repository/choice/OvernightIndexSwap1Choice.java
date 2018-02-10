@@ -102,7 +102,7 @@ public class OvernightIndexSwap1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the reason why no transactions are being reported for a money market reporting period. "
+	 * "Provides the reason why no transactions are being reported for a money market reporting period."
 	 * </li>
 	 * </ul>
 	 */
@@ -113,7 +113,7 @@ public class OvernightIndexSwap1Choice {
 			xmlTag = "DataSetActn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetAction";
-			definition = "Provides the reason why no transactions are being reported for a money market reporting period. ";
+			definition = "Provides the reason why no transactions are being reported for a money market reporting period.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ReportPeriodActivity1Code.mmObject();
@@ -146,7 +146,7 @@ public class OvernightIndexSwap1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the details of the secured market transaction as reported by the reporting agent"
+	 * "Provides the details of the secured market transaction as reported by the reporting agent."
 	 * </li>
 	 * </ul>
 	 */
@@ -157,7 +157,7 @@ public class OvernightIndexSwap1Choice {
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
-			definition = "Provides the details of the secured market transaction as reported by the reporting agent";
+			definition = "Provides the details of the secured market transaction as reported by the reporting agent.";
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> OvernightIndexSwapTransaction1.mmObject();

@@ -278,7 +278,7 @@ public class SwitchOrderV02 {
 	 * name} = "SwitchOrderDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information related to the switch order"</li>
+	 * definition} = "Information related to the switch order."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmSwitchOrderDetails = new MMMessageBuildingBlock() {
@@ -286,7 +286,7 @@ public class SwitchOrderV02 {
 			xmlTag = "SwtchOrdrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SwitchOrderDetails";
-			definition = "Information related to the switch order";
+			definition = "Information related to the switch order.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SwitchOrder2.mmObject();

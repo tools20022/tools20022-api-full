@@ -165,7 +165,7 @@ public class MoneyMarketTransactionStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Internal unique transaction identifier used by the reporting agent for each transaction. "
+	 * "Internal unique transaction identifier used by the reporting agent for each transaction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -184,7 +184,7 @@ public class MoneyMarketTransactionStatus1 {
 			xmlTag = "PrtryTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryTransactionIdentification";
-			definition = "Internal unique transaction identifier used by the reporting agent for each transaction. ";
+			definition = "Internal unique transaction identifier used by the reporting agent for each transaction.";
 			nextVersions_lazy = () -> Arrays.asList(MoneyMarketTransactionStatus2.mmProprietaryTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;

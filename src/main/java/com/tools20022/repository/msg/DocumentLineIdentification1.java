@@ -158,7 +158,7 @@ public class DocumentLineIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the type specified for the referred document line. "</li>
+	 * "Identification of the type specified for the referred document line."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -173,7 +173,7 @@ public class DocumentLineIdentification1 {
 			xmlTag = "Nb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Number";
-			definition = "Identification of the type specified for the referred document line. ";
+			definition = "Identification of the type specified for the referred document line.";
 			previousVersion_lazy = () -> ReferredDocumentInformation3.mmNumber;
 			maxOccurs = 1;
 			minOccurs = 0;

@@ -69,6 +69,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of elements used to provide information on the tax amount(s) of tax record."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxAmount2 TaxAmount2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +113,13 @@ public class TaxAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Rate used to calculate the tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxAmount2#mmRate
+	 * TaxAmount2.mmRate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
@@ -118,6 +131,7 @@ public class TaxAmount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Rate used to calculate the tax.";
+			nextVersions_lazy = () -> Arrays.asList(TaxAmount2.mmRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -155,6 +169,14 @@ public class TaxAmount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money on which the tax is based."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxAmount2#mmTaxableBaseAmount
+	 * TaxAmount2.mmTaxableBaseAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTaxableBaseAmount = new MMMessageAttribute() {
@@ -166,6 +188,7 @@ public class TaxAmount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxableBaseAmount";
 			definition = "Amount of money on which the tax is based.";
+			nextVersions_lazy = () -> Arrays.asList(TaxAmount2.mmTaxableBaseAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -204,6 +227,13 @@ public class TaxAmount1 {
 	 * definition} =
 	 * "Total amount that is the result of the calculation of the tax for the record."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxAmount2#mmTotalAmount
+	 * TaxAmount2.mmTotalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalAmount = new MMMessageAttribute() {
@@ -215,6 +245,7 @@ public class TaxAmount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalAmount";
 			definition = "Total amount that is the result of the calculation of the tax for the record.";
+			nextVersions_lazy = () -> Arrays.asList(TaxAmount2.mmTotalAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -246,6 +277,13 @@ public class TaxAmount1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to provide details on the tax period and amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxAmount2#mmDetails
+	 * TaxAmount2.mmDetails}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDetails = new MMMessageAssociationEnd() {
@@ -256,6 +294,7 @@ public class TaxAmount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Details";
 			definition = "Set of elements used to provide details on the tax period and amount.";
+			nextVersions_lazy = () -> Arrays.asList(TaxAmount2.mmDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TaxRecordDetails1.mmObject();
@@ -272,6 +311,7 @@ public class TaxAmount1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxAmount1";
 				definition = "Set of elements used to provide information on the tax amount(s) of tax record.";
+				nextVersions_lazy = () -> Arrays.asList(TaxAmount2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

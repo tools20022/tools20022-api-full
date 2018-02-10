@@ -154,7 +154,7 @@ public class InitialBaselineSubmissionV05 {
 	 * name} = "SubmissionIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the submitted information"</li>
+	 * definition} = "Identifies the submitted information."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -167,7 +167,7 @@ public class InitialBaselineSubmissionV05 {
 			xmlTag = "SubmissnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionIdentification";
-			definition = "Identifies the submitted information";
+			definition = "Identifies the submitted information.";
 			previousVersion_lazy = () -> InitialBaselineSubmissionV04.mmSubmissionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -256,7 +256,7 @@ public class InitialBaselineSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the instruction requested by the submitter by means of a code. "
+	 * "Specifies the instruction requested by the submitter by means of a code."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -270,7 +270,7 @@ public class InitialBaselineSubmissionV05 {
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
-			definition = "Specifies the instruction requested by the submitter by means of a code. ";
+			definition = "Specifies the instruction requested by the submitter by means of a code.";
 			previousVersion_lazy = () -> InitialBaselineSubmissionV04.mmInstruction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -357,8 +357,7 @@ public class InitialBaselineSubmissionV05 {
 	 * name} = "BuyerContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Person to be contacted in the organisation of the buyer. "
-	 * </li>
+	 * definition} = "Person to be contacted in the organisation of the buyer."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -371,7 +370,7 @@ public class InitialBaselineSubmissionV05 {
 			xmlTag = "BuyrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerContactPerson";
-			definition = "Person to be contacted in the organisation of the buyer. ";
+			definition = "Person to be contacted in the organisation of the buyer.";
 			previousVersion_lazy = () -> InitialBaselineSubmissionV04.mmBuyerContactPerson;
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();

@@ -85,6 +85,7 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.CardAccount3 CardAccount3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CardAccount2 CardAccount2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAccount14 CardAccount14}</li>
  * </ul>
  * </li>
  * </ul>
@@ -129,6 +130,9 @@ public class CardAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardAccount3#mmSelectionMethod
 	 * CardAccount3.mmSelectionMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount14#mmSelectionMethod
+	 * CardAccount14.mmSelectionMethod}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -141,7 +145,7 @@ public class CardAccount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectionMethod";
 			definition = "Method used by the cardholder and the terminal for the choice of the account.";
-			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmSelectionMethod);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmSelectionMethod, CardAccount14.mmSelectionMethod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccountChoiceMethod1Code.mmObject();
@@ -188,6 +192,9 @@ public class CardAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardAccount2#mmSelectedAccountType
 	 * CardAccount2.mmSelectedAccountType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount14#mmSelectedAccountType
+	 * CardAccount14.mmSelectedAccountType}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -201,7 +208,7 @@ public class CardAccount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelectedAccountType";
 			definition = "Type of cardholder account used for the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmSelectedAccountType, CardAccount2.mmSelectedAccountType);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmSelectedAccountType, CardAccount2.mmSelectedAccountType, CardAccount14.mmSelectedAccountType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardAccountType2Code.mmObject();
@@ -247,6 +254,9 @@ public class CardAccount1 {
 	 * CardAccount3.mmAccountName}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#mmAccountName
 	 * CardAccount2.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount14#mmAccountName
+	 * CardAccount14.mmAccountName}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -260,7 +270,7 @@ public class CardAccount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountName";
 			definition = "Name of the account, as assigned by the account servicing institution, in agreement with the account owner in order to provide an additional means of identification of the account.\r\nUsage: The account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner's identity and the account number.";
-			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountName, CardAccount2.mmAccountName);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountName, CardAccount2.mmAccountName, CardAccount14.mmAccountName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -305,6 +315,9 @@ public class CardAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardAccount2#mmAccountOwner
 	 * CardAccount2.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount14#mmAccountOwner
+	 * CardAccount14.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -318,7 +331,7 @@ public class CardAccount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
-			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountOwner, CardAccount2.mmAccountOwner);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountOwner, CardAccount2.mmAccountOwner, CardAccount14.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -366,6 +379,9 @@ public class CardAccount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardAccount2#mmAccountIdentifier
 	 * CardAccount2.mmAccountIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount14#mmAccountIdentifier
+	 * CardAccount14.mmAccountIdentifier}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -379,7 +395,7 @@ public class CardAccount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentifier";
 			definition = "Unique identifier of the account, as assigned by the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountIdentifier, CardAccount2.mmAccountIdentifier);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmAccountIdentifier, CardAccount2.mmAccountIdentifier, CardAccount14.mmAccountIdentifier);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -426,6 +442,8 @@ public class CardAccount1 {
 	 * CardAccount3.mmServicer}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#mmServicer
 	 * CardAccount2.mmServicer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount14#mmServicer
+	 * CardAccount14.mmServicer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -439,7 +457,7 @@ public class CardAccount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
-			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmServicer, CardAccount2.mmServicer);
+			nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmServicer, CardAccount2.mmServicer, CardAccount14.mmServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -458,7 +476,7 @@ public class CardAccount1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAccount1";
 				definition = "Way to identify a customer account or a relationship to its account affected for the transaction.";
-				nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmObject(), CardAccount2.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(CardAccount3.mmObject(), CardAccount2.mmObject(), CardAccount14.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

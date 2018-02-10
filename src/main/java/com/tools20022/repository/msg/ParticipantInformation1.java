@@ -193,7 +193,7 @@ public class ParticipantInformation1 {
 	 * name} = "TerminalIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "CBRF identification of the terminal. "</li>
+	 * definition} = "CBRF identification of the terminal."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTerminalIdentification = new MMMessageAttribute() {
@@ -203,7 +203,7 @@ public class ParticipantInformation1 {
 			xmlTag = "TermnlId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalIdentification";
-			definition = "CBRF identification of the terminal. ";
+			definition = "CBRF identification of the terminal.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -318,7 +318,7 @@ public class ParticipantInformation1 {
 	 * name} = "Migration"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information related for participant migration process. "</li>
+	 * definition} = "Information related for participant migration process."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMigration = new MMMessageAssociationEnd() {
@@ -328,7 +328,7 @@ public class ParticipantInformation1 {
 			xmlTag = "Mgrtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Migration";
-			definition = "Information related for participant migration process. ";
+			definition = "Information related for participant migration process.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

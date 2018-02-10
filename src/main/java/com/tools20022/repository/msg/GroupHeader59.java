@@ -99,6 +99,12 @@ import javax.xml.bind.annotation.XmlType;
  * "GroupHeader59"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides further details on the message."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.GroupHeader76 GroupHeader76}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -139,6 +145,14 @@ public class GroupHeader59 {
 	 * definition} =
 	 * "Point to point reference, as assigned by the account owner or the party authorised to send the message, and sent to the account servicing institution, to unambiguously identify the message.\nUsage: The sender has to make sure that 'MessageIdentification' is unique per account servicing institution for a pre-agreed period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader76#mmMessageIdentification
+	 * GroupHeader76.mmMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
@@ -150,6 +164,7 @@ public class GroupHeader59 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the account owner or the party authorised to send the message, and sent to the account servicing institution, to unambiguously identify the message.\nUsage: The sender has to make sure that 'MessageIdentification' is unique per account servicing institution for a pre-agreed period.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader76.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -186,6 +201,14 @@ public class GroupHeader59 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader76#mmCreationDateTime
+	 * GroupHeader76.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -197,6 +220,7 @@ public class GroupHeader59 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader76.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -229,6 +253,14 @@ public class GroupHeader59 {
 	 * definition} =
 	 * "Identification of the party that is sending the message, when different from the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader76#mmMessageSender
+	 * GroupHeader76.mmMessageSender}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMessageSender = new MMMessageAssociationEnd() {
@@ -239,6 +271,7 @@ public class GroupHeader59 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageSender";
 			definition = "Identification of the party that is sending the message, when different from the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(GroupHeader76.mmMessageSender);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -258,6 +291,7 @@ public class GroupHeader59 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GroupHeader59";
 				definition = "Provides further details on the message.";
+				nextVersions_lazy = () -> Arrays.asList(GroupHeader76.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

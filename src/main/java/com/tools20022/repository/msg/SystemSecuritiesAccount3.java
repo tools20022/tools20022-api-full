@@ -218,7 +218,7 @@ public class SystemSecuritiesAccount3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Meaning when true : Account is in Hold status.\r\nMeaning when false : Account is in Release status."
+	 * "Meaning when true: Account is in Hold status.\r\nMeaning when false: Account is in Release status."
 	 * </li>
 	 * </ul>
 	 */
@@ -229,7 +229,7 @@ public class SystemSecuritiesAccount3 {
 			xmlTag = "HldInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
-			definition = "Meaning when true : Account is in Hold status.\r\nMeaning when false : Account is in Release status.";
+			definition = "Meaning when true: Account is in Hold status.\r\nMeaning when false: Account is in Release status.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -479,7 +479,7 @@ public class SystemSecuritiesAccount3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Defines the specific processing characteristics for a securities account  to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices."
+	 * "Defines the specific processing characteristics for a securities account to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices."
 	 * </li>
 	 * </ul>
 	 */
@@ -490,7 +490,7 @@ public class SystemSecuritiesAccount3 {
 			xmlTag = "Rstrctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
-			definition = "Defines the specific processing characteristics for a securities account  to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
+			definition = "Defines the specific processing characteristics for a securities account to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SystemRestriction1.mmObject();

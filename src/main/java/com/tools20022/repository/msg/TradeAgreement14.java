@@ -135,7 +135,7 @@ public class TradeAgreement14 {
 	 * name} = "TradeDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date on which the trading parties agreed on the trade. "</li>
+	 * definition} = "Date on which the trading parties agreed on the trade."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -151,7 +151,7 @@ public class TradeAgreement14 {
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			definition = "Date on which the trading parties agreed on the trade. ";
+			definition = "Date on which the trading parties agreed on the trade.";
 			previousVersion_lazy = () -> TradeAgreement10.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -185,7 +185,7 @@ public class TradeAgreement14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party. "
+	 * "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -201,7 +201,7 @@ public class TradeAgreement14 {
 			xmlTag = "OrgtrRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorReference";
-			definition = "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party. ";
+			definition = "Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party.";
 			previousVersion_lazy = () -> TradeAgreement10.mmOriginatorReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -239,7 +239,7 @@ public class TradeAgreement14 {
 	 * name} = "CommonReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reference common to both parties of the trade. "</li>
+	 * definition} = "Reference common to both parties of the trade."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -255,7 +255,7 @@ public class TradeAgreement14 {
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			definition = "Reference common to both parties of the trade. ";
+			definition = "Reference common to both parties of the trade.";
 			previousVersion_lazy = () -> TradeAgreement10.mmCommonReference;
 			maxOccurs = 1;
 			minOccurs = 0;

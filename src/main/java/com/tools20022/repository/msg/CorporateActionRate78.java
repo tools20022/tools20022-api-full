@@ -569,7 +569,7 @@ public class CorporateActionRate78 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment ."
+	 * "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment."
 	 * </li>
 	 * </ul>
 	 */
@@ -581,7 +581,7 @@ public class CorporateActionRate78 {
 			xmlTag = "IntrstShrtfll";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestShortfall";
-			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment .";
+			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat43Choice.mmObject();
@@ -665,7 +665,7 @@ public class CorporateActionRate78 {
 	 * name} = "DeclaredRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Dividend or interest rate declared by the issuer. "</li>
+	 * definition} = "Dividend or interest rate declared by the issuer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDeclaredRate = new MMMessageAttribute() {
@@ -675,7 +675,7 @@ public class CorporateActionRate78 {
 			xmlTag = "DclrdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRate";
-			definition = "Dividend or interest rate declared by the issuer. ";
+			definition = "Dividend or interest rate declared by the issuer.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat43Choice.mmObject();

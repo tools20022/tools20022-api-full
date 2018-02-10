@@ -67,6 +67,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between transactions and booked entries held at the transaction administrator or an operational error when the requested data cannot be retrieved."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TransactionReportOrError3Choice
+ * TransactionReportOrError3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.TransactionReportOrError1Choice
@@ -104,6 +112,14 @@ public class TransactionReportOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reports on payment transactions."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionReportOrError3Choice#mmBusinessReport
+	 * TransactionReportOrError3Choice.mmBusinessReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +135,7 @@ public class TransactionReportOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on payment transactions.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionReportOrError3Choice.mmBusinessReport);
 			previousVersion_lazy = () -> TransactionReportOrError1Choice.mmBusinessReport;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -154,6 +171,14 @@ public class TransactionReportOrError2Choice {
 	 * definition} =
 	 * "Indicates that an operational error has been issued during the processing of the related request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionReportOrError3Choice#mmOperationalError
+	 * TransactionReportOrError3Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -169,6 +194,7 @@ public class TransactionReportOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionReportOrError3Choice.mmOperationalError);
 			previousVersion_lazy = () -> TransactionReportOrError1Choice.mmOperationalError;
 			minOccurs = 1;
 			isComposite = true;
@@ -184,6 +210,7 @@ public class TransactionReportOrError2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReportOrError2Choice";
 				definition = "Choice between transactions and booked entries held at the transaction administrator or an operational error when the requested data cannot be retrieved.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionReportOrError3Choice.mmObject());
 				previousVersion_lazy = () -> TransactionReportOrError1Choice.mmObject();
 			}
 		});

@@ -24,6 +24,12 @@ class ListBuilderForSecurity_01 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) IntraPositionDetails39.mmFinancialInstrumentIdentification);
+		list.add((T) AdditionalInformation13.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesFinancingTransactionDetails35.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesSettlementTransactionDetails28.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails96.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesCollateral8.mmSecurityIdentification);
 		list.add((T) CorporateActionGeneralInformation120.mmFinancialInstrumentIdentification);
 		list.add((T) CorporateActionOption134.mmSecurityIdentification);
 		list.add((T) SecuritiesTradeDetails69.mmFinancialInstrumentIdentification);
@@ -44,6 +50,54 @@ class ListBuilderForSecurity_01 {
 		list.add((T) TransactionDetails100.mmFinancialInstrumentIdentification);
 		list.add((T) TransactionDetails99.mmFinancialInstrumentIdentification);
 		list.add((T) FinancialInstrumentAttributes83.mmFinancialInstrumentIdentification);
+		list.add((T) ContractType5.mmProductIdentification);
+		list.add((T) TransactionDetails102.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrument60.mmIdentification);
+		list.add((T) FinancialInstrument64.mmIdentification);
+		list.add((T) FinancialInstrument63.mmIdentification);
+		list.add((T) FinancialInstrument61.mmIdentification);
+		list.add((T) FinancialInstrument65.mmIdentification);
+		list.add((T) EntryTransaction9.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentDetails28.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesTradeDetails71.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails105.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentDetails29.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesTradeDetails72.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesSettlementTransactionDetails34.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails104.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails107.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentAttributes91.mmUnderlyingFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentAttributes92.mmUnderlyingFinancialInstrumentIdentification);
+		list.add((T) CorporateActionGeneralInformation127.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionGeneralInformation126.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionOption141.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionOption138.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionGeneralInformation124.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionOption142.mmSecurityIdentification);
+		list.add((T) CorporateActionOption139.mmSecurityIdentification);
+		list.add((T) SecuritiesOption65.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentAttributes93.mmSecurityIdentification);
+		list.add((T) SecuritiesOption66.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionGeneralInformation129.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionOption144.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionOption146.mmSecurityIdentification);
+		list.add((T) CorporateActionGeneralInformation130.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesOption67.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionGeneralInformation131.mmFinancialInstrumentIdentification);
+		list.add((T) CorporateActionOption148.mmSecurityIdentification);
+		list.add((T) SecuritiesOption69.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentAttributes94.mmSecurityIdentification);
+		list.add((T) CorporateActionOption150.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentAttributes95.mmUnderlyingFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentDetails30.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesTradeDetails81.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentAttributes97.mmUnderlyingFinancialInstrumentIdentification);
+		list.add((T) SecuritiesTradeDetails85.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails109.mmFinancialInstrumentIdentification);
+		list.add((T) SecuritiesSettlementTransactionDetails37.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails110.mmFinancialInstrumentIdentification);
+		list.add((T) TransactionDetails111.mmFinancialInstrumentIdentification);
+		list.add((T) FinancialInstrumentDetails31.mmFinancialInstrumentIdentification);
 		return list;
 	}
 }

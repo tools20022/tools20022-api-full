@@ -49,7 +49,7 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of  CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount."
+	 * "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 			validator = ConstraintTotalInterbankSettlementAmount1Rule::checkFIToFICustomerCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount1Rule";
-			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of  CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
+			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerCreditTransferV01.mmObject();
 		}
 	};
@@ -79,7 +79,7 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of  DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount."
+	 * "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount."
 	 * </li>
 	 * </ul>
 	 */
@@ -88,7 +88,7 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 			validator = ConstraintTotalInterbankSettlementAmount1Rule::checkFIToFICustomerDirectDebitV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount1Rule";
-			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of  DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
+			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of DirectDebitTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount.";
 			owner_lazy = () -> FIToFICustomerDirectDebitV01.mmObject();
 		}
 	};
@@ -109,7 +109,7 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of  CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount. \n"
+	 * "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount. \n."
 	 * </li>
 	 * </ul>
 	 */
@@ -118,7 +118,7 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 			validator = ConstraintTotalInterbankSettlementAmount1Rule::checkFinancialInstitutionCreditTransferV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInterbankSettlementAmount1Rule";
-			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of  CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount. \n";
+			definition = "If GroupHeader/TotalInterbankSettlementAmount is present, then all occurrences of CreditTransferTransactionInformation/InterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalInterbankSettlementAmount. \n.";
 			owner_lazy = () -> FinancialInstitutionCreditTransferV01.mmObject();
 		}
 	};
@@ -150,7 +150,7 @@ public class ConstraintTotalInterbankSettlementAmount1Rule {
 	 * occurrences of
 	 * CreditTransferTransactionInformation/InterbankSettlementAmount must have
 	 * the same currency as the currency of
-	 * GroupHeader/TotalInterbankSettlementAmount.
+	 * GroupHeader/TotalInterbankSettlementAmount. .
 	 */
 	public static void checkFinancialInstitutionCreditTransferV01(FinancialInstitutionCreditTransferV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();

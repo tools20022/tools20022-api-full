@@ -111,7 +111,7 @@ public class PaymentStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Status of a transfer, in coded form, as  assigned by the transaction administrator."
+	 * "Status of a transfer, in coded form, as assigned by the transaction administrator."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -130,7 +130,7 @@ public class PaymentStatus1 {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Status of a transfer, in coded form, as  assigned by the transaction administrator.";
+			definition = "Status of a transfer, in coded form, as assigned by the transaction administrator.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentStatus2.mmCode);
 			maxOccurs = 1;
 			minOccurs = 0;

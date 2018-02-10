@@ -209,8 +209,8 @@ public class Header17 {
 	 * name} = "ProtocolVersion"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Version of the acquirer to issuer protocol specifications"
-	 * </li>
+	 * definition} =
+	 * "Version of the acquirer to issuer protocol specifications."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -232,7 +232,7 @@ public class Header17 {
 			xmlTag = "PrtcolVrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
-			definition = "Version of the acquirer to issuer protocol specifications";
+			definition = "Version of the acquirer to issuer protocol specifications.";
 			nextVersions_lazy = () -> Arrays.asList(Header18.mmProtocolVersion);
 			previousVersion_lazy = () -> Header10.mmProtocolVersion;
 			maxOccurs = 1;

@@ -103,14 +103,14 @@ public class IssuanceTypeCode extends MMCode {
 	 * name} = "UndertakingIssuedDirect"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Undertaking issued direct to the beneficiary. "</li>
+	 * definition} = "Undertaking issued direct to the beneficiary."</li>
 	 * </ul>
 	 */
 	public static final IssuanceTypeCode UndertakingIssuedDirect = new IssuanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingIssuedDirect";
-			definition = "Undertaking issued direct to the beneficiary. ";
+			definition = "Undertaking issued direct to the beneficiary.";
 			owner_lazy = () -> com.tools20022.repository.codeset.IssuanceTypeCode.mmObject();
 			codeName = "ISSU";
 		}
@@ -197,7 +197,7 @@ public class IssuanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Counter-undertaking issued to a correspondent with a request to issue a local undertaking. "
+	 * "Counter-undertaking issued to a correspondent with a request to issue a local undertaking."
 	 * </li>
 	 * </ul>
 	 */
@@ -205,7 +205,7 @@ public class IssuanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterUndertakingRequestForLocalUndertaking";
-			definition = "Counter-undertaking issued to a correspondent with a request to issue a local undertaking. ";
+			definition = "Counter-undertaking issued to a correspondent with a request to issue a local undertaking.";
 			owner_lazy = () -> com.tools20022.repository.codeset.IssuanceTypeCode.mmObject();
 			codeName = "CRQL";
 		}

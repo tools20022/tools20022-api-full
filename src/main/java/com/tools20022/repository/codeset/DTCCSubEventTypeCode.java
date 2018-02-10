@@ -172,6 +172,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DTCCSubEventTypeCode#DividendEquivalentPayment871M
  * DTCCSubEventTypeCode.DividendEquivalentPayment871M}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DTCCSubEventTypeCode#Conversion
+ * DTCCSubEventTypeCode.Conversion}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -187,6 +190,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * DTCCSubEventType4Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType5Code
  * DTCCSubEventType5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.DTCCSubEventType6Code
+ * DTCCSubEventType6Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -464,7 +469,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies an event where \"unwinding\" of the basket of securities occurs. "
+	 * "Identifies an event where \"unwinding\" of the basket of securities occurs."
 	 * </li>
 	 * </ul>
 	 */
@@ -472,7 +477,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unwind";
-			definition = "Identifies an event where \"unwinding\" of the basket of securities occurs. ";
+			definition = "Identifies an event where \"unwinding\" of the basket of securities occurs.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventTypeCode.mmObject();
 			codeName = "UNWD";
 		}
@@ -834,7 +839,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies an event where the company is not issuing a security with the right to subscribe for additional shares. In these instances, a User CUSIP is created by DTC  (The Depository Trust Company)  as opposed to a company-issued CUSIP in order to identify these issues. "
+	 * "Identifies an event where the company is not issuing a security with the right to subscribe for additional shares. In these instances, a User CUSIP is created by DTC (The Depository Trust Company) as opposed to a company-issued CUSIP in order to identify these issues."
 	 * </li>
 	 * </ul>
 	 */
@@ -842,7 +847,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalRightsNotIssued";
-			definition = "Identifies an event where the company is not issuing a security with the right to subscribe for additional shares. In these instances, a User CUSIP is created by DTC  (The Depository Trust Company)  as opposed to a company-issued CUSIP in order to identify these issues. ";
+			definition = "Identifies an event where the company is not issuing a security with the right to subscribe for additional shares. In these instances, a User CUSIP is created by DTC (The Depository Trust Company) as opposed to a company-issued CUSIP in order to identify these issues.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventTypeCode.mmObject();
 			codeName = "PRNI";
 		}
@@ -933,7 +938,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies an event where redemption shares are issued in addition to shares of the original security.  This is related to the Mandatory Exchange event with the same sub-event type name."
+	 * "Identifies an event where redemption shares are issued in addition to shares of the original security. This is related to the Mandatory Exchange event with the same sub-event type name."
 	 * </li>
 	 * </ul>
 	 */
@@ -941,7 +946,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryRedemptionOfShares";
-			definition = "Identifies an event where redemption shares are issued in addition to shares of the original security.  This is related to the Mandatory Exchange event with the same sub-event type name.";
+			definition = "Identifies an event where redemption shares are issued in addition to shares of the original security. This is related to the Mandatory Exchange event with the same sub-event type name.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventTypeCode.mmObject();
 			codeName = "MROS";
 		}
@@ -969,7 +974,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies an event involving the offer of shares by a corporation listed on the Australia Stock Exchange, in which ASIC will give relief so that the company can offer existing shareholders the opportunity to acquire small numbers of additional shares without needing a disclosure document or Product Disclosure Statement (PDS). "
+	 * "Identifies an event involving the offer of shares by a corporation listed on the Australia Stock Exchange, in which ASIC will give relief so that the company can offer existing shareholders the opportunity to acquire small numbers of additional shares without needing a disclosure document or Product Disclosure Statement (PDS)."
 	 * </li>
 	 * </ul>
 	 */
@@ -977,7 +982,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SharePurchasePlan";
-			definition = "Identifies an event involving the offer of shares by a corporation listed on the Australia Stock Exchange, in which ASIC will give relief so that the company can offer existing shareholders the opportunity to acquire small numbers of additional shares without needing a disclosure document or Product Disclosure Statement (PDS). ";
+			definition = "Identifies an event involving the offer of shares by a corporation listed on the Australia Stock Exchange, in which ASIC will give relief so that the company can offer existing shareholders the opportunity to acquire small numbers of additional shares without needing a disclosure document or Product Disclosure Statement (PDS).";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventTypeCode.mmObject();
 			codeName = "SHPP";
 		}
@@ -1172,7 +1177,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies when the event security is an ADR. The underlying security is American Depositary Receipt.                    "
+	 * "Identifies when the event security is an ADR. The underlying security is American Depositary Receipt."
 	 * </li>
 	 * </ul>
 	 */
@@ -1180,7 +1185,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ADR";
-			definition = "Identifies when the event security is an ADR. The underlying security is American Depositary Receipt.                    ";
+			definition = "Identifies when the event security is an ADR. The underlying security is American Depositary Receipt.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventTypeCode.mmObject();
 			codeName = "ADRS";
 		}
@@ -1718,6 +1723,38 @@ public class DTCCSubEventTypeCode extends MMCode {
 			codeName = "M871";
 		}
 	};
+	/**
+	 * Identifies an event which is a full call or a maturity with conversion.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.DTCCSubEventTypeCode
+	 * DTCCSubEventTypeCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CONV"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Conversion"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Identifies an event which is a full call or a maturity with conversion."
+	 * </li>
+	 * </ul>
+	 */
+	public static final DTCCSubEventTypeCode Conversion = new DTCCSubEventTypeCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Conversion";
+			definition = "Identifies an event which is a full call or a maturity with conversion.";
+			owner_lazy = () -> com.tools20022.repository.codeset.DTCCSubEventTypeCode.mmObject();
+			codeName = "CONV";
+		}
+	};
 	final static private LinkedHashMap<String, DTCCSubEventTypeCode> codesByName = new LinkedHashMap<>();
 
 	protected DTCCSubEventTypeCode() {
@@ -1731,7 +1768,8 @@ public class DTCCSubEventTypeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DTCCSubEventTypeCode";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined sub event types.";
-				derivation_lazy = () -> Arrays.asList(DTCCSubEventType2Code.mmObject(), DTCCSubEventType1Code.mmObject(), DTCCSubEventType3Code.mmObject(), DTCCSubEventType4Code.mmObject(), DTCCSubEventType5Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(DTCCSubEventType2Code.mmObject(), DTCCSubEventType1Code.mmObject(), DTCCSubEventType3Code.mmObject(), DTCCSubEventType4Code.mmObject(), DTCCSubEventType5Code.mmObject(),
+						DTCCSubEventType6Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DTCCSubEventTypeCode.OptOut, com.tools20022.repository.codeset.DTCCSubEventTypeCode.DividendReinvestmentByDTC,
 						com.tools20022.repository.codeset.DTCCSubEventTypeCode.PlaceOfListing, com.tools20022.repository.codeset.DTCCSubEventTypeCode.BoardLot, com.tools20022.repository.codeset.DTCCSubEventTypeCode.InterimPayment,
 						com.tools20022.repository.codeset.DTCCSubEventTypeCode.FinalPayment, com.tools20022.repository.codeset.DTCCSubEventTypeCode.Remarketing, com.tools20022.repository.codeset.DTCCSubEventTypeCode.Unwind,
@@ -1748,7 +1786,8 @@ public class DTCCSubEventTypeCode extends MMCode {
 						com.tools20022.repository.codeset.DTCCSubEventTypeCode.BasedOnRecordDateHoldings, com.tools20022.repository.codeset.DTCCSubEventTypeCode.PresentationRequired,
 						com.tools20022.repository.codeset.DTCCSubEventTypeCode.Cash, com.tools20022.repository.codeset.DTCCSubEventTypeCode.Securities, com.tools20022.repository.codeset.DTCCSubEventTypeCode.ConvertAndTender,
 						com.tools20022.repository.codeset.DTCCSubEventTypeCode.MiniTender, com.tools20022.repository.codeset.DTCCSubEventTypeCode.SelfTender, com.tools20022.repository.codeset.DTCCSubEventTypeCode.GDR,
-						com.tools20022.repository.codeset.DTCCSubEventTypeCode.DeemedDividend305C, com.tools20022.repository.codeset.DTCCSubEventTypeCode.DividendEquivalentPayment871M);
+						com.tools20022.repository.codeset.DTCCSubEventTypeCode.DeemedDividend305C, com.tools20022.repository.codeset.DTCCSubEventTypeCode.DividendEquivalentPayment871M,
+						com.tools20022.repository.codeset.DTCCSubEventTypeCode.Conversion);
 			}
 		});
 		return mmObject_lazy.get();
@@ -1801,6 +1840,7 @@ public class DTCCSubEventTypeCode extends MMCode {
 		codesByName.put(GDR.getCodeName().get(), GDR);
 		codesByName.put(DeemedDividend305C.getCodeName().get(), DeemedDividend305C);
 		codesByName.put(DividendEquivalentPayment871M.getCodeName().get(), DividendEquivalentPayment871M);
+		codesByName.put(Conversion.getCodeName().get(), Conversion);
 	}
 
 	public static DTCCSubEventTypeCode valueOf(String codeName) {

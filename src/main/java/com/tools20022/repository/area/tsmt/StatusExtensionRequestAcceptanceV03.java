@@ -176,7 +176,7 @@ public class StatusExtensionRequestAcceptanceV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n"
+	 * "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -185,7 +185,7 @@ public class StatusExtensionRequestAcceptanceV03 {
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
-			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
+			definition = "Unique identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -267,7 +267,7 @@ public class StatusExtensionRequestAcceptanceV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the status for which the user accepts an extension of the validity period.."
+	 * "Identifies the status for which the user accepts an extension of the validity period."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +276,7 @@ public class StatusExtensionRequestAcceptanceV03 {
 			xmlTag = "XtndedSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedStatus";
-			definition = "Identifies the status for which the user accepts an extension of the validity period..";
+			definition = "Identifies the status for which the user accepts an extension of the validity period.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();

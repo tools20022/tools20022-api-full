@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * "DateFormat4Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the value of a date."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.DateFormat56Choice
+ * DateFormat56Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +105,14 @@ public class DateFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date expressed as an ISO Date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat56Choice#mmDate
+	 * DateFormat56Choice.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
@@ -108,6 +123,7 @@ public class DateFormat4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as an ISO Date.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat56Choice.mmDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.choice.DateAndDateTimeChoice.mmObject();
@@ -141,6 +157,14 @@ public class DateFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "The date is not specified, eg, the date is unknown."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat56Choice#mmNotSpecifiedDate
+	 * DateFormat56Choice.mmNotSpecifiedDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNotSpecifiedDate = new MMMessageAttribute() {
@@ -151,6 +175,7 @@ public class DateFormat4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedDate";
 			definition = "The date is not specified, eg, the date is unknown.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat56Choice.mmNotSpecifiedDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DateType6Code.mmObject();
@@ -184,6 +209,14 @@ public class DateFormat4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary scheme to specify a date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateFormat56Choice#mmProprietary
+	 * DateFormat56Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -194,6 +227,7 @@ public class DateFormat4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary scheme to specify a date.";
+			nextVersions_lazy = () -> Arrays.asList(DateFormat56Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -209,6 +243,7 @@ public class DateFormat4Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateFormat4Choice";
 				definition = "Specifies the value of a date.";
+				nextVersions_lazy = () -> Arrays.asList(DateFormat56Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

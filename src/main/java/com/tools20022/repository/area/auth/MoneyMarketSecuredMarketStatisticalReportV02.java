@@ -83,7 +83,7 @@ import javax.xml.bind.annotation.*;
  * "MoneyMarketSecuredMarketStatisticalReportV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all relevant secured money market transactions. "
+ * "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all relevant secured money market transactions."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -255,7 +255,7 @@ public class MoneyMarketSecuredMarketStatisticalReportV02 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MoneyMarketSecuredMarketStatisticalReportV02";
-				definition = "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all relevant secured money market transactions. ";
+				definition = "The MoneyMarketSecuredMarketStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report all relevant secured money market transactions.";
 				previousVersion_lazy = () -> MoneyMarketSecuredMarketStatisticalReportV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(MoneyMarketStatisticalReportingISOLatestversion.mmObject());
 				rootElement = "Document";

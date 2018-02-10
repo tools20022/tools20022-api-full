@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.DebitAuthorisationRequestV05;
+import com.tools20022.repository.area.camt.DebitAuthorisationRequestV06;
 import com.tools20022.repository.choice.CancellationReason33Choice;
 import com.tools20022.repository.datatype.ActiveOrHistoricCurrencyAndAmount;
 import com.tools20022.repository.datatype.ISODate;
@@ -67,6 +68,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV05#mmDetail
  * DebitAuthorisationRequestV05.mmDetail}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DebitAuthorisationRequestV06#mmDetail
+ * DebitAuthorisationRequestV06.mmDetail}</li>
  * </ul>
  * </li>
  * <li>
@@ -312,7 +316,7 @@ public class DebitAuthorisation2 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.DebitAuthorisation2.mmCancellationReason, com.tools20022.repository.msg.DebitAuthorisation2.mmAmountToDebit,
 						com.tools20022.repository.msg.DebitAuthorisation2.mmValueDateToDebit, com.tools20022.repository.msg.DebitAuthorisation2.mmAdditionalCancellationReasonInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationRequestV05.mmDetail);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DebitAuthorisationRequestV05.mmDetail, DebitAuthorisationRequestV06.mmDetail);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebitAuthorisation2";

@@ -102,7 +102,7 @@ public class QueueTransaction1 {
 	 * name} = "AccountOwner"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account owner identification such as BIC. "</li>
+	 * definition} = "Account owner identification such as BIC."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -112,7 +112,7 @@ public class QueueTransaction1 {
 			xmlTag = "AcctOwnr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
-			definition = "Account owner identification such as BIC. ";
+			definition = "Account owner identification such as BIC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

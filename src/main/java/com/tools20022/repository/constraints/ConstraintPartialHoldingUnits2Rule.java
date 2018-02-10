@@ -50,7 +50,7 @@ public class ConstraintPartialHoldingUnits2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If BlockHolding is “PRTH” then PartialHoldingUnits is mandatory. "</li>
+	 * "If BlockHolding is “PRTH” then PartialHoldingUnits is mandatory."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -66,7 +66,7 @@ public class ConstraintPartialHoldingUnits2Rule {
 			validator = ConstraintPartialHoldingUnits2Rule::checkBlockedHoldingDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialHoldingUnits2Rule";
-			definition = "If BlockHolding is “PRTH” then PartialHoldingUnits is mandatory. ";
+			definition = "If BlockHolding is “PRTH” then PartialHoldingUnits is mandatory.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialHoldingUnits2Rule.forBlockedHoldingDetails2);
 			owner_lazy = () -> BlockedHoldingDetails1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PartialHoldingUnits</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/BlockedHolding</leftOperand><rightOperand>PartialHolding</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -93,7 +93,7 @@ public class ConstraintPartialHoldingUnits2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If BlockHolding is PRTH (PartialHolding) then PartialHoldingUnits is mandatory. "
+	 * "If BlockHolding is PRTH (PartialHolding) then PartialHoldingUnits is mandatory."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -107,7 +107,7 @@ public class ConstraintPartialHoldingUnits2Rule {
 			validator = ConstraintPartialHoldingUnits2Rule::checkBlockedHoldingDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialHoldingUnits2Rule";
-			definition = "If BlockHolding is PRTH (PartialHolding) then PartialHoldingUnits is mandatory. ";
+			definition = "If BlockHolding is PRTH (PartialHolding) then PartialHoldingUnits is mandatory.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPartialHoldingUnits2Rule.forBlockedHoldingDetails1;
 			owner_lazy = () -> BlockedHoldingDetails2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/PartialHoldingUnits</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/BlockedHolding</leftOperand><rightOperand>PartialHolding</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";

@@ -98,6 +98,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument63
+ * FinancialInstrument63}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.FinancialInstrument45
@@ -142,6 +149,14 @@ public class FinancialInstrument49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a security by an ISIN."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmIdentification
+	 * FinancialInstrument63.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -158,6 +173,7 @@ public class FinancialInstrument49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of a security by an ISIN.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument63.mmIdentification);
 			previousVersion_lazy = () -> FinancialInstrument45.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -199,6 +215,14 @@ public class FinancialInstrument49 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Name of the financial instrument in free format text."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmName
+	 * FinancialInstrument63.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -216,6 +240,7 @@ public class FinancialInstrument49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument63.mmName);
 			previousVersion_lazy = () -> FinancialInstrument45.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -256,6 +281,14 @@ public class FinancialInstrument49 {
 	 * definition} =
 	 * "Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmShortName
+	 * FinancialInstrument63.mmShortName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -272,6 +305,7 @@ public class FinancialInstrument49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument63.mmShortName);
 			previousVersion_lazy = () -> FinancialInstrument45.mmShortName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -307,6 +341,14 @@ public class FinancialInstrument49 {
 	 * definition} =
 	 * "Additional information about a financial instrument to help identify the instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmSupplementaryIdentification
+	 * FinancialInstrument63.mmSupplementaryIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -322,6 +364,7 @@ public class FinancialInstrument49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryIdentification";
 			definition = "Additional information about a financial instrument to help identify the instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument63.mmSupplementaryIdentification);
 			previousVersion_lazy = () -> FinancialInstrument45.mmSupplementaryIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -362,6 +405,14 @@ public class FinancialInstrument49 {
 	 * definition} =
 	 * "Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy, for example, pay out or accumulate, or a trailer policy, for example, with or without. Fund classes are typically denoted by a single character, for example, 'Class A', 'Class 2'."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmClassType
+	 * FinancialInstrument63.mmClassType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -378,6 +429,7 @@ public class FinancialInstrument49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassType";
 			definition = "Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy, for example, pay out or accumulate, or a trailer policy, for example, with or without. Fund classes are typically denoted by a single character, for example, 'Class A', 'Class 2'.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument63.mmClassType);
 			previousVersion_lazy = () -> FinancialInstrument45.mmClassType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -422,6 +474,14 @@ public class FinancialInstrument49 {
 	 * definition} =
 	 * "Form, that is, ownership, of the security, for example, registered or bearer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmSecuritiesForm
+	 * FinancialInstrument63.mmSecuritiesForm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -439,6 +499,7 @@ public class FinancialInstrument49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesForm";
 			definition = "Form, that is, ownership, of the security, for example, registered or bearer.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument63.mmSecuritiesForm);
 			previousVersion_lazy = () -> FinancialInstrument45.mmSecuritiesForm;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -480,6 +541,14 @@ public class FinancialInstrument49 {
 	 * definition} =
 	 * "Income policy relating to a class type, that is, if income is paid out or retained in the fund."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument63#mmDistributionPolicy
+	 * FinancialInstrument63.mmDistributionPolicy}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -496,6 +565,7 @@ public class FinancialInstrument49 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionPolicy";
 			definition = "Income policy relating to a class type, that is, if income is paid out or retained in the fund.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument63.mmDistributionPolicy);
 			previousVersion_lazy = () -> FinancialInstrument45.mmDistributionPolicy;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -515,6 +585,7 @@ public class FinancialInstrument49 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument49";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrument63.mmObject());
 				previousVersion_lazy = () -> FinancialInstrument45.mmObject();
 			}
 		});

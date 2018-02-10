@@ -129,6 +129,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmSettlementInformation
  * RequestedModification6.mmSettlementInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmSettlementInformation
+ * RequestedModification7.mmSettlementInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -183,6 +186,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SettlementInformation9}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SettlementTerms3
  * SettlementTerms3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ResolutionInformation2
+ * ResolutionInformation2}</li>
  * </ul>
  * </li>
  * <li>
@@ -685,6 +690,9 @@ public class CashSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction62#mmOriginalInterbankSettlementAmount
 	 * PaymentTransaction62.mmOriginalInterbankSettlementAmount}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInterbankSettlementAmount
+	 * PaymentSearch6.mmInterbankSettlementAmount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#mmInterbankSettlementAmount
 	 * DirectDebitTransactionInformation21.mmInterbankSettlementAmount}</li>
 	 * <li>
@@ -714,6 +722,66 @@ public class CashSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmInterbankSettlementAmount
 	 * PaymentComplementaryInformation6.mmInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmUpFrontPayment
+	 * TradeTransaction15.mmUpFrontPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmUpFrontPayment
+	 * TradeTransaction17.mmUpFrontPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmUpFrontPayment
+	 * TradeTransaction14.mmUpFrontPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmUpFrontPayment
+	 * TradeTransaction16.mmUpFrontPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation7#mmInterbankSettlementAmount
+	 * PaymentComplementaryInformation7.mmInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmOriginalInterbankSettlementAmount
+	 * PaymentTransaction87.mmOriginalInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmReturnedInterbankSettlementAmount
+	 * PaymentTransaction87.mmReturnedInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInterbankSettlementAmount
+	 * CreditTransferTransaction31.mmInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalInterbankSettlementAmount
+	 * PaymentTransaction88.mmOriginalInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmReversedInterbankSettlementAmount
+	 * PaymentTransaction88.mmReversedInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInterbankSettlementAmount
+	 * RequestedModification7.mmInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction90#mmOriginalInterbankSettlementAmount
+	 * PaymentTransaction90.mmOriginalInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ResolutionInformation2#mmInterbankSettlementAmount
+	 * ResolutionInformation2.mmInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction85#mmOriginalInterbankSettlementAmount
+	 * PaymentTransaction85.mmOriginalInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmInterbankSettlementAmount
+	 * OriginalTransactionReference27.mmInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction89#mmOriginalInterbankSettlementAmount
+	 * PaymentTransaction89.mmOriginalInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalInterbankSettlementAmount
+	 * UnderlyingPaymentTransaction3.mmOriginalInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch7#mmInterbankSettlementAmount
+	 * PaymentSearch7.mmInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmInterbankSettlementAmount
+	 * CreditTransferTransaction30.mmInterbankSettlementAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmInterbankSettlementAmount
+	 * PaymentInstruction26.mmInterbankSettlementAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -785,10 +853,16 @@ public class CashSettlement extends Settlement {
 					PaymentTransaction65.mmOriginalInterbankSettlementAmount, PaymentTransaction65.mmReturnedInterbankSettlementAmount, PaymentComplementaryInformation5.mmInterbankSettlementAmount,
 					DirectDebitTransactionInformation20.mmInterbankSettlementAmount, PaymentTransaction60.mmOriginalInterbankSettlementAmount, PaymentTransaction60.mmReversedInterbankSettlementAmount,
 					GroupHeader71.mmTotalReversedInterbankSettlementAmount, OriginalTransactionReference22.mmInterbankSettlementAmount, PaymentTransaction67.mmOriginalInterbankSettlementAmount,
-					PaymentTransaction62.mmOriginalInterbankSettlementAmount, DirectDebitTransactionInformation21.mmInterbankSettlementAmount, PaymentTransaction81.mmOriginalInterbankSettlementAmount,
-					PaymentTransaction81.mmReversedInterbankSettlementAmount, RequestedModification6.mmInterbankSettlementAmount, PaymentTransaction76.mmOriginalInterbankSettlementAmount,
-					PaymentTransaction76.mmReturnedInterbankSettlementAmount, OriginalTransactionReference24.mmInterbankSettlementAmount, PaymentTransaction75.mmOriginalInterbankSettlementAmount,
-					PaymentTransaction79.mmOriginalInterbankSettlementAmount, PaymentComplementaryInformation6.mmInterbankSettlementAmount);
+					PaymentTransaction62.mmOriginalInterbankSettlementAmount, PaymentSearch6.mmInterbankSettlementAmount, DirectDebitTransactionInformation21.mmInterbankSettlementAmount,
+					PaymentTransaction81.mmOriginalInterbankSettlementAmount, PaymentTransaction81.mmReversedInterbankSettlementAmount, RequestedModification6.mmInterbankSettlementAmount,
+					PaymentTransaction76.mmOriginalInterbankSettlementAmount, PaymentTransaction76.mmReturnedInterbankSettlementAmount, OriginalTransactionReference24.mmInterbankSettlementAmount,
+					PaymentTransaction75.mmOriginalInterbankSettlementAmount, PaymentTransaction79.mmOriginalInterbankSettlementAmount, PaymentComplementaryInformation6.mmInterbankSettlementAmount, TradeTransaction15.mmUpFrontPayment,
+					TradeTransaction17.mmUpFrontPayment, TradeTransaction14.mmUpFrontPayment, TradeTransaction16.mmUpFrontPayment, PaymentComplementaryInformation7.mmInterbankSettlementAmount,
+					PaymentTransaction87.mmOriginalInterbankSettlementAmount, PaymentTransaction87.mmReturnedInterbankSettlementAmount, CreditTransferTransaction31.mmInterbankSettlementAmount,
+					PaymentTransaction88.mmOriginalInterbankSettlementAmount, PaymentTransaction88.mmReversedInterbankSettlementAmount, RequestedModification7.mmInterbankSettlementAmount,
+					PaymentTransaction90.mmOriginalInterbankSettlementAmount, ResolutionInformation2.mmInterbankSettlementAmount, PaymentTransaction85.mmOriginalInterbankSettlementAmount,
+					OriginalTransactionReference27.mmInterbankSettlementAmount, PaymentTransaction89.mmOriginalInterbankSettlementAmount, UnderlyingPaymentTransaction3.mmOriginalInterbankSettlementAmount,
+					PaymentSearch7.mmInterbankSettlementAmount, CreditTransferTransaction30.mmInterbankSettlementAmount, PaymentInstruction26.mmInterbankSettlementAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1229,6 +1303,15 @@ public class CashSettlement extends Settlement {
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction62#mmOriginalInterbankSettlementDate
 	 * PaymentTransaction62.mmOriginalInterbankSettlementDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance3#mmSettlementDate
+	 * IntraBalance3.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance4#mmSettlementDate
+	 * IntraBalance4.mmSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInterbankSettlementDate
+	 * PaymentSearch6.mmInterbankSettlementDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation21#mmInterbankSettlementDate
 	 * DirectDebitTransactionInformation21.mmInterbankSettlementDate}</li>
 	 * <li>
@@ -1252,6 +1335,54 @@ public class CashSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmInterbankSettlementDate
 	 * PaymentComplementaryInformation6.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation7#mmInterbankSettlementDate
+	 * PaymentComplementaryInformation7.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmOriginalInterbankSettlementDate
+	 * PaymentTransaction87.mmOriginalInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmInterbankSettlementDate
+	 * PaymentTransaction87.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmInterbankSettlementDate
+	 * CreditTransferTransaction31.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmInterbankSettlementDate
+	 * PaymentTransaction88.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInterbankSettlementDate
+	 * RequestedModification7.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction90#mmOriginalInterbankSettlementDate
+	 * PaymentTransaction90.mmOriginalInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ResolutionInformation2#mmInterbankSettlementDate
+	 * ResolutionInformation2.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDates3#mmInterbankSettlementDate
+	 * TransactionDates3.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction85#mmOriginalInterbankSettlementDate
+	 * PaymentTransaction85.mmOriginalInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmInterbankSettlementDate
+	 * OriginalTransactionReference27.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction89#mmOriginalInterbankSettlementDate
+	 * PaymentTransaction89.mmOriginalInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalInterbankSettlementDate
+	 * UnderlyingPaymentTransaction3.mmOriginalInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch7#mmInterbankSettlementDate
+	 * PaymentSearch7.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmInterbankSettlementDate
+	 * CreditTransferTransaction30.mmInterbankSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction26#mmInterbankSettlementDate
+	 * PaymentInstruction26.mmInterbankSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1308,10 +1439,14 @@ public class CashSettlement extends Settlement {
 					PaymentTransaction55.mmOriginalInterbankSettlementDate, CashInOutForecast7.mmCashSettlementDate, CreditTransferTransaction23.mmInterbankSettlementDate, GroupHeader70.mmInterbankSettlementDate,
 					RequestedModification5.mmInterbankSettlementDate, CreditTransferTransaction25.mmInterbankSettlementDate, GroupHeader72.mmInterbankSettlementDate, PaymentTransaction65.mmInterbankSettlementDate,
 					PaymentComplementaryInformation5.mmInterbankSettlementDate, DirectDebitTransactionInformation20.mmInterbankSettlementDate, PaymentTransaction60.mmInterbankSettlementDate, GroupHeader71.mmInterbankSettlementDate,
-					OriginalTransactionReference22.mmInterbankSettlementDate, PaymentTransaction67.mmOriginalInterbankSettlementDate, PaymentTransaction62.mmOriginalInterbankSettlementDate,
-					DirectDebitTransactionInformation21.mmInterbankSettlementDate, PaymentTransaction81.mmInterbankSettlementDate, RequestedModification6.mmInterbankSettlementDate, PaymentTransaction76.mmInterbankSettlementDate,
-					OriginalTransactionReference24.mmInterbankSettlementDate, PaymentTransaction75.mmOriginalInterbankSettlementDate, PaymentTransaction79.mmOriginalInterbankSettlementDate,
-					PaymentComplementaryInformation6.mmInterbankSettlementDate);
+					OriginalTransactionReference22.mmInterbankSettlementDate, PaymentTransaction67.mmOriginalInterbankSettlementDate, PaymentTransaction62.mmOriginalInterbankSettlementDate, IntraBalance3.mmSettlementDate,
+					IntraBalance4.mmSettlementDate, PaymentSearch6.mmInterbankSettlementDate, DirectDebitTransactionInformation21.mmInterbankSettlementDate, PaymentTransaction81.mmInterbankSettlementDate,
+					RequestedModification6.mmInterbankSettlementDate, PaymentTransaction76.mmInterbankSettlementDate, OriginalTransactionReference24.mmInterbankSettlementDate, PaymentTransaction75.mmOriginalInterbankSettlementDate,
+					PaymentTransaction79.mmOriginalInterbankSettlementDate, PaymentComplementaryInformation6.mmInterbankSettlementDate, PaymentComplementaryInformation7.mmInterbankSettlementDate,
+					PaymentTransaction87.mmOriginalInterbankSettlementDate, PaymentTransaction87.mmInterbankSettlementDate, CreditTransferTransaction31.mmInterbankSettlementDate, PaymentTransaction88.mmInterbankSettlementDate,
+					RequestedModification7.mmInterbankSettlementDate, PaymentTransaction90.mmOriginalInterbankSettlementDate, ResolutionInformation2.mmInterbankSettlementDate, TransactionDates3.mmInterbankSettlementDate,
+					PaymentTransaction85.mmOriginalInterbankSettlementDate, OriginalTransactionReference27.mmInterbankSettlementDate, PaymentTransaction89.mmOriginalInterbankSettlementDate,
+					UnderlyingPaymentTransaction3.mmOriginalInterbankSettlementDate, PaymentSearch7.mmInterbankSettlementDate, CreditTransferTransaction30.mmInterbankSettlementDate, PaymentInstruction26.mmInterbankSettlementDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1801,6 +1936,11 @@ public class CashSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria1#mmCSDOrNCB
 	 * BillingSearchCriteria1.mmCSDOrNCB}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria2#mmCSDOrNCB
+	 * BillingSearchCriteria2.mmCSDOrNCB}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BillingReport2#mmCSDOrNCB
+	 * BillingReport2.mmCSDOrNCB}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1823,7 +1963,7 @@ public class CashSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmPartyRole = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(BillingReport1.mmCSDOrNCB, BillingSearchCriteria1.mmCSDOrNCB);
+			derivation_lazy = () -> Arrays.asList(BillingReport1.mmCSDOrNCB, BillingSearchCriteria1.mmCSDOrNCB, BillingSearchCriteria2.mmCSDOrNCB, BillingReport2.mmCSDOrNCB);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2047,7 +2187,7 @@ public class CashSettlement extends Settlement {
 						com.tools20022.repository.entity.BookEntry.mmRelatedSettlementInstruction, com.tools20022.repository.entity.CashSettlementInstructionPartyRole.mmSettlementInstruction,
 						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmCoverCorrection);
 				derivationElement_lazy = () -> Arrays.asList(RequestedModification3.mmSettlementInformation, RequestedModification4.mmSettlementInformation, RequestedModification5.mmSettlementInformation,
-						RequestedModification6.mmSettlementInformation);
+						RequestedModification6.mmSettlementInformation, RequestedModification7.mmSettlementInformation);
 				superType_lazy = () -> Settlement.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementAmount, com.tools20022.repository.entity.CashSettlement.mmInterbankSettlementDate,
 						com.tools20022.repository.entity.CashSettlement.mmRTGS, com.tools20022.repository.entity.CashSettlement.mmCreditDateTime, com.tools20022.repository.entity.CashSettlement.mmRelatedPaymentInstruction,
@@ -2058,7 +2198,7 @@ public class CashSettlement extends Settlement {
 						SettlementDateTimeIndication1.mmObject(), SettlementInstruction1.mmObject(), SettlementInformation2.mmObject(), SettlementInformation14.mmObject(), SettlementInstruction2.mmObject(),
 						SettlementInformation16.mmObject(), PaymentSchemeChoice.mmObject(), ReturnInformation1.mmObject(), SettlementInformation15.mmObject(), ResolutionInformation1.mmObject(), SettlementTerms1.mmObject(),
 						SettlementTerms2.mmObject(), SettlementInstruction3.mmObject(), SettlementInformation10.mmObject(), SettlementInformation6.mmObject(), SettlementInformation11.mmObject(), SettlementInformation12.mmObject(),
-						SettlementInformation8.mmObject(), SettlementInformation9.mmObject(), SettlementTerms3.mmObject());
+						SettlementInformation8.mmObject(), SettlementInformation9.mmObject(), SettlementTerms3.mmObject(), ResolutionInformation2.mmObject());
 			}
 
 			@Override

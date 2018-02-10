@@ -36,8 +36,8 @@ public class ConstraintNomineeAccountServicerRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
-	 * PortfolioTransferInstructionV07}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08
+	 * PortfolioTransferInstructionV08}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -52,6 +52,160 @@ public class ConstraintNomineeAccountServicerRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV07
+	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferInstructionV08> forPortfolioTransferInstructionV08 = new MMConstraint<PortfolioTransferInstructionV08>() {
+		{
+			validator = ConstraintNomineeAccountServicerRule::checkPortfolioTransferInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NomineeAccountServicerRule";
+			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07;
+			owner_lazy = () -> PortfolioTransferInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08
+	 * PortfolioTransferConfirmationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NomineeAccountServicerRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferConfirmationV07
+	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV07}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferConfirmationV08> forPortfolioTransferConfirmationV08 = new MMConstraint<PortfolioTransferConfirmationV08>() {
+		{
+			validator = ConstraintNomineeAccountServicerRule::checkPortfolioTransferConfirmationV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NomineeAccountServicerRule";
+			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV07;
+			owner_lazy = () -> PortfolioTransferConfirmationV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06
+	 * AccountHoldingInformationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NomineeAccountServicerRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationV05
+	 * ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationV06> forAccountHoldingInformationV06 = new MMConstraint<AccountHoldingInformationV06>() {
+		{
+			validator = ConstraintNomineeAccountServicerRule::checkAccountHoldingInformationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NomineeAccountServicerRule";
+			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV05;
+			owner_lazy = () -> AccountHoldingInformationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05
+	 * AccountHoldingInformationRequestV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NomineeAccountServicerRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationRequestV04
+	 * ConstraintNomineeAccountServicerRule.
+	 * forAccountHoldingInformationRequestV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationRequestV05> forAccountHoldingInformationRequestV05 = new MMConstraint<AccountHoldingInformationRequestV05>() {
+		{
+			validator = ConstraintNomineeAccountServicerRule::checkAccountHoldingInformationRequestV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NomineeAccountServicerRule";
+			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV04;
+			owner_lazy = () -> AccountHoldingInformationRequestV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
+	 * PortfolioTransferInstructionV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NomineeAccountServicerRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV08
+	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV06
 	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV06}</li>
 	 * </ul>
@@ -62,6 +216,7 @@ public class ConstraintNomineeAccountServicerRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccountServicerRule";
 			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV06;
 			owner_lazy = () -> PortfolioTransferInstructionV07.mmObject();
 		}
@@ -85,6 +240,14 @@ public class ConstraintNomineeAccountServicerRule {
 	 * definition} =
 	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationV06
+	 * ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV06}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -98,6 +261,7 @@ public class ConstraintNomineeAccountServicerRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccountServicerRule";
 			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV04;
 			owner_lazy = () -> AccountHoldingInformationV05.mmObject();
 		}
@@ -121,6 +285,15 @@ public class ConstraintNomineeAccountServicerRule {
 	 * definition} =
 	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferConfirmationV08
+	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV08}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -135,6 +308,7 @@ public class ConstraintNomineeAccountServicerRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccountServicerRule";
 			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV06;
 			owner_lazy = () -> PortfolioTransferConfirmationV07.mmObject();
 		}
@@ -158,6 +332,15 @@ public class ConstraintNomineeAccountServicerRule {
 	 * definition} =
 	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationRequestV05
+	 * ConstraintNomineeAccountServicerRule.
+	 * forAccountHoldingInformationRequestV05}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,192 +355,9 @@ public class ConstraintNomineeAccountServicerRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccountServicerRule";
 			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV03;
 			owner_lazy = () -> AccountHoldingInformationRequestV04.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03
-	 * AccountHoldingInformationRequestV03}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NomineeAccountServicerRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationRequestV04
-	 * ConstraintNomineeAccountServicerRule.
-	 * forAccountHoldingInformationRequestV04}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationRequestV02
-	 * ConstraintNomineeAccountServicerRule.
-	 * forAccountHoldingInformationRequestV02}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountHoldingInformationRequestV03> forAccountHoldingInformationRequestV03 = new MMConstraint<AccountHoldingInformationRequestV03>() {
-		{
-			validator = ConstraintNomineeAccountServicerRule::checkAccountHoldingInformationRequestV03;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NomineeAccountServicerRule";
-			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV04);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV02;
-			owner_lazy = () -> AccountHoldingInformationRequestV03.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04
-	 * AccountHoldingInformationV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NomineeAccountServicerRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationV05
-	 * ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV05}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationV03
-	 * ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV03}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<AccountHoldingInformationV04> forAccountHoldingInformationV04 = new MMConstraint<AccountHoldingInformationV04>() {
-		{
-			validator = ConstraintNomineeAccountServicerRule::checkAccountHoldingInformationV04;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NomineeAccountServicerRule";
-			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV05);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV03;
-			owner_lazy = () -> AccountHoldingInformationV04.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06
-	 * PortfolioTransferConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NomineeAccountServicerRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferConfirmationV07
-	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV07}
-	 * </li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferConfirmationV05
-	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV05}
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferConfirmationV06> forPortfolioTransferConfirmationV06 = new MMConstraint<PortfolioTransferConfirmationV06>() {
-		{
-			validator = ConstraintNomineeAccountServicerRule::checkPortfolioTransferConfirmationV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NomineeAccountServicerRule";
-			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV05;
-			owner_lazy = () -> PortfolioTransferConfirmationV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06
-	 * PortfolioTransferInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "NomineeAccountServicerRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV07
-	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV05
-	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferInstructionV06> forPortfolioTransferInstructionV06 = new MMConstraint<PortfolioTransferInstructionV06>() {
-		{
-			validator = ConstraintNomineeAccountServicerRule::checkPortfolioTransferInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "NomineeAccountServicerRule";
-			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV05;
-			owner_lazy = () -> PortfolioTransferInstructionV06.mmObject();
 		}
 	};
 	/**
@@ -734,6 +734,98 @@ public class ConstraintNomineeAccountServicerRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03
+	 * AccountHoldingInformationRequestV03}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NomineeAccountServicerRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationRequestV04
+	 * ConstraintNomineeAccountServicerRule.
+	 * forAccountHoldingInformationRequestV04}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationRequestV02
+	 * ConstraintNomineeAccountServicerRule.
+	 * forAccountHoldingInformationRequestV02}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationRequestV03> forAccountHoldingInformationRequestV03 = new MMConstraint<AccountHoldingInformationRequestV03>() {
+		{
+			validator = ConstraintNomineeAccountServicerRule::checkAccountHoldingInformationRequestV03;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NomineeAccountServicerRule";
+			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV04);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationRequestV02;
+			owner_lazy = () -> AccountHoldingInformationRequestV03.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV04
+	 * AccountHoldingInformationV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NomineeAccountServicerRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationV05
+	 * ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV05}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forAccountHoldingInformationV03
+	 * ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV03}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationV04> forAccountHoldingInformationV04 = new MMConstraint<AccountHoldingInformationV04>() {
+		{
+			validator = ConstraintNomineeAccountServicerRule::checkAccountHoldingInformationV04;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NomineeAccountServicerRule";
+			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forAccountHoldingInformationV03;
+			owner_lazy = () -> AccountHoldingInformationV04.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05
 	 * PortfolioTransferInstructionV05}</li>
 	 * <li>
@@ -818,6 +910,98 @@ public class ConstraintNomineeAccountServicerRule {
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV04;
 			owner_lazy = () -> PortfolioTransferConfirmationV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV06
+	 * PortfolioTransferConfirmationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NomineeAccountServicerRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferConfirmationV07
+	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV07}
+	 * </li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferConfirmationV05
+	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV05}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferConfirmationV06> forPortfolioTransferConfirmationV06 = new MMConstraint<PortfolioTransferConfirmationV06>() {
+		{
+			validator = ConstraintNomineeAccountServicerRule::checkPortfolioTransferConfirmationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NomineeAccountServicerRule";
+			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferConfirmationV05;
+			owner_lazy = () -> PortfolioTransferConfirmationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV06
+	 * PortfolioTransferInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NomineeAccountServicerRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV07
+	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule#forPortfolioTransferInstructionV05
+	 * ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferInstructionV06> forPortfolioTransferInstructionV06 = new MMConstraint<PortfolioTransferInstructionV06>() {
+		{
+			validator = ConstraintNomineeAccountServicerRule::checkPortfolioTransferInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NomineeAccountServicerRule";
+			definition = "NomineeAccount/Servicer must be present when and only when different from TransferorAccount/Servicer.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNomineeAccountServicerRule.forPortfolioTransferInstructionV05;
+			owner_lazy = () -> PortfolioTransferInstructionV06.mmObject();
 		}
 	};
 	/**
@@ -1046,6 +1230,38 @@ public class ConstraintNomineeAccountServicerRule {
 	 * NomineeAccount/Servicer must be present when and only when different from
 	 * TransferorAccount/Servicer.
 	 */
+	public static void checkPortfolioTransferInstructionV08(PortfolioTransferInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NomineeAccount/Servicer must be present when and only when different from
+	 * TransferorAccount/Servicer.
+	 */
+	public static void checkPortfolioTransferConfirmationV08(PortfolioTransferConfirmationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NomineeAccount/Servicer must be present when and only when different from
+	 * TransferorAccount/Servicer.
+	 */
+	public static void checkAccountHoldingInformationV06(AccountHoldingInformationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NomineeAccount/Servicer must be present when and only when different from
+	 * TransferorAccount/Servicer.
+	 */
+	public static void checkAccountHoldingInformationRequestV05(AccountHoldingInformationRequestV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NomineeAccount/Servicer must be present when and only when different from
+	 * TransferorAccount/Servicer.
+	 */
 	public static void checkPortfolioTransferInstructionV07(PortfolioTransferInstructionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -1071,38 +1287,6 @@ public class ConstraintNomineeAccountServicerRule {
 	 * TransferorAccount/Servicer.
 	 */
 	public static void checkAccountHoldingInformationRequestV04(AccountHoldingInformationRequestV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * NomineeAccount/Servicer must be present when and only when different from
-	 * TransferorAccount/Servicer.
-	 */
-	public static void checkAccountHoldingInformationRequestV03(AccountHoldingInformationRequestV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * NomineeAccount/Servicer must be present when and only when different from
-	 * TransferorAccount/Servicer.
-	 */
-	public static void checkAccountHoldingInformationV04(AccountHoldingInformationV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * NomineeAccount/Servicer must be present when and only when different from
-	 * TransferorAccount/Servicer.
-	 */
-	public static void checkPortfolioTransferConfirmationV06(PortfolioTransferConfirmationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * NomineeAccount/Servicer must be present when and only when different from
-	 * TransferorAccount/Servicer.
-	 */
-	public static void checkPortfolioTransferInstructionV06(PortfolioTransferInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1198,6 +1382,22 @@ public class ConstraintNomineeAccountServicerRule {
 	 * NomineeAccount/Servicer must be present when and only when different from
 	 * TransferorAccount/Servicer.
 	 */
+	public static void checkAccountHoldingInformationRequestV03(AccountHoldingInformationRequestV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NomineeAccount/Servicer must be present when and only when different from
+	 * TransferorAccount/Servicer.
+	 */
+	public static void checkAccountHoldingInformationV04(AccountHoldingInformationV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NomineeAccount/Servicer must be present when and only when different from
+	 * TransferorAccount/Servicer.
+	 */
 	public static void checkPortfolioTransferInstructionV05(PortfolioTransferInstructionV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -1207,6 +1407,22 @@ public class ConstraintNomineeAccountServicerRule {
 	 * TransferorAccount/Servicer.
 	 */
 	public static void checkPortfolioTransferConfirmationV05(PortfolioTransferConfirmationV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NomineeAccount/Servicer must be present when and only when different from
+	 * TransferorAccount/Servicer.
+	 */
+	public static void checkPortfolioTransferConfirmationV06(PortfolioTransferConfirmationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * NomineeAccount/Servicer must be present when and only when different from
+	 * TransferorAccount/Servicer.
+	 */
+	public static void checkPortfolioTransferInstructionV06(PortfolioTransferInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

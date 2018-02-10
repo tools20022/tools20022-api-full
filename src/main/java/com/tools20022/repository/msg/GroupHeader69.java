@@ -227,7 +227,7 @@ public class GroupHeader69 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction. "
+	 * "Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction."
 	 * </li>
 	 * </ul>
 	 */
@@ -239,7 +239,7 @@ public class GroupHeader69 {
 			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR3.forReportCategory);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportCategory";
-			definition = "Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction. ";
+			definition = "Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalDocumentType1Code.mmObject();
@@ -408,7 +408,7 @@ public class GroupHeader69 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Details of tax representative. The corporate (buyer) is allowed to use a tax representative for value added tax responsibilities in  case the buyer is not registered in a specific value added tax registry."
+	 * "Details of tax representative. The corporate (buyer) is allowed to use a tax representative for value added tax responsibilities in case the buyer is not registered in a specific value added tax registry."
 	 * </li>
 	 * </ul>
 	 */
@@ -419,7 +419,7 @@ public class GroupHeader69 {
 			xmlTag = "BuyrTaxRprtv";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerTaxRepresentative";
-			definition = "Details of tax representative. The corporate (buyer) is allowed to use a tax representative for value added tax responsibilities in  case the buyer is not registered in a specific value added tax registry.";
+			definition = "Details of tax representative. The corporate (buyer) is allowed to use a tax representative for value added tax responsibilities in case the buyer is not registered in a specific value added tax registry.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

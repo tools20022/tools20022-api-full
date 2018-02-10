@@ -84,6 +84,14 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorCancellationAdviceResponse6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Cancellation advice response from the acquirer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse7
+ * AcceptorCancellationAdviceResponse7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse5
@@ -126,6 +134,14 @@ public class AcceptorCancellationAdviceResponse6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse7#mmEnvironment
+	 * AcceptorCancellationAdviceResponse7.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -142,6 +158,7 @@ public class AcceptorCancellationAdviceResponse6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponse7.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorCancellationAdviceResponse5.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -182,6 +199,14 @@ public class AcceptorCancellationAdviceResponse6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Cancellation transaction from an acceptor to the acquirer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse7#mmTransaction
+	 * AcceptorCancellationAdviceResponse7.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -198,6 +223,7 @@ public class AcceptorCancellationAdviceResponse6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Cancellation transaction from an acceptor to the acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponse7.mmTransaction);
 			previousVersion_lazy = () -> AcceptorCancellationAdviceResponse5.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -237,6 +263,14 @@ public class AcceptorCancellationAdviceResponse6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Instructions for contacting the terminal management host."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse7#mmTMSTrigger
+	 * AcceptorCancellationAdviceResponse7.mmTMSTrigger}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -253,6 +287,7 @@ public class AcceptorCancellationAdviceResponse6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSTrigger";
 			definition = "Instructions for contacting the terminal management host.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponse7.mmTMSTrigger);
 			previousVersion_lazy = () -> AcceptorCancellationAdviceResponse5.mmTMSTrigger;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -272,6 +307,7 @@ public class AcceptorCancellationAdviceResponse6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationAdviceResponse6";
 				definition = "Cancellation advice response from the acquirer.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationAdviceResponse7.mmObject());
 				previousVersion_lazy = () -> AcceptorCancellationAdviceResponse5.mmObject();
 			}
 		});

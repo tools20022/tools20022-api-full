@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ServiceCategoryTotals1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies totals related to the invoice."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2
+ * ServiceCategoryTotals2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -122,6 +129,14 @@ public class ServiceCategoryTotals1 {
 	 * definition} =
 	 * "Unique identification of an securities account or cash account belonging to billed customer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2#mmAccountIdentification
+	 * ServiceCategoryTotals2.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
@@ -133,6 +148,7 @@ public class ServiceCategoryTotals1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique identification of an securities account or cash account belonging to billed customer.";
+			nextVersions_lazy = () -> Arrays.asList(ServiceCategoryTotals2.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -172,6 +188,14 @@ public class ServiceCategoryTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "BIC of the party which is invoiced by the CSD/NCB."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2#mmBilledCustomerIdentification
+	 * ServiceCategoryTotals2.mmBilledCustomerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBilledCustomerIdentification = new MMMessageAttribute() {
@@ -183,6 +207,7 @@ public class ServiceCategoryTotals1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilledCustomerIdentification";
 			definition = "BIC of the party which is invoiced by the CSD/NCB.";
+			nextVersions_lazy = () -> Arrays.asList(ServiceCategoryTotals2.mmBilledCustomerIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
@@ -221,6 +246,14 @@ public class ServiceCategoryTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total amount subject to tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2#mmTotalTaxableAmount
+	 * ServiceCategoryTotals2.mmTotalTaxableAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalTaxableAmount = new MMMessageAttribute() {
@@ -232,6 +265,7 @@ public class ServiceCategoryTotals1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxableAmount";
 			definition = "Total amount subject to tax.";
+			nextVersions_lazy = () -> Arrays.asList(ServiceCategoryTotals2.mmTotalTaxableAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -269,6 +303,14 @@ public class ServiceCategoryTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Sum of all tax amounts related to the invoice."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2#mmTotalTaxAmount
+	 * ServiceCategoryTotals2.mmTotalTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalTaxAmount = new MMMessageAttribute() {
@@ -280,6 +322,7 @@ public class ServiceCategoryTotals1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxAmount";
 			definition = "Sum of all tax amounts related to the invoice.";
+			nextVersions_lazy = () -> Arrays.asList(ServiceCategoryTotals2.mmTotalTaxAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -320,6 +363,14 @@ public class ServiceCategoryTotals1 {
 	 * definition} =
 	 * "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice adjustment amount (discounts, allowances and charges) and total tax amounts."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2#mmTotalInvoiceAmount
+	 * ServiceCategoryTotals2.mmTotalInvoiceAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalInvoiceAmount = new MMMessageAttribute() {
@@ -331,6 +382,7 @@ public class ServiceCategoryTotals1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInvoiceAmount";
 			definition = "Total amount of the invoice, being the sum of total invoice lines amounts, total invoice adjustment amount (discounts, allowances and charges) and total tax amounts.";
+			nextVersions_lazy = () -> Arrays.asList(ServiceCategoryTotals2.mmTotalInvoiceAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -366,6 +418,14 @@ public class ServiceCategoryTotals1 {
 	 * definition} =
 	 * "Agreement under which or rules under which the transaction should be processed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2#mmServiceCategory
+	 * ServiceCategoryTotals2.mmServiceCategory}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmServiceCategory = new MMMessageAttribute() {
@@ -376,6 +436,7 @@ public class ServiceCategoryTotals1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceCategory";
 			definition = "Agreement under which or rules under which the transaction should be processed.";
+			nextVersions_lazy = () -> Arrays.asList(ServiceCategoryTotals2.mmServiceCategory);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -412,6 +473,14 @@ public class ServiceCategoryTotals1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies totals related to the invoice."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ServiceCategoryTotals2#mmServiceItemTotals
+	 * ServiceCategoryTotals2.mmServiceItemTotals}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmServiceItemTotals = new MMMessageAssociationEnd() {
@@ -423,6 +492,7 @@ public class ServiceCategoryTotals1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceItemTotals";
 			definition = "Specifies totals related to the invoice.";
+			nextVersions_lazy = () -> Arrays.asList(ServiceCategoryTotals2.mmServiceItemTotals);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ServiceItemTotals1.mmObject();
@@ -441,6 +511,7 @@ public class ServiceCategoryTotals1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ServiceCategoryTotals1";
 				definition = "Specifies totals related to the invoice.";
+				nextVersions_lazy = () -> Arrays.asList(ServiceCategoryTotals2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

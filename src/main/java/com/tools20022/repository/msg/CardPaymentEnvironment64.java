@@ -76,6 +76,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CardPaymentEnvironment64"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Environment of the diagnostic exchange."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71
+ * CardPaymentEnvironment71}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment55
@@ -116,6 +123,14 @@ public class CardPaymentEnvironment64 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Acquirer involved in the card payment transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71#mmAcquirer
+	 * CardPaymentEnvironment71.mmAcquirer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -132,6 +147,7 @@ public class CardPaymentEnvironment64 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			definition = "Acquirer involved in the card payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment71.mmAcquirer);
 			previousVersion_lazy = () -> CardPaymentEnvironment55.mmAcquirer;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -169,6 +185,14 @@ public class CardPaymentEnvironment64 {
 	 * definition} =
 	 * "The availability of the acquirer to process transaction must be provided."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71#mmAcquirerAvailabilityRequested
+	 * CardPaymentEnvironment71.mmAcquirerAvailabilityRequested}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -184,6 +208,7 @@ public class CardPaymentEnvironment64 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerAvailabilityRequested";
 			definition = "The availability of the acquirer to process transaction must be provided.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment71.mmAcquirerAvailabilityRequested);
 			previousVersion_lazy = () -> CardPaymentEnvironment55.mmAcquirerAvailabilityRequested;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -223,6 +248,14 @@ public class CardPaymentEnvironment64 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the merchant requesting the diagnostic."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71#mmMerchantIdentification
+	 * CardPaymentEnvironment71.mmMerchantIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -239,6 +272,7 @@ public class CardPaymentEnvironment64 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantIdentification";
 			definition = "Identification of the merchant requesting the diagnostic.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment71.mmMerchantIdentification);
 			previousVersion_lazy = () -> CardPaymentEnvironment55.mmMerchantIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -280,6 +314,14 @@ public class CardPaymentEnvironment64 {
 	 * definition} =
 	 * "Identification of the POI (Point Of Interaction) requesting the diagnostic."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71#mmPOIIdentification
+	 * CardPaymentEnvironment71.mmPOIIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -296,6 +338,7 @@ public class CardPaymentEnvironment64 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the POI (Point Of Interaction) requesting the diagnostic.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment71.mmPOIIdentification);
 			previousVersion_lazy = () -> CardPaymentEnvironment55.mmPOIIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -332,6 +375,14 @@ public class CardPaymentEnvironment64 {
 	 * definition} =
 	 * "Data related to the components of the POI (Point Of Interaction) performing the payment transactions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71#mmPOIComponent
+	 * CardPaymentEnvironment71.mmPOIComponent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -347,6 +398,7 @@ public class CardPaymentEnvironment64 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIComponent";
 			definition = "Data related to the components of the POI (Point Of Interaction) performing the payment transactions.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment71.mmPOIComponent);
 			previousVersion_lazy = () -> CardPaymentEnvironment55.mmPOIComponent;
 			minOccurs = 0;
 			isComposite = true;
@@ -365,6 +417,7 @@ public class CardPaymentEnvironment64 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentEnvironment64";
 				definition = "Environment of the diagnostic exchange.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment71.mmObject());
 				previousVersion_lazy = () -> CardPaymentEnvironment55.mmObject();
 			}
 		});

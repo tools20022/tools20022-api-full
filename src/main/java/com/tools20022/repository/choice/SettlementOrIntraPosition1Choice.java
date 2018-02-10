@@ -62,6 +62,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Choice between the intra-position movement or the settlement transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementOrIntraPosition2Choice
+ * SettlementOrIntraPosition2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -95,6 +103,14 @@ public class SettlementOrIntraPosition1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the requested intra-position movement details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrIntraPosition2Choice#mmIntraPositionMovement
+	 * SettlementOrIntraPosition2Choice.mmIntraPositionMovement}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIntraPositionMovement = new MMMessageAssociationEnd() {
@@ -105,6 +121,7 @@ public class SettlementOrIntraPosition1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraPositionMovement";
 			definition = "Specifies the requested intra-position movement details.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementOrIntraPosition2Choice.mmIntraPositionMovement);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -137,6 +154,14 @@ public class SettlementOrIntraPosition1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the requested settlement transaction details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrIntraPosition2Choice#mmSettlementTransaction
+	 * SettlementOrIntraPosition2Choice.mmSettlementTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettlementTransaction = new MMMessageAssociationEnd() {
@@ -147,6 +172,7 @@ public class SettlementOrIntraPosition1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransaction";
 			definition = "Specifies the requested settlement transaction details.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementOrIntraPosition2Choice.mmSettlementTransaction);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -162,6 +188,7 @@ public class SettlementOrIntraPosition1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementOrIntraPosition1Choice";
 				definition = "Choice between the intra-position movement or the settlement transaction.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementOrIntraPosition2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -122,7 +122,7 @@ public class CorporateActionOptionServicing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the option for which an entitlement is calculated"</li>
+	 * "Specifies the option for which an entitlement is calculated."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedOption = new MMBusinessAssociationEnd() {
@@ -132,7 +132,7 @@ public class CorporateActionOptionServicing {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOptionServicing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedOption";
-			definition = "Specifies the option for which an entitlement is calculated";
+			definition = "Specifies the option for which an entitlement is calculated.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmCorporateActionOptionServicing;

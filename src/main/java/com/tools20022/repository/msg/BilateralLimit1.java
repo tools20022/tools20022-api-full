@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Characteristics and values set for a bilateral limit, including the counterparty upon which the limit applies."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BilateralLimit2
+ * BilateralLimit2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -120,6 +127,14 @@ public class BilateralLimit1 {
 	 * definition} =
 	 * "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BilateralLimit2#mmCounterpartyIdentification
+	 * BilateralLimit2.mmCounterpartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
@@ -131,6 +146,7 @@ public class BilateralLimit1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
+			nextVersions_lazy = () -> Arrays.asList(BilateralLimit2.mmCounterpartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -171,6 +187,14 @@ public class BilateralLimit1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BilateralLimit2#mmLimitAmount
+	 * BilateralLimit2.mmLimitAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLimitAmount = new MMMessageAttribute() {
@@ -182,6 +206,7 @@ public class BilateralLimit1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitAmount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
+			nextVersions_lazy = () -> Arrays.asList(BilateralLimit2.mmLimitAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Amount2Choice.mmObject();
@@ -220,6 +245,14 @@ public class BilateralLimit1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies if a limit is a debit limit or a credit limit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BilateralLimit2#mmCreditDebitIndicator
+	 * BilateralLimit2.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
@@ -231,6 +264,7 @@ public class BilateralLimit1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies if a limit is a debit limit or a credit limit.";
+			nextVersions_lazy = () -> Arrays.asList(BilateralLimit2.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -268,6 +302,14 @@ public class BilateralLimit1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance calculated with regard to one member in the system."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BilateralLimit2#mmBilateralBalance
+	 * BilateralLimit2.mmBilateralBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBilateralBalance = new MMMessageAssociationEnd() {
@@ -279,6 +321,7 @@ public class BilateralLimit1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalance";
 			definition = "Balance calculated with regard to one member in the system.";
+			nextVersions_lazy = () -> Arrays.asList(BilateralLimit2.mmBilateralBalance);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashBalance6.mmObject();
@@ -295,6 +338,7 @@ public class BilateralLimit1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BilateralLimit1";
 				definition = "Characteristics and values set for a bilateral limit, including the counterparty upon which the limit applies.";
+				nextVersions_lazy = () -> Arrays.asList(BilateralLimit2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

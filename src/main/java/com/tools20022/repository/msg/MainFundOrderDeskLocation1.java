@@ -158,7 +158,7 @@ public class MainFundOrderDeskLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Offset of the reporting time before or after 00:00 hour UTC."</li>
+	 * "Offset of the reporting time before or after 00: 00 hour UTC."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTimeZoneOffSet = new MMMessageAttribute() {
@@ -169,7 +169,7 @@ public class MainFundOrderDeskLocation1 {
 			xmlTag = "TmZoneOffSet";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeZoneOffSet";
-			definition = "Offset of the reporting time before or after 00:00 hour UTC.";
+			definition = "Offset of the reporting time before or after 00: 00 hour UTC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.UTCOffset1.mmObject();

@@ -321,11 +321,20 @@ import java.util.Objects;
  * {@linkplain com.tools20022.repository.choice.Status23Choice#mmProprietary
  * Status23Choice.mmProprietary}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryStatus2#mmType
+ * IntraBalanceQueryStatus2.mmType}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msg.StatusAndReason32#mmStatusAndReason
  * StatusAndReason32.mmStatusAndReason}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msg.StatusAndReason33#mmStatusAndReason
  * StatusAndReason33.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason34#mmStatusAndReason
+ * StatusAndReason34.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StatusAndReason35#mmStatusAndReason
+ * StatusAndReason35.mmStatusAndReason}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -595,12 +604,33 @@ import java.util.Objects;
  * ModificationProcessingStatus8Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PointOfInteractionComponent6
  * PointOfInteractionComponent6}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ProcessingStatus70Choice
+ * ProcessingStatus70Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus9Choice
+ * ModificationProcessingStatus9Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason2
+ * IntraBalanceStatusAndReason2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SettlementStatus26Choice
+ * SettlementStatus26Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryStatus2
+ * IntraBalanceQueryStatus2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceStatusType2
+ * IntraBalanceStatusType2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ProcessingStatus68Choice
+ * ProcessingStatus68Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason32
  * StatusAndReason32}</li>
  * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason33
  * StatusAndReason33}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PointOfInteractionComponent7
  * PointOfInteractionComponent7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason34
+ * StatusAndReason34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason35
+ * StatusAndReason35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8
+ * PointOfInteractionComponent8}</li>
  * </ul>
  * </li>
  * <li>
@@ -1004,6 +1034,15 @@ public class Status {
 	 * {@linkplain com.tools20022.repository.choice.DeliveryReturn4Choice#mmProprietary
 	 * DeliveryReturn4Choice.mmProprietary}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason2#mmSettled
+	 * IntraBalanceStatusAndReason2.mmSettled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusType2#mmSettled
+	 * IntraBalanceStatusType2.mmSettled}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusType2#mmSettled
+	 * IntraPositionStatusType2.mmSettled}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AccountManagementStatusAndReason5#mmStatusReason
 	 * AccountManagementStatusAndReason5.mmStatusReason}</li>
 	 * <li>
@@ -1082,6 +1121,50 @@ public class Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.MandateSuspensionReason1#mmReason
 	 * MandateSuspensionReason1.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmReturnReasonInformation
+	 * PaymentTransaction87.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmReversalReasonInformation
+	 * PaymentTransaction88.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmStatusReasonInformation
+	 * PaymentTransaction91.mmStatusReasonInformation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus3#mmReason
+	 * PaymentStatus3.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch4#mmProprietaryStatusReason
+	 * InstructionStatusSearch4.mmProprietaryStatusReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClaimNonReceiptRejectReason1Choice#mmCode
+	 * ClaimNonReceiptRejectReason1Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClaimNonReceiptRejectReason1Choice#mmProprietary
+	 * ClaimNonReceiptRejectReason1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction28#mmReversalReasonInformation
+	 * OriginalPaymentInstruction28.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmStatusReasonInformation
+	 * OriginalPaymentInstruction27.mmStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction29#mmCancellationReasonInformation
+	 * OriginalPaymentInstruction29.mmCancellationReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction92#mmStatusReasonInformation
+	 * PaymentTransaction92.mmStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction93#mmReversalReasonInformation
+	 * PaymentTransaction93.mmReversalReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmStatusReasonInformation
+	 * OriginalGroupHeader13.mmStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader12#mmReturnReasonInformation
+	 * OriginalGroupHeader12.mmReturnReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReasonInformation11#mmReason
+	 * StatusReasonInformation11.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1129,12 +1212,16 @@ public class Status {
 					PaymentTransaction60.mmReversalReasonInformation, PaymentTransaction68.mmStatusReasonInformation, OriginalPaymentInstruction15.mmCancellationReasonInformation, PaymentTransaction64.mmReversalReasonInformation,
 					Blocked2.mmReason, TransferStatus2Choice.mmUnmatched, TransferStatus2Choice.mmInRepair, TransferStatus2Choice.mmFailedSettlement, TransferStatus2Choice.mmCancellationPending, Status21Choice.mmPending,
 					OriginalPaymentInstruction19.mmStatusReasonInformation, PaymentTransaction69.mmStatusReasonInformation, ProprietaryStatusAndReason7.mmProprietaryReason, DeliveryReturn4Choice.mmCode, DeliveryReturn4Choice.mmProprietary,
-					AccountManagementStatusAndReason5.mmStatusReason, OrderStatus5Choice.mmCancelled, OrderStatus5Choice.mmInRepair, AccountStatus2.mmEnabled, AccountStatus2.mmDisabled, AccountStatus2.mmPending,
-					AccountStatus2.mmPendingOpening, AccountStatus2.mmProforma, AccountStatus2.mmClosed, AccountStatus2.mmClosurePending, OtherAccountStatus1.mmReason, OrderStatus3Choice.mmCancelled, OrderStatus4Choice.mmCancelled,
-					OrderStatus4Choice.mmInRepair, PaymentTransaction80.mmStatusReasonInformation, OriginalGroupHeader7.mmStatusReasonInformation, PaymentTransaction81.mmReversalReasonInformation,
-					OriginalPaymentInstruction23.mmStatusReasonInformation, OriginalPaymentInstruction21.mmReversalReasonInformation, MandateAmendment5.mmAmendmentReason, OriginalPaymentInstruction24.mmStatusReasonInformation,
-					OriginalGroupInformation28.mmStatusReasonInformation, PaymentTransaction76.mmReturnReasonInformation, OriginalPaymentInstruction20.mmCancellationReasonInformation, PaymentTransaction83.mmStatusReasonInformation,
-					PaymentTransaction77.mmReversalReasonInformation, PaymentTransaction82.mmStatusReasonInformation, MandateSuspensionReason1.mmReason);
+					IntraBalanceStatusAndReason2.mmSettled, IntraBalanceStatusType2.mmSettled, IntraPositionStatusType2.mmSettled, AccountManagementStatusAndReason5.mmStatusReason, OrderStatus5Choice.mmCancelled,
+					OrderStatus5Choice.mmInRepair, AccountStatus2.mmEnabled, AccountStatus2.mmDisabled, AccountStatus2.mmPending, AccountStatus2.mmPendingOpening, AccountStatus2.mmProforma, AccountStatus2.mmClosed,
+					AccountStatus2.mmClosurePending, OtherAccountStatus1.mmReason, OrderStatus3Choice.mmCancelled, OrderStatus4Choice.mmCancelled, OrderStatus4Choice.mmInRepair, PaymentTransaction80.mmStatusReasonInformation,
+					OriginalGroupHeader7.mmStatusReasonInformation, PaymentTransaction81.mmReversalReasonInformation, OriginalPaymentInstruction23.mmStatusReasonInformation, OriginalPaymentInstruction21.mmReversalReasonInformation,
+					MandateAmendment5.mmAmendmentReason, OriginalPaymentInstruction24.mmStatusReasonInformation, OriginalGroupInformation28.mmStatusReasonInformation, PaymentTransaction76.mmReturnReasonInformation,
+					OriginalPaymentInstruction20.mmCancellationReasonInformation, PaymentTransaction83.mmStatusReasonInformation, PaymentTransaction77.mmReversalReasonInformation, PaymentTransaction82.mmStatusReasonInformation,
+					MandateSuspensionReason1.mmReason, PaymentTransaction87.mmReturnReasonInformation, PaymentTransaction88.mmReversalReasonInformation, PaymentTransaction91.mmStatusReasonInformation, PaymentStatus3.mmReason,
+					InstructionStatusSearch4.mmProprietaryStatusReason, ClaimNonReceiptRejectReason1Choice.mmCode, ClaimNonReceiptRejectReason1Choice.mmProprietary, OriginalPaymentInstruction28.mmReversalReasonInformation,
+					OriginalPaymentInstruction27.mmStatusReasonInformation, OriginalPaymentInstruction29.mmCancellationReasonInformation, PaymentTransaction92.mmStatusReasonInformation, PaymentTransaction93.mmReversalReasonInformation,
+					OriginalGroupHeader13.mmStatusReasonInformation, OriginalGroupHeader12.mmReturnReasonInformation, StatusReasonInformation11.mmReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1263,6 +1350,18 @@ public class Status {
 	 * <li>{@linkplain com.tools20022.repository.msg.StatusTrail7#mmStatusDate
 	 * StatusTrail7.mmStatusDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement4#mmStatusDate
+	 * IntraBalanceMovement4.mmStatusDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmStatusDate
+	 * IntraBalanceCancellation4.mmStatusDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification4#mmStatusDate
+	 * IntraBalanceModification4.mmStatusDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification4#mmStatusDate
+	 * IntraPositionModification4.mmStatusDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#mmStatusDate
 	 * InvestmentAccount62.mmStatusDate}</li>
 	 * <li>
@@ -1280,6 +1379,14 @@ public class Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradeData16#mmCurrentStatusDateTime
 	 * TradeData16.mmCurrentStatusDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus3#mmDateTime
+	 * PaymentStatus3.mmDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionStatusSearch4#mmPaymentInstructionStatusDateTime
+	 * InstructionStatusSearch4.mmPaymentInstructionStatusDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClaimNonReceipt1#mmDateProcessed
+	 * ClaimNonReceipt1.mmDateProcessed}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1306,8 +1413,9 @@ public class Status {
 					CaseStatus2.mmDateTime, TradeStatus1.mmStatusTime, TransactionStatus2.mmChangeDateTime, TransactionStatus5.mmChangeDateTime, IntraBalanceCancellation2.mmStatusDate, IntraBalanceMovement2.mmStatusDate,
 					IntraBalanceModification2.mmStatusDate, IntraPositionModification2.mmStatusDate, PaymentStatus2.mmDateTime, TradeData11.mmCurrentStatusDateTime, StatusTrail4.mmStatusDate, StatusTrail5.mmStatusDate,
 					CurrencyControlGroupStatus1.mmStatusDateTime, CurrencyControlPackageStatus1.mmStatusDateTime, RegisteredContractJournal1.mmClosureDate, CurrencyControlRecordStatus1.mmStatusDateTime, StatusTrail6.mmStatusDate,
-					InvestmentAccount50.mmStatusDate, StatusTrail7.mmStatusDate, InvestmentAccount62.mmStatusDate, TradeData14.mmCurrentStatusDateTime, TradeData12.mmCurrentStatusDateTime, TradeData15.mmCurrentStatusDateTime,
-					TradeData15.mmPreviousStatusDateTime, TradeData16.mmCurrentStatusDateTime);
+					InvestmentAccount50.mmStatusDate, StatusTrail7.mmStatusDate, IntraBalanceMovement4.mmStatusDate, IntraBalanceCancellation4.mmStatusDate, IntraBalanceModification4.mmStatusDate, IntraPositionModification4.mmStatusDate,
+					InvestmentAccount62.mmStatusDate, TradeData14.mmCurrentStatusDateTime, TradeData12.mmCurrentStatusDateTime, TradeData15.mmCurrentStatusDateTime, TradeData15.mmPreviousStatusDateTime, TradeData16.mmCurrentStatusDateTime,
+					PaymentStatus3.mmDateTime, InstructionStatusSearch4.mmPaymentInstructionStatusDateTime, ClaimNonReceipt1.mmDateProcessed);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1359,6 +1467,12 @@ public class Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SystemStatus2#mmValidityTime
 	 * SystemStatus2.mmValidityTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus2#mmDatePeriod
+	 * IntraPositionQueryStatus2.mmDatePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemStatus3#mmValidityTime
+	 * SystemStatus3.mmValidityTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1389,7 +1503,8 @@ public class Status {
 	 */
 	public static final MMBusinessAssociationEnd mmValidityTime = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(SystemStatusDetails1.mmValidityTime, SystemStatus1.mmValidityTime, IntraPositionQueryStatus1.mmDatePeriod, SystemStatus2.mmValidityTime);
+			derivation_lazy = () -> Arrays.asList(SystemStatusDetails1.mmValidityTime, SystemStatus1.mmValidityTime, IntraPositionQueryStatus1.mmDatePeriod, SystemStatus2.mmValidityTime, IntraPositionQueryStatus2.mmDatePeriod,
+					SystemStatus3.mmValidityTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -1523,6 +1638,9 @@ public class Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyControlRecordStatus1#mmStatus
 	 * CurrencyControlRecordStatus1.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReasonInformation11#mmAdditionalInformation
+	 * StatusReasonInformation11.mmAdditionalInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1552,7 +1670,7 @@ public class Status {
 					CorporateActionDeactivationInstructionProcessingStatus1.mmAdditionalInformation, CorporateActionDeactivationInstructionRejectionStatus1.mmAdditionalInformation,
 					CorporateActionDeactivationCancellationProcessingStatus1.mmAdditionalInformation, CorporateActionDeactivationCancellationRejectionStatus1.mmAdditionalInformation,
 					CancellationStatusInformation1.mmAdditionalStatusReasonInformation, CollateralCancellationStatus1.mmAdditionalInformation, GenericValidationRuleIdentification1.mmDescription, CurrencyControlGroupStatus1.mmStatus,
-					ValidationStatusReason1.mmValidationRule, ValidationStatusReason1.mmAdditionalInformation, CurrencyControlRecordStatus1.mmStatus);
+					ValidationStatusReason1.mmValidationRule, ValidationStatusReason1.mmAdditionalInformation, CurrencyControlRecordStatus1.mmStatus, StatusReasonInformation11.mmAdditionalInformation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1904,6 +2022,24 @@ public class Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.Status23Choice#mmSettlementStatus
 	 * Status23Choice.mmSettlementStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason2#mmSettlementStatus
+	 * IntraBalanceStatusAndReason2.mmSettlementStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus26Choice#mmCode
+	 * SettlementStatus26Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementStatus26Choice#mmProprietary
+	 * SettlementStatus26Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PendingStatusAndReason2#mmSettlementStatus
+	 * PendingStatusAndReason2.mmSettlementStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusType2#mmSettlementStatus
+	 * IntraBalanceStatusType2.mmSettlementStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusType2#mmSettlementStatus
+	 * IntraPositionStatusType2.mmSettlementStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1930,7 +2066,9 @@ public class Status {
 					PendingStatusAndReason1.mmSettlementStatus, IntraBalanceStatusAndReason1.mmSettlementStatus, IntraPositionStatusType1.mmSettlementStatus, IntraBalanceStatusType1.mmSettlementStatus, Status15Choice.mmSettlementStatus,
 					StatusAndReason19.mmSettlementStatus, StatusAndReason20.mmSettlementStatus, Status16Choice.mmSettlementStatus, StatusTrail4.mmSettlementStatus, StatusTrail5.mmSettlementStatus, StatusAndReason28.mmSettlementStatus,
 					StatusTrail6.mmSettlementStatus, Status18Choice.mmSettlementStatus, Status19Choice.mmSettlementStatus, SettlementStatus19Choice.mmCode, SettlementStatus19Choice.mmProprietary, StatusAndReason29.mmSettlementStatus,
-					StatusTrail7.mmSettlementStatus, Status22Choice.mmSettlementStatus, SettlementStatus25Choice.mmCode, SettlementStatus25Choice.mmProprietary, Status23Choice.mmSettlementStatus);
+					StatusTrail7.mmSettlementStatus, Status22Choice.mmSettlementStatus, SettlementStatus25Choice.mmCode, SettlementStatus25Choice.mmProprietary, Status23Choice.mmSettlementStatus,
+					IntraBalanceStatusAndReason2.mmSettlementStatus, SettlementStatus26Choice.mmCode, SettlementStatus26Choice.mmProprietary, PendingStatusAndReason2.mmSettlementStatus, IntraBalanceStatusType2.mmSettlementStatus,
+					IntraPositionStatusType2.mmSettlementStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2011,6 +2149,12 @@ public class Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.Status22Choice#mmCancellationProcessingStatus
 	 * Status22Choice.mmCancellationProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus9Choice#mmCode
+	 * CancellationProcessingStatus9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CancellationProcessingStatus9Choice#mmProprietary
+	 * CancellationProcessingStatus9Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2033,7 +2177,8 @@ public class Status {
 			derivation_lazy = () -> Arrays.asList(CancellationProcessingStatus1Choice.mmCode, CancellationProcessingStatus1Choice.mmProprietary, Status1Choice.mmCancellationProcessingStatus, Status8Choice.mmCancellationProcessingStatus,
 					CancellationProcessingStatus2Choice.mmCode, CancellationProcessingStatus2Choice.mmProprietary, Status3Choice.mmCancellationProcessingStatus, Status10Choice.mmCancellationProcessingStatus,
 					CancellationProcessingStatus3Choice.mmCode, CancellationProcessingStatus3Choice.mmProprietary, Status19Choice.mmCancellationProcessingStatus, CancellationProcessingStatus7Choice.mmCode,
-					CancellationProcessingStatus7Choice.mmProprietary, CancellationProcessingStatus8Choice.mmCode, CancellationProcessingStatus8Choice.mmProprietary, Status22Choice.mmCancellationProcessingStatus);
+					CancellationProcessingStatus7Choice.mmProprietary, CancellationProcessingStatus8Choice.mmCode, CancellationProcessingStatus8Choice.mmProprietary, Status22Choice.mmCancellationProcessingStatus,
+					CancellationProcessingStatus9Choice.mmCode, CancellationProcessingStatus9Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2246,6 +2391,30 @@ public class Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.Status23Choice#mmInstructionProcessingStatus
 	 * Status23Choice.mmInstructionProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus70Choice#mmCode
+	 * ProcessingStatus70Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus70Choice#mmProprietary
+	 * ProcessingStatus70Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusAndReason2#mmProcessingStatus
+	 * IntraBalanceStatusAndReason2.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PendingStatusAndReason2#mmProcessingStatus
+	 * PendingStatusAndReason2.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceStatusType2#mmProcessingStatus
+	 * IntraBalanceStatusType2.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionStatusType2#mmProcessingStatus
+	 * IntraPositionStatusType2.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus68Choice#mmCode
+	 * ProcessingStatus68Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus68Choice#mmProprietary
+	 * ProcessingStatus68Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2280,7 +2449,9 @@ public class Status {
 					Status16Choice.mmInstructionProcessingStatus, ReportItemStatus1Choice.mmRejected, AdditionalInformation11.mmProcessingStatus, Status18Choice.mmInstructionProcessingStatus, InstructionProcessingStatus23Choice.mmCode,
 					InstructionProcessingStatus23Choice.mmProprietary, Status19Choice.mmInstructionProcessingStatus, Status19Choice.mmRegistrationProcessingStatus, Status19Choice.mmReplacementProcessingStatus,
 					AdditionalInformation12.mmProcessingStatus, Status22Choice.mmInstructionProcessingStatus, Status22Choice.mmRegistrationProcessingStatus, Status22Choice.mmReplacementProcessingStatus,
-					InstructionProcessingStatus26Choice.mmCode, InstructionProcessingStatus26Choice.mmProprietary, Status23Choice.mmInstructionProcessingStatus);
+					InstructionProcessingStatus26Choice.mmCode, InstructionProcessingStatus26Choice.mmProprietary, Status23Choice.mmInstructionProcessingStatus, ProcessingStatus70Choice.mmCode, ProcessingStatus70Choice.mmProprietary,
+					IntraBalanceStatusAndReason2.mmProcessingStatus, PendingStatusAndReason2.mmProcessingStatus, IntraBalanceStatusType2.mmProcessingStatus, IntraPositionStatusType2.mmProcessingStatus, ProcessingStatus68Choice.mmCode,
+					ProcessingStatus68Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2319,6 +2490,12 @@ public class Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus1Choice#mmProprietary
 	 * ModificationProcessingStatus1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus9Choice#mmCode
+	 * ModificationProcessingStatus9Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus9Choice#mmProprietary
+	 * ModificationProcessingStatus9Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2338,7 +2515,7 @@ public class Status {
 	 */
 	public static final MMBusinessAttribute mmModificationProcessingStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ModificationProcessingStatus1Choice.mmCode, ModificationProcessingStatus1Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(ModificationProcessingStatus1Choice.mmCode, ModificationProcessingStatus1Choice.mmProprietary, ModificationProcessingStatus9Choice.mmCode, ModificationProcessingStatus9Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Status.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -2382,7 +2559,8 @@ public class Status {
 						StatusTrail6.mmModificationProcessingStatus, StatusTrail6.mmCancellationStatus, StatusTrail6.mmSettled, ModificationProcessingStatus7Choice.mmProprietary, ProprietaryStatusAndReason6.mmProprietaryStatus,
 						Status18Choice.mmProprietary, ProprietaryStatusAndReason7.mmProprietaryStatus, StatusAndReason30.mmStatusAndReason, ResponseStatus8Choice.mmRejected, ResponseStatus8Choice.mmPending,
 						StatusAndReason29.mmProcessingStatus, StatusOrStatement8Choice.mmStatusAdvice, StatusTrail7.mmProcessingStatus, StatusTrail7.mmModificationProcessingStatus, StatusTrail7.mmCancellationStatus, StatusTrail7.mmSettled,
-						ModificationProcessingStatus8Choice.mmProprietary, Status23Choice.mmProprietary, StatusAndReason32.mmStatusAndReason, StatusAndReason33.mmStatusAndReason);
+						ModificationProcessingStatus8Choice.mmProprietary, Status23Choice.mmProprietary, IntraBalanceQueryStatus2.mmType, StatusAndReason32.mmStatusAndReason, StatusAndReason33.mmStatusAndReason,
+						StatusAndReason34.mmStatusAndReason, StatusAndReason35.mmStatusAndReason);
 				subType_lazy = () -> Arrays.asList(AccountStatus.mmObject(), PaymentStatus.mmObject(), SystemStatus.mmObject(), LimitStatus.mmObject(), SecuritiesTradeStatus.mmObject(), CorporateActionStatus.mmObject(),
 						SecuritiesStatus.mmObject(), UndertakingStatus.mmObject(), MandateStatus.mmObject(), TreasuryTradeSettlementStatus.mmObject(), CardPaymentStatus.mmObject(), SecuritiesOrderStatus.mmObject(),
 						InvestigationCaseStatus.mmObject(), MeetingStatus.mmObject(), CollateralStatus.mmObject(), InvoiceFinancingStatus.mmObject(), BaselineStatus.mmObject(), QuoteStatus.mmObject(), InvoiceStatus.mmObject());
@@ -2409,7 +2587,9 @@ public class Status {
 						SettlementConditionModificationStatus3Choice.mmObject(), MatchingDenied3Choice.mmObject(), ProprietaryStatusAndReason7.mmObject(), StatusAndReason30.mmObject(), ResponseStatus8Choice.mmObject(),
 						StatusAndReason29.mmObject(), StatusTrail7.mmObject(), MatchingDenied4Choice.mmObject(), Status22Choice.mmObject(), RegistrationProcessingStatus4Choice.mmObject(), ResponseStatus7Choice.mmObject(),
 						SettlementConditionModificationStatus4Choice.mmObject(), ReplacementProcessingStatus9Choice.mmObject(), DeliveryReturn4Choice.mmObject(), ModificationProcessingStatus8Choice.mmObject(),
-						PointOfInteractionComponent6.mmObject(), StatusAndReason32.mmObject(), StatusAndReason33.mmObject(), PointOfInteractionComponent7.mmObject());
+						PointOfInteractionComponent6.mmObject(), ProcessingStatus70Choice.mmObject(), ModificationProcessingStatus9Choice.mmObject(), IntraBalanceStatusAndReason2.mmObject(), SettlementStatus26Choice.mmObject(),
+						IntraBalanceQueryStatus2.mmObject(), IntraBalanceStatusType2.mmObject(), ProcessingStatus68Choice.mmObject(), StatusAndReason32.mmObject(), StatusAndReason33.mmObject(), PointOfInteractionComponent7.mmObject(),
+						StatusAndReason34.mmObject(), StatusAndReason35.mmObject(), PointOfInteractionComponent8.mmObject());
 			}
 
 			@Override

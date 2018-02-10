@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant;
+import com.tools20022.repository.area.SecuritiesEventsPreviousversionsubsetvariant;
 import com.tools20022.repository.msg.AccountIdentification41;
 import com.tools20022.repository.msg.Pagination;
 import com.tools20022.repository.msg.Statement48;
@@ -86,8 +86,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnInstrStmtRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant
- * SecuritiesEventsLatestversionsubsetvariant}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousversionsubsetvariant
+ * SecuritiesEventsPreviousversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.042.002.06}</li>
@@ -313,7 +313,7 @@ public class CorporateActionInstructionStatementReport002V06 {
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISO15022VariantsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStmtRpt";
-				businessArea_lazy = () -> SecuritiesEventsLatestversionsubsetvariant.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsPreviousversionsubsetvariant.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmPagination,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmStatementGeneralDetails,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06.mmAccountAndStatementDetails,

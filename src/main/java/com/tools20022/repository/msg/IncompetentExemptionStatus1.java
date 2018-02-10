@@ -96,7 +96,7 @@ public class IncompetentExemptionStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTC  (The Depository Trust Corporation) or not (not maintained by DTCC)."
+	 * "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTC (The Depository Trust Corporation) or not (not maintained by DTCC)."
 	 * </li>
 	 * </ul>
 	 */
@@ -108,7 +108,7 @@ public class IncompetentExemptionStatus1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Documentation Acknowledgement Of Exemption"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationAcknowledgementOfExemption";
-			definition = "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTC  (The Depository Trust Corporation) or not (not maintained by DTCC).";
+			definition = "Acknowledgement of exempt instruction specifying whether the documentation will be sent to DTC (The Depository Trust Corporation) or not (not maintained by DTCC).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

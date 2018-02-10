@@ -25,6 +25,7 @@ import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1;
+import com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4;
 import com.tools20022.repository.msg.FinancialInstrumentAttributes44;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -160,6 +161,9 @@ public class Entitlement extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmCoveredIndicator
 	 * CommonFinancialInstrumentAttributes1.mmCoveredIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmCoveredIndicator
+	 * CommonFinancialInstrumentAttributes4.mmCoveredIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -181,7 +185,7 @@ public class Entitlement extends Security {
 	 */
 	public static final MMBusinessAttribute mmCoveredIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes44.mmCoveredIndicator, CommonFinancialInstrumentAttributes1.mmCoveredIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes44.mmCoveredIndicator, CommonFinancialInstrumentAttributes1.mmCoveredIndicator, CommonFinancialInstrumentAttributes4.mmCoveredIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Entitlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

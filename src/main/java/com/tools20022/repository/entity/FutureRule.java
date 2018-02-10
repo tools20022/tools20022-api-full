@@ -24,6 +24,7 @@ import com.tools20022.repository.datatype.PercentageRate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.Future1;
 import com.tools20022.repository.msg.Future2;
+import com.tools20022.repository.msg.Future3;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -101,6 +102,8 @@ public class FutureRule {
 	 * Future1.mmTimeUnit}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Future2#mmTimeUnit
 	 * Future2.mmTimeUnit}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future3#mmTimeUnit
+	 * Future3.mmTimeUnit}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -121,7 +124,7 @@ public class FutureRule {
 	 */
 	public static final MMBusinessAttribute mmTimeType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Future1.mmTimeUnit, Future2.mmTimeUnit);
+			derivation_lazy = () -> Arrays.asList(Future1.mmTimeUnit, Future2.mmTimeUnit, Future3.mmTimeUnit);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.FutureRule.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

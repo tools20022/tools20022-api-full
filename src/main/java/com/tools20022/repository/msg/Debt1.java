@@ -993,7 +993,7 @@ public class Debt1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The program under which a commercial paper is issued. The values that are most used are:\n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other"
+	 * "The program under which a commercial paper is issued. The values that are most used are: \n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other."
 	 * </li>
 	 * </ul>
 	 */
@@ -1006,7 +1006,7 @@ public class Debt1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "875"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CPProgram";
-			definition = "The program under which a commercial paper is issued. The values that are most used are:\n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other";
+			definition = "The program under which a commercial paper is issued. The values that are most used are: \n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -1889,7 +1889,7 @@ public class Debt1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the current factor expressed as a decimal between 0 and 1 defining the outstanding principal of  the bond (for asset or mortgage backed securities)."
+	 * "Identifies the current factor expressed as a decimal between 0 and 1 defining the outstanding principal of the bond (for asset or mortgage backed securities)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1901,7 +1901,7 @@ public class Debt1 {
 			xmlTag = "CurFctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentFactor";
-			definition = "Identifies the current factor expressed as a decimal between 0 and 1 defining the outstanding principal of  the bond (for asset or mortgage backed securities).";
+			definition = "Identifies the current factor expressed as a decimal between 0 and 1 defining the outstanding principal of the bond (for asset or mortgage backed securities).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -1939,7 +1939,7 @@ public class Debt1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the new factor expressed as a decimal between 0 and 1 defining the outstanding principal of  the bond (for asset or mortgage backed securities)."
+	 * "Identifies the new factor expressed as a decimal between 0 and 1 defining the outstanding principal of the bond (for asset or mortgage backed securities)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1951,7 +1951,7 @@ public class Debt1 {
 			xmlTag = "NxtFctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactor";
-			definition = "Identifies the new factor expressed as a decimal between 0 and 1 defining the outstanding principal of  the bond (for asset or mortgage backed securities).";
+			definition = "Identifies the new factor expressed as a decimal between 0 and 1 defining the outstanding principal of the bond (for asset or mortgage backed securities).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();

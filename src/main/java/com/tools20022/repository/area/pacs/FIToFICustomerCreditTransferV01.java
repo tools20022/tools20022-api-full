@@ -215,7 +215,7 @@ public class FIToFICustomerCreditTransferV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Set of elements providing information specific to the individual credit transfer(s). "
+	 * "Set of elements providing information specific to the individual credit transfer(s)."
 	 * </li>
 	 * </ul>
 	 */
@@ -224,7 +224,7 @@ public class FIToFICustomerCreditTransferV01 {
 			xmlTag = "CdtTrfTxInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferTransactionInformation";
-			definition = "Set of elements providing information specific to the individual credit transfer(s). ";
+			definition = "Set of elements providing information specific to the individual credit transfer(s).";
 			minOccurs = 1;
 			complexType_lazy = () -> CreditTransferTransactionInformation2.mmObject();
 		}

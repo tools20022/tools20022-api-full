@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
-import com.tools20022.repository.choice.IssuerOrInvestor1choice;
+import com.tools20022.repository.choice.IssuerOrInvestor1Choice;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecurityCSDLink3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines how the CSD is linked to the security."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityCSDLink6
+ * SecurityCSDLink6}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +105,14 @@ public class SecurityCSDLink3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityCSDLink6#mmFinancialInstrumentIdentification
+	 * SecurityCSDLink6.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
@@ -108,13 +123,14 @@ public class SecurityCSDLink3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityCSDLink6.mmFinancialInstrumentIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
 		}
 	};
 	@XmlElement(name = "IssrInvstrCSD", required = true)
-	protected IssuerOrInvestor1choice issuerInvestorCSD;
+	protected IssuerOrInvestor1Choice issuerInvestorCSD;
 	/**
 	 * 
 	 <p>
@@ -123,8 +139,8 @@ public class SecurityCSDLink3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getComplexType
 	 * complexType} =
-	 * {@linkplain com.tools20022.repository.choice.IssuerOrInvestor1choice
-	 * IssuerOrInvestor1choice}</li>
+	 * {@linkplain com.tools20022.repository.choice.IssuerOrInvestor1Choice
+	 * IssuerOrInvestor1Choice}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
 	 * componentContext} =
@@ -141,6 +157,14 @@ public class SecurityCSDLink3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "CSD Issuer of a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityCSDLink6#mmIssuerInvestorCSD
+	 * SecurityCSDLink6.mmIssuerInvestorCSD}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuerInvestorCSD = new MMMessageAttribute() {
@@ -151,9 +175,10 @@ public class SecurityCSDLink3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerInvestorCSD";
 			definition = "CSD Issuer of a security.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityCSDLink6.mmIssuerInvestorCSD);
 			maxOccurs = 1;
 			minOccurs = 1;
-			complexType_lazy = () -> IssuerOrInvestor1choice.mmObject();
+			complexType_lazy = () -> IssuerOrInvestor1Choice.mmObject();
 		}
 	};
 	@XmlElement(name = "VldFr", required = true)
@@ -185,6 +210,14 @@ public class SecurityCSDLink3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the date since when the CSD is linked to the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityCSDLink6#mmValidFrom
+	 * SecurityCSDLink6.mmValidFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
@@ -195,6 +228,7 @@ public class SecurityCSDLink3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the CSD is linked to the security.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityCSDLink6.mmValidFrom);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -210,6 +244,7 @@ public class SecurityCSDLink3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityCSDLink3";
 				definition = "Defines how the CSD is linked to the security.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityCSDLink6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();
@@ -224,11 +259,11 @@ public class SecurityCSDLink3 {
 		return this;
 	}
 
-	public IssuerOrInvestor1choice getIssuerInvestorCSD() {
+	public IssuerOrInvestor1Choice getIssuerInvestorCSD() {
 		return issuerInvestorCSD;
 	}
 
-	public SecurityCSDLink3 setIssuerInvestorCSD(IssuerOrInvestor1choice issuerInvestorCSD) {
+	public SecurityCSDLink3 setIssuerInvestorCSD(IssuerOrInvestor1Choice issuerInvestorCSD) {
 		this.issuerInvestorCSD = Objects.requireNonNull(issuerInvestorCSD);
 		return this;
 	}

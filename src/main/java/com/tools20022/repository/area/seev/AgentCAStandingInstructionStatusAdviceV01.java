@@ -353,7 +353,7 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the linked Agent CA Standing Instruction  Cancellation Request for which a status is given.\n"
+	 * "Identification of the linked Agent CA Standing Instruction Cancellation Request for which a status is given.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -362,7 +362,7 @@ public class AgentCAStandingInstructionStatusAdviceV01 {
 			xmlTag = "AgtCAStgInstrCxlReqId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAStandingInstructionCancellationRequestIdentification";
-			definition = "Identification of the linked Agent CA Standing Instruction  Cancellation Request for which a status is given.\n";
+			definition = "Identification of the linked Agent CA Standing Instruction Cancellation Request for which a status is given.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();

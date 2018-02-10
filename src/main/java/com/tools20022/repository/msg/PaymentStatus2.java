@@ -67,6 +67,12 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentStatus2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Payment status details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus3 PaymentStatus3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.PaymentStatus1
  * PaymentStatus1}</li>
@@ -108,7 +114,14 @@ public class PaymentStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Status of a transfer, in coded form, as  assigned by the transaction administrator."
+	 * "Status of a transfer, in coded form, as assigned by the transaction administrator."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus3#mmCode
+	 * PaymentStatus3.mmCode}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -125,7 +138,8 @@ public class PaymentStatus2 {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Status of a transfer, in coded form, as  assigned by the transaction administrator.";
+			definition = "Status of a transfer, in coded form, as assigned by the transaction administrator.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatus3.mmCode);
 			previousVersion_lazy = () -> PaymentStatus1.mmCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -166,6 +180,13 @@ public class PaymentStatus2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which the status was assigned to the transfer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus3#mmDateTime
+	 * PaymentStatus3.mmDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +203,7 @@ public class PaymentStatus2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateTime";
 			definition = "Date and time at which the status was assigned to the transfer.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatus3.mmDateTime);
 			previousVersion_lazy = () -> PaymentStatus1.mmDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -219,6 +241,13 @@ public class PaymentStatus2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason provided for the status of a transfer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentStatus3#mmReason
+	 * PaymentStatus3.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -235,6 +264,7 @@ public class PaymentStatus2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Reason provided for the status of a transfer.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatus3.mmReason);
 			previousVersion_lazy = () -> PaymentStatus1.mmReason;
 			minOccurs = 0;
 			isComposite = true;
@@ -251,6 +281,7 @@ public class PaymentStatus2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatus2";
 				definition = "Payment status details.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentStatus3.mmObject());
 				previousVersion_lazy = () -> PaymentStatus1.mmObject();
 			}
 		});

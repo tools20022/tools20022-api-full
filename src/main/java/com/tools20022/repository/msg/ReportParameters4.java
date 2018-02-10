@@ -147,7 +147,7 @@ public class ReportParameters4 {
 	 * name} = "ReportDateAndTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date and time of the report ."</li>
+	 * definition} = "Date and time of the report."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReportDateAndTime = new MMMessageAttribute() {
@@ -157,7 +157,7 @@ public class ReportParameters4 {
 			xmlTag = "RptDtAndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportDateAndTime";
-			definition = "Date and time of the report .";
+			definition = "Date and time of the report.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();

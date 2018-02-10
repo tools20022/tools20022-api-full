@@ -84,7 +84,7 @@ public class NonTradingDayReasonCode extends MMCode {
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
 	 * Other reasons a day is a non-trading day e.g. technical fault, company
-	 * specific non-trading day not known in advance
+	 * specific non-trading day not known in advance.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -102,7 +102,7 @@ public class NonTradingDayReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Other reasons a day is a non-trading day e.g. technical fault, company specific non-trading day not known in advance"
+	 * "Other reasons a day is a non-trading day e.g. technical fault, company specific non-trading day not known in advance."
 	 * </li>
 	 * </ul>
 	 */
@@ -110,7 +110,7 @@ public class NonTradingDayReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			definition = "Other reasons a day is a non-trading day e.g. technical fault, company specific non-trading day not known in advance";
+			definition = "Other reasons a day is a non-trading day e.g. technical fault, company specific non-trading day not known in advance.";
 			owner_lazy = () -> com.tools20022.repository.codeset.NonTradingDayReasonCode.mmObject();
 			codeName = "OTHR";
 		}

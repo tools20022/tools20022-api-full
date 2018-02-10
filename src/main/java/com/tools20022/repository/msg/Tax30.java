@@ -79,6 +79,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Tax30"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Tax related to an investment fund order."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax34 Tax34}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Tax31 Tax31}</li>
  * </ul>
@@ -119,6 +125,12 @@ public class Tax30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax34#mmType Tax34.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -134,6 +146,7 @@ public class Tax30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of tax.";
+			nextVersions_lazy = () -> Arrays.asList(Tax34.mmType);
 			previousVersion_lazy = () -> Tax31.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -218,6 +231,13 @@ public class Tax30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Country where the tax is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax34#mmCountry
+	 * Tax34.mmCountry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -234,6 +254,7 @@ public class Tax30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
 			definition = "Country where the tax is due.";
+			nextVersions_lazy = () -> Arrays.asList(Tax34.mmCountry);
 			previousVersion_lazy = () -> Tax31.mmCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -272,6 +293,13 @@ public class Tax30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether a tax exemption applies."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax34#mmExemptionIndicator
+	 * Tax34.mmExemptionIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmExemptionIndicator = new MMMessageAttribute() {
@@ -283,6 +311,7 @@ public class Tax30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionIndicator";
 			definition = "Indicates whether a tax exemption applies.";
+			nextVersions_lazy = () -> Arrays.asList(Tax34.mmExemptionIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -320,6 +349,13 @@ public class Tax30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason for the tax exemption."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax34#mmExemptionReason
+	 * Tax34.mmExemptionReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmExemptionReason = new MMMessageAttribute() {
@@ -331,6 +367,7 @@ public class Tax30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReason";
 			definition = "Reason for the tax exemption.";
+			nextVersions_lazy = () -> Arrays.asList(Tax34.mmExemptionReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ExemptionReason1Choice.mmObject();
@@ -365,6 +402,14 @@ public class Tax30 {
 	 * definition} =
 	 * "Party that receives the tax. The recipient of, and the party entitled to, the tax may be two different parties."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Tax34#mmRecipientIdentification
+	 * Tax34.mmRecipientIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -380,6 +425,7 @@ public class Tax30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientIdentification";
 			definition = "Party that receives the tax. The recipient of, and the party entitled to, the tax may be two different parties.";
+			nextVersions_lazy = () -> Arrays.asList(Tax34.mmRecipientIdentification);
 			previousVersion_lazy = () -> Tax31.mmRecipientIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -417,6 +463,14 @@ public class Tax30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information used to calculate the tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Tax34#mmTaxCalculationDetails
+	 * Tax34.mmTaxCalculationDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -433,6 +487,7 @@ public class Tax30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCalculationDetails";
 			definition = "Information used to calculate the tax.";
+			nextVersions_lazy = () -> Arrays.asList(Tax34.mmTaxCalculationDetails);
 			previousVersion_lazy = () -> Tax31.mmTaxCalculationDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -452,6 +507,7 @@ public class Tax30 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Tax30";
 				definition = "Tax related to an investment fund order.";
+				nextVersions_lazy = () -> Arrays.asList(Tax34.mmObject());
 				previousVersion_lazy = () -> Tax31.mmObject();
 			}
 		});

@@ -220,7 +220,7 @@ public class AmendmentOfUndertaking {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Decrease (negative) or increase (positive) of the undertaking as a result of the amendment. "
+	 * "Decrease (negative) or increase (positive) of the undertaking as a result of the amendment."
 	 * </li>
 	 * </ul>
 	 */
@@ -231,7 +231,7 @@ public class AmendmentOfUndertaking {
 			elementContext_lazy = () -> com.tools20022.repository.entity.AmendmentOfUndertaking.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ChangeOfAmount";
-			definition = "Decrease (negative) or increase (positive) of the undertaking as a result of the amendment. ";
+			definition = "Decrease (negative) or increase (positive) of the undertaking as a result of the amendment.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CurrencyAndAmount.mmObject();

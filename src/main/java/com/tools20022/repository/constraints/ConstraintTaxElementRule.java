@@ -45,7 +45,7 @@ public class ConstraintTaxElementRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "One of the elements (TaxableIncomePerDividend, EUCapitalGain, EUDividendStatus,  PercentageOfDebtClaim, IndividualTax) must be present."
+	 * "One of the elements (TaxableIncomePerDividend, EUCapitalGain, EUDividendStatus, PercentageOfDebtClaim, IndividualTax) must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -54,7 +54,7 @@ public class ConstraintTaxElementRule {
 			validator = ConstraintTaxElementRule::checkInformativeTax1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxElementRule";
-			definition = "One of the elements (TaxableIncomePerDividend, EUCapitalGain, EUDividendStatus,  PercentageOfDebtClaim, IndividualTax) must be present.";
+			definition = "One of the elements (TaxableIncomePerDividend, EUCapitalGain, EUDividendStatus, PercentageOfDebtClaim, IndividualTax) must be present.";
 			owner_lazy = () -> InformativeTax1.mmObject();
 		}
 	};

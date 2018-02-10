@@ -207,7 +207,7 @@ public class CorporateActionNarrativeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In the context of  a corporate action, an International Central Securities Depository (ICSD)  refuses a mark-up/mark-down confirmation sent by the account servicer."
+	 * "In the context of a corporate action, an International Central Securities Depository (ICSD) refuses a mark-up/mark-down confirmation sent by the account servicer."
 	 * </li>
 	 * </ul>
 	 */
@@ -215,7 +215,7 @@ public class CorporateActionNarrativeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ICSDRefusalOfMarkUpDownConfirmation";
-			definition = "In the context of  a corporate action, an International Central Securities Depository (ICSD)  refuses a mark-up/mark-down confirmation sent by the account servicer.";
+			definition = "In the context of a corporate action, an International Central Securities Depository (ICSD) refuses a mark-up/mark-down confirmation sent by the account servicer.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionNarrativeCode.mmObject();
 			codeName = "RFMC";
 		}

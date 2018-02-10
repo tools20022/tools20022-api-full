@@ -437,7 +437,7 @@ public class BeneficialOwner1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required"
+	 * "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -457,7 +457,7 @@ public class BeneficialOwner1 {
 			xmlTag = "CertfctnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
-			definition = "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required";
+			definition = "Whether or not certification is required from the account owner. \nYes: certification required \nNo: no certification required.";
 			nextVersions_lazy = () -> Arrays.asList(BeneficialOwner2.mmCertificationIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;

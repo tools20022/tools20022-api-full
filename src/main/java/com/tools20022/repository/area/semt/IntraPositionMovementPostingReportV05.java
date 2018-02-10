@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesManagementPreviousVersion;
+import com.tools20022.repository.area.SecuritiesManagementArchive;
 import com.tools20022.repository.choice.PartyIdentification92Choice;
 import com.tools20022.repository.msg.FinancialInstrumentDetails21;
 import com.tools20022.repository.msg.Pagination;
@@ -94,8 +94,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "IntraPosMvmntPstngRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesManagementPreviousVersion
- * SecuritiesManagementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesManagementArchive
+ * SecuritiesManagementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code semt.016.001.05}</li>
@@ -434,7 +434,7 @@ public class IntraPositionMovementPostingReportV05 {
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "IntraPosMvmntPstngRpt";
-				businessArea_lazy = () -> SecuritiesManagementPreviousVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesManagementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmPagination,
 						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmStatementGeneralDetails, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmAccountOwner,
 						com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmSafekeepingAccount, com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05.mmFinancialInstrument);

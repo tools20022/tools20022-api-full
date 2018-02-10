@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorAuthorisationRequest6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Authorisation request from an acceptor."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7
+ * AcceptorAuthorisationRequest7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest5
@@ -123,6 +130,14 @@ public class AcceptorAuthorisationRequest6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7#mmEnvironment
+	 * AcceptorAuthorisationRequest7.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +154,7 @@ public class AcceptorAuthorisationRequest6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequest7.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorAuthorisationRequest5.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -178,6 +194,14 @@ public class AcceptorAuthorisationRequest6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Context in which the transaction is performed (payment and sale)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7#mmContext
+	 * AcceptorAuthorisationRequest7.mmContext}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -194,6 +218,7 @@ public class AcceptorAuthorisationRequest6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed (payment and sale).";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequest7.mmContext);
 			previousVersion_lazy = () -> AcceptorAuthorisationRequest5.mmContext;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -233,6 +258,14 @@ public class AcceptorAuthorisationRequest6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Card payment transaction for which the authorisation is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7#mmTransaction
+	 * AcceptorAuthorisationRequest7.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -249,6 +282,7 @@ public class AcceptorAuthorisationRequest6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment transaction for which the authorisation is requested.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequest7.mmTransaction);
 			previousVersion_lazy = () -> AcceptorAuthorisationRequest5.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -283,6 +317,14 @@ public class AcceptorAuthorisationRequest6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Additional information incorporated as an extension to the message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7#mmSupplementaryData
+	 * AcceptorAuthorisationRequest7.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -298,6 +340,7 @@ public class AcceptorAuthorisationRequest6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information incorporated as an extension to the message.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequest7.mmSupplementaryData);
 			previousVersion_lazy = () -> AcceptorAuthorisationRequest5.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
@@ -316,6 +359,7 @@ public class AcceptorAuthorisationRequest6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorAuthorisationRequest6";
 				definition = "Authorisation request from an acceptor.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorAuthorisationRequest7.mmObject());
 				previousVersion_lazy = () -> AcceptorAuthorisationRequest5.mmObject();
 			}
 		});

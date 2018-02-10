@@ -116,6 +116,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementDetails125"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of settlement of a transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementDetails141
+ * SettlementDetails141}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SettlementDetails99
@@ -165,6 +172,14 @@ public class SettlementDetails125 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the transaction is on hold/blocked/frozen."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmHoldIndicator
+	 * SettlementDetails141.mmHoldIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +197,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldIndicator";
 			definition = "Specifies whether the transaction is on hold/blocked/frozen.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmHoldIndicator);
 			previousVersion_lazy = () -> SettlementDetails99.mmHoldIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -223,6 +239,14 @@ public class SettlementDetails125 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the type of securities transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmSecuritiesTransactionType
+	 * SettlementDetails141.mmSecuritiesTransactionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -240,6 +264,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmSecuritiesTransactionType);
 			previousVersion_lazy = () -> SettlementDetails99.mmSecuritiesTransactionType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -282,6 +307,14 @@ public class SettlementDetails125 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Conditions under which the order/trade is to be settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmSettlementTransactionCondition
+	 * SettlementDetails141.mmSettlementTransactionCondition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -299,6 +332,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTransactionCondition";
 			definition = "Conditions under which the order/trade is to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmSettlementTransactionCondition);
 			previousVersion_lazy = () -> SettlementDetails99.mmSettlementTransactionCondition;
 			minOccurs = 0;
 			isComposite = true;
@@ -341,6 +375,14 @@ public class SettlementDetails125 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether partial settlement is allowed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmPartialSettlementIndicator
+	 * SettlementDetails141.mmPartialSettlementIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -358,6 +400,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmPartialSettlementIndicator);
 			previousVersion_lazy = () -> SettlementDetails99.mmPartialSettlementIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -400,6 +443,14 @@ public class SettlementDetails125 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether there is change of beneficial ownership."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmBeneficialOwnership
+	 * SettlementDetails141.mmBeneficialOwnership}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -417,6 +468,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnership";
 			definition = "Specifies whether there is change of beneficial ownership.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmBeneficialOwnership);
 			previousVersion_lazy = () -> SettlementDetails99.mmBeneficialOwnership;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -461,6 +513,14 @@ public class SettlementDetails125 {
 	 * definition} =
 	 * "Specifies the category of cash clearing system, for example, cheque clearing."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmCashClearingSystem
+	 * SettlementDetails141.mmCashClearingSystem}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -478,6 +538,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashClearingSystem";
 			definition = "Specifies the category of cash clearing system, for example, cheque clearing.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmCashClearingSystem);
 			previousVersion_lazy = () -> SettlementDetails99.mmCashClearingSystem;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -522,6 +583,14 @@ public class SettlementDetails125 {
 	 * definition} =
 	 * "Specifies if an instruction is for a market side or a client side transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmMarketClientSide
+	 * SettlementDetails141.mmMarketClientSide}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -539,6 +608,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClientSide";
 			definition = "Specifies if an instruction is for a market side or a client side transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmMarketClientSide);
 			previousVersion_lazy = () -> SettlementDetails99.mmMarketClientSide;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -581,6 +651,14 @@ public class SettlementDetails125 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether registration should occur upon receipt."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmRegistration
+	 * SettlementDetails141.mmRegistration}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -598,6 +676,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Registration";
 			definition = "Specifies whether registration should occur upon receipt.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmRegistration);
 			previousVersion_lazy = () -> SettlementDetails99.mmRegistration;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -641,6 +720,14 @@ public class SettlementDetails125 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies whether the rate is fixed, variable or a forfeit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmRepurchaseType
+	 * SettlementDetails141.mmRepurchaseType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -658,6 +745,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RepurchaseType";
 			definition = "Specifies whether the rate is fixed, variable or a forfeit.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmRepurchaseType);
 			previousVersion_lazy = () -> SettlementDetails99.mmRepurchaseType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -702,6 +790,14 @@ public class SettlementDetails125 {
 	 * definition} =
 	 * "Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmSecuritiesRTGS
+	 * SettlementDetails141.mmSecuritiesRTGS}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -719,6 +815,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesRTGS";
 			definition = "Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmSecuritiesRTGS);
 			previousVersion_lazy = () -> SettlementDetails99.mmSecuritiesRTGS;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -763,6 +860,14 @@ public class SettlementDetails125 {
 	 * definition} =
 	 * "Specifies the stamp duty type or exemption reason applicable to the settlement transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmStampDutyTaxBasis
+	 * SettlementDetails141.mmStampDutyTaxBasis}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -780,6 +885,7 @@ public class SettlementDetails125 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDutyTaxBasis";
 			definition = "Specifies the stamp duty type or exemption reason applicable to the settlement transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmStampDutyTaxBasis);
 			previousVersion_lazy = () -> SettlementDetails99.mmStampDutyTaxBasis;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -804,6 +910,7 @@ public class SettlementDetails125 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDetails125";
 				definition = "Details of settlement of a transaction.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementDetails141.mmObject());
 				previousVersion_lazy = () -> SettlementDetails99.mmObject();
 			}
 		});

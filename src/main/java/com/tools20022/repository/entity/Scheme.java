@@ -298,6 +298,21 @@ public class Scheme {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GenericIdentification79#mmSchemeName
 	 * GenericIdentification79.mmSchemeName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification165#mmSchemeName
+	 * GenericIdentification165.mmSchemeName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification169#mmSchemeName
+	 * GenericIdentification169.mmSchemeName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification168#mmSchemeName
+	 * GenericIdentification168.mmSchemeName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification172#mmSchemeName
+	 * GenericIdentification172.mmSchemeName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification170#mmSchemeName
+	 * GenericIdentification170.mmSchemeName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -326,7 +341,8 @@ public class Scheme {
 					GenericIdentification51.mmSchemeName, GenericIdentification56.mmSchemeName, GenericIdentification65.mmSchemeName, GenericIdentification63.mmSchemeName, GenericIdentification66.mmSchemeName,
 					GenericIdentification62.mmSchemeName, GenericIdentification60.mmSchemeName, GenericIdentification64.mmSchemeName, GenericIdentification67.mmSchemeName, SecuritiesCertificate4.mmSchemeName,
 					ProprietaryQuantity8.mmSchemeName, ProprietaryQuantity7.mmSchemeName, GenericIdentification84.mmSchemeName, ProprietaryQuantity10.mmSchemeName, ProprietaryQuantity9.mmSchemeName, GenericIdentification86.mmSchemeName,
-					SecuritiesCertificate5.mmSchemeName, GenericIdentification144.mmSchemeName, GenericIdentification163.mmSchemeName, GenericIdentification79.mmSchemeName);
+					SecuritiesCertificate5.mmSchemeName, GenericIdentification144.mmSchemeName, GenericIdentification163.mmSchemeName, GenericIdentification79.mmSchemeName, GenericIdentification165.mmSchemeName,
+					GenericIdentification169.mmSchemeName, GenericIdentification168.mmSchemeName, GenericIdentification172.mmSchemeName, GenericIdentification170.mmSchemeName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Scheme.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

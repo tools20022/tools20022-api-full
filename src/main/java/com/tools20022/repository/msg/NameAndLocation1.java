@@ -161,7 +161,7 @@ public class NameAndLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Location of the country in which the counterparty is incorporated. "</li>
+	 * "Location of the country in which the counterparty is incorporated."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,7 +177,7 @@ public class NameAndLocation1 {
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
-			definition = "Location of the country in which the counterparty is incorporated. ";
+			definition = "Location of the country in which the counterparty is incorporated.";
 			previousVersion_lazy = () -> ReportedPartyIdentification1.mmLocation;
 			maxOccurs = 1;
 			minOccurs = 1;

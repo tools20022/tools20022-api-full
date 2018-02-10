@@ -150,6 +150,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides further details on the reference and status on the original transactions, included in the original instruction, to which the reversal message applies."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction88
+ * PaymentTransaction88}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PaymentTransaction60
@@ -192,6 +199,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reversed transaction.\nUsage: The instructing party is the party sending the reversal message and not the party that sent the original instruction that is being reversed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmReversalIdentification
+	 * PaymentTransaction88.mmReversalIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -207,6 +222,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalIdentification";
 			definition = "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reversed transaction.\nUsage: The instructing party is the party sending the reversal message and not the party that sent the original instruction that is being reversed.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmReversalIdentification);
 			previousVersion_lazy = () -> PaymentTransaction60.mmReversalIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -245,6 +261,14 @@ public class PaymentTransaction81 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides information on the original message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalGroupInformation
+	 * PaymentTransaction88.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -261,6 +285,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Provides information on the original message.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmOriginalGroupInformation);
 			previousVersion_lazy = () -> PaymentTransaction60.mmOriginalGroupInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -302,6 +327,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalInstructionIdentification
+	 * PaymentTransaction88.mmOriginalInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -318,6 +351,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructionIdentification";
 			definition = "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmOriginalInstructionIdentification);
 			previousVersion_lazy = () -> PaymentTransaction60.mmOriginalInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -358,6 +392,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalEndToEndIdentification
+	 * PaymentTransaction88.mmOriginalEndToEndIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,6 +416,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmOriginalEndToEndIdentification);
 			previousVersion_lazy = () -> PaymentTransaction60.mmOriginalEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -414,6 +457,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalTransactionIdentification
+	 * PaymentTransaction88.mmOriginalTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -430,6 +481,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionIdentification";
 			definition = "Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmOriginalTransactionIdentification);
 			previousVersion_lazy = () -> PaymentTransaction60.mmOriginalTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -470,6 +522,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Unique reference, as assigned by the original clearing system, to unambiguously identify the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalClearingSystemReference
+	 * PaymentTransaction88.mmOriginalClearingSystemReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -486,6 +546,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalClearingSystemReference";
 			definition = "Unique reference, as assigned by the original clearing system, to unambiguously identify the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmOriginalClearingSystemReference);
 			previousVersion_lazy = () -> PaymentTransaction60.mmOriginalClearingSystemReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -527,6 +588,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Amount of money, as provided in the original transaction, to be moved between the instructing agent and the instructed agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalInterbankSettlementAmount
+	 * PaymentTransaction88.mmOriginalInterbankSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -543,6 +612,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInterbankSettlementAmount";
 			definition = "Amount of money, as provided in the original transaction, to be moved between the instructing agent and the instructed agent.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmOriginalInterbankSettlementAmount);
 			previousVersion_lazy = () -> PaymentTransaction60.mmOriginalInterbankSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -584,6 +654,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Amount of money moved between the instructing agent and the instructed agent in the reversed transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmReversedInterbankSettlementAmount
+	 * PaymentTransaction88.mmReversedInterbankSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -600,6 +678,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversedInterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent in the reversed transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmReversedInterbankSettlementAmount);
 			previousVersion_lazy = () -> PaymentTransaction60.mmReversedInterbankSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -640,6 +719,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.\n\nUsage: The InterbankSettlementDate is the interbank settlement date of the reversal message, and not of the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmInterbankSettlementDate
+	 * PaymentTransaction88.mmInterbankSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -656,6 +743,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.\n\nUsage: The InterbankSettlementDate is the interbank settlement date of the reversal message, and not of the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmInterbankSettlementDate);
 			previousVersion_lazy = () -> PaymentTransaction60.mmInterbankSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -697,6 +785,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.\r\n\r\n\r\nUsage: the SettlementPriority is the settlement priority of the reversal message, and not of the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmSettlementPriority
+	 * PaymentTransaction88.mmSettlementPriority}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -713,6 +809,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPriority";
 			definition = "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.\r\n\r\n\r\nUsage: the SettlementPriority is the settlement priority of the reversal message, and not of the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmSettlementPriority);
 			previousVersion_lazy = () -> PaymentTransaction60.mmSettlementPriority;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -754,6 +851,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Amount of money to be moved between the debtor and the creditor, before deduction of charges, in the reversed transaction.\r\nUsage: This amount has to be transported unchanged through the transaction chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmReversedInstructedAmount
+	 * PaymentTransaction88.mmReversedInstructedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -770,6 +875,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversedInstructedAmount";
 			definition = "Amount of money to be moved between the debtor and the creditor, before deduction of charges, in the reversed transaction.\r\nUsage: This amount has to be transported unchanged through the transaction chain.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmReversedInstructedAmount);
 			previousVersion_lazy = () -> PaymentTransaction60.mmReversedInstructedAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -810,6 +916,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Factor used to convert an amount from one currency into another. This reflects the price at which one currency was bought with another currency."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmExchangeRate
+	 * PaymentTransaction88.mmExchangeRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -826,6 +940,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Factor used to convert an amount from one currency into another. This reflects the price at which one currency was bought with another currency.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmExchangeRate);
 			previousVersion_lazy = () -> PaymentTransaction60.mmExchangeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -867,6 +982,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Amount of money asked or paid as compensation for the processing of the instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmCompensationAmount
+	 * PaymentTransaction88.mmCompensationAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -883,6 +1006,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompensationAmount";
 			definition = "Amount of money asked or paid as compensation for the processing of the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmCompensationAmount);
 			previousVersion_lazy = () -> PaymentTransaction60.mmCompensationAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -924,6 +1048,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.\n\nUsage: The ChargeBearer applies to the reversal message, not to the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmChargeBearer
+	 * PaymentTransaction88.mmChargeBearer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -940,6 +1072,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies if the creditor and/or debtor will bear the charges associated with the processing of the payment transaction.\n\nUsage: The ChargeBearer applies to the reversal message, not to the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmChargeBearer);
 			previousVersion_lazy = () -> PaymentTransaction60.mmChargeBearer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -977,6 +1110,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Provides information on the charges to be paid by the charge bearer(s) related to the processing of the reversal transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmChargesInformation
+	 * PaymentTransaction88.mmChargesInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -993,6 +1134,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformation";
 			definition = "Provides information on the charges to be paid by the charge bearer(s) related to the processing of the reversal transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmChargesInformation);
 			previousVersion_lazy = () -> PaymentTransaction60.mmChargesInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -1033,6 +1175,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructing agent is the party sending the reversal message and not the party that sent the original instruction that is being reversed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmInstructingAgent
+	 * PaymentTransaction88.mmInstructingAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1049,6 +1199,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructing agent is the party sending the reversal message and not the party that sent the original instruction that is being reversed.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmInstructingAgent);
 			previousVersion_lazy = () -> PaymentTransaction60.mmInstructingAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1090,6 +1241,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructed agent is the party receiving the reversal message and not the party that received the original instruction that is being reversed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmInstructedAgent
+	 * PaymentTransaction88.mmInstructedAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1106,6 +1265,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructed agent is the party receiving the reversal message and not the party that received the original instruction that is being reversed.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmInstructedAgent);
 			previousVersion_lazy = () -> PaymentTransaction60.mmInstructedAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1144,6 +1304,14 @@ public class PaymentTransaction81 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides detailed information on the reversal reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmReversalReasonInformation
+	 * PaymentTransaction88.mmReversalReasonInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1160,6 +1328,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalReasonInformation";
 			definition = "Provides detailed information on the reversal reason.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmReversalReasonInformation);
 			previousVersion_lazy = () -> PaymentTransaction60.mmReversalReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -1199,6 +1368,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Key elements used to identify the original transaction that is being referred to."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmOriginalTransactionReference
+	 * PaymentTransaction88.mmOriginalTransactionReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1215,6 +1392,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionReference";
 			definition = "Key elements used to identify the original transaction that is being referred to.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmOriginalTransactionReference);
 			previousVersion_lazy = () -> PaymentTransaction60.mmOriginalTransactionReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1252,6 +1430,14 @@ public class PaymentTransaction81 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmSupplementaryData
+	 * PaymentTransaction88.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1267,6 +1453,7 @@ public class PaymentTransaction81 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmSupplementaryData);
 			previousVersion_lazy = () -> PaymentTransaction60.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -1295,6 +1482,7 @@ public class PaymentTransaction81 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction81";
 				definition = "Provides further details on the reference and status on the original transactions, included in the original instruction, to which the reversal message applies.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentTransaction88.mmObject());
 				previousVersion_lazy = () -> PaymentTransaction60.mmObject();
 			}
 		});

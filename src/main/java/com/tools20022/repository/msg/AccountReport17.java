@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Reports either on the account information or on a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport21
+ * AccountReport21}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.AccountReport13
  * AccountReport13}</li>
@@ -113,6 +120,14 @@ public class AccountReport17 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport21#mmAccountIdentification
+	 * AccountReport21.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +144,7 @@ public class AccountReport17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport21.mmAccountIdentification);
 			previousVersion_lazy = () -> AccountReport13.mmAccountIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -169,6 +185,14 @@ public class AccountReport17 {
 	 * definition} =
 	 * "Requested information on the account or business error when information has not been found."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport21#mmAccountOrError
+	 * AccountReport21.mmAccountOrError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -185,6 +209,7 @@ public class AccountReport17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOrError";
 			definition = "Requested information on the account or business error when information has not been found.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport21.mmAccountOrError);
 			previousVersion_lazy = () -> AccountReport13.mmAccountOrError;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -202,6 +227,7 @@ public class AccountReport17 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountReport17";
 				definition = "Reports either on the account information or on a business error.";
+				nextVersions_lazy = () -> Arrays.asList(AccountReport21.mmObject());
 				previousVersion_lazy = () -> AccountReport13.mmObject();
 			}
 		});

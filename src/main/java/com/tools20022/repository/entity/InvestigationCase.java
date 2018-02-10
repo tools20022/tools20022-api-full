@@ -18,6 +18,7 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.ClaimNonReceipt1Choice;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
@@ -28,7 +29,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Set of activities performed to handle an exception to a normal transaction
- * flow..
+ * flow.
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -116,6 +117,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment3
  * CaseAssignment3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Case3 Case3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ClaimNonReceipt1Choice
+ * ClaimNonReceipt1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ClaimNonReceipt1
+ * ClaimNonReceipt1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Case4 Case4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CaseAssignment4
+ * CaseAssignment4}</li>
  * </ul>
  * </li>
  * <li>
@@ -131,7 +139,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "InvestigationCase"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Set of activities performed to handle an exception to a normal transaction flow.."
+ * "Set of activities performed to handle an exception to a normal transaction flow."
  * </li>
  * </ul>
  */
@@ -160,6 +168,9 @@ public class InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CaseAssignment3#mmIdentification
 	 * CaseAssignment3.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CaseAssignment4#mmIdentification
+	 * CaseAssignment4.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -180,7 +191,7 @@ public class InvestigationCase {
 	 */
 	public static final MMBusinessAttribute mmAssignmentIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(CaseAssignment.mmIdentification, CaseAssignment2.mmIdentification, CaseAssignment3.mmIdentification);
+			derivation_lazy = () -> Arrays.asList(CaseAssignment.mmIdentification, CaseAssignment2.mmIdentification, CaseAssignment3.mmIdentification, CaseAssignment4.mmIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -221,6 +232,9 @@ public class InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CaseAssignment3#mmCreationDateTime
 	 * CaseAssignment3.mmCreationDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CaseAssignment4#mmCreationDateTime
+	 * CaseAssignment4.mmCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -241,7 +255,7 @@ public class InvestigationCase {
 	 */
 	public static final MMBusinessAttribute mmCreationDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(CaseAssignment.mmCreationDateTime, CaseAssignment2.mmCreationDateTime, CaseAssignment3.mmCreationDateTime);
+			derivation_lazy = () -> Arrays.asList(CaseAssignment.mmCreationDateTime, CaseAssignment2.mmCreationDateTime, CaseAssignment3.mmCreationDateTime, CaseAssignment4.mmCreationDateTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -279,6 +293,8 @@ public class InvestigationCase {
 	 * Case2.mmIdentification}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Case3#mmIdentification
 	 * Case3.mmIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Case4#mmIdentification
+	 * Case4.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -299,7 +315,7 @@ public class InvestigationCase {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Case.mmIdentification, Case2.mmIdentification, Case3.mmIdentification);
+			derivation_lazy = () -> Arrays.asList(Case.mmIdentification, Case2.mmIdentification, Case3.mmIdentification, Case4.mmIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -394,6 +410,24 @@ public class InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction79#mmCancellationStatusReasonInformation
 	 * PaymentTransaction79.mmCancellationStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction90#mmModificationStatusReasonInformation
+	 * PaymentTransaction90.mmModificationStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction85#mmCancellationStatusReasonInformation
+	 * PaymentTransaction85.mmCancellationStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction26#mmCancellationStatusReasonInformation
+	 * OriginalPaymentInstruction26.mmCancellationStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmCancellationStatusReasonInformation
+	 * PaymentTransaction84.mmCancellationStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9#mmCancellationStatusReasonInformation
+	 * OriginalGroupHeader9.mmCancellationStatusReasonInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction29#mmCase
+	 * OriginalPaymentInstruction29.mmCase}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -421,7 +455,9 @@ public class InvestigationCase {
 					OriginalPaymentInstruction13.mmCase, OriginalPaymentInstruction10.mmCancellationStatusReasonInformation, PaymentTransaction54.mmCancellationStatusReasonInformation,
 					PaymentTransaction53.mmCancellationStatusReasonInformation, OriginalPaymentInstruction15.mmCase, PaymentTransaction66.mmCancellationStatusReasonInformation, PaymentTransaction67.mmCancellationStatusReasonInformation,
 					OriginalPaymentInstruction17.mmCancellationStatusReasonInformation, OriginalPaymentInstruction22.mmCancellationStatusReasonInformation, PaymentTransaction78.mmCancellationStatusReasonInformation,
-					OriginalPaymentInstruction20.mmCase, PaymentTransaction79.mmCancellationStatusReasonInformation);
+					OriginalPaymentInstruction20.mmCase, PaymentTransaction79.mmCancellationStatusReasonInformation, PaymentTransaction90.mmModificationStatusReasonInformation, PaymentTransaction85.mmCancellationStatusReasonInformation,
+					OriginalPaymentInstruction26.mmCancellationStatusReasonInformation, PaymentTransaction84.mmCancellationStatusReasonInformation, OriginalGroupHeader9.mmCancellationStatusReasonInformation,
+					OriginalPaymentInstruction29.mmCase);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -557,6 +593,12 @@ public class InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CancellationStatusReason2#mmReason
 	 * CancellationStatusReason2.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CancellationStatusReason3#mmReason
+	 * CancellationStatusReason3.mmReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ModificationStatusReason1#mmReason
+	 * ModificationStatusReason1.mmReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -578,7 +620,7 @@ public class InvestigationCase {
 	 */
 	public static final MMBusinessAssociationEnd mmInvestigationResolution = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CancellationStatusReason2.mmReason);
+			derivation_lazy = () -> Arrays.asList(CancellationStatusReason2.mmReason, CancellationStatusReason3.mmReason, ModificationStatusReason1.mmReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -742,7 +784,7 @@ public class InvestigationCase {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestigationCase";
-				definition = "Set of activities performed to handle an exception to a normal transaction flow..";
+				definition = "Set of activities performed to handle an exception to a normal transaction flow.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationPartyRole.mmInvestigationCase, com.tools20022.repository.entity.InvestigationCase.mmOriginalInvestigationCase,
 						com.tools20022.repository.entity.InvestigationCase.mmLinkedCase, com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCase, com.tools20022.repository.entity.Reassignment.mmReassignedCase,
 						com.tools20022.repository.entity.InvestigationCaseStatus.mmInvestigationCase, com.tools20022.repository.entity.DuplicateCase.mmDuplicatedCase);
@@ -751,7 +793,8 @@ public class InvestigationCase {
 						com.tools20022.repository.entity.InvestigationCase.mmIdentification, com.tools20022.repository.entity.InvestigationCase.mmStatus, com.tools20022.repository.entity.InvestigationCase.mmInvestigationPartyRole,
 						com.tools20022.repository.entity.InvestigationCase.mmDuplicateCaseResolution, com.tools20022.repository.entity.InvestigationCase.mmInvestigationResolution,
 						com.tools20022.repository.entity.InvestigationCase.mmOriginalInvestigationCase, com.tools20022.repository.entity.InvestigationCase.mmLinkedCase, com.tools20022.repository.entity.InvestigationCase.mmReassignment);
-				derivationComponent_lazy = () -> Arrays.asList(CaseAssignment.mmObject(), CaseAssignment2.mmObject(), Case.mmObject(), Case2.mmObject(), CaseAssignment3.mmObject(), Case3.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(CaseAssignment.mmObject(), CaseAssignment2.mmObject(), Case.mmObject(), Case2.mmObject(), CaseAssignment3.mmObject(), Case3.mmObject(), ClaimNonReceipt1Choice.mmObject(),
+						ClaimNonReceipt1.mmObject(), Case4.mmObject(), CaseAssignment4.mmObject());
 			}
 
 			@Override

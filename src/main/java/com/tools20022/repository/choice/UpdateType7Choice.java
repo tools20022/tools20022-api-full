@@ -60,6 +60,13 @@ import javax.xml.bind.annotation.XmlType;
  * "UpdateType7Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between action to request on a security."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType24Choice
+ * UpdateType24Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -93,6 +100,14 @@ public class UpdateType7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Set of data requested to enrich a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType24Choice#mmAdd
+	 * UpdateType24Choice.mmAdd}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAdd = new MMMessageAssociationEnd() {
@@ -103,6 +118,7 @@ public class UpdateType7Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Add";
 			definition = "Set of data requested to enrich a security.";
+			nextVersions_lazy = () -> Arrays.asList(UpdateType24Choice.mmAdd);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -135,6 +151,14 @@ public class UpdateType7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Set of data requested for deletion from a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType24Choice#mmDelete
+	 * UpdateType24Choice.mmDelete}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDelete = new MMMessageAssociationEnd() {
@@ -145,6 +169,7 @@ public class UpdateType7Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Delete";
 			definition = "Set of data requested for deletion from a security.";
+			nextVersions_lazy = () -> Arrays.asList(UpdateType24Choice.mmDelete);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -177,6 +202,14 @@ public class UpdateType7Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Set of data requested to modify a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType24Choice#mmModify
+	 * UpdateType24Choice.mmModify}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmModify = new MMMessageAssociationEnd() {
@@ -187,6 +220,7 @@ public class UpdateType7Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modify";
 			definition = "Set of data requested to modify a security.";
+			nextVersions_lazy = () -> Arrays.asList(UpdateType24Choice.mmModify);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -202,6 +236,7 @@ public class UpdateType7Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdateType7Choice";
 				definition = "Choice between action to request on a security.";
+				nextVersions_lazy = () -> Arrays.asList(UpdateType24Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

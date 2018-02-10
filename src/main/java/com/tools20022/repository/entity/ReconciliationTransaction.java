@@ -104,6 +104,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest6#mmTransaction
  * AcceptorReconciliationRequest6.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest7#mmTransaction
+ * AcceptorReconciliationRequest7.mmTransaction}</li>
  * </ul>
  * </li>
  * <li>
@@ -136,6 +139,8 @@ import java.util.Objects;
  * TransactionReconciliation4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest6
  * AcceptorReconciliationRequest6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest7
+ * AcceptorReconciliationRequest7}</li>
  * </ul>
  * </li>
  * <li>
@@ -390,6 +395,21 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction78#mmReconciliationIdentification
 	 * CardPaymentTransaction78.mmReconciliationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonData7#mmReconciliationIdentification
+	 * CommonData7.mmReconciliationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmReconciliationIdentification
+	 * CardPaymentTransaction83.mmReconciliationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmReconciliationIdentification
+	 * CardPaymentTransaction81.mmReconciliationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction82#mmReconciliationIdentification
+	 * CardPaymentTransaction82.mmReconciliationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction80#mmReconciliationIdentification
+	 * CardPaymentTransaction80.mmReconciliationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -433,7 +453,8 @@ public class ReconciliationTransaction extends Reconciliation {
 					ATMTransaction19.mmReconciliationIdentification, ATMTransaction15.mmReconciliationIdentification, ATMTransaction24.mmReconciliationIdentification, ATMTransaction23.mmReconciliationIdentification,
 					CardPaymentTransaction71.mmReconciliationIdentification, CardPaymentTransaction75.mmReconciliationIdentification, CardPaymentTransaction74.mmReconciliationIdentification,
 					CardPaymentTransaction70.mmReconciliationIdentification, CardPaymentTransaction76.mmReconciliationIdentification, CommonData6.mmReconciliationIdentification, CardPaymentTransaction69.mmReconciliationIdentification,
-					CardPaymentTransaction77.mmReconciliationIdentification, CardPaymentTransaction78.mmReconciliationIdentification);
+					CardPaymentTransaction77.mmReconciliationIdentification, CardPaymentTransaction78.mmReconciliationIdentification, CommonData7.mmReconciliationIdentification, CardPaymentTransaction83.mmReconciliationIdentification,
+					CardPaymentTransaction81.mmReconciliationIdentification, CardPaymentTransaction82.mmReconciliationIdentification, CardPaymentTransaction80.mmReconciliationIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -798,6 +819,9 @@ public class ReconciliationTransaction extends Reconciliation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest6#mmEnvironment
 	 * AcceptorReconciliationRequest6.mmEnvironment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationRequest7#mmEnvironment
+	 * AcceptorReconciliationRequest7.mmEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -821,7 +845,7 @@ public class ReconciliationTransaction extends Reconciliation {
 	public static final MMBusinessAssociationEnd mmCardPaymentTotal = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationRequest1.mmEnvironment, AcceptorReconciliationRequest2.mmEnvironment, AcceptorReconciliationRequest3.mmEnvironment, AcceptorReconciliationRequest4.mmEnvironment,
-					AcceptorReconciliationRequest5.mmEnvironment, AcceptorReconciliationRequest6.mmEnvironment);
+					AcceptorReconciliationRequest5.mmEnvironment, AcceptorReconciliationRequest6.mmEnvironment, AcceptorReconciliationRequest7.mmEnvironment);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ReconciliationTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -843,7 +867,7 @@ public class ReconciliationTransaction extends Reconciliation {
 				definition = "Totals performed during the reconciliation period, for a certain type of transaction.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.mmReconciliation);
 				derivationElement_lazy = () -> Arrays.asList(AcceptorReconciliationRequest1.mmTransaction, AcceptorReconciliationRequest2.mmTransaction, AcceptorReconciliationRequest3.mmTransaction,
-						AcceptorReconciliationRequest4.mmTransaction, AcceptorReconciliationRequest5.mmTransaction, AcceptorReconciliationRequest6.mmTransaction);
+						AcceptorReconciliationRequest4.mmTransaction, AcceptorReconciliationRequest5.mmTransaction, AcceptorReconciliationRequest6.mmTransaction, AcceptorReconciliationRequest7.mmTransaction);
 				superType_lazy = () -> Reconciliation.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ReconciliationTransaction.mmReconciliationIdentification, com.tools20022.repository.entity.ReconciliationTransaction.mmCurrency,
 						com.tools20022.repository.entity.ReconciliationTransaction.mmTransactionType, com.tools20022.repository.entity.ReconciliationTransaction.mmTotalNumber,
@@ -851,7 +875,7 @@ public class ReconciliationTransaction extends Reconciliation {
 						com.tools20022.repository.entity.ReconciliationTransaction.mmCardPaymentTotal);
 				derivationComponent_lazy = () -> Arrays.asList(TransactionTotals1.mmObject(), TransactionReconciliation1.mmObject(), AcceptorReconciliationRequest1.mmObject(), TransactionReconciliation2.mmObject(),
 						AcceptorReconciliationRequest2.mmObject(), AcceptorReconciliationRequest3.mmObject(), AcceptorReconciliationRequest4.mmObject(), TransactionReconciliation3.mmObject(), CardTransaction10.mmObject(),
-						CardTransaction9.mmObject(), AcceptorReconciliationRequest5.mmObject(), TransactionReconciliation4.mmObject(), AcceptorReconciliationRequest6.mmObject());
+						CardTransaction9.mmObject(), AcceptorReconciliationRequest5.mmObject(), TransactionReconciliation4.mmObject(), AcceptorReconciliationRequest6.mmObject(), AcceptorReconciliationRequest7.mmObject());
 			}
 
 			@Override

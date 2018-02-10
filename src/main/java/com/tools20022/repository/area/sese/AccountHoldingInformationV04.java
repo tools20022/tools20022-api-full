@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
+import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.codeset.BusinessFlowDirectionType1Code;
 import com.tools20022.repository.msg.*;
@@ -116,8 +116,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AcctHldgInf"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
- * SecuritiesSettlementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.018.001.04}</li>
@@ -1148,7 +1148,7 @@ public class AccountHoldingInformationV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional information that can not be captured in the structured fields and/or any other specific block. "
+	 * "Additional information that can not be captured in the structured fields and/or any other specific block."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1170,7 +1170,7 @@ public class AccountHoldingInformationV04 {
 			xmlTag = "Xtnsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
-			definition = "Additional information that can not be captured in the structured fields and/or any other specific block. ";
+			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationV05.mmExtension);
 			previousVersion_lazy = () -> AccountHoldingInformationV03.mmExtension;
 			minOccurs = 0;
@@ -1201,7 +1201,7 @@ public class AccountHoldingInformationV04 {
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctHldgInf";
-				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmMessageReference, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPoolReference,
 						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPreviousReference, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmRelatedReference,
 						com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmBusinessFlowDirectionType, com.tools20022.repository.area.sese.AccountHoldingInformationV04.mmPrimaryIndividualInvestor,

@@ -96,6 +96,92 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * AlgorithmCode.SHA1WithRSA}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#RSASSAPSS
  * AlgorithmCode.RSASSAPSS}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#EllipticCryptographicCurveFirstAlgorithm
+ * AlgorithmCode.EllipticCryptographicCurveFirstAlgorithm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#EllipticCryptographicCurveSecondAlgorithm
+ * AlgorithmCode.EllipticCryptographicCurveSecondAlgorithm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#EllipticCryptographicCurveThirdAlgorithm
+ * AlgorithmCode.EllipticCryptographicCurveThirdAlgorithm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#EllipticCryptographicCurveFourthAlgorithm
+ * AlgorithmCode.EllipticCryptographicCurveFourthAlgorithm}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#EllipticCryptographicCurveFifthAlgortihm
+ * AlgorithmCode.EllipticCryptographicCurveFifthAlgortihm}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA3224
+ * AlgorithmCode.SHA3224}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA3256
+ * AlgorithmCode.SHA3256}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA3384
+ * AlgorithmCode.SHA3384}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA3512
+ * AlgorithmCode.SHA3512}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHAKE128
+ * AlgorithmCode.SHAKE128}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHAKE256
+ * AlgorithmCode.SHAKE256}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA256CMACWithAES256
+ * AlgorithmCode.SHA256CMACWithAES256}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA3256CMACWithAES128
+ * AlgorithmCode.SHA3256CMACWithAES128}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA3384CMACWithAES192
+ * AlgorithmCode.SHA3384CMACWithAES192}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA3512CMACWithAES256
+ * AlgorithmCode.SHA3512CMACWithAES256}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA3256WithRSA
+ * AlgorithmCode.SHA3256WithRSA}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SHA32563DESMAC
+ * AlgorithmCode.SHA32563DESMAC}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#AESDUKPT128ECB
+ * AlgorithmCode.AESDUKPT128ECB}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#AESDUKPT256ECB
+ * AlgorithmCode.AESDUKPT256ECB}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#AESDUKPT192ECB
+ * AlgorithmCode.AESDUKPT192ECB}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#Nist800108KeyDerivation
+ * AlgorithmCode.Nist800108KeyDerivation}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#AES128CTR
+ * AlgorithmCode.AES128CTR}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#AES192CTR
+ * AlgorithmCode.AES192CTR}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#AES256CTR
+ * AlgorithmCode.AES256CTR}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SignatureWithEllipticCurveP256
+ * AlgorithmCode.SignatureWithEllipticCurveP256}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SignatureWithEllipticCurveP384
+ * AlgorithmCode.SignatureWithEllipticCurveP384}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AlgorithmCode#SignatureWithEllipticCurveP512
+ * AlgorithmCode.SignatureWithEllipticCurveP512}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#DES112CTR
+ * AlgorithmCode.DES112CTR}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#DES168CBC
+ * AlgorithmCode.DES168CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#DES168CTR
+ * AlgorithmCode.DES168CTR}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#SDE056CBC
+ * AlgorithmCode.SDE056CBC}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#CMACAES128
+ * AlgorithmCode.CMACAES128}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#CMACAES192
+ * AlgorithmCode.CMACAES192}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AlgorithmCode#CMACAES256
+ * AlgorithmCode.CMACAES256}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -131,6 +217,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * Algorithm15Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.Algorithm13Code
  * Algorithm13Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm16Code
+ * Algorithm16Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm17Code
+ * Algorithm17Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm18Code
+ * Algorithm18Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm19Code
+ * Algorithm19Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -219,7 +313,7 @@ public class AlgorithmCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Retail-CBC-MAC with SHA-256 (Secure HAsh standard)  - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-256)."
+	 * "Retail-CBC-MAC with SHA-256 (Secure HAsh standard) - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-256)."
 	 * </li>
 	 * </ul>
 	 */
@@ -228,7 +322,7 @@ public class AlgorithmCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-retail-cbc-mac-sha-256"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RetailSHA256MAC";
-			definition = "Retail-CBC-MAC with SHA-256 (Secure HAsh standard)  - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-256).";
+			definition = "Retail-CBC-MAC with SHA-256 (Secure HAsh standard) - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-256).";
 			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
 			codeName = "MCCS";
 		}
@@ -294,7 +388,7 @@ public class AlgorithmCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "DUKPT (Derived Unique Key Per Transaction) algorithm, as specified in ANSI X9.24-2004, Annex A, and ISO/DIS 13492-2006.  - (ASN.1 Object Identifier: id-dukpt-wrap)."
+	 * "DUKPT (Derived Unique Key Per Transaction) algorithm, as specified in ANSI X9.24-2004, Annex A, and ISO/DIS 13492-2006. - (ASN.1 Object Identifier: id-dukpt-wrap)."
 	 * </li>
 	 * </ul>
 	 */
@@ -303,7 +397,7 @@ public class AlgorithmCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-dukpt-wrap"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DUKPT";
-			definition = "DUKPT (Derived Unique Key Per Transaction) algorithm, as specified in ANSI X9.24-2004, Annex A, and ISO/DIS 13492-2006.  - (ASN.1 Object Identifier: id-dukpt-wrap).";
+			definition = "DUKPT (Derived Unique Key Per Transaction) algorithm, as specified in ANSI X9.24-2004, Annex A, and ISO/DIS 13492-2006. - (ASN.1 Object Identifier: id-dukpt-wrap).";
 			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
 			codeName = "DKPT";
 		}
@@ -765,8 +859,8 @@ public class AlgorithmCode extends MMCode {
 		}
 	};
 	/**
-	 * Message digest algorithm SHA-1 as defined in FIPS 180-1 - (ASN.1 Object
-	 * Identifier: id-sha1).
+	 * The DEPRECATED Message digest algorithm SHA-1 as defined in FIPS 180-1 -
+	 * (ASN.1 Object Identifier: id-sha1).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -784,7 +878,7 @@ public class AlgorithmCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Message digest algorithm SHA-1 as defined in FIPS 180-1 - (ASN.1 Object Identifier: id-sha1)."
+	 * "The DEPRECATED Message digest algorithm SHA-1 as defined in FIPS 180-1 - (ASN.1 Object Identifier: id-sha1)."
 	 * </li>
 	 * </ul>
 	 */
@@ -792,14 +886,14 @@ public class AlgorithmCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA1";
-			definition = "Message digest algorithm SHA-1 as defined in FIPS 180-1 - (ASN.1 Object Identifier: id-sha1).";
+			definition = "The DEPRECATED Message digest algorithm SHA-1 as defined in FIPS 180-1 - (ASN.1 Object Identifier: id-sha1).";
 			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
 			codeName = "HS01";
 		}
 	};
 	/**
-	 * Retail-CBC-MAC with SHA-1 (Secure Hash standard) - (ASN.1 Object
-	 * Identifier: id-retail-cbc-mac-sha-1).
+	 * The DEPRECATED Retail-CBC-MAC with SHA-1 (Secure Hash standard) - (ASN.1
+	 * Object Identifier: id-retail-cbc-mac-sha-1).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -817,7 +911,7 @@ public class AlgorithmCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Retail-CBC-MAC with SHA-1 (Secure Hash standard) - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-1)."
+	 * "The DEPRECATED Retail-CBC-MAC with SHA-1 (Secure Hash standard) - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-1)."
 	 * </li>
 	 * </ul>
 	 */
@@ -825,7 +919,7 @@ public class AlgorithmCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetailSHA1MAC";
-			definition = "Retail-CBC-MAC with SHA-1 (Secure Hash standard) - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-1).";
+			definition = "The DEPRECATED Retail-CBC-MAC with SHA-1 (Secure Hash standard) - (ASN.1 Object Identifier: id-retail-cbc-mac-sha-1).";
 			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
 			codeName = "MCC1";
 		}
@@ -975,8 +1069,9 @@ public class AlgorithmCode extends MMCode {
 		}
 	};
 	/**
-	 * Signature algorithms with RSA (PKCS #1 version 2.1), using SHA-1 digest
-	 * algorithm - (ASN.1 Object Identifier: sha1WithRSAEncryption).
+	 * The DEPRECATED Signature algorithms with RSA (PKCS #1 version 2.1), using
+	 * SHA-1 digest algorithm - (ASN.1 Object Identifier:
+	 * sha1WithRSAEncryption).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -994,7 +1089,7 @@ public class AlgorithmCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Signature algorithms with RSA (PKCS #1 version 2.1), using SHA-1 digest algorithm - (ASN.1 Object Identifier: sha1WithRSAEncryption)."
+	 * "The DEPRECATED Signature algorithms with RSA (PKCS #1 version 2.1), using SHA-1 digest algorithm - (ASN.1 Object Identifier: sha1WithRSAEncryption)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1002,7 +1097,7 @@ public class AlgorithmCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA1WithRSA";
-			definition = "Signature algorithms with RSA (PKCS #1 version 2.1), using SHA-1 digest algorithm - (ASN.1 Object Identifier: sha1WithRSAEncryption).";
+			definition = "The DEPRECATED Signature algorithms with RSA (PKCS #1 version 2.1), using SHA-1 digest algorithm - (ASN.1 Object Identifier: sha1WithRSAEncryption).";
 			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
 			codeName = "ERS1";
 		}
@@ -1040,6 +1135,1158 @@ public class AlgorithmCode extends MMCode {
 			codeName = "RPSS";
 		}
 	};
+	/**
+	 * First Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ECC1"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EllipticCryptographicCurveFirstAlgorithm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "First Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode EllipticCryptographicCurveFirstAlgorithm = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EllipticCryptographicCurveFirstAlgorithm";
+			definition = "First Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ECC1";
+		}
+	};
+	/**
+	 * Second Elliptic Cryptographic Curve Algorithm identified by EMVCo
+	 * Nextgen.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ECC2"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EllipticCryptographicCurveSecondAlgorithm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Second Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode EllipticCryptographicCurveSecondAlgorithm = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EllipticCryptographicCurveSecondAlgorithm";
+			definition = "Second Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ECC2";
+		}
+	};
+	/**
+	 * Third Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ECC3"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EllipticCryptographicCurveThirdAlgorithm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Third Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode EllipticCryptographicCurveThirdAlgorithm = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EllipticCryptographicCurveThirdAlgorithm";
+			definition = "Third Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ECC3";
+		}
+	};
+	/**
+	 * Fourth Elliptic Cryptographic Curve Algorithm identified by EMVCo
+	 * Nextgen.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ECC4"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EllipticCryptographicCurveFourthAlgorithm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Fourth Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode EllipticCryptographicCurveFourthAlgorithm = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EllipticCryptographicCurveFourthAlgorithm";
+			definition = "Fourth Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ECC4";
+		}
+	};
+	/**
+	 * Fifth Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ECC5"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EllipticCryptographicCurveFifthAlgortihm"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Fifth Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode EllipticCryptographicCurveFifthAlgortihm = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EllipticCryptographicCurveFifthAlgortihm";
+			definition = "Fifth Elliptic Cryptographic Curve Algorithm identified by EMVCo Nextgen.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ECC5";
+		}
+	};
+	/**
+	 * Message digest algorithm SHA3-224 as defined in FIPS 202 - (ASN.1 Object
+	 * Identifier: id-sha3-224).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SH31"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-224"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Message digest algorithm SHA3-224 as defined in FIPS 202 - (ASN.1 Object Identifier: id-sha3-224)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA3224 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-224";
+			definition = "Message digest algorithm SHA3-224 as defined in FIPS 202 - (ASN.1 Object Identifier: id-sha3-224).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "SH31";
+		}
+	};
+	/**
+	 * Message digest algorithm SHA3-256 as defined in FIPS 202 - (ASN.1 Object
+	 * Identifier: id-sha3-256).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SH32"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-256"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Message digest algorithm SHA3-256 as defined in FIPS 202 - (ASN.1 Object Identifier: id-sha3-256)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA3256 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-256";
+			definition = "Message digest algorithm SHA3-256 as defined in FIPS 202 - (ASN.1 Object Identifier: id-sha3-256).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "SH32";
+		}
+	};
+	/**
+	 * Message digest algorithm SHA3-384 as defined in FIPS 202 - (ASN.1 Object
+	 * Identifier: id-sha3-384).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SH33"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-384"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Message digest algorithm SHA3-384 as defined in FIPS 202 - (ASN.1 Object Identifier: id-sha3-384)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA3384 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-384";
+			definition = "Message digest algorithm SHA3-384 as defined in FIPS 202 - (ASN.1 Object Identifier: id-sha3-384).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "SH33";
+		}
+	};
+	/**
+	 * Message digest algorithm SHA3-512 as defined in FIPS 202 - (ASN.1 Object
+	 * Identifier: id-sha3-512).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SH35"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-512"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Message digest algorithm SHA3-512 as defined in FIPS 202 - (ASN.1 Object Identifier: id-sha3-512)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA3512 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-512";
+			definition = "Message digest algorithm SHA3-512 as defined in FIPS 202 - (ASN.1 Object Identifier: id-sha3-512).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "SH35";
+		}
+	};
+	/**
+	 * Message digest algorithm SHAKE-128 as defined in FIPS 202 - (ASN.1 Object
+	 * Identifier: id-shake128).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SHK1"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHAKE128"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Message digest algorithm SHAKE-128 as defined in FIPS 202 - (ASN.1 Object Identifier: id-shake128)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHAKE128 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHAKE128";
+			definition = "Message digest algorithm SHAKE-128 as defined in FIPS 202 - (ASN.1 Object Identifier: id-shake128).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "SHK1";
+		}
+	};
+	/**
+	 * Message digest algorithm SHAKE-256 as defined in FIPS 202 - (ASN.1 Object
+	 * Identifier: id-shake256).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SHK2"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHAKE256"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Message digest algorithm SHAKE-256 as defined in FIPS 202 - (ASN.1 Object Identifier: id-shake256)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHAKE256 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHAKE256";
+			definition = "Message digest algorithm SHAKE-256 as defined in FIPS 202 - (ASN.1 Object Identifier: id-shake256).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "SHK2";
+		}
+	};
+	/**
+	 * CMAC (Cipher based Message Authentication Code) defined by the National
+	 * Institute of Standards and Technology (NIST 800-38B - May 2005), using
+	 * the block cipher Advanced Encryption Standard with a 256 bits
+	 * cryptographic key, approved by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * The CMAC algorithm is computed on the SHA-256 digest of the message.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CMA2"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA256CMACWithAES256"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 256 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard). The CMAC algorithm is computed on the SHA-256 digest of the message."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA256CMACWithAES256 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA256CMACWithAES256";
+			definition = "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 256 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard). The CMAC algorithm is computed on the SHA-256 digest of the message.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "CMA2";
+		}
+	};
+	/**
+	 * CMAC (Cipher based Message Authentication Code) defined by the National
+	 * Institute of Standards and Technology (NIST 800-38B - May 2005), using
+	 * the block cipher Advanced Encryption Standard with a 128 bits
+	 * cryptographic key, approved by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * The CMAC algorithm is computed on the SHA3-256 digest of the message.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CM31"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-256CMACWithAES128"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 128 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard). The CMAC algorithm is computed on the SHA3-256 digest of the message."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA3256CMACWithAES128 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-256CMACWithAES128";
+			definition = "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 128 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard). The CMAC algorithm is computed on the SHA3-256 digest of the message.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "CM31";
+		}
+	};
+	/**
+	 * CMAC (Cipher based Message Authentication Code) defined by the National
+	 * Institute of Standards and Technology (NIST 800-38B - May 2005), using
+	 * the block cipher Advanced Encryption Standard with a 192 bits
+	 * cryptographic key, approved by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * The CMAC algorithm is computed on the SHA3-384 digest of the message.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CM32"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-384CMACWithAES192"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 192 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard). The CMAC algorithm is computed on the SHA3-384 digest of the message."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA3384CMACWithAES192 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-384CMACWithAES192";
+			definition = "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 192 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard). The CMAC algorithm is computed on the SHA3-384 digest of the message.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "CM32";
+		}
+	};
+	/**
+	 * CMAC (Cipher based Message Authentication Code) defined by the National
+	 * Institute of Standards and Technology (NIST 800-38B - May 2005), using
+	 * the block cipher Advanced Encryption Standard with a 256 bits
+	 * cryptographic key, approved by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * The CMAC algorithm is computed on the SHA3-512 digest of the message.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CM33"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-512CMACWithAES256"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 256 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard). The CMAC algorithm is computed on the SHA3-512 digest of the message."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA3512CMACWithAES256 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-512CMACWithAES256";
+			definition = "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 256 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard). The CMAC algorithm is computed on the SHA3-512 digest of the message.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "CM33";
+		}
+	};
+	/**
+	 * Signature algorithms with RSA, using SHA3-256 digest algorithm. (ASN.1
+	 * Object Identifier: id-rsassa-pkcs1-v1-5-with-sha3-256).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ERS3"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-256WithRSA"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Signature algorithms with RSA, using SHA3-256 digest algorithm. (ASN.1 Object Identifier: id-rsassa-pkcs1-v1-5-with-sha3-256)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA3256WithRSA = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-256WithRSA";
+			definition = "Signature algorithms with RSA, using SHA3-256 digest algorithm. (ASN.1 Object Identifier: id-rsassa-pkcs1-v1-5-with-sha3-256).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ERS3";
+		}
+	};
+	/**
+	 * 3DES CBC-MAC with SHA3-256 (SecureHAsh standard) and ISO/IEC9797-1 method
+	 * 2 padding.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "MCS3"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SHA3-256-3DESMAC"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "3DES CBC-MAC with SHA3-256 (SecureHAsh standard) and ISO/IEC9797-1 method 2 padding."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SHA32563DESMAC = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SHA3-256-3DESMAC";
+			definition = "3DES CBC-MAC with SHA3-256 (SecureHAsh standard) and ISO/IEC9797-1 method 2 padding.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "MCS3";
+		}
+	};
+	/**
+	 * AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as
+	 * specified in ANSI X9.24-3-2017 Annex A, With key length of 128 bits.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "DA12"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AESDUKPT128ECB"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as specified in ANSI X9.24-3-2017 Annex A, With key length of 128 bits."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode AESDUKPT128ECB = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AESDUKPT128ECB";
+			definition = "AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as specified in ANSI X9.24-3-2017 Annex A, With key length of 128 bits.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "DA12";
+		}
+	};
+	/**
+	 * AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as
+	 * specified in ANSI X9.24-3-2017 Annex A.With key length of 256 bits.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "DA25"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AESDUKPT256ECB"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as specified in ANSI X9.24-3-2017 Annex A.With key length of 256 bits."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode AESDUKPT256ECB = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AESDUKPT256ECB";
+			definition = "AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as specified in ANSI X9.24-3-2017 Annex A.With key length of 256 bits.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "DA25";
+		}
+	};
+	/**
+	 * AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as
+	 * specified in ANSI X9.24-3-2017 Annex A.With key length of 192 bits.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "DA19"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AESDUKPT192ECB"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as specified in ANSI X9.24-3-2017 Annex A.With key length of 192 bits."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode AESDUKPT192ECB = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AESDUKPT192ECB";
+			definition = "AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as specified in ANSI X9.24-3-2017 Annex A.With key length of 192 bits.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "DA19";
+		}
+	};
+	/**
+	 * Key Derivation according to the Special Publication from the NIST
+	 * entitled 800-108.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "N108"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Nist800-108KeyDerivation"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Key Derivation according to the Special Publication from the NIST entitled 800-108."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode Nist800108KeyDerivation = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Nist800-108KeyDerivation";
+			definition = "Key Derivation according to the Special Publication from the NIST entitled 800-108.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "N108";
+		}
+	};
+	/**
+	 * AES (Advanced Encryption Standard) CTR (Counter) encryption with a 128
+	 * bits cryptographic key as defined by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "EA2R"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AES128CTR"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "AES (Advanced Encryption Standard) CTR (Counter) encryption with a 128 bits cryptographic key as defined by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode AES128CTR = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AES128CTR";
+			definition = "AES (Advanced Encryption Standard) CTR (Counter) encryption with a 128 bits cryptographic key as defined by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "EA2R";
+		}
+	};
+	/**
+	 * AES (Advanced Encryption Standard) CTR (Counter) encryption with a 192
+	 * bits cryptographic key as defined by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "EA9R"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AES192CTR"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "AES (Advanced Encryption Standard) CTR (Counter) encryption with a 192 bits cryptographic key as defined by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode AES192CTR = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AES192CTR";
+			definition = "AES (Advanced Encryption Standard) CTR (Counter) encryption with a 192 bits cryptographic key as defined by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "EA9R";
+		}
+	};
+	/**
+	 * AES (Advanced Encryption Standard) CTR (Counter) encryption with a 256
+	 * bits cryptographic key as defined by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "EA5R"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AES256CTR"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "AES (Advanced Encryption Standard) CTR (Counter) encryption with a 256 bits cryptographic key as defined by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode AES256CTR = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AES256CTR";
+			definition = "AES (Advanced Encryption Standard) CTR (Counter) encryption with a 256 bits cryptographic key as defined by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "EA5R";
+		}
+	};
+	/**
+	 * Elliptic Curve Signature with the Curve P-256 as defined by the Federal
+	 * Information Processing Standards (FIPS 186-4 - July, 2013 - Digital
+	 * Signature Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ECP2"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SignatureWithEllipticCurveP-256"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Elliptic Curve Signature with the Curve P-256 as defined by the Federal Information Processing Standards (FIPS 186-4 - July, 2013 - Digital Signature Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SignatureWithEllipticCurveP256 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SignatureWithEllipticCurveP-256";
+			definition = "Elliptic Curve Signature with the Curve P-256 as defined by the Federal Information Processing Standards (FIPS 186-4 - July, 2013 - Digital Signature Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ECP2";
+		}
+	};
+	/**
+	 * Elliptic Curve Signature with the Curve P-384 as defined by the Federal
+	 * Information Processing Standards (FIPS 186-4 - July, 2013 - Digital
+	 * Signature Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ECP3"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SignatureWithEllipticCurveP-384"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Elliptic Curve Signature with the Curve P-384 as defined by the Federal Information Processing Standards (FIPS 186-4 - July, 2013 - Digital Signature Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SignatureWithEllipticCurveP384 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SignatureWithEllipticCurveP-384";
+			definition = "Elliptic Curve Signature with the Curve P-384 as defined by the Federal Information Processing Standards (FIPS 186-4 - July, 2013 - Digital Signature Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ECP3";
+		}
+	};
+	/**
+	 * Elliptic Curve Signature with the Curve P-512 as defined by the Federal
+	 * Information Processing Standards (FIPS 186-4 - July, 2013 - Digital
+	 * Signature Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "ECP5"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SignatureWithEllipticCurveP-512"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Elliptic Curve Signature with the Curve P-512 as defined by the Federal Information Processing Standards (FIPS 186-4 - July, 2013 - Digital Signature Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SignatureWithEllipticCurveP512 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SignatureWithEllipticCurveP-512";
+			definition = "Elliptic Curve Signature with the Curve P-512 as defined by the Federal Information Processing Standards (FIPS 186-4 - July, 2013 - Digital Signature Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "ECP5";
+		}
+	};
+	/**
+	 * Triple DES (Data Encryption Standard) CTR (Counter) encryption with
+	 * double length key (112 Bit) as defined in FIPS SP 800-38a.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "E3DR"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DES112CTR"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Triple DES (Data Encryption Standard) CTR (Counter) encryption with double length key (112 Bit) as defined in FIPS SP 800-38a."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode DES112CTR = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DES112CTR";
+			definition = "Triple DES (Data Encryption Standard) CTR (Counter) encryption with double length key (112 Bit) as defined in FIPS SP 800-38a.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "E3DR";
+		}
+	};
+	/**
+	 * Triple DES (Data Encryption Standard) CBC (Chaining Block Cypher)
+	 * encryption with triple length key (168 Bit) as defined in FIPS PUB 46-3 -
+	 * (ASN.1 Object Identifier: des-ede3-cbc).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "E36C"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DES168CBC"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Triple DES (Data Encryption Standard) CBC (Chaining Block Cypher) encryption with triple length key (168 Bit) as defined in FIPS PUB 46-3 - (ASN.1 Object Identifier: des-ede3-cbc)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode DES168CBC = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DES168CBC";
+			definition = "Triple DES (Data Encryption Standard) CBC (Chaining Block Cypher) encryption with triple length key (168 Bit) as defined in FIPS PUB 46-3 - (ASN.1 Object Identifier: des-ede3-cbc).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "E36C";
+		}
+	};
+	/**
+	 * Triple DES (Data Encryption Standard) CTR (Counter) encryption with
+	 * triple length key (168 Bit) as defined in FIPS SP 800-38a.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "E36R"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DES168CTR"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Triple DES (Data Encryption Standard) CTR (Counter) encryption with triple length key (168 Bit) as defined in FIPS SP 800-38a."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode DES168CTR = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DES168CTR";
+			definition = "Triple DES (Data Encryption Standard) CTR (Counter) encryption with triple length key (168 Bit) as defined in FIPS SP 800-38a.";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "E36R";
+		}
+	};
+	/**
+	 * The DEPRECATED Simple DES (Data Encryption Standard) CBC (Chaining Block
+	 * Cypher) encryption with simple length key (56 Bit) as defined in FIPS PUB
+	 * 81 - (ASN.1 Object Identifier: des-cbc).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SD5C"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SDE056CBC"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The DEPRECATED Simple DES (Data Encryption Standard) CBC (Chaining Block Cypher) encryption with simple length key (56 Bit) as defined in FIPS PUB 81 - (ASN.1 Object Identifier: des-cbc)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode SDE056CBC = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SDE056CBC";
+			definition = "The DEPRECATED Simple DES (Data Encryption Standard) CBC (Chaining Block Cypher) encryption with simple length key (56 Bit) as defined in FIPS PUB 81 - (ASN.1 Object Identifier: des-cbc).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "SD5C";
+		}
+	};
+	/**
+	 * CMAC (Cipher based Message Authentication Code) defined by the National
+	 * Institute of Standards and Technology (NIST 800-38B - May 2005), using
+	 * the block cipher Advanced Encryption Standard with a 128 bits
+	 * cryptographic key, approved by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CCA1"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CMACAES128"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 128 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode CMACAES128 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CMACAES128";
+			definition = "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 128 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "CCA1";
+		}
+	};
+	/**
+	 * CMAC (Cipher based Message Authentication Code) defined by the National
+	 * Institute of Standards and Technology (NIST 800-38B - May 2005), using
+	 * the block cipher Advanced Encryption Standard with a 192 bits
+	 * cryptographic key, approved by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CCA2"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CMACAES192"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 192 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode CMACAES192 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CMACAES192";
+			definition = "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 192 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "CCA2";
+		}
+	};
+	/**
+	 * CMAC (Cipher based Message Authentication Code) defined by the National
+	 * Institute of Standards and Technology (NIST 800-38B - May 2005), using
+	 * the block cipher Advanced Encryption Standard with a 256 bits
+	 * cryptographic key, approved by the Federal Information Processing
+	 * Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.AlgorithmCode
+	 * AlgorithmCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CCA3"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CMACAES256"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 256 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final AlgorithmCode CMACAES256 = new AlgorithmCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CMACAES256";
+			definition = "CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 256 bits cryptographic key, approved by the Federal Information Processing Standards (FIPS 197 - November 6, 2001 - Advanced Encryption Standard).";
+			owner_lazy = () -> com.tools20022.repository.codeset.AlgorithmCode.mmObject();
+			codeName = "CCA3";
+		}
+	};
 	final static private LinkedHashMap<String, AlgorithmCode> codesByName = new LinkedHashMap<>();
 
 	protected AlgorithmCode() {
@@ -1055,7 +2302,7 @@ public class AlgorithmCode extends MMCode {
 				definition = "Identification of the MAC algorithm.";
 				derivation_lazy = () -> Arrays.asList(Algorithm1Code.mmObject(), Algorithm7Code.mmObject(), Algorithm5Code.mmObject(), Algorithm8Code.mmObject(), Algorithm2Code.mmObject(), Algorithm3Code.mmObject(),
 						Algorithm4Code.mmObject(), Algorithm6Code.mmObject(), Algorithm9Code.mmObject(), Algorithm10Code.mmObject(), Algorithm11Code.mmObject(), Algorithm14Code.mmObject(), Algorithm12Code.mmObject(),
-						Algorithm15Code.mmObject(), Algorithm13Code.mmObject());
+						Algorithm15Code.mmObject(), Algorithm13Code.mmObject(), Algorithm16Code.mmObject(), Algorithm17Code.mmObject(), Algorithm18Code.mmObject(), Algorithm19Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AlgorithmCode.RetailCBCMAC, com.tools20022.repository.codeset.AlgorithmCode.RetailSHA256MAC, com.tools20022.repository.codeset.AlgorithmCode.UKPT,
 						com.tools20022.repository.codeset.AlgorithmCode.DUKPT, com.tools20022.repository.codeset.AlgorithmCode.DES112CBC, com.tools20022.repository.codeset.AlgorithmCode.SHA256,
 						com.tools20022.repository.codeset.AlgorithmCode.SHA256WithRSA, com.tools20022.repository.codeset.AlgorithmCode.RSAEncryption, com.tools20022.repository.codeset.AlgorithmCode.AES128CBC,
@@ -1064,7 +2311,20 @@ public class AlgorithmCode extends MMCode {
 						com.tools20022.repository.codeset.AlgorithmCode.RSAESOAEP, com.tools20022.repository.codeset.AlgorithmCode.MGF1, com.tools20022.repository.codeset.AlgorithmCode.SHA1,
 						com.tools20022.repository.codeset.AlgorithmCode.RetailSHA1MAC, com.tools20022.repository.codeset.AlgorithmCode.SHA384CMACwithAES192, com.tools20022.repository.codeset.AlgorithmCode.SHA512CMACwithAES256,
 						com.tools20022.repository.codeset.AlgorithmCode.AES256CBC, com.tools20022.repository.codeset.AlgorithmCode.AES192CBC, com.tools20022.repository.codeset.AlgorithmCode.SHA1WithRSA,
-						com.tools20022.repository.codeset.AlgorithmCode.RSASSAPSS);
+						com.tools20022.repository.codeset.AlgorithmCode.RSASSAPSS, com.tools20022.repository.codeset.AlgorithmCode.EllipticCryptographicCurveFirstAlgorithm,
+						com.tools20022.repository.codeset.AlgorithmCode.EllipticCryptographicCurveSecondAlgorithm, com.tools20022.repository.codeset.AlgorithmCode.EllipticCryptographicCurveThirdAlgorithm,
+						com.tools20022.repository.codeset.AlgorithmCode.EllipticCryptographicCurveFourthAlgorithm, com.tools20022.repository.codeset.AlgorithmCode.EllipticCryptographicCurveFifthAlgortihm,
+						com.tools20022.repository.codeset.AlgorithmCode.SHA3224, com.tools20022.repository.codeset.AlgorithmCode.SHA3256, com.tools20022.repository.codeset.AlgorithmCode.SHA3384,
+						com.tools20022.repository.codeset.AlgorithmCode.SHA3512, com.tools20022.repository.codeset.AlgorithmCode.SHAKE128, com.tools20022.repository.codeset.AlgorithmCode.SHAKE256,
+						com.tools20022.repository.codeset.AlgorithmCode.SHA256CMACWithAES256, com.tools20022.repository.codeset.AlgorithmCode.SHA3256CMACWithAES128, com.tools20022.repository.codeset.AlgorithmCode.SHA3384CMACWithAES192,
+						com.tools20022.repository.codeset.AlgorithmCode.SHA3512CMACWithAES256, com.tools20022.repository.codeset.AlgorithmCode.SHA3256WithRSA, com.tools20022.repository.codeset.AlgorithmCode.SHA32563DESMAC,
+						com.tools20022.repository.codeset.AlgorithmCode.AESDUKPT128ECB, com.tools20022.repository.codeset.AlgorithmCode.AESDUKPT256ECB, com.tools20022.repository.codeset.AlgorithmCode.AESDUKPT192ECB,
+						com.tools20022.repository.codeset.AlgorithmCode.Nist800108KeyDerivation, com.tools20022.repository.codeset.AlgorithmCode.AES128CTR, com.tools20022.repository.codeset.AlgorithmCode.AES192CTR,
+						com.tools20022.repository.codeset.AlgorithmCode.AES256CTR, com.tools20022.repository.codeset.AlgorithmCode.SignatureWithEllipticCurveP256,
+						com.tools20022.repository.codeset.AlgorithmCode.SignatureWithEllipticCurveP384, com.tools20022.repository.codeset.AlgorithmCode.SignatureWithEllipticCurveP512,
+						com.tools20022.repository.codeset.AlgorithmCode.DES112CTR, com.tools20022.repository.codeset.AlgorithmCode.DES168CBC, com.tools20022.repository.codeset.AlgorithmCode.DES168CTR,
+						com.tools20022.repository.codeset.AlgorithmCode.SDE056CBC, com.tools20022.repository.codeset.AlgorithmCode.CMACAES128, com.tools20022.repository.codeset.AlgorithmCode.CMACAES192,
+						com.tools20022.repository.codeset.AlgorithmCode.CMACAES256);
 			}
 		});
 		return mmObject_lazy.get();
@@ -1096,6 +2356,40 @@ public class AlgorithmCode extends MMCode {
 		codesByName.put(AES192CBC.getCodeName().get(), AES192CBC);
 		codesByName.put(SHA1WithRSA.getCodeName().get(), SHA1WithRSA);
 		codesByName.put(RSASSAPSS.getCodeName().get(), RSASSAPSS);
+		codesByName.put(EllipticCryptographicCurveFirstAlgorithm.getCodeName().get(), EllipticCryptographicCurveFirstAlgorithm);
+		codesByName.put(EllipticCryptographicCurveSecondAlgorithm.getCodeName().get(), EllipticCryptographicCurveSecondAlgorithm);
+		codesByName.put(EllipticCryptographicCurveThirdAlgorithm.getCodeName().get(), EllipticCryptographicCurveThirdAlgorithm);
+		codesByName.put(EllipticCryptographicCurveFourthAlgorithm.getCodeName().get(), EllipticCryptographicCurveFourthAlgorithm);
+		codesByName.put(EllipticCryptographicCurveFifthAlgortihm.getCodeName().get(), EllipticCryptographicCurveFifthAlgortihm);
+		codesByName.put(SHA3224.getCodeName().get(), SHA3224);
+		codesByName.put(SHA3256.getCodeName().get(), SHA3256);
+		codesByName.put(SHA3384.getCodeName().get(), SHA3384);
+		codesByName.put(SHA3512.getCodeName().get(), SHA3512);
+		codesByName.put(SHAKE128.getCodeName().get(), SHAKE128);
+		codesByName.put(SHAKE256.getCodeName().get(), SHAKE256);
+		codesByName.put(SHA256CMACWithAES256.getCodeName().get(), SHA256CMACWithAES256);
+		codesByName.put(SHA3256CMACWithAES128.getCodeName().get(), SHA3256CMACWithAES128);
+		codesByName.put(SHA3384CMACWithAES192.getCodeName().get(), SHA3384CMACWithAES192);
+		codesByName.put(SHA3512CMACWithAES256.getCodeName().get(), SHA3512CMACWithAES256);
+		codesByName.put(SHA3256WithRSA.getCodeName().get(), SHA3256WithRSA);
+		codesByName.put(SHA32563DESMAC.getCodeName().get(), SHA32563DESMAC);
+		codesByName.put(AESDUKPT128ECB.getCodeName().get(), AESDUKPT128ECB);
+		codesByName.put(AESDUKPT256ECB.getCodeName().get(), AESDUKPT256ECB);
+		codesByName.put(AESDUKPT192ECB.getCodeName().get(), AESDUKPT192ECB);
+		codesByName.put(Nist800108KeyDerivation.getCodeName().get(), Nist800108KeyDerivation);
+		codesByName.put(AES128CTR.getCodeName().get(), AES128CTR);
+		codesByName.put(AES192CTR.getCodeName().get(), AES192CTR);
+		codesByName.put(AES256CTR.getCodeName().get(), AES256CTR);
+		codesByName.put(SignatureWithEllipticCurveP256.getCodeName().get(), SignatureWithEllipticCurveP256);
+		codesByName.put(SignatureWithEllipticCurveP384.getCodeName().get(), SignatureWithEllipticCurveP384);
+		codesByName.put(SignatureWithEllipticCurveP512.getCodeName().get(), SignatureWithEllipticCurveP512);
+		codesByName.put(DES112CTR.getCodeName().get(), DES112CTR);
+		codesByName.put(DES168CBC.getCodeName().get(), DES168CBC);
+		codesByName.put(DES168CTR.getCodeName().get(), DES168CTR);
+		codesByName.put(SDE056CBC.getCodeName().get(), SDE056CBC);
+		codesByName.put(CMACAES128.getCodeName().get(), CMACAES128);
+		codesByName.put(CMACAES192.getCodeName().get(), CMACAES192);
+		codesByName.put(CMACAES256.getCodeName().get(), CMACAES256);
 	}
 
 	public static AlgorithmCode valueOf(String codeName) {

@@ -132,6 +132,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides information about the rates related to securities movement."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RateDetails32 RateDetails32}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.RateDetails23
  * RateDetails23}</li>
@@ -174,6 +180,14 @@ public class RateDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Rate used for additional tax that cannot be categorised."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmAdditionalTax
+	 * RateDetails32.mmAdditionalTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -190,6 +204,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTax";
 			definition = "Rate used for additional tax that cannot be categorised.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmAdditionalTax);
 			previousVersion_lazy = () -> RateDetails23.mmAdditionalTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -230,6 +245,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Rate used to calculate the amount of the charges/fees that cannot be categorised."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmChargesFees
+	 * RateDetails32.mmChargesFees}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -246,6 +269,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesFees";
 			definition = "Rate used to calculate the amount of the charges/fees that cannot be categorised.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmChargesFees);
 			previousVersion_lazy = () -> RateDetails23.mmChargesFees;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -284,6 +308,14 @@ public class RateDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Percentage of fiscal tax to apply."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmFiscalStamp
+	 * RateDetails32.mmFiscalStamp}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -300,6 +332,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiscalStamp";
 			definition = "Percentage of fiscal tax to apply.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmFiscalStamp);
 			previousVersion_lazy = () -> RateDetails23.mmFiscalStamp;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -339,6 +372,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Cash dividend amount per equity before deductions or allowances have been made."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmGrossDividendRate
+	 * RateDetails32.mmGrossDividendRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -355,6 +396,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossDividendRate";
 			definition = "Cash dividend amount per equity before deductions or allowances have been made.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmGrossDividendRate);
 			previousVersion_lazy = () -> RateDetails23.mmGrossDividendRate;
 			minOccurs = 0;
 			isComposite = true;
@@ -395,6 +437,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmEarlySolicitationFeeRate
+	 * RateDetails32.mmEarlySolicitationFeeRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -411,6 +461,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlySolicitationFeeRate";
 			definition = "Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmEarlySolicitationFeeRate);
 			previousVersion_lazy = () -> RateDetails23.mmEarlySolicitationFeeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -451,6 +502,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Cash rate made available in an event in order to encourage participation in the offer. As information, Payment is made to a third party who has solicited an entity to take part in the offer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmThirdPartyIncentiveRate
+	 * RateDetails32.mmThirdPartyIncentiveRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -467,6 +526,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdPartyIncentiveRate";
 			definition = "Cash rate made available in an event in order to encourage participation in the offer. As information, Payment is made to a third party who has solicited an entity to take part in the offer.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmThirdPartyIncentiveRate);
 			previousVersion_lazy = () -> RateDetails23.mmThirdPartyIncentiveRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -506,6 +566,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Actual interest rate used for the payment of the interest for the specified interest period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmInterestRateUsedForPayment
+	 * RateDetails32.mmInterestRateUsedForPayment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -522,6 +590,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRateUsedForPayment";
 			definition = "Actual interest rate used for the payment of the interest for the specified interest period.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmInterestRateUsedForPayment);
 			previousVersion_lazy = () -> RateDetails23.mmInterestRateUsedForPayment;
 			minOccurs = 0;
 			isComposite = true;
@@ -561,6 +630,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Cash dividend amount per equity after deductions or allowances have been made."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmNetDividendRate
+	 * RateDetails32.mmNetDividendRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -577,6 +654,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate";
 			definition = "Cash dividend amount per equity after deductions or allowances have been made.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmNetDividendRate);
 			previousVersion_lazy = () -> RateDetails23.mmNetDividendRate;
 			minOccurs = 0;
 			isComposite = true;
@@ -671,6 +749,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Rate applicable to the event announced, for example, redemption rate for a redemption event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmApplicableRate
+	 * RateDetails32.mmApplicableRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -687,6 +773,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicableRate";
 			definition = "Rate applicable to the event announced, for example, redemption rate for a redemption event.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmApplicableRate);
 			previousVersion_lazy = () -> RateDetails23.mmApplicableRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -727,6 +814,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Rate of the cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fee."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmSolicitationFeeRate
+	 * RateDetails32.mmSolicitationFeeRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -743,6 +838,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SolicitationFeeRate";
 			definition = "Rate of the cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fee.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmSolicitationFeeRate);
 			previousVersion_lazy = () -> RateDetails23.mmSolicitationFeeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -781,6 +877,14 @@ public class RateDetails27 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money per equity allocated as the result of a tax credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmTaxCreditRate
+	 * RateDetails32.mmTaxCreditRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -797,6 +901,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate";
 			definition = "Amount of money per equity allocated as the result of a tax credit.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmTaxCreditRate);
 			previousVersion_lazy = () -> RateDetails23.mmTaxCreditRate;
 			minOccurs = 0;
 			isComposite = true;
@@ -836,6 +941,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmWithholdingTaxRate
+	 * RateDetails32.mmWithholdingTaxRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -852,6 +965,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithholdingTaxRate";
 			definition = "Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmWithholdingTaxRate);
 			previousVersion_lazy = () -> RateDetails23.mmWithholdingTaxRate;
 			minOccurs = 0;
 			complexType_lazy = () -> RateAndAmountFormat40Choice.mmObject();
@@ -889,6 +1003,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmSecondLevelTax
+	 * RateDetails32.mmSecondLevelTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -905,6 +1027,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax";
 			definition = "Rate at which the income will be withheld by a jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate (TAXR) levied by the jurisdiction of the issuer’s tax domicile.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmSecondLevelTax);
 			previousVersion_lazy = () -> RateDetails23.mmSecondLevelTax;
 			minOccurs = 0;
 			isComposite = true;
@@ -943,6 +1066,14 @@ public class RateDetails27 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Taxation applied on an amount clearly identified as an income."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmTaxOnIncome
+	 * RateDetails32.mmTaxOnIncome}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -959,6 +1090,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxOnIncome";
 			definition = "Taxation applied on an amount clearly identified as an income.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmTaxOnIncome);
 			previousVersion_lazy = () -> RateDetails23.mmTaxOnIncome;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -998,6 +1130,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Taxation applied on an amount clearly identified as capital profits, capital gains."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmTaxOnProfits
+	 * RateDetails32.mmTaxOnProfits}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1014,6 +1154,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxOnProfits";
 			definition = "Taxation applied on an amount clearly identified as capital profits, capital gains.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmTaxOnProfits);
 			previousVersion_lazy = () -> RateDetails23.mmTaxOnProfits;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1053,6 +1194,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Percentage of cash that was paid in excess of actual tax obligation and was reclaimed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmTaxReclaimRate
+	 * RateDetails32.mmTaxReclaimRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1069,6 +1218,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxReclaimRate";
 			definition = "Percentage of cash that was paid in excess of actual tax obligation and was reclaimed.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmTaxReclaimRate);
 			previousVersion_lazy = () -> RateDetails23.mmTaxReclaimRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1109,6 +1259,14 @@ public class RateDetails27 {
 	 * definition} =
 	 * "Portion of the fund distribution which represents the average accrued income included in the purchase price for units bought during the account period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmEqualisationRate
+	 * RateDetails32.mmEqualisationRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1125,6 +1283,7 @@ public class RateDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualisationRate";
 			definition = "Portion of the fund distribution which represents the average accrued income included in the purchase price for units bought during the account period.";
+			nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmEqualisationRate);
 			previousVersion_lazy = () -> RateDetails23.mmEqualisationRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1150,6 +1309,7 @@ public class RateDetails27 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateDetails27";
 				definition = "Provides information about the rates related to securities movement.";
+				nextVersions_lazy = () -> Arrays.asList(RateDetails32.mmObject());
 				previousVersion_lazy = () -> RateDetails23.mmObject();
 			}
 		});

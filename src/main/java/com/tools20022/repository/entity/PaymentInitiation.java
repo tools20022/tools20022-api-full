@@ -23,6 +23,7 @@ import com.tools20022.repository.entity.PaymentExecution;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CorrectivePaymentInitiation1;
 import com.tools20022.repository.msg.CorrectivePaymentInitiation2;
+import com.tools20022.repository.msg.CorrectivePaymentInitiation3;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -49,6 +50,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * CorrectivePaymentInitiation1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation2
  * CorrectivePaymentInitiation2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3
+ * CorrectivePaymentInitiation3}</li>
  * </ul>
  * </li>
  * <li>
@@ -80,7 +83,7 @@ public class PaymentInitiation extends PaymentExecution {
 				name = "PaymentInitiation";
 				definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction is the first of the series of instructions which may be used to execute a payment. It is normally sent by the initiating party to the forwarding agent or to the debtor's agent.";
 				superType_lazy = () -> PaymentExecution.mmObject();
-				derivationComponent_lazy = () -> Arrays.asList(CorrectivePaymentInitiation1.mmObject(), CorrectivePaymentInitiation2.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(CorrectivePaymentInitiation1.mmObject(), CorrectivePaymentInitiation2.mmObject(), CorrectivePaymentInitiation3.mmObject());
 			}
 
 			@Override

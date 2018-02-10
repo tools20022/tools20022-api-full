@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PointOfInteraction7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Point of interaction (POI) performing the transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PointOfInteraction8
+ * PointOfInteraction8}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PointOfInteraction5
@@ -121,6 +128,14 @@ public class PointOfInteraction7 {
 	 * definition} =
 	 * "Identification of the POI (Point Of Interaction) for the acquirer or its agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmIdentification
+	 * PointOfInteraction8.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -136,6 +151,7 @@ public class PointOfInteraction7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI (Point Of Interaction) for the acquirer or its agent.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction8.mmIdentification);
 			previousVersion_lazy = () -> PointOfInteraction5.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -177,6 +193,14 @@ public class PointOfInteraction7 {
 	 * definition} =
 	 * "Common name assigned by the acquirer to the POI (Point Of Interaction) system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmSystemName
+	 * PointOfInteraction8.mmSystemName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -193,6 +217,7 @@ public class PointOfInteraction7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemName";
 			definition = "Common name assigned by the acquirer to the POI (Point Of Interaction) system.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction8.mmSystemName);
 			previousVersion_lazy = () -> PointOfInteraction5.mmSystemName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -228,6 +253,14 @@ public class PointOfInteraction7 {
 	 * definition} =
 	 * "Identifier assigned by the merchant identifying a set of POI (Point Of Interaction) terminals performing some categories of transactions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmGroupIdentification
+	 * PointOfInteraction8.mmGroupIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -243,6 +276,7 @@ public class PointOfInteraction7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupIdentification";
 			definition = "Identifier assigned by the merchant identifying a set of POI (Point Of Interaction) terminals performing some categories of transactions.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction8.mmGroupIdentification);
 			previousVersion_lazy = () -> PointOfInteraction5.mmGroupIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -283,6 +317,14 @@ public class PointOfInteraction7 {
 	 * definition} =
 	 * "Capabilities of the POI (Point Of Interaction) performing the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmCapabilities
+	 * PointOfInteraction8.mmCapabilities}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -299,6 +341,7 @@ public class PointOfInteraction7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Capabilities";
 			definition = "Capabilities of the POI (Point Of Interaction) performing the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction8.mmCapabilities);
 			previousVersion_lazy = () -> PointOfInteraction5.mmCapabilities;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -335,6 +378,14 @@ public class PointOfInteraction7 {
 	 * definition} =
 	 * "Time zone name as defined by IANA (Internet Assigned Numbers Authority) in the time zone data base. America/Chicago or Europe/Paris are examples of time zone names."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmTimeZone
+	 * PointOfInteraction8.mmTimeZone}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -350,6 +401,7 @@ public class PointOfInteraction7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeZone";
 			definition = "Time zone name as defined by IANA (Internet Assigned Numbers Authority) in the time zone data base. America/Chicago or Europe/Paris are examples of time zone names.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction8.mmTimeZone);
 			previousVersion_lazy = () -> PointOfInteraction5.mmTimeZone;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -386,6 +438,14 @@ public class PointOfInteraction7 {
 	 * definition} =
 	 * "Indicates the type of integration of the POI terminal in the sale environment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmTerminalIntegration
+	 * PointOfInteraction8.mmTerminalIntegration}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -401,6 +461,7 @@ public class PointOfInteraction7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalIntegration";
 			definition = "Indicates the type of integration of the POI terminal in the sale environment.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction8.mmTerminalIntegration);
 			previousVersion_lazy = () -> PointOfInteraction5.mmTerminalIntegration;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -441,6 +502,14 @@ public class PointOfInteraction7 {
 	 * definition} =
 	 * "Data related to a component of the POI (Point Of Interaction) performing the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmComponent
+	 * PointOfInteraction8.mmComponent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -457,6 +526,7 @@ public class PointOfInteraction7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Component";
 			definition = "Data related to a component of the POI (Point Of Interaction) performing the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteraction8.mmComponent);
 			previousVersion_lazy = () -> PointOfInteraction5.mmComponent;
 			minOccurs = 0;
 			isComposite = true;
@@ -475,6 +545,7 @@ public class PointOfInteraction7 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteraction7";
 				definition = "Point of interaction (POI) performing the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(PointOfInteraction8.mmObject());
 				previousVersion_lazy = () -> PointOfInteraction5.mmObject();
 			}
 		});

@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * "RejectionReason20FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the reason of a rejection of the standing instruction request."
+ * "Choice of formats to express the reason of a rejection of the standing instruction request."
  * </li>
  * </ul>
  */
@@ -156,7 +156,7 @@ public class RejectionReason20FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the reason of a rejection of the standing instruction request."
+	 * "Proprietary code to express the reason of a rejection of the standing instruction request."
 	 * </li>
 	 * </ul>
 	 */
@@ -167,7 +167,7 @@ public class RejectionReason20FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the reason of a rejection of the standing instruction request.";
+			definition = "Proprietary code to express the reason of a rejection of the standing instruction request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -182,7 +182,7 @@ public class RejectionReason20FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason20FormatChoice";
-				definition = "Choice of formats to  express the reason of a rejection of the standing instruction request.";
+				definition = "Choice of formats to express the reason of a rejection of the standing instruction request.";
 			}
 		});
 		return mmObject_lazy.get();

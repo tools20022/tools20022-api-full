@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding notification general information details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD9
+ * CorporateActionNotificationSD9}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,6 +110,14 @@ public class CorporateActionNotificationSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD9#mmPlaceAndName
+	 * CorporateActionNotificationSD9.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -113,6 +128,7 @@ public class CorporateActionNotificationSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD9.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -148,7 +164,15 @@ public class CorporateActionNotificationSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time when DTCC  (The Depository Trust and Clearing Corporation) created the announcement record."
+	 * "Date and time when DTCC (The Depository Trust and Clearing Corporation) created the announcement record."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD9#mmCreateDateAndTime
+	 * CorporateActionNotificationSD9.mmCreateDateAndTime}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -160,7 +184,8 @@ public class CorporateActionNotificationSD3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Create Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateDateAndTime";
-			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) created the announcement record.";
+			definition = "Date and time when DTCC (The Depository Trust and Clearing Corporation) created the announcement record.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD9.mmCreateDateAndTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -196,7 +221,15 @@ public class CorporateActionNotificationSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time when DTCC  (The Depository Trust and Clearing Corporation) last updated the announcement."
+	 * "Date and time when DTCC (The Depository Trust and Clearing Corporation) last updated the announcement."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD9#mmUpdateDateAndTime
+	 * CorporateActionNotificationSD9.mmUpdateDateAndTime}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -208,7 +241,8 @@ public class CorporateActionNotificationSD3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Update Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDateAndTime";
-			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) last updated the announcement.";
+			definition = "Date and time when DTCC (The Depository Trust and Clearing Corporation) last updated the announcement.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD9.mmUpdateDateAndTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -224,6 +258,7 @@ public class CorporateActionNotificationSD3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationSD3";
 				definition = "Provides additional information regarding notification general information details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

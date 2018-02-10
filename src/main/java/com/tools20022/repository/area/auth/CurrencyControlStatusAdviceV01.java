@@ -93,7 +93,7 @@ import javax.xml.bind.annotation.*;
  * "CurrencyControlStatusAdviceV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The CurrencyControlStatusAdvice message is sent by either the reporting party (respectively the registration agent or the registration agent (respectively the reporting party) to provide a status advice on a previously sent currency control message.\r\n\r\nUsage: \r\nThe message may be sent in response to requests on the registration of  the currency control contract, supporting document or on the payment regulatory information notification."
+ * "The CurrencyControlStatusAdvice message is sent by either the reporting party (respectively the registration agent or the registration agent (respectively the reporting party) to provide a status advice on a previously sent currency control message.\r\n\r\nUsage: \r\nThe message may be sent in response to requests on the registration of the currency control contract, supporting document or on the payment regulatory information notification."
  * </li>
  * </ul>
  */
@@ -287,7 +287,7 @@ public class CurrencyControlStatusAdviceV01 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyControlStatusAdviceV01";
-				definition = "The CurrencyControlStatusAdvice message is sent by either the reporting party (respectively the registration agent or the registration agent (respectively the reporting party) to provide a status advice on a previously sent currency control message.\r\n\r\nUsage: \r\nThe message may be sent in response to requests on the registration of  the currency control contract, supporting document or on the payment regulatory information notification.";
+				definition = "The CurrencyControlStatusAdvice message is sent by either the reporting party (respectively the registration agent or the registration agent (respectively the reporting party) to provide a status advice on a previously sent currency control message.\r\n\r\nUsage: \r\nThe message may be sent in response to requests on the registration of the currency control contract, supporting document or on the payment regulatory information notification.";
 				messageSet_lazy = () -> Arrays.asList(CrossBorderTransactionsCurrencyControlReportingISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CcyCtrlStsAdvc";

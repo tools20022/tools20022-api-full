@@ -99,6 +99,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Identifies the underlying (group of) transaction(s) to which the investigation applies."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingTransaction20
+ * UnderlyingTransaction20}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction13
@@ -143,6 +150,14 @@ public class UnderlyingTransaction16 {
 	 * definition} =
 	 * "Provides information on the original message, to which the cancellation refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction20#mmOriginalGroupInformationAndCancellation
+	 * UnderlyingTransaction20.mmOriginalGroupInformationAndCancellation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -159,6 +174,7 @@ public class UnderlyingTransaction16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformationAndCancellation";
 			definition = "Provides information on the original message, to which the cancellation refers.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction20.mmOriginalGroupInformationAndCancellation);
 			previousVersion_lazy = () -> UnderlyingTransaction13.mmOriginalGroupInformationAndCancellation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -199,6 +215,14 @@ public class UnderlyingTransaction16 {
 	 * definition} =
 	 * "Provides information on the original transactions to which the cancellation request message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingTransaction20#mmTransactionInformation
+	 * UnderlyingTransaction20.mmTransactionInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -215,6 +239,7 @@ public class UnderlyingTransaction16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformation";
 			definition = "Provides information on the original transactions to which the cancellation request message refers.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction20.mmTransactionInformation);
 			previousVersion_lazy = () -> UnderlyingTransaction13.mmTransactionInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -237,6 +262,7 @@ public class UnderlyingTransaction16 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingTransaction16";
 				definition = "Identifies the underlying (group of) transaction(s) to which the investigation applies.";
+				nextVersions_lazy = () -> Arrays.asList(UnderlyingTransaction20.mmObject());
 				previousVersion_lazy = () -> UnderlyingTransaction13.mmObject();
 			}
 		});

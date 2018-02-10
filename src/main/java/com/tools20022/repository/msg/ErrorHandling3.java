@@ -56,7 +56,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ErrorHandling3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -182,7 +182,7 @@ public class ErrorHandling3 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ErrorHandling3.mmError, com.tools20022.repository.msg.ErrorHandling3.mmDescription);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ErrorHandling3";
 				definition = "Specifies the error resulting from the processing of a request.";
 				nextVersions_lazy = () -> Arrays.asList(ErrorHandling4.mmObject());

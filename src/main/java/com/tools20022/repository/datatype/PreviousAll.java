@@ -47,7 +47,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "PreviousAll"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Indicates that the investment plan issued during  all the previous years have to be transferred."
+ * "Indicates that the investment plan issued during all the previous years have to be transferred."
  * </li>
  * </ul>
  */
@@ -63,7 +63,7 @@ public class PreviousAll {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreviousAll";
-				definition = "Indicates that the investment plan issued during  all the previous years have to be transferred.";
+				definition = "Indicates that the investment plan issued during all the previous years have to be transferred.";
 				pattern = "ALL";
 			}
 		});

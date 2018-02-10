@@ -106,6 +106,11 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.choice.StandingOrderOrAll1Choice#mmAllStandingOrders
  * StandingOrderOrAll1Choice.mmAllStandingOrders}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingOrder5#mmCreditorAccount
+ * StandingOrder5.mmCreditorAccount}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingOrder5#mmDebtorAccount
+ * StandingOrder5.mmDebtorAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -132,6 +137,9 @@ import java.util.Optional;
  * <li>{@linkplain com.tools20022.repository.choice.StandingOrderOrAll1Choice
  * StandingOrderOrAll1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.StandingOrder4 StandingOrder4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingOrder5 StandingOrder5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2
+ * StandingOrderSearchCriteria2}</li>
  * </ul>
  * </li>
  * <li>
@@ -177,6 +185,12 @@ public class CashStandingOrder extends StandingOrder {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StandingOrder2#mmZeroSweepIndicator
 	 * StandingOrder2.mmZeroSweepIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrder5#mmZeroSweepIndicator
+	 * StandingOrder5.mmZeroSweepIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmZeroSweepIndicator
+	 * StandingOrderSearchCriteria2.mmZeroSweepIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -193,18 +207,19 @@ public class CashStandingOrder extends StandingOrder {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero."
+	 * "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is zero."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmZeroSweepIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmZeroSweepIndicator, StandingOrder1.mmZeroSweepIndicator, StandingOrder2.mmZeroSweepIndicator);
+			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmZeroSweepIndicator, StandingOrder1.mmZeroSweepIndicator, StandingOrder2.mmZeroSweepIndicator, StandingOrder5.mmZeroSweepIndicator,
+					StandingOrderSearchCriteria2.mmZeroSweepIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ZeroSweepIndicator";
-			definition = "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is  zero.";
+			definition = "Indicates whether the liquidity transfer standing order is defined as a zero sweeping order. When true, the liquidity transfer standing order will transfer all amount of money out of the account so the resulting balance is zero.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -457,6 +472,9 @@ public class CashStandingOrder extends StandingOrder {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StandingOrderIdentification3#mmAccount
 	 * StandingOrderIdentification3.mmAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingOrderSearchCriteria2#mmAccount
+	 * StandingOrderSearchCriteria2.mmAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -477,7 +495,7 @@ public class CashStandingOrder extends StandingOrder {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmAccount, StandingOrderIdentification2.mmAccount, StandingOrderIdentification3.mmAccount);
+			derivation_lazy = () -> Arrays.asList(StandingOrderSearchCriteria1.mmAccount, StandingOrderIdentification2.mmAccount, StandingOrderIdentification3.mmAccount, StandingOrderSearchCriteria2.mmAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashStandingOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -501,14 +519,14 @@ public class CashStandingOrder extends StandingOrder {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmCashStandingOrder, com.tools20022.repository.entity.CashManagementService.mmStandingOrder,
 						com.tools20022.repository.entity.CreditTransfer.mmRelatedStandingOrder);
 				derivationElement_lazy = () -> Arrays.asList(StandingOrder1.mmCreditorAccount, StandingOrder1.mmDebtorAccount, StandingOrder2.mmCurrency, StandingOrder2.mmCreditorAccount, StandingOrderOrAll1Choice.mmStandingOrder,
-						StandingOrderOrAll1Choice.mmAllStandingOrders);
+						StandingOrderOrAll1Choice.mmAllStandingOrders, StandingOrder5.mmCreditorAccount, StandingOrder5.mmDebtorAccount);
 				superType_lazy = () -> StandingOrder.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashStandingOrder.mmZeroSweepIndicator, com.tools20022.repository.entity.CashStandingOrder.mmRelatedCashServices,
 						com.tools20022.repository.entity.CashStandingOrder.mmCreditDebitIndicator, com.tools20022.repository.entity.CashStandingOrder.mmCreditTransfer, com.tools20022.repository.entity.CashStandingOrder.mmFloorAmount,
 						com.tools20022.repository.entity.CashStandingOrder.mmCashAccount);
 				derivationComponent_lazy = () -> Arrays.asList(StandingOrderType1Choice.mmObject(), StandingOrderSearchCriteria1.mmObject(), StandingOrderIdentification1.mmObject(), StandingOrderDetails1.mmObject(),
 						StandingOrderIdentification2.mmObject(), StandingOrder1.mmObject(), StandingOrderDetails3.mmObject(), StandingOrder2.mmObject(), StandingOrder3.mmObject(), StandingOrderIdentification3.mmObject(),
-						StandingOrderOrAll1Choice.mmObject(), StandingOrder4.mmObject());
+						StandingOrderOrAll1Choice.mmObject(), StandingOrder4.mmObject(), StandingOrder5.mmObject(), StandingOrderSearchCriteria2.mmObject());
 			}
 
 			@Override

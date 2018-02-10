@@ -590,6 +590,12 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmNonStandardSettlementInformation
 	 * SwitchRedemptionLegExecution4.mmNonStandardSettlementInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmNonStandardSettlementInformation
+	 * Transfer35.mmNonStandardSettlementInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer34#mmNonStandardSettlementInformation
+	 * Transfer34.mmNonStandardSettlementInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -627,7 +633,8 @@ public class InvestmentFundOrderExecution extends SecuritiesTradeExecution {
 					RedemptionOrder14.mmNonStandardSettlementInformation, SwitchSubscriptionLegOrder6.mmNonStandardSettlementInformation, SubscriptionExecution13.mmNonStandardSettlementInformation,
 					SubscriptionExecution12.mmNonStandardSettlementInformation, SubscriptionOrder15.mmNonStandardSettlementInformation, SwitchRedemptionLegOrder6.mmNonStandardSettlementInformation,
 					RedemptionOrder15.mmNonStandardSettlementInformation, RedemptionExecution16.mmNonStandardSettlementInformation, SubscriptionOrder14.mmNonStandardSettlementInformation,
-					SwitchSubscriptionLegExecution4.mmNonStandardSettlementInformation, RedemptionExecution15.mmNonStandardSettlementInformation, SwitchRedemptionLegExecution4.mmNonStandardSettlementInformation);
+					SwitchSubscriptionLegExecution4.mmNonStandardSettlementInformation, RedemptionExecution15.mmNonStandardSettlementInformation, SwitchRedemptionLegExecution4.mmNonStandardSettlementInformation,
+					Transfer35.mmNonStandardSettlementInformation, Transfer34.mmNonStandardSettlementInformation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundOrderExecution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

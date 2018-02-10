@@ -164,7 +164,7 @@ public class ExposureTypeV2Code extends MMCode {
 	/**
 	 * Cross currency agreement between two parties (known as counterparties)
 	 * where one stream of future interest payments is exchanged for another
-	 * based on a specified principal amount
+	 * based on a specified principal amount.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -182,7 +182,7 @@ public class ExposureTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cross currency agreement between two parties (known as counterparties) where one stream of future interest payments is exchanged for another based on a specified principal amount"
+	 * "Cross currency agreement between two parties (known as counterparties) where one stream of future interest payments is exchanged for another based on a specified principal amount."
 	 * </li>
 	 * </ul>
 	 */
@@ -190,14 +190,14 @@ public class ExposureTypeV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CrossCurrencyIRS";
-			definition = "Cross currency agreement between two parties (known as counterparties) where one stream of future interest payments is exchanged for another based on a specified principal amount";
+			definition = "Cross currency agreement between two parties (known as counterparties) where one stream of future interest payments is exchanged for another based on a specified principal amount.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ExposureTypeV2Code.mmObject();
 			codeName = "CCIR";
 		}
 	};
 	/**
 	 * Any good exchanged during commerce, which includes goods traded on a
-	 * commodity exchange
+	 * commodity exchange.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -215,7 +215,7 @@ public class ExposureTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Any good exchanged during commerce, which includes goods traded on a commodity exchange"
+	 * "Any good exchanged during commerce, which includes goods traded on a commodity exchange."
 	 * </li>
 	 * </ul>
 	 */
@@ -223,7 +223,7 @@ public class ExposureTypeV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Commodities";
-			definition = "Any good exchanged during commerce, which includes goods traded on a commodity exchange";
+			definition = "Any good exchanged during commerce, which includes goods traded on a commodity exchange.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ExposureTypeV2Code.mmObject();
 			codeName = "COMM";
 		}

@@ -82,6 +82,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between ways of identifying a payment instruction by its references and business identification."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PaymentIdentification5Choice
+ * PaymentIdentification5Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -123,6 +131,14 @@ public class PaymentIdentification4Choice {
 	 * definition} =
 	 * "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.\nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.\nUsage: this is the former PaymentInstructionReference element."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentIdentification5Choice#mmTransactionIdentification
+	 * PaymentIdentification5Choice.mmTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransactionIdentification = new MMMessageAttribute() {
@@ -134,6 +150,7 @@ public class PaymentIdentification4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.\nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.\nUsage: this is the former PaymentInstructionReference element.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentIdentification5Choice.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -168,6 +185,14 @@ public class PaymentIdentification4Choice {
 	 * definition} =
 	 * "Identification of the payment instruction by its position in a queue managed by the clearing agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentIdentification5Choice#mmQueueIdentification
+	 * PaymentIdentification5Choice.mmQueueIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmQueueIdentification = new MMMessageAssociationEnd() {
@@ -178,6 +203,7 @@ public class PaymentIdentification4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueIdentification";
 			definition = "Identification of the payment instruction by its position in a queue managed by the clearing agent.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentIdentification5Choice.mmQueueIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -218,6 +244,14 @@ public class PaymentIdentification4Choice {
 	 * definition} =
 	 * "Business identification of the payment instruction given by the clearing agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentIdentification5Choice#mmLongBusinessIdentification
+	 * PaymentIdentification5Choice.mmLongBusinessIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLongBusinessIdentification = new MMMessageAssociationEnd() {
@@ -229,6 +263,7 @@ public class PaymentIdentification4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongBusinessIdentification";
 			definition = "Business identification of the payment instruction given by the clearing agent.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentIdentification5Choice.mmLongBusinessIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -269,6 +304,14 @@ public class PaymentIdentification4Choice {
 	 * definition} =
 	 * "Business identification of the payment instruction given by the clearing agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentIdentification5Choice#mmShortBusinessIdentification
+	 * PaymentIdentification5Choice.mmShortBusinessIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmShortBusinessIdentification = new MMMessageAssociationEnd() {
@@ -280,6 +323,7 @@ public class PaymentIdentification4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortBusinessIdentification";
 			definition = "Business identification of the payment instruction given by the clearing agent.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentIdentification5Choice.mmShortBusinessIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -315,6 +359,14 @@ public class PaymentIdentification4Choice {
 	 * definition} =
 	 * "Unique reference of the underlying payment instruction assigned by Target2 SSP."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentIdentification5Choice#mmProprietaryIdentification
+	 * PaymentIdentification5Choice.mmProprietaryIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietaryIdentification = new MMMessageAttribute() {
@@ -325,6 +377,7 @@ public class PaymentIdentification4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique reference of the underlying payment instruction assigned by Target2 SSP.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentIdentification5Choice.mmProprietaryIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -342,6 +395,7 @@ public class PaymentIdentification4Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentIdentification4Choice";
 				definition = "Choice between ways of identifying a payment instruction by its references and business identification.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentIdentification5Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -157,6 +157,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Transfer31"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Transfer35 Transfer35}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Transfer28
  * Transfer28}</li>
@@ -197,6 +203,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferConfirmationReference
+	 * Transfer35.mmTransferConfirmationReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -212,6 +226,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationReference";
 			definition = "Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTransferConfirmationReference);
 			previousVersion_lazy = () -> Transfer28.mmTransferConfirmationReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -251,6 +266,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferReference
+	 * Transfer35.mmTransferReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -267,6 +290,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTransferReference);
 			previousVersion_lazy = () -> Transfer28.mmTransferReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -307,6 +331,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmClientReference
+	 * Transfer35.mmClientReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -323,6 +355,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmClientReference);
 			previousVersion_lazy = () -> Transfer28.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -363,6 +396,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Unambiguous identification of the transfer allocated by the counterparty."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmCounterpartyReference
+	 * Transfer35.mmCounterpartyReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -379,6 +420,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmCounterpartyReference);
 			previousVersion_lazy = () -> Transfer28.mmCounterpartyReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -414,6 +456,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmBusinessFlowType
+	 * Transfer35.mmBusinessFlowType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -429,6 +479,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessFlowType";
 			definition = "Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process).";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmBusinessFlowType);
 			previousVersion_lazy = () -> Transfer28.mmBusinessFlowType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -467,6 +518,14 @@ public class Transfer31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the transfer was executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmEffectiveTransferDate
+	 * Transfer35.mmEffectiveTransferDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -483,6 +542,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveTransferDate";
 			definition = "Date and time at which the transfer was executed.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmEffectiveTransferDate);
 			previousVersion_lazy = () -> Transfer28.mmEffectiveTransferDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -522,6 +582,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmRequestedSettlementDate
+	 * Transfer35.mmRequestedSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -538,6 +606,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmRequestedSettlementDate);
 			previousVersion_lazy = () -> Transfer28.mmRequestedSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -578,6 +647,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Date and time at which the securities were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmEffectiveSettlementDate
+	 * Transfer35.mmEffectiveSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -594,6 +671,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which the securities were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmEffectiveSettlementDate);
 			previousVersion_lazy = () -> Transfer28.mmEffectiveSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -634,6 +712,13 @@ public class Transfer31 {
 	 * definition} =
 	 * "Date and time at which a transaction is completed and cleared, that is, securities are delivered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmTradeDate
+	 * Transfer35.mmTradeDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -650,6 +735,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date and time at which a transaction is completed and cleared, that is, securities are delivered.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTradeDate);
 			previousVersion_lazy = () -> Transfer28.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -688,6 +774,14 @@ public class Transfer31 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies in which date the investor signed the transfer order form."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferOrderDateForm
+	 * Transfer35.mmTransferOrderDateForm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -704,6 +798,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferOrderDateForm";
 			definition = "Identifies in which date the investor signed the transfer order form.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTransferOrderDateForm);
 			previousVersion_lazy = () -> Transfer28.mmTransferOrderDateForm;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -742,6 +837,14 @@ public class Transfer31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the transfer reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferReason
+	 * Transfer35.mmTransferReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -758,6 +861,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReason";
 			definition = "Identifies the transfer reason.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTransferReason);
 			previousVersion_lazy = () -> Transfer28.mmTransferReason;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -798,6 +902,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Identifies whether or not saving plan or withdrawal or switch plan are included in the holdings."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmHoldingsPlanType
+	 * Transfer35.mmHoldingsPlanType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -814,6 +926,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HoldingsPlanType";
 			definition = "Identifies whether or not saving plan or withdrawal or switch plan are included in the holdings.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmHoldingsPlanType);
 			previousVersion_lazy = () -> Transfer28.mmHoldingsPlanType;
 			maxOccurs = 3;
 			minOccurs = 0;
@@ -853,6 +966,14 @@ public class Transfer31 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to the financial instrument withdrawn."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmFinancialInstrumentDetails
+	 * Transfer35.mmFinancialInstrumentDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -869,6 +990,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
 			definition = "Information related to the financial instrument withdrawn.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmFinancialInstrumentDetails);
 			previousVersion_lazy = () -> Transfer28.mmFinancialInstrumentDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -907,6 +1029,14 @@ public class Transfer31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of securities settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTotalUnitsNumber
+	 * Transfer35.mmTotalUnitsNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -923,6 +1053,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalUnitsNumber";
 			definition = "Total quantity of securities settled.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTotalUnitsNumber);
 			previousVersion_lazy = () -> Transfer28.mmTotalUnitsNumber;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -958,6 +1089,13 @@ public class Transfer31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information about the units to be transferred."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmUnitsDetails
+	 * Transfer35.mmUnitsDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -974,6 +1112,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsDetails";
 			definition = "Information about the units to be transferred.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmUnitsDetails);
 			previousVersion_lazy = () -> Transfer28.mmUnitsDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -1012,6 +1151,13 @@ public class Transfer31 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of securities settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmTransferRate
+	 * Transfer35.mmTransferRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1028,6 +1174,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PortfolioTransferOutRate";
 			definition = "Total quantity of securities settled.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTransferRate);
 			previousVersion_lazy = () -> Transfer28.mmPortfolioTransferOutRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1067,6 +1214,13 @@ public class Transfer31 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the rounding direction applied to nearest unit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmRounding
+	 * Transfer35.mmRounding}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1083,6 +1237,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rounding";
 			definition = "Indicates the rounding direction applied to nearest unit.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmRounding);
 			previousVersion_lazy = () -> Transfer28.mmRounding;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1123,6 +1278,13 @@ public class Transfer31 {
 	 * definition} =
 	 * "Weighted average price of the units in the account before the transfer was executed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmAveragePrice
+	 * Transfer35.mmAveragePrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1139,6 +1301,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AveragePrice";
 			definition = "Weighted average price of the units in the account before the transfer was executed.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmAveragePrice);
 			previousVersion_lazy = () -> Transfer28.mmAveragePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1179,6 +1342,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Weighted average price of the units in the account after the transfer was executed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmNewAveragePrice
+	 * Transfer35.mmNewAveragePrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1195,6 +1366,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAveragePrice";
 			definition = "Weighted average price of the units in the account after the transfer was executed.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmNewAveragePrice);
 			previousVersion_lazy = () -> Transfer28.mmNewAveragePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1234,6 +1406,13 @@ public class Transfer31 {
 	 * definition} =
 	 * "Trade date of the average weighted data of units in the account before the transfer was executed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmAverageDate
+	 * Transfer35.mmAverageDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAverageDate = new MMMessageAttribute() {
@@ -1245,6 +1424,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageDate";
 			definition = "Trade date of the average weighted data of units in the account before the transfer was executed.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmAverageDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1283,6 +1463,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Trade date of the average weighted data of units in the account after the transfer was executed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmNewAverageDate
+	 * Transfer35.mmNewAverageDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNewAverageDate = new MMMessageAttribute() {
@@ -1294,6 +1482,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewAverageDate";
 			definition = "Trade date of the average weighted data of units in the account after the transfer was executed.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmNewAverageDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1332,6 +1521,14 @@ public class Transfer31 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the currency to be used to transfer the holdings."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferCurrency
+	 * Transfer35.mmTransferCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1348,6 +1545,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferCurrency";
 			definition = "Identifies the currency to be used to transfer the holdings.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTransferCurrency);
 			previousVersion_lazy = () -> Transfer28.mmTransferCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1388,6 +1586,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Indicates whether the transfer results in a change of beneficial owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmOwnAccountTransferIndicator
+	 * Transfer35.mmOwnAccountTransferIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1404,6 +1610,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnAccountTransferIndicator";
 			definition = "Indicates whether the transfer results in a change of beneficial owner.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmOwnAccountTransferIndicator);
 			previousVersion_lazy = () -> Transfer28.mmOwnAccountTransferIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1443,6 +1650,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Additional specific settlement information for non-regulated traded funds."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmNonStandardSettlementInformation
+	 * Transfer35.mmNonStandardSettlementInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1459,6 +1674,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonStandardSettlementInformation";
 			definition = "Additional specific settlement information for non-regulated traded funds.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmNonStandardSettlementInformation);
 			previousVersion_lazy = () -> Transfer28.mmNonStandardSettlementInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1499,6 +1715,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmReceivingAgentDetails
+	 * Transfer35.mmReceivingAgentDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1515,6 +1739,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingAgentDetails";
 			definition = "Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmReceivingAgentDetails);
 			previousVersion_lazy = () -> Transfer28.mmReceivingAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1555,6 +1780,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmDeliveringAgentDetails
+	 * Transfer35.mmDeliveringAgentDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1571,6 +1804,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgentDetails";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmDeliveringAgentDetails);
 			previousVersion_lazy = () -> Transfer28.mmDeliveringAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1610,6 +1844,14 @@ public class Transfer31 {
 	 * definition} =
 	 * "Specifies how the payment of charges, taxes and commissions as a result of the transfer is covered, that is, whether by cash or the redemption of units."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferExpensesPaymentType
+	 * Transfer35.mmTransferExpensesPaymentType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1626,6 +1868,7 @@ public class Transfer31 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferExpensesPaymentType";
 			definition = "Specifies how the payment of charges, taxes and commissions as a result of the transfer is covered, that is, whether by cash or the redemption of units.";
+			nextVersions_lazy = () -> Arrays.asList(Transfer35.mmTransferExpensesPaymentType);
 			previousVersion_lazy = () -> Transfer28.mmTransferExpensesPaymentType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1655,6 +1898,7 @@ public class Transfer31 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transfer31";
 				definition = "Parameters applied to the settlement of a security transfer.";
+				nextVersions_lazy = () -> Arrays.asList(Transfer35.mmObject());
 				previousVersion_lazy = () -> Transfer28.mmObject();
 			}
 		});

@@ -347,7 +347,7 @@ public class MeetingInstructionStatusV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the securities for which the meeting is organised. "</li>
+	 * "Identifies the securities for which the meeting is organised."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmSecurityIdentification = new MMMessageBuildingBlock() {
@@ -355,7 +355,7 @@ public class MeetingInstructionStatusV03 {
 			xmlTag = "SctyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
-			definition = "Identifies the securities for which the meeting is organised. ";
+			definition = "Identifies the securities for which the meeting is organised.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SecurityIdentification11.mmObject();

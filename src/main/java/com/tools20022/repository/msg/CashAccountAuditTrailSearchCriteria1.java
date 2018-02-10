@@ -61,6 +61,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Describes search criteria for cash account audit trail query."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria2
+ * CashAccountAuditTrailSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -95,6 +103,14 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Describes cash account to be queried."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria2#mmCashAccountIdentification
+	 * CashAccountAuditTrailSearchCriteria2.mmCashAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
@@ -105,6 +121,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Describes cash account to be queried.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailSearchCriteria2.mmCashAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
@@ -138,6 +155,14 @@ public class CashAccountAuditTrailSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Describes date period for querying information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailSearchCriteria2#mmDatePeriod
+	 * CashAccountAuditTrailSearchCriteria2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
@@ -148,6 +173,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Describes date period for querying information.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailSearchCriteria2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -162,6 +188,7 @@ public class CashAccountAuditTrailSearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for cash account audit trail query.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

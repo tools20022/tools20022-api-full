@@ -195,7 +195,7 @@ public class SecuritiesTransactionReport4 {
 	 * name} = "ExecutingParty"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of the entity executing the transaction. "</li>
+	 * definition} = "Identification of the entity executing the transaction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmExecutingParty = new MMMessageAttribute() {
@@ -206,7 +206,7 @@ public class SecuritiesTransactionReport4 {
 			xmlTag = "ExctgPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingParty";
-			definition = "Identification of the entity executing the transaction. ";
+			definition = "Identification of the entity executing the transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -441,7 +441,7 @@ public class SecuritiesTransactionReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indication as to whether the transaction results from an order  transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied."
+	 * "Indication as to whether the transaction results from an order transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied."
 	 * </li>
 	 * </ul>
 	 */
@@ -453,7 +453,7 @@ public class SecuritiesTransactionReport4 {
 			xmlTag = "OrdrTrnsmssn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrderTransmission";
-			definition = "Indication as to whether the transaction results from an order  transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied.";
+			definition = "Indication as to whether the transaction results from an order transmitted by the reporting of a client to a third party.\r\n\r\nUsage: Only applicable when the conditions for transmission are not satisfied.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -590,7 +590,7 @@ public class SecuritiesTransactionReport4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the person or algorithm which is responsible within the reporting party for the investment decision. "
+	 * "Identifies the person or algorithm which is responsible within the reporting party for the investment decision."
 	 * </li>
 	 * </ul>
 	 */
@@ -602,7 +602,7 @@ public class SecuritiesTransactionReport4 {
 			xmlTag = "InvstmtDcsnPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentDecisionPerson";
-			definition = "Identifies the person or algorithm which is responsible within the reporting party for the investment decision. ";
+			definition = "Identifies the person or algorithm which is responsible within the reporting party for the investment decision.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

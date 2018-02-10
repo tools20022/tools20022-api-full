@@ -253,7 +253,7 @@ public class TradeData15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the unique system identification assigned to the trade  by the central matching system."
+	 * "Reference to the unique system identification assigned to the trade by the central matching system."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -270,7 +270,7 @@ public class TradeData15 {
 			xmlTag = "MtchgSysUnqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
-			definition = "Reference to the unique system identification assigned to the trade  by the central matching system.";
+			definition = "Reference to the unique system identification assigned to the trade by the central matching system.";
 			previousVersion_lazy = () -> TradeData7.mmMatchingSystemUniqueReference;
 			maxOccurs = 1;
 			minOccurs = 1;

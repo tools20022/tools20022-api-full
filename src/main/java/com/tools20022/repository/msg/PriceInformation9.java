@@ -241,7 +241,7 @@ public class PriceInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Period during which the price of a security is determined (For  outturn securities)."
+	 * "Period during which the price of a security is determined (For outturn securities)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -261,7 +261,7 @@ public class PriceInformation9 {
 			xmlTag = "PricClctnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
-			definition = "Period during which the price of a security is determined (For  outturn securities).";
+			definition = "Period during which the price of a security is determined (For outturn securities).";
 			nextVersions_lazy = () -> Arrays.asList(PriceInformation11.mmPriceCalculationPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;

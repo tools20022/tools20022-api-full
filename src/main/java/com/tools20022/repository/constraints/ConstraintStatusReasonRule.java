@@ -123,6 +123,9 @@ public class ConstraintStatusReasonRule {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forValidationStatusReason1
 	 * ConstraintStatusReasonRule.forValidationStatusReason1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forStatusReasonInformation11
+	 * ConstraintStatusReasonRule.forStatusReasonInformation11}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -133,7 +136,7 @@ public class ConstraintStatusReasonRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonRule";
 			definition = "If Reason/Code is equal to NARR, then AddititionalInformation must be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forValidationStatusReason1);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forValidationStatusReason1, com.tools20022.repository.constraints.ConstraintStatusReasonRule.forStatusReasonInformation11);
 			owner_lazy = () -> StatusReasonInformation9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>Narrative</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -194,7 +197,7 @@ public class ConstraintStatusReasonRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO 20022 Rule:\nIf StatusReason/Code is equal to 'NARR', then at least one occurrence of AddititionalStatusReasonInformation must be present."
+	 * "ISO 20022 Rule: \nIf StatusReason/Code is equal to 'NARR', then at least one occurrence of AddititionalStatusReasonInformation must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -203,7 +206,7 @@ public class ConstraintStatusReasonRule {
 			validator = ConstraintStatusReasonRule::checkStatusReasonInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonRule";
-			definition = "ISO 20022 Rule:\nIf StatusReason/Code is equal to 'NARR', then at least one occurrence of AddititionalStatusReasonInformation must be present.";
+			definition = "ISO 20022 Rule: \nIf StatusReason/Code is equal to 'NARR', then at least one occurrence of AddititionalStatusReasonInformation must be present.";
 			owner_lazy = () -> StatusReasonInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalStatusReasonInformation[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/StatusReason/Code</leftOperand><rightOperand>Narrative</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -254,6 +257,14 @@ public class ConstraintStatusReasonRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "If Status equals REJT (Rejected) then StatusReason must be present."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forSecuritiesAccountStatus2
+	 * ConstraintStatusReasonRule.forSecuritiesAccountStatus2}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SecuritiesAccountStatus1> forSecuritiesAccountStatus1 = new MMConstraint<SecuritiesAccountStatus1>() {
@@ -262,6 +273,7 @@ public class ConstraintStatusReasonRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonRule";
 			definition = "If Status equals REJT (Rejected) then StatusReason must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forSecuritiesAccountStatus2);
 			owner_lazy = () -> SecuritiesAccountStatus1.mmObject();
 		}
 	};
@@ -391,6 +403,82 @@ public class ConstraintStatusReasonRule {
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>Narrative</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus2
+	 * SecuritiesAccountStatus2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatusReasonRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Status equals REJT (Rejected) then StatusReason must be present."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forSecuritiesAccountStatus1
+	 * ConstraintStatusReasonRule.forSecuritiesAccountStatus1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesAccountStatus2> forSecuritiesAccountStatus2 = new MMConstraint<SecuritiesAccountStatus2>() {
+		{
+			validator = ConstraintStatusReasonRule::checkSecuritiesAccountStatus2;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "StatusReasonRule";
+			definition = "If Status equals REJT (Rejected) then StatusReason must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusReasonRule.forSecuritiesAccountStatus1;
+			owner_lazy = () -> SecuritiesAccountStatus2.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.StatusReasonInformation11
+	 * StatusReasonInformation11}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/AdditionalInformation[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;Narrative&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/Reason/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StatusReasonRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Reason/Code is equal to NARR, then AddititionalInformation must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintStatusReasonRule#forStatusReasonInformation9
+	 * ConstraintStatusReasonRule.forStatusReasonInformation9}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<StatusReasonInformation11> forStatusReasonInformation11 = new MMConstraint<StatusReasonInformation11>() {
+		{
+			validator = ConstraintStatusReasonRule::checkStatusReasonInformation11;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "StatusReasonRule";
+			definition = "If Reason/Code is equal to NARR, then AddititionalInformation must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintStatusReasonRule.forStatusReasonInformation9;
+			owner_lazy = () -> StatusReasonInformation11.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/AdditionalInformation[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Reason/Code</leftOperand><rightOperand>Narrative</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/Reason/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+	};
 
 	/**
 	 * If StatusReason/Code is equal to 'NARR', then at least one occurrence of
@@ -472,6 +560,21 @@ public class ConstraintStatusReasonRule {
 	 * must be present.
 	 */
 	public static void checkValidationStatusReason1(ValidationStatusReason1 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Status equals REJT (Rejected) then StatusReason must be present.
+	 */
+	public static void checkSecuritiesAccountStatus2(SecuritiesAccountStatus2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Reason/Code is equal to NARR, then AddititionalInformation must be
+	 * present.
+	 */
+	public static void checkStatusReasonInformation11(StatusReasonInformation11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

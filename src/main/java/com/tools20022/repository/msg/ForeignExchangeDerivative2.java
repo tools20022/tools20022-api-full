@@ -103,7 +103,7 @@ public class ForeignExchangeDerivative2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of deliverable and non-deliverable forwards, options and swaps contract.\t"
+	 * "Type of deliverable and non-deliverable forwards, options and swaps contract.\t."
 	 * </li>
 	 * </ul>
 	 */
@@ -115,7 +115,7 @@ public class ForeignExchangeDerivative2 {
 			xmlTag = "CtrctSubTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSubType";
-			definition = "Type of deliverable and non-deliverable forwards, options and swaps contract.\t";
+			definition = "Type of deliverable and non-deliverable forwards, options and swaps contract.\t.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassSubProductType19Code.mmObject();

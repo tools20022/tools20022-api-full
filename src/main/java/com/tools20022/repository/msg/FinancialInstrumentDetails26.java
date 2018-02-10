@@ -21,7 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06;
+import com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06;
 import com.tools20022.repository.entity.SecuritiesQuantity;
 import com.tools20022.repository.entity.Security;
 import com.tools20022.repository.GeneratedRepository;
@@ -59,7 +59,7 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06#mmFinancialInstrument
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06#mmFinancialInstrument
  * IntraPositionMovementPostingReport002V06.mmFinancialInstrument}</li>
  * </ul>
  * </li>

@@ -39,9 +39,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04
  * SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferNotification002V04
- * PortfolioTransferNotification002V04}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementAllegementRemovalAdvice002V04
  * SecuritiesSettlementAllegementRemovalAdvice002V04}</li>
  * <li>
@@ -63,41 +60,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07
  * SecuritiesSettlementConditionModificationStatusAdvice002V07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V05
- * SecuritiesSettlementTransactionModificationRequest002V05}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V06
- * SecuritiesSettlementTransactionAllegementNotification002V06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V07
- * SecuritiesSettlementTransactionInstruction002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07
- * SecuritiesFinancingConfirmation002V07}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V07
  * SecuritiesFinancingStatusAdvice002V07}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07
  * SecuritiesSettlementConditionsModificationRequest002V07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08
- * SecuritiesSettlementTransactionStatusAdvice002V08}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07
- * SecuritiesFinancingInstruction002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07
- * SecuritiesSettlementTransactionGenerationNotification002V07}</li>
- * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingModificationInstruction002V06
  * SecuritiesFinancingModificationInstruction002V06}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V07
- * SecuritiesSettlementTransactionConfirmation002V07}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdvice002V06
- * SecuritiesSettlementTransactionReversalAdvice002V06}</li>
  * </ul>
  * </li>
  * <li>
@@ -128,14 +98,10 @@ public class SecuritiesSettlementLatestversionsubsetvariant {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Securities Settlement - Latest version - subset / variant";
 				definition = "Messages that support the settlement process for securities and report its status and confirmation.";
-				messageDefinition_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmObject(), PortfolioTransferNotification002V04.mmObject(),
-						SecuritiesSettlementAllegementRemovalAdvice002V04.mmObject(), SecuritiesTransactionStatusQuery002V04.mmObject(), SecuritiesSettlementTransactionCounterpartyResponse002V02.mmObject(),
-						SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmObject(), SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmObject(), SecuritiesTransactionCancellationRequest002V05.mmObject(),
-						SecuritiesSettlementConditionModificationStatusAdvice002V07.mmObject(), SecuritiesSettlementTransactionModificationRequest002V05.mmObject(), SecuritiesSettlementTransactionAllegementNotification002V06.mmObject(),
-						SecuritiesSettlementTransactionInstruction002V07.mmObject(), SecuritiesFinancingConfirmation002V07.mmObject(), SecuritiesFinancingStatusAdvice002V07.mmObject(),
-						SecuritiesSettlementConditionsModificationRequest002V07.mmObject(), SecuritiesSettlementTransactionStatusAdvice002V08.mmObject(), SecuritiesFinancingInstruction002V07.mmObject(),
-						SecuritiesSettlementTransactionGenerationNotification002V07.mmObject(), SecuritiesFinancingModificationInstruction002V06.mmObject(), SecuritiesSettlementTransactionConfirmation002V07.mmObject(),
-						SecuritiesSettlementTransactionReversalAdvice002V06.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmObject(), SecuritiesSettlementAllegementRemovalAdvice002V04.mmObject(),
+						SecuritiesTransactionStatusQuery002V04.mmObject(), SecuritiesSettlementTransactionCounterpartyResponse002V02.mmObject(), SecuritiesTransactionCancellationRequestStatusAdvice002V05.mmObject(),
+						SecuritiesStatusOrStatementQueryStatusAdvice002V04.mmObject(), SecuritiesTransactionCancellationRequest002V05.mmObject(), SecuritiesSettlementConditionModificationStatusAdvice002V07.mmObject(),
+						SecuritiesFinancingStatusAdvice002V07.mmObject(), SecuritiesSettlementConditionsModificationRequest002V07.mmObject(), SecuritiesFinancingModificationInstruction002V06.mmObject());
 				code = "sese";
 			}
 		});

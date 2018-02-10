@@ -421,7 +421,7 @@ public class Fund3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Previous total value of all the holdings, less the fund's liabilities, of the fund/sub fund"
+	 * "Previous total value of all the holdings, less the fund's liabilities, of the fund/sub fund."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -438,7 +438,7 @@ public class Fund3 {
 			xmlTag = "PrvsTtlNAV";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousTotalNAV";
-			definition = "Previous total value of all the holdings, less the fund's liabilities, of the fund/sub fund";
+			definition = "Previous total value of all the holdings, less the fund's liabilities, of the fund/sub fund.";
 			previousVersion_lazy = () -> Fund1.mmPreviousTotalNAV;
 			maxOccurs = 1;
 			minOccurs = 0;

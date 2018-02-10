@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Result of an individual terminal management action by the point of interaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TMSActionIdentification5
+ * TMSActionIdentification5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TMSActionIdentification3
@@ -116,6 +123,14 @@ public class TMSActionIdentification4 {
 	 * definition} =
 	 * "Types of terminal management action performed by a point of interaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification5#mmActionType
+	 * TMSActionIdentification5.mmActionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -132,6 +147,7 @@ public class TMSActionIdentification4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Types of terminal management action performed by a point of interaction.";
+			nextVersions_lazy = () -> Arrays.asList(TMSActionIdentification5.mmActionType);
 			previousVersion_lazy = () -> TMSActionIdentification3.mmActionType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -164,6 +180,14 @@ public class TMSActionIdentification4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data set on which the action has been performed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSActionIdentification5#mmDataSetIdentification
+	 * TMSActionIdentification5.mmDataSetIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,6 +203,7 @@ public class TMSActionIdentification4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetIdentification";
 			definition = "Data set on which the action has been performed.";
+			nextVersions_lazy = () -> Arrays.asList(TMSActionIdentification5.mmDataSetIdentification);
 			previousVersion_lazy = () -> TMSActionIdentification3.mmDataSetIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -196,6 +221,7 @@ public class TMSActionIdentification4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TMSActionIdentification4";
 				definition = "Result of an individual terminal management action by the point of interaction.";
+				nextVersions_lazy = () -> Arrays.asList(TMSActionIdentification5.mmObject());
 				previousVersion_lazy = () -> TMSActionIdentification3.mmObject();
 			}
 		});

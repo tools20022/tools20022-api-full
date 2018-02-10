@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07;
+import com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV08;
 import com.tools20022.repository.entity.CorporateActionStatus;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
 import com.tools20022.repository.entity.StatusReason;
@@ -72,6 +73,10 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07#mmInstructionCancellationRequestStatus
  * CorporateActionInstructionCancellationRequestStatusAdviceV07.
+ * mmInstructionCancellationRequestStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV08#mmInstructionCancellationRequestStatus
+ * CorporateActionInstructionCancellationRequestStatusAdviceV08.
  * mmInstructionCancellationRequestStatus}</li>
  * </ul>
  * </li>
@@ -409,7 +414,8 @@ public class InstructionCancellationRequestStatus11Choice {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice.mmCancellationCompleted,
 						com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice.mmAccepted, com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice.mmRejected,
 						com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice.mmPendingCancellation, com.tools20022.repository.choice.InstructionCancellationRequestStatus11Choice.mmProprietaryStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionCancellationRequestStatusAdviceV07.mmInstructionCancellationRequestStatus);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionCancellationRequestStatusAdviceV07.mmInstructionCancellationRequestStatus,
+						CorporateActionInstructionCancellationRequestStatusAdviceV08.mmInstructionCancellationRequestStatus);
 				trace_lazy = () -> CorporateActionStatus.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

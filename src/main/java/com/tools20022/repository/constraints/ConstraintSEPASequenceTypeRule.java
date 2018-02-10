@@ -58,7 +58,7 @@ public class ConstraintSEPASequenceTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then  DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST."
+	 * "If DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST."
 	 * </li>
 	 * </ul>
 	 */
@@ -67,7 +67,7 @@ public class ConstraintSEPASequenceTypeRule {
 			validator = ConstraintSEPASequenceTypeRule::checkDirectDebitTransactionInformation5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPASequenceTypeRule";
-			definition = "If DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then  DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
+			definition = "If DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
 			owner_lazy = () -> DirectDebitTransactionInformation5.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentTypeInformation/SequenceType</leftOperand><rightOperand>First</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent/FinancialInstitutionIdentification/ProprietaryIdentification/Identification</leftOperand><rightOperand>SMNDA</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentTypeInformation</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -93,7 +93,7 @@ public class ConstraintSEPASequenceTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SEPA TVS 3.x rule:\nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then  DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST."
+	 * "SEPA TVS 3.x rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST."
 	 * </li>
 	 * </ul>
 	 */
@@ -102,7 +102,7 @@ public class ConstraintSEPASequenceTypeRule {
 			validator = ConstraintSEPASequenceTypeRule::checkDirectDebitTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPASequenceTypeRule";
-			definition = "SEPA TVS 3.x rule:\nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then  DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
+			definition = "SEPA TVS 3.x rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
 			owner_lazy = () -> DirectDebitTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentTypeInformation/SequenceType</leftOperand><rightOperand>First</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent/FinancialInstitutionIdentification/ProprietaryIdentification/Identification</leftOperand><rightOperand>SMNDA</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentTypeInformation</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -128,7 +128,7 @@ public class ConstraintSEPASequenceTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SEPA TVS v3.x Rule:\nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then  DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST."
+	 * "SEPA TVS v3.x Rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST."
 	 * </li>
 	 * </ul>
 	 */
@@ -137,7 +137,7 @@ public class ConstraintSEPASequenceTypeRule {
 			validator = ConstraintSEPASequenceTypeRule::checkDirectDebitTransactionInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPASequenceTypeRule";
-			definition = "SEPA TVS v3.x Rule:\nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then  DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
+			definition = "SEPA TVS v3.x Rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
 			owner_lazy = () -> DirectDebitTransactionInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentTypeInformation/SequenceType</leftOperand><rightOperand>First</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent/FinancialInstitutionIdentification/ProprietaryIdentification/Identification</leftOperand><rightOperand>SMNDA</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentTypeInformation</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -163,7 +163,7 @@ public class ConstraintSEPASequenceTypeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "SEPA TVS v3.x Rule:\nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then  DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST."
+	 * "SEPA TVS v3.x Rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST."
 	 * </li>
 	 * </ul>
 	 */
@@ -172,7 +172,7 @@ public class ConstraintSEPASequenceTypeRule {
 			validator = ConstraintSEPASequenceTypeRule::checkDirectDebitTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SEPASequenceTypeRule";
-			definition = "SEPA TVS v3.x Rule:\nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then  DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
+			definition = "SEPA TVS v3.x Rule: \nIf DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator is equal to True and DirectDebitTransactionInformation/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent is present and is set to SMNDA, then DirectDebitTransactionInformation/PaymentTypeInformation/SequenceType must be equal to FRST.";
 			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/PaymentTypeInformation/SequenceType</leftOperand><rightOperand>First</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/DirectDebitTransaction/MandateRelatedInformation/AmendmentInformationDetails/OriginalDebtorAgent/FinancialInstitutionIdentification/ProprietaryIdentification/Identification</leftOperand><rightOperand>SMNDA</rightOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/PaymentTypeInformation</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}

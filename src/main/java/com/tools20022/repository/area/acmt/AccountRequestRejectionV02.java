@@ -90,7 +90,7 @@ import javax.xml.bind.annotation.*;
  * "AccountRequestRejectionV02"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid. "
+ * "The AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -425,7 +425,7 @@ public class AccountRequestRejectionV02 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountRequestRejectionV02";
-				definition = "The AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid. ";
+				definition = "The AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid.";
 				previousVersion_lazy = () -> AccountRequestRejectionV01.mmObject();
 				messageSet_lazy = () -> Arrays.asList(BankAccountManagementISOLatestversion.mmObject());
 				rootElement = "Document";

@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07;
 import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08;
+import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09;
 import com.tools20022.repository.choice.BalanceFormat5Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SecuritiesAccount;
@@ -65,6 +66,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#mmAccountDetails
  * CorporateActionMovementReversalAdviceV08.mmAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmAccountDetails
+ * CorporateActionMovementReversalAdviceV09.mmAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -215,7 +219,8 @@ public class AccountAndBalance36 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountAndBalance36.mmSafekeepingAccount, com.tools20022.repository.msg.AccountAndBalance36.mmConfirmedBalance);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV07.mmAccountDetails, CorporateActionMovementReversalAdviceV08.mmAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(CorporateActionMovementReversalAdviceV07.mmAccountDetails, CorporateActionMovementReversalAdviceV08.mmAccountDetails, CorporateActionMovementReversalAdviceV09.mmAccountDetails);
 				trace_lazy = () -> SecuritiesAccount.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

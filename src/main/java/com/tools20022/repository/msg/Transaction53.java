@@ -121,6 +121,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Transaction53"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies the details of the transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction60 Transaction60}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Transaction47
  * Transaction47}</li>
@@ -166,6 +172,14 @@ public class Transaction53 {
 	 * definition} =
 	 * "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmAccountOwnerTransactionIdentification
+	 * Transaction60.mmAccountOwnerTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +196,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwnerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmAccountOwnerTransactionIdentification);
 			previousVersion_lazy = () -> Transaction47.mmAccountOwnerTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -221,6 +236,14 @@ public class Transaction53 {
 	 * definition} =
 	 * "Unambiguous identification of the transaction as known by the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmAccountServicerTransactionIdentification
+	 * Transaction60.mmAccountServicerTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,6 +260,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerTransactionIdentification";
 			definition = "Unambiguous identification of the transaction as known by the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmAccountServicerTransactionIdentification);
 			previousVersion_lazy = () -> Transaction47.mmAccountServicerTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -277,6 +301,14 @@ public class Transaction53 {
 	 * definition} =
 	 * "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmMarketInfrastructureTransactionIdentification
+	 * Transaction60.mmMarketInfrastructureTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -293,6 +325,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketInfrastructureTransactionIdentification";
 			definition = "Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmMarketInfrastructureTransactionIdentification);
 			previousVersion_lazy = () -> Transaction47.mmMarketInfrastructureTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -332,6 +365,14 @@ public class Transaction53 {
 	 * definition} =
 	 * "Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmProcessorTransactionIdentification
+	 * Transaction60.mmProcessorTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -348,6 +389,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmProcessorTransactionIdentification);
 			previousVersion_lazy = () -> Transaction47.mmProcessorTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -387,6 +429,14 @@ public class Transaction53 {
 	 * definition} =
 	 * "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmTradeIdentification
+	 * Transaction60.mmTradeIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -403,6 +453,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeIdentification";
 			definition = "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmTradeIdentification);
 			previousVersion_lazy = () -> Transaction47.mmTradeIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -439,6 +490,14 @@ public class Transaction53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Collective reference identifying a set of messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmPoolIdentification
+	 * Transaction60.mmPoolIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -455,6 +514,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolIdentification";
 			definition = "Collective reference identifying a set of messages.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmPoolIdentification);
 			previousVersion_lazy = () -> Transaction47.mmPoolIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -494,6 +554,14 @@ public class Transaction53 {
 	 * definition} =
 	 * "Unique reference agreed upon by the two trade counterparties to identify the trade."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmCommonIdentification
+	 * Transaction60.mmCommonIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -510,6 +578,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonIdentification";
 			definition = "Unique reference agreed upon by the two trade counterparties to identify the trade.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmCommonIdentification);
 			previousVersion_lazy = () -> Transaction47.mmCommonIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -549,6 +618,14 @@ public class Transaction53 {
 	 * definition} =
 	 * "Identification assigned by the account servicer to unambiguously identify a corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmCorporateActionEventIdentification
+	 * Transaction60.mmCorporateActionEventIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -565,6 +642,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Identification assigned by the account servicer to unambiguously identify a corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmCorporateActionEventIdentification);
 			previousVersion_lazy = () -> Transaction47.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -606,6 +684,15 @@ public class Transaction53 {
 	 * definition} =
 	 * "Unique identification identifying the triparty collateral management transaction from the triparty-agent's/service-provider's point of view."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * Transaction60.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -622,6 +709,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentServiceProviderCollateralTransactionIdentification";
 			definition = "Unique identification identifying the triparty collateral management transaction from the triparty-agent's/service-provider's point of view.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmTripartyAgentServiceProviderCollateralTransactionIdentification);
 			previousVersion_lazy = () -> Transaction47.mmTripartyAgentCollateralTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -662,6 +750,14 @@ public class Transaction53 {
 	 * definition} =
 	 * "Unique reference identifying the triparty collateral management transaction from the client's point of view."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction60.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -678,6 +774,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientTripartyCollateralTransactionIdentification";
 			definition = "Unique reference identifying the triparty collateral management transaction from the client's point of view.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmClientTripartyCollateralTransactionIdentification);
 			previousVersion_lazy = () -> Transaction47.mmClientTripartyCollateralTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -716,6 +813,14 @@ public class Transaction53 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Unique identification assigned to the instruction by the client."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmClientCollateralInstructionIdentification
+	 * Transaction60.mmClientCollateralInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -732,6 +837,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientCollateralInstructionIdentification";
 			definition = "Unique identification assigned to the instruction by the client.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmClientCollateralInstructionIdentification);
 			previousVersion_lazy = () -> Transaction47.mmClientCollateralInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -773,6 +879,15 @@ public class Transaction53 {
 	 * definition} =
 	 * "Unique identification assigned to the instruction by the triparty-agent/service-provider."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * Transaction60.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -789,6 +904,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentServiceProviderCollateralInstructionIdentification";
 			definition = "Unique identification assigned to the instruction by the triparty-agent/service-provider.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
 			previousVersion_lazy = () -> Transaction47.mmTripartyCollateralInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -825,6 +941,14 @@ public class Transaction53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the details of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmTransactionDetails
+	 * Transaction60.mmTransactionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -841,6 +965,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmTransactionDetails);
 			previousVersion_lazy = () -> Transaction47.mmTransactionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -878,6 +1003,14 @@ public class Transaction53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status and reason for the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmStatusAndReason
+	 * Transaction60.mmStatusAndReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -894,6 +1027,7 @@ public class Transaction53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and reason for the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction60.mmStatusAndReason);
 			previousVersion_lazy = () -> Transaction47.mmStatusAndReason;
 			minOccurs = 0;
 			isComposite = true;
@@ -918,6 +1052,7 @@ public class Transaction53 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transaction53";
 				definition = "Specifies the details of the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(Transaction60.mmObject());
 				previousVersion_lazy = () -> Transaction47.mmObject();
 			}
 		});

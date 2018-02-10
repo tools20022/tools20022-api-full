@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Defines the criteria to be used to extract
+ * Defines the criteria to be used to extract.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -74,7 +74,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "BillingSearchCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Defines the criteria to be used to extract"</li>
+ * definition} = "Defines the criteria to be used to extract."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingSearchCriteria2
+ * BillingSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -115,6 +122,14 @@ public class BillingSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the billing report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria2#mmBillingIdentification
+	 * BillingSearchCriteria2.mmBillingIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
@@ -126,6 +141,7 @@ public class BillingSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingIdentification";
 			definition = "Identification of the billing report.";
+			nextVersions_lazy = () -> Arrays.asList(BillingSearchCriteria2.mmBillingIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.BillingIdentification1.mmObject();
@@ -164,6 +180,14 @@ public class BillingSearchCriteria1 {
 	 * definition} =
 	 * "General information for each invoice invoicing request or month end billing event is stored."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria2#mmBillingPeriod
+	 * BillingSearchCriteria2.mmBillingPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBillingPeriod = new MMMessageAssociationEnd() {
@@ -175,6 +199,7 @@ public class BillingSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingPeriod";
 			definition = "General information for each invoice invoicing request or month end billing event is stored.";
+			nextVersions_lazy = () -> Arrays.asList(BillingSearchCriteria2.mmBillingPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -214,6 +239,14 @@ public class BillingSearchCriteria1 {
 	 * definition} =
 	 * "Party identification of the CSD or the NCB which has a contractual relationship with T2S party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria2#mmCSDOrNCB
+	 * BillingSearchCriteria2.mmCSDOrNCB}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCSDOrNCB = new MMMessageAssociationEnd() {
@@ -225,6 +258,7 @@ public class BillingSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
 			definition = "Party identification of the CSD or the NCB which has a contractual relationship with T2S party.";
+			nextVersions_lazy = () -> Arrays.asList(BillingSearchCriteria2.mmCSDOrNCB);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -266,6 +300,14 @@ public class BillingSearchCriteria1 {
 	 * definition} =
 	 * "Participant of the CSD or NCB who has to pay the bill in the end chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria2#mmBilledCustomerIdentification
+	 * BillingSearchCriteria2.mmBilledCustomerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBilledCustomerIdentification = new MMMessageAttribute() {
@@ -277,6 +319,7 @@ public class BillingSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilledCustomerIdentification";
 			definition = "Participant of the CSD or NCB who has to pay the bill in the end chain.";
+			nextVersions_lazy = () -> Arrays.asList(BillingSearchCriteria2.mmBilledCustomerIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
@@ -315,6 +358,14 @@ public class BillingSearchCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Either securities account or dedicated cash account number."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingSearchCriteria2#mmAccountIdentification
+	 * BillingSearchCriteria2.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
@@ -326,6 +377,7 @@ public class BillingSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Either securities account or dedicated cash account number.";
+			nextVersions_lazy = () -> Arrays.asList(BillingSearchCriteria2.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -343,7 +395,8 @@ public class BillingSearchCriteria1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingSearchCriteria1";
-				definition = "Defines the criteria to be used to extract";
+				definition = "Defines the criteria to be used to extract.";
+				nextVersions_lazy = () -> Arrays.asList(BillingSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

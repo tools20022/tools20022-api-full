@@ -20,7 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.codeset.ExternalPurposeCode;
+import com.tools20022.repository.codeset.ExternalPurposeCode_Obsolete;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentObligation;
 import com.tools20022.repository.GeneratedRepository;
@@ -79,7 +79,7 @@ public class Purpose1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Cd", required = true)
-	protected ExternalPurposeCode code;
+	protected ExternalPurposeCode_Obsolete code;
 	/**
 	 * 
 	 <p>
@@ -88,8 +88,8 @@ public class Purpose1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
 	 * simpleType} =
-	 * {@linkplain com.tools20022.repository.codeset.ExternalPurposeCode
-	 * ExternalPurposeCode}</li>
+	 * {@linkplain com.tools20022.repository.codeset.ExternalPurposeCode_Obsolete
+	 * ExternalPurposeCode_Obsolete}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
@@ -126,7 +126,7 @@ public class Purpose1Choice {
 			definition = "Specifies the underlying reason for the payment transaction, as published in an external purpose code list.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			simpleType_lazy = () -> ExternalPurposeCode.mmObject();
+			simpleType_lazy = () -> ExternalPurposeCode_Obsolete.mmObject();
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -194,11 +194,11 @@ public class Purpose1Choice {
 		return mmObject_lazy.get();
 	}
 
-	public ExternalPurposeCode getCode() {
+	public ExternalPurposeCode_Obsolete getCode() {
 		return code;
 	}
 
-	public Purpose1Choice setCode(ExternalPurposeCode code) {
+	public Purpose1Choice setCode(ExternalPurposeCode_Obsolete code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

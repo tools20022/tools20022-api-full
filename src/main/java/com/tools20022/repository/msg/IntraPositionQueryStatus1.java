@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the intra-position movement status query criteria including the status period."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus2
+ * IntraPositionQueryStatus2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class IntraPositionQueryStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the status type of query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus2#mmType
+	 * IntraPositionQueryStatus2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -119,6 +134,7 @@ public class IntraPositionQueryStatus1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Defines the status type of query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryStatus2.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -157,6 +173,14 @@ public class IntraPositionQueryStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specified date period of the status."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryStatus2#mmDatePeriod
+	 * IntraPositionQueryStatus2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
@@ -168,6 +192,7 @@ public class IntraPositionQueryStatus1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Specified date period of the status.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryStatus2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -184,6 +209,7 @@ public class IntraPositionQueryStatus1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraPositionQueryStatus1";
 				definition = "Defines the intra-position movement status query criteria including the status period.";
+				nextVersions_lazy = () -> Arrays.asList(IntraPositionQueryStatus2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

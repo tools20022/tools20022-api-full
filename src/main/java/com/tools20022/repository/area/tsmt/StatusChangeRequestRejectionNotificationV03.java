@@ -278,7 +278,7 @@ public class StatusChangeRequestRejectionNotificationV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the status of the transaction by means of a code. "</li>
+	 * "Identifies the status of the transaction by means of a code."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmTransactionStatus = new MMMessageBuildingBlock() {
@@ -286,7 +286,7 @@ public class StatusChangeRequestRejectionNotificationV03 {
 			xmlTag = "TxSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
-			definition = "Identifies the status of the transaction by means of a code. ";
+			definition = "Identifies the status of the transaction by means of a code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus4.mmObject();

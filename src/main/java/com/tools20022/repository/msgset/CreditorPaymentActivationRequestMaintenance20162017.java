@@ -54,7 +54,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Creditor Payment Activation Request - Maintenance 2016 - 2017"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This document describes the Creditor Payment Activation Request message set. "
+ * "This document describes the Creditor Payment Activation Request message set."
  * </li>
  * </ul>
  */
@@ -68,7 +68,7 @@ public class CreditorPaymentActivationRequestMaintenance20162017 {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Creditor Payment Activation Request - Maintenance 2016 - 2017";
-				definition = "This document describes the Creditor Payment Activation Request message set. ";
+				definition = "This document describes the Creditor Payment Activation Request message set.";
 				messageDefinition_lazy = () -> Arrays.asList(CreditorPaymentActivationRequestStatusReportV06.mmObject(), CreditorPaymentActivationRequestV06.mmObject());
 			}
 		});

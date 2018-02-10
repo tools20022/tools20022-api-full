@@ -110,6 +110,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CardPaymentTransaction75"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Transaction information in the cancellation advice."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction83
+ * CardPaymentTransaction83}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction61
@@ -158,6 +165,14 @@ public class CardPaymentTransaction75 {
 	 * definition} =
 	 * "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmMerchantCategoryCode
+	 * CardPaymentTransaction83.mmMerchantCategoryCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -174,6 +189,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantCategoryCode";
 			definition = "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmMerchantCategoryCode);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmMerchantCategoryCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -208,7 +224,15 @@ public class CardPaymentTransaction75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "This enables retailers, if they so wish, to clearly indicate whether the consent of the customer was explicitly obtained for a given service instead of being implicitly derived"
+	 * "This enables retailers, if they so wish, to clearly indicate whether the consent of the customer was explicitly obtained for a given service instead of being implicitly derived."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmCustomerConsent
+	 * CardPaymentTransaction83.mmCustomerConsent}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -219,7 +243,8 @@ public class CardPaymentTransaction75 {
 			xmlTag = "CstmrCnsnt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerConsent";
-			definition = "This enables retailers, if they so wish, to clearly indicate whether the consent of the customer was explicitly obtained for a given service instead of being implicitly derived";
+			definition = "This enables retailers, if they so wish, to clearly indicate whether the consent of the customer was explicitly obtained for a given service instead of being implicitly derived.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmCustomerConsent);
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
 		}
@@ -258,6 +283,14 @@ public class CardPaymentTransaction75 {
 	 * definition} =
 	 * "The card programme proposed by a retailer to a cardholder among a series of payment programmes offered by the retailer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmCardProgrammeProposed
+	 * CardPaymentTransaction83.mmCardProgrammeProposed}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCardProgrammeProposed = new MMMessageAttribute() {
@@ -269,6 +302,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProgrammeProposed";
 			definition = "The card programme proposed by a retailer to a cardholder among a series of payment programmes offered by the retailer.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmCardProgrammeProposed);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -307,6 +341,14 @@ public class CardPaymentTransaction75 {
 	 * definition} =
 	 * "The card programme actually selected by the cardholder among the ones supported by the retailer and/or the one actually proposed to him."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmCardProgrammeApplied
+	 * CardPaymentTransaction83.mmCardProgrammeApplied}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCardProgrammeApplied = new MMMessageAttribute() {
@@ -318,6 +360,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProgrammeApplied";
 			definition = "The card programme actually selected by the cardholder among the ones supported by the retailer and/or the one actually proposed to him.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmCardProgrammeApplied);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -350,6 +393,14 @@ public class CardPaymentTransaction75 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Global reference of the sale transaction for the sale system."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmSaleReferenceIdentification
+	 * CardPaymentTransaction83.mmSaleReferenceIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -365,6 +416,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReferenceIdentification";
 			definition = "Global reference of the sale transaction for the sale system.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmSaleReferenceIdentification);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmSaleReferenceIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -404,6 +456,14 @@ public class CardPaymentTransaction75 {
 	 * definition} =
 	 * "Unique identification of the transaction assigned by the POI (Point Of Interaction)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmTransactionIdentification
+	 * CardPaymentTransaction83.mmTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -420,6 +480,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification of the transaction assigned by the POI (Point Of Interaction).";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmTransactionIdentification);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -458,6 +519,14 @@ public class CardPaymentTransaction75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the original transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmOriginalTransaction
+	 * CardPaymentTransaction83.mmOriginalTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -474,6 +543,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransaction";
 			definition = "Identification of the original transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmOriginalTransaction);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmOriginalTransaction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -514,6 +584,14 @@ public class CardPaymentTransaction75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Outcome of the transaction at the acceptor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmTransactionSuccess
+	 * CardPaymentTransaction83.mmTransactionSuccess}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -530,6 +608,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionSuccess";
 			definition = "Outcome of the transaction at the acceptor.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmTransactionSuccess);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmTransactionSuccess;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -571,6 +650,14 @@ public class CardPaymentTransaction75 {
 	 * definition} =
 	 * "Notify that a previous transaction has to be reversed if this original transaction has been approved by the acquirer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmReversal
+	 * CardPaymentTransaction83.mmReversal}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -587,6 +674,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
 			definition = "Notify that a previous transaction has to be reversed if this original transaction has been approved by the acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmReversal);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmReversal;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -626,6 +714,14 @@ public class CardPaymentTransaction75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "List of incidents during the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmFailureReason
+	 * CardPaymentTransaction83.mmFailureReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -642,6 +738,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailureReason";
 			definition = "List of incidents during the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmFailureReason);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmFailureReason;
 			minOccurs = 0;
 			simpleType_lazy = () -> FailureReason3Code.mmObject();
@@ -676,6 +773,14 @@ public class CardPaymentTransaction75 {
 	 * definition} =
 	 * "Identification of the transaction assigned by the initiating party for the recipient party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmInitiatorTransactionIdentification
+	 * CardPaymentTransaction83.mmInitiatorTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -691,6 +796,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatorTransactionIdentification";
 			definition = "Identification of the transaction assigned by the initiating party for the recipient party.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmInitiatorTransactionIdentification);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmInitiatorTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -726,6 +832,14 @@ public class CardPaymentTransaction75 {
 	 * definition} =
 	 * "Identification of the transaction assigned by the recipient party for the initiating party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmRecipientTransactionIdentification
+	 * CardPaymentTransaction83.mmRecipientTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -741,6 +855,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientTransactionIdentification";
 			definition = "Identification of the transaction assigned by the recipient party for the initiating party.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmRecipientTransactionIdentification);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmRecipientTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -781,6 +896,14 @@ public class CardPaymentTransaction75 {
 	 * definition} =
 	 * "Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmReconciliationIdentification
+	 * CardPaymentTransaction83.mmReconciliationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -797,6 +920,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationIdentification";
 			definition = "Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmReconciliationIdentification);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmReconciliationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -835,6 +959,14 @@ public class CardPaymentTransaction75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Interchange information related to the card scheme."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmInterchangeData
+	 * CardPaymentTransaction83.mmInterchangeData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -851,6 +983,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterchangeData";
 			definition = "Interchange information related to the card scheme.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmInterchangeData);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmInterchangeData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -888,6 +1021,14 @@ public class CardPaymentTransaction75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Details of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmTransactionDetails
+	 * CardPaymentTransaction83.mmTransactionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -904,6 +1045,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Details of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmTransactionDetails);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmTransactionDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -942,6 +1084,14 @@ public class CardPaymentTransaction75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Outcome of the authorisation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmAuthorisationResult
+	 * CardPaymentTransaction83.mmAuthorisationResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -958,6 +1108,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationResult";
 			definition = "Outcome of the authorisation.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmAuthorisationResult);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmAuthorisationResult;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -992,6 +1143,14 @@ public class CardPaymentTransaction75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Additional information related to the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmAdditionalTransactionData
+	 * CardPaymentTransaction83.mmAdditionalTransactionData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1007,6 +1166,7 @@ public class CardPaymentTransaction75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTransactionData";
 			definition = "Additional information related to the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmAdditionalTransactionData);
 			previousVersion_lazy = () -> CardPaymentTransaction61.mmAdditionalTransactionData;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -1030,6 +1190,7 @@ public class CardPaymentTransaction75 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentTransaction75";
 				definition = "Transaction information in the cancellation advice.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentTransaction83.mmObject());
 				previousVersion_lazy = () -> CardPaymentTransaction61.mmObject();
 			}
 		});

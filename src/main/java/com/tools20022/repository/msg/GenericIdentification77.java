@@ -230,7 +230,7 @@ public class GenericIdentification77 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Entity assigning the identification  (for example merchant, acceptor, acquirer, or tax authority)."
+	 * "Entity assigning the identification (for example merchant, acceptor, acquirer, or tax authority)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -247,7 +247,7 @@ public class GenericIdentification77 {
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
-			definition = "Entity assigning the identification  (for example merchant, acceptor, acquirer, or tax authority).";
+			definition = "Entity assigning the identification (for example merchant, acceptor, acquirer, or tax authority).";
 			previousVersion_lazy = () -> GenericIdentification76.mmIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -281,7 +281,7 @@ public class GenericIdentification77 {
 	 * name} = "Country"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Country of the entity (ISO 3166-1 alpha-2 or alpha-3)"</li>
+	 * definition} = "Country of the entity (ISO 3166-1 alpha-2 or alpha-3)."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -296,7 +296,7 @@ public class GenericIdentification77 {
 			xmlTag = "Ctry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Country";
-			definition = "Country of the entity (ISO 3166-1 alpha-2 or alpha-3)";
+			definition = "Country of the entity (ISO 3166-1 alpha-2 or alpha-3).";
 			previousVersion_lazy = () -> GenericIdentification76.mmCountry;
 			maxOccurs = 1;
 			minOccurs = 0;

@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CashAccountAuditTrailReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Report information about cash account reference data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport2
+ * CashAccountAuditTrailReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +109,14 @@ public class CashAccountAuditTrailReport1 {
 	 * definition} =
 	 * "Identifies the returned cash account reference data or error information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport2#mmCashAccountAuditTrailOrError
+	 * CashAccountAuditTrailReport2.mmCashAccountAuditTrailOrError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountAuditTrailOrError = new MMMessageAssociationEnd() {
@@ -112,6 +127,7 @@ public class CashAccountAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountAuditTrailOrError";
 			definition = "Identifies the returned cash account reference data or error information.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailReport2.mmCashAccountAuditTrailOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -146,6 +162,14 @@ public class CashAccountAuditTrailReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period in dates for which the audit trail is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport2#mmDatePeriod
+	 * CashAccountAuditTrailReport2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
@@ -156,6 +180,7 @@ public class CashAccountAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Period in dates for which the audit trail is provided.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailReport2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -189,6 +214,14 @@ public class CashAccountAuditTrailReport1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the cash account for which the audit trail is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountAuditTrailReport2#mmCashAccountIdentification
+	 * CashAccountAuditTrailReport2.mmCashAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCashAccountIdentification = new MMMessageAttribute() {
@@ -199,6 +232,7 @@ public class CashAccountAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountIdentification";
 			definition = "Identifies the cash account for which the audit trail is provided.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailReport2.mmCashAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.CashAccount16.mmObject();
@@ -214,6 +248,7 @@ public class CashAccountAuditTrailReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailReport1";
 				definition = "Report information about cash account reference data.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

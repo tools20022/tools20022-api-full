@@ -84,6 +84,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessingStatus31Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the processing status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ProcessingStatus71Choice
+ * ProcessingStatus71Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -469,6 +476,7 @@ public class ProcessingStatus31Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProcessingStatus31Choice";
 				definition = "Choice of format for the processing status.";
+				nextVersions_lazy = () -> Arrays.asList(ProcessingStatus71Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

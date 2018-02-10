@@ -76,6 +76,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorCancellationResponse6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Cancellation response from the acquirer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse7
+ * AcceptorCancellationResponse7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse5
@@ -118,6 +125,14 @@ public class AcceptorCancellationResponse6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse7#mmEnvironment
+	 * AcceptorCancellationResponse7.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -134,6 +149,7 @@ public class AcceptorCancellationResponse6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationResponse7.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorCancellationResponse5.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -173,6 +189,14 @@ public class AcceptorCancellationResponse6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Cancellation transaction between an acceptor and an acquirer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse7#mmTransaction
+	 * AcceptorCancellationResponse7.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +213,7 @@ public class AcceptorCancellationResponse6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Cancellation transaction between an acceptor and an acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationResponse7.mmTransaction);
 			previousVersion_lazy = () -> AcceptorCancellationResponse5.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -228,6 +253,14 @@ public class AcceptorCancellationResponse6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Response from the acquirer to the cancellation transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse7#mmTransactionResponse
+	 * AcceptorCancellationResponse7.mmTransactionResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -244,6 +277,7 @@ public class AcceptorCancellationResponse6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response from the acquirer to the cancellation transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationResponse7.mmTransactionResponse);
 			previousVersion_lazy = () -> AcceptorCancellationResponse5.mmTransactionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -263,6 +297,7 @@ public class AcceptorCancellationResponse6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCancellationResponse6";
 				definition = "Cancellation response from the acquirer.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorCancellationResponse7.mmObject());
 				previousVersion_lazy = () -> AcceptorCancellationResponse5.mmObject();
 			}
 		});

@@ -46,7 +46,7 @@ public class ConstraintMidSideRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If MidSide is present then MinimumQuantity, MaximumQuantity,  Quantity and MarketPrice must not be present."
+	 * "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,7 +55,7 @@ public class ConstraintMidSideRule {
 			validator = ConstraintMidSideRule::checkQuoteSide1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSideRule";
-			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity,  Quantity and MarketPrice must not be present.";
+			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present.";
 			owner_lazy = () -> QuoteSide1.mmObject();
 		}
 	};
@@ -75,7 +75,7 @@ public class ConstraintMidSideRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If MidSide is present then MinimumQuantity, MaximumQuantity,  Quantity and MarketPrice must not be present."
+	 * "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -84,7 +84,7 @@ public class ConstraintMidSideRule {
 			validator = ConstraintMidSideRule::checkQuoteEntry2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSideRule";
-			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity,  Quantity and MarketPrice must not be present.";
+			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present.";
 			owner_lazy = () -> QuoteEntry2.mmObject();
 		}
 	};
@@ -104,7 +104,7 @@ public class ConstraintMidSideRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If MidSide is present then MinimumQuantity, MaximumQuantity,  Quantity and MarketPrice must not be present."
+	 * "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -113,7 +113,7 @@ public class ConstraintMidSideRule {
 			validator = ConstraintMidSideRule::checkQuoteEntry1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MidSideRule";
-			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity,  Quantity and MarketPrice must not be present.";
+			definition = "If MidSide is present then MinimumQuantity, MaximumQuantity, Quantity and MarketPrice must not be present.";
 			owner_lazy = () -> QuoteEntry1.mmObject();
 		}
 	};

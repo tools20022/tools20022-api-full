@@ -48,6 +48,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * LegalRestrictions1Code.Restrictions}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.LegalRestrictionsCode
+ * LegalRestrictionsCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -108,6 +111,7 @@ public class LegalRestrictions1Code extends MMCode {
 			definition = "Ownership or transfer of an unregistered security issued, pursuant to US legal restrictions 144A.";
 			owner_lazy = () -> com.tools20022.repository.codeset.LegalRestrictions1Code.mmObject();
 			codeName = "USLE";
+			codeName = LegalRestrictionsCode.USLegal144A.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -140,6 +144,7 @@ public class LegalRestrictions1Code extends MMCode {
 			definition = "Ownership or transfer of a security that is not subject to restrictions.";
 			owner_lazy = () -> com.tools20022.repository.codeset.LegalRestrictions1Code.mmObject();
 			codeName = "NORE";
+			codeName = LegalRestrictionsCode.NoRestrictions.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -173,6 +178,7 @@ public class LegalRestrictions1Code extends MMCode {
 			definition = "Ownership or transfer of a security that is subject to restrictions, and not pursuant to 144A.";
 			owner_lazy = () -> com.tools20022.repository.codeset.LegalRestrictions1Code.mmObject();
 			codeName = "REST";
+			codeName = LegalRestrictionsCode.Restrictions.getCodeName().orElse(name);
 		}
 	};
 	final static private LinkedHashMap<String, LegalRestrictions1Code> codesByName = new LinkedHashMap<>();
@@ -189,6 +195,7 @@ public class LegalRestrictions1Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LegalRestrictions1Code";
 				definition = "Specifies the regulatory restrictions applicable to a security.";
+				trace_lazy = () -> LegalRestrictionsCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LegalRestrictions1Code.USLegal144A, com.tools20022.repository.codeset.LegalRestrictions1Code.NoRestrictions,
 						com.tools20022.repository.codeset.LegalRestrictions1Code.Restrictions);
 			}

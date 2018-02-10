@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RenounceableStatus1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the renounceable status."</li>
+ * definition} = "Choice of formats to express the renounceable status."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -138,7 +138,7 @@ public class RenounceableStatus1FormatChoice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Proprietary code to  express the renounceable status."</li>
+	 * definition} = "Proprietary code to express the renounceable status."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -148,7 +148,7 @@ public class RenounceableStatus1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the renounceable status.";
+			definition = "Proprietary code to express the renounceable status.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -162,7 +162,7 @@ public class RenounceableStatus1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RenounceableStatus1FormatChoice";
-				definition = "Choice of formats to  express the renounceable status.";
+				definition = "Choice of formats to express the renounceable status.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -152,6 +152,12 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.LiquidityManagementLimitIdentificationDetails#mmSystemIdentification
 	 * LiquidityManagementLimitIdentificationDetails.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmSystemIdentification
+	 * LimitSearchCriteria4.mmSystemIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria5#mmSystemIdentification
+	 * LimitSearchCriteria5.mmSystemIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -174,7 +180,8 @@ public class TransactionAdministrator extends SystemPartyRole {
 		{
 			derivation_lazy = () -> Arrays.asList(RiskManagementLimitIdentificationDetails.mmSystemIdentification, LimitIdentificationDetails1.mmSystemIdentification, LimitIdentificationDetails2.mmSystemIdentification,
 					LimitIdentificationDetails3.mmSystemIdentification, LimitIdentification1.mmSystemIdentification, LimitIdentification2.mmSystemIdentification, LimitSearchCriteria1.mmSystemIdentification,
-					LimitSearchCriteria2.mmSystemIdentification, LimitSearchCriteria3.mmSystemIdentification, LiquidityManagementLimitIdentificationDetails.mmSystemIdentification);
+					LimitSearchCriteria2.mmSystemIdentification, LimitSearchCriteria3.mmSystemIdentification, LiquidityManagementLimitIdentificationDetails.mmSystemIdentification, LimitSearchCriteria4.mmSystemIdentification,
+					LimitSearchCriteria5.mmSystemIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -206,6 +213,9 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents1#mmSystemCurrency
 	 * SystemAvailabilityAndEvents1.mmSystemCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2#mmSystemCurrency
+	 * SystemAvailabilityAndEvents2.mmSystemCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -228,7 +238,7 @@ public class TransactionAdministrator extends SystemPartyRole {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmSystemCurrency, SystemAvailabilityAndEvents1.mmSystemCurrency);
+			derivation_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmSystemCurrency, SystemAvailabilityAndEvents1.mmSystemCurrency, SystemAvailabilityAndEvents2.mmSystemCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TransactionAdministrator.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Result of the performed service..
+ * Result of the performed service.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -59,7 +59,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Response4Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Result of the performed service.."</li>
+ * definition} = "Result of the performed service."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -149,7 +149,7 @@ public class Response4Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Response4Code";
-				definition = "Result of the performed service..";
+				definition = "Result of the performed service.";
 				trace_lazy = () -> ResponseCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Response4Code.Approved, com.tools20022.repository.codeset.Response4Code.Declined, com.tools20022.repository.codeset.Response4Code.PartialApproved);
 			}

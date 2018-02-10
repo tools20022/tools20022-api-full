@@ -959,7 +959,7 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 		}
 	};
 	/**
-	 * Full Payment
+	 * Full Payment.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -976,20 +976,20 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 	 * name} = "FullPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Full Payment"</li>
+	 * definition} = "Full Payment."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionV2Code FullPayment = new SettlementTransactionConditionV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPayment";
-			definition = "Full Payment";
+			definition = "Full Payment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionConditionV2Code.mmObject();
 			codeName = "FUSD";
 		}
 	};
 	/**
-	 * Half Payment
+	 * Half Payment.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1006,14 +1006,14 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 	 * name} = "HalfPayment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Half Payment"</li>
+	 * definition} = "Half Payment."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionV2Code HalfPayment = new SettlementTransactionConditionV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HalfPayment";
-			definition = "Half Payment";
+			definition = "Half Payment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionConditionV2Code.mmObject();
 			codeName = "HASD";
 		}
@@ -1049,7 +1049,7 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 		}
 	};
 	/**
-	 * Letter of guarantee is not accepted
+	 * Letter of guarantee is not accepted.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1066,14 +1066,14 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 	 * name} = "LetterOfGuaranteeIsNotAccepted"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Letter of guarantee is not accepted"</li>
+	 * definition} = "Letter of guarantee is not accepted."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionV2Code LetterOfGuaranteeIsNotAccepted = new SettlementTransactionConditionV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LetterOfGuaranteeIsNotAccepted";
-			definition = "Letter of guarantee is not accepted";
+			definition = "Letter of guarantee is not accepted.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionConditionV2Code.mmObject();
 			codeName = "NLEG";
 		}
@@ -1199,7 +1199,7 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 		}
 	};
 	/**
-	 * Security eligible for collateral purposes
+	 * Security eligible for collateral purposes.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1216,14 +1216,14 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 	 * name} = "SecurityEligibleForCollateralPurposes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Security eligible for collateral purposes"</li>
+	 * definition} = "Security eligible for collateral purposes."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionV2Code SecurityEligibleForCollateralPurposes = new SettlementTransactionConditionV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityEligibleForCollateralPurposes";
-			definition = "Security eligible for collateral purposes";
+			definition = "Security eligible for collateral purposes.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionConditionV2Code.mmObject();
 			codeName = "COLA";
 		}
@@ -1289,7 +1289,7 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 		}
 	};
 	/**
-	 * Settlement Instruction is not CCP eligible
+	 * Settlement Instruction is not CCP eligible.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1306,20 +1306,20 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 	 * name} = "SettlementInstructionIsNotCCPEligible"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Settlement Instruction is not CCP eligible"</li>
+	 * definition} = "Settlement Instruction is not CCP eligible."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionV2Code SettlementInstructionIsNotCCPEligible = new SettlementTransactionConditionV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstructionIsNotCCPEligible";
-			definition = "Settlement Instruction is not CCP eligible";
+			definition = "Settlement Instruction is not CCP eligible.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionConditionV2Code.mmObject();
 			codeName = "NCCP";
 		}
 	};
 	/**
-	 * Settle through the Non-RTGS System
+	 * Settle through the Non-RTGS System.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1336,14 +1336,14 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 	 * name} = "SettleThroughTheNon-RTGSSystem"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Settle through the Non-RTGS System"</li>
+	 * definition} = "Settle through the Non-RTGS System."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionV2Code SettleThroughTheNonRTGSSystem = new SettlementTransactionConditionV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettleThroughTheNon-RTGSSystem";
-			definition = "Settle through the Non-RTGS System";
+			definition = "Settle through the Non-RTGS System.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionConditionV2Code.mmObject();
 			codeName = "NRTG";
 		}
@@ -1469,7 +1469,7 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 		}
 	};
 	/**
-	 * Transformation
+	 * Transformation.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1486,14 +1486,14 @@ public class SettlementTransactionConditionV2Code extends MMCode {
 	 * name} = "Transformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Transformation"</li>
+	 * definition} = "Transformation."</li>
 	 * </ul>
 	 */
 	public static final SettlementTransactionConditionV2Code Transformation = new SettlementTransactionConditionV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transformation";
-			definition = "Transformation";
+			definition = "Transformation.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionConditionV2Code.mmObject();
 			codeName = "TRAN";
 		}

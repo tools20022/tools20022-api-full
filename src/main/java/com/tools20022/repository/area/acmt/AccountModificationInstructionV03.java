@@ -306,7 +306,7 @@ public class AccountModificationInstructionV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provide detailed information about the application modification instruction. "
+	 * "Provide detailed information about the application modification instruction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -323,7 +323,7 @@ public class AccountModificationInstructionV03 {
 			xmlTag = "InstrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
-			definition = "Provide detailed information about the application modification instruction. ";
+			definition = "Provide detailed information about the application modification instruction.";
 			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV04.mmInstructionDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -361,7 +361,7 @@ public class AccountModificationInstructionV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Investment account selection information used to identify the account for which the information is modified.."
+	 * "Investment account selection information used to identify the account for which the information is modified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -378,7 +378,7 @@ public class AccountModificationInstructionV03 {
 			xmlTag = "InvstmtAcctSelctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentAccountSelection";
-			definition = "Investment account selection information used to identify the account for which the information is modified..";
+			definition = "Investment account selection information used to identify the account for which the information is modified.";
 			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV04.mmInvestmentAccountSelection);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -854,7 +854,7 @@ public class AccountModificationInstructionV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to documents to be added, deleted or updated.\n"</li>
+	 * "Information related to documents to be added, deleted or updated.\n."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -870,7 +870,7 @@ public class AccountModificationInstructionV03 {
 			xmlTag = "ModfdSvcLvlAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedServiceLevelAgreement";
-			definition = "Information related to documents to be added, deleted or updated.\n";
+			definition = "Information related to documents to be added, deleted or updated.\n.";
 			nextVersions_lazy = () -> Arrays.asList(AccountModificationInstructionV04.mmModifiedServiceLevelAgreement);
 			maxOccurs = 30;
 			minOccurs = 0;

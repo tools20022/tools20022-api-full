@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 /**
  * List of standards insurance clauses. (standard policy wordings issued by the
  * Institute of London Underwriters or the American Institute of Marine
- * Underwriters)
+ * Underwriters).
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -99,7 +99,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "InsuranceClausesCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+ * "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
  * </li>
  * </ul>
  */
@@ -110,7 +110,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute Cargo Clause A (standard policy wordings issued by the
 	 * Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -128,7 +128,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute Cargo Clause A (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute Cargo Clause A (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -136,7 +136,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseA";
-			definition = "Institute Cargo Clause A (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute Cargo Clause A (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "ICCA";
 		}
@@ -144,7 +144,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute Cargo Clause B (standard policy wordings issued by the
 	 * Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -162,7 +162,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute Cargo Clause B (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute Cargo Clause B (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -170,7 +170,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseB";
-			definition = "Institute Cargo Clause B (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute Cargo Clause B (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "ICCB";
 		}
@@ -178,7 +178,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute Cargo Clause C (standard policy wordings issued by the
 	 * Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -196,7 +196,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute Cargo Clause C (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute Cargo Clause C (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -204,7 +204,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseC";
-			definition = "Institute Cargo Clause C (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute Cargo Clause C (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "ICCC";
 		}
@@ -212,7 +212,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute Cargo Clause for Air (standard policy wordings issued by the
 	 * Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -230,7 +230,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute Cargo Clause for Air (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute Cargo Clause for Air (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -238,7 +238,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteCargoClauseAir";
-			definition = "Institute Cargo Clause for Air (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute Cargo Clause for Air (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "ICAI";
 		}
@@ -246,7 +246,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute War Clause for Cargo (standard policy wordings issued by the
 	 * Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -264,7 +264,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute War Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute War Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -272,7 +272,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteWarClauseCargo";
-			definition = "Institute War Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute War Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "IWCC";
 		}
@@ -280,7 +280,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute Strikes Clause for Cargo (standard policy wordings issued by
 	 * the Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -298,7 +298,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute Strikes Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute Strikes Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -306,7 +306,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteStrikesClauseCargo";
-			definition = "Institute Strikes Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute Strikes Clause for Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "ISCC";
 		}
@@ -314,7 +314,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute Replacement Clause (standard policy wordings issued by the
 	 * Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -332,7 +332,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute Replacement Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute Replacement Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -340,7 +340,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteReplacementClause";
-			definition = "Institute Replacement Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute Replacement Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "IREC";
 		}
@@ -348,7 +348,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute Classification Clause (standard policy wordings issued by the
 	 * Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -366,7 +366,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute Classification Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute Classification Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -374,14 +374,14 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteClassificationClause";
-			definition = "Institute Classification Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute Classification Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "ICLC";
 		}
 	};
 	/**
 	 * ISM Code Endorsement (standard policy wordings issued by the Institute of
-	 * London Underwriters or the American Institute of Marine Underwriters)
+	 * London Underwriters or the American Institute of Marine Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -399,7 +399,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISM Code Endorsement (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "ISM Code Endorsement (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -407,7 +407,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISMCodeEndorsement";
-			definition = "ISM Code Endorsement (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "ISM Code Endorsement (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "ISMC";
 		}
@@ -415,7 +415,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Computer Millenium Clause Cargo (standard policy wordings issued by the
 	 * Institute of London Underwriters or the American Institute of Marine
-	 * Underwriters)
+	 * Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -433,7 +433,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Computer Millenium Clause Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Computer Millenium Clause Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -441,7 +441,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComputerMilleniumClauseCargo";
-			definition = "Computer Millenium Clause Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Computer Millenium Clause Cargo (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "CMCC";
 		}
@@ -449,7 +449,7 @@ public class InsuranceClausesCode extends MMCode {
 	/**
 	 * Institute Radioactive Contamination Exclusion Clause (standard policy
 	 * wordings issued by the Institute of London Underwriters or the American
-	 * Institute of Marine Underwriters)
+	 * Institute of Marine Underwriters).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -467,7 +467,7 @@ public class InsuranceClausesCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Institute Radioactive Contamination Exclusion Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)"
+	 * "Institute Radioactive Contamination Exclusion Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)."
 	 * </li>
 	 * </ul>
 	 */
@@ -475,7 +475,7 @@ public class InsuranceClausesCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstituteRadioactiveContaminationExclusionClause";
-			definition = "Institute Radioactive Contamination Exclusion Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+			definition = "Institute Radioactive Contamination Exclusion Clause (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 			owner_lazy = () -> com.tools20022.repository.codeset.InsuranceClausesCode.mmObject();
 			codeName = "IRCE";
 		}
@@ -492,7 +492,7 @@ public class InsuranceClausesCode extends MMCode {
 				example = Arrays.asList("ICCA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceClausesCode";
-				definition = "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters)";
+				definition = "List of standards insurance clauses. (standard policy wordings issued by the Institute of London Underwriters or the American Institute of Marine Underwriters).";
 				derivation_lazy = () -> Arrays.asList(InsuranceClauses1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InsuranceClausesCode.InstituteCargoClauseA, com.tools20022.repository.codeset.InsuranceClausesCode.InstituteCargoClauseB,
 						com.tools20022.repository.codeset.InsuranceClausesCode.InstituteCargoClauseC, com.tools20022.repository.codeset.InsuranceClausesCode.InstituteCargoClauseAir,

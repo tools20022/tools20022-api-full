@@ -102,6 +102,13 @@ import javax.xml.bind.annotation.XmlType;
  * "LimitSearchCriteria3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to search for a limit."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.LimitSearchCriteria4
+ * LimitSearchCriteria4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -141,7 +148,15 @@ public class LimitSearchCriteria3 {
 	 * name} = "SystemIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of a particular cash clearing system. "</li>
+	 * definition} = "Identification of a particular cash clearing system."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmSystemIdentification
+	 * LimitSearchCriteria4.mmSystemIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSystemIdentification = new MMMessageAssociationEnd() {
@@ -152,7 +167,8 @@ public class LimitSearchCriteria3 {
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
-			definition = "Identification of a particular cash clearing system. ";
+			definition = "Identification of a particular cash clearing system.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmSystemIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -193,6 +209,14 @@ public class LimitSearchCriteria3 {
 	 * definition} =
 	 * "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmBilateralLimitCounterpartyIdentification
+	 * LimitSearchCriteria4.mmBilateralLimitCounterpartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBilateralLimitCounterpartyIdentification = new MMMessageAssociationEnd() {
@@ -204,6 +228,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralLimitCounterpartyIdentification";
 			definition = "Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmBilateralLimitCounterpartyIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
@@ -243,6 +268,14 @@ public class LimitSearchCriteria3 {
 	 * definition} =
 	 * "Type of limit as set by default in the system. The default limit is applicable by the system unless otherwise instructed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmDefaultLimitType
+	 * LimitSearchCriteria4.mmDefaultLimitType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDefaultLimitType = new MMMessageAttribute() {
@@ -254,6 +287,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultLimitType";
 			definition = "Type of limit as set by default in the system. The default limit is applicable by the system unless otherwise instructed.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmDefaultLimitType);
 			minOccurs = 0;
 			complexType_lazy = () -> LimitType1Choice.mmObject();
 		}
@@ -290,6 +324,14 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of limit applied by the system at the present time."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmCurrentLimitType
+	 * LimitSearchCriteria4.mmCurrentLimitType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrentLimitType = new MMMessageAttribute() {
@@ -301,6 +343,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentLimitType";
 			definition = "Type of limit applied by the system at the present time.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmCurrentLimitType);
 			minOccurs = 0;
 			complexType_lazy = () -> LimitType1Choice.mmObject();
 		}
@@ -337,6 +380,14 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Owner of the account which is being queried."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmAccountOwner
+	 * LimitSearchCriteria4.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -348,6 +399,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Owner of the account which is being queried.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -388,6 +440,14 @@ public class LimitSearchCriteria3 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmAccountIdentification
+	 * LimitSearchCriteria4.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
@@ -399,6 +459,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -436,6 +497,14 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Actual usage of the limit expressed as an amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmUsedAmount
+	 * LimitSearchCriteria4.mmUsedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUsedAmount = new MMMessageAssociationEnd() {
@@ -447,6 +516,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedAmount";
 			definition = "Actual usage of the limit expressed as an amount.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmUsedAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -486,6 +556,14 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Actual usage of the limit expressed as a percentage."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmUsedPercentage
+	 * LimitSearchCriteria4.mmUsedPercentage}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUsedPercentage = new MMMessageAttribute() {
@@ -497,6 +575,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UsedPercentage";
 			definition = "Actual usage of the limit expressed as a percentage.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmUsedPercentage);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PercentageRange1Choice.mmObject();
@@ -535,6 +614,14 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency unit used to specify the limit amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmLimitCurrency
+	 * LimitSearchCriteria4.mmLimitCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLimitCurrency = new MMMessageAttribute() {
@@ -546,6 +633,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitCurrency";
 			definition = "Currency unit used to specify the limit amount.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmLimitCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -583,6 +671,14 @@ public class LimitSearchCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Amount of money of the limit, expressed in an eligible currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmLimitAmount
+	 * LimitSearchCriteria4.mmLimitAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLimitAmount = new MMMessageAssociationEnd() {
@@ -594,6 +690,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitAmount";
 			definition = "Amount of money of the limit, expressed in an eligible currency.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmLimitAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -633,6 +730,14 @@ public class LimitSearchCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Range of dates when the limit becomes valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmLimitValidAsOfDate
+	 * LimitSearchCriteria4.mmLimitValidAsOfDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLimitValidAsOfDate = new MMMessageAttribute() {
@@ -644,6 +749,7 @@ public class LimitSearchCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitValidAsOfDate";
 			definition = "Range of dates when the limit becomes valid.";
+			nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmLimitValidAsOfDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndPeriod2Choice.mmObject();
@@ -664,6 +770,7 @@ public class LimitSearchCriteria3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitSearchCriteria3";
 				definition = "Defines the criteria used to search for a limit.";
+				nextVersions_lazy = () -> Arrays.asList(LimitSearchCriteria4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

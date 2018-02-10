@@ -47,7 +47,7 @@ public class ConstraintCurrencyUserDefinedPeriodsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Currency in  ByUserDefinedTimePeriod/HighestPriceValue/Amount, ByUserDefinedTimePeriod/LowestPriceValue/Amount and ByUserDefinedTimePeriod/PriceChange/Amount must be the same as Currency."
+	 * "Currency in ByUserDefinedTimePeriod/HighestPriceValue/Amount, ByUserDefinedTimePeriod/LowestPriceValue/Amount and ByUserDefinedTimePeriod/PriceChange/Amount must be the same as Currency."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintCurrencyUserDefinedPeriodsRule {
 			validator = ConstraintCurrencyUserDefinedPeriodsRule::checkValuationStatistics2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyUserDefinedPeriodsRule";
-			definition = "Currency in  ByUserDefinedTimePeriod/HighestPriceValue/Amount, ByUserDefinedTimePeriod/LowestPriceValue/Amount and ByUserDefinedTimePeriod/PriceChange/Amount must be the same as Currency.";
+			definition = "Currency in ByUserDefinedTimePeriod/HighestPriceValue/Amount, ByUserDefinedTimePeriod/LowestPriceValue/Amount and ByUserDefinedTimePeriod/PriceChange/Amount must be the same as Currency.";
 			owner_lazy = () -> ValuationStatistics2.mmObject();
 		}
 	};

@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessedStatus5FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the processing status of a request."</li>
+ * "Choice of formats to express the processing status of a request."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,7 +106,7 @@ public class ProcessedStatus5FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to specify  the processing status of a request."</li>
+	 * "Standard code to specify the processing status of a request."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -117,7 +117,7 @@ public class ProcessedStatus5FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to specify  the processing status of a request.";
+			definition = "Standard code to specify the processing status of a request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessedStatus5Code.mmObject();
@@ -156,7 +156,7 @@ public class ProcessedStatus5FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the processing status of a request."</li>
+	 * "Proprietary code to express the processing status of a request."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -167,7 +167,7 @@ public class ProcessedStatus5FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the processing status of a request.";
+			definition = "Proprietary code to express the processing status of a request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -182,7 +182,7 @@ public class ProcessedStatus5FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus5FormatChoice";
-				definition = "Choice of formats to  express the processing status of a request.";
+				definition = "Choice of formats to express the processing status of a request.";
 			}
 		});
 		return mmObject_lazy.get();

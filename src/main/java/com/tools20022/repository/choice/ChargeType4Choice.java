@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ChargeType4Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of formats for the type of charge."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ChargeType6Choice
+ * ChargeType6Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +108,14 @@ public class ChargeType4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of charge expressed as a code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType6Choice#mmCode
+	 * ChargeType6Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -112,6 +127,7 @@ public class ChargeType4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Type of charge expressed as a code.";
+			nextVersions_lazy = () -> Arrays.asList(ChargeType6Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ChargeType12Code.mmObject();
@@ -150,6 +166,14 @@ public class ChargeType4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of charge expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType6Choice#mmProprietary
+	 * ChargeType6Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -161,6 +185,7 @@ public class ChargeType4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Type of charge expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(ChargeType6Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();
@@ -175,6 +200,7 @@ public class ChargeType4Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType4Choice";
 				definition = "Choice of formats for the type of charge.";
+				nextVersions_lazy = () -> Arrays.asList(ChargeType6Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

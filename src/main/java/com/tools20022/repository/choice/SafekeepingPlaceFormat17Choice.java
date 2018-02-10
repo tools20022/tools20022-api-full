@@ -22,8 +22,8 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
-import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.area.semt.IntraPositionMovementInstruction002V04;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.entity.PartyIdentificationInformation;
@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05#mmSafekeepingPlace
  * IntraPositionMovementConfirmation002V05.mmSafekeepingPlace}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06#mmSafekeepingPlace
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06#mmSafekeepingPlace
  * IntraPositionMovementConfirmation002V06.mmSafekeepingPlace}</li>
  * </ul>
  * </li>

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.LiquidityCreditTransferV04;
 import com.tools20022.repository.choice.Amount2Choice;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.entity.*;
@@ -71,6 +72,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.Payment Payment}</li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.LiquidityCreditTransferV04#mmLiquidityCreditTransfer
+ * LiquidityCreditTransferV04.mmLiquidityCreditTransfer}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -86,12 +96,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "LiquidityCreditTransfer1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides details specific to the liquidity credit transfer, used to  transfer an amount of money from the debtor to the creditor, where both are financial institutions."
+ * "Provides details specific to the liquidity credit transfer, used to transfer an amount of money from the debtor to the creditor, where both are financial institutions."
  * </li>
  * </ul>
  */
@@ -221,7 +231,7 @@ public class LiquidityCreditTransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Account to be credited as a result of a transfer of liquidity. "</li>
+	 * "Account to be credited as a result of a transfer of liquidity."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
@@ -232,7 +242,7 @@ public class LiquidityCreditTransfer1 {
 			xmlTag = "CdtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
-			definition = "Account to be credited as a result of a transfer of liquidity. ";
+			definition = "Account to be credited as a result of a transfer of liquidity.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -368,7 +378,7 @@ public class LiquidityCreditTransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Account to be debited as a result of a transfer of liquidity. "</li>
+	 * "Account to be debited as a result of a transfer of liquidity."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
@@ -379,7 +389,7 @@ public class LiquidityCreditTransfer1 {
 			xmlTag = "DbtrAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
-			definition = "Account to be debited as a result of a transfer of liquidity. ";
+			definition = "Account to be debited as a result of a transfer of liquidity.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -443,12 +453,13 @@ public class LiquidityCreditTransfer1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.LiquidityCreditTransfer1.mmLiquidityTransferIdentification, com.tools20022.repository.msg.LiquidityCreditTransfer1.mmCreditor,
 						com.tools20022.repository.msg.LiquidityCreditTransfer1.mmCreditorAccount, com.tools20022.repository.msg.LiquidityCreditTransfer1.mmTransferredAmount, com.tools20022.repository.msg.LiquidityCreditTransfer1.mmDebtor,
 						com.tools20022.repository.msg.LiquidityCreditTransfer1.mmDebtorAccount, com.tools20022.repository.msg.LiquidityCreditTransfer1.mmSettlementDate);
+				messageBuildingBlock_lazy = () -> Arrays.asList(LiquidityCreditTransferV04.mmLiquidityCreditTransfer);
 				trace_lazy = () -> Payment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCreditAccountRule.forLiquidityCreditTransfer1);
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LiquidityCreditTransfer1";
-				definition = "Provides details specific to the liquidity credit transfer, used to  transfer an amount of money from the debtor to the creditor, where both are financial institutions.";
+				definition = "Provides details specific to the liquidity credit transfer, used to transfer an amount of money from the debtor to the creditor, where both are financial institutions.";
 			}
 		});
 		return mmObject_lazy.get();

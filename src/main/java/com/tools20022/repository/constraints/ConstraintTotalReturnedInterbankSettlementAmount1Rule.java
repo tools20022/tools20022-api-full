@@ -26,7 +26,7 @@ import com.tools20022.repository.area.pacs.PaymentReturnV01;
  * If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all
  * occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must
  * have the same currency as the currency of
- * GroupHeader/TotalReturnedInterbankSettlementAmount.
+ * GroupHeader/TotalReturnedInterbankSettlementAmount. .
  */
 public class ConstraintTotalReturnedInterbankSettlementAmount1Rule {
 
@@ -47,7 +47,7 @@ public class ConstraintTotalReturnedInterbankSettlementAmount1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount. \n"
+	 * "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount. \n."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintTotalReturnedInterbankSettlementAmount1Rule {
 			validator = ConstraintTotalReturnedInterbankSettlementAmount1Rule::checkPaymentReturnV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReturnedInterbankSettlementAmount1Rule";
-			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount. \n";
+			definition = "If GroupHeader/TotalReturnedInterbankSettlementAmount is present, then all occurrences of TransactionInformation/ReturnedInterbankSettlementAmount must have the same currency as the currency of GroupHeader/TotalReturnedInterbankSettlementAmount. \n.";
 			owner_lazy = () -> PaymentReturnV01.mmObject();
 		}
 	};
@@ -66,7 +66,7 @@ public class ConstraintTotalReturnedInterbankSettlementAmount1Rule {
 	 * all occurrences of
 	 * TransactionInformation/ReturnedInterbankSettlementAmount must have the
 	 * same currency as the currency of
-	 * GroupHeader/TotalReturnedInterbankSettlementAmount.
+	 * GroupHeader/TotalReturnedInterbankSettlementAmount. .
 	 */
 	public static void checkPaymentReturnV01(PaymentReturnV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();

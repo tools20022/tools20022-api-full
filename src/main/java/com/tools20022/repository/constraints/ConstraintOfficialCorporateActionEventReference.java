@@ -2159,6 +2159,15 @@ public class ConstraintOfficialCorporateActionEventReference {
 	 * definition} =
 	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation126
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation126}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2173,6 +2182,7 @@ public class ConstraintOfficialCorporateActionEventReference {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventReference";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation126);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation89;
 			owner_lazy = () -> CorporateActionGeneralInformation111.mmObject();
 		}
@@ -2196,6 +2206,15 @@ public class ConstraintOfficialCorporateActionEventReference {
 	 * definition} =
 	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation127
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation127}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2210,6 +2229,7 @@ public class ConstraintOfficialCorporateActionEventReference {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventReference";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation127);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation87;
 			owner_lazy = () -> CorporateActionGeneralInformation112.mmObject();
 		}
@@ -2270,6 +2290,15 @@ public class ConstraintOfficialCorporateActionEventReference {
 	 * definition} =
 	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation125
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation125}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2284,6 +2313,7 @@ public class ConstraintOfficialCorporateActionEventReference {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventReference";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation125);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation85;
 			owner_lazy = () -> CorporateActionGeneralInformation105.mmObject();
 		}
@@ -2344,6 +2374,15 @@ public class ConstraintOfficialCorporateActionEventReference {
 	 * definition} =
 	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation128
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation128}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2358,6 +2397,7 @@ public class ConstraintOfficialCorporateActionEventReference {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventReference";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation128);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation84;
 			owner_lazy = () -> CorporateActionGeneralInformation106.mmObject();
 		}
@@ -2381,6 +2421,15 @@ public class ConstraintOfficialCorporateActionEventReference {
 	 * definition} =
 	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation124
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation124}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2395,6 +2444,7 @@ public class ConstraintOfficialCorporateActionEventReference {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventReference";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation124);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation86;
 			owner_lazy = () -> CorporateActionGeneralInformation108.mmObject();
 		}
@@ -2637,6 +2687,341 @@ public class ConstraintOfficialCorporateActionEventReference {
 			name = "OfficialCorporateActionEventReference";
 			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
 			owner_lazy = () -> CorporateActionGeneralInformation113.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation127
+	 * CorporateActionGeneralInformation127}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are available in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation112
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation112}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation127> forCorporateActionGeneralInformation127 = new MMConstraint<CorporateActionGeneralInformation127>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation127;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are available in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation112;
+			owner_lazy = () -> CorporateActionGeneralInformation127.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation126
+	 * CorporateActionGeneralInformation126}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation111
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation111}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation126> forCorporateActionGeneralInformation126 = new MMConstraint<CorporateActionGeneralInformation126>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation126;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation111;
+			owner_lazy = () -> CorporateActionGeneralInformation126.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125
+	 * CorporateActionGeneralInformation125}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). These recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation105
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation105}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation125> forCorporateActionGeneralInformation125 = new MMConstraint<CorporateActionGeneralInformation125>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation125;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). These recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation105;
+			owner_lazy = () -> CorporateActionGeneralInformation125.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation124
+	 * CorporateActionGeneralInformation124}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are available in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation108
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation108}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation124> forCorporateActionGeneralInformation124 = new MMConstraint<CorporateActionGeneralInformation124>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation124;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are available in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation108;
+			owner_lazy = () -> CorporateActionGeneralInformation124.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation128
+	 * CorporateActionGeneralInformation128}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference#forCorporateActionGeneralInformation106
+	 * ConstraintOfficialCorporateActionEventReference.
+	 * forCorporateActionGeneralInformation106}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation128> forCorporateActionGeneralInformation128 = new MMConstraint<CorporateActionGeneralInformation128>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation128;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOfficialCorporateActionEventReference.forCorporateActionGeneralInformation106;
+			owner_lazy = () -> CorporateActionGeneralInformation128.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation129
+	 * CorporateActionGeneralInformation129}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are available in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation129> forCorporateActionGeneralInformation129 = new MMConstraint<CorporateActionGeneralInformation129>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation129;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are available in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			owner_lazy = () -> CorporateActionGeneralInformation129.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation130
+	 * CorporateActionGeneralInformation130}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation130> forCorporateActionGeneralInformation130 = new MMConstraint<CorporateActionGeneralInformation130>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation130;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			owner_lazy = () -> CorporateActionGeneralInformation130.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation131
+	 * CorporateActionGeneralInformation131}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are available in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation131> forCorporateActionGeneralInformation131 = new MMConstraint<CorporateActionGeneralInformation131>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation131;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are available in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			owner_lazy = () -> CorporateActionGeneralInformation131.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation132
+	 * CorporateActionGeneralInformation132}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation132> forCorporateActionGeneralInformation132 = new MMConstraint<CorporateActionGeneralInformation132>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation132;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). Those recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			owner_lazy = () -> CorporateActionGeneralInformation132.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation134
+	 * CorporateActionGeneralInformation134}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OfficialCorporateActionEventReference"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). These recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformation134> forCorporateActionGeneralInformation134 = new MMConstraint<CorporateActionGeneralInformation134>() {
+		{
+			validator = ConstraintOfficialCorporateActionEventReference::checkCorporateActionGeneralInformation134;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OfficialCorporateActionEventReference";
+			definition = "The Securities Market Practice Group (SMPG) has published market practice recommendations on the structure and usage of the Official Corporate Action Event Reference (COAF). These recommendations are\r\navailable in the SMPG Global Market Practices Part 1 document on www.smpg.info.";
+			owner_lazy = () -> CorporateActionGeneralInformation134.mmObject();
 		}
 	};
 
@@ -3462,6 +3847,112 @@ public class ConstraintOfficialCorporateActionEventReference {
 	 * www.smpg.info.
 	 */
 	public static void checkCorporateActionGeneralInformation113(CorporateActionGeneralInformation113 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). Those recommendations are available in the
+	 * SMPG Global Market Practices Part 1 document on www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation127(CorporateActionGeneralInformation127 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). Those recommendations are<br>
+	 * available in the SMPG Global Market Practices Part 1 document on
+	 * www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation126(CorporateActionGeneralInformation126 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). These recommendations are<br>
+	 * available in the SMPG Global Market Practices Part 1 document on
+	 * www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation125(CorporateActionGeneralInformation125 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). Those recommendations are available in the
+	 * SMPG Global Market Practices Part 1 document on www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation124(CorporateActionGeneralInformation124 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). Those recommendations are<br>
+	 * available in the SMPG Global Market Practices Part 1 document on
+	 * www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation128(CorporateActionGeneralInformation128 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). Those recommendations are available in the
+	 * SMPG Global Market Practices Part 1 document on www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation129(CorporateActionGeneralInformation129 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). Those recommendations are<br>
+	 * available in the SMPG Global Market Practices Part 1 document on
+	 * www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation130(CorporateActionGeneralInformation130 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). Those recommendations are available in the
+	 * SMPG Global Market Practices Part 1 document on www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation131(CorporateActionGeneralInformation131 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). Those recommendations are<br>
+	 * available in the SMPG Global Market Practices Part 1 document on
+	 * www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation132(CorporateActionGeneralInformation132 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The Securities Market Practice Group (SMPG) has published market practice
+	 * recommendations on the structure and usage of the Official Corporate
+	 * Action Event Reference (COAF). These recommendations are<br>
+	 * available in the SMPG Global Market Practices Part 1 document on
+	 * www.smpg.info.
+	 */
+	public static void checkCorporateActionGeneralInformation134(CorporateActionGeneralInformation134 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

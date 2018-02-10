@@ -78,6 +78,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionDate24"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies corporate action dates."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDate65
+ * CorporateActionDate65}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionDate7
@@ -126,6 +133,14 @@ public class CorporateActionDate24 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/Time of the posting (credit or debit) to the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmPostingDate
+	 * CorporateActionDate65.mmPostingDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPostingDate = new MMMessageAttribute() {
@@ -138,6 +153,7 @@ public class CorporateActionDate24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingDate";
 			definition = "Date/Time of the posting (credit or debit) to the account.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate65.mmPostingDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -180,6 +196,14 @@ public class CorporateActionDate24 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time when calculating economic benefit for a cash amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmValueDate
+	 * CorporateActionDate65.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
@@ -192,6 +216,7 @@ public class CorporateActionDate24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time when calculating economic benefit for a cash amount.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate65.mmValueDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -234,6 +259,14 @@ public class CorporateActionDate24 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time at which a foreign exchange rate will be determined."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmForeignExchangeRateFixingDate
+	 * CorporateActionDate65.mmForeignExchangeRateFixingDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmForeignExchangeRateFixingDate = new MMMessageAttribute() {
@@ -246,6 +279,7 @@ public class CorporateActionDate24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeRateFixingDate";
 			definition = "Date/time at which a foreign exchange rate will be determined.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate65.mmForeignExchangeRateFixingDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -289,6 +323,14 @@ public class CorporateActionDate24 {
 	 * definition} =
 	 * "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmEarliestPaymentDate
+	 * CorporateActionDate65.mmEarliestPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEarliestPaymentDate = new MMMessageAttribute() {
@@ -301,6 +343,7 @@ public class CorporateActionDate24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate65.mmEarliestPaymentDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -344,6 +387,14 @@ public class CorporateActionDate24 {
 	 * definition} =
 	 * "Date on which the distribution is due to take place (cash and/or securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmPaymentDate
+	 * CorporateActionDate65.mmPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentDate = new MMMessageAttribute() {
@@ -356,6 +407,7 @@ public class CorporateActionDate24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date on which the distribution is due to take place (cash and/or securities).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate65.mmPaymentDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -373,6 +425,7 @@ public class CorporateActionDate24 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate24";
 				definition = "Specifies corporate action dates.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionDate65.mmObject());
 				previousVersion_lazy = () -> CorporateActionDate7.mmObject();
 			}
 		});

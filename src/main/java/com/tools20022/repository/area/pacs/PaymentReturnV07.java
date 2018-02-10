@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.PaymentsClearingandSettlementLatestVersion;
+import com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader72;
 import com.tools20022.repository.msg.OriginalGroupHeader2;
 import com.tools20022.repository.msg.PaymentTransaction76;
@@ -95,8 +95,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "PmtRtr"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementLatestVersion
- * PaymentsClearingandSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion
+ * PaymentsClearingandSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.004.001.07}</li>
@@ -157,6 +157,13 @@ import javax.xml.bind.annotation.*;
  * definition} =
  * "Scope\r\nThe PaymentReturn message is sent by an agent to the previous agent in the payment chain to undo a payment previously settled.\r\nUsage\r\nThe PaymentReturn message is exchanged between agents to return funds after settlement of credit transfer instructions (i.e. FIToFICustomerCreditTransfer message and FinancialInstitutionCreditTransfer message) or direct debit instructions (FIToFICustomerDirectDebit message).\r\nThe PaymentReturn message should not be used between agents and non-financial institution customers. Non-financial institution customers will be informed about a debit or a credit on their account(s) through a BankToCustomerDebitCreditNotification message ('notification') and/or BankToCustomerAccountReport/BankToCustomerStatement message ('statement').\r\nThe PaymentReturn message can be used to return single instructions or multiple instructions from one or different files.\r\nThe PaymentReturn message can be used in domestic and cross-border scenarios.\r\nThe PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.area.pacs.PaymentReturnV08
+ * PaymentReturnV08}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV06
@@ -192,6 +199,14 @@ public class PaymentReturnV07 {
 	 * definition} =
 	 * "Set of characteristics shared by all individual transactions included in the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV08#mmGroupHeader
+	 * PaymentReturnV08.mmGroupHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -205,6 +220,7 @@ public class PaymentReturnV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnV08.mmGroupHeader);
 			previousVersion_lazy = () -> PaymentReturnV06.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -244,6 +260,14 @@ public class PaymentReturnV07 {
 	 * definition} =
 	 * "Information concerning the original group of transactions, to which the message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV08#mmOriginalGroupInformation
+	 * PaymentReturnV08.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -257,6 +281,7 @@ public class PaymentReturnV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnV08.mmOriginalGroupInformation);
 			previousVersion_lazy = () -> PaymentReturnV06.mmOriginalGroupInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -296,6 +321,14 @@ public class PaymentReturnV07 {
 	 * definition} =
 	 * "Information concerning the original transactions, to which the return message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV08#mmTransactionInformation
+	 * PaymentReturnV08.mmTransactionInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -309,6 +342,7 @@ public class PaymentReturnV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionInformation";
 			definition = "Information concerning the original transactions, to which the return message refers.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnV08.mmTransactionInformation);
 			previousVersion_lazy = () -> PaymentReturnV06.mmTransactionInformation;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentTransaction76.mmObject();
@@ -347,6 +381,14 @@ public class PaymentReturnV07 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV08#mmSupplementaryData
+	 * PaymentReturnV08.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -360,6 +402,7 @@ public class PaymentReturnV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnV08.mmSupplementaryData);
 			previousVersion_lazy = () -> PaymentReturnV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
@@ -388,11 +431,12 @@ public class PaymentReturnV07 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReturnV07";
 				definition = "Scope\r\nThe PaymentReturn message is sent by an agent to the previous agent in the payment chain to undo a payment previously settled.\r\nUsage\r\nThe PaymentReturn message is exchanged between agents to return funds after settlement of credit transfer instructions (i.e. FIToFICustomerCreditTransfer message and FinancialInstitutionCreditTransfer message) or direct debit instructions (FIToFICustomerDirectDebit message).\r\nThe PaymentReturn message should not be used between agents and non-financial institution customers. Non-financial institution customers will be informed about a debit or a credit on their account(s) through a BankToCustomerDebitCreditNotification message ('notification') and/or BankToCustomerAccountReport/BankToCustomerStatement message ('statement').\r\nThe PaymentReturn message can be used to return single instructions or multiple instructions from one or different files.\r\nThe PaymentReturn message can be used in domestic and cross-border scenarios.\r\nThe PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentReturnV08.mmObject());
 				previousVersion_lazy = () -> PaymentReturnV06.mmObject();
 				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOLatestversion.mmObject(), MX_Payment_Maintenance_2016_2017.mmObject(), PaymentsClearingandSettlementMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "PmtRtr";
-				businessArea_lazy = () -> PaymentsClearingandSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV07.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV07.mmOriginalGroupInformation,
 						com.tools20022.repository.area.pacs.PaymentReturnV07.mmTransactionInformation, com.tools20022.repository.area.pacs.PaymentReturnV07.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

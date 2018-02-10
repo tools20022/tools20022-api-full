@@ -847,6 +847,14 @@ public class ConstraintOptionNumberGuideline {
 	 * definition} =
 	 * "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberGuideline#forCorporateActionOption138
+	 * ConstraintOptionNumberGuideline.forCorporateActionOption138}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -860,6 +868,7 @@ public class ConstraintOptionNumberGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption138);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption114;
 			owner_lazy = () -> CorporateActionOption130.mmObject();
 		}
@@ -883,6 +892,14 @@ public class ConstraintOptionNumberGuideline {
 	 * definition} =
 	 * "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberGuideline#forCorporateActionOption139
+	 * ConstraintOptionNumberGuideline.forCorporateActionOption139}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -896,6 +913,7 @@ public class ConstraintOptionNumberGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption139);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption115;
 			owner_lazy = () -> CorporateActionOption129.mmObject();
 		}
@@ -958,6 +976,138 @@ public class ConstraintOptionNumberGuideline {
 			name = "OptionNumberGuideline";
 			definition = "It is recommended to use the OptionNumber rather than the OptionType for differentiation between options, for example, in the case where two or more offers can be described by the same corporate action option code.";
 			owner_lazy = () -> CorporateActionOption133.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138
+	 * CorporateActionOption138}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberGuideline#forCorporateActionOption130
+	 * ConstraintOptionNumberGuideline.forCorporateActionOption130}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption138> forCorporateActionOption138 = new MMConstraint<CorporateActionOption138>() {
+		{
+			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption138;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberGuideline";
+			definition = "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption130;
+			owner_lazy = () -> CorporateActionOption138.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139
+	 * CorporateActionOption139}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionNumberGuideline#forCorporateActionOption129
+	 * ConstraintOptionNumberGuideline.forCorporateActionOption129}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption139> forCorporateActionOption139 = new MMConstraint<CorporateActionOption139>() {
+		{
+			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption139;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberGuideline";
+			definition = "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionNumberGuideline.forCorporateActionOption129;
+			owner_lazy = () -> CorporateActionOption139.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148
+	 * CorporateActionOption148}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption148> forCorporateActionOption148 = new MMConstraint<CorporateActionOption148>() {
+		{
+			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption148;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberGuideline";
+			definition = "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code.";
+			owner_lazy = () -> CorporateActionOption148.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150
+	 * CorporateActionOption150}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionNumberGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption150> forCorporateActionOption150 = new MMConstraint<CorporateActionOption150>() {
+		{
+			validator = ConstraintOptionNumberGuideline::checkCorporateActionOption150;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionNumberGuideline";
+			definition = "For differentiation between options, it is recommended to use the OptionNumber rather than the OptionType, for example, in the case where two or more offers can be described by the same corporate action option code.";
+			owner_lazy = () -> CorporateActionOption150.mmObject();
 		}
 	};
 
@@ -1210,6 +1360,46 @@ public class ConstraintOptionNumberGuideline {
 	 * more offers can be described by the same corporate action option code.
 	 */
 	public static void checkCorporateActionOption133(CorporateActionOption133 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For differentiation between options, it is recommended to use the
+	 * OptionNumber rather than the OptionType, for example, in the case where
+	 * two or more offers can be described by the same corporate action option
+	 * code.
+	 */
+	public static void checkCorporateActionOption138(CorporateActionOption138 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For differentiation between options, it is recommended to use the
+	 * OptionNumber rather than the OptionType, for example, in the case where
+	 * two or more offers can be described by the same corporate action option
+	 * code.
+	 */
+	public static void checkCorporateActionOption139(CorporateActionOption139 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For differentiation between options, it is recommended to use the
+	 * OptionNumber rather than the OptionType, for example, in the case where
+	 * two or more offers can be described by the same corporate action option
+	 * code.
+	 */
+	public static void checkCorporateActionOption148(CorporateActionOption148 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For differentiation between options, it is recommended to use the
+	 * OptionNumber rather than the OptionType, for example, in the case where
+	 * two or more offers can be described by the same corporate action option
+	 * code.
+	 */
+	public static void checkCorporateActionOption150(CorporateActionOption150 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

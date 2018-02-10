@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.*;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max3NumericText;
 import com.tools20022.repository.datatype.Max6Text;
@@ -58,6 +59,27 @@ import javax.xml.bind.annotation.XmlType;
  * Header23.mmMessageSequenceNumber}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Header23#mmCreationDateTime
  * Header23.mmCreationDateTime}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01#mmHeader
+ * ForeignExchangeTradeConfirmationStatusAdviceV01.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestCancellationRequestV01#mmHeader
+ * ForeignExchangeTradeConfirmationRequestCancellationRequestV01.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01#mmHeader
+ * ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestV01#mmHeader
+ * ForeignExchangeTradeConfirmationRequestV01.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01#mmHeader
+ * ForeignExchangeTradeCaptureReportV01.mmHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -303,7 +325,7 @@ public class Header23 {
 	 * name} = "MessageSequenceNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Sequence of this message in a conversation in integer. "</li>
+	 * definition} = "Sequence of this message in a conversation in integer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageSequenceNumber = new MMMessageAttribute() {
@@ -313,7 +335,7 @@ public class Header23 {
 			xmlTag = "MsgSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageSequenceNumber";
-			definition = "Sequence of this message in a conversation in integer. ";
+			definition = "Sequence of this message in a conversation in integer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -372,6 +394,8 @@ public class Header23 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header23.mmFormatVersion, com.tools20022.repository.msg.Header23.mmExchangeIdentification, com.tools20022.repository.msg.Header23.mmInitiatingParty,
 						com.tools20022.repository.msg.Header23.mmRecipientParty, com.tools20022.repository.msg.Header23.mmMessageSequenceNumber, com.tools20022.repository.msg.Header23.mmCreationDateTime);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationStatusAdviceV01.mmHeader, ForeignExchangeTradeConfirmationRequestCancellationRequestV01.mmHeader,
+						ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmHeader, ForeignExchangeTradeConfirmationRequestV01.mmHeader, ForeignExchangeTradeCaptureReportV01.mmHeader);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header23";

@@ -408,7 +408,7 @@ public class Derivative2Choice {
 	 * name} = "EmissionAllowance"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Details specific for emission allowance derivatives"</li>
+	 * definition} = "Details specific for emission allowance derivatives."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEmissionAllowance = new MMMessageAttribute() {
@@ -419,7 +419,7 @@ public class Derivative2Choice {
 			xmlTag = "EmssnAllwnc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EmissionAllowance";
-			definition = "Details specific for emission allowance derivatives";
+			definition = "Details specific for emission allowance derivatives.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EmissionAllowanceProductType1Code.mmObject();

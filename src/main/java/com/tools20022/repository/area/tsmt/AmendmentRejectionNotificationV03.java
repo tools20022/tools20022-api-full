@@ -189,7 +189,7 @@ public class AmendmentRejectionNotificationV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique Identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n"
+	 * "Unique Identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -198,7 +198,7 @@ public class AmendmentRejectionNotificationV03 {
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
-			definition = "Unique Identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n";
+			definition = "Unique Identification assigned by the matching application to the transaction.\nThis identification is to be used in any communication between the parties.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> SimpleIdentificationInformation.mmObject();
@@ -503,9 +503,7 @@ public class AmendmentRejectionNotificationV03 {
 	 * name} = "RejectionReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Specifies the reaons for rejecting the amendment.                                                    "
-	 * </li>
+	 * definition} = "Specifies the reaons for rejecting the amendment."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
@@ -513,7 +511,7 @@ public class AmendmentRejectionNotificationV03 {
 			xmlTag = "RjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
-			definition = "Specifies the reaons for rejecting the amendment.                                                    ";
+			definition = "Specifies the reaons for rejecting the amendment.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason1Choice.mmObject();

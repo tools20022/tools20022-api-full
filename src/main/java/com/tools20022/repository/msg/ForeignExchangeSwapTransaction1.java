@@ -269,7 +269,7 @@ public class ForeignExchangeSwapTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Internal unique transaction identifier used by the reporting agent for each transaction. "
+	 * "Internal unique transaction identifier used by the reporting agent for each transaction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -289,7 +289,7 @@ public class ForeignExchangeSwapTransaction1 {
 			xmlTag = "PrtryTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryTransactionIdentification";
-			definition = "Internal unique transaction identifier used by the reporting agent for each transaction. ";
+			definition = "Internal unique transaction identifier used by the reporting agent for each transaction.";
 			nextVersions_lazy = () -> Arrays.asList(ForeignExchangeSwapTransaction2.mmProprietaryTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -388,7 +388,7 @@ public class ForeignExchangeSwapTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the counterparty of the reporting agent for the reported transaction. "
+	 * "Identification of the counterparty of the reporting agent for the reported transaction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -408,7 +408,7 @@ public class ForeignExchangeSwapTransaction1 {
 			xmlTag = "CtrPtyId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
-			definition = "Identification of the counterparty of the reporting agent for the reported transaction. ";
+			definition = "Identification of the counterparty of the reporting agent for the reported transaction.";
 			nextVersions_lazy = () -> Arrays.asList(ForeignExchangeSwapTransaction2.mmCounterpartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -448,7 +448,7 @@ public class ForeignExchangeSwapTransaction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time on which the parties entered into the reported transaction.\r\n\r\nUsage: when time is available, it must be reported.\r\n\r\nIt is to be reported with only the date when the time of the transaction is not available. \r\n\r\nThe reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent. "
+	 * "Date and time on which the parties entered into the reported transaction.\r\n\r\nUsage: when time is available, it must be reported.\r\n\r\nIt is to be reported with only the date when the time of the transaction is not available. \r\n\r\nThe reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -468,7 +468,7 @@ public class ForeignExchangeSwapTransaction1 {
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			definition = "Date and time on which the parties entered into the reported transaction.\r\n\r\nUsage: when time is available, it must be reported.\r\n\r\nIt is to be reported with only the date when the time of the transaction is not available. \r\n\r\nThe reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent. ";
+			definition = "Date and time on which the parties entered into the reported transaction.\r\n\r\nUsage: when time is available, it must be reported.\r\n\r\nIt is to be reported with only the date when the time of the transaction is not available. \r\n\r\nThe reported time is the execution time when available or otherwise the time at which the transaction entered the trading system of the reporting agent.";
 			nextVersions_lazy = () -> Arrays.asList(ForeignExchangeSwapTransaction2.mmTradeDate);
 			maxOccurs = 1;
 			minOccurs = 1;

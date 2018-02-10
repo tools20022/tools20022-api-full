@@ -74,6 +74,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Status of the acceptor system containing the identification of the POI (Point Of Interaction), its components and their installed versions."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusReport7 StatusReport7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.StatusReport5
  * StatusReport5}</li>
@@ -111,6 +117,14 @@ public class StatusReport6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the point of interaction for terminal management."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReport7#mmPOIIdentification
+	 * StatusReport7.mmPOIIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -126,6 +140,7 @@ public class StatusReport6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interaction for terminal management.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReport7.mmPOIIdentification);
 			previousVersion_lazy = () -> StatusReport5.mmPOIIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -161,6 +176,14 @@ public class StatusReport6 {
 	 * definition} =
 	 * "Identification of the terminal management system (TMS) to contact for the maintenance."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusReport7#mmTerminalManagerIdentification
+	 * StatusReport7.mmTerminalManagerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -176,6 +199,7 @@ public class StatusReport6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) to contact for the maintenance.";
+			nextVersions_lazy = () -> Arrays.asList(StatusReport7.mmTerminalManagerIdentification);
 			previousVersion_lazy = () -> StatusReport5.mmTerminalManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -210,6 +234,13 @@ public class StatusReport6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Data related to a status report of a point of interaction (POI)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.StatusReport7#mmDataSet
+	 * StatusReport7.mmDataSet}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -225,6 +256,7 @@ public class StatusReport6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data related to a status report of a point of interaction (POI).";
+			nextVersions_lazy = () -> Arrays.asList(StatusReport7.mmDataSet);
 			previousVersion_lazy = () -> StatusReport5.mmDataSet;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -243,6 +275,7 @@ public class StatusReport6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusReport6";
 				definition = "Status of the acceptor system containing the identification of the POI (Point Of Interaction), its components and their installed versions.";
+				nextVersions_lazy = () -> Arrays.asList(StatusReport7.mmObject());
 				previousVersion_lazy = () -> StatusReport5.mmObject();
 			}
 		});

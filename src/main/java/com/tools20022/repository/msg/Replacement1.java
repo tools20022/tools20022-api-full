@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Replacement of an existing content by a different one
+ * Replacement of an existing content by a different one.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -57,7 +57,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Replacement1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Replacement of an existing content by a different one"</li>
+ * definition} = "Replacement of an existing content by a different one."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -131,7 +131,7 @@ public class Replacement1 {
 	 * name} = "ProposedValue"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Content of the new element"</li>
+	 * definition} = "Content of the new element."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProposedValue = new MMMessageAttribute() {
@@ -141,7 +141,7 @@ public class Replacement1 {
 			xmlTag = "PropsdVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProposedValue";
-			definition = "Content of the new element";
+			definition = "Content of the new element.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -155,7 +155,7 @@ public class Replacement1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Replacement1";
-				definition = "Replacement of an existing content by a different one";
+				definition = "Replacement of an existing content by a different one.";
 			}
 		});
 		return mmObject_lazy.get();

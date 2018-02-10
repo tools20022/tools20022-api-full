@@ -75,6 +75,13 @@ import javax.xml.bind.annotation.XmlType;
  * "StatusAndReason32"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Status and reason of an instructed order."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.StatusAndReason34
+ * StatusAndReason34}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.StatusAndReason27
@@ -116,6 +123,14 @@ public class StatusAndReason32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status and reason for the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason34#mmStatusAndReason
+	 * StatusAndReason34.mmStatusAndReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -132,6 +147,7 @@ public class StatusAndReason32 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusAndReason";
 			definition = "Status and reason for the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(StatusAndReason34.mmStatusAndReason);
 			previousVersion_lazy = () -> StatusAndReason27.mmStatusAndReason;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -165,6 +181,14 @@ public class StatusAndReason32 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Details of the transactions reported."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatusAndReason34#mmTransaction
+	 * StatusAndReason34.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +204,7 @@ public class StatusAndReason32 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Details of the transactions reported.";
+			nextVersions_lazy = () -> Arrays.asList(StatusAndReason34.mmTransaction);
 			previousVersion_lazy = () -> StatusAndReason27.mmTransaction;
 			minOccurs = 0;
 			isComposite = true;
@@ -197,6 +222,7 @@ public class StatusAndReason32 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatusAndReason32";
 				definition = "Status and reason of an instructed order.";
+				nextVersions_lazy = () -> Arrays.asList(StatusAndReason34.mmObject());
 				previousVersion_lazy = () -> StatusAndReason27.mmObject();
 			}
 		});

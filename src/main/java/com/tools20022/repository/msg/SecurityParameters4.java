@@ -76,6 +76,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters5
  * SecurityParameters5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters7
+ * SecurityParameters7}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -122,6 +124,8 @@ public class SecurityParameters4 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters5#mmKey
 	 * SecurityParameters5.mmKey}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SecurityParameters7#mmKey
+	 * SecurityParameters7.mmKey}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -139,7 +143,7 @@ public class SecurityParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Cryptographic key used to protect the key download.";
-			nextVersions_lazy = () -> Arrays.asList(SecurityParameters5.mmKey);
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters5.mmKey, SecurityParameters7.mmKey);
 			previousVersion_lazy = () -> SecurityParameters3.mmSymmetricKey;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -230,6 +234,14 @@ public class SecurityParameters4 {
 	 * definition} =
 	 * "Ordered certificate chain of the asymmetric key encryption key, starting with the ATM certificate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters7#mmCertificate
+	 * SecurityParameters7.mmCertificate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCertificate = new MMMessageAttribute() {
@@ -240,6 +252,7 @@ public class SecurityParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Certificate";
 			definition = "Ordered certificate chain of the asymmetric key encryption key, starting with the ATM certificate.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters7.mmCertificate);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
 		}
@@ -278,6 +291,9 @@ public class SecurityParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecurityParameters5#mmHostChallenge
 	 * SecurityParameters5.mmHostChallenge}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters7#mmATMChallenge
+	 * SecurityParameters7.mmATMChallenge}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -295,7 +311,7 @@ public class SecurityParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMChallenge";
 			definition = "Random value from the ATM to avoid message replay.";
-			nextVersions_lazy = () -> Arrays.asList(SecurityParameters5.mmHostChallenge);
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters5.mmHostChallenge, SecurityParameters7.mmATMChallenge);
 			previousVersion_lazy = () -> SecurityParameters3.mmPOIChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -329,7 +345,15 @@ public class SecurityParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Requested  key for downloading, depending on the key hierarchy used by the host."
+	 * "Requested key for downloading, depending on the key hierarchy used by the host."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityParameters7#mmRequestedKey
+	 * SecurityParameters7.mmRequestedKey}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -340,7 +364,8 @@ public class SecurityParameters4 {
 			xmlTag = "ReqdKey";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedKey";
-			definition = "Requested  key for downloading, depending on the key hierarchy used by the host.";
+			definition = "Requested key for downloading, depending on the key hierarchy used by the host.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityParameters7.mmRequestedKey);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -356,7 +381,7 @@ public class SecurityParameters4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityParameters4";
 				definition = "Security parameters of the ATM for the initiated key download.";
-				nextVersions_lazy = () -> Arrays.asList(SecurityParameters5.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(SecurityParameters5.mmObject(), SecurityParameters7.mmObject());
 				previousVersion_lazy = () -> SecurityParameters3.mmObject();
 			}
 		});

@@ -794,7 +794,7 @@ public class InvestmentPlan14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account. "
+	 * "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -810,7 +810,7 @@ public class InvestmentPlan14 {
 			xmlTag = "CtrctRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractReference";
-			definition = "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account. ";
+			definition = "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account.";
 			previousVersion_lazy = () -> InvestmentPlan12.mmContractReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1048,7 +1048,7 @@ public class InvestmentPlan14 {
 	 * name} = "PlanStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of the savings or withdrawal investment plan. "</li>
+	 * definition} = "Status of the savings or withdrawal investment plan."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1064,7 +1064,7 @@ public class InvestmentPlan14 {
 			xmlTag = "PlanSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlanStatus";
-			definition = "Status of the savings or withdrawal investment plan. ";
+			definition = "Status of the savings or withdrawal investment plan.";
 			previousVersion_lazy = () -> InvestmentPlan12.mmPlanStatus;
 			maxOccurs = 1;
 			minOccurs = 0;

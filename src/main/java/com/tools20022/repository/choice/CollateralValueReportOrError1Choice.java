@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Report on collateral values or error report in case of business processing of the related request."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError3Choice
+ * CollateralValueReportOrError3Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +109,14 @@ public class CollateralValueReportOrError1Choice {
 	 * definition} =
 	 * "Provides information specific to the collateral value reports included in the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError3Choice#mmBusinessReport
+	 * CollateralValueReportOrError3Choice.mmBusinessReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
@@ -111,6 +127,7 @@ public class CollateralValueReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Provides information specific to the collateral value reports included in the message.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueReportOrError3Choice.mmBusinessReport);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CollateralValueReport1.mmObject();
@@ -144,6 +161,14 @@ public class CollateralValueReportOrError1Choice {
 	 * definition} =
 	 * "Indicates whether an operational error has been issued during the processing of the related request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CollateralValueReportOrError3Choice#mmOperationalError
+	 * CollateralValueReportOrError3Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
@@ -154,6 +179,7 @@ public class CollateralValueReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates whether an operational error has been issued during the processing of the related request.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueReportOrError3Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -168,6 +194,7 @@ public class CollateralValueReportOrError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueReportOrError1Choice";
 				definition = "Report on collateral values or error report in case of business processing of the related request.";
+				nextVersions_lazy = () -> Arrays.asList(CollateralValueReportOrError3Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

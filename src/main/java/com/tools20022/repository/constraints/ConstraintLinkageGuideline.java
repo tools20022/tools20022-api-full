@@ -27,11 +27,49 @@ import java.util.Arrays;
  * Global market practice rules on the use of the linkages exists for various
  * business scenarios such as cancellations, settlement confirmation but also
  * more complex processes like pair-off, back-to-back, block trades, sell-buy
- * back, buy-sell back, securities lending and borrowing, etc.<br>
- * For more details, see the relevant market practice documents on www.smpg.info
+ * back, buy-sell back, securities lending and borrowing.<br>
+ * For more details, see the relevant market practice documents on
+ * www.smpg.info.
  */
 public class ConstraintLinkageGuideline {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08
+	 * SecuritiesSettlementTransactionInstructionV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkageGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkageGuideline#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintLinkageGuideline.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV08> forSecuritiesSettlementTransactionInstructionV08 = new MMConstraint<SecuritiesSettlementTransactionInstructionV08>() {
+		{
+			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkageGuideline";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV08.mmObject();
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -49,7 +87,16 @@ public class ConstraintLinkageGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkageGuideline#forSecuritiesSettlementTransactionInstructionV08
+	 * ConstraintLinkageGuideline.
+	 * forSecuritiesSettlementTransactionInstructionV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -64,7 +111,8 @@ public class ConstraintLinkageGuideline {
 			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV07.mmObject();
 		}
@@ -86,7 +134,7 @@ public class ConstraintLinkageGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -95,85 +143,8 @@ public class ConstraintLinkageGuideline {
 			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstruction002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
-	 * SecuritiesSettlementTransactionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkageGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkageGuideline#forSecuritiesSettlementTransactionInstructionV07
-	 * ConstraintLinkageGuideline.
-	 * forSecuritiesSettlementTransactionInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkageGuideline#forSecuritiesSettlementTransactionInstructionV05
-	 * ConstraintLinkageGuideline.
-	 * forSecuritiesSettlementTransactionInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
-		{
-			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
-	 * SecuritiesSettlementTransactionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "LinkageGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
-		{
-			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstruction002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
-			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
 		}
 	};
 	/**
@@ -193,7 +164,7 @@ public class ConstraintLinkageGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -202,7 +173,7 @@ public class ConstraintLinkageGuideline {
 			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV01.mmObject();
 		}
 	};
@@ -223,7 +194,7 @@ public class ConstraintLinkageGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -232,7 +203,7 @@ public class ConstraintLinkageGuideline {
 			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV02.mmObject();
 		}
 	};
@@ -253,7 +224,7 @@ public class ConstraintLinkageGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -262,7 +233,7 @@ public class ConstraintLinkageGuideline {
 			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV03.mmObject();
 		}
 	};
@@ -283,7 +254,7 @@ public class ConstraintLinkageGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -301,7 +272,7 @@ public class ConstraintLinkageGuideline {
 			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV04.mmObject();
 		}
@@ -323,7 +294,7 @@ public class ConstraintLinkageGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info"
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -347,12 +318,101 @@ public class ConstraintLinkageGuideline {
 			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageGuideline";
-			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
+	 * SecuritiesSettlementTransactionInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkageGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkageGuideline#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintLinkageGuideline.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintLinkageGuideline#forSecuritiesSettlementTransactionInstructionV05
+	 * ConstraintLinkageGuideline.
+	 * forSecuritiesSettlementTransactionInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
+		{
+			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkageGuideline";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLinkageGuideline.forSecuritiesSettlementTransactionInstructionV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
+	 * SecuritiesSettlementTransactionInstruction002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "LinkageGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
+		{
+			validator = ConstraintLinkageGuideline::checkSecuritiesSettlementTransactionInstruction002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "LinkageGuideline";
+			definition = "Global market practice rules on the use of the linkages exists for various business scenarios such as cancellations, settlement confirmation but also more complex processes like pair-off, back-to-back, block trades, sell-buy back, buy-sell back, securities lending and borrowing, etc.\r\nFor more details, see the relevant market practice documents on www.smpg.info.";
+			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
+		}
+	};
+
+	/**
+	 * Global market practice rules on the use of the linkages exists for
+	 * various business scenarios such as cancellations, settlement confirmation
+	 * but also more complex processes like pair-off, back-to-back, block
+	 * trades, sell-buy back, buy-sell back, securities lending and borrowing.<br>
+	 * For more details, see the relevant market practice documents on
+	 * www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV08(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * Global market practice rules on the use of the linkages exists for
@@ -361,7 +421,7 @@ public class ConstraintLinkageGuideline {
 	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
 	 * etc.<br>
 	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV07(SecuritiesSettlementTransactionInstructionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -374,7 +434,7 @@ public class ConstraintLinkageGuideline {
 	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
 	 * etc.<br>
 	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstruction002V07(SecuritiesSettlementTransactionInstruction002V07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -387,33 +447,7 @@ public class ConstraintLinkageGuideline {
 	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
 	 * etc.<br>
 	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
-	 */
-	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Global market practice rules on the use of the linkages exists for
-	 * various business scenarios such as cancellations, settlement confirmation
-	 * but also more complex processes like pair-off, back-to-back, block
-	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
-	 * etc.<br>
-	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
-	 */
-	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Global market practice rules on the use of the linkages exists for
-	 * various business scenarios such as cancellations, settlement confirmation
-	 * but also more complex processes like pair-off, back-to-back, block
-	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
-	 * etc.<br>
-	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV01(SecuritiesSettlementTransactionInstructionV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -426,7 +460,7 @@ public class ConstraintLinkageGuideline {
 	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
 	 * etc.<br>
 	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV02(SecuritiesSettlementTransactionInstructionV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -439,7 +473,7 @@ public class ConstraintLinkageGuideline {
 	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
 	 * etc.<br>
 	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV03(SecuritiesSettlementTransactionInstructionV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -452,7 +486,7 @@ public class ConstraintLinkageGuideline {
 	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
 	 * etc.<br>
 	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV04(SecuritiesSettlementTransactionInstructionV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -465,9 +499,35 @@ public class ConstraintLinkageGuideline {
 	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
 	 * etc.<br>
 	 * For more details, see the relevant market practice documents on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV05(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Global market practice rules on the use of the linkages exists for
+	 * various business scenarios such as cancellations, settlement confirmation
+	 * but also more complex processes like pair-off, back-to-back, block
+	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
+	 * etc.<br>
+	 * For more details, see the relevant market practice documents on
+	 * www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Global market practice rules on the use of the linkages exists for
+	 * various business scenarios such as cancellations, settlement confirmation
+	 * but also more complex processes like pair-off, back-to-back, block
+	 * trades, sell-buy back, buy-sell back, securities lending and borrowing,
+	 * etc.<br>
+	 * For more details, see the relevant market practice documents on
+	 * www.smpg.info.
+	 */
+	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

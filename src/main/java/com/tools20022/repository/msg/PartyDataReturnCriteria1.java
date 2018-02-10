@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PartyQueryV01;
 import com.tools20022.repository.datatype.RequestedIndicator;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -79,6 +80,15 @@ import javax.xml.bind.annotation.XmlType;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyQueryV01#mmReturnCriteria
+ * PartyQueryV01.mmReturnCriteria}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -91,7 +101,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyDataReturnCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Return criteria for information to be returned in the report deriving from a query about party reference data. "
+ * "Return criteria for information to be returned in the report deriving from a query about party reference data."
  * </li>
  * </ul>
  */
@@ -614,7 +624,7 @@ public class PartyDataReturnCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the market specific attributes  for the party are requested."
+	 * "Indicates whether the market specific attributes for the party are requested."
 	 * </li>
 	 * </ul>
 	 */
@@ -625,7 +635,7 @@ public class PartyDataReturnCriteria1 {
 			xmlTag = "MktSpcfcAttr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketSpecificAttribute";
-			definition = "Indicates whether the market specific attributes  for the party are requested.";
+			definition = "Indicates whether the market specific attributes for the party are requested.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -640,10 +650,11 @@ public class PartyDataReturnCriteria1 {
 						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmRestrictionIdentification, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmRestrictedOnDate,
 						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmName, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmShortName, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmAddress,
 						com.tools20022.repository.msg.PartyDataReturnCriteria1.mmTechnicalAddress, com.tools20022.repository.msg.PartyDataReturnCriteria1.mmMarketSpecificAttribute);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyQueryV01.mmReturnCriteria);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyDataReturnCriteria1";
-				definition = "Return criteria for information to be returned in the report deriving from a query about party reference data. ";
+				definition = "Return criteria for information to be returned in the report deriving from a query about party reference data.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -80,6 +80,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionPeriod7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies periods related to a corporate action option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPeriod12
+ * CorporateActionPeriod12}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -123,6 +130,14 @@ public class CorporateActionPeriod7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Period during which the price of a security is determined."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmPriceCalculationPeriod
+	 * CorporateActionPeriod12.mmPriceCalculationPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPriceCalculationPeriod = new MMMessageAssociationEnd() {
@@ -135,6 +150,7 @@ public class CorporateActionPeriod7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
 			definition = "Period during which the price of a security is determined.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod12.mmPriceCalculationPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -177,6 +193,14 @@ public class CorporateActionPeriod7 {
 	 * definition} =
 	 * "Period during which both old and new equity may be traded simultaneously, for example, consolidation of equity or splitting of equity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmParallelTradingPeriod
+	 * CorporateActionPeriod12.mmParallelTradingPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmParallelTradingPeriod = new MMMessageAssociationEnd() {
@@ -189,6 +213,7 @@ public class CorporateActionPeriod7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ParallelTradingPeriod";
 			definition = "Period during which both old and new equity may be traded simultaneously, for example, consolidation of equity or splitting of equity.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod12.mmParallelTradingPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -231,6 +256,14 @@ public class CorporateActionPeriod7 {
 	 * definition} =
 	 * "Period during which the specified option, or all options of the event, remains valid, for example, offer period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmActionPeriod
+	 * CorporateActionPeriod12.mmActionPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmActionPeriod = new MMMessageAssociationEnd() {
@@ -243,6 +276,7 @@ public class CorporateActionPeriod7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionPeriod";
 			definition = "Period during which the specified option, or all options of the event, remains valid, for example, offer period.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod12.mmActionPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -285,6 +319,14 @@ public class CorporateActionPeriod7 {
 	 * definition} =
 	 * "Period during which the shareholder can revoke, change or withdraw its instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmRevocabilityPeriod
+	 * CorporateActionPeriod12.mmRevocabilityPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRevocabilityPeriod = new MMMessageAssociationEnd() {
@@ -297,6 +339,7 @@ public class CorporateActionPeriod7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RevocabilityPeriod";
 			definition = "Period during which the shareholder can revoke, change or withdraw its instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod12.mmRevocabilityPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -339,6 +382,14 @@ public class CorporateActionPeriod7 {
 	 * definition} =
 	 * "Period during which the privilege is not available, for example, this can happen whenever a meeting takes place or whenever a coupon payment is due."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmPrivilegeSuspensionPeriod
+	 * CorporateActionPeriod12.mmPrivilegeSuspensionPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPrivilegeSuspensionPeriod = new MMMessageAssociationEnd() {
@@ -351,6 +402,7 @@ public class CorporateActionPeriod7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrivilegeSuspensionPeriod";
 			definition = "Period during which the privilege is not available, for example, this can happen whenever a meeting takes place or whenever a coupon payment is due.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod12.mmPrivilegeSuspensionPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -393,6 +445,14 @@ public class CorporateActionPeriod7 {
 	 * definition} =
 	 * "Period during which the participant of the account servicer can revoke change or withdraw its instructions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmAccountServicerRevocabilityPeriod
+	 * CorporateActionPeriod12.mmAccountServicerRevocabilityPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicerRevocabilityPeriod = new MMMessageAssociationEnd() {
@@ -405,6 +465,7 @@ public class CorporateActionPeriod7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerRevocabilityPeriod";
 			definition = "Period during which the participant of the account servicer can revoke change or withdraw its instructions.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod12.mmAccountServicerRevocabilityPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -447,6 +508,14 @@ public class CorporateActionPeriod7 {
 	 * definition} =
 	 * "Period defining the last date on which withdrawal in street name requests on the outturn security will be accepted and the date on which the suspension will be released and withdrawal by transfer processing on the outturn security will resume."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmDepositorySuspensionPeriodForWithdrawal
+	 * CorporateActionPeriod12.mmDepositorySuspensionPeriodForWithdrawal}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDepositorySuspensionPeriodForWithdrawal = new MMMessageAssociationEnd() {
@@ -459,6 +528,7 @@ public class CorporateActionPeriod7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositorySuspensionPeriodForWithdrawal";
 			definition = "Period defining the last date on which withdrawal in street name requests on the outturn security will be accepted and the date on which the suspension will be released and withdrawal by transfer processing on the outturn security will resume.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod12.mmDepositorySuspensionPeriodForWithdrawal);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -478,6 +548,7 @@ public class CorporateActionPeriod7 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriod7";
 				definition = "Specifies periods related to a corporate action option.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriod12.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

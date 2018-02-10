@@ -66,6 +66,12 @@ import javax.xml.bind.annotation.XmlType;
  * "TradeParty3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies an entity involved in a trade activity."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeParty4 TradeParty4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.TradeParty1
  * TradeParty1}</li>
@@ -108,6 +114,14 @@ public class TradeParty3 {
 	 * definition} =
 	 * "Unique identification, as assigned by an organisation, to unambiguously identify a party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeParty4#mmPartyIdentification
+	 * TradeParty4.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +138,7 @@ public class TradeParty3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Unique identification, as assigned by an organisation, to unambiguously identify a party.";
+			nextVersions_lazy = () -> Arrays.asList(TradeParty4.mmPartyIdentification);
 			previousVersion_lazy = () -> TradeParty1.mmPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -161,6 +176,14 @@ public class TradeParty3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Legally constituted organization specified for this trade party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeParty4#mmLegalOrganisation
+	 * TradeParty4.mmLegalOrganisation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +200,7 @@ public class TradeParty3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalOrganisation";
 			definition = "Legally constituted organization specified for this trade party.";
+			nextVersions_lazy = () -> Arrays.asList(TradeParty4.mmLegalOrganisation);
 			previousVersion_lazy = () -> TradeParty1.mmLegalOrganisation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -212,6 +236,13 @@ public class TradeParty3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Entity involved in an activity."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeParty4#mmTaxParty
+	 * TradeParty4.mmTaxParty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -228,6 +259,7 @@ public class TradeParty3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxParty";
 			definition = "Entity involved in an activity.";
+			nextVersions_lazy = () -> Arrays.asList(TradeParty4.mmTaxParty);
 			previousVersion_lazy = () -> TradeParty1.mmTaxParty;
 			minOccurs = 0;
 			isComposite = true;
@@ -244,6 +276,7 @@ public class TradeParty3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeParty3";
 				definition = "Specifies an entity involved in a trade activity.";
+				nextVersions_lazy = () -> Arrays.asList(TradeParty4.mmObject());
 				previousVersion_lazy = () -> TradeParty1.mmObject();
 			}
 		});

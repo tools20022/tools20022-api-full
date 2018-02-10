@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant;
+import com.tools20022.repository.area.SecuritiesSettlementArchivesubsetsvariants;
 import com.tools20022.repository.choice.MatchingStatus32Choice;
 import com.tools20022.repository.choice.ProcessingStatus63Choice;
 import com.tools20022.repository.choice.SettlementStatus22Choice;
@@ -107,8 +107,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "SctiesSttlmTxStsAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousversionsubsetvariant
- * SecuritiesSettlementPreviousversionsubsetvariant}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchivesubsetsvariants
+ * SecuritiesSettlementArchivesubsetsvariants}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.024.002.07}</li>
@@ -541,7 +541,7 @@ public class SecuritiesSettlementTransactionStatusAdvice002V07 {
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISO15022VariantsISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxStsAdvc";
-				businessArea_lazy = () -> SecuritiesSettlementPreviousversionsubsetvariant.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementArchivesubsetsvariants.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07.mmTransactionIdentification,
 						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07.mmProcessingStatus,
 						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07.mmInferredMatchingStatus, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V07.mmMatchingStatus,

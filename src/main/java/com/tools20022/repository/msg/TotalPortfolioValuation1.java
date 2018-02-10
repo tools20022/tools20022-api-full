@@ -586,7 +586,7 @@ public class TotalPortfolioValuation1 {
 	 * name} = "ExpensesPaid"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Expenses attributable to the portfolio"</li>
+	 * definition} = "Expenses attributable to the portfolio."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmExpensesPaid = new MMMessageAttribute() {
@@ -597,7 +597,7 @@ public class TotalPortfolioValuation1 {
 			xmlTag = "ExpnssPd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpensesPaid";
-			definition = "Expenses attributable to the portfolio";
+			definition = "Expenses attributable to the portfolio.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AmountAndDirection30.mmObject();

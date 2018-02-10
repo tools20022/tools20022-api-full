@@ -74,7 +74,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMDepositCompletionAcknowledgement1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information related to the acknowledgement  of an ATM deposit transaction from the ATM manager."
+ * "Information related to the acknowledgement of an ATM deposit transaction from the ATM manager."
  * </li>
  * </ul>
  */
@@ -220,7 +220,7 @@ public class ATMDepositCompletionAcknowledgement1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDepositCompletionAcknowledgement1";
-				definition = "Information related to the acknowledgement  of an ATM deposit transaction from the ATM manager.";
+				definition = "Information related to the acknowledgement of an ATM deposit transaction from the ATM manager.";
 			}
 		});
 		return mmObject_lazy.get();

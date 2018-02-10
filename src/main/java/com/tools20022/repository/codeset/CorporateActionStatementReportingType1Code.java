@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "CorporateActionStatementReportingType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Type of statement reporting on account holdings  for corporate action events eg. reporting on multiple accounts or multiple events."
+ * "Type of statement reporting on account holdings for corporate action events eg. reporting on multiple accounts or multiple events."
  * </li>
  * </ul>
  */
@@ -135,7 +135,7 @@ public class CorporateActionStatementReportingType1Code extends MMCode {
 				example = Arrays.asList("MASE");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionStatementReportingType1Code";
-				definition = "Type of statement reporting on account holdings  for corporate action events eg. reporting on multiple accounts or multiple events.";
+				definition = "Type of statement reporting on account holdings for corporate action events eg. reporting on multiple accounts or multiple events.";
 				trace_lazy = () -> CorporateActionStatementReportingTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code.MultipleAccounts, com.tools20022.repository.codeset.CorporateActionStatementReportingType1Code.MultipleEvents);
 			}

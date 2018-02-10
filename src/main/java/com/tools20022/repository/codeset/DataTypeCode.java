@@ -85,14 +85,14 @@ public class DataTypeCode extends MMCode {
 	 * name} = "TradingData"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specified type of  data is trading data."</li>
+	 * definition} = "Specified type of data is trading data."</li>
 	 * </ul>
 	 */
 	public static final DataTypeCode TradingData = new DataTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingData";
-			definition = "Specified type of  data is trading data.";
+			definition = "Specified type of data is trading data.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DataTypeCode.mmObject();
 			codeName = "TRDA";
 		}
@@ -114,14 +114,14 @@ public class DataTypeCode extends MMCode {
 	 * name} = "ExerciseData"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specified type of  data is exercise data."</li>
+	 * definition} = "Specified type of data is exercise data."</li>
 	 * </ul>
 	 */
 	public static final DataTypeCode ExerciseData = new DataTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExerciseData";
-			definition = "Specified type of  data is exercise data.";
+			definition = "Specified type of data is exercise data.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DataTypeCode.mmObject();
 			codeName = "EXDA";
 		}

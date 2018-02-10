@@ -424,6 +424,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification91
  * MarketIdentification91}</li>
  * <li>{@linkplain com.tools20022.repository.msg.MarketDetail2 MarketDetail2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContractSize1 ContractSize1}</li>
  * </ul>
  * </li>
  * <li>
@@ -842,6 +843,8 @@ public class TradingMarket extends Market {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradingParameters1#mmTradeLotSize
 	 * TradingParameters1.mmTradeLotSize}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ContractSize1#mmLotSize
+	 * ContractSize1.mmLotSize}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -858,17 +861,17 @@ public class TradingMarket extends Market {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the number of securities that have to be traded in one lot ."</li>
+	 * "Specifies the number of securities that have to be traded in one lot."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmTradeLotSize = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmTradeLotSize, TradingParameters1.mmTradeLotSize);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmTradeLotSize, TradingParameters1.mmTradeLotSize, ContractSize1.mmLotSize);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeLotSize";
-			definition = "Specifies the number of securities that have to be traded in one lot .";
+			definition = "Specifies the number of securities that have to be traded in one lot.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmTradeLotMarket;
@@ -905,6 +908,8 @@ public class TradingMarket extends Market {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradingParameters1#mmMinimumTradedNominalQuantity
 	 * TradingParameters1.mmMinimumTradedNominalQuantity}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmMinimumQuantity
+	 * Debt3.mmMinimumQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -925,7 +930,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumTradedNominalQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmMinimumTradedNominalQuantity, Debt2.mmMinimumQuantity, TradingParameters1.mmMinimumTradedNominalQuantity);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmMinimumTradedNominalQuantity, Debt2.mmMinimumQuantity, TradingParameters1.mmMinimumTradedNominalQuantity, Debt3.mmMinimumQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -957,6 +962,9 @@ public class TradingMarket extends Market {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes1#mmListingDate
 	 * CommonFinancialInstrumentAttributes1.mmListingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmListingDate
+	 * CommonFinancialInstrumentAttributes4.mmListingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -978,7 +986,7 @@ public class TradingMarket extends Market {
 	 */
 	public static final MMBusinessAttribute mmListingDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmListingDate, CommonFinancialInstrumentAttributes1.mmListingDate);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmListingDate, CommonFinancialInstrumentAttributes1.mmListingDate, CommonFinancialInstrumentAttributes4.mmListingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1334,7 +1342,7 @@ public class TradingMarket extends Market {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size."
+	 * "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125 shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size."
 	 * </li>
 	 * </ul>
 	 */
@@ -1345,7 +1353,7 @@ public class TradingMarket extends Market {
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradingMarket.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundLot";
-			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125  shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
+			definition = "Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125 shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmRoundLotMarket;
@@ -1728,7 +1736,7 @@ public class TradingMarket extends Market {
 						PlaceOfTradeIdentification2Choice.mmObject(), MarketType8Choice.mmObject(), MarketIdentification20.mmObject(), MarketType9Choice.mmObject(), MarketIdentification21.mmObject(),
 						PlaceOfTradeIdentification3Choice.mmObject(), TradingParameters1.mmObject(), MarketType1Choice.mmObject(), MarketIdentification3.mmObject(), MarketIdentification78.mmObject(), MarketIdentification79.mmObject(),
 						MarketIdentification80.mmObject(), MarketIdentification82.mmObject(), MarketIdentification84.mmObject(), MarketIdentification85.mmObject(), TradingVenueAttributes1.mmObject(), MarketIdentification89.mmObject(),
-						MarketType15Choice.mmObject(), MarketIdentification90.mmObject(), MarketType16Choice.mmObject(), MarketType17Choice.mmObject(), MarketIdentification91.mmObject(), MarketDetail2.mmObject());
+						MarketType15Choice.mmObject(), MarketIdentification90.mmObject(), MarketType16Choice.mmObject(), MarketType17Choice.mmObject(), MarketIdentification91.mmObject(), MarketDetail2.mmObject(), ContractSize1.mmObject());
 			}
 
 			@Override

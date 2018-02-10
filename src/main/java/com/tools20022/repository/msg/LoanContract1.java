@@ -891,7 +891,7 @@ public class LoanContract1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Loan offered by a group of lenders (called a syndicate) who work together to provide funds for a single borrower. "
+	 * "Loan offered by a group of lenders (called a syndicate) who work together to provide funds for a single borrower."
 	 * </li>
 	 * </ul>
 	 */
@@ -903,7 +903,7 @@ public class LoanContract1 {
 			xmlTag = "SndctdLn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SyndicatedLoan";
-			definition = "Loan offered by a group of lenders (called a syndicate) who work together to provide funds for a single borrower. ";
+			definition = "Loan offered by a group of lenders (called a syndicate) who work together to provide funds for a single borrower.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SyndicatedLoan1.mmObject();

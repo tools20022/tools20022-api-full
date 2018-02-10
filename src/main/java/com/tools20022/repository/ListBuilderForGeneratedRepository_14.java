@@ -25,6 +25,7 @@ class ListBuilderForGeneratedRepository_14 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) BillingRate1.mmObject());
 		list.add((T) CurrencyExchange6.mmObject());
 		list.add((T) BillingBalanceType1Choice.mmObject());
 		list.add((T) AmountAndDirection34.mmObject());
@@ -524,7 +525,6 @@ class ListBuilderForGeneratedRepository_14 {
 		list.add((T) StatusAndReason15.mmObject());
 		list.add((T) SettlementDetails66.mmObject());
 		list.add((T) TransactionDetails51.mmObject());
-		list.add((T) Transaction25.mmObject());
 		ListBuilderForGeneratedRepository_15.addElems(list);
 		return list;
 	}

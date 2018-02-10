@@ -78,7 +78,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "WorkflowStatusCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the workflow status of the details of a specific level. "</li>
+ * "Specifies the workflow status of the details of a specific level."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -230,7 +230,7 @@ public class WorkflowStatusCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Level has been deleted, cancelled/deactivated/invalidated by the source or due to error processing error. "
+	 * "Level has been deleted, cancelled/deactivated/invalidated by the source or due to error processing error."
 	 * </li>
 	 * </ul>
 	 */
@@ -238,7 +238,7 @@ public class WorkflowStatusCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deleted";
-			definition = "Level has been deleted, cancelled/deactivated/invalidated by the source or due to error processing error. ";
+			definition = "Level has been deleted, cancelled/deactivated/invalidated by the source or due to error processing error.";
 			owner_lazy = () -> com.tools20022.repository.codeset.WorkflowStatusCode.mmObject();
 			codeName = "DLTD";
 		}
@@ -255,7 +255,7 @@ public class WorkflowStatusCode extends MMCode {
 				example = Arrays.asList("COMP");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "WorkflowStatusCode";
-				definition = "Specifies the workflow status of the details of a specific level. ";
+				definition = "Specifies the workflow status of the details of a specific level.";
 				derivation_lazy = () -> Arrays.asList(WorkflowStatus1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.WorkflowStatusCode.Complete, com.tools20022.repository.codeset.WorkflowStatusCode.Conflict,
 						com.tools20022.repository.codeset.WorkflowStatusCode.ConditionallyComplete, com.tools20022.repository.codeset.WorkflowStatusCode.Incomplete, com.tools20022.repository.codeset.WorkflowStatusCode.Deleted);

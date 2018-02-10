@@ -400,7 +400,7 @@ public class ExchangeConfiguration3 {
 	 * name} = "ExchangeDeclined"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indicates that declined transaction must be exchanged"</li>
+	 * definition} = "Indicates that declined transaction must be exchanged."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -418,7 +418,7 @@ public class ExchangeConfiguration3 {
 			xmlTag = "XchgDclnd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeDeclined";
-			definition = "Indicates that declined transaction must be exchanged";
+			definition = "Indicates that declined transaction must be exchanged.";
 			nextVersions_lazy = () -> Arrays.asList(ExchangeConfiguration5.mmExchangeDeclined);
 			maxOccurs = 1;
 			minOccurs = 0;

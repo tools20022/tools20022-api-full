@@ -120,7 +120,7 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies a particular unique zone of taxes assigned by taxing authorities.  A tax region number is unique.  Every account is considered to reside within a tax region, although some tax regions may not charge taxes on services."
+	 * "Specifies a particular unique zone of taxes assigned by taxing authorities. A tax region number is unique. Every account is considered to reside within a tax region, although some tax regions may not charge taxes on services."
 	 * </li>
 	 * </ul>
 	 */
@@ -131,7 +131,7 @@ public class BillingTaxRegion1 {
 			xmlTag = "RgnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegionNumber";
-			definition = "Specifies a particular unique zone of taxes assigned by taxing authorities.  A tax region number is unique.  Every account is considered to reside within a tax region, although some tax regions may not charge taxes on services.";
+			definition = "Specifies a particular unique zone of taxes assigned by taxing authorities. A tax region number is unique. Every account is considered to reside within a tax region, although some tax regions may not charge taxes on services.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
@@ -217,7 +217,7 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the financial institution’s customer tax identification number.  \n\nUsage:\nThis is the number passed from the financial institution to the taxing authority to indicate the specific customer tied to the taxes calculated for this tax region and group of delivered services.  It is typically the tax identification tied to a customer’s account."
+	 * "Specifies the financial institution’s customer tax identification number. \n\nUsage: \nThis is the number passed from the financial institution to the taxing authority to indicate the specific customer tied to the taxes calculated for this tax region and group of delivered services. It is typically the tax identification tied to a customer’s account."
 	 * </li>
 	 * </ul>
 	 */
@@ -229,7 +229,7 @@ public class BillingTaxRegion1 {
 			xmlTag = "CstmrTaxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerTaxIdentification";
-			definition = "Specifies the financial institution’s customer tax identification number.  \n\nUsage:\nThis is the number passed from the financial institution to the taxing authority to indicate the specific customer tied to the taxes calculated for this tax region and group of delivered services.  It is typically the tax identification tied to a customer’s account.";
+			definition = "Specifies the financial institution’s customer tax identification number. \n\nUsage: \nThis is the number passed from the financial institution to the taxing authority to indicate the specific customer tied to the taxes calculated for this tax region and group of delivered services. It is typically the tax identification tied to a customer’s account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
@@ -267,7 +267,7 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date on which the tax calculation was performed. \n\nUsage:\nThis date can be used to verify the tax rate value on the calculation date."
+	 * "Date on which the tax calculation was performed. \n\nUsage: \nThis date can be used to verify the tax rate value on the calculation date."
 	 * </li>
 	 * </ul>
 	 */
@@ -279,7 +279,7 @@ public class BillingTaxRegion1 {
 			xmlTag = "PtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PointDate";
-			definition = "Date on which the tax calculation was performed. \n\nUsage:\nThis date can be used to verify the tax rate value on the calculation date.";
+			definition = "Date on which the tax calculation was performed. \n\nUsage: \nThis date can be used to verify the tax rate value on the calculation date.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -462,7 +462,7 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total tax amount expressed in the account’s settlement (or charging) currency.  \n\nUsage: This total sums the individual service level taxes as calculated for each service by methods A, B and D. The sum of these amounts across all tax regions for the statement is displayed as the tax total sum in the compensation section."
+	 * "Total tax amount expressed in the account’s settlement (or charging) currency. \n\nUsage: This total sums the individual service level taxes as calculated for each service by methods A, B and D. The sum of these amounts across all tax regions for the statement is displayed as the tax total sum in the compensation section."
 	 * </li>
 	 * </ul>
 	 */
@@ -474,7 +474,7 @@ public class BillingTaxRegion1 {
 			xmlTag = "SttlmAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
-			definition = "Total tax amount expressed in the account’s settlement (or charging) currency.  \n\nUsage: This total sums the individual service level taxes as calculated for each service by methods A, B and D. The sum of these amounts across all tax regions for the statement is displayed as the tax total sum in the compensation section.";
+			definition = "Total tax amount expressed in the account’s settlement (or charging) currency. \n\nUsage: This total sums the individual service level taxes as calculated for each service by methods A, B and D. The sum of these amounts across all tax regions for the statement is displayed as the tax total sum in the compensation section.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -511,7 +511,7 @@ public class BillingTaxRegion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total amount of all taxes for a specific customer within the tax region expressed in the tax region’s host currency. \n\nUsage: It is the same value as total tax amount and is included for the specific use of tax calculation methods A , B and D."
+	 * "Total amount of all taxes for a specific customer within the tax region expressed in the tax region’s host currency. \n\nUsage: It is the same value as total tax amount and is included for the specific use of tax calculation methods A, B and D."
 	 * </li>
 	 * </ul>
 	 */
@@ -523,7 +523,7 @@ public class BillingTaxRegion1 {
 			xmlTag = "TaxDueToRgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxDueToRegion";
-			definition = "Total amount of all taxes for a specific customer within the tax region expressed in the tax region’s host currency. \n\nUsage: It is the same value as total tax amount and is included for the specific use of tax calculation methods A , B and D.";
+			definition = "Total amount of all taxes for a specific customer within the tax region expressed in the tax region’s host currency. \n\nUsage: It is the same value as total tax amount and is included for the specific use of tax calculation methods A, B and D.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

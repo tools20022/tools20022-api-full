@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * TSE/JASDEC extension codes for mergers
+ * TSE/JASDEC extension codes for mergers.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InstitutionalClassificationCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "TSE/JASDEC extension codes for mergers"</li>
+ * definition} = "TSE/JASDEC extension codes for mergers."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -247,7 +247,7 @@ public class InstitutionalClassificationCode extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstitutionalClassificationCode";
-				definition = "TSE/JASDEC extension codes for mergers";
+				definition = "TSE/JASDEC extension codes for mergers.";
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InstitutionalClassificationCode.SurvivingCompany, com.tools20022.repository.codeset.InstitutionalClassificationCode.DiscontinuedCompany,
 						com.tools20022.repository.codeset.InstitutionalClassificationCode.Subsidiary, com.tools20022.repository.codeset.InstitutionalClassificationCode.Unknown,
 						com.tools20022.repository.codeset.InstitutionalClassificationCode.Parent);

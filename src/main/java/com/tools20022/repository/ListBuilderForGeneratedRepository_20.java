@@ -25,6 +25,21 @@ class ListBuilderForGeneratedRepository_20 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) SettlementDetails94.mmObject());
+		list.add((T) SettlementTypeAndAdditionalParameters14.mmObject());
+		list.add((T) AmountAndDirection45.mmObject());
+		list.add((T) AcceptedStatus7Choice.mmObject());
+		list.add((T) AcceptedStatusReason8.mmObject());
+		list.add((T) AmountAndDirection51.mmObject());
+		list.add((T) PartyIdentification93Choice.mmObject());
+		list.add((T) RepairStatus12Choice.mmObject());
+		list.add((T) RejectionReason22Choice.mmObject());
+		list.add((T) RejectionReason23Choice.mmObject());
+		list.add((T) CancellationStatus16Choice.mmObject());
+		list.add((T) CancellationReason12.mmObject());
+		list.add((T) MatchingStatus27Choice.mmObject());
+		list.add((T) ResponseStatus5Choice.mmObject());
+		list.add((T) StatementType5Choice.mmObject());
 		list.add((T) ForeignExchangeTerms23.mmObject());
 		list.add((T) CancellationReason23Choice.mmObject());
 		list.add((T) GenericDocumentIdentification4.mmObject());
@@ -510,21 +525,6 @@ class ListBuilderForGeneratedRepository_20 {
 		list.add((T) RateType36Choice.mmObject());
 		list.add((T) IntermediateSecuritiesDistributionTypeFormat15Choice.mmObject());
 		list.add((T) CashOption42.mmObject());
-		list.add((T) OfferTypeFormat10Choice.mmObject());
-		list.add((T) CorporateActionPrice58.mmObject());
-		list.add((T) CorporateActionRate67.mmObject());
-		list.add((T) OptionFeaturesFormat17Choice.mmObject());
-		list.add((T) OptionAvailabilityStatus3Choice.mmObject());
-		list.add((T) CorporateActionChangeTypeFormat6Choice.mmObject());
-		list.add((T) CashOption43.mmObject());
-		list.add((T) ForeignExchangeTerms24.mmObject());
-		list.add((T) CorporateActionAmounts36.mmObject());
-		list.add((T) RateDetails22.mmObject());
-		list.add((T) ProprietaryQuantity8.mmObject());
-		list.add((T) SecurityDate11.mmObject());
-		list.add((T) Quantity19Choice.mmObject());
-		list.add((T) SecuritiesOption52.mmObject());
-		list.add((T) EventInformation7.mmObject());
 		ListBuilderForGeneratedRepository_21.addElems(list);
 		return list;
 	}

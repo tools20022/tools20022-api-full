@@ -176,7 +176,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time of notification via web service as reference information.\r\n通知日時  Notification date and time."
+	 * "Date and time of notification via web service as reference information.\r\n通知日時 Notification date and time."
 	 * </li>
 	 * </ul>
 	 */
@@ -187,7 +187,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "WebSvcNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WebServiceNotificationDate";
-			definition = "Date and time of notification via web service as reference information.\r\n通知日時  Notification date and time.";
+			definition = "Date and time of notification via web service as reference information.\r\n通知日時 Notification date and time.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -221,7 +221,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時"
+	 * "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時."
 	 * </li>
 	 * </ul>
 	 */
@@ -232,7 +232,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "PrvsWebSvcNtfctnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousWebServiceNotificationDate";
-			definition = "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時";
+			definition = "Date and time of previous notification via web service as a reference information (in case of replacement). \r\n訂正（削除）前通知日時.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -266,7 +266,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Actual record date - the previous business day of the record date if the record date falls to Saturday, Sunday or national holiday.\r\n権利確定日"
+	 * "Actual record date - the previous business day of the record date if the record date falls to Saturday, Sunday or national holiday.\r\n権利確定日."
 	 * </li>
 	 * </ul>
 	 */
@@ -277,7 +277,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "ActlRcrdDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualRecordDate";
-			definition = "Actual record date - the previous business day of the record date if the record date falls to Saturday, Sunday or national holiday.\r\n権利確定日";
+			definition = "Actual record date - the previous business day of the record date if the record date falls to Saturday, Sunday or national holiday.\r\n権利確定日.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -310,7 +310,7 @@ public class CorporateActionDate21SD1 {
 	 * name} = "BoardMeetingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date of the board meeting.\r\n取締役会決議日"</li>
+	 * definition} = "Date of the board meeting.\r\n取締役会決議日."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBoardMeetingDate = new MMMessageAttribute() {
@@ -320,7 +320,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "BrdMtgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BoardMeetingDate";
-			definition = "Date of the board meeting.\r\n取締役会決議日";
+			definition = "Date of the board meeting.\r\n取締役会決議日.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -354,7 +354,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date on which the new company will be registered.\r\n新設会社登記日"</li>
+	 * "Date on which the new company will be registered.\r\n新設会社登記日."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCorporateRegistrationDate = new MMMessageAttribute() {
@@ -364,7 +364,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "CorpRegnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateRegistrationDate";
-			definition = "Date on which the new company will be registered.\r\n新設会社登記日";
+			definition = "Date on which the new company will be registered.\r\n新設会社登記日.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -398,7 +398,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Earliest planned date on which the issue price will be set.\r\n発行価格決定予定日（最短）"
+	 * "Earliest planned date on which the issue price will be set.\r\n発行価格決定予定日（最短）."
 	 * </li>
 	 * </ul>
 	 */
@@ -409,7 +409,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "EarlstPlandDtOfIssePric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPlannedDateOfIssuePrice";
-			definition = "Earliest planned date on which the issue price will be set.\r\n発行価格決定予定日（最短）";
+			definition = "Earliest planned date on which the issue price will be set.\r\n発行価格決定予定日（最短）.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -443,7 +443,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Latest planned date on which the issue price will be set.\r\n発行価格決定予定日（最長）"
+	 * "Latest planned date on which the issue price will be set.\r\n発行価格決定予定日（最長）."
 	 * </li>
 	 * </ul>
 	 */
@@ -454,7 +454,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "LatstPlandDtOfIssePric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestPlannedDateOfIssuePrice";
-			definition = "Latest planned date on which the issue price will be set.\r\n発行価格決定予定日（最長）";
+			definition = "Latest planned date on which the issue price will be set.\r\n発行価格決定予定日（最長）.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -487,7 +487,7 @@ public class CorporateActionDate21SD1 {
 	 * name} = "DateOfIssuePrice"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date on which the issue price will be set.\r\n発行価格決定日"</li>
+	 * definition} = "Date on which the issue price will be set.\r\n発行価格決定日."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDateOfIssuePrice = new MMMessageAttribute() {
@@ -497,7 +497,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "DtOfIssePric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateOfIssuePrice";
-			definition = "Date on which the issue price will be set.\r\n発行価格決定日";
+			definition = "Date on which the issue price will be set.\r\n発行価格決定日.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -531,7 +531,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Earliest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最短）"
+	 * "Earliest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最短）."
 	 * </li>
 	 * </ul>
 	 */
@@ -542,7 +542,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "EarlstPlandSbcptCostPmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPlannedSubscriptionCostPaymentDate";
-			definition = "Earliest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最短）";
+			definition = "Earliest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最短）.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -576,7 +576,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Latest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最長）"
+	 * "Latest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最長）."
 	 * </li>
 	 * </ul>
 	 */
@@ -587,7 +587,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "LatstPlandSbcptCostPmtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestPlannedSubscriptionCostPaymentDate";
-			definition = "Latest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最長）";
+			definition = "Latest planned date on which the cash payment (for the subscription cost) will be made.\r\n払込期日予定日（最長）.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();
@@ -621,7 +621,7 @@ public class CorporateActionDate21SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日"</li>
+	 * "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubsequentListingDate = new MMMessageAttribute() {
@@ -631,7 +631,7 @@ public class CorporateActionDate21SD1 {
 			xmlTag = "SbsqntListgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubsequentListingDate";
-			definition = "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日";
+			definition = "Listing date of the new shares announced by Stock Exchange.\r\n変更上場日.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();

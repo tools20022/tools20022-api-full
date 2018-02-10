@@ -416,7 +416,7 @@ public class PaymentCard27 {
 	 * name} = "CardProductSubType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Additionnal information to identify CardProduct"</li>
+	 * definition} = "Additionnal information to identify CardProduct."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCardProductSubType = new MMMessageAttribute() {
@@ -427,7 +427,7 @@ public class PaymentCard27 {
 			xmlTag = "CardPdctSubTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardProductSubType";
-			definition = "Additionnal information to identify CardProduct";
+			definition = "Additionnal information to identify CardProduct.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

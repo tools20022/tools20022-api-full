@@ -84,6 +84,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6
  * CryptographicKey6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey13
+ * CryptographicKey13}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -130,6 +132,9 @@ public class CryptographicKey5 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmIdentification
 	 * CryptographicKey6.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey13#mmIdentification
+	 * CryptographicKey13.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -147,7 +152,7 @@ public class CryptographicKey5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Name of the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmIdentification, CryptographicKey13.mmIdentification);
 			previousVersion_lazy = () -> CryptographicKey4.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -183,6 +188,14 @@ public class CryptographicKey5 {
 	 * definition} =
 	 * "Additional identification of the key.\r\nUsage\r\nFor derived unique key per transaction (DUKPT) keys, the key serial number (KSN) with the 21 bits of the transaction counter set to zero."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey13#mmAdditionalIdentification
+	 * CryptographicKey13.mmAdditionalIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -198,6 +211,7 @@ public class CryptographicKey5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalIdentification";
 			definition = "Additional identification of the key.\r\nUsage\r\nFor derived unique key per transaction (DUKPT) keys, the key serial number (KSN) with the 21 bits of the transaction counter set to zero.";
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey13.mmAdditionalIdentification);
 			previousVersion_lazy = () -> CryptographicKey4.mmAdditionalIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -237,6 +251,9 @@ public class CryptographicKey5 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmVersion
 	 * CryptographicKey6.mmVersion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey13#mmVersion
+	 * CryptographicKey13.mmVersion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -254,7 +271,7 @@ public class CryptographicKey5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmVersion);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmVersion, CryptographicKey13.mmVersion);
 			previousVersion_lazy = () -> CryptographicKey4.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -294,6 +311,8 @@ public class CryptographicKey5 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey6#mmType
 	 * CryptographicKey6.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CryptographicKey13#mmType
+	 * CryptographicKey13.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -311,7 +330,7 @@ public class CryptographicKey5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of algorithm used by the cryptographic key.";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmType);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmType, CryptographicKey13.mmType);
 			previousVersion_lazy = () -> CryptographicKey4.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -352,6 +371,9 @@ public class CryptographicKey5 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmFunction
 	 * CryptographicKey6.mmFunction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey13#mmFunction
+	 * CryptographicKey13.mmFunction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -369,7 +391,7 @@ public class CryptographicKey5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Function";
 			definition = "Allowed usage of the key.";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmFunction);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmFunction, CryptographicKey13.mmFunction);
 			previousVersion_lazy = () -> CryptographicKey4.mmFunction;
 			minOccurs = 1;
 			simpleType_lazy = () -> KeyUsage1Code.mmObject();
@@ -408,6 +430,9 @@ public class CryptographicKey5 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmActivationDate
 	 * CryptographicKey6.mmActivationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey13#mmActivationDate
+	 * CryptographicKey13.mmActivationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -425,7 +450,7 @@ public class CryptographicKey5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivationDate";
 			definition = "Date and time on which the key must be activated.";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmActivationDate);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmActivationDate, CryptographicKey13.mmActivationDate);
 			previousVersion_lazy = () -> CryptographicKey4.mmActivationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -465,6 +490,9 @@ public class CryptographicKey5 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CryptographicKey6#mmDeactivationDate
 	 * CryptographicKey6.mmDeactivationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey13#mmDeactivationDate
+	 * CryptographicKey13.mmDeactivationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -482,7 +510,7 @@ public class CryptographicKey5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeactivationDate";
 			definition = "Date and time on which the key must be deactivated.";
-			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmDeactivationDate);
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmDeactivationDate, CryptographicKey13.mmDeactivationDate);
 			previousVersion_lazy = () -> CryptographicKey4.mmDeactivationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -516,6 +544,14 @@ public class CryptographicKey5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Encrypted cryptographic key."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CryptographicKey13#mmKeyValue
+	 * CryptographicKey13.mmKeyValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -531,6 +567,7 @@ public class CryptographicKey5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyValue";
 			definition = "Encrypted cryptographic key.";
+			nextVersions_lazy = () -> Arrays.asList(CryptographicKey13.mmKeyValue);
 			previousVersion_lazy = () -> CryptographicKey4.mmKeyValue;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -549,7 +586,7 @@ public class CryptographicKey5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKey5";
 				definition = "Cryptographic Key.";
-				nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(CryptographicKey6.mmObject(), CryptographicKey13.mmObject());
 				previousVersion_lazy = () -> CryptographicKey4.mmObject();
 			}
 		});

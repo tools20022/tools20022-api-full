@@ -113,7 +113,7 @@ public class PaymentType3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type, or nature, of the payment, such as express payment.\n"</li>
+	 * "Type, or nature, of the payment, such as express payment.\n."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -132,7 +132,7 @@ public class PaymentType3Choice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Type, or nature, of the payment, such as express payment.\n";
+			definition = "Type, or nature, of the payment, such as express payment.\n.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentType4Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;

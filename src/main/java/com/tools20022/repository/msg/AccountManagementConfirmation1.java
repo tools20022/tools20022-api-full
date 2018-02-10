@@ -125,7 +125,7 @@ public class AccountManagementConfirmation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies if the confirmation message applies to an account opening,  an account modification request or to a get account details."
+	 * "Specifies if the confirmation message applies to an account opening, an account modification request or to a get account details."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -144,7 +144,7 @@ public class AccountManagementConfirmation1 {
 			xmlTag = "ConfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
-			definition = "Specifies if the confirmation message applies to an account opening,  an account modification request or to a get account details.";
+			definition = "Specifies if the confirmation message applies to an account opening, an account modification request or to a get account details.";
 			nextVersions_lazy = () -> Arrays.asList(AccountManagementConfirmation2.mmConfirmationType);
 			maxOccurs = 1;
 			minOccurs = 1;

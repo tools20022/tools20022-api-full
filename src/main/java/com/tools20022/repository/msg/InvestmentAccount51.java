@@ -893,7 +893,7 @@ public class InvestmentAccount51 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Method by which the tax (withholding tax) is to be processed, that is,  either withheld at source or tax information is reported to tax authorities or tax information is reported due to the provision of a tax certificate."
+	 * "Method by which the tax (withholding tax) is to be processed, that is, either withheld at source or tax information is reported to tax authorities or tax information is reported due to the provision of a tax certificate."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -918,7 +918,7 @@ public class InvestmentAccount51 {
 			xmlTag = "TaxWhldgMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxWithholdingMethod";
-			definition = "Method by which the tax (withholding tax) is to be processed, that is,  either withheld at source or tax information is reported to tax authorities or tax information is reported due to the provision of a tax certificate.";
+			definition = "Method by which the tax (withholding tax) is to be processed, that is, either withheld at source or tax information is reported to tax authorities or tax information is reported due to the provision of a tax certificate.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount63.mmTaxWithholdingMethod);
 			previousVersion_lazy = () -> InvestmentAccount47.mmTaxWithholdingMethod;
 			maxOccurs = 1;
@@ -1720,7 +1720,7 @@ public class InvestmentAccount51 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the means by which the investor or account owner submits the open account form. "
+	 * "Specifies the means by which the investor or account owner submits the open account form."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1745,7 +1745,7 @@ public class InvestmentAccount51 {
 			xmlTag = "TxChanlTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionChannelType";
-			definition = "Specifies the means by which the investor or account owner submits the open account form. ";
+			definition = "Specifies the means by which the investor or account owner submits the open account form.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccount63.mmTransactionChannelType);
 			previousVersion_lazy = () -> InvestmentAccount47.mmTransactionChannelType;
 			maxOccurs = 1;

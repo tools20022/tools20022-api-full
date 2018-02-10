@@ -154,7 +154,7 @@ public class NameAndAddress4 {
 	 * name} = "Address"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Postal address of a party."</li>
+	 * definition} = "Postal address of the party."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
@@ -165,7 +165,7 @@ public class NameAndAddress4 {
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
-			definition = "Postal address of a party.";
+			definition = "Postal address of the party.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

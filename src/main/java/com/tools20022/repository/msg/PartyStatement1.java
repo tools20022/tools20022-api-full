@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PartyActivityAdviceV01;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.ArrayList;
@@ -46,6 +47,15 @@ import javax.xml.bind.annotation.XmlType;
  * PartyStatement1.mmSystemDate}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PartyStatement1#mmChange
  * PartyStatement1.mmChange}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyActivityAdviceV01#mmPartyActivity
+ * PartyActivityAdviceV01.mmPartyActivity}</li>
  * </ul>
  * </li>
  * <li>
@@ -159,6 +169,7 @@ public class PartyStatement1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyStatement1.mmSystemDate, com.tools20022.repository.msg.PartyStatement1.mmChange);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyActivityAdviceV01.mmPartyActivity);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyStatement1";

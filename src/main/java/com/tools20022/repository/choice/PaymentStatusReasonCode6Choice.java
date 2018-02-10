@@ -79,6 +79,14 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentStatusReasonCode6Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reason for the status of the transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice
+ * PaymentStatusReasonCode7Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode5Choice
@@ -123,6 +131,14 @@ public class PaymentStatusReasonCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason why the payment status is unmatched."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice#mmUnmatched
+	 * PaymentStatusReasonCode7Choice.mmUnmatched}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +155,7 @@ public class PaymentStatusReasonCode6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unmatched";
 			definition = "Reason why the payment status is unmatched.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode7Choice.mmUnmatched);
 			previousVersion_lazy = () -> PaymentStatusReasonCode5Choice.mmUnmatched;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -178,6 +195,14 @@ public class PaymentStatusReasonCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason why the payment status is cancelled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice#mmCancelled
+	 * PaymentStatusReasonCode7Choice.mmCancelled}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -194,6 +219,7 @@ public class PaymentStatusReasonCode6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancelled";
 			definition = "Reason why the payment status is cancelled.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode7Choice.mmCancelled);
 			previousVersion_lazy = () -> PaymentStatusReasonCode5Choice.mmCancelled;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -233,6 +259,14 @@ public class PaymentStatusReasonCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason why the payment status is suspended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice#mmSuspended
+	 * PaymentStatusReasonCode7Choice.mmSuspended}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -249,6 +283,7 @@ public class PaymentStatusReasonCode6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Suspended";
 			definition = "Reason why the payment status is suspended.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode7Choice.mmSuspended);
 			previousVersion_lazy = () -> PaymentStatusReasonCode5Choice.mmSuspended;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -289,6 +324,14 @@ public class PaymentStatusReasonCode6Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reason why the payment status is pending (failing settlement)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice#mmPendingFailingSettlement
+	 * PaymentStatusReasonCode7Choice.mmPendingFailingSettlement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -305,6 +348,7 @@ public class PaymentStatusReasonCode6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingFailingSettlement";
 			definition = "Reason why the payment status is pending (failing settlement).";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode7Choice.mmPendingFailingSettlement);
 			previousVersion_lazy = () -> PaymentStatusReasonCode5Choice.mmPendingFailingSettlement;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -344,6 +388,14 @@ public class PaymentStatusReasonCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason why the payment status is pending (settlement)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice#mmPendingSettlement
+	 * PaymentStatusReasonCode7Choice.mmPendingSettlement}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -360,6 +412,7 @@ public class PaymentStatusReasonCode6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingSettlement";
 			definition = "Reason why the payment status is pending (settlement).";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode7Choice.mmPendingSettlement);
 			previousVersion_lazy = () -> PaymentStatusReasonCode5Choice.mmPendingSettlement;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -394,7 +447,15 @@ public class PaymentStatusReasonCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Defines the reason that has been used by the Target2 SSP system to reject the transaction"
+	 * "Defines the reason that has been used by the Target2 SSP system to reject the transaction."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice#mmProprietaryRejection
+	 * PaymentStatusReasonCode7Choice.mmProprietaryRejection}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -410,7 +471,8 @@ public class PaymentStatusReasonCode6Choice {
 			xmlTag = "PrtryRjctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryRejection";
-			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction";
+			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode7Choice.mmProprietaryRejection);
 			previousVersion_lazy = () -> PaymentStatusReasonCode5Choice.mmProprietaryRejection;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -444,6 +506,14 @@ public class PaymentStatusReasonCode6Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines a free text proprietary reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PaymentStatusReasonCode7Choice#mmProprietary
+	 * PaymentStatusReasonCode7Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -459,6 +529,7 @@ public class PaymentStatusReasonCode6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Defines a free text proprietary reason.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode7Choice.mmProprietary);
 			previousVersion_lazy = () -> PaymentStatusReasonCode5Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -477,6 +548,7 @@ public class PaymentStatusReasonCode6Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentStatusReasonCode6Choice";
 				definition = "Reason for the status of the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentStatusReasonCode7Choice.mmObject());
 				previousVersion_lazy = () -> PaymentStatusReasonCode5Choice.mmObject();
 			}
 		});

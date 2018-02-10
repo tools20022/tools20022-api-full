@@ -101,6 +101,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * MatchingSystemReference1Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.UniqueTransactionIdentifier2
  * UniqueTransactionIdentifier2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReferences1
+ * SecuritiesTransactionReferences1}</li>
  * </ul>
  * </li>
  * <li>
@@ -275,6 +278,18 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmCounterpartyProprietaryTransactionIdentification
 	 * UnsecuredMarketTransaction4.
 	 * mmCounterpartyProprietaryTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer29#mmCounterpartyReference
+	 * ISATransfer29.mmCounterpartyReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmCounterpartyReference
+	 * Transfer35.mmCounterpartyReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer34#mmCounterpartyReference
+	 * Transfer34.mmCounterpartyReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmCounterpartyReference
+	 * ISATransfer28.mmCounterpartyReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -308,7 +323,8 @@ public class TradeIdentification {
 					OvernightIndexSwapTransaction3.mmCounterpartyProprietaryTransactionIdentification, SecuredMarketTransaction3.mmCounterpartyProprietaryTransactionIdentification, InvestmentAccountOpening3.mmCounterpartyReference,
 					InvestmentAccountModification3.mmCounterpartyReference, AccountManagementConfirmation4.mmCounterpartyReference, GeneralInformation5.mmCounterpartyReference,
 					SecuredMarketTransaction4.mmCounterpartyProprietaryTransactionIdentification, ForeignExchangeSwapTransaction3.mmCounterpartyProprietaryTransactionIdentification,
-					OvernightIndexSwapTransaction4.mmCounterpartyProprietaryTransactionIdentification, UnsecuredMarketTransaction4.mmCounterpartyProprietaryTransactionIdentification);
+					OvernightIndexSwapTransaction4.mmCounterpartyProprietaryTransactionIdentification, UnsecuredMarketTransaction4.mmCounterpartyProprietaryTransactionIdentification, ISATransfer29.mmCounterpartyReference,
+					Transfer35.mmCounterpartyReference, Transfer34.mmCounterpartyReference, ISATransfer28.mmCounterpartyReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1303,6 +1319,9 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.repository.msg.SecuredMarketTransaction3#mmProprietaryTransactionIdentification
 	 * SecuredMarketTransaction3.mmProprietaryTransactionIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmTradeIdentification
+	 * Transaction51.mmTradeIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualOrderConfirmationStatusAndReason2#mmDealReference
 	 * IndividualOrderConfirmationStatusAndReason2.mmDealReference}</li>
 	 * <li>
@@ -1419,6 +1438,120 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmRelatedProprietaryTransactionIdentification
 	 * UnsecuredMarketTransaction4.mmRelatedProprietaryTransactionIdentification
 	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType6#mmProductIdentification
+	 * ContractType6.mmProductIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction58#mmTradeIdentification
+	 * Transaction58.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmPaymentInformationIdentification
+	 * PaymentInstruction24.mmPaymentInformationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmCancellationReference
+	 * MessageAndBusinessReference11.mmCancellationReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References63Choice#mmPreviousReference
+	 * References63Choice.mmPreviousReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.References63Choice#mmOtherReference
+	 * References63Choice.mmOtherReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction90#mmOriginalPaymentInformationIdentification
+	 * PaymentTransaction90.mmOriginalPaymentInformationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction26#mmOriginalPaymentInformationIdentification
+	 * OriginalPaymentInstruction26.mmOriginalPaymentInformationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorrectivePaymentInitiation3#mmPaymentInformationIdentification
+	 * CorrectivePaymentInitiation3.mmPaymentInformationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmTradeIdentification
+	 * SecuritiesTradeDetails71.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmTradeIdentification
+	 * TransactionDetails105.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmTradeIdentification
+	 * Transaction60.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmTradeIdentification
+	 * Transaction61.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmTradeIdentification
+	 * Transaction62.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmTradeIdentification
+	 * SecuritiesTradeDetails73.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmTradeIdentification
+	 * SecuritiesTradeDetails75.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTradeIdentification
+	 * SecuritiesTradeDetails76.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmOtherTransactionIdentification
+	 * TransactionDetails106.mmOtherTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmTradeIdentification
+	 * SecuritiesTradeDetails78.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmTradeIdentification
+	 * SecuritiesTradeDetails79.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails80#mmTradeIdentification
+	 * SecuritiesTradeDetails80.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification25#mmTransactionIdentification
+	 * SettlementTypeAndIdentification25.mmTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction28#mmOriginalPaymentInformationIdentification
+	 * OriginalPaymentInstruction28.mmOriginalPaymentInformationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction27#mmOriginalPaymentInformationIdentification
+	 * OriginalPaymentInstruction27.mmOriginalPaymentInformationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction29#mmOriginalPaymentInformationIdentification
+	 * OriginalPaymentInstruction29.mmOriginalPaymentInformationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementTypeAndIdentification26#mmTransactionIdentification
+	 * SettlementTypeAndIdentification26.mmTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails84#mmTradeIdentification
+	 * SecuritiesTradeDetails84.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmTradeIdentification
+	 * SecuritiesTradeDetails85.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmTradeIdentification
+	 * SecuritiesTradeDetails86.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmTradeIdentification
+	 * SecuritiesTradeDetails87.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmTradeIdentification
+	 * SecuritiesTradeDetails88.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails108#mmOtherTransactionIdentification
+	 * TransactionDetails108.mmOtherTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmTradeIdentification
+	 * SecuritiesTradeDetails89.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmTradeIdentification
+	 * SecuritiesTradeDetails90.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmTradeIdentification
+	 * TransactionDetails110.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmTradeIdentification
+	 * Transaction63.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmTradeIdentification
+	 * Transaction64.mmTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmTradeIdentification
+	 * Transaction65.mmTradeIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1446,108 +1579,112 @@ public class TradeIdentification {
 	 */
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(SettlementTypeAndIdentification3.mmTransactionIdentification, TransactionDetails41.mmOtherTransactionIdentification, References1Choice.mmOtherTransactionIdentification,
-							SecuritiesTradeDetails25.mmTradeIdentification, SecuritiesTradeDetails26.mmTradeIdentification, SettlementTypeAndIdentification13.mmTransactionIdentification,
-							SettlementTypeAndIdentification7.mmTransactionIdentification, TransactionDetails43.mmOtherTransactionIdentification, References12Choice.mmOtherTransactionIdentification,
-							SecuritiesTradeDetails27.mmTradeIdentification, References28Choice.mmOtherTransactionIdentification, SecuritiesTradeDetails28.mmTradeIdentification, SettlementTypeAndIdentification2.mmTransactionIdentification,
-							SettlementTypeAndIdentification5.mmTransactionIdentification, AdditionalParameters3.mmPreviousPartialConfirmationIdentification, AdditionalParameters7.mmPreviousPartialConfirmationIdentification,
-							AdditionalParameters8.mmPreviousPartialConfirmationIdentification, AdditionalParameters9.mmPreviousPartialConfirmationIdentification, AdditionalParameters10.mmPreviousPartialConfirmationIdentification,
-							AdditionalParameters11.mmPreviousPartialConfirmationIdentification, AdditionalParameters2.mmPreviousPartialConfirmationIdentification, AdditionalParameters6.mmPreviousPartialConfirmationIdentification,
-							AdditionalParameters12.mmPreviousPartialConfirmationIdentification, AdditionalParameters13.mmPreviousPartialConfirmationIdentification, AdditionalParameters18.mmPreviousPartialConfirmationIdentification,
-							AdditionalParameters19.mmPreviousPartialConfirmationIdentification, References14Choice.mmOtherTransactionIdentification, References16Choice.mmOtherTransactionIdentification,
-							References25Choice.mmOtherTransactionIdentification, References32Choice.mmOtherTransactionIdentification, SettlementTypeAndIdentification14.mmTransactionIdentification, References1.mmTradeIdentification,
-							References6Choice.mmTradeIdentification, References2.mmTradeIdentification, References10Choice.mmTradeIdentification, References7.mmTradeIdentification, References13Choice.mmTradeIdentification,
-							References13Choice.mmOtherTransactionIdentification, References8.mmTradeIdentification, References15Choice.mmTradeIdentification, References15Choice.mmOtherTransactionIdentification,
-							References9.mmTradeIdentification, References24Choice.mmTradeIdentification, References24Choice.mmOtherTransactionIdentification, References13.mmTradeIdentification, References31Choice.mmTradeIdentification,
-							References31Choice.mmOtherTransactionIdentification, SecuritiesTradeDetails2.mmTradeIdentification, SecuritiesTradeDetails16.mmTradeIdentification,
-							AdditionalParameters17.mmPreviousPartialConfirmationIdentification, AdditionalParameters20.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails1.mmTradeIdentification,
-							SecuritiesTradeDetails15.mmTradeIdentification, TransactionDetails5.mmTradeIdentification, TransactionDetails9.mmTradeIdentification, TransactionDetails22.mmTradeIdentification,
-							TransactionDetails23.mmTradeIdentification, TransactionDetails36.mmTradeIdentification, TransactionDetails47.mmTradeIdentification, TransactionDetails53.mmTradeIdentification,
-							TransactionDetails58.mmTradeIdentification, Transaction7.mmTradeIdentification, Transaction8.mmTradeIdentification, Transaction9.mmTradeIdentification, Transaction10.mmTradeIdentification,
-							Transaction14.mmTradeIdentification, Transaction12.mmTradeIdentification, Transaction15.mmTradeIdentification, Transaction16.mmTradeIdentification, Transaction20.mmTradeIdentification,
-							Transaction19.mmTradeIdentification, Transaction23.mmTradeIdentification, Transaction22.mmTradeIdentification, Transaction28.mmTradeIdentification, Transaction27.mmTradeIdentification,
-							Transaction30.mmTradeIdentification, Transaction31.mmTradeIdentification, Transaction6.mmTradeIdentification, Transaction11.mmTradeIdentification, Transaction13.mmTradeIdentification,
-							Transaction17.mmTradeIdentification, Transaction18.mmTradeIdentification, Transaction21.mmTradeIdentification, Transaction29.mmTradeIdentification, Transaction32.mmTradeIdentification,
-							Identification2.mmTradeIdentification, IdentificationReference8Choice.mmInstructingPartyTransactionIdentification, IdentificationReference8Choice.mmExecutingPartyTransactionIdentification,
-							IdentificationReference11Choice.mmInstructingPartyTransactionIdentification, IdentificationReference11Choice.mmExecutingPartyTransactionIdentification, TwoLegTransactionDetails1.mmOpeningLegIdentification,
-							TwoLegTransactionDetails1.mmClosingLegIdentification, CurrencyExchange3.mmContractIdentification, CurrencyExchange5.mmContractIdentification, ExchangeRateInformation1.mmContractIdentification,
-							PaymentInstructionInformation1.mmPaymentInformationIdentification, PaymentInstructionInformation3.mmPaymentInformationIdentification, ExchangeRate1.mmContractIdentification,
-							PaymentInstruction6.mmPaymentInformationIdentification, PaymentInstruction9.mmPaymentInformationIdentification, PaymentInstructionInformation2.mmPaymentInformationIdentification,
-							PaymentInstructionInformation4.mmPaymentInformationIdentification, PaymentInstruction7.mmPaymentInformationIdentification, PaymentInstruction10.mmPaymentInformationIdentification,
-							OriginalPaymentInformation4.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction4.mmOriginalPaymentInformationIdentification,
-							OriginalPaymentInstruction8.mmOriginalPaymentInformationIdentification, OriginalPaymentInformation2.mmOriginalPaymentInformationIdentification,
-							OriginalPaymentInstruction2.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction7.mmOriginalPaymentInformationIdentification,
-							OriginalPaymentInformation1.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction1.mmOriginalPaymentInformationIdentification,
-							OriginalPaymentInstruction6.mmOriginalPaymentInformationIdentification, MatchingSystemReference1Choice.mmRelatedReference, TradeAgreement9.mmRelatedReference,
-							OriginalPaymentInformation5.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction5.mmOriginalPaymentInformationIdentification,
-							OriginalPaymentInstruction9.mmOriginalPaymentInformationIdentification, PaymentInstruction5.mmPaymentInformationIdentification, PaymentInstruction8.mmPaymentInformationIdentification,
-							PaymentInstruction11.mmPaymentInformationIdentification, IndividualOrderConfirmationStatusAndReason1.mmDealReference, IndividualOrderStatusAndReason2.mmDealReference,
-							MessageAndBusinessReference5.mmOtherReference, MessageAndBusinessReference5.mmPreviousReference, MessageAndBusinessReference5.mmRelatedReference, MessageAndBusinessReference2.mmOtherReference,
-							MessageAndBusinessReference2.mmPreviousReference, MessageAndBusinessReference4.mmOtherReference, MessageAndBusinessReference4.mmPreviousReference, MessageAndBusinessReference4.mmRelatedReference,
-							MessageAndBusinessReference1.mmPreviousReference, MessageAndBusinessReference1.mmOtherReference, MessageAndBusinessReference6.mmPreviousReference, MessageAndBusinessReference6.mmOtherReference,
-							MessageAndBusinessReference6.mmCancellationReference, TransactionDetails1.mmTradeReference, TransactionDetails1.mmAssociatedTradeReference, TransactionDetails3.mmTradeReference,
-							TransactionDetails3.mmAssociatedTradeReference, TransactionDetails2.mmTradeReference, TradeTransactionStatusAndReason1.mmTradeReference, TradeTransactionStatusAndReason2.mmTradeReference,
-							SecuritiesFinancingTransactionDetails2.mmClosingLegIdentification, SecuritiesTradeDetails8.mmTradeIdentification, SecuritiesTradeDetails18.mmTradeIdentification, SecuritiesTradeDetails4.mmTradeIdentification,
-							SecuritiesTradeDetails17.mmTradeIdentification, Identification7.mmTradeIdentification, SettlementTypeAndIdentification4.mmTransactionIdentification, References4Choice.mmOtherTransactionIdentification,
-							References22Choice.mmOtherTransactionIdentification, References2Choice.mmOtherTransactionIdentification, Identification6.mmTradeIdentification, NotificationEntry2.mmIdentification,
-							NotificationItem3.mmIdentification, OriginalItem1.mmOriginalItemIdentification, OriginalItem2.mmOriginalItemIdentification, OriginalItem2.mmOriginalEndToEndIdentification,
-							OriginalItemAndStatus1.mmOriginalItemIdentification, OriginalItemAndStatus2.mmOriginalItemIdentification, OriginalPaymentInformation3.mmOriginalPaymentInformationCancellationIdentification,
-							OriginalPaymentInformation3.mmOriginalPaymentInformationIdentification, CorrectivePaymentInitiation1.mmPaymentInformationIdentification, SecuritiesFinancingTransactionDetails6.mmClosingLegIdentification,
-							SecuritiesTradeDetails9.mmTradeIdentification, SecuritiesTradeDetails21.mmTradeIdentification, SecuritiesTradeDetails10.mmTradeIdentification, SecuritiesTradeDetails22.mmTradeIdentification,
-							SecuritiesTradeDetails23.mmTradeIdentification, SecuritiesTradeDetails29.mmTradeIdentification, Identification5.mmTradeIdentification, Identification8.mmTradeIdentification,
-							Identification11.mmTradeIdentification, Identification13.mmTradeIdentification, References8Choice.mmOtherTransactionIdentification, References17Choice.mmOtherTransactionIdentification,
-							SettlementTypeAndIdentification6.mmTransactionIdentification, References7Choice.mmOtherTransactionIdentification, References23Choice.mmOtherTransactionIdentification,
-							References30Choice.mmOtherTransactionIdentification, Identification9.mmTradeIdentification, OriginalPaymentInstruction3.mmOriginalPaymentInformationIdentification, NotificationItem4.mmIdentification,
-							OriginalItemAndStatus3.mmOriginalItemIdentification, TradeLeg2.mmTradeLegIdentification, TradeLeg5.mmTradeLegIdentification, TradeLeg3.mmTradeLegIdentification, TradeLeg6.mmTradeLegIdentification,
-							TradeLeg4.mmTradeLegIdentification, TradeLeg7.mmTradeLegIdentification, IndividualOrderStatusAndReason3.mmDealReference, References34Choice.mmOtherTransactionIdentification, Transaction25.mmTradeIdentification,
-							References35Choice.mmTradeIdentification, Identification3.mmTradeIdentification, AdditionalParameters16.mmPreviousPartialConfirmationIdentification, MessageAndBusinessReference7.mmCancellationReference,
-							References39Choice.mmPreviousReference, References39Choice.mmOtherReference, TransactionDetails61.mmTradeIdentification, Transaction34.mmTradeIdentification,
-							TransactionDetails64.mmOtherTransactionIdentification, Transaction35.mmTradeIdentification, Transaction36.mmTradeIdentification, TransactionReferences4.mmPaymentInformationIdentification,
-							SecuritiesTradeDetails31.mmTradeIdentification, SecuritiesTradeDetails33.mmTradeIdentification, SecuritiesTradeDetails35.mmTradeIdentification, SecuritiesTradeDetails36.mmTradeIdentification,
-							SecuritiesTradeDetails34.mmTradeIdentification, SecuritiesTradeDetails32.mmTradeIdentification, References16.mmTradeIdentification, SecuritiesTradeDetails44.mmTradeIdentification,
-							SecuritiesTradeDetails43.mmTradeIdentification, SecuritiesTradeDetails41.mmTradeIdentification, Transaction38.mmTradeIdentification, TransactionDetails66.mmTradeIdentification,
-							TransactionDetails65.mmOtherTransactionIdentification, SecuritiesTradeDetails42.mmTradeIdentification, References17.mmTradeIdentification, Transaction39.mmTradeIdentification,
-							SecuritiesTradeDetails46.mmTradeIdentification, SecuritiesTradeDetails47.mmTradeIdentification, Transaction37.mmTradeIdentification, TradeAgreement12.mmRelatedReference,
-							PaymentInstruction16.mmPaymentInformationIdentification, OriginalPaymentInstruction12.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction11.mmOriginalPaymentInformationIdentification,
-							PaymentInstruction15.mmPaymentInformationIdentification, OriginalPaymentInstruction13.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction10.mmOriginalPaymentInformationIdentification,
-							OriginalItemAndStatus4.mmOriginalItemIdentification, NotificationItem5.mmIdentification, TradeLeg8.mmTradeLegIdentification, Transaction41.mmTradeIdentification, TransactionDetails70.mmTradeIdentification,
-							Transaction40.mmTradeIdentification, TradeLeg10.mmTradeLegIdentification, TradeLeg9.mmTradeLegIdentification, PaymentInstruction17.mmPaymentInformationIdentification,
-							OriginalPaymentInstruction14.mmOriginalPaymentInformationIdentification, Transaction43.mmTradeIdentification, TransactionDetails71.mmTradeIdentification, Transaction42.mmTradeIdentification,
-							ForeignExchangeSwapTransaction1.mmProprietaryTransactionIdentification, UnsecuredMarketTransaction1.mmProprietaryTransactionIdentification, OvernightIndexSwapTransaction1.mmProprietaryTransactionIdentification,
-							SecuredMarketTransaction1.mmProprietaryTransactionIdentification, SecuritiesTradeDetails49.mmTradeIdentification, Transaction47.mmTradeIdentification, TransactionDetails76.mmOtherTransactionIdentification,
-							TransactionDetails79.mmTradeIdentification, Transaction45.mmTradeIdentification, Transaction46.mmTradeIdentification, CertificateIdentification1.mmPaymentInformationIdentification,
-							Trade2.mmProductIdentification, Trade1.mmProductIdentification, References45Choice.mmOtherTransactionIdentification, SettlementTypeAndIdentification18.mmTransactionIdentification,
-							SecuritiesTradeDetails51.mmTradeIdentification, SecuritiesTradeDetails53.mmTradeIdentification, AdditionalParameters24.mmPreviousPartialConfirmationIdentification,
-							AdditionalParameters22.mmPreviousPartialConfirmationIdentification, AdditionalParameters21.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails54.mmTradeIdentification,
-							SecuritiesTradeDetails52.mmTradeIdentification, References46Choice.mmTradeIdentification, References46Choice.mmOtherTransactionIdentification, Identification15.mmTradeIdentification,
-							SecuritiesTradeDetails50.mmTradeIdentification, References41Choice.mmOtherTransactionIdentification, References44Choice.mmOtherTransactionIdentification, References47Choice.mmOtherTransactionIdentification,
-							References18.mmTradeIdentification, PaymentInstruction18.mmPaymentInformationIdentification, OriginalPaymentInstruction16.mmOriginalPaymentInformationIdentification,
-							OriginalPaymentInstruction18.mmOriginalPaymentInformationIdentification, PaymentInstruction19.mmPaymentInformationIdentification, PaymentInstruction20.mmPaymentInformationIdentification,
-							OriginalPaymentInstruction15.mmOriginalPaymentInformationIdentification, OriginalItemAndStatus5.mmOriginalItemIdentification, OriginalPaymentInstruction17.mmOriginalPaymentInformationIdentification,
-							NotificationItem6.mmIdentification, SettlementTypeAndIdentification20.mmTransactionIdentification, MessageAndBusinessReference8.mmCancellationReference, References48Choice.mmPreviousReference,
-							References48Choice.mmOtherReference, OriginalPaymentInstruction19.mmOriginalPaymentInformationIdentification, SettlementTypeAndIdentification21.mmTransactionIdentification,
-							References60Choice.mmOtherTransactionIdentification, Transaction49.mmTradeIdentification, AdditionalParameters26.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails61.mmTradeIdentification,
-							AdditionalParameters25.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails63.mmTradeIdentification, SecuritiesTradeDetails62.mmTradeIdentification,
-							AdditionalParameters27.mmPreviousPartialConfirmationIdentification, TransactionDetails85.mmOtherTransactionIdentification, TransactionDetails87.mmTradeIdentification,
-							SecuritiesTradeDetails60.mmTradeIdentification, References58Choice.mmOtherTransactionIdentification, Identification24.mmTradeIdentification, Transaction50.mmTradeIdentification,
-							References50Choice.mmOtherTransactionIdentification, Transaction48.mmTradeIdentification, References21.mmTradeIdentification, SettlementTypeAndIdentification22.mmTransactionIdentification,
-							SecuritiesTradeDetails65.mmTradeIdentification, References59Choice.mmOtherTransactionIdentification, References54Choice.mmTradeIdentification, References54Choice.mmOtherTransactionIdentification,
-							SecuritiesTradeDetails66.mmTradeIdentification, UnsecuredMarketTransaction2.mmProprietaryTransactionIdentification, ForeignExchangeSwapTransaction2.mmProprietaryTransactionIdentification,
-							SecuredMarketTransaction2.mmProprietaryTransactionIdentification, UnsecuredMarketTransaction3.mmProprietaryTransactionIdentification, OvernightIndexSwapTransaction3.mmProprietaryTransactionIdentification,
-							SecuredMarketTransaction3.mmProprietaryTransactionIdentification, IndividualOrderConfirmationStatusAndReason2.mmDealReference, MessageAndBusinessReference10.mmReference,
-							MessageAndBusinessReference10.mmRelatedReference, IndividualOrderStatusAndReason7.mmDealReference, SecuritiesTransactionReport4.mmTransactionIdentification,
-							PaymentInstruction21.mmPaymentInformationIdentification, OriginalPaymentInstruction23.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction21.mmOriginalPaymentInformationIdentification,
-							PaymentInstruction23.mmPaymentInformationIdentification, OriginalPaymentInstruction24.mmOriginalPaymentInformationIdentification, PaymentInstruction22.mmPaymentInformationIdentification,
-							OriginalPaymentInstruction22.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction20.mmOriginalPaymentInformationIdentification, CorrectivePaymentInitiation2.mmPaymentInformationIdentification,
-							AdditionalParameters29.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails67.mmTradeIdentification, Transaction53.mmTradeIdentification, SecuritiesTradeDetails68.mmTradeIdentification,
-							TransactionDetails97.mmTradeIdentification, Transaction54.mmTradeIdentification, Transaction52.mmTradeIdentification, SecuritiesTradeDetails69.mmTradeIdentification,
-							AdditionalParameters31.mmPreviousPartialConfirmationIdentification, Transaction57.mmTradeIdentification, SecuritiesTradeDetails70.mmTradeIdentification, Transaction56.mmTradeIdentification,
-							TransactionDetails100.mmTradeIdentification, Transaction55.mmTradeIdentification, TransactionDetails101.mmOtherTransactionIdentification, FixingConditions1.mmOriginatorReference,
-							SecuredMarketTransaction4.mmProprietaryTransactionIdentification, SecuredMarketTransaction4.mmRelatedProprietaryTransactionIdentification, ForeignExchangeSwapTransaction3.mmProprietaryTransactionIdentification,
-							ForeignExchangeSwapTransaction3.mmRelatedProprietaryTransactionIdentification, OvernightIndexSwapTransaction4.mmProprietaryTransactionIdentification,
-							OvernightIndexSwapTransaction4.mmRelatedProprietaryTransactionIdentification, UnsecuredMarketTransaction4.mmProprietaryTransactionIdentification,
-							UnsecuredMarketTransaction4.mmRelatedProprietaryTransactionIdentification);
+			derivation_lazy = () -> Arrays.asList(SettlementTypeAndIdentification3.mmTransactionIdentification, TransactionDetails41.mmOtherTransactionIdentification, References1Choice.mmOtherTransactionIdentification,
+					SecuritiesTradeDetails25.mmTradeIdentification, SecuritiesTradeDetails26.mmTradeIdentification, SettlementTypeAndIdentification13.mmTransactionIdentification,
+					SettlementTypeAndIdentification7.mmTransactionIdentification, TransactionDetails43.mmOtherTransactionIdentification, References12Choice.mmOtherTransactionIdentification, SecuritiesTradeDetails27.mmTradeIdentification,
+					References28Choice.mmOtherTransactionIdentification, SecuritiesTradeDetails28.mmTradeIdentification, SettlementTypeAndIdentification2.mmTransactionIdentification,
+					SettlementTypeAndIdentification5.mmTransactionIdentification, AdditionalParameters3.mmPreviousPartialConfirmationIdentification, AdditionalParameters7.mmPreviousPartialConfirmationIdentification,
+					AdditionalParameters8.mmPreviousPartialConfirmationIdentification, AdditionalParameters9.mmPreviousPartialConfirmationIdentification, AdditionalParameters10.mmPreviousPartialConfirmationIdentification,
+					AdditionalParameters11.mmPreviousPartialConfirmationIdentification, AdditionalParameters2.mmPreviousPartialConfirmationIdentification, AdditionalParameters6.mmPreviousPartialConfirmationIdentification,
+					AdditionalParameters12.mmPreviousPartialConfirmationIdentification, AdditionalParameters13.mmPreviousPartialConfirmationIdentification, AdditionalParameters18.mmPreviousPartialConfirmationIdentification,
+					AdditionalParameters19.mmPreviousPartialConfirmationIdentification, References14Choice.mmOtherTransactionIdentification, References16Choice.mmOtherTransactionIdentification,
+					References25Choice.mmOtherTransactionIdentification, References32Choice.mmOtherTransactionIdentification, SettlementTypeAndIdentification14.mmTransactionIdentification, References1.mmTradeIdentification,
+					References6Choice.mmTradeIdentification, References2.mmTradeIdentification, References10Choice.mmTradeIdentification, References7.mmTradeIdentification, References13Choice.mmTradeIdentification,
+					References13Choice.mmOtherTransactionIdentification, References8.mmTradeIdentification, References15Choice.mmTradeIdentification, References15Choice.mmOtherTransactionIdentification, References9.mmTradeIdentification,
+					References24Choice.mmTradeIdentification, References24Choice.mmOtherTransactionIdentification, References13.mmTradeIdentification, References31Choice.mmTradeIdentification,
+					References31Choice.mmOtherTransactionIdentification, SecuritiesTradeDetails2.mmTradeIdentification, SecuritiesTradeDetails16.mmTradeIdentification, AdditionalParameters17.mmPreviousPartialConfirmationIdentification,
+					AdditionalParameters20.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails1.mmTradeIdentification, SecuritiesTradeDetails15.mmTradeIdentification, TransactionDetails5.mmTradeIdentification,
+					TransactionDetails9.mmTradeIdentification, TransactionDetails22.mmTradeIdentification, TransactionDetails23.mmTradeIdentification, TransactionDetails36.mmTradeIdentification, TransactionDetails47.mmTradeIdentification,
+					TransactionDetails53.mmTradeIdentification, TransactionDetails58.mmTradeIdentification, Transaction7.mmTradeIdentification, Transaction8.mmTradeIdentification, Transaction9.mmTradeIdentification,
+					Transaction10.mmTradeIdentification, Transaction14.mmTradeIdentification, Transaction12.mmTradeIdentification, Transaction15.mmTradeIdentification, Transaction16.mmTradeIdentification,
+					Transaction20.mmTradeIdentification, Transaction19.mmTradeIdentification, Transaction23.mmTradeIdentification, Transaction22.mmTradeIdentification, Transaction28.mmTradeIdentification,
+					Transaction27.mmTradeIdentification, Transaction30.mmTradeIdentification, Transaction31.mmTradeIdentification, Transaction6.mmTradeIdentification, Transaction11.mmTradeIdentification,
+					Transaction13.mmTradeIdentification, Transaction17.mmTradeIdentification, Transaction18.mmTradeIdentification, Transaction21.mmTradeIdentification, Transaction29.mmTradeIdentification,
+					Transaction32.mmTradeIdentification, Identification2.mmTradeIdentification, IdentificationReference8Choice.mmInstructingPartyTransactionIdentification,
+					IdentificationReference8Choice.mmExecutingPartyTransactionIdentification, IdentificationReference11Choice.mmInstructingPartyTransactionIdentification,
+					IdentificationReference11Choice.mmExecutingPartyTransactionIdentification, TwoLegTransactionDetails1.mmOpeningLegIdentification, TwoLegTransactionDetails1.mmClosingLegIdentification,
+					CurrencyExchange3.mmContractIdentification, CurrencyExchange5.mmContractIdentification, ExchangeRateInformation1.mmContractIdentification, PaymentInstructionInformation1.mmPaymentInformationIdentification,
+					PaymentInstructionInformation3.mmPaymentInformationIdentification, ExchangeRate1.mmContractIdentification, PaymentInstruction6.mmPaymentInformationIdentification, PaymentInstruction9.mmPaymentInformationIdentification,
+					PaymentInstructionInformation2.mmPaymentInformationIdentification, PaymentInstructionInformation4.mmPaymentInformationIdentification, PaymentInstruction7.mmPaymentInformationIdentification,
+					PaymentInstruction10.mmPaymentInformationIdentification, OriginalPaymentInformation4.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction4.mmOriginalPaymentInformationIdentification,
+					OriginalPaymentInstruction8.mmOriginalPaymentInformationIdentification, OriginalPaymentInformation2.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction2.mmOriginalPaymentInformationIdentification,
+					OriginalPaymentInstruction7.mmOriginalPaymentInformationIdentification, OriginalPaymentInformation1.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction1.mmOriginalPaymentInformationIdentification,
+					OriginalPaymentInstruction6.mmOriginalPaymentInformationIdentification, MatchingSystemReference1Choice.mmRelatedReference, TradeAgreement9.mmRelatedReference,
+					OriginalPaymentInformation5.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction5.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction9.mmOriginalPaymentInformationIdentification,
+					PaymentInstruction5.mmPaymentInformationIdentification, PaymentInstruction8.mmPaymentInformationIdentification, PaymentInstruction11.mmPaymentInformationIdentification,
+					IndividualOrderConfirmationStatusAndReason1.mmDealReference, IndividualOrderStatusAndReason2.mmDealReference, MessageAndBusinessReference5.mmOtherReference, MessageAndBusinessReference5.mmPreviousReference,
+					MessageAndBusinessReference5.mmRelatedReference, MessageAndBusinessReference2.mmOtherReference, MessageAndBusinessReference2.mmPreviousReference, MessageAndBusinessReference4.mmOtherReference,
+					MessageAndBusinessReference4.mmPreviousReference, MessageAndBusinessReference4.mmRelatedReference, MessageAndBusinessReference1.mmPreviousReference, MessageAndBusinessReference1.mmOtherReference,
+					MessageAndBusinessReference6.mmPreviousReference, MessageAndBusinessReference6.mmOtherReference, MessageAndBusinessReference6.mmCancellationReference, TransactionDetails1.mmTradeReference,
+					TransactionDetails1.mmAssociatedTradeReference, TransactionDetails3.mmTradeReference, TransactionDetails3.mmAssociatedTradeReference, TransactionDetails2.mmTradeReference,
+					TradeTransactionStatusAndReason1.mmTradeReference, TradeTransactionStatusAndReason2.mmTradeReference, SecuritiesFinancingTransactionDetails2.mmClosingLegIdentification, SecuritiesTradeDetails8.mmTradeIdentification,
+					SecuritiesTradeDetails18.mmTradeIdentification, SecuritiesTradeDetails4.mmTradeIdentification, SecuritiesTradeDetails17.mmTradeIdentification, Identification7.mmTradeIdentification,
+					SettlementTypeAndIdentification4.mmTransactionIdentification, References4Choice.mmOtherTransactionIdentification, References22Choice.mmOtherTransactionIdentification, References2Choice.mmOtherTransactionIdentification,
+					Identification6.mmTradeIdentification, NotificationEntry2.mmIdentification, NotificationItem3.mmIdentification, OriginalItem1.mmOriginalItemIdentification, OriginalItem2.mmOriginalItemIdentification,
+					OriginalItem2.mmOriginalEndToEndIdentification, OriginalItemAndStatus1.mmOriginalItemIdentification, OriginalItemAndStatus2.mmOriginalItemIdentification,
+					OriginalPaymentInformation3.mmOriginalPaymentInformationCancellationIdentification, OriginalPaymentInformation3.mmOriginalPaymentInformationIdentification,
+					CorrectivePaymentInitiation1.mmPaymentInformationIdentification, SecuritiesFinancingTransactionDetails6.mmClosingLegIdentification, SecuritiesTradeDetails9.mmTradeIdentification,
+					SecuritiesTradeDetails21.mmTradeIdentification, SecuritiesTradeDetails10.mmTradeIdentification, SecuritiesTradeDetails22.mmTradeIdentification, SecuritiesTradeDetails23.mmTradeIdentification,
+					SecuritiesTradeDetails29.mmTradeIdentification, Identification5.mmTradeIdentification, Identification8.mmTradeIdentification, Identification11.mmTradeIdentification, Identification13.mmTradeIdentification,
+					References8Choice.mmOtherTransactionIdentification, References17Choice.mmOtherTransactionIdentification, SettlementTypeAndIdentification6.mmTransactionIdentification, References7Choice.mmOtherTransactionIdentification,
+					References23Choice.mmOtherTransactionIdentification, References30Choice.mmOtherTransactionIdentification, Identification9.mmTradeIdentification, OriginalPaymentInstruction3.mmOriginalPaymentInformationIdentification,
+					NotificationItem4.mmIdentification, OriginalItemAndStatus3.mmOriginalItemIdentification, TradeLeg2.mmTradeLegIdentification, TradeLeg5.mmTradeLegIdentification, TradeLeg3.mmTradeLegIdentification,
+					TradeLeg6.mmTradeLegIdentification, TradeLeg4.mmTradeLegIdentification, TradeLeg7.mmTradeLegIdentification, IndividualOrderStatusAndReason3.mmDealReference, References34Choice.mmOtherTransactionIdentification,
+					Transaction25.mmTradeIdentification, References35Choice.mmTradeIdentification, Identification3.mmTradeIdentification, AdditionalParameters16.mmPreviousPartialConfirmationIdentification,
+					MessageAndBusinessReference7.mmCancellationReference, References39Choice.mmPreviousReference, References39Choice.mmOtherReference, TransactionDetails61.mmTradeIdentification, Transaction34.mmTradeIdentification,
+					TransactionDetails64.mmOtherTransactionIdentification, Transaction35.mmTradeIdentification, Transaction36.mmTradeIdentification, TransactionReferences4.mmPaymentInformationIdentification,
+					SecuritiesTradeDetails31.mmTradeIdentification, SecuritiesTradeDetails33.mmTradeIdentification, SecuritiesTradeDetails35.mmTradeIdentification, SecuritiesTradeDetails36.mmTradeIdentification,
+					SecuritiesTradeDetails34.mmTradeIdentification, SecuritiesTradeDetails32.mmTradeIdentification, References16.mmTradeIdentification, SecuritiesTradeDetails44.mmTradeIdentification,
+					SecuritiesTradeDetails43.mmTradeIdentification, SecuritiesTradeDetails41.mmTradeIdentification, Transaction38.mmTradeIdentification, TransactionDetails66.mmTradeIdentification,
+					TransactionDetails65.mmOtherTransactionIdentification, SecuritiesTradeDetails42.mmTradeIdentification, References17.mmTradeIdentification, Transaction39.mmTradeIdentification,
+					SecuritiesTradeDetails46.mmTradeIdentification, SecuritiesTradeDetails47.mmTradeIdentification, Transaction37.mmTradeIdentification, TradeAgreement12.mmRelatedReference,
+					PaymentInstruction16.mmPaymentInformationIdentification, OriginalPaymentInstruction12.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction11.mmOriginalPaymentInformationIdentification,
+					PaymentInstruction15.mmPaymentInformationIdentification, OriginalPaymentInstruction13.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction10.mmOriginalPaymentInformationIdentification,
+					OriginalItemAndStatus4.mmOriginalItemIdentification, NotificationItem5.mmIdentification, TradeLeg8.mmTradeLegIdentification, Transaction41.mmTradeIdentification, TransactionDetails70.mmTradeIdentification,
+					Transaction40.mmTradeIdentification, TradeLeg10.mmTradeLegIdentification, TradeLeg9.mmTradeLegIdentification, PaymentInstruction17.mmPaymentInformationIdentification,
+					OriginalPaymentInstruction14.mmOriginalPaymentInformationIdentification, Transaction43.mmTradeIdentification, TransactionDetails71.mmTradeIdentification, Transaction42.mmTradeIdentification,
+					ForeignExchangeSwapTransaction1.mmProprietaryTransactionIdentification, UnsecuredMarketTransaction1.mmProprietaryTransactionIdentification, OvernightIndexSwapTransaction1.mmProprietaryTransactionIdentification,
+					SecuredMarketTransaction1.mmProprietaryTransactionIdentification, SecuritiesTradeDetails49.mmTradeIdentification, Transaction47.mmTradeIdentification, TransactionDetails76.mmOtherTransactionIdentification,
+					TransactionDetails79.mmTradeIdentification, Transaction45.mmTradeIdentification, Transaction46.mmTradeIdentification, CertificateIdentification1.mmPaymentInformationIdentification, Trade2.mmProductIdentification,
+					Trade1.mmProductIdentification, References45Choice.mmOtherTransactionIdentification, SettlementTypeAndIdentification18.mmTransactionIdentification, SecuritiesTradeDetails51.mmTradeIdentification,
+					SecuritiesTradeDetails53.mmTradeIdentification, AdditionalParameters24.mmPreviousPartialConfirmationIdentification, AdditionalParameters22.mmPreviousPartialConfirmationIdentification,
+					AdditionalParameters21.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails54.mmTradeIdentification, SecuritiesTradeDetails52.mmTradeIdentification, References46Choice.mmTradeIdentification,
+					References46Choice.mmOtherTransactionIdentification, Identification15.mmTradeIdentification, SecuritiesTradeDetails50.mmTradeIdentification, References41Choice.mmOtherTransactionIdentification,
+					References44Choice.mmOtherTransactionIdentification, References47Choice.mmOtherTransactionIdentification, References18.mmTradeIdentification, PaymentInstruction18.mmPaymentInformationIdentification,
+					OriginalPaymentInstruction16.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction18.mmOriginalPaymentInformationIdentification, PaymentInstruction19.mmPaymentInformationIdentification,
+					PaymentInstruction20.mmPaymentInformationIdentification, OriginalPaymentInstruction15.mmOriginalPaymentInformationIdentification, OriginalItemAndStatus5.mmOriginalItemIdentification,
+					OriginalPaymentInstruction17.mmOriginalPaymentInformationIdentification, NotificationItem6.mmIdentification, SettlementTypeAndIdentification20.mmTransactionIdentification,
+					MessageAndBusinessReference8.mmCancellationReference, References48Choice.mmPreviousReference, References48Choice.mmOtherReference, OriginalPaymentInstruction19.mmOriginalPaymentInformationIdentification,
+					SettlementTypeAndIdentification21.mmTransactionIdentification, References60Choice.mmOtherTransactionIdentification, Transaction49.mmTradeIdentification,
+					AdditionalParameters26.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails61.mmTradeIdentification, AdditionalParameters25.mmPreviousPartialConfirmationIdentification,
+					SecuritiesTradeDetails63.mmTradeIdentification, SecuritiesTradeDetails62.mmTradeIdentification, AdditionalParameters27.mmPreviousPartialConfirmationIdentification, TransactionDetails85.mmOtherTransactionIdentification,
+					TransactionDetails87.mmTradeIdentification, SecuritiesTradeDetails60.mmTradeIdentification, References58Choice.mmOtherTransactionIdentification, Identification24.mmTradeIdentification,
+					Transaction50.mmTradeIdentification, References50Choice.mmOtherTransactionIdentification, Transaction48.mmTradeIdentification, References21.mmTradeIdentification,
+					SettlementTypeAndIdentification22.mmTransactionIdentification, SecuritiesTradeDetails65.mmTradeIdentification, References59Choice.mmOtherTransactionIdentification, References54Choice.mmTradeIdentification,
+					References54Choice.mmOtherTransactionIdentification, SecuritiesTradeDetails66.mmTradeIdentification, UnsecuredMarketTransaction2.mmProprietaryTransactionIdentification,
+					ForeignExchangeSwapTransaction2.mmProprietaryTransactionIdentification, SecuredMarketTransaction2.mmProprietaryTransactionIdentification, UnsecuredMarketTransaction3.mmProprietaryTransactionIdentification,
+					OvernightIndexSwapTransaction3.mmProprietaryTransactionIdentification, SecuredMarketTransaction3.mmProprietaryTransactionIdentification, Transaction51.mmTradeIdentification,
+					IndividualOrderConfirmationStatusAndReason2.mmDealReference, MessageAndBusinessReference10.mmReference, MessageAndBusinessReference10.mmRelatedReference, IndividualOrderStatusAndReason7.mmDealReference,
+					SecuritiesTransactionReport4.mmTransactionIdentification, PaymentInstruction21.mmPaymentInformationIdentification, OriginalPaymentInstruction23.mmOriginalPaymentInformationIdentification,
+					OriginalPaymentInstruction21.mmOriginalPaymentInformationIdentification, PaymentInstruction23.mmPaymentInformationIdentification, OriginalPaymentInstruction24.mmOriginalPaymentInformationIdentification,
+					PaymentInstruction22.mmPaymentInformationIdentification, OriginalPaymentInstruction22.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction20.mmOriginalPaymentInformationIdentification,
+					CorrectivePaymentInitiation2.mmPaymentInformationIdentification, AdditionalParameters29.mmPreviousPartialConfirmationIdentification, SecuritiesTradeDetails67.mmTradeIdentification, Transaction53.mmTradeIdentification,
+					SecuritiesTradeDetails68.mmTradeIdentification, TransactionDetails97.mmTradeIdentification, Transaction54.mmTradeIdentification, Transaction52.mmTradeIdentification, SecuritiesTradeDetails69.mmTradeIdentification,
+					AdditionalParameters31.mmPreviousPartialConfirmationIdentification, Transaction57.mmTradeIdentification, SecuritiesTradeDetails70.mmTradeIdentification, Transaction56.mmTradeIdentification,
+					TransactionDetails100.mmTradeIdentification, Transaction55.mmTradeIdentification, TransactionDetails101.mmOtherTransactionIdentification, FixingConditions1.mmOriginatorReference,
+					SecuredMarketTransaction4.mmProprietaryTransactionIdentification, SecuredMarketTransaction4.mmRelatedProprietaryTransactionIdentification, ForeignExchangeSwapTransaction3.mmProprietaryTransactionIdentification,
+					ForeignExchangeSwapTransaction3.mmRelatedProprietaryTransactionIdentification, OvernightIndexSwapTransaction4.mmProprietaryTransactionIdentification,
+					OvernightIndexSwapTransaction4.mmRelatedProprietaryTransactionIdentification, UnsecuredMarketTransaction4.mmProprietaryTransactionIdentification,
+					UnsecuredMarketTransaction4.mmRelatedProprietaryTransactionIdentification, ContractType6.mmProductIdentification, Transaction58.mmTradeIdentification, PaymentInstruction24.mmPaymentInformationIdentification,
+					MessageAndBusinessReference11.mmCancellationReference, References63Choice.mmPreviousReference, References63Choice.mmOtherReference, PaymentTransaction90.mmOriginalPaymentInformationIdentification,
+					OriginalPaymentInstruction26.mmOriginalPaymentInformationIdentification, CorrectivePaymentInitiation3.mmPaymentInformationIdentification, SecuritiesTradeDetails71.mmTradeIdentification,
+					TransactionDetails105.mmTradeIdentification, Transaction60.mmTradeIdentification, Transaction61.mmTradeIdentification, Transaction62.mmTradeIdentification, SecuritiesTradeDetails73.mmTradeIdentification,
+					SecuritiesTradeDetails75.mmTradeIdentification, SecuritiesTradeDetails76.mmTradeIdentification, TransactionDetails106.mmOtherTransactionIdentification, SecuritiesTradeDetails78.mmTradeIdentification,
+					SecuritiesTradeDetails79.mmTradeIdentification, SecuritiesTradeDetails80.mmTradeIdentification, SettlementTypeAndIdentification25.mmTransactionIdentification,
+					OriginalPaymentInstruction28.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction27.mmOriginalPaymentInformationIdentification, OriginalPaymentInstruction29.mmOriginalPaymentInformationIdentification,
+					SettlementTypeAndIdentification26.mmTransactionIdentification, SecuritiesTradeDetails84.mmTradeIdentification, SecuritiesTradeDetails85.mmTradeIdentification, SecuritiesTradeDetails86.mmTradeIdentification,
+					SecuritiesTradeDetails87.mmTradeIdentification, SecuritiesTradeDetails88.mmTradeIdentification, TransactionDetails108.mmOtherTransactionIdentification, SecuritiesTradeDetails89.mmTradeIdentification,
+					SecuritiesTradeDetails90.mmTradeIdentification, TransactionDetails110.mmTradeIdentification, Transaction63.mmTradeIdentification, Transaction64.mmTradeIdentification, Transaction65.mmTradeIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "BusinessComment", new String[]{"BusinessComment", "Reference to the trade given by the IMI and Broker/Dealer each oin their side"}), new ISO15022Synonym(
@@ -2080,6 +2217,9 @@ public class TradeIdentification {
 	 * {@linkplain com.tools20022.repository.choice.References54Choice#mmCommonIdentification
 	 * References54Choice.mmCommonIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmCommonIdentification
+	 * Transaction51.mmCommonIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradeAgreement15#mmCommonReference
 	 * TradeAgreement15.mmCommonReference}</li>
 	 * <li>
@@ -2136,6 +2276,54 @@ public class TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FixingConditions1#mmCommonReference
 	 * FixingConditions1.mmCommonReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmComplexTradeIdentification
+	 * TradeTransaction15.mmComplexTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmComplexTradeIdentification
+	 * TradeTransaction17.mmComplexTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmComplexTradeIdentification
+	 * TradeTransaction14.mmComplexTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmComplexTradeIdentification
+	 * TradeTransaction18.mmComplexTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmComplexTradeIdentification
+	 * TradeTransaction16.mmComplexTradeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction58#mmCommonIdentification
+	 * Transaction58.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmCommonIdentification
+	 * SecuritiesTradeDetails71.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmCommonIdentification
+	 * Transaction60.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmCommonIdentification
+	 * SecuritiesTradeDetails72.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmCommonIdentification
+	 * Transaction61.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmCommonIdentification
+	 * Transaction62.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmCommonIdentification
+	 * SecuritiesTradeDetails81.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmCommonIdentification
+	 * SecuritiesTradeDetails85.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmCommonIdentification
+	 * Transaction63.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmCommonIdentification
+	 * Transaction64.mmCommonIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmCommonIdentification
+	 * Transaction65.mmCommonIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2202,11 +2390,15 @@ public class TradeIdentification {
 					SettlementTypeAndAdditionalParameters16.mmCommonIdentification, SettlementTypeAndIdentification24.mmCommonIdentification, TransactionIdentifications38.mmCommonIdentification,
 					SettlementTypeAndAdditionalParameters15.mmCommonIdentification, Identification24.mmCommonIdentification, Transaction50.mmCommonIdentification, Transaction48.mmCommonIdentification,
 					SettlementTypeAndAdditionalParameters18.mmCommonIdentification, References21.mmCommonIdentification, SettlementTypeAndAdditionalParameters17.mmCommonIdentification, References54Choice.mmCommonIdentification,
-					TradeAgreement15.mmCommonReference, TradeAgreement14.mmCommonReference, SettlementTypeAndAdditionalParameters19.mmCommonIdentification, Transaction53.mmCommonIdentification,
+					Transaction51.mmCommonIdentification, TradeAgreement15.mmCommonReference, TradeAgreement14.mmCommonReference, SettlementTypeAndAdditionalParameters19.mmCommonIdentification, Transaction53.mmCommonIdentification,
 					SecuritiesTradeDetails68.mmCommonIdentification, TransactionTypeAndAdditionalParameters15.mmCommonIdentification, TransactionTypeAndAdditionalParameters17.mmCommonIdentification,
 					TransactionTypeAndAdditionalParameters16.mmCommonIdentification, Transaction54.mmCommonIdentification, Transaction52.mmCommonIdentification, TransactionTypeAndAdditionalParameters19.mmCommonIdentification,
 					SecuritiesTradeDetails69.mmCommonIdentification, TransactionTypeAndAdditionalParameters20.mmCommonIdentification, Transaction57.mmCommonIdentification, TransactionTypeAndAdditionalParameters18.mmCommonIdentification,
-					SettlementTypeAndAdditionalParameters20.mmCommonIdentification, Transaction56.mmCommonIdentification, Transaction55.mmCommonIdentification, FixingConditions1.mmCommonReference);
+					SettlementTypeAndAdditionalParameters20.mmCommonIdentification, Transaction56.mmCommonIdentification, Transaction55.mmCommonIdentification, FixingConditions1.mmCommonReference,
+					TradeTransaction15.mmComplexTradeIdentification, TradeTransaction17.mmComplexTradeIdentification, TradeTransaction14.mmComplexTradeIdentification, TradeTransaction18.mmComplexTradeIdentification,
+					TradeTransaction16.mmComplexTradeIdentification, Transaction58.mmCommonIdentification, SecuritiesTradeDetails71.mmCommonIdentification, Transaction60.mmCommonIdentification,
+					SecuritiesTradeDetails72.mmCommonIdentification, Transaction61.mmCommonIdentification, Transaction62.mmCommonIdentification, SecuritiesTradeDetails81.mmCommonIdentification,
+					SecuritiesTradeDetails85.mmCommonIdentification, Transaction63.mmCommonIdentification, Transaction64.mmCommonIdentification, Transaction65.mmCommonIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "BusinessComment", new String[]{"BusinessComment", "Commmon reference given by IMI and BD commonly"}), new ISO15022Synonym(this, ":20C::COMM"));
@@ -2484,6 +2676,24 @@ public class TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmUniqueTransactionIdentifier
 	 * UnsecuredMarketTransaction4.mmUniqueTransactionIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmUniqueTradeIdentifier
+	 * TradeTransaction15.mmUniqueTradeIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmUniqueTradeIdentifier
+	 * TradeTransaction17.mmUniqueTradeIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmUniqueTradeIdentifier
+	 * TradeTransaction14.mmUniqueTradeIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmUniqueTradeIdentifier
+	 * TradeTransaction18.mmUniqueTradeIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmUniqueTradeIdentifier
+	 * TradeTransaction16.mmUniqueTradeIdentifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClearedProduct1#mmUniversalProductIdentification
+	 * ClearedProduct1.mmUniversalProductIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2512,7 +2722,8 @@ public class TradeIdentification {
 					SecuritiesTransactionReport2.mmTransactionIdentification, UnsecuredMarketTransaction2.mmUniqueTransactionIdentifier, ForeignExchangeSwapTransaction2.mmUniqueTransactionIdentifier,
 					SecuredMarketTransaction2.mmUniqueTransactionIdentifier, UnsecuredMarketTransaction3.mmUniqueTransactionIdentifier, OvernightIndexSwapTransaction3.mmUniqueTransactionIdentifier,
 					SecuredMarketTransaction3.mmUniqueTransactionIdentifier, SecuredMarketTransaction4.mmUniqueTransactionIdentifier, ForeignExchangeSwapTransaction3.mmUniqueTransactionIdentifier,
-					OvernightIndexSwapTransaction4.mmUniqueTransactionIdentifier, UnsecuredMarketTransaction4.mmUniqueTransactionIdentifier);
+					OvernightIndexSwapTransaction4.mmUniqueTransactionIdentifier, UnsecuredMarketTransaction4.mmUniqueTransactionIdentifier, TradeTransaction15.mmUniqueTradeIdentifier, TradeTransaction17.mmUniqueTradeIdentifier,
+					TradeTransaction14.mmUniqueTradeIdentifier, TradeTransaction18.mmUniqueTradeIdentifier, TradeTransaction16.mmUniqueTradeIdentifier, ClearedProduct1.mmUniversalProductIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2612,7 +2823,7 @@ public class TradeIdentification {
 						com.tools20022.repository.entity.TradeIdentification.mmCommonIdentification, com.tools20022.repository.entity.TradeIdentification.mmMatchingReference, com.tools20022.repository.entity.TradeIdentification.mmTrade,
 						com.tools20022.repository.entity.TradeIdentification.mmUniqueTradeIdentifier, com.tools20022.repository.entity.TradeIdentification.mmClearingBrokerIdentification);
 				derivationComponent_lazy = () -> Arrays.asList(TransactionReferences1.mmObject(), TransactionReferences2.mmObject(), TransactionReferences3.mmObject(), UniqueTransactionIdentifier1.mmObject(),
-						MatchingSystemReference1Choice.mmObject(), UniqueTransactionIdentifier2.mmObject());
+						MatchingSystemReference1Choice.mmObject(), UniqueTransactionIdentifier2.mmObject(), SecuritiesTransactionReferences1.mmObject());
 			}
 
 			@Override

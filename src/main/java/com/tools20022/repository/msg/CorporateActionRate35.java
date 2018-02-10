@@ -652,7 +652,7 @@ public class CorporateActionRate35 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment ."
+	 * "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -672,7 +672,7 @@ public class CorporateActionRate35 {
 			xmlTag = "IntrstShrtfll";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestShortfall";
-			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment .";
+			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate43.mmInterestShortfall);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -766,7 +766,7 @@ public class CorporateActionRate35 {
 	 * name} = "DeclaredRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Dividend or interest rate declared by the issuer. "</li>
+	 * definition} = "Dividend or interest rate declared by the issuer."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -784,7 +784,7 @@ public class CorporateActionRate35 {
 			xmlTag = "DclrdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRate";
-			definition = "Dividend or interest rate declared by the issuer. ";
+			definition = "Dividend or interest rate declared by the issuer.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate43.mmDeclaredRate);
 			maxOccurs = 1;
 			minOccurs = 0;

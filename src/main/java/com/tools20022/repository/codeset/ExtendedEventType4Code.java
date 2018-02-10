@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * definition} =
  * "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType6Code
+ * ExtendedEventType6Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.ExtendedEventType3Code
@@ -90,6 +97,14 @@ public class ExtendedEventType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Termination"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ExtendedEventType6Code#Termination
+	 * ExtendedEventType6Code.Termination}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -101,6 +116,7 @@ public class ExtendedEventType4Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
+			nextVersions_lazy = () -> Arrays.asList(ExtendedEventType6Code.Termination);
 			previousVersion_lazy = () -> ExtendedEventType3Code.Termination;
 			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType4Code.mmObject();
 			codeName = ExtendedEventTypeV2Code.Termination.getCodeName().orElse(name);
@@ -120,12 +136,21 @@ public class ExtendedEventType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinalPaydown"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ExtendedEventType6Code#FinalPaydown
+	 * ExtendedEventType6Code.FinalPaydown}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ExtendedEventType4Code FinalPaydown = new ExtendedEventType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinalPaydown";
+			nextVersions_lazy = () -> Arrays.asList(ExtendedEventType6Code.FinalPaydown);
 			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType4Code.mmObject();
 			codeName = ExtendedEventTypeV2Code.FinalPaydown.getCodeName().orElse(name);
 		}
@@ -144,12 +169,21 @@ public class ExtendedEventType4Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertificateOfDepositEarlyRedemption"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.ExtendedEventType6Code#CertificateOfDepositEarlyRedemption
+	 * ExtendedEventType6Code.CertificateOfDepositEarlyRedemption}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final ExtendedEventType4Code CertificateOfDepositEarlyRedemption = new ExtendedEventType4Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateOfDepositEarlyRedemption";
+			nextVersions_lazy = () -> Arrays.asList(ExtendedEventType6Code.CertificateOfDepositEarlyRedemption);
 			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventType4Code.mmObject();
 			codeName = ExtendedEventTypeV2Code.CertificateOfDepositEarlyRedemption.getCodeName().orElse(name);
 		}
@@ -166,6 +200,7 @@ public class ExtendedEventType4Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ExtendedEventType4Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
+				nextVersions_lazy = () -> Arrays.asList(ExtendedEventType6Code.mmObject());
 				previousVersion_lazy = () -> ExtendedEventType3Code.mmObject();
 				trace_lazy = () -> ExtendedEventTypeV2Code.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventType4Code.Termination, com.tools20022.repository.codeset.ExtendedEventType4Code.FinalPaydown,

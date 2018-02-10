@@ -62,6 +62,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ReferredDocumentType4.mmIssuer}</li>
  * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader2#mmIssuer
  * InvoiceHeader2.mmIssuer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvoiceHeader3#mmIssuer
+ * InvoiceHeader3.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>
@@ -93,7 +95,7 @@ public class DocumentIssuer extends DocumentPartyRole {
 				name = "DocumentIssuer";
 				definition = "Party that issues a document such as a bank guarantee or letter of / documentary credit. For instance the inspection company for a trade certificate or the insurance company or its agent for an insurance certificate.";
 				derivationElement_lazy = () -> Arrays.asList(ReferredDocumentType1.mmIssuer, CreditorReferenceType1.mmIssuer, ReferredDocumentType2.mmIssuer, CreditorReferenceType2.mmIssuer, InvoiceHeader1.mmIssuer,
-						GarnishmentType1.mmIssuer, ReferredDocumentType4.mmIssuer, InvoiceHeader2.mmIssuer);
+						GarnishmentType1.mmIssuer, ReferredDocumentType4.mmIssuer, InvoiceHeader2.mmIssuer, InvoiceHeader3.mmIssuer);
 				superType_lazy = () -> DocumentPartyRole.mmObject();
 			}
 

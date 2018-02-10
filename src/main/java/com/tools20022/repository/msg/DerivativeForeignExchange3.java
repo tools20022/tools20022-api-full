@@ -107,7 +107,7 @@ public class DerivativeForeignExchange3 {
 	 * name} = "FXType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type of the underlying currency"</li>
+	 * definition} = "Type of the underlying currency."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFXType = new MMMessageAttribute() {
@@ -118,7 +118,7 @@ public class DerivativeForeignExchange3 {
 			xmlTag = "FxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXType";
-			definition = "Type of the underlying currency";
+			definition = "Type of the underlying currency.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetFXSubProductType1Code.mmObject();

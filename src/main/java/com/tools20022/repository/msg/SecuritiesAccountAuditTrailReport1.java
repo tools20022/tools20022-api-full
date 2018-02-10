@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesAccountAuditTrailReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Report information about securities account reference data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport2
+ * SecuritiesAccountAuditTrailReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +110,14 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * definition} =
 	 * "Identifies the returned securities account reference data or error information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport2#mmSecuritiesAccountAuditTrailOrError
+	 * SecuritiesAccountAuditTrailReport2.mmSecuritiesAccountAuditTrailOrError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountAuditTrailOrError = new MMMessageAssociationEnd() {
@@ -112,6 +128,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountAuditTrailOrError";
 			definition = "Identifies the returned securities account reference data or error information.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailReport2.mmSecuritiesAccountAuditTrailOrError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -146,6 +163,14 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period in dates for which the audit trail is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport2#mmDatePeriod
+	 * SecuritiesAccountAuditTrailReport2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
@@ -156,6 +181,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Period in dates for which the audit trail is provided.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailReport2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -191,6 +217,14 @@ public class SecuritiesAccountAuditTrailReport1 {
 	 * definition} =
 	 * "Identifies the securities account for which the audit trail is provided."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailReport2#mmSecuritiesAccountIdentification
+	 * SecuritiesAccountAuditTrailReport2.mmSecuritiesAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
@@ -201,6 +235,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Identifies the securities account for which the audit trail is provided.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailReport2.mmSecuritiesAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
@@ -216,6 +251,7 @@ public class SecuritiesAccountAuditTrailReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountAuditTrailReport1";
 				definition = "Report information about securities account reference data.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -105,7 +105,7 @@ public class MergerDetailsType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Differentiation of different types of merger.\r\n合併/株式交換/株式移転の区分"</li>
+	 * "Differentiation of different types of merger.\r\n合併/株式交換/株式移転の区分."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMergerType = new MMMessageAttribute() {
@@ -115,7 +115,7 @@ public class MergerDetailsType1 {
 			xmlTag = "MrgrTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MergerType";
-			definition = "Differentiation of different types of merger.\r\n合併/株式交換/株式移転の区分";
+			definition = "Differentiation of different types of merger.\r\n合併/株式交換/株式移転の区分.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MergerTypeCode.mmObject();
@@ -192,7 +192,7 @@ public class MergerDetailsType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Classification of the simplified merger regulatory condition of the parent company.\r\n簡易区分"
+	 * "Classification of the simplified merger regulatory condition of the parent company.\r\n簡易区分."
 	 * </li>
 	 * </ul>
 	 */
@@ -203,7 +203,7 @@ public class MergerDetailsType1 {
 			xmlTag = "SmplfdMrgrClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SimplifiedMergerClassification";
-			definition = "Classification of the simplified merger regulatory condition of the parent company.\r\n簡易区分";
+			definition = "Classification of the simplified merger regulatory condition of the parent company.\r\n簡易区分.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MergerCode.mmObject();
@@ -236,7 +236,7 @@ public class MergerDetailsType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Classification of the short form merger regulatory condition of the subsidiary company.\r\n略式区分"
+	 * "Classification of the short form merger regulatory condition of the subsidiary company.\r\n略式区分."
 	 * </li>
 	 * </ul>
 	 */
@@ -247,7 +247,7 @@ public class MergerDetailsType1 {
 			xmlTag = "ShrtFormMrgrClssfctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortFormMergerClassification";
-			definition = "Classification of the short form merger regulatory condition of the subsidiary company.\r\n略式区分";
+			definition = "Classification of the short form merger regulatory condition of the subsidiary company.\r\n略式区分.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MergerCode.mmObject();
@@ -280,7 +280,7 @@ public class MergerDetailsType1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Share unit quantity of the shares of the new company.\r\n新設会社の単元株数"</li>
+	 * "Share unit quantity of the shares of the new company.\r\n新設会社の単元株数."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmShareUnitQuantityOfNewCompany = new MMMessageAttribute() {
@@ -290,7 +290,7 @@ public class MergerDetailsType1 {
 			xmlTag = "ShrUnitQtyOfNewCpny";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareUnitQuantityOfNewCompany";
-			definition = "Share unit quantity of the shares of the new company.\r\n新設会社の単元株数";
+			definition = "Share unit quantity of the shares of the new company.\r\n新設会社の単元株数.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();

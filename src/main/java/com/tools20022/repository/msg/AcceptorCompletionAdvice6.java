@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Notification to the acquirer of the completion of the card payment at the acceptor."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7
+ * AcceptorCompletionAdvice7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice5
@@ -123,6 +130,14 @@ public class AcceptorCompletionAdvice6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7#mmEnvironment
+	 * AcceptorCompletionAdvice7.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +154,7 @@ public class AcceptorCompletionAdvice6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdvice7.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -178,6 +194,14 @@ public class AcceptorCompletionAdvice6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Context in which the transaction is performed (payment and sale)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7#mmContext
+	 * AcceptorCompletionAdvice7.mmContext}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -194,6 +218,7 @@ public class AcceptorCompletionAdvice6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Context";
 			definition = "Context in which the transaction is performed (payment and sale).";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdvice7.mmContext);
 			previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmContext;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -233,6 +258,14 @@ public class AcceptorCompletionAdvice6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Card payment transaction between an acceptor and an acquirer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7#mmTransaction
+	 * AcceptorCompletionAdvice7.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -249,6 +282,7 @@ public class AcceptorCompletionAdvice6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment transaction between an acceptor and an acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdvice7.mmTransaction);
 			previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -283,6 +317,14 @@ public class AcceptorCompletionAdvice6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Additional information incorporated as an extension to the message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7#mmSupplementaryData
+	 * AcceptorCompletionAdvice7.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -298,6 +340,7 @@ public class AcceptorCompletionAdvice6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information incorporated as an extension to the message.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdvice7.mmSupplementaryData);
 			previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
@@ -316,6 +359,7 @@ public class AcceptorCompletionAdvice6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCompletionAdvice6";
 				definition = "Notification to the acquirer of the completion of the card payment at the acceptor.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorCompletionAdvice7.mmObject());
 				previousVersion_lazy = () -> AcceptorCompletionAdvice5.mmObject();
 			}
 		});

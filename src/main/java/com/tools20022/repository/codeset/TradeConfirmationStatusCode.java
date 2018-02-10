@@ -221,7 +221,7 @@ public class TradeConfirmationStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * Both the two parties are not confirmed
+	 * Both the two parties are not confirmed.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -238,14 +238,14 @@ public class TradeConfirmationStatusCode extends MMCode {
 	 * name} = "SelfNotConfirmedAndCouterpartyNotConfirmed"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Both the two parties are not confirmed"</li>
+	 * definition} = "Both the two parties are not confirmed."</li>
 	 * </ul>
 	 */
 	public static final TradeConfirmationStatusCode SelfNotConfirmedAndCouterpartyNotConfirmed = new TradeConfirmationStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SelfNotConfirmedAndCouterpartyNotConfirmed";
-			definition = "Both the two parties are not confirmed";
+			definition = "Both the two parties are not confirmed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradeConfirmationStatusCode.mmObject();
 			codeName = "SNCN";
 		}

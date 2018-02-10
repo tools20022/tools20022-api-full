@@ -751,6 +751,8 @@ public class SecuritiesOrder extends Order {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SwitchLegReferences2#mmLegIdentification
 	 * SwitchLegReferences2.mmLegIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit8#mmReference
+	 * Unit8.mmReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -792,7 +794,7 @@ public class SecuritiesOrder extends Order {
 					InvestmentFundOrder9.mmOrderReference, SwitchOrder7.mmOrderReference, RedemptionOrder14.mmOrderReference, IndividualOrderStatusAndReason7.mmOrderReference, SwitchOrderStatusAndReason2.mmOrderReference,
 					IndividualOrderStatusAndReason8.mmOrderReference, SubscriptionExecution13.mmOrderReference, SubscriptionExecution12.mmOrderReference, SubscriptionOrder15.mmOrderReference, RedemptionOrder15.mmOrderReference,
 					RedemptionExecution16.mmOrderReference, SubscriptionOrder14.mmOrderReference, InvestmentFundOrder8.mmOrderReference, LegIdentification1Choice.mmRedemptionLegIdentification,
-					LegIdentification1Choice.mmSubscriptionLegIdentification, RedemptionExecution15.mmOrderReference, SwitchLegReferences2.mmLegIdentification);
+					LegIdentification1Choice.mmSubscriptionLegIdentification, RedemptionExecution15.mmOrderReference, SwitchLegReferences2.mmLegIdentification, Unit8.mmReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1225,7 +1227,7 @@ public class SecuritiesOrder extends Order {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together."
+	 * "Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together."
 	 * </li>
 	 * </ul>
 	 */
@@ -1239,7 +1241,7 @@ public class SecuritiesOrder extends Order {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "77"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PositionEffect";
-			definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
+			definition = "Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PositionEffectCode.mmObject();
@@ -2847,6 +2849,8 @@ public class SecuritiesOrder extends Order {
 	 * Order17.mmOrderBookingDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Order18#mmOrderBookingDate
 	 * Order18.mmOrderBookingDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit8#mmOrderDate
+	 * Unit8.mmOrderDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2872,7 +2876,7 @@ public class SecuritiesOrder extends Order {
 	 */
 	public static final MMBusinessAttribute mmOrderDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Order16.mmOrderBookingDate, Order14.mmOrderBookingDate, Order17.mmOrderBookingDate, Order18.mmOrderBookingDate);
+			derivation_lazy = () -> Arrays.asList(Order16.mmOrderBookingDate, Order14.mmOrderBookingDate, Order17.mmOrderBookingDate, Order18.mmOrderBookingDate, Unit8.mmOrderDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::ORDR"));
@@ -3648,6 +3652,21 @@ public class SecuritiesOrder extends Order {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualOrderStatusAndReason8#mmClientReference
 	 * IndividualOrderStatusAndReason8.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference11#mmClientReference
+	 * TransferReference11.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmClientReference
+	 * TransferStatusAndReason5.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference13#mmClientReference
+	 * TransferReference13.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference12#mmClientReference
+	 * TransferReference12.mmClientReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmClientReference
+	 * MessageAndBusinessReference11.mmClientReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3664,7 +3683,7 @@ public class SecuritiesOrder extends Order {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identifier for the order as assigned by the buy-side.  Uniqueness must be guaranteed within a single trading day.  Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element."
+	 * "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element."
 	 * </li>
 	 * </ul>
 	 */
@@ -3678,12 +3697,13 @@ public class SecuritiesOrder extends Order {
 					Order11.mmClientOrderIdentification, Order11.mmSecondaryClientOrderIdentification, MessageAndBusinessReference7.mmClientReference, TransferStatusAndReason3.mmClientReference, TransferReference5.mmClientReference,
 					TransferReference6.mmClientReference, Order17.mmClientOrderIdentification, Order17.mmSecondaryClientOrderIdentification, Order18.mmClientOrderIdentification, Order18.mmSecondaryClientOrderIdentification,
 					MessageAndBusinessReference8.mmClientReference, TransferStatusAndReason4.mmClientReference, TransferReference9.mmClientReference, TransferReference10.mmClientReference,
-					IndividualOrderConfirmationStatusAndReason2.mmClientReference, IndividualOrderStatusAndReason7.mmClientReference, IndividualOrderStatusAndReason8.mmClientReference);
+					IndividualOrderConfirmationStatusAndReason2.mmClientReference, IndividualOrderStatusAndReason7.mmClientReference, IndividualOrderStatusAndReason8.mmClientReference, TransferReference11.mmClientReference,
+					TransferStatusAndReason5.mmClientReference, TransferReference13.mmClientReference, TransferReference12.mmClientReference, MessageAndBusinessReference11.mmClientReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrder.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClientOrderIdentification";
-			definition = "Unique identifier for the order as assigned by the buy-side.  Uniqueness must be guaranteed within a single trading day.  Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
+			definition = "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -3804,7 +3824,7 @@ public class SecuritiesOrder extends Order {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument."
+	 * "Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument."
 	 * </li>
 	 * </ul>
 	 */
@@ -3816,7 +3836,7 @@ public class SecuritiesOrder extends Order {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::TOOR"), new FIXSynonym(this, "80"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Type";
-			definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
+			definition = "Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OrderTypeCode.mmObject();

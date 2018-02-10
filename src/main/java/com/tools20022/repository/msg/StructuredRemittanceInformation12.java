@@ -517,7 +517,7 @@ public class StructuredRemittanceInformation12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides remittance information about a payment for garnishment-related purposes. "
+	 * "Provides remittance information about a payment for garnishment-related purposes."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -537,7 +537,7 @@ public class StructuredRemittanceInformation12 {
 			xmlTag = "GrnshmtRmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GarnishmentRemittance";
-			definition = "Provides remittance information about a payment for garnishment-related purposes. ";
+			definition = "Provides remittance information about a payment for garnishment-related purposes.";
 			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation13.mmGarnishmentRemittance);
 			maxOccurs = 1;
 			minOccurs = 0;

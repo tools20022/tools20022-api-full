@@ -83,6 +83,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Identifier of an account, as assigned by the account servicer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice
+ * AccountIdentification39Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.AccountIdentification1Choice
@@ -127,6 +135,14 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "PAN of the card identifying the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmCard
+	 * AccountIdentification39Choice.mmCard}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCard = new MMMessageAttribute() {
@@ -138,6 +154,7 @@ public class AccountIdentification30Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "PAN of the card identifying the account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmCard);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Min8Max28NumericText.mmObject();
@@ -177,6 +194,14 @@ public class AccountIdentification30Choice {
 	 * definition} =
 	 * "Mobile Subscriber Integrated Service Digital Network (i.e. mobile phone number of the SIM card)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmMSISDN
+	 * AccountIdentification39Choice.mmMSISDN}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMSISDN = new MMMessageAttribute() {
@@ -188,6 +213,7 @@ public class AccountIdentification30Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MSISDN";
 			definition = "Mobile Subscriber Integrated Service Digital Network (i.e. mobile phone number of the SIM card).";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmMSISDN);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -225,6 +251,14 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "E-mail identifying the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmEMail
+	 * AccountIdentification39Choice.mmEMail}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEMail = new MMMessageAttribute() {
@@ -236,6 +270,7 @@ public class AccountIdentification30Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EMail";
 			definition = "E-mail identifying the account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmEMail);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -276,6 +311,14 @@ public class AccountIdentification30Choice {
 	 * definition} =
 	 * "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmIBAN
+	 * AccountIdentification39Choice.mmIBAN}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -292,6 +335,7 @@ public class AccountIdentification30Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBAN";
 			definition = "International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of a customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 \"Banking and related financial services - International Bank Account Number (IBAN)\" version 1997-10-01, or later revisions.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmIBAN);
 			previousVersion_lazy = () -> AccountIdentification1Choice.mmIBAN;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -333,6 +377,14 @@ public class AccountIdentification30Choice {
 	 * definition} =
 	 * "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, that is, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmBBAN
+	 * AccountIdentification39Choice.mmBBAN}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -349,6 +401,7 @@ public class AccountIdentification30Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BBAN";
 			definition = "Basic Bank Account Number (BBAN) - identifier used nationally by financial institutions, that is, in individual countries, generally as part of a National Account Numbering Scheme(s), to uniquely identify the account of a customer.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmBBAN);
 			previousVersion_lazy = () -> AccountIdentification1Choice.mmBBAN;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -390,6 +443,14 @@ public class AccountIdentification30Choice {
 	 * definition} =
 	 * "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmUPIC
+	 * AccountIdentification39Choice.mmUPIC}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -406,6 +467,7 @@ public class AccountIdentification30Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UPIC";
 			definition = "Universal Payment Identification Code (UPIC) - identifier used by the New York Clearing House to mask confidential data, such as bank accounts and bank routing numbers. UPIC numbers remain with business customers, regardless of banking relationship changes.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmUPIC);
 			previousVersion_lazy = () -> AccountIdentification1Choice.mmUPIC;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -446,6 +508,14 @@ public class AccountIdentification30Choice {
 	 * definition} =
 	 * "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmDomestic
+	 * AccountIdentification39Choice.mmDomestic}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDomestic = new MMMessageAttribute() {
@@ -457,6 +527,7 @@ public class AccountIdentification30Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Domestic";
 			definition = "Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmDomestic);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -494,6 +565,14 @@ public class AccountIdentification30Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Other identifier."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmOther
+	 * AccountIdentification39Choice.mmOther}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
@@ -505,6 +584,7 @@ public class AccountIdentification30Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
 			definition = "Other identifier.";
+			nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmOther);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -523,6 +603,7 @@ public class AccountIdentification30Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountIdentification30Choice";
 				definition = "Identifier of an account, as assigned by the account servicer.";
+				nextVersions_lazy = () -> Arrays.asList(AccountIdentification39Choice.mmObject());
 				previousVersion_lazy = () -> AccountIdentification1Choice.mmObject();
 			}
 		});

@@ -225,7 +225,7 @@ public class ExpiryTerms1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Documentary condition that indicates when the undertaking will cease to be available. "
+	 * "Documentary condition that indicates when the undertaking will cease to be available."
 	 * </li>
 	 * </ul>
 	 */
@@ -237,7 +237,7 @@ public class ExpiryTerms1 {
 			xmlTag = "Cond";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Condition";
-			definition = "Documentary condition that indicates when the undertaking will cease to be available. ";
+			definition = "Documentary condition that indicates when the undertaking will cease to be available.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max2000Text.mmObject();

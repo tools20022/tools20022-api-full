@@ -121,7 +121,7 @@ public class ExecutingBrokerRole extends Broker {
 	 * name} = "ExecutingTrader"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Trader at the executing broker"</li>
+	 * definition} = "Trader at the executing broker."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmExecutingTrader = new MMBusinessAssociationEnd() {
@@ -130,7 +130,7 @@ public class ExecutingBrokerRole extends Broker {
 			elementContext_lazy = () -> com.tools20022.repository.entity.ExecutingBrokerRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExecutingTrader";
-			definition = "Trader at the executing broker";
+			definition = "Trader at the executing broker.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ExecutingTrader.mmExecutingBroker;

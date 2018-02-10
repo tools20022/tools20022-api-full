@@ -100,6 +100,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionRate66"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies rates of a corporate action."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionRate91
+ * CorporateActionRate91}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionRate43
@@ -147,6 +154,14 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Annual rate of a financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmInterestRate
+	 * CorporateActionRate91.mmInterestRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -164,6 +179,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
 			definition = "Annual rate of a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmInterestRate);
 			previousVersion_lazy = () -> CorporateActionRate43.mmInterest;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -207,6 +223,14 @@ public class CorporateActionRate66 {
 	 * definition} =
 	 * "Percentage of securities the offeror/issuer will purchase or redeem under the terms of the event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmPercentageSought
+	 * CorporateActionRate91.mmPercentageSought}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -224,6 +248,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageSought";
 			definition = "Percentage of securities the offeror/issuer will purchase or redeem under the terms of the event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmPercentageSought);
 			previousVersion_lazy = () -> CorporateActionRate43.mmPercentageSought;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -267,6 +292,14 @@ public class CorporateActionRate66 {
 	 * definition} =
 	 * "Index rate related to the interest rate of the forthcoming interest payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmRelatedIndex
+	 * CorporateActionRate91.mmRelatedIndex}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -284,6 +317,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedIndex";
 			definition = "Index rate related to the interest rate of the forthcoming interest payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmRelatedIndex);
 			previousVersion_lazy = () -> CorporateActionRate43.mmRelatedIndex;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -325,6 +359,14 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Margin allowed over or under a given rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmSpread
+	 * CorporateActionRate91.mmSpread}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -342,6 +384,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Spread";
 			definition = "Margin allowed over or under a given rate.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmSpread);
 			previousVersion_lazy = () -> CorporateActionRate43.mmSpread;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -384,6 +427,14 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Acceptable price increment used for submitting a bid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmBidInterval
+	 * CorporateActionRate91.mmBidInterval}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -401,6 +452,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BidInterval";
 			definition = "Acceptable price increment used for submitting a bid.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmBidInterval);
 			previousVersion_lazy = () -> CorporateActionRate43.mmBidInterval;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -444,6 +496,14 @@ public class CorporateActionRate66 {
 	 * definition} =
 	 * "Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) until the next redemption (factor) date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmPreviousFactor
+	 * CorporateActionRate91.mmPreviousFactor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -461,6 +521,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousFactor";
 			definition = "Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) until the next redemption (factor) date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmPreviousFactor);
 			previousVersion_lazy = () -> CorporateActionRate43.mmPreviousFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -504,6 +565,14 @@ public class CorporateActionRate66 {
 	 * definition} =
 	 * "Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) that will applicable after the redemption (factor) date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmNextFactor
+	 * CorporateActionRate91.mmNextFactor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -521,6 +590,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactor";
 			definition = "Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) that will applicable after the redemption (factor) date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmNextFactor);
 			previousVersion_lazy = () -> CorporateActionRate43.mmNextFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -564,6 +634,14 @@ public class CorporateActionRate66 {
 	 * definition} =
 	 * "Rate of discount for securities purchased through a reinvestment scheme as compared to the current market price of security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmReinvestmentDiscountRateToMarket
+	 * CorporateActionRate91.mmReinvestmentDiscountRateToMarket}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -581,6 +659,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentDiscountRateToMarket";
 			definition = "Rate of discount for securities purchased through a reinvestment scheme as compared to the current market price of security.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmReinvestmentDiscountRateToMarket);
 			previousVersion_lazy = () -> CorporateActionRate43.mmReinvestmentDiscountRateToMarket;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -621,7 +700,15 @@ public class CorporateActionRate66 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment ."
+	 * "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmInterestShortfall
+	 * CorporateActionRate91.mmInterestShortfall}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -638,7 +725,8 @@ public class CorporateActionRate66 {
 			xmlTag = "IntrstShrtfll";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestShortfall";
-			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment .";
+			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the interest payment and the expected or scheduled rate of the interest payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmInterestShortfall);
 			previousVersion_lazy = () -> CorporateActionRate43.mmInterestShortfall;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -680,6 +768,14 @@ public class CorporateActionRate66 {
 	 * definition} =
 	 * "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the capital or principal repayment and the scheduled capital repayment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmRealisedLoss
+	 * CorporateActionRate91.mmRealisedLoss}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -696,6 +792,7 @@ public class CorporateActionRate66 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RealisedLoss";
 			definition = "For structured security issues where there is a set schedule of principal and interest payments for the life of the issue, this is the difference between the actual rate of the capital or principal repayment and the scheduled capital repayment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmRealisedLoss);
 			previousVersion_lazy = () -> CorporateActionRate43.mmRealisedLoss;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -729,7 +826,15 @@ public class CorporateActionRate66 {
 	 * name} = "DeclaredRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Dividend or interest rate declared by the issuer. "</li>
+	 * definition} = "Dividend or interest rate declared by the issuer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmDeclaredRate
+	 * CorporateActionRate91.mmDeclaredRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -744,7 +849,8 @@ public class CorporateActionRate66 {
 			xmlTag = "DclrdRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredRate";
-			definition = "Dividend or interest rate declared by the issuer. ";
+			definition = "Dividend or interest rate declared by the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmDeclaredRate);
 			previousVersion_lazy = () -> CorporateActionRate43.mmDeclaredRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -766,6 +872,7 @@ public class CorporateActionRate66 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRate66";
 				definition = "Specifies rates of a corporate action.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionRate91.mmObject());
 				previousVersion_lazy = () -> CorporateActionRate43.mmObject();
 			}
 		});

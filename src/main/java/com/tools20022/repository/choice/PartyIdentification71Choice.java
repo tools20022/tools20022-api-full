@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.*;
 import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
 import com.tools20022.repository.entity.OrganisationIdentification;
@@ -326,6 +327,185 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV07#mmInformationAgent
  * CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.
  * mmInformationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmIssuerAgent
+ * CorporateActionMovementReversalAdviceV09.mmIssuerAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmPayingAgent
+ * CorporateActionMovementReversalAdviceV09.mmPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmSubPayingAgent
+ * CorporateActionMovementReversalAdviceV09.mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmIssuerAgent
+ * CorporateActionNotificationV08.mmIssuerAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmPayingAgent
+ * CorporateActionNotificationV08.mmPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmSubPayingAgent
+ * CorporateActionNotificationV08.mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmRegistrar
+ * CorporateActionNotificationV08.mmRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmResellingAgent
+ * CorporateActionNotificationV08.mmResellingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmPhysicalSecuritiesAgent
+ * CorporateActionNotificationV08.mmPhysicalSecuritiesAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmDropAgent
+ * CorporateActionNotificationV08.mmDropAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmSolicitationAgent
+ * CorporateActionNotificationV08.mmSolicitationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08#mmInformationAgent
+ * CorporateActionNotificationV08.mmInformationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09#mmIssuerAgent
+ * CorporateActionMovementConfirmationV09.mmIssuerAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09#mmPayingAgent
+ * CorporateActionMovementConfirmationV09.mmPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09#mmSubPayingAgent
+ * CorporateActionMovementConfirmationV09.mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmIssuerAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmIssuerAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmPayingAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmSubPayingAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.
+ * mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmRegistrar
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmResellingAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.
+ * mmResellingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmPhysicalSecuritiesAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.
+ * mmPhysicalSecuritiesAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmDropAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmDropAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmSolicitationAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.
+ * mmSolicitationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceCancellationAdviceV08#mmInformationAgent
+ * CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.
+ * mmInformationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmIssuerAgent
+ * CorporateActionMovementPreliminaryAdviceV09.mmIssuerAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmPayingAgent
+ * CorporateActionMovementPreliminaryAdviceV09.mmPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmSubPayingAgent
+ * CorporateActionMovementPreliminaryAdviceV09.mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmRegistrar
+ * CorporateActionMovementPreliminaryAdviceV09.mmRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmResellingAgent
+ * CorporateActionMovementPreliminaryAdviceV09.mmResellingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmPhysicalSecuritiesAgent
+ * CorporateActionMovementPreliminaryAdviceV09.mmPhysicalSecuritiesAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmDropAgent
+ * CorporateActionMovementPreliminaryAdviceV09.mmDropAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmSolicitationAgent
+ * CorporateActionMovementPreliminaryAdviceV09.mmSolicitationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmInformationAgent
+ * CorporateActionMovementPreliminaryAdviceV09.mmInformationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmIssuerAgent
+ * CorporateActionCancellationAdviceV08.mmIssuerAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmPayingAgent
+ * CorporateActionCancellationAdviceV08.mmPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmSubPayingAgent
+ * CorporateActionCancellationAdviceV08.mmSubPayingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmRegistrar
+ * CorporateActionCancellationAdviceV08.mmRegistrar}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmResellingAgent
+ * CorporateActionCancellationAdviceV08.mmResellingAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmPhysicalSecuritiesAgent
+ * CorporateActionCancellationAdviceV08.mmPhysicalSecuritiesAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmDropAgent
+ * CorporateActionCancellationAdviceV08.mmDropAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmSolicitationAgent
+ * CorporateActionCancellationAdviceV08.mmSolicitationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionCancellationAdviceV08#mmInformationAgent
+ * CorporateActionCancellationAdviceV08.mmInformationAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyAuditTrailQueryV01#mmMessageOriginator
+ * PartyAuditTrailQueryV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyAuditTrailQueryV01#mmMessageRecipient
+ * PartyAuditTrailQueryV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyActivityAdviceV01#mmMessageOriginator
+ * PartyActivityAdviceV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyActivityAdviceV01#mmMessageRecipient
+ * PartyActivityAdviceV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyCreationRequestV01#mmMessageOriginator
+ * PartyCreationRequestV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyCreationRequestV01#mmMessageRecipient
+ * PartyCreationRequestV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyReportV01#mmMessageOriginator
+ * PartyReportV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyReportV01#mmMessageRecipient
+ * PartyReportV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyAuditTrailReportV02#mmMessageOriginator
+ * PartyAuditTrailReportV02.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyAuditTrailReportV02#mmMessageRecipient
+ * PartyAuditTrailReportV02.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyQueryV01#mmMessageOriginator
+ * PartyQueryV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyQueryV01#mmMessageRecipient
+ * PartyQueryV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyStatusAdviceV01#mmMessageOriginator
+ * PartyStatusAdviceV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyStatusAdviceV01#mmMessageRecipient
+ * PartyStatusAdviceV01.mmMessageRecipient}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyModificationRequestV01#mmMessageOriginator
+ * PartyModificationRequestV01.mmMessageOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyModificationRequestV01#mmMessageRecipient
+ * PartyModificationRequestV01.mmMessageRecipient}</li>
  * </ul>
  * </li>
  * <li>
@@ -533,7 +713,24 @@ public class PartyIdentification71Choice {
 						CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmSubPayingAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmRegistrar,
 						CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmResellingAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmPhysicalSecuritiesAgent,
 						CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmDropAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmSolicitationAgent,
-						CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmInformationAgent);
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV07.mmInformationAgent, CorporateActionMovementReversalAdviceV09.mmIssuerAgent, CorporateActionMovementReversalAdviceV09.mmPayingAgent,
+						CorporateActionMovementReversalAdviceV09.mmSubPayingAgent, CorporateActionNotificationV08.mmIssuerAgent, CorporateActionNotificationV08.mmPayingAgent, CorporateActionNotificationV08.mmSubPayingAgent,
+						CorporateActionNotificationV08.mmRegistrar, CorporateActionNotificationV08.mmResellingAgent, CorporateActionNotificationV08.mmPhysicalSecuritiesAgent, CorporateActionNotificationV08.mmDropAgent,
+						CorporateActionNotificationV08.mmSolicitationAgent, CorporateActionNotificationV08.mmInformationAgent, CorporateActionMovementConfirmationV09.mmIssuerAgent, CorporateActionMovementConfirmationV09.mmPayingAgent,
+						CorporateActionMovementConfirmationV09.mmSubPayingAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmIssuerAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmPayingAgent,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmSubPayingAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmRegistrar,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmResellingAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmPhysicalSecuritiesAgent,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmDropAgent, CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmSolicitationAgent,
+						CorporateActionMovementPreliminaryAdviceCancellationAdviceV08.mmInformationAgent, CorporateActionMovementPreliminaryAdviceV09.mmIssuerAgent, CorporateActionMovementPreliminaryAdviceV09.mmPayingAgent,
+						CorporateActionMovementPreliminaryAdviceV09.mmSubPayingAgent, CorporateActionMovementPreliminaryAdviceV09.mmRegistrar, CorporateActionMovementPreliminaryAdviceV09.mmResellingAgent,
+						CorporateActionMovementPreliminaryAdviceV09.mmPhysicalSecuritiesAgent, CorporateActionMovementPreliminaryAdviceV09.mmDropAgent, CorporateActionMovementPreliminaryAdviceV09.mmSolicitationAgent,
+						CorporateActionMovementPreliminaryAdviceV09.mmInformationAgent, CorporateActionCancellationAdviceV08.mmIssuerAgent, CorporateActionCancellationAdviceV08.mmPayingAgent,
+						CorporateActionCancellationAdviceV08.mmSubPayingAgent, CorporateActionCancellationAdviceV08.mmRegistrar, CorporateActionCancellationAdviceV08.mmResellingAgent,
+						CorporateActionCancellationAdviceV08.mmPhysicalSecuritiesAgent, CorporateActionCancellationAdviceV08.mmDropAgent, CorporateActionCancellationAdviceV08.mmSolicitationAgent,
+						CorporateActionCancellationAdviceV08.mmInformationAgent, PartyAuditTrailQueryV01.mmMessageOriginator, PartyAuditTrailQueryV01.mmMessageRecipient, PartyActivityAdviceV01.mmMessageOriginator,
+						PartyActivityAdviceV01.mmMessageRecipient, PartyCreationRequestV01.mmMessageOriginator, PartyCreationRequestV01.mmMessageRecipient, PartyReportV01.mmMessageOriginator, PartyReportV01.mmMessageRecipient,
+						PartyAuditTrailReportV02.mmMessageOriginator, PartyAuditTrailReportV02.mmMessageRecipient, PartyQueryV01.mmMessageOriginator, PartyQueryV01.mmMessageRecipient, PartyStatusAdviceV01.mmMessageOriginator,
+						PartyStatusAdviceV01.mmMessageRecipient, PartyModificationRequestV01.mmMessageOriginator, PartyModificationRequestV01.mmMessageRecipient);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -483,7 +483,7 @@ public class CardPaymentEnvironment40 {
 	 * name} = "PaymentToken"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Payment token information"</li>
+	 * definition} = "Payment token information."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -501,7 +501,7 @@ public class CardPaymentEnvironment40 {
 			xmlTag = "PmtTkn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentToken";
-			definition = "Payment token information";
+			definition = "Payment token information.";
 			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment52.mmPaymentToken);
 			maxOccurs = 1;
 			minOccurs = 0;

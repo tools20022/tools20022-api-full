@@ -385,6 +385,9 @@ public class Location {
 	 * {@linkplain com.tools20022.repository.msg.InsuranceDataSet1#mmPlaceOfIssue
 	 * InsuranceDataSet1.mmPlaceOfIssue}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmPostalAddress
+	 * IndividualPerson19.mmPostalAddress}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmModifiedPostalAddress
 	 * IndividualPerson28.mmModifiedPostalAddress}</li>
 	 * <li>
@@ -410,8 +413,8 @@ public class Location {
 	 */
 	public static final MMBusinessAssociationEnd mmAddress = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(Organisation12.mmOperationalAddress, OrganisationModification1.mmOperationalAddress, InsuranceDataSet1.mmPlaceOfIssue, IndividualPerson28.mmModifiedPostalAddress,
-					IndividualPerson33.mmModifiedPostalAddress);
+			derivation_lazy = () -> Arrays.asList(Organisation12.mmOperationalAddress, OrganisationModification1.mmOperationalAddress, InsuranceDataSet1.mmPlaceOfIssue, IndividualPerson19.mmPostalAddress,
+					IndividualPerson28.mmModifiedPostalAddress, IndividualPerson33.mmModifiedPostalAddress);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -874,7 +877,7 @@ public class Location {
 	 * name} = "TaxableParty"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party which is taxable at a specific location"</li>
+	 * definition} = "Party which is taxable at a specific location."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmTaxableParty = new MMBusinessAssociationEnd() {
@@ -883,7 +886,7 @@ public class Location {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TaxableParty";
-			definition = "Party which is taxable at a specific location";
+			definition = "Party which is taxable at a specific location.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Party.mmLocation;
@@ -1024,7 +1027,7 @@ public class Location {
 	 * name} = "TimeZone"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Offset of the time before or after 00:00 hour UTC."</li>
+	 * definition} = "Offset of the time before or after 00: 00 hour UTC."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmTimeZone = new MMBusinessAssociationEnd() {
@@ -1034,7 +1037,7 @@ public class Location {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Location.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TimeZone";
-			definition = "Offset of the time before or after 00:00 hour UTC.";
+			definition = "Offset of the time before or after 00: 00 hour UTC.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.UTCOffset.mmLocation;
 			aggregation = MMAggregation.NONE;

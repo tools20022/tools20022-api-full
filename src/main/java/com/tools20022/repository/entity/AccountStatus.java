@@ -447,6 +447,15 @@ public class AccountStatus extends Status {
 	 * ReportEntry7.mmStatus}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry8#mmStatus
 	 * ReportEntry8.mmStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TransactionType2#mmStatus
+	 * TransactionType2.mmStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ReportEntry9#mmStatus
+	 * ReportEntry9.mmStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashEntry2#mmStatus
+	 * CashEntry2.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountEntrySearch5#mmEntryStatus
+	 * CashAccountEntrySearch5.mmEntryStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -468,7 +477,8 @@ public class AccountStatus extends Status {
 	public static final MMBusinessAttribute mmEntryStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountCashEntrySearch2.mmEntryStatus, CashAccountEntrySearch3.mmEntryStatus, AccountCashEntryDetails3.mmEntryStatus, CashEntry1.mmStatus, ReportEntry1.mmStatus, ReportEntry2.mmStatus,
-					ReportEntry3.mmStatus, ReportEntry4.mmStatus, NotificationEntry1.mmStatus, StatementEntry1.mmStatus, TransactionType1.mmStatus, CashAccountEntrySearch4.mmEntryStatus, ReportEntry7.mmStatus, ReportEntry8.mmStatus);
+					ReportEntry3.mmStatus, ReportEntry4.mmStatus, NotificationEntry1.mmStatus, StatementEntry1.mmStatus, TransactionType1.mmStatus, CashAccountEntrySearch4.mmEntryStatus, ReportEntry7.mmStatus, ReportEntry8.mmStatus,
+					TransactionType2.mmStatus, ReportEntry9.mmStatus, CashEntry2.mmStatus, CashAccountEntrySearch5.mmEntryStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -523,6 +533,10 @@ public class AccountStatus extends Status {
 	 * CashBalance5.mmStatus}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance6#mmStatus
 	 * CashBalance6.mmStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance10#mmStatus
+	 * CashBalance10.mmStatus}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance11#mmStatus
+	 * CashBalance11.mmStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -544,7 +558,7 @@ public class AccountStatus extends Status {
 	public static final MMBusinessAttribute mmBalanceStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CashBalanceDetails2.mmStatus, CashBalanceDetails3.mmStatus, CashBalanceDetails4.mmStatus, CashBalanceDetails5.mmStatus, CashBalanceDetails6.mmStatus, CashBalanceDetails7.mmStatus,
-					CashBalance5.mmStatus, CashBalance6.mmStatus);
+					CashBalance5.mmStatus, CashBalance6.mmStatus, CashBalance10.mmStatus, CashBalance11.mmStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

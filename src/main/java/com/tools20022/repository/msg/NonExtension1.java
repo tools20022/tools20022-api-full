@@ -123,7 +123,7 @@ public class NonExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent. "
+	 * "Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent."
 	 * </li>
 	 * </ul>
 	 */
@@ -135,7 +135,7 @@ public class NonExtension1 {
 			xmlTag = "NtfctnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationPeriod";
-			definition = "Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent. ";
+			definition = "Minimum number of days prior to the then current expiry date by which notice of non-extension must be sent.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();

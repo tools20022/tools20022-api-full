@@ -24,7 +24,7 @@ import com.tools20022.repository.area.tsin.InvoiceFinancingRequestV01;
 
 /**
  * If RequestGroupInformation/FinancingRequester/IBAN is not present, then
- * InvoiceRequestInformation/Supplier/IBAN must be present.
+ * InvoiceRequestInformation/Supplier/IBAN must be present. .
  */
 public class ConstraintMandatory2Rule {
 
@@ -45,7 +45,7 @@ public class ConstraintMandatory2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If RequestGroupInformation/FinancingRequester/IBAN\nis not present, then InvoiceRequestInformation/Supplier/IBAN must be present.\n"
+	 * "If RequestGroupInformation/FinancingRequester/IBAN\nis not present, then InvoiceRequestInformation/Supplier/IBAN must be present.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -54,14 +54,14 @@ public class ConstraintMandatory2Rule {
 			validator = ConstraintMandatory2Rule::checkInvoiceFinancingRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandatory2Rule";
-			definition = "If RequestGroupInformation/FinancingRequester/IBAN\nis not present, then InvoiceRequestInformation/Supplier/IBAN must be present.\n";
+			definition = "If RequestGroupInformation/FinancingRequester/IBAN\nis not present, then InvoiceRequestInformation/Supplier/IBAN must be present.\n.";
 			owner_lazy = () -> InvoiceFinancingRequestV01.mmObject();
 		}
 	};
 
 	/**
 	 * If RequestGroupInformation/FinancingRequester/IBAN is not present, then
-	 * InvoiceRequestInformation/Supplier/IBAN must be present.
+	 * InvoiceRequestInformation/Supplier/IBAN must be present. .
 	 */
 	public static void checkInvoiceFinancingRequestV01(InvoiceFinancingRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();

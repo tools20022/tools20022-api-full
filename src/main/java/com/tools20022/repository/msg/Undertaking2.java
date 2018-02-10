@@ -172,8 +172,7 @@ public class Undertaking2 {
 	 * name} = "Beneficiary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Party in whose favour the counter-undertaking is issued. "
-	 * </li>
+	 * definition} = "Party in whose favour the counter-undertaking is issued."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBeneficiary = new MMMessageAssociationEnd() {
@@ -184,7 +183,7 @@ public class Undertaking2 {
 			xmlTag = "Bnfcry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Beneficiary";
-			definition = "Party in whose favour the counter-undertaking is issued. ";
+			definition = "Party in whose favour the counter-undertaking is issued.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

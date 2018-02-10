@@ -348,7 +348,7 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "URL (Uniform Resource Locator) where the document can be found"</li>
+	 * "URL (Uniform Resource Locator) where the document can be found."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -364,7 +364,7 @@ public class DocumentGeneralInformation3 {
 			xmlTag = "URL";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URL";
-			definition = "URL (Uniform Resource Locator) where the document can be found";
+			definition = "URL (Uniform Resource Locator) where the document can be found.";
 			previousVersion_lazy = () -> DocumentGeneralInformation2.mmURL;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -403,7 +403,7 @@ public class DocumentGeneralInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Full Signature Structure without Signature itself:\r\nHash  + Certificate."
+	 * "Full Signature Structure without Signature itself:\r\nHash + Certificate."
 	 * </li>
 	 * </ul>
 	 */
@@ -415,7 +415,7 @@ public class DocumentGeneralInformation3 {
 			xmlTag = "LkFileHash";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkFileHash";
-			definition = "Full Signature Structure without Signature itself:\r\nHash  + Certificate.";
+			definition = "Full Signature Structure without Signature itself:\r\nHash + Certificate.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

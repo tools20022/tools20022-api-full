@@ -145,7 +145,7 @@ public class AccountLimits1 {
 	 * name} = "LimitAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Amount of money of the limit. "</li>
+	 * definition} = "Amount of money of the limit."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLimitAmount = new MMMessageAttribute() {
@@ -155,7 +155,7 @@ public class AccountLimits1 {
 			xmlTag = "LmtAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitAmount";
-			definition = "Amount of money of the limit. ";
+			definition = "Amount of money of the limit.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -187,7 +187,7 @@ public class AccountLimits1 {
 	 * name} = "LimitUtilisationAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Amount of used funds out of defined limit. "</li>
+	 * definition} = "Amount of used funds out of defined limit."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLimitUtilisationAmount = new MMMessageAttribute() {
@@ -197,7 +197,7 @@ public class AccountLimits1 {
 			xmlTag = "LmtUtlstnAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitUtilisationAmount";
-			definition = "Amount of used funds out of defined limit. ";
+			definition = "Amount of used funds out of defined limit.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Type of date
+ * Type of date.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DateType7Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Type of date"</li>
+ * definition} = "Type of date."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -103,7 +103,7 @@ public class DateType7Code extends MMCode {
 				example = Arrays.asList("ONGO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateType7Code";
-				definition = "Type of date";
+				definition = "Type of date.";
 				trace_lazy = () -> DateTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateType7Code.Ongoing);
 			}

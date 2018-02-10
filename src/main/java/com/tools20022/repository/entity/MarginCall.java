@@ -210,6 +210,13 @@ import java.util.Objects;
  * MarginCalculation2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.MarginReport2 MarginReport2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.MarginCall2 MarginCall2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EndOfDayRequirement2
+ * EndOfDayRequirement2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EndOfDayRequirement1
+ * EndOfDayRequirement1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AvailableFinancialResourcesAmount1
+ * AvailableFinancialResourcesAmount1}</li>
  * </ul>
  * </li>
  * <li>
@@ -406,6 +413,12 @@ public class MarginCall {
 	 * Margin2.mmVariationMargin}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Margin3#mmVariationMargin
 	 * Margin3.mmVariationMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EndOfDayRequirement2#mmVariationMarginRequirements
+	 * EndOfDayRequirement2.mmVariationMarginRequirements}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EndOfDayRequirement1#mmVariationMarginRequirement
+	 * EndOfDayRequirement1.mmVariationMarginRequirement}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -428,7 +441,7 @@ public class MarginCall {
 	public static final MMBusinessAttribute mmVariationMargin = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(DisputeNotification1.mmVariationMarginDispute, MarginCallResult2.mmVariationMarginResult, MarginCallResult2Choice.mmMarginCallAmount, AgreedAmount1.mmVariationMarginAmount,
-					Margin2.mmVariationMargin, Margin3.mmVariationMargin);
+					Margin2.mmVariationMargin, Margin3.mmVariationMargin, EndOfDayRequirement2.mmVariationMarginRequirements, EndOfDayRequirement1.mmVariationMarginRequirement);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MarginCall.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -983,6 +996,15 @@ public class MarginCall {
 	 * Margin2.mmInitialMargin}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Margin3#mmInitialMargin
 	 * Margin3.mmInitialMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EndOfDayRequirement2#mmInitialMarginRequirements
+	 * EndOfDayRequirement2.mmInitialMarginRequirements}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EndOfDayRequirement1#mmInitialMarginRequirement
+	 * EndOfDayRequirement1.mmInitialMarginRequirement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AvailableFinancialResourcesAmount1#mmTotalInitialMargin
+	 * AvailableFinancialResourcesAmount1.mmTotalInitialMargin}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1004,7 +1026,8 @@ public class MarginCall {
 	 */
 	public static final MMBusinessAttribute mmInitialMargin = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Margin2.mmInitialMargin, Margin3.mmInitialMargin);
+			derivation_lazy = () -> Arrays.asList(Margin2.mmInitialMargin, Margin3.mmInitialMargin, EndOfDayRequirement2.mmInitialMarginRequirements, EndOfDayRequirement1.mmInitialMarginRequirement,
+					AvailableFinancialResourcesAmount1.mmTotalInitialMargin);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MarginCall.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -1504,7 +1527,7 @@ public class MarginCall {
 				derivationComponent_lazy = () -> Arrays.asList(MarginCall1.mmObject(), MarginCallResult2.mmObject(), MarginCallResult1Choice.mmObject(), MarginCallResult1.mmObject(), MarginCallResult2Choice.mmObject(),
 						MarginCallResult3.mmObject(), Amount1.mmObject(), AgreedAmount1.mmObject(), AgreedAmount1Choice.mmObject(), MarginProductType1Choice.mmObject(), VariationMargin2.mmObject(), Margin2.mmObject(),
 						MarginReport1.mmObject(), MarginCalculation1.mmObject(), VariationMargin3.mmObject(), MarginType1Choice.mmObject(), Margin4.mmObject(), Margin3.mmObject(), MarginCalculation2.mmObject(), MarginReport2.mmObject(),
-						MarginCall2.mmObject());
+						MarginCall2.mmObject(), EndOfDayRequirement2.mmObject(), EndOfDayRequirement1.mmObject(), AvailableFinancialResourcesAmount1.mmObject());
 			}
 
 			@Override

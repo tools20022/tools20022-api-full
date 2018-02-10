@@ -163,7 +163,7 @@ public class RateType35Choice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Rate expressed as an a proprietary code."</li>
+	 * definition} = "Rate expressed as a proprietary code."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,7 +179,7 @@ public class RateType35Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Rate expressed as an a proprietary code.";
+			definition = "Rate expressed as a proprietary code.";
 			previousVersion_lazy = () -> RateType5Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;

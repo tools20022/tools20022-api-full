@@ -209,7 +209,7 @@ public class BaselineReSubmissionV03 {
 	 * name} = "SubmissionIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the submitted information"</li>
+	 * definition} = "Identifies the submitted information."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -225,7 +225,7 @@ public class BaselineReSubmissionV03 {
 			xmlTag = "SubmissnId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubmissionIdentification";
-			definition = "Identifies the submitted information";
+			definition = "Identifies the submitted information.";
 			nextVersions_lazy = () -> Arrays.asList(BaselineReSubmissionV04.mmSubmissionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -424,8 +424,7 @@ public class BaselineReSubmissionV03 {
 	 * name} = "BuyerContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Person to be contacted in the organisation of the buyer. "
-	 * </li>
+	 * definition} = "Person to be contacted in the organisation of the buyer."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -441,7 +440,7 @@ public class BaselineReSubmissionV03 {
 			xmlTag = "BuyrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerContactPerson";
-			definition = "Person to be contacted in the organisation of the buyer. ";
+			definition = "Person to be contacted in the organisation of the buyer.";
 			nextVersions_lazy = () -> Arrays.asList(BaselineReSubmissionV04.mmBuyerContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
@@ -477,8 +476,8 @@ public class BaselineReSubmissionV03 {
 	 * name} = "SellerContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Person to be contacted in the organisation of the seller. "</li>
+	 * definition} = "Person to be contacted in the organisation of the seller."
+	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -494,7 +493,7 @@ public class BaselineReSubmissionV03 {
 			xmlTag = "SellrCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerContactPerson";
-			definition = "Person to be contacted in the organisation of the seller. ";
+			definition = "Person to be contacted in the organisation of the seller.";
 			nextVersions_lazy = () -> Arrays.asList(BaselineReSubmissionV04.mmSellerContactPerson);
 			minOccurs = 0;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
@@ -530,7 +529,7 @@ public class BaselineReSubmissionV03 {
 	 * name} = "BuyerBankContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Person to be contacted in the buyer's bank. "</li>
+	 * definition} = "Person to be contacted in the buyer's bank."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmBuyerBankContactPerson = new MMMessageBuildingBlock() {
@@ -538,7 +537,7 @@ public class BaselineReSubmissionV03 {
 			xmlTag = "BuyrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBankContactPerson";
-			definition = "Person to be contacted in the buyer's bank. ";
+			definition = "Person to be contacted in the buyer's bank.";
 			minOccurs = 1;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}
@@ -573,7 +572,7 @@ public class BaselineReSubmissionV03 {
 	 * name} = "SellerBankContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Person to be contacted in the seller's bank. "</li>
+	 * definition} = "Person to be contacted in the seller's bank."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmSellerBankContactPerson = new MMMessageBuildingBlock() {
@@ -581,7 +580,7 @@ public class BaselineReSubmissionV03 {
 			xmlTag = "SellrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankContactPerson";
-			definition = "Person to be contacted in the seller's bank. ";
+			definition = "Person to be contacted in the seller's bank.";
 			minOccurs = 1;
 			complexType_lazy = () -> ContactIdentification1.mmObject();
 		}

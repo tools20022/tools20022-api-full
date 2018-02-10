@@ -138,7 +138,7 @@ public class AutoExtend1Choice {
 	 * name} = "Months"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of months"</li>
+	 * definition} = "Number of months."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMonths = new MMMessageAttribute() {
@@ -148,7 +148,7 @@ public class AutoExtend1Choice {
 			xmlTag = "Mnths";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Months";
-			definition = "Number of months";
+			definition = "Number of months.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();

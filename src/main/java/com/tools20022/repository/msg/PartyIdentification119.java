@@ -21,9 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07;
+import com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07;
 import com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07;
 import com.tools20022.repository.choice.PartyIdentification103Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
@@ -63,16 +63,16 @@ import javax.xml.bind.annotation.XmlType;
  * messageBuildingBlock} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08#mmAccountOwner
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08#mmAccountOwner
  * SecuritiesTransactionPendingReport002V08.mmAccountOwner}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07#mmAccountOwner
  * SecuritiesSettlementConditionsModificationRequest002V07.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06#mmAccountOwner
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06#mmAccountOwner
  * SecuritiesSettlementTransactionAllegementReport002V06.mmAccountOwner}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07#mmAccountOwner
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07#mmAccountOwner
  * SecuritiesTransactionPostingReport002V07.mmAccountOwner}</li>
  * </ul>
  * </li>

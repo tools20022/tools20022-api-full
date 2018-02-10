@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of elements used to report between the securities account reference data or an operational error."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrOperationalError2Choice
+ * SecuritiesAccountOrOperationalError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +109,14 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Report information about securities account reference data."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrOperationalError2Choice#mmSecuritiesAccountReport
+	 * SecuritiesAccountOrOperationalError2Choice.mmSecuritiesAccountReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccountReport = new MMMessageAssociationEnd() {
@@ -111,6 +127,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountReport";
 			definition = "Report information about securities account reference data.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountOrOperationalError2Choice.mmSecuritiesAccountReport);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> SecuritiesAccountReport1.mmObject();
@@ -142,6 +159,14 @@ public class SecuritiesAccountOrOperationalError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Operational error resulting from a rejection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesAccountOrOperationalError2Choice#mmOperationalError
+	 * SecuritiesAccountOrOperationalError2Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
@@ -152,6 +177,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountOrOperationalError2Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -167,6 +193,7 @@ public class SecuritiesAccountOrOperationalError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountOrOperationalError1Choice";
 				definition = "Set of elements used to report between the securities account reference data or an operational error.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountOrOperationalError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

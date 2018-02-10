@@ -143,7 +143,7 @@ public class EligibilityIdentification1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISIN  used to identify the security to be defined as eligible."</li>
+	 * "ISIN used to identify the security to be defined as eligible."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFinancialInstrumentIdentification = new MMMessageAttribute() {
@@ -153,7 +153,7 @@ public class EligibilityIdentification1Choice {
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
-			definition = "ISIN  used to identify the security to be defined as eligible.";
+			definition = "ISIN used to identify the security to be defined as eligible.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();

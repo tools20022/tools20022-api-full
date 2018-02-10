@@ -231,6 +231,15 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.choice.OriginalMandate5Choice#mmOriginalMandate
  * OriginalMandate5Choice.mmOriginalMandate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmMandateRelatedInformation
+ * OriginalTransactionReference27.mmMandateRelatedInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmAmendmentInformationDetails
+ * MandateRelatedInformation12.mmAmendmentInformationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardDirectDebit1#mmMandateRelatedInformation
+ * CardDirectDebit1.mmMandateRelatedInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -310,6 +319,12 @@ import java.util.Optional;
  * <li>{@linkplain com.tools20022.repository.msg.Mandate8 Mandate8}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AmendmentInformationDetails11
  * AmendmentInformationDetails11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateRelatedInformation12
+ * MandateRelatedInformation12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12
+ * AmendmentInformationDetails12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MandateRelatedInformation13
+ * MandateRelatedInformation13}</li>
  * </ul>
  * </li>
  * <li>
@@ -453,6 +468,12 @@ public class DirectDebitMandate extends Mandate {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails11#mmOriginalFinalCollectionDate
 	 * AmendmentInformationDetails11.mmOriginalFinalCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmFinalCollectionDate
+	 * MandateRelatedInformation12.mmFinalCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalFinalCollectionDate
+	 * AmendmentInformationDetails12.mmOriginalFinalCollectionDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -479,7 +500,7 @@ public class DirectDebitMandate extends Mandate {
 					MandateRelatedInformation8.mmFinalCollectionDate, MandateOccurrences1.mmFinalCollectionDate, MandateOccurrences2.mmFinalCollectionDate, AmendmentInformationDetails9.mmOriginalFinalCollectionDate,
 					MandateRelatedInformation9.mmFinalCollectionDate, AmendmentInformationDetails5.mmOriginalFinalCollectionDate, MandateRelatedInformation5.mmFinalCollectionDate,
 					AmendmentInformationDetails10.mmOriginalFinalCollectionDate, MandateRelatedInformation10.mmFinalCollectionDate, MandateOccurrences3.mmFinalCollectionDate, MandateRelatedInformation11.mmFinalCollectionDate,
-					MandateOccurrences4.mmFinalCollectionDate, AmendmentInformationDetails11.mmOriginalFinalCollectionDate);
+					MandateOccurrences4.mmFinalCollectionDate, AmendmentInformationDetails11.mmOriginalFinalCollectionDate, MandateRelatedInformation12.mmFinalCollectionDate, AmendmentInformationDetails12.mmOriginalFinalCollectionDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -575,6 +596,12 @@ public class DirectDebitMandate extends Mandate {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails11#mmOriginalFrequency
 	 * AmendmentInformationDetails11.mmOriginalFrequency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmFrequency
+	 * MandateRelatedInformation12.mmFrequency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmendmentInformationDetails12#mmOriginalFrequency
+	 * AmendmentInformationDetails12.mmOriginalFrequency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -601,7 +628,7 @@ public class DirectDebitMandate extends Mandate {
 					AmendmentInformationDetails7.mmOriginalFrequency, MandateRelatedInformation7.mmFrequency, AmendmentInformationDetails8.mmOriginalFrequency, MandateRelatedInformation8.mmFrequency, MandateOccurrences1.mmFrequency,
 					MandateOccurrences2.mmFrequency, AmendmentInformationDetails9.mmOriginalFrequency, MandateRelatedInformation9.mmFrequency, AmendmentInformationDetails5.mmOriginalFrequency, MandateRelatedInformation5.mmFrequency,
 					AmendmentInformationDetails10.mmOriginalFrequency, MandateRelatedInformation10.mmFrequency, MandateOccurrences3.mmFrequency, MandateRelatedInformation11.mmFrequency, MandateAdjustment1.mmCategory,
-					MandateOccurrences4.mmFrequency, AmendmentInformationDetails11.mmOriginalFrequency);
+					MandateOccurrences4.mmFrequency, AmendmentInformationDetails11.mmOriginalFrequency, MandateRelatedInformation12.mmFrequency, AmendmentInformationDetails12.mmOriginalFrequency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -669,6 +696,9 @@ public class DirectDebitMandate extends Mandate {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.MandateOccurrences4#mmFirstCollectionDate
 	 * MandateOccurrences4.mmFirstCollectionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmFirstCollectionDate
+	 * MandateRelatedInformation12.mmFirstCollectionDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -693,7 +723,7 @@ public class DirectDebitMandate extends Mandate {
 			derivation_lazy = () -> Arrays.asList(MandateRelatedInformation1.mmFirstCollectionDate, MandateRelatedInformation6.mmFirstCollectionDate, MandateRelatedInformation7.mmFirstCollectionDate,
 					MandateRelatedInformation8.mmFirstCollectionDate, MandateOccurrences1.mmFirstCollectionDate, MandateOccurrences2.mmFirstCollectionDate, MandateRelatedInformation9.mmFirstCollectionDate,
 					MandateRelatedInformation5.mmFirstCollectionDate, MandateRelatedInformation10.mmFirstCollectionDate, MandateOccurrences3.mmFirstCollectionDate, MandateRelatedInformation11.mmFirstCollectionDate,
-					MandateOccurrences4.mmFirstCollectionDate);
+					MandateOccurrences4.mmFirstCollectionDate, MandateRelatedInformation12.mmFirstCollectionDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1023,7 +1053,7 @@ public class DirectDebitMandate extends Mandate {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates wether a pre-notification must be sent by the creditor to the debtor before a direct debit occurs"
+	 * "Indicates wether a pre-notification must be sent by the creditor to the debtor before a direct debit occurs."
 	 * </li>
 	 * </ul>
 	 */
@@ -1033,7 +1063,7 @@ public class DirectDebitMandate extends Mandate {
 			elementContext_lazy = () -> com.tools20022.repository.entity.DirectDebitMandate.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PreNotification";
-			definition = "Indicates wether a pre-notification must be sent by the creditor to the debtor before a direct debit occurs";
+			definition = "Indicates wether a pre-notification must be sent by the creditor to the debtor before a direct debit occurs.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -1220,7 +1250,8 @@ public class DirectDebitMandate extends Mandate {
 						OriginalTransactionReference11.mmMandateRelatedInformation, MandateAmendment4.mmMandate, Mandate7.mmOccurrences, OriginalMandate3Choice.mmOriginalMandate, Mandate6.mmOccurrences, Mandate5.mmOccurrences,
 						OriginalTransactionReference20.mmMandateRelatedInformation, MandateRelatedInformation10.mmAmendmentInformationDetails, OriginalTransactionReference22.mmMandateRelatedInformation, Mandate10.mmOccurrences,
 						MandateAmendment5.mmMandate, OriginalMandate4Choice.mmOriginalMandate, Mandate9.mmOccurrences, OriginalTransactionReference24.mmMandateRelatedInformation, MandateRelatedInformation11.mmAmendmentInformationDetails,
-						Mandate11.mmOccurrences, Mandate8.mmOccurrences, OriginalMandate5Choice.mmOriginalMandate);
+						Mandate11.mmOccurrences, Mandate8.mmOccurrences, OriginalMandate5Choice.mmOriginalMandate, OriginalTransactionReference27.mmMandateRelatedInformation, MandateRelatedInformation12.mmAmendmentInformationDetails,
+						CardDirectDebit1.mmMandateRelatedInformation);
 				superType_lazy = () -> Mandate.mmObject();
 				element_lazy = () -> Arrays
 						.asList(com.tools20022.repository.entity.DirectDebitMandate.mmRelatedDirectDebit, com.tools20022.repository.entity.DirectDebitMandate.mmFinalCollectionDate,
@@ -1235,7 +1266,8 @@ public class DirectDebitMandate extends Mandate {
 						Mandate3.mmObject(), MandateInformation2.mmObject(), Mandate2.mmObject(), Mandate4.mmObject(), AmendmentInformationDetails9.mmObject(), MandateRelatedInformation9.mmObject(), AmendmentInformationDetails4.mmObject(),
 						MandateRelatedInformation4.mmObject(), AmendmentInformationDetails5.mmObject(), MandateRelatedInformation5.mmObject(), MandateAcceptance4.mmObject(), Mandate7.mmObject(), AmendmentInformationDetails10.mmObject(),
 						Mandate6.mmObject(), Mandate5.mmObject(), MandateRelatedInformation10.mmObject(), MandateOccurrences3.mmObject(), Mandate10.mmObject(), MandateAcceptance5.mmObject(), Mandate9.mmObject(),
-						MandateRelatedInformation11.mmObject(), Mandate11.mmObject(), MandateAdjustment1.mmObject(), MandateOccurrences4.mmObject(), Mandate8.mmObject(), AmendmentInformationDetails11.mmObject());
+						MandateRelatedInformation11.mmObject(), Mandate11.mmObject(), MandateAdjustment1.mmObject(), MandateOccurrences4.mmObject(), Mandate8.mmObject(), AmendmentInformationDetails11.mmObject(),
+						MandateRelatedInformation12.mmObject(), AmendmentInformationDetails12.mmObject(), MandateRelatedInformation13.mmObject());
 			}
 
 			@Override

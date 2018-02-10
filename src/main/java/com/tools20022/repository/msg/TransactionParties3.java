@@ -85,6 +85,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides further details on the parties specific to the individual transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionParties4
+ * TransactionParties4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -124,6 +131,14 @@ public class TransactionParties3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that initiated the payment that is reported in the entry."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmInitiatingParty
+	 * TransactionParties4.mmInitiatingParty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInitiatingParty = new MMMessageAssociationEnd() {
@@ -135,6 +150,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Party that initiated the payment that is reported in the entry.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmInitiatingParty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -173,6 +189,14 @@ public class TransactionParties3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmDebtor
+	 * TransactionParties4.mmDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDebtor = new MMMessageAssociationEnd() {
@@ -184,6 +208,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmDebtor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -221,6 +246,14 @@ public class TransactionParties3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unambiguous identification of the account of the debtor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmDebtorAccount
+	 * TransactionParties4.mmDebtorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDebtorAccount = new MMMessageAssociationEnd() {
@@ -232,6 +265,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmDebtorAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -271,6 +305,14 @@ public class TransactionParties3 {
 	 * definition} =
 	 * "Ultimate party that owes an amount of money to the (ultimate) creditor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmUltimateDebtor
+	 * TransactionParties4.mmUltimateDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
@@ -282,6 +324,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmUltimateDebtor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -319,6 +362,14 @@ public class TransactionParties3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party to which an amount of money is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmCreditor
+	 * TransactionParties4.mmCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditor = new MMMessageAssociationEnd() {
@@ -330,6 +381,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party to which an amount of money is due.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmCreditor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -369,6 +421,14 @@ public class TransactionParties3 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the creditor to which a credit entry has been posted as a result of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmCreditorAccount
+	 * TransactionParties4.mmCreditorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditorAccount = new MMMessageAssociationEnd() {
@@ -380,6 +440,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Unambiguous identification of the account of the creditor to which a credit entry has been posted as a result of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmCreditorAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -417,6 +478,14 @@ public class TransactionParties3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Ultimate party to which an amount of money is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmUltimateCreditor
+	 * TransactionParties4.mmUltimateCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUltimateCreditor = new MMMessageAssociationEnd() {
@@ -428,6 +497,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditor";
 			definition = "Ultimate party to which an amount of money is due.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmUltimateCreditor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -467,6 +537,14 @@ public class TransactionParties3 {
 	 * definition} =
 	 * "Party that plays an active role in planning and executing the transactions that create or liquidate investments of the investors assets, or that move the investor's assets from one investment to another. A trading party is a trade instructor, an investment decision-maker, a post trade administrator, or a trader. In the context of treasury, it is the party that negotiates and executes the treasury transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmTradingParty
+	 * TransactionParties4.mmTradingParty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTradingParty = new MMMessageAssociationEnd() {
@@ -478,6 +556,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingParty";
 			definition = "Party that plays an active role in planning and executing the transactions that create or liquidate investments of the investors assets, or that move the investor's assets from one investment to another. A trading party is a trade instructor, an investment decision-maker, a post trade administrator, or a trader. In the context of treasury, it is the party that negotiates and executes the treasury transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmTradingParty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -510,6 +589,14 @@ public class TransactionParties3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary party related to the underlying transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionParties4#mmProprietary
+	 * TransactionParties4.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -520,6 +607,7 @@ public class TransactionParties3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary party related to the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmProprietary);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ProprietaryParty3.mmObject();
@@ -538,6 +626,7 @@ public class TransactionParties3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionParties3";
 				definition = "Provides further details on the parties specific to the individual transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionParties4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionNarrativeV04;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06;
+import com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07;
 import com.tools20022.repository.area.semt.IntraPositionMovementInstructionV04;
 import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.datatype.ISINOct2015Identifier;
@@ -137,6 +138,35 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#mmFinancialInstrumentIdentification
  * SecuritiesSettlementTransactionInstructionV07.
  * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07#mmFinancialInstrumentIdentification
+ * IntraPositionMovementConfirmationV07.mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionGenerationNotificationV08.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionAllegementNotificationV07.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionConfirmationV08.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV08#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingInstructionV08.mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08#mmFinancialInstrumentIdentification
+ * SecuritiesFinancingConfirmationV08.mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV07#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionReversalAdviceV07.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08#mmFinancialInstrumentIdentification
+ * SecuritiesSettlementTransactionInstructionV08.
+ * mmFinancialInstrumentIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -216,7 +246,7 @@ public class SecurityIdentification19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country."
+	 * "International Securities Identification Number (ISIN). A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -233,7 +263,7 @@ public class SecurityIdentification19 {
 			xmlTag = "ISIN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISIN";
-			definition = "International Securities Identification Number (ISIN).  A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
+			definition = "International Securities Identification Number (ISIN). A numbering system designed by the United Nation's International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.";
 			previousVersion_lazy = () -> SecurityIdentification14.mmISIN;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -364,7 +394,11 @@ public class SecurityIdentification19 {
 						SecuritiesSettlementTransactionGenerationNotificationV07.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionConfirmationV07.mmFinancialInstrumentIdentification,
 						IntraPositionMovementConfirmationV06.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionReversalAdviceV06.mmFinancialInstrumentIdentification,
 						SecuritiesFinancingModificationInstructionV06.mmFinancialInstrumentIdentification, SecuritiesFinancingConfirmationV07.mmFinancialInstrumentIdentification,
-						SecuritiesSettlementTransactionInstructionV07.mmFinancialInstrumentIdentification);
+						SecuritiesSettlementTransactionInstructionV07.mmFinancialInstrumentIdentification, IntraPositionMovementConfirmationV07.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionGenerationNotificationV08.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionAllegementNotificationV07.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionConfirmationV08.mmFinancialInstrumentIdentification, SecuritiesFinancingInstructionV08.mmFinancialInstrumentIdentification,
+						SecuritiesFinancingConfirmationV08.mmFinancialInstrumentIdentification, SecuritiesSettlementTransactionReversalAdviceV07.mmFinancialInstrumentIdentification,
+						SecuritiesSettlementTransactionInstructionV08.mmFinancialInstrumentIdentification);
 				trace_lazy = () -> SecuritiesIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDescriptionPresenceRule.forSecurityIdentification19,

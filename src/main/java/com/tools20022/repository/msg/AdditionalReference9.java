@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.area.setr.*;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
@@ -124,6 +125,45 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.setr.SubscriptionOrderV04#mmPoolReference
  * SubscriptionOrderV04.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV08#mmPoolReference
+ * ReversalOfTransferOutConfirmationV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV08#mmPoolReference
+ * TransferInConfirmationV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08#mmPoolReference
+ * PortfolioTransferInstructionV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08#mmPoolReference
+ * PortfolioTransferCancellationRequestV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV08#mmPoolReference
+ * TransferOutCancellationRequestV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV08#mmPoolReference
+ * TransferInInstructionV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08#mmPoolReference
+ * PortfolioTransferConfirmationV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06#mmPoolReference
+ * AccountHoldingInformationV06.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmPoolReference
+ * TransferOutConfirmationV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV08#mmPoolReference
+ * TransferInCancellationRequestV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV08#mmPoolReference
+ * TransferOutInstructionV08.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmPoolReference
+ * AccountHoldingInformationRequestV05.mmPoolReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08#mmPoolReference
+ * ReversalOfTransferInConfirmationV08.mmPoolReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -320,7 +360,11 @@ public class AdditionalReference9 {
 						RedemptionBulkOrderConfirmationV04.mmPoolReference, RedemptionBulkOrderCancellationRequestV04.mmPoolReference, SwitchOrderConfirmationV04.mmPoolReference, SubscriptionOrderConfirmationV04.mmPoolReference,
 						SubscriptionOrderConfirmationCancellationInstructionV02.mmPoolReference, SwitchOrderCancellationRequestV04.mmPoolReference, SwitchOrderV04.mmPoolReference,
 						RedemptionOrderConfirmationCancellationInstructionV02.mmPoolReference, RedemptionOrderConfirmationV04.mmPoolReference, SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmPoolReference,
-						RedemptionOrderCancellationRequestV04.mmPoolReference, SubscriptionBulkOrderV04.mmPoolReference, SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference, SubscriptionOrderV04.mmPoolReference);
+						RedemptionOrderCancellationRequestV04.mmPoolReference, SubscriptionBulkOrderV04.mmPoolReference, SwitchOrderConfirmationCancellationInstructionV02.mmPoolReference, SubscriptionOrderV04.mmPoolReference,
+						ReversalOfTransferOutConfirmationV08.mmPoolReference, TransferInConfirmationV08.mmPoolReference, PortfolioTransferInstructionV08.mmPoolReference, PortfolioTransferCancellationRequestV08.mmPoolReference,
+						TransferOutCancellationRequestV08.mmPoolReference, TransferInInstructionV08.mmPoolReference, PortfolioTransferConfirmationV08.mmPoolReference, AccountHoldingInformationV06.mmPoolReference,
+						TransferOutConfirmationV08.mmPoolReference, TransferInCancellationRequestV08.mmPoolReference, TransferOutInstructionV08.mmPoolReference, AccountHoldingInformationRequestV05.mmPoolReference,
+						ReversalOfTransferInConfirmationV08.mmPoolReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

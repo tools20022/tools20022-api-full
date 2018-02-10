@@ -257,7 +257,7 @@ public class PaymentInvestigationCase extends InvestigationCase {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the end to end payment which is the subject of the investigation"
+	 * "Identifies the end to end payment which is the subject of the investigation."
 	 * </li>
 	 * </ul>
 	 */
@@ -267,7 +267,7 @@ public class PaymentInvestigationCase extends InvestigationCase {
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCase.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnderlyingPayment";
-			definition = "Identifies the end to end payment which is the subject of the investigation";
+			definition = "Identifies the end to end payment which is the subject of the investigation.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Payment.mmRelatedInvestigationCase;
 			aggregation = MMAggregation.NONE;

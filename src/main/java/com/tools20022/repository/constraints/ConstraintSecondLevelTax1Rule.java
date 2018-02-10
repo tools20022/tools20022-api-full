@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 /**
  * If at least one occurrence of SecondLevelTax is present, then at least one
- * occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+ * occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
  */
 public class ConstraintSecondLevelTax1Rule {
 
@@ -49,7 +49,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -66,7 +66,7 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkRateDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forRateDetails27);
 			owner_lazy = () -> RateDetails23.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -137,7 +137,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -154,7 +154,7 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forCorporateActionRate82);
 			owner_lazy = () -> CorporateActionRate70.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -224,7 +224,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -241,7 +241,7 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkRateDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forRateDetails26);
 			owner_lazy = () -> RateDetails22.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -268,7 +268,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -277,7 +277,7 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate74;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			owner_lazy = () -> CorporateActionRate74.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -337,7 +337,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -346,7 +346,7 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkRateDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			owner_lazy = () -> RateDetails24.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -371,7 +371,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)."
 	 * </li>
 	 * </ul>
 	 */
@@ -380,7 +380,7 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkRateDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
 			owner_lazy = () -> RateDetails25.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -440,7 +440,15 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule#forRateDetails31
+	 * ConstraintSecondLevelTax3Rule.forRateDetails31}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -454,7 +462,8 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkRateDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule.forRateDetails31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forRateDetails22;
 			owner_lazy = () -> RateDetails26.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -481,7 +490,15 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule#forCorporateActionRate88
+	 * ConstraintSecondLevelTax3Rule.forCorporateActionRate88}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -495,7 +512,8 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate82;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule.forCorporateActionRate88);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forCorporateActionRate70;
 			owner_lazy = () -> CorporateActionRate82.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -524,6 +542,14 @@ public class ConstraintSecondLevelTax1Rule {
 	 * definition} =
 	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule#forCorporateActionRate87
+	 * ConstraintSecondLevelTax3Rule.forCorporateActionRate87}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -537,6 +563,7 @@ public class ConstraintSecondLevelTax1Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule.forCorporateActionRate87);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forCorporateActionRate68;
 			owner_lazy = () -> CorporateActionRate80.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -562,7 +589,15 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule#forRateDetails32
+	 * ConstraintSecondLevelTax3Rule.forRateDetails32}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -576,7 +611,8 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkRateDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule.forRateDetails32);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forRateDetails23;
 			owner_lazy = () -> RateDetails27.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -605,6 +641,14 @@ public class ConstraintSecondLevelTax1Rule {
 	 * definition} =
 	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule#forCorporateActionRate86
+	 * ConstraintSecondLevelTax3Rule.forCorporateActionRate86}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -618,6 +662,7 @@ public class ConstraintSecondLevelTax1Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
 			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecondLevelTax3Rule.forCorporateActionRate86);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecondLevelTax1Rule.forCorporateActionRate67;
 			owner_lazy = () -> CorporateActionRate81.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -714,7 +759,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -723,7 +768,7 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate85;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			owner_lazy = () -> CorporateActionRate85.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -748,7 +793,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)."
 	 * </li>
 	 * </ul>
 	 */
@@ -757,7 +802,7 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkRateDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).";
 			owner_lazy = () -> RateDetails28.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -782,7 +827,7 @@ public class ConstraintSecondLevelTax1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)"
+	 * "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -791,15 +836,311 @@ public class ConstraintSecondLevelTax1Rule {
 			validator = ConstraintSecondLevelTax1Rule::checkRateDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondLevelTax1Rule";
-			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)";
+			definition = "If at least one occurrence of SecondLevelTax is present, then at least one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).";
 			owner_lazy = () -> RateDetails30.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/WithholdingTaxRate[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/SecondLevelTax[*]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkRateDetails31;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> RateDetails31.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate86
+	 * CorporateActionRate86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate86> forCorporateActionRate86 = new MMConstraint<CorporateActionRate86>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate86;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> CorporateActionRate86.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32 RateDetails32}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 566 NVR C4)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkRateDetails32;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 566 NVR C4).";
+			owner_lazy = () -> RateDetails32.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87
+	 * CorporateActionRate87}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate87> forCorporateActionRate87 = new MMConstraint<CorporateActionRate87>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate87;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> CorporateActionRate87.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate88
+	 * CorporateActionRate88}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate88> forCorporateActionRate88 = new MMConstraint<CorporateActionRate88>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate88;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> CorporateActionRate88.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate92
+	 * CorporateActionRate92}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate92> forCorporateActionRate92 = new MMConstraint<CorporateActionRate92>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate92;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> CorporateActionRate92.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33 RateDetails33}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 566 NVR C4)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkRateDetails33;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 566 NVR C4).";
+			owner_lazy = () -> RateDetails33.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate94
+	 * CorporateActionRate94}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate94> forCorporateActionRate94 = new MMConstraint<CorporateActionRate94>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate94;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> CorporateActionRate94.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34 RateDetails34}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails34> forRateDetails34 = new MMConstraint<RateDetails34>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkRateDetails34;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> RateDetails34.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate97
+	 * CorporateActionRate97}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SecondLevelTax1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate97> forCorporateActionRate97 = new MMConstraint<CorporateActionRate97>() {
+		{
+			validator = ConstraintSecondLevelTax1Rule::checkCorporateActionRate97;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SecondLevelTax1Rule";
+			definition = "If SecondLevelTax is repeated, then SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different in each occurrence of SecondLevelTax. \r\n(MT 564 NVR C8).";
+			owner_lazy = () -> CorporateActionRate97.mmObject();
 		}
 	};
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
 	 */
 	public static void checkRateDetails23(RateDetails23 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -815,7 +1156,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
 	 */
 	public static void checkCorporateActionRate70(CorporateActionRate70 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -831,7 +1172,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).
 	 */
 	public static void checkRateDetails22(RateDetails22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -839,7 +1180,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
 	 */
 	public static void checkCorporateActionRate74(CorporateActionRate74 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -855,7 +1196,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
 	 */
 	public static void checkRateDetails24(RateDetails24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -863,7 +1204,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).
 	 */
 	public static void checkRateDetails25(RateDetails25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -879,7 +1220,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).
 	 */
 	public static void checkRateDetails26(RateDetails26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -887,7 +1228,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
 	 */
 	public static void checkCorporateActionRate82(CorporateActionRate82 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -903,7 +1244,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
 	 */
 	public static void checkRateDetails27(RateDetails27 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -935,7 +1276,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
 	 */
 	public static void checkCorporateActionRate85(CorporateActionRate85 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -943,7 +1284,7 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 564 NVR C19).
 	 */
 	public static void checkRateDetails28(RateDetails28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -951,9 +1292,109 @@ public class ConstraintSecondLevelTax1Rule {
 
 	/**
 	 * If at least one occurrence of SecondLevelTax is present, then at least
-	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8)
+	 * one occurrence of WithholdingTaxRate must be present. (MT 566 NVR C8).
 	 */
 	public static void checkRateDetails30(RateDetails30 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 564 NVR C8).
+	 */
+	public static void checkRateDetails31(RateDetails31 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 564 NVR C8).
+	 */
+	public static void checkCorporateActionRate86(CorporateActionRate86 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 566 NVR C4).
+	 */
+	public static void checkRateDetails32(RateDetails32 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 564 NVR C8).
+	 */
+	public static void checkCorporateActionRate87(CorporateActionRate87 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 564 NVR C8).
+	 */
+	public static void checkCorporateActionRate88(CorporateActionRate88 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 564 NVR C8).
+	 */
+	public static void checkCorporateActionRate92(CorporateActionRate92 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 566 NVR C4).
+	 */
+	public static void checkRateDetails33(RateDetails33 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 564 NVR C8).
+	 */
+	public static void checkCorporateActionRate94(CorporateActionRate94 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 564 NVR C8).
+	 */
+	public static void checkRateDetails34(RateDetails34 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If SecondLevelTax is repeated, then
+	 * SecondLevelTax/RateTypeAndRate/RateType/Code values must all be different
+	 * in each occurrence of SecondLevelTax. <br>
+	 * (MT 564 NVR C8).
+	 */
+	public static void checkCorporateActionRate97(CorporateActionRate97 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -125,7 +125,7 @@ public class ParticipantAccount1 {
 	 * name} = "AccountTypeName"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type of the account"</li>
+	 * definition} = "Type of the account."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountTypeName = new MMMessageAttribute() {
@@ -135,7 +135,7 @@ public class ParticipantAccount1 {
 			xmlTag = "AcctTpNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTypeName";
-			definition = "Type of the account";
+			definition = "Type of the account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max40Text.mmObject();
@@ -587,7 +587,7 @@ public class ParticipantAccount1 {
 	 * name} = "Migration"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information related for participant migration process. "</li>
+	 * definition} = "Information related for participant migration process."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMigration = new MMMessageAssociationEnd() {
@@ -597,7 +597,7 @@ public class ParticipantAccount1 {
 			xmlTag = "Mgrtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Migration";
-			definition = "Information related for participant migration process. ";
+			definition = "Information related for participant migration process.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -102,7 +102,7 @@ public class AcknowledgementOfExemption1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Acknowledgement of exempt instruction specifying that the documentation will be sent to DTC  (The Depository Trust Corporation)."
+	 * "Acknowledgement of exempt instruction specifying that the documentation will be sent to DTC (The Depository Trust Corporation)."
 	 * </li>
 	 * </ul>
 	 */
@@ -114,7 +114,7 @@ public class AcknowledgementOfExemption1Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Documentation Will Be Sent Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DocumentationWillBeSentIndicator";
-			definition = "Acknowledgement of exempt instruction specifying that the documentation will be sent to DTC  (The Depository Trust Corporation).";
+			definition = "Acknowledgement of exempt instruction specifying that the documentation will be sent to DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

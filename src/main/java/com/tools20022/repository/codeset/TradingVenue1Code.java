@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "TradingVenue1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the type of a trading venue which must use the market identification code (MIC). "
+ * "Specifies the type of a trading venue which must use the market identification code (MIC)."
  * </li>
  * </ul>
  */
@@ -182,7 +182,7 @@ public class TradingVenue1Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingVenue1Code";
-				definition = "Specifies the type of a trading venue which must use the market identification code (MIC). ";
+				definition = "Specifies the type of a trading venue which must use the market identification code (MIC).";
 				trace_lazy = () -> TradingVenueCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingVenue1Code.SystematicInternaliser, com.tools20022.repository.codeset.TradingVenue1Code.MultilateralTradingFacility,
 						com.tools20022.repository.codeset.TradingVenue1Code.OrganisedTradingFacility, com.tools20022.repository.codeset.TradingVenue1Code.RegulatedMarket);

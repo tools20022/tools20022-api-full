@@ -64,7 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionQuantitySD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides additional information regarding corporate action securities quantity details. "
+ * "Provides additional information regarding corporate action securities quantity details."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD3
+ * CorporateActionQuantitySD3}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -100,6 +107,14 @@ public class CorporateActionQuantitySD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD3#mmPlaceAndName
+	 * CorporateActionQuantitySD3.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -110,6 +125,7 @@ public class CorporateActionQuantitySD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionQuantitySD3.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -147,7 +163,15 @@ public class CorporateActionQuantitySD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Represents \"subscription base\" (Quantity2) and \"subscription disbursed\" (Quantity1)  quantity elements. \"Subscription base quantity\" is the quantity of the rights security that forms the basis for calculating the payout. It is located on the distribution announcement, with the rights subscription announcement following later. \"Subscription disbursed quantity\" is the quantity of securities received in the security payout. It is located on the distribution announcement, with the rights subscription announcement following later."
+	 * "Represents \"subscription base\" (Quantity2) and \"subscription disbursed\" (Quantity1) quantity elements. \"Subscription base quantity\" is the quantity of the rights security that forms the basis for calculating the payout. It is located on the distribution announcement, with the rights subscription announcement following later. \"Subscription disbursed quantity\" is the quantity of securities received in the security payout. It is located on the distribution announcement, with the rights subscription announcement following later."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionQuantitySD3#mmSubscriptionQuantity
+	 * CorporateActionQuantitySD3.mmSubscriptionQuantity}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -159,7 +183,8 @@ public class CorporateActionQuantitySD1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Subscription Base Quantity"), new DTCCSynonym(this, "Subscription Disbursed Quantity"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionQuantity";
-			definition = "Represents \"subscription base\" (Quantity2) and \"subscription disbursed\" (Quantity1)  quantity elements. \"Subscription base quantity\" is the quantity of the rights security that forms the basis for calculating the payout. It is located on the distribution announcement, with the rights subscription announcement following later. \"Subscription disbursed quantity\" is the quantity of securities received in the security payout. It is located on the distribution announcement, with the rights subscription announcement following later.";
+			definition = "Represents \"subscription base\" (Quantity2) and \"subscription disbursed\" (Quantity1) quantity elements. \"Subscription base quantity\" is the quantity of the rights security that forms the basis for calculating the payout. It is located on the distribution announcement, with the rights subscription announcement following later. \"Subscription disbursed quantity\" is the quantity of securities received in the security payout. It is located on the distribution announcement, with the rights subscription announcement following later.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionQuantitySD3.mmSubscriptionQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RatioFormat13Choice.mmObject();
@@ -173,7 +198,8 @@ public class CorporateActionQuantitySD1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionQuantitySD1";
-				definition = "Provides additional information regarding corporate action securities quantity details. ";
+				definition = "Provides additional information regarding corporate action securities quantity details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionQuantitySD3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

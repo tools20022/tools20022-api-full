@@ -477,6 +477,7 @@ class ListBuilderForPaymentPartyRole_00 {
 		list.add((T) CreditTransferTransaction22.mmCreditorAccount);
 		list.add((T) OriginalTransactionReference23.mmDebtorAccount);
 		list.add((T) OriginalTransactionReference23.mmCreditorAccount);
+		list.add((T) AccountReport20.mmBalanceTransferAccount);
 		list.add((T) CreditTransfer8.mmDebtorAccount);
 		list.add((T) CreditTransfer8.mmDebtorAgentAccount);
 		list.add((T) CreditTransfer8.mmIntermediaryAgent1Account);
@@ -523,7 +524,6 @@ class ListBuilderForPaymentPartyRole_00 {
 		list.add((T) PaymentComplementaryInformation6.mmDebtorAgentAccount);
 		list.add((T) PaymentComplementaryInformation6.mmIntermediaryAgent1Account);
 		list.add((T) PaymentComplementaryInformation6.mmIntermediaryAgent2Account);
-		list.add((T) PaymentComplementaryInformation6.mmIntermediaryAgent3Account);
 		ListBuilderForPaymentPartyRole_01.addElems(list);
 		return list;
 	}

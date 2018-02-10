@@ -63,7 +63,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CashAccountAndEntry1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. "
+ * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccountAndEntry2
+ * CashAccountAndEntry2}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -102,6 +109,14 @@ public class CashAccountAndEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a cash entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountAndEntry2#mmAccount
+	 * CashAccountAndEntry2.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
@@ -113,6 +128,7 @@ public class CashAccountAndEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Account to or from which a cash entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAndEntry2.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -149,7 +165,15 @@ public class CashAccountAndEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. "
+	 * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccountAndEntry2#mmEntry
+	 * CashAccountAndEntry2.mmEntry}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -161,7 +185,8 @@ public class CashAccountAndEntry1 {
 			xmlTag = "Ntry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Entry";
-			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
+			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAndEntry2.mmEntry);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -177,7 +202,8 @@ public class CashAccountAndEntry1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountAndEntry1";
-				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
+				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccountAndEntry2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

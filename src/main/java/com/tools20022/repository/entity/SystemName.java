@@ -103,6 +103,9 @@ public class SystemName {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction7#mmSystemName
 	 * PointOfInteraction7.mmSystemName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteraction8#mmSystemName
+	 * PointOfInteraction8.mmSystemName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -125,7 +128,7 @@ public class SystemName {
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(PointOfInteraction1.mmSystemName, PointOfInteraction2.mmSystemName, PointOfInteraction3.mmSystemName, PointOfInteraction4.mmSystemName, PointOfInteraction5.mmSystemName,
-					PointOfInteraction7.mmSystemName);
+					PointOfInteraction7.mmSystemName, PointOfInteraction8.mmSystemName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

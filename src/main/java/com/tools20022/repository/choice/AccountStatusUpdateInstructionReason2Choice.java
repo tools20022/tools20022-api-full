@@ -154,7 +154,7 @@ public class AccountStatusUpdateInstructionReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reason for the  instruction to change the account status expressed as a proprietary code."
+	 * "Reason for the instruction to change the account status expressed as a proprietary code."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -170,7 +170,7 @@ public class AccountStatusUpdateInstructionReason2Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Reason for the  instruction to change the account status expressed as a proprietary code.";
+			definition = "Reason for the instruction to change the account status expressed as a proprietary code.";
 			previousVersion_lazy = () -> EnabledStatusReason2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;

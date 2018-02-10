@@ -421,7 +421,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Sub structured type of the financial instrument is a credit card trust .
+	 * Sub structured type of the financial instrument is a credit card trust.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -439,7 +439,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Sub structured type of the financial instrument is a credit card trust ."
+	 * "Sub structured type of the financial instrument is a credit card trust."
 	 * </li>
 	 * </ul>
 	 */
@@ -447,7 +447,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditCardTrust";
-			definition = "Sub structured type of the financial instrument is a credit card trust .";
+			definition = "Sub structured type of the financial instrument is a credit card trust.";
 			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureTypeCode.mmObject();
 			codeName = "CRCT";
 		}
@@ -485,7 +485,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 	};
 	/**
 	 * Sub structured type of the financial instrument is a loan participation
-	 * notes .
+	 * notes.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -503,7 +503,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Sub structured type of the financial instrument is a loan participation notes ."
+	 * "Sub structured type of the financial instrument is a loan participation notes."
 	 * </li>
 	 * </ul>
 	 */
@@ -511,7 +511,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LoanParticipationNote";
-			definition = "Sub structured type of the financial instrument is a loan participation notes .";
+			definition = "Sub structured type of the financial instrument is a loan participation notes.";
 			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureTypeCode.mmObject();
 			codeName = "LPNO";
 		}
@@ -610,8 +610,8 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Sub structured type of the financial instrument is a residential mortgage
-	 * .
+	 * Sub structured type of the financial instrument is a residential
+	 * mortgage.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -629,7 +629,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Sub structured type of the financial instrument is a residential mortgage ."
+	 * "Sub structured type of the financial instrument is a residential mortgage."
 	 * </li>
 	 * </ul>
 	 */
@@ -637,14 +637,14 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidentialMortgage";
-			definition = "Sub structured type of the financial instrument is a residential mortgage .";
+			definition = "Sub structured type of the financial instrument is a residential mortgage.";
 			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureTypeCode.mmObject();
 			codeName = "RMBS";
 		}
 	};
 	/**
 	 * Sub structured type of the financial instrument is a structured covered
-	 * bond .
+	 * bond.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -662,7 +662,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Sub structured type of the financial instrument is a structured covered bond ."
+	 * "Sub structured type of the financial instrument is a structured covered bond."
 	 * </li>
 	 * </ul>
 	 */
@@ -670,7 +670,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StructuredCoveredBond";
-			definition = "Sub structured type of the financial instrument is a structured covered bond .";
+			definition = "Sub structured type of the financial instrument is a structured covered bond.";
 			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureTypeCode.mmObject();
 			codeName = "SCBO";
 		}
@@ -707,7 +707,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Sub structured type of the financial instrument is a student loan trust .
+	 * Sub structured type of the financial instrument is a student loan trust.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -725,7 +725,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Sub structured type of the financial instrument is a student loan trust ."
+	 * "Sub structured type of the financial instrument is a student loan trust."
 	 * </li>
 	 * </ul>
 	 */
@@ -733,14 +733,14 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StudentLoanTrust";
-			definition = "Sub structured type of the financial instrument is a student loan trust .";
+			definition = "Sub structured type of the financial instrument is a student loan trust.";
 			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureTypeCode.mmObject();
 			codeName = "STUT";
 		}
 	};
 	/**
 	 * Sub structured type of the financial instrument is a whole business
-	 * security .
+	 * security.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -758,7 +758,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Sub structured type of the financial instrument is a whole business security ."
+	 * "Sub structured type of the financial instrument is a whole business security."
 	 * </li>
 	 * </ul>
 	 */
@@ -766,7 +766,7 @@ public class InstrumentSubStructureTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WholeBusinessSecurity";
-			definition = "Sub structured type of the financial instrument is a whole business security .";
+			definition = "Sub structured type of the financial instrument is a whole business security.";
 			owner_lazy = () -> com.tools20022.repository.codeset.InstrumentSubStructureTypeCode.mmObject();
 			codeName = "WBSE";
 		}

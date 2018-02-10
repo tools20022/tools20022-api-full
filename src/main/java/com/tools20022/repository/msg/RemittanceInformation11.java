@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RemittanceInformation15
+ * RemittanceInformation15}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.RemittanceInformation10
@@ -114,6 +121,14 @@ public class RemittanceInformation11 {
 	 * definition} =
 	 * "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation15#mmUnstructured
+	 * RemittanceInformation15.mmUnstructured}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -130,6 +145,7 @@ public class RemittanceInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unstructured";
 			definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.";
+			nextVersions_lazy = () -> Arrays.asList(RemittanceInformation15.mmUnstructured);
 			previousVersion_lazy = () -> RemittanceInformation10.mmUnstructured;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -168,6 +184,14 @@ public class RemittanceInformation11 {
 	 * definition} =
 	 * "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RemittanceInformation15#mmStructured
+	 * RemittanceInformation15.mmStructured}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -184,6 +208,7 @@ public class RemittanceInformation11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Structured";
 			definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
+			nextVersions_lazy = () -> Arrays.asList(RemittanceInformation15.mmStructured);
 			previousVersion_lazy = () -> RemittanceInformation10.mmStructured;
 			minOccurs = 0;
 			isComposite = true;
@@ -200,6 +225,7 @@ public class RemittanceInformation11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RemittanceInformation11";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system.";
+				nextVersions_lazy = () -> Arrays.asList(RemittanceInformation15.mmObject());
 				previousVersion_lazy = () -> RemittanceInformation10.mmObject();
 			}
 		});

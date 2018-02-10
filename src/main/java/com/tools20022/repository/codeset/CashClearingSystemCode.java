@@ -554,7 +554,8 @@ public class CashClearingSystemCode extends MMCode {
 		}
 	};
 	/**
-	 * Scheme code for CA (Canada) - Canadian Large Value Transfer System (LVTS)
+	 * Scheme code for CA (Canada) - Canadian Large Value Transfer System
+	 * (LVTS).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -572,7 +573,7 @@ public class CashClearingSystemCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Scheme code for CA (Canada) - Canadian Large Value Transfer System (LVTS)"
+	 * "Scheme code for CA (Canada) - Canadian Large Value Transfer System (LVTS)."
 	 * </li>
 	 * </ul>
 	 */
@@ -580,7 +581,7 @@ public class CashClearingSystemCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Canada";
-			definition = "Scheme code for CA (Canada) - Canadian Large Value Transfer System (LVTS)";
+			definition = "Scheme code for CA (Canada) - Canadian Large Value Transfer System (LVTS).";
 			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystemCode.mmObject();
 			codeName = "CAD";
 		}
@@ -676,7 +677,7 @@ public class CashClearingSystemCode extends MMCode {
 		}
 	};
 	/**
-	 * Scheme code for DK (Denmark) - Danish Euro RTGS (KRONOS)
+	 * Scheme code for DK (Denmark) - Danish Euro RTGS (KRONOS).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -693,14 +694,15 @@ public class CashClearingSystemCode extends MMCode {
 	 * name} = "Denmark"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Scheme code for DK (Denmark) - Danish Euro RTGS (KRONOS)"</li>
+	 * definition} = "Scheme code for DK (Denmark) - Danish Euro RTGS (KRONOS)."
+	 * </li>
 	 * </ul>
 	 */
 	public static final CashClearingSystemCode Denmark = new CashClearingSystemCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Denmark";
-			definition = "Scheme code for DK (Denmark) - Danish Euro RTGS (KRONOS)";
+			definition = "Scheme code for DK (Denmark) - Danish Euro RTGS (KRONOS).";
 			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystemCode.mmObject();
 			codeName = "DKC";
 		}
@@ -1459,7 +1461,7 @@ public class CashClearingSystemCode extends MMCode {
 		}
 	};
 	/**
-	 * Scheme code for NL (Netherlands) - Dutch RTGS (TOP)
+	 * Scheme code for NL (Netherlands) - Dutch RTGS (TOP).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1476,14 +1478,14 @@ public class CashClearingSystemCode extends MMCode {
 	 * name} = "Netherlands"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Scheme code for NL (Netherlands) - Dutch RTGS (TOP)"</li>
+	 * definition} = "Scheme code for NL (Netherlands) - Dutch RTGS (TOP)."</li>
 	 * </ul>
 	 */
 	public static final CashClearingSystemCode Netherlands = new CashClearingSystemCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Netherlands";
-			definition = "Scheme code for NL (Netherlands) - Dutch RTGS (TOP)";
+			definition = "Scheme code for NL (Netherlands) - Dutch RTGS (TOP).";
 			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystemCode.mmObject();
 			codeName = "TOP";
 		}
@@ -1739,7 +1741,7 @@ public class CashClearingSystemCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FedNet is a link to a Federal Bank account via the internet.  FedNet enables checking of account balance, transactions, take print outs of account statement, transfer funds to third party accounts, E-shopping, BSNL Payments, Deposit opening, Deposit Renewal, Request for Demand Draft, Cheque Book etc."
+	 * "FedNet is a link to a Federal Bank account via the internet. FedNet enables checking of account balance, transactions, take print outs of account statement, transfer funds to third party accounts, E-shopping, BSNL Payments, Deposit opening, Deposit Renewal, Request for Demand Draft, Cheque Book etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -1747,13 +1749,13 @@ public class CashClearingSystemCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FedNet";
-			definition = "FedNet is a link to a Federal Bank account via the internet.  FedNet enables checking of account balance, transactions, take print outs of account statement, transfer funds to third party accounts, E-shopping, BSNL Payments, Deposit opening, Deposit Renewal, Request for Demand Draft, Cheque Book etc.";
+			definition = "FedNet is a link to a Federal Bank account via the internet. FedNet enables checking of account balance, transactions, take print outs of account statement, transfer funds to third party accounts, E-shopping, BSNL Payments, Deposit opening, Deposit Renewal, Request for Demand Draft, Cheque Book etc.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystemCode.mmObject();
 			codeName = "FDN";
 		}
 	};
 	/**
-	 * Scheme code for DK (Denmark) - Danish Krone RTGS (KRONOS)
+	 * Scheme code for DK (Denmark) - Danish Krone RTGS (KRONOS).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1770,15 +1772,15 @@ public class CashClearingSystemCode extends MMCode {
 	 * name} = "DenmarkDDK"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Scheme code for DK (Denmark) - Danish Krone RTGS (KRONOS)"
-	 * </li>
+	 * definition} =
+	 * "Scheme code for DK (Denmark) - Danish Krone RTGS (KRONOS)."</li>
 	 * </ul>
 	 */
 	public static final CashClearingSystemCode DenmarkDDK = new CashClearingSystemCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DenmarkDDK";
-			definition = "Scheme code for DK (Denmark) - Danish Krone RTGS (KRONOS)";
+			definition = "Scheme code for DK (Denmark) - Danish Krone RTGS (KRONOS).";
 			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystemCode.mmObject();
 			codeName = "DDK";
 		}
@@ -1802,14 +1804,14 @@ public class CashClearingSystemCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Scheme code for AL (Albania) -  Albania Interbank Payment System."</li>
+	 * "Scheme code for AL (Albania) - Albania Interbank Payment System."</li>
 	 * </ul>
 	 */
 	public static final CashClearingSystemCode Albania = new CashClearingSystemCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Albania";
-			definition = "Scheme code for AL (Albania) -  Albania Interbank Payment System.";
+			definition = "Scheme code for AL (Albania) - Albania Interbank Payment System.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CashClearingSystemCode.mmObject();
 			codeName = "AIP";
 		}

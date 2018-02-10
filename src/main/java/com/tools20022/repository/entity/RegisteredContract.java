@@ -917,7 +917,7 @@ public class RegisteredContract extends Contract {
 	 * name} = "ClosureReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reason of closure of the contract. "</li>
+	 * definition} = "Reason of closure of the contract."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmClosureReason = new MMBusinessAssociationEnd() {
@@ -927,7 +927,7 @@ public class RegisteredContract extends Contract {
 			elementContext_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosureReason";
-			definition = "Reason of closure of the contract. ";
+			definition = "Reason of closure of the contract.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.StatusReason.mmRelatedClosureReason;
@@ -958,7 +958,7 @@ public class RegisteredContract extends Contract {
 	 * name} = "ClosureDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date of closure of the contract. "</li>
+	 * definition} = "Date of closure of the contract."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmClosureDate = new MMBusinessAttribute() {
@@ -967,7 +967,7 @@ public class RegisteredContract extends Contract {
 			elementContext_lazy = () -> com.tools20022.repository.entity.RegisteredContract.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClosureDate";
-			definition = "Date of closure of the contract. ";
+			definition = "Date of closure of the contract.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();

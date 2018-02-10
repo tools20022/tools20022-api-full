@@ -1041,7 +1041,7 @@ public class TransferStatusAndReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "One and only one message element in the list (Status, PendingSettlement, Unmatched, InRepair, Rejected, FailedSettlement,  Cancelled, Reversed, CancellationPending) must be present."
+	 * "One and only one message element in the list (Status, PendingSettlement, Unmatched, InRepair, Rejected, FailedSettlement, Cancelled, Reversed, CancellationPending) must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -1049,7 +1049,7 @@ public class TransferStatusAndReason2 {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfStatusRule";
-			definition = "One and only one message element in the list (Status, PendingSettlement, Unmatched, InRepair, Rejected, FailedSettlement,  Cancelled, Reversed, CancellationPending) must be present.";
+			definition = "One and only one message element in the list (Status, PendingSettlement, Unmatched, InRepair, Rejected, FailedSettlement, Cancelled, Reversed, CancellationPending) must be present.";
 			messageComponent_lazy = () -> com.tools20022.repository.msg.TransferStatusAndReason2.mmObject();
 			impactedElements_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransferStatusAndReason2.mmStatus, com.tools20022.repository.msg.TransferStatusAndReason2.mmPendingSettlement,
 					com.tools20022.repository.msg.TransferStatusAndReason2.mmUnmatched, com.tools20022.repository.msg.TransferStatusAndReason2.mmInRepair, com.tools20022.repository.msg.TransferStatusAndReason2.mmRejected,

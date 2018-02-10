@@ -45,6 +45,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * MarketClientSideCode.ClientSide}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MarketClientSide1Code
+ * MarketClientSide1Code}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -156,6 +163,7 @@ public class MarketClientSideCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketClientSideCode";
 				definition = "Specifies if an instruction is for a market or client side transaction.";
+				derivation_lazy = () -> Arrays.asList(MarketClientSide1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MarketClientSideCode.MarketSide, com.tools20022.repository.codeset.MarketClientSideCode.ClientSide);
 			}
 		});

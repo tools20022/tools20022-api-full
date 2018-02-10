@@ -221,7 +221,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time when DTCC  (The Depository Trust and Clearing Corporation) created the announcement record."
+	 * "Date and time when DTCC (The Depository Trust and Clearing Corporation) created the announcement record."
 	 * </li>
 	 * </ul>
 	 */
@@ -233,7 +233,7 @@ public class NotificationGeneralInformationExtension1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Create Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreateDateAndTime";
-			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) created the announcement record.";
+			definition = "Date and time when DTCC (The Depository Trust and Clearing Corporation) created the announcement record.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -269,7 +269,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time when DTCC  (The Depository Trust and Clearing Corporation) last updated the announcement."
+	 * "Date and time when DTCC (The Depository Trust and Clearing Corporation) last updated the announcement."
 	 * </li>
 	 * </ul>
 	 */
@@ -281,7 +281,7 @@ public class NotificationGeneralInformationExtension1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Update Date and Time"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateDateAndTime";
-			definition = "Date and time when DTCC  (The Depository Trust and Clearing Corporation) last updated the announcement.";
+			definition = "Date and time when DTCC (The Depository Trust and Clearing Corporation) last updated the announcement.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -412,7 +412,7 @@ public class NotificationGeneralInformationExtension1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system."
+	 * "Date until which the event will remain in an active status on DTCC (The Depository Trust and Clearing Corporation) system."
 	 * </li>
 	 * </ul>
 	 */
@@ -424,7 +424,7 @@ public class NotificationGeneralInformationExtension1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Active Until Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveUntilDate";
-			definition = "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system.";
+			definition = "Date until which the event will remain in an active status on DTCC (The Depository Trust and Clearing Corporation) system.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();

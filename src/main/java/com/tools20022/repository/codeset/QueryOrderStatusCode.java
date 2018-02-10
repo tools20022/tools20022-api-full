@@ -157,14 +157,14 @@ public class QueryOrderStatusCode extends MMCode {
 	 * name} = "QueryPartiallyExecutedOrder"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Query for orders have been partially executed.  "</li>
+	 * definition} = "Query for orders have been partially executed."</li>
 	 * </ul>
 	 */
 	public static final QueryOrderStatusCode QueryPartiallyExecutedOrder = new QueryOrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryPartiallyExecutedOrder";
-			definition = "Query for orders have been partially executed.  ";
+			definition = "Query for orders have been partially executed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.QueryOrderStatusCode.mmObject();
 			codeName = "QPEO";
 		}
@@ -187,14 +187,14 @@ public class QueryOrderStatusCode extends MMCode {
 	 * name} = "QueryFullyExecutedOrder"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Query for orders have been completely executed.  "</li>
+	 * definition} = "Query for orders have been completely executed."</li>
 	 * </ul>
 	 */
 	public static final QueryOrderStatusCode QueryFullyExecutedOrder = new QueryOrderStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryFullyExecutedOrder";
-			definition = "Query for orders have been completely executed.  ";
+			definition = "Query for orders have been completely executed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.QueryOrderStatusCode.mmObject();
 			codeName = "QFEO";
 		}

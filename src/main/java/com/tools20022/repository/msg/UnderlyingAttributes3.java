@@ -1,0 +1,1092 @@
+/* Tools20022 - API for ISO 20022
+* Copyright (C) 2017 Tools20022.com - László Bukodi 
+* 
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+* 
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+* 
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+package com.tools20022.repository.msg;
+
+import com.tools20022.metamodel.ext.FIXSynonym;
+import com.tools20022.metamodel.MMMessageAssociationEnd;
+import com.tools20022.metamodel.MMMessageAttribute;
+import com.tools20022.metamodel.MMMessageComponent;
+import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.choice.SettlementType3Choice;
+import com.tools20022.repository.choice.UnitOrFaceAmountChoice;
+import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
+import com.tools20022.repository.datatype.Max35Text;
+import com.tools20022.repository.datatype.PercentageRate;
+import com.tools20022.repository.entity.*;
+import com.tools20022.repository.GeneratedRepository;
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.Optional;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+/**
+ * Provides additional details on the underlying. In securities financing deals,
+ * it is used to identify and provide information on the collateral.
+ * <p>
+ * <strong>Constant fields:</strong>
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageElementContainer#getMessageElement
+ * messageElement} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmAllocationPercentage
+ * UnderlyingAttributes3.mmAllocationPercentage}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmQuantity
+ * UnderlyingAttributes3.mmQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmSettlementType
+ * UnderlyingAttributes3.mmSettlementType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCashAmount
+ * UnderlyingAttributes3.mmCashAmount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCashType
+ * UnderlyingAttributes3.mmCashType}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmPrice
+ * UnderlyingAttributes3.mmPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmDirtyPrice
+ * UnderlyingAttributes3.mmDirtyPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmEndPrice
+ * UnderlyingAttributes3.mmEndPrice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmStartValue
+ * UnderlyingAttributes3.mmStartValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCurrentValue
+ * UnderlyingAttributes3.mmCurrentValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmEndValue
+ * UnderlyingAttributes3.mmEndValue}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmAdjustedQuantity
+ * UnderlyingAttributes3.mmAdjustedQuantity}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmExchangeRate
+ * UnderlyingAttributes3.mmExchangeRate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCapValue
+ * UnderlyingAttributes3.mmCapValue}</li>
+ * </ul>
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
+ * trace} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
+ * dataDictionary} =
+ * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
+ * GeneratedRepository.dataDict}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+ * registrationStatus} =
+ * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
+ * "UnderlyingAttributes3"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+ * definition} =
+ * "Provides additional details on the underlying. In securities financing deals, it is used to identify and provide information on the collateral."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+ * previousVersion} =
+ * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2
+ * UnderlyingAttributes2}</li>
+ * </ul>
+ */
+@XmlAccessorType(XmlAccessType.NONE)
+@XmlType(name = "UnderlyingAttributes3", propOrder = {"allocationPercentage", "quantity", "settlementType", "cashAmount", "cashType", "price", "dirtyPrice", "endPrice", "startValue", "currentValue", "endValue", "adjustedQuantity",
+		"exchangeRate", "capValue"})
+public class UnderlyingAttributes3 {
+
+	final static private AtomicReference<MMMessageComponent> mmObject_lazy = new AtomicReference<>();
+	@XmlElement(name = "AllcnPctg")
+	protected PercentageRate allocationPercentage;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
+	 * PercentageRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Allocation#mmPercentage
+	 * Allocation.mmPercentage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "AllcnPctg"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 972</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AllocationPercentage"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Percent of the strike price that this underlying represents."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmAllocationPercentage
+	 * UnderlyingAttributes2.mmAllocationPercentage}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmAllocationPercentage = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Allocation.mmPercentage;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "AllcnPctg";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "972"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AllocationPercentage";
+			definition = "Percent of the strike price that this underlying represents.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmAllocationPercentage;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+	};
+	@XmlElement(name = "Qty")
+	protected UnitOrFaceAmountChoice quantity;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountChoice
+	 * UnitOrFaceAmountChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Qty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Quantity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Unit amount of the underlying security."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmQuantity
+	 * UnderlyingAttributes2.mmQuantity}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
+		{
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "Qty";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Quantity";
+			definition = "Unit amount of the underlying security.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmQuantity;
+			maxOccurs = 1;
+			minOccurs = 0;
+			isComposite = true;
+			type_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+		}
+	};
+	@XmlElement(name = "SttlmTp")
+	protected SettlementType3Choice settlementType;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getComplexType
+	 * complexType} =
+	 * {@linkplain com.tools20022.repository.choice.SettlementType3Choice
+	 * SettlementType3Choice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Option#mmSettlementType
+	 * Option.mmSettlementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "SttlmTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 975</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SettlementType"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Indicates order settlement period for the underlying instrument. Represents the number of days until settlement; for example, 2 means T+1 settlement, 4 means T+3 settlement, 5 means T+4 settlement."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmSettlementType
+	 * UnderlyingAttributes2.mmSettlementType}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Option.mmSettlementType;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "SttlmTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "975"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SettlementType";
+			definition = "Indicates order settlement period for the underlying instrument. Represents the number of days until settlement; for example, 2 means T+1 settlement, 4 means T+3 settlement, 5 means T+4 settlement.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmSettlementType;
+			maxOccurs = 1;
+			minOccurs = 0;
+			complexType_lazy = () -> SettlementType3Choice.mmObject();
+		}
+	};
+	@XmlElement(name = "CshAmt")
+	protected ActiveCurrencyAndAmount cashAmount;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
+	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Derivative#mmNotionalCurrencyAndAmount
+	 * Derivative.mmNotionalCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CshAmt"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 973</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashAmount"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Cash amount associated with the underlying component. Necessary for derivatives that deliver into more than one underlying instrument and one of the underlying's is a fixed cash value."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmCashAmount
+	 * UnderlyingAttributes2.mmCashAmount}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Derivative.mmNotionalCurrencyAndAmount;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "CshAmt";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "973"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashAmount";
+			definition = "Cash amount associated with the underlying component. Necessary for derivatives that deliver into more than one underlying instrument and one of the underlying's is a fixed cash value.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmCashAmount;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+	};
+	@XmlElement(name = "CshTp")
+	protected Max35Text cashType;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.Max35Text
+	 * Max35Text}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CshTp"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 974</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CashType"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Represents how the cash will be calculated. Indicates that the cash is either fixed or a difference value (difference between strike and current underlying price)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmCashType
+	 * UnderlyingAttributes2.mmCashType}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmCashType = new MMMessageAttribute() {
+		{
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "CshTp";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "974"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CashType";
+			definition = "Represents how the cash will be calculated. Indicates that the cash is either fixed or a difference value (difference between strike and current underlying price).";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmCashType;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> Max35Text.mmObject();
+		}
+	};
+	@XmlElement(name = "Pric")
+	protected Price1 price;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getComplexType
+	 * complexType} = {@linkplain com.tools20022.repository.msg.Price1 Price1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "Pric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 975</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Price"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In a financing deal, clean price (percent-of-par or per unit) of the underlying security or basket."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmPrice
+	 * UnderlyingAttributes2.mmPrice}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Security.mmPricing;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "Pric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "975"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Price";
+			definition = "In a financing deal, clean price (percent-of-par or per unit) of the underlying security or basket.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmPrice;
+			maxOccurs = 1;
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+		}
+	};
+	@XmlElement(name = "DrtyPric")
+	protected Price1 dirtyPrice;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getComplexType
+	 * complexType} = {@linkplain com.tools20022.repository.msg.Price1 Price1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Debt#mmDirtyPrice
+	 * Debt.mmDirtyPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "DrtyPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 882</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DirtyPrice"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket. \"Dirty\" means it includes accrued interest."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmDirtyPrice
+	 * UnderlyingAttributes2.mmDirtyPrice}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmDirtyPrice = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Debt.mmDirtyPrice;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "DrtyPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "882"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DirtyPrice";
+			definition = "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket. \"Dirty\" means it includes accrued interest.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmDirtyPrice;
+			maxOccurs = 1;
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+		}
+	};
+	@XmlElement(name = "EndPric")
+	protected Price1 endPrice;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getComplexType
+	 * complexType} = {@linkplain com.tools20022.repository.msg.Price1 Price1}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmPricing
+	 * Security.mmPricing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "EndPric"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 883</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EndPrice"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmEndPrice
+	 * UnderlyingAttributes2.mmEndPrice}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmEndPrice = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Security.mmPricing;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "EndPric";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "883"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EndPrice";
+			definition = "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmEndPrice;
+			maxOccurs = 1;
+			minOccurs = 0;
+			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
+		}
+	};
+	@XmlElement(name = "StartVal")
+	protected ActiveCurrencyAndAmount startValue;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
+	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmValuation
+	 * Collateral.mmValuation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "StartVal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 884</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "StartValue"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Currency value attributed to this collateral at the start of the agreement."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmStartValue
+	 * UnderlyingAttributes2.mmStartValue}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmStartValue = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Collateral.mmValuation;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "StartVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "884"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "StartValue";
+			definition = "Currency value attributed to this collateral at the start of the agreement.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmStartValue;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+	};
+	@XmlElement(name = "CurVal")
+	protected ActiveCurrencyAndAmount currentValue;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
+	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmValuation
+	 * Collateral.mmValuation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CurVal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 885</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrentValue"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Currency value currently attributed to this collateral."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmCurrentValue
+	 * UnderlyingAttributes2.mmCurrentValue}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmCurrentValue = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Collateral.mmValuation;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "CurVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "885"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrentValue";
+			definition = "Currency value currently attributed to this collateral.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmCurrentValue;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+	};
+	@XmlElement(name = "EndVal")
+	protected ActiveCurrencyAndAmount endValue;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
+	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Collateral#mmValuation
+	 * Collateral.mmValuation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "EndVal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 886</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EndValue"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Currency value attributed to this collateral at the end of the agreement."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmEndValue
+	 * UnderlyingAttributes2.mmEndValue}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmEndValue = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> Collateral.mmValuation;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "EndVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "886"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EndValue";
+			definition = "Currency value attributed to this collateral at the end of the agreement.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmEndValue;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+	};
+	@XmlElement(name = "AdjstdQty")
+	protected UnitOrFaceAmountChoice adjustedQuantity;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageAssociationEnd#getType
+	 * type} =
+	 * {@linkplain com.tools20022.repository.choice.UnitOrFaceAmountChoice
+	 * UnitOrFaceAmountChoice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.Security#mmSecuritiesQuantity
+	 * Security.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "AdjstdQty"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdjustedQuantity"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmAdjustedQuantity
+	 * UnderlyingAttributes2.mmAdjustedQuantity}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAssociationEnd mmAdjustedQuantity = new MMMessageAssociationEnd() {
+		{
+			businessElementTrace_lazy = () -> Security.mmSecuritiesQuantity;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "AdjstdQty";
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdjustedQuantity";
+			definition = "Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmAdjustedQuantity;
+			maxOccurs = 1;
+			minOccurs = 0;
+			isComposite = true;
+			type_lazy = () -> UnitOrFaceAmountChoice.mmObject();
+		}
+	};
+	@XmlElement(name = "XchgRate")
+	protected PercentageRate exchangeRate;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.PercentageRate
+	 * PercentageRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmExchangeRate
+	 * AssetHolding.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "XchgRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1045</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExchangeRate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Foreign exchange rate used to compute the current value."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmExchangeRate
+	 * UnderlyingAttributes2.mmExchangeRate}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> AssetHolding.mmExchangeRate;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "XchgRate";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1045"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExchangeRate";
+			definition = "Foreign exchange rate used to compute the current value.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmExchangeRate;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> PercentageRate.mmObject();
+		}
+	};
+	@XmlElement(name = "CapVal")
+	protected ActiveCurrencyAndAmount capValue;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
+	 * simpleType} =
+	 * {@linkplain com.tools20022.repository.datatype.ActiveCurrencyAndAmount
+	 * ActiveCurrencyAndAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
+	 * businessElementTrace} =
+	 * {@linkplain com.tools20022.repository.entity.AssetHolding#mmCapValue
+	 * AssetHolding.mmCapValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getComponentContext
+	 * componentContext} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+	 * UnderlyingAttributes3}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMMessageConstruct#getXmlTag
+	 * xmlTag} = "CapVal"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getSemanticMarkup
+	 * semanticMarkup} = FIXSynonym: 1038</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CapValue"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Maximum notional value for a financial instrument that is capped."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmCapValue
+	 * UnderlyingAttributes2.mmCapValue}</li>
+	 * </ul>
+	 */
+	public static final MMMessageAttribute mmCapValue = new MMMessageAttribute() {
+		{
+			businessElementTrace_lazy = () -> AssetHolding.mmCapValue;
+			componentContext_lazy = () -> com.tools20022.repository.msg.UnderlyingAttributes3.mmObject();
+			isDerived = false;
+			xmlTag = "CapVal";
+			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1038"));
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CapValue";
+			definition = "Maximum notional value for a financial instrument that is capped.";
+			previousVersion_lazy = () -> UnderlyingAttributes2.mmCapValue;
+			maxOccurs = 1;
+			minOccurs = 0;
+			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
+		}
+	};
+
+	final static public MMMessageComponent mmObject() {
+		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
+			{
+				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.UnderlyingAttributes3.mmAllocationPercentage, com.tools20022.repository.msg.UnderlyingAttributes3.mmQuantity,
+						com.tools20022.repository.msg.UnderlyingAttributes3.mmSettlementType, com.tools20022.repository.msg.UnderlyingAttributes3.mmCashAmount, com.tools20022.repository.msg.UnderlyingAttributes3.mmCashType,
+						com.tools20022.repository.msg.UnderlyingAttributes3.mmPrice, com.tools20022.repository.msg.UnderlyingAttributes3.mmDirtyPrice, com.tools20022.repository.msg.UnderlyingAttributes3.mmEndPrice,
+						com.tools20022.repository.msg.UnderlyingAttributes3.mmStartValue, com.tools20022.repository.msg.UnderlyingAttributes3.mmCurrentValue, com.tools20022.repository.msg.UnderlyingAttributes3.mmEndValue,
+						com.tools20022.repository.msg.UnderlyingAttributes3.mmAdjustedQuantity, com.tools20022.repository.msg.UnderlyingAttributes3.mmExchangeRate, com.tools20022.repository.msg.UnderlyingAttributes3.mmCapValue);
+				trace_lazy = () -> Asset.mmObject();
+				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
+				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				name = "UnderlyingAttributes3";
+				definition = "Provides additional details on the underlying. In securities financing deals, it is used to identify and provide information on the collateral.";
+				previousVersion_lazy = () -> UnderlyingAttributes2.mmObject();
+			}
+		});
+		return mmObject_lazy.get();
+	}
+
+	public Optional<PercentageRate> getAllocationPercentage() {
+		return allocationPercentage == null ? Optional.empty() : Optional.of(allocationPercentage);
+	}
+
+	public UnderlyingAttributes3 setAllocationPercentage(PercentageRate allocationPercentage) {
+		this.allocationPercentage = allocationPercentage;
+		return this;
+	}
+
+	public Optional<UnitOrFaceAmountChoice> getQuantity() {
+		return quantity == null ? Optional.empty() : Optional.of(quantity);
+	}
+
+	public UnderlyingAttributes3 setQuantity(UnitOrFaceAmountChoice quantity) {
+		this.quantity = quantity;
+		return this;
+	}
+
+	public Optional<SettlementType3Choice> getSettlementType() {
+		return settlementType == null ? Optional.empty() : Optional.of(settlementType);
+	}
+
+	public UnderlyingAttributes3 setSettlementType(SettlementType3Choice settlementType) {
+		this.settlementType = settlementType;
+		return this;
+	}
+
+	public Optional<ActiveCurrencyAndAmount> getCashAmount() {
+		return cashAmount == null ? Optional.empty() : Optional.of(cashAmount);
+	}
+
+	public UnderlyingAttributes3 setCashAmount(ActiveCurrencyAndAmount cashAmount) {
+		this.cashAmount = cashAmount;
+		return this;
+	}
+
+	public Optional<Max35Text> getCashType() {
+		return cashType == null ? Optional.empty() : Optional.of(cashType);
+	}
+
+	public UnderlyingAttributes3 setCashType(Max35Text cashType) {
+		this.cashType = cashType;
+		return this;
+	}
+
+	public Optional<Price1> getPrice() {
+		return price == null ? Optional.empty() : Optional.of(price);
+	}
+
+	public UnderlyingAttributes3 setPrice(com.tools20022.repository.msg.Price1 price) {
+		this.price = price;
+		return this;
+	}
+
+	public Optional<Price1> getDirtyPrice() {
+		return dirtyPrice == null ? Optional.empty() : Optional.of(dirtyPrice);
+	}
+
+	public UnderlyingAttributes3 setDirtyPrice(com.tools20022.repository.msg.Price1 dirtyPrice) {
+		this.dirtyPrice = dirtyPrice;
+		return this;
+	}
+
+	public Optional<Price1> getEndPrice() {
+		return endPrice == null ? Optional.empty() : Optional.of(endPrice);
+	}
+
+	public UnderlyingAttributes3 setEndPrice(com.tools20022.repository.msg.Price1 endPrice) {
+		this.endPrice = endPrice;
+		return this;
+	}
+
+	public Optional<ActiveCurrencyAndAmount> getStartValue() {
+		return startValue == null ? Optional.empty() : Optional.of(startValue);
+	}
+
+	public UnderlyingAttributes3 setStartValue(ActiveCurrencyAndAmount startValue) {
+		this.startValue = startValue;
+		return this;
+	}
+
+	public Optional<ActiveCurrencyAndAmount> getCurrentValue() {
+		return currentValue == null ? Optional.empty() : Optional.of(currentValue);
+	}
+
+	public UnderlyingAttributes3 setCurrentValue(ActiveCurrencyAndAmount currentValue) {
+		this.currentValue = currentValue;
+		return this;
+	}
+
+	public Optional<ActiveCurrencyAndAmount> getEndValue() {
+		return endValue == null ? Optional.empty() : Optional.of(endValue);
+	}
+
+	public UnderlyingAttributes3 setEndValue(ActiveCurrencyAndAmount endValue) {
+		this.endValue = endValue;
+		return this;
+	}
+
+	public Optional<UnitOrFaceAmountChoice> getAdjustedQuantity() {
+		return adjustedQuantity == null ? Optional.empty() : Optional.of(adjustedQuantity);
+	}
+
+	public UnderlyingAttributes3 setAdjustedQuantity(UnitOrFaceAmountChoice adjustedQuantity) {
+		this.adjustedQuantity = adjustedQuantity;
+		return this;
+	}
+
+	public Optional<PercentageRate> getExchangeRate() {
+		return exchangeRate == null ? Optional.empty() : Optional.of(exchangeRate);
+	}
+
+	public UnderlyingAttributes3 setExchangeRate(PercentageRate exchangeRate) {
+		this.exchangeRate = exchangeRate;
+		return this;
+	}
+
+	public Optional<ActiveCurrencyAndAmount> getCapValue() {
+		return capValue == null ? Optional.empty() : Optional.of(capValue);
+	}
+
+	public UnderlyingAttributes3 setCapValue(ActiveCurrencyAndAmount capValue) {
+		this.capValue = capValue;
+		return this;
+	}
+}

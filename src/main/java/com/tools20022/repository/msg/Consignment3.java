@@ -103,7 +103,7 @@ public class Consignment3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total quantity of packaging units, eg number of boxes, containers, pallets, etc"
+	 * "Total quantity of packaging units, eg number of boxes, containers, pallets, etc."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -120,7 +120,7 @@ public class Consignment3 {
 			xmlTag = "TtlQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalQuantity";
-			definition = "Total quantity of packaging units, eg number of boxes, containers, pallets, etc";
+			definition = "Total quantity of packaging units, eg number of boxes, containers, pallets, etc.";
 			previousVersion_lazy = () -> Consignment1.mmTotalQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;

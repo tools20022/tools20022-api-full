@@ -283,7 +283,7 @@ public class Order6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identifier for the order as assigned by the buy-side.  Uniqueness must be guaranteed within a single trading day.  Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element."
+	 * "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element."
 	 * </li>
 	 * </ul>
 	 */
@@ -296,7 +296,7 @@ public class Order6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "11"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientOrderIdentification";
-			definition = "Unique identifier for the order as assigned by the buy-side.  Uniqueness must be guaranteed within a single trading day.  Firms, particularly those  that  electronically submit multi-day orders, trade globally or throughout market close periods, should ensure  uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
+			definition = "Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -588,7 +588,7 @@ public class Order6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Must be used when Side = Undisclosed. Indicates which \"SideValue\" the value refers to. SideValue 1 and SideValue2 are used as opposed to Buy or Sell so that the basket can be quoted either way as Buy or Sell.\n\nTrue = SideValue 1\nFalse = SideValue 2"
+	 * "Must be used when Side = Undisclosed. Indicates which \"SideValue\" the value refers to. SideValue 1 and SideValue2 are used as opposed to Buy or Sell so that the basket can be quoted either way as Buy or Sell.\n\nTrue = SideValue 1\nFalse = SideValue 2."
 	 * </li>
 	 * </ul>
 	 */
@@ -600,7 +600,7 @@ public class Order6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "401"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SideValueIndicator";
-			definition = "Must be used when Side = Undisclosed. Indicates which \"SideValue\" the value refers to. SideValue 1 and SideValue2 are used as opposed to Buy or Sell so that the basket can be quoted either way as Buy or Sell.\n\nTrue = SideValue 1\nFalse = SideValue 2";
+			definition = "Must be used when Side = Undisclosed. Indicates which \"SideValue\" the value refers to. SideValue 1 and SideValue2 are used as opposed to Buy or Sell so that the basket can be quoted either way as Buy or Sell.\n\nTrue = SideValue 1\nFalse = SideValue 2.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -795,7 +795,7 @@ public class Order6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification  used to represent this transaction for compliance purposes."
+	 * "Identification used to represent this transaction for compliance purposes."
 	 * </li>
 	 * </ul>
 	 */
@@ -807,7 +807,7 @@ public class Order6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "376"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ComplianceIdentification";
-			definition = "Identification  used to represent this transaction for compliance purposes.";
+			definition = "Identification used to represent this transaction for compliance purposes.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -956,7 +956,7 @@ public class Order6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together."
+	 * "Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together."
 	 * </li>
 	 * </ul>
 	 */
@@ -969,7 +969,7 @@ public class Order6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "77"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionEffect";
-			definition = "Indicates whether the resulting position after a  trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
+			definition = "Indicates whether the resulting position after a trade should be an opening position or closing position. Used for omnibus accounting - where accounts are held on a gross basis instead of being netted together.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PositionEffect1Code.mmObject();
@@ -1353,7 +1353,7 @@ public class Order6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates mode used for Settlement Instructions message, eg, Default, SSI provided.."
+	 * "Indicates mode used for Settlement Instructions message, eg, Default, SSI provided."
 	 * </li>
 	 * </ul>
 	 */
@@ -1365,7 +1365,7 @@ public class Order6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "160"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstructionMethod";
-			definition = "Indicates mode used for Settlement Instructions message, eg, Default, SSI provided..";
+			definition = "Indicates mode used for Settlement Instructions message, eg, Default, SSI provided.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -2033,7 +2033,7 @@ public class Order6 {
 	 * name} = "ExecutionInstructionsDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the instructions for order handling"</li>
+	 * definition} = "Identifies the instructions for order handling."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmExecutionInstructionsDetails = new MMMessageAssociationEnd() {
@@ -2044,7 +2044,7 @@ public class Order6 {
 			xmlTag = "ExctnInstrsDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutionInstructionsDetails";
-			definition = "Identifies the instructions for order handling";
+			definition = "Identifies the instructions for order handling.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

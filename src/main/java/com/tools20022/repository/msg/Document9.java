@@ -209,7 +209,7 @@ public class Document9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Format of the document  or template, such as PDF, XML, XSLT."</li>
+	 * "Format of the document or template, such as PDF, XML, XSLT."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFormat = new MMMessageAttribute() {
@@ -220,7 +220,7 @@ public class Document9 {
 			xmlTag = "Frmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Format";
-			definition = "Format of the document  or template, such as PDF, XML, XSLT.";
+			definition = "Format of the document or template, such as PDF, XML, XSLT.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentFormat1Choice.mmObject();

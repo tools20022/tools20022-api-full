@@ -107,6 +107,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Describes the type of product and the assets to be transferred."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ISATransfer28 ISATransfer28}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.ISATransfer21
  * ISATransfer21}</li>
@@ -146,6 +152,14 @@ public class ISATransfer26 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmMasterReference
+	 * ISATransfer28.mmMasterReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -161,6 +175,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmMasterReference);
 			previousVersion_lazy = () -> ISATransfer21.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -193,7 +208,15 @@ public class ISATransfer26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the confirmation assigned by the transferor to the transfer. "
+	 * "Identification of the confirmation assigned by the transferor to the transfer."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmTransferConfirmationIdentification
+	 * ISATransfer28.mmTransferConfirmationIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -209,7 +232,8 @@ public class ISATransfer26 {
 			xmlTag = "TrfConfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationIdentification";
-			definition = "Identification of the confirmation assigned by the transferor to the transfer. ";
+			definition = "Identification of the confirmation assigned by the transferor to the transfer.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmTransferConfirmationIdentification);
 			previousVersion_lazy = () -> ISATransfer21.mmTransferConfirmationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -244,6 +268,14 @@ public class ISATransfer26 {
 	 * definition} =
 	 * "Identification assigned to the transfer of asset, typically assigned by the transferee."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmTransferInstructionReference
+	 * ISATransfer28.mmTransferInstructionReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -259,6 +291,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferInstructionReference";
 			definition = "Identification assigned to the transfer of asset, typically assigned by the transferee.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmTransferInstructionReference);
 			previousVersion_lazy = () -> ISATransfer21.mmTransferInstructionReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -299,6 +332,14 @@ public class ISATransfer26 {
 	 * definition} =
 	 * "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmClientReference
+	 * ISATransfer28.mmClientReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClientReference = new MMMessageAttribute() {
@@ -310,6 +351,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmClientReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference7.mmObject();
@@ -349,6 +391,14 @@ public class ISATransfer26 {
 	 * definition} =
 	 * "Unambiguous identification of the transfer allocated by the counterparty."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmCounterpartyReference
+	 * ISATransfer28.mmCounterpartyReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCounterpartyReference = new MMMessageAttribute() {
@@ -360,6 +410,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyReference";
 			definition = "Unambiguous identification of the transfer allocated by the counterparty.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmCounterpartyReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.AdditionalReference7.mmObject();
@@ -394,6 +445,14 @@ public class ISATransfer26 {
 	 * definition} =
 	 * "Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmBusinessFlowType
+	 * ISATransfer28.mmBusinessFlowType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBusinessFlowType = new MMMessageAttribute() {
@@ -404,6 +463,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessFlowType";
 			definition = "Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process).";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmBusinessFlowType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BusinessFlowType1Code.mmObject();
@@ -440,6 +500,14 @@ public class ISATransfer26 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date when the transfer instruction was executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmActualTransferDate
+	 * ISATransfer28.mmActualTransferDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -456,6 +524,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualTransferDate";
 			definition = "Date when the transfer instruction was executed.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmActualTransferDate);
 			previousVersion_lazy = () -> ISATransfer21.mmActualTransferDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -491,6 +560,14 @@ public class ISATransfer26 {
 	 * definition} =
 	 * "Indicates whether there is cash in the account that is awaiting investment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmResidualCash
+	 * ISATransfer28.mmResidualCash}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -506,6 +583,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidualCash";
 			definition = "Indicates whether there is cash in the account that is awaiting investment.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmResidualCash);
 			previousVersion_lazy = () -> ISATransfer21.mmResidualCash;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -544,6 +622,13 @@ public class ISATransfer26 {
 	 * definition} =
 	 * "Specifies portfolio information or government schemes, for example Individual Savings Account (ISA) in the UK."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ISATransfer28#mmPortfolio
+	 * ISATransfer28.mmPortfolio}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -560,6 +645,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Portfolio";
 			definition = "Specifies portfolio information or government schemes, for example Individual Savings Account (ISA) in the UK.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmPortfolio);
 			previousVersion_lazy = () -> ISATransfer21.mmPortfolio;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -596,6 +682,14 @@ public class ISATransfer26 {
 	 * definition} =
 	 * "Specifies whether all remaining assets in a portfolio not listed for transfer should be liquidated and transferred as cash."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmAllOtherCash
+	 * ISATransfer28.mmAllOtherCash}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -611,6 +705,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllOtherCash";
 			definition = "Specifies whether all remaining assets in a portfolio not listed for transfer should be liquidated and transferred as cash.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmAllOtherCash);
 			previousVersion_lazy = () -> ISATransfer21.mmAllOtherCash;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -648,6 +743,14 @@ public class ISATransfer26 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the underlying assets for the ISA or portfolio."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ISATransfer28#mmFinancialInstrumentAssetForTransfer
+	 * ISATransfer28.mmFinancialInstrumentAssetForTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -664,6 +767,7 @@ public class ISATransfer26 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAssetForTransfer";
 			definition = "Specifies the underlying assets for the ISA or portfolio.";
+			nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmFinancialInstrumentAssetForTransfer);
 			previousVersion_lazy = () -> ISATransfer21.mmFinancialInstrumentAssetForTransfer;
 			minOccurs = 0;
 			isComposite = true;
@@ -684,6 +788,7 @@ public class ISATransfer26 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISATransfer26";
 				definition = "Describes the type of product and the assets to be transferred.";
+				nextVersions_lazy = () -> Arrays.asList(ISATransfer28.mmObject());
 				previousVersion_lazy = () -> ISATransfer21.mmObject();
 			}
 		});

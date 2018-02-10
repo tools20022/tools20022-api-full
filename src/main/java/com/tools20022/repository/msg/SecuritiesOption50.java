@@ -322,7 +322,7 @@ public class SecuritiesOption50 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US."
+	 * "Specifies that the security identified is a temporary security identification used for processing reasons, for example, contra security used in the US."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -348,7 +348,7 @@ public class SecuritiesOption50 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TEMP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
-			definition = "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US.";
+			definition = "Specifies that the security identified is a temporary security identification used for processing reasons, for example, contra security used in the US.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption60.mmTemporaryFinancialInstrumentIndicator);
 			previousVersion_lazy = () -> SecuritiesOption42.mmTemporaryFinancialInstrumentIndicator;
 			maxOccurs = 1;

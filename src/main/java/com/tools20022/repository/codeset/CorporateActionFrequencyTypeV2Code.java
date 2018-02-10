@@ -271,14 +271,14 @@ public class CorporateActionFrequencyTypeV2Code extends MMCode {
 	 * name} = "SpecialDividendWithReinvestment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Special Dividend with reinvestment component.  "</li>
+	 * definition} = "Special Dividend with reinvestment component."</li>
 	 * </ul>
 	 */
 	public static final CorporateActionFrequencyTypeV2Code SpecialDividendWithReinvestment = new CorporateActionFrequencyTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialDividendWithReinvestment";
-			definition = "Special Dividend with reinvestment component.  ";
+			definition = "Special Dividend with reinvestment component.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CorporateActionFrequencyTypeV2Code.mmObject();
 			codeName = "SPRE";
 		}

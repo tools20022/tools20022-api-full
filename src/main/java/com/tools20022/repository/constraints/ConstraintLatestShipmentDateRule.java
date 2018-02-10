@@ -50,7 +50,7 @@ public class ConstraintLatestShipmentDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails.  If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails."
+	 * "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails. If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails."
 	 * </li>
 	 * </ul>
 	 */
@@ -59,7 +59,7 @@ public class ConstraintLatestShipmentDateRule {
 			validator = ConstraintLatestShipmentDateRule::checkLineItem5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDateRule";
-			definition = "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails.  If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails.";
+			definition = "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails. If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails.";
 			owner_lazy = () -> LineItem5.mmObject();
 		}
 	};
@@ -79,7 +79,7 @@ public class ConstraintLatestShipmentDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails.  If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails."
+	 * "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails. If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -96,7 +96,7 @@ public class ConstraintLatestShipmentDateRule {
 			validator = ConstraintLatestShipmentDateRule::checkLineItem7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDateRule";
-			definition = "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails.  If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails.";
+			definition = "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails. If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLatestShipmentDateRule.forLineItem11);
 			owner_lazy = () -> LineItem7.mmObject();
 		}
@@ -117,7 +117,7 @@ public class ConstraintLatestShipmentDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails.  If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails."
+	 * "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails. If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -139,7 +139,7 @@ public class ConstraintLatestShipmentDateRule {
 			validator = ConstraintLatestShipmentDateRule::checkLineItem11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDateRule";
-			definition = "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails.  If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails.";
+			definition = "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails. If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintLatestShipmentDateRule.forLineItem13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLatestShipmentDateRule.forLineItem7;
 			owner_lazy = () -> LineItem11.mmObject();
@@ -161,7 +161,7 @@ public class ConstraintLatestShipmentDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails.  If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails."
+	 * "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails. If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -175,7 +175,7 @@ public class ConstraintLatestShipmentDateRule {
 			validator = ConstraintLatestShipmentDateRule::checkLineItem13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LatestShipmentDateRule";
-			definition = "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails.  If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails.";
+			definition = "If LatestShipmentDate is present, then LatestShipmentDate is not allowed within each occurrence of LineItemDetails. If LatestShipmentDate is not present, then LatestShipmentDate is allowed within each occurrence of LineItemDetails.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintLatestShipmentDateRule.forLineItem11;
 			owner_lazy = () -> LineItem13.mmObject();
 		}

@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between the transaction details or a business error when the requested data cannot be retrieved."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TransactionOrError3Choice
+ * TransactionOrError3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.TransactionOrError1Choice
@@ -107,6 +114,14 @@ public class TransactionOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested information on the payment transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionOrError3Choice#mmTransaction
+	 * TransactionOrError3Choice.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -122,6 +137,7 @@ public class TransactionOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Requested information on the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionOrError3Choice.mmTransaction);
 			previousVersion_lazy = () -> TransactionOrError1Choice.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -156,6 +172,14 @@ public class TransactionOrError2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reason why the requested business information is not given."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionOrError3Choice#mmBusinessError
+	 * TransactionOrError3Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -171,6 +195,7 @@ public class TransactionOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason why the requested business information is not given.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionOrError3Choice.mmBusinessError);
 			previousVersion_lazy = () -> TransactionOrError1Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
@@ -187,6 +212,7 @@ public class TransactionOrError2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionOrError2Choice";
 				definition = "Choice between the transaction details or a business error when the requested data cannot be retrieved.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionOrError3Choice.mmObject());
 				previousVersion_lazy = () -> TransactionOrError1Choice.mmObject();
 			}
 		});

@@ -65,6 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * nextVersions} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.ATMCommand6 ATMCommand6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand12 ATMCommand12}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -109,6 +110,8 @@ public class ATMCommand3 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand6#mmType
 	 * ATMCommand6.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand12#mmType
+	 * ATMCommand12.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -126,7 +129,7 @@ public class ATMCommand3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmType);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmType, ATMCommand12.mmType);
 			previousVersion_lazy = () -> ATMCommand2.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -165,6 +168,9 @@ public class ATMCommand3 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ATMCommand6#mmCommandIdentification
 	 * ATMCommand6.mmCommandIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand12#mmCommandIdentification
+	 * ATMCommand12.mmCommandIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -182,7 +188,7 @@ public class ATMCommand3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmCommandIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmCommandIdentification, ATMCommand12.mmCommandIdentification);
 			previousVersion_lazy = () -> ATMCommand2.mmCommandIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -199,7 +205,7 @@ public class ATMCommand3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand3";
 				definition = "Maintenance command which has requested the device report.";
-				nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(ATMCommand6.mmObject(), ATMCommand12.mmObject());
 				previousVersion_lazy = () -> ATMCommand2.mmObject();
 			}
 		});

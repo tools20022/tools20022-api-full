@@ -387,6 +387,14 @@ public class ConstraintExemptionTypeUsageRule {
 	 * definition} =
 	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forCashOption58
+	 * ConstraintExemptionTypeUsageRule.forCashOption58}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -400,6 +408,7 @@ public class ConstraintExemptionTypeUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption58);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption44;
 			owner_lazy = () -> CashOption52.mmObject();
 		}
@@ -423,6 +432,14 @@ public class ConstraintExemptionTypeUsageRule {
 	 * definition} =
 	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forSecuritiesOption65
+	 * ConstraintExemptionTypeUsageRule.forSecuritiesOption65}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -436,6 +453,7 @@ public class ConstraintExemptionTypeUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption50;
 			owner_lazy = () -> SecuritiesOption60.mmObject();
 		}
@@ -458,6 +476,14 @@ public class ConstraintExemptionTypeUsageRule {
 	 * definition} =
 	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forCashOption57
+	 * ConstraintExemptionTypeUsageRule.forCashOption57}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -471,6 +497,7 @@ public class ConstraintExemptionTypeUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption57);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption42;
 			owner_lazy = () -> CashOption51.mmObject();
 		}
@@ -494,6 +521,14 @@ public class ConstraintExemptionTypeUsageRule {
 	 * definition} =
 	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forSecuritiesOption64
+	 * ConstraintExemptionTypeUsageRule.forSecuritiesOption64}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -507,6 +542,7 @@ public class ConstraintExemptionTypeUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption64);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption49;
 			owner_lazy = () -> SecuritiesOption59.mmObject();
 		}
@@ -529,6 +565,14 @@ public class ConstraintExemptionTypeUsageRule {
 	 * definition} =
 	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption &amp; Income Type Codes\" that is available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forCashOption56
+	 * ConstraintExemptionTypeUsageRule.forCashOption56}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -542,6 +586,7 @@ public class ConstraintExemptionTypeUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption56);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption43;
 			owner_lazy = () -> CashOption50.mmObject();
 		}
@@ -691,6 +736,330 @@ public class ConstraintExemptionTypeUsageRule {
 			name = "ExemptionTypeUsageRule";
 			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document titled \"ETYP-ITYP Exemption & Income Type Codes\" that is available on the SMPG website at www.smpg.info.";
 			owner_lazy = () -> CashOption55.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption56 CashOption56}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forCashOption50
+	 * ConstraintExemptionTypeUsageRule.forCashOption50}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption56> forCashOption56 = new MMConstraint<CashOption56>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkCashOption56;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption50;
+			owner_lazy = () -> CashOption56.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption57 CashOption57}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forCashOption51
+	 * ConstraintExemptionTypeUsageRule.forCashOption51}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption57> forCashOption57 = new MMConstraint<CashOption57>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkCashOption57;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption51;
+			owner_lazy = () -> CashOption57.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64
+	 * SecuritiesOption64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forSecuritiesOption59
+	 * ConstraintExemptionTypeUsageRule.forSecuritiesOption59}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesOption64> forSecuritiesOption64 = new MMConstraint<SecuritiesOption64>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption59;
+			owner_lazy = () -> SecuritiesOption64.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65
+	 * SecuritiesOption65}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forSecuritiesOption60
+	 * ConstraintExemptionTypeUsageRule.forSecuritiesOption60}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesOption65> forSecuritiesOption65 = new MMConstraint<SecuritiesOption65>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption65;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forSecuritiesOption60;
+			owner_lazy = () -> SecuritiesOption65.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption58 CashOption58}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule#forCashOption52
+	 * ConstraintExemptionTypeUsageRule.forCashOption52}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption58> forCashOption58 = new MMConstraint<CashOption58>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkCashOption58;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintExemptionTypeUsageRule.forCashOption52;
+			owner_lazy = () -> CashOption58.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67
+	 * SecuritiesOption67}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesOption67> forSecuritiesOption67 = new MMConstraint<SecuritiesOption67>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption67;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> SecuritiesOption67.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption60 CashOption60}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption60> forCashOption60 = new MMConstraint<CashOption60>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkCashOption60;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> CashOption60.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68
+	 * SecuritiesOption68}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesOption68> forSecuritiesOption68 = new MMConstraint<SecuritiesOption68>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkSecuritiesOption68;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> SecuritiesOption68.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption61 CashOption61}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption61> forCashOption61 = new MMConstraint<CashOption61>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkCashOption61;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> CashOption61.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashOption63 CashOption63}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ExemptionTypeUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption &amp; Income Type Codes\" available on the SMPG website at www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashOption63> forCashOption63 = new MMConstraint<CashOption63>() {
+		{
+			validator = ConstraintExemptionTypeUsageRule::checkCashOption63;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ExemptionTypeUsageRule";
+			definition = "The lists of exemption type codes to be used in ExemptionType are provided in the document \"ETYP-ITYP Exemption & Income Type Codes\" available on the SMPG website at www.smpg.info.";
+			owner_lazy = () -> CashOption63.mmObject();
 		}
 	};
 
@@ -891,6 +1260,96 @@ public class ConstraintExemptionTypeUsageRule {
 	 * SMPG website at www.smpg.info.
 	 */
 	public static void checkCashOption55(CashOption55 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption56(CashOption56 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption57(CashOption57 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkSecuritiesOption64(SecuritiesOption64 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkSecuritiesOption65(SecuritiesOption65 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption58(CashOption58 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkSecuritiesOption67(SecuritiesOption67 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption60(CashOption60 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkSecuritiesOption68(SecuritiesOption68 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption61(CashOption61 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The lists of exemption type codes to be used in ExemptionType are
+	 * provided in the document "ETYP-ITYP Exemption &amp; Income Type Codes"
+	 * available on the SMPG website at www.smpg.info.
+	 */
+	public static void checkCashOption63(CashOption63 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

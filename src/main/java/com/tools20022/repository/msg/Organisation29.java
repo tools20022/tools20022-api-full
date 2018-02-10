@@ -140,7 +140,7 @@ public class Organisation29 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name by which the organisation is known and which is usually used to identify that  organisation."
+	 * "Name by which the organisation is known and which is usually used to identify that organisation."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -157,7 +157,7 @@ public class Organisation29 {
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
-			definition = "Name by which the organisation is known and which is usually used to identify that  organisation.";
+			definition = "Name by which the organisation is known and which is usually used to identify that organisation.";
 			previousVersion_lazy = () -> Organisation22.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;

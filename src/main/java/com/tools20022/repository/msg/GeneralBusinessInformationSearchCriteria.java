@@ -25,11 +25,10 @@ import com.tools20022.repository.choice.CharacterSearchChoice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.text.DateFormat;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.List;
-import java.util.Objects;
+import java.util.function.Supplier;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlElement;
@@ -66,12 +65,21 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GeneralBusinessInformationSearchCriteria"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to search for business information."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1
+ * GeneralBusinessInformationSearchCriteria1}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -114,6 +122,14 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * definition} =
 	 * "Unique and unambiguous reference assigned to a general business information system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1#mmReference
+	 * GeneralBusinessInformationSearchCriteria1.mmReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
@@ -125,6 +141,7 @@ public class GeneralBusinessInformationSearchCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Unique and unambiguous reference assigned to a general business information system.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria1.mmReference);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
 		}
@@ -164,6 +181,14 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * definition} =
 	 * "Subject line of an item of general business information, summarizing the topic and intended destination of the information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1#mmSubject
+	 * GeneralBusinessInformationSearchCriteria1.mmSubject}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
@@ -175,6 +200,7 @@ public class GeneralBusinessInformationSearchCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subject";
 			definition = "Subject line of an item of general business information, summarizing the topic and intended destination of the information.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria1.mmSubject);
 			minOccurs = 0;
 			complexType_lazy = () -> CharacterSearchChoice.mmObject();
 		}
@@ -213,6 +239,14 @@ public class GeneralBusinessInformationSearchCriteria {
 	 * definition} =
 	 * "Further information about the criticality or importance of a general business information system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1#mmQualifier
+	 * GeneralBusinessInformationSearchCriteria1.mmQualifier}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmQualifier = new MMMessageAssociationEnd() {
@@ -224,6 +258,7 @@ public class GeneralBusinessInformationSearchCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Further information about the criticality or importance of a general business information system.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria1.mmQualifier);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
@@ -237,9 +272,17 @@ public class GeneralBusinessInformationSearchCriteria {
 						com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria.mmQualifier);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "GeneralBusinessInformationSearchCriteria";
 				definition = "Defines the criteria used to search for business information.";
+				nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

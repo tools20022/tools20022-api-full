@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Identification of a cryptographic algorithm and parameters for digital signatures."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AlgorithmIdentification20
+ * AlgorithmIdentification20}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification4
@@ -104,6 +111,14 @@ public class AlgorithmIdentification17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification20#mmAlgorithm
+	 * AlgorithmIdentification20.mmAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class AlgorithmIdentification17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification20.mmAlgorithm);
 			previousVersion_lazy = () -> AlgorithmIdentification4.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -152,6 +168,14 @@ public class AlgorithmIdentification17 {
 	 * definition} =
 	 * "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification20#mmParameter
+	 * AlgorithmIdentification20.mmParameter}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmParameter = new MMMessageAssociationEnd() {
@@ -162,6 +186,7 @@ public class AlgorithmIdentification17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters of the RSASSA-PSS digital signature algorithm (RSA signature algorithm with appendix: Probabilistic Signature Scheme).";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification20.mmParameter);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -177,6 +202,7 @@ public class AlgorithmIdentification17 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification17";
 				definition = "Identification of a cryptographic algorithm and parameters for digital signatures.";
+				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification20.mmObject());
 				previousVersion_lazy = () -> AlgorithmIdentification4.mmObject();
 			}
 		});

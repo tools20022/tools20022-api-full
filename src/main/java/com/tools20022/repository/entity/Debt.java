@@ -245,6 +245,8 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.Quote1#mmUnderlyingStipulations
  * Quote1.mmUnderlyingStipulations}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument54#mmDebt
+ * FinancialInstrument54.mmDebt}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesReferenceDataReport5#mmDebtInstrumentAttributes
  * SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes}</li>
@@ -275,8 +277,11 @@ import java.util.Objects;
  * DebtInstrument2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument4
  * DebtInstrument4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Debt3 Debt3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5
  * DebtInstrument5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditDerivative3
+ * CreditDerivative3}</li>
  * </ul>
  * </li>
  * <li>
@@ -376,6 +381,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes2#mmPaymentDirection
 	 * FinancialInstrumentAttributes2.mmPaymentDirection}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmPaymentDirectionIndicator
+	 * Debt3.mmPaymentDirectionIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -402,7 +410,7 @@ public class Debt extends Security {
 					PaymentDirection3Choice.mmProprietary, FinancialInstrumentAttributes13.mmPaymentDirection, FinancialInstrumentAttributes21.mmPaymentDirection, FinancialInstrumentAttributes26.mmPaymentDirection,
 					FinancialInstrumentAttributes27.mmPaymentDirection, FinancialInstrumentAttributes14.mmPaymentDirection, FinancialInstrumentAttributes30.mmPaymentDirection, FinancialInstrumentAttributes28.mmPaymentDirection,
 					Debt1.mmPaymentDirectionIndicator, FinancialInstrumentAttributes15.mmPaymentDirection, FinancialInstrumentAttributes29.mmPaymentDirection, Debt2.mmPaymentDirectionIndicator,
-					FinancialInstrumentAttributes2.mmPaymentDirection);
+					FinancialInstrumentAttributes2.mmPaymentDirection, Debt3.mmPaymentDirectionIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -603,6 +611,8 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmNextCallableDate
 	 * FinancialInstrumentAttributes78.mmNextCallableDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmNextCallableDate
+	 * Debt3.mmNextCallableDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#mmNextCallableDate
 	 * FinancialInstrumentAttributes79.mmNextCallableDate}</li>
@@ -621,6 +631,18 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83#mmNextCallableDate
 	 * FinancialInstrumentAttributes83.mmNextCallableDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmNextCallableDate
+	 * FinancialInstrumentAttributes91.mmNextCallableDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmNextCallableDate
+	 * FinancialInstrumentAttributes92.mmNextCallableDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmNextCallableDate
+	 * FinancialInstrumentAttributes95.mmNextCallableDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmNextCallableDate
+	 * FinancialInstrumentAttributes97.mmNextCallableDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -656,8 +678,10 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes49.mmNextCallableDate, FinancialInstrumentAttributes55.mmNextCallableDate, FinancialInstrumentAttributes57.mmNextCallableDate, FinancialInstrumentAttributes56.mmNextCallableDate,
 					FinancialInstrumentAttributes63.mmNextCallableDate, FinancialInstrumentAttributes64.mmNextCallableDate, FinancialInstrumentAttributes66.mmNextCallableDate, FinancialInstrumentAttributes65.mmNextCallableDate,
 					FinancialInstrumentAttributes67.mmNextCallableDate, FinancialInstrumentAttributes70.mmNextCallableDate, FinancialInstrumentAttributes69.mmNextCallableDate, FinancialInstrumentAttributes71.mmNextCallableDate,
-					FinancialInstrumentAttributes75.mmNextCallableDate, FinancialInstrumentAttributes78.mmNextCallableDate, FinancialInstrumentAttributes79.mmNextCallableDate, FinancialInstrumentAttributes81.mmNextCallableDate,
-					FinancialInstrumentAttributes80.mmNextCallableDate, FinancialInstrumentAttributes85.mmNextCallableDate, FinancialInstrumentAttributes84.mmNextCallableDate, FinancialInstrumentAttributes83.mmNextCallableDate);
+					FinancialInstrumentAttributes75.mmNextCallableDate, FinancialInstrumentAttributes78.mmNextCallableDate, Debt3.mmNextCallableDate, FinancialInstrumentAttributes79.mmNextCallableDate,
+					FinancialInstrumentAttributes81.mmNextCallableDate, FinancialInstrumentAttributes80.mmNextCallableDate, FinancialInstrumentAttributes85.mmNextCallableDate, FinancialInstrumentAttributes84.mmNextCallableDate,
+					FinancialInstrumentAttributes83.mmNextCallableDate, FinancialInstrumentAttributes91.mmNextCallableDate, FinancialInstrumentAttributes92.mmNextCallableDate, FinancialInstrumentAttributes95.mmNextCallableDate,
+					FinancialInstrumentAttributes97.mmNextCallableDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -858,6 +882,8 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmPutableDate
 	 * FinancialInstrumentAttributes78.mmPutableDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPutableDate
+	 * Debt3.mmPutableDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#mmPutableDate
 	 * FinancialInstrumentAttributes79.mmPutableDate}</li>
@@ -876,6 +902,18 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83#mmPutableDate
 	 * FinancialInstrumentAttributes83.mmPutableDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmPutableDate
+	 * FinancialInstrumentAttributes91.mmPutableDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPutableDate
+	 * FinancialInstrumentAttributes92.mmPutableDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmPutableDate
+	 * FinancialInstrumentAttributes95.mmPutableDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmPutableDate
+	 * FinancialInstrumentAttributes97.mmPutableDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -910,9 +948,10 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes50.mmPutableDate, FinancialInstrumentAttributes49.mmPutableDate, FinancialInstrumentAttributes55.mmPutableDate, FinancialInstrumentAttributes57.mmPutableDate,
 					FinancialInstrumentAttributes56.mmPutableDate, FinancialInstrumentAttributes63.mmPutableDate, FinancialInstrumentAttributes64.mmPutableDate, FinancialInstrumentAttributes66.mmPutableDate,
 					FinancialInstrumentAttributes65.mmPutableDate, FinancialInstrumentAttributes67.mmPutableDate, FinancialInstrumentAttributes70.mmPutableDate, FinancialInstrumentAttributes69.mmPutableDate,
-					FinancialInstrumentAttributes71.mmPutableDate, FinancialInstrumentAttributes75.mmPutableDate, FinancialInstrumentAttributes78.mmPutableDate, FinancialInstrumentAttributes79.mmPutableDate,
+					FinancialInstrumentAttributes71.mmPutableDate, FinancialInstrumentAttributes75.mmPutableDate, FinancialInstrumentAttributes78.mmPutableDate, Debt3.mmPutableDate, FinancialInstrumentAttributes79.mmPutableDate,
 					FinancialInstrumentAttributes81.mmPutableDate, FinancialInstrumentAttributes80.mmPutableDate, FinancialInstrumentAttributes85.mmPutableDate, FinancialInstrumentAttributes84.mmPutableDate,
-					FinancialInstrumentAttributes83.mmPutableDate);
+					FinancialInstrumentAttributes83.mmPutableDate, FinancialInstrumentAttributes91.mmPutableDate, FinancialInstrumentAttributes92.mmPutableDate, FinancialInstrumentAttributes95.mmPutableDate,
+					FinancialInstrumentAttributes97.mmPutableDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1113,6 +1152,8 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmDatedDate
 	 * FinancialInstrumentAttributes78.mmDatedDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmDatedDate
+	 * Debt3.mmDatedDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#mmDatedDate
 	 * FinancialInstrumentAttributes79.mmDatedDate}</li>
@@ -1131,6 +1172,18 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83#mmDatedDate
 	 * FinancialInstrumentAttributes83.mmDatedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmDatedDate
+	 * FinancialInstrumentAttributes91.mmDatedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmDatedDate
+	 * FinancialInstrumentAttributes92.mmDatedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmDatedDate
+	 * FinancialInstrumentAttributes95.mmDatedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmDatedDate
+	 * FinancialInstrumentAttributes97.mmDatedDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1164,9 +1217,10 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes50.mmDatedDate, FinancialInstrumentAttributes49.mmDatedDate, FinancialInstrumentAttributes55.mmDatedDate, FinancialInstrumentAttributes57.mmDatedDate,
 					FinancialInstrumentAttributes56.mmDatedDate, FinancialInstrumentAttributes63.mmDatedDate, FinancialInstrumentAttributes64.mmDatedDate, FinancialInstrumentAttributes66.mmDatedDate,
 					FinancialInstrumentAttributes65.mmDatedDate, FinancialInstrumentAttributes67.mmDatedDate, FinancialInstrumentAttributes70.mmDatedDate, FinancialInstrumentAttributes69.mmDatedDate,
-					FinancialInstrumentAttributes71.mmDatedDate, FinancialInstrumentAttributes75.mmDatedDate, FinancialInstrumentAttributes78.mmDatedDate, FinancialInstrumentAttributes79.mmDatedDate,
+					FinancialInstrumentAttributes71.mmDatedDate, FinancialInstrumentAttributes75.mmDatedDate, FinancialInstrumentAttributes78.mmDatedDate, Debt3.mmDatedDate, FinancialInstrumentAttributes79.mmDatedDate,
 					FinancialInstrumentAttributes81.mmDatedDate, FinancialInstrumentAttributes80.mmDatedDate, FinancialInstrumentAttributes85.mmDatedDate, FinancialInstrumentAttributes84.mmDatedDate,
-					FinancialInstrumentAttributes83.mmDatedDate);
+					FinancialInstrumentAttributes83.mmDatedDate, FinancialInstrumentAttributes91.mmDatedDate, FinancialInstrumentAttributes92.mmDatedDate, FinancialInstrumentAttributes95.mmDatedDate,
+					FinancialInstrumentAttributes97.mmDatedDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1271,6 +1325,20 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmFirstPaymentDate
 	 * FinancialInstrumentAttributes78.mmFirstPaymentDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmFirstPaymentDate
+	 * Debt3.mmFirstPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmFirstPaymentDate
+	 * FinancialInstrumentAttributes91.mmFirstPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmFirstPaymentDate
+	 * FinancialInstrumentAttributes92.mmFirstPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmFirstPaymentDate
+	 * FinancialInstrumentAttributes95.mmFirstPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmFirstPaymentDate
+	 * FinancialInstrumentAttributes97.mmFirstPaymentDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1298,7 +1366,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes14.mmFirstPaymentDate, FinancialInstrumentAttributes30.mmFirstPaymentDate, FinancialInstrumentAttributes28.mmFirstPaymentDate, Debt1.mmFirstPaymentDate,
 					FinancialInstrumentAttributes31.mmFirstPaymentDate, FinancialInstrumentAttributes44.mmFirstPaymentDate, FinancialInstrumentAttributes15.mmFirstPaymentDate, FinancialInstrumentAttributes29.mmFirstPaymentDate,
 					Debt2.mmFirstPaymentDate, FinancialInstrumentAttributes2.mmFirstPaymentDate, FinancialInstrumentAttributes63.mmFirstPaymentDate, FinancialInstrumentAttributes64.mmFirstPaymentDate,
-					FinancialInstrumentAttributes75.mmFirstPaymentDate, FinancialInstrumentAttributes78.mmFirstPaymentDate);
+					FinancialInstrumentAttributes75.mmFirstPaymentDate, FinancialInstrumentAttributes78.mmFirstPaymentDate, Debt3.mmFirstPaymentDate, FinancialInstrumentAttributes91.mmFirstPaymentDate,
+					FinancialInstrumentAttributes92.mmFirstPaymentDate, FinancialInstrumentAttributes95.mmFirstPaymentDate, FinancialInstrumentAttributes97.mmFirstPaymentDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1820,6 +1889,12 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmNextFactor
 	 * FinancialInstrumentAttributes78.mmNextFactor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmCurrentFactor
+	 * Debt3.mmCurrentFactor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmNextFactor
+	 * Debt3.mmNextFactor}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPreviousFactor
+	 * Debt3.mmPreviousFactor}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#mmPreviousFactor
 	 * FinancialInstrumentAttributes79.mmPreviousFactor}</li>
@@ -1856,6 +1931,54 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83#mmNextFactor
 	 * FinancialInstrumentAttributes83.mmNextFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmPreviousFactor
+	 * FinancialInstrumentAttributes91.mmPreviousFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmCurrentFactor
+	 * FinancialInstrumentAttributes91.mmCurrentFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmNextFactor
+	 * FinancialInstrumentAttributes91.mmNextFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPreviousFactor
+	 * FinancialInstrumentAttributes92.mmPreviousFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmCurrentFactor
+	 * FinancialInstrumentAttributes92.mmCurrentFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmNextFactor
+	 * FinancialInstrumentAttributes92.mmNextFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmPreviousFactor
+	 * CorporateActionRate91.mmPreviousFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmNextFactor
+	 * CorporateActionRate91.mmNextFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate96#mmPreviousFactor
+	 * CorporateActionRate96.mmPreviousFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate96#mmNextFactor
+	 * CorporateActionRate96.mmNextFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmPreviousFactor
+	 * FinancialInstrumentAttributes95.mmPreviousFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmCurrentFactor
+	 * FinancialInstrumentAttributes95.mmCurrentFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmNextFactor
+	 * FinancialInstrumentAttributes95.mmNextFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmPreviousFactor
+	 * FinancialInstrumentAttributes97.mmPreviousFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmCurrentFactor
+	 * FinancialInstrumentAttributes97.mmCurrentFactor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmNextFactor
+	 * FinancialInstrumentAttributes97.mmNextFactor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1916,10 +2039,14 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes70.mmPreviousFactor, FinancialInstrumentAttributes70.mmNextFactor, FinancialInstrumentAttributes69.mmPreviousFactor, FinancialInstrumentAttributes69.mmNextFactor,
 					FinancialInstrumentAttributes71.mmPreviousFactor, FinancialInstrumentAttributes71.mmNextFactor, CorporateActionRate78.mmPreviousFactor, CorporateActionRate78.mmNextFactor,
 					FinancialInstrumentAttributes75.mmPreviousFactor, FinancialInstrumentAttributes75.mmCurrentFactor, FinancialInstrumentAttributes75.mmNextFactor, FinancialInstrumentAttributes78.mmPreviousFactor,
-					FinancialInstrumentAttributes78.mmCurrentFactor, FinancialInstrumentAttributes78.mmNextFactor, FinancialInstrumentAttributes79.mmPreviousFactor, FinancialInstrumentAttributes79.mmNextFactor,
-					FinancialInstrumentAttributes81.mmPreviousFactor, FinancialInstrumentAttributes81.mmNextFactor, FinancialInstrumentAttributes80.mmPreviousFactor, FinancialInstrumentAttributes80.mmNextFactor,
-					FinancialInstrumentAttributes85.mmPreviousFactor, FinancialInstrumentAttributes85.mmNextFactor, FinancialInstrumentAttributes84.mmPreviousFactor, FinancialInstrumentAttributes84.mmNextFactor,
-					FinancialInstrumentAttributes83.mmPreviousFactor, FinancialInstrumentAttributes83.mmNextFactor);
+					FinancialInstrumentAttributes78.mmCurrentFactor, FinancialInstrumentAttributes78.mmNextFactor, Debt3.mmCurrentFactor, Debt3.mmNextFactor, Debt3.mmPreviousFactor, FinancialInstrumentAttributes79.mmPreviousFactor,
+					FinancialInstrumentAttributes79.mmNextFactor, FinancialInstrumentAttributes81.mmPreviousFactor, FinancialInstrumentAttributes81.mmNextFactor, FinancialInstrumentAttributes80.mmPreviousFactor,
+					FinancialInstrumentAttributes80.mmNextFactor, FinancialInstrumentAttributes85.mmPreviousFactor, FinancialInstrumentAttributes85.mmNextFactor, FinancialInstrumentAttributes84.mmPreviousFactor,
+					FinancialInstrumentAttributes84.mmNextFactor, FinancialInstrumentAttributes83.mmPreviousFactor, FinancialInstrumentAttributes83.mmNextFactor, FinancialInstrumentAttributes91.mmPreviousFactor,
+					FinancialInstrumentAttributes91.mmCurrentFactor, FinancialInstrumentAttributes91.mmNextFactor, FinancialInstrumentAttributes92.mmPreviousFactor, FinancialInstrumentAttributes92.mmCurrentFactor,
+					FinancialInstrumentAttributes92.mmNextFactor, CorporateActionRate91.mmPreviousFactor, CorporateActionRate91.mmNextFactor, CorporateActionRate96.mmPreviousFactor, CorporateActionRate96.mmNextFactor,
+					FinancialInstrumentAttributes95.mmPreviousFactor, FinancialInstrumentAttributes95.mmCurrentFactor, FinancialInstrumentAttributes95.mmNextFactor, FinancialInstrumentAttributes97.mmPreviousFactor,
+					FinancialInstrumentAttributes97.mmCurrentFactor, FinancialInstrumentAttributes97.mmNextFactor);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2027,6 +2154,21 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmPoolNumber
 	 * FinancialInstrumentAttributes78.mmPoolNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmPoolNumber
+	 * CommonFinancialInstrumentAttributes4.mmPoolNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmPoolNumber
+	 * FinancialInstrumentAttributes91.mmPoolNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPoolNumber
+	 * FinancialInstrumentAttributes92.mmPoolNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmPoolNumber
+	 * FinancialInstrumentAttributes95.mmPoolNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmPoolNumber
+	 * FinancialInstrumentAttributes97.mmPoolNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2054,7 +2196,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes30.mmPoolNumber, FinancialInstrumentAttributes28.mmPoolNumber, FinancialInstrumentAttributes1.mmPoolNumber, FinancialInstrumentAttributes31.mmPoolNumber,
 					FinancialInstrumentAttributes44.mmPoolNumber, FinancialInstrumentAttributes15.mmPoolNumber, FinancialInstrumentAttributes29.mmPoolNumber, CommonFinancialInstrumentAttributes1.mmPoolNumber,
 					FinancialInstrumentAttributes2.mmPoolNumber, FinancialInstrumentAttributes63.mmPoolNumber, FinancialInstrumentAttributes64.mmPoolNumber, FinancialInstrumentAttributes75.mmPoolNumber,
-					FinancialInstrumentAttributes78.mmPoolNumber);
+					FinancialInstrumentAttributes78.mmPoolNumber, CommonFinancialInstrumentAttributes4.mmPoolNumber, FinancialInstrumentAttributes91.mmPoolNumber, FinancialInstrumentAttributes92.mmPoolNumber,
+					FinancialInstrumentAttributes95.mmPoolNumber, FinancialInstrumentAttributes97.mmPoolNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2162,6 +2305,21 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmVariableRateIndicator
 	 * FinancialInstrumentAttributes78.mmVariableRateIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmVariableRateIndicator
+	 * Debt3.mmVariableRateIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmVariableRateIndicator
+	 * FinancialInstrumentAttributes91.mmVariableRateIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmVariableRateIndicator
+	 * FinancialInstrumentAttributes92.mmVariableRateIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmVariableRateIndicator
+	 * FinancialInstrumentAttributes95.mmVariableRateIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmVariableRateIndicator
+	 * FinancialInstrumentAttributes97.mmVariableRateIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2190,7 +2348,8 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes30.mmVariableRateIndicator, FinancialInstrumentAttributes28.mmVariableRateIndicator, Debt1.mmVariableRateIndicator, FinancialInstrumentAttributes31.mmVariableRateIndicator,
 					FinancialInstrumentAttributes44.mmVariableRateIndicator, FinancialInstrumentAttributes15.mmVariableRateIndicator, FinancialInstrumentAttributes29.mmVariableRateIndicator, Debt2.mmVariableRateIndicator,
 					FinancialInstrumentAttributes2.mmVariableRateIndicator, FinancialInstrumentAttributes63.mmVariableRateIndicator, FinancialInstrumentAttributes64.mmVariableRateIndicator,
-					FinancialInstrumentAttributes75.mmVariableRateIndicator, FinancialInstrumentAttributes78.mmVariableRateIndicator);
+					FinancialInstrumentAttributes75.mmVariableRateIndicator, FinancialInstrumentAttributes78.mmVariableRateIndicator, Debt3.mmVariableRateIndicator, FinancialInstrumentAttributes91.mmVariableRateIndicator,
+					FinancialInstrumentAttributes92.mmVariableRateIndicator, FinancialInstrumentAttributes95.mmVariableRateIndicator, FinancialInstrumentAttributes97.mmVariableRateIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2302,6 +2461,20 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmCallableIndicator
 	 * FinancialInstrumentAttributes78.mmCallableIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmCallableIndicator
+	 * Debt3.mmCallableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmCallableIndicator
+	 * FinancialInstrumentAttributes91.mmCallableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmCallableIndicator
+	 * FinancialInstrumentAttributes92.mmCallableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmCallableIndicator
+	 * FinancialInstrumentAttributes95.mmCallableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmCallableIndicator
+	 * FinancialInstrumentAttributes97.mmCallableIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2329,7 +2502,9 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes14.mmCallableIndicator, FinancialInstrumentAttributes30.mmCallableIndicator, FinancialInstrumentAttributes28.mmCallableIndicator, Debt1.mmCallableIndicator,
 					FinancialInstrumentStipulations.mmCallableIndicator, FinancialInstrumentAttributes31.mmCallableIndicator, FinancialInstrumentStipulations2.mmCallableIndicator, FinancialInstrumentAttributes44.mmCallableIndicator,
 					FinancialInstrumentAttributes15.mmCallableIndicator, FinancialInstrumentAttributes29.mmCallableIndicator, Debt2.mmCallableIndicator, FinancialInstrumentAttributes2.mmCallableIndicator,
-					FinancialInstrumentAttributes63.mmCallableIndicator, FinancialInstrumentAttributes64.mmCallableIndicator, FinancialInstrumentAttributes75.mmCallableIndicator, FinancialInstrumentAttributes78.mmCallableIndicator);
+					FinancialInstrumentAttributes63.mmCallableIndicator, FinancialInstrumentAttributes64.mmCallableIndicator, FinancialInstrumentAttributes75.mmCallableIndicator, FinancialInstrumentAttributes78.mmCallableIndicator,
+					Debt3.mmCallableIndicator, FinancialInstrumentAttributes91.mmCallableIndicator, FinancialInstrumentAttributes92.mmCallableIndicator, FinancialInstrumentAttributes95.mmCallableIndicator,
+					FinancialInstrumentAttributes97.mmCallableIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2441,6 +2616,20 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmPutableIndicator
 	 * FinancialInstrumentAttributes78.mmPutableIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPutableIndicator
+	 * Debt3.mmPutableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmPutableIndicator
+	 * FinancialInstrumentAttributes91.mmPutableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPutableIndicator
+	 * FinancialInstrumentAttributes92.mmPutableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmPutableIndicator
+	 * FinancialInstrumentAttributes95.mmPutableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmPutableIndicator
+	 * FinancialInstrumentAttributes97.mmPutableIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2468,7 +2657,9 @@ public class Debt extends Security {
 					FinancialInstrumentAttributes14.mmPutableIndicator, FinancialInstrumentAttributes30.mmPutableIndicator, FinancialInstrumentAttributes28.mmPutableIndicator, Debt1.mmPutableIndicator,
 					FinancialInstrumentStipulations.mmPutableIndicator, FinancialInstrumentAttributes31.mmPutableIndicator, FinancialInstrumentStipulations2.mmPutableIndicator, FinancialInstrumentAttributes44.mmPutableIndicator,
 					FinancialInstrumentAttributes15.mmPutableIndicator, FinancialInstrumentAttributes29.mmPutableIndicator, Debt2.mmPutableIndicator, FinancialInstrumentAttributes2.mmPutableIndicator,
-					FinancialInstrumentAttributes63.mmPutableIndicator, FinancialInstrumentAttributes64.mmPutableIndicator, FinancialInstrumentAttributes75.mmPutableIndicator, FinancialInstrumentAttributes78.mmPutableIndicator);
+					FinancialInstrumentAttributes63.mmPutableIndicator, FinancialInstrumentAttributes64.mmPutableIndicator, FinancialInstrumentAttributes75.mmPutableIndicator, FinancialInstrumentAttributes78.mmPutableIndicator,
+					Debt3.mmPutableIndicator, FinancialInstrumentAttributes91.mmPutableIndicator, FinancialInstrumentAttributes92.mmPutableIndicator, FinancialInstrumentAttributes95.mmPutableIndicator,
+					FinancialInstrumentAttributes97.mmPutableIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2525,6 +2716,18 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmYieldToMaturityRate
 	 * FinancialInstrumentAttributes78.mmYieldToMaturityRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmYieldToMaturityRate
+	 * FinancialInstrumentAttributes91.mmYieldToMaturityRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmYieldToMaturityRate
+	 * FinancialInstrumentAttributes92.mmYieldToMaturityRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmYieldToMaturityRate
+	 * FinancialInstrumentAttributes95.mmYieldToMaturityRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmYieldToMaturityRate
+	 * FinancialInstrumentAttributes97.mmYieldToMaturityRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2547,7 +2750,8 @@ public class Debt extends Security {
 		{
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes35.mmYieldToMaturityRate, FinancialInstrumentAttributes41.mmYieldToMaturityRate, FinancialInstrumentAttributes36.mmYieldToMaturityRate,
 					FinancialInstrumentAttributes42.mmYieldToMaturityRate, FinancialInstrumentAttributes63.mmYieldToMaturityRate, FinancialInstrumentAttributes64.mmYieldToMaturityRate, FinancialInstrumentAttributes75.mmYieldToMaturityRate,
-					FinancialInstrumentAttributes78.mmYieldToMaturityRate);
+					FinancialInstrumentAttributes78.mmYieldToMaturityRate, FinancialInstrumentAttributes91.mmYieldToMaturityRate, FinancialInstrumentAttributes92.mmYieldToMaturityRate, FinancialInstrumentAttributes95.mmYieldToMaturityRate,
+					FinancialInstrumentAttributes97.mmYieldToMaturityRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2664,6 +2868,24 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OtherAmounts33#mmAccruedCapitalisationAmount
 	 * OtherAmounts33.mmAccruedCapitalisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmAccruedCapitalisationAmount
+	 * OtherAmounts41.mmAccruedCapitalisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmAccruedCapitalisationAmount
+	 * OtherAmounts39.mmAccruedCapitalisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmAccruedCapitalisationAmount
+	 * OtherAmounts40.mmAccruedCapitalisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmAccruedCapitalisationAmount
+	 * OtherAmounts42.mmAccruedCapitalisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmAccruedCapitalisationAmount
+	 * OtherAmounts43.mmAccruedCapitalisationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmAccruedCapitalisationAmount
+	 * OtherAmounts44.mmAccruedCapitalisationAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2694,7 +2916,9 @@ public class Debt extends Security {
 					OtherAmounts24.mmAccruedCapitalisationAmount, OtherAmounts13.mmAccruedCapitalisationAmount, OtherAmounts1.mmAccruedCapitalisationAmount, OtherAmounts16.mmAccruedCapitalisationAmount,
 					OtherAmounts2.mmAccruedCapitalisationAmount, OtherAmounts6.mmAccruedCapitalisationAmount, OtherAmounts15.mmAccruedCapitalisationAmount, OtherAmounts22.mmAccruedCapitalisationAmount,
 					OtherAmounts28.mmAccruedCapitalisationAmount, OtherAmounts30.mmAccruedCapitalisationAmount, OtherAmounts31.mmAccruedCapitalisationAmount, OtherAmounts29.mmAccruedCapitalisationAmount,
-					OtherAmounts35.mmAccruedCapitalisationAmount, OtherAmounts34.mmAccruedCapitalisationAmount, OtherAmounts38.mmAccruedCapitalisationAmount, OtherAmounts33.mmAccruedCapitalisationAmount);
+					OtherAmounts35.mmAccruedCapitalisationAmount, OtherAmounts34.mmAccruedCapitalisationAmount, OtherAmounts38.mmAccruedCapitalisationAmount, OtherAmounts33.mmAccruedCapitalisationAmount,
+					OtherAmounts41.mmAccruedCapitalisationAmount, OtherAmounts39.mmAccruedCapitalisationAmount, OtherAmounts40.mmAccruedCapitalisationAmount, OtherAmounts42.mmAccruedCapitalisationAmount,
+					OtherAmounts43.mmAccruedCapitalisationAmount, OtherAmounts44.mmAccruedCapitalisationAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ACRU"));
@@ -2919,6 +3143,8 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes2#mmNextFactorDate
 	 * FinancialInstrumentAttributes2.mmNextFactorDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmNextFactorDate
+	 * Debt3.mmNextFactorDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2940,7 +3166,7 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmNextFactorDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmNextFactorDate, FinancialInstrumentAttributes31.mmNextFactorDate, FinancialInstrumentAttributes44.mmNextFactorDate, Debt2.mmNextFactorDate,
-					FinancialInstrumentAttributes2.mmNextFactorDate);
+					FinancialInstrumentAttributes2.mmNextFactorDate, Debt3.mmNextFactorDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2986,6 +3212,8 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes2#mmOddCouponIndicator
 	 * FinancialInstrumentAttributes2.mmOddCouponIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmOddCouponIndicator
+	 * Debt3.mmOddCouponIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3008,7 +3236,7 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmOddCouponIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmOddCouponIndicator, FinancialInstrumentAttributes31.mmOddCouponIndicator, FinancialInstrumentAttributes44.mmOddCouponIndicator, Debt2.mmOddCouponIndicator,
-					FinancialInstrumentAttributes2.mmOddCouponIndicator);
+					FinancialInstrumentAttributes2.mmOddCouponIndicator, Debt3.mmOddCouponIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3044,6 +3272,8 @@ public class Debt extends Security {
 	 * Debt1.mmCPProgram}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmCPProgram
 	 * Debt2.mmCPProgram}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmCPProgram
+	 * Debt3.mmCPProgram}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3059,18 +3289,18 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The program under which a commercial paper is issued. The values that are most used are:\n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other"
+	 * "The program under which a commercial paper is issued. The values that are most used are: \n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmCPProgram = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmCPProgram, Debt2.mmCPProgram);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmCPProgram, Debt2.mmCPProgram, Debt3.mmCPProgram);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CPProgram";
-			definition = "The program under which a commercial paper is issued. The values that are most used are:\n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other";
+			definition = "The program under which a commercial paper is issued. The values that are most used are: \n0 = N/A\n1 = 3(a)3\n2 = 4(2)\n3 = 3(a)4\n4 = 3(c)7\n5 = 144A\n6 = 3(a)2\n99 = Other.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -3101,6 +3331,8 @@ public class Debt extends Security {
 	 * Debt1.mmCPRegistrationType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmCPRegistrationType
 	 * Debt2.mmCPRegistrationType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmCPRegistrationType
+	 * Debt3.mmCPRegistrationType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3120,7 +3352,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmCPRegistrationType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmCPRegistrationType, Debt2.mmCPRegistrationType);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmCPRegistrationType, Debt2.mmCPRegistrationType, Debt3.mmCPRegistrationType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3173,6 +3405,8 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes2#mmConvertibleIndicator
 	 * FinancialInstrumentAttributes2.mmConvertibleIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmCouponRange
+	 * Debt3.mmCouponRange}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3195,7 +3429,7 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmConvertibleIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmConvertibleIndicator, FinancialInstrumentStipulations.mmConvertibleIndicator, FinancialInstrumentAttributes31.mmConvertibleIndicator,
-					FinancialInstrumentStipulations2.mmConvertibleIndicator, FinancialInstrumentAttributes44.mmConvertibleIndicator, Debt2.mmCouponRange, FinancialInstrumentAttributes2.mmConvertibleIndicator);
+					FinancialInstrumentStipulations2.mmConvertibleIndicator, FinancialInstrumentAttributes44.mmConvertibleIndicator, Debt2.mmCouponRange, FinancialInstrumentAttributes2.mmConvertibleIndicator, Debt3.mmCouponRange);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3238,6 +3472,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmPreFundedIndicator}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPreFundedIndicator
 	 * Debt2.mmPreFundedIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPreFundedIndicator
+	 * Debt3.mmPreFundedIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3259,7 +3495,8 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPreFundedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmPreFundedIndicator, FinancialInstrumentStipulations.mmPreFundedIndicator, FinancialInstrumentStipulations2.mmPreFundedIndicator, Debt2.mmPreFundedIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPreFundedIndicator, FinancialInstrumentStipulations.mmPreFundedIndicator, FinancialInstrumentStipulations2.mmPreFundedIndicator, Debt2.mmPreFundedIndicator,
+					Debt3.mmPreFundedIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3302,6 +3539,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmEscrowedIndicator}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmEscrowedIndicator
 	 * Debt2.mmEscrowedIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmEscrowedIndicator
+	 * Debt3.mmEscrowedIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3323,7 +3562,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmEscrowedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmEscrowedIndicator, FinancialInstrumentStipulations.mmEscrowedIndicator, FinancialInstrumentStipulations2.mmEscrowedIndicator, Debt2.mmEscrowedIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmEscrowedIndicator, FinancialInstrumentStipulations.mmEscrowedIndicator, FinancialInstrumentStipulations2.mmEscrowedIndicator, Debt2.mmEscrowedIndicator, Debt3.mmEscrowedIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3366,6 +3605,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmPerpetualIndicator}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPerpetualIndicator
 	 * Debt2.mmPerpetualIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPerpetualIndicator
+	 * Debt3.mmPerpetualIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3385,7 +3626,8 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPerpetualIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmPerpetualIndicator, FinancialInstrumentStipulations.mmPerpetualIndicator, FinancialInstrumentStipulations2.mmPerpetualIndicator, Debt2.mmPerpetualIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPerpetualIndicator, FinancialInstrumentStipulations.mmPerpetualIndicator, FinancialInstrumentStipulations2.mmPerpetualIndicator, Debt2.mmPerpetualIndicator,
+					Debt3.mmPerpetualIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3424,6 +3666,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmSubordinatedIndicator
 	 * Debt2.mmSubordinatedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmSubordinatedIndicator
+	 * Debt3.mmSubordinatedIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3444,7 +3689,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmSubordinatedIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmSubordinatedIndicator, Debt2.mmSubordinatedIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmSubordinatedIndicator, Debt2.mmSubordinatedIndicator, Debt3.mmSubordinatedIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3483,6 +3728,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmExtendibleIndicator
 	 * Debt2.mmExtendibleIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmExtendibleIndicator
+	 * Debt3.mmExtendibleIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3504,7 +3752,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmExtendibleIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendibleIndicator, Debt2.mmExtendibleIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendibleIndicator, Debt2.mmExtendibleIndicator, Debt3.mmExtendibleIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3548,6 +3796,8 @@ public class Debt extends Security {
 	 * Debt1.mmExtendiblePeriod}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmExtendiblePeriod
 	 * Debt2.mmExtendiblePeriod}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmExtendiblePeriod
+	 * Debt3.mmExtendiblePeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3567,7 +3817,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmExtendiblePeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendiblePeriod, Debt2.mmExtendiblePeriod);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmExtendiblePeriod, Debt2.mmExtendiblePeriod, Debt3.mmExtendiblePeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3606,6 +3856,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmOverAllotmentAmount
 	 * Debt2.mmOverAllotmentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmOverAllotmentAmount
+	 * Debt3.mmOverAllotmentAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3627,7 +3880,8 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmOverAllotmentAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentAmount, FinancialInstrumentStipulations.mmOverAllotmentAmount, FinancialInstrumentStipulations2.mmOverAllotmentAmount, Debt2.mmOverAllotmentAmount);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentAmount, FinancialInstrumentStipulations.mmOverAllotmentAmount, FinancialInstrumentStipulations2.mmOverAllotmentAmount, Debt2.mmOverAllotmentAmount,
+					Debt3.mmOverAllotmentAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3670,6 +3924,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmOverAllotmentRate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmOverAllotmentRate
 	 * Debt2.mmOverAllotmentRate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmOverAllotmentRate
+	 * Debt3.mmOverAllotmentRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3691,7 +3947,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmOverAllotmentRate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentRate, FinancialInstrumentStipulations.mmOverAllotmentRate, FinancialInstrumentStipulations2.mmOverAllotmentRate, Debt2.mmOverAllotmentRate);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmOverAllotmentRate, FinancialInstrumentStipulations.mmOverAllotmentRate, FinancialInstrumentStipulations2.mmOverAllotmentRate, Debt2.mmOverAllotmentRate, Debt3.mmOverAllotmentRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3739,6 +3995,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmAmortisableIndicator
 	 * Debt2.mmAmortisableIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmAmortisableIndicator
+	 * Debt3.mmAmortisableIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3761,7 +4020,7 @@ public class Debt extends Security {
 	public static final MMBusinessAttribute mmAmortisableIndicator = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Debt1.mmAmortisableIndicator, FinancialInstrumentStipulations.mmAmortisableIndicator, FinancialInstrumentStipulations.mmAlternativeMinimumTaxIndicator,
-					FinancialInstrumentStipulations2.mmAmortisableIndicator, Debt2.mmAmortisableIndicator);
+					FinancialInstrumentStipulations2.mmAmortisableIndicator, Debt2.mmAmortisableIndicator, Debt3.mmAmortisableIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3800,6 +4059,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmCapitalisedInterest
 	 * Debt2.mmCapitalisedInterest}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmCapitalisedInterest
+	 * Debt3.mmCapitalisedInterest}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3821,7 +4083,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmCapitalisedInterest = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmCapitalisedInterest, Debt2.mmCapitalisedInterest);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmCapitalisedInterest, Debt2.mmCapitalisedInterest, Debt3.mmCapitalisedInterest);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3860,6 +4122,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmActualDenominationAmount
 	 * Debt2.mmActualDenominationAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmActualDenominationAmount
+	 * Debt3.mmActualDenominationAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3879,7 +4144,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmActualDenominationAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmActualDenominationAmount, Debt2.mmActualDenominationAmount);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmActualDenominationAmount, Debt2.mmActualDenominationAmount, Debt3.mmActualDenominationAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3915,6 +4180,8 @@ public class Debt extends Security {
 	 * Debt1.mmPieces}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPieces
 	 * Debt2.mmPieces}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPieces
+	 * Debt3.mmPieces}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3934,7 +4201,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPieces = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmPieces, Debt2.mmPieces);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPieces, Debt2.mmPieces, Debt3.mmPieces);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3971,6 +4238,8 @@ public class Debt extends Security {
 	 * Debt1.mmPoolsMaximum}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPoolsMaximum
 	 * Debt2.mmPoolsMaximum}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPoolsMaximum
+	 * Debt3.mmPoolsMaximum}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3990,7 +4259,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolsMaximum = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsMaximum, Debt2.mmPoolsMaximum);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsMaximum, Debt2.mmPoolsMaximum, Debt3.mmPoolsMaximum);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4027,6 +4296,8 @@ public class Debt extends Security {
 	 * Debt1.mmPoolsPerMillion}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPoolsPerMillion
 	 * Debt2.mmPoolsPerMillion}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPoolsPerMillion
+	 * Debt3.mmPoolsPerMillion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4048,7 +4319,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolsPerMillion = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerMillion, Debt2.mmPoolsPerMillion);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerMillion, Debt2.mmPoolsPerMillion, Debt3.mmPoolsPerMillion);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4085,6 +4356,8 @@ public class Debt extends Security {
 	 * Debt1.mmPoolsPerLot}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPoolsPerLot
 	 * Debt2.mmPoolsPerLot}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPoolsPerLot
+	 * Debt3.mmPoolsPerLot}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4106,7 +4379,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolsPerLot = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerLot, Debt2.mmPoolsPerLot);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerLot, Debt2.mmPoolsPerLot, Debt3.mmPoolsPerLot);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4143,6 +4416,8 @@ public class Debt extends Security {
 	 * Debt1.mmPoolsPerTrade}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPoolsPerTrade
 	 * Debt2.mmPoolsPerTrade}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPoolsPerTrade
+	 * Debt3.mmPoolsPerTrade}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4164,7 +4439,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPoolsPerTrade = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerTrade, Debt2.mmPoolsPerTrade);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmPoolsPerTrade, Debt2.mmPoolsPerTrade, Debt3.mmPoolsPerTrade);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4203,6 +4478,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmConstantPrePaymentPenaltyIndicator
 	 * Debt2.mmConstantPrePaymentPenaltyIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmConstantPrePaymentPenaltyIndicator
+	 * Debt3.mmConstantPrePaymentPenaltyIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4224,7 +4502,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmConstantPrePaymentPenalty = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentPenaltyIndicator, Debt2.mmConstantPrePaymentPenaltyIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentPenaltyIndicator, Debt2.mmConstantPrePaymentPenaltyIndicator, Debt3.mmConstantPrePaymentPenaltyIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4319,6 +4597,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmConstantPrePaymentYield
 	 * Debt2.mmConstantPrePaymentYield}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmConstantPrePaymentYield
+	 * Debt3.mmConstantPrePaymentYield}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4340,7 +4621,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmConstantPrePaymentYield = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentYield, Debt2.mmConstantPrePaymentYield);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConstantPrePaymentYield, Debt2.mmConstantPrePaymentYield, Debt3.mmConstantPrePaymentYield);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4379,6 +4660,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmWeightedAverageCoupon
 	 * Debt2.mmWeightedAverageCoupon}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmWeightedAverageCoupon
+	 * Debt3.mmWeightedAverageCoupon}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4400,7 +4684,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWeightedAverageCoupon = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageCoupon, Debt2.mmWeightedAverageCoupon);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageCoupon, Debt2.mmWeightedAverageCoupon, Debt3.mmWeightedAverageCoupon);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4439,6 +4723,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmWeightedAverageLife
 	 * Debt2.mmWeightedAverageLife}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmWeightedAverageLife
+	 * Debt3.mmWeightedAverageLife}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4460,7 +4747,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWeightedAverageLife = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLife, Debt2.mmWeightedAverageLife);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLife, Debt2.mmWeightedAverageLife, Debt3.mmWeightedAverageLife);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4499,6 +4786,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmWeightedAverageLoan
 	 * Debt2.mmWeightedAverageLoan}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmWeightedAverageLoan
+	 * Debt3.mmWeightedAverageLoan}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4520,7 +4810,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWeightedAverageLoan = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLoan, Debt2.mmWeightedAverageLoan);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageLoan, Debt2.mmWeightedAverageLoan, Debt3.mmWeightedAverageLoan);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4559,6 +4849,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmWeightedAverageMaturity
 	 * Debt2.mmWeightedAverageMaturity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmWeightedAverageMaturity
+	 * Debt3.mmWeightedAverageMaturity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4580,7 +4873,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmWeightedAverageMaturity = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageMaturity, Debt2.mmWeightedAverageMaturity);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmWeightedAverageMaturity, Debt2.mmWeightedAverageMaturity, Debt3.mmWeightedAverageMaturity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4623,6 +4916,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmInsuredIndicator}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmInsuredIndicator
 	 * Debt2.mmInsuredIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmInsuredIndicator
+	 * Debt3.mmInsuredIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4644,7 +4939,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmInsuredIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmInsuredIndicator, FinancialInstrumentStipulations.mmInsuredIndicator, FinancialInstrumentStipulations2.mmInsuredIndicator, Debt2.mmInsuredIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmInsuredIndicator, FinancialInstrumentStipulations.mmInsuredIndicator, FinancialInstrumentStipulations2.mmInsuredIndicator, Debt2.mmInsuredIndicator, Debt3.mmInsuredIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4683,6 +4978,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmBankQualifiedIndicator
 	 * Debt2.mmBankQualifiedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmBankQualifiedIndicator
+	 * Debt3.mmBankQualifiedIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4704,7 +5002,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmBankQualified = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmBankQualifiedIndicator, Debt2.mmBankQualifiedIndicator);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmBankQualifiedIndicator, Debt2.mmBankQualifiedIndicator, Debt3.mmBankQualifiedIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4745,6 +5043,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmAutoReinvestment}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmAutoReinvestment
 	 * Debt2.mmAutoReinvestment}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmAutoReinvestment
+	 * Debt3.mmAutoReinvestment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4766,7 +5066,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmAutoReinvestment = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmAutoReinvestment, FinancialInstrumentStipulations2.mmAutoReinvestment, Debt2.mmAutoReinvestment);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmAutoReinvestment, FinancialInstrumentStipulations2.mmAutoReinvestment, Debt2.mmAutoReinvestment, Debt3.mmAutoReinvestment);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4867,6 +5167,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmLookBack}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmLookBack
 	 * Debt2.mmLookBack}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmLookBack
+	 * Debt3.mmLookBack}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4891,7 +5193,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmLookBack = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmLookBack, FinancialInstrumentStipulations2.mmLookBack, Debt2.mmLookBack);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmLookBack, FinancialInstrumentStipulations2.mmLookBack, Debt2.mmLookBack, Debt3.mmLookBack);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TTCO//GTDL"));
@@ -4992,6 +5294,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmMaximumSubstitution
 	 * Debt2.mmMaximumSubstitution}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmMaximumSubstitution
+	 * Debt3.mmMaximumSubstitution}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5011,7 +5316,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmMaximumSubstitution = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMaximumSubstitution, FinancialInstrumentStipulations2.mmMaximumSubstitution, Debt2.mmMaximumSubstitution);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMaximumSubstitution, FinancialInstrumentStipulations2.mmMaximumSubstitution, Debt2.mmMaximumSubstitution, Debt3.mmMaximumSubstitution);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5059,6 +5364,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmMinimumIncrement}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmMinimumIncrement
 	 * Debt2.mmMinimumIncrement}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmMinimumIncrement
+	 * Debt3.mmMinimumIncrement}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5078,7 +5385,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAssociationEnd mmMinimumIncrement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMinimumIncrement, FinancialInstrumentStipulations2.mmMinimumIncrement, Debt2.mmMinimumIncrement);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmMinimumIncrement, FinancialInstrumentStipulations2.mmMinimumIncrement, Debt2.mmMinimumIncrement, Debt3.mmMinimumIncrement);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5231,6 +5538,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmPriceFrequency}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPriceFrequency
 	 * Debt2.mmPriceFrequency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPriceFrequency
+	 * Debt3.mmPriceFrequency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5252,7 +5561,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPriceFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmPriceFrequency, FinancialInstrumentStipulations2.mmPriceFrequency, Debt2.mmPriceFrequency);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmPriceFrequency, FinancialInstrumentStipulations2.mmPriceFrequency, Debt2.mmPriceFrequency, Debt3.mmPriceFrequency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5294,6 +5603,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmSubstitutionFrequency
 	 * Debt2.mmSubstitutionFrequency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmSubstitutionFrequency
+	 * Debt3.mmSubstitutionFrequency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5314,7 +5626,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmSubstitutionFrequency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionFrequency, FinancialInstrumentStipulations2.mmSubstitutionFrequency, Debt2.mmSubstitutionFrequency);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionFrequency, FinancialInstrumentStipulations2.mmSubstitutionFrequency, Debt2.mmSubstitutionFrequency, Debt3.mmSubstitutionFrequency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5354,6 +5666,8 @@ public class Debt extends Security {
 	 * FinancialInstrumentStipulations2.mmSubstitutionLeft}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmSubstitutionLeft
 	 * Debt2.mmSubstitutionLeft}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmSubstitutionLeft
+	 * Debt3.mmSubstitutionLeft}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5374,7 +5688,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmSubstitutionLeft = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionLeft, FinancialInstrumentStipulations2.mmSubstitutionLeft, Debt2.mmSubstitutionLeft);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations.mmSubstitutionLeft, FinancialInstrumentStipulations2.mmSubstitutionLeft, Debt2.mmSubstitutionLeft, Debt3.mmSubstitutionLeft);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5473,6 +5787,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Debt2#mmAlternativeMinimumTaxIndicator
 	 * Debt2.mmAlternativeMinimumTaxIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmAlternativeMinimumTaxIndicator
+	 * Debt3.mmAlternativeMinimumTaxIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5494,7 +5811,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmAlternativeMinimumTax = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations2.mmAlternativeMinimumTaxIndicator, Debt2.mmAlternativeMinimumTaxIndicator);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentStipulations2.mmAlternativeMinimumTaxIndicator, Debt2.mmAlternativeMinimumTaxIndicator, Debt3.mmAlternativeMinimumTaxIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5721,6 +6038,8 @@ public class Debt extends Security {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmGeographics
 	 * Debt2.mmGeographics}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmGeographics
+	 * Debt3.mmGeographics}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5742,7 +6061,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmGeographics = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt2.mmGeographics);
+			derivation_lazy = () -> Arrays.asList(Debt2.mmGeographics, Debt3.mmGeographics);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5776,6 +6095,8 @@ public class Debt extends Security {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmPaymentCurrency
 	 * Debt2.mmPaymentCurrency}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmPaymentCurrency
+	 * Debt3.mmPaymentCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5795,7 +6116,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmPaymentCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt2.mmPaymentCurrency);
+			derivation_lazy = () -> Arrays.asList(Debt2.mmPaymentCurrency, Debt3.mmPaymentCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5834,6 +6155,9 @@ public class Debt extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmDirtyPrice
 	 * UnderlyingAttributes2.mmDirtyPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmDirtyPrice
+	 * UnderlyingAttributes3.mmDirtyPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -5855,7 +6179,7 @@ public class Debt extends Security {
 	 */
 	public static final MMBusinessAttribute mmDirtyPrice = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmDirtyPrice, UnderlyingAttributes2.mmDirtyPrice);
+			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmDirtyPrice, UnderlyingAttributes2.mmDirtyPrice, UnderlyingAttributes3.mmDirtyPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Debt.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
@@ -5935,8 +6259,8 @@ public class Debt extends Security {
 						com.tools20022.repository.entity.InterestCalculation.mmDebtInstrument);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmDebt, FinancialInstrument28.mmDebt, SingleQuote1.mmStipulations, SingleQuote1.mmUnderlyingStipulations,
 						QuoteCancellation1Choice.mmStipulations, QuoteCancellation1Choice.mmUnderlyingStipulations, QuoteRequest1.mmStipulations, QuoteRequest1.mmUnderlyingStipulations, RequestForQuote.mmStipulations,
-						RequestForQuote.mmUnderlyingStipulations, Quote1.mmStipulations, Quote1.mmUnderlyingStipulations, SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes, TransparencyDataReport10.mmBond,
-						InterestRateDerivative5.mmUnderlyingBond, SecurityInstrumentDescription13.mmDebtInstrumentAttributes);
+						RequestForQuote.mmUnderlyingStipulations, Quote1.mmStipulations, Quote1.mmUnderlyingStipulations, FinancialInstrument54.mmDebt, SecuritiesReferenceDataReport5.mmDebtInstrumentAttributes,
+						TransparencyDataReport10.mmBond, InterestRateDerivative5.mmUnderlyingBond, SecurityInstrumentDescription13.mmDebtInstrumentAttributes);
 				subType_lazy = () -> Arrays.asList(Loan.mmObject());
 				superType_lazy = () -> Security.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Debt.mmPaymentDirectionIndicator, com.tools20022.repository.entity.Debt.mmNextCallableDate, com.tools20022.repository.entity.Debt.mmPutableDate,
@@ -5960,7 +6284,7 @@ public class Debt extends Security {
 						com.tools20022.repository.entity.Debt.mmAlternativeMinimumTax, com.tools20022.repository.entity.Debt.mmNextInterest, com.tools20022.repository.entity.Debt.mmExtendibleDate,
 						com.tools20022.repository.entity.Debt.mmSinkableIndicator, com.tools20022.repository.entity.Debt.mmInsured, com.tools20022.repository.entity.Debt.mmGeographics,
 						com.tools20022.repository.entity.Debt.mmPaymentCurrency, com.tools20022.repository.entity.Debt.mmDirtyPrice, com.tools20022.repository.entity.Debt.mmDebtSeniority);
-				derivationComponent_lazy = () -> Arrays.asList(Debt1.mmObject(), Debt2.mmObject(), DebtInstrument2.mmObject(), DebtInstrument4.mmObject(), DebtInstrument5.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(Debt1.mmObject(), Debt2.mmObject(), DebtInstrument2.mmObject(), DebtInstrument4.mmObject(), Debt3.mmObject(), DebtInstrument5.mmObject(), CreditDerivative3.mmObject());
 			}
 
 			@Override

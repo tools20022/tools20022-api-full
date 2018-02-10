@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Choice between formats for the specification of the number of units, amount
- * of money or percentage..
+ * of money or percentage.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -71,7 +71,7 @@ import javax.xml.bind.annotation.XmlType;
  * "FinancialInstrumentQuantity28Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between formats for the specification of the number of units, amount of money or percentage.."
+ * "Choice between formats for the specification of the number of units, amount of money or percentage."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -311,7 +311,7 @@ public class FinancialInstrumentQuantity28Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentQuantity28Choice";
-				definition = "Choice between formats for the specification of the number of units, amount of money or percentage..";
+				definition = "Choice between formats for the specification of the number of units, amount of money or percentage.";
 				previousVersion_lazy = () -> FinancialInstrumentQuantity27Choice.mmObject();
 			}
 		});

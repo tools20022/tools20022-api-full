@@ -194,7 +194,7 @@ public class CorporateActionMovement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the movement is a high priority or not.\nMeaning when true: High priority\nMeaning when false: Standard"
+	 * "Indicates whether the movement is a high priority or not.\nMeaning when true: High priority\nMeaning when false: Standard."
 	 * </li>
 	 * </ul>
 	 */
@@ -206,7 +206,7 @@ public class CorporateActionMovement1 {
 			xmlTag = "HghPrtyInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HighPriorityIndicator";
-			definition = "Indicates whether the movement is a high priority or not.\nMeaning when true: High priority\nMeaning when false: Standard";
+			definition = "Indicates whether the movement is a high priority or not.\nMeaning when true: High priority\nMeaning when false: Standard.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

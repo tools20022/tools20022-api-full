@@ -35,6 +35,8 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Business reference(s) to one or more relevant messages previously sent by
  * other parties, or by the same party issuing this message.
+ * 
+ * .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -61,12 +63,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OriginalMessageAndIssuer1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.\n\n"
+ * "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.\n\n."
  * </li>
  * </ul>
  */
@@ -102,7 +104,7 @@ public class OriginalMessageAndIssuer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification of the original message to which the message refers. "
+	 * "Unambiguous identification of the original message to which the message refers."
 	 * </li>
 	 * </ul>
 	 */
@@ -113,7 +115,7 @@ public class OriginalMessageAndIssuer1 {
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
-			definition = "Unambiguous identification of the original message to which the message refers. ";
+			definition = "Unambiguous identification of the original message to which the message refers.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -190,7 +192,7 @@ public class OriginalMessageAndIssuer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name of the original party that assigned the original message identification. "
+	 * "Name of the original party that assigned the original message identification."
 	 * </li>
 	 * </ul>
 	 */
@@ -201,7 +203,7 @@ public class OriginalMessageAndIssuer1 {
 			xmlTag = "OrgtrNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginatorName";
-			definition = "Name of the original party that assigned the original message identification. ";
+			definition = "Name of the original party that assigned the original message identification.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -214,9 +216,9 @@ public class OriginalMessageAndIssuer1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmMessageIdentification, com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmMessageNameIdentification,
 						com.tools20022.repository.msg.OriginalMessageAndIssuer1.mmOriginatorName);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalMessageAndIssuer1";
-				definition = "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.\n\n";
+				definition = "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.\n\n.";
 			}
 		});
 		return mmObject_lazy.get();

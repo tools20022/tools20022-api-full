@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between account details or an operational error when the requested data cannot be retrieved."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError3Choice
+ * AccountOrOperationalError3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError1Choice
@@ -104,6 +112,14 @@ public class AccountOrOperationalError2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reports either on the account information or on a business error."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError3Choice#mmAccountReport
+	 * AccountOrOperationalError3Choice.mmAccountReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +135,7 @@ public class AccountOrOperationalError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountReport";
 			definition = "Reports either on the account information or on a business error.";
+			nextVersions_lazy = () -> Arrays.asList(AccountOrOperationalError3Choice.mmAccountReport);
 			previousVersion_lazy = () -> AccountOrOperationalError1Choice.mmAccountReport;
 			minOccurs = 1;
 			isComposite = true;
@@ -153,6 +170,14 @@ public class AccountOrOperationalError2Choice {
 	 * definition} =
 	 * "Indicates that an operational error has been issued during the processing of the related request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountOrOperationalError3Choice#mmOperationalError
+	 * AccountOrOperationalError3Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +193,7 @@ public class AccountOrOperationalError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
+			nextVersions_lazy = () -> Arrays.asList(AccountOrOperationalError3Choice.mmOperationalError);
 			previousVersion_lazy = () -> AccountOrOperationalError1Choice.mmOperationalError;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +209,7 @@ public class AccountOrOperationalError2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOrOperationalError2Choice";
 				definition = "Choice between account details or an operational error when the requested data cannot be retrieved.";
+				nextVersions_lazy = () -> Arrays.asList(AccountOrOperationalError3Choice.mmObject());
 				previousVersion_lazy = () -> AccountOrOperationalError1Choice.mmObject();
 			}
 		});

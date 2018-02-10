@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * "Quantity21Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between different quantity of security formats."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity41Choice
+ * Quantity41Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class Quantity21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity41Choice#mmQuantity
+	 * Quantity41Choice.mmQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
@@ -107,6 +122,7 @@ public class Quantity21Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Quantity of security.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity41Choice.mmQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -139,6 +155,14 @@ public class Quantity21Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary quantity of security format."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity41Choice#mmDescription
+	 * Quantity41Choice.mmDescription}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietaryQuantity = new MMMessageAssociationEnd() {
@@ -149,6 +173,7 @@ public class Quantity21Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryQuantity";
 			definition = "Proprietary quantity of security format.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity41Choice.mmDescription);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -165,6 +190,7 @@ public class Quantity21Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity21Choice";
 				definition = "Choice between different quantity of security formats.";
+				nextVersions_lazy = () -> Arrays.asList(Quantity41Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

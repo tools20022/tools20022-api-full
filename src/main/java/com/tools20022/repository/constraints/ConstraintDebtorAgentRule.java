@@ -27,6 +27,8 @@ import java.util.Arrays;
 
 /**
  * GroupHeader/DebtorAgent is not allowed.
+ * 
+ * .
  */
 public class ConstraintDebtorAgentRule {
 
@@ -46,7 +48,7 @@ public class ConstraintDebtorAgentRule {
 	 * name} = "DebtorAgentRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "GroupHeader/DebtorAgent is not allowed.\n\n"</li>
+	 * definition} = "GroupHeader/DebtorAgent is not allowed.\n\n."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
@@ -54,7 +56,7 @@ public class ConstraintDebtorAgentRule {
 			validator = ConstraintDebtorAgentRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentRule";
-			definition = "GroupHeader/DebtorAgent is not allowed.\n\n";
+			definition = "GroupHeader/DebtorAgent is not allowed.\n\n.";
 			owner_lazy = () -> PaymentCancellationRequestV01.mmObject();
 		}
 	};
@@ -74,7 +76,7 @@ public class ConstraintDebtorAgentRule {
 	 * name} = "DebtorAgentRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "GroupHeader/DebtorAgent is not allowed.\n\n"</li>
+	 * definition} = "GroupHeader/DebtorAgent is not allowed.\n\n."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<PaymentStatusReportV02>() {
@@ -82,7 +84,7 @@ public class ConstraintDebtorAgentRule {
 			validator = ConstraintDebtorAgentRule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentRule";
-			definition = "GroupHeader/DebtorAgent is not allowed.\n\n";
+			definition = "GroupHeader/DebtorAgent is not allowed.\n\n.";
 			owner_lazy = () -> PaymentStatusReportV02.mmObject();
 		}
 	};
@@ -595,6 +597,8 @@ public class ConstraintDebtorAgentRule {
 
 	/**
 	 * GroupHeader/DebtorAgent is not allowed.
+	 * 
+	 * .
 	 */
 	public static void checkPaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -602,6 +606,8 @@ public class ConstraintDebtorAgentRule {
 
 	/**
 	 * GroupHeader/DebtorAgent is not allowed.
+	 * 
+	 * .
 	 */
 	public static void checkPaymentStatusReportV02(PaymentStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();

@@ -377,7 +377,7 @@ public class CorporateActionDate2 {
 	 * name} = "MarginFixingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date/time at which the margin rate will be determined ."</li>
+	 * definition} = "Date/time at which the margin rate will be determined."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMarginFixingDate = new MMMessageAttribute() {
@@ -388,7 +388,7 @@ public class CorporateActionDate2 {
 			xmlTag = "MrgnFxgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginFixingDate";
-			definition = "Date/time at which the margin rate will be determined .";
+			definition = "Date/time at which the margin rate will be determined.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();
@@ -831,7 +831,7 @@ public class CorporateActionDate2 {
 	 * name} = "IndexFixingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date/time at which an index rate will be determined ."</li>
+	 * definition} = "Date/time at which an index rate will be determined."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIndexFixingDate = new MMMessageAttribute() {
@@ -842,7 +842,7 @@ public class CorporateActionDate2 {
 			xmlTag = "IndxFxgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexFixingDate";
-			definition = "Date/time at which an index rate will be determined .";
+			definition = "Date/time at which an index rate will be determined.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat4Choice.mmObject();

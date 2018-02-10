@@ -83,6 +83,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Information related to the request of a key download from an ATM."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest3
+ * ATMKeyDownloadRequest3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,6 +123,14 @@ public class ATMKeyDownloadRequest2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the key download."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest3#mmEnvironment
+	 * ATMKeyDownloadRequest3.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
@@ -126,6 +141,7 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the key download.";
+			nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadRequest3.mmEnvironment);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -158,6 +174,14 @@ public class ATMKeyDownloadRequest2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Result of a maintenance command performed by the ATM."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest3#mmCommandResult
+	 * ATMKeyDownloadRequest3.mmCommandResult}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCommandResult = new MMMessageAssociationEnd() {
@@ -168,6 +192,7 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandResult";
 			definition = "Result of a maintenance command performed by the ATM.";
+			nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadRequest3.mmCommandResult);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ATMCommand2.mmObject();
@@ -201,6 +226,14 @@ public class ATMKeyDownloadRequest2 {
 	 * definition} =
 	 * "Security command in progress inside which the key download is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest3#mmCommandContext
+	 * ATMKeyDownloadRequest3.mmCommandContext}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCommandContext = new MMMessageAssociationEnd() {
@@ -211,6 +244,7 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandContext";
 			definition = "Security command in progress inside which the key download is requested.";
+			nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadRequest3.mmCommandContext);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -243,6 +277,14 @@ public class ATMKeyDownloadRequest2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Context of the ATM for the key download."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest3#mmATMSecurityContext
+	 * ATMKeyDownloadRequest3.mmATMSecurityContext}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmATMSecurityContext = new MMMessageAssociationEnd() {
@@ -253,6 +295,7 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMSecurityContext";
 			definition = "Context of the ATM for the key download.";
+			nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadRequest3.mmATMSecurityContext);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -286,6 +329,14 @@ public class ATMKeyDownloadRequest2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Security parameters of the ATM for the initiated key download."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest3#mmATMSecurityParameters
+	 * ATMKeyDownloadRequest3.mmATMSecurityParameters}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmATMSecurityParameters = new MMMessageAssociationEnd() {
@@ -296,6 +347,7 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMSecurityParameters";
 			definition = "Security parameters of the ATM for the initiated key download.";
+			nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadRequest3.mmATMSecurityParameters);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -331,6 +383,14 @@ public class ATMKeyDownloadRequest2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Random value from the host provided during a previous exchange."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMKeyDownloadRequest3#mmHostChallenge
+	 * ATMKeyDownloadRequest3.mmHostChallenge}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmHostChallenge = new MMMessageAttribute() {
@@ -341,6 +401,7 @@ public class ATMKeyDownloadRequest2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostChallenge";
 			definition = "Random value from the host provided during a previous exchange.";
+			nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadRequest3.mmHostChallenge);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Binary.mmObject();
@@ -358,6 +419,7 @@ public class ATMKeyDownloadRequest2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMKeyDownloadRequest2";
 				definition = "Information related to the request of a key download from an ATM.";
+				nextVersions_lazy = () -> Arrays.asList(ATMKeyDownloadRequest3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

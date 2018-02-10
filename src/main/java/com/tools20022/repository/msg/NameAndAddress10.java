@@ -104,7 +104,7 @@ public class NameAndAddress10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name by which a party is known and is usually used to identify that identity."
+	 * "Name by which a party is known and is usually used to identify that party."
 	 * </li>
 	 * </ul>
 	 */
@@ -116,7 +116,7 @@ public class NameAndAddress10 {
 			xmlTag = "Nm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
-			definition = "Name by which a party is known and is usually used to identify that identity.";
+			definition = "Name by which a party is known and is usually used to identify that party.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max140Text.mmObject();

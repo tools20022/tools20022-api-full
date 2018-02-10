@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMSecurityContext2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Context of the ATM for the key download."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMSecurityContext3
+ * ATMSecurityContext3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ATMSecurityContext1
@@ -106,6 +113,14 @@ public class ATMSecurityContext2 {
 	 * definition} =
 	 * "Key exchange security scheme in activation on the ATM for the host manager."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityContext3#mmCurrentSecurityScheme
+	 * ATMSecurityContext3.mmCurrentSecurityScheme}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -121,6 +136,7 @@ public class ATMSecurityContext2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentSecurityScheme";
 			definition = "Key exchange security scheme in activation on the ATM for the host manager.";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityContext3.mmCurrentSecurityScheme);
 			previousVersion_lazy = () -> ATMSecurityContext1.mmCurrentSecurityScheme;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -155,6 +171,14 @@ public class ATMSecurityContext2 {
 	 * definition} =
 	 * "Hardware security module information, so called EPP for Encrypted PIN Pad."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityContext3#mmDeviceProperty
+	 * ATMSecurityContext3.mmDeviceProperty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDeviceProperty = new MMMessageAssociationEnd() {
@@ -165,6 +189,7 @@ public class ATMSecurityContext2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviceProperty";
 			definition = "Hardware security module information, so called EPP for Encrypted PIN Pad.";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityContext3.mmDeviceProperty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -198,6 +223,14 @@ public class ATMSecurityContext2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Configuration parameters in use by the security device."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityContext3#mmCurrentConfiguration
+	 * ATMSecurityContext3.mmCurrentConfiguration}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCurrentConfiguration = new MMMessageAssociationEnd() {
@@ -208,6 +241,7 @@ public class ATMSecurityContext2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentConfiguration";
 			definition = "Configuration parameters in use by the security device.";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityContext3.mmCurrentConfiguration);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -224,6 +258,7 @@ public class ATMSecurityContext2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityContext2";
 				definition = "Context of the ATM for the key download.";
+				nextVersions_lazy = () -> Arrays.asList(ATMSecurityContext3.mmObject());
 				previousVersion_lazy = () -> ATMSecurityContext1.mmObject();
 			}
 		});

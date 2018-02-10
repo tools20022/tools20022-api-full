@@ -356,7 +356,7 @@ public class DocumentGeneralInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "URL (Uniform Resource Locator) where the document can be found"</li>
+	 * "URL (Uniform Resource Locator) where the document can be found."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -375,7 +375,7 @@ public class DocumentGeneralInformation2 {
 			xmlTag = "URL";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "URL";
-			definition = "URL (Uniform Resource Locator) where the document can be found";
+			definition = "URL (Uniform Resource Locator) where the document can be found.";
 			nextVersions_lazy = () -> Arrays.asList(DocumentGeneralInformation3.mmURL);
 			maxOccurs = 1;
 			minOccurs = 0;

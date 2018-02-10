@@ -171,7 +171,7 @@ public class MoneyMarketReportHeader1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Beginning and ending date-time to which the transaction data refers (trade date in case of new transactions and date of amendment in case of revisions). "
+	 * "Beginning and ending date-time to which the transaction data refers (trade date in case of new transactions and date of amendment in case of revisions)."
 	 * </li>
 	 * </ul>
 	 */
@@ -182,7 +182,7 @@ public class MoneyMarketReportHeader1 {
 			xmlTag = "RefPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferencePeriod";
-			definition = "Beginning and ending date-time to which the transaction data refers (trade date in case of new transactions and date of amendment in case of revisions). ";
+			definition = "Beginning and ending date-time to which the transaction data refers (trade date in case of new transactions and date of amendment in case of revisions).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

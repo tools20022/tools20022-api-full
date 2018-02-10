@@ -51,7 +51,7 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference.  If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -60,7 +60,7 @@ public class ConstraintOtherReferenceGuideline {
 			validator = ConstraintOtherReferenceGuideline::checkRequestForOrderStatusReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
-			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference.  If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> RequestForOrderStatusReportV04.mmObject();
 		}
 	};
@@ -147,7 +147,7 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference.  If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -156,7 +156,7 @@ public class ConstraintOtherReferenceGuideline {
 			validator = ConstraintOtherReferenceGuideline::checkRequestForOrderConfirmationStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
-			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference.  If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			definition = "RequestDetails/Reference/OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If RequestDetails/Reference/OtherReference is present, RequestDetails/Reference/OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> RequestForOrderConfirmationStatusReportV02.mmObject();
 		}
 	};
@@ -237,7 +237,7 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment  'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -246,7 +246,7 @@ public class ConstraintOtherReferenceGuideline {
 			validator = ConstraintOtherReferenceGuideline::checkOrderConfirmationStatusReportV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment  'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			definition = "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> OrderConfirmationStatusReportV01.mmObject();
 		}
 	};
@@ -405,7 +405,7 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment  'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -414,7 +414,7 @@ public class ConstraintOtherReferenceGuideline {
 			validator = ConstraintOtherReferenceGuideline::checkMessageAndBusinessReference5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment  'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			definition = "OtherReference should be used to reference an order confirmation, order confirmation cancellation or order confirmation amendment 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> MessageAndBusinessReference5.mmObject();
 		}
 	};
@@ -465,7 +465,7 @@ public class ConstraintOtherReferenceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference.  If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
+	 * "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -474,7 +474,7 @@ public class ConstraintOtherReferenceGuideline {
 			validator = ConstraintOtherReferenceGuideline::checkMessageAndBusinessReference4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReferenceGuideline";
-			definition = "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference.  If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
+			definition = "OtherReference should be used to reference an order instruction or cancellation 'message' sent in a proprietary way or used for a system reference. If OtherReference is present, OtherReference/MessageName must contain 'fax' or 'phone' or 'email', etc.";
 			owner_lazy = () -> MessageAndBusinessReference4.mmObject();
 		}
 	};

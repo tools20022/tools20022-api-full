@@ -776,7 +776,7 @@ public class VoteParameters {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time by which the vote instructions should be submitted to the intermediary to take advantage of the premium. "
+	 * "Date and time by which the vote instructions should be submitted to the intermediary to take advantage of the premium."
 	 * </li>
 	 * </ul>
 	 */
@@ -788,7 +788,7 @@ public class VoteParameters {
 			xmlTag = "VoteWthPrmDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteWithPremiumDeadline";
-			definition = "Date and time by which the vote instructions should be submitted to the intermediary to take advantage of the premium. ";
+			definition = "Date and time by which the vote instructions should be submitted to the intermediary to take advantage of the premium.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -874,7 +874,7 @@ public class VoteParameters {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time by which the vote instructions should be submitted to the issuer to take advantage of the premium. "
+	 * "Date and time by which the vote instructions should be submitted to the issuer to take advantage of the premium."
 	 * </li>
 	 * </ul>
 	 */
@@ -886,7 +886,7 @@ public class VoteParameters {
 			xmlTag = "VoteWthPrmMktDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VoteWithPremiumMarketDeadline";
-			definition = "Date and time by which the vote instructions should be submitted to the issuer to take advantage of the premium. ";
+			definition = "Date and time by which the vote instructions should be submitted to the issuer to take advantage of the premium.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();

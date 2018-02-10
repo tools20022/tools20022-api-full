@@ -26,7 +26,7 @@ import java.util.Arrays;
 /**
  * The AdditionalInformation field in all elements must not contain information
  * that can be provided in a structured field unless bilaterally agreed or
- * advised differently in the element definition as in NarrativeVersion,
+ * advised differently in the element definition as in NarrativeVersion.
  */
 public class ConstraintAdditionalInforrmationRule {
 
@@ -47,7 +47,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentification35.mmObject();
 		}
 	};
@@ -77,7 +77,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -86,7 +86,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount14.mmObject();
 		}
 	};
@@ -107,7 +107,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -116,7 +116,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount17.mmObject();
 		}
 	};
@@ -137,7 +137,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -146,7 +146,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount18.mmObject();
 		}
 	};
@@ -167,7 +167,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -176,7 +176,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentification37.mmObject();
 		}
 	};
@@ -197,7 +197,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -206,7 +206,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount22.mmObject();
 		}
 	};
@@ -227,7 +227,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -236,7 +236,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount23.mmObject();
 		}
 	};
@@ -257,7 +257,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -266,7 +266,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount24.mmObject();
 		}
 	};
@@ -287,7 +287,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -304,7 +304,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentification92);
 			owner_lazy = () -> PartyIdentification47.mmObject();
 		}
@@ -326,7 +326,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -344,7 +344,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount122);
 			owner_lazy = () -> PartyIdentificationAndAccount51.mmObject();
 		}
@@ -366,7 +366,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -384,7 +384,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount52;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount121);
 			owner_lazy = () -> PartyIdentificationAndAccount52.mmObject();
 		}
@@ -406,7 +406,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -424,7 +424,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount101);
 			owner_lazy = () -> PartyIdentificationAndAccount54.mmObject();
 		}
@@ -446,7 +446,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -455,7 +455,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentification49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentification49.mmObject();
 		}
 	};
@@ -476,7 +476,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -485,7 +485,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount56.mmObject();
 		}
 	};
@@ -506,7 +506,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -515,7 +515,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount57.mmObject();
 		}
 	};
@@ -536,7 +536,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -545,7 +545,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount58.mmObject();
 		}
 	};
@@ -566,7 +566,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -575,7 +575,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative5.mmObject();
 		}
 	};
@@ -596,7 +596,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -613,7 +613,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionNarrative28);
 			owner_lazy = () -> CorporateActionNarrative6.mmObject();
 		}
@@ -635,7 +635,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -644,7 +644,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative15.mmObject();
 		}
 	};
@@ -665,7 +665,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -674,7 +674,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative16.mmObject();
 		}
 	};
@@ -695,7 +695,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -712,7 +712,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionNarrative29);
 			owner_lazy = () -> CorporateActionNarrative20.mmObject();
 		}
@@ -734,7 +734,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -743,7 +743,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative22.mmObject();
 		}
 	};
@@ -764,7 +764,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -773,7 +773,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative3.mmObject();
 		}
 	};
@@ -833,7 +833,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -850,7 +850,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionNarrative27);
 			owner_lazy = () -> CorporateActionNarrative11.mmObject();
 		}
@@ -872,7 +872,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -881,7 +881,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative18.mmObject();
 		}
 	};
@@ -932,7 +932,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -941,7 +941,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative17.mmObject();
 		}
 	};
@@ -962,7 +962,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -979,7 +979,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionNarrative26);
 			owner_lazy = () -> CorporateActionNarrative24.mmObject();
 		}
@@ -1001,7 +1001,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -1010,7 +1010,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkCorporateActionNarrative25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative25.mmObject();
 		}
 	};
@@ -1031,7 +1031,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -1040,7 +1040,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount34.mmObject();
 		}
 	};
@@ -1091,7 +1091,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1105,7 +1105,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount101;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount54;
 			owner_lazy = () -> PartyIdentificationAndAccount101.mmObject();
 		}
@@ -1127,7 +1127,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -1136,7 +1136,7 @@ public class ConstraintAdditionalInforrmationRule {
 			validator = ConstraintAdditionalInforrmationRule::checkPartyIdentificationAndAccount104;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInforrmationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> PartyIdentificationAndAccount104.mmObject();
 		}
 	};
@@ -1448,7 +1448,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentification35(PartyIdentification35 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1458,7 +1458,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount14(PartyIdentificationAndAccount14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1468,7 +1468,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount17(PartyIdentificationAndAccount17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1478,7 +1478,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount18(PartyIdentificationAndAccount18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1488,7 +1488,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentification37(PartyIdentification37 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1498,7 +1498,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount22(PartyIdentificationAndAccount22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1508,7 +1508,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount23(PartyIdentificationAndAccount23 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1518,7 +1518,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount24(PartyIdentificationAndAccount24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1528,7 +1528,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentification47(PartyIdentification47 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1538,7 +1538,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount51(PartyIdentificationAndAccount51 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1548,7 +1548,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount52(PartyIdentificationAndAccount52 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1558,7 +1558,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount54(PartyIdentificationAndAccount54 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1568,7 +1568,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentification49(PartyIdentification49 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1578,7 +1578,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount56(PartyIdentificationAndAccount56 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1588,7 +1588,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount57(PartyIdentificationAndAccount57 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1598,7 +1598,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount58(PartyIdentificationAndAccount58 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1608,7 +1608,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative5(CorporateActionNarrative5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1618,7 +1618,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative6(CorporateActionNarrative6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1628,7 +1628,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative15(CorporateActionNarrative15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1638,7 +1638,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative16(CorporateActionNarrative16 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1648,7 +1648,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative20(CorporateActionNarrative20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1658,7 +1658,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative22(CorporateActionNarrative22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1668,7 +1668,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative3(CorporateActionNarrative3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1686,7 +1686,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative11(CorporateActionNarrative11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1696,7 +1696,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative18(CorporateActionNarrative18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1714,7 +1714,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative17(CorporateActionNarrative17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1724,7 +1724,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative24(CorporateActionNarrative24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1734,7 +1734,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative25(CorporateActionNarrative25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1744,7 +1744,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount34(PartyIdentificationAndAccount34 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1762,7 +1762,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount101(PartyIdentificationAndAccount101 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1772,7 +1772,7 @@ public class ConstraintAdditionalInforrmationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkPartyIdentificationAndAccount104(PartyIdentificationAndAccount104 obj) throws Exception {
 		throw new NotImplementedConstraintException();

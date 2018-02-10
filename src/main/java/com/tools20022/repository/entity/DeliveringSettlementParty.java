@@ -331,6 +331,36 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmDeliveringSettlementParties
  * SecuritiesSettlementTransactionDetails31.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction14.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails34.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails33.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails32.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmDeliveringSettlementParties
+ * SecuritiesOption65.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmDeliveringSettlementParties
+ * SecuritiesOption67.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction15#mmOtherDeliveringSettlementParties
+ * StandingSettlementInstruction15.mmOtherDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails35.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails36.mmDeliveringSettlementParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmDeliveringSettlementParties
+ * SecuritiesSettlementTransactionDetails37.mmDeliveringSettlementParties}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -496,7 +526,10 @@ public class DeliveringSettlementParty extends SecuritiesSettlementPartyRole {
 						SecuritiesFinancingTransactionDetails35.mmDeliveringSettlementParties, SecuritiesSettlementTransactionDetails27.mmDeliveringSettlementParties, SecuritiesSettlementTransactionDetails28.mmDeliveringSettlementParties,
 						SecuritiesSettlementTransactionDetails26.mmDeliveringSettlementParties, SettlementParties7Choice.mmDeliveringSettlementParties, SecuritiesFinancingTransactionDetails36.mmDeliveringSettlementParties,
 						SecuritiesSettlementTransactionDetails30.mmDeliveringSettlementParties, SecuritiesOption63.mmDeliveringSettlementParties, SecuritiesSettlementTransactionDetails29.mmDeliveringSettlementParties,
-						SecuritiesSettlementTransactionDetails31.mmDeliveringSettlementParties);
+						SecuritiesSettlementTransactionDetails31.mmDeliveringSettlementParties, StandingSettlementInstruction14.mmOtherDeliveringSettlementParties, SecuritiesSettlementTransactionDetails34.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionDetails33.mmDeliveringSettlementParties, SecuritiesSettlementTransactionDetails32.mmDeliveringSettlementParties, SecuritiesOption65.mmDeliveringSettlementParties,
+						SecuritiesOption67.mmDeliveringSettlementParties, StandingSettlementInstruction15.mmOtherDeliveringSettlementParties, SecuritiesSettlementTransactionDetails35.mmDeliveringSettlementParties,
+						SecuritiesSettlementTransactionDetails36.mmDeliveringSettlementParties, SecuritiesSettlementTransactionDetails37.mmDeliveringSettlementParties);
 				subType_lazy = () -> Arrays.asList(DeliveringDepositoryRole.mmObject());
 				superType_lazy = () -> SecuritiesSettlementPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DeliveringSettlementParty.mmDeliveringSettlementParty, com.tools20022.repository.entity.DeliveringSettlementParty.mmNextParty);

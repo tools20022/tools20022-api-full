@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.AuthoritiesLatestVersion;
+import com.tools20022.repository.area.AuthoritiesPreviousVersion;
 import com.tools20022.repository.choice.OvernightIndexSwap3Choice;
 import com.tools20022.repository.msg.MoneyMarketReportHeader1;
 import com.tools20022.repository.msg.SupplementaryData1;
@@ -71,8 +71,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "MnyMktOvrnghtIndxSwpsSttstclRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.AuthoritiesLatestVersion
- * AuthoritiesLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.AuthoritiesPreviousVersion
+ * AuthoritiesPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code auth.015.001.01}</li>
@@ -275,7 +275,7 @@ public class MoneyMarketOvernightIndexSwapsStatisticalReportV01 {
 				messageSet_lazy = () -> Arrays.asList(MoneyMarketStatisticalReportingISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "MnyMktOvrnghtIndxSwpsSttstclRpt";
-				businessArea_lazy = () -> AuthoritiesLatestVersion.mmObject();
+				businessArea_lazy = () -> AuthoritiesPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmReportHeader,
 						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmOvernightIndexSwapsReport,
 						com.tools20022.repository.area.auth.MoneyMarketOvernightIndexSwapsStatisticalReportV01.mmSupplementaryData);

@@ -128,11 +128,38 @@ import java.util.Objects;
  * {@linkplain com.tools20022.repository.msg.IntraPositionDetails37#mmIntraPositionMovement
  * IntraPositionDetails37.mmIntraPositionMovement}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition6#mmSearchCriteria
+ * IntraBalanceQueryDefinition6.mmSearchCriteria}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionModification3#mmModification
+ * IntraPositionModification3.mmModification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovements2#mmMovement
+ * IntraPositionMovements2.mmMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition4#mmSearchCriteria
+ * IntraBalanceQueryDefinition4.mmSearchCriteria}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition5#mmSearchCriteria
+ * IntraBalanceQueryDefinition5.mmSearchCriteria}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation3#mmCancellation
+ * IntraPositionCancellation3.mmCancellation}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msg.IntraPositionDetails40#mmIntraPositionMovement
  * IntraPositionDetails40.mmIntraPositionMovement}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msg.IntraPositionDetails44#mmIntraPositionMovement
  * IntraPositionDetails44.mmIntraPositionMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionMovements3#mmMovement
+ * IntraPositionMovements3.mmMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails45#mmIntraPositionMovement
+ * IntraPositionDetails45.mmIntraPositionMovement}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails48#mmIntraPositionMovement
+ * IntraPositionDetails48.mmIntraPositionMovement}</li>
  * </ul>
  * </li>
  * <li>
@@ -264,6 +291,31 @@ import java.util.Objects;
  * IntraPositionMovementDetails12}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IntraPositionDetails37
  * IntraPositionDetails37}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition6
+ * IntraBalanceQueryDefinition6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionModification3
+ * IntraPositionModification3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovements2
+ * IntraPositionMovements2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition4
+ * IntraBalanceQueryDefinition4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryDefinition5
+ * IntraBalanceQueryDefinition5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionCancellation3
+ * IntraPositionCancellation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionCancellation4
+ * IntraPositionCancellation4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria4
+ * IntraBalanceQueryCriteria4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria6
+ * IntraPositionQueryCriteria6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionModification4
+ * IntraPositionModification4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPosition5 IntraPosition5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovement3
+ * IntraPositionMovement3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovement4
+ * IntraPositionMovement4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IntraPositionDetails41
  * IntraPositionDetails41}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IntraPositionDetails39
@@ -280,6 +332,24 @@ import java.util.Objects;
  * IntraPositionDetails44}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14
  * IntraPositionMovementDetails14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovements3
+ * IntraPositionMovements3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovement5
+ * IntraPositionMovement5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovement6
+ * IntraPositionMovement6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionDetails46
+ * IntraPositionDetails46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionDetails45
+ * IntraPositionDetails45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15
+ * IntraPositionMovementDetails15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionDetails47
+ * IntraPositionDetails47}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionDetails48
+ * IntraPositionDetails48}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails16
+ * IntraPositionMovementDetails16}</li>
  * </ul>
  * </li>
  * <li>
@@ -430,6 +500,18 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#mmCollateralMonitorAmount
 	 * IntraPositionMovementDetails14.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails46#mmCollateralMonitorAmount
+	 * IntraPositionDetails46.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails15.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails47#mmCollateralMonitorAmount
+	 * IntraPositionDetails47.mmCollateralMonitorAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails16#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails16.mmCollateralMonitorAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -457,7 +539,8 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 					IntraPositionMovementDetails9.mmCollateralMonitorAmount, IntraPositionMovementDetails10.mmCollateralMonitorAmount, IntraPositionMovementDetails3.mmCollateralMonitorAmount,
 					IntraPositionMovementDetails4.mmCollateralMonitorAmount, IntraPositionDetails34.mmCollateralMonitorAmount, IntraPositionMovementDetails11.mmCollateralMonitorAmount, IntraPositionDetails35.mmCollateralMonitorAmount,
 					IntraPositionMovementDetails12.mmCollateralMonitorAmount, IntraPositionDetails41.mmCollateralMonitorAmount, IntraPositionMovementDetails13.mmCollateralMonitorAmount, IntraPositionDetails43.mmCollateralMonitorAmount,
-					IntraPositionMovementDetails14.mmCollateralMonitorAmount);
+					IntraPositionMovementDetails14.mmCollateralMonitorAmount, IntraPositionDetails46.mmCollateralMonitorAmount, IntraPositionMovementDetails15.mmCollateralMonitorAmount, IntraPositionDetails47.mmCollateralMonitorAmount,
+					IntraPositionMovementDetails16.mmCollateralMonitorAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -505,6 +588,14 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 * IntraPosition4.mmBalanceFrom}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.IntraPosition4#mmBalanceTo
 	 * IntraPosition4.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria6#mmBalanceType
+	 * IntraPositionQueryCriteria6.mmBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition5#mmBalanceFrom
+	 * IntraPosition5.mmBalanceFrom}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.IntraPosition5#mmBalanceTo
+	 * IntraPosition5.mmBalanceTo}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -527,7 +618,8 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 	 */
 	public static final MMBusinessAssociationEnd mmSecuritiesBalance = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(IntraPositionQueryCriteria1.mmBalanceType, IntraPosition4.mmBalanceFrom, IntraPosition4.mmBalanceTo);
+			derivation_lazy = () -> Arrays.asList(IntraPositionQueryCriteria1.mmBalanceType, IntraPosition4.mmBalanceFrom, IntraPosition4.mmBalanceTo, IntraPositionQueryCriteria6.mmBalanceType, IntraPosition5.mmBalanceFrom,
+					IntraPosition5.mmBalanceTo);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.IntraPositionTransfer.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -553,7 +645,10 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 						IntraPositionDetails18.mmIntraPositionMovement, IntraPositionDetails20.mmIntraPositionMovement, IntraPositionDetails24.mmIntraPositionMovement, IntraPositionDetails28.mmIntraPositionMovement,
 						IntraPositionDetails30.mmIntraPositionMovement, IntraPositionDetails10.mmIntraPositionMovement, IntraPositionDetails14.mmIntraPositionMovement, IntraBalanceQueryDefinition2.mmSearchCriteria,
 						IntraPositionMovements1.mmMovement, IntraBalanceQueryDefinition1.mmSearchCriteria, IntraBalanceQueryDefinition3.mmSearchCriteria, IntraPositionModification1.mmModification, IntraPositionCancellation1.mmCancellation,
-						IntraPositionDetails32.mmIntraPositionMovement, IntraPositionDetails37.mmIntraPositionMovement, IntraPositionDetails40.mmIntraPositionMovement, IntraPositionDetails44.mmIntraPositionMovement);
+						IntraPositionDetails32.mmIntraPositionMovement, IntraPositionDetails37.mmIntraPositionMovement, IntraBalanceQueryDefinition6.mmSearchCriteria, IntraPositionModification3.mmModification,
+						IntraPositionMovements2.mmMovement, IntraBalanceQueryDefinition4.mmSearchCriteria, IntraBalanceQueryDefinition5.mmSearchCriteria, IntraPositionCancellation3.mmCancellation,
+						IntraPositionDetails40.mmIntraPositionMovement, IntraPositionDetails44.mmIntraPositionMovement, IntraPositionMovements3.mmMovement, IntraPositionDetails45.mmIntraPositionMovement,
+						IntraPositionDetails48.mmIntraPositionMovement);
 				superType_lazy = () -> SecuritiesTransfer.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IntraPositionTransfer.mmReservation, com.tools20022.repository.entity.IntraPositionTransfer.mmCollateralAmount,
 						com.tools20022.repository.entity.IntraPositionTransfer.mmSecuritiesBalance);
@@ -569,8 +664,12 @@ public class IntraPositionTransfer extends SecuritiesTransfer {
 						IntraBalanceQueryDefinition3.mmObject(), IntraPosition4.mmObject(), IntraPositionModification2.mmObject(), IntraPositionModification1.mmObject(), IntraPositionCancellation2.mmObject(),
 						IntraPositionCancellation1.mmObject(), IntraPositionDetails31.mmObject(), IntraPositionDetails33.mmObject(), IntraPositionDetails34.mmObject(), IntraPositionDetails32.mmObject(),
 						IntraPositionMovementDetails11.mmObject(), IntraPositionDetails35.mmObject(), IntraPositionDetails36.mmObject(), IntraPositionDetails38.mmObject(), IntraPositionMovementDetails12.mmObject(),
-						IntraPositionDetails37.mmObject(), IntraPositionDetails41.mmObject(), IntraPositionDetails39.mmObject(), IntraPositionDetails40.mmObject(), IntraPositionMovementDetails13.mmObject(),
-						IntraPositionDetails43.mmObject(), IntraPositionDetails42.mmObject(), IntraPositionDetails44.mmObject(), IntraPositionMovementDetails14.mmObject());
+						IntraPositionDetails37.mmObject(), IntraBalanceQueryDefinition6.mmObject(), IntraPositionModification3.mmObject(), IntraPositionMovements2.mmObject(), IntraBalanceQueryDefinition4.mmObject(),
+						IntraBalanceQueryDefinition5.mmObject(), IntraPositionCancellation3.mmObject(), IntraPositionCancellation4.mmObject(), IntraBalanceQueryCriteria4.mmObject(), IntraPositionQueryCriteria6.mmObject(),
+						IntraPositionModification4.mmObject(), IntraPosition5.mmObject(), IntraPositionMovement3.mmObject(), IntraPositionMovement4.mmObject(), IntraPositionDetails41.mmObject(), IntraPositionDetails39.mmObject(),
+						IntraPositionDetails40.mmObject(), IntraPositionMovementDetails13.mmObject(), IntraPositionDetails43.mmObject(), IntraPositionDetails42.mmObject(), IntraPositionDetails44.mmObject(),
+						IntraPositionMovementDetails14.mmObject(), IntraPositionMovements3.mmObject(), IntraPositionMovement5.mmObject(), IntraPositionMovement6.mmObject(), IntraPositionDetails46.mmObject(),
+						IntraPositionDetails45.mmObject(), IntraPositionMovementDetails15.mmObject(), IntraPositionDetails47.mmObject(), IntraPositionDetails48.mmObject(), IntraPositionMovementDetails16.mmObject());
 			}
 
 			@Override

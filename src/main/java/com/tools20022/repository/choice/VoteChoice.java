@@ -151,7 +151,7 @@ public class VoteChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction specifiying a vote instruction per resolution for the entire entitlement. "
+	 * "Instruction specifiying a vote instruction per resolution for the entire entitlement."
 	 * </li>
 	 * </ul>
 	 */
@@ -163,7 +163,7 @@ public class VoteChoice {
 			xmlTag = "GblVoteInstr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GlobalVoteInstruction";
-			definition = "Instruction specifiying a vote instruction per resolution for the entire entitlement. ";
+			definition = "Instruction specifiying a vote instruction per resolution for the entire entitlement.";
 			maxOccurs = 200;
 			minOccurs = 1;
 			isComposite = true;

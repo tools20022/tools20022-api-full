@@ -160,14 +160,14 @@ public class QueryTradeStatusCode extends MMCode {
 	 * name} = "QueryCanceledTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Query for trades have been canceled.  "</li>
+	 * definition} = "Query for trades have been canceled."</li>
 	 * </ul>
 	 */
 	public static final QueryTradeStatusCode QueryCanceledTrade = new QueryTradeStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryCanceledTrade";
-			definition = "Query for trades have been canceled.  ";
+			definition = "Query for trades have been canceled.";
 			owner_lazy = () -> com.tools20022.repository.codeset.QueryTradeStatusCode.mmObject();
 			codeName = "QCTR";
 		}
@@ -190,14 +190,14 @@ public class QueryTradeStatusCode extends MMCode {
 	 * name} = "QueryReplacedTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Query for trades have been replaced.  "</li>
+	 * definition} = "Query for trades have been replaced."</li>
 	 * </ul>
 	 */
 	public static final QueryTradeStatusCode QueryReplacedTrade = new QueryTradeStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryReplacedTrade";
-			definition = "Query for trades have been replaced.  ";
+			definition = "Query for trades have been replaced.";
 			owner_lazy = () -> com.tools20022.repository.codeset.QueryTradeStatusCode.mmObject();
 			codeName = "QRTR";
 		}

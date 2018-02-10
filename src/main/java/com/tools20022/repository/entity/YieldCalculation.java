@@ -19,7 +19,9 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.CalculationType2Choice;
+import com.tools20022.repository.choice.CalculationType3Choice;
 import com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice;
+import com.tools20022.repository.choice.SecuritiesTransactionPrice9Choice;
 import com.tools20022.repository.codeset.CalculationTypeCode;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.PercentageRate;
@@ -116,6 +118,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * CalculationType2Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation3
  * YieldCalculation3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CalculationType3Choice
+ * CalculationType3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation5
+ * YieldCalculation5}</li>
  * </ul>
  * </li>
  * <li>
@@ -166,6 +172,9 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmRedemptionPrice
 	 * YieldCalculation3.mmRedemptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmRedemptionPrice
+	 * YieldCalculation5.mmRedemptionPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -186,7 +195,7 @@ public class YieldCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmRedemptionPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmRedemptionPrice, YieldCalculation2.mmRedemptionPrice, YieldCalculation3.mmRedemptionPrice);
+			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmRedemptionPrice, YieldCalculation2.mmRedemptionPrice, YieldCalculation3.mmRedemptionPrice, YieldCalculation5.mmRedemptionPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -222,6 +231,11 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice2Choice#mmYield
 	 * SecuritiesTransactionPrice2Choice.mmYield}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.YieldCalculation5#mmValue
+	 * YieldCalculation5.mmValue}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionPrice9Choice#mmYield
+	 * SecuritiesTransactionPrice9Choice.mmYield}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -242,7 +256,8 @@ public class YieldCalculation {
 	 */
 	public static final MMBusinessAttribute mmValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmValue, YieldCalculation2.mmValue, YieldCalculation3.mmValue, SecuritiesTransactionPrice2Choice.mmYield);
+			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmValue, YieldCalculation2.mmValue, YieldCalculation3.mmValue, SecuritiesTransactionPrice2Choice.mmYield, YieldCalculation5.mmValue,
+					SecuritiesTransactionPrice9Choice.mmYield);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -300,6 +315,15 @@ public class YieldCalculation {
 	 * Order17.mmYieldType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Order18#mmYieldType
 	 * Order18.mmYieldType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CalculationType3Choice#mmCode
+	 * CalculationType3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CalculationType3Choice#mmProprietary
+	 * CalculationType3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmCalculationType
+	 * YieldCalculation5.mmCalculationType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -321,7 +345,7 @@ public class YieldCalculation {
 	public static final MMBusinessAttribute mmCalculationType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmCalculationType, YieldCalculation2.mmCalculationType, Order16.mmYieldType, Order14.mmYieldType, CalculationType2Choice.mmCode, CalculationType2Choice.mmProprietary,
-					YieldCalculation3.mmCalculationType, Order6.mmYieldDetails, Order17.mmYieldType, Order18.mmYieldType);
+					YieldCalculation3.mmCalculationType, Order6.mmYieldDetails, Order17.mmYieldType, Order18.mmYieldType, CalculationType3Choice.mmCode, CalculationType3Choice.mmProprietary, YieldCalculation5.mmCalculationType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -362,6 +386,9 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmValueDate
 	 * YieldCalculation3.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmValueDate
+	 * YieldCalculation5.mmValueDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -384,7 +411,7 @@ public class YieldCalculation {
 	 */
 	public static final MMBusinessAttribute mmValueDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmValueDateTime, YieldCalculation2.mmValueDate, YieldCalculation3.mmValueDate);
+			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmValueDateTime, YieldCalculation2.mmValueDate, YieldCalculation3.mmValueDate, YieldCalculation5.mmValueDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -433,6 +460,9 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmValuePeriod
 	 * YieldCalculation3.mmValuePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmValuePeriod
+	 * YieldCalculation5.mmValuePeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -453,7 +483,7 @@ public class YieldCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmValuePeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmValuePeriod, YieldCalculation2.mmValuePeriod, YieldCalculation3.mmValuePeriod);
+			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmValuePeriod, YieldCalculation2.mmValuePeriod, YieldCalculation3.mmValuePeriod, YieldCalculation5.mmValuePeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -488,6 +518,9 @@ public class YieldCalculation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.YieldCalculation3#mmCalculationDate
 	 * YieldCalculation3.mmCalculationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.YieldCalculation5#mmCalculationDate
+	 * YieldCalculation5.mmCalculationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -510,7 +543,7 @@ public class YieldCalculation {
 	 */
 	public static final MMBusinessAttribute mmYieldCalculationDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmCalculationDate, YieldCalculation2.mmCalculationDate, YieldCalculation3.mmCalculationDate);
+			derivation_lazy = () -> Arrays.asList(YieldCalculation1.mmCalculationDate, YieldCalculation2.mmCalculationDate, YieldCalculation3.mmCalculationDate, YieldCalculation5.mmCalculationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -552,6 +585,8 @@ public class YieldCalculation {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmYieldRange
 	 * Debt2.mmYieldRange}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmYieldRange
+	 * Debt3.mmYieldRange}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -572,7 +607,7 @@ public class YieldCalculation {
 	 */
 	public static final MMBusinessAssociationEnd mmYieldRange = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt2.mmYieldRange);
+			derivation_lazy = () -> Arrays.asList(Debt2.mmYieldRange, Debt3.mmYieldRange);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.YieldCalculation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -646,7 +681,8 @@ public class YieldCalculation {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.YieldCalculation.mmRedemptionPrice, com.tools20022.repository.entity.YieldCalculation.mmValue,
 						com.tools20022.repository.entity.YieldCalculation.mmCalculationType, com.tools20022.repository.entity.YieldCalculation.mmValueDate, com.tools20022.repository.entity.YieldCalculation.mmValuePeriod,
 						com.tools20022.repository.entity.YieldCalculation.mmYieldCalculationDate, com.tools20022.repository.entity.YieldCalculation.mmYieldRange, com.tools20022.repository.entity.YieldCalculation.mmVariableInterest);
-				derivationComponent_lazy = () -> Arrays.asList(YieldCalculation1.mmObject(), YieldCalculation2.mmObject(), CalculationType2Choice.mmObject(), YieldCalculation3.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(YieldCalculation1.mmObject(), YieldCalculation2.mmObject(), CalculationType2Choice.mmObject(), YieldCalculation3.mmObject(), CalculationType3Choice.mmObject(),
+						YieldCalculation5.mmObject());
 			}
 
 			@Override

@@ -146,6 +146,24 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ReservationReport4#mmReservationIdentification
  * ReservationReport4.mmReservationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError6Choice#mmBusinessReport
+ * ReservationOrError6Choice.mmBusinessReport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReservationReport5#mmReservationIdentification
+ * ReservationReport5.mmReservationIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ReservationOrError7Choice#mmReservation
+ * ReservationOrError7Choice.mmReservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation3#mmCurrentReservation
+ * CurrentAndDefaultReservation3.mmCurrentReservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation3#mmDefaultReservation
+ * CurrentAndDefaultReservation3.mmDefaultReservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReservationCriteria3#mmSearchCriteria
+ * ReservationCriteria3.mmSearchCriteria}</li>
  * </ul>
  * </li>
  * <li>
@@ -200,6 +218,18 @@ import java.util.Objects;
  * ReservationOrError5Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ReservationReport4
  * ReservationReport4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reservation4 Reservation4}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ReservationOrError6Choice
+ * ReservationOrError6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReservationReport5
+ * ReservationReport5}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ReservationOrError7Choice
+ * ReservationOrError7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Reservation3 Reservation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrentAndDefaultReservation3
+ * CurrentAndDefaultReservation3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReservationCriteria3
+ * ReservationCriteria3}</li>
  * </ul>
  * </li>
  * <li>
@@ -455,7 +485,8 @@ public class Reservation extends Limit {
 						Reservations1.mmDefaultReservation, ReservationReport2.mmReservationIdentification, ReservationReport2.mmReservation, Reservations2.mmCurrentReservation, Reservations2.mmDefaultReservation,
 						ReservationOrError3Choice.mmReservation, ReservationReport3.mmReservationIdentification, CurrentAndDefaultReservation1.mmCurrentReservation, CurrentAndDefaultReservation1.mmDefaultReservation,
 						ReservationOrError2Choice.mmBusinessReport, ReservationOrError4Choice.mmBusinessReport, CurrentAndDefaultReservation2.mmCurrentReservation, CurrentAndDefaultReservation2.mmDefaultReservation,
-						ReservationOrError5Choice.mmReservation, ReservationReport4.mmReservationIdentification);
+						ReservationOrError5Choice.mmReservation, ReservationReport4.mmReservationIdentification, ReservationOrError6Choice.mmBusinessReport, ReservationReport5.mmReservationIdentification,
+						ReservationOrError7Choice.mmReservation, CurrentAndDefaultReservation3.mmCurrentReservation, CurrentAndDefaultReservation3.mmDefaultReservation, ReservationCriteria3.mmSearchCriteria);
 				superType_lazy = () -> Limit.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Reservation.mmReservationType, com.tools20022.repository.entity.Reservation.mmRelatedIntraPositionTransfer,
 						com.tools20022.repository.entity.Reservation.mmSettlementInstruction, com.tools20022.repository.entity.Reservation.mmAccountService);
@@ -463,7 +494,8 @@ public class Reservation extends Limit {
 						ReservationCriteria1.mmObject(), ReservationSearchCriteria2.mmObject(), ReservationCriteria2.mmObject(), ReservationDetails2.mmObject(), CurrentOrDefaultReservation1Choice.mmObject(), Reservation2.mmObject(),
 						ReservationDetails1.mmObject(), ReservationReport1.mmObject(), Reservations1.mmObject(), ReservationReport2.mmObject(), Reservations2.mmObject(), ReservationStatus1Choice.mmObject(), Reservation1.mmObject(),
 						ReservationOrError3Choice.mmObject(), ReservationReport3.mmObject(), CurrentAndDefaultReservation1.mmObject(), ReservationOrError2Choice.mmObject(), ReservationOrError4Choice.mmObject(),
-						CurrentAndDefaultReservation2.mmObject(), ReservationOrError5Choice.mmObject(), ReservationReport4.mmObject());
+						CurrentAndDefaultReservation2.mmObject(), ReservationOrError5Choice.mmObject(), ReservationReport4.mmObject(), Reservation4.mmObject(), ReservationOrError6Choice.mmObject(), ReservationReport5.mmObject(),
+						ReservationOrError7Choice.mmObject(), Reservation3.mmObject(), CurrentAndDefaultReservation3.mmObject(), ReservationCriteria3.mmObject());
 			}
 
 			@Override

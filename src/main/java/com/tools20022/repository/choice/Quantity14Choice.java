@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice of quantity of assets to be transferred in percentage rate or units."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.Quantity43Choice
+ * Quantity43Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.Quantity12Choice
@@ -108,6 +115,13 @@ public class Quantity14Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of securities to be settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.Quantity43Choice#mmUnit
+	 * Quantity43Choice.mmUnit}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
@@ -119,6 +133,7 @@ public class Quantity14Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
 			definition = "Total quantity of securities to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity43Choice.mmUnit);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Unit4.mmObject();
@@ -152,6 +167,14 @@ public class Quantity14Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Percentage rate of assets to be settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Quantity43Choice#mmPercentageRate
+	 * Quantity43Choice.mmPercentageRate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPercentageRate = new MMMessageAttribute() {
@@ -162,6 +185,7 @@ public class Quantity14Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PercentageRate";
 			definition = "Percentage rate of assets to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(Quantity43Choice.mmPercentageRate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -177,6 +201,7 @@ public class Quantity14Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Quantity14Choice";
 				definition = "Choice of quantity of assets to be transferred in percentage rate or units.";
+				nextVersions_lazy = () -> Arrays.asList(Quantity43Choice.mmObject());
 				previousVersion_lazy = () -> Quantity12Choice.mmObject();
 			}
 		});

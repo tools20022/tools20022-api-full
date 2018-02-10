@@ -139,7 +139,7 @@ public class MeetingInstructionV02 {
 	 * name} = "MeetingInstructionIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the meeting instruction message. "</li>
+	 * definition} = "Identifies the meeting instruction message."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmMeetingInstructionIdentification = new MMMessageBuildingBlock() {
@@ -147,7 +147,7 @@ public class MeetingInstructionV02 {
 			xmlTag = "MtgInstrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingInstructionIdentification";
-			definition = "Identifies the meeting instruction message. ";
+			definition = "Identifies the meeting instruction message.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();

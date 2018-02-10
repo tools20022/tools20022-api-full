@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AgreementFramework1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between a code or a proprietary code for  the underlying master agreement."
+ * "Choice between a code or a proprietary code for the underlying master agreement."
  * </li>
  * </ul>
  */
@@ -184,7 +184,7 @@ public class AgreementFramework1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AgreementFramework1Choice";
-				definition = "Choice between a code or a proprietary code for  the underlying master agreement.";
+				definition = "Choice between a code or a proprietary code for the underlying master agreement.";
 			}
 		});
 		return mmObject_lazy.get();

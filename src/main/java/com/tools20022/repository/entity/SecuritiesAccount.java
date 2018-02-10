@@ -911,6 +911,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.AccountIdentification39#mmSafekeepingAccount
  * AccountIdentification39.mmSafekeepingAccount}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification38Choice#mmSecuritiesAccountIdentification
+ * AccountIdentification38Choice.mmSecuritiesAccountIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesAccount2Choice#mmAccount
+ * SecuritiesAccount2Choice.mmAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification48#mmSafekeepingAccount
+ * SubAccountIdentification48.mmSafekeepingAccount}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msg.SafekeepingAccount7#mmAccountIdentification
  * SafekeepingAccount7.mmAccountIdentification}</li>
  * <li>
@@ -979,6 +988,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AccountIdentification42#mmSafekeepingAccount
  * AccountIdentification42.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification51#mmSafekeepingAccount
+ * SubAccountIdentification51.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmSafekeepingAccount
+ * QuantityAndAccount64.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount63#mmSafekeepingAccount
+ * QuantityAndAccount63.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount159#mmSafekeepingAccount
+ * PartyIdentificationAndAccount159.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount65#mmSafekeepingAccount
+ * QuantityAndAccount65.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmSafekeepingAccount
+ * QuantityAndAccount68.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification43#mmSafekeepingAccount
+ * AccountIdentification43.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification44#mmSafekeepingAccount
+ * AccountIdentification44.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PartyIdentificationAndAccount160#mmSafekeepingAccount
+ * PartyIdentificationAndAccount160.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount69#mmSafekeepingAccount
+ * QuantityAndAccount69.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount70#mmSafekeepingAccount
+ * QuantityAndAccount70.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmSafekeepingAccount
+ * QuantityAndAccount72.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount76#mmSafekeepingAccount
+ * QuantityAndAccount76.mmSafekeepingAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SubAccountIdentification52#mmSafekeepingAccount
+ * SubAccountIdentification52.mmSafekeepingAccount}</li>
  * </ul>
  * </li>
  * <li>
@@ -1199,6 +1250,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesAccount30}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccount34
  * SecuritiesAccount34}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SecuritiesAccount2Choice
+ * SecuritiesAccount2Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SafekeepingAccount7
  * SafekeepingAccount7}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AccountSubLevel15
@@ -1223,6 +1276,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * SubAccountIdentification49}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification50
  * SubAccountIdentification50}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification51
+ * SubAccountIdentification51}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification52
+ * SubAccountIdentification52}</li>
  * </ul>
  * </li>
  * <li>
@@ -1592,6 +1649,12 @@ public class SecuritiesAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification50#mmFinancialInstrumentDetails
 	 * SubAccountIdentification50.mmFinancialInstrumentDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification51#mmFinancialInstrumentDetails
+	 * SubAccountIdentification51.mmFinancialInstrumentDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification52#mmFinancialInstrumentDetails
+	 * SubAccountIdentification52.mmFinancialInstrumentDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1616,7 +1679,8 @@ public class SecuritiesAccount extends Account {
 					SubAccountIdentification18.mmFinancialInstrumentDetails, SubAccountIdentification21.mmFinancialInstrumentDetails, SubAccountIdentification24.mmFinancialInstrumentDetails,
 					SubAccountIdentification30.mmFinancialInstrumentDetails, SubAccountIdentification33.mmFinancialInstrumentDetails, SubAccountIdentification34.mmFinancialInstrumentDetails,
 					SubAccountIdentification35.mmFinancialInstrumentDetails, SubAccountIdentification44.mmFinancialInstrumentDetails, SubAccountIdentification47.mmFinancialInstrumentDetails,
-					SubAccountIdentification49.mmFinancialInstrumentDetails, SubAccountIdentification50.mmFinancialInstrumentDetails);
+					SubAccountIdentification49.mmFinancialInstrumentDetails, SubAccountIdentification50.mmFinancialInstrumentDetails, SubAccountIdentification51.mmFinancialInstrumentDetails,
+					SubAccountIdentification52.mmFinancialInstrumentDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2734,12 +2798,17 @@ public class SecuritiesAccount extends Account {
 						SubAccountIdentification47.mmSafekeepingAccount, QuantityAndAccount47.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails33.mmSafekeepingAccount, SubAccountIdentification45.mmSafekeepingAccount,
 						QuantityAndAccount48.mmSafekeepingAccount, QuantityAndAccount46.mmSafekeepingAccount, SubAccountIdentification46.mmSafekeepingAccount, QuantityAndAccount51.mmSafekeepingAccount,
 						QuantityAndAccount49.mmSafekeepingAccount, PartyIdentificationAndAccount131.mmSafekeepingAccount, PartyIdentificationAndAccount146.mmSafekeepingAccount, PartyIdentificationAndAccount135.mmSafekeepingAccount,
-						PartyIdentificationAndAccount136.mmSafekeepingAccount, QuantityAndAccount55.mmSafekeepingAccount, AccountIdentification39.mmSafekeepingAccount, SafekeepingAccount7.mmAccountIdentification,
-						SafekeepingAccount7.mmAccountSubLevel1, AccountSubLevel15.mmAccountSubLevel6, AccountSubLevel16.mmAccountSubLevel7, AccountSubLevel18.mmAccountSubLevel9, AccountSubLevel11.mmAccountSubLevel2,
-						AccountSubLevel12.mmAccountSubLevel3, AccountSubLevel17.mmAccountSubLevel8, AccountSubLevel13.mmAccountSubLevel4, AccountSubLevel14.mmAccountSubLevel5, AccountIdentification40.mmSafekeepingAccount,
-						SubAccountIdentification49.mmSafekeepingAccount, SecuritiesFinancingTransactionDetails35.mmSafekeepingAccount, SubAccountIdentification50.mmSafekeepingAccount, AccountIdentification41.mmSafekeepingAccount,
+						PartyIdentificationAndAccount136.mmSafekeepingAccount, QuantityAndAccount55.mmSafekeepingAccount, AccountIdentification39.mmSafekeepingAccount, AccountIdentification38Choice.mmSecuritiesAccountIdentification,
+						SecuritiesAccount2Choice.mmAccount, SubAccountIdentification48.mmSafekeepingAccount, SafekeepingAccount7.mmAccountIdentification, SafekeepingAccount7.mmAccountSubLevel1, AccountSubLevel15.mmAccountSubLevel6,
+						AccountSubLevel16.mmAccountSubLevel7, AccountSubLevel18.mmAccountSubLevel9, AccountSubLevel11.mmAccountSubLevel2, AccountSubLevel12.mmAccountSubLevel3, AccountSubLevel17.mmAccountSubLevel8,
+						AccountSubLevel13.mmAccountSubLevel4, AccountSubLevel14.mmAccountSubLevel5, AccountIdentification40.mmSafekeepingAccount, SubAccountIdentification49.mmSafekeepingAccount,
+						SecuritiesFinancingTransactionDetails35.mmSafekeepingAccount, SubAccountIdentification50.mmSafekeepingAccount, AccountIdentification41.mmSafekeepingAccount,
 						SecuritiesFinancingTransactionDetails36.mmSafekeepingAccount, QuantityAndAccount57.mmSafekeepingAccount, QuantityAndAccount58.mmSafekeepingAccount, QuantityAndAccount56.mmSafekeepingAccount,
-						QuantityAndAccount61.mmSafekeepingAccount, QuantityAndAccount62.mmSafekeepingAccount, QuantityAndAccount60.mmSafekeepingAccount, AccountIdentification42.mmSafekeepingAccount);
+						QuantityAndAccount61.mmSafekeepingAccount, QuantityAndAccount62.mmSafekeepingAccount, QuantityAndAccount60.mmSafekeepingAccount, AccountIdentification42.mmSafekeepingAccount,
+						SubAccountIdentification51.mmSafekeepingAccount, QuantityAndAccount64.mmSafekeepingAccount, QuantityAndAccount63.mmSafekeepingAccount, PartyIdentificationAndAccount159.mmSafekeepingAccount,
+						QuantityAndAccount65.mmSafekeepingAccount, QuantityAndAccount68.mmSafekeepingAccount, AccountIdentification43.mmSafekeepingAccount, AccountIdentification44.mmSafekeepingAccount,
+						PartyIdentificationAndAccount160.mmSafekeepingAccount, QuantityAndAccount69.mmSafekeepingAccount, QuantityAndAccount70.mmSafekeepingAccount, QuantityAndAccount72.mmSafekeepingAccount,
+						QuantityAndAccount76.mmSafekeepingAccount, SubAccountIdentification52.mmSafekeepingAccount);
 				superType_lazy = () -> Account.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesAccountType, com.tools20022.repository.entity.SecuritiesAccount.mmRelatedInvestmentAccount,
 						com.tools20022.repository.entity.SecuritiesAccount.mmRelatedTransfer, com.tools20022.repository.entity.SecuritiesAccount.mmSecuritiesPartyRole, com.tools20022.repository.entity.SecuritiesAccount.mmSecurity,
@@ -2768,8 +2837,9 @@ public class SecuritiesAccount extends Account {
 						SecuritiesAccount26.mmObject(), SecuritiesAccount25.mmObject(), PurposeCode7Choice.mmObject(), AccountAndBalance34.mmObject(), AccountAndBalance35.mmObject(), AccountAndBalance36.mmObject(),
 						AccountAndBalance33.mmObject(), AccountAndBalance40.mmObject(), AccountAndBalance38.mmObject(), AccountAndBalance37.mmObject(), AccountAndBalance39.mmObject(), SubAccountIdentification47.mmObject(),
 						SecuritiesAccount33.mmObject(), SubAccountIdentification45.mmObject(), SubAccountIdentification46.mmObject(), SecuritiesAccount27.mmObject(), PurposeCode8Choice.mmObject(), SecuritiesAccount30.mmObject(),
-						SecuritiesAccount34.mmObject(), SafekeepingAccount7.mmObject(), AccountSubLevel15.mmObject(), AccountSubLevel16.mmObject(), AccountSubLevel18.mmObject(), AccountSubLevel19.mmObject(), AccountSubLevel11.mmObject(),
-						AccountSubLevel12.mmObject(), AccountSubLevel17.mmObject(), AccountSubLevel13.mmObject(), AccountSubLevel14.mmObject(), SubAccountIdentification49.mmObject(), SubAccountIdentification50.mmObject());
+						SecuritiesAccount34.mmObject(), SecuritiesAccount2Choice.mmObject(), SafekeepingAccount7.mmObject(), AccountSubLevel15.mmObject(), AccountSubLevel16.mmObject(), AccountSubLevel18.mmObject(),
+						AccountSubLevel19.mmObject(), AccountSubLevel11.mmObject(), AccountSubLevel12.mmObject(), AccountSubLevel17.mmObject(), AccountSubLevel13.mmObject(), AccountSubLevel14.mmObject(),
+						SubAccountIdentification49.mmObject(), SubAccountIdentification50.mmObject(), SubAccountIdentification51.mmObject(), SubAccountIdentification52.mmObject());
 			}
 
 			@Override

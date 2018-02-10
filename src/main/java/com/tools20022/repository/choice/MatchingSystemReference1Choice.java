@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * "MatchingSystemReference1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between a matching system unique identification or the related reference. "
+ * "Choice between a matching system unique identification or the related reference."
  * </li>
  * </ul>
  */
@@ -106,7 +106,7 @@ public class MatchingSystemReference1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the unique system identification assigned to the trade  by the central matching system."
+	 * "Reference to the unique system identification assigned to the trade by the central matching system."
 	 * </li>
 	 * </ul>
 	 */
@@ -118,7 +118,7 @@ public class MatchingSystemReference1Choice {
 			xmlTag = "MtchgSysUnqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
-			definition = "Reference to the unique system identification assigned to the trade  by the central matching system.";
+			definition = "Reference to the unique system identification assigned to the trade by the central matching system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -156,7 +156,7 @@ public class MatchingSystemReference1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Refers to the identification of a previous event in the life of a trade which is amended or cancelled. "
+	 * "Refers to the identification of a previous event in the life of a trade which is amended or cancelled."
 	 * </li>
 	 * </ul>
 	 */
@@ -168,7 +168,7 @@ public class MatchingSystemReference1Choice {
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
-			definition = "Refers to the identification of a previous event in the life of a trade which is amended or cancelled. ";
+			definition = "Refers to the identification of a previous event in the life of a trade which is amended or cancelled.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -183,7 +183,7 @@ public class MatchingSystemReference1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MatchingSystemReference1Choice";
-				definition = "Choice between a matching system unique identification or the related reference. ";
+				definition = "Choice between a matching system unique identification or the related reference.";
 			}
 		});
 		return mmObject_lazy.get();

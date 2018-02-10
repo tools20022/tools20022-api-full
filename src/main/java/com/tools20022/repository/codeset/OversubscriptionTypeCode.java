@@ -110,7 +110,7 @@ public class OversubscriptionTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Limited subscription by quantity or percentage.
+	 * The subscription is limited by quantity or percentage.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -127,14 +127,14 @@ public class OversubscriptionTypeCode extends MMCode {
 	 * name} = "LimitedByQuantityOrPercentage"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Limited subscription by quantity or percentage."</li>
+	 * definition} = "The subscription is limited by quantity or percentage."</li>
 	 * </ul>
 	 */
 	public static final OversubscriptionTypeCode LimitedByQuantityOrPercentage = new OversubscriptionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitedByQuantityOrPercentage";
-			definition = "Limited subscription by quantity or percentage.";
+			definition = "The subscription is limited by quantity or percentage.";
 			owner_lazy = () -> com.tools20022.repository.codeset.OversubscriptionTypeCode.mmObject();
 			codeName = "LTDB";
 		}

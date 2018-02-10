@@ -268,6 +268,22 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmTransactionOverhead
  * SwitchRedemptionLegExecution4.mmTransactionOverhead}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmIndividualTax
+ * ReceiveInformation18.mmIndividualTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmIndividualTax
+ * DeliverInformation19.mmIndividualTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmIndividualTax
+ * ReceiveInformation19.mmIndividualTax}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmIndividualTax
+ * DeliverInformation18.mmIndividualTax}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit8#mmTransactionOverhead
+ * Unit8.mmTransactionOverhead}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax34#mmTaxCalculationDetails
+ * Tax34.mmTaxCalculationDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -320,6 +336,10 @@ import java.util.Optional;
  * <li>{@linkplain com.tools20022.repository.msg.Tax31 Tax31}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TaxCalculationInformation10
  * TaxCalculationInformation10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fees1 Fees1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Tax34 Tax34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxCalculationInformation11
+ * TaxCalculationInformation11}</li>
  * </ul>
  * </li>
  * <li>
@@ -664,6 +684,8 @@ public class InvestmentFundTax extends SecuritiesTax {
 	 * Tax32.mmExemptionIndicator}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Tax30#mmExemptionIndicator
 	 * Tax30.mmExemptionIndicator}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Tax34#mmExemptionIndicator
+	 * Tax34.mmExemptionIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -686,7 +708,7 @@ public class InvestmentFundTax extends SecuritiesTax {
 		{
 			derivation_lazy = () -> Arrays.asList(Tax3.mmExemptionIndicator, Tax15.mmExemptionIndicator, Tax6.mmExemptionIndicator, Tax16.mmExemptionIndicator, Tax7.mmExemptionIndicator, Tax14.mmExemptionIndicator,
 					Tax18.mmExemptionIndicator, Tax19.mmExemptionIndicator, Tax20.mmExemptionIndicator, Tax21.mmExemptionIndicator, Tax25.mmExemptionIndicator, Tax28.mmExemptionIndicator, Tax32.mmExemptionIndicator,
-					Tax30.mmExemptionIndicator);
+					Tax30.mmExemptionIndicator, Tax34.mmExemptionIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundTax.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -775,7 +797,8 @@ public class InvestmentFundTax extends SecuritiesTax {
 						Tax32.mmTaxCalculationDetails, SubscriptionExecution13.mmTransactionOverhead, TotalFeesAndTaxes40.mmTotalTaxes, TotalFeesAndTaxes40.mmIndividualTax, SubscriptionExecution12.mmTransactionOverhead,
 						SubscriptionOrder15.mmTransactionOverhead, InvestmentAccountOwnershipInformation15.mmTaxExemption, SwitchRedemptionLegOrder6.mmTransactionOverhead, RedemptionOrder15.mmTransactionOverhead,
 						Tax30.mmTaxCalculationDetails, Tax31.mmTaxCalculationDetails, RedemptionExecution16.mmTransactionOverhead, InvestmentAccountOwnershipInformation14.mmTaxExemption, SubscriptionOrder14.mmTransactionOverhead,
-						SwitchSubscriptionLegExecution4.mmTransactionOverhead, RedemptionExecution15.mmTransactionOverhead, SwitchRedemptionLegExecution4.mmTransactionOverhead);
+						SwitchSubscriptionLegExecution4.mmTransactionOverhead, RedemptionExecution15.mmTransactionOverhead, SwitchRedemptionLegExecution4.mmTransactionOverhead, ReceiveInformation18.mmIndividualTax,
+						DeliverInformation19.mmIndividualTax, ReceiveInformation19.mmIndividualTax, DeliverInformation18.mmIndividualTax, Unit8.mmTransactionOverhead, Tax34.mmTaxCalculationDetails);
 				superType_lazy = () -> SecuritiesTax.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundTax.mmFiscalExemption, com.tools20022.repository.entity.InvestmentFundTax.mmInvestmentAccount,
 						com.tools20022.repository.entity.InvestmentFundTax.mmPercentageOfDebtClaim, com.tools20022.repository.entity.InvestmentFundTax.mmPercentageGrandfatheredDebt,
@@ -784,7 +807,7 @@ public class InvestmentFundTax extends SecuritiesTax {
 						Tax6.mmObject(), TaxCalculationInformation5.mmObject(), Tax16.mmObject(), TaxCalculationInformation3.mmObject(), Tax7.mmObject(), TotalTaxes2.mmObject(), TaxCalculationInformation6.mmObject(), Tax14.mmObject(),
 						TotalTaxes3.mmObject(), TaxCalculationBasisType1Choice.mmObject(), TaxCalculationInformation7.mmObject(), Tax18.mmObject(), TotalTaxes4.mmObject(), Tax19.mmObject(), Tax20.mmObject(), TotalTaxes5.mmObject(),
 						Tax21.mmObject(), TaxCalculationInformation8.mmObject(), Tax25.mmObject(), Tax28.mmObject(), FeeAndTax1.mmObject(), Tax32.mmObject(), TotalFeesAndTaxes40.mmObject(), Tax30.mmObject(),
-						TaxCalculationInformation9.mmObject(), Tax31.mmObject(), TaxCalculationInformation10.mmObject());
+						TaxCalculationInformation9.mmObject(), Tax31.mmObject(), TaxCalculationInformation10.mmObject(), Fees1.mmObject(), Tax34.mmObject(), TaxCalculationInformation11.mmObject());
 			}
 
 			@Override

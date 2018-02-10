@@ -568,7 +568,7 @@ public class BuyOrSellIndicationOfInterest {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In case of multilegs indication of interest, indicates number of instrumentLeg repeating group ."
+	 * "In case of multilegs indication of interest, indicates number of instrumentLeg repeating group."
 	 * </li>
 	 * </ul>
 	 */
@@ -579,7 +579,7 @@ public class BuyOrSellIndicationOfInterest {
 			elementContext_lazy = () -> com.tools20022.repository.entity.BuyOrSellIndicationOfInterest.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NumberOfLegs";
-			definition = "In case of multilegs indication of interest, indicates number of instrumentLeg repeating group .";
+			definition = "In case of multilegs indication of interest, indicates number of instrumentLeg repeating group.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();

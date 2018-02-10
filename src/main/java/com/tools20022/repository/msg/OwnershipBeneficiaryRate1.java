@@ -70,7 +70,7 @@ import javax.xml.bind.annotation.XmlType;
  * "OwnershipBeneficiaryRate1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Percentage of ownership or of beneficial ownership of the shares/units in the account. "
+ * "Percentage of ownership or of beneficial ownership of the shares/units in the account."
  * </li>
  * </ul>
  */
@@ -176,7 +176,7 @@ public class OwnershipBeneficiaryRate1 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOwnershipBeneficiaryRateRule.forOwnershipBeneficiaryRate1);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OwnershipBeneficiaryRate1";
-				definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. ";
+				definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account.";
 			}
 		});
 		return mmObject_lazy.get();

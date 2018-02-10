@@ -248,6 +248,18 @@ import java.util.Objects;
  * {@linkplain com.tools20022.repository.msg.AggregateHoldingBalance1#mmFinancialInstrumentIdentification
  * AggregateHoldingBalance1.mmFinancialInstrumentIdentification}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.AlternateIdentification3#mmIdentificationSource
+ * AlternateIdentification3.mmIdentificationSource}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1#mmAlternativeInstrumentIdentification
+ * SecurityIdentificationQueryCriteria1.mmAlternativeInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification18Choice#mmAlternativeInstrumentIdentification
+ * SecurityIdentification18Choice.mmAlternativeInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification19Choice#mmAlternativeInstrumentIdentification
+ * SecurityIdentification19Choice.mmAlternativeInstrumentIdentification}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmAlternateIdentification
  * SecurityIdentification22Choice.mmAlternateIdentification}</li>
  * <li>
@@ -278,6 +290,13 @@ import java.util.Objects;
  * {@linkplain com.tools20022.repository.msg.SecurityIdentification21#mmDescription
  * SecurityIdentification21.mmDescription}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification24Choice#mmOtherIdentification
+ * SecurityIdentification24Choice.mmOtherIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity2#mmFinancialInstrumentIdentification
+ * FinancialInstrumentIdentificationValidity2.
+ * mmFinancialInstrumentIdentification}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmOtherProprietaryIdentification
  * SecurityIdentification25Choice.mmOtherProprietaryIdentification}</li>
  * <li>
@@ -286,6 +305,15 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SwapLegIdentification2#mmSwapOut
  * SwapLegIdentification2.mmSwapOut}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentificationQuery3Choice#mmAlternativeInstrumentIdentification
+ * SecurityIdentificationQuery3Choice.mmAlternativeInstrumentIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentificationQuery3Choice#mmIndex
+ * SecurityIdentificationQuery3Choice.mmIndex}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SpecificCollateral2#mmFinancialInstrumentIdentification
+ * SpecificCollateral2.mmFinancialInstrumentIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -376,6 +404,20 @@ import java.util.Objects;
  * SecurityIdentification14SD1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.OtherIdentification4
  * OtherIdentification4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AlternateIdentification3
+ * AlternateIdentification3}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1
+ * SecurityIdentificationQueryCriteria1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification18Choice
+ * SecurityIdentification18Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification19Choice
+ * SecurityIdentification19Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification20Choice
+ * SecurityIdentification20Choice}</li>
  * <li>
  * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice
  * SecurityIdentification22Choice}</li>
@@ -394,6 +436,12 @@ import java.util.Objects;
  * <li>{@linkplain com.tools20022.repository.msg.SecurityIdentification21
  * SecurityIdentification21}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentification24Choice
+ * SecurityIdentification24Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity2
+ * FinancialInstrumentIdentificationValidity2}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice
  * SecurityIdentification25Choice}</li>
  * <li>
@@ -407,6 +455,17 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.choice.FinancialInstrumentIdentification5Choice
  * FinancialInstrumentIdentification5Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityIdentificationQuery3Choice
+ * SecurityIdentificationQuery3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument59
+ * FinancialInstrument59}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SpecificCollateral2
+ * SpecificCollateral2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GeneralCollateral3
+ * GeneralCollateral3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GeneralCollateral2
+ * GeneralCollateral2}</li>
  * </ul>
  * </li>
  * <li>
@@ -590,6 +649,18 @@ public class SecuritiesIdentification {
 	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName4Choice#mmISIN
 	 * BenchmarkCurveName4Choice.mmISIN}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentificationQueryCriteria1#mmISIN
+	 * SecurityIdentificationQueryCriteria1.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification18Choice#mmISIN
+	 * SecurityIdentification18Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification19Choice#mmISIN
+	 * SecurityIdentification19Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification20Choice#mmISIN
+	 * SecurityIdentification20Choice.mmISIN}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification22Choice#mmISIN
 	 * SecurityIdentification22Choice.mmISIN}</li>
 	 * <li>
@@ -622,6 +693,15 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName6Choice#mmISIN
 	 * BenchmarkCurveName6Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValue2#mmSecurityIdentification
+	 * CollateralValue2.mmSecurityIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve4#mmBenchmarkIdentification
+	 * BenchmarkCurve4.mmBenchmarkIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification24Choice#mmISIN
+	 * SecurityIdentification24Choice.mmISIN}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification25Choice#mmISIN
 	 * SecurityIdentification25Choice.mmISIN}</li>
@@ -663,6 +743,18 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#mmIdentification
 	 * FinancialInstrumentAttributes3Choice.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentificationQuery3Choice#mmISIN
+	 * SecurityIdentificationQuery3Choice.mmISIN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument59#mmIdentification
+	 * FinancialInstrument59.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityIdentificationAndAmount1#mmIdentification
+	 * SecurityIdentificationAndAmount1.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralCollateral3#mmEligibleFinancialInstrumentIdentification
+	 * GeneralCollateral3.mmEligibleFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -687,12 +779,15 @@ public class SecuritiesIdentification {
 					SecurityIdentification14.mmISIN, SecurityIdentification15.mmISIN, SecurityIdentification12Choice.mmISIN, SecurityIdentification16.mmISIN, SecurityIdentification4Choice.mmISIN,
 					InvestmentFundTransactionsByFund1.mmIdentification, InvestmentFundTransactionsByFund2.mmIdentification, SecurityIdentification3.mmISIN, SecurityIdentification5Choice.mmISIN, SecurityIdentification6Choice.mmISIN,
 					SecurityIdentification10Choice.mmISIN, SecurityIdentification7Choice.mmISIN, BenchmarkCurve2.mmBenchmarkIdentification, CollateralValue1.mmSecurityIdentification, BenchmarkCurve1.mmBenchmarkIdentification,
-					InvestmentFundTransactionsByFund3.mmIdentification, CollateralValuation3.mmISIN, InflationIndex1Choice.mmISIN, BenchmarkCurveName4Choice.mmISIN, SecurityIdentification22Choice.mmISIN,
-					SecurityIdentification23Choice.mmISIN, SecurityIdentification19.mmISIN, SecurityIdentification20.mmISIN, SecurityIdentification32.mmISIN, SecurityIdentification21.mmISIN, CollateralValuation6.mmISIN,
-					VolumeCapReport2.mmIdentification, FinancialInstrument46Choice.mmISIN, FinancialInstrument53.mmISIN, BenchmarkCurveName6Choice.mmISIN, SecurityIdentification25Choice.mmISIN, TransparencyDataReport11.mmIdentification,
-					TransparencyDataReport13.mmIdentification, TransparencyDataReport12.mmIdentification, TransparencyDataReport15.mmIdentification, TransparencyDataReport10.mmIdentification, TransparencyDataReport14.mmIdentification,
-					FinancialInstrumentIdentification6Choice.mmISIN, FinancialInstrument58.mmISIN, BasketDescription3.mmISIN, FinancialInstrument48Choice.mmISIN, CreditDefaultSwapDerivative4.mmUnderlyingNameIdentification,
-					CreditDefaultSwapDerivative4.mmObligationIdentification, FinancialInstrumentAttributes3Choice.mmIdentification);
+					InvestmentFundTransactionsByFund3.mmIdentification, CollateralValuation3.mmISIN, InflationIndex1Choice.mmISIN, BenchmarkCurveName4Choice.mmISIN, SecurityIdentificationQueryCriteria1.mmISIN,
+					SecurityIdentification18Choice.mmISIN, SecurityIdentification19Choice.mmISIN, SecurityIdentification20Choice.mmISIN, SecurityIdentification22Choice.mmISIN, SecurityIdentification23Choice.mmISIN,
+					SecurityIdentification19.mmISIN, SecurityIdentification20.mmISIN, SecurityIdentification32.mmISIN, SecurityIdentification21.mmISIN, CollateralValuation6.mmISIN, VolumeCapReport2.mmIdentification,
+					FinancialInstrument46Choice.mmISIN, FinancialInstrument53.mmISIN, BenchmarkCurveName6Choice.mmISIN, CollateralValue2.mmSecurityIdentification, BenchmarkCurve4.mmBenchmarkIdentification,
+					SecurityIdentification24Choice.mmISIN, SecurityIdentification25Choice.mmISIN, TransparencyDataReport11.mmIdentification, TransparencyDataReport13.mmIdentification, TransparencyDataReport12.mmIdentification,
+					TransparencyDataReport15.mmIdentification, TransparencyDataReport10.mmIdentification, TransparencyDataReport14.mmIdentification, FinancialInstrumentIdentification6Choice.mmISIN, FinancialInstrument58.mmISIN,
+					BasketDescription3.mmISIN, FinancialInstrument48Choice.mmISIN, CreditDefaultSwapDerivative4.mmUnderlyingNameIdentification, CreditDefaultSwapDerivative4.mmObligationIdentification,
+					FinancialInstrumentAttributes3Choice.mmIdentification, SecurityIdentificationQuery3Choice.mmISIN, FinancialInstrument59.mmIdentification, SecurityIdentificationAndAmount1.mmIdentification,
+					GeneralCollateral3.mmEligibleFinancialInstrumentIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1040,7 +1135,7 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifier of securities issued in Luxembourg.  The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes."
+	 * "Identifier of securities issued in Luxembourg. The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes."
 	 * </li>
 	 * </ul>
 	 */
@@ -1052,7 +1147,7 @@ public class SecuritiesIdentification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Common";
-			definition = "Identifier of securities issued in Luxembourg.  The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.";
+			definition = "Identifier of securities issued in Luxembourg. The common code is a 9-digit code that replaces the CEDEL (Clearstream) and Euroclear codes.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EuroclearClearstreamIdentifier.mmObject();
@@ -1102,6 +1197,9 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InvestmentFundTransactionsByFund3#mmName
 	 * InvestmentFundTransactionsByFund3.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityIdentification20Choice#mmName
+	 * SecurityIdentification20Choice.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1126,7 +1224,7 @@ public class SecuritiesIdentification {
 	public static final MMBusinessAssociationEnd mmName = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesAccount1.mmFinancialInstrumentName, SecuritiesAccount4.mmFinancialInstrumentName, InvestmentFundTransactionsByFund1.mmName, InvestmentFundTransactionsByFund2.mmName,
-					InvestmentFundTransactionsByFund3.mmName);
+					InvestmentFundTransactionsByFund3.mmName, SecurityIdentification20Choice.mmName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70a::FIAN"));
@@ -1185,7 +1283,7 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Stock Exchange Daily Official List (SEDOL) number.  A code used by the London Stock Exchange to identify foreign stocks, especially those that aren't actively traded in the US and don't have a CUSIP number."
+	 * "Stock Exchange Daily Official List (SEDOL) number. A code used by the London Stock Exchange to identify foreign stocks, especially those that aren't actively traded in the US and don't have a CUSIP number."
 	 * </li>
 	 * </ul>
 	 */
@@ -1197,7 +1295,7 @@ public class SecuritiesIdentification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SEDOL";
-			definition = "Stock Exchange Daily Official List (SEDOL) number.  A code used by the London Stock Exchange to identify foreign stocks, especially those that aren't actively traded in the US and don't have a CUSIP number.";
+			definition = "Stock Exchange Daily Official List (SEDOL) number. A code used by the London Stock Exchange to identify foreign stocks, especially those that aren't actively traded in the US and don't have a CUSIP number.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SEDOLIdentifier.mmObject();
@@ -1253,7 +1351,7 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security.  Non-US securities have a similar number called the CINS number."
+	 * "Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security. Non-US securities have a similar number called the CINS number."
 	 * </li>
 	 * </ul>
 	 */
@@ -1264,7 +1362,7 @@ public class SecuritiesIdentification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CUSIP";
-			definition = "Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security.  Non-US securities have a similar number called the CINS number.";
+			definition = "Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security. Non-US securities have a similar number called the CINS number.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CUSIPIdentifier.mmObject();
@@ -1384,7 +1482,7 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Wertpapier Kenn-nummer.  A number issued in Germany by the Wertpapier Mitteilungen. The Wertpapier Kenn-nummer, sometimes called WPK, contains 6-digits, but no check digit. There are different ranges of numbers representing different classes of securities."
+	 * "Wertpapier Kenn-nummer. A number issued in Germany by the Wertpapier Mitteilungen. The Wertpapier Kenn-nummer, sometimes called WPK, contains 6-digits, but no check digit. There are different ranges of numbers representing different classes of securities."
 	 * </li>
 	 * </ul>
 	 */
@@ -1395,7 +1493,7 @@ public class SecuritiesIdentification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Wertpapier";
-			definition = "Wertpapier Kenn-nummer.  A number issued in Germany by the Wertpapier Mitteilungen. The Wertpapier Kenn-nummer, sometimes called WPK, contains 6-digits, but no check digit. There are different ranges of numbers representing different classes of securities.";
+			definition = "Wertpapier Kenn-nummer. A number issued in Germany by the Wertpapier Mitteilungen. The Wertpapier Kenn-nummer, sometimes called WPK, contains 6-digits, but no check digit. There are different ranges of numbers representing different classes of securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> WertpapierIdentifier.mmObject();
@@ -1574,7 +1672,7 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifier for French securities assigned by the Societe Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in France.  The Sicovam is composed of 5-digits."
+	 * "Identifier for French securities assigned by the Societe Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in France. The Sicovam is composed of 5-digits."
 	 * </li>
 	 * </ul>
 	 */
@@ -1585,7 +1683,7 @@ public class SecuritiesIdentification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Sicovam";
-			definition = "Identifier for French securities assigned by the Societe Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in France.  The Sicovam is composed of 5-digits.";
+			definition = "Identifier for French securities assigned by the Societe Interprofessionnelle Pour La Compensation des Valeurs Mobilieres in France. The Sicovam is composed of 5-digits.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SicovamIdentifier.mmObject();
@@ -1750,6 +1848,12 @@ public class SecuritiesIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.FinancialInstrumentAttributes3Choice#mmOther
 	 * FinancialInstrumentAttributes3Choice.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralCollateral3#mmFinancialInstrumentIdentification
+	 * GeneralCollateral3.mmFinancialInstrumentIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralCollateral2#mmEligibleFinancialInstrumentIdentification
+	 * GeneralCollateral2.mmEligibleFinancialInstrumentIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1772,7 +1876,8 @@ public class SecuritiesIdentification {
 	 */
 	public static final MMBusinessAssociationEnd mmGenericIdentification = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification7.mmIdentificationSource, FinancialInstrumentAttributes3Choice.mmOther);
+			derivation_lazy = () -> Arrays.asList(AlternateSecurityIdentification7.mmIdentificationSource, FinancialInstrumentAttributes3Choice.mmOther, GeneralCollateral3.mmFinancialInstrumentIdentification,
+					GeneralCollateral2.mmEligibleFinancialInstrumentIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2048,10 +2153,13 @@ public class SecuritiesIdentification {
 						SecurityIdentification5Choice.mmOtherIdentification, SecurityIdentification6Choice.mmOtherIdentification, SecurityIdentification10Choice.mmOtherIdentification, SecurityIdentification9.mmSecurityIdentification,
 						SecurityIdentification9.mmDescription, SecurityIdentification7Choice.mmOtherProprietaryIdentification, SecurityIdentification8.mmSecurityIdentification, SecurityIdentification8.mmDescription,
 						FinancialInstrumentIdentificationValidity1.mmFinancialInstrumentIdentification, TriggeringInstructions.mmTriggerSecurityDetails, ReportItem1.mmFinancialInstrumentIdentification,
-						AggregateHoldingBalance1.mmFinancialInstrumentIdentification, SecurityIdentification22Choice.mmAlternateIdentification, SecurityIdentification23Choice.mmOtherProprietaryIdentification,
-						SecurityIdentification19.mmOtherIdentification, SecurityIdentification19.mmDescription, SecurityIdentification20.mmOtherIdentification, SecurityIdentification20.mmDescription,
-						SecurityIdentification32.mmOtherIdentification, SecurityIdentification32.mmDescription, SecurityIdentification21.mmOtherIdentification, SecurityIdentification21.mmDescription,
-						SecurityIdentification25Choice.mmOtherProprietaryIdentification, SwapLegIdentification2.mmSwapIn, SwapLegIdentification2.mmSwapOut);
+						AggregateHoldingBalance1.mmFinancialInstrumentIdentification, AlternateIdentification3.mmIdentificationSource, SecurityIdentificationQueryCriteria1.mmAlternativeInstrumentIdentification,
+						SecurityIdentification18Choice.mmAlternativeInstrumentIdentification, SecurityIdentification19Choice.mmAlternativeInstrumentIdentification, SecurityIdentification22Choice.mmAlternateIdentification,
+						SecurityIdentification23Choice.mmOtherProprietaryIdentification, SecurityIdentification19.mmOtherIdentification, SecurityIdentification19.mmDescription, SecurityIdentification20.mmOtherIdentification,
+						SecurityIdentification20.mmDescription, SecurityIdentification32.mmOtherIdentification, SecurityIdentification32.mmDescription, SecurityIdentification21.mmOtherIdentification, SecurityIdentification21.mmDescription,
+						SecurityIdentification24Choice.mmOtherIdentification, FinancialInstrumentIdentificationValidity2.mmFinancialInstrumentIdentification, SecurityIdentification25Choice.mmOtherProprietaryIdentification,
+						SwapLegIdentification2.mmSwapIn, SwapLegIdentification2.mmSwapOut, SecurityIdentificationQuery3Choice.mmAlternativeInstrumentIdentification, SecurityIdentificationQuery3Choice.mmIndex,
+						SpecificCollateral2.mmFinancialInstrumentIdentification);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesIdentification.mmIdentifiedSecurity, com.tools20022.repository.entity.SecuritiesIdentification.mmSecurityIdentification,
 						com.tools20022.repository.entity.SecuritiesIdentification.mmRIC, com.tools20022.repository.entity.SecuritiesIdentification.mmTickerSymbol, com.tools20022.repository.entity.SecuritiesIdentification.mmBloomberg,
 						com.tools20022.repository.entity.SecuritiesIdentification.mmCTA, com.tools20022.repository.entity.SecuritiesIdentification.mmCommon, com.tools20022.repository.entity.SecuritiesIdentification.mmName,
@@ -2069,9 +2177,11 @@ public class SecuritiesIdentification {
 						SecurityIdentification4Choice.mmObject(), AlternateFinancialInstrumentIdentification1.mmObject(), SecurityIdentification3.mmObject(), SecurityIdentification5Choice.mmObject(),
 						SecurityIdentification6Choice.mmObject(), SecurityIdentification10Choice.mmObject(), SecurityIdentification9.mmObject(), AlternateSecurityIdentification4.mmObject(), SecurityIdentification7Choice.mmObject(),
 						SecurityIdentification8.mmObject(), FinancialInstrumentIdentificationValidity1.mmObject(), OtherIdentification2SD1.mmObject(), SecurityIdentification14SD1.mmObject(), OtherIdentification4.mmObject(),
+						AlternateIdentification3.mmObject(), SecurityIdentificationQueryCriteria1.mmObject(), SecurityIdentification18Choice.mmObject(), SecurityIdentification19Choice.mmObject(), SecurityIdentification20Choice.mmObject(),
 						SecurityIdentification22Choice.mmObject(), AlternateSecurityIdentification7.mmObject(), SecurityIdentification23Choice.mmObject(), SecurityIdentification19.mmObject(), SecurityIdentification20.mmObject(),
-						SecurityIdentification32.mmObject(), SecurityIdentification21.mmObject(), SecurityIdentification25Choice.mmObject(), FinancialInstrumentIdentification6Choice.mmObject(), BasketDescription3.mmObject(),
-						FinancialInstrumentIdentification7Choice.mmObject(), FinancialInstrumentIdentification5Choice.mmObject());
+						SecurityIdentification32.mmObject(), SecurityIdentification21.mmObject(), SecurityIdentification24Choice.mmObject(), FinancialInstrumentIdentificationValidity2.mmObject(), SecurityIdentification25Choice.mmObject(),
+						FinancialInstrumentIdentification6Choice.mmObject(), BasketDescription3.mmObject(), FinancialInstrumentIdentification7Choice.mmObject(), FinancialInstrumentIdentification5Choice.mmObject(),
+						SecurityIdentificationQuery3Choice.mmObject(), FinancialInstrument59.mmObject(), SpecificCollateral2.mmObject(), GeneralCollateral3.mmObject(), GeneralCollateral2.mmObject());
 			}
 
 			@Override

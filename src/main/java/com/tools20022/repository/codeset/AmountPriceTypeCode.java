@@ -56,6 +56,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * AmountPriceType1Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType2Code
  * AmountPriceType2Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.AmountPriceType3Code
+ * AmountPriceType3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -217,7 +219,7 @@ public class AmountPriceTypeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountPriceTypeCode";
 				definition = "Specifies the amount price type.";
-				derivation_lazy = () -> Arrays.asList(AmountPriceType1Code.mmObject(), AmountPriceType2Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(AmountPriceType1Code.mmObject(), AmountPriceType2Code.mmObject(), AmountPriceType3Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AmountPriceTypeCode.ActualAmount, com.tools20022.repository.codeset.AmountPriceTypeCode.Discount, com.tools20022.repository.codeset.AmountPriceTypeCode.Lot,
 						com.tools20022.repository.codeset.AmountPriceTypeCode.Premium);
 			}

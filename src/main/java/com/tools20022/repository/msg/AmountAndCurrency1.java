@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AmountAndCurrency1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Amount to be authorised by the issuer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndCurrency2
+ * AmountAndCurrency2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,6 +112,14 @@ public class AmountAndCurrency1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount value."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrency2#mmAmount
+	 * AmountAndCurrency2.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -116,6 +131,7 @@ public class AmountAndCurrency1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount value.";
+			nextVersions_lazy = () -> Arrays.asList(AmountAndCurrency2.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -154,6 +170,14 @@ public class AmountAndCurrency1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency of the amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndCurrency2#mmCurrency
+	 * AmountAndCurrency2.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
@@ -165,6 +189,7 @@ public class AmountAndCurrency1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Currency of the amount.";
+			nextVersions_lazy = () -> Arrays.asList(AmountAndCurrency2.mmCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -180,6 +205,7 @@ public class AmountAndCurrency1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndCurrency1";
 				definition = "Amount to be authorised by the issuer.";
+				nextVersions_lazy = () -> Arrays.asList(AmountAndCurrency2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

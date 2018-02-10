@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Choice of format for the replacement processing status
+ * Choice of format for the replacement processing status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ReplacementProcessingStatus8Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of format for the replacement processing status"</li>
+ * definition} = "Choice of format for the replacement processing status."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.ReplacementProcessingStatus1Choice
@@ -207,7 +207,7 @@ public class ReplacementProcessingStatus8Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReplacementProcessingStatus8Choice";
-				definition = "Choice of format for the replacement processing status";
+				definition = "Choice of format for the replacement processing status.";
 				previousVersion_lazy = () -> ReplacementProcessingStatus1Choice.mmObject();
 			}
 		});

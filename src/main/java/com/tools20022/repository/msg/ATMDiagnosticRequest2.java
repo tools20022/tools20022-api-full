@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Information related to the request of a diagnostic from an ATM..
+ * Information related to the request of a diagnostic from an ATM.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMDiagnosticRequest2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information related to the request of a diagnostic from an ATM.."</li>
+ * "Information related to the request of a diagnostic from an ATM."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -169,7 +169,7 @@ public class ATMDiagnosticRequest2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMDiagnosticRequest2";
-				definition = "Information related to the request of a diagnostic from an ATM..";
+				definition = "Information related to the request of a diagnostic from an ATM.";
 			}
 		});
 		return mmObject_lazy.get();

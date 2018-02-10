@@ -249,7 +249,7 @@ public class SecuritiesOption16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum multiple quantity (or lot) of financial  instrument that must be exercised or tendered."
+	 * "Minimum multiple quantity (or lot) of financial instrument that must be exercised or tendered."
 	 * </li>
 	 * </ul>
 	 */
@@ -262,7 +262,7 @@ public class SecuritiesOption16 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":36B::MILT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumExercisableMultipleQuantity";
-			definition = "Minimum multiple quantity (or lot) of financial  instrument that must be exercised or tendered.";
+			definition = "Minimum multiple quantity (or lot) of financial instrument that must be exercised or tendered.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

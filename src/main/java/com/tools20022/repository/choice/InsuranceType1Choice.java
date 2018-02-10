@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * "InsuranceType1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats for the specification of the type  of insurance."</li>
+ * "Choice of formats for the specification of the type of insurance."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -205,7 +205,7 @@ public class InsuranceType1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InsuranceType1Choice";
-				definition = "Choice of formats for the specification of the type  of insurance.";
+				definition = "Choice of formats for the specification of the type of insurance.";
 				nextVersions_lazy = () -> Arrays.asList(InsuranceType2Choice.mmObject());
 			}
 		});

@@ -20,6 +20,9 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportAcknowledgementV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.GenericIdentification;
 import com.tools20022.repository.entity.Party;
@@ -58,6 +61,21 @@ import javax.xml.bind.annotation.XmlType;
  * trace} = {@linkplain com.tools20022.repository.entity.GenericIdentification
  * GenericIdentification}</li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01#mmReference
+ * ForeignExchangeTradeConfirmationStatusAdviceV01.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01#mmReference
+ * ForeignExchangeTradeCaptureReportV01.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportAcknowledgementV01#mmReference
+ * ForeignExchangeTradeCaptureReportAcknowledgementV01.mmReference}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -79,6 +97,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageReference1
+ * MessageReference1}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -121,6 +146,14 @@ public class AdditionalReferences {
 	 * definition} =
 	 * "Unambiguous reference to a previous message having a business relevance with this message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageReference1#mmReference
+	 * MessageReference1.mmReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReference = new MMMessageAttribute() {
@@ -132,6 +165,7 @@ public class AdditionalReferences {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "Unambiguous reference to a previous message having a business relevance with this message.";
+			nextVersions_lazy = () -> Arrays.asList(MessageReference1.mmReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -166,6 +200,14 @@ public class AdditionalReferences {
 	 * definition} =
 	 * "Name of the message which contained the given additional reference as its message reference."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageReference1#mmMessageName
+	 * MessageReference1.mmMessageName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageName = new MMMessageAttribute() {
@@ -176,6 +218,7 @@ public class AdditionalReferences {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageName";
 			definition = "Name of the message which contained the given additional reference as its message reference.";
+			nextVersions_lazy = () -> Arrays.asList(MessageReference1.mmMessageName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -215,6 +258,14 @@ public class AdditionalReferences {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that initially assigned the given additional reference."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageReference1#mmReferenceIssuer
+	 * MessageReference1.mmReferenceIssuer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReferenceIssuer = new MMMessageAttribute() {
@@ -226,6 +277,7 @@ public class AdditionalReferences {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceIssuer";
 			definition = "Party that initially assigned the given additional reference.";
+			nextVersions_lazy = () -> Arrays.asList(MessageReference1.mmReferenceIssuer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PartyIdentification.mmObject();
@@ -237,12 +289,14 @@ public class AdditionalReferences {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalReferences.mmReference, com.tools20022.repository.msg.AdditionalReferences.mmMessageName,
 						com.tools20022.repository.msg.AdditionalReferences.mmReferenceIssuer);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationStatusAdviceV01.mmReference, ForeignExchangeTradeCaptureReportV01.mmReference, ForeignExchangeTradeCaptureReportAcknowledgementV01.mmReference);
 				trace_lazy = () -> GenericIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAndOrMessageNameRule.forAdditionalReferences);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AdditionalReferences";
 				definition = "Business reference(s) to one or more relevant messages previously sent by other parties, or by the same party issuing this message.";
+				nextVersions_lazy = () -> Arrays.asList(MessageReference1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

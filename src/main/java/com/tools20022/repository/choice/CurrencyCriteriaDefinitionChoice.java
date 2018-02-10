@@ -24,8 +24,11 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.CurrencyExchangeCriteria;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -57,13 +60,22 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CurrencyCriteriaDefinitionChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CurrencyCriteriaDefinition1Choice
+ * CurrencyCriteriaDefinition1Choice}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -101,6 +113,14 @@ public class CurrencyCriteriaDefinitionChoice {
 	 * definition} =
 	 * "Recalls the criteria (search and return criteria) defined in a preceding query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CurrencyCriteriaDefinition1Choice#mmQueryName
+	 * CurrencyCriteriaDefinition1Choice.mmQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
@@ -111,6 +131,7 @@ public class CurrencyCriteriaDefinitionChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyCriteriaDefinition1Choice.mmQueryName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -144,6 +165,14 @@ public class CurrencyCriteriaDefinitionChoice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria based on which the information is extracted."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CurrencyCriteriaDefinition1Choice#mmNewCriteria
+	 * CurrencyCriteriaDefinition1Choice.mmNewCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
@@ -154,6 +183,7 @@ public class CurrencyCriteriaDefinitionChoice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Defines the criteria based on which the information is extracted.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyCriteriaDefinition1Choice.mmNewCriteria);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,9 +196,17 @@ public class CurrencyCriteriaDefinitionChoice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.CurrencyCriteriaDefinitionChoice.mmQueryName, com.tools20022.repository.choice.CurrencyCriteriaDefinitionChoice.mmNewCriteria);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "CurrencyCriteriaDefinitionChoice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
+				nextVersions_lazy = () -> Arrays.asList(CurrencyCriteriaDefinition1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

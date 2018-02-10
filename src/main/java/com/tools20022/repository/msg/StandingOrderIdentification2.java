@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ModifyStandingOrderV05;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.CashStandingOrder;
 import com.tools20022.repository.entity.Organisation;
@@ -58,6 +59,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.CashStandingOrder
  * CashStandingOrder}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ModifyStandingOrderV05#mmStandingOrderIdentification
+ * ModifyStandingOrderV05.mmStandingOrderIdentification}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -160,7 +170,7 @@ public class StandingOrderIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n"
+	 * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -172,7 +182,7 @@ public class StandingOrderIdentification2 {
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
-			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n";
+			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -234,6 +244,7 @@ public class StandingOrderIdentification2 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderIdentification2.mmIdentification, com.tools20022.repository.msg.StandingOrderIdentification2.mmAccount,
 						com.tools20022.repository.msg.StandingOrderIdentification2.mmAccountOwner);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ModifyStandingOrderV05.mmStandingOrderIdentification);
 				trace_lazy = () -> CashStandingOrder.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

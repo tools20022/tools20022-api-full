@@ -60,6 +60,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionRateSD6Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies security rate details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CorporateActionRateSD7Choice
+ * CorporateActionRateSD7Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +106,14 @@ public class CorporateActionRateSD6Choice {
 	 * definition} =
 	 * "Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, for example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionRateSD7Choice#mmAdditionalQuantityForExistingSecurities
+	 * CorporateActionRateSD7Choice.mmAdditionalQuantityForExistingSecurities}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalQuantityForExistingSecurities = new MMMessageAssociationEnd() {
@@ -109,6 +125,7 @@ public class CorporateActionRateSD6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalQuantityForExistingSecurities";
 			definition = "Quantity of additional securities for a given quantity of underlying securities where underlying securities are not exchanged or debited, for example, 1 for 1: 1 new equity credited for every 1 underlying equity = 2 resulting equities.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD7Choice.mmAdditionalQuantityForExistingSecurities);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -146,6 +163,14 @@ public class CorporateActionRateSD6Choice {
 	 * definition} =
 	 * "Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, for example, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorporateActionRateSD7Choice#mmNewToOld
+	 * CorporateActionRateSD7Choice.mmNewToOld}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNewToOld = new MMMessageAssociationEnd() {
@@ -157,6 +182,7 @@ public class CorporateActionRateSD6Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewToOld";
 			definition = "Quantity of new securities for a given quantity of underlying securities, where the underlying securities will be exchanged or debited, for example, 2 for 1: 2 new equities credited for every 1 underlying equity debited = 2 resulting equities.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD7Choice.mmNewToOld);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -172,6 +198,7 @@ public class CorporateActionRateSD6Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD6Choice";
 				definition = "Specifies security rate details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD7Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

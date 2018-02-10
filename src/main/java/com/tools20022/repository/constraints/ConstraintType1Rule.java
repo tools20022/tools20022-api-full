@@ -23,7 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.Undertaking3;
 
 /**
- * Type must present if IssuanceType is ISSU, ISAD, ISCO
+ * Type must present if IssuanceType is ISSU, ISAD, ISCO.
  */
 public class ConstraintType1Rule {
 
@@ -46,7 +46,7 @@ public class ConstraintType1Rule {
 	 * name} = "Type1Rule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type must present if IssuanceType is ISSU, ISAD, ISCO"</li>
+	 * definition} = "Type must present if IssuanceType is ISSU, ISAD, ISCO."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Undertaking3> forUndertaking3 = new MMConstraint<Undertaking3>() {
@@ -54,14 +54,14 @@ public class ConstraintType1Rule {
 			validator = ConstraintType1Rule::checkUndertaking3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type1Rule";
-			definition = "Type must present if IssuanceType is ISSU, ISAD, ISCO";
+			definition = "Type must present if IssuanceType is ISSU, ISAD, ISCO.";
 			owner_lazy = () -> Undertaking3.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Type</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IssuanceType</leftOperand><rightOperand>ISSU</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IssuanceType</leftOperand><rightOperand>ISAD</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/IssuanceType</leftOperand><rightOperand>ISCO</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
 
 	/**
-	 * Type must present if IssuanceType is ISSU, ISAD, ISCO
+	 * Type must present if IssuanceType is ISSU, ISAD, ISCO.
 	 */
 	public static void checkUndertaking3(Undertaking3 obj) throws Exception {
 		throw new NotImplementedConstraintException();

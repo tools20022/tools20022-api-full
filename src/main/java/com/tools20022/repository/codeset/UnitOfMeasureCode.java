@@ -224,8 +224,53 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#TonsOfCarbonDioxide
  * UnitOfMeasureCode.TonsOfCarbonDioxide}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Shares
+ * UnitOfMeasureCode.Shares}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Therms
+ * UnitOfMeasureCode.Therms}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Future
+ * UnitOfMeasureCode.Future}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#GigawattHours
+ * UnitOfMeasureCode.GigawattHours}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#BritishThermalUnit
+ * UnitOfMeasureCode.BritishThermalUnit}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Lot
  * UnitOfMeasureCode.Lot}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Bag
+ * UnitOfMeasureCode.Bag}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Bale
+ * UnitOfMeasureCode.Bale}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Bottle
+ * UnitOfMeasureCode.Bottle}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Box
+ * UnitOfMeasureCode.Box}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Carton
+ * UnitOfMeasureCode.Carton}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Container
+ * UnitOfMeasureCode.Container}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#Crate
+ * UnitOfMeasureCode.Crate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#CubicInch
+ * UnitOfMeasureCode.CubicInch}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#CubicMillimetre
+ * UnitOfMeasureCode.CubicMillimetre}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#GBFuildOunce
+ * UnitOfMeasureCode.GBFuildOunce}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#GBTon
+ * UnitOfMeasureCode.GBTon}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#USBarrel
+ * UnitOfMeasureCode.USBarrel}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#USFluidOunce
+ * UnitOfMeasureCode.USFluidOunce}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode#USTon
+ * UnitOfMeasureCode.USTon}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -235,6 +280,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * UnitOfMeasure1Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure6Code
  * UnitOfMeasure6Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure8Code
+ * UnitOfMeasure8Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.UnitOfMeasure9Code
+ * UnitOfMeasure9Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -480,7 +529,7 @@ public class UnitOfMeasureCode extends MMCode {
 		}
 	};
 	/**
-	 * Unit of measure that is equal to a 1,000th of a kilo.
+	 * Unit of measure that is equal to a 1, 000th of a kilo.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -497,20 +546,20 @@ public class UnitOfMeasureCode extends MMCode {
 	 * name} = "Gram"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unit of measure that is equal to a 1,000th of a kilo."</li>
+	 * definition} = "Unit of measure that is equal to a 1, 000th of a kilo."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Gram = new UnitOfMeasureCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Gram";
-			definition = "Unit of measure that is equal to a 1,000th of a kilo.";
+			definition = "Unit of measure that is equal to a 1, 000th of a kilo.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "GRAM";
 		}
 	};
 	/**
-	 * One 100th part of a metre.
+	 * Unit of measure that is equal to one hundredth of a metre.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -527,14 +576,15 @@ public class UnitOfMeasureCode extends MMCode {
 	 * name} = "Centimetre"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "One 100th part of a metre."</li>
+	 * definition} =
+	 * "Unit of measure that is equal to one hundredth of a metre."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Centimetre = new UnitOfMeasureCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Centimetre";
-			definition = "One 100th part of a metre.";
+			definition = "Unit of measure that is equal to one hundredth of a metre.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "CMET";
 		}
@@ -600,7 +650,7 @@ public class UnitOfMeasureCode extends MMCode {
 		}
 	};
 	/**
-	 * Unit of length equal to 1,760 yards
+	 * Unit of length equal to 1, 760 yards.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -617,14 +667,14 @@ public class UnitOfMeasureCode extends MMCode {
 	 * name} = "Mile"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unit of length equal to 1,760 yards"</li>
+	 * definition} = "Unit of length equal to 1, 760 yards."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Mile = new UnitOfMeasureCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Mile";
-			definition = "Unit of length equal to 1,760 yards";
+			definition = "Unit of length equal to 1, 760 yards.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MILE";
 		}
@@ -960,7 +1010,7 @@ public class UnitOfMeasureCode extends MMCode {
 		}
 	};
 	/**
-	 * Unit of measure that is equal to 1,000 meters.
+	 * Unit of measure that is equal to 1, 000 meters.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -977,14 +1027,14 @@ public class UnitOfMeasureCode extends MMCode {
 	 * name} = "Kilometre"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unit of measure that is equal to 1,000 meters."</li>
+	 * definition} = "Unit of measure that is equal to 1, 000 meters."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Kilometre = new UnitOfMeasureCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Kilometre";
-			definition = "Unit of measure that is equal to 1,000 meters.";
+			definition = "Unit of measure that is equal to 1, 000 meters.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "KMET";
 		}
@@ -1020,7 +1070,7 @@ public class UnitOfMeasureCode extends MMCode {
 		}
 	};
 	/**
-	 * Unit of measure equal to 4,840 square yards.
+	 * Unit of measure equal to 4, 840 square yards.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1037,14 +1087,14 @@ public class UnitOfMeasureCode extends MMCode {
 	 * name} = "Acre"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unit of measure equal to 4,840 square yards."</li>
+	 * definition} = "Unit of measure equal to 4, 840 square yards."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Acre = new UnitOfMeasureCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Acre";
-			definition = "Unit of measure equal to 4,840 square yards.";
+			definition = "Unit of measure equal to 4, 840 square yards.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "ACRE";
 		}
@@ -1140,7 +1190,7 @@ public class UnitOfMeasureCode extends MMCode {
 		}
 	};
 	/**
-	 * Unit of measure that is equal to 10,000 square meters.
+	 * Unit of measure that is equal to 10, 000 square meters.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1157,14 +1207,14 @@ public class UnitOfMeasureCode extends MMCode {
 	 * name} = "Hectare"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unit of measure that is equal to 10,000 square meters."</li>
+	 * definition} = "Unit of measure that is equal to 10, 000 square meters."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Hectare = new UnitOfMeasureCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Hectare";
-			definition = "Unit of measure that is equal to 10,000 square meters.";
+			definition = "Unit of measure that is equal to 10, 000 square meters.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "HECT";
 		}
@@ -1323,7 +1373,7 @@ public class UnitOfMeasureCode extends MMCode {
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Amount of money deducted from a price or an amount due.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1335,25 +1385,26 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Allowances"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} = "Amount of money deducted from a price or an amount due."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Allowances = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Allowances";
-			definition = "TO BE REVIEWED";
+			definition = "Amount of money deducted from a price or an amount due.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "ALOW";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Number of monetary units specified in a currency, where the unit of
+	 * currency is explicit and compliant with ISO 4217.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1365,25 +1416,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AmountOfCurrency"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode AmountOfCurrency = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "AmountOfCurrency";
-			definition = "TO BE REVIEWED";
+			definition = "Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "ACCY";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of volume that is equal to 42 US gallons.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1395,25 +1448,26 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Barrels"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} = "Unit of volume that is equal to 42 US gallons."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Barrels = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Barrels";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of volume that is equal to 42 US gallons.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "BARL";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure for large volumes of natural gas equivalent to 28316846
+	 * cubic meters.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1425,25 +1479,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BillionCubicFeet"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure for large volumes of natural gas equivalent to 28316846 cubic meters."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode BillionCubicFeet = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BillionCubicFeet";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure for large volumes of natural gas equivalent to 28316846 cubic meters.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "BCUF";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Measure of length equal to to 144 cubic inches.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1455,25 +1511,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BoardFeet"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} = "Measure of length equal to to 144 cubic inches."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode BoardFeet = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BoardFeet";
-			definition = "TO BE REVIEWED";
+			definition = "Measure of length equal to to 144 cubic inches.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "BDFT";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of weight that is equal to 8 gallons. Mostly used for agricultural
+	 * products with a specification of weight defined for each commodity
+	 * differently.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1485,25 +1543,30 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Bushels"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of weight that is equal to 8 gallons. Mostly used for agricultural products with a specification of weight defined for each commodity differently."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Bushels = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Bushels";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of weight that is equal to 8 gallons. Mostly used for agricultural products with a specification of weight defined for each commodity differently.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "BUSL";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of emissions type (or carbon credits) issued by the Clean
+	 * Development Mechanism (CDM) Executive Board for emission reductions
+	 * achieved by CDM projects and verified by a DOE (Designated Operational
+	 * Entity) under the rules of the Kyoto Protocol.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1515,25 +1578,29 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CertifiedEmissionsReduction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of emissions type (or carbon credits) issued by the Clean Development Mechanism (CDM) Executive Board for emission reductions achieved by CDM projects and verified by a DOE (Designated Operational Entity) under the rules of the Kyoto Protocol."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode CertifiedEmissionsReduction = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CertifiedEmissionsReduction";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of emissions type (or carbon credits) issued by the Clean Development Mechanism (CDM) Executive Board for emission reductions achieved by CDM projects and verified by a DOE (Designated Operational Entity) under the rules of the Kyoto Protocol.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "CEER";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of offset credits used by the Climate Action Reserve. One Climate
+	 * Reserve Tonne is equal to one metric ton of Greenhouse Gas (GHG)
+	 * reduced/sequestered.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1545,25 +1612,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ClimateReserveTonnes"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of offset credits used by the Climate Action Reserve. One Climate Reserve Tonne is equal to one metric ton of Greenhouse Gas (GHG) reduced/sequestered."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode ClimateReserveTonnes = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ClimateReserveTonnes";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of offset credits used by the Climate Action Reserve. One Climate Reserve Tonne is equal to one metric ton of Greenhouse Gas (GHG) reduced/sequestered.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "CLRT";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of volume that is equal to one metre in length, breadth and height
+	 * or also equal to 1000 liter.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1575,25 +1645,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CubicMeters"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of volume that is equal to one metre in length, breadth and height or also equal to 1000 liter."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode CubicMeters = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CubicMeters";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of volume that is equal to one metre in length, breadth and height or also equal to 1000 liter.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "CBME";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of time that is equal to 24 hours.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1605,25 +1677,26 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Days"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} = "Unit of time that is equal to 24 hours."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Days = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Days";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of time that is equal to 24 hours.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "DAYS";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of weight that is equal to the same mass value as a metric ton
+	 * excluding moisture.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1635,25 +1708,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DryMetricTons"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of weight that is equal to the same mass value as a metric ton excluding moisture."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode DryMetricTons = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DryMetricTons";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of weight that is equal to the same mass value as a metric ton excluding moisture.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "DMET";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure for ownership of credit (or allowance) of carbon dioxyde
+	 * emission (in metric ton).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1665,25 +1741,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EnvironmentalCredit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure for ownership of credit (or allowance) of carbon dioxyde emission (in metric ton)."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode EnvironmentalCredit = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EnvironmentalCredit";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure for ownership of credit (or allowance) of carbon dioxyde emission (in metric ton).";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "ENVC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure for reduction of carbon dioxyde emission (in metric ton)
+	 * that may result in Environmental Credit.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1695,25 +1774,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "EnvironmentalOffset"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure for reduction of carbon dioxyde emission (in metric ton) that may result in Environmental Credit."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode EnvironmentalOffset = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "EnvironmentalOffset";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure for reduction of carbon dioxyde emission (in metric ton) that may result in Environmental Credit.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "ENVO";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of weight or mass of various values in the Imperial Unit System also
+	 * known as quintal, cental or centum.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1725,25 +1807,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Hundredweight"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of weight or mass of various values in the Imperial Unit System also known as quintal, cental or centum."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Hundredweight = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Hundredweight";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of weight or mass of various values in the Imperial Unit System also known as quintal, cental or centum.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "HUWG";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000 watt in one day.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1755,19 +1840,21 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KilowattDayCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000 watt in one day."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode KilowattDayCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "KilowattDayCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000 watt in one day.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "KWDC";
 		}
@@ -1786,7 +1873,7 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KilowattHours"</li>
 	 * <li>
@@ -1798,7 +1885,7 @@ public class UnitOfMeasureCode extends MMCode {
 	 */
 	public static final UnitOfMeasureCode KilowattHours = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "KilowattHours";
 			definition = "Unit of measure that is equal to the power consumption of one kilowatt during one hour.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
@@ -1806,7 +1893,8 @@ public class UnitOfMeasureCode extends MMCode {
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000 watt in one hour.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1818,25 +1906,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KilowattHoursCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000 watt in one hour."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode KilowattHoursCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "KilowattHoursCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000 watt in one hour.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "KWHC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000 watt in one minute.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1848,25 +1939,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KilowattMinuteCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000 watt in one minute."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode KilowattMinuteCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "KilowattMinuteCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000 watt in one minute.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "KMOC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000 watt in one month.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1878,25 +1972,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KilowattMonthCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000 watt in one month."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode KilowattMonthCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "KilowattMonthCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000 watt in one month.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "KWMC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000 watt in one year.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1908,25 +2005,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "KilowattYearCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000 watt in one year."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode KilowattYearCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "KilowattYearCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000 watt in one year.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "KWYC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000000 watt in one day.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1938,25 +2038,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MegawattDayCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one day."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode MegawattDayCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MegawattDayCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one day.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MWDC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure that is equal to the power consumption of one megawatt
+	 * during one hour.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1968,25 +2071,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MegawattHours"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure that is equal to the power consumption of one megawatt during one hour."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode MegawattHours = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MegawattHours";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure that is equal to the power consumption of one megawatt during one hour.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MWHO";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000000 watt in one hour.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1998,25 +2104,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MegawattHoursCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one hour."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode MegawattHoursCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MegawattHoursCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one hour.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MWHC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000000 watt in one minute.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2028,25 +2137,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MegawattMinuteCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one minute."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode MegawattMinuteCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MegawattMinuteCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one minute.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MWMC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000000 watt in one month.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2058,25 +2170,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MegawattMonthCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one month."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode MegawattMonthCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MegawattMonthCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one month.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MMOC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of the capacity of production of electric power equal to
+	 * 1000000 watt in one year.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2088,25 +2203,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MegawattYearCapacity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one year."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode MegawattYearCapacity = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MegawattYearCapacity";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of the capacity of production of electric power equal to 1000000 watt in one year.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MWYC";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of mass equal to 1000 kilograms; equivalent to approximately 2,204.6
+	 * pounds, 1.102 short tons (US) or 0.984 long tons (imperial).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2118,25 +2236,28 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MetricTons"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of mass equal to 1000 kilograms; equivalent to approximately 2,204.6 pounds, 1.102 short tons (US) or 0.984 long tons (imperial)."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode MetricTons = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MetricTons";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of mass equal to 1000 kilograms; equivalent to approximately 2,204.6 pounds, 1.102 short tons (US) or 0.984 long tons (imperial).";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "TONE";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of volume that is equal to 1 million barrels equivalent to
+	 * 42.000.000 US gallons.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2148,25 +2269,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "MillionBarrels"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of volume that is equal to 1 million barrels equivalent to 42.000.000 US gallons."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode MillionBarrels = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "MillionBarrels";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of volume that is equal to 1 million barrels equivalent to 42.000.000 US gallons.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MIBA";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of measure of heat equal to one million British thermal unit (BTU).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2178,25 +2301,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OneMillionBTU"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of measure of heat equal to one million British thermal unit (BTU)."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode OneMillionBTU = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OneMillionBTU";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of measure of heat equal to one million British thermal unit (BTU).";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "MBTU";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of weight equal to 31.1034768 grams. Used in precious metals.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2208,25 +2333,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TroyOunces"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of weight equal to 31.1034768 grams. Used in precious metals."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode TroyOunces = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TroyOunces";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of weight equal to 31.1034768 grams. Used in precious metals.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "OZTR";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Unit of weight or mass of various values in the US Customary System also
+	 * known as quintal, cental or centum. Equal to 100 lbs.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2238,25 +2365,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "USHundredweight"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Unit of weight or mass of various values in the US Customary System also known as quintal, cental or centum. Equal to 100 lbs."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode USHundredweight = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "USHundredweight";
-			definition = "TO BE REVIEWED";
+			definition = "Unit of weight or mass of various values in the US Customary System also known as quintal, cental or centum. Equal to 100 lbs.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "UCWT";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Decimal number used to calculate an amount or a price price.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2268,25 +2397,27 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "IndexPoint"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Decimal number used to calculate an amount or a price price."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode IndexPoint = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IndexPoint";
-			definition = "TO BE REVIEWED";
+			definition = "Decimal number used to calculate an amount or a price price.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "IPNT";
 		}
 	};
 	/**
-	 * TO BE REVIEWED
+	 * Amount of money borrowed, or part of that amount which remains unpaid
+	 * (excluding interest).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2298,19 +2429,21 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PrincipalWithRelationToDebtInstrument"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "TO BE REVIEWED"</li>
+	 * definition} =
+	 * "Amount of money borrowed, or part of that amount which remains unpaid (excluding interest)."
+	 * </li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode PrincipalWithRelationToDebtInstrument = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PrincipalWithRelationToDebtInstrument";
-			definition = "TO BE REVIEWED";
+			definition = "Amount of money borrowed, or part of that amount which remains unpaid (excluding interest).";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "PWRD";
 		}
@@ -2328,7 +2461,7 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DieselGallonEquivalent"</li>
 	 * <li>
@@ -2339,7 +2472,7 @@ public class UnitOfMeasureCode extends MMCode {
 	 */
 	public static final UnitOfMeasureCode DieselGallonEquivalent = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DieselGallonEquivalent";
 			definition = "Amount of fuel alternative equal to one gallon of diesel.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
@@ -2359,7 +2492,7 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "GasolineGallonEquivalent"</li>
 	 * <li>
@@ -2370,7 +2503,7 @@ public class UnitOfMeasureCode extends MMCode {
 	 */
 	public static final UnitOfMeasureCode GasolineGallonEquivalent = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GasolineGallonEquivalent";
 			definition = "Amount of fuel alternative equal to one gallon of gasoline.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
@@ -2390,7 +2523,7 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "TonsOfCarbonDioxide"</li>
 	 * <li>
@@ -2400,7 +2533,7 @@ public class UnitOfMeasureCode extends MMCode {
 	 */
 	public static final UnitOfMeasureCode TonsOfCarbonDioxide = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TonsOfCarbonDioxide";
 			definition = "Tons of carbon dioxide.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
@@ -2408,7 +2541,172 @@ public class UnitOfMeasureCode extends MMCode {
 		}
 	};
 	/**
-	 * Indication of the unit of measurement
+	 * Financial instrument that gives the owner right to dividends paid by a
+	 * company and the most junior claim on the companies assets in the event of
+	 * a bankruptcy.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SHAS"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Shares"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Financial instrument that gives the owner right to dividends paid by a company and the most junior claim on the companies assets in the event of a bankruptcy."
+	 * </li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Shares = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "Shares";
+			definition = "Financial instrument that gives the owner right to dividends paid by a company and the most junior claim on the companies assets in the event of a bankruptcy.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "SHAS";
+		}
+	};
+	/**
+	 * Unit of heat, often used a unit of measure for natural gas in the UK.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "THMS"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Therms"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unit of heat, often used a unit of measure for natural gas in the UK."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Therms = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "Therms";
+			definition = "Unit of heat, often used a unit of measure for natural gas in the UK.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "THMS";
+		}
+	};
+	/**
+	 * Exchange traded contract that defines an agreement to buy specific
+	 * quantities of a commodity or financial instrument at an agreed time in
+	 * the future.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "FUTU"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Future"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Exchange traded contract that defines an agreement to buy specific quantities of a commodity or financial instrument at an agreed time in the future."
+	 * </li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Future = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "Future";
+			definition = "Exchange traded contract that defines an agreement to buy specific quantities of a commodity or financial instrument at an agreed time in the future.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "FUTU";
+		}
+	};
+	/**
+	 * Unit of measure that is equal to the power consumption of one Gigawatt
+	 * during one hour.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "GWHO"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GigawattHours"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unit of measure that is equal to the power consumption of one Gigawatt during one hour."
+	 * </li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode GigawattHours = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "GigawattHours";
+			definition = "Unit of measure that is equal to the power consumption of one Gigawatt during one hour.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "GWHO";
+		}
+	};
+	/**
+	 * Unit of measure of heat required to raise the temperature of one pound of
+	 * water by one degree Fahrenheit.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "BRTU"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BritishThermalUnit"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unit of measure of heat required to raise the temperature of one pound of water by one degree Fahrenheit."
+	 * </li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode BritishThermalUnit = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "BritishThermalUnit";
+			definition = "Unit of measure of heat required to raise the temperature of one pound of water by one degree Fahrenheit.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "BRTU";
+		}
+	};
+	/**
+	 * Indication of the unit of measurement.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2420,21 +2718,442 @@ public class UnitOfMeasureCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Lot"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Indication of the unit of measurement"</li>
+	 * definition} = "Indication of the unit of measurement."</li>
 	 * </ul>
 	 */
 	public static final UnitOfMeasureCode Lot = new UnitOfMeasureCode() {
 		{
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Lot";
-			definition = "Indication of the unit of measurement";
+			definition = "Indication of the unit of measurement.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
 			codeName = "LOTS";
+		}
+	};
+	/**
+	 * Code for a bag.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "BAGG"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Bag"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Code for a bag."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Bag = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Bag";
+			definition = "Code for a bag.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "BAGG";
+		}
+	};
+	/**
+	 * Code for a bale.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "BALE"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Bale"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Code for a bale."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Bale = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Bale";
+			definition = "Code for a bale.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "BALE";
+		}
+	};
+	/**
+	 * Code for a bottle.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "BOTL"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Bottle"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Code for a bottle."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Bottle = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Bottle";
+			definition = "Code for a bottle.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "BOTL";
+		}
+	};
+	/**
+	 * Code for a box.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "BOXX"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Box"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Code for a box."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Box = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Box";
+			definition = "Code for a box.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "BOXX";
+		}
+	};
+	/**
+	 * Code for a carton.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CRTN"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Carton"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Code for a carton."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Carton = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Carton";
+			definition = "Code for a carton.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "CRTN";
+		}
+	};
+	/**
+	 * Code for a container.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CNTR"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Container"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Code for a container."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Container = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Container";
+			definition = "Code for a container.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "CNTR";
+		}
+	};
+	/**
+	 * Code for a crate.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CRAT"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "Crate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Code for a crate."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode Crate = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "Crate";
+			definition = "Code for a crate.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "CRAT";
+		}
+	};
+	/**
+	 * Measure of a volume, one inch by one inch by one inch.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CBIN"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CubicInch"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Measure of a volume, one inch by one inch by one inch."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode CubicInch = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CubicInch";
+			definition = "Measure of a volume, one inch by one inch by one inch.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "CBIN";
+		}
+	};
+	/**
+	 * Unit of volume that is equal to one thousandth of a litre.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "CBML"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CubicMillimetre"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Unit of volume that is equal to one thousandth of a litre."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode CubicMillimetre = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CubicMillimetre";
+			definition = "Unit of volume that is equal to one thousandth of a litre.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "CBML";
+		}
+	};
+	/**
+	 * Unit of volume equal to 2, 841 306 centilitre.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "GBFO"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GBFuildOunce"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Unit of volume equal to 2, 841 306 centilitre."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode GBFuildOunce = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GBFuildOunce";
+			definition = "Unit of volume equal to 2, 841 306 centilitre.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "GBFO";
+		}
+	};
+	/**
+	 * Measure of weight, in Britain 2240 lb (long ton).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "GBTN"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GBTon"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Measure of weight, in Britain 2240 lb (long ton)."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode GBTon = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GBTon";
+			definition = "Measure of weight, in Britain 2240 lb (long ton).";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "GBTN";
+		}
+	};
+	/**
+	 * Unit of volume equal to 158, 9873 litre.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "USBA"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "USBarrel"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Unit of volume equal to 158, 9873 litre."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode USBarrel = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "USBarrel";
+			definition = "Unit of volume equal to 158, 9873 litre.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "USBA";
+		}
+	};
+	/**
+	 * Unit of volume equal to 2, 957353 centilitre.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "USFO"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "USFluidOunce"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Unit of volume equal to 2, 957353 centilitre."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode USFluidOunce = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "USFluidOunce";
+			definition = "Unit of volume equal to 2, 957353 centilitre.";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "USFO";
+		}
+	};
+	/**
+	 * Measure of weight, in the US 2000 lb (short ton).
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.UnitOfMeasureCode
+	 * UnitOfMeasureCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "USTN"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "USTon"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Measure of weight, in the US 2000 lb (short ton)."</li>
+	 * </ul>
+	 */
+	public static final UnitOfMeasureCode USTon = new UnitOfMeasureCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "USTon";
+			definition = "Measure of weight, in the US 2000 lb (short ton).";
+			owner_lazy = () -> com.tools20022.repository.codeset.UnitOfMeasureCode.mmObject();
+			codeName = "USTN";
 		}
 	};
 	final static private LinkedHashMap<String, UnitOfMeasureCode> codesByName = new LinkedHashMap<>();
@@ -2450,7 +3169,7 @@ public class UnitOfMeasureCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasureCode";
 				definition = "Identifies the unit of measure by means of a code.";
-				derivation_lazy = () -> Arrays.asList(UnitOfMeasure1Code.mmObject(), UnitOfMeasure6Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(UnitOfMeasure1Code.mmObject(), UnitOfMeasure6Code.mmObject(), UnitOfMeasure8Code.mmObject(), UnitOfMeasure9Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnitOfMeasureCode.Kilogram, com.tools20022.repository.codeset.UnitOfMeasureCode.Piece, com.tools20022.repository.codeset.UnitOfMeasureCode.Ton,
 						com.tools20022.repository.codeset.UnitOfMeasureCode.Metre, com.tools20022.repository.codeset.UnitOfMeasureCode.Inch, com.tools20022.repository.codeset.UnitOfMeasureCode.Yard,
 						com.tools20022.repository.codeset.UnitOfMeasureCode.GBGallon, com.tools20022.repository.codeset.UnitOfMeasureCode.Gram, com.tools20022.repository.codeset.UnitOfMeasureCode.Centimetre,
@@ -2476,7 +3195,13 @@ public class UnitOfMeasureCode extends MMCode {
 						com.tools20022.repository.codeset.UnitOfMeasureCode.OneMillionBTU, com.tools20022.repository.codeset.UnitOfMeasureCode.TroyOunces, com.tools20022.repository.codeset.UnitOfMeasureCode.USHundredweight,
 						com.tools20022.repository.codeset.UnitOfMeasureCode.IndexPoint, com.tools20022.repository.codeset.UnitOfMeasureCode.PrincipalWithRelationToDebtInstrument,
 						com.tools20022.repository.codeset.UnitOfMeasureCode.DieselGallonEquivalent, com.tools20022.repository.codeset.UnitOfMeasureCode.GasolineGallonEquivalent,
-						com.tools20022.repository.codeset.UnitOfMeasureCode.TonsOfCarbonDioxide, com.tools20022.repository.codeset.UnitOfMeasureCode.Lot);
+						com.tools20022.repository.codeset.UnitOfMeasureCode.TonsOfCarbonDioxide, com.tools20022.repository.codeset.UnitOfMeasureCode.Shares, com.tools20022.repository.codeset.UnitOfMeasureCode.Therms,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.Future, com.tools20022.repository.codeset.UnitOfMeasureCode.GigawattHours, com.tools20022.repository.codeset.UnitOfMeasureCode.BritishThermalUnit,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.Lot, com.tools20022.repository.codeset.UnitOfMeasureCode.Bag, com.tools20022.repository.codeset.UnitOfMeasureCode.Bale,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.Bottle, com.tools20022.repository.codeset.UnitOfMeasureCode.Box, com.tools20022.repository.codeset.UnitOfMeasureCode.Carton,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.Container, com.tools20022.repository.codeset.UnitOfMeasureCode.Crate, com.tools20022.repository.codeset.UnitOfMeasureCode.CubicInch,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.CubicMillimetre, com.tools20022.repository.codeset.UnitOfMeasureCode.GBFuildOunce, com.tools20022.repository.codeset.UnitOfMeasureCode.GBTon,
+						com.tools20022.repository.codeset.UnitOfMeasureCode.USBarrel, com.tools20022.repository.codeset.UnitOfMeasureCode.USFluidOunce, com.tools20022.repository.codeset.UnitOfMeasureCode.USTon);
 			}
 		});
 		return mmObject_lazy.get();
@@ -2554,7 +3279,26 @@ public class UnitOfMeasureCode extends MMCode {
 		codesByName.put(DieselGallonEquivalent.getCodeName().get(), DieselGallonEquivalent);
 		codesByName.put(GasolineGallonEquivalent.getCodeName().get(), GasolineGallonEquivalent);
 		codesByName.put(TonsOfCarbonDioxide.getCodeName().get(), TonsOfCarbonDioxide);
+		codesByName.put(Shares.getCodeName().get(), Shares);
+		codesByName.put(Therms.getCodeName().get(), Therms);
+		codesByName.put(Future.getCodeName().get(), Future);
+		codesByName.put(GigawattHours.getCodeName().get(), GigawattHours);
+		codesByName.put(BritishThermalUnit.getCodeName().get(), BritishThermalUnit);
 		codesByName.put(Lot.getCodeName().get(), Lot);
+		codesByName.put(Bag.getCodeName().get(), Bag);
+		codesByName.put(Bale.getCodeName().get(), Bale);
+		codesByName.put(Bottle.getCodeName().get(), Bottle);
+		codesByName.put(Box.getCodeName().get(), Box);
+		codesByName.put(Carton.getCodeName().get(), Carton);
+		codesByName.put(Container.getCodeName().get(), Container);
+		codesByName.put(Crate.getCodeName().get(), Crate);
+		codesByName.put(CubicInch.getCodeName().get(), CubicInch);
+		codesByName.put(CubicMillimetre.getCodeName().get(), CubicMillimetre);
+		codesByName.put(GBFuildOunce.getCodeName().get(), GBFuildOunce);
+		codesByName.put(GBTon.getCodeName().get(), GBTon);
+		codesByName.put(USBarrel.getCodeName().get(), USBarrel);
+		codesByName.put(USFluidOunce.getCodeName().get(), USFluidOunce);
+		codesByName.put(USTon.getCodeName().get(), USTon);
 	}
 
 	public static UnitOfMeasureCode valueOf(String codeName) {

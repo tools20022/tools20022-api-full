@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.LimitCriteria4Choice
+ * LimitCriteria4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +108,14 @@ public class LimitCriteria3Choice {
 	 * definition} =
 	 * "Recalls the criteria (search and return criteria) defined in a preceding query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitCriteria4Choice#mmQueryName
+	 * LimitCriteria4Choice.mmQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
@@ -111,6 +126,7 @@ public class LimitCriteria3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
+			nextVersions_lazy = () -> Arrays.asList(LimitCriteria4Choice.mmQueryName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -143,6 +159,14 @@ public class LimitCriteria3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria based on which the information is extracted."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitCriteria4Choice#mmNewCriteria
+	 * LimitCriteria4Choice.mmNewCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNewCriteria = new MMMessageAssociationEnd() {
@@ -153,6 +177,7 @@ public class LimitCriteria3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Defines the criteria based on which the information is extracted.";
+			nextVersions_lazy = () -> Arrays.asList(LimitCriteria4Choice.mmNewCriteria);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -168,6 +193,7 @@ public class LimitCriteria3Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitCriteria3Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
+				nextVersions_lazy = () -> Arrays.asList(LimitCriteria4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

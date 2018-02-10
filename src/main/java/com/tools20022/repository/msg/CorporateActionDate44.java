@@ -174,6 +174,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionDate44"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies corporate action dates."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDate61
+ * CorporateActionDate61}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionDate27
@@ -224,6 +231,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time at which the issuer announced that a corporate action event will occur."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmAnnouncementDate
+	 * CorporateActionDate61.mmAnnouncementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -241,6 +256,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date/time at which the issuer announced that a corporate action event will occur.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmAnnouncementDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmAnnouncementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -284,6 +300,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Deadline by which the beneficial ownership of securities must be declared."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmCertificationDeadline
+	 * CorporateActionDate61.mmCertificationDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -301,6 +325,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationDeadline";
 			definition = "Deadline by which the beneficial ownership of securities must be declared.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmCertificationDeadline);
 			previousVersion_lazy = () -> CorporateActionDate27.mmCertificationDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -342,6 +367,14 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date upon which the court provided approval."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmCourtApprovalDate
+	 * CorporateActionDate61.mmCourtApprovalDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -359,6 +392,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CourtApprovalDate";
 			definition = "Date upon which the court provided approval.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmCourtApprovalDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmCourtApprovalDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -402,6 +436,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "First possible early closing date of an offer if different from the expiry date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmEarlyClosingDate
+	 * CorporateActionDate61.mmEarlyClosingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -419,6 +461,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyClosingDate";
 			definition = "First possible early closing date of an offer if different from the expiry date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmEarlyClosingDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmEarlyClosingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -462,6 +505,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time at which an event is officially effective from the issuer's perspective."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmEffectiveDate
+	 * CorporateActionDate61.mmEffectiveDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -479,6 +530,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDate";
 			definition = "Date/time at which an event is officially effective from the issuer's perspective.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmEffectiveDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmEffectiveDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -522,6 +574,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/Time on which all or part of any holding bought in a unit trust is subject to being treated as capital rather than income. This is normally one day after the previous distribution's ex date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmEqualisationDate
+	 * CorporateActionDate61.mmEqualisationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -539,6 +599,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EqualisationDate";
 			definition = "Date/Time on which all or part of any holding bought in a unit trust is subject to being treated as capital rather than income. This is normally one day after the previous distribution's ex date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmEqualisationDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmEqualisationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -582,6 +643,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time at which additional information on the event will be announced, for example, exchange ratio announcement date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmFurtherDetailedAnnouncementDate
+	 * CorporateActionDate61.mmFurtherDetailedAnnouncementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -599,6 +668,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FurtherDetailedAnnouncementDate";
 			definition = "Date/time at which additional information on the event will be announced, for example, exchange ratio announcement date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmFurtherDetailedAnnouncementDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmFurtherDetailedAnnouncementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -641,6 +711,14 @@ public class CorporateActionDate44 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time at which an index / rate / price / value will be determined."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmFixingDate
+	 * CorporateActionDate61.mmFixingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -658,6 +736,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingDate";
 			definition = "Date/time at which an index / rate / price / value will be determined.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmFixingDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmFixingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -701,6 +780,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmLotteryDate
+	 * CorporateActionDate61.mmLotteryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -718,6 +805,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryDate";
 			definition = "Date/time on which the lottery is run and applied to the holder's positions. This is also applicable to partial calls.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmLotteryDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmLotteryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -758,6 +846,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time to which the maturity date of an interest bearing security is extended."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmNewMaturityDate
+	 * CorporateActionDate61.mmNewMaturityDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -774,6 +870,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewMaturityDate";
 			definition = "Date/time to which the maturity date of an interest bearing security is extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmNewMaturityDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmNewMaturityDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -817,6 +914,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time on which the bondholder's or shareholder's meeting will take place."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmMeetingDate
+	 * CorporateActionDate61.mmMeetingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -834,6 +939,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MeetingDate";
 			definition = "Date/time on which the bondholder's or shareholder's meeting will take place.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmMeetingDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmMeetingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -874,7 +980,15 @@ public class CorporateActionDate44 {
 	 * name} = "MarginFixingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date/time at which the margin rate will be determined ."</li>
+	 * definition} = "Date/time at which the margin rate will be determined."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmMarginFixingDate
+	 * CorporateActionDate61.mmMarginFixingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -891,7 +1005,8 @@ public class CorporateActionDate44 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::MFIX"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarginFixingDate";
-			definition = "Date/time at which the margin rate will be determined .";
+			definition = "Date/time at which the margin rate will be determined.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmMarginFixingDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmMarginFixingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -935,6 +1050,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time (and time) at which an issuer will determine the proration amount/quantity of an offer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmProrationDate
+	 * CorporateActionDate61.mmProrationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -952,6 +1075,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProrationDate";
 			definition = "Date/time (and time) at which an issuer will determine the proration amount/quantity of an offer.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmProrationDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmProrationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -995,6 +1119,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmRecordDate
+	 * CorporateActionDate61.mmRecordDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1012,6 +1144,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecordDate";
 			definition = "Date/time at which positions are struck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmRecordDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmRecordDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1055,6 +1188,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time on which instructions to register or registration details will be accepted."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmRegistrationDeadline
+	 * CorporateActionDate61.mmRegistrationDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1072,6 +1213,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationDeadline";
 			definition = "Date/time on which instructions to register or registration details will be accepted.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmRegistrationDeadline);
 			previousVersion_lazy = () -> CorporateActionDate27.mmRegistrationDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1115,6 +1257,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time on which results are published, for example, results of an offer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmResultsPublicationDate
+	 * CorporateActionDate61.mmResultsPublicationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1132,6 +1282,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultsPublicationDate";
 			definition = "Date/time on which results are published, for example, results of an offer.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmResultsPublicationDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmResultsPublicationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1175,6 +1326,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Deadline by which instructions must be received to split securities, for example, of physical certificates."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmDeadlineToSplit
+	 * CorporateActionDate61.mmDeadlineToSplit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1192,6 +1351,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeadlineToSplit";
 			definition = "Deadline by which instructions must be received to split securities, for example, of physical certificates.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmDeadlineToSplit);
 			previousVersion_lazy = () -> CorporateActionDate27.mmDeadlineToSplit;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1234,6 +1394,14 @@ public class CorporateActionDate44 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time on until which tax breakdown instructions will be accepted."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmDeadlineForTaxBreakdownInstruction
+	 * CorporateActionDate61.mmDeadlineForTaxBreakdownInstruction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1251,6 +1419,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeadlineForTaxBreakdownInstruction";
 			definition = "Date/time on until which tax breakdown instructions will be accepted.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmDeadlineForTaxBreakdownInstruction);
 			previousVersion_lazy = () -> CorporateActionDate27.mmDeadlineForTaxBreakdownInstruction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1294,6 +1463,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time at which trading of a security is suspended as the result of an event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmTradingSuspendedDate
+	 * CorporateActionDate61.mmTradingSuspendedDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1311,6 +1488,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSuspendedDate";
 			definition = "Date/time at which trading of a security is suspended as the result of an event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmTradingSuspendedDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmTradingSuspendedDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1354,6 +1532,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time upon which the terms of the take-over become unconditional as to acceptances."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmUnconditionalDate
+	 * CorporateActionDate61.mmUnconditionalDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1371,6 +1557,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnconditionalDate";
 			definition = "Date/time upon which the terms of the take-over become unconditional as to acceptances.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmUnconditionalDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmUnconditionalDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1414,6 +1601,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time at on which all conditions, including regulatory, legal etc. pertaining to the take-over, have been met."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmWhollyUnconditionalDate
+	 * CorporateActionDate61.mmWhollyUnconditionalDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1431,6 +1626,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WhollyUnconditionalDate";
 			definition = "Date/time at on which all conditions, including regulatory, legal etc. pertaining to the take-over, have been met.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmWhollyUnconditionalDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmWhollyUnconditionalDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1474,6 +1670,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmExDividendDate
+	 * CorporateActionDate61.mmExDividendDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1491,6 +1695,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExDividendDate";
 			definition = "Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmExDividendDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmExDividendDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1534,6 +1739,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time at which the corporate action is legally announced by an official body, for example, publication by a governmental administration."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmOfficialAnnouncementPublicationDate
+	 * CorporateActionDate61.mmOfficialAnnouncementPublicationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1551,6 +1764,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialAnnouncementPublicationDate";
 			definition = "Date/time at which the corporate action is legally announced by an official body, for example, publication by a governmental administration.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmOfficialAnnouncementPublicationDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmOfficialAnnouncementPublicationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1592,7 +1806,15 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively,  for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets."
+	 * "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively, for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmSpecialExDate
+	 * CorporateActionDate61.mmSpecialExDate}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1610,7 +1832,8 @@ public class CorporateActionDate44 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::SXDT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialExDate";
-			definition = "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively,  for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets.";
+			definition = "Date/time as from which 'special processing' can start to be used by participants for that event. Special processing is a means of marking a transaction, that would normally be traded ex or cum, as being traded cum or ex respectively, for example, a transaction dealt 'special' after the ex date would result in the buyer being eligible for the entitlement. This is typically used in the UK and Irish markets.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmSpecialExDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmSpecialExDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1654,6 +1877,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Last date/time by which a buying counterparty to a trade can be sure that it will have the right to participate in an event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmGuaranteedParticipationDate
+	 * CorporateActionDate61.mmGuaranteedParticipationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1671,6 +1902,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GuaranteedParticipationDate";
 			definition = "Last date/time by which a buying counterparty to a trade can be sure that it will have the right to participate in an event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmGuaranteedParticipationDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmGuaranteedParticipationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1714,6 +1946,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event, also known as Buyer Protection Deadline."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmElectionToCounterpartyMarketDeadline
+	 * CorporateActionDate61.mmElectionToCounterpartyMarketDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1731,6 +1971,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionToCounterpartyMarketDeadline";
 			definition = "Deadline by which an entitled holder needs to advise their counterparty to a transaction of their election for a corporate action event, also known as Buyer Protection Deadline.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmElectionToCounterpartyMarketDeadline);
 			previousVersion_lazy = () -> CorporateActionDate27.mmElectionToCounterpartyDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1769,7 +2010,15 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date/time the account servicer has set as the deadline to respond, with instructions, prior to the election to counterparty market deadline "
+	 * "Date/time the account servicer has set as the deadline to respond, with instructions, prior to the election to counterparty market deadline."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmElectionToCounterpartyResponseDeadline
+	 * CorporateActionDate61.mmElectionToCounterpartyResponseDeadline}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -1781,7 +2030,8 @@ public class CorporateActionDate44 {
 			xmlTag = "ElctnToCtrPtyRspnDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ElectionToCounterpartyResponseDeadline";
-			definition = "Date/time the account servicer has set as the deadline to respond, with instructions, prior to the election to counterparty market deadline ";
+			definition = "Date/time the account servicer has set as the deadline to respond, with instructions, prior to the election to counterparty market deadline.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmElectionToCounterpartyResponseDeadline);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1823,6 +2073,14 @@ public class CorporateActionDate44 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time at which an event/offer is terminated or lapsed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmLapsedDate
+	 * CorporateActionDate61.mmLapsedDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1840,6 +2098,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LapsedDate";
 			definition = "Date/time at which an event/offer is terminated or lapsed.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmLapsedDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmLapsedDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1883,6 +2142,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/time at which the movement is due to take place (cash and/or securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmPaymentDate
+	 * CorporateActionDate61.mmPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1900,6 +2167,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement is due to take place (cash and/or securities).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmPaymentDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1943,6 +2211,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/Time by which the account owner must instruct directly another party, for example to provide documentation to an issuer agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmThirdPartyDeadline
+	 * CorporateActionDate61.mmThirdPartyDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1960,6 +2236,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ThirdPartyDeadline";
 			definition = "Date/Time by which the account owner must instruct directly another party, for example to provide documentation to an issuer agent.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmThirdPartyDeadline);
 			previousVersion_lazy = () -> CorporateActionDate27.mmThirdPartyDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2003,6 +2280,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date/Time set by the issuer agent as a first early deadline by which the account owner must instruct directly another party, possibly giving the holder eligibility to incentives. For example, to provide documentation to an issuer agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmEarlyThirdPartyDeadline
+	 * CorporateActionDate61.mmEarlyThirdPartyDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2020,6 +2305,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyThirdPartyDeadline";
 			definition = "Date/Time set by the issuer agent as a first early deadline by which the account owner must instruct directly another party, possibly giving the holder eligibility to incentives. For example, to provide documentation to an issuer agent.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmEarlyThirdPartyDeadline);
 			previousVersion_lazy = () -> CorporateActionDate27.mmEarlyThirdPartyDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2063,6 +2349,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date by which the depository stops monitoring activities of the event, for instance, accounting and tracking activities for due bills end."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate61.mmMarketClaimTrackingEndDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2080,6 +2374,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketClaimTrackingEndDate";
 			definition = "Date by which the depository stops monitoring activities of the event, for instance, accounting and tracking activities for due bills end.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmMarketClaimTrackingEndDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmMarketClaimTrackingEndDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2118,6 +2413,14 @@ public class CorporateActionDate44 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Last day an investor can become a lead plaintiff."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmLeadPlaintiffDeadline
+	 * CorporateActionDate61.mmLeadPlaintiffDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2134,6 +2437,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LeadPlaintiffDeadline";
 			definition = "Last day an investor can become a lead plaintiff.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmLeadPlaintiffDeadline);
 			previousVersion_lazy = () -> CorporateActionDate27.mmLeadPlaintiffDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2175,6 +2479,14 @@ public class CorporateActionDate44 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date on which the action was filed at the applicable court."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmFilingDate
+	 * CorporateActionDate61.mmFilingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2191,6 +2503,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FilingDate";
 			definition = "Date on which the action was filed at the applicable court.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmFilingDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmFilingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2232,6 +2545,14 @@ public class CorporateActionDate44 {
 	 * definition} =
 	 * "Date for the hearing between the plaintiff and defendant, as set by the court."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmHearingDate
+	 * CorporateActionDate61.mmHearingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2248,6 +2569,7 @@ public class CorporateActionDate44 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HearingDate";
 			definition = "Date for the hearing between the plaintiff and defendant, as set by the court.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmHearingDate);
 			previousVersion_lazy = () -> CorporateActionDate27.mmHearingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2279,6 +2601,7 @@ public class CorporateActionDate44 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate44";
 				definition = "Specifies corporate action dates.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionDate61.mmObject());
 				previousVersion_lazy = () -> CorporateActionDate27.mmObject();
 			}
 		});

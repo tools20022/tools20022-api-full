@@ -269,7 +269,7 @@ public class CurrencyConversion1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Plain text explaining the result of the  currency conversion request."</li>
+	 * "Plain text explaining the result of the currency conversion request."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmResponseReason = new MMMessageAttribute() {
@@ -279,7 +279,7 @@ public class CurrencyConversion1 {
 			xmlTag = "RspnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseReason";
-			definition = "Plain text explaining the result of the  currency conversion request.";
+			definition = "Plain text explaining the result of the currency conversion request.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

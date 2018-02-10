@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.choice.MatchingStatus24Choice;
 import com.tools20022.repository.choice.ProcessingStatus48Choice;
 import com.tools20022.repository.choice.SettlementStatus17Choice;
@@ -110,8 +110,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "SctiesSttlmTxStsAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.024.001.08}</li>
@@ -154,6 +154,14 @@ import javax.xml.bind.annotation.*;
  * definition} =
  * "Scope\r\nAn account servicer sends a SecuritiesSettlementTransactionStatusAdvice to an account owner to advise the status of a securities settlement transaction instruction previously sent by the account owner or the status of a settlement transaction existing in the books of the servicer for the account of the owner. The status may be a processing, pending processing, internal matching, matching and/or settlement status.\r\nThe status advice may be sent as a response to the request of the account owner or not.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09
+ * SecuritiesSettlementTransactionStatusAdviceV09}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07
@@ -190,6 +198,15 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides unambiguous transaction identification information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmTransactionIdentification
+	 * SecuritiesSettlementTransactionStatusAdviceV09.
+	 * mmTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -204,6 +221,7 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Provides unambiguous transaction identification information.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmTransactionIdentification);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -241,6 +259,14 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Link to another transaction - provided for information only."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmLinkages
+	 * SecuritiesSettlementTransactionStatusAdviceV09.mmLinkages}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -254,6 +280,7 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Link to another transaction - provided for information only.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmLinkages);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmLinkages;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -292,6 +319,14 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides details on the processing status of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmProcessingStatus
+	 * SecuritiesSettlementTransactionStatusAdviceV09.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -305,6 +340,7 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmProcessingStatus);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmProcessingStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -344,6 +380,14 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 	 * definition} =
 	 * "Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmInferredMatchingStatus
+	 * SecuritiesSettlementTransactionStatusAdviceV09.mmInferredMatchingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -357,6 +401,7 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InferredMatchingStatus";
 			definition = "Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmInferredMatchingStatus);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmInferredMatchingStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -394,6 +439,14 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the matching status of the instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmMatchingStatus
+	 * SecuritiesSettlementTransactionStatusAdviceV09.mmMatchingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -407,6 +460,7 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingStatus";
 			definition = "Provides the matching status of the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmMatchingStatus);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmMatchingStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -444,6 +498,14 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of settlement of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmSettlementStatus
+	 * SecuritiesSettlementTransactionStatusAdviceV09.mmSettlementStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -457,6 +519,7 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
 			definition = "Provides the status of settlement of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmSettlementStatus);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmSettlementStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -494,6 +557,14 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the details of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmTransactionDetails
+	 * SecuritiesSettlementTransactionStatusAdviceV09.mmTransactionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -507,6 +578,7 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDetails";
 			definition = "Identifies the details of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmTransactionDetails);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmTransactionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -546,6 +618,14 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmSupplementaryData
+	 * SecuritiesSettlementTransactionStatusAdviceV09.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -559,6 +639,7 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmSupplementaryData);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
@@ -585,11 +666,12 @@ public class SecuritiesSettlementTransactionStatusAdviceV08 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionStatusAdviceV08";
 				definition = "Scope\r\nAn account servicer sends a SecuritiesSettlementTransactionStatusAdvice to an account owner to advise the status of a securities settlement transaction instruction previously sent by the account owner or the status of a settlement transaction existing in the books of the servicer for the account of the owner. The status may be a processing, pending processing, internal matching, matching and/or settlement status.\r\nThe status advice may be sent as a response to the request of the account owner or not.\r\nThe account servicer/owner relationship may be:\r\n- a central securities depository or another settlement market infrastructure acting on behalf of their participants\r\n- an agent (sub-custodian) acting on behalf of their global custodian customer, or\r\n- a custodian acting on behalf of an investment management institution or a broker/dealer.\r\n\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent,\r\n- provide a third party with a copy of a message for information,\r\n- re-send to a third party a copy of a message for information\r\nusing the relevant elements in the Business Application Header.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV09.mmObject());
 				previousVersion_lazy = () -> SecuritiesSettlementTransactionStatusAdviceV07.mmObject();
 				messageSet_lazy = () -> Arrays.asList(SettlementAndReconciliationISOLatestversion.mmObject(), SettlementandReconciliationMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "SctiesSttlmTxStsAdvc";
-				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08.mmTransactionIdentification,
 						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08.mmLinkages, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08.mmProcessingStatus,
 						com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08.mmInferredMatchingStatus, com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08.mmMatchingStatus,

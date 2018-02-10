@@ -83,7 +83,7 @@ public class ConstraintFixingCurrencyAndFixingDateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ForeignExchangeTradeProduct is equal to value 'NDFO', then FixingCurrency and FixingDate must be present. "
+	 * "If ForeignExchangeTradeProduct is equal to value 'NDFO', then FixingCurrency and FixingDate must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -92,7 +92,7 @@ public class ConstraintFixingCurrencyAndFixingDateRule {
 			validator = ConstraintFixingCurrencyAndFixingDateRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FixingCurrencyAndFixingDateRule";
-			definition = "If ForeignExchangeTradeProduct is equal to value 'NDFO', then FixingCurrency and FixingDate must be present. ";
+			definition = "If ForeignExchangeTradeProduct is equal to value 'NDFO', then FixingCurrency and FixingDate must be present.";
 			owner_lazy = () -> Trade1.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'NDFO'\r\nFollowing must be true\r\n\t/FixingCurrency must be present\r\nAnd/FixingDate must be present";
 		}

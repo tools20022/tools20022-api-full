@@ -165,6 +165,8 @@ import java.util.Objects;
  * </li>
  * <li>{@linkplain com.tools20022.repository.entity.DebitCreditFacility
  * DebitCreditFacility}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.AccountSwitching
+ * AccountSwitching}</li>
  * </ul>
  * </li>
  * <li>
@@ -197,6 +199,8 @@ import java.util.Objects;
  * BillingServiceParameters3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.BillingService2
  * BillingService2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DirectDebitInstructionDetails1
+ * DirectDebitInstructionDetails1}</li>
  * </ul>
  * </li>
  * <li>
@@ -246,6 +250,8 @@ public class CashAccountService extends AccountService {
 	 * AccountReport15.mmMandate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport14#mmMandate
 	 * AccountReport14.mmMandate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport20#mmMandate
+	 * AccountReport20.mmMandate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -268,7 +274,7 @@ public class CashAccountService extends AccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmCashAccountMandate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(AccountReport1.mmMandate, AccountReport15.mmMandate, AccountReport14.mmMandate);
+			derivation_lazy = () -> Arrays.asList(AccountReport1.mmMandate, AccountReport15.mmMandate, AccountReport14.mmMandate, AccountReport20.mmMandate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -683,14 +689,14 @@ public class CashAccountService extends AccountService {
 						BillingMethod4.mmServiceDetail, BillingServiceAdjustment1.mmSubService, BillingStatement1.mmCompensation, BillingStatement1.mmService, BillingStatement1.mmServiceAdjustment,
 						BillingServiceIdentification3.mmSubService, BillingServiceParameters3.mmBankService, BillingService2.mmServiceDetail, BillingStatement2.mmCompensation, BillingStatement2.mmService,
 						BillingStatement2.mmServiceAdjustment);
-				subType_lazy = () -> Arrays.asList(CashManagementService.mmObject(), BankOperation.mmObject(), DebitCreditFacility.mmObject());
+				subType_lazy = () -> Arrays.asList(CashManagementService.mmObject(), BankOperation.mmObject(), DebitCreditFacility.mmObject(), AccountSwitching.mmObject());
 				superType_lazy = () -> AccountService.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccountService.mmCashAccountMandate, com.tools20022.repository.entity.CashAccountService.mmCompensationMethod,
 						com.tools20022.repository.entity.CashAccountService.mmBillingCurrency, com.tools20022.repository.entity.CashAccountService.mmBillingChargeMethod, com.tools20022.repository.entity.CashAccountService.mmPaymentMethod,
 						com.tools20022.repository.entity.CashAccountService.mmCashAccountContract, com.tools20022.repository.entity.CashAccountService.mmIdentification, com.tools20022.repository.entity.CashAccountService.mmCashAccount);
 				derivationComponent_lazy = () -> Arrays.asList(BillingCompensation1.mmObject(), BillingServiceIdentification1.mmObject(), BillingServiceParameters1.mmObject(), BillingServicesAmount1.mmObject(),
 						BillingServicesAmount2.mmObject(), BillingService1.mmObject(), BillingServiceIdentification2.mmObject(), BillingServiceParameters2.mmObject(), BillingServicesAmount3.mmObject(), BillingServiceAdjustment1.mmObject(),
-						BillingServiceIdentification3.mmObject(), BillingServiceParameters3.mmObject(), BillingService2.mmObject());
+						BillingServiceIdentification3.mmObject(), BillingServiceParameters3.mmObject(), BillingService2.mmObject(), DirectDebitInstructionDetails1.mmObject());
 			}
 
 			@Override

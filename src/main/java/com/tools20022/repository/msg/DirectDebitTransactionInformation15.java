@@ -153,7 +153,7 @@ public class DirectDebitTransactionInformation15 {
 	 * name} = "PaymentIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "References used for  a payment instruction."</li>
+	 * definition} = "References used for a payment instruction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentIdentification = new MMMessageAttribute() {
@@ -164,7 +164,7 @@ public class DirectDebitTransactionInformation15 {
 			xmlTag = "PmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
-			definition = "References used for  a payment instruction.";
+			definition = "References used for a payment instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.PaymentIdentification3.mmObject();

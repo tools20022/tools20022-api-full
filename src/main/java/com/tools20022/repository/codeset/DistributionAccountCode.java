@@ -130,7 +130,7 @@ public class DistributionAccountCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "RRG account. Sub account. DTC (The Depository Trust Company)  does not allow immediate use of securities."
+	 * "RRG account. Sub account. DTC (The Depository Trust Company) does not allow immediate use of securities."
 	 * </li>
 	 * </ul>
 	 */
@@ -138,7 +138,7 @@ public class DistributionAccountCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RRGAccount";
-			definition = "RRG account. Sub account. DTC (The Depository Trust Company)  does not allow immediate use of securities.";
+			definition = "RRG account. Sub account. DTC (The Depository Trust Company) does not allow immediate use of securities.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DistributionAccountCode.mmObject();
 			codeName = "RRGA";
 		}

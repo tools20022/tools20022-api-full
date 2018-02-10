@@ -158,7 +158,7 @@ public class PowerOfAttorneyRequirements1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the documents needed to obtain a valid power of attorney. "</li>
+	 * "Specifies the documents needed to obtain a valid power of attorney."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOtherDocumentation = new MMMessageAttribute() {
@@ -169,7 +169,7 @@ public class PowerOfAttorneyRequirements1 {
 			xmlTag = "OthrDcmnttn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentation";
-			definition = "Specifies the documents needed to obtain a valid power of attorney. ";
+			definition = "Specifies the documents needed to obtain a valid power of attorney.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();

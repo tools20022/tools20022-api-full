@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "DeliveryStatusCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides an explicit indication whether the delivery attempt resulted in success or failure. "
+ * "Provides an explicit indication whether the delivery attempt resulted in success or failure."
  * </li>
  * </ul>
  */
@@ -142,7 +142,7 @@ public class DeliveryStatusCode extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DeliveryStatusCode";
-				definition = "Provides an explicit indication whether the delivery attempt resulted in success or failure. ";
+				definition = "Provides an explicit indication whether the delivery attempt resulted in success or failure.";
 				derivation_lazy = () -> Arrays.asList(DeliveryStatus1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DeliveryStatusCode.Failure, com.tools20022.repository.codeset.DeliveryStatusCode.Success);
 			}

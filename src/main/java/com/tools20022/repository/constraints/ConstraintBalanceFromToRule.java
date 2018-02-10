@@ -555,6 +555,14 @@ public class ConstraintBalanceFromToRule {
 	 * definition} =
 	 * "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraBalance3
+	 * ConstraintBalanceFromToRule.forIntraBalance3}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraBalance1> forIntraBalance1 = new MMConstraint<IntraBalance1>() {
@@ -563,6 +571,7 @@ public class ConstraintBalanceFromToRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule";
 			definition = "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraBalance3);
 			owner_lazy = () -> IntraBalance1.mmObject();
 		}
 	};
@@ -585,6 +594,14 @@ public class ConstraintBalanceFromToRule {
 	 * definition} =
 	 * "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraPositionType2
+	 * ConstraintBalanceFromToRule.forIntraPositionType2}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionType1> forIntraPositionType1 = new MMConstraint<IntraPositionType1>() {
@@ -593,6 +610,7 @@ public class ConstraintBalanceFromToRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule";
 			definition = "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraPositionType2);
 			owner_lazy = () -> IntraPositionType1.mmObject();
 		}
 	};
@@ -615,6 +633,14 @@ public class ConstraintBalanceFromToRule {
 	 * definition} =
 	 * "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraBalanceType2
+	 * ConstraintBalanceFromToRule.forIntraBalanceType2}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraBalanceType1> forIntraBalanceType1 = new MMConstraint<IntraBalanceType1>() {
@@ -623,6 +649,7 @@ public class ConstraintBalanceFromToRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule";
 			definition = "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraBalanceType2);
 			owner_lazy = () -> IntraBalanceType1.mmObject();
 		}
 	};
@@ -793,6 +820,113 @@ public class ConstraintBalanceFromToRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraBalance3 IntraBalance3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceFromToRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraBalance1
+	 * ConstraintBalanceFromToRule.forIntraBalance1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraBalance3> forIntraBalance3 = new MMConstraint<IntraBalance3>() {
+		{
+			validator = ConstraintBalanceFromToRule::checkIntraBalance3;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceFromToRule";
+			definition = "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraBalance1;
+			owner_lazy = () -> IntraBalance3.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionType2
+	 * IntraPositionType2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceFromToRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraPositionType1
+	 * ConstraintBalanceFromToRule.forIntraPositionType1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionType2> forIntraPositionType2 = new MMConstraint<IntraPositionType2>() {
+		{
+			validator = ConstraintBalanceFromToRule::checkIntraPositionType2;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceFromToRule";
+			definition = "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraPositionType1;
+			owner_lazy = () -> IntraPositionType2.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceType2
+	 * IntraBalanceType2}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceFromToRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraBalanceType1
+	 * ConstraintBalanceFromToRule.forIntraBalanceType1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraBalanceType2> forIntraBalanceType2 = new MMConstraint<IntraBalanceType2>() {
+		{
+			validator = ConstraintBalanceFromToRule::checkIntraBalanceType2;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceFromToRule";
+			definition = "The cash balance type of BalanceFrom must be different from the cash balance type of BalanceTo.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraBalanceType1;
+			owner_lazy = () -> IntraBalanceType2.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails41
 	 * IntraPositionDetails41}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
@@ -810,6 +944,14 @@ public class ConstraintBalanceFromToRule {
 	 * definition} =
 	 * "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraPositionDetails46
+	 * ConstraintBalanceFromToRule.forIntraPositionDetails46}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -823,6 +965,7 @@ public class ConstraintBalanceFromToRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFromToRule";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraPositionDetails46);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraPositionDetails34;
 			owner_lazy = () -> IntraPositionDetails41.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/BalanceFrom/Type/Code</leftOperand><rightOperand>/BalanceTo/Type/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Type/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceTo/Type/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\r\n";
@@ -860,6 +1003,82 @@ public class ConstraintBalanceFromToRule {
 			name = "BalanceFromToRule";
 			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
 			owner_lazy = () -> IntraPositionDetails43.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/BalanceFrom/Type/Code</leftOperand><rightOperand>/BalanceTo/Type/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Type/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceTo/Type/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\r\n";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails46
+	 * IntraPositionDetails46}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"DifferentFromNode\"&gt;&lt;leftOperand&gt;/BalanceFrom/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;/BalanceTo/Type/Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/BalanceFrom/Type/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/BalanceTo/Type/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\r\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceFromToRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBalanceFromToRule#forIntraPositionDetails41
+	 * ConstraintBalanceFromToRule.forIntraPositionDetails41}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionDetails46> forIntraPositionDetails46 = new MMConstraint<IntraPositionDetails46>() {
+		{
+			validator = ConstraintBalanceFromToRule::checkIntraPositionDetails46;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceFromToRule";
+			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBalanceFromToRule.forIntraPositionDetails41;
+			owner_lazy = () -> IntraPositionDetails46.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/BalanceFrom/Type/Code</leftOperand><rightOperand>/BalanceTo/Type/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Type/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceTo/Type/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\r\n";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails47
+	 * IntraPositionDetails47}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"DifferentFromNode\"&gt;&lt;leftOperand&gt;/BalanceFrom/Type/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;/BalanceTo/Type/Code&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/BalanceFrom/Type/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/BalanceTo/Type/Code&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\r\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BalanceFromToRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionDetails47> forIntraPositionDetails47 = new MMConstraint<IntraPositionDetails47>() {
+		{
+			validator = ConstraintBalanceFromToRule::checkIntraPositionDetails47;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BalanceFromToRule";
+			definition = "The SecuritiesBalanceType of BalanceFrom must be different from the SecuritiesBalanceType of BalanceTo.";
+			owner_lazy = () -> IntraPositionDetails47.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/BalanceFrom/Type/Code</leftOperand><rightOperand>/BalanceTo/Type/Code</rightOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceFrom/Type/Code</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceTo/Type/Code</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\r\n";
 		}
 	};
@@ -1033,6 +1252,30 @@ public class ConstraintBalanceFromToRule {
 	}
 
 	/**
+	 * The cash balance type of BalanceFrom must be different from the cash
+	 * balance type of BalanceTo.
+	 */
+	public static void checkIntraBalance3(IntraBalance3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The cash balance type of BalanceFrom must be different from the cash
+	 * balance type of BalanceTo.
+	 */
+	public static void checkIntraPositionType2(IntraPositionType2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The cash balance type of BalanceFrom must be different from the cash
+	 * balance type of BalanceTo.
+	 */
+	public static void checkIntraBalanceType2(IntraBalanceType2 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * The SecuritiesBalanceType of BalanceFrom must be different from the
 	 * SecuritiesBalanceType of BalanceTo.
 	 */
@@ -1045,6 +1288,22 @@ public class ConstraintBalanceFromToRule {
 	 * SecuritiesBalanceType of BalanceTo.
 	 */
 	public static void checkIntraPositionDetails43(IntraPositionDetails43 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The SecuritiesBalanceType of BalanceFrom must be different from the
+	 * SecuritiesBalanceType of BalanceTo.
+	 */
+	public static void checkIntraPositionDetails46(IntraPositionDetails46 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * The SecuritiesBalanceType of BalanceFrom must be different from the
+	 * SecuritiesBalanceType of BalanceTo.
+	 */
+	public static void checkIntraPositionDetails47(IntraPositionDetails47 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Commercial agreement in which the buyer agrees to pay the seller an amount of
  * cash. Some aspects of the payment may be defined in the agreement, for
- * example, the method of the payment
+ * example, the method of the payment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -85,7 +85,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PremiumAmount3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, for example, the method of the payment"
+ * "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, for example, the method of the payment."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.PremiumAmount2
@@ -353,7 +353,7 @@ public class PremiumAmount3 {
 	 * name} = "PayerPartyReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Premium fee payer related information"</li>
+	 * definition} = "Premium fee payer related information."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPayerPartyReference = new MMMessageAttribute() {
@@ -363,7 +363,7 @@ public class PremiumAmount3 {
 			xmlTag = "PyerPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayerPartyReference";
-			definition = "Premium fee payer related information";
+			definition = "Premium fee payer related information.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -394,7 +394,7 @@ public class PremiumAmount3 {
 	 * name} = "ReceiverPartyReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Premium fee receiver related information"</li>
+	 * definition} = "Premium fee receiver related information."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReceiverPartyReference = new MMMessageAttribute() {
@@ -404,7 +404,7 @@ public class PremiumAmount3 {
 			xmlTag = "RcvrPtyRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceiverPartyReference";
-			definition = "Premium fee receiver related information";
+			definition = "Premium fee receiver related information.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -421,7 +421,7 @@ public class PremiumAmount3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PremiumAmount3";
-				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, for example, the method of the payment";
+				definition = "Commercial agreement in which the buyer agrees to pay the seller an amount of cash. Some aspects of the payment may be defined in the agreement, for example, the method of the payment.";
 				previousVersion_lazy = () -> PremiumAmount2.mmObject();
 			}
 		});

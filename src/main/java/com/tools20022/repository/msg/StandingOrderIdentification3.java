@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "StandingOrderIdentification3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -104,7 +104,7 @@ public class StandingOrderIdentification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n"
+	 * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -116,7 +116,7 @@ public class StandingOrderIdentification3 {
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
-			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n";
+			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -179,7 +179,7 @@ public class StandingOrderIdentification3 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StandingOrderIdentification3.mmAccount, com.tools20022.repository.msg.StandingOrderIdentification3.mmAccountOwner);
 				trace_lazy = () -> CashStandingOrder.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingOrderIdentification3";
 				definition = "Defines the elements used to uniquely identify a standing order.";
 			}

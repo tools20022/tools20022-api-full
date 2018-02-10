@@ -653,7 +653,7 @@ public class ProcessingStatus17Choice {
 	 * name} = "OpenOrder"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Trade is in OpenOrder"</li>
+	 * definition} = "Trade is in OpenOrder."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOpenOrder = new MMMessageAssociationEnd() {
@@ -664,7 +664,7 @@ public class ProcessingStatus17Choice {
 			xmlTag = "OpnOrdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpenOrder";
-			definition = "Trade is in OpenOrder";
+			definition = "Trade is in OpenOrder.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -702,7 +702,7 @@ public class ProcessingStatus17Choice {
 	 * name} = "PendingProcessing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Processing of the trade is pending ."</li>
+	 * definition} = "Processing of the trade is pending."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPendingProcessing = new MMMessageAssociationEnd() {
@@ -713,7 +713,7 @@ public class ProcessingStatus17Choice {
 			xmlTag = "PdgPrcg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
-			definition = "Processing of the trade is pending .";
+			definition = "Processing of the trade is pending.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

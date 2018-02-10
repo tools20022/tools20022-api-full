@@ -67,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReport4#mmBuyer
  * SecuritiesTransactionReport4.mmBuyer}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeAgreement16#mmBuyer
+ * TradeAgreement16.mmBuyer}</li>
  * </ul>
  * </li>
  * <li>
@@ -105,7 +107,7 @@ public class BuyerRole extends TradePartyRole {
 				name = "BuyerRole";
 				definition = "Party that buys assets, good or services.";
 				derivationElement_lazy = () -> Arrays.asList(ConfirmationParties3.mmBuyer, ConfirmationParties4.mmBuyer, ConfirmationParties2.mmBuyer, TradeAgreement6.mmBuyer, TradeSettlement1.mmPayee, ReportSpecification4.mmBuyer,
-						TradeContract1.mmBuyer, LoanContract1.mmBuyer, PartyIdentification79.mmDecisionMaker, TaxReport1.mmBuyer, TradeAgreement13.mmBuyer, SecuritiesTransactionReport4.mmBuyer);
+						TradeContract1.mmBuyer, LoanContract1.mmBuyer, PartyIdentification79.mmDecisionMaker, TaxReport1.mmBuyer, TradeAgreement13.mmBuyer, SecuritiesTransactionReport4.mmBuyer, TradeAgreement16.mmBuyer);
 				superType_lazy = () -> TradePartyRole.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(PartyIdentification72.mmObject(), TaxReport1.mmObject());
 			}

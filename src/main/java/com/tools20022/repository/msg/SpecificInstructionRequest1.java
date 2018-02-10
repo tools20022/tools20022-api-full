@@ -158,7 +158,7 @@ public class SpecificInstructionRequest1 {
 	 * name} = "BlockingSecurities"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Request to block the securities"</li>
+	 * definition} = "Request to block the securities."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBlockingSecurities = new MMMessageAttribute() {
@@ -169,7 +169,7 @@ public class SpecificInstructionRequest1 {
 			xmlTag = "BlckgScties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockingSecurities";
-			definition = "Request to block the securities";
+			definition = "Request to block the securities.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

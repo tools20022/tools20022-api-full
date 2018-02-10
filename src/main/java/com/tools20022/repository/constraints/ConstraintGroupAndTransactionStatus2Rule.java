@@ -309,7 +309,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.\n"
+	 * "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -318,7 +318,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 			validator = ConstraintGroupAndTransactionStatus2Rule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupAndTransactionStatus2Rule";
-			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.\n";
+			definition = "If OriginalGroupInformationAndStatus/GroupStatus is present and is equal to PDNG, then TransactionInformationAndStatus/TransactionStatus must be different from RJCT.\n.";
 			owner_lazy = () -> com.tools20022.repository.area.pacs.PaymentStatusReportV02.mmObject();
 		}
 	};
@@ -389,7 +389,7 @@ public class ConstraintGroupAndTransactionStatus2Rule {
 	/**
 	 * If OriginalGroupInformationAndStatus/GroupStatus is present and is equal
 	 * to PDNG, then TransactionInformationAndStatus/TransactionStatus must be
-	 * different from RJCT.
+	 * different from RJCT. .
 	 */
 	public static void checkPaymentStatusReportV02(com.tools20022.repository.area.pacs.PaymentStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();

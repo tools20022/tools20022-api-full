@@ -329,6 +329,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.InvestmentAccount62#mmAccountUsageType
  * InvestmentAccount62.mmAccountUsageType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount17#mmReceiverDetails
+ * ReceivingPartiesAndAccount17.mmReceiverDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -472,6 +475,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestmentAccount64}</li>
  * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount60
  * InvestmentAccount60}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Account24 Account24}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount66
+ * InvestmentAccount66}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount67
+ * InvestmentAccount67}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount65
+ * InvestmentAccount65}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount68
+ * InvestmentAccount68}</li>
  * </ul>
  * </li>
  * <li>
@@ -949,6 +961,20 @@ public class InvestmentAccount extends Account {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount64#mmDesignation
 	 * InvestmentAccount64.mmDesignation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Account24#mmDesignation
+	 * Account24.mmDesignation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount66#mmAccountDesignation
+	 * InvestmentAccount66.mmAccountDesignation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount67#mmAccountDesignation
+	 * InvestmentAccount67.mmAccountDesignation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount65#mmAccountDesignation
+	 * InvestmentAccount65.mmAccountDesignation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmAccountDesignation
+	 * InvestmentAccount68.mmAccountDesignation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -981,7 +1007,8 @@ public class InvestmentAccount extends Account {
 					InvestmentAccount47.mmDesignation, SecuritiesAccount26.mmDesignation, Account19.mmDesignation, InvestmentAccount49.mmDesignation, InvestmentAccount54.mmAccountDesignation, InvestmentAccount51.mmDesignation,
 					InvestmentAccount50.mmDesignation, InvestmentAccount56.mmAccountDesignation, InvestmentAccount52.mmDesignation, InvestmentAccount55.mmAccountDesignation, InvestmentAccount53.mmAccountDesignation,
 					InvestmentAccount57.mmAccountDesignation, SecuritiesAccount33.mmDesignation, InvestmentAccount61.mmDesignation, InvestmentAccount63.mmDesignation, InvestmentAccount62.mmDesignation,
-					InvestmentAccount58.mmAccountDesignation, SubAccount6.mmAccountDesignation, InvestmentAccount64.mmDesignation);
+					InvestmentAccount58.mmAccountDesignation, SubAccount6.mmAccountDesignation, InvestmentAccount64.mmDesignation, Account24.mmDesignation, InvestmentAccount66.mmAccountDesignation, InvestmentAccount67.mmAccountDesignation,
+					InvestmentAccount65.mmAccountDesignation, InvestmentAccount68.mmAccountDesignation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1954,7 +1981,7 @@ public class InvestmentAccount extends Account {
 	 * name} = "InvestmentAccountContract"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Contract defining the related account"</li>
+	 * definition} = "Contract defining the related account."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmInvestmentAccountContract = new MMBusinessAssociationEnd() {
@@ -1967,7 +1994,7 @@ public class InvestmentAccount extends Account {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccount.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentAccountContract";
-			definition = "Contract defining the related account";
+			definition = "Contract defining the related account.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.InvestmentAccountContract.mmInvestmentAccount;
@@ -2243,7 +2270,8 @@ public class InvestmentAccount extends Account {
 						InvestmentAccount49.mmType, InvestmentAccount49.mmAccountUsageType, InvestmentAccount51.mmType, InvestmentAccount51.mmAccountUsageType, AccountSelection1Choice.mmOtherAccountSelectionData,
 						InvestmentAccount50.mmType, InvestmentAccount50.mmAccountUsageType, ReceivingPartiesAndAccount13.mmReceiverDetails, TransferOut17.mmAccountDetails, TransferIn14.mmAccountDetails, TransferIn15.mmAccountDetails,
 						TransferOut16.mmAccountDetails, AccountUsageType2Choice.mmCode, AccountUsageType2Choice.mmProprietary, InvestmentAccount61.mmType, InvestmentAccount61.mmAccountUsageType,
-						AccountSelection2Choice.mmOtherAccountSelectionData, InvestmentAccount63.mmType, InvestmentAccount63.mmAccountUsageType, InvestmentAccount62.mmType, InvestmentAccount62.mmAccountUsageType);
+						AccountSelection2Choice.mmOtherAccountSelectionData, InvestmentAccount63.mmType, InvestmentAccount63.mmAccountUsageType, InvestmentAccount62.mmType, InvestmentAccount62.mmAccountUsageType,
+						ReceivingPartiesAndAccount17.mmReceiverDetails);
 				superType_lazy = () -> Account.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentAccount.mmInvestmentAccountType, com.tools20022.repository.entity.InvestmentAccount.mmOwnershipType,
 						com.tools20022.repository.entity.InvestmentAccount.mmDesignation, com.tools20022.repository.entity.InvestmentAccount.mmReferenceCurrency, com.tools20022.repository.entity.InvestmentAccount.mmInvestmentFundClass,
@@ -2264,7 +2292,8 @@ public class InvestmentAccount extends Account {
 						InvestmentAccount42.mmObject(), InvestmentAccount46.mmObject(), InvestmentAccount47.mmObject(), Account19.mmObject(), InvestmentAccount49.mmObject(), InvestmentAccount54.mmObject(), InvestmentAccount51.mmObject(),
 						InvestmentAccount50.mmObject(), InvestmentAccount56.mmObject(), InvestmentAccount52.mmObject(), AccountType2Choice.mmObject(), InvestmentAccount55.mmObject(), InvestmentAccount53.mmObject(),
 						InvestmentAccount57.mmObject(), AccountUsageType2Choice.mmObject(), OwnershipType2Choice.mmObject(), InvestmentAccount61.mmObject(), InvestmentAccount63.mmObject(), InvestmentAccount62.mmObject(),
-						InvestmentAccount58.mmObject(), InvestmentAccount64.mmObject(), InvestmentAccount60.mmObject());
+						InvestmentAccount58.mmObject(), InvestmentAccount64.mmObject(), InvestmentAccount60.mmObject(), Account24.mmObject(), InvestmentAccount66.mmObject(), InvestmentAccount67.mmObject(), InvestmentAccount65.mmObject(),
+						InvestmentAccount68.mmObject());
 			}
 
 			@Override

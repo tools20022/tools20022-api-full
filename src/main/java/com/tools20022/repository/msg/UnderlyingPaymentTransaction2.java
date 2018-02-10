@@ -93,6 +93,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Reference information concerning the original transaction, to which the investigation message refers."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3
+ * UnderlyingPaymentTransaction3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -129,6 +136,14 @@ public class UnderlyingPaymentTransaction2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to provide information on the original message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalGroupInformation
+	 * UnderlyingPaymentTransaction3.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginalGroupInformation = new MMMessageAssociationEnd() {
@@ -139,6 +154,7 @@ public class UnderlyingPaymentTransaction2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Set of elements used to provide information on the original message.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentTransaction3.mmOriginalGroupInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -179,6 +195,14 @@ public class UnderlyingPaymentTransaction2 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalInstructionIdentification
+	 * UnderlyingPaymentTransaction3.mmOriginalInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalInstructionIdentification = new MMMessageAttribute() {
@@ -190,6 +214,7 @@ public class UnderlyingPaymentTransaction2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructionIdentification";
 			definition = "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentTransaction3.mmOriginalInstructionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -229,6 +254,14 @@ public class UnderlyingPaymentTransaction2 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalEndToEndIdentification
+	 * UnderlyingPaymentTransaction3.mmOriginalEndToEndIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalEndToEndIdentification = new MMMessageAttribute() {
@@ -240,6 +273,7 @@ public class UnderlyingPaymentTransaction2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentTransaction3.mmOriginalEndToEndIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -279,6 +313,14 @@ public class UnderlyingPaymentTransaction2 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalTransactionIdentification
+	 * UnderlyingPaymentTransaction3.mmOriginalTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalTransactionIdentification = new MMMessageAttribute() {
@@ -290,6 +332,7 @@ public class UnderlyingPaymentTransaction2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionIdentification";
 			definition = "Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentTransaction3.mmOriginalTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -330,6 +373,14 @@ public class UnderlyingPaymentTransaction2 {
 	 * definition} =
 	 * "Amount of money, as provided in the original transaction, to be moved between the instructing agent and the instructed agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalInterbankSettlementAmount
+	 * UnderlyingPaymentTransaction3.mmOriginalInterbankSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalInterbankSettlementAmount = new MMMessageAttribute() {
@@ -341,6 +392,7 @@ public class UnderlyingPaymentTransaction2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInterbankSettlementAmount";
 			definition = "Amount of money, as provided in the original transaction, to be moved between the instructing agent and the instructed agent.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentTransaction3.mmOriginalInterbankSettlementAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -380,6 +432,14 @@ public class UnderlyingPaymentTransaction2 {
 	 * definition} =
 	 * "Date, as provided in the original transaction, on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingPaymentTransaction3#mmOriginalInterbankSettlementDate
+	 * UnderlyingPaymentTransaction3.mmOriginalInterbankSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalInterbankSettlementDate = new MMMessageAttribute() {
@@ -391,6 +451,7 @@ public class UnderlyingPaymentTransaction2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInterbankSettlementDate";
 			definition = "Date, as provided in the original transaction, on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentTransaction3.mmOriginalInterbankSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -410,6 +471,7 @@ public class UnderlyingPaymentTransaction2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingPaymentTransaction2";
 				definition = "Reference information concerning the original transaction, to which the investigation message refers.";
+				nextVersions_lazy = () -> Arrays.asList(UnderlyingPaymentTransaction3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

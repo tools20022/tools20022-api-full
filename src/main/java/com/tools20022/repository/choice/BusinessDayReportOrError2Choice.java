@@ -163,7 +163,7 @@ public class BusinessDayReportOrError2Choice {
 	 * name} = "BusinessError"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reason the requested business information is not given. "</li>
+	 * definition} = "Reason the requested business information is not given."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -184,7 +184,7 @@ public class BusinessDayReportOrError2Choice {
 			xmlTag = "BizErr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
-			definition = "Reason the requested business information is not given. ";
+			definition = "Reason the requested business information is not given.";
 			nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError6Choice.mmBusinessError, BusinessDayReportOrError4Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;

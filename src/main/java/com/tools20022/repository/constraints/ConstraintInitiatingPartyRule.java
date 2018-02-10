@@ -25,6 +25,8 @@ import com.tools20022.repository.area.pacs.PaymentStatusReportV02;
 
 /**
  * GroupHeader/InitiatingParty is not allowed.
+ * 
+ * .
  */
 public class ConstraintInitiatingPartyRule {
 
@@ -44,7 +46,7 @@ public class ConstraintInitiatingPartyRule {
 	 * name} = "InitiatingPartyRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "GroupHeader/InitiatingParty is not allowed.\n\n"</li>
+	 * definition} = "GroupHeader/InitiatingParty is not allowed.\n\n."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
@@ -52,7 +54,7 @@ public class ConstraintInitiatingPartyRule {
 			validator = ConstraintInitiatingPartyRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyRule";
-			definition = "GroupHeader/InitiatingParty is not allowed.\n\n";
+			definition = "GroupHeader/InitiatingParty is not allowed.\n\n.";
 			owner_lazy = () -> PaymentCancellationRequestV01.mmObject();
 		}
 	};
@@ -72,7 +74,7 @@ public class ConstraintInitiatingPartyRule {
 	 * name} = "InitiatingPartyRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "GroupHeader/InitiatingParty is not allowed.\n\n"</li>
+	 * definition} = "GroupHeader/InitiatingParty is not allowed.\n\n."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<PaymentStatusReportV02>() {
@@ -80,13 +82,15 @@ public class ConstraintInitiatingPartyRule {
 			validator = ConstraintInitiatingPartyRule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingPartyRule";
-			definition = "GroupHeader/InitiatingParty is not allowed.\n\n";
+			definition = "GroupHeader/InitiatingParty is not allowed.\n\n.";
 			owner_lazy = () -> PaymentStatusReportV02.mmObject();
 		}
 	};
 
 	/**
 	 * GroupHeader/InitiatingParty is not allowed.
+	 * 
+	 * .
 	 */
 	public static void checkPaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -94,6 +98,8 @@ public class ConstraintInitiatingPartyRule {
 
 	/**
 	 * GroupHeader/InitiatingParty is not allowed.
+	 * 
+	 * .
 	 */
 	public static void checkPaymentStatusReportV02(PaymentStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();

@@ -334,7 +334,7 @@ public class AffirmStatusCode extends MMCode {
 		}
 	};
 	/**
-	 * Notfies the clearing status changed
+	 * Notfies the clearing status changed.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -351,14 +351,14 @@ public class AffirmStatusCode extends MMCode {
 	 * name} = "AckToSettlementStateChanged"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Notfies the clearing status changed"</li>
+	 * definition} = "Notfies the clearing status changed."</li>
 	 * </ul>
 	 */
 	public static final AffirmStatusCode AckToSettlementStateChanged = new AffirmStatusCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AckToSettlementStateChanged";
-			definition = "Notfies the clearing status changed";
+			definition = "Notfies the clearing status changed.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AffirmStatusCode.mmObject();
 			codeName = "ATSC";
 		}

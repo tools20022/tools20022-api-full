@@ -87,6 +87,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding the existing agent component."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentificationSD6
+ * PartyIdentificationSD6}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -121,6 +128,14 @@ public class PartyIdentificationSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD6#mmPlaceAndName
+	 * PartyIdentificationSD6.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -131,6 +146,7 @@ public class PartyIdentificationSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationSD6.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -166,6 +182,14 @@ public class PartyIdentificationSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "DTC agent identification number."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD6#mmAgentIdentification
+	 * PartyIdentificationSD6.mmAgentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAgentIdentification = new MMMessageAttribute() {
@@ -177,6 +201,7 @@ public class PartyIdentificationSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentIdentification";
 			definition = "DTC agent identification number.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationSD6.mmAgentIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();
@@ -212,6 +237,14 @@ public class PartyIdentificationSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Telephone number of the agent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD6#mmAgentTelephoneNumber
+	 * PartyIdentificationSD6.mmAgentTelephoneNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAgentTelephoneNumber = new MMMessageAttribute() {
@@ -223,6 +256,7 @@ public class PartyIdentificationSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentTelephoneNumber";
 			definition = "Telephone number of the agent.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationSD6.mmAgentTelephoneNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhoneNumber.mmObject();
@@ -256,7 +290,15 @@ public class PartyIdentificationSD2 {
 	 * name} = "ContactInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Agent designated contact information details. "</li>
+	 * definition} = "Agent designated contact information details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD6#mmContactInformation
+	 * PartyIdentificationSD6.mmContactInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
@@ -267,7 +309,8 @@ public class PartyIdentificationSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Contact Information Address"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
-			definition = "Agent designated contact information details. ";
+			definition = "Agent designated contact information details.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationSD6.mmContactInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -304,6 +347,14 @@ public class PartyIdentificationSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Email address of the event agent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD6#mmAgentEmailAddress
+	 * PartyIdentificationSD6.mmAgentEmailAddress}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAgentEmailAddress = new MMMessageAttribute() {
@@ -315,6 +366,7 @@ public class PartyIdentificationSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentEmailAddress";
 			definition = "Email address of the event agent.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationSD6.mmAgentEmailAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max256Text.mmObject();
@@ -350,6 +402,14 @@ public class PartyIdentificationSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Event agent address."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentificationSD6#mmAgentAddress
+	 * PartyIdentificationSD6.mmAgentAddress}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAgentAddress = new MMMessageAttribute() {
@@ -361,6 +421,7 @@ public class PartyIdentificationSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentAddress";
 			definition = "Event agent address.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentificationSD6.mmAgentAddress);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PostalAddress1.mmObject();
@@ -378,6 +439,7 @@ public class PartyIdentificationSD2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationSD2";
 				definition = "Provides additional information regarding the existing agent component.";
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentificationSD6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

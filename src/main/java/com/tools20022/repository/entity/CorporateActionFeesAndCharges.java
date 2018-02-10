@@ -358,6 +358,36 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RateDetails30#mmSolicitationFeeRate
 	 * RateDetails30.mmSolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmSolicitationFees
+	 * CorporateActionAmounts42.mmSolicitationFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31#mmSolicitationFeeRate
+	 * RateDetails31.mmSolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmSolicitationFees
+	 * CorporateActionAmounts43.mmSolicitationFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmSolicitationFeeRate
+	 * RateDetails32.mmSolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmSolicitationFees
+	 * CorporateActionAmounts44.mmSolicitationFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmSolicitationFees
+	 * CorporateActionAmounts45.mmSolicitationFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33#mmSolicitationFeeRate
+	 * RateDetails33.mmSolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmSolicitationFees
+	 * CorporateActionAmounts46.mmSolicitationFees}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34#mmSolicitationFeeRate
+	 * RateDetails34.mmSolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmSolicitationFees
+	 * CorporateActionAmounts47.mmSolicitationFees}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -392,7 +422,9 @@ public class CorporateActionFeesAndCharges extends Charges {
 					RateDetails14.mmSolicitationFeeRate, CorporateActionAmounts33.mmSolicitationFees, CorporateActionAmounts32.mmSolicitationFees, RateDetails18.mmSolicitationFeeRate, RateDetails21.mmSolicitationFeeRate,
 					CorporateActionAmounts35.mmSolicitationFees, CorporateActionAmounts37.mmSolicitationFees, RateDetails23.mmSolicitationFeeRate, CorporateActionAmounts36.mmSolicitationFees, RateDetails22.mmSolicitationFeeRate,
 					CorporateActionAmounts38.mmSolicitationFees, RateDetails24.mmSolicitationFeeRate, CorporateActionAmounts39.mmSolicitationFees, CorporateActionAmounts41.mmSolicitationFees, RateDetails25.mmSolicitationFeeRate,
-					CorporateActionAmounts40.mmSolicitationFees, RateDetails26.mmSolicitationFeeRate, RateDetails27.mmSolicitationFeeRate, RateDetails28.mmSolicitationFeeRate, RateDetails30.mmSolicitationFeeRate);
+					CorporateActionAmounts40.mmSolicitationFees, RateDetails26.mmSolicitationFeeRate, RateDetails27.mmSolicitationFeeRate, RateDetails28.mmSolicitationFeeRate, RateDetails30.mmSolicitationFeeRate,
+					CorporateActionAmounts42.mmSolicitationFees, RateDetails31.mmSolicitationFeeRate, CorporateActionAmounts43.mmSolicitationFees, RateDetails32.mmSolicitationFeeRate, CorporateActionAmounts44.mmSolicitationFees,
+					CorporateActionAmounts45.mmSolicitationFees, RateDetails33.mmSolicitationFeeRate, CorporateActionAmounts46.mmSolicitationFees, RateDetails34.mmSolicitationFeeRate, CorporateActionAmounts47.mmSolicitationFees);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -492,6 +524,18 @@ public class CorporateActionFeesAndCharges extends Charges {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RateDetails30#mmEarlySolicitationFeeRate
 	 * RateDetails30.mmEarlySolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31#mmEarlySolicitationFeeRate
+	 * RateDetails31.mmEarlySolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32#mmEarlySolicitationFeeRate
+	 * RateDetails32.mmEarlySolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33#mmEarlySolicitationFeeRate
+	 * RateDetails33.mmEarlySolicitationFeeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34#mmEarlySolicitationFeeRate
+	 * RateDetails34.mmEarlySolicitationFeeRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -518,7 +562,8 @@ public class CorporateActionFeesAndCharges extends Charges {
 					CorporateActionRate5.mmEarlySolicitationFeeRate, CorporateActionRate12.mmEarlySolicitationFeeRate, RateDetails3.mmEarlySolicitationFeeRate, RateDetails5.mmEarlySolicitationFeeRate,
 					RateDetails10.mmEarlySolicitationFeeRate, RateDetails13.mmEarlySolicitationFeeRate, RateDetails15.mmEarlySolicitationFeeRate, RateDetails14.mmEarlySolicitationFeeRate, RateDetails18.mmEarlySolicitationFeeRate,
 					RateDetails21.mmEarlySolicitationFeeRate, RateDetails23.mmEarlySolicitationFeeRate, RateDetails22.mmEarlySolicitationFeeRate, RateDetails24.mmEarlySolicitationFeeRate, RateDetails25.mmEarlySolicitationFeeRate,
-					RateDetails26.mmEarlySolicitationFeeRate, RateDetails27.mmEarlySolicitationFeeRate, RateDetails28.mmEarlySolicitationFeeRate, RateDetails30.mmEarlySolicitationFeeRate);
+					RateDetails26.mmEarlySolicitationFeeRate, RateDetails27.mmEarlySolicitationFeeRate, RateDetails28.mmEarlySolicitationFeeRate, RateDetails30.mmEarlySolicitationFeeRate, RateDetails31.mmEarlySolicitationFeeRate,
+					RateDetails32.mmEarlySolicitationFeeRate, RateDetails33.mmEarlySolicitationFeeRate, RateDetails34.mmEarlySolicitationFeeRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionFeesAndCharges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

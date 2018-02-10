@@ -62,6 +62,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Describes search criteria for securities account audit trail query."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria2
+ * SecuritiesAccountAuditTrailSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +105,15 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Describes securities account to be queried."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria2#mmSecuritiesAccountIdentification
+	 * SecuritiesAccountAuditTrailSearchCriteria2.
+	 * mmSecuritiesAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecuritiesAccountIdentification = new MMMessageAttribute() {
@@ -107,6 +124,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountIdentification";
 			definition = "Describes securities account to be queried.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailSearchCriteria2.mmSecuritiesAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecuritiesAccount13.mmObject();
@@ -140,6 +158,14 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Describes date period for querying information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountAuditTrailSearchCriteria2#mmDatePeriod
+	 * SecuritiesAccountAuditTrailSearchCriteria2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDatePeriod = new MMMessageAttribute() {
@@ -150,6 +176,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Describes date period for querying information.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailSearchCriteria2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateSearchChoice.mmObject();
@@ -165,6 +192,7 @@ public class SecuritiesAccountAuditTrailSearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountAuditTrailSearchCriteria1";
 				definition = "Describes search criteria for securities account audit trail query.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountAuditTrailSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

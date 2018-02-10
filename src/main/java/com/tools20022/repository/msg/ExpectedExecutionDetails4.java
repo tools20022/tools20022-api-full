@@ -176,7 +176,7 @@ public class ExpectedExecutionDetails4 {
 	 * name} = "ExpectedCashSettlementDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date of a payment, for example, a prepayment date. "</li>
+	 * definition} = "Date of a payment, for example, a prepayment date."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -192,7 +192,7 @@ public class ExpectedExecutionDetails4 {
 			xmlTag = "XpctdCshSttlmDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpectedCashSettlementDate";
-			definition = "Date of a payment, for example, a prepayment date. ";
+			definition = "Date of a payment, for example, a prepayment date.";
 			previousVersion_lazy = () -> ExpectedExecutionDetails2.mmExpectedCashSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;

@@ -223,6 +223,24 @@ public class ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OtherAmounts38#mmSpecialConcession
 	 * OtherAmounts38.mmSpecialConcession}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmSpecialConcession
+	 * OtherAmounts41.mmSpecialConcession}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmSpecialConcession
+	 * OtherAmounts39.mmSpecialConcession}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmSpecialConcession
+	 * OtherAmounts40.mmSpecialConcession}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmSpecialConcession
+	 * OtherAmounts42.mmSpecialConcession}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmSpecialConcession
+	 * OtherAmounts43.mmSpecialConcession}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmSpecialConcession
+	 * OtherAmounts44.mmSpecialConcession}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -249,7 +267,8 @@ public class ProceedsDefinition {
 					OtherAmounts17.mmSpecialConcession, OtherAmounts23.mmSpecialConcession, OtherAmounts3.mmSpecialConcession, OtherAmounts7.mmSpecialConcession, OtherAmounts9.mmSpecialConcession, OtherAmounts10.mmSpecialConcession,
 					OtherAmounts18.mmSpecialConcession, OtherAmounts24.mmSpecialConcession, OtherAmounts13.mmSpecialConcession, OtherAmounts1.mmSpecialConcession, OtherAmounts16.mmSpecialConcession,
 					CorporateActionAmounts1.mmSpecialConcessionAmount, OtherAmounts28.mmSpecialConcession, OtherAmounts30.mmSpecialConcession, OtherAmounts31.mmSpecialConcession, OtherAmounts35.mmSpecialConcession,
-					OtherAmounts34.mmSpecialConcession, OtherAmounts38.mmSpecialConcession);
+					OtherAmounts34.mmSpecialConcession, OtherAmounts38.mmSpecialConcession, OtherAmounts41.mmSpecialConcession, OtherAmounts39.mmSpecialConcession, OtherAmounts40.mmSpecialConcession, OtherAmounts42.mmSpecialConcession,
+					OtherAmounts43.mmSpecialConcession, OtherAmounts44.mmSpecialConcession);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -570,6 +589,48 @@ public class ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmCreditDebitIndicator
 	 * CashOption55.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption56#mmCreditDebitIndicator
+	 * CashOption56.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmCreditDebitIndicator
+	 * CashOption57.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmCreditDebitIndicator
+	 * SecuritiesOption64.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmCreditDebitIndicator
+	 * SecuritiesOption65.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption58#mmCreditDebitIndicator
+	 * CashOption58.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption66#mmCreditDebitIndicator
+	 * SecuritiesOption66.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption59#mmCreditDebitIndicator
+	 * CashOption59.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmCreditDebitIndicator
+	 * SecuritiesOption67.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption60#mmCreditDebitIndicator
+	 * CashOption60.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmCreditDebitIndicator
+	 * SecuritiesOption68.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption61#mmCreditDebitIndicator
+	 * CashOption61.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption69#mmCreditDebitIndicator
+	 * SecuritiesOption69.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption62#mmCreditDebitIndicator
+	 * CashOption62.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption63#mmCreditDebitIndicator
+	 * CashOption63.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -609,7 +670,10 @@ public class ProceedsDefinition {
 					CashOption46.mmCreditDebitIndicator, SecuritiesOption55.mmCreditDebitIndicator, CashOption49.mmCreditDebitIndicator, CashOption47.mmCreditDebitIndicator, SecuritiesOption57.mmCreditDebitIndicator,
 					SecuritiesOption58.mmCreditDebitIndicator, CashOption48.mmCreditDebitIndicator, CashOption52.mmCreditDebitIndicator, SecuritiesOption60.mmCreditDebitIndicator, CashOption51.mmCreditDebitIndicator,
 					SecuritiesOption59.mmCreditDebitIndicator, CashOption50.mmCreditDebitIndicator, CashOption53.mmCreditDebitIndicator, SecuritiesOption61.mmCreditDebitIndicator, SecuritiesOption63.mmCreditDebitIndicator,
-					CashOption54.mmCreditDebitIndicator, CashOption55.mmCreditDebitIndicator);
+					CashOption54.mmCreditDebitIndicator, CashOption55.mmCreditDebitIndicator, CashOption56.mmCreditDebitIndicator, CashOption57.mmCreditDebitIndicator, SecuritiesOption64.mmCreditDebitIndicator,
+					SecuritiesOption65.mmCreditDebitIndicator, CashOption58.mmCreditDebitIndicator, SecuritiesOption66.mmCreditDebitIndicator, CashOption59.mmCreditDebitIndicator, SecuritiesOption67.mmCreditDebitIndicator,
+					CashOption60.mmCreditDebitIndicator, SecuritiesOption68.mmCreditDebitIndicator, CashOption61.mmCreditDebitIndicator, SecuritiesOption69.mmCreditDebitIndicator, CashOption62.mmCreditDebitIndicator,
+					CashOption63.mmCreditDebitIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -722,6 +786,27 @@ public class ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecurityDate13#mmEarliestPaymentDate
 	 * SecurityDate13.mmEarliestPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate15#mmEarliestPaymentDate
+	 * SecurityDate15.mmEarliestPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate62#mmEarliestPaymentDate
+	 * CorporateActionDate62.mmEarliestPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmEarliestPaymentDate
+	 * SecurityDate16.mmEarliestPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmEarliestPaymentDate
+	 * CorporateActionDate65.mmEarliestPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate17#mmEarliestPaymentDate
+	 * SecurityDate17.mmEarliestPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate18#mmEarliestPaymentDate
+	 * SecurityDate18.mmEarliestPaymentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate72#mmEarliestPaymentDate
+	 * CorporateActionDate72.mmEarliestPaymentDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -749,7 +834,8 @@ public class ProceedsDefinition {
 					CorporateActionDate12.mmEarliestPaymentDate, SecurityDate5.mmEarliestPaymentDate, CorporateActionDate17.mmEarliestPaymentDate, SecurityDate8.mmEarliestPaymentDate, CorporateActionDate20.mmEarliestPaymentDate,
 					CorporateActionDate23.mmEarliestPaymentDate, CorporateActionDate26.mmEarliestPaymentDate, SecurityDate9.mmEarliestPaymentDate, SecurityDate10.mmEarliestPaymentDate, CorporateActionDate4.mmEarliestPaymentDate,
 					CorporateActionDate3.mmEarliestPaymentDate, CorporateActionDate5.mmEarliestPaymentDate, SecurityDate12.mmEarliestPaymentDate, CorporateActionDate47.mmEarliestPaymentDate, SecurityDate11.mmEarliestPaymentDate,
-					CorporateActionDate56.mmEarliestPaymentDate, SecurityDate14.mmEarliestPaymentDate, SecurityDate13.mmEarliestPaymentDate);
+					CorporateActionDate56.mmEarliestPaymentDate, SecurityDate14.mmEarliestPaymentDate, SecurityDate13.mmEarliestPaymentDate, SecurityDate15.mmEarliestPaymentDate, CorporateActionDate62.mmEarliestPaymentDate,
+					SecurityDate16.mmEarliestPaymentDate, CorporateActionDate65.mmEarliestPaymentDate, SecurityDate17.mmEarliestPaymentDate, SecurityDate18.mmEarliestPaymentDate, CorporateActionDate72.mmEarliestPaymentDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -826,6 +912,19 @@ public class ProceedsDefinition {
 	 * CorporateActionDate56.mmValueDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CashOption48#mmValueDate
 	 * CashOption48.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate62#mmValueDate
+	 * CorporateActionDate62.mmValueDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption59#mmValueDate
+	 * CashOption59.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate65#mmValueDate
+	 * CorporateActionDate65.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate72#mmValueDate
+	 * CorporateActionDate72.mmValueDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption62#mmValueDate
+	 * CashOption62.mmValueDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -850,7 +949,8 @@ public class ProceedsDefinition {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate7.mmValueDate, CorporateActionDate24.mmValueDate, CorporateActionDate9.mmValueDate, CorporateActionDate12.mmValueDate, CorporateActionDate17.mmValueDate,
 					CorporateActionDate20.mmValueDate, CorporateActionDate23.mmValueDate, CorporateActionDate26.mmValueDate, CashOption5.mmValueDate, CashOption7.mmValueDate, CashOption19.mmValueDate, CashOption23.mmValueDate,
-					CorporateActionDate5.mmValueDate, CorporateActionDate47.mmValueDate, CashOption45.mmValueDate, CorporateActionDate56.mmValueDate, CashOption48.mmValueDate);
+					CorporateActionDate5.mmValueDate, CorporateActionDate47.mmValueDate, CashOption45.mmValueDate, CorporateActionDate56.mmValueDate, CashOption48.mmValueDate, CorporateActionDate62.mmValueDate, CashOption59.mmValueDate,
+					CorporateActionDate65.mmValueDate, CorporateActionDate72.mmValueDate, CashOption62.mmValueDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1057,6 +1157,24 @@ public class ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption54#mmNonEligibleProceedsIndicator
 	 * CashOption54.mmNonEligibleProceedsIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption56#mmNonEligibleProceedsIndicator
+	 * CashOption56.mmNonEligibleProceedsIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmNonEligibleProceedsIndicator
+	 * CashOption57.mmNonEligibleProceedsIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmNonEligibleProceedsIndicator
+	 * SecuritiesOption64.mmNonEligibleProceedsIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmNonEligibleProceedsIndicator
+	 * SecuritiesOption68.mmNonEligibleProceedsIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption61#mmNonEligibleProceedsIndicator
+	 * CashOption61.mmNonEligibleProceedsIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption63#mmNonEligibleProceedsIndicator
+	 * CashOption63.mmNonEligibleProceedsIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1093,7 +1211,8 @@ public class ProceedsDefinition {
 					SecuritiesOption49.mmNonEligibleProceedsIndicator, CashOption42.mmNonEligibleProceedsIndicator, CashOption43.mmNonEligibleProceedsIndicator, CashOption49.mmNonEligibleProceedsIndicator,
 					NonEligibleProceedsIndicator4Choice.mmCode, NonEligibleProceedsIndicator4Choice.mmProprietary, CashOption47.mmNonEligibleProceedsIndicator, SecuritiesOption57.mmNonEligibleProceedsIndicator,
 					CashOption51.mmNonEligibleProceedsIndicator, SecuritiesOption59.mmNonEligibleProceedsIndicator, CashOption50.mmNonEligibleProceedsIndicator, CashOption53.mmNonEligibleProceedsIndicator,
-					SecuritiesOption61.mmNonEligibleProceedsIndicator, CashOption54.mmNonEligibleProceedsIndicator);
+					SecuritiesOption61.mmNonEligibleProceedsIndicator, CashOption54.mmNonEligibleProceedsIndicator, CashOption56.mmNonEligibleProceedsIndicator, CashOption57.mmNonEligibleProceedsIndicator,
+					SecuritiesOption64.mmNonEligibleProceedsIndicator, SecuritiesOption68.mmNonEligibleProceedsIndicator, CashOption61.mmNonEligibleProceedsIndicator, CashOption63.mmNonEligibleProceedsIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1251,6 +1370,36 @@ public class ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmIssuerOfferorTaxabilityIndicator
 	 * CashOption55.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption56#mmIssuerOfferorTaxabilityIndicator
+	 * CashOption56.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmIssuerOfferorTaxabilityIndicator
+	 * CashOption57.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmIssuerOfferorTaxabilityIndicator
+	 * SecuritiesOption64.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmIssuerOfferorTaxabilityIndicator
+	 * SecuritiesOption65.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption58#mmIssuerOfferorTaxabilityIndicator
+	 * CashOption58.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmIssuerOfferorTaxabilityIndicator
+	 * SecuritiesOption67.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption60#mmIssuerOfferorTaxabilityIndicator
+	 * CashOption60.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmIssuerOfferorTaxabilityIndicator
+	 * SecuritiesOption68.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption61#mmIssuerOfferorTaxabilityIndicator
+	 * CashOption61.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption63#mmIssuerOfferorTaxabilityIndicator
+	 * CashOption63.mmIssuerOfferorTaxabilityIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1283,7 +1432,10 @@ public class ProceedsDefinition {
 					CashOption46.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption55.mmIssuerOfferorTaxabilityIndicator, CashOption49.mmIssuerOfferorTaxabilityIndicator, CashOption47.mmIssuerOfferorTaxabilityIndicator,
 					SecuritiesOption57.mmIssuerOfferorTaxabilityIndicator, CashOption52.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption60.mmIssuerOfferorTaxabilityIndicator, CashOption51.mmIssuerOfferorTaxabilityIndicator,
 					SecuritiesOption59.mmIssuerOfferorTaxabilityIndicator, CashOption50.mmIssuerOfferorTaxabilityIndicator, CashOption53.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption61.mmIssuerOfferorTaxabilityIndicator,
-					SecuritiesOption63.mmIssuerOfferorTaxabilityIndicator, CashOption54.mmIssuerOfferorTaxabilityIndicator, CashOption55.mmIssuerOfferorTaxabilityIndicator);
+					SecuritiesOption63.mmIssuerOfferorTaxabilityIndicator, CashOption54.mmIssuerOfferorTaxabilityIndicator, CashOption55.mmIssuerOfferorTaxabilityIndicator, CashOption56.mmIssuerOfferorTaxabilityIndicator,
+					CashOption57.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption64.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption65.mmIssuerOfferorTaxabilityIndicator, CashOption58.mmIssuerOfferorTaxabilityIndicator,
+					SecuritiesOption67.mmIssuerOfferorTaxabilityIndicator, CashOption60.mmIssuerOfferorTaxabilityIndicator, SecuritiesOption68.mmIssuerOfferorTaxabilityIndicator, CashOption61.mmIssuerOfferorTaxabilityIndicator,
+					CashOption63.mmIssuerOfferorTaxabilityIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1333,6 +1485,12 @@ public class ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmFixingDate
 	 * CorporateActionDate58.mmFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmFixingDate
+	 * CorporateActionDate61.mmFixingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmFixingDate
+	 * CorporateActionDate74.mmFixingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1356,7 +1514,7 @@ public class ProceedsDefinition {
 	public static final MMBusinessAttribute mmOfferPriceFixingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate22.mmFixingDate, CorporateActionDate25.mmFixingDate, CorporateActionDate27.mmFixingDate, CorporateActionDate28.mmFixingDate, CorporateActionDate44.mmFixingDate,
-					CorporateActionDate58.mmFixingDate);
+					CorporateActionDate58.mmFixingDate, CorporateActionDate61.mmFixingDate, CorporateActionDate74.mmFixingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1534,6 +1692,30 @@ public class ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmCountryOfIncomeSource
 	 * CashOption55.mmCountryOfIncomeSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption56#mmCountryOfIncomeSource
+	 * CashOption56.mmCountryOfIncomeSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmCountryOfIncomeSource
+	 * SecuritiesOption64.mmCountryOfIncomeSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmCountryOfIncomeSource
+	 * SecuritiesOption65.mmCountryOfIncomeSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption58#mmCountryOfIncomeSource
+	 * CashOption58.mmCountryOfIncomeSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmCountryOfIncomeSource
+	 * SecuritiesOption67.mmCountryOfIncomeSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption60#mmCountryOfIncomeSource
+	 * CashOption60.mmCountryOfIncomeSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmCountryOfIncomeSource
+	 * SecuritiesOption68.mmCountryOfIncomeSource}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption63#mmCountryOfIncomeSource
+	 * CashOption63.mmCountryOfIncomeSource}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1557,7 +1739,8 @@ public class ProceedsDefinition {
 			derivation_lazy = () -> Arrays.asList(CashOption44.mmCountryOfIncomeSource, SecuritiesOption49.mmCountryOfIncomeSource, CashOption43.mmCountryOfIncomeSource, SecuritiesOption50.mmCountryOfIncomeSource,
 					CashOption46.mmCountryOfIncomeSource, SecuritiesOption55.mmCountryOfIncomeSource, CashOption49.mmCountryOfIncomeSource, SecuritiesOption57.mmCountryOfIncomeSource, CashOption52.mmCountryOfIncomeSource,
 					SecuritiesOption60.mmCountryOfIncomeSource, SecuritiesOption59.mmCountryOfIncomeSource, CashOption50.mmCountryOfIncomeSource, CashOption53.mmCountryOfIncomeSource, SecuritiesOption61.mmCountryOfIncomeSource,
-					SecuritiesOption63.mmCountryOfIncomeSource, CashOption55.mmCountryOfIncomeSource);
+					SecuritiesOption63.mmCountryOfIncomeSource, CashOption55.mmCountryOfIncomeSource, CashOption56.mmCountryOfIncomeSource, SecuritiesOption64.mmCountryOfIncomeSource, SecuritiesOption65.mmCountryOfIncomeSource,
+					CashOption58.mmCountryOfIncomeSource, SecuritiesOption67.mmCountryOfIncomeSource, CashOption60.mmCountryOfIncomeSource, SecuritiesOption68.mmCountryOfIncomeSource, CashOption63.mmCountryOfIncomeSource);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

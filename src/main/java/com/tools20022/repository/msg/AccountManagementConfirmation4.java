@@ -120,7 +120,7 @@ public class AccountManagementConfirmation4 {
 	 * name} = "ConfirmationType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the confirmation type. "</li>
+	 * definition} = "Specifies the confirmation type."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -135,7 +135,7 @@ public class AccountManagementConfirmation4 {
 			xmlTag = "ConfTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationType";
-			definition = "Specifies the confirmation type. ";
+			definition = "Specifies the confirmation type.";
 			previousVersion_lazy = () -> AccountManagementConfirmation3.mmConfirmationType;
 			maxOccurs = 1;
 			minOccurs = 1;

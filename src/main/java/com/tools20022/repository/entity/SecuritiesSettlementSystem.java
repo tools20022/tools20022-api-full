@@ -115,6 +115,18 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount13#mmSecuritiesSettlementSystem
  * ReceivingPartiesAndAccount13.mmSecuritiesSettlementSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount18#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount18.mmSecuritiesSettlementSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmSecuritiesSettlementSystem
+ * DeliveringPartiesAndAccount17.mmSecuritiesSettlementSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount17#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount17.mmSecuritiesSettlementSystem}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReceivingPartiesAndAccount18#mmSecuritiesSettlementSystem
+ * ReceivingPartiesAndAccount18.mmSecuritiesSettlementSystem}</li>
  * </ul>
  * </li>
  * <li>
@@ -198,7 +210,9 @@ public class SecuritiesSettlementSystem extends System {
 						DeliveringPartiesAndAccount5.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount6.mmSecuritiesSettlementSystem, DeliveringPartiesAndAccount7.mmSecuritiesSettlementSystem,
 						ReceivingPartiesAndAccount7.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount9.mmSecuritiesSettlementSystem, DeliveringPartiesAndAccount9.mmSecuritiesSettlementSystem,
 						ReceivingPartiesAndAccount11.mmSecuritiesSettlementSystem, DeliveringPartiesAndAccount11.mmSecuritiesSettlementSystem, DeliveringPartiesAndAccount14.mmSecuritiesSettlementSystem,
-						DeliveringPartiesAndAccount13.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount14.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount13.mmSecuritiesSettlementSystem);
+						DeliveringPartiesAndAccount13.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount14.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount13.mmSecuritiesSettlementSystem,
+						DeliveringPartiesAndAccount18.mmSecuritiesSettlementSystem, DeliveringPartiesAndAccount17.mmSecuritiesSettlementSystem, ReceivingPartiesAndAccount17.mmSecuritiesSettlementSystem,
+						ReceivingPartiesAndAccount18.mmSecuritiesSettlementSystem);
 				superType_lazy = () -> System.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesSettlementSystem.mmSettlementParty);
 			}

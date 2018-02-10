@@ -35,8 +35,8 @@ public class ConstraintIssuerAgentGuideline {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07
-	 * CorporateActionNotificationV07}</li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09
+	 * CorporateActionMovementReversalAdviceV09}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -51,6 +51,124 @@ public class ConstraintIssuerAgentGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementReversalAdviceV08
+	 * ConstraintIssuerAgentGuideline.
+	 * forCorporateActionMovementReversalAdviceV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementReversalAdviceV09> forCorporateActionMovementReversalAdviceV09 = new MMConstraint<CorporateActionMovementReversalAdviceV09>() {
+		{
+			validator = ConstraintIssuerAgentGuideline::checkCorporateActionMovementReversalAdviceV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerAgentGuideline";
+			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV08;
+			owner_lazy = () -> CorporateActionMovementReversalAdviceV09.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08
+	 * CorporateActionNotificationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerAgentGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV07
+	 * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotificationV08> forCorporateActionNotificationV08 = new MMConstraint<CorporateActionNotificationV08>() {
+		{
+			validator = ConstraintIssuerAgentGuideline::checkCorporateActionNotificationV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerAgentGuideline";
+			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV07;
+			owner_lazy = () -> CorporateActionNotificationV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09
+	 * CorporateActionMovementConfirmationV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerAgentGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementConfirmationV08
+	 * ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV08}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementConfirmationV09> forCorporateActionMovementConfirmationV09 = new MMConstraint<CorporateActionMovementConfirmationV09>() {
+		{
+			validator = ConstraintIssuerAgentGuideline::checkCorporateActionMovementConfirmationV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerAgentGuideline";
+			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV08;
+			owner_lazy = () -> CorporateActionMovementConfirmationV09.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV07
+	 * CorporateActionNotificationV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerAgentGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV08
+	 * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV06
 	 * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV06}</li>
 	 * </ul>
@@ -61,6 +179,7 @@ public class ConstraintIssuerAgentGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgentGuideline";
 			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV06;
 			owner_lazy = () -> CorporateActionNotificationV07.mmObject();
 		}
@@ -84,6 +203,15 @@ public class ConstraintIssuerAgentGuideline {
 	 * definition} =
 	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementConfirmationV09
+	 * ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV09}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -98,6 +226,7 @@ public class ConstraintIssuerAgentGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgentGuideline";
 			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV07;
 			owner_lazy = () -> CorporateActionMovementConfirmationV08.mmObject();
 		}
@@ -121,6 +250,15 @@ public class ConstraintIssuerAgentGuideline {
 	 * definition} =
 	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementReversalAdviceV09
+	 * ConstraintIssuerAgentGuideline.
+	 * forCorporateActionMovementReversalAdviceV09}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -135,6 +273,7 @@ public class ConstraintIssuerAgentGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgentGuideline";
 			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV07;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV08.mmObject();
 		}
@@ -227,145 +366,6 @@ public class ConstraintIssuerAgentGuideline {
 			name = "IssuerAgentGuideline";
 			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
 			owner_lazy = () -> CorporateActionMovementConfirmation002V08.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07
-	 * CorporateActionMovementConfirmationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IssuerAgentGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementConfirmationV08
-	 * ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV08}
-	 * </li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementConfirmationV06
-	 * ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV06}
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionMovementConfirmationV07> forCorporateActionMovementConfirmationV07 = new MMConstraint<CorporateActionMovementConfirmationV07>() {
-		{
-			validator = ConstraintIssuerAgentGuideline::checkCorporateActionMovementConfirmationV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IssuerAgentGuideline";
-			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV06;
-			owner_lazy = () -> CorporateActionMovementConfirmationV07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06
-	 * CorporateActionNotificationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IssuerAgentGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV07
-	 * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV05
-	 * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionNotificationV06> forCorporateActionNotificationV06 = new MMConstraint<CorporateActionNotificationV06>() {
-		{
-			validator = ConstraintIssuerAgentGuideline::checkCorporateActionNotificationV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IssuerAgentGuideline";
-			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV05;
-			owner_lazy = () -> CorporateActionNotificationV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07
-	 * CorporateActionMovementReversalAdviceV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IssuerAgentGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementReversalAdviceV08
-	 * ConstraintIssuerAgentGuideline.
-	 * forCorporateActionMovementReversalAdviceV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementReversalAdviceV06
-	 * ConstraintIssuerAgentGuideline.
-	 * forCorporateActionMovementReversalAdviceV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionMovementReversalAdviceV07> forCorporateActionMovementReversalAdviceV07 = new MMConstraint<CorporateActionMovementReversalAdviceV07>() {
-		{
-			validator = ConstraintIssuerAgentGuideline::checkCorporateActionMovementReversalAdviceV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IssuerAgentGuideline";
-			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV06;
-			owner_lazy = () -> CorporateActionMovementReversalAdviceV07.mmObject();
 		}
 	};
 	/**
@@ -990,6 +990,169 @@ public class ConstraintIssuerAgentGuideline {
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV06.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07
+	 * CorporateActionMovementConfirmationV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerAgentGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementConfirmationV08
+	 * ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV08}
+	 * </li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementConfirmationV06
+	 * ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV06}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementConfirmationV07> forCorporateActionMovementConfirmationV07 = new MMConstraint<CorporateActionMovementConfirmationV07>() {
+		{
+			validator = ConstraintIssuerAgentGuideline::checkCorporateActionMovementConfirmationV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerAgentGuideline";
+			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementConfirmationV06;
+			owner_lazy = () -> CorporateActionMovementConfirmationV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV06
+	 * CorporateActionNotificationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerAgentGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV07
+	 * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionNotificationV05
+	 * ConstraintIssuerAgentGuideline.forCorporateActionNotificationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotificationV06> forCorporateActionNotificationV06 = new MMConstraint<CorporateActionNotificationV06>() {
+		{
+			validator = ConstraintIssuerAgentGuideline::checkCorporateActionNotificationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerAgentGuideline";
+			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionNotificationV05;
+			owner_lazy = () -> CorporateActionNotificationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07
+	 * CorporateActionMovementReversalAdviceV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IssuerAgentGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "IssuerAgent must be used only in the communication between a CSD and local custodians."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementReversalAdviceV08
+	 * ConstraintIssuerAgentGuideline.
+	 * forCorporateActionMovementReversalAdviceV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline#forCorporateActionMovementReversalAdviceV06
+	 * ConstraintIssuerAgentGuideline.
+	 * forCorporateActionMovementReversalAdviceV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementReversalAdviceV07> forCorporateActionMovementReversalAdviceV07 = new MMConstraint<CorporateActionMovementReversalAdviceV07>() {
+		{
+			validator = ConstraintIssuerAgentGuideline::checkCorporateActionMovementReversalAdviceV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IssuerAgentGuideline";
+			definition = "IssuerAgent must be used only in the communication between a CSD and local custodians.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIssuerAgentGuideline.forCorporateActionMovementReversalAdviceV06;
+			owner_lazy = () -> CorporateActionMovementReversalAdviceV07.mmObject();
+		}
+	};
+
+	/**
+	 * IssuerAgent must be used only in the communication between a CSD and
+	 * local custodians.
+	 */
+	public static void checkCorporateActionMovementReversalAdviceV09(CorporateActionMovementReversalAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * IssuerAgent must be used only in the communication between a CSD and
+	 * local custodians.
+	 */
+	public static void checkCorporateActionNotificationV08(CorporateActionNotificationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * IssuerAgent must be used only in the communication between a CSD and
+	 * local custodians.
+	 */
+	public static void checkCorporateActionMovementConfirmationV09(CorporateActionMovementConfirmationV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * IssuerAgent must be used only in the communication between a CSD and
@@ -1036,30 +1199,6 @@ public class ConstraintIssuerAgentGuideline {
 	 * local custodians.
 	 */
 	public static void checkCorporateActionMovementConfirmation002V08(CorporateActionMovementConfirmation002V08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * IssuerAgent must be used only in the communication between a CSD and
-	 * local custodians.
-	 */
-	public static void checkCorporateActionMovementConfirmationV07(CorporateActionMovementConfirmationV07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * IssuerAgent must be used only in the communication between a CSD and
-	 * local custodians.
-	 */
-	public static void checkCorporateActionNotificationV06(CorporateActionNotificationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * IssuerAgent must be used only in the communication between a CSD and
-	 * local custodians.
-	 */
-	public static void checkCorporateActionMovementReversalAdviceV07(CorporateActionMovementReversalAdviceV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1196,6 +1335,30 @@ public class ConstraintIssuerAgentGuideline {
 	 * local custodians.
 	 */
 	public static void checkCorporateActionMovementReversalAdviceV06(CorporateActionMovementReversalAdviceV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * IssuerAgent must be used only in the communication between a CSD and
+	 * local custodians.
+	 */
+	public static void checkCorporateActionMovementConfirmationV07(CorporateActionMovementConfirmationV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * IssuerAgent must be used only in the communication between a CSD and
+	 * local custodians.
+	 */
+	public static void checkCorporateActionNotificationV06(CorporateActionNotificationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * IssuerAgent must be used only in the communication between a CSD and
+	 * local custodians.
+	 */
+	public static void checkCorporateActionMovementReversalAdviceV07(CorporateActionMovementReversalAdviceV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

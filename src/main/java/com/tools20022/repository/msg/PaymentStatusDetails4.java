@@ -104,7 +104,7 @@ public class PaymentStatusDetails4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Status of a transfer, in coded form, as  assigned by the transaction administrator."
+	 * "Status of a transfer, in coded form, as assigned by the transaction administrator."
 	 * </li>
 	 * </ul>
 	 */
@@ -115,7 +115,7 @@ public class PaymentStatusDetails4 {
 			xmlTag = "PmtInstrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatus";
-			definition = "Status of a transfer, in coded form, as  assigned by the transaction administrator.";
+			definition = "Status of a transfer, in coded form, as assigned by the transaction administrator.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

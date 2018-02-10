@@ -171,7 +171,7 @@ public class ReportedPartyIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Location of the country in which the counterparty is incorporated. "</li>
+	 * "Location of the country in which the counterparty is incorporated."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -195,7 +195,7 @@ public class ReportedPartyIdentification1 {
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
-			definition = "Location of the country in which the counterparty is incorporated. ";
+			definition = "Location of the country in which the counterparty is incorporated.";
 			nextVersions_lazy = () -> Arrays.asList(NameAndLocation1.mmLocation);
 			previousVersion_lazy = () -> SectorAndLocation1.mmLocation;
 			maxOccurs = 1;

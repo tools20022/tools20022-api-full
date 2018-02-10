@@ -80,7 +80,7 @@ public class ConstraintOrganisationIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either Identification or Legal Entity Identifier must be present. Both  Identification and Legal Entity Identifier may be present."
+	 * "Either Identification or Legal Entity Identifier must be present. Both Identification and Legal Entity Identifier may be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -89,7 +89,7 @@ public class ConstraintOrganisationIdentificationRule {
 			validator = ConstraintOrganisationIdentificationRule::checkPartyIdentification96;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OrganisationIdentificationRule";
-			definition = "Either Identification or Legal Entity Identifier must be present. Both  Identification and Legal Entity Identifier may be present.";
+			definition = "Either Identification or Legal Entity Identifier must be present. Both Identification and Legal Entity Identifier may be present.";
 			owner_lazy = () -> PartyIdentification96.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Identification</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/LegalEntityIdentifier</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}

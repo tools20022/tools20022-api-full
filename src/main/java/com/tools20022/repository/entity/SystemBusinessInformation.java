@@ -19,10 +19,7 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
-import com.tools20022.repository.choice.GeneralBusinessOrError1Choice;
-import com.tools20022.repository.choice.GeneralBusinessOrError2Choice;
-import com.tools20022.repository.choice.GeneralBusinessOrError3Choice;
-import com.tools20022.repository.choice.GeneralBusinessOrError4Choice;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
@@ -94,6 +91,9 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#mmGeneralBusinessOrError
  * GeneralBusinessReport4.mmGeneralBusinessOrError}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport5#mmGeneralBusinessOrError
+ * GeneralBusinessReport5.mmGeneralBusinessOrError}</li>
  * </ul>
  * </li>
  * <li>
@@ -125,6 +125,19 @@ import java.util.Optional;
  * GeneralBusinessOrError4Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.GeneralBusinessReport4
  * GeneralBusinessReport4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError5Choice
+ * GeneralBusinessOrError5Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GeneralBusinessReport5
+ * GeneralBusinessReport5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1
+ * GeneralBusinessInformationSearchCriteria1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError6Choice
+ * GeneralBusinessOrError6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.GeneralBusinessInformation1
+ * GeneralBusinessInformation1}</li>
  * </ul>
  * </li>
  * <li>
@@ -173,6 +186,12 @@ public class SystemBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmQualifier
 	 * GeneralBusinessInformationSearchCriteria.mmQualifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1#mmQualifier
+	 * GeneralBusinessInformationSearchCriteria1.mmQualifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation1#mmQualifier
+	 * GeneralBusinessInformation1.mmQualifier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -206,7 +225,7 @@ public class SystemBusinessInformation {
 	 */
 	public static final MMBusinessAssociationEnd mmQualifier = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmQualifier, GeneralBusinessInformationSearchCriteria.mmQualifier);
+			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmQualifier, GeneralBusinessInformationSearchCriteria.mmQualifier, GeneralBusinessInformationSearchCriteria1.mmQualifier, GeneralBusinessInformation1.mmQualifier);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -245,6 +264,12 @@ public class SystemBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmSubject
 	 * GeneralBusinessInformationSearchCriteria.mmSubject}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1#mmSubject
+	 * GeneralBusinessInformationSearchCriteria1.mmSubject}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation1#mmSubject
+	 * GeneralBusinessInformation1.mmSubject}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -278,7 +303,7 @@ public class SystemBusinessInformation {
 	 */
 	public static final MMBusinessAttribute mmSubject = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmSubject, GeneralBusinessInformationSearchCriteria.mmSubject);
+			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmSubject, GeneralBusinessInformationSearchCriteria.mmSubject, GeneralBusinessInformationSearchCriteria1.mmSubject, GeneralBusinessInformation1.mmSubject);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -320,6 +345,9 @@ public class SystemBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation#mmSubjectDetails
 	 * GeneralBusinessInformation.mmSubjectDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation1#mmSubjectDetails
+	 * GeneralBusinessInformation1.mmSubjectDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -351,7 +379,7 @@ public class SystemBusinessInformation {
 	 */
 	public static final MMBusinessAttribute mmSubjectDetails = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmSubjectDetails);
+			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmSubjectDetails, GeneralBusinessInformation1.mmSubjectDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -402,6 +430,9 @@ public class SystemBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport4#mmBusinessInformationReference
 	 * GeneralBusinessReport4.mmBusinessInformationReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessReport5#mmBusinessInformationReference
+	 * GeneralBusinessReport5.mmBusinessInformationReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -425,7 +456,7 @@ public class SystemBusinessInformation {
 	public static final MMBusinessAttribute mmIdentification = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralBusinessReport.mmBusinessInformationReference, GeneralBusinessReport2.mmBusinessInformationReference, GeneralBusinessReport3.mmBusinessInformationReference,
-					GeneralBusinessReport4.mmBusinessInformationReference);
+					GeneralBusinessReport4.mmBusinessInformationReference, GeneralBusinessReport5.mmBusinessInformationReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -460,6 +491,9 @@ public class SystemBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria#mmReference
 	 * GeneralBusinessInformationSearchCriteria.mmReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformationSearchCriteria1#mmReference
+	 * GeneralBusinessInformationSearchCriteria1.mmReference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -493,7 +527,7 @@ public class SystemBusinessInformation {
 	 */
 	public static final MMBusinessAttribute mmReference = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria.mmReference);
+			derivation_lazy = () -> Arrays.asList(GeneralBusinessInformationSearchCriteria.mmReference, GeneralBusinessInformationSearchCriteria1.mmReference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemBusinessInformation.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -576,13 +610,14 @@ public class SystemBusinessInformation {
 				definition = "Details about business information related to a system.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.System.mmSystemGeneratedInformation, com.tools20022.repository.entity.InformationQualifier.mmSystemBusinessInformation);
 				derivationElement_lazy = () -> Arrays.asList(GeneralBusinessReport.mmGeneralBusinessInformation, GeneralBusinessReport2.mmGeneralBusinessInformation, GeneralBusinessReport3.mmGeneralBusinessOrError,
-						GeneralBusinessReport4.mmGeneralBusinessOrError);
+						GeneralBusinessReport4.mmGeneralBusinessOrError, GeneralBusinessReport5.mmGeneralBusinessOrError);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemBusinessInformation.mmQualifier, com.tools20022.repository.entity.SystemBusinessInformation.mmSubject,
 						com.tools20022.repository.entity.SystemBusinessInformation.mmSubjectDetails, com.tools20022.repository.entity.SystemBusinessInformation.mmIdentification,
 						com.tools20022.repository.entity.SystemBusinessInformation.mmReference, com.tools20022.repository.entity.SystemBusinessInformation.mmSystem);
 				derivationComponent_lazy = () -> Arrays.asList(GeneralBusinessInformation.mmObject(), GeneralBusinessReport.mmObject(), GeneralBusinessReport2.mmObject(), GeneralBusinessOrError2Choice.mmObject(),
 						GeneralBusinessReport3.mmObject(), GeneralBusinessOrError1Choice.mmObject(), GeneralBusinessInformationSearchCriteria.mmObject(), GeneralBusinessOrError3Choice.mmObject(), GeneralBusinessOrError4Choice.mmObject(),
-						GeneralBusinessReport4.mmObject());
+						GeneralBusinessReport4.mmObject(), GeneralBusinessOrError5Choice.mmObject(), GeneralBusinessReport5.mmObject(), GeneralBusinessInformationSearchCriteria1.mmObject(), GeneralBusinessOrError6Choice.mmObject(),
+						GeneralBusinessInformation1.mmObject());
 			}
 
 			@Override

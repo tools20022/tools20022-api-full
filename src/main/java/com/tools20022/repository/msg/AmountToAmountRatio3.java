@@ -150,7 +150,7 @@ public class AmountToAmountRatio3 {
 	 * name} = "Amount2"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Denominator of the quotient of amounts"</li>
+	 * definition} = "Denominator of the quotient of amounts."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount2 = new MMMessageAttribute() {
@@ -161,7 +161,7 @@ public class AmountToAmountRatio3 {
 			xmlTag = "Amt2";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount2";
-			definition = "Denominator of the quotient of amounts";
+			definition = "Denominator of the quotient of amounts.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();

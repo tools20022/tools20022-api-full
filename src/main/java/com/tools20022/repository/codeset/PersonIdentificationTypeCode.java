@@ -739,7 +739,7 @@ public class PersonIdentificationTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number that identifies the type of investor registered at a securities and exchange commission.  "
+	 * "Number that identifies the type of investor registered at a securities and exchange commission."
 	 * </li>
 	 * </ul>
 	 */
@@ -747,7 +747,7 @@ public class PersonIdentificationTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonResidentInvestor";
-			definition = "Number that identifies the type of investor registered at a securities and exchange commission.  ";
+			definition = "Number that identifies the type of investor registered at a securities and exchange commission.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PersonIdentificationTypeCode.mmObject();
 			codeName = "NINV";
 		}

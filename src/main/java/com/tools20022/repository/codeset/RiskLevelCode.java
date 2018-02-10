@@ -107,7 +107,7 @@ public class RiskLevelCode extends MMCode {
 		}
 	};
 	/**
-	 * Medium.
+	 * Medium. .
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -124,14 +124,14 @@ public class RiskLevelCode extends MMCode {
 	 * name} = "Medium"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Medium.\t"</li>
+	 * definition} = "Medium.\t."</li>
 	 * </ul>
 	 */
 	public static final RiskLevelCode Medium = new RiskLevelCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Medium";
-			definition = "Medium.\t";
+			definition = "Medium.\t.";
 			owner_lazy = () -> com.tools20022.repository.codeset.RiskLevelCode.mmObject();
 			codeName = "MEDM";
 		}

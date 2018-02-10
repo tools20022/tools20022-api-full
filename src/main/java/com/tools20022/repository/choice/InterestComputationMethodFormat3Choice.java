@@ -69,6 +69,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between a standard code or proprietary code to specify the type of interest computation method."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat6Choice
+ * InterestComputationMethodFormat6Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +119,14 @@ public class InterestComputationMethodFormat3Choice {
 	 * definition} =
 	 * "Standard code to specify the method used to compute accruing interest of a financial instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat6Choice#mmCode
+	 * InterestComputationMethodFormat6Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -122,6 +138,7 @@ public class InterestComputationMethodFormat3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Standard code to specify the method used to compute accruing interest of a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(InterestComputationMethodFormat6Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InterestComputationMethod2Code.mmObject();
@@ -161,6 +178,14 @@ public class InterestComputationMethodFormat3Choice {
 	 * definition} =
 	 * "Proprietary identification of the format of interest computation method."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InterestComputationMethodFormat6Choice#mmProprietary
+	 * InterestComputationMethodFormat6Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -172,6 +197,7 @@ public class InterestComputationMethodFormat3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary identification of the format of interest computation method.";
+			nextVersions_lazy = () -> Arrays.asList(InterestComputationMethodFormat6Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -188,6 +214,7 @@ public class InterestComputationMethodFormat3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InterestComputationMethodFormat3Choice";
 				definition = "Choice between a standard code or proprietary code to specify the type of interest computation method.";
+				nextVersions_lazy = () -> Arrays.asList(InterestComputationMethodFormat6Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

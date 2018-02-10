@@ -183,7 +183,7 @@ public class OrganisationIdentification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "International Business Entity Identifier to uniquely identify business entities playing a role in the lifecycle of and events related to a financial instrument. (tentative - to be confirmed)"
+	 * "International Business Entity Identifier to uniquely identify business entities playing a role in the lifecycle of and events related to a financial instrument. (tentative - to be confirmed)."
 	 * </li>
 	 * </ul>
 	 */
@@ -195,7 +195,7 @@ public class OrganisationIdentification2 {
 			xmlTag = "IBEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IBEI";
-			definition = "International Business Entity Identifier to uniquely identify business entities playing a role in the lifecycle of and events related to a financial instrument. (tentative - to be confirmed)";
+			definition = "International Business Entity Identifier to uniquely identify business entities playing a role in the lifecycle of and events related to a financial instrument. (tentative - to be confirmed).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> IBEIIdentifier.mmObject();

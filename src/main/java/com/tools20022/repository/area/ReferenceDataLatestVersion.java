@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * Messages that support the communication of reference data related to
  * financial instruments, parties, accounts, prices and other business
- * information required to support financial activities
+ * information required to support financial activities.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -65,6 +65,25 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.reda.NettingCutOffReferenceDataReportV01
  * NettingCutOffReferenceDataReportV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.reda.PartyAuditTrailQueryV01
+ * PartyAuditTrailQueryV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.reda.PartyActivityAdviceV01
+ * PartyActivityAdviceV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.reda.PartyCreationRequestV01
+ * PartyCreationRequestV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.reda.PartyReportV01
+ * PartyReportV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.reda.PartyAuditTrailReportV02
+ * PartyAuditTrailReportV02}</li>
+ * <li>{@linkplain com.tools20022.repository.area.reda.PartyDeletionRequestV01
+ * PartyDeletionRequestV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.reda.PartyQueryV01
+ * PartyQueryV01}</li>
+ * <li>{@linkplain com.tools20022.repository.area.reda.PartyStatusAdviceV01
+ * PartyStatusAdviceV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyModificationRequestV01
+ * PartyModificationRequestV01}</li>
  * </ul>
  * </li>
  * <li>
@@ -80,7 +99,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Reference Data - Latest version - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities"
+ * "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities."
  * </li>
  * </ul>
  */
@@ -94,10 +113,11 @@ public class ReferenceDataLatestVersion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Reference Data - Latest version - master";
-				definition = "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities";
+				definition = "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities.";
 				messageDefinition_lazy = () -> Arrays.asList(FundProcessingPassportReportV02.mmObject(), InvestmentFundReportRequestV02.mmObject(), PriceReportCancellationV04.mmObject(), PriceReportV04.mmObject(),
 						StandingSettlementInstructionV01.mmObject(), StandingSettlementInstructionCancellationV01.mmObject(), StandingSettlementInstructionStatusAdviceV01.mmObject(), StandingSettlementInstructionDeletionV01.mmObject(),
-						NettingCutOffReferenceDataUpdateRequestV01.mmObject(), NettingCutOffReferenceDataReportV01.mmObject());
+						NettingCutOffReferenceDataUpdateRequestV01.mmObject(), NettingCutOffReferenceDataReportV01.mmObject(), PartyAuditTrailQueryV01.mmObject(), PartyActivityAdviceV01.mmObject(), PartyCreationRequestV01.mmObject(),
+						PartyReportV01.mmObject(), PartyAuditTrailReportV02.mmObject(), PartyDeletionRequestV01.mmObject(), PartyQueryV01.mmObject(), PartyStatusAdviceV01.mmObject(), PartyModificationRequestV01.mmObject());
 				code = "reda";
 			}
 		});

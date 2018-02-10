@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information on the shipment date, the charges, the routing and the goods
- * described in the transport document
+ * described in the transport document.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -87,7 +87,7 @@ import javax.xml.bind.annotation.XmlType;
  * "TransportDetails1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information on the shipment date, the charges, the routing and the goods described in the transport document"
+ * "Information on the shipment date, the charges, the routing and the goods described in the transport document."
  * </li>
  * </ul>
  */
@@ -123,7 +123,7 @@ public class TransportDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the identification of  the underlying transport document."</li>
+	 * "Reference to the identification of the underlying transport document."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransportDocumentReference = new MMMessageAssociationEnd() {
@@ -133,7 +133,7 @@ public class TransportDetails1 {
 			xmlTag = "TrnsprtDocRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDocumentReference";
-			definition = "Reference to the identification of  the underlying transport document.";
+			definition = "Reference to the identification of the underlying transport document.";
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.DocumentIdentification7.mmObject();
@@ -487,7 +487,7 @@ public class TransportDetails1 {
 					}
 				})).get();
 				name = "TransportDetails1";
-				definition = "Information on the shipment date, the charges, the routing and the goods described in the transport document";
+				definition = "Information on the shipment date, the charges, the routing and the goods described in the transport document.";
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransportDetails1.ProposedShipmentOrActualShipmentDateRule);
 			}
 		});

@@ -604,7 +604,7 @@ public class UnderlyingSecurityExtension2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Ticket symbol for the event security (underlying security). "</li>
+	 * "Ticket symbol for the event security (underlying security)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTickerSymbol = new MMMessageAttribute() {
@@ -615,7 +615,7 @@ public class UnderlyingSecurityExtension2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Ticker Symbol"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
-			definition = "Ticket symbol for the event security (underlying security). ";
+			definition = "Ticket symbol for the event security (underlying security).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

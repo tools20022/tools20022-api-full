@@ -60,6 +60,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementDate10Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the settlement date."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.SettlementDate19Choice
+ * SettlementDate19Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.SettlementDate2Choice
@@ -103,6 +110,14 @@ public class SettlementDate10Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date in ISO format."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate19Choice#mmDate
+	 * SettlementDate19Choice.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class SettlementDate10Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date in ISO format.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDate19Choice.mmDate);
 			previousVersion_lazy = () -> SettlementDate2Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -157,6 +173,14 @@ public class SettlementDate10Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which the securities are to be delivered or received."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementDate19Choice#mmDateCode
+	 * SettlementDate19Choice.mmDateCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -173,6 +197,7 @@ public class SettlementDate10Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Date and time at which the securities are to be delivered or received.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementDate19Choice.mmDateCode);
 			previousVersion_lazy = () -> SettlementDate2Choice.mmDateCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -188,6 +213,7 @@ public class SettlementDate10Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDate10Choice";
 				definition = "Choice of format for the settlement date.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementDate19Choice.mmObject());
 				previousVersion_lazy = () -> SettlementDate2Choice.mmObject();
 			}
 		});

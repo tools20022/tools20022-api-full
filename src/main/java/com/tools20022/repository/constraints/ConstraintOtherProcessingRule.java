@@ -108,6 +108,14 @@ public class ConstraintOtherProcessingRule {
 	 * definition} =
 	 * "If OtherProcessing is used, then its usage must be pre-agreed between the sender and receiver."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherProcessingRule#forRequestDetails18
+	 * ConstraintOtherProcessingRule.forRequestDetails18}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestDetails6> forRequestDetails6 = new MMConstraint<RequestDetails6>() {
@@ -116,6 +124,7 @@ public class ConstraintOtherProcessingRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProcessingRule";
 			definition = "If OtherProcessing is used, then its usage must be pre-agreed between the sender and receiver.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherProcessingRule.forRequestDetails18);
 			owner_lazy = () -> RequestDetails6.mmObject();
 		}
 	};
@@ -297,6 +306,14 @@ public class ConstraintOtherProcessingRule {
 	 * definition} =
 	 * "If OtherProcessing is used, then its usage must be pre-agreed between the sender and the receiver."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherProcessingRule#forRequestDetails17
+	 * ConstraintOtherProcessingRule.forRequestDetails17}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<RequestDetails10> forRequestDetails10 = new MMConstraint<RequestDetails10>() {
@@ -305,6 +322,7 @@ public class ConstraintOtherProcessingRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProcessingRule";
 			definition = "If OtherProcessing is used, then its usage must be pre-agreed between the sender and the receiver.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOtherProcessingRule.forRequestDetails17);
 			owner_lazy = () -> RequestDetails10.mmObject();
 		}
 	};
@@ -449,6 +467,78 @@ public class ConstraintOtherProcessingRule {
 			owner_lazy = () -> RequestDetails16.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17
+	 * RequestDetails17}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherProcessingRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OtherProcessing is used, then its usage must be pre-agreed between the sender and the receiver."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherProcessingRule#forRequestDetails10
+	 * ConstraintOtherProcessingRule.forRequestDetails10}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails17> forRequestDetails17 = new MMConstraint<RequestDetails17>() {
+		{
+			validator = ConstraintOtherProcessingRule::checkRequestDetails17;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherProcessingRule";
+			definition = "If OtherProcessing is used, then its usage must be pre-agreed between the sender and the receiver.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherProcessingRule.forRequestDetails10;
+			owner_lazy = () -> RequestDetails17.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18
+	 * RequestDetails18}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OtherProcessingRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If OtherProcessing is used, then its usage must be pre-agreed between the sender and receiver."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOtherProcessingRule#forRequestDetails6
+	 * ConstraintOtherProcessingRule.forRequestDetails6}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestDetails18> forRequestDetails18 = new MMConstraint<RequestDetails18>() {
+		{
+			validator = ConstraintOtherProcessingRule::checkRequestDetails18;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OtherProcessingRule";
+			definition = "If OtherProcessing is used, then its usage must be pre-agreed between the sender and receiver.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOtherProcessingRule.forRequestDetails6;
+			owner_lazy = () -> RequestDetails18.mmObject();
+		}
+	};
 
 	/**
 	 * If OtherProcessing is used, then its usage must be pre-agreed between the
@@ -551,6 +641,22 @@ public class ConstraintOtherProcessingRule {
 	 * sender and receiver.
 	 */
 	public static void checkRequestDetails16(RequestDetails16 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If OtherProcessing is used, then its usage must be pre-agreed between the
+	 * sender and the receiver.
+	 */
+	public static void checkRequestDetails17(RequestDetails17 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If OtherProcessing is used, then its usage must be pre-agreed between the
+	 * sender and receiver.
+	 */
+	public static void checkRequestDetails18(RequestDetails18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

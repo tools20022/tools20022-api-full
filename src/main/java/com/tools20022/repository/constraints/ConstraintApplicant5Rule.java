@@ -49,7 +49,7 @@ public class ConstraintApplicant5Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If IssuanceType is \"QRQC\" then Applicant  must not be present."</li>
+	 * "If IssuanceType is \"QRQC\" then Applicant must not be present."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UndertakingIssuanceV01> forUndertakingIssuanceV01 = new MMConstraint<UndertakingIssuanceV01>() {
@@ -57,7 +57,7 @@ public class ConstraintApplicant5Rule {
 			validator = ConstraintApplicant5Rule::checkUndertakingIssuanceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicant5Rule";
-			definition = "If IssuanceType is \"QRQC\" then Applicant  must not be present.";
+			definition = "If IssuanceType is \"QRQC\" then Applicant must not be present.";
 			owner_lazy = () -> UndertakingIssuanceV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UndertakingIssuanceDetails/Applicant[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/UndertakingIssuanceDetails/IssuanceType</leftOperand><rightOperand>QRQC</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -83,7 +83,7 @@ public class ConstraintApplicant5Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If IssuanceType is \"QRQC\" then Applicant  must not be present."</li>
+	 * "If IssuanceType is \"QRQC\" then Applicant must not be present."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<UndertakingAdvice2> forUndertakingAdvice2 = new MMConstraint<UndertakingAdvice2>() {
@@ -91,7 +91,7 @@ public class ConstraintApplicant5Rule {
 			validator = ConstraintApplicant5Rule::checkUndertakingAdvice2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Applicant5Rule";
-			definition = "If IssuanceType is \"QRQC\" then Applicant  must not be present.";
+			definition = "If IssuanceType is \"QRQC\" then Applicant must not be present.";
 			owner_lazy = () -> UndertakingAdvice2.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/UndertakingIssuanceMessage/UndertakingDetails/Applicant[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/UndertakingIssuanceMessage/UndertakingDetails/IssuanceType</leftOperand><rightOperand>QRQC</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}

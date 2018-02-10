@@ -77,6 +77,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Card payment transaction including an authorisation response."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25
+ * CardPaymentDataSetTransaction25}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction17
@@ -116,6 +124,14 @@ public class CardPaymentDataSetTransaction21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Sequential counter of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25#mmTransactionSequenceCounter
+	 * CardPaymentDataSetTransaction25.mmTransactionSequenceCounter}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +147,7 @@ public class CardPaymentDataSetTransaction21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionSequenceCounter";
 			definition = "Sequential counter of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction25.mmTransactionSequenceCounter);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmTransactionSequenceCounter;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -165,6 +182,14 @@ public class CardPaymentDataSetTransaction21 {
 	 * definition} =
 	 * "Identification of partners involved in the exchange from the merchant to the issuer, with the corresponding timestamp of their exchanges."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25#mmTraceability
+	 * CardPaymentDataSetTransaction25.mmTraceability}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +205,7 @@ public class CardPaymentDataSetTransaction21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in the exchange from the merchant to the issuer, with the corresponding timestamp of their exchanges.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction25.mmTraceability);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmTraceability;
 			minOccurs = 0;
 			isComposite = true;
@@ -218,6 +244,14 @@ public class CardPaymentDataSetTransaction21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Data related to the environment of the card payment transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25#mmEnvironment
+	 * CardPaymentDataSetTransaction25.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -234,6 +268,7 @@ public class CardPaymentDataSetTransaction21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Data related to the environment of the card payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction25.mmEnvironment);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -272,6 +307,14 @@ public class CardPaymentDataSetTransaction21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Card payment transaction authorisation result."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25#mmTransaction
+	 * CardPaymentDataSetTransaction25.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -288,6 +331,7 @@ public class CardPaymentDataSetTransaction21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Card payment transaction authorisation result.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction25.mmTransaction);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -327,6 +371,14 @@ public class CardPaymentDataSetTransaction21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Response to the authorisation request from the acquirer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25#mmTransactionResponse
+	 * CardPaymentDataSetTransaction25.mmTransactionResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -343,6 +395,7 @@ public class CardPaymentDataSetTransaction21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response to the authorisation request from the acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction25.mmTransactionResponse);
 			previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmTransactionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -361,6 +414,7 @@ public class CardPaymentDataSetTransaction21 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentDataSetTransaction21";
 				definition = "Card payment transaction including an authorisation response.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentDataSetTransaction25.mmObject());
 				previousVersion_lazy = () -> CardPaymentDataSetTransaction17.mmObject();
 			}
 		});

@@ -461,7 +461,7 @@ public class StructuredRemittanceInformation10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides remittance information about a payment for garnishment-related purposes. "
+	 * "Provides remittance information about a payment for garnishment-related purposes."
 	 * </li>
 	 * </ul>
 	 */
@@ -473,7 +473,7 @@ public class StructuredRemittanceInformation10 {
 			xmlTag = "GrnshmtRmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GarnishmentRemittance";
-			definition = "Provides remittance information about a payment for garnishment-related purposes. ";
+			definition = "Provides remittance information about a payment for garnishment-related purposes.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

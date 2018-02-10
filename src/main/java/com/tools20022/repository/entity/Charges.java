@@ -352,6 +352,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.PaymentTransaction82#mmChargesInformation
  * PaymentTransaction82.mmChargesInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmDiscountDetails
+ * Fee4.mmDiscountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmChargesInformation
+ * PaymentTransaction87.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmChargesInformation
+ * PaymentTransaction88.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ResolutionInformation2#mmCharges
+ * ResolutionInformation2.mmCharges}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmChargesInformation
+ * PaymentTransaction91.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmChargesInformation
+ * CreditTransferTransaction30.mmChargesInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentTransaction92#mmChargesInformation
+ * PaymentTransaction92.mmChargesInformation}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -449,6 +469,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.Fee3 Fee3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Fee2 Fee2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Fee1 Fee1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Fee4 Fee4}</li>
  * </ul>
  * </li>
  * <li>
@@ -631,6 +652,13 @@ public class Charges extends Adjustment {
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee3#mmType Fee3.mmType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee2#mmType Fee2.mmType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Fee1#mmType Fee1.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType6Choice#mmCode
+	 * ChargeType6Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ChargeType6Choice#mmProprietary
+	 * ChargeType6Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmType Fee4.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -658,7 +686,7 @@ public class Charges extends Adjustment {
 					DiscountOrChargeType1Choice.mmChargeType, ChargesDetails2.mmType, ChargesDetails2.mmOtherChargesType, ChargesDetails1.mmType, ChargesDetails1.mmOtherChargesType, ChargeType1Choice.mmType,
 					ChargeType1Choice.mmProprietary, Charge21.mmChargeType, Charge23.mmType, Charge22.mmType, Charges5.mmType, ChargesDetails3.mmType, ChargesType1Choice.mmType, ChargesType1Choice.mmOtherChargesType,
 					ChargesDetails4.mmChargesType, Charge26.mmType, ChargeType4Choice.mmCode, ChargeType4Choice.mmProprietary, Charge27.mmType, Charge29.mmType, ChargeType5Choice.mmCode, ChargeType5Choice.mmProprietary, Fee3.mmType,
-					Fee2.mmType, Fee1.mmType);
+					Fee2.mmType, Fee1.mmType, ChargeType6Choice.mmCode, ChargeType6Choice.mmProprietary, Fee4.mmType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1072,6 +1100,32 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation6#mmChargeBearer
 	 * PaymentComplementaryInformation6.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmChargeBearer
+	 * PaymentInstruction24.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmChargeBearer
+	 * CreditTransferTransaction27.mmChargeBearer}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Fee4#mmChargeBearer
+	 * Fee4.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentComplementaryInformation7#mmChargeBearer
+	 * PaymentComplementaryInformation7.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmChargeBearer
+	 * PaymentTransaction87.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmChargeBearer
+	 * PaymentTransaction88.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmChargeBearer
+	 * RequestedModification7.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmChargeBearer
+	 * CreditTransferTransaction30.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction93#mmChargeBearer
+	 * PaymentTransaction93.mmChargeBearer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1116,7 +1170,8 @@ public class Charges extends Adjustment {
 					PaymentTransaction60.mmChargeBearer, CreditTransferTransaction26.mmChargeBearer, DirectDebitTransactionInformation19.mmChargeBearer, CreditTransferTransaction22.mmChargeBearer, PaymentTransaction64.mmChargeBearer,
 					Charge29.mmChargeBearer, PaymentInstruction21.mmChargeBearer, DirectDebitTransactionInformation21.mmChargeBearer, PaymentTransaction81.mmChargeBearer, RequestedModification6.mmChargeBearer,
 					PaymentInstruction23.mmChargeBearer, PaymentTransaction76.mmChargeBearer, PaymentInstruction22.mmChargeBearer, PaymentTransaction77.mmChargeBearer, DirectDebitTransactionInformation22.mmChargeBearer,
-					PaymentComplementaryInformation6.mmChargeBearer);
+					PaymentComplementaryInformation6.mmChargeBearer, PaymentInstruction24.mmChargeBearer, CreditTransferTransaction27.mmChargeBearer, Fee4.mmChargeBearer, PaymentComplementaryInformation7.mmChargeBearer,
+					PaymentTransaction87.mmChargeBearer, PaymentTransaction88.mmChargeBearer, RequestedModification7.mmChargeBearer, CreditTransferTransaction30.mmChargeBearer, PaymentTransaction93.mmChargeBearer);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1204,6 +1259,9 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmChargesAccount
 	 * PaymentInstruction22.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmChargesAccount
+	 * PaymentInstruction24.mmChargesAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1226,7 +1284,7 @@ public class Charges extends Adjustment {
 			derivation_lazy = () -> Arrays.asList(Account8Choice.mmChargesAccount, Account9Choice.mmChargesAccount, PaymentInstructionInformation1.mmChargesAccount, PaymentInstructionInformation3.mmChargesAccount,
 					PaymentInstruction6.mmChargesAccount, PaymentInstruction9.mmChargesAccount, PaymentInstructionInformation2.mmChargesAccount, PaymentInstructionInformation4.mmChargesAccount, PaymentInstruction7.mmChargesAccount,
 					PaymentInstruction10.mmChargesAccount, PaymentInstruction16.mmChargesAccount, PaymentInstruction15.mmChargesAccount, PaymentInstruction18.mmChargesAccount, PaymentInstruction20.mmChargesAccount,
-					PaymentInstruction21.mmChargesAccount, PaymentInstruction22.mmChargesAccount);
+					PaymentInstruction21.mmChargesAccount, PaymentInstruction22.mmChargesAccount, PaymentInstruction24.mmChargesAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1663,7 +1721,7 @@ public class Charges extends Adjustment {
 	 * name} = "LineItem"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Line item for which charges are specified"</li>
+	 * definition} = "Line item for which charges are specified."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmLineItem = new MMBusinessAssociationEnd() {
@@ -1672,7 +1730,7 @@ public class Charges extends Adjustment {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LineItem";
-			definition = "Line item for which charges are specified";
+			definition = "Line item for which charges are specified.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.LineItem.mmCharges;
@@ -2001,6 +2059,12 @@ public class Charges extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transfer33#mmTransferExpensesPaymentType
 	 * Transfer33.mmTransferExpensesPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmTransferExpensesPaymentType
+	 * Transfer35.mmTransferExpensesPaymentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer34#mmTransferExpensesPaymentType
+	 * Transfer34.mmTransferExpensesPaymentType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2021,7 +2085,8 @@ public class Charges extends Adjustment {
 	public static final MMBusinessAttribute mmChargePaymentMethod = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Transfer27.mmTransferExpensesPaymentType, Transfer28.mmTransferExpensesPaymentType, Transfer29.mmTransferExpensesPaymentType, ChargePaymentMethod1Choice.mmCode,
-					ChargePaymentMethod1Choice.mmProprietary, Transfer31.mmTransferExpensesPaymentType, Transfer30.mmTransferExpensesPaymentType, Transfer33.mmTransferExpensesPaymentType);
+					ChargePaymentMethod1Choice.mmProprietary, Transfer31.mmTransferExpensesPaymentType, Transfer30.mmTransferExpensesPaymentType, Transfer33.mmTransferExpensesPaymentType, Transfer35.mmTransferExpensesPaymentType,
+					Transfer34.mmTransferExpensesPaymentType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Charges.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2070,7 +2135,8 @@ public class Charges extends Adjustment {
 						PaymentTransaction63.mmChargesInformation, PaymentTransaction60.mmChargesInformation, PaymentTransaction68.mmChargesInformation, PaymentTransaction69.mmChargesInformation,
 						IndividualOrderStatusAndReason7.mmRepairedFee, TotalFeesAndTaxes40.mmTotalFees, TotalFeesAndTaxes40.mmIndividualFee, Fee2.mmDiscountDetails, Fee1.mmDiscountDetails, SwitchLegReferences2.mmRepairedFee,
 						DirectDebitTransactionInformation21.mmChargesInformation, PaymentTransaction80.mmChargesInformation, PaymentTransaction81.mmChargesInformation, PaymentTransaction76.mmChargesInformation,
-						PaymentTransaction83.mmChargesInformation, PaymentTransaction82.mmChargesInformation);
+						PaymentTransaction83.mmChargesInformation, PaymentTransaction82.mmChargesInformation, Fee4.mmDiscountDetails, PaymentTransaction87.mmChargesInformation, PaymentTransaction88.mmChargesInformation,
+						ResolutionInformation2.mmCharges, PaymentTransaction91.mmChargesInformation, CreditTransferTransaction30.mmChargesInformation, PaymentTransaction92.mmChargesInformation);
 				subType_lazy = () -> Arrays.asList(SecuritiesRelatedFees.mmObject(), CorporateActionFeesAndCharges.mmObject());
 				superType_lazy = () -> Adjustment.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Charges.mmChargeType, com.tools20022.repository.entity.Charges.mmCalculationBasis, com.tools20022.repository.entity.Charges.mmBearerType,
@@ -2087,7 +2153,7 @@ public class Charges extends Adjustment {
 						Charges1.mmObject(), ChargeTypeFormat3Choice.mmObject(), ChargesDetails2.mmObject(), ChargesDetails1.mmObject(), Charge12.mmObject(), Charge13.mmObject(), ChargeType1Choice.mmObject(), AmountRate1Choice.mmObject(),
 						Charge21.mmObject(), TotalCharges4.mmObject(), ChargesInformation2.mmObject(), ChargesInformation4.mmObject(), Charge23.mmObject(), TotalCharges5.mmObject(), Charge22.mmObject(), Charges5.mmObject(),
 						ChargePaymentMethod1Choice.mmObject(), Charge24.mmObject(), ChargesDetails3.mmObject(), ChargesType1Choice.mmObject(), Charge25.mmObject(), ChargesDetails4.mmObject(), Charge26.mmObject(), Charge27.mmObject(),
-						Charge29.mmObject(), Fee3.mmObject(), Fee2.mmObject(), Fee1.mmObject());
+						Charge29.mmObject(), Fee3.mmObject(), Fee2.mmObject(), Fee1.mmObject(), Fee4.mmObject());
 			}
 
 			@Override

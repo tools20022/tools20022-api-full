@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the criteria which are used to search for a payment transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionSearchCriteria6
+ * TransactionSearchCriteria6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria4
@@ -104,6 +111,14 @@ public class TransactionSearchCriteria5 {
 	 * definition} =
 	 * "Defines the criteria which are used to search for the destination of the payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria6#mmPaymentTo
+	 * TransactionSearchCriteria6.mmPaymentTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class TransactionSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTo";
 			definition = "Defines the criteria which are used to search for the destination of the payment.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria6.mmPaymentTo);
 			previousVersion_lazy = () -> TransactionSearchCriteria4.mmPaymentTo;
 			minOccurs = 0;
 			isComposite = true;
@@ -153,6 +169,14 @@ public class TransactionSearchCriteria5 {
 	 * definition} =
 	 * "Defines the criteria which are used to search for the origin of the payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria6#mmPaymentFrom
+	 * TransactionSearchCriteria6.mmPaymentFrom}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +192,7 @@ public class TransactionSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrom";
 			definition = "Defines the criteria which are used to search for the origin of the payment.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria6.mmPaymentFrom);
 			previousVersion_lazy = () -> TransactionSearchCriteria4.mmPaymentFrom;
 			minOccurs = 0;
 			isComposite = true;
@@ -201,6 +226,14 @@ public class TransactionSearchCriteria5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria which are used to search for a payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria6#mmPaymentSearch
+	 * TransactionSearchCriteria6.mmPaymentSearch}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -216,6 +249,7 @@ public class TransactionSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentSearch";
 			definition = "Defines the criteria which are used to search for a payment.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria6.mmPaymentSearch);
 			previousVersion_lazy = () -> TransactionSearchCriteria4.mmPaymentSearch;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -251,6 +285,14 @@ public class TransactionSearchCriteria5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines the criteria which are used to search for a cash entry."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionSearchCriteria6#mmAccountEntrySearch
+	 * TransactionSearchCriteria6.mmAccountEntrySearch}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -266,6 +308,7 @@ public class TransactionSearchCriteria5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountEntrySearch";
 			definition = "Defines the criteria which are used to search for a cash entry.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria6.mmAccountEntrySearch);
 			previousVersion_lazy = () -> TransactionSearchCriteria4.mmAccountEntrySearch;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -283,6 +326,7 @@ public class TransactionSearchCriteria5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionSearchCriteria5";
 				definition = "Defines the criteria which are used to search for a payment transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionSearchCriteria6.mmObject());
 				previousVersion_lazy = () -> TransactionSearchCriteria4.mmObject();
 			}
 		});

@@ -91,7 +91,7 @@ public class SystemSecuritiesAccountTypeCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
-	 * Account owned by a CSD Participant
+	 * Account owned by a CSD Participant .
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -108,20 +108,20 @@ public class SystemSecuritiesAccountTypeCode extends MMCode {
 	 * name} = "CSDParticipantAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account owned by a CSD Participant\n"</li>
+	 * definition} = "Account owned by a CSD Participant\n."</li>
 	 * </ul>
 	 */
 	public static final SystemSecuritiesAccountTypeCode CSDParticipantAccount = new SystemSecuritiesAccountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDParticipantAccount";
-			definition = "Account owned by a CSD Participant\n";
+			definition = "Account owned by a CSD Participant\n.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountTypeCode.mmObject();
 			codeName = "CSDP";
 		}
 	};
 	/**
-	 * Account operated by CSD for mirroring positions
+	 * Account operated by CSD for mirroring positions .
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -138,14 +138,14 @@ public class SystemSecuritiesAccountTypeCode extends MMCode {
 	 * name} = "CSDMirrorAccount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Account operated by CSD for mirroring positions\n"</li>
+	 * definition} = "Account operated by CSD for mirroring positions\n."</li>
 	 * </ul>
 	 */
 	public static final SystemSecuritiesAccountTypeCode CSDMirrorAccount = new SystemSecuritiesAccountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDMirrorAccount";
-			definition = "Account operated by CSD for mirroring positions\n";
+			definition = "Account operated by CSD for mirroring positions\n.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountTypeCode.mmObject();
 			codeName = "CSDM";
 		}
@@ -184,7 +184,7 @@ public class SystemSecuritiesAccountTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Account operated by CSDs in a direct holding market context
+	 * Account operated by CSDs in a direct holding market context.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -202,14 +202,14 @@ public class SystemSecuritiesAccountTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Account operated by CSDs in a direct holding market context"</li>
+	 * "Account operated by CSDs in a direct holding market context."</li>
 	 * </ul>
 	 */
 	public static final SystemSecuritiesAccountTypeCode TechnicalOffsetAccount = new SystemSecuritiesAccountTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TechnicalOffsetAccount";
-			definition = "Account operated by CSDs in a direct holding market context";
+			definition = "Account operated by CSDs in a direct holding market context.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountTypeCode.mmObject();
 			codeName = "TOFF";
 		}
@@ -246,7 +246,7 @@ public class SystemSecuritiesAccountTypeCode extends MMCode {
 	};
 	/**
 	 * Account reflecting the holdings of the participants of the issuer CSD for
-	 * a given financial instrument
+	 * a given financial instrument.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -264,7 +264,7 @@ public class SystemSecuritiesAccountTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Account reflecting the holdings of the participants of the issuer CSD for a given financial instrument"
+	 * "Account reflecting the holdings of the participants of the issuer CSD for a given financial instrument."
 	 * </li>
 	 * </ul>
 	 */
@@ -272,7 +272,7 @@ public class SystemSecuritiesAccountTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceAccount";
-			definition = "Account reflecting the holdings of the participants of the issuer CSD for a given financial instrument";
+			definition = "Account reflecting the holdings of the participants of the issuer CSD for a given financial instrument.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SystemSecuritiesAccountTypeCode.mmObject();
 			codeName = "ISSA";
 		}

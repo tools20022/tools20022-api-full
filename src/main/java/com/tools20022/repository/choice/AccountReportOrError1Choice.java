@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountReportOrError1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between account information or an error report."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.AccountReportOrError2Choice
+ * AccountReportOrError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,6 +103,14 @@ public class AccountReportOrError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Error that occurred during processing."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountReportOrError2Choice#mmError
+	 * AccountReportOrError2Choice.mmError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmError = new MMMessageAssociationEnd() {
@@ -106,6 +121,7 @@ public class AccountReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Error";
 			definition = "Error that occurred during processing.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReportOrError2Choice.mmError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -137,6 +153,14 @@ public class AccountReportOrError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested details of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountReportOrError2Choice#mmAccountReport
+	 * AccountReportOrError2Choice.mmAccountReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountReport = new MMMessageAssociationEnd() {
@@ -147,6 +171,7 @@ public class AccountReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountReport";
 			definition = "Requested details of the account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReportOrError2Choice.mmAccountReport);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> AccountReport14.mmObject();
@@ -161,6 +186,7 @@ public class AccountReportOrError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReportOrError1Choice";
 				definition = "Choice between account information or an error report.";
+				nextVersions_lazy = () -> Arrays.asList(AccountReportOrError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

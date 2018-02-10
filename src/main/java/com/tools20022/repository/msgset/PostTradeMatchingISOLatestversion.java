@@ -70,7 +70,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Post Trade Matching - ISO - Latest version"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Set of messages exchanged between executing broker, Central Matching Utility (CMU), investment manager and trustee, to submit trade confirmation details for matching or affirmation. The messages support the cancellation of previously sent trade confirmation messagse and the advice of the status of the confirmation. "
+ * "Set of messages exchanged between executing broker, Central Matching Utility (CMU), investment manager and trustee, to submit trade confirmation details for matching or affirmation. The messages support the cancellation of previously sent trade confirmation messagse and the advice of the status of the confirmation."
  * </li>
  * </ul>
  */
@@ -84,7 +84,7 @@ public class PostTradeMatchingISOLatestversion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Post Trade Matching - ISO - Latest version";
-				definition = "Set of messages exchanged between executing broker, Central Matching Utility (CMU), investment manager and trustee, to submit trade confirmation details for matching or affirmation. The messages support the cancellation of previously sent trade confirmation messagse and the advice of the status of the confirmation. ";
+				definition = "Set of messages exchanged between executing broker, Central Matching Utility (CMU), investment manager and trustee, to submit trade confirmation details for matching or affirmation. The messages support the cancellation of previously sent trade confirmation messagse and the advice of the status of the confirmation.";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesTradeConfirmationCancellationV01.mmObject(), SecuritiesTradeConfirmationResponseV01.mmObject(), SecuritiesEndOfProcessReportV01.mmObject(),
 						SecuritiesTradeConfirmationV03.mmObject(), SecuritiesTradeConfirmationStatusAdviceV02.mmObject());
 			}

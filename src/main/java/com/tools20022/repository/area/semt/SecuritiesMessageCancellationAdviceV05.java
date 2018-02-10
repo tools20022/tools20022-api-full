@@ -152,7 +152,7 @@ public class SecuritiesMessageCancellationAdviceV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the message advised to be cancelled by the account servicer"
+	 * "Reference to the message advised to be cancelled by the account servicer."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -166,7 +166,7 @@ public class SecuritiesMessageCancellationAdviceV05 {
 			xmlTag = "Ref";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
-			definition = "Reference to the message advised to be cancelled by the account servicer";
+			definition = "Reference to the message advised to be cancelled by the account servicer.";
 			previousVersion_lazy = () -> SecuritiesMessageCancellationAdviceV04.mmReference;
 			maxOccurs = 1;
 			minOccurs = 1;

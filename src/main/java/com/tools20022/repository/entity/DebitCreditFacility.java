@@ -22,10 +22,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.entity.CashAccountService;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.CashBalance1;
-import com.tools20022.repository.msg.CashBalance2;
-import com.tools20022.repository.msg.CashBalance3;
-import com.tools20022.repository.msg.CashBalance7;
+import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -118,6 +115,8 @@ public class DebitCreditFacility extends CashAccountService {
 	 * CashBalance2.mmCreditLine}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance7#mmCreditLine
 	 * CashBalance7.mmCreditLine}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance8#mmCreditLine
+	 * CashBalance8.mmCreditLine}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -138,7 +137,7 @@ public class DebitCreditFacility extends CashAccountService {
 	 */
 	public static final MMBusinessAssociationEnd mmCreditLine = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CashBalance1.mmCreditLine, CashBalance3.mmCreditLine, CashBalance2.mmCreditLine, CashBalance7.mmCreditLine);
+			derivation_lazy = () -> Arrays.asList(CashBalance1.mmCreditLine, CashBalance3.mmCreditLine, CashBalance2.mmCreditLine, CashBalance7.mmCreditLine, CashBalance8.mmCreditLine);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DebitCreditFacility.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

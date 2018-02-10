@@ -828,6 +828,14 @@ public class ConstraintAggregateBalanceGuideline {
 	 * definition} =
 	 * "If AvailableBalance and NotAvailableBalance are both present, then the AggregateBalance should be the sum of AvailableBalance and NotAvailableBalance."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAggregateBalanceGuideline#forAggregateBalanceInformation34
+	 * ConstraintAggregateBalanceGuideline.forAggregateBalanceInformation34}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AggregateBalanceInformation20> forAggregateBalanceInformation20 = new MMConstraint<AggregateBalanceInformation20>() {
@@ -836,6 +844,7 @@ public class ConstraintAggregateBalanceGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregateBalanceGuideline";
 			definition = "If AvailableBalance and NotAvailableBalance are both present, then the AggregateBalance should be the sum of AvailableBalance and NotAvailableBalance.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAggregateBalanceGuideline.forAggregateBalanceInformation34);
 			owner_lazy = () -> AggregateBalanceInformation20.mmObject();
 		}
 	};
@@ -1328,6 +1337,42 @@ public class ConstraintAggregateBalanceGuideline {
 			owner_lazy = () -> AggregateBalancePerSafekeepingPlace30.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34
+	 * AggregateBalanceInformation34}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AggregateBalanceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If AvailableBalance and NotAvailableBalance are both present, then the AggregateBalance should be the sum of AvailableBalance and NotAvailableBalance."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAggregateBalanceGuideline#forAggregateBalanceInformation20
+	 * ConstraintAggregateBalanceGuideline.forAggregateBalanceInformation20}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AggregateBalanceInformation34> forAggregateBalanceInformation34 = new MMConstraint<AggregateBalanceInformation34>() {
+		{
+			validator = ConstraintAggregateBalanceGuideline::checkAggregateBalanceInformation34;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AggregateBalanceGuideline";
+			definition = "If AvailableBalance and NotAvailableBalance are both present, then the AggregateBalance should be the sum of AvailableBalance and NotAvailableBalance.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAggregateBalanceGuideline.forAggregateBalanceInformation20;
+			owner_lazy = () -> AggregateBalanceInformation34.mmObject();
+		}
+	};
 
 	/**
 	 * If AvailableQuantity and NotAvailableQuantity are both present, then the
@@ -1686,6 +1731,15 @@ public class ConstraintAggregateBalanceGuideline {
 	 * NotAvailableQuantity.
 	 */
 	public static void checkAggregateBalancePerSafekeepingPlace30(AggregateBalancePerSafekeepingPlace30 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If AvailableBalance and NotAvailableBalance are both present, then the
+	 * AggregateBalance should be the sum of AvailableBalance and
+	 * NotAvailableBalance.
+	 */
+	public static void checkAggregateBalanceInformation34(AggregateBalanceInformation34 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -69,6 +69,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Reports either on the business information or on a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError6Choice
+ * GeneralBusinessOrError6Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError2Choice
@@ -106,6 +114,14 @@ public class GeneralBusinessOrError4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason the requested business information is not given."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError6Choice#mmBusinessError
+	 * GeneralBusinessOrError6Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -121,6 +137,7 @@ public class GeneralBusinessOrError4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError6Choice.mmBusinessError);
 			previousVersion_lazy = () -> GeneralBusinessOrError2Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
@@ -154,6 +171,14 @@ public class GeneralBusinessOrError4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested business information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.GeneralBusinessOrError6Choice#mmGeneralBusiness
+	 * GeneralBusinessOrError6Choice.mmGeneralBusiness}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -169,6 +194,7 @@ public class GeneralBusinessOrError4Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralBusiness";
 			definition = "Requested business information.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError6Choice.mmGeneralBusiness);
 			previousVersion_lazy = () -> GeneralBusinessOrError2Choice.mmGeneralBusiness;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -186,6 +212,7 @@ public class GeneralBusinessOrError4Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GeneralBusinessOrError4Choice";
 				definition = "Reports either on the business information or on a business error.";
+				nextVersions_lazy = () -> Arrays.asList(GeneralBusinessOrError6Choice.mmObject());
 				previousVersion_lazy = () -> GeneralBusinessOrError2Choice.mmObject();
 			}
 		});

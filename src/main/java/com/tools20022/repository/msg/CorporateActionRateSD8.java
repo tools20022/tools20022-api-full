@@ -74,6 +74,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action option securities movement rate details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionRateSD10
+ * CorporateActionRateSD10}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD6
@@ -112,6 +119,14 @@ public class CorporateActionRateSD8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD10#mmPlaceAndName
+	 * CorporateActionRateSD10.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -127,6 +142,7 @@ public class CorporateActionRateSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD10.mmPlaceAndName);
 			previousVersion_lazy = () -> CorporateActionRateSD6.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -166,6 +182,14 @@ public class CorporateActionRateSD8 {
 	 * definition} =
 	 * "Corresponding rate of the security being disbursed as a result of the corporate action as declared by the issuer or offeror on the market."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD10#mmDeclaredSecurityRate
+	 * CorporateActionRateSD10.mmDeclaredSecurityRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -182,6 +206,7 @@ public class CorporateActionRateSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredSecurityRate";
 			definition = "Corresponding rate of the security being disbursed as a result of the corporate action as declared by the issuer or offeror on the market.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD10.mmDeclaredSecurityRate);
 			previousVersion_lazy = () -> CorporateActionRateSD6.mmDeclaredSecurityRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -219,6 +244,14 @@ public class CorporateActionRateSD8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Denotes whether the rate is approximate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD10#mmEstimatedRateFlag
+	 * CorporateActionRateSD10.mmEstimatedRateFlag}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -235,6 +268,7 @@ public class CorporateActionRateSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedRateFlag";
 			definition = "Denotes whether the rate is approximate.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD10.mmEstimatedRateFlag);
 			previousVersion_lazy = () -> CorporateActionRateSD6.mmEstimatedRateFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -274,6 +308,14 @@ public class CorporateActionRateSD8 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Rate at which the fee will be charged to a DTC participant."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRateSD10#mmDeclaredFeeRate
+	 * CorporateActionRateSD10.mmDeclaredFeeRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -290,6 +332,7 @@ public class CorporateActionRateSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredFeeRate";
 			definition = "Rate at which the fee will be charged to a DTC participant.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD10.mmDeclaredFeeRate);
 			previousVersion_lazy = () -> CorporateActionRateSD6.mmDeclaredFeeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -306,6 +349,7 @@ public class CorporateActionRateSD8 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionRateSD8";
 				definition = "Provides additional information regarding corporate action option securities movement rate details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionRateSD10.mmObject());
 				previousVersion_lazy = () -> CorporateActionRateSD6.mmObject();
 			}
 		});

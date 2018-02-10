@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Choice of opening and intermediary balances
+ * Choice of opening and intermediary balances.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -59,7 +59,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "OpeningBalance3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of opening and intermediary balances"</li>
+ * definition} = "Choice of opening and intermediary balances."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -164,7 +164,7 @@ public class OpeningBalance3Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OpeningBalance3Choice";
-				definition = "Choice of opening and intermediary balances";
+				definition = "Choice of opening and intermediary balances.";
 			}
 		});
 		return mmObject_lazy.get();

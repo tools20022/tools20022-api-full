@@ -24,6 +24,7 @@ import com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequ
 import com.tools20022.repository.area.acmt.AccountExcludedMandateMaintenanceRequestV02;
 import com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV01;
 import com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.SecuritiesSettlement;
 import com.tools20022.repository.GeneratedRepository;
@@ -70,6 +71,10 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.acmt.AccountMandateMaintenanceRequestV02#mmAdditionalMessageInformation
  * AccountMandateMaintenanceRequestV02.mmAdditionalMessageInformation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01#mmAdditionalInformation
+ * ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.
+ * mmAdditionalInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,7 +144,8 @@ public class AdditionalInformation5 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalInformation5.mmInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(AccountExcludedMandateMaintenanceRequestV01.mmAdditionalMessageInformation, AccountExcludedMandateMaintenanceRequestV02.mmAdditionalMessageInformation,
-						AccountMandateMaintenanceRequestV01.mmAdditionalMessageInformation, AccountMandateMaintenanceRequestV02.mmAdditionalMessageInformation);
+						AccountMandateMaintenanceRequestV01.mmAdditionalMessageInformation, AccountMandateMaintenanceRequestV02.mmAdditionalMessageInformation,
+						ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.mmAdditionalInformation);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

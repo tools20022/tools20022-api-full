@@ -107,6 +107,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional details on the underlying. In securities financing deals, it is used to identify and provide information on the collateral."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingAttributes3
+ * UnderlyingAttributes3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -152,6 +159,14 @@ public class UnderlyingAttributes2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Percent of the strike price that this underlying represents."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmAllocationPercentage
+	 * UnderlyingAttributes3.mmAllocationPercentage}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAllocationPercentage = new MMMessageAttribute() {
@@ -164,6 +179,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationPercentage";
 			definition = "Percent of the strike price that this underlying represents.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmAllocationPercentage);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -201,6 +217,14 @@ public class UnderlyingAttributes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unit amount of the underlying security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmQuantity
+	 * UnderlyingAttributes3.mmQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmQuantity = new MMMessageAssociationEnd() {
@@ -212,6 +236,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Unit amount of the underlying security.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -256,6 +281,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "Indicates order settlement period for the underlying instrument. Represents the number of days until settlement; for example, 2 means T+1 settlement, 4 means T+3 settlement, 5 means T+4 settlement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmSettlementType
+	 * UnderlyingAttributes3.mmSettlementType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSettlementType = new MMMessageAttribute() {
@@ -268,6 +301,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementType";
 			definition = "Indicates order settlement period for the underlying instrument. Represents the number of days until settlement; for example, 2 means T+1 settlement, 4 means T+3 settlement, 5 means T+4 settlement.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmSettlementType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SettlementType2Choice.mmObject();
@@ -311,6 +345,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "Cash amount associated with the underlying component. Necessary for derivatives that deliver into more than one underlying instrument and one of the underlying's is a fixed cash value."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCashAmount
+	 * UnderlyingAttributes3.mmCashAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCashAmount = new MMMessageAttribute() {
@@ -323,6 +365,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAmount";
 			definition = "Cash amount associated with the underlying component. Necessary for derivatives that deliver into more than one underlying instrument and one of the underlying's is a fixed cash value.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmCashAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -360,6 +403,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "Represents how the cash will be calculated. Indicates that the cash is either fixed or a difference value (difference between strike and current underlying price)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCashType
+	 * UnderlyingAttributes3.mmCashType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCashType = new MMMessageAttribute() {
@@ -371,6 +422,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashType";
 			definition = "Represents how the cash will be calculated. Indicates that the cash is either fixed or a difference value (difference between strike and current underlying price).";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmCashType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -412,6 +464,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "In a financing deal, clean price (percent-of-par or per unit) of the underlying security or basket."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmPrice
+	 * UnderlyingAttributes3.mmPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPrice = new MMMessageAttribute() {
@@ -424,6 +484,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Price";
 			definition = "In a financing deal, clean price (percent-of-par or per unit) of the underlying security or basket.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
@@ -465,6 +526,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket. \"Dirty\" means it includes accrued interest."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmDirtyPrice
+	 * UnderlyingAttributes3.mmDirtyPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDirtyPrice = new MMMessageAttribute() {
@@ -477,6 +546,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DirtyPrice";
 			definition = "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket. \"Dirty\" means it includes accrued interest.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmDirtyPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
@@ -518,6 +588,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmEndPrice
+	 * UnderlyingAttributes3.mmEndPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEndPrice = new MMMessageAttribute() {
@@ -530,6 +608,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndPrice";
 			definition = "In a financing deal, price (percent-of-par or per unit) of the underlying security or basket at the end of the agreement.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmEndPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
@@ -573,6 +652,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "Currency value attributed to this collateral at the start of the agreement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmStartValue
+	 * UnderlyingAttributes3.mmStartValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStartValue = new MMMessageAttribute() {
@@ -585,6 +672,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StartValue";
 			definition = "Currency value attributed to this collateral at the start of the agreement.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmStartValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -626,6 +714,14 @@ public class UnderlyingAttributes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency value currently attributed to this collateral."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCurrentValue
+	 * UnderlyingAttributes3.mmCurrentValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrentValue = new MMMessageAttribute() {
@@ -638,6 +734,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentValue";
 			definition = "Currency value currently attributed to this collateral.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmCurrentValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -681,6 +778,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "Currency value attributed to this collateral at the end of the agreement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmEndValue
+	 * UnderlyingAttributes3.mmEndValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEndValue = new MMMessageAttribute() {
@@ -693,6 +798,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndValue";
 			definition = "Currency value attributed to this collateral at the end of the agreement.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmEndValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -732,6 +838,14 @@ public class UnderlyingAttributes2 {
 	 * definition} =
 	 * "Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmAdjustedQuantity
+	 * UnderlyingAttributes3.mmAdjustedQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAdjustedQuantity = new MMMessageAssociationEnd() {
@@ -743,6 +857,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedQuantity";
 			definition = "Unit amount of the underlying security (shares) adjusted for pending corporate action not yet allocated.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmAdjustedQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -785,6 +900,14 @@ public class UnderlyingAttributes2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Foreign exchange rate used to compute the current value."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmExchangeRate
+	 * UnderlyingAttributes3.mmExchangeRate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmExchangeRate = new MMMessageAttribute() {
@@ -797,6 +920,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeRate";
 			definition = "Foreign exchange rate used to compute the current value.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmExchangeRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -839,6 +963,14 @@ public class UnderlyingAttributes2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Maximum notional value for a financial instrument that is capped."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCapValue
+	 * UnderlyingAttributes3.mmCapValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCapValue = new MMMessageAttribute() {
@@ -851,6 +983,7 @@ public class UnderlyingAttributes2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CapValue";
 			definition = "Maximum notional value for a financial instrument that is capped.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmCapValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -870,6 +1003,7 @@ public class UnderlyingAttributes2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UnderlyingAttributes2";
 				definition = "Provides additional details on the underlying. In securities financing deals, it is used to identify and provide information on the collateral.";
+				nextVersions_lazy = () -> Arrays.asList(UnderlyingAttributes3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

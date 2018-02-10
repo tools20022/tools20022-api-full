@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pacs.PaymentReturnV06;
 import com.tools20022.repository.area.pacs.PaymentReturnV07;
+import com.tools20022.repository.area.pacs.PaymentReturnV08;
 import com.tools20022.repository.choice.Authorisation1Choice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.entity.*;
@@ -90,6 +91,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV07#mmGroupHeader
  * PaymentReturnV07.mmGroupHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pacs.PaymentReturnV08#mmGroupHeader
+ * PaymentReturnV08.mmGroupHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -776,7 +780,7 @@ public class GroupHeader72 {
 						com.tools20022.repository.msg.GroupHeader72.mmControlSum, com.tools20022.repository.msg.GroupHeader72.mmGroupReturn, com.tools20022.repository.msg.GroupHeader72.mmTotalReturnedInterbankSettlementAmount,
 						com.tools20022.repository.msg.GroupHeader72.mmInterbankSettlementDate, com.tools20022.repository.msg.GroupHeader72.mmSettlementInformation, com.tools20022.repository.msg.GroupHeader72.mmInstructingAgent,
 						com.tools20022.repository.msg.GroupHeader72.mmInstructedAgent);
-				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentReturnV06.mmGroupHeader, PaymentReturnV07.mmGroupHeader);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PaymentReturnV06.mmGroupHeader, PaymentReturnV07.mmGroupHeader, PaymentReturnV08.mmGroupHeader);
 				trace_lazy = () -> Payment.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReturnAndNumberOfTransactionsGuideline.forGroupHeader72,

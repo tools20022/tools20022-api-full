@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessedStatus2FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the processing status of a cancellation request."
+ * "Choice of formats to express the processing status of a cancellation request."
  * </li>
  * </ul>
  */
@@ -107,7 +107,7 @@ public class ProcessedStatus2FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to specify  the processing status of a cancellation request."
+	 * "Standard code to specify the processing status of a cancellation request."
 	 * </li>
 	 * </ul>
 	 */
@@ -119,7 +119,7 @@ public class ProcessedStatus2FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to specify  the processing status of a cancellation request.";
+			definition = "Standard code to specify the processing status of a cancellation request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessedStatus2Code.mmObject();
@@ -158,7 +158,7 @@ public class ProcessedStatus2FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the processing status of a cancellation request."
+	 * "Proprietary code to express the processing status of a cancellation request."
 	 * </li>
 	 * </ul>
 	 */
@@ -170,7 +170,7 @@ public class ProcessedStatus2FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the processing status of a cancellation request.";
+			definition = "Proprietary code to express the processing status of a cancellation request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -185,7 +185,7 @@ public class ProcessedStatus2FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus2FormatChoice";
-				definition = "Choice of formats to  express the processing status of a cancellation request.";
+				definition = "Choice of formats to express the processing status of a cancellation request.";
 			}
 		});
 		return mmObject_lazy.get();

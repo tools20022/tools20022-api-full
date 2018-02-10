@@ -108,6 +108,15 @@ public class ConstraintNumberOfTransactionsPerCancellationStatusGuideline {
 	 * definition} =
 	 * "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupCancellationStatus equals PACR."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline#forOriginalGroupHeader9
+	 * ConstraintNumberOfTransactionsPerCancellationStatusGuideline.
+	 * forOriginalGroupHeader9}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<OriginalGroupHeader5> forOriginalGroupHeader5 = new MMConstraint<OriginalGroupHeader5>() {
@@ -116,6 +125,7 @@ public class ConstraintNumberOfTransactionsPerCancellationStatusGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerCancellationStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupCancellationStatus equals PACR.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline.forOriginalGroupHeader9);
 			owner_lazy = () -> OriginalGroupHeader5.mmObject();
 		}
 	};
@@ -272,6 +282,15 @@ public class ConstraintNumberOfTransactionsPerCancellationStatusGuideline {
 	 * definition} =
 	 * "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupCancellationStatus equals PACR (PartialCancellationRequest)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline#forOriginalPaymentInstruction26
+	 * ConstraintNumberOfTransactionsPerCancellationStatusGuideline.
+	 * forOriginalPaymentInstruction26}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -286,8 +305,83 @@ public class ConstraintNumberOfTransactionsPerCancellationStatusGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerCancellationStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupCancellationStatus equals PACR (PartialCancellationRequest).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline.forOriginalPaymentInstruction26);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline.forOriginalPaymentInstruction17;
 			owner_lazy = () -> OriginalPaymentInstruction22.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction26
+	 * OriginalPaymentInstruction26}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NumberOfTransactionsPerCancellationStatusGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupCancellationStatus equals PACR (PartialCancellationRequest)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline#forOriginalPaymentInstruction22
+	 * ConstraintNumberOfTransactionsPerCancellationStatusGuideline.
+	 * forOriginalPaymentInstruction22}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OriginalPaymentInstruction26> forOriginalPaymentInstruction26 = new MMConstraint<OriginalPaymentInstruction26>() {
+		{
+			validator = ConstraintNumberOfTransactionsPerCancellationStatusGuideline::checkOriginalPaymentInstruction26;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NumberOfTransactionsPerCancellationStatusGuideline";
+			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupCancellationStatus equals PACR (PartialCancellationRequest).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline.forOriginalPaymentInstruction22;
+			owner_lazy = () -> OriginalPaymentInstruction26.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader9
+	 * OriginalGroupHeader9}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NumberOfTransactionsPerCancellationStatusGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupCancellationStatus equals PACR."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline#forOriginalGroupHeader5
+	 * ConstraintNumberOfTransactionsPerCancellationStatusGuideline.
+	 * forOriginalGroupHeader5}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OriginalGroupHeader9> forOriginalGroupHeader9 = new MMConstraint<OriginalGroupHeader9>() {
+		{
+			validator = ConstraintNumberOfTransactionsPerCancellationStatusGuideline::checkOriginalGroupHeader9;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NumberOfTransactionsPerCancellationStatusGuideline";
+			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupCancellationStatus equals PACR.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionsPerCancellationStatusGuideline.forOriginalGroupHeader5;
+			owner_lazy = () -> OriginalGroupHeader9.mmObject();
 		}
 	};
 
@@ -346,6 +440,23 @@ public class ConstraintNumberOfTransactionsPerCancellationStatusGuideline {
 	 * (PartialCancellationRequest).
 	 */
 	public static void checkOriginalPaymentInstruction22(OriginalPaymentInstruction22 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should
+	 * only be present if GroupCancellationStatus equals PACR
+	 * (PartialCancellationRequest).
+	 */
+	public static void checkOriginalPaymentInstruction26(OriginalPaymentInstruction26 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should
+	 * only be present if GroupCancellationStatus equals PACR.
+	 */
+	public static void checkOriginalGroupHeader9(OriginalGroupHeader9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

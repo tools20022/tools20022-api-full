@@ -78,6 +78,14 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorReconciliationResponse4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reconciliation response from the acquirer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse5
+ * AcceptorReconciliationResponse5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse3
@@ -121,6 +129,14 @@ public class AcceptorReconciliationResponse4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse5#mmEnvironment
+	 * AcceptorReconciliationResponse5.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -137,6 +153,7 @@ public class AcceptorReconciliationResponse4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponse5.mmEnvironment);
 			previousVersion_lazy = () -> AcceptorReconciliationResponse3.mmEnvironment;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -176,6 +193,14 @@ public class AcceptorReconciliationResponse4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Response from the acquirer to the reconciliation transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse5#mmTransactionResponse
+	 * AcceptorReconciliationResponse5.mmTransactionResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -192,6 +217,7 @@ public class AcceptorReconciliationResponse4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionResponse";
 			definition = "Response from the acquirer to the reconciliation transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponse5.mmTransactionResponse);
 			previousVersion_lazy = () -> AcceptorReconciliationResponse3.mmTransactionResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -232,6 +258,14 @@ public class AcceptorReconciliationResponse4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reconciliation transaction between an acceptor an acquirer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse5#mmTransaction
+	 * AcceptorReconciliationResponse5.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -248,6 +282,7 @@ public class AcceptorReconciliationResponse4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Reconciliation transaction between an acceptor an acquirer.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponse5.mmTransaction);
 			previousVersion_lazy = () -> AcceptorReconciliationResponse3.mmTransaction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -267,6 +302,7 @@ public class AcceptorReconciliationResponse4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorReconciliationResponse4";
 				definition = "Reconciliation response from the acquirer.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorReconciliationResponse5.mmObject());
 				previousVersion_lazy = () -> AcceptorReconciliationResponse3.mmObject();
 			}
 		});

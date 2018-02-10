@@ -71,7 +71,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "DerivativeCommodity2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Defines the details of a commodity derivative. "</li>
+ * definition} = "Defines the details of a commodity derivative."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -235,7 +235,7 @@ public class DerivativeCommodity2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DerivativeCommodity2";
-				definition = "Defines the details of a commodity derivative. ";
+				definition = "Defines the details of a commodity derivative.";
 			}
 		});
 		return mmObject_lazy.get();

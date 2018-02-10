@@ -258,7 +258,7 @@ public class ClaimNonReceipt {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates if the claim non receipt is a missing cover. The absence of the component means that the message is not for a missing cover. "
+	 * "Indicates if the claim non receipt is a missing cover. The absence of the component means that the message is not for a missing cover."
 	 * </li>
 	 * </ul>
 	 */
@@ -267,7 +267,7 @@ public class ClaimNonReceipt {
 			xmlTag = "MssngCover";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MissingCover";
-			definition = "Indicates if the claim non receipt is a missing cover. The absence of the component means that the message is not for a missing cover. ";
+			definition = "Indicates if the claim non receipt is a missing cover. The absence of the component means that the message is not for a missing cover.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> MissingCover.mmObject();

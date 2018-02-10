@@ -64,6 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides the financial instruments details or the operational error details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityOrOperationalError2Choice
+ * SecurityOrOperationalError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +107,14 @@ public class SecurityOrOperationalError1Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides the financial instruments details or the business error."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityOrOperationalError2Choice#mmSecurityReportOrBusinessError
+	 * SecurityOrOperationalError2Choice.mmSecurityReportOrBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecurityReportOrBusinessError = new MMMessageAssociationEnd() {
@@ -109,6 +125,7 @@ public class SecurityOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityReportOrBusinessError";
 			definition = "Provides the financial instruments details or the business error.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityOrOperationalError2Choice.mmSecurityReportOrBusinessError);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -141,6 +158,14 @@ public class SecurityOrOperationalError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the operational error details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityOrOperationalError2Choice#mmOperationalError
+	 * SecurityOrOperationalError2Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
@@ -151,6 +176,7 @@ public class SecurityOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Provides the operational error details.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityOrOperationalError2Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -166,6 +192,7 @@ public class SecurityOrOperationalError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityOrOperationalError1Choice";
 				definition = "Provides the financial instruments details or the operational error details.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityOrOperationalError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

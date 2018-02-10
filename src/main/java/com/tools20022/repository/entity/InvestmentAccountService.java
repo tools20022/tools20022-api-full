@@ -397,6 +397,18 @@ public class InvestmentAccountService extends AccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SwitchRedemptionLegExecution4#mmIncomePreference
 	 * SwitchRedemptionLegExecution4.mmIncomePreference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount66#mmIncomePreference
+	 * InvestmentAccount66.mmIncomePreference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount67#mmIncomePreference
+	 * InvestmentAccount67.mmIncomePreference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount65#mmIncomePreference
+	 * InvestmentAccount65.mmIncomePreference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmIncomePreference
+	 * InvestmentAccount68.mmIncomePreference}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -437,7 +449,7 @@ public class InvestmentAccountService extends AccountService {
 					InvestmentPlan14.mmIncomePreference, InvestmentAccount63.mmIncomePreference, InvestmentAccount62.mmIncomePreference, RedemptionOrder14.mmIncomePreference, SwitchSubscriptionLegOrder6.mmIncomePreference,
 					InvestmentPlan15.mmIncomePreference, SubscriptionExecution13.mmIncomePreference, SubscriptionExecution12.mmIncomePreference, SubscriptionOrder15.mmIncomePreference, SwitchRedemptionLegOrder6.mmIncomePreference,
 					RedemptionOrder15.mmIncomePreference, RedemptionExecution16.mmIncomePreference, SubscriptionOrder14.mmIncomePreference, SwitchSubscriptionLegExecution4.mmIncomePreference, RedemptionExecution15.mmIncomePreference,
-					SwitchRedemptionLegExecution4.mmIncomePreference);
+					SwitchRedemptionLegExecution4.mmIncomePreference, InvestmentAccount66.mmIncomePreference, InvestmentAccount67.mmIncomePreference, InvestmentAccount65.mmIncomePreference, InvestmentAccount68.mmIncomePreference);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -803,6 +815,18 @@ public class InvestmentAccountService extends AccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson31#mmBeneficiaryCertificationCompletion
 	 * IndividualPerson31.mmBeneficiaryCertificationCompletion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount66#mmBeneficiaryCertificationCompletion
+	 * InvestmentAccount66.mmBeneficiaryCertificationCompletion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount67#mmBeneficiaryCertificationCompletion
+	 * InvestmentAccount67.mmBeneficiaryCertificationCompletion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount65#mmBeneficiaryCertificationCompletion
+	 * InvestmentAccount65.mmBeneficiaryCertificationCompletion}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmBeneficiaryCertificationCompletion
+	 * InvestmentAccount68.mmBeneficiaryCertificationCompletion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -828,7 +852,8 @@ public class InvestmentAccountService extends AccountService {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount22.mmBeneficiaryCertificationCompletion, InvestmentAccount24.mmBeneficiaryCertificationCompletion, IndividualPerson9.mmBeneficiaryCertificationCompletion,
 					IndividualPerson15.mmBeneficiaryCertificationCompletion, InvestmentAccount40.mmBeneficiaryCertificationCompletion, InvestmentAccount41.mmBeneficiaryCertificationCompletion,
 					InvestmentAccount54.mmBeneficiaryCertificationCompletion, InvestmentAccount56.mmBeneficiaryCertificationCompletion, InvestmentAccount55.mmBeneficiaryCertificationCompletion,
-					InvestmentAccount57.mmBeneficiaryCertificationCompletion, IndividualPerson31.mmBeneficiaryCertificationCompletion);
+					InvestmentAccount57.mmBeneficiaryCertificationCompletion, IndividualPerson31.mmBeneficiaryCertificationCompletion, InvestmentAccount66.mmBeneficiaryCertificationCompletion,
+					InvestmentAccount67.mmBeneficiaryCertificationCompletion, InvestmentAccount65.mmBeneficiaryCertificationCompletion, InvestmentAccount68.mmBeneficiaryCertificationCompletion);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentAccountService.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

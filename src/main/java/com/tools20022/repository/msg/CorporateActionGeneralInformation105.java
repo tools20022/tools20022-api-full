@@ -110,6 +110,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionGeneralInformation105"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "General information about the corporate action event."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125
+ * CorporateActionGeneralInformation125}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation85
@@ -159,6 +167,15 @@ public class CorporateActionGeneralInformation105 {
 	 * definition} =
 	 * "Reference assigned by the account servicer to unambiguously identify a corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation125.mmCorporateActionEventIdentification
+	 * }</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +194,7 @@ public class CorporateActionGeneralInformation105 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation125.mmCorporateActionEventIdentification);
 			previousVersion_lazy = () -> CorporateActionGeneralInformation85.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -221,6 +239,15 @@ public class CorporateActionGeneralInformation105 {
 	 * definition} =
 	 * "Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation125.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -239,6 +266,7 @@ public class CorporateActionGeneralInformation105 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventIdentification";
 			definition = "Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation125.mmOfficialCorporateActionEventIdentification);
 			previousVersion_lazy = () -> CorporateActionGeneralInformation85.mmOfficialCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -280,6 +308,14 @@ public class CorporateActionGeneralInformation105 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference assigned by a court to a class action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmClassActionNumber
+	 * CorporateActionGeneralInformation125.mmClassActionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,6 +333,7 @@ public class CorporateActionGeneralInformation105 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassActionNumber";
 			definition = "Reference assigned by a court to a class action.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation125.mmClassActionNumber);
 			previousVersion_lazy = () -> CorporateActionGeneralInformation85.mmClassActionNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -338,6 +375,14 @@ public class CorporateActionGeneralInformation105 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of processing involved by a corporate action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmEventProcessingType
+	 * CorporateActionGeneralInformation125.mmEventProcessingType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -355,6 +400,7 @@ public class CorporateActionGeneralInformation105 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventProcessingType";
 			definition = "Type of processing involved by a corporate action.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation125.mmEventProcessingType);
 			previousVersion_lazy = () -> CorporateActionGeneralInformation85.mmEventProcessingType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -397,6 +443,14 @@ public class CorporateActionGeneralInformation105 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of corporate action event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmEventType
+	 * CorporateActionGeneralInformation125.mmEventType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -414,6 +468,7 @@ public class CorporateActionGeneralInformation105 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Type of corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation125.mmEventType);
 			previousVersion_lazy = () -> CorporateActionGeneralInformation85.mmEventType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -458,6 +513,14 @@ public class CorporateActionGeneralInformation105 {
 	 * definition} =
 	 * "Specifies whether the event is mandatory, mandatory with options or voluntary."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmMandatoryVoluntaryEventType
+	 * CorporateActionGeneralInformation125.mmMandatoryVoluntaryEventType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -475,6 +538,7 @@ public class CorporateActionGeneralInformation105 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryVoluntaryEventType";
 			definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation125.mmMandatoryVoluntaryEventType);
 			previousVersion_lazy = () -> CorporateActionGeneralInformation85.mmMandatoryVoluntaryEventType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -517,6 +581,14 @@ public class CorporateActionGeneralInformation105 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Security concerned by the corporate action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmUnderlyingSecurity
+	 * CorporateActionGeneralInformation125.mmUnderlyingSecurity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -534,6 +606,7 @@ public class CorporateActionGeneralInformation105 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Security concerned by the corporate action.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation125.mmUnderlyingSecurity);
 			previousVersion_lazy = () -> CorporateActionGeneralInformation85.mmUnderlyingSecurity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -557,6 +630,7 @@ public class CorporateActionGeneralInformation105 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionGeneralInformation105";
 				definition = "General information about the corporate action event.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformation125.mmObject());
 				previousVersion_lazy = () -> CorporateActionGeneralInformation85.mmObject();
 			}
 		});

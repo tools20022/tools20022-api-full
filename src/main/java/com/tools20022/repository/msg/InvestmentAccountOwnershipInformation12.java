@@ -197,8 +197,7 @@ public class InvestmentAccountOwnershipInformation12 {
 	 * name} = "Party"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information about the organisation or individual person. "
-	 * </li>
+	 * definition} = "Information about the organisation or individual person."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -222,7 +221,7 @@ public class InvestmentAccountOwnershipInformation12 {
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
-			definition = "Information about the organisation or individual person. ";
+			definition = "Information about the organisation or individual person.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation14.mmParty);
 			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation10.mmParty;
 			maxOccurs = 1;
@@ -392,7 +391,7 @@ public class InvestmentAccountOwnershipInformation12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells  will be allocated using the same percentage."
+	 * "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells will be allocated using the same percentage."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -417,7 +416,7 @@ public class InvestmentAccountOwnershipInformation12 {
 			xmlTag = "OwnrshBnfcryRate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OwnershipBeneficiaryRate";
-			definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells  will be allocated using the same percentage.";
+			definition = "Percentage of ownership or of beneficial ownership of the shares/units in the account. All subsequent subscriptions or purchases and or redemptions or sells will be allocated using the same percentage.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation14.mmOwnershipBeneficiaryRate);
 			previousVersion_lazy = () -> InvestmentAccountOwnershipInformation10.mmOwnershipBeneficiaryRate;
 			maxOccurs = 1;
@@ -1183,7 +1182,7 @@ public class InvestmentAccountOwnershipInformation12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Country and residential status of the organisation or individual person. "
+	 * "Country and residential status of the organisation or individual person."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1203,7 +1202,7 @@ public class InvestmentAccountOwnershipInformation12 {
 			xmlTag = "CtryAndResdtlSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryAndResidentialStatus";
-			definition = "Country and residential status of the organisation or individual person. ";
+			definition = "Country and residential status of the organisation or individual person.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation14.mmCountryAndResidentialStatus);
 			maxOccurs = 1;
 			minOccurs = 0;

@@ -73,7 +73,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "PreferenceToIncomeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Indicates the  level of priority to claim on income and assets of \nthe company in case of the payment of dividends and in the event of a bankruptcy, eg, ordinary/common stocks, preferred stocks, subordinated debt, etc."
+ * "Indicates the level of priority to claim on income and assets of \nthe company in case of the payment of dividends and in the event of a bankruptcy, eg, ordinary/common stocks, preferred stocks, subordinated debt, etc."
  * </li>
  * </ul>
  */
@@ -161,7 +161,7 @@ public class PreferenceToIncomeCode extends MMCode {
 				example = Arrays.asList("ORDN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PreferenceToIncomeCode";
-				definition = "Indicates the  level of priority to claim on income and assets of \nthe company in case of the payment of dividends and in the event of a bankruptcy, eg, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
+				definition = "Indicates the level of priority to claim on income and assets of \nthe company in case of the payment of dividends and in the event of a bankruptcy, eg, ordinary/common stocks, preferred stocks, subordinated debt, etc.";
 				derivation_lazy = () -> Arrays.asList(PreferenceToIncome1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.PreferenceToIncomeCode.Ordinary, com.tools20022.repository.codeset.PreferenceToIncomeCode.Preferred);
 			}

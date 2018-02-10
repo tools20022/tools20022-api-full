@@ -47,7 +47,7 @@ public class ConstraintNettDividendRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
+	 * "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintNettDividendRate1Rule {
 			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
-			definition = "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
+			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate26.mmObject();
 		}
 	};
@@ -77,7 +77,7 @@ public class ConstraintNettDividendRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
+	 * "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -86,7 +86,7 @@ public class ConstraintNettDividendRate1Rule {
 			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
-			definition = "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
+			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate31.mmObject();
 		}
 	};
@@ -107,7 +107,7 @@ public class ConstraintNettDividendRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
+	 * "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -124,7 +124,7 @@ public class ConstraintNettDividendRate1Rule {
 			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
-			definition = "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
+			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate46);
 			owner_lazy = () -> CorporateActionRate38.mmObject();
 		}
@@ -146,7 +146,7 @@ public class ConstraintNettDividendRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
+	 * "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -155,7 +155,7 @@ public class ConstraintNettDividendRate1Rule {
 			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
-			definition = "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
+			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate39.mmObject();
 		}
 	};
@@ -176,7 +176,7 @@ public class ConstraintNettDividendRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
+	 * "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -198,7 +198,7 @@ public class ConstraintNettDividendRate1Rule {
 			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
-			definition = "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
+			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate70);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate38;
 			owner_lazy = () -> CorporateActionRate46.mmObject();
@@ -221,7 +221,7 @@ public class ConstraintNettDividendRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
+	 * "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -230,7 +230,7 @@ public class ConstraintNettDividendRate1Rule {
 			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
-			definition = "NettDividendRate is repeated, then  RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
+			definition = "NettDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NettDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate64.mmObject();
 		}
 	};
@@ -328,6 +328,14 @@ public class ConstraintNettDividendRate1Rule {
 	 * definition} =
 	 * "NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 )."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule#forCorporateActionRate88
+	 * ConstraintNettDividendRate1Rule.forCorporateActionRate88}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -341,6 +349,7 @@ public class ConstraintNettDividendRate1Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NettDividendRate1Rule";
 			definition = "NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate88);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate70;
 			owner_lazy = () -> CorporateActionRate82.mmObject();
 		}
@@ -373,6 +382,72 @@ public class ConstraintNettDividendRate1Rule {
 			name = "NettDividendRate1Rule";
 			definition = "NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate85.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate88
+	 * CorporateActionRate88}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NettDividendRate1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 )."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule#forCorporateActionRate82
+	 * ConstraintNettDividendRate1Rule.forCorporateActionRate82}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate88> forCorporateActionRate88 = new MMConstraint<CorporateActionRate88>() {
+		{
+			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate88;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NettDividendRate1Rule";
+			definition = "If NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNettDividendRate1Rule.forCorporateActionRate82;
+			owner_lazy = () -> CorporateActionRate88.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate92
+	 * CorporateActionRate92}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NettDividendRate1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 )."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate92> forCorporateActionRate92 = new MMConstraint<CorporateActionRate92>() {
+		{
+			validator = ConstraintNettDividendRate1Rule::checkCorporateActionRate92;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NettDividendRate1Rule";
+			definition = "If NetDividendRate is repeated, then RateTypeAndAmountAndRateStatus/RateType/Code values must all be different in each occurrence of NetDividendRate. (MT 566 NVR C4 ).";
+			owner_lazy = () -> CorporateActionRate92.mmObject();
 		}
 	};
 
@@ -463,6 +538,24 @@ public class ConstraintNettDividendRate1Rule {
 	 * in each occurrence of NetDividendRate. (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate85(CorporateActionRate85 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If NetDividendRate is repeated, then
+	 * RateTypeAndAmountAndRateStatus/RateType/Code values must all be different
+	 * in each occurrence of NetDividendRate. (MT 566 NVR C4 ).
+	 */
+	public static void checkCorporateActionRate88(CorporateActionRate88 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If NetDividendRate is repeated, then
+	 * RateTypeAndAmountAndRateStatus/RateType/Code values must all be different
+	 * in each occurrence of NetDividendRate. (MT 566 NVR C4 ).
+	 */
+	public static void checkCorporateActionRate92(CorporateActionRate92 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -140,6 +140,18 @@ public class PhoneAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#mmPhone
 	 * CommunicationAddress6.mmPhone}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress8#mmPhoneNumber
+	 * CommunicationAddress8.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification5#mmPhoneNumber
+	 * ContactIdentification5.mmPhoneNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmPhone
+	 * CommunicationAddress9.mmPhone}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmCustomerService
+	 * CommunicationAddress9.mmCustomerService}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -163,7 +175,8 @@ public class PhoneAddress extends ContactPoint {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmPhoneNumber, OrderDeskContactDetails.mmPhoneNumber, ContactAttributes1.mmPhoneNumber, CommunicationAddress3.mmPhone, ContactDetails2.mmPhoneNumber,
 					ContactIdentification2.mmPhoneNumber, ContactIdentification1.mmPhoneNumber, Contacts3.mmPhoneNumber, ContactInformation1.mmTelephoneNumber, ContactIdentification4.mmPhoneNumber, ContactIdentification3.mmPhoneNumber,
-					CommunicationAddressDetails.mmPhoneNumber, ContactDetails3.mmPhoneNumber, CommunicationAddress5.mmPhone, CommunicationAddress5.mmCustomerService, CommunicationAddress6.mmPhone);
+					CommunicationAddressDetails.mmPhoneNumber, ContactDetails3.mmPhoneNumber, CommunicationAddress5.mmPhone, CommunicationAddress5.mmCustomerService, CommunicationAddress6.mmPhone, CommunicationAddress8.mmPhoneNumber,
+					ContactIdentification5.mmPhoneNumber, CommunicationAddress9.mmPhone, CommunicationAddress9.mmCustomerService);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -236,6 +249,9 @@ public class PhoneAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#mmFaxNumber
 	 * CommunicationAddress6.mmFaxNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress8#mmFaxNumber
+	 * CommunicationAddress8.mmFaxNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -259,7 +275,7 @@ public class PhoneAddress extends ContactPoint {
 		{
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmFaxNumber, OrderDeskContactDetails.mmFaxNumber, ContactAttributes1.mmFaxNumber, CommunicationAddress3.mmFaxNumber, ContactDetails2.mmFaxNumber,
 					ContactIdentification2.mmFaxNumber, ContactIdentification1.mmFaxNumber, Contacts3.mmFaxNumber, ContactInformation1.mmFaxNumber, ContactIdentification4.mmFaxNumber, ContactIdentification3.mmFaxNumber,
-					CommunicationAddressDetails.mmFaxNumber, ContactDetails3.mmFaxNumber, CommunicationAddress6.mmFaxNumber);
+					CommunicationAddressDetails.mmFaxNumber, ContactDetails3.mmFaxNumber, CommunicationAddress6.mmFaxNumber, CommunicationAddress8.mmFaxNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PhoneAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

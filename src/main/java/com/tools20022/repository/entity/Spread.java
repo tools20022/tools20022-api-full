@@ -455,6 +455,9 @@ public class Spread {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve1#mmBenchmarkPrice
 	 * BenchmarkCurve1.mmBenchmarkPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve4#mmBenchmarkPrice
+	 * BenchmarkCurve4.mmBenchmarkPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -474,7 +477,7 @@ public class Spread {
 	 */
 	public static final MMBusinessAssociationEnd mmBenchmarkPrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkPrice, BenchmarkCurve1.mmBenchmarkPrice);
+			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkPrice, BenchmarkCurve1.mmBenchmarkPrice, BenchmarkCurve4.mmBenchmarkPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Spread.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -717,7 +720,7 @@ public class Spread {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Either a swap spread or spread to benchmark depending upon order type.  In case of a spread to benchmark, the price offset is expressed in terms of basis points relative to a benchmark - this can be a positive or a negative spread.  In case of a swap spread, the price offset is target spread for a swap."
+	 * "Either a swap spread or spread to benchmark depending upon order type. In case of a spread to benchmark, the price offset is expressed in terms of basis points relative to a benchmark - this can be a positive or a negative spread. In case of a swap spread, the price offset is target spread for a swap."
 	 * </li>
 	 * </ul>
 	 */
@@ -728,7 +731,7 @@ public class Spread {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "218"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PriceOffset";
-			definition = "Either a swap spread or spread to benchmark depending upon order type.  In case of a spread to benchmark, the price offset is expressed in terms of basis points relative to a benchmark - this can be a positive or a negative spread.  In case of a swap spread, the price offset is target spread for a swap.";
+			definition = "Either a swap spread or spread to benchmark depending upon order type. In case of a spread to benchmark, the price offset is expressed in terms of basis points relative to a benchmark - this can be a positive or a negative spread. In case of a swap spread, the price offset is target spread for a swap.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();

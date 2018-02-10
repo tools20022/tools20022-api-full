@@ -205,7 +205,7 @@ public class LineItemTax1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date of the tax point  date when this tax, levy or duty becomes applicable."
+	 * "Date of the tax point date when this tax, levy or duty becomes applicable."
 	 * </li>
 	 * </ul>
 	 */
@@ -217,7 +217,7 @@ public class LineItemTax1 {
 			xmlTag = "TaxPtDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxPointDate";
-			definition = "Date of the tax point  date when this tax, levy or duty becomes applicable.";
+			definition = "Date of the tax point date when this tax, levy or duty becomes applicable.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();

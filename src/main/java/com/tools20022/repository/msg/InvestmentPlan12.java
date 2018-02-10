@@ -893,7 +893,7 @@ public class InvestmentPlan12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account. "
+	 * "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -917,7 +917,7 @@ public class InvestmentPlan12 {
 			xmlTag = "CtrctRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractReference";
-			definition = "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account. ";
+			definition = "Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan14.mmContractReference);
 			previousVersion_lazy = () -> InvestmentPlan10.mmContractReference;
 			maxOccurs = 1;
@@ -1192,7 +1192,7 @@ public class InvestmentPlan12 {
 	 * name} = "PlanStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of the savings or withdrawal investment plan. "</li>
+	 * definition} = "Status of the savings or withdrawal investment plan."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1216,7 +1216,7 @@ public class InvestmentPlan12 {
 			xmlTag = "PlanSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlanStatus";
-			definition = "Status of the savings or withdrawal investment plan. ";
+			definition = "Status of the savings or withdrawal investment plan.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentPlan14.mmPlanStatus);
 			previousVersion_lazy = () -> InvestmentPlan10.mmPlanStatus;
 			maxOccurs = 1;

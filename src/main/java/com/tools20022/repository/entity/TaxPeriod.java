@@ -22,6 +22,7 @@ import com.tools20022.repository.codeset.TaxRecordPeriodCode;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.TaxPeriod1;
+import com.tools20022.repository.msg.TaxPeriod2;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -67,6 +68,7 @@ import java.util.Optional;
  * derivationComponent} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod1 TaxPeriod1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod2 TaxPeriod2}</li>
  * </ul>
  * </li>
  * <li>
@@ -149,6 +151,8 @@ public class TaxPeriod {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod1#mmYear
 	 * TaxPeriod1.mmYear}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod2#mmYear
+	 * TaxPeriod2.mmYear}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -168,7 +172,7 @@ public class TaxPeriod {
 	 */
 	public static final MMBusinessAttribute mmYear = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmYear);
+			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmYear, TaxPeriod2.mmYear);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -203,6 +207,8 @@ public class TaxPeriod {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod1#mmType
 	 * TaxPeriod1.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod2#mmType
+	 * TaxPeriod2.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -222,7 +228,7 @@ public class TaxPeriod {
 	 */
 	public static final MMBusinessAttribute mmType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmType);
+			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmType, TaxPeriod2.mmType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -264,6 +270,8 @@ public class TaxPeriod {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod1#mmFromToDate
 	 * TaxPeriod1.mmFromToDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod2#mmFromToDate
+	 * TaxPeriod2.mmFromToDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -285,7 +293,7 @@ public class TaxPeriod {
 	 */
 	public static final MMBusinessAssociationEnd mmFromToDate = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmFromToDate);
+			derivation_lazy = () -> Arrays.asList(TaxPeriod1.mmFromToDate, TaxPeriod2.mmFromToDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TaxPeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -354,7 +362,7 @@ public class TaxPeriod {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmTaxPeriod, com.tools20022.repository.entity.TaxRecord.mmPeriod);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TaxPeriod.mmTaxRecord, com.tools20022.repository.entity.TaxPeriod.mmYear, com.tools20022.repository.entity.TaxPeriod.mmType,
 						com.tools20022.repository.entity.TaxPeriod.mmFromToDate, com.tools20022.repository.entity.TaxPeriod.mmEndOfFiscalYear);
-				derivationComponent_lazy = () -> Arrays.asList(TaxPeriod1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(TaxPeriod1.mmObject(), TaxPeriod2.mmObject());
 			}
 
 			@Override

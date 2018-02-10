@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
+import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.msg.Extension1;
 import com.tools20022.repository.msg.MarketPracticeVersion1;
 import com.tools20022.repository.msg.MessageAndBusinessReference7;
@@ -79,8 +79,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "ReqForTrfStsRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
- * SecuritiesSettlementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.009.001.04}</li>
@@ -136,7 +136,7 @@ public class RequestForTransferStatusReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference that uniquely identifies a message from a business application standpoint. "
+	 * "Reference that uniquely identifies a message from a business application standpoint."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -158,7 +158,7 @@ public class RequestForTransferStatusReportV04 {
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
-			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
+			definition = "Reference that uniquely identifies a message from a business application standpoint.";
 			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV05.mmMessageIdentification);
 			previousVersion_lazy = () -> RequestForTransferStatusReportV03.mmMessageIdentification;
 			maxOccurs = 1;
@@ -197,7 +197,7 @@ public class RequestForTransferStatusReportV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information to identify the transfer for which the status is requested.\n"
+	 * "Information to identify the transfer for which the status is requested.\n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -219,7 +219,7 @@ public class RequestForTransferStatusReportV04 {
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
-			definition = "Information to identify the transfer for which the status is requested.\n";
+			definition = "Information to identify the transfer for which the status is requested.\n.";
 			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV05.mmRequestDetails);
 			previousVersion_lazy = () -> RequestForTransferStatusReportV03.mmRequestDetails;
 			minOccurs = 1;
@@ -359,7 +359,7 @@ public class RequestForTransferStatusReportV04 {
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "ReqForTrfStsRpt";
-				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmMessageIdentification,
 						com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmRequestDetails, com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmMarketPracticeVersion,
 						com.tools20022.repository.area.sese.RequestForTransferStatusReportV04.mmExtension);

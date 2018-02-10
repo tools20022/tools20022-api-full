@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ISAPortfolio1Choice;
 import com.tools20022.repository.choice.ISAPortfolio2Choice;
 import com.tools20022.repository.choice.ISAPortfolio3Choice;
+import com.tools20022.repository.choice.ISAPortfolio4Choice;
 import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
@@ -104,6 +105,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.ISAPortfolio3Choice#mmPortfolio
  * ISAPortfolio3Choice.mmPortfolio}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ISAPortfolio4Choice#mmPortfolio
+ * ISAPortfolio4Choice.mmPortfolio}</li>
  * </ul>
  * </li>
  * <li>
@@ -117,6 +121,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * ISAPortfolio2Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio3Choice
  * ISAPortfolio3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ISAPortfolio4Choice
+ * ISAPortfolio4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -216,6 +222,9 @@ public class Portfolio {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ISAPortfolio3Choice#mmISA
 	 * ISAPortfolio3Choice.mmISA}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ISAPortfolio4Choice#mmISA
+	 * ISAPortfolio4Choice.mmISA}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -235,7 +244,7 @@ public class Portfolio {
 	 */
 	public static final MMBusinessAssociationEnd mmTransfer = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(ISAPortfolio1Choice.mmISA, ISAPortfolio2Choice.mmISA, ISAPortfolio3Choice.mmISA);
+			derivation_lazy = () -> Arrays.asList(ISAPortfolio1Choice.mmISA, ISAPortfolio2Choice.mmISA, ISAPortfolio3Choice.mmISA, ISAPortfolio4Choice.mmISA);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Portfolio.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -582,11 +591,11 @@ public class Portfolio {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmPortfolio, com.tools20022.repository.entity.InvestmentAccount.mmPortfolio, com.tools20022.repository.entity.InvestmentPlan.mmPortfolio,
 						com.tools20022.repository.entity.PortfolioTransfer.mmTransferredPortfolio, com.tools20022.repository.entity.PortfolioValuation.mmPortfolio, com.tools20022.repository.entity.PortfolioStrategy.mmPortfolio,
 						com.tools20022.repository.entity.PortfolioBenchmark.mmPortfolio);
-				derivationElement_lazy = () -> Arrays.asList(Portfolio1.mmPortfolioInformation, ISAPortfolio1Choice.mmPortfolio, ISAPortfolio2Choice.mmPortfolio, ISAPortfolio3Choice.mmPortfolio);
+				derivationElement_lazy = () -> Arrays.asList(Portfolio1.mmPortfolioInformation, ISAPortfolio1Choice.mmPortfolio, ISAPortfolio2Choice.mmPortfolio, ISAPortfolio3Choice.mmPortfolio, ISAPortfolio4Choice.mmPortfolio);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Portfolio.mmValuation, com.tools20022.repository.entity.Portfolio.mmTransfer, com.tools20022.repository.entity.Portfolio.mmAssetDescription,
 						com.tools20022.repository.entity.Portfolio.mmName, com.tools20022.repository.entity.Portfolio.mmIdentification, com.tools20022.repository.entity.Portfolio.mmStrategy,
 						com.tools20022.repository.entity.Portfolio.mmBenchmark, com.tools20022.repository.entity.Portfolio.mmInvestmentPlan, com.tools20022.repository.entity.Portfolio.mmAccount);
-				derivationComponent_lazy = () -> Arrays.asList(Portfolio1.mmObject(), ISAPortfolio1Choice.mmObject(), ISAPortfolio2Choice.mmObject(), ISAPortfolio3Choice.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(Portfolio1.mmObject(), ISAPortfolio1Choice.mmObject(), ISAPortfolio2Choice.mmObject(), ISAPortfolio3Choice.mmObject(), ISAPortfolio4Choice.mmObject());
 			}
 
 			@Override

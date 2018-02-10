@@ -275,7 +275,7 @@ public class PartyIdentificationAndAccount92 {
 	 * name} = "AdditionalInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides additional information regarding the party,"</li>
+	 * definition} = "Provides additional information regarding the party."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalInformation = new MMMessageAssociationEnd() {
@@ -286,7 +286,7 @@ public class PartyIdentificationAndAccount92 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":70a:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
-			definition = "Provides additional information regarding the party,";
+			definition = "Provides additional information regarding the party.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -79,6 +79,12 @@ import javax.xml.bind.annotation.XmlType;
  * "BillingReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Report on specific billing data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BillingReport2 BillingReport2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -117,6 +123,14 @@ public class BillingReport1 {
 	 * definition} =
 	 * "Information about legal and regulatory data exchanged between invoicing and paying party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport2#mmRegulatoryData
+	 * BillingReport2.mmRegulatoryData}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRegulatoryData = new MMMessageAssociationEnd() {
@@ -128,6 +142,7 @@ public class BillingReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegulatoryData";
 			definition = "Information about legal and regulatory data exchanged between invoicing and paying party.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReport2.mmRegulatoryData);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -165,6 +180,14 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date at which the billing report was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport2#mmInvoiceDate
+	 * BillingReport2.mmInvoiceDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInvoiceDate = new MMMessageAttribute() {
@@ -176,6 +199,7 @@ public class BillingReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceDate";
 			definition = "Date at which the billing report was created.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReport2.mmInvoiceDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -212,6 +236,14 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identification of the billing report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport2#mmBillingIdentification
+	 * BillingReport2.mmBillingIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBillingIdentification = new MMMessageAttribute() {
@@ -223,6 +255,7 @@ public class BillingReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingIdentification";
 			definition = "Unique identification of the billing report.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReport2.mmBillingIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -260,6 +293,14 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date period for which the report data is valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport2#mmBillingPeriod
+	 * BillingReport2.mmBillingPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBillingPeriod = new MMMessageAttribute() {
@@ -271,6 +312,7 @@ public class BillingReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingPeriod";
 			definition = "Date period for which the report data is valid.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReport2.mmBillingPeriod);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
@@ -306,7 +348,14 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the billed party either CSD or NCB (party identification of the CSD or NCB  which has a contractual relationship with the billed customer)"
+	 * "Specifies the billed party either CSD or NCB (party identification of the CSD or NCB which has a contractual relationship with the billed customer)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.BillingReport2#mmCSDOrNCB
+	 * BillingReport2.mmCSDOrNCB}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -318,7 +367,8 @@ public class BillingReport1 {
 			xmlTag = "CSDOrNCB";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDOrNCB";
-			definition = "Specifies the billed party either CSD or NCB (party identification of the CSD or NCB  which has a contractual relationship with the billed customer)";
+			definition = "Specifies the billed party either CSD or NCB (party identification of the CSD or NCB which has a contractual relationship with the billed customer).";
+			nextVersions_lazy = () -> Arrays.asList(BillingReport2.mmCSDOrNCB);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -354,6 +404,14 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies totals related to the invoice."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport2#mmInvoiceTotals
+	 * BillingReport2.mmInvoiceTotals}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInvoiceTotals = new MMMessageAssociationEnd() {
@@ -365,6 +423,7 @@ public class BillingReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvoiceTotals";
 			definition = "Specifies totals related to the invoice.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReport2.mmInvoiceTotals);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -400,6 +459,14 @@ public class BillingReport1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies totals related to the service category."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BillingReport2#mmServiceCategoryTotals
+	 * BillingReport2.mmServiceCategoryTotals}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmServiceCategoryTotals = new MMMessageAssociationEnd() {
@@ -411,6 +478,7 @@ public class BillingReport1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ServiceCategoryTotals";
 			definition = "Specifies totals related to the service category.";
+			nextVersions_lazy = () -> Arrays.asList(BillingReport2.mmServiceCategoryTotals);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ServiceCategoryTotals1.mmObject();
@@ -428,6 +496,7 @@ public class BillingReport1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BillingReport1";
 				definition = "Report on specific billing data.";
+				nextVersions_lazy = () -> Arrays.asList(BillingReport2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

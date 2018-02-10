@@ -80,6 +80,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CashAccount34"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information used for identifying an account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashAccount201 CashAccount201}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.CashAccount29
  * CashAccount29}</li>
@@ -124,6 +130,14 @@ public class CashAccount34 {
 	 * definition} =
 	 * "Unique and unambiguous identification of the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount201#mmIdentification
+	 * CashAccount201.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -140,6 +154,7 @@ public class CashAccount34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identification of the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccount201.mmIdentification);
 			previousVersion_lazy = () -> CashAccount29.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -179,6 +194,14 @@ public class CashAccount34 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Institution that maintains the records where the account is held."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashAccount201#mmAccountServicer
+	 * CashAccount201.mmAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -195,6 +218,7 @@ public class CashAccount34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Institution that maintains the records where the account is held.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccount201.mmAccountServicer);
 			previousVersion_lazy = () -> CashAccount29.mmAccountServicer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -212,6 +236,7 @@ public class CashAccount34 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccount34";
 				definition = "Information used for identifying an account.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccount201.mmObject());
 				previousVersion_lazy = () -> CashAccount29.mmObject();
 			}
 		});

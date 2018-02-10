@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Indicates if the transfer relates to an PEP or ISA product
+ * Indicates if the transfer relates to an PEP or ISA product.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PEPOrISAChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Indicates if the transfer relates to an PEP or ISA product"</li>
+ * definition} = "Indicates if the transfer relates to an PEP or ISA product."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -178,7 +178,7 @@ public class PEPOrISAChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PEPOrISAChoice";
-				definition = "Indicates if the transfer relates to an PEP or ISA product";
+				definition = "Indicates if the transfer relates to an PEP or ISA product.";
 			}
 		});
 		return mmObject_lazy.get();

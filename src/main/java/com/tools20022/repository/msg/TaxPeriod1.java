@@ -64,6 +64,12 @@ import javax.xml.bind.annotation.XmlType;
  * "TaxPeriod1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Period of time details related to the tax payment."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod2 TaxPeriod2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +108,13 @@ public class TaxPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Year related to the tax payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod2#mmYear
+	 * TaxPeriod2.mmYear}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmYear = new MMMessageAttribute() {
@@ -113,6 +126,7 @@ public class TaxPeriod1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Year";
 			definition = "Year related to the tax payment.";
+			nextVersions_lazy = () -> Arrays.asList(TaxPeriod2.mmYear);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -150,6 +164,13 @@ public class TaxPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the period related to the tax payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod2#mmType
+	 * TaxPeriod2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -161,6 +182,7 @@ public class TaxPeriod1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Identification of the period related to the tax payment.";
+			nextVersions_lazy = () -> Arrays.asList(TaxPeriod2.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TaxRecordPeriod1Code.mmObject();
@@ -200,6 +222,13 @@ public class TaxPeriod1 {
 	 * definition} =
 	 * "Range of time between a start date and an end date for which the tax report is provided."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxPeriod2#mmFromToDate
+	 * TaxPeriod2.mmFromToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromToDate = new MMMessageAttribute() {
@@ -211,6 +240,7 @@ public class TaxPeriod1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for which the tax report is provided.";
+			nextVersions_lazy = () -> Arrays.asList(TaxPeriod2.mmFromToDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.DatePeriodDetails.mmObject();
@@ -226,6 +256,7 @@ public class TaxPeriod1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxPeriod1";
 				definition = "Period of time details related to the tax payment.";
+				nextVersions_lazy = () -> Arrays.asList(TaxPeriod2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
+import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
@@ -113,8 +113,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnMvmntRvslAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
+ * SecuritiesEventsPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.037.001.08}</li>
@@ -159,6 +159,14 @@ import javax.xml.bind.annotation.*;
  * definition} =
  * "Scope\r\nAn account servicer sends the CorporateActionMovementReversalAdvice message to an account owner or its designated agent to reverse previously confirmed posting of securities or cash.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH)."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09
+ * CorporateActionMovementReversalAdviceV09}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07
@@ -195,6 +203,15 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of a previously sent movement confirmation document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmMovementConfirmationIdentification
+	 * CorporateActionMovementReversalAdviceV09.
+	 * mmMovementConfirmationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -209,6 +226,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementConfirmationIdentification";
 			definition = "Identification of a previously sent movement confirmation document.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmMovementConfirmationIdentification);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmMovementConfirmationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -247,6 +265,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of other documents as well as the document number."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmOtherDocumentIdentification
+	 * CorporateActionMovementReversalAdviceV09.mmOtherDocumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -260,6 +286,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentIdentification";
 			definition = "Identification of other documents as well as the document number.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmOtherDocumentIdentification);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmOtherDocumentIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification32.mmObject();
@@ -298,6 +325,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * definition} =
 	 * "Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmEventsLinkage
+	 * CorporateActionMovementReversalAdviceV09.mmEventsLinkage}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -311,6 +346,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventsLinkage";
 			definition = "Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmEventsLinkage);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmEventsLinkage;
 			minOccurs = 0;
 			complexType_lazy = () -> CorporateActionEventReference3.mmObject();
@@ -347,6 +383,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason for the reversal."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmReversalReason
+	 * CorporateActionMovementReversalAdviceV09.mmReversalReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -360,6 +404,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalReason";
 			definition = "Reason for the reversal.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmReversalReason);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmReversalReason;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -397,6 +442,15 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "General information about the corporate action event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmCorporateActionGeneralInformation
+	 * CorporateActionMovementReversalAdviceV09.
+	 * mmCorporateActionGeneralInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -411,6 +465,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmCorporateActionGeneralInformation);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -450,6 +505,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * definition} =
 	 * "General information about the safekeeping account, owner and account balance."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmAccountDetails
+	 * CorporateActionMovementReversalAdviceV09.mmAccountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -463,6 +526,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountDetails";
 			definition = "General information about the safekeeping account, owner and account balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmAccountDetails);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -500,6 +564,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information about the corporate action event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmCorporateActionDetails
+	 * CorporateActionMovementReversalAdviceV09.mmCorporateActionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -513,6 +585,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionDetails";
 			definition = "Information about the corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmCorporateActionDetails);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmCorporateActionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -550,6 +623,15 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information about the corporate action option."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmCorporateActionConfirmationDetails
+	 * CorporateActionMovementReversalAdviceV09.
+	 * mmCorporateActionConfirmationDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -564,6 +646,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionConfirmationDetails";
 			definition = "Information about the corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmCorporateActionConfirmationDetails);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmCorporateActionConfirmationDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -601,6 +684,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides additional information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmAdditionalInformation
+	 * CorporateActionMovementReversalAdviceV09.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -614,6 +705,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmAdditionalInformation);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -653,6 +745,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * definition} =
 	 * "Party appointed to administer the event on behalf of the issuer company/offeror. The party may be contacted for more information about the event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmIssuerAgent
+	 * CorporateActionMovementReversalAdviceV09.mmIssuerAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -666,6 +766,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerAgent";
 			definition = "Party appointed to administer the event on behalf of the issuer company/offeror. The party may be contacted for more information about the event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmIssuerAgent);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmIssuerAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -704,6 +805,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * definition} =
 	 * "Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmPayingAgent
+	 * CorporateActionMovementReversalAdviceV09.mmPayingAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -717,6 +826,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
 			definition = "Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmPayingAgent);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmPayingAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -755,6 +865,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * definition} =
 	 * "Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmSubPayingAgent
+	 * CorporateActionMovementReversalAdviceV09.mmSubPayingAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -768,6 +886,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubPayingAgent";
 			definition = "Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmSubPayingAgent);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmSubPayingAgent;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -806,6 +925,14 @@ public class CorporateActionMovementReversalAdviceV08 {
 	 * definition} =
 	 * "Additional information that can not be captured in the structured fields and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmSupplementaryData
+	 * CorporateActionMovementReversalAdviceV09.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -819,6 +946,7 @@ public class CorporateActionMovementReversalAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmSupplementaryData);
 			previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
@@ -846,11 +974,12 @@ public class CorporateActionMovementReversalAdviceV08 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionMovementReversalAdviceV08";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionMovementReversalAdvice message to an account owner or its designated agent to reverse previously confirmed posting of securities or cash.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementReversalAdviceV09.mmObject());
 				previousVersion_lazy = () -> CorporateActionMovementReversalAdviceV07.mmObject();
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOLatestversion.mmObject(), CorporateActionsMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnMvmntRvslAdvc";
-				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmMovementConfirmationIdentification,
 						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmOtherDocumentIdentification, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmEventsLinkage,
 						com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmReversalReason, com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08.mmCorporateActionGeneralInformation,

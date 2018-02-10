@@ -94,6 +94,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * TradingCapacity3Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity5Code
  * TradingCapacity5Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity7Code
+ * TradingCapacity7Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.TradingCapacity8Code
  * TradingCapacity8Code}</li>
  * </ul>
@@ -211,7 +213,7 @@ public class TradingCapacityCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Trading as a riskless principal, ie, the  order to buy(sell) has been simultaneously offset by an order to sell (buy) with another party."
+	 * "Trading as a riskless principal, ie, the order to buy(sell) has been simultaneously offset by an order to sell (buy) with another party."
 	 * </li>
 	 * </ul>
 	 */
@@ -219,7 +221,7 @@ public class TradingCapacityCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RisklessPrincipal";
-			definition = "Trading as a riskless principal, ie, the  order to buy(sell) has been simultaneously offset by an order to sell (buy) with another party.";
+			definition = "Trading as a riskless principal, ie, the order to buy(sell) has been simultaneously offset by an order to sell (buy) with another party.";
 			owner_lazy = () -> com.tools20022.repository.codeset.TradingCapacityCode.mmObject();
 			codeName = "RISP";
 		}
@@ -650,7 +652,8 @@ public class TradingCapacityCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradingCapacityCode";
 				definition = "Specifies the role of a trading party in a transaction.";
-				derivation_lazy = () -> Arrays.asList(TradingCapacity4Code.mmObject(), TradingCapacity6Code.mmObject(), TradingCapacity3Code.mmObject(), TradingCapacity5Code.mmObject(), TradingCapacity8Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(TradingCapacity4Code.mmObject(), TradingCapacity6Code.mmObject(), TradingCapacity3Code.mmObject(), TradingCapacity5Code.mmObject(), TradingCapacity7Code.mmObject(),
+						TradingCapacity8Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TradingCapacityCode.Principal, com.tools20022.repository.codeset.TradingCapacityCode.CrossingPrincipal,
 						com.tools20022.repository.codeset.TradingCapacityCode.RisklessPrincipal, com.tools20022.repository.codeset.TradingCapacityCode.Proprietary, com.tools20022.repository.codeset.TradingCapacityCode.Agent,
 						com.tools20022.repository.codeset.TradingCapacityCode.CrossingAgent, com.tools20022.repository.codeset.TradingCapacityCode.OtherAgent, com.tools20022.repository.codeset.TradingCapacityCode.PrincipalAgent,

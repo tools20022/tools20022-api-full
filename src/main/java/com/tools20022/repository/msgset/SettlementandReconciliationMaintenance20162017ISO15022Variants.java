@@ -19,6 +19,7 @@ package com.tools20022.repository.msgset;
 
 import com.tools20022.metamodel.MMMessageSet;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.area.semt.*;
 import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.GeneratedRepository;
@@ -91,10 +92,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionModificationStatusAdvice002V07
  * SecuritiesSettlementConditionModificationStatusAdvice002V07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08
  * SecuritiesTransactionPendingReport002V08}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06
  * IntraPositionMovementConfirmation002V06}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementStatusAdvice002V05
@@ -112,7 +113,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmation002V07
  * SecuritiesFinancingConfirmation002V07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06
  * IntraPositionMovementPostingReport002V06}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingStatusAdvice002V07
@@ -121,7 +122,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementConditionsModificationRequest002V07
  * SecuritiesSettlementConditionsModificationRequest002V07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06
  * SecuritiesSettlementTransactionAllegementReport002V06}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdvice002V08
@@ -130,7 +131,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstruction002V07
  * SecuritiesFinancingInstruction002V07}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07
  * SecuritiesTransactionPostingReport002V07}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotification002V07
@@ -160,7 +161,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This Message Definition Report provides the description of the ISO15022 Variants of the current version of the Settlement And Reconciliation message definitions. These variants have been developed by SWIFT to help ISO 20022 users who need to be interoperable with the ISO 15022 Settlement And Reconciliation message types. This has been done by restricting the ISO 20022 message components wherever necessary to ensure compatibility with the equivalent fields in ISO 15022. For more information, please refer to the ISO 15022 Variants Business Justification that is available at http://www.iso20022.org/documents/BJ/BJ096/ISO20022BJ_15022_variants_v3_with_comments.doc\r\n\r\nThese variants are maintained by SWIFT. Requests for changes to these variants should be addressed directly to SWIFT. "
+ * "This Message Definition Report provides the description of the ISO15022 Variants of the current version of the Settlement And Reconciliation message definitions. These variants have been developed by SWIFT to help ISO 20022 users who need to be interoperable with the ISO 15022 Settlement And Reconciliation message types. This has been done by restricting the ISO 20022 message components wherever necessary to ensure compatibility with the equivalent fields in ISO 15022. For more information, please refer to the ISO 15022 Variants Business Justification that is available at http://www.iso20022.org/documents/BJ/BJ096/ISO20022BJ_15022_variants_v3_with_comments.doc\r\n\r\nThese variants are maintained by SWIFT. Requests for changes to these variants should be addressed directly to SWIFT."
  * </li>
  * </ul>
  */
@@ -174,7 +175,7 @@ public class SettlementandReconciliationMaintenance20162017ISO15022Variants {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Settlement and Reconciliation - Maintenance 2016 - 2017 - ISO 15022 Variants";
-				definition = "This Message Definition Report provides the description of the ISO15022 Variants of the current version of the Settlement And Reconciliation message definitions. These variants have been developed by SWIFT to help ISO 20022 users who need to be interoperable with the ISO 15022 Settlement And Reconciliation message types. This has been done by restricting the ISO 20022 message components wherever necessary to ensure compatibility with the equivalent fields in ISO 15022. For more information, please refer to the ISO 15022 Variants Business Justification that is available at http://www.iso20022.org/documents/BJ/BJ096/ISO20022BJ_15022_variants_v3_with_comments.doc\r\n\r\nThese variants are maintained by SWIFT. Requests for changes to these variants should be addressed directly to SWIFT. ";
+				definition = "This Message Definition Report provides the description of the ISO15022 Variants of the current version of the Settlement And Reconciliation message definitions. These variants have been developed by SWIFT to help ISO 20022 users who need to be interoperable with the ISO 15022 Settlement And Reconciliation message types. This has been done by restricting the ISO 20022 message components wherever necessary to ensure compatibility with the equivalent fields in ISO 15022. For more information, please refer to the ISO 15022 Variants Business Justification that is available at http://www.iso20022.org/documents/BJ/BJ096/ISO20022BJ_15022_variants_v3_with_comments.doc\r\n\r\nThese variants are maintained by SWIFT. Requests for changes to these variants should be addressed directly to SWIFT.";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionModificationRequestStatusAdvice002V04.mmObject(), PortfolioTransferNotification002V04.mmObject(),
 						SecuritiesSettlementTransactionAuditTrailReport002V03.mmObject(), SecuritiesSettlementAllegementRemovalAdvice002V04.mmObject(), SecuritiesTransactionStatusQuery002V04.mmObject(),
 						SecuritiesMessageCancellationAdvice002V05.mmObject(), SecuritiesBalanceAccountingReport002V09.mmObject(), SecuritiesSettlementTransactionCounterpartyResponse002V02.mmObject(),

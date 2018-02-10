@@ -82,6 +82,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action option securities movement security details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD16
+ * FinancialInstrumentAttributesSD16}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD1
@@ -120,6 +128,14 @@ public class FinancialInstrumentAttributesSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD16#mmPlaceAndName
+	 * FinancialInstrumentAttributesSD16.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -135,6 +151,7 @@ public class FinancialInstrumentAttributesSD13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD16.mmPlaceAndName);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD1.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -174,6 +191,14 @@ public class FinancialInstrumentAttributesSD13 {
 	 * definition} =
 	 * "Indicates whether or not the newly issued securities are transferable by the agent. This flag is specific to DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD16#mmDTCSecurityTransferableFlag
+	 * FinancialInstrumentAttributesSD16.mmDTCSecurityTransferableFlag}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -190,6 +215,7 @@ public class FinancialInstrumentAttributesSD13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCSecurityTransferableFlag";
 			definition = "Indicates whether or not the newly issued securities are transferable by the agent. This flag is specific to DTC (The Depository Trust Corporation).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD16.mmDTCSecurityTransferableFlag);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD1.mmDTCSecurityTransferableFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -228,6 +254,14 @@ public class FinancialInstrumentAttributesSD13 {
 	 * definition} =
 	 * "Details of security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD16#mmDeclaredDisbursedSecurityDetails
+	 * FinancialInstrumentAttributesSD16.mmDeclaredDisbursedSecurityDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -244,6 +278,7 @@ public class FinancialInstrumentAttributesSD13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityDetails";
 			definition = "Details of security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD16.mmDeclaredDisbursedSecurityDetails);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD1.mmDeclaredDisbursedSecurityDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -284,6 +319,14 @@ public class FinancialInstrumentAttributesSD13 {
 	 * definition} =
 	 * "Further classification of DTC disbursed security instruments into (issue) asset types at DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD16#mmDTCDisbursedSecurityAssetType
+	 * FinancialInstrumentAttributesSD16.mmDTCDisbursedSecurityAssetType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -300,6 +343,7 @@ public class FinancialInstrumentAttributesSD13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurityAssetType";
 			definition = "Further classification of DTC disbursed security instruments into (issue) asset types at DTC (The Depository Trust Corporation).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD16.mmDTCDisbursedSecurityAssetType);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD1.mmDTCDisbursedSecurityAssetType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -339,6 +383,14 @@ public class FinancialInstrumentAttributesSD13 {
 	 * definition} =
 	 * "Classification of DTC disbursed security instruments into asset classes at DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD16#mmDTCDisbursedSecurityAssetClass
+	 * FinancialInstrumentAttributesSD16.mmDTCDisbursedSecurityAssetClass}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -355,6 +407,7 @@ public class FinancialInstrumentAttributesSD13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCDisbursedSecurityAssetClass";
 			definition = "Classification of DTC disbursed security instruments into asset classes at DTC (The Depository Trust Corporation).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD16.mmDTCDisbursedSecurityAssetClass);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD1.mmDTCDisbursedSecurityAssetClass;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -394,6 +447,14 @@ public class FinancialInstrumentAttributesSD13 {
 	 * definition} =
 	 * "Dollar amount attributed to the bond when the par value is less than 1000."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD16#mmBabyBondDenomination
+	 * FinancialInstrumentAttributesSD16.mmBabyBondDenomination}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -410,6 +471,7 @@ public class FinancialInstrumentAttributesSD13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BabyBondDenomination";
 			definition = "Dollar amount attributed to the bond when the par value is less than 1000.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD16.mmBabyBondDenomination);
 			previousVersion_lazy = () -> FinancialInstrumentAttributesSD1.mmBabyBondDenomination;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -427,6 +489,7 @@ public class FinancialInstrumentAttributesSD13 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentAttributesSD13";
 				definition = "Provides additional information regarding corporate action option securities movement security details.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD16.mmObject());
 				previousVersion_lazy = () -> FinancialInstrumentAttributesSD1.mmObject();
 			}
 		});

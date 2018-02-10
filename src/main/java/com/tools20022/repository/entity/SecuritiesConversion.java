@@ -285,6 +285,18 @@ public class SecuritiesConversion {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmConversionPrice
 	 * FinancialInstrumentAttributes78.mmConversionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmConversionPrice
+	 * FinancialInstrumentAttributes91.mmConversionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmConversionPrice
+	 * FinancialInstrumentAttributes92.mmConversionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmConversionPrice
+	 * FinancialInstrumentAttributes95.mmConversionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmConversionPrice
+	 * FinancialInstrumentAttributes97.mmConversionPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -310,7 +322,8 @@ public class SecuritiesConversion {
 					FinancialInstrumentAttributes26.mmConversionPrice, FinancialInstrumentAttributes36.mmConversionPrice, FinancialInstrumentAttributes42.mmConversionPrice, FinancialInstrumentAttributes27.mmConversionPrice,
 					FinancialInstrumentAttributes14.mmConversionPrice, FinancialInstrumentAttributes30.mmConversionPrice, FinancialInstrumentAttributes28.mmConversionPrice, FinancialInstrumentAttributes31.mmConversionPrice,
 					FinancialInstrumentAttributes44.mmConversionPrice, FinancialInstrumentAttributes15.mmConversionPrice, FinancialInstrumentAttributes29.mmConversionPrice, FinancialInstrumentAttributes2.mmConversionPrice,
-					FinancialInstrumentAttributes63.mmConversionPrice, FinancialInstrumentAttributes64.mmConversionPrice, FinancialInstrumentAttributes75.mmConversionPrice, FinancialInstrumentAttributes78.mmConversionPrice);
+					FinancialInstrumentAttributes63.mmConversionPrice, FinancialInstrumentAttributes64.mmConversionPrice, FinancialInstrumentAttributes75.mmConversionPrice, FinancialInstrumentAttributes78.mmConversionPrice,
+					FinancialInstrumentAttributes91.mmConversionPrice, FinancialInstrumentAttributes92.mmConversionPrice, FinancialInstrumentAttributes95.mmConversionPrice, FinancialInstrumentAttributes97.mmConversionPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -445,6 +458,8 @@ public class SecuritiesConversion {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes71#mmConversionDate
 	 * FinancialInstrumentAttributes71.mmConversionDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option13#mmConversionDate
+	 * Option13.mmConversionDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#mmConversionDate
 	 * FinancialInstrumentAttributes79.mmConversionDate}</li>
@@ -494,8 +509,8 @@ public class SecuritiesConversion {
 					FinancialInstrumentAttributes2.mmConversionDate, FinancialInstrumentAttributes48.mmConversionDate, FinancialInstrumentAttributes50.mmConversionDate, FinancialInstrumentAttributes49.mmConversionDate,
 					FinancialInstrumentAttributes55.mmConversionDate, FinancialInstrumentAttributes57.mmConversionDate, FinancialInstrumentAttributes56.mmConversionDate, FinancialInstrumentAttributes66.mmConversionDate,
 					FinancialInstrumentAttributes65.mmConversionDate, FinancialInstrumentAttributes67.mmConversionDate, FinancialInstrumentAttributes70.mmConversionDate, FinancialInstrumentAttributes69.mmConversionDate,
-					FinancialInstrumentAttributes71.mmConversionDate, FinancialInstrumentAttributes79.mmConversionDate, FinancialInstrumentAttributes81.mmConversionDate, FinancialInstrumentAttributes80.mmConversionDate,
-					FinancialInstrumentAttributes85.mmConversionDate, FinancialInstrumentAttributes84.mmConversionDate, FinancialInstrumentAttributes83.mmConversionDate);
+					FinancialInstrumentAttributes71.mmConversionDate, Option13.mmConversionDate, FinancialInstrumentAttributes79.mmConversionDate, FinancialInstrumentAttributes81.mmConversionDate,
+					FinancialInstrumentAttributes80.mmConversionDate, FinancialInstrumentAttributes85.mmConversionDate, FinancialInstrumentAttributes84.mmConversionDate, FinancialInstrumentAttributes83.mmConversionDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1006,6 +1021,9 @@ public class SecuritiesConversion {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption56#mmMaximumQuantityToInstruct
 	 * SecuritiesOption56.mmMaximumQuantityToInstruct}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Option13#mmMinimumExercisableQuantity
+	 * Option13.mmMinimumExercisableQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1030,7 +1048,7 @@ public class SecuritiesConversion {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesOption1.mmMaximumExercisableQuantity, SecuritiesOption9.mmMaximumExercisableQuantity, SecuritiesOption15.mmMaximumExercisableQuantity,
 					SecuritiesOption16.mmMaximumExercisableQuantity, SecuritiesOption23.mmMaximumExercisableQuantity, SecuritiesOption28.mmMaximumExercisableQuantity, Option7.mmMinimumExercisableQuantity,
-					SecuritiesOption51.mmMaximumQuantityToInstruct, SecuritiesOption56.mmMaximumQuantityToInstruct);
+					SecuritiesOption51.mmMaximumQuantityToInstruct, SecuritiesOption56.mmMaximumQuantityToInstruct, Option13.mmMinimumExercisableQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1126,6 +1144,12 @@ public class SecuritiesConversion {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ConversionTypeFormat4Choice#mmProprietary
 	 * ConversionTypeFormat4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmConversionType
+	 * CorporateAction41.mmConversionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmConversionType
+	 * CorporateAction51.mmConversionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1150,7 +1174,7 @@ public class SecuritiesConversion {
 					ConversionTypeFormat2Choice.mmProprietary, CorporateAction4.mmConversionType, CorporateAction5.mmConversionType, CorporateAction6.mmConversionType, CorporateAction7.mmConversionType, CorporateAction8.mmConversionType,
 					CorporateAction10.mmConversionType, CorporateAction11.mmConversionType, ConversionType1FormatChoice.mmCode, ConversionType1FormatChoice.mmProprietary, CorporateAction2.mmConversionType,
 					CorporateAction12.mmConversionType, CorporateAction17.mmConversionType, CorporateAction31.mmConversionType, ConversionTypeFormat3Choice.mmCode, ConversionTypeFormat3Choice.mmProprietary,
-					CorporateAction40.mmConversionType, ConversionTypeFormat4Choice.mmCode, ConversionTypeFormat4Choice.mmProprietary);
+					CorporateAction40.mmConversionType, ConversionTypeFormat4Choice.mmCode, ConversionTypeFormat4Choice.mmProprietary, CorporateAction41.mmConversionType, CorporateAction51.mmConversionType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1199,6 +1223,9 @@ public class SecuritiesConversion {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.OptionDateOrPeriod1Choice#mmNoticePeriod
 	 * OptionDateOrPeriod1Choice.mmNoticePeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Option13#mmConversionPeriod
+	 * Option13.mmConversionPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1221,7 +1248,7 @@ public class SecuritiesConversion {
 	 */
 	public static final MMBusinessAssociationEnd mmConversionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmConversionPeriod, Option1.mmConversionPeriod, Option7.mmConversionPeriod, OptionDateOrPeriod1Choice.mmNoticePeriod);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmConversionPeriod, Option1.mmConversionPeriod, Option7.mmConversionPeriod, OptionDateOrPeriod1Choice.mmNoticePeriod, Option13.mmConversionPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1823,7 +1850,7 @@ public class SecuritiesConversion {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Financial place  taken into account to adjust the date and time, as defined within the business day convention."
+	 * "Financial place taken into account to adjust the date and time, as defined within the business day convention."
 	 * </li>
 	 * </ul>
 	 */
@@ -1833,7 +1860,7 @@ public class SecuritiesConversion {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FinancialCenter";
-			definition = "Financial place  taken into account to adjust the date and time, as defined within the business day convention.";
+			definition = "Financial place taken into account to adjust the date and time, as defined within the business day convention.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> FinancialCenterCode.mmObject();
@@ -2322,6 +2349,8 @@ public class SecuritiesConversion {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmContractSize
 	 * FinancialInstrumentAttributes78.mmContractSize}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future3#mmContractSize
+	 * Future3.mmContractSize}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes79#mmContractSize
 	 * FinancialInstrumentAttributes79.mmContractSize}</li>
@@ -2340,6 +2369,18 @@ public class SecuritiesConversion {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83#mmContractSize
 	 * FinancialInstrumentAttributes83.mmContractSize}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmContractSize
+	 * FinancialInstrumentAttributes91.mmContractSize}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmContractSize
+	 * FinancialInstrumentAttributes92.mmContractSize}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmContractSize
+	 * FinancialInstrumentAttributes95.mmContractSize}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmContractSize
+	 * FinancialInstrumentAttributes97.mmContractSize}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2376,8 +2417,9 @@ public class SecuritiesConversion {
 					FinancialInstrumentAttributes55.mmContractSize, FinancialInstrumentAttributes57.mmContractSize, FinancialInstrumentAttributes56.mmContractSize, FinancialInstrumentAttributes63.mmContractSize,
 					FinancialInstrumentAttributes64.mmContractSize, FinancialInstrumentAttributes66.mmContractSize, FinancialInstrumentAttributes65.mmContractSize, FinancialInstrumentAttributes67.mmContractSize,
 					FinancialInstrumentAttributes70.mmContractSize, FinancialInstrumentAttributes69.mmContractSize, FinancialInstrumentAttributes71.mmContractSize, FinancialInstrumentAttributes75.mmContractSize,
-					FinancialInstrumentAttributes78.mmContractSize, FinancialInstrumentAttributes79.mmContractSize, FinancialInstrumentAttributes81.mmContractSize, FinancialInstrumentAttributes80.mmContractSize,
-					FinancialInstrumentAttributes85.mmContractSize, FinancialInstrumentAttributes84.mmContractSize, FinancialInstrumentAttributes83.mmContractSize);
+					FinancialInstrumentAttributes78.mmContractSize, Future3.mmContractSize, FinancialInstrumentAttributes79.mmContractSize, FinancialInstrumentAttributes81.mmContractSize, FinancialInstrumentAttributes80.mmContractSize,
+					FinancialInstrumentAttributes85.mmContractSize, FinancialInstrumentAttributes84.mmContractSize, FinancialInstrumentAttributes83.mmContractSize, FinancialInstrumentAttributes91.mmContractSize,
+					FinancialInstrumentAttributes92.mmContractSize, FinancialInstrumentAttributes95.mmContractSize, FinancialInstrumentAttributes97.mmContractSize);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesConversion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

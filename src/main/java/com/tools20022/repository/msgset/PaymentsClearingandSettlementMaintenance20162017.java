@@ -69,7 +69,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Payments Clearing and Settlement - Maintenance 2016 - 2017"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This document describes the Payments Clearing and Settlement message set. "</li>
+ * "This document describes the Payments Clearing and Settlement message set."</li>
  * </ul>
  */
 public class PaymentsClearingandSettlementMaintenance20162017 {
@@ -82,7 +82,7 @@ public class PaymentsClearingandSettlementMaintenance20162017 {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Payments Clearing and Settlement - Maintenance 2016 - 2017";
-				definition = "This document describes the Payments Clearing and Settlement message set. ";
+				definition = "This document describes the Payments Clearing and Settlement message set.";
 				messageDefinition_lazy = () -> Arrays.asList(FinancialInstitutionCreditTransferV06.mmObject(), FIToFICustomerCreditTransferV06.mmObject(), FinancialInstitutionDirectDebitV02.mmObject(),
 						FIToFIPaymentStatusRequestV01.mmObject(), PaymentReturnV07.mmObject(), FIToFIPaymentStatusReportV08.mmObject(), FIToFIPaymentReversalV07.mmObject(), FIToFICustomerDirectDebitV07.mmObject());
 			}

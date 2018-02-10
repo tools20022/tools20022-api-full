@@ -129,6 +129,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides information about the corporate action security option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption65
+ * SecuritiesOption65}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SecuritiesOption50
@@ -176,6 +183,14 @@ public class SecuritiesOption60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmFinancialInstrumentIdentification
+	 * SecuritiesOption65.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -193,6 +208,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of the financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmFinancialInstrumentIdentification);
 			previousVersion_lazy = () -> SecuritiesOption50.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -236,6 +252,14 @@ public class SecuritiesOption60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether the value is a debit or credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmCreditDebitIndicator
+	 * SecuritiesOption65.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -253,6 +277,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Specifies whether the value is a debit or credit.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> SecuritiesOption50.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -294,7 +319,15 @@ public class SecuritiesOption60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US."
+	 * "Specifies that the security identified is a temporary security identification used for processing reasons, for example, contra security used in the US."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmTemporaryFinancialInstrumentIndicator
+	 * SecuritiesOption65.mmTemporaryFinancialInstrumentIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -312,7 +345,8 @@ public class SecuritiesOption60 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::TEMP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TemporaryFinancialInstrumentIndicator";
-			definition = "Specifies that the security identified  is a temporary security identification used for processing reasons, for example, contra security used in the US.";
+			definition = "Specifies that the security identified is a temporary security identification used for processing reasons, for example, contra security used in the US.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmTemporaryFinancialInstrumentIndicator);
 			previousVersion_lazy = () -> SecuritiesOption50.mmTemporaryFinancialInstrumentIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -349,6 +383,14 @@ public class SecuritiesOption60 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the securities are newly issued or not."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmNewSecuritiesIssuanceIndicator
+	 * SecuritiesOption65.mmNewSecuritiesIssuanceIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -364,6 +406,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewSecuritiesIssuanceIndicator";
 			definition = "Indicates whether the securities are newly issued or not.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmNewSecuritiesIssuanceIndicator);
 			previousVersion_lazy = () -> SecuritiesOption50.mmNewSecuritiesIssuanceIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -405,6 +448,14 @@ public class SecuritiesOption60 {
 	 * definition} =
 	 * "Proceeds are taxable according to the information provided by the issuer / offeror."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmIssuerOfferorTaxabilityIndicator
+	 * SecuritiesOption65.mmIssuerOfferorTaxabilityIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -421,6 +472,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOfferorTaxabilityIndicator";
 			definition = "Proceeds are taxable according to the information provided by the issuer / offeror.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmIssuerOfferorTaxabilityIndicator);
 			previousVersion_lazy = () -> SecuritiesOption50.mmIssuerOfferorTaxabilityIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -464,6 +516,14 @@ public class SecuritiesOption60 {
 	 * definition} =
 	 * "Specifies the type of income.\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmIncomeType
+	 * SecuritiesOption65.mmIncomeType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -481,6 +541,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncomeType";
 			definition = "Specifies the type of income.\nThe lists of income type codes to be used, are available on the SMPG website at www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmIncomeType);
 			previousVersion_lazy = () -> SecuritiesOption50.mmIncomeType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -515,6 +576,14 @@ public class SecuritiesOption60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the basis for the reduced rate of withholding."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmExemptionType
+	 * SecuritiesOption65.mmExemptionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -530,6 +599,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionType";
 			definition = "Specifies the basis for the reduced rate of withholding.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmExemptionType);
 			previousVersion_lazy = () -> SecuritiesOption50.mmExemptionType;
 			minOccurs = 0;
 			isComposite = true;
@@ -568,6 +638,14 @@ public class SecuritiesOption60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the country from which the income originates."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmCountryOfIncomeSource
+	 * SecuritiesOption65.mmCountryOfIncomeSource}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -584,6 +662,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIncomeSource";
 			definition = "Indicates the country from which the income originates.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmCountryOfIncomeSource);
 			previousVersion_lazy = () -> SecuritiesOption50.mmCountryOfIncomeSource;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -626,6 +705,14 @@ public class SecuritiesOption60 {
 	 * definition} =
 	 * "Quantity of securities that have been posted (credit or debit) to the safekeeping account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmPostingQuantity
+	 * SecuritiesOption65.mmPostingQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -643,6 +730,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PostingQuantity";
 			definition = "Quantity of securities that have been posted (credit or debit) to the safekeeping account.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmPostingQuantity);
 			previousVersion_lazy = () -> SecuritiesOption50.mmPostingQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -686,6 +774,14 @@ public class SecuritiesOption60 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Location where the financial instruments are/will be safekept."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmSafekeepingPlace
+	 * SecuritiesOption65.mmSafekeepingPlace}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -703,6 +799,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
 			definition = "Location where the financial instruments are/will be safekept.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmSafekeepingPlace);
 			previousVersion_lazy = () -> SecuritiesOption50.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -747,6 +844,14 @@ public class SecuritiesOption60 {
 	 * definition} =
 	 * "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmFractionDisposition
+	 * SecuritiesOption65.mmFractionDisposition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -764,6 +869,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmFractionDisposition);
 			previousVersion_lazy = () -> SecuritiesOption50.mmFractionDisposition;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -809,6 +915,14 @@ public class SecuritiesOption60 {
 	 * definition} =
 	 * "Currency in which the cash disbursed from an interest or dividend payment is offered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmCurrencyOption
+	 * SecuritiesOption65.mmCurrencyOption}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -826,6 +940,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOption";
 			definition = "Currency in which the cash disbursed from an interest or dividend payment is offered.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmCurrencyOption);
 			previousVersion_lazy = () -> SecuritiesOption50.mmCurrencyOption;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -867,6 +982,14 @@ public class SecuritiesOption60 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides information about the dates related to securities movement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmDateDetails
+	 * SecuritiesOption65.mmDateDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -884,6 +1007,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to securities movement.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmDateDetails);
 			previousVersion_lazy = () -> SecuritiesOption50.mmDateDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -926,6 +1050,14 @@ public class SecuritiesOption60 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides information about the rates related to securities movement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmRateDetails
+	 * SecuritiesOption65.mmRateDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -943,6 +1075,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateDetails";
 			definition = "Provides information about the rates related to securities movement.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmRateDetails);
 			previousVersion_lazy = () -> SecuritiesOption50.mmRateDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -985,6 +1118,14 @@ public class SecuritiesOption60 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides information about the prices related to securities movement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmPriceDetails
+	 * SecuritiesOption65.mmPriceDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1002,6 +1143,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to securities movement.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmPriceDetails);
 			previousVersion_lazy = () -> SecuritiesOption50.mmPriceDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1043,6 +1185,14 @@ public class SecuritiesOption60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of receiving settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmReceivingSettlementParties
+	 * SecuritiesOption65.mmReceivingSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1060,6 +1210,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmReceivingSettlementParties);
 			previousVersion_lazy = () -> SecuritiesOption50.mmReceivingSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1101,6 +1252,14 @@ public class SecuritiesOption60 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of delivering settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmDeliveringSettlementParties
+	 * SecuritiesOption65.mmDeliveringSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1118,6 +1277,7 @@ public class SecuritiesOption60 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmDeliveringSettlementParties);
 			previousVersion_lazy = () -> SecuritiesOption50.mmDeliveringSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1143,6 +1303,7 @@ public class SecuritiesOption60 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesOption60";
 				definition = "Provides information about the corporate action security option.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesOption65.mmObject());
 				previousVersion_lazy = () -> SecuritiesOption50.mmObject();
 			}
 		});

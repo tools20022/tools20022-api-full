@@ -26,6 +26,7 @@ import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BenchmarkCurve1;
 import com.tools20022.repository.msg.BenchmarkCurve2;
+import com.tools20022.repository.msg.BenchmarkCurve4;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -69,6 +70,8 @@ import java.util.Optional;
  * BenchmarkCurve2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve1
  * BenchmarkCurve1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve4
+ * BenchmarkCurve4}</li>
  * </ul>
  * </li>
  * <li>
@@ -108,6 +111,9 @@ public class Curve {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve1#mmBenchmarkCurveCurrency
 	 * BenchmarkCurve1.mmBenchmarkCurveCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve4#mmBenchmarkCurveCurrency
+	 * BenchmarkCurve4.mmBenchmarkCurveCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -130,7 +136,7 @@ public class Curve {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkCurveCurrency, BenchmarkCurve1.mmBenchmarkCurveCurrency);
+			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkCurveCurrency, BenchmarkCurve1.mmBenchmarkCurveCurrency, BenchmarkCurve4.mmBenchmarkCurveCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Curve.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "220"));
@@ -197,6 +203,15 @@ public class Curve {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName6Choice#mmName
 	 * BenchmarkCurveName6Choice.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve4#mmBenchmarkCurveName
+	 * BenchmarkCurve4.mmBenchmarkCurveName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName7Choice#mmCode
+	 * BenchmarkCurveName7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BenchmarkCurveName7Choice#mmProprietary
+	 * BenchmarkCurveName7Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -220,7 +235,8 @@ public class Curve {
 	public static final MMBusinessAttribute mmName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(BenchmarkCurveName2Choice.mmCode, BenchmarkCurveName2Choice.mmProprietary, BenchmarkCurve2.mmBenchmarkCurveName, BenchmarkCurve1.mmBenchmarkCurveName, InflationIndex1Choice.mmName,
-					BenchmarkCurveName4Choice.mmIndex, BenchmarkCurveName4Choice.mmName, BenchmarkCurveName5Choice.mmIndex, BenchmarkCurveName5Choice.mmName, BenchmarkCurveName6Choice.mmIndex, BenchmarkCurveName6Choice.mmName);
+					BenchmarkCurveName4Choice.mmIndex, BenchmarkCurveName4Choice.mmName, BenchmarkCurveName5Choice.mmIndex, BenchmarkCurveName5Choice.mmName, BenchmarkCurveName6Choice.mmIndex, BenchmarkCurveName6Choice.mmName,
+					BenchmarkCurve4.mmBenchmarkCurveName, BenchmarkCurveName7Choice.mmCode, BenchmarkCurveName7Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Curve.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "221"));
@@ -259,6 +275,9 @@ public class Curve {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve1#mmBenchmarkCurvePoint
 	 * BenchmarkCurve1.mmBenchmarkCurvePoint}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BenchmarkCurve4#mmBenchmarkCurvePoint
+	 * BenchmarkCurve4.mmBenchmarkCurvePoint}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -283,7 +302,7 @@ public class Curve {
 	 */
 	public static final MMBusinessAttribute mmPoint = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkCurvePoint, BenchmarkCurve1.mmBenchmarkCurvePoint);
+			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmBenchmarkCurvePoint, BenchmarkCurve1.mmBenchmarkCurvePoint, BenchmarkCurve4.mmBenchmarkCurvePoint);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Curve.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "222"));
@@ -327,6 +346,8 @@ public class Curve {
 	 * BenchmarkCurve2.mmSpread}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve1#mmSpread
 	 * BenchmarkCurve1.mmSpread}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BenchmarkCurve4#mmSpread
+	 * BenchmarkCurve4.mmSpread}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -346,7 +367,7 @@ public class Curve {
 	 */
 	public static final MMBusinessAssociationEnd mmSpread = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmSpread, BenchmarkCurve1.mmSpread);
+			derivation_lazy = () -> Arrays.asList(BenchmarkCurve2.mmSpread, BenchmarkCurve1.mmSpread, BenchmarkCurve4.mmSpread);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Curve.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -370,7 +391,7 @@ public class Curve {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Spread.mmBenchmarkCurve);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Curve.mmCurrency, com.tools20022.repository.entity.Curve.mmName, com.tools20022.repository.entity.Curve.mmPoint,
 						com.tools20022.repository.entity.Curve.mmSpread);
-				derivationComponent_lazy = () -> Arrays.asList(BenchmarkCurve2.mmObject(), BenchmarkCurve1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(BenchmarkCurve2.mmObject(), BenchmarkCurve1.mmObject(), BenchmarkCurve4.mmObject());
 			}
 
 			@Override

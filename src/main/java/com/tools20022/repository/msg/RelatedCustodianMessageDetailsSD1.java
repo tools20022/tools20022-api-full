@@ -275,7 +275,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Rate that the  ISO message was received from the custodian. Applicable to custodian service only."
+	 * "Rate that the ISO message was received from the custodian. Applicable to custodian service only."
 	 * </li>
 	 * </ul>
 	 */
@@ -287,7 +287,7 @@ public class RelatedCustodianMessageDetailsSD1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Received Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivedDate";
-			definition = "Rate that the  ISO message was received from the custodian. Applicable to custodian service only.";
+			definition = "Rate that the ISO message was received from the custodian. Applicable to custodian service only.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();

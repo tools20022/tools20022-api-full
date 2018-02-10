@@ -38,6 +38,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ExternalBankTransactionSubFamily1Code
+ * ExternalBankTransactionSubFamily1Code}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -78,6 +86,7 @@ public class ExternalBankTransactionSubFamilyCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalBankTransactionSubFamilyCode";
 				definition = "Specifies the external sub-family code of the bank transaction code in the format of character string with a maximum length of 4 characters.\r\nThe list of valid codes is an external code list published separately, and is a sub-list of the bank transaction family code list.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				derivation_lazy = () -> Arrays.asList(ExternalBankTransactionSubFamily1Code.mmObject());
 				minLength = 1;
 				maxLength = 4;
 			}

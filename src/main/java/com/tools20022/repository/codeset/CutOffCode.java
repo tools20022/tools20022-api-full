@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CutOffCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the cut-off  type."</li>
+ * definition} = "Specifies the cut-off type."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -106,8 +106,8 @@ public class CutOffCode extends MMCode {
 		}
 	};
 	/**
-	 * Cutoff occurs before the DTCC (The Depository Trust and Clearing
-	 * Corporation) standard settlement cutoff. Early cutoff usually 1:30
+	 * Cut-off occurs before the DTCC (The Depository Trust and Clearing
+	 * Corporation) standard settlement cutoff. Early cut-off usually 1: 30
 	 * Eastern Standard Time.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -125,7 +125,7 @@ public class CutOffCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cutoff occurs before the DTCC (The Depository Trust and Clearing Corporation) standard settlement cutoff. Early cutoff usually 1:30 Eastern Standard Time."
+	 * "Cut-off occurs before the DTCC (The Depository Trust and Clearing Corporation) standard settlement cutoff. Early cut-off usually 1: 30 Eastern Standard Time."
 	 * </li>
 	 * </ul>
 	 */
@@ -133,13 +133,13 @@ public class CutOffCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Early";
-			definition = "Cutoff occurs before the DTCC (The Depository Trust and Clearing Corporation) standard settlement cutoff. Early cutoff usually 1:30 Eastern Standard Time.";
+			definition = "Cut-off occurs before the DTCC (The Depository Trust and Clearing Corporation) standard settlement cutoff. Early cut-off usually 1: 30 Eastern Standard Time.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CutOffCode.mmObject();
 			codeName = "EARL";
 		}
 	};
 	/**
-	 * Cutoff is after settlement at DTCC (The Depository Trust and Clearing
+	 * Cut-off is after settlement at DTCC (The Depository Trust and Clearing
 	 * Corporation).
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -157,7 +157,7 @@ public class CutOffCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cutoff is after settlement at DTCC (The Depository Trust and Clearing Corporation). "
+	 * "Cut-off is after settlement at DTCC (The Depository Trust and Clearing Corporation)."
 	 * </li>
 	 * </ul>
 	 */
@@ -165,7 +165,7 @@ public class CutOffCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Late";
-			definition = "Cutoff is after settlement at DTCC (The Depository Trust and Clearing Corporation). ";
+			definition = "Cut-off is after settlement at DTCC (The Depository Trust and Clearing Corporation).";
 			owner_lazy = () -> com.tools20022.repository.codeset.CutOffCode.mmObject();
 			codeName = "LATE";
 		}
@@ -182,7 +182,7 @@ public class CutOffCode extends MMCode {
 				example = Arrays.asList("AERL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CutOffCode";
-				definition = "Specifies the cut-off  type.";
+				definition = "Specifies the cut-off type.";
 				derivation_lazy = () -> Arrays.asList(CutOff1Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CutOffCode.AnticipatedEarlyCutoff, com.tools20022.repository.codeset.CutOffCode.Early, com.tools20022.repository.codeset.CutOffCode.Late);
 			}

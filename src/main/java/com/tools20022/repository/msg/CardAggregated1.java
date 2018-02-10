@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CardAggregated1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Globalised card transaction entry details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAggregated2
+ * CardAggregated2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -119,6 +126,14 @@ public class CardAggregated1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Service in addition to the main service."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAggregated2#mmAdditionalService
+	 * CardAggregated2.mmAdditionalService}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalService = new MMMessageAttribute() {
@@ -130,6 +145,7 @@ public class CardAggregated1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalService";
 			definition = "Service in addition to the main service.";
+			nextVersions_lazy = () -> Arrays.asList(CardAggregated2.mmAdditionalService);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CardPaymentServiceType2Code.mmObject();
@@ -170,6 +186,14 @@ public class CardAggregated1 {
 	 * definition} =
 	 * "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAggregated2#mmTransactionCategory
+	 * CardAggregated2.mmTransactionCategory}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransactionCategory = new MMMessageAttribute() {
@@ -181,6 +205,7 @@ public class CardAggregated1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCategory";
 			definition = "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardAggregated2.mmTransactionCategory);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ExternalCardTransactionCategory1Code.mmObject();
@@ -215,6 +240,14 @@ public class CardAggregated1 {
 	 * definition} =
 	 * "Unique identification of the sales reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAggregated2#mmSaleReconciliationIdentification
+	 * CardAggregated2.mmSaleReconciliationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSaleReconciliationIdentification = new MMMessageAttribute() {
@@ -225,6 +258,7 @@ public class CardAggregated1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SaleReconciliationIdentification";
 			definition = "Unique identification of the sales reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.";
+			nextVersions_lazy = () -> Arrays.asList(CardAggregated2.mmSaleReconciliationIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -258,6 +292,14 @@ public class CardAggregated1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Range of sequence numbers on which the globalisation applies."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAggregated2#mmSequenceNumberRange
+	 * CardAggregated2.mmSequenceNumberRange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSequenceNumberRange = new MMMessageAssociationEnd() {
@@ -268,6 +310,7 @@ public class CardAggregated1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumberRange";
 			definition = "Range of sequence numbers on which the globalisation applies.";
+			nextVersions_lazy = () -> Arrays.asList(CardAggregated2.mmSequenceNumberRange);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -301,6 +344,14 @@ public class CardAggregated1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date range on which the globalisation applies."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAggregated2#mmTransactionDateRange
+	 * CardAggregated2.mmTransactionDateRange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransactionDateRange = new MMMessageAssociationEnd() {
@@ -311,6 +362,7 @@ public class CardAggregated1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionDateRange";
 			definition = "Date range on which the globalisation applies.";
+			nextVersions_lazy = () -> Arrays.asList(CardAggregated2.mmTransactionDateRange);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -329,6 +381,7 @@ public class CardAggregated1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardAggregated1";
 				definition = "Globalised card transaction entry details.";
+				nextVersions_lazy = () -> Arrays.asList(CardAggregated2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

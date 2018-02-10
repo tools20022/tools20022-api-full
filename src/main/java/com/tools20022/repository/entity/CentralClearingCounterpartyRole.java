@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.SettlementPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.ClearingPartyAndTime3;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -61,6 +62,14 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.entity.ClearingSystem#mmCentralClearingCounterparty
  * ClearingSystem.mmCentralClearingCounterparty}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ClearingPartyAndTime3
+ * ClearingPartyAndTime3}</li>
  * </ul>
  * </li>
  * <li>
@@ -142,6 +151,7 @@ public class CentralClearingCounterpartyRole extends SettlementPartyRole {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ClearingSystem.mmCentralClearingCounterparty);
 				superType_lazy = () -> SettlementPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CentralClearingCounterpartyRole.mmSystem);
+				derivationComponent_lazy = () -> Arrays.asList(ClearingPartyAndTime3.mmObject());
 			}
 
 			@Override

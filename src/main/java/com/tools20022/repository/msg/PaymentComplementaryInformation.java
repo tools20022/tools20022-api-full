@@ -344,7 +344,8 @@ public class PaymentComplementaryInformation {
 	 * name} = "Amount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Instructed amount of the payment instruction (Field 33B)"</li>
+	 * definition} = "Instructed amount of the payment instruction (Field 33B)."
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAmount = new MMMessageAssociationEnd() {
@@ -355,7 +356,7 @@ public class PaymentComplementaryInformation {
 			xmlTag = "Amt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
-			definition = "Instructed amount of the payment instruction (Field 33B)";
+			definition = "Instructed amount of the payment instruction (Field 33B).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -538,7 +539,7 @@ public class PaymentComplementaryInformation {
 	 * name} = "LastSettlementAgent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Correspondent of the Final agent (Field 54 of Mt 202)"</li>
+	 * definition} = "Correspondent of the Final agent (Field 54 of Mt 202)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLastSettlementAgent = new MMMessageAssociationEnd() {
@@ -549,7 +550,7 @@ public class PaymentComplementaryInformation {
 			xmlTag = "LastSttlmAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastSettlementAgent";
-			definition = "Correspondent of the Final agent (Field 54 of Mt 202)";
+			definition = "Correspondent of the Final agent (Field 54 of Mt 202).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -89,6 +89,11 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus6Choice
  * SecuritiesPaymentStatus6Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SecurityStatus3Choice
+ * SecurityStatus3Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus7Choice
+ * SecuritiesPaymentStatus7Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -224,6 +229,24 @@ public class SecuritiesStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus6Choice#mmProprietary
 	 * SecuritiesPaymentStatus6Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus7Choice#mmCode
+	 * SecuritiesPaymentStatus7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesPaymentStatus7Choice#mmProprietary
+	 * SecuritiesPaymentStatus7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmPaymentStatus
+	 * FinancialInstrumentAttributes91.mmPaymentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPaymentStatus
+	 * FinancialInstrumentAttributes92.mmPaymentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmPaymentStatus
+	 * FinancialInstrumentAttributes95.mmPaymentStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmPaymentStatus
+	 * FinancialInstrumentAttributes97.mmPaymentStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -252,7 +275,8 @@ public class SecuritiesStatus extends Status {
 					Equity1.mmPaymentStatus, FinancialInstrumentAttributes15.mmPaymentStatus, FinancialInstrumentAttributes29.mmPaymentStatus, SecuritiesPaymentStatus4Choice.mmCode, SecuritiesPaymentStatus4Choice.mmProprietary,
 					FinancialInstrumentAttributes2.mmPaymentStatus, FinancialInstrumentAttributes63.mmPaymentStatus, FinancialInstrumentAttributes64.mmPaymentStatus, SecuritiesPaymentStatus5Choice.mmCode,
 					SecuritiesPaymentStatus5Choice.mmProprietary, FinancialInstrumentAttributes75.mmPaymentStatus, FinancialInstrumentAttributes78.mmPaymentStatus, SecuritiesPaymentStatus6Choice.mmCode,
-					SecuritiesPaymentStatus6Choice.mmProprietary);
+					SecuritiesPaymentStatus6Choice.mmProprietary, SecuritiesPaymentStatus7Choice.mmCode, SecuritiesPaymentStatus7Choice.mmProprietary, FinancialInstrumentAttributes91.mmPaymentStatus,
+					FinancialInstrumentAttributes92.mmPaymentStatus, FinancialInstrumentAttributes95.mmPaymentStatus, FinancialInstrumentAttributes97.mmPaymentStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -454,7 +478,7 @@ public class SecuritiesStatus extends Status {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesStatus.mmPaymentStatus, com.tools20022.repository.entity.SecuritiesStatus.mmStatus,
 						com.tools20022.repository.entity.SecuritiesStatus.mmRegistrationStatus, com.tools20022.repository.entity.SecuritiesStatus.mmSecurity);
 				derivationComponent_lazy = () -> Arrays.asList(SecuritiesPaymentStatus1Choice.mmObject(), SecuritiesPaymentStatus2Choice.mmObject(), SecuritiesPaymentStatus3Choice.mmObject(), SecurityStatus2Choice.mmObject(),
-						SecuritiesPaymentStatus4Choice.mmObject(), SecuritiesPaymentStatus5Choice.mmObject(), SecuritiesPaymentStatus6Choice.mmObject());
+						SecuritiesPaymentStatus4Choice.mmObject(), SecuritiesPaymentStatus5Choice.mmObject(), SecuritiesPaymentStatus6Choice.mmObject(), SecurityStatus3Choice.mmObject(), SecuritiesPaymentStatus7Choice.mmObject());
 			}
 
 			@Override

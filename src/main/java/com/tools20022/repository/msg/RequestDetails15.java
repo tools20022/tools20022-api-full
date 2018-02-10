@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Details of the settlement condition modification request
+ * Details of the settlement condition modification request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -126,7 +126,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RequestDetails15"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Details of the settlement condition modification request"</li>
+ * definition} = "Details of the settlement condition modification request."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.RequestDetails13 RequestDetails13}</li>
@@ -277,7 +277,7 @@ public class RequestDetails15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies whether the instruction due to expire is confirmed for settlement"
+	 * "Specifies whether the instruction due to expire is confirmed for settlement."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -293,7 +293,7 @@ public class RequestDetails15 {
 			xmlTag = "RtnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetainIndicator";
-			definition = "Specifies whether the instruction due to expire is confirmed for settlement";
+			definition = "Specifies whether the instruction due to expire is confirmed for settlement.";
 			previousVersion_lazy = () -> RequestDetails13.mmRetainIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -431,7 +431,7 @@ public class RequestDetails15 {
 	 * name} = "OtherProcessing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies another type of processing change request"</li>
+	 * definition} = "Specifies another type of processing change request."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -446,7 +446,7 @@ public class RequestDetails15 {
 			xmlTag = "OthrPrcg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProcessing";
-			definition = "Specifies another type of processing change request";
+			definition = "Specifies another type of processing change request.";
 			previousVersion_lazy = () -> RequestDetails13.mmOtherProcessing;
 			minOccurs = 0;
 			isComposite = true;
@@ -794,7 +794,7 @@ public class RequestDetails15 {
 						com.tools20022.repository.constraints.ConstraintOtherProcessingRule.forRequestDetails15, com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails15);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails15";
-				definition = "Details of the settlement condition modification request";
+				definition = "Details of the settlement condition modification request.";
 				previousVersion_lazy = () -> RequestDetails13.mmObject();
 			}
 		});

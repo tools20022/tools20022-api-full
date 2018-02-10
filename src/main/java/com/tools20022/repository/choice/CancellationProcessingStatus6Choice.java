@@ -172,7 +172,7 @@ public class CancellationProcessingStatus6Choice {
 	 * name} = "CancellationRequested"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Cancelation request for the trade.."</li>
+	 * definition} = "Cancelation request for the trade."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCancellationRequested = new MMMessageAssociationEnd() {
@@ -183,7 +183,7 @@ public class CancellationProcessingStatus6Choice {
 			xmlTag = "CxlReqd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequested";
-			definition = "Cancelation request for the trade..";
+			definition = "Cancelation request for the trade.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

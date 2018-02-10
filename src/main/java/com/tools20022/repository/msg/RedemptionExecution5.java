@@ -656,7 +656,7 @@ public class RedemptionExecution5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of money paid to the investor as a result of the redemption after deduction of charges, commissions and taxes.\n[(Quantity * Price) - (Charges + Commissions +Taxes)]"
+	 * "Amount of money paid to the investor as a result of the redemption after deduction of charges, commissions and taxes.\n[(Quantity * Price) - (Charges + Commissions +Taxes)]."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -676,7 +676,7 @@ public class RedemptionExecution5 {
 			xmlTag = "NetAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
-			definition = "Amount of money paid to the investor as a result of the redemption after deduction of charges, commissions and taxes.\n[(Quantity * Price) - (Charges + Commissions +Taxes)]";
+			definition = "Amount of money paid to the investor as a result of the redemption after deduction of charges, commissions and taxes.\n[(Quantity * Price) - (Charges + Commissions +Taxes)].";
 			nextVersions_lazy = () -> Arrays.asList(RedemptionExecution16.mmNetAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -835,7 +835,7 @@ public class RedemptionExecution5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of money resulting from the redemption before deduction of  charges, commissions and taxes.\n[Quantity * Price]"
+	 * "Amount of money resulting from the redemption before deduction of charges, commissions and taxes.\n[Quantity * Price]."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -855,7 +855,7 @@ public class RedemptionExecution5 {
 			xmlTag = "GrssAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
-			definition = "Amount of money resulting from the redemption before deduction of  charges, commissions and taxes.\n[Quantity * Price]";
+			definition = "Amount of money resulting from the redemption before deduction of charges, commissions and taxes.\n[Quantity * Price].";
 			nextVersions_lazy = () -> Arrays.asList(RedemptionExecution16.mmGrossAmount);
 			maxOccurs = 1;
 			minOccurs = 0;

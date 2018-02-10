@@ -64,6 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice of transaction type, corporate action event or settlement transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent23Choice
+ * SettlementOrCorporateActionEvent23Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent14Choice
@@ -111,6 +119,14 @@ public class SettlementOrCorporateActionEvent17Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the type of securities transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent23Choice#mmSecuritiesTransactionType
+	 * SettlementOrCorporateActionEvent23Choice.mmSecuritiesTransactionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -128,6 +144,7 @@ public class SettlementOrCorporateActionEvent17Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesTransactionType";
 			definition = "Identifies the type of securities transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementOrCorporateActionEvent23Choice.mmSecuritiesTransactionType);
 			previousVersion_lazy = () -> SettlementOrCorporateActionEvent14Choice.mmSecuritiesTransactionType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -170,6 +187,14 @@ public class SettlementOrCorporateActionEvent17Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of corporate event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent23Choice#mmCorporateActionEventType
+	 * SettlementOrCorporateActionEvent23Choice.mmCorporateActionEventType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -187,6 +212,7 @@ public class SettlementOrCorporateActionEvent17Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventType";
 			definition = "Specifies the type of corporate event.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementOrCorporateActionEvent23Choice.mmCorporateActionEventType);
 			previousVersion_lazy = () -> SettlementOrCorporateActionEvent14Choice.mmCorporateActionEventType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -203,6 +229,7 @@ public class SettlementOrCorporateActionEvent17Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementOrCorporateActionEvent17Choice";
 				definition = "Choice of transaction type, corporate action event or settlement transaction.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementOrCorporateActionEvent23Choice.mmObject());
 				previousVersion_lazy = () -> SettlementOrCorporateActionEvent14Choice.mmObject();
 			}
 		});

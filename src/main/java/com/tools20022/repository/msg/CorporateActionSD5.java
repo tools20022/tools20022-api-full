@@ -107,7 +107,7 @@ public class CorporateActionSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification or serial number that is assigned and affixed by an issuer or transfer agent to each securities certificate.  "
+	 * "Unique identification or serial number that is assigned and affixed by an issuer or transfer agent to each securities certificate."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -127,7 +127,7 @@ public class CorporateActionSD5 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Certificate Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateNumber";
-			definition = "Unique identification or serial number that is assigned and affixed by an issuer or transfer agent to each securities certificate.  ";
+			definition = "Unique identification or serial number that is assigned and affixed by an issuer or transfer agent to each securities certificate.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD15.mmCertificateNumber);
 			maxOccurs = 1;
 			minOccurs = 1;

@@ -109,7 +109,7 @@ public class RegistrationReason5 {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the reaoson of the holding status."</li>
+	 * definition} = "Specifies the reason of the holding status."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,7 +125,7 @@ public class RegistrationReason5 {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Specifies the reaoson of the holding status.";
+			definition = "Specifies the reason of the holding status.";
 			previousVersion_lazy = () -> RegistrationReason3.mmCode;
 			maxOccurs = 1;
 			minOccurs = 1;

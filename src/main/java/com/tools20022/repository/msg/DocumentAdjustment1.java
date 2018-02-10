@@ -163,7 +163,7 @@ public class DocumentAdjustment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies whether the adjustment must be substracted or added to the total amount."
+	 * "Specifies whether the adjustment must be subtracted or added to the total amount."
 	 * </li>
 	 * </ul>
 	 */
@@ -175,7 +175,7 @@ public class DocumentAdjustment1 {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Specifies whether the adjustment must be substracted or added to the total amount.";
+			definition = "Specifies whether the adjustment must be subtracted or added to the total amount.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();

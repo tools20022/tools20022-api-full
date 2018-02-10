@@ -308,7 +308,7 @@ public class PowerOfAttorneyRequirements {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Meeting to which the power  of attorney requirements apply."</li>
+	 * "Meeting to which the power of attorney requirements apply."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmMeeting = new MMBusinessAssociationEnd() {
@@ -317,7 +317,7 @@ public class PowerOfAttorneyRequirements {
 			elementContext_lazy = () -> com.tools20022.repository.entity.PowerOfAttorneyRequirements.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Meeting";
-			definition = "Meeting to which the power  of attorney requirements apply.";
+			definition = "Meeting to which the power of attorney requirements apply.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Meeting.mmPowerOfAttorneyRequirements;
 			aggregation = MMAggregation.NONE;

@@ -454,8 +454,8 @@ public class CashOption4 {
 	 * name} = "ForeignExchangeDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Exchange rate between the amount and the resulting amount"
-	 * </li>
+	 * definition} =
+	 * "Exchange rate between the amount and the resulting amount."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmForeignExchangeDetails = new MMMessageAssociationEnd() {
@@ -467,7 +467,7 @@ public class CashOption4 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::EXCH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
-			definition = "Exchange rate between the amount and the resulting amount";
+			definition = "Exchange rate between the amount and the resulting amount.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

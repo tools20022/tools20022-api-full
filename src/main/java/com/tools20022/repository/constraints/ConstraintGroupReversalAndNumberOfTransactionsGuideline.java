@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.pain.CustomerPaymentReversalV05;
 import com.tools20022.repository.area.pain.CustomerPaymentReversalV06;
 import com.tools20022.repository.area.pain.CustomerPaymentReversalV07;
+import com.tools20022.repository.area.pain.CustomerPaymentReversalV08;
 import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
@@ -34,53 +35,6 @@ import java.util.Arrays;
  */
 public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV06
-	 * CustomerPaymentReversalV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forCustomerPaymentReversalV07
-	 * ConstraintGroupReversalAndNumberOfTransactionsGuideline.
-	 * forCustomerPaymentReversalV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forCustomerPaymentReversalV05
-	 * ConstraintGroupReversalAndNumberOfTransactionsGuideline.
-	 * forCustomerPaymentReversalV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CustomerPaymentReversalV06> forCustomerPaymentReversalV06 = new MMConstraint<CustomerPaymentReversalV06>() {
-		{
-			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkCustomerPaymentReversalV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "GroupReversalAndNumberOfTransactionsGuideline";
-			definition = "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV05;
-			owner_lazy = () -> CustomerPaymentReversalV06.mmObject();
-		}
-	};
 	/**
 	 * 
 	 <p>
@@ -100,6 +54,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forCustomerPaymentReversalV08
+	 * ConstraintGroupReversalAndNumberOfTransactionsGuideline.
+	 * forCustomerPaymentReversalV08}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -114,8 +77,46 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV06;
 			owner_lazy = () -> CustomerPaymentReversalV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08
+	 * CustomerPaymentReversalV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forCustomerPaymentReversalV07
+	 * ConstraintGroupReversalAndNumberOfTransactionsGuideline.
+	 * forCustomerPaymentReversalV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CustomerPaymentReversalV08> forCustomerPaymentReversalV08 = new MMConstraint<CustomerPaymentReversalV08>() {
+		{
+			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkCustomerPaymentReversalV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupReversalAndNumberOfTransactionsGuideline";
+			definition = "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV07;
+			owner_lazy = () -> CustomerPaymentReversalV08.mmObject();
 		}
 	};
 	/**
@@ -163,6 +164,53 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsRule.forCustomerPaymentReversalV04;
 			owner_lazy = () -> CustomerPaymentReversalV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV06
+	 * CustomerPaymentReversalV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forCustomerPaymentReversalV07
+	 * ConstraintGroupReversalAndNumberOfTransactionsGuideline.
+	 * forCustomerPaymentReversalV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forCustomerPaymentReversalV05
+	 * ConstraintGroupReversalAndNumberOfTransactionsGuideline.
+	 * forCustomerPaymentReversalV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CustomerPaymentReversalV06> forCustomerPaymentReversalV06 = new MMConstraint<CustomerPaymentReversalV06>() {
+		{
+			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkCustomerPaymentReversalV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupReversalAndNumberOfTransactionsGuideline";
+			definition = "If GroupHeader/GroupReversal is false and OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is false, then NumberOfTransactions must equal the number of occurrences of OriginalPaymentInformationAndReversal[*]/TransactionInformation.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forCustomerPaymentReversalV05;
+			owner_lazy = () -> CustomerPaymentReversalV06.mmObject();
 		}
 	};
 	/**
@@ -241,6 +289,15 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * definition} =
 	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forGroupHeader75
+	 * ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader75}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<GroupHeader56> forGroupHeader56 = new MMConstraint<GroupHeader56>() {
@@ -249,6 +306,7 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
 			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader75);
 			owner_lazy = () -> GroupHeader56.mmObject();
 		}
 	};
@@ -423,7 +481,7 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
+	 * "ISO20022 Rule: \nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
 	 * </ul>
 	 */
@@ -432,7 +490,7 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
-			definition = "ISO20022 Rule:\nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
+			definition = "ISO20022 Rule: \nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader18.mmObject();
 		}
 	};
@@ -452,7 +510,7 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
+	 * "ISO20022 Rule: \nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
 	 * </ul>
 	 */
@@ -461,7 +519,7 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReversalAndNumberOfTransactionsGuideline";
-			definition = "ISO20022 Rule:\nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
+			definition = "ISO20022 Rule: \nIf GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader30.mmObject();
 		}
 	};
@@ -501,16 +559,42 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 			owner_lazy = () -> GroupHeader71.mmObject();
 		}
 	};
-
 	/**
-	 * If GroupHeader/GroupReversal is false and
-	 * OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is
-	 * false, then NumberOfTransactions must equal the number of occurrences of
-	 * OriginalPaymentInformationAndReversal[*]/TransactionInformation.
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.GroupHeader75 GroupHeader75}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "GroupReversalAndNumberOfTransactionsGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline#forGroupHeader56
+	 * ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader56}
+	 * </li>
+	 * </ul>
 	 */
-	public static void checkCustomerPaymentReversalV06(CustomerPaymentReversalV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
+	public static final MMConstraint<GroupHeader75> forGroupHeader75 = new MMConstraint<GroupHeader75>() {
+		{
+			validator = ConstraintGroupReversalAndNumberOfTransactionsGuideline::checkGroupHeader75;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "GroupReversalAndNumberOfTransactionsGuideline";
+			definition = "If GroupReversal is true, then NumberOfTransactions equals the number of transactions in the original message.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintGroupReversalAndNumberOfTransactionsGuideline.forGroupHeader56;
+			owner_lazy = () -> GroupHeader75.mmObject();
+		}
+	};
 
 	/**
 	 * If GroupHeader/GroupReversal is false and
@@ -528,7 +612,27 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * false, then NumberOfTransactions must equal the number of occurrences of
 	 * OriginalPaymentInformationAndReversal[*]/TransactionInformation.
 	 */
+	public static void checkCustomerPaymentReversalV08(CustomerPaymentReversalV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If GroupHeader/GroupReversal is false and
+	 * OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is
+	 * false, then NumberOfTransactions must equal the number of occurrences of
+	 * OriginalPaymentInformationAndReversal[*]/TransactionInformation.
+	 */
 	public static void checkCustomerPaymentReversalV05(CustomerPaymentReversalV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If GroupHeader/GroupReversal is false and
+	 * OriginalPaymentInformationAndReversal[*]/PaymentInformationReversal is
+	 * false, then NumberOfTransactions must equal the number of occurrences of
+	 * OriginalPaymentInformationAndReversal[*]/TransactionInformation.
+	 */
+	public static void checkCustomerPaymentReversalV06(CustomerPaymentReversalV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -617,6 +721,14 @@ public class ConstraintGroupReversalAndNumberOfTransactionsGuideline {
 	 * transactions in the original message.
 	 */
 	public static void checkGroupHeader71(GroupHeader71 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If GroupReversal is true, then NumberOfTransactions equals the number of
+	 * transactions in the original message.
+	 */
+	public static void checkGroupHeader75(GroupHeader75 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

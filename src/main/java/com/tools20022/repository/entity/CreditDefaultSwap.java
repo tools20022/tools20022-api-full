@@ -111,7 +111,7 @@ import java.util.Objects;
  * "CreditDefaultSwap"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Credit default swap is a particular type of swap designed to transfer the credit exposure of fixed income products between two or more parties. "
+ * "Credit default swap is a particular type of swap designed to transfer the credit exposure of fixed income products between two or more parties."
  * </li>
  * </ul>
  */
@@ -285,7 +285,7 @@ public class CreditDefaultSwap extends Swaps {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditDefaultSwap";
-				definition = "Credit default swap is a particular type of swap designed to transfer the credit exposure of fixed income products between two or more parties. ";
+				definition = "Credit default swap is a particular type of swap designed to transfer the credit exposure of fixed income products between two or more parties.";
 				derivationElement_lazy = () -> Arrays.asList(CreditDefaultSwapDerivative4.mmSingleName, Derivative2Choice.mmCredit, CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwap,
 						CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndex, CreditDefaultSwapsDerivative3Choice.mmSingleNameCreditDefaultSwapDerivative, CreditDefaultSwapsDerivative3Choice.mmCreditDefaultSwapIndexDerivative);
 				superType_lazy = () -> Swaps.mmObject();

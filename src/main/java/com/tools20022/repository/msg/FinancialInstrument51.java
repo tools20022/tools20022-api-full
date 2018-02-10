@@ -423,7 +423,7 @@ public class FinancialInstrument51 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy,  for example, pay out or accumulate, or a trailer policy,  for example, with or without. Fund classes are typically denoted by a single character,  for example, 'Class A', 'Class 2'."
+	 * "Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy, for example, pay out or accumulate, or a trailer policy, for example, with or without. Fund classes are typically denoted by a single character, for example, 'Class A', 'Class 2'."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -448,7 +448,7 @@ public class FinancialInstrument51 {
 			xmlTag = "ClssTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassType";
-			definition = "Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy,  for example, pay out or accumulate, or a trailer policy,  for example, with or without. Fund classes are typically denoted by a single character,  for example, 'Class A', 'Class 2'.";
+			definition = "Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy, for example, pay out or accumulate, or a trailer policy, for example, with or without. Fund classes are typically denoted by a single character, for example, 'Class A', 'Class 2'.";
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument56.mmClassType);
 			previousVersion_lazy = () -> FinancialInstrument29.mmClassType;
 			maxOccurs = 1;
@@ -905,8 +905,7 @@ public class FinancialInstrument51 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies if all the shares are owned exclusively by the fund company. "
-	 * </li>
+	 * "Specifies if all the shares are owned exclusively by the fund company."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -924,7 +923,7 @@ public class FinancialInstrument51 {
 			xmlTag = "FndOwnrsh";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundOwnership";
-			definition = "Specifies if all the shares are owned exclusively by the fund company. ";
+			definition = "Specifies if all the shares are owned exclusively by the fund company.";
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument56.mmFundOwnership);
 			maxOccurs = 1;
 			minOccurs = 0;

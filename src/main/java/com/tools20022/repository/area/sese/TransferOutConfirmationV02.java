@@ -334,8 +334,7 @@ public class TransferOutConfirmationV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "General information related to the transfer of a financial instrument. "
-	 * </li>
+	 * "General information related to the transfer of a financial instrument."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmTransferDetails = new MMMessageBuildingBlock() {
@@ -343,7 +342,7 @@ public class TransferOutConfirmationV02 {
 			xmlTag = "TrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
-			definition = "General information related to the transfer of a financial instrument. ";
+			definition = "General information related to the transfer of a financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Transfer10.mmObject();

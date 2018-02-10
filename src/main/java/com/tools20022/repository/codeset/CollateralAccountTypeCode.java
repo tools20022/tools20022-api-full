@@ -58,6 +58,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.codeset.CollateralAccountType1Code
  * CollateralAccountType1Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.CollateralAccountType3Code
+ * CollateralAccountType3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -267,7 +269,7 @@ public class CollateralAccountTypeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CollateralAccountTypeCode";
 				definition = "Specifies the collateral account type.";
-				derivation_lazy = () -> Arrays.asList(CollateralAccountType1Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(CollateralAccountType1Code.mmObject(), CollateralAccountType3Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CollateralAccountTypeCode.House, com.tools20022.repository.codeset.CollateralAccountTypeCode.Client,
 						com.tools20022.repository.codeset.CollateralAccountTypeCode.LiquidityProvider, com.tools20022.repository.codeset.CollateralAccountTypeCode.Margin,
 						com.tools20022.repository.codeset.CollateralAccountTypeCode.DefaultFund);

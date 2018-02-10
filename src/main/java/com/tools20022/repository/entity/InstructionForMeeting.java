@@ -597,7 +597,7 @@ public class InstructionForMeeting {
 	 * name} = "BlockingSecurities"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Request to block the securities"</li>
+	 * definition} = "Request to block the securities."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmBlockingSecurities = new MMBusinessAttribute() {
@@ -607,7 +607,7 @@ public class InstructionForMeeting {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InstructionForMeeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BlockingSecurities";
-			definition = "Request to block the securities";
+			definition = "Request to block the securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

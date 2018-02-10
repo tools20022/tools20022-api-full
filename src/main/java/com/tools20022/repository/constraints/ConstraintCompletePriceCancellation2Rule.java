@@ -49,7 +49,7 @@ public class ConstraintCompletePriceCancellation2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CompletePriceCancellation is \"true\" or \"1\" (Yes), then CancelledPriceValuationDetails  must not be present."
+	 * "If CompletePriceCancellation is \"true\" or \"1\" (Yes), then CancelledPriceValuationDetails must not be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -58,7 +58,7 @@ public class ConstraintCompletePriceCancellation2Rule {
 			validator = ConstraintCompletePriceCancellation2Rule::checkPriceReportCancellationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletePriceCancellation2Rule";
-			definition = "If CompletePriceCancellation is \"true\" or \"1\" (Yes), then CancelledPriceValuationDetails  must not be present.";
+			definition = "If CompletePriceCancellation is \"true\" or \"1\" (Yes), then CancelledPriceValuationDetails must not be present.";
 			owner_lazy = () -> PriceReportCancellationV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CancelledPriceValuationDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CompletePriceCancellation</leftOperand><rightOperand>True</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}

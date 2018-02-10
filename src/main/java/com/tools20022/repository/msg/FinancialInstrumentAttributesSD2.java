@@ -64,6 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding security that will be distributed as part of entitlement."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD18
+ * FinancialInstrumentAttributesSD18}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,6 +112,15 @@ public class FinancialInstrumentAttributesSD2 {
 	 * definition} =
 	 * "Security identification of the security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD18#mmDeclaredDisbursedSecurityIdentification
+	 * FinancialInstrumentAttributesSD18.
+	 * mmDeclaredDisbursedSecurityIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDeclaredDisbursedSecurityIdentification = new MMMessageAttribute() {
@@ -115,6 +132,7 @@ public class FinancialInstrumentAttributesSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityIdentification";
 			definition = "Security identification of the security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD18.mmDeclaredDisbursedSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
@@ -151,6 +169,15 @@ public class FinancialInstrumentAttributesSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Declared disbursed security description."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributesSD18#mmDeclaredDisbursedSecurityDescription
+	 * FinancialInstrumentAttributesSD18.mmDeclaredDisbursedSecurityDescription}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDeclaredDisbursedSecurityDescription = new MMMessageAttribute() {
@@ -162,6 +189,7 @@ public class FinancialInstrumentAttributesSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredDisbursedSecurityDescription";
 			definition = "Declared disbursed security description.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD18.mmDeclaredDisbursedSecurityDescription);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -177,6 +205,7 @@ public class FinancialInstrumentAttributesSD2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributesSD2";
 				definition = "Provides additional information regarding security that will be distributed as part of entitlement.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD18.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

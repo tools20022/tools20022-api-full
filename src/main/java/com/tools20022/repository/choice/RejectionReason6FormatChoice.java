@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * "RejectionReason6FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the reason of a rejection of the notification advice."
+ * "Choice of formats to express the reason of a rejection of the notification advice."
  * </li>
  * </ul>
  */
@@ -161,7 +161,7 @@ public class RejectionReason6FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the reason of a rejection of the notification advice."
+	 * "Proprietary code to express the reason of a rejection of the notification advice."
 	 * </li>
 	 * </ul>
 	 */
@@ -173,7 +173,7 @@ public class RejectionReason6FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the reason of a rejection of the notification advice.";
+			definition = "Proprietary code to express the reason of a rejection of the notification advice.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -188,7 +188,7 @@ public class RejectionReason6FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason6FormatChoice";
-				definition = "Choice of formats to  express the reason of a rejection of the notification advice.";
+				definition = "Choice of formats to express the reason of a rejection of the notification advice.";
 			}
 		});
 		return mmObject_lazy.get();

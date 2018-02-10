@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Provides information about identification of the party .
+ * Provides information about identification of the party.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PartyIdentification102"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Provides information about identification of the party ."</li>
+ * definition} = "Provides information about identification of the party."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -284,7 +284,7 @@ public class PartyIdentification102 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentification102);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification102";
-				definition = "Provides information about identification of the party .";
+				definition = "Provides information about identification of the party.";
 				nextVersions_lazy = () -> Arrays.asList(PartyIdentification120.mmObject());
 			}
 		});

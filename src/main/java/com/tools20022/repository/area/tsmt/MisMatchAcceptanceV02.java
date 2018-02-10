@@ -267,7 +267,7 @@ public class MisMatchAcceptanceV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the identification of the report that contained the difference. "
+	 * "Reference to the identification of the report that contained the difference."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +276,7 @@ public class MisMatchAcceptanceV02 {
 			xmlTag = "DataSetMtchRptRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSetMatchReportReference";
-			definition = "Reference to the identification of the report that contained the difference. ";
+			definition = "Reference to the identification of the report that contained the difference.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> MessageIdentification1.mmObject();

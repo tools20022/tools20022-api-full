@@ -81,6 +81,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice
  * ProcessingStatus43Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice
+ * ProcessingStatus72Choice}</li>
  * </ul>
  * </li>
  * </ul>
@@ -127,6 +129,9 @@ public class ProcessingStatus36Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmAccepted
 	 * ProcessingStatus43Choice.mmAccepted}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmAcknowledgedAccepted
+	 * ProcessingStatus72Choice.mmAcknowledgedAccepted}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -140,7 +145,7 @@ public class ProcessingStatus36Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedAccepted";
 			definition = "Instruction has been acknowledged by the executing party.";
-			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmAccepted);
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmAccepted, ProcessingStatus72Choice.mmAcknowledgedAccepted);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -184,6 +189,9 @@ public class ProcessingStatus36Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmPendingProcessing
 	 * ProcessingStatus43Choice.mmPendingProcessing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmPendingProcessing
+	 * ProcessingStatus72Choice.mmPendingProcessing}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -197,7 +205,7 @@ public class ProcessingStatus36Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingProcessing";
 			definition = "Instruction is pendingprocessing by the executing party.";
-			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmPendingProcessing);
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmPendingProcessing, ProcessingStatus72Choice.mmPendingProcessing);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -241,6 +249,9 @@ public class ProcessingStatus36Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmRejected
 	 * ProcessingStatus43Choice.mmRejected}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmRejected
+	 * ProcessingStatus72Choice.mmRejected}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -254,7 +265,7 @@ public class ProcessingStatus36Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rejected";
 			definition = "Instruction is rejected by the executing party.";
-			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmRejected);
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmRejected, ProcessingStatus72Choice.mmRejected);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -291,6 +302,14 @@ public class ProcessingStatus36Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Instruction has been completed by the executing party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmCompleted
+	 * ProcessingStatus72Choice.mmCompleted}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCompleted = new MMMessageAssociationEnd() {
@@ -302,6 +321,7 @@ public class ProcessingStatus36Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Completed";
 			definition = "Instruction has been completed by the executing party.";
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus72Choice.mmCompleted);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -348,6 +368,9 @@ public class ProcessingStatus36Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus43Choice#mmProprietaryStatus
 	 * ProcessingStatus43Choice.mmProprietaryStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmProprietary
+	 * ProcessingStatus72Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -361,7 +384,7 @@ public class ProcessingStatus36Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Status that cannot be reported using one of the available standard status.";
-			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmProprietaryStatus);
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmProprietaryStatus, ProcessingStatus72Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -379,7 +402,7 @@ public class ProcessingStatus36Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProcessingStatus36Choice";
 				definition = "Specifies the status and the reason of the operation.";
-				nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(ProcessingStatus43Choice.mmObject(), ProcessingStatus72Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

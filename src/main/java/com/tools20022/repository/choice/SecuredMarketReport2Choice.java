@@ -172,7 +172,7 @@ public class SecuredMarketReport2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the details of the secured market transaction as reported by the reporting agent"
+	 * "Provides the details of the secured market transaction as reported by the reporting agent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -196,7 +196,7 @@ public class SecuredMarketReport2Choice {
 			xmlTag = "Tx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
-			definition = "Provides the details of the secured market transaction as reported by the reporting agent";
+			definition = "Provides the details of the secured market transaction as reported by the reporting agent.";
 			nextVersions_lazy = () -> Arrays.asList(SecuredMarketReport3Choice.mmTransaction);
 			previousVersion_lazy = () -> SecuredMarketReport1Choice.mmTransaction;
 			minOccurs = 1;

@@ -50,7 +50,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "CorporateInvestor"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Corporate that makes investment decisions in relation with its investment account. "
+ * "Corporate that makes investment decisions in relation with its investment account."
  * </li>
  * </ul>
  */
@@ -64,7 +64,7 @@ public class CorporateInvestor extends InvestmentAccountPartyRole {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateInvestor";
-				definition = "Corporate that makes investment decisions in relation with its investment account. ";
+				definition = "Corporate that makes investment decisions in relation with its investment account.";
 				superType_lazy = () -> InvestmentAccountPartyRole.mmObject();
 			}
 

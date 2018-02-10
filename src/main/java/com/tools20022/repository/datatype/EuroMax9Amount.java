@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * Number of monetary units specified in a currency, where the unit of currency
  * is the EUR and compliant with ISO 4217. The decimal separator is a dot, of
  * maximum 9 digits before the dot and 2 after. Note: A zero amount is not
- * allowed
+ * allowed.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "EuroMax9Amount"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Number of monetary units specified in a currency, where the unit of currency is the EUR and compliant with ISO 4217.  The decimal separator is a dot, of maximum 9 digits before the dot and 2 after.\nNote: A zero amount is not allowed"
+ * "Number of monetary units specified in a currency, where the unit of currency is the EUR and compliant with ISO 4217. The decimal separator is a dot, of maximum 9 digits before the dot and 2 after.\nNote: A zero amount is not allowed."
  * </li>
  * </ul>
  */
@@ -80,7 +80,7 @@ public class EuroMax9Amount {
 				example = Arrays.asList("1000");
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EuroMax9Amount";
-				definition = "Number of monetary units specified in a currency, where the unit of currency is the EUR and compliant with ISO 4217.  The decimal separator is a dot, of maximum 9 digits before the dot and 2 after.\nNote: A zero amount is not allowed";
+				definition = "Number of monetary units specified in a currency, where the unit of currency is the EUR and compliant with ISO 4217. The decimal separator is a dot, of maximum 9 digits before the dot and 2 after.\nNote: A zero amount is not allowed.";
 				currencyIdentifierSet_lazy = () -> EuroCurrencyCode.mmObject();
 				minInclusive = "0.01";
 				maxInclusive = "999999999.99";

@@ -24,7 +24,7 @@ import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
- * When RateType is equal to Fixed (FIXE), then DealRate must be present
+ * When RateType is equal to Fixed (FIXE), then DealRate must be present.
  */
 public class ConstraintDealRatePresenceRule {
 
@@ -49,7 +49,7 @@ public class ConstraintDealRatePresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present"</li>
+	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -65,7 +65,7 @@ public class ConstraintDealRatePresenceRule {
 			validator = ConstraintDealRatePresenceRule::checkUnsecuredMarketTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
-			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present";
+			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction2);
 			owner_lazy = () -> UnsecuredMarketTransaction1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -92,7 +92,7 @@ public class ConstraintDealRatePresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present"</li>
+	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -108,7 +108,7 @@ public class ConstraintDealRatePresenceRule {
 			validator = ConstraintDealRatePresenceRule::checkSecuredMarketTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
-			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present";
+			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction2);
 			owner_lazy = () -> SecuredMarketTransaction1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -135,7 +135,7 @@ public class ConstraintDealRatePresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present"</li>
+	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -156,7 +156,7 @@ public class ConstraintDealRatePresenceRule {
 			validator = ConstraintDealRatePresenceRule::checkUnsecuredMarketTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
-			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present";
+			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction1;
 			owner_lazy = () -> UnsecuredMarketTransaction2.mmObject();
@@ -184,7 +184,7 @@ public class ConstraintDealRatePresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present"</li>
+	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -205,7 +205,7 @@ public class ConstraintDealRatePresenceRule {
 			validator = ConstraintDealRatePresenceRule::checkSecuredMarketTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
-			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present";
+			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction1;
 			owner_lazy = () -> SecuredMarketTransaction2.mmObject();
@@ -233,7 +233,7 @@ public class ConstraintDealRatePresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present"</li>
+	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -254,7 +254,7 @@ public class ConstraintDealRatePresenceRule {
 			validator = ConstraintDealRatePresenceRule::checkUnsecuredMarketTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
-			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present";
+			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction4);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction2;
 			owner_lazy = () -> UnsecuredMarketTransaction3.mmObject();
@@ -282,7 +282,7 @@ public class ConstraintDealRatePresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present"</li>
+	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -303,7 +303,7 @@ public class ConstraintDealRatePresenceRule {
 			validator = ConstraintDealRatePresenceRule::checkSecuredMarketTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
-			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present";
+			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction4);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction2;
 			owner_lazy = () -> SecuredMarketTransaction3.mmObject();
@@ -331,7 +331,7 @@ public class ConstraintDealRatePresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present"</li>
+	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -344,7 +344,7 @@ public class ConstraintDealRatePresenceRule {
 			validator = ConstraintDealRatePresenceRule::checkSecuredMarketTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
-			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present";
+			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forSecuredMarketTransaction3;
 			owner_lazy = () -> SecuredMarketTransaction4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -371,7 +371,7 @@ public class ConstraintDealRatePresenceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present"</li>
+	 * "When RateType is equal to Fixed (FIXE), then DealRate must be present."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -384,7 +384,7 @@ public class ConstraintDealRatePresenceRule {
 			validator = ConstraintDealRatePresenceRule::checkUnsecuredMarketTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealRatePresenceRule";
-			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present";
+			definition = "When RateType is equal to Fixed (FIXE), then DealRate must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDealRatePresenceRule.forUnsecuredMarketTransaction3;
 			owner_lazy = () -> UnsecuredMarketTransaction4.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/DealRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/RateType</leftOperand><rightOperand>Fixed</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -392,56 +392,56 @@ public class ConstraintDealRatePresenceRule {
 	};
 
 	/**
-	 * When RateType is equal to Fixed (FIXE), then DealRate must be present
+	 * When RateType is equal to Fixed (FIXE), then DealRate must be present.
 	 */
 	public static void checkUnsecuredMarketTransaction1(UnsecuredMarketTransaction1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * When RateType is equal to Fixed (FIXE), then DealRate must be present
+	 * When RateType is equal to Fixed (FIXE), then DealRate must be present.
 	 */
 	public static void checkSecuredMarketTransaction1(SecuredMarketTransaction1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * When RateType is equal to Fixed (FIXE), then DealRate must be present
+	 * When RateType is equal to Fixed (FIXE), then DealRate must be present.
 	 */
 	public static void checkUnsecuredMarketTransaction2(UnsecuredMarketTransaction2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * When RateType is equal to Fixed (FIXE), then DealRate must be present
+	 * When RateType is equal to Fixed (FIXE), then DealRate must be present.
 	 */
 	public static void checkSecuredMarketTransaction2(SecuredMarketTransaction2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * When RateType is equal to Fixed (FIXE), then DealRate must be present
+	 * When RateType is equal to Fixed (FIXE), then DealRate must be present.
 	 */
 	public static void checkUnsecuredMarketTransaction3(UnsecuredMarketTransaction3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * When RateType is equal to Fixed (FIXE), then DealRate must be present
+	 * When RateType is equal to Fixed (FIXE), then DealRate must be present.
 	 */
 	public static void checkSecuredMarketTransaction3(SecuredMarketTransaction3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * When RateType is equal to Fixed (FIXE), then DealRate must be present
+	 * When RateType is equal to Fixed (FIXE), then DealRate must be present.
 	 */
 	public static void checkSecuredMarketTransaction4(SecuredMarketTransaction4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * When RateType is equal to Fixed (FIXE), then DealRate must be present
+	 * When RateType is equal to Fixed (FIXE), then DealRate must be present.
 	 */
 	public static void checkUnsecuredMarketTransaction4(UnsecuredMarketTransaction4 obj) throws Exception {
 		throw new NotImplementedConstraintException();

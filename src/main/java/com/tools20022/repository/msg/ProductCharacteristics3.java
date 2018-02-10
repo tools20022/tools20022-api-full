@@ -64,6 +64,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ProductCharacteristics3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Product characteristic applicable to this trade product."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ProductCharacteristics4
+ * ProductCharacteristics4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ProductCharacteristics2
@@ -108,6 +115,14 @@ public class ProductCharacteristics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Characteristics of the product."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics4#mmCharacteristic
+	 * ProductCharacteristics4.mmCharacteristic}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +139,7 @@ public class ProductCharacteristics3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristic";
 			definition = "Characteristics of the product.";
+			nextVersions_lazy = () -> Arrays.asList(ProductCharacteristics4.mmCharacteristic);
 			previousVersion_lazy = () -> ProductCharacteristics2.mmCharacteristic;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -157,6 +173,14 @@ public class ProductCharacteristics3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Measurement value for this product characteristic."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProductCharacteristics4#mmValueMeasure
+	 * ProductCharacteristics4.mmValueMeasure}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,6 +196,7 @@ public class ProductCharacteristics3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueMeasure";
 			definition = "Measurement value for this product characteristic.";
+			nextVersions_lazy = () -> Arrays.asList(ProductCharacteristics4.mmValueMeasure);
 			previousVersion_lazy = () -> ProductCharacteristics2.mmValueMeasure;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -188,6 +213,7 @@ public class ProductCharacteristics3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProductCharacteristics3";
 				definition = "Product characteristic applicable to this trade product.";
+				nextVersions_lazy = () -> Arrays.asList(ProductCharacteristics4.mmObject());
 				previousVersion_lazy = () -> ProductCharacteristics2.mmObject();
 			}
 		});

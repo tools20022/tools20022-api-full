@@ -213,7 +213,7 @@ public class AmountAndCurrencyExchange3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Set of elements used to provide the countervalue amount and  currency exchange information. \nUsage: This can be either the counter amount quoted in an FX deal, or the result of the currency information applied to an instructed amount, before deduction of charges."
+	 * "Set of elements used to provide the countervalue amount and currency exchange information. \nUsage: This can be either the counter amount quoted in an FX deal, or the result of the currency information applied to an instructed amount, before deduction of charges."
 	 * </li>
 	 * </ul>
 	 */
@@ -225,7 +225,7 @@ public class AmountAndCurrencyExchange3 {
 			xmlTag = "CntrValAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterValueAmount";
-			definition = "Set of elements used to provide the countervalue amount and  currency exchange information. \nUsage: This can be either the counter amount quoted in an FX deal, or the result of the currency information applied to an instructed amount, before deduction of charges.";
+			definition = "Set of elements used to provide the countervalue amount and currency exchange information. \nUsage: This can be either the counter amount quoted in an FX deal, or the result of the currency information applied to an instructed amount, before deduction of charges.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

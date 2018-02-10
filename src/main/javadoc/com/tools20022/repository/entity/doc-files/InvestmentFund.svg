@@ -34,7 +34,7 @@ Price -[hidden]-> CardPayment
 class ProductCategory [[../ProductCategory.html{Specifies the category of the product.}]] #EEEEEE {
 }
 ProductCategory -[hidden]-> Price
-class LineItem [[../LineItem.html{Unit of information  showing the related  provision of products and/or services and monetary summations reported as a discrete line item.}]] #EEEEEE {
+class LineItem [[../LineItem.html{Unit of information showing the related provision of products and/or services and monetary summations reported as a discrete line item.}]] #EEEEEE {
 }
 LineItem -[hidden]-> ProductCategory
 class ProductIdentification [[../ProductIdentification.html{Information used to identify a product.}]] #EEEEEE {

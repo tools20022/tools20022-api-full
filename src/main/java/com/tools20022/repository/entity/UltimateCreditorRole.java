@@ -57,6 +57,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.RequestedModification6#mmUltimateCreditor
  * RequestedModification6.mmUltimateCreditor}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmUltimateCreditor
+ * RequestedModification7.mmUltimateCreditor}</li>
  * </ul>
  * </li>
  * <li>
@@ -86,7 +89,7 @@ public class UltimateCreditorRole extends PaymentObligationPartyRole {
 				name = "UltimateCreditorRole";
 				definition = "Ultimate party to which an amount of money is due.";
 				derivationElement_lazy = () -> Arrays.asList(RequestedModification2.mmUltimateCreditor, RequestedModification3.mmUltimateCreditor, RequestedModification4.mmUltimateCreditor, RequestedModification5.mmUltimateCreditor,
-						RequestedModification6.mmUltimateCreditor);
+						RequestedModification6.mmUltimateCreditor, RequestedModification7.mmUltimateCreditor);
 				superType_lazy = () -> PaymentObligationPartyRole.mmObject();
 			}
 

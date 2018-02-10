@@ -37,6 +37,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.CountrySubDivision1Code
+ * CountrySubDivision1Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMString#getPattern pattern} =
  * "[A-Z]{2,2}\\-[0-9A-Z]{1,3}"</li>
  * <li>
@@ -79,6 +86,7 @@ public class CountrySubDivisionCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CountrySubDivisionCode";
 				definition = "Code to identify a name of a unit resulting from the division of a country, dependency, or other area of special geopolitical interest contained in ISO 3166-1, on the basis of country names obtained from the United Nations (ISO 3166-2: Country subdivision code).";
+				derivation_lazy = () -> Arrays.asList(CountrySubDivision1Code.mmObject());
 				pattern = "[A-Z]{2,2}\\-[0-9A-Z]{1,3}";
 			}
 		});

@@ -29,11 +29,84 @@ import java.util.Arrays;
  * (Yes) in one or more occurrences of CorporateActionOptionDetails, then
  * CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must
  * be CHOS (MandatoryWithOptions) and at least one of the
- * CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be
+ * CorporateActionDetails/AdditionalBusinessProcessIndicator/Code values must be
  * REAC (RequiredAction).
  */
 public class ConstraintAppliedOptionRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotificationV08
+	 * CorporateActionNotificationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AppliedOptionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code values must be REAC (RequiredAction)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionNotificationV07
+	 * ConstraintAppliedOptionRule.forCorporateActionNotificationV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionNotificationV08> forCorporateActionNotificationV08 = new MMConstraint<CorporateActionNotificationV08>() {
+		{
+			validator = ConstraintAppliedOptionRule::checkCorporateActionNotificationV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AppliedOptionRule";
+			definition = "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code values must be REAC (RequiredAction).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionNotificationV07;
+			owner_lazy = () -> CorporateActionNotificationV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09
+	 * CorporateActionMovementPreliminaryAdviceV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AppliedOptionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code values must be REAC (RequiredAction)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionMovementPreliminaryAdviceV08
+	 * ConstraintAppliedOptionRule.
+	 * forCorporateActionMovementPreliminaryAdviceV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV09> forCorporateActionMovementPreliminaryAdviceV09 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV09>() {
+		{
+			validator = ConstraintAppliedOptionRule::checkCorporateActionMovementPreliminaryAdviceV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AppliedOptionRule";
+			definition = "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code values must be REAC (RequiredAction).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionMovementPreliminaryAdviceV08;
+			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV09.mmObject();
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -51,7 +124,15 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
+	 * "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionNotificationV08
+	 * ConstraintAppliedOptionRule.forCorporateActionNotificationV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -65,7 +146,8 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionNotificationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
+			definition = "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionNotificationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionNotificationV06;
 			owner_lazy = () -> CorporateActionNotificationV07.mmObject();
 		}
@@ -87,7 +169,16 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
+	 * "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionMovementPreliminaryAdviceV09
+	 * ConstraintAppliedOptionRule.
+	 * forCorporateActionMovementPreliminaryAdviceV09}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -102,7 +193,8 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionMovementPreliminaryAdviceV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
+			definition = "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionMovementPreliminaryAdviceV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionMovementPreliminaryAdviceV07;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV08.mmObject();
 		}
@@ -124,7 +216,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
+	 * "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
 	 * </li>
 	 * </ul>
 	 */
@@ -133,7 +225,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionMovementPreliminaryAdvice002V08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
+			definition = "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdvice002V08.mmObject();
 		}
 	};
@@ -154,7 +246,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
+	 * "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
 	 * </li>
 	 * </ul>
 	 */
@@ -163,7 +255,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionNotification002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
+			definition = "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
 			owner_lazy = () -> CorporateActionNotification002V07.mmObject();
 		}
 	};
@@ -184,7 +276,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
+	 * "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -202,7 +294,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionMovementPreliminaryAdviceV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
+			definition = "If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionMovementDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionMovementPreliminaryAdviceV08);
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV07.mmObject();
 		}
@@ -224,7 +316,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
+	 * "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -241,7 +333,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and  at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
+			definition = "If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or '1' (Yes) in one or more occurrences of CorporateActionOptionDetails, then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value must be CHOS (MandatoryWithOptions) and at least one of the CorporateActionDetails/AdditionalBusinessProcessIndicator/Code value must be REAC (RequiredAction).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionNotificationV07);
 			owner_lazy = () -> CorporateActionNotificationV06.mmObject();
 		}
@@ -263,7 +355,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes)."
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -280,7 +372,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionOption115;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes).";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionOption129);
 			owner_lazy = () -> CorporateActionOption115.mmObject();
 		}
@@ -302,7 +394,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes)."
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -319,7 +411,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionOption114;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes).";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionOption130);
 			owner_lazy = () -> CorporateActionOption114.mmObject();
 		}
@@ -341,7 +433,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes)."
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
 	 * </li>
 	 * </ul>
 	 */
@@ -350,7 +442,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionOption125;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes).";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
 			owner_lazy = () -> CorporateActionOption125.mmObject();
 		}
 	};
@@ -371,7 +463,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes)."
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
 	 * </li>
 	 * </ul>
 	 */
@@ -380,7 +472,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionOption127;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes).";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
 			owner_lazy = () -> CorporateActionOption127.mmObject();
 		}
 	};
@@ -401,7 +493,15 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes)."
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionOption138
+	 * ConstraintAppliedOptionRule.forCorporateActionOption138}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -415,7 +515,8 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionOption130;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes).";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionOption138);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionOption114;
 			owner_lazy = () -> CorporateActionOption130.mmObject();
 		}
@@ -437,7 +538,15 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes)."
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionOption139
+	 * ConstraintAppliedOptionRule.forCorporateActionOption139}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -451,7 +560,8 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionOption129;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes).";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionOption139);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionOption115;
 			owner_lazy = () -> CorporateActionOption129.mmObject();
 		}
@@ -473,7 +583,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes)."
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
 	 * </li>
 	 * </ul>
 	 */
@@ -482,7 +592,7 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionOption135;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes).";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
 			owner_lazy = () -> CorporateActionOption135.mmObject();
 		}
 	};
@@ -503,7 +613,7 @@ public class ConstraintAppliedOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes)."
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
 	 * </li>
 	 * </ul>
 	 */
@@ -512,10 +622,167 @@ public class ConstraintAppliedOptionRule {
 			validator = ConstraintAppliedOptionRule::checkCorporateActionOption133;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AppliedOptionRule";
-			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be  '1' or 'true' (Yes).";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
 			owner_lazy = () -> CorporateActionOption133.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138
+	 * CorporateActionOption138}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AppliedOptionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionOption130
+	 * ConstraintAppliedOptionRule.forCorporateActionOption130}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption138> forCorporateActionOption138 = new MMConstraint<CorporateActionOption138>() {
+		{
+			validator = ConstraintAppliedOptionRule::checkCorporateActionOption138;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AppliedOptionRule";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionOption130;
+			owner_lazy = () -> CorporateActionOption138.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139
+	 * CorporateActionOption139}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AppliedOptionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAppliedOptionRule#forCorporateActionOption129
+	 * ConstraintAppliedOptionRule.forCorporateActionOption129}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption139> forCorporateActionOption139 = new MMConstraint<CorporateActionOption139>() {
+		{
+			validator = ConstraintAppliedOptionRule::checkCorporateActionOption139;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AppliedOptionRule";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAppliedOptionRule.forCorporateActionOption129;
+			owner_lazy = () -> CorporateActionOption139.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148
+	 * CorporateActionOption148}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AppliedOptionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption148> forCorporateActionOption148 = new MMConstraint<CorporateActionOption148>() {
+		{
+			validator = ConstraintAppliedOptionRule::checkCorporateActionOption148;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AppliedOptionRule";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
+			owner_lazy = () -> CorporateActionOption148.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150
+	 * CorporateActionOption150}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AppliedOptionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption150> forCorporateActionOption150 = new MMConstraint<CorporateActionOption150>() {
+		{
+			validator = ConstraintAppliedOptionRule::checkCorporateActionOption150;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AppliedOptionRule";
+			definition = "If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator value must not be '1' or 'true' (Yes).";
+			owner_lazy = () -> CorporateActionOption150.mmObject();
+		}
+	};
+
+	/**
+	 * If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or
+	 * '1' (Yes) in one or more occurrences of CorporateActionOptionDetails,
+	 * then CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code
+	 * value must be CHOS (MandatoryWithOptions) and at least one of the
+	 * CorporateActionDetails/AdditionalBusinessProcessIndicator/Code values
+	 * must be REAC (RequiredAction).
+	 */
+	public static void checkCorporateActionNotificationV08(CorporateActionNotificationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionMovementDetails/AppliedOptionIndicator value is 'true'
+	 * or '1' (Yes) in one or more occurrences of
+	 * CorporateActionMovementDetails, then
+	 * CorporateActionGeneralInformation/MandatoryVoluntaryEventType/Code value
+	 * must be CHOS (MandatoryWithOptions) and at least one of the
+	 * CorporateActionDetails/AdditionalBusinessProcessIndicator/Code values
+	 * must be REAC (RequiredAction).
+	 */
+	public static void checkCorporateActionMovementPreliminaryAdviceV09(CorporateActionMovementPreliminaryAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If CorporateActionOptionDetails/AppliedOptionIndicator value is 'true' or
@@ -661,6 +928,42 @@ public class ConstraintAppliedOptionRule {
 	 * value must not be '1' or 'true' (Yes).
 	 */
 	public static void checkCorporateActionOption133(CorporateActionOption133 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is
+	 * present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator
+	 * value must not be '1' or 'true' (Yes).
+	 */
+	public static void checkCorporateActionOption138(CorporateActionOption138 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is
+	 * present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator
+	 * value must not be '1' or 'true' (Yes).
+	 */
+	public static void checkCorporateActionOption139(CorporateActionOption139 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is
+	 * present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator
+	 * value must not be '1' or 'true' (Yes).
+	 */
+	public static void checkCorporateActionOption148(CorporateActionOption148 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If DefaultProcessingOrStandingInstruction/DefaultOptionIndicator is
+	 * present and its value is '1' or 'true' (Yes), then AppliedOptionIndicator
+	 * value must not be '1' or 'true' (Yes).
+	 */
+	public static void checkCorporateActionOption150(CorporateActionOption150 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

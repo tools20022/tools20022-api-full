@@ -628,6 +628,15 @@ public class ConstraintActivityAndBalanceForSubAccount1Rule {
 	 * definition} =
 	 * "If the ActivityIndicator is \"true\" (Yes), then at least one occurrence of BalanceForSubAccount must be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintActivityAndBalanceForSubAccount1Rule#forSubAccountIdentification48
+	 * ConstraintActivityAndBalanceForSubAccount1Rule.
+	 * forSubAccountIdentification48}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<SubAccountIdentification27> forSubAccountIdentification27 = new MMConstraint<SubAccountIdentification27>() {
@@ -636,6 +645,7 @@ public class ConstraintActivityAndBalanceForSubAccount1Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityAndBalanceForSubAccount1Rule";
 			definition = "If the ActivityIndicator is \"true\" (Yes), then at least one occurrence of BalanceForSubAccount must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintActivityAndBalanceForSubAccount1Rule.forSubAccountIdentification48);
 			owner_lazy = () -> SubAccountIdentification27.mmObject();
 		}
 	};
@@ -1037,6 +1047,43 @@ public class ConstraintActivityAndBalanceForSubAccount1Rule {
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/BalanceForSubAccount[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/ActivityIndicator</leftOperand><rightOperand>true</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SubAccountIdentification48
+	 * SubAccountIdentification48}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ActivityAndBalanceForSubAccount1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If the ActivityIndicator is \"true\" (Yes), then at least one occurrence of BalanceForSubAccount must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintActivityAndBalanceForSubAccount1Rule#forSubAccountIdentification27
+	 * ConstraintActivityAndBalanceForSubAccount1Rule.
+	 * forSubAccountIdentification27}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SubAccountIdentification48> forSubAccountIdentification48 = new MMConstraint<SubAccountIdentification48>() {
+		{
+			validator = ConstraintActivityAndBalanceForSubAccount1Rule::checkSubAccountIdentification48;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ActivityAndBalanceForSubAccount1Rule";
+			definition = "If the ActivityIndicator is \"true\" (Yes), then at least one occurrence of BalanceForSubAccount must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintActivityAndBalanceForSubAccount1Rule.forSubAccountIdentification27;
+			owner_lazy = () -> SubAccountIdentification48.mmObject();
+		}
+	};
 
 	/**
 	 * If the ActivityIndicator is TRUE (Yes), then at least one occurrence of
@@ -1251,6 +1298,14 @@ public class ConstraintActivityAndBalanceForSubAccount1Rule {
 	 * BalanceForSubAccount must be present.
 	 */
 	public static void checkSubAccountIdentification46(SubAccountIdentification46 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If the ActivityIndicator is "true" (Yes), then at least one occurrence of
+	 * BalanceForSubAccount must be present.
+	 */
+	public static void checkSubAccountIdentification48(SubAccountIdentification48 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

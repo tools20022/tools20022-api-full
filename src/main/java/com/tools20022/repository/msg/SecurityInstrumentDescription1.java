@@ -377,7 +377,7 @@ public class SecurityInstrumentDescription1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).\n"
+	 * "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -389,7 +389,7 @@ public class SecurityInstrumentDescription1 {
 			xmlTag = "OptnTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
-			definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).\n";
+			definition = "Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OptionType1Code.mmObject();
@@ -431,7 +431,7 @@ public class SecurityInstrumentDescription1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Predetermined price at which the holder will have to buy or sell the underlying instrument.\n"
+	 * "Predetermined price at which the holder will have to buy or sell the underlying instrument.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -444,7 +444,7 @@ public class SecurityInstrumentDescription1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "90a:EXER"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
-			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.\n";
+			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriceRateOrAmountChoice.mmObject();

@@ -78,6 +78,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action general information details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD32
+ * CorporateActionGeneralInformationSD32}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD25
@@ -116,6 +124,14 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD32#mmPlaceAndName
+	 * CorporateActionGeneralInformationSD32.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +147,7 @@ public class CorporateActionGeneralInformationSD27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD32.mmPlaceAndName);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD25.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -168,6 +185,14 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "DTC processing domain/ category for event types."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD32#mmEventGroup
+	 * CorporateActionGeneralInformationSD32.mmEventGroup}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -184,6 +209,7 @@ public class CorporateActionGeneralInformationSD27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventGroup";
 			definition = "DTC processing domain/ category for event types.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD32.mmEventGroup);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD25.mmEventGroup;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -221,7 +247,15 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events."
+	 * "DTCC (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two or more distinct events (in DTCC model) use same ISO code and there are no additional data elements that distinguish those two or more events."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD32#mmEventType
+	 * CorporateActionGeneralInformationSD32.mmEventType}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -238,7 +272,8 @@ public class CorporateActionGeneralInformationSD27 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
-			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two  or more distinct events (in DTCC model)  use same ISO code and there are no additional data elements that distinguish those two or more events.";
+			definition = "DTCC (The Depository Trust and Clearing Corporation) native corporate action event type name. Used in place for the events that cannot be classified by ISO code and mapped to OTHR or when two or more distinct events (in DTCC model) use same ISO code and there are no additional data elements that distinguish those two or more events.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD32.mmEventType);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD25.mmEventType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -276,7 +311,15 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. "
+	 * "DTCC (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD32#mmSubEventType
+	 * CorporateActionGeneralInformationSD32.mmSubEventType}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -293,7 +336,8 @@ public class CorporateActionGeneralInformationSD27 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Sub Event Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubEventType";
-			definition = "DTCC  (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type. ";
+			definition = "DTCC (The Depository Trust and Clearing Corporation) native corporate action sub event type name further defines the event type.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD32.mmSubEventType);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD25.mmSubEventType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -328,7 +372,15 @@ public class CorporateActionGeneralInformationSD27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function. "
+	 * "Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD32#mmRedemptionIdentification
+	 * CorporateActionGeneralInformationSD32.mmRedemptionIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -344,7 +396,8 @@ public class CorporateActionGeneralInformationSD27 {
 			xmlTag = "RedId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionIdentification";
-			definition = "Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function. ";
+			definition = "Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD32.mmRedemptionIdentification);
 			previousVersion_lazy = () -> CorporateActionGeneralInformationSD25.mmRedemptionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -362,6 +415,7 @@ public class CorporateActionGeneralInformationSD27 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionGeneralInformationSD27";
 				definition = "Provides additional information regarding corporate action general information details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionGeneralInformationSD32.mmObject());
 				previousVersion_lazy = () -> CorporateActionGeneralInformationSD25.mmObject();
 			}
 		});

@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecurityAttributes3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Tangible items of value to a business."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityAttributes4
+ * SecurityAttributes4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -95,6 +102,14 @@ public class SecurityAttributes3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Way(s) of identifying the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityAttributes4#mmFinancialInstrumentIdentification
+	 * SecurityAttributes4.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
@@ -105,6 +120,7 @@ public class SecurityAttributes3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Way(s) of identifying the security.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityAttributes4.mmFinancialInstrumentIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -137,6 +153,14 @@ public class SecurityAttributes3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides additional details about the financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityAttributes4#mmFinancialInstrumentType
+	 * SecurityAttributes4.mmFinancialInstrumentType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentType = new MMMessageAssociationEnd() {
@@ -147,6 +171,7 @@ public class SecurityAttributes3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentType";
 			definition = "Provides additional details about the financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityAttributes4.mmFinancialInstrumentType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -182,6 +207,14 @@ public class SecurityAttributes3 {
 	 * definition} =
 	 * "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityAttributes4#mmFinancialInstrumentAttributes
+	 * SecurityAttributes4.mmFinancialInstrumentAttributes}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentAttributes = new MMMessageAssociationEnd() {
@@ -192,6 +225,7 @@ public class SecurityAttributes3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityAttributes4.mmFinancialInstrumentAttributes);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CommonFinancialInstrumentAttributes3.mmObject();
@@ -207,6 +241,7 @@ public class SecurityAttributes3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityAttributes3";
 				definition = "Tangible items of value to a business.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityAttributes4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

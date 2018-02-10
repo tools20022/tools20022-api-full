@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TransferReference8"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reference of a transfer and of a transfer cancellation."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferReference13
+ * TransferReference13}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransferReference1
@@ -114,6 +121,14 @@ public class TransferReference8 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference13#mmTransferReference
+	 * TransferReference13.mmTransferReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -130,6 +145,7 @@ public class TransferReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReference13.mmTransferReference);
 			previousVersion_lazy = () -> TransferReference1.mmTransferReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -165,6 +181,14 @@ public class TransferReference8 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference13#mmCancellationReference
+	 * TransferReference13.mmCancellationReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +204,7 @@ public class TransferReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReference13.mmCancellationReference);
 			previousVersion_lazy = () -> TransferReference1.mmCancellationReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -215,6 +240,14 @@ public class TransferReference8 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferReference13#mmTransferConfirmationReference
+	 * TransferReference13.mmTransferConfirmationReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransferConfirmationReference = new MMMessageAttribute() {
@@ -225,6 +258,7 @@ public class TransferReference8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationReference";
 			definition = "Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReference13.mmTransferConfirmationReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -241,6 +275,7 @@ public class TransferReference8 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferReference8";
 				definition = "Reference of a transfer and of a transfer cancellation.";
+				nextVersions_lazy = () -> Arrays.asList(TransferReference13.mmObject());
 				previousVersion_lazy = () -> TransferReference1.mmObject();
 			}
 		});

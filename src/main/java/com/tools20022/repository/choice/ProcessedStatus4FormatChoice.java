@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessedStatus4FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the processing status of the standing instruction cancellation request."
+ * "Choice of formats to express the processing status of the standing instruction cancellation request."
  * </li>
  * </ul>
  */
@@ -108,7 +108,7 @@ public class ProcessedStatus4FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to specify  the processing status of the standing instruction cancellation request."
+	 * "Standard code to specify the processing status of the standing instruction cancellation request."
 	 * </li>
 	 * </ul>
 	 */
@@ -120,7 +120,7 @@ public class ProcessedStatus4FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to specify  the processing status of the standing instruction cancellation request.";
+			definition = "Standard code to specify the processing status of the standing instruction cancellation request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ProcessedStatus4Code.mmObject();
@@ -159,7 +159,7 @@ public class ProcessedStatus4FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the processing status of the standing instruction cancellation request."
+	 * "Proprietary code to express the processing status of the standing instruction cancellation request."
 	 * </li>
 	 * </ul>
 	 */
@@ -171,7 +171,7 @@ public class ProcessedStatus4FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the processing status of the standing instruction cancellation request.";
+			definition = "Proprietary code to express the processing status of the standing instruction cancellation request.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -186,7 +186,7 @@ public class ProcessedStatus4FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus4FormatChoice";
-				definition = "Choice of formats to  express the processing status of the standing instruction cancellation request.";
+				definition = "Choice of formats to express the processing status of the standing instruction cancellation request.";
 			}
 		});
 		return mmObject_lazy.get();

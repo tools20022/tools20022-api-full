@@ -107,6 +107,18 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06#mmTransactionIdentificationDetails
  * SecuritiesSettlementTransactionReversalAdviceV06.
  * mmTransactionIdentificationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08#mmTransactionIdentificationDetails
+ * SecuritiesSettlementTransactionGenerationNotificationV08.
+ * mmTransactionIdentificationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08#mmTransactionIdentificationDetails
+ * SecuritiesSettlementTransactionConfirmationV08.
+ * mmTransactionIdentificationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV07#mmTransactionIdentificationDetails
+ * SecuritiesSettlementTransactionReversalAdviceV07.
+ * mmTransactionIdentificationDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -697,7 +709,9 @@ public class SettlementTypeAndIdentification19 {
 						com.tools20022.repository.msg.SettlementTypeAndIdentification19.mmCorporateActionEventIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionConfirmationV06.mmTransactionIdentificationDetails, SecuritiesSettlementTransactionGenerationNotificationV06.mmTransactionIdentificationDetails,
 						SecuritiesSettlementTransactionReversalAdviceV05.mmTransactionIdentificationDetails, SecuritiesSettlementTransactionGenerationNotificationV07.mmTransactionIdentificationDetails,
-						SecuritiesSettlementTransactionConfirmationV07.mmTransactionIdentificationDetails, SecuritiesSettlementTransactionReversalAdviceV06.mmTransactionIdentificationDetails);
+						SecuritiesSettlementTransactionConfirmationV07.mmTransactionIdentificationDetails, SecuritiesSettlementTransactionReversalAdviceV06.mmTransactionIdentificationDetails,
+						SecuritiesSettlementTransactionGenerationNotificationV08.mmTransactionIdentificationDetails, SecuritiesSettlementTransactionConfirmationV08.mmTransactionIdentificationDetails,
+						SecuritiesSettlementTransactionReversalAdviceV07.mmTransactionIdentificationDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forSettlementTypeAndIdentification19);

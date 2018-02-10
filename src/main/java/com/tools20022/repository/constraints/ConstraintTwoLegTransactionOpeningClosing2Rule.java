@@ -32,39 +32,146 @@ import java.util.Arrays;
  * SettlementParameters/SecuritiesTransactionType codes:<br>
  * <br>
  * Sell-Buy Back: Sell<br>
- * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
- * (DELI)<br>
- * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+ * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)<br>
+ * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
  * Sell-Buy Back: Buy Back<br>
- * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)<br>
- * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+ * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)<br>
+ * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
  * <br>
  * Buy-Sell Back: Buy<br>
- * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)<br>
- * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+ * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)<br>
+ * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
  * Buy-Sell Back: Sell Back<br>
- * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
- * (DELI) <br>
- * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+ * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) <br>
+ * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
  * <br>
  * Collateral (giver) Out Initiation<br>
- * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
- * (DELI)<br>
- * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+ * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)<br>
+ * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
  * Collateral (giver) Out Return<br>
- * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)<br>
- * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+ * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)<br>
+ * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
  * <br>
  * Collateral (taker) In Initiation<br>
- * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)<br>
- * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+ * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)<br>
+ * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
  * Collateral (taker) In Return<br>
- * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
- * (DELI) <br>
- * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+ * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) <br>
+ * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
  */
 public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07
+	 * SecuritiesSettlementTransactionAllegementNotificationV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionAllegementNotificationV06
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV07> forSecuritiesSettlementTransactionAllegementNotificationV07 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV07>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotificationV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV06;
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08
+	 * SecuritiesSettlementTransactionConfirmationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionConfirmationV07
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionConfirmationV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV08> forSecuritiesSettlementTransactionConfirmationV08 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV08>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08
+	 * SecuritiesSettlementTransactionInstructionV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV08> forSecuritiesSettlementTransactionInstructionV08 = new MMConstraint<SecuritiesSettlementTransactionInstructionV08>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV07;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV08.mmObject();
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -82,7 +189,16 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionAllegementNotificationV07
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV07}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -97,7 +213,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotificationV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV05;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV06.mmObject();
 		}
@@ -119,7 +236,16 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionConfirmationV08
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionConfirmationV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -134,7 +260,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV07.mmObject();
 		}
@@ -156,7 +283,16 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionInstructionV08
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionInstructionV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -171,7 +307,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV06;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV07.mmObject();
 		}
@@ -193,7 +330,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -202,7 +339,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotification002V06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotification002V06.mmObject();
 		}
 	};
@@ -223,7 +360,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -232,7 +369,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstruction002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V07.mmObject();
 		}
 	};
@@ -253,7 +390,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -262,239 +399,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmation002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
-	 * SecuritiesSettlementTransactionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionInstructionV07
-	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
-	 * forSecuritiesSettlementTransactionInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionInstructionV05
-	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
-	 * forSecuritiesSettlementTransactionInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
-		{
-			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06
-	 * SecuritiesSettlementTransactionConfirmationV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionConfirmationV07
-	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
-	 * forSecuritiesSettlementTransactionConfirmationV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionConfirmationV05
-	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
-	 * forSecuritiesSettlementTransactionConfirmationV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV06> forSecuritiesSettlementTransactionConfirmationV06 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV06>() {
-		{
-			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV05;
-			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05
-	 * SecuritiesSettlementTransactionAllegementNotificationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionAllegementNotificationV06
-	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
-	 * forSecuritiesSettlementTransactionAllegementNotificationV06}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionAllegementNotificationV04
-	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
-	 * forSecuritiesSettlementTransactionAllegementNotificationV04}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05> forSecuritiesSettlementTransactionAllegementNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05>() {
-		{
-			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotificationV05;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV04;
-			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV05.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05
-	 * SecuritiesSettlementTransactionAllegementNotification002V05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05> forSecuritiesSettlementTransactionAllegementNotification002V05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05>() {
-		{
-			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotification002V05;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
-			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotification002V05.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06
-	 * SecuritiesSettlementTransactionConfirmation002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V06> forSecuritiesSettlementTransactionConfirmation002V06 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V06>() {
-		{
-			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmation002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
-			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
-	 * SecuritiesSettlementTransactionInstruction002V06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
-		{
-			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstruction002V06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
-			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
 		}
 	};
 	/**
@@ -514,7 +420,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -523,7 +429,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV01.mmObject();
 		}
 	};
@@ -544,7 +450,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -553,7 +459,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV02.mmObject();
 		}
 	};
@@ -574,7 +480,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -583,7 +489,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV03.mmObject();
 		}
 	};
@@ -604,7 +510,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -622,7 +528,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV04.mmObject();
 		}
@@ -644,7 +550,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -653,7 +559,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV01.mmObject();
 		}
 	};
@@ -674,7 +580,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -683,7 +589,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV02.mmObject();
 		}
 	};
@@ -704,7 +610,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -713,7 +619,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV03.mmObject();
 		}
 	};
@@ -734,7 +640,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -752,7 +658,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV05);
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV04.mmObject();
 		}
@@ -774,7 +680,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -783,7 +689,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotificationV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV01.mmObject();
 		}
 	};
@@ -804,7 +710,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -813,7 +719,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotificationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV02.mmObject();
 		}
 	};
@@ -834,7 +740,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -852,7 +758,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotificationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV04);
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV03.mmObject();
 		}
@@ -874,7 +780,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -898,7 +804,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotificationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV03;
 			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV04.mmObject();
@@ -921,7 +827,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -945,7 +851,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV05.mmObject();
@@ -968,7 +874,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -992,10 +898,241 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV06
+	 * SecuritiesSettlementTransactionInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionInstructionV07
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionInstructionV05
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstructionV06> forSecuritiesSettlementTransactionInstructionV06 = new MMConstraint<SecuritiesSettlementTransactionInstructionV06>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionInstructionV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionInstructionV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV06
+	 * SecuritiesSettlementTransactionConfirmationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionConfirmationV07
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionConfirmationV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionConfirmationV05
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionConfirmationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionConfirmationV06> forSecuritiesSettlementTransactionConfirmationV06 = new MMConstraint<SecuritiesSettlementTransactionConfirmationV06>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionConfirmationV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionConfirmationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05
+	 * SecuritiesSettlementTransactionAllegementNotificationV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionAllegementNotificationV06
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV06}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesSettlementTransactionAllegementNotificationV04
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesSettlementTransactionAllegementNotificationV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05> forSecuritiesSettlementTransactionAllegementNotificationV05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotificationV05>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotificationV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesSettlementTransactionAllegementNotificationV04;
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotificationV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotification002V05
+	 * SecuritiesSettlementTransactionAllegementNotification002V05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05> forSecuritiesSettlementTransactionAllegementNotification002V05 = new MMConstraint<SecuritiesSettlementTransactionAllegementNotification002V05>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionAllegementNotification002V05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			owner_lazy = () -> SecuritiesSettlementTransactionAllegementNotification002V05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmation002V06
+	 * SecuritiesSettlementTransactionConfirmation002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionConfirmation002V06> forSecuritiesSettlementTransactionConfirmation002V06 = new MMConstraint<SecuritiesSettlementTransactionConfirmation002V06>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionConfirmation002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of TransactionIdentificationDetails/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nTransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nTransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			owner_lazy = () -> SecuritiesSettlementTransactionConfirmation002V06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstruction002V06
+	 * SecuritiesSettlementTransactionInstruction002V06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionInstruction002V06> forSecuritiesSettlementTransactionInstruction002V06 = new MMConstraint<SecuritiesSettlementTransactionInstruction002V06>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesSettlementTransactionInstruction002V06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is instructed by sending the below combination of SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			owner_lazy = () -> SecuritiesSettlementTransactionInstruction002V06.mmObject();
 		}
 	};
 	/**
@@ -1015,7 +1152,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1024,7 +1161,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails5.mmObject();
 		}
 	};
@@ -1045,7 +1182,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1054,7 +1191,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails9.mmObject();
 		}
 	};
@@ -1075,7 +1212,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1084,7 +1221,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails22.mmObject();
 		}
 	};
@@ -1105,7 +1242,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1114,7 +1251,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails23.mmObject();
 		}
 	};
@@ -1135,7 +1272,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1144,7 +1281,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails36.mmObject();
 		}
 	};
@@ -1165,7 +1302,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1174,7 +1311,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails47.mmObject();
 		}
 	};
@@ -1195,7 +1332,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1212,7 +1349,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails53;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails61);
 			owner_lazy = () -> TransactionDetails53.mmObject();
 		}
@@ -1234,7 +1371,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1243,7 +1380,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails58;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails58.mmObject();
 		}
 	};
@@ -1264,7 +1401,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1273,7 +1410,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails7.mmObject();
 		}
 	};
@@ -1294,7 +1431,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1303,7 +1440,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails16.mmObject();
 		}
 	};
@@ -1324,7 +1461,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1333,7 +1470,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails26.mmObject();
 		}
 	};
@@ -1354,7 +1491,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1363,7 +1500,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails27.mmObject();
 		}
 	};
@@ -1384,7 +1521,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1393,7 +1530,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails39.mmObject();
 		}
 	};
@@ -1414,7 +1551,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1423,7 +1560,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails50.mmObject();
 		}
 	};
@@ -1444,7 +1581,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1461,7 +1598,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails62);
 			owner_lazy = () -> TransactionDetails56.mmObject();
 		}
@@ -1483,7 +1620,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1492,7 +1629,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails59.mmObject();
 		}
 	};
@@ -1513,7 +1650,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1522,7 +1659,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails6.mmObject();
 		}
 	};
@@ -1543,7 +1680,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1552,7 +1689,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails18.mmObject();
 		}
 	};
@@ -1573,7 +1710,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1582,7 +1719,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails24.mmObject();
 		}
 	};
@@ -1603,7 +1740,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1612,7 +1749,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails34.mmObject();
 		}
 	};
@@ -1633,7 +1770,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1642,7 +1779,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails37.mmObject();
 		}
 	};
@@ -1663,7 +1800,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1672,7 +1809,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails48;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails48.mmObject();
 		}
 	};
@@ -1693,7 +1830,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1710,7 +1847,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails63);
 			owner_lazy = () -> TransactionDetails57.mmObject();
 		}
@@ -1732,7 +1869,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1741,7 +1878,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails60.mmObject();
 		}
 	};
@@ -1762,7 +1899,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1771,7 +1908,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesTradeDetails4.mmObject();
 		}
 	};
@@ -1792,7 +1929,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1801,7 +1938,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesTradeDetails17.mmObject();
 		}
 	};
@@ -1822,7 +1959,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1831,7 +1968,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesTradeDetails10.mmObject();
 		}
 	};
@@ -1852,7 +1989,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1861,7 +1998,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesTradeDetails22.mmObject();
 		}
 	};
@@ -1882,7 +2019,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1900,7 +2037,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesTradeDetails35);
 			owner_lazy = () -> SecuritiesTradeDetails23.mmObject();
 		}
@@ -1922,7 +2059,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1931,7 +2068,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesTradeDetails29.mmObject();
 		}
 	};
@@ -1952,7 +2089,15 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails93
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails93}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -1961,7 +2106,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails93);
 			owner_lazy = () -> TransactionDetails51.mmObject();
 		}
 	};
@@ -1982,7 +2128,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2004,7 +2150,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails70);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails53;
 			owner_lazy = () -> TransactionDetails61.mmObject();
@@ -2027,7 +2173,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2049,7 +2195,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails62;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails69);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails56;
 			owner_lazy = () -> TransactionDetails62.mmObject();
@@ -2072,7 +2218,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2094,7 +2240,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails63;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails78);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails57;
 			owner_lazy = () -> TransactionDetails63.mmObject();
@@ -2117,7 +2263,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2141,7 +2287,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesTradeDetails49);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesTradeDetails23;
 			owner_lazy = () -> SecuritiesTradeDetails35.mmObject();
@@ -2164,7 +2310,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2173,7 +2319,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails66;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails66.mmObject();
 		}
 	};
@@ -2194,7 +2340,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2203,7 +2349,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesTradeDetails42.mmObject();
 		}
 	};
@@ -2224,7 +2370,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2233,7 +2379,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails67;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails67.mmObject();
 		}
 	};
@@ -2254,7 +2400,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2263,7 +2409,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails68.mmObject();
 		}
 	};
@@ -2284,7 +2430,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2306,7 +2452,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails70;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails79);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails61;
 			owner_lazy = () -> TransactionDetails70.mmObject();
@@ -2329,7 +2475,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2351,7 +2497,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails75);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails62;
 			owner_lazy = () -> TransactionDetails69.mmObject();
@@ -2374,7 +2520,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2383,7 +2529,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails71;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails71.mmObject();
 		}
 	};
@@ -2404,7 +2550,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2413,7 +2559,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails72.mmObject();
 		}
 	};
@@ -2434,7 +2580,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2458,7 +2604,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesTradeDetails68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesTradeDetails35;
 			owner_lazy = () -> SecuritiesTradeDetails49.mmObject();
@@ -2481,7 +2627,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2503,7 +2649,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails79;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails97);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails70;
 			owner_lazy = () -> TransactionDetails79.mmObject();
@@ -2526,7 +2672,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2548,7 +2694,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails96);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails69;
 			owner_lazy = () -> TransactionDetails75.mmObject();
@@ -2571,7 +2717,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -2593,7 +2739,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails78;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails95);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails63;
 			owner_lazy = () -> TransactionDetails78.mmObject();
@@ -2616,7 +2762,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2625,7 +2771,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails61;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesTradeDetails61.mmObject();
 		}
 	};
@@ -2646,7 +2792,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2655,7 +2801,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails87;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails87.mmObject();
 		}
 	};
@@ -2676,7 +2822,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2685,7 +2831,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails91;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails91.mmObject();
 		}
 	};
@@ -2706,7 +2852,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2715,8 +2861,53 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails90;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails90.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93
+	 * TransactionDetails93}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails102
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails102}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails51
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails51}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails93> forTransactionDetails93 = new MMConstraint<TransactionDetails93>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails93;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails102);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails51;
+			owner_lazy = () -> TransactionDetails93.mmObject();
 		}
 	};
 	/**
@@ -2736,7 +2927,16 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesTradeDetails71
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesTradeDetails71}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -2751,7 +2951,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails68;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesTradeDetails71);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesTradeDetails49;
 			owner_lazy = () -> SecuritiesTradeDetails68.mmObject();
 		}
@@ -2773,7 +2974,15 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails105
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails105}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -2787,7 +2996,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails97;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails105);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails79;
 			owner_lazy = () -> TransactionDetails97.mmObject();
 		}
@@ -2809,7 +3019,15 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails104
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails104}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -2823,7 +3041,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails96;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails104);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails75;
 			owner_lazy = () -> TransactionDetails96.mmObject();
 		}
@@ -2845,7 +3064,15 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails103
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails103}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -2859,7 +3086,8 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails95;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails103);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails78;
 			owner_lazy = () -> TransactionDetails95.mmObject();
 		}
@@ -2881,7 +3109,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2890,7 +3118,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails69;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> SecuritiesTradeDetails69.mmObject();
 		}
 	};
@@ -2911,7 +3139,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2920,7 +3148,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails100;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails100.mmObject();
 		}
 	};
@@ -2941,7 +3169,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2950,7 +3178,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails99;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails99.mmObject();
 		}
 	};
@@ -2971,7 +3199,7 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)"
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
 	 * </li>
 	 * </ul>
 	 */
@@ -2980,8 +3208,309 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails98;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosing2Rule";
-			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType :  CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
 			owner_lazy = () -> TransactionDetails98.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102
+	 * TransactionDetails102}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails93
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails93}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails102> forTransactionDetails102 = new MMConstraint<TransactionDetails102>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails102;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails93;
+			owner_lazy = () -> TransactionDetails102.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71
+	 * SecuritiesTradeDetails71}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forSecuritiesTradeDetails68
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.
+	 * forSecuritiesTradeDetails68}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails71> forSecuritiesTradeDetails71 = new MMConstraint<SecuritiesTradeDetails71>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails71;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forSecuritiesTradeDetails68;
+			owner_lazy = () -> SecuritiesTradeDetails71.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105
+	 * TransactionDetails105}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails97
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails97}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails105> forTransactionDetails105 = new MMConstraint<TransactionDetails105>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails105;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails97;
+			owner_lazy = () -> TransactionDetails105.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104
+	 * TransactionDetails104}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails96
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails96}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails104> forTransactionDetails104 = new MMConstraint<TransactionDetails104>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails104;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails96;
+			owner_lazy = () -> TransactionDetails104.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103
+	 * TransactionDetails103}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule#forTransactionDetails95
+	 * ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails95}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails103> forTransactionDetails103 = new MMConstraint<TransactionDetails103>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails103;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosing2Rule.forTransactionDetails95;
+			owner_lazy = () -> TransactionDetails103.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85
+	 * SecuritiesTradeDetails85}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesTradeDetails85> forSecuritiesTradeDetails85 = new MMConstraint<SecuritiesTradeDetails85>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkSecuritiesTradeDetails85;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is alleged by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			owner_lazy = () -> SecuritiesTradeDetails85.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110
+	 * TransactionDetails110}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails110> forTransactionDetails110 = new MMConstraint<TransactionDetails110>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails110;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			owner_lazy = () -> TransactionDetails110.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111
+	 * TransactionDetails111}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails111> forTransactionDetails111 = new MMConstraint<TransactionDetails111>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails111;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is identified by the providing of the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			owner_lazy = () -> TransactionDetails111.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112
+	 * TransactionDetails112}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "TwoLegTransactionOpeningClosing2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails112> forTransactionDetails112 = new MMConstraint<TransactionDetails112>() {
+		{
+			validator = ConstraintTwoLegTransactionOpeningClosing2Rule::checkTransactionDetails112;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "TwoLegTransactionOpeningClosing2Rule";
+			definition = "For settlement of two parts transactions (buy-sell back, sell buy-back, collateral in and out), the opening/initiation and closing/return of the transaction is confirmed by sending the below combination of SecuritiesMovementType codes and SettlementParameters/SecuritiesTransactionType codes:\r\n\r\nSell-Buy Back: Sell\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\nSell-Buy Back: Buy Back\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)\r\n\r\nBuy-Sell Back: Buy\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\nBuy-Sell Back: Sell Back\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)\r\n\r\nCollateral (giver) Out Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\nCollateral (giver) Out Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)\r\n\r\nCollateral (taker) In Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)\r\nCollateral (taker) In Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).";
+			owner_lazy = () -> TransactionDetails112.mmObject();
 		}
 	};
 
@@ -2993,40 +3522,173 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionAllegementNotificationV07(SecuritiesSettlementTransactionAllegementNotificationV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is confirmed by sending the below combination of
+	 * TransactionIdentificationDetails/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionConfirmationV08(SecuritiesSettlementTransactionConfirmationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is instructed by sending the below combination of
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV08(SecuritiesSettlementTransactionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is alleged by sending the below combination of
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionAllegementNotificationV06(SecuritiesSettlementTransactionAllegementNotificationV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3040,32 +3702,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionConfirmationV07(SecuritiesSettlementTransactionConfirmationV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3079,40 +3741,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV07(SecuritiesSettlementTransactionInstructionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3126,40 +3788,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionAllegementNotification002V06(SecuritiesSettlementTransactionAllegementNotification002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3173,40 +3835,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionInstruction002V07(SecuritiesSettlementTransactionInstruction002V07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3220,32 +3882,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionConfirmation002V07(SecuritiesSettlementTransactionConfirmation002V07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3254,303 +3916,37 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	/**
 	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
 	 * collateral in and out), the opening/initiation and closing/return of the
-	 * transaction is instructed by sending the below combination of
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
-	 * SettlementParameters/SecuritiesTransactionType codes:<br>
-	 * <br>
-	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * <br>
-	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * <br>
-	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * <br>
-	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
-	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
-	 */
-	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
-	 * collateral in and out), the opening/initiation and closing/return of the
 	 * transaction is confirmed by sending the below combination of
 	 * TransactionIdentificationDetails/SecuritiesMovementType codes and
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
-	 */
-	public static void checkSecuritiesSettlementTransactionConfirmationV06(SecuritiesSettlementTransactionConfirmationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
-	 * collateral in and out), the opening/initiation and closing/return of the
-	 * transaction is alleged by sending the below combination of
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
-	 * SettlementParameters/SecuritiesTransactionType codes:<br>
-	 * <br>
-	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * <br>
-	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * <br>
-	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * <br>
-	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
-	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
-	 */
-	public static void checkSecuritiesSettlementTransactionAllegementNotificationV05(SecuritiesSettlementTransactionAllegementNotificationV05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
-	 * collateral in and out), the opening/initiation and closing/return of the
-	 * transaction is alleged by sending the below combination of
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
-	 * SettlementParameters/SecuritiesTransactionType codes:<br>
-	 * <br>
-	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * <br>
-	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * <br>
-	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * <br>
-	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
-	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
-	 */
-	public static void checkSecuritiesSettlementTransactionAllegementNotification002V05(SecuritiesSettlementTransactionAllegementNotification002V05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
-	 * collateral in and out), the opening/initiation and closing/return of the
-	 * transaction is confirmed by sending the below combination of
-	 * TransactionIdentificationDetails/SecuritiesMovementType codes and
-	 * SettlementParameters/SecuritiesTransactionType codes:<br>
-	 * <br>
-	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * <br>
-	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * <br>
-	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * <br>
-	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
-	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
-	 */
-	public static void checkSecuritiesSettlementTransactionConfirmation002V06(SecuritiesSettlementTransactionConfirmation002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
-	 * collateral in and out), the opening/initiation and closing/return of the
-	 * transaction is instructed by sending the below combination of
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
-	 * SettlementParameters/SecuritiesTransactionType codes:<br>
-	 * <br>
-	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * <br>
-	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * <br>
-	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * <br>
-	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
-	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
-	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
-	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
-	 */
-	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
-	 * collateral in and out), the opening/initiation and closing/return of the
-	 * transaction is confirmed by sending the below combination of
-	 * TransactionIdentificationDetails/SecuritiesMovementType codes and
-	 * SettlementParameters/SecuritiesTransactionType codes:<br>
-	 * <br>
-	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
-	 * <br>
-	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
-	 * <br>
-	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
-	 * <br>
-	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
-	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionConfirmationV01(SecuritiesSettlementTransactionConfirmationV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3564,32 +3960,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionConfirmationV02(SecuritiesSettlementTransactionConfirmationV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3603,32 +3999,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionConfirmationV03(SecuritiesSettlementTransactionConfirmationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3642,32 +4038,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionConfirmationV04(SecuritiesSettlementTransactionConfirmationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3681,40 +4077,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV01(SecuritiesSettlementTransactionInstructionV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3728,40 +4124,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV02(SecuritiesSettlementTransactionInstructionV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3775,40 +4171,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV03(SecuritiesSettlementTransactionInstructionV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3822,40 +4218,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV04(SecuritiesSettlementTransactionInstructionV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3869,40 +4265,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionAllegementNotificationV01(SecuritiesSettlementTransactionAllegementNotificationV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3916,40 +4312,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionAllegementNotificationV02(SecuritiesSettlementTransactionAllegementNotificationV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -3963,40 +4359,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionAllegementNotificationV03(SecuritiesSettlementTransactionAllegementNotificationV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4010,40 +4406,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionAllegementNotificationV04(SecuritiesSettlementTransactionAllegementNotificationV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4057,40 +4453,40 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Receive
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
 	 * (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType : Delivery
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
 	 * (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionInstructionV05(SecuritiesSettlementTransactionInstructionV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4104,34 +4500,300 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * TransactionIdentificationDetails/SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesSettlementTransactionConfirmationV05(SecuritiesSettlementTransactionConfirmationV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is instructed by sending the below combination of
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionInstructionV06(SecuritiesSettlementTransactionInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is confirmed by sending the below combination of
+	 * TransactionIdentificationDetails/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionConfirmationV06(SecuritiesSettlementTransactionConfirmationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is alleged by sending the below combination of
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionAllegementNotificationV05(SecuritiesSettlementTransactionAllegementNotificationV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is alleged by sending the below combination of
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionAllegementNotification002V05(SecuritiesSettlementTransactionAllegementNotification002V05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is confirmed by sending the below combination of
+	 * TransactionIdentificationDetails/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * TransactionIdentificationDetails/SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionConfirmation002V06(SecuritiesSettlementTransactionConfirmation002V06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is instructed by sending the below combination of
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Receive
+	 * (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SettlementTypeAndAdditionalParameters/SecuritiesMovementType: Delivery
+	 * (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesSettlementTransactionInstruction002V06(SecuritiesSettlementTransactionInstruction002V06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -4144,32 +4806,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails5(TransactionDetails5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4184,32 +4846,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails9(TransactionDetails9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4224,32 +4886,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails22(TransactionDetails22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4264,32 +4926,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails23(TransactionDetails23 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4304,32 +4966,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails36(TransactionDetails36 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4344,32 +5006,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails47(TransactionDetails47 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4384,32 +5046,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails53(TransactionDetails53 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4424,32 +5086,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails58(TransactionDetails58 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4464,32 +5126,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails7(TransactionDetails7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4504,32 +5166,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails16(TransactionDetails16 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4544,32 +5206,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails26(TransactionDetails26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4584,32 +5246,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails27(TransactionDetails27 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4624,32 +5286,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails39(TransactionDetails39 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4664,32 +5326,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails50(TransactionDetails50 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4704,32 +5366,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails56(TransactionDetails56 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4744,32 +5406,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails59(TransactionDetails59 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4783,32 +5445,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails6(TransactionDetails6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4822,32 +5484,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails18(TransactionDetails18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4861,32 +5523,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails24(TransactionDetails24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4900,32 +5562,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails34(TransactionDetails34 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4939,32 +5601,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails37(TransactionDetails37 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -4978,32 +5640,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails48(TransactionDetails48 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5017,32 +5679,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails57(TransactionDetails57 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5056,32 +5718,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails60(TransactionDetails60 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5095,32 +5757,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails4(SecuritiesTradeDetails4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5134,32 +5796,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails17(SecuritiesTradeDetails17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5173,32 +5835,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails10(SecuritiesTradeDetails10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5212,32 +5874,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails22(SecuritiesTradeDetails22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5251,32 +5913,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails23(SecuritiesTradeDetails23 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5290,32 +5952,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails29(SecuritiesTradeDetails29 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5329,32 +5991,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails51(TransactionDetails51 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5369,32 +6031,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails61(TransactionDetails61 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5409,32 +6071,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails62(TransactionDetails62 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5448,32 +6110,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails63(TransactionDetails63 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5487,32 +6149,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails35(SecuritiesTradeDetails35 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5527,32 +6189,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails66(TransactionDetails66 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5566,32 +6228,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails42(SecuritiesTradeDetails42 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5606,32 +6268,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails67(TransactionDetails67 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5645,32 +6307,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails68(TransactionDetails68 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5685,32 +6347,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails70(TransactionDetails70 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5725,32 +6387,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails69(TransactionDetails69 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5765,32 +6427,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails71(TransactionDetails71 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5805,32 +6467,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails72(TransactionDetails72 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5844,32 +6506,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails49(SecuritiesTradeDetails49 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5884,32 +6546,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails79(TransactionDetails79 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5924,32 +6586,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails75(TransactionDetails75 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -5963,32 +6625,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails78(TransactionDetails78 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6002,32 +6664,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails61(SecuritiesTradeDetails61 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6042,32 +6704,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails87(TransactionDetails87 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6081,32 +6743,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails91(TransactionDetails91 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6121,34 +6783,73 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails90(TransactionDetails90 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is confirmed by sending the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkTransactionDetails93(TransactionDetails93 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -6160,32 +6861,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails68(SecuritiesTradeDetails68 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6200,32 +6901,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails97(TransactionDetails97 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6240,32 +6941,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails96(TransactionDetails96 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6279,32 +6980,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails95(TransactionDetails95 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6318,32 +7019,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkSecuritiesTradeDetails69(SecuritiesTradeDetails69 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6358,32 +7059,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails100(TransactionDetails100 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6398,32 +7099,32 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * <br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails99(TransactionDetails99 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -6437,34 +7138,389 @@ public class ConstraintTwoLegTransactionOpeningClosing2Rule {
 	 * SettlementParameters/SecuritiesTransactionType codes:<br>
 	 * <br>
 	 * Sell-Buy Back: Sell<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * Sell-Buy Back: Buy Back<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : SellBuyBack (SBBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
 	 * <br>
 	 * Buy-Sell Back: Buy<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * Buy-Sell Back: Sell Back<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : BuySellBack (BSBK)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
 	 * <br>
 	 * Collateral (giver) Out Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * Collateral (giver) Out Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralOut (COLO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
 	 * <br>
 	 * Collateral (taker) In Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
 	 * Collateral (taker) In Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SettlementParameters/SecuritiesTransactionType : CollateralIn (COLI)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
 	 */
 	public static void checkTransactionDetails98(TransactionDetails98 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is confirmed by sending the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkTransactionDetails102(TransactionDetails102 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is alleged by sending the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesTradeDetails71(SecuritiesTradeDetails71 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is identified by the providing of the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkTransactionDetails105(TransactionDetails105 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is identified by the providing of the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkTransactionDetails104(TransactionDetails104 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is confirmed by sending the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkTransactionDetails103(TransactionDetails103 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is alleged by sending the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkSecuritiesTradeDetails85(SecuritiesTradeDetails85 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is identified by the providing of the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkTransactionDetails110(TransactionDetails110 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is identified by the providing of the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkTransactionDetails111(TransactionDetails111 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * For settlement of two parts transactions (buy-sell back, sell buy-back,
+	 * collateral in and out), the opening/initiation and closing/return of the
+	 * transaction is confirmed by sending the below combination of
+	 * SecuritiesMovementType codes and
+	 * SettlementParameters/SecuritiesTransactionType codes:<br>
+	 * <br>
+	 * Sell-Buy Back: Sell<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * Sell-Buy Back: Buy Back<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: SellBuyBack (SBBK)<br>
+	 * <br>
+	 * Buy-Sell Back: Buy<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * Buy-Sell Back: Sell Back<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: BuySellBack (BSBK)<br>
+	 * <br>
+	 * Collateral (giver) Out Initiation<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * Collateral (giver) Out Return<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralOut (COLO)<br>
+	 * <br>
+	 * Collateral (taker) In Initiation<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI)<br>
+	 * Collateral (taker) In Return<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SettlementParameters/SecuritiesTransactionType: CollateralIn (COLI).
+	 */
+	public static void checkTransactionDetails112(TransactionDetails112 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies the contract type of a derivate
+ * Specifies the contract type of a derivate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -92,7 +92,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "FinancialInstrumentContractType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the contract type of a derivate"</li>
+ * definition} = "Specifies the contract type of a derivate."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -422,7 +422,7 @@ public class FinancialInstrumentContractType1Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentContractType1Code";
-				definition = "Specifies the contract type of a derivate";
+				definition = "Specifies the contract type of a derivate.";
 				trace_lazy = () -> FinancialInstrumentContractTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.FinancialInstrumentContractType1Code.ContractForDifference, com.tools20022.repository.codeset.FinancialInstrumentContractType1Code.Forward,
 						com.tools20022.repository.codeset.FinancialInstrumentContractType1Code.ForwardRateAgreement, com.tools20022.repository.codeset.FinancialInstrumentContractType1Code.Futures,

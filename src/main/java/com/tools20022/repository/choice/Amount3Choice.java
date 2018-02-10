@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Amount3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice between an amount with or without the currency. "</li>
+ * definition} = "Choice between an amount with or without the currency."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -166,7 +166,7 @@ public class Amount3Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Amount3Choice";
-				definition = "Choice between an amount with or without the currency. ";
+				definition = "Choice between an amount with or without the currency.";
 			}
 		});
 		return mmObject_lazy.get();

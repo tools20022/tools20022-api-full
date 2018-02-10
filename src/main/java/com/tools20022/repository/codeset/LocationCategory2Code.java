@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
  * Location category of the place where the transaction is actually performed. <br>
- * It correspond partially to the ISO 8583:1993, field number 22-4.
+ * It correspond partially to the ISO 8583: 1993, field number 22-4.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "LocationCategory2Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583:1993, field number 22-4."
+ * "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583: 1993, field number 22-4."
  * </li>
  * </ul>
  */
@@ -181,7 +181,7 @@ public class LocationCategory2Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LocationCategory2Code";
-				definition = "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583:1993, field number 22-4.";
+				definition = "Location category of the place where the transaction is actually performed. \r\nIt correspond partially to the ISO 8583: 1993, field number 22-4.";
 				trace_lazy = () -> LocationCategoryCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.LocationCategory2Code.Aboard, com.tools20022.repository.codeset.LocationCategory2Code.Fixed, com.tools20022.repository.codeset.LocationCategory2Code.Home,
 						com.tools20022.repository.codeset.LocationCategory2Code.Nomadic);

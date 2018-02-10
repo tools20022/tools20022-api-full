@@ -75,6 +75,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TerminalManagementDataSet17"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification of requested data set."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TerminalManagementDataSet25
+ * TerminalManagementDataSet25}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet12
@@ -114,6 +121,14 @@ public class TerminalManagementDataSet17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the required data set."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet25#mmIdentification
+	 * TerminalManagementDataSet25.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +144,7 @@ public class TerminalManagementDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the required data set.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet25.mmIdentification);
 			previousVersion_lazy = () -> TerminalManagementDataSet12.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -164,6 +180,14 @@ public class TerminalManagementDataSet17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Point of interaction challenge for cryptographic key injection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet25#mmPOIChallenge
+	 * TerminalManagementDataSet25.mmPOIChallenge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,6 +203,7 @@ public class TerminalManagementDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIChallenge";
 			definition = "Point of interaction challenge for cryptographic key injection.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet25.mmPOIChallenge);
 			previousVersion_lazy = () -> TerminalManagementDataSet12.mmPOIChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -214,6 +239,14 @@ public class TerminalManagementDataSet17 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Terminal manager challenge for cryptographic key injection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet25#mmTMChallenge
+	 * TerminalManagementDataSet25.mmTMChallenge}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -229,6 +262,7 @@ public class TerminalManagementDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMChallenge";
 			definition = "Terminal manager challenge for cryptographic key injection.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet25.mmTMChallenge);
 			previousVersion_lazy = () -> TerminalManagementDataSet12.mmTMChallenge;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -263,6 +297,14 @@ public class TerminalManagementDataSet17 {
 	 * definition} =
 	 * "Temporary encryption key that the host will use for protecting keys to download."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet25#mmSessionKey
+	 * TerminalManagementDataSet25.mmSessionKey}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -278,6 +320,7 @@ public class TerminalManagementDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SessionKey";
 			definition = "Temporary encryption key that the host will use for protecting keys to download.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet25.mmSessionKey);
 			previousVersion_lazy = () -> TerminalManagementDataSet12.mmSessionKey;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -315,6 +358,14 @@ public class TerminalManagementDataSet17 {
 	 * definition} =
 	 * "Proof of delegation to be validated by the terminal manager receiving a status report from a new POI."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet25#mmDelegationProof
+	 * TerminalManagementDataSet25.mmDelegationProof}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDelegationProof = new MMMessageAttribute() {
@@ -325,6 +376,7 @@ public class TerminalManagementDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DelegationProof";
 			definition = "Proof of delegation to be validated by the terminal manager receiving a status report from a new POI.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet25.mmDelegationProof);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5000Binary.mmObject();
@@ -357,6 +409,14 @@ public class TerminalManagementDataSet17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Protected proof of delegation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet25#mmProtectedDelegationProof
+	 * TerminalManagementDataSet25.mmProtectedDelegationProof}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProtectedDelegationProof = new MMMessageAssociationEnd() {
@@ -367,6 +427,7 @@ public class TerminalManagementDataSet17 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectedDelegationProof";
 			definition = "Protected proof of delegation.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet25.mmProtectedDelegationProof);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -384,6 +445,7 @@ public class TerminalManagementDataSet17 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet17";
 				definition = "Identification of requested data set.";
+				nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet25.mmObject());
 				previousVersion_lazy = () -> TerminalManagementDataSet12.mmObject();
 			}
 		});

@@ -25,7 +25,7 @@ import java.util.Arrays;
 
 /**
  * Only a single occurrence of NetDividendRate/Amount may be present.<br>
- * (MT 566 NVR C3)
+ * (MT 566 NVR C3).
  */
 public class ConstraintNetDividendRate2Rule {
 
@@ -45,7 +45,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -54,7 +54,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails2.mmObject();
 		}
 	};
@@ -74,7 +74,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -83,7 +83,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails4.mmObject();
 		}
 	};
@@ -103,7 +103,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -112,7 +112,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails7.mmObject();
 		}
 	};
@@ -132,7 +132,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -141,7 +141,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails9.mmObject();
 		}
 	};
@@ -161,7 +161,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -178,7 +178,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails15);
 			owner_lazy = () -> RateDetails11.mmObject();
 		}
@@ -199,7 +199,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -208,7 +208,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails12.mmObject();
 		}
 	};
@@ -228,7 +228,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -237,7 +237,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails3.mmObject();
 		}
 	};
@@ -257,7 +257,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -266,7 +266,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails5.mmObject();
 		}
 	};
@@ -385,7 +385,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -402,7 +402,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails14);
 			owner_lazy = () -> RateDetails10.mmObject();
 		}
@@ -453,7 +453,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -462,7 +462,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails13.mmObject();
 		}
 	};
@@ -551,7 +551,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -573,7 +573,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails23);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails11;
 			owner_lazy = () -> RateDetails15.mmObject();
@@ -685,7 +685,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -707,7 +707,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails22);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails10;
 			owner_lazy = () -> RateDetails14.mmObject();
@@ -759,7 +759,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -768,7 +768,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present , both elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/NotSpecifiedRate may be present, both elements may not be present together.\r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails18.mmObject();
 		}
 	};
@@ -788,7 +788,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -797,7 +797,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of NetDividendRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails21.mmObject();
 		}
 	};
@@ -847,7 +847,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)"
+	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -869,7 +869,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails27);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails15;
 			owner_lazy = () -> RateDetails23.mmObject();
@@ -981,7 +981,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one  of those elements may be present.\r\n(MT 564 NVR C7)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present.\r\n(MT 564 NVR C7)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1003,7 +1003,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one  of those elements may be present.\r\n(MT 564 NVR C7)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present.\r\n(MT 564 NVR C7).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails26);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails14;
 			owner_lazy = () -> RateDetails22.mmObject();
@@ -1055,7 +1055,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)"
+	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1064,7 +1064,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails24.mmObject();
 		}
 	};
@@ -1084,7 +1084,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one  of those elements may be present.\r\n(MT 564 NVR C7)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present.\r\n(MT 564 NVR C7)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1093,7 +1093,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one  of those elements may be present.\r\n(MT 564 NVR C7)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present.\r\n(MT 564 NVR C7).";
 			owner_lazy = () -> RateDetails25.mmObject();
 		}
 	};
@@ -1143,7 +1143,15 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one  of those elements may be present.\r\n(MT 564 NVR C7)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present.\r\n(MT 564 NVR C7)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forRateDetails31
+	 * ConstraintNetDividendRate2Rule.forRateDetails31}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1157,7 +1165,8 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one  of those elements may be present.\r\n(MT 564 NVR C7)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present.\r\n(MT 564 NVR C7).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails22;
 			owner_lazy = () -> RateDetails26.mmObject();
 		}
@@ -1181,6 +1190,14 @@ public class ConstraintNetDividendRate2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present. (MT 564 NVR C7)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forCorporateActionRate87
+	 * ConstraintNetDividendRate2Rule.forCorporateActionRate87}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1194,6 +1211,7 @@ public class ConstraintNetDividendRate2Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
 			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present. (MT 564 NVR C7).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forCorporateActionRate87);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forCorporateActionRate68;
 			owner_lazy = () -> CorporateActionRate80.mmObject();
 		}
@@ -1214,7 +1232,15 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)"
+	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forRateDetails32
+	 * ConstraintNetDividendRate2Rule.forRateDetails32}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1228,7 +1254,8 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails32);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails23;
 			owner_lazy = () -> RateDetails27.mmObject();
 		}
@@ -1252,6 +1279,14 @@ public class ConstraintNetDividendRate2Rule {
 	 * definition} =
 	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present. (MT 564 NVR C7)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forCorporateActionRate86
+	 * ConstraintNetDividendRate2Rule.forCorporateActionRate86}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1265,6 +1300,7 @@ public class ConstraintNetDividendRate2Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
 			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present. (MT 564 NVR C7).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forCorporateActionRate86);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forCorporateActionRate67;
 			owner_lazy = () -> CorporateActionRate81.mmObject();
 		}
@@ -1345,7 +1381,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one  of those elements may be present.\r\n(MT 564 NVR C7)"
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present.\r\n(MT 564 NVR C7)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1354,7 +1390,7 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one  of those elements may be present.\r\n(MT 564 NVR C7)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of those elements may be present.\r\n(MT 564 NVR C7).";
 			owner_lazy = () -> RateDetails28.mmObject();
 		}
 	};
@@ -1374,7 +1410,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)"
+	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1383,14 +1419,274 @@ public class ConstraintNetDividendRate2Rule {
 			validator = ConstraintNetDividendRate2Rule::checkRateDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetDividendRate2Rule";
-			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)";
+			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails30.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails31 RateDetails31}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present.\r\n(MT 564 NVR C7)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forRateDetails26
+	 * ConstraintNetDividendRate2Rule.forRateDetails26}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails31> forRateDetails31 = new MMConstraint<RateDetails31>() {
+		{
+			validator = ConstraintNetDividendRate2Rule::checkRateDetails31;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRate2Rule";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present.\r\n(MT 564 NVR C7).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails26;
+			owner_lazy = () -> RateDetails31.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate86
+	 * CorporateActionRate86}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present. (MT 564 NVR C7)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forCorporateActionRate81
+	 * ConstraintNetDividendRate2Rule.forCorporateActionRate81}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate86> forCorporateActionRate86 = new MMConstraint<CorporateActionRate86>() {
+		{
+			validator = ConstraintNetDividendRate2Rule::checkCorporateActionRate86;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRate2Rule";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present. (MT 564 NVR C7).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forCorporateActionRate81;
+			owner_lazy = () -> CorporateActionRate86.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails32 RateDetails32}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forRateDetails27
+	 * ConstraintNetDividendRate2Rule.forRateDetails27}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails32> forRateDetails32 = new MMConstraint<RateDetails32>() {
+		{
+			validator = ConstraintNetDividendRate2Rule::checkRateDetails32;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRate2Rule";
+			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forRateDetails27;
+			owner_lazy = () -> RateDetails32.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate87
+	 * CorporateActionRate87}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present. (MT 564 NVR C7)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule#forCorporateActionRate80
+	 * ConstraintNetDividendRate2Rule.forCorporateActionRate80}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate87> forCorporateActionRate87 = new MMConstraint<CorporateActionRate87>() {
+		{
+			validator = ConstraintNetDividendRate2Rule::checkCorporateActionRate87;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRate2Rule";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present. (MT 564 NVR C7).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNetDividendRate2Rule.forCorporateActionRate80;
+			owner_lazy = () -> CorporateActionRate87.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails33 RateDetails33}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails33> forRateDetails33 = new MMConstraint<RateDetails33>() {
+		{
+			validator = ConstraintNetDividendRate2Rule::checkRateDetails33;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRate2Rule";
+			definition = "Only a single occurrence of either NetDividendRate/Amount may be present. Both elements may not be present together. (MT 566 NVR C3).";
+			owner_lazy = () -> RateDetails33.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate94
+	 * CorporateActionRate94}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present. (MT 564 NVR C7)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate94> forCorporateActionRate94 = new MMConstraint<CorporateActionRate94>() {
+		{
+			validator = ConstraintNetDividendRate2Rule::checkCorporateActionRate94;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRate2Rule";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present. (MT 564 NVR C7).";
+			owner_lazy = () -> CorporateActionRate94.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.RateDetails34 RateDetails34}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present.\r\n(MT 564 NVR C7)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RateDetails34> forRateDetails34 = new MMConstraint<RateDetails34>() {
+		{
+			validator = ConstraintNetDividendRate2Rule::checkRateDetails34;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRate2Rule";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present.\r\n(MT 564 NVR C7).";
+			owner_lazy = () -> RateDetails34.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate97
+	 * CorporateActionRate97}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NetDividendRate2Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present. (MT 564 NVR C7)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionRate97> forCorporateActionRate97 = new MMConstraint<CorporateActionRate97>() {
+		{
+			validator = ConstraintNetDividendRate2Rule::checkCorporateActionRate97;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NetDividendRate2Rule";
+			definition = "Only a single occurrence of either NetDividendRate/Amount or NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate may be present, and only one of these elements may be present. (MT 564 NVR C7).";
+			owner_lazy = () -> CorporateActionRate97.mmObject();
 		}
 	};
 
 	/**
 	 * Only a single occurrence of NetDividendRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails2(RateDetails2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1398,7 +1694,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of NetDividendRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails4(RateDetails4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1406,7 +1702,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of NetDividendRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails7(RateDetails7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1414,7 +1710,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of NetDividendRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails9(RateDetails9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1422,7 +1718,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of NetDividendRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails11(RateDetails11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1430,7 +1726,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of NetDividendRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails12(RateDetails12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1438,9 +1734,9 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount or
-	 * NetDividendRate/NotSpecifiedRate may be present , both elements may not
-	 * be present together.<br>
-	 * (MT 564 NVR C8)
+	 * NetDividendRate/NotSpecifiedRate may be present, both elements may not be
+	 * present together.<br>
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails3(RateDetails3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1448,9 +1744,9 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount or
-	 * NetDividendRate/NotSpecifiedRate may be present , both elements may not
-	 * be present together.<br>
-	 * (MT 564 NVR C8)
+	 * NetDividendRate/NotSpecifiedRate may be present, both elements may not be
+	 * present together.<br>
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails5(RateDetails5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1485,9 +1781,9 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount or
-	 * NetDividendRate/NotSpecifiedRate may be present , both elements may not
-	 * be present together.<br>
-	 * (MT 564 NVR C8)
+	 * NetDividendRate/NotSpecifiedRate may be present, both elements may not be
+	 * present together.<br>
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails10(RateDetails10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1504,9 +1800,9 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount or
-	 * NetDividendRate/NotSpecifiedRate may be present , both elements may not
-	 * be present together.<br>
-	 * (MT 564 NVR C8)
+	 * NetDividendRate/NotSpecifiedRate may be present, both elements may not be
+	 * present together.<br>
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails13(RateDetails13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1532,7 +1828,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of NetDividendRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails15(RateDetails15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1558,9 +1854,9 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount or
-	 * NetDividendRate/NotSpecifiedRate may be present , both elements may not
-	 * be present together.<br>
-	 * (MT 564 NVR C8)
+	 * NetDividendRate/NotSpecifiedRate may be present, both elements may not be
+	 * present together.<br>
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails14(RateDetails14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1577,9 +1873,9 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount or
-	 * NetDividendRate/NotSpecifiedRate may be present , both elements may not
-	 * be present together.<br>
-	 * (MT 564 NVR C8)
+	 * NetDividendRate/NotSpecifiedRate may be present, both elements may not be
+	 * present together.<br>
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails18(RateDetails18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1587,7 +1883,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of NetDividendRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails21(RateDetails21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1604,7 +1900,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount may be present.
-	 * Both elements may not be present together. (MT 566 NVR C3)
+	 * Both elements may not be present together. (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails23(RateDetails23 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1634,7 +1930,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * Only a single occurrence of either NetDividendRate/Amount or
 	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
 	 * may be present, and only one of those elements may be present.<br>
-	 * (MT 564 NVR C7)
+	 * (MT 564 NVR C7).
 	 */
 	public static void checkRateDetails22(RateDetails22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1652,7 +1948,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount may be present.
-	 * Both elements may not be present together. (MT 566 NVR C3)
+	 * Both elements may not be present together. (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails24(RateDetails24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1662,7 +1958,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * Only a single occurrence of either NetDividendRate/Amount or
 	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
 	 * may be present, and only one of those elements may be present.<br>
-	 * (MT 564 NVR C7)
+	 * (MT 564 NVR C7).
 	 */
 	public static void checkRateDetails25(RateDetails25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1682,7 +1978,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * Only a single occurrence of either NetDividendRate/Amount or
 	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
 	 * may be present, and only one of those elements may be present.<br>
-	 * (MT 564 NVR C7)
+	 * (MT 564 NVR C7).
 	 */
 	public static void checkRateDetails26(RateDetails26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1700,7 +1996,7 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount may be present.
-	 * Both elements may not be present together. (MT 566 NVR C3)
+	 * Both elements may not be present together. (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails27(RateDetails27 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1740,7 +2036,7 @@ public class ConstraintNetDividendRate2Rule {
 	 * Only a single occurrence of either NetDividendRate/Amount or
 	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
 	 * may be present, and only one of those elements may be present.<br>
-	 * (MT 564 NVR C7)
+	 * (MT 564 NVR C7).
 	 */
 	public static void checkRateDetails28(RateDetails28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1748,9 +2044,85 @@ public class ConstraintNetDividendRate2Rule {
 
 	/**
 	 * Only a single occurrence of either NetDividendRate/Amount may be present.
-	 * Both elements may not be present together. (MT 566 NVR C3)
+	 * Both elements may not be present together. (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails30(RateDetails30 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either NetDividendRate/Amount or
+	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
+	 * may be present, and only one of these elements may be present.<br>
+	 * (MT 564 NVR C7).
+	 */
+	public static void checkRateDetails31(RateDetails31 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either NetDividendRate/Amount or
+	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
+	 * may be present, and only one of these elements may be present. (MT 564
+	 * NVR C7).
+	 */
+	public static void checkCorporateActionRate86(CorporateActionRate86 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either NetDividendRate/Amount may be present.
+	 * Both elements may not be present together. (MT 566 NVR C3).
+	 */
+	public static void checkRateDetails32(RateDetails32 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either NetDividendRate/Amount or
+	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
+	 * may be present, and only one of these elements may be present. (MT 564
+	 * NVR C7).
+	 */
+	public static void checkCorporateActionRate87(CorporateActionRate87 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either NetDividendRate/Amount may be present.
+	 * Both elements may not be present together. (MT 566 NVR C3).
+	 */
+	public static void checkRateDetails33(RateDetails33 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either NetDividendRate/Amount or
+	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
+	 * may be present, and only one of these elements may be present. (MT 564
+	 * NVR C7).
+	 */
+	public static void checkCorporateActionRate94(CorporateActionRate94 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either NetDividendRate/Amount or
+	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
+	 * may be present, and only one of these elements may be present.<br>
+	 * (MT 564 NVR C7).
+	 */
+	public static void checkRateDetails34(RateDetails34 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Only a single occurrence of either NetDividendRate/Amount or
+	 * NetDividendRate/AmountAndRateStatus or NetDividendRate/NotSpecifiedRate
+	 * may be present, and only one of these elements may be present. (MT 564
+	 * NVR C7).
+	 */
+	public static void checkCorporateActionRate97(CorporateActionRate97 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

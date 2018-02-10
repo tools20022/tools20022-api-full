@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant;
+import com.tools20022.repository.area.SecuritiesEventsPreviousversionsubsetvariant;
 import com.tools20022.repository.choice.InstructionProcessingStatus30Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISO15022VariantsISOLatestversion;
@@ -93,8 +93,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnInstrStsAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestversionsubsetvariant
- * SecuritiesEventsLatestversionsubsetvariant}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousversionsubsetvariant
+ * SecuritiesEventsPreviousversionsubsetvariant}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.034.002.08}</li>
@@ -445,7 +445,7 @@ public class CorporateActionInstructionStatusAdvice002V08 {
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISO15022VariantsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStsAdvc";
-				businessArea_lazy = () -> SecuritiesEventsLatestversionsubsetvariant.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsPreviousversionsubsetvariant.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08.mmInstructionIdentification,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08.mmOtherDocumentIdentification,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdvice002V08.mmCorporateActionGeneralInformation,

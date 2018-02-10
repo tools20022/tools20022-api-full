@@ -46,7 +46,7 @@ import javax.xml.bind.annotation.*;
  * Depending on whether the response can be provided STP within the authorities
  * financial investigations messages, the requested information may be <br>
  * • provided in part or in full within the response message itself, or <br>
- * • only referred to in the response message
+ * • only referred to in the response message.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -101,7 +101,7 @@ import javax.xml.bind.annotation.*;
  * "InformationRequestResponseV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This message is sent by the financial institution to the authorities (police, customs, tax authorities, enforcement authorities) to provide a part or all of the requested information.\r\nThe financial institution previously received a request for financial information in the scope of a financial investigation.\r\n\r\nDepending on whether the response can be provided STP within the authorities financial investigations messages, the requested information may be \r\n•\tprovided in part or in full within the response message itself, or \r\n•\tonly referred to in the response message"
+ * "This message is sent by the financial institution to the authorities (police, customs, tax authorities, enforcement authorities) to provide a part or all of the requested information.\r\nThe financial institution previously received a request for financial information in the scope of a financial investigation.\r\n\r\nDepending on whether the response can be provided STP within the authorities financial investigations messages, the requested information may be \r\n•\tprovided in part or in full within the response message itself, or \r\n•\tonly referred to in the response message."
  * </li>
  * </ul>
  */
@@ -385,7 +385,7 @@ public class InformationRequestResponseV01 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InformationRequestResponseV01";
-				definition = "This message is sent by the financial institution to the authorities (police, customs, tax authorities, enforcement authorities) to provide a part or all of the requested information.\r\nThe financial institution previously received a request for financial information in the scope of a financial investigation.\r\n\r\nDepending on whether the response can be provided STP within the authorities financial investigations messages, the requested information may be \r\n•\tprovided in part or in full within the response message itself, or \r\n•\tonly referred to in the response message";
+				definition = "This message is sent by the financial institution to the authorities (police, customs, tax authorities, enforcement authorities) to provide a part or all of the requested information.\r\nThe financial institution previously received a request for financial information in the scope of a financial investigation.\r\n\r\nDepending on whether the response can be provided STP within the authorities financial investigations messages, the requested information may be \r\n•\tprovided in part or in full within the response message itself, or \r\n•\tonly referred to in the response message.";
 				messageSet_lazy = () -> Arrays.asList(AuthoritiesFinancialInvestigationsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "InfReqRspn";

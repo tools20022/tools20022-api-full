@@ -152,6 +152,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice2
  * CardPaymentInvoice2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.LineItem16 LineItem16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentInvoice3
+ * CardPaymentInvoice3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem17 LineItem17}</li>
  * </ul>
  * </li>
  * <li>
@@ -203,6 +206,9 @@ public class CommercialTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.LineItem16#mmPurchaseAccountingAccount
 	 * LineItem16.mmPurchaseAccountingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmPurchaseAccountingAccount
+	 * LineItem17.mmPurchaseAccountingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -225,7 +231,7 @@ public class CommercialTrade extends Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmPurchaseAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmPurchaseAccountingAccount, LineItem10.mmPurchaseAccountingAccount, LineItem16.mmPurchaseAccountingAccount);
+			derivation_lazy = () -> Arrays.asList(TradeSettlement1.mmPurchaseAccountingAccount, LineItem10.mmPurchaseAccountingAccount, LineItem16.mmPurchaseAccountingAccount, LineItem17.mmPurchaseAccountingAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -620,9 +626,7 @@ public class CommercialTrade extends Trade {
 	 * name} = "Documents"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Documents related to                             a commercial trade transaction."
-	 * </li>
+	 * definition} = "Documents related to a commercial trade transaction."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmDocuments = new MMBusinessAssociationEnd() {
@@ -631,7 +635,7 @@ public class CommercialTrade extends Trade {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Documents";
-			definition = "Documents related to                             a commercial trade transaction.";
+			definition = "Documents related to a commercial trade transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.Document.mmCommercialTrade;
@@ -808,7 +812,7 @@ public class CommercialTrade extends Trade {
 						com.tools20022.repository.entity.CommercialTrade.mmRelatedUndertaking, com.tools20022.repository.entity.CommercialTrade.mmTransactionStatus, com.tools20022.repository.entity.CommercialTrade.mmAgreement);
 				derivationComponent_lazy = () -> Arrays.asList(LineItem10.mmObject(), LineItem5.mmObject(), Baseline2.mmObject(), LineItem7.mmObject(), Baseline3.mmObject(), LineItem4.mmObject(), CommercialDataSet2.mmObject(),
 						LineItem9.mmObject(), CommercialDataSet3.mmObject(), Baseline4.mmObject(), CommercialDataSet4.mmObject(), LineItem11.mmObject(), LineItem12.mmObject(), CardPaymentInvoice1.mmObject(), Baseline5.mmObject(),
-						CommercialDataSet5.mmObject(), LineItem13.mmObject(), LineItem15.mmObject(), TradeSettlement2.mmObject(), CardPaymentInvoice2.mmObject(), LineItem16.mmObject());
+						CommercialDataSet5.mmObject(), LineItem13.mmObject(), LineItem15.mmObject(), TradeSettlement2.mmObject(), CardPaymentInvoice2.mmObject(), LineItem16.mmObject(), CardPaymentInvoice3.mmObject(), LineItem17.mmObject());
 			}
 
 			@Override

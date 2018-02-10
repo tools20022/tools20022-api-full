@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.GuaranteePartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Guarantee1;
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -35,6 +37,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.GuaranteePartyRole
  * GuaranteePartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
+ * derivationComponent} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Guarantee1 Guarantee1}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -62,6 +71,7 @@ public class GuaranteeBeneficiary extends GuaranteePartyRole {
 				name = "GuaranteeBeneficiary";
 				definition = "Party that is the beneficiary of the guarantee.";
 				superType_lazy = () -> GuaranteePartyRole.mmObject();
+				derivationComponent_lazy = () -> Arrays.asList(Guarantee1.mmObject());
 			}
 
 			@Override

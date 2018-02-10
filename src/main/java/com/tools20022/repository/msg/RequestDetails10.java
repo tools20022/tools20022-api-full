@@ -93,7 +93,14 @@ import javax.xml.bind.annotation.XmlType;
  * "RequestDetails10"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Details of the request providing  the changes and references of the instruction."
+ * "Details of the request providing the changes and references of the instruction."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestDetails17
+ * RequestDetails17}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -138,6 +145,14 @@ public class RequestDetails10 {
 	 * definition} =
 	 * "References of the transaction for which the intra-balance modification is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmReference
+	 * RequestDetails17.mmReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReference = new MMMessageAssociationEnd() {
@@ -150,6 +165,7 @@ public class RequestDetails10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
 			definition = "References of the transaction for which the intra-balance modification is requested.";
+			nextVersions_lazy = () -> Arrays.asList(RequestDetails17.mmReference);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -187,6 +203,13 @@ public class RequestDetails10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of linkage requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.RequestDetails17#mmLinkage
+	 * RequestDetails17.mmLinkage}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLinkage = new MMMessageAttribute() {
@@ -198,6 +221,7 @@ public class RequestDetails10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkage";
 			definition = "Specifies the type of linkage requested.";
+			nextVersions_lazy = () -> Arrays.asList(RequestDetails17.mmLinkage);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> LinkageType1Choice.mmObject();
@@ -236,6 +260,14 @@ public class RequestDetails10 {
 	 * definition} =
 	 * "Specifies whether the transaction is to be executed with a high priority."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmPriority
+	 * RequestDetails17.mmPriority}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPriority = new MMMessageAttribute() {
@@ -247,6 +279,7 @@ public class RequestDetails10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
 			definition = "Specifies whether the transaction is to be executed with a high priority.";
+			nextVersions_lazy = () -> Arrays.asList(RequestDetails17.mmPriority);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityNumeric1Choice.mmObject();
@@ -283,6 +316,14 @@ public class RequestDetails10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies another type of processing change request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmOtherProcessing
+	 * RequestDetails17.mmOtherProcessing}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOtherProcessing = new MMMessageAttribute() {
@@ -294,6 +335,7 @@ public class RequestDetails10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProcessing";
 			definition = "Specifies another type of processing change request.";
+			nextVersions_lazy = () -> Arrays.asList(RequestDetails17.mmOtherProcessing);
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification30.mmObject();
 		}
@@ -334,6 +376,14 @@ public class RequestDetails10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies whether partial settlement is allowed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmPartialSettlementIndicator
+	 * RequestDetails17.mmPartialSettlementIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartialSettlementIndicator = new MMMessageAttribute() {
@@ -346,6 +396,7 @@ public class RequestDetails10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialSettlementIndicator";
 			definition = "Specifies whether partial settlement is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(RequestDetails17.mmPartialSettlementIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -389,6 +440,14 @@ public class RequestDetails10 {
 	 * definition} =
 	 * "Specifies the clearing channel to be used to process the payment instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmClearingChannel
+	 * RequestDetails17.mmClearingChannel}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClearingChannel = new MMMessageAttribute() {
@@ -401,6 +460,7 @@ public class RequestDetails10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingChannel";
 			definition = "Specifies the clearing channel to be used to process the payment instruction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestDetails17.mmClearingChannel);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ClearingChannel2Code.mmObject();
@@ -434,6 +494,14 @@ public class RequestDetails10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information regarding the linkage requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmLinkages
+	 * RequestDetails17.mmLinkages}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLinkages = new MMMessageAssociationEnd() {
@@ -445,6 +513,7 @@ public class RequestDetails10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Information regarding the linkage requested.";
+			nextVersions_lazy = () -> Arrays.asList(RequestDetails17.mmLinkages);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Linkages26.mmObject();
@@ -463,7 +532,8 @@ public class RequestDetails10 {
 						com.tools20022.repository.constraints.ConstraintOtherProcessingRule.forRequestDetails10);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RequestDetails10";
-				definition = "Details of the request providing  the changes and references of the instruction.";
+				definition = "Details of the request providing the changes and references of the instruction.";
+				nextVersions_lazy = () -> Arrays.asList(RequestDetails17.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

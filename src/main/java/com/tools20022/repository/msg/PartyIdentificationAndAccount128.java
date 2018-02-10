@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Provides information about identification and account of the party .
+ * Provides information about identification and account of the party.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -83,7 +83,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyIdentificationAndAccount128"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides information about identification and account of the party ."</li>
+ * "Provides information about identification and account of the party."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -307,7 +307,7 @@ public class PartyIdentificationAndAccount128 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forPartyIdentificationAndAccount128);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentificationAndAccount128";
-				definition = "Provides information about identification and account of the party .";
+				definition = "Provides information about identification and account of the party.";
 			}
 		});
 		return mmObject_lazy.get();

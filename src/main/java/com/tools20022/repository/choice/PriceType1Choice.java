@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PriceType1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of price type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.PriceType4Choice
+ * PriceType4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +109,14 @@ public class PriceType1Choice {
 	 * definition} =
 	 * "Last reported price of a financial instrument in a market, determined by supply and demand."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriceType4Choice#mmMarket
+	 * PriceType4Choice.mmMarket}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMarket = new MMMessageAssociationEnd() {
@@ -113,6 +128,7 @@ public class PriceType1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Market";
 			definition = "Last reported price of a financial instrument in a market, determined by supply and demand.";
+			nextVersions_lazy = () -> Arrays.asList(PriceType4Choice.mmMarket);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -149,6 +165,14 @@ public class PriceType1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Estimated price, for valuation purposes."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriceType4Choice#mmIndicative
+	 * PriceType4Choice.mmIndicative}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIndicative = new MMMessageAssociationEnd() {
@@ -160,6 +184,7 @@ public class PriceType1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Indicative";
 			definition = "Estimated price, for valuation purposes.";
+			nextVersions_lazy = () -> Arrays.asList(PriceType4Choice.mmIndicative);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -176,6 +201,7 @@ public class PriceType1Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PriceType1Choice";
 				definition = "Choice of price type.";
+				nextVersions_lazy = () -> Arrays.asList(PriceType4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

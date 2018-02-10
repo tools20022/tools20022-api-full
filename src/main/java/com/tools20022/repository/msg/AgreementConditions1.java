@@ -108,7 +108,7 @@ public class AgreementConditions1 {
 	 * name} = "AgreementCode"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the type of agreement"</li>
+	 * definition} = "Specifies the type of agreement."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAgreementCode = new MMMessageAttribute() {
@@ -119,7 +119,7 @@ public class AgreementConditions1 {
 			xmlTag = "AgrmtCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgreementCode";
-			definition = "Specifies the type of agreement";
+			definition = "Specifies the type of agreement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max6AlphaText.mmObject();

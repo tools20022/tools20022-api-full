@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PendingStatusAndReason1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of the intra-balance movement status type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PendingStatusAndReason2
+ * PendingStatusAndReason2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class PendingStatusAndReason1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides details on the processing status of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PendingStatusAndReason2#mmProcessingStatus
+	 * PendingStatusAndReason2.mmProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProcessingStatus = new MMMessageAssociationEnd() {
@@ -119,6 +134,7 @@ public class PendingStatusAndReason1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingStatus";
 			definition = "Provides details on the processing status of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PendingStatusAndReason2.mmProcessingStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> ProcessingStatus34Choice.mmObject();
@@ -155,7 +171,15 @@ public class PendingStatusAndReason1 {
 	 * name} = "SettlementStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides the settlement status of a transaction"</li>
+	 * definition} = "Provides the settlement status of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PendingStatusAndReason2#mmSettlementStatus
+	 * PendingStatusAndReason2.mmSettlementStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettlementStatus = new MMMessageAssociationEnd() {
@@ -166,7 +190,8 @@ public class PendingStatusAndReason1 {
 			xmlTag = "SttlmSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStatus";
-			definition = "Provides the settlement status of a transaction";
+			definition = "Provides the settlement status of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PendingStatusAndReason2.mmSettlementStatus);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SettlementStatus9Choice.mmObject();
@@ -182,6 +207,7 @@ public class PendingStatusAndReason1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PendingStatusAndReason1";
 				definition = "Choice of the intra-balance movement status type.";
+				nextVersions_lazy = () -> Arrays.asList(PendingStatusAndReason2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -185,7 +185,7 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'."
+	 * "ISO20022 Rule: \nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'."
 	 * </li>
 	 * </ul>
 	 */
@@ -194,7 +194,7 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupInformation15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
-			definition = "ISO20022 Rule:\nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
+			definition = "ISO20022 Rule: \nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			owner_lazy = () -> OriginalGroupInformation15.mmObject();
 		}
 	};
@@ -215,7 +215,7 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'."
+	 * "ISO20022 Rule: \nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'."
 	 * </li>
 	 * </ul>
 	 */
@@ -224,7 +224,7 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupInformation19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
-			definition = "ISO20022 Rule:\nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
+			definition = "ISO20022 Rule: \nOriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			owner_lazy = () -> OriginalGroupInformation19.mmObject();
 		}
 	};
@@ -247,6 +247,15 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 * definition} =
 	 * "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline#forOriginalGroupHeader13
+	 * ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader13}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -260,6 +269,7 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionPerStatusGuideline";
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader13);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader1;
 			owner_lazy = () -> OriginalGroupHeader7.mmObject();
 		}
@@ -299,6 +309,42 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupInformation25;
 			owner_lazy = () -> OriginalGroupInformation28.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13
+	 * OriginalGroupHeader13}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NumberOfTransactionPerStatusGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline#forOriginalGroupHeader7
+	 * ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader7}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<OriginalGroupHeader13> forOriginalGroupHeader13 = new MMConstraint<OriginalGroupHeader13>() {
+		{
+			validator = ConstraintNumberOfTransactionPerStatusGuideline::checkOriginalGroupHeader13;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NumberOfTransactionPerStatusGuideline";
+			definition = "OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should only be present if GroupStatus equals 'PART'.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNumberOfTransactionPerStatusGuideline.forOriginalGroupHeader7;
+			owner_lazy = () -> OriginalGroupHeader13.mmObject();
 		}
 	};
 
@@ -365,6 +411,14 @@ public class ConstraintNumberOfTransactionPerStatusGuideline {
 	 * only be present if GroupStatus equals 'PART'.
 	 */
 	public static void checkOriginalGroupInformation28(OriginalGroupInformation28 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * OriginalGroupInformationAndStatus/NumberOfTransactionsPerStatus should
+	 * only be present if GroupStatus equals 'PART'.
+	 */
+	public static void checkOriginalGroupHeader13(OriginalGroupHeader13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

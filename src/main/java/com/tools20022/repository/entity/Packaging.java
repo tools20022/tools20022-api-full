@@ -150,6 +150,9 @@ public class Packaging {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.LineItem16#mmPackageQuantity
 	 * LineItem16.mmPackageQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmPackageQuantity
+	 * LineItem17.mmPackageQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -164,17 +167,17 @@ public class Packaging {
 	 * name} = "Quantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of packages for a  supply chain trade delivery."</li>
+	 * definition} = "Number of packages for a supply chain trade delivery."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(LineItem10.mmPackageQuantity, LineItem16.mmPackageQuantity);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmPackageQuantity, LineItem16.mmPackageQuantity, LineItem17.mmPackageQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Quantity";
-			definition = "Number of packages for a  supply chain trade delivery.";
+			definition = "Number of packages for a supply chain trade delivery.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmRelatedPackaging;
@@ -209,6 +212,9 @@ public class Packaging {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.LineItem16#mmPerPackageUnitQuantity
 	 * LineItem16.mmPerPackageUnitQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmPerPackageUnitQuantity
+	 * LineItem17.mmPerPackageUnitQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -224,17 +230,17 @@ public class Packaging {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number of units per package  for a supply chain trade delivery."</li>
+	 * "Number of units per package for a supply chain trade delivery."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmPerPackageUnitQuantity = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(LineItem10.mmPerPackageUnitQuantity, LineItem16.mmPerPackageUnitQuantity);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmPerPackageUnitQuantity, LineItem16.mmPerPackageUnitQuantity, LineItem17.mmPerPackageUnitQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PerPackageUnitQuantity";
-			definition = "Number of units per package  for a supply chain trade delivery.";
+			definition = "Number of units per package for a supply chain trade delivery.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmPackagingForUnitQuantity;
@@ -386,7 +392,7 @@ public class Packaging {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total quantity of packaging units, eg number of boxes, containers, pallets, etc"
+	 * "Total quantity of packaging units, eg number of boxes, containers, pallets, etc."
 	 * </li>
 	 * </ul>
 	 */
@@ -397,7 +403,7 @@ public class Packaging {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Packaging.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalConsignmentQuantity";
-			definition = "Total quantity of packaging units, eg number of boxes, containers, pallets, etc";
+			definition = "Total quantity of packaging units, eg number of boxes, containers, pallets, etc.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.ProductQuantity.mmPackagingForConsignmentlQuantity;

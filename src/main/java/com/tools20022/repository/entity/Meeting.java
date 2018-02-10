@@ -197,7 +197,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Meeting"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the physical parameters of a general meeting. Several dates and places can be defined for a  meeting."
+ * "Specifies the physical parameters of a general meeting. Several dates and places can be defined for a meeting."
  * </li>
  * </ul>
  */
@@ -276,6 +276,12 @@ public class Meeting {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmMeetingDate
 	 * CorporateActionDate58.mmMeetingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmMeetingDate
+	 * CorporateActionDate61.mmMeetingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmMeetingDate
+	 * CorporateActionDate74.mmMeetingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -298,7 +304,8 @@ public class Meeting {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmMeetingDate, CorporateActionDate13.mmMeetingDate, CorporateActionDate14.mmMeetingDate, CorporateActionDate21.mmMeetingDate, CorporateActionDate22.mmMeetingDate,
 					CorporateActionDate25.mmMeetingDate, CorporateActionDate27.mmMeetingDate, CorporateActionDate28.mmMeetingDate, Meeting1.mmDateAndTime, Meeting2.mmDateAndTime, Meeting3.mmDateAndTime,
 					MeetingReference1.mmMeetingDateAndTime, MeetingReference2.mmMeetingDateAndTime, MeetingReference5.mmMeetingDateAndTime, MeetingReference3.mmMeetingDateAndTime, MeetingReference4.mmMeetingDateAndTime,
-					MeetingReference7.mmMeetingDateAndTime, MeetingReference6.mmMeetingDateAndTime, Meeting4.mmDateAndTime, CorporateActionDate44.mmMeetingDate, CorporateActionDate58.mmMeetingDate);
+					MeetingReference7.mmMeetingDateAndTime, MeetingReference6.mmMeetingDateAndTime, Meeting4.mmDateAndTime, CorporateActionDate44.mmMeetingDate, CorporateActionDate58.mmMeetingDate, CorporateActionDate61.mmMeetingDate,
+					CorporateActionDate74.mmMeetingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Meeting.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1589,7 +1596,7 @@ public class Meeting {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Meeting";
-				definition = "Specifies the physical parameters of a general meeting. Several dates and places can be defined for a  meeting.";
+				definition = "Specifies the physical parameters of a general meeting. Several dates and places can be defined for a meeting.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPoint.mmContactPointForMeeting, com.tools20022.repository.entity.ContactPersonRole.mmMeeting,
 						com.tools20022.repository.entity.CorporateActionEvent.mmRelatedMeeting, com.tools20022.repository.entity.Deadline.mmRelatedMeeting, com.tools20022.repository.entity.MeetingPartyRole.mmMeeting,
 						com.tools20022.repository.entity.ResolutionProposal.mmMeeting, com.tools20022.repository.entity.ProxyAppointmentCondition.mmMeeting, com.tools20022.repository.entity.MeetingParticipation.mmMeeting,

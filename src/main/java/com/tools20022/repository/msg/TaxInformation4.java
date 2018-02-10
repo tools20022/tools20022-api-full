@@ -93,6 +93,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Details about tax paid, or to be paid, to the government in accordance with the law, including pre-defined parameters such as thresholds and type of account."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxInformation7
+ * TaxInformation7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.TaxInformation3
  * TaxInformation3}</li>
@@ -134,6 +141,13 @@ public class TaxInformation4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party on the credit side of the transaction to which the tax applies."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxInformation7#mmCreditor
+	 * TaxInformation7.mmCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -150,6 +164,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party on the credit side of the transaction to which the tax applies.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmCreditor);
 			previousVersion_lazy = () -> TaxInformation3.mmCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -189,6 +204,13 @@ public class TaxInformation4 {
 	 * definition} =
 	 * "Identifies the party on the debit side of the transaction to which the tax applies."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxInformation7#mmDebtor
+	 * TaxInformation7.mmDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -205,6 +227,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Identifies the party on the debit side of the transaction to which the tax applies.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmDebtor);
 			previousVersion_lazy = () -> TaxInformation3.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -244,6 +267,14 @@ public class TaxInformation4 {
 	 * definition} =
 	 * "Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the taxing authority."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxInformation7#mmUltimateDebtor
+	 * TaxInformation7.mmUltimateDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUltimateDebtor = new MMMessageAssociationEnd() {
@@ -255,6 +286,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the taxing authority.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmUltimateDebtor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -294,6 +326,14 @@ public class TaxInformation4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Territorial part of a country to which the tax payment is related."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxInformation7#mmAdministrationZone
+	 * TaxInformation7.mmAdministrationZone}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -310,6 +350,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdministrationZone";
 			definition = "Territorial part of a country to which the tax payment is related.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmAdministrationZone);
 			previousVersion_lazy = () -> TaxInformation3.mmAdministrationZone;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -349,6 +390,14 @@ public class TaxInformation4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Tax reference information that is specific to a taxing agency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxInformation7#mmReferenceNumber
+	 * TaxInformation7.mmReferenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -365,6 +414,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceNumber";
 			definition = "Tax reference information that is specific to a taxing agency.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmReferenceNumber);
 			previousVersion_lazy = () -> TaxInformation3.mmReferenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -404,6 +454,13 @@ public class TaxInformation4 {
 	 * definition} =
 	 * "Method used to indicate the underlying business or how the tax is paid."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxInformation7#mmMethod
+	 * TaxInformation7.mmMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -420,6 +477,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Method";
 			definition = "Method used to indicate the underlying business or how the tax is paid.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmMethod);
 			previousVersion_lazy = () -> TaxInformation3.mmMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -459,6 +517,14 @@ public class TaxInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total amount of money on which the tax is based."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxInformation7#mmTotalTaxableBaseAmount
+	 * TaxInformation7.mmTotalTaxableBaseAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -475,6 +541,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxableBaseAmount";
 			definition = "Total amount of money on which the tax is based.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmTotalTaxableBaseAmount);
 			previousVersion_lazy = () -> TaxInformation3.mmTotalTaxableBaseAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -514,6 +581,14 @@ public class TaxInformation4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Total amount of money as result of the calculation of the tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxInformation7#mmTotalTaxAmount
+	 * TaxInformation7.mmTotalTaxAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -530,6 +605,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxAmount";
 			definition = "Total amount of money as result of the calculation of the tax.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmTotalTaxAmount);
 			previousVersion_lazy = () -> TaxInformation3.mmTotalTaxAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -568,6 +644,13 @@ public class TaxInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date by which tax is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxInformation7#mmDate
+	 * TaxInformation7.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -584,6 +667,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date by which tax is due.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmDate);
 			previousVersion_lazy = () -> TaxInformation3.mmDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -617,6 +701,14 @@ public class TaxInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Sequential number of the tax report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxInformation7#mmSequenceNumber
+	 * TaxInformation7.mmSequenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -632,6 +724,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceNumber";
 			definition = "Sequential number of the tax report.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmSequenceNumber);
 			previousVersion_lazy = () -> TaxInformation3.mmSequenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -667,6 +760,13 @@ public class TaxInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Record of tax details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxInformation7#mmRecord
+	 * TaxInformation7.mmRecord}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -683,6 +783,7 @@ public class TaxInformation4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Record";
 			definition = "Record of tax details.";
+			nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmRecord);
 			previousVersion_lazy = () -> TaxInformation3.mmRecord;
 			minOccurs = 0;
 			isComposite = true;
@@ -702,6 +803,7 @@ public class TaxInformation4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxInformation4";
 				definition = "Details about tax paid, or to be paid, to the government in accordance with the law, including pre-defined parameters such as thresholds and type of account.";
+				nextVersions_lazy = () -> Arrays.asList(TaxInformation7.mmObject());
 				previousVersion_lazy = () -> TaxInformation3.mmObject();
 			}
 		});

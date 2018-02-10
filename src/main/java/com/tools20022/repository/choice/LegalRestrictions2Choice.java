@@ -62,6 +62,13 @@ import javax.xml.bind.annotation.XmlType;
  * "LegalRestrictions2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for legal restrictions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.LegalRestrictions5Choice
+ * LegalRestrictions5Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class LegalRestrictions2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Legal restrictions expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LegalRestrictions5Choice#mmCode
+	 * LegalRestrictions5Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class LegalRestrictions2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Legal restrictions expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(LegalRestrictions5Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> LegalRestrictions2Code.mmObject();
@@ -139,6 +155,14 @@ public class LegalRestrictions2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Legal restrictions expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LegalRestrictions5Choice#mmProprietary
+	 * LegalRestrictions5Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -149,6 +173,7 @@ public class LegalRestrictions2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Legal restrictions expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(LegalRestrictions5Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,6 +189,7 @@ public class LegalRestrictions2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LegalRestrictions2Choice";
 				definition = "Choice of format for legal restrictions.";
+				nextVersions_lazy = () -> Arrays.asList(LegalRestrictions5Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

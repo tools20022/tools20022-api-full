@@ -83,7 +83,7 @@ import javax.xml.bind.annotation.XmlType;
  * "VerificationReport1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Set of elements used  to provide information concerning the verification of identification data for which verification was requested."
+ * "Set of elements used to provide information concerning the verification of identification data for which verification was requested."
  * </li>
  * </ul>
  */
@@ -326,7 +326,7 @@ public class VerificationReport1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "VerificationReport1";
-				definition = "Set of elements used  to provide information concerning the verification of identification data for which verification was requested.";
+				definition = "Set of elements used to provide information concerning the verification of identification data for which verification was requested.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -133,6 +133,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Header30"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of characteristics related to the protocol."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Header35 Header35}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Header10
  * Header10}</li>
@@ -170,6 +176,13 @@ public class Header30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the type of process related to the message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header35#mmMessageFunction
+	 * Header35.mmMessageFunction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -185,6 +198,7 @@ public class Header30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Identifies the type of process related to the message.";
+			nextVersions_lazy = () -> Arrays.asList(Header35.mmMessageFunction);
 			previousVersion_lazy = () -> Header10.mmMessageFunction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -217,6 +231,13 @@ public class Header30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the acquirer protocol specifications."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header35#mmProtocolVersion
+	 * Header35.mmProtocolVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -232,6 +253,7 @@ public class Header30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the acquirer protocol specifications.";
+			nextVersions_lazy = () -> Arrays.asList(Header35.mmProtocolVersion);
 			previousVersion_lazy = () -> Header10.mmProtocolVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -264,6 +286,14 @@ public class Header30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identification of an exchange occurrence."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Header35#mmExchangeIdentification
+	 * Header35.mmExchangeIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -279,6 +309,7 @@ public class Header30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
+			nextVersions_lazy = () -> Arrays.asList(Header35.mmExchangeIdentification);
 			previousVersion_lazy = () -> Header10.mmExchangeIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -311,6 +342,14 @@ public class Header30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Header35#mmCreationDateTime
+	 * Header35.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -326,6 +365,7 @@ public class Header30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
+			nextVersions_lazy = () -> Arrays.asList(Header35.mmCreationDateTime);
 			previousVersion_lazy = () -> Header10.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -359,6 +399,13 @@ public class Header30 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Unique identification of the partner that has initiated the exchange."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header35#mmInitiatingParty
+	 * Header35.mmInitiatingParty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,6 +421,7 @@ public class Header30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
+			nextVersions_lazy = () -> Arrays.asList(Header35.mmInitiatingParty);
 			previousVersion_lazy = () -> Header10.mmInitiatingParty;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -409,6 +457,13 @@ public class Header30 {
 	 * definition} =
 	 * "Unique identification of the partner that is the recipient of the message exchange."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header35#mmRecipientParty
+	 * Header35.mmRecipientParty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -424,6 +479,7 @@ public class Header30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the message exchange.";
+			nextVersions_lazy = () -> Arrays.asList(Header35.mmRecipientParty);
 			previousVersion_lazy = () -> Header10.mmRecipientParty;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -459,6 +515,13 @@ public class Header30 {
 	 * definition} =
 	 * "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header35#mmTraceability
+	 * Header35.mmTraceability}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -474,6 +537,7 @@ public class Header30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
+			nextVersions_lazy = () -> Arrays.asList(Header35.mmTraceability);
 			previousVersion_lazy = () -> Header10.mmTraceability;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Traceability5.mmObject();
@@ -495,6 +559,7 @@ public class Header30 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header30";
 				definition = "Set of characteristics related to the protocol.";
+				nextVersions_lazy = () -> Arrays.asList(Header35.mmObject());
 				previousVersion_lazy = () -> Header10.mmObject();
 			}
 		});

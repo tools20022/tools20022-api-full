@@ -55,7 +55,7 @@ class SecuritiesFinancing [[../SecuritiesFinancing.html{Process of lending or bo
 RepurchaseAgreement -up-|> SecuritiesFinancing
 class RepurchaseAgreement [[../RepurchaseAgreement.html{Sale of securities together with an agreement for the seller to buy back the securities at a later date.
 A repo is equivalent to a spot sale combined with a forward contract.
-For the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement. }]] #FEFECE {
+For the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement.}]] #FEFECE {
 }
 }
 together {
@@ -73,7 +73,7 @@ Obligation -[hidden]-> TradePartyRole
 class Negotiation [[../Negotiation.html{Decision making on the transfer of a financial instrument.}]] #EEEEEE {
 }
 Negotiation -[hidden]-> Obligation
-class MasterAgreement [[../MasterAgreement.html{Agreement which defines the framework of a contract between two trading parties in different domains such as collateral, derivatives, trade..}]] #EEEEEE {
+class MasterAgreement [[../MasterAgreement.html{Agreement which defines the framework of a contract between two trading parties in different domains such as collateral, derivatives, trade.}]] #EEEEEE {
 }
 MasterAgreement -[hidden]-> Negotiation
 class System [[../System.html{Set of integrated applications that provides centralised services such as clearing, netting, reconciliation, trading and/or settlement.}]] #EEEEEE {
@@ -133,7 +133,7 @@ class SecuritiesOrder [[../SecuritiesOrder.html{Intention to transfer an ownersh
 SecuritiesOrder -[hidden]-> Allocation
 }
 together {
-class Interest [[../Interest.html{Consideration, such as amount of money,  paid or received in exchange for an asset that has been invested, loaned or borrowed for a certain period. The interest is expressed as a fixed amount or percentage of the amount upon which the interest is applied.}]] #EEEEEE {
+class Interest [[../Interest.html{Consideration, such as amount of money, paid or received in exchange for an asset that has been invested, loaned or borrowed for a certain period. The interest is expressed as a fixed amount or percentage of the amount upon which the interest is applied.}]] #EEEEEE {
 }
 class Spread [[../Spread.html{Margin over or under an index which determines a rate.}]] #EEEEEE {
 }

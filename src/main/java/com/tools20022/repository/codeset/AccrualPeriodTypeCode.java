@@ -275,7 +275,7 @@ public class AccrualPeriodTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Payment is omitted.
+	 * Payment has not been done.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -292,14 +292,14 @@ public class AccrualPeriodTypeCode extends MMCode {
 	 * name} = "PaymentOmitted"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Payment is omitted."</li>
+	 * definition} = "Payment has not been done."</li>
 	 * </ul>
 	 */
 	public static final AccrualPeriodTypeCode PaymentOmitted = new AccrualPeriodTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentOmitted";
-			definition = "Payment is omitted.";
+			definition = "Payment has not been done.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AccrualPeriodTypeCode.mmObject();
 			codeName = "OMIT";
 		}

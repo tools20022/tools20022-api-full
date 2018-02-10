@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Type of tax
+ * Type of tax.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TaxType3Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Type of tax"</li>
+ * definition} = "Type of tax."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -155,7 +155,7 @@ public class TaxType3Code extends MMCode {
 				example = Arrays.asList("LIDT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxType3Code";
-				definition = "Type of tax";
+				definition = "Type of tax.";
 				trace_lazy = () -> TaxTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TaxType3Code.GermanLocalTax2, com.tools20022.repository.codeset.TaxType3Code.WithholdingOfForeignTax,
 						com.tools20022.repository.codeset.TaxType3Code.WithholdingOfLocalTax);

@@ -127,7 +127,7 @@ public class CounterpartyIdentification3Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction. "
+	 * "Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -144,7 +144,7 @@ public class CounterpartyIdentification3Choice {
 			xmlTag = "LEI";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
-			definition = "Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction. ";
+			definition = "Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.";
 			previousVersion_lazy = () -> CounterpartyIdentification2Choice.mmLEI;
 			maxOccurs = 1;
 			minOccurs = 1;

@@ -236,7 +236,7 @@ public class UnableToApplyIncorrectInformationV2Code extends MMCode {
 	};
 	/**
 	 * Payment type service level is incorrect (former
-	 * IncorrectBankOperationCode)
+	 * IncorrectBankOperationCode).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -254,7 +254,7 @@ public class UnableToApplyIncorrectInformationV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Payment type service level is incorrect (former IncorrectBankOperationCode)"
+	 * "Payment type service level is incorrect (former IncorrectBankOperationCode)."
 	 * </li>
 	 * </ul>
 	 */
@@ -262,7 +262,7 @@ public class UnableToApplyIncorrectInformationV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectPaymentServiceLevel";
-			definition = "Payment type service level is incorrect (former IncorrectBankOperationCode)";
+			definition = "Payment type service level is incorrect (former IncorrectBankOperationCode).";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInformationV2Code.mmObject();
 			codeName = "IN02";
 		}
@@ -736,7 +736,7 @@ public class UnableToApplyIncorrectInformationV2Code extends MMCode {
 	};
 	/**
 	 * Instruction for next agent is incorrect (former
-	 * IncorrectSenderToReceiverInformation)
+	 * IncorrectSenderToReceiverInformation).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -754,7 +754,7 @@ public class UnableToApplyIncorrectInformationV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction for next agent is incorrect (former IncorrectSenderToReceiverInformation)"
+	 * "Instruction for next agent is incorrect (former IncorrectSenderToReceiverInformation)."
 	 * </li>
 	 * </ul>
 	 */
@@ -762,7 +762,7 @@ public class UnableToApplyIncorrectInformationV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IncorrectInstructionForNextAgent";
-			definition = "Instruction for next agent is incorrect (former IncorrectSenderToReceiverInformation)";
+			definition = "Instruction for next agent is incorrect (former IncorrectSenderToReceiverInformation).";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnableToApplyIncorrectInformationV2Code.mmObject();
 			codeName = "IN18";
 		}

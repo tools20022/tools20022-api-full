@@ -106,6 +106,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation11#mmElectronicSignature
  * MandateRelatedInformation11.mmElectronicSignature}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MandateRelatedInformation12#mmElectronicSignature
+ * MandateRelatedInformation12.mmElectronicSignature}</li>
  * </ul>
  * </li>
  * <li>
@@ -252,7 +255,7 @@ public class ElectronicSignature extends Signature {
 				derivationElement_lazy = () -> Arrays.asList(PartyAndSignature2.mmSignature, MandateRelatedInformation1.mmElectronicSignature, MandateRelatedInformation6.mmElectronicSignature,
 						MandateRelatedInformation7.mmElectronicSignature, MandateRelatedInformation8.mmElectronicSignature, Document9.mmDigitalSignature, MandateRelatedInformation9.mmElectronicSignature,
 						MandateRelatedInformation4.mmElectronicSignature, MandateRelatedInformation5.mmElectronicSignature, MandateRelatedInformation10.mmElectronicSignature, BusinessLetter1.mmDigitalSignature,
-						QualifiedPartyAndXMLSignature1.mmSignature, MandateRelatedInformation11.mmElectronicSignature);
+						QualifiedPartyAndXMLSignature1.mmSignature, MandateRelatedInformation11.mmElectronicSignature, MandateRelatedInformation12.mmElectronicSignature);
 				superType_lazy = () -> Signature.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ElectronicSignature.mmUndertaking, com.tools20022.repository.entity.ElectronicSignature.mmRelatedSecurityCertificate);
 				derivationComponent_lazy = () -> Arrays.asList(PartyAndSignature2.mmObject(), QualifiedPartyAndXMLSignature1.mmObject());

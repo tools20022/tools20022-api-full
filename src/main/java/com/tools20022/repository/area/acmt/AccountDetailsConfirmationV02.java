@@ -305,7 +305,7 @@ public class AccountDetailsConfirmationV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provide detailed information about the request or instruction which triggered this confirmation. "
+	 * "Provide detailed information about the request or instruction which triggered this confirmation."
 	 * </li>
 	 * </ul>
 	 */
@@ -314,7 +314,7 @@ public class AccountDetailsConfirmationV02 {
 			xmlTag = "ConfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConfirmationDetails";
-			definition = "Provide detailed information about the request or instruction which triggered this confirmation. ";
+			definition = "Provide detailed information about the request or instruction which triggered this confirmation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AccountManagementConfirmation1.mmObject();

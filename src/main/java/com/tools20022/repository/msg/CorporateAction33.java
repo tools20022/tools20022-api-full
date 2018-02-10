@@ -95,6 +95,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateAction33"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides information about the corporate action event."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateAction44
+ * CorporateAction44}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateAction13
@@ -139,6 +146,14 @@ public class CorporateAction33 {
 	 * definition} =
 	 * "Provides information about the dates related to a corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction44#mmDateDetails
+	 * CorporateAction44.mmDateDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -155,6 +170,7 @@ public class CorporateAction33 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateAction44.mmDateDetails);
 			previousVersion_lazy = () -> CorporateAction13.mmDateDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -194,6 +210,14 @@ public class CorporateAction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Stage in the corporate action event life cycle."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction44#mmEventStage
+	 * CorporateAction44.mmEventStage}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -210,6 +234,7 @@ public class CorporateAction33 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventStage";
 			definition = "Stage in the corporate action event life cycle.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateAction44.mmEventStage);
 			previousVersion_lazy = () -> CorporateAction13.mmEventStage;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -254,6 +279,14 @@ public class CorporateAction33 {
 	 * definition} =
 	 * "Indicates that the additional business process relates to a claim on the associated corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction44#mmAdditionalBusinessProcessIndicator
+	 * CorporateAction44.mmAdditionalBusinessProcessIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAdditionalBusinessProcessIndicator = new MMMessageAssociationEnd() {
@@ -266,6 +299,7 @@ public class CorporateAction33 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalBusinessProcessIndicator";
 			definition = "Indicates that the additional business process relates to a claim on the associated corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateAction44.mmAdditionalBusinessProcessIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -307,6 +341,14 @@ public class CorporateAction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of lottery announced."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction44#mmLotteryType
+	 * CorporateAction44.mmLotteryType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -324,6 +366,7 @@ public class CorporateAction33 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotteryType";
 			definition = "Specifies the type of lottery announced.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateAction44.mmLotteryType);
 			previousVersion_lazy = () -> CorporateAction13.mmLotteryType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -344,6 +387,7 @@ public class CorporateAction33 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateAction33";
 				definition = "Provides information about the corporate action event.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateAction44.mmObject());
 				previousVersion_lazy = () -> CorporateAction13.mmObject();
 			}
 		});

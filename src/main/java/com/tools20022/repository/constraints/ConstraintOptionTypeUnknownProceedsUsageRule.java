@@ -331,6 +331,15 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * definition} =
 	 * "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule#forCorporateActionOption138
+	 * ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption138}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -345,6 +354,7 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption138);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption114;
 			owner_lazy = () -> CorporateActionOption130.mmObject();
 		}
@@ -377,6 +387,73 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 			name = "OptionTypeUnknownProceedsUsageRule";
 			definition = "When used, the corporate action option code Unknown Proceeds should be maintained throughout the full lifecycle of the event.";
 			owner_lazy = () -> CorporateActionOption133.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138
+	 * CorporateActionOption138}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used, the corporate action option code PRUN (Unknown Proceeds) should be maintained throughout the full lifecycle of the event."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule#forCorporateActionOption130
+	 * ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption130}
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption138> forCorporateActionOption138 = new MMConstraint<CorporateActionOption138>() {
+		{
+			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption138;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionTypeUnknownProceedsUsageRule";
+			definition = "When used, the corporate action option code PRUN (Unknown Proceeds) should be maintained throughout the full lifecycle of the event.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintOptionTypeUnknownProceedsUsageRule.forCorporateActionOption130;
+			owner_lazy = () -> CorporateActionOption138.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150
+	 * CorporateActionOption150}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "OptionTypeUnknownProceedsUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used, the corporate action option code PRUN (Unknown Proceeds) should be maintained throughout the full lifecycle of the event."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionOption150> forCorporateActionOption150 = new MMConstraint<CorporateActionOption150>() {
+		{
+			validator = ConstraintOptionTypeUnknownProceedsUsageRule::checkCorporateActionOption150;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "OptionTypeUnknownProceedsUsageRule";
+			definition = "When used, the corporate action option code PRUN (Unknown Proceeds) should be maintained throughout the full lifecycle of the event.";
+			owner_lazy = () -> CorporateActionOption150.mmObject();
 		}
 	};
 
@@ -457,6 +534,22 @@ public class ConstraintOptionTypeUnknownProceedsUsageRule {
 	 * maintained throughout the full lifecycle of the event.
 	 */
 	public static void checkCorporateActionOption133(CorporateActionOption133 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used, the corporate action option code PRUN (Unknown Proceeds)
+	 * should be maintained throughout the full lifecycle of the event.
+	 */
+	public static void checkCorporateActionOption138(CorporateActionOption138 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used, the corporate action option code PRUN (Unknown Proceeds)
+	 * should be maintained throughout the full lifecycle of the event.
+	 */
+	public static void checkCorporateActionOption150(CorporateActionOption150 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

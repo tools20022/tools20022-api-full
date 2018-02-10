@@ -35,6 +35,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Payment processes required to transfer cash from the debtor to the creditor.
+ * .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -81,7 +82,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Transaction3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Payment processes required to transfer cash from the debtor to the creditor.\n"
+ * "Payment processes required to transfer cash from the debtor to the creditor.\n."
  * </li>
  * </ul>
  */
@@ -216,7 +217,7 @@ public class Transaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the payment transaction is a debit or credit transaction. \n"
+	 * "Indicates whether the payment transaction is a debit or credit transaction. \n."
 	 * </li>
 	 * </ul>
 	 */
@@ -228,7 +229,7 @@ public class Transaction3 {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the payment transaction is a debit or credit transaction. \n";
+			definition = "Indicates whether the payment transaction is a debit or credit transaction. \n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -264,7 +265,7 @@ public class Transaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n"
+	 * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +277,7 @@ public class Transaction3 {
 			xmlTag = "Pmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
-			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
+			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -314,7 +315,7 @@ public class Transaction3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. "
+	 * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account."
 	 * </li>
 	 * </ul>
 	 */
@@ -326,7 +327,7 @@ public class Transaction3 {
 			xmlTag = "AcctNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountEntry";
-			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
+			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -345,7 +346,7 @@ public class Transaction3 {
 						com.tools20022.repository.constraints.ConstraintTransactionCreditDebitIndicatorRule.forTransaction3);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Transaction3";
-				definition = "Payment processes required to transfer cash from the debtor to the creditor.\n";
+				definition = "Payment processes required to transfer cash from the debtor to the creditor.\n.";
 			}
 		});
 		return mmObject_lazy.get();

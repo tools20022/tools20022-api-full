@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Specifies the reason for a cancellation rejected status
+ * Specifies the reason for a cancellation rejected status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CancellationRejectedReason1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the reason for a cancellation rejected status"</li>
+ * definition} = "Specifies the reason for a cancellation rejected status."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -132,7 +132,7 @@ public class CancellationRejectedReason1Code extends MMCode {
 				example = Arrays.asList("CUTO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CancellationRejectedReason1Code";
-				definition = "Specifies the reason for a cancellation rejected status";
+				definition = "Specifies the reason for a cancellation rejected status.";
 				trace_lazy = () -> RejectedStatusReasonCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CancellationRejectedReason1Code.CutOffTime, com.tools20022.repository.codeset.CancellationRejectedReason1Code.AlreadyExecuted);
 			}

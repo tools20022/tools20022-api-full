@@ -233,7 +233,7 @@ public class MeetingVoteExecutionConfirmationV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the securities for which the meeting is organised. "</li>
+	 * "Identifies the securities for which the meeting is organised."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -246,7 +246,7 @@ public class MeetingVoteExecutionConfirmationV05 {
 			xmlTag = "FinInstrmId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
-			definition = "Identifies the securities for which the meeting is organised. ";
+			definition = "Identifies the securities for which the meeting is organised.";
 			previousVersion_lazy = () -> MeetingVoteExecutionConfirmationV04.mmSecurityIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;

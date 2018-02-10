@@ -861,7 +861,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 		}
 	};
 	/**
-	 * Financial institution that holds the seller's account .
+	 * Financial institution that holds the seller's account.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -878,14 +878,14 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * name} = "SellersBank"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Financial institution that holds the seller's account ."</li>
+	 * definition} = "Financial institution that holds the seller's account."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessRole SellersBank = new MMBusinessRole() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellersBank";
-			definition = "Financial institution that holds the seller's account .";
+			definition = "Financial institution that holds the seller's account.";
 			businessProcess_lazy = () -> BUSINESSPROCESS_FOR_ROLES.mmObject();
 		}
 	};
@@ -2150,7 +2150,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that receives the cash. In the payment chain, it may be an agent or the creditor.  Furthermore, for each pair of consecutive parties in the payment chain, one party always plays the role of the debit party, and the other, the role of the credit party."
+	 * "Party that receives the cash. In the payment chain, it may be an agent or the creditor. Furthermore, for each pair of consecutive parties in the payment chain, one party always plays the role of the debit party, and the other, the role of the credit party."
 	 * </li>
 	 * </ul>
 	 */
@@ -2158,7 +2158,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditParty";
-			definition = "Party that receives the cash. In the payment chain, it may be an agent or the creditor.  Furthermore, for each pair of consecutive parties in the payment chain, one party always plays the role of the debit party, and the other, the role of the credit party.";
+			definition = "Party that receives the cash. In the payment chain, it may be an agent or the creditor. Furthermore, for each pair of consecutive parties in the payment chain, one party always plays the role of the debit party, and the other, the role of the credit party.";
 			businessProcess_lazy = () -> BUSINESSPROCESS_FOR_ROLES.mmObject();
 		}
 	};
@@ -2586,7 +2586,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Agent that executes the payment.  In the context of the Funds industry, the paying agent is the legal representative of the Fund locally. It may pay out dividends, and collects money for the purchase of funds when a client deals directly with the Fund and/or when a client deals with bearer shares. It pays out the redemption of the Fund, may distribute information about the fund, and provides legal information about the Fund."
+	 * "Agent that executes the payment. In the context of the Funds industry, the paying agent is the legal representative of the Fund locally. It may pay out dividends, and collects money for the purchase of funds when a client deals directly with the Fund and/or when a client deals with bearer shares. It pays out the redemption of the Fund, may distribute information about the fund, and provides legal information about the Fund."
 	 * </li>
 	 * </ul>
 	 */
@@ -2594,7 +2594,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PayingAgent";
-			definition = "Agent that executes the payment.  In the context of the Funds industry, the paying agent is the legal representative of the Fund locally. It may pay out dividends, and collects money for the purchase of funds when a client deals directly with the Fund and/or when a client deals with bearer shares. It pays out the redemption of the Fund, may distribute information about the fund, and provides legal information about the Fund.";
+			definition = "Agent that executes the payment. In the context of the Funds industry, the paying agent is the legal representative of the Fund locally. It may pay out dividends, and collects money for the purchase of funds when a client deals directly with the Fund and/or when a client deals with bearer shares. It pays out the redemption of the Fund, may distribute information about the fund, and provides legal information about the Fund.";
 			businessProcess_lazy = () -> BUSINESSPROCESS_FOR_ROLES.mmObject();
 		}
 	};
@@ -3323,7 +3323,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * <br>
 	 * - Beneficial Owner (the effective owner of the shares)<br>
 	 * - Investment Manager<br>
-	 * - Proxy Agency
+	 * - Proxy Agency.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -3341,7 +3341,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that issues voting instructions instructions. It can be:\r\n\r\n- Beneficial Owner (the effective owner of the shares)\r\n- Investment Manager\r\n- Proxy Agency"
+	 * "Party that issues voting instructions instructions. It can be:\r\n\r\n- Beneficial Owner (the effective owner of the shares)\r\n- Investment Manager\r\n- Proxy Agency."
 	 * </li>
 	 * </ul>
 	 */
@@ -3349,7 +3349,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VotingParty";
-			definition = "Party that issues voting instructions instructions. It can be:\r\n\r\n- Beneficial Owner (the effective owner of the shares)\r\n- Investment Manager\r\n- Proxy Agency";
+			definition = "Party that issues voting instructions instructions. It can be:\r\n\r\n- Beneficial Owner (the effective owner of the shares)\r\n- Investment Manager\r\n- Proxy Agency.";
 			businessProcess_lazy = () -> BUSINESSPROCESS_FOR_ROLES.mmObject();
 		}
 	};
@@ -3678,7 +3678,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party which holds and administers securities for example, Eurobonds or other financial assets, holds issuance accounts and enables transactions to be processed by book entry. An  ICSD also settles trades in international securities and in various domestic securities, usually through direct or indirect (through local agents) links to local CSDs. Assets may exist either physically (but immobilized within the CSD) or in a dematerialised form."
+	 * "Party which holds and administers securities for example, Eurobonds or other financial assets, holds issuance accounts and enables transactions to be processed by book entry. An ICSD also settles trades in international securities and in various domestic securities, usually through direct or indirect (through local agents) links to local CSDs. Assets may exist either physically (but immobilized within the CSD) or in a dematerialised form."
 	 * </li>
 	 * </ul>
 	 */
@@ -3686,7 +3686,7 @@ public class BUSINESSPROCESS_FOR_ROLES {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InternationalCentralSecuritiesDepository";
-			definition = "Party which holds and administers securities for example, Eurobonds or other financial assets, holds issuance accounts and enables transactions to be processed by book entry. An  ICSD also settles trades in international securities and in various domestic securities, usually through direct or indirect (through local agents) links to local CSDs. Assets may exist either physically (but immobilized within the CSD) or in a dematerialised form.";
+			definition = "Party which holds and administers securities for example, Eurobonds or other financial assets, holds issuance accounts and enables transactions to be processed by book entry. An ICSD also settles trades in international securities and in various domestic securities, usually through direct or indirect (through local agents) links to local CSDs. Assets may exist either physically (but immobilized within the CSD) or in a dematerialised form.";
 			businessProcess_lazy = () -> BUSINESSPROCESS_FOR_ROLES.mmObject();
 		}
 	};

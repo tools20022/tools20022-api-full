@@ -175,7 +175,7 @@ public class AgentCANotificationCancellationRequestV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides information about the type of  notification cancellation request and linked message."
+	 * "Provides information about the type of notification cancellation request and linked message."
 	 * </li>
 	 * </ul>
 	 */
@@ -184,7 +184,7 @@ public class AgentCANotificationCancellationRequestV01 {
 			xmlTag = "NtfctnCxlTpAndLkg";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationCancellationTypeAndLinkage";
-			definition = "Provides information about the type of  notification cancellation request and linked message.";
+			definition = "Provides information about the type of notification cancellation request and linked message.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NotificationCancellation1.mmObject();

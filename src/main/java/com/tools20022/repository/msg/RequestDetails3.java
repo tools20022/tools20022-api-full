@@ -160,7 +160,7 @@ public class RequestDetails3 {
 	 * name} = "Key"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specific report data requested, for example, a  BIC."</li>
+	 * definition} = "Specific report data requested, for example, a BIC."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -178,7 +178,7 @@ public class RequestDetails3 {
 			xmlTag = "Key";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
-			definition = "Specific report data requested, for example, a  BIC.";
+			definition = "Specific report data requested, for example, a BIC.";
 			nextVersions_lazy = () -> Arrays.asList(RequestDetails19.mmRequestorIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;

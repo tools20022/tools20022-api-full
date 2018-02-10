@@ -20,10 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.CutOff1;
-import com.tools20022.repository.msg.NettingCutOff1;
-import com.tools20022.repository.msg.SystemAvailabilityAndEvents1;
-import com.tools20022.repository.msg.SystemAvailabilityAndEventsDetails1;
+import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -135,6 +132,9 @@ public class SystemAvailability {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents1#mmSessionPeriod
 	 * SystemAvailabilityAndEvents1.mmSessionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2#mmSessionPeriod
+	 * SystemAvailabilityAndEvents2.mmSessionPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -155,7 +155,7 @@ public class SystemAvailability {
 	 */
 	public static final MMBusinessAssociationEnd mmAvailableSessionPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmSessionPeriod, SystemAvailabilityAndEvents1.mmSessionPeriod);
+			derivation_lazy = () -> Arrays.asList(SystemAvailabilityAndEventsDetails1.mmSessionPeriod, SystemAvailabilityAndEvents1.mmSessionPeriod, SystemAvailabilityAndEvents2.mmSessionPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemAvailability.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

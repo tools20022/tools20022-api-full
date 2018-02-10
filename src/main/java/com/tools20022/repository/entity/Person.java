@@ -24,6 +24,7 @@ import com.tools20022.repository.codeset.CivilStatusCode;
 import com.tools20022.repository.codeset.GenderCode;
 import com.tools20022.repository.codeset.LanguageCode;
 import com.tools20022.repository.codeset.ResidentialStatusCode;
+import com.tools20022.repository.datatype.ISODate;
 import com.tools20022.repository.datatype.ISODateTime;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.datatype.YesNoIndicator;
@@ -93,6 +94,11 @@ import java.util.Objects;
  * Person.mmCivilStatus}</li>
  * <li>{@linkplain com.tools20022.repository.entity.Person#mmDeathDate
  * Person.mmDeathDate}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.Person#mmCitizenshipEndDate
+ * Person.mmCitizenshipEndDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.entity.Person#mmCitizenshipStartDate
+ * Person.mmCitizenshipStartDate}</li>
  * </ul>
  * </li>
  * <li>
@@ -323,6 +329,12 @@ import java.util.Objects;
  * {@linkplain com.tools20022.repository.choice.Party23Choice#mmIndividualPerson
  * Party23Choice.mmIndividualPerson}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmCountryAndResidentialStatus
+ * IndividualPerson19.mmCountryAndResidentialStatus}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmCitizenshipInformation
+ * IndividualPerson19.mmCitizenshipInformation}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.choice.Party30Choice#mmIndividualPerson
  * Party30Choice.mmIndividualPerson}</li>
  * <li>
@@ -382,12 +394,19 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.IndividualPerson34#mmFamilyInformation
  * IndividualPerson34.mmFamilyInformation}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Member3#mmContactReference
+ * Member3.mmContactReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Member4#mmContactReference
+ * Member4.mmContactReference}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
  * derivationComponent} =
  * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CountryAndResidentialStatusType1
+ * CountryAndResidentialStatusType1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CitizenshipInformation
  * CitizenshipInformation}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson5
@@ -449,6 +468,10 @@ import java.util.Objects;
  * IndividualPerson25}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson26
  * IndividualPerson26}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CitizenshipInformation1
+ * CitizenshipInformation1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson19
+ * IndividualPerson19}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson30
  * IndividualPerson30}</li>
  * <li>{@linkplain com.tools20022.repository.msg.IndividualPerson28
@@ -469,6 +492,11 @@ import java.util.Objects;
  * IndividualPerson34}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CitizenshipInformation2
  * CitizenshipInformation2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress1
+ * ContactIdentificationAndAddress1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateAndPlaceOfBirth1
+ * DateAndPlaceOfBirth1}</li>
  * </ul>
  * </li>
  * <li>
@@ -536,6 +564,9 @@ public class Person extends Party {
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmGender
 	 * IndividualPerson24.mmGender}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmGender
+	 * IndividualPerson19.mmGender}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson30#mmGender
 	 * IndividualPerson30.mmGender}</li>
 	 * <li>
@@ -573,8 +604,8 @@ public class Person extends Party {
 	public static final MMBusinessAttribute mmGender = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmGender, IndividualPerson10.mmGender, IndividualPerson20.mmGender, IndividualPerson3.mmGender, IndividualPerson8.mmGender, IndividualPerson4.mmGender,
-					IndividualPerson6.mmGender, IndividualPerson11.mmGender, IndividualPerson21.mmGender, IndividualPerson22.mmGender, IndividualPerson23.mmGender, IndividualPerson24.mmGender, IndividualPerson30.mmGender,
-					IndividualPerson28.mmGender, IndividualPerson27.mmGender, IndividualPerson33.mmGender, IndividualPerson35.mmGender, IndividualPerson34.mmGender);
+					IndividualPerson6.mmGender, IndividualPerson11.mmGender, IndividualPerson21.mmGender, IndividualPerson22.mmGender, IndividualPerson23.mmGender, IndividualPerson24.mmGender, IndividualPerson19.mmGender,
+					IndividualPerson30.mmGender, IndividualPerson28.mmGender, IndividualPerson27.mmGender, IndividualPerson33.mmGender, IndividualPerson35.mmGender, IndividualPerson34.mmGender);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -643,10 +674,15 @@ public class Person extends Party {
 	 * Cardholder7.mmLanguage}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder9#mmLanguage
 	 * Cardholder9.mmLanguage}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmLanguage
+	 * IndividualPerson19.mmLanguage}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder10#mmLanguage
 	 * Cardholder10.mmLanguage}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder12#mmLanguage
 	 * Cardholder12.mmLanguage}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder13#mmLanguage
+	 * Cardholder13.mmLanguage}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -671,7 +707,7 @@ public class Person extends Party {
 		{
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmLanguage, IndividualPerson10.mmLanguage, IndividualPerson20.mmLanguage, IndividualPerson6.mmLanguage, IndividualPerson11.mmLanguage, Cardholder1.mmLanguage,
 					Cardholder3.mmLanguage, IndividualPerson21.mmLanguage, IndividualPerson22.mmLanguage, Cardholder5.mmLanguage, IndividualPerson23.mmLanguage, IndividualPerson24.mmLanguage, Cardholder7.mmLanguage, Cardholder9.mmLanguage,
-					Cardholder10.mmLanguage, Cardholder12.mmLanguage);
+					IndividualPerson19.mmLanguage, Cardholder10.mmLanguage, Cardholder12.mmLanguage, Cardholder13.mmLanguage);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::LANG"));
@@ -762,6 +798,9 @@ public class Person extends Party {
 	 * {@linkplain com.tools20022.repository.msg.PersonIdentification10#mmBirthDate
 	 * PersonIdentification10.mmBirthDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmBirthDate
+	 * IndividualPerson19.mmBirthDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson30#mmBirthDate
 	 * IndividualPerson30.mmBirthDate}</li>
 	 * <li>
@@ -785,6 +824,9 @@ public class Person extends Party {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson34#mmBirthDate
 	 * IndividualPerson34.mmBirthDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DateAndPlaceOfBirth1#mmBirthDate
+	 * DateAndPlaceOfBirth1.mmBirthDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -807,8 +849,8 @@ public class Person extends Party {
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmBirthDate, IndividualPerson10.mmBirthDate, IndividualPerson20.mmBirthDate, IndividualPerson3.mmBirthDate, IndividualPerson8.mmBirthDate, IndividualPerson4.mmBirthDate,
 					IndividualPerson6.mmBirthDate, IndividualPerson11.mmBirthDate, DateAndPlaceOfBirth.mmBirthDate, IndividualPerson2.mmBirthDate, IndividualPerson12.mmBirthDate, IndividualPerson9.mmBirthDate,
 					PartyAdditionalIdentification2Choice.mmBirthDate, IndividualPerson15.mmBirthDate, IndividualPerson21.mmBirthDate, IndividualPerson22.mmBirthDate, IndividualPerson23.mmBirthDate, IndividualPerson24.mmBirthDate,
-					PersonIdentification10.mmBirthDate, IndividualPerson30.mmBirthDate, IndividualPerson28.mmBirthDate, IndividualPerson27.mmBirthDate, IndividualPerson32.mmBirthDate, IndividualPerson31.mmBirthDate,
-					IndividualPerson33.mmBirthDate, IndividualPerson35.mmBirthDate, IndividualPerson34.mmBirthDate);
+					PersonIdentification10.mmBirthDate, IndividualPerson19.mmBirthDate, IndividualPerson30.mmBirthDate, IndividualPerson28.mmBirthDate, IndividualPerson27.mmBirthDate, IndividualPerson32.mmBirthDate,
+					IndividualPerson31.mmBirthDate, IndividualPerson33.mmBirthDate, IndividualPerson35.mmBirthDate, IndividualPerson34.mmBirthDate, DateAndPlaceOfBirth1.mmBirthDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -911,6 +953,9 @@ public class Person extends Party {
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmCityOfBirth
 	 * IndividualPerson24.mmCityOfBirth}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmCityOfBirth
+	 * IndividualPerson19.mmCityOfBirth}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmCountryOfBirth
 	 * IndividualPerson28.mmCountryOfBirth}</li>
 	 * <li>
@@ -969,9 +1014,9 @@ public class Person extends Party {
 			derivation_lazy = () -> Arrays.asList(IndividualPerson5.mmCountryOfBirth, IndividualPerson5.mmCityOfBirth, IndividualPerson10.mmCountryOfBirth, IndividualPerson20.mmCountryOfBirth, IndividualPerson20.mmProvinceOfBirth,
 					IndividualPerson20.mmCityOfBirth, IndividualPerson6.mmCountryOfBirth, IndividualPerson6.mmCityOfBirth, IndividualPerson11.mmCountryOfBirth, IndividualPerson21.mmCountryOfBirth, IndividualPerson21.mmProvinceOfBirth,
 					IndividualPerson21.mmCityOfBirth, IndividualPerson22.mmCountryOfBirth, IndividualPerson22.mmProvinceOfBirth, IndividualPerson22.mmCityOfBirth, IndividualPerson23.mmCountryOfBirth, IndividualPerson23.mmProvinceOfBirth,
-					IndividualPerson23.mmCityOfBirth, IndividualPerson24.mmCountryOfBirth, IndividualPerson24.mmProvinceOfBirth, IndividualPerson24.mmCityOfBirth, IndividualPerson28.mmCountryOfBirth, IndividualPerson28.mmProvinceOfBirth,
-					IndividualPerson28.mmCityOfBirth, IndividualPerson27.mmCountryOfBirth, IndividualPerson27.mmProvinceOfBirth, IndividualPerson27.mmCityOfBirth, IndividualPerson33.mmCountryOfBirth, IndividualPerson33.mmProvinceOfBirth,
-					IndividualPerson33.mmCityOfBirth, IndividualPerson34.mmCountryOfBirth, IndividualPerson34.mmProvinceOfBirth, IndividualPerson34.mmCityOfBirth);
+					IndividualPerson23.mmCityOfBirth, IndividualPerson24.mmCountryOfBirth, IndividualPerson24.mmProvinceOfBirth, IndividualPerson24.mmCityOfBirth, IndividualPerson19.mmCityOfBirth, IndividualPerson28.mmCountryOfBirth,
+					IndividualPerson28.mmProvinceOfBirth, IndividualPerson28.mmCityOfBirth, IndividualPerson27.mmCountryOfBirth, IndividualPerson27.mmProvinceOfBirth, IndividualPerson27.mmCityOfBirth, IndividualPerson33.mmCountryOfBirth,
+					IndividualPerson33.mmProvinceOfBirth, IndividualPerson33.mmCityOfBirth, IndividualPerson34.mmCountryOfBirth, IndividualPerson34.mmProvinceOfBirth, IndividualPerson34.mmCityOfBirth);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1253,6 +1298,9 @@ public class Person extends Party {
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson24#mmModifiedCitizenship
 	 * IndividualPerson24.mmModifiedCitizenship}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation1#mmNationality
+	 * CitizenshipInformation1.mmNationality}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IndividualPerson28#mmModifiedCitizenship
 	 * IndividualPerson28.mmModifiedCitizenship}</li>
 	 * <li>
@@ -1290,8 +1338,8 @@ public class Person extends Party {
 		{
 			derivation_lazy = () -> Arrays.asList(CitizenshipInformation.mmNationality, IndividualPerson5.mmCitizenship, IndividualPerson10.mmCitizenship, IndividualPerson20.mmCitizenship, IndividualPerson6.mmModifiedCitizenship,
 					IndividualPerson11.mmModifiedCitizenship, SecuritiesAccount10.mmAccountOwnerNationality, IndividualPerson21.mmModifiedCitizenship, IndividualPerson22.mmCitizenship, IndividualPerson23.mmCitizenship,
-					IndividualPerson24.mmModifiedCitizenship, IndividualPerson28.mmModifiedCitizenship, IndividualPerson27.mmCitizenship, IndividualPerson33.mmModifiedCitizenship, IndividualPerson34.mmCitizenship,
-					CitizenshipInformation2.mmNationality);
+					IndividualPerson24.mmModifiedCitizenship, CitizenshipInformation1.mmNationality, IndividualPerson28.mmModifiedCitizenship, IndividualPerson27.mmCitizenship, IndividualPerson33.mmModifiedCitizenship,
+					IndividualPerson34.mmCitizenship, CitizenshipInformation2.mmNationality);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1321,6 +1369,9 @@ public class Person extends Party {
 	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation#mmMinorIndicator
 	 * CitizenshipInformation.mmMinorIndicator}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation1#mmMinorIndicator
+	 * CitizenshipInformation1.mmMinorIndicator}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation2#mmMinorIndicator
 	 * CitizenshipInformation2.mmMinorIndicator}</li>
 	 * </ul>
@@ -1344,7 +1395,7 @@ public class Person extends Party {
 	 */
 	public static final MMBusinessAttribute mmMinorIndicator = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(CitizenshipInformation.mmMinorIndicator, CitizenshipInformation2.mmMinorIndicator);
+			derivation_lazy = () -> Arrays.asList(CitizenshipInformation.mmMinorIndicator, CitizenshipInformation1.mmMinorIndicator, CitizenshipInformation2.mmMinorIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1518,6 +1569,9 @@ public class Person extends Party {
 	 * {@linkplain com.tools20022.repository.msg.CashAccountCharacteristics2#mmAccountServicerContact
 	 * CashAccountCharacteristics2.mmAccountServicerContact}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmOtherIdentification
+	 * IndividualPerson19.mmOtherIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.AccountOwner1Choice#mmIndividualOwnerIdentification
 	 * AccountOwner1Choice.mmIndividualOwnerIdentification}</li>
 	 * <li>
@@ -1553,8 +1607,8 @@ public class Person extends Party {
 			derivation_lazy = () -> Arrays.asList(InvestmentAccount19.mmIndividualOwnerIdentification, InvestmentAccount29.mmIndividualOwnerIdentification, InvestmentAccount14.mmIndividualOwnerIdentification,
 					IndividualPerson7.mmIdentification, IndividualPerson14.mmIdentification, IndividualPerson16.mmIdentification, IndividualPerson13.mmIdentification, IndividualPerson17.mmIdentification,
 					CashAccountCharacteristics1.mmAccountServicerContact, BillingTaxIdentification1.mmTaxContact, OwnerIdentification1Choice.mmIndividualOwnerIdentification, IndividualPerson25.mmIdentification,
-					IndividualPerson26.mmIdentification, CashAccountCharacteristics2.mmAccountServicerContact, AccountOwner1Choice.mmIndividualOwnerIdentification, OwnerIdentification2Choice.mmIndividualOwnerIdentification,
-					ParticipantAndStatus1.mmParticipantContactDetails, AccountOwner2Choice.mmIndividualOwnerIdentification);
+					IndividualPerson26.mmIdentification, CashAccountCharacteristics2.mmAccountServicerContact, IndividualPerson19.mmOtherIdentification, AccountOwner1Choice.mmIndividualOwnerIdentification,
+					OwnerIdentification2Choice.mmIndividualOwnerIdentification, ParticipantAndStatus1.mmParticipantContactDetails, AccountOwner2Choice.mmIndividualOwnerIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2047,6 +2101,114 @@ public class Person extends Party {
 			}
 		}
 	};
+	protected ISODate citizenshipEndDate;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
+	 * ISODate}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation1#mmEndDate
+	 * CitizenshipInformation1.mmEndDate}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Person
+	 * Person}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CitizenshipEndDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Date of the end of citizenship."</li>
+	 * </ul>
+	 */
+	public static final MMBusinessAttribute mmCitizenshipEndDate = new MMBusinessAttribute() {
+		{
+			derivation_lazy = () -> Arrays.asList(CitizenshipInformation1.mmEndDate);
+			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "CitizenshipEndDate";
+			definition = "Date of the end of citizenship.";
+			maxOccurs = 1;
+			minOccurs = 1;
+			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Person.class.getMethod("getCitizenshipEndDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
+	protected ISODate citizenshipStartDate;
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessAttribute#getSimpleType
+	 * simpleType} = {@linkplain com.tools20022.repository.datatype.ISODate
+	 * ISODate}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CitizenshipInformation1#mmStartDate
+	 * CitizenshipInformation1.mmStartDate}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
+	 * elementContext} = {@linkplain com.tools20022.repository.entity.Person
+	 * Person}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CitizenshipStartDate"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Date of the commencement of citizenship."</li>
+	 * </ul>
+	 */
+	public static final MMBusinessAttribute mmCitizenshipStartDate = new MMBusinessAttribute() {
+		{
+			derivation_lazy = () -> Arrays.asList(CitizenshipInformation1.mmStartDate);
+			isDerived = false;
+			elementContext_lazy = () -> com.tools20022.repository.entity.Person.mmObject();
+			registrationStatus = MMRegistrationStatus.REGISTERED;
+			name = "CitizenshipStartDate";
+			definition = "Date of the commencement of citizenship.";
+			maxOccurs = 1;
+			minOccurs = 1;
+			simpleType_lazy = () -> ISODate.mmObject();
+		}
+
+		public Method getGetterMethod() {
+			try {
+				return Person.class.getMethod("getCitizenshipStartDate", new Class[]{});
+			} catch (NoSuchMethodException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	};
 
 	static public MMBusinessComponent mmObject() {
 		mmObject_lazy.compareAndSet(null, new MMBusinessComponent() {
@@ -2073,11 +2235,12 @@ public class Person extends Party {
 						BeneficiaryInformation1.mmBeneficiaryIdentification, SubscriptionOrder9.mmBeneficiaryDetails, TransferOut4.mmInvestor, ContactInformation3.mmContactPerson, Member1.mmContactReference, Member2.mmContactReference,
 						Party15Choice.mmIndividualPerson, Party16Choice.mmIndividualPerson, ISATransfer12.mmPrimaryIndividualInvestor, ISATransfer12.mmSecondaryIndividualInvestor, ISATransfer12.mmOtherIndividualInvestor,
 						ISATransfer19.mmPrimaryIndividualInvestor, ISATransfer19.mmSecondaryIndividualInvestor, ISATransfer19.mmOtherIndividualInvestor, Instruction3.mmMeetingAttendee, MeetingNotice4.mmContactPersonDetails,
-						Party24Choice.mmIndividualPerson, Party23Choice.mmIndividualPerson, Party30Choice.mmIndividualPerson, IndividualPerson28.mmFamilyInformation, Party31Choice.mmIndividualPerson, IndividualPerson27.mmFamilyInformation,
-						ISATransfer24.mmPrimaryIndividualInvestor, ISATransfer24.mmSecondaryIndividualInvestor, ISATransfer24.mmOtherIndividualInvestor, RedemptionMultipleExecution5.mmBeneficiaryDetails,
-						RedemptionMultipleOrder6.mmBeneficiaryDetails, SubscriptionMultipleOrder6.mmBeneficiaryDetails, SubscriptionMultipleExecution5.mmBeneficiaryDetails, SubscriptionExecution12.mmBeneficiaryDetails,
-						SubscriptionOrder15.mmBeneficiaryDetails, RedemptionOrder15.mmBeneficiaryDetails, Party33Choice.mmIndividualPerson, IndividualPerson33.mmFamilyInformation, Party32Choice.mmIndividualPerson,
-						RedemptionExecution16.mmBeneficiaryDetails, SecuritiesTransactionReport4.mmExecutingPerson, IndividualPerson34.mmFamilyInformation);
+						Party24Choice.mmIndividualPerson, Party23Choice.mmIndividualPerson, IndividualPerson19.mmCountryAndResidentialStatus, IndividualPerson19.mmCitizenshipInformation, Party30Choice.mmIndividualPerson,
+						IndividualPerson28.mmFamilyInformation, Party31Choice.mmIndividualPerson, IndividualPerson27.mmFamilyInformation, ISATransfer24.mmPrimaryIndividualInvestor, ISATransfer24.mmSecondaryIndividualInvestor,
+						ISATransfer24.mmOtherIndividualInvestor, RedemptionMultipleExecution5.mmBeneficiaryDetails, RedemptionMultipleOrder6.mmBeneficiaryDetails, SubscriptionMultipleOrder6.mmBeneficiaryDetails,
+						SubscriptionMultipleExecution5.mmBeneficiaryDetails, SubscriptionExecution12.mmBeneficiaryDetails, SubscriptionOrder15.mmBeneficiaryDetails, RedemptionOrder15.mmBeneficiaryDetails, Party33Choice.mmIndividualPerson,
+						IndividualPerson33.mmFamilyInformation, Party32Choice.mmIndividualPerson, RedemptionExecution16.mmBeneficiaryDetails, SecuritiesTransactionReport4.mmExecutingPerson, IndividualPerson34.mmFamilyInformation,
+						Member3.mmContactReference, Member4.mmContactReference);
 				superType_lazy = () -> Party.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Person.mmGender, com.tools20022.repository.entity.Person.mmLanguage, com.tools20022.repository.entity.Person.mmBirthDate,
 						com.tools20022.repository.entity.Person.mmPlaceOfBirth, com.tools20022.repository.entity.Person.mmProfession, com.tools20022.repository.entity.Person.mmResidentialStatus,
@@ -2085,14 +2248,15 @@ public class Person extends Party {
 						com.tools20022.repository.entity.Person.mmPersonIdentification, com.tools20022.repository.entity.Person.mmEmployingParty, com.tools20022.repository.entity.Person.mmMeetingAttendee,
 						com.tools20022.repository.entity.Person.mmRelatedRole, com.tools20022.repository.entity.Person.mmPreAssignedProxyPerson, com.tools20022.repository.entity.Person.mmPersonProfile,
 						com.tools20022.repository.entity.Person.mmContactPersonRole, com.tools20022.repository.entity.Person.mmHousehold, com.tools20022.repository.entity.Person.mmCivilStatus,
-						com.tools20022.repository.entity.Person.mmDeathDate);
-				derivationComponent_lazy = () -> Arrays.asList(CitizenshipInformation.mmObject(), IndividualPerson5.mmObject(), IndividualPerson10.mmObject(), IndividualPerson20.mmObject(), IndividualPerson3.mmObject(),
-						IndividualPerson8.mmObject(), IndividualPerson4.mmObject(), IndividualPerson6.mmObject(), IndividualPerson11.mmObject(), DateAndPlaceOfBirth.mmObject(), PartyIdentificationSD4.mmObject(), Contacts3.mmObject(),
-						IndividualPerson2.mmObject(), IndividualPerson12.mmObject(), IndividualPerson9.mmObject(), IndividualPerson7.mmObject(), IndividualPerson14.mmObject(), IndividualPerson16.mmObject(),
-						PartyAdditionalIdentification2Choice.mmObject(), IndividualPerson13.mmObject(), IndividualPerson17.mmObject(), ContactIdentificationAndAddress.mmObject(), IndividualPerson15.mmObject(),
-						ContactInformation3.mmObject(), IndividualPerson21.mmObject(), IndividualPerson22.mmObject(), IndividualPerson23.mmObject(), IndividualPerson24.mmObject(), IndividualPerson25.mmObject(),
-						IndividualPerson26.mmObject(), IndividualPerson30.mmObject(), IndividualPerson28.mmObject(), IndividualPerson27.mmObject(), IndividualPerson29.mmObject(), IndividualPerson32.mmObject(),
-						IndividualPerson31.mmObject(), IndividualPerson33.mmObject(), IndividualPerson35.mmObject(), IndividualPerson34.mmObject(), CitizenshipInformation2.mmObject());
+						com.tools20022.repository.entity.Person.mmDeathDate, com.tools20022.repository.entity.Person.mmCitizenshipEndDate, com.tools20022.repository.entity.Person.mmCitizenshipStartDate);
+				derivationComponent_lazy = () -> Arrays.asList(CountryAndResidentialStatusType1.mmObject(), CitizenshipInformation.mmObject(), IndividualPerson5.mmObject(), IndividualPerson10.mmObject(), IndividualPerson20.mmObject(),
+						IndividualPerson3.mmObject(), IndividualPerson8.mmObject(), IndividualPerson4.mmObject(), IndividualPerson6.mmObject(), IndividualPerson11.mmObject(), DateAndPlaceOfBirth.mmObject(),
+						PartyIdentificationSD4.mmObject(), Contacts3.mmObject(), IndividualPerson2.mmObject(), IndividualPerson12.mmObject(), IndividualPerson9.mmObject(), IndividualPerson7.mmObject(), IndividualPerson14.mmObject(),
+						IndividualPerson16.mmObject(), PartyAdditionalIdentification2Choice.mmObject(), IndividualPerson13.mmObject(), IndividualPerson17.mmObject(), ContactIdentificationAndAddress.mmObject(),
+						IndividualPerson15.mmObject(), ContactInformation3.mmObject(), IndividualPerson21.mmObject(), IndividualPerson22.mmObject(), IndividualPerson23.mmObject(), IndividualPerson24.mmObject(),
+						IndividualPerson25.mmObject(), IndividualPerson26.mmObject(), CitizenshipInformation1.mmObject(), IndividualPerson19.mmObject(), IndividualPerson30.mmObject(), IndividualPerson28.mmObject(),
+						IndividualPerson27.mmObject(), IndividualPerson29.mmObject(), IndividualPerson32.mmObject(), IndividualPerson31.mmObject(), IndividualPerson33.mmObject(), IndividualPerson35.mmObject(),
+						IndividualPerson34.mmObject(), CitizenshipInformation2.mmObject(), ContactIdentificationAndAddress1.mmObject(), DateAndPlaceOfBirth1.mmObject());
 			}
 
 			@Override
@@ -2271,6 +2435,24 @@ public class Person extends Party {
 
 	public Person setDeathDate(ISODateTime deathDate) {
 		this.deathDate = Objects.requireNonNull(deathDate);
+		return this;
+	}
+
+	public ISODate getCitizenshipEndDate() {
+		return citizenshipEndDate;
+	}
+
+	public Person setCitizenshipEndDate(ISODate citizenshipEndDate) {
+		this.citizenshipEndDate = Objects.requireNonNull(citizenshipEndDate);
+		return this;
+	}
+
+	public ISODate getCitizenshipStartDate() {
+		return citizenshipStartDate;
+	}
+
+	public Person setCitizenshipStartDate(ISODate citizenshipStartDate) {
+		this.citizenshipStartDate = Objects.requireNonNull(citizenshipStartDate);
 		return this;
 	}
 }

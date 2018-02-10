@@ -28,7 +28,7 @@ import java.util.concurrent.atomic.AtomicReference;
 /**
  * Messages that support the communication of reference data related to
  * financial instruments, parties, accounts, prices and other business
- * information required to support financial activities
+ * information required to support financial activities.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -57,7 +57,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Reference Data - Previous version - master"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities"
+ * "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities."
  * </li>
  * </ul>
  */
@@ -71,7 +71,7 @@ public class ReferenceDataPreviousVersion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Reference Data - Previous version - master";
-				definition = "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities";
+				definition = "Messages that support the communication of reference data related to financial instruments, parties, accounts, prices and other business information required to support financial activities.";
 				messageDefinition_lazy = () -> Arrays.asList(PriceReportCancellationV03.mmObject(), PriceReportV03.mmObject());
 				code = "reda";
 			}

@@ -71,6 +71,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Detailed account holdings information report for a corporate action event."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance13
+ * CorporateActionEventAndBalance13}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance9
@@ -114,6 +122,14 @@ public class CorporateActionEventAndBalance11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides general information related to a corporate action event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance13#mmGeneralInformation
+	 * CorporateActionEventAndBalance13.mmGeneralInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -130,6 +146,7 @@ public class CorporateActionEventAndBalance11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GeneralInformation";
 			definition = "Provides general information related to a corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventAndBalance13.mmGeneralInformation);
 			previousVersion_lazy = () -> CorporateActionEventAndBalance9.mmGeneralInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -172,6 +189,14 @@ public class CorporateActionEventAndBalance11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Security concerned by the corporate action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance13#mmUnderlyingSecurity
+	 * CorporateActionEventAndBalance13.mmUnderlyingSecurity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +214,7 @@ public class CorporateActionEventAndBalance11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingSecurity";
 			definition = "Security concerned by the corporate action.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventAndBalance13.mmUnderlyingSecurity);
 			previousVersion_lazy = () -> CorporateActionEventAndBalance9.mmUnderlyingSecurity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -232,6 +258,14 @@ public class CorporateActionEventAndBalance11 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides information about the balance related to a corporate action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance13#mmBalance
+	 * CorporateActionEventAndBalance13.mmBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -249,6 +283,7 @@ public class CorporateActionEventAndBalance11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
 			definition = "Provides information about the balance related to a corporate action.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventAndBalance13.mmBalance);
 			previousVersion_lazy = () -> CorporateActionEventAndBalance9.mmBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -284,6 +319,14 @@ public class CorporateActionEventAndBalance11 {
 	 * definition} =
 	 * "Provides additional information related to the event and the balance of the corporate action."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionEventAndBalance13#mmSupplementaryData
+	 * CorporateActionEventAndBalance13.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -299,6 +342,7 @@ public class CorporateActionEventAndBalance11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Provides additional information related to the event and the balance of the corporate action.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionEventAndBalance13.mmSupplementaryData);
 			previousVersion_lazy = () -> CorporateActionEventAndBalance9.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
@@ -316,6 +360,7 @@ public class CorporateActionEventAndBalance11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionEventAndBalance11";
 				definition = "Detailed account holdings information report for a corporate action event.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionEventAndBalance13.mmObject());
 				previousVersion_lazy = () -> CorporateActionEventAndBalance9.mmObject();
 			}
 		});

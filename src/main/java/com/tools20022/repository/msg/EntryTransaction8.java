@@ -131,6 +131,13 @@ import javax.xml.bind.annotation.XmlType;
  * "EntryTransaction8"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identifies the underlying transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction9
+ * EntryTransaction9}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.EntryTransaction7
@@ -176,6 +183,14 @@ public class EntryTransaction8 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides the identification of the underlying transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmReferences
+	 * EntryTransaction9.mmReferences}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -192,6 +207,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "References";
 			definition = "Provides the identification of the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmReferences);
 			previousVersion_lazy = () -> EntryTransaction7.mmReferences;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -232,6 +248,13 @@ public class EntryTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money in the cash transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction9#mmAmount
+	 * EntryTransaction9.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -248,6 +271,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmAmount);
 			previousVersion_lazy = () -> EntryTransaction7.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -288,6 +312,14 @@ public class EntryTransaction8 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the transaction is a credit or a debit transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmCreditDebitIndicator
+	 * EntryTransaction9.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -304,6 +336,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the transaction is a credit or a debit transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> EntryTransaction7.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -343,6 +376,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Provides detailed information on the original amount.\n\nUsage: This component (on transaction level) should be used in case booking is for a single transaction and the original amount is different from the entry amount. It can also be used in case individual original amounts are provided in case of a batch or aggregate booking."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmAmountDetails
+	 * EntryTransaction9.mmAmountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -359,6 +400,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
 			definition = "Provides detailed information on the original amount.\n\nUsage: This component (on transaction level) should be used in case booking is for a single transaction and the original amount is different from the entry amount. It can also be used in case individual original amounts are provided in case of a batch or aggregate booking.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmAmountDetails);
 			previousVersion_lazy = () -> EntryTransaction7.mmAmountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -399,6 +441,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Indicates when the booked amount of money will become available, that is can be accessed and starts generating interest. \n\nUsage: This type of information is used in the US and is linked to particular instruments such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmAvailability
+	 * EntryTransaction9.mmAvailability}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -415,6 +465,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Indicates when the booked amount of money will become available, that is can be accessed and starts generating interest. \n\nUsage: This type of information is used in the US and is linked to particular instruments such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmAvailability);
 			previousVersion_lazy = () -> EntryTransaction7.mmAvailability;
 			minOccurs = 0;
 			isComposite = true;
@@ -455,6 +506,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Set of elements used to fully identify the type of underlying transaction resulting in an entry."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmBankTransactionCode
+	 * EntryTransaction9.mmBankTransactionCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -471,6 +530,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BankTransactionCode";
 			definition = "Set of elements used to fully identify the type of underlying transaction resulting in an entry.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmBankTransactionCode);
 			previousVersion_lazy = () -> EntryTransaction7.mmBankTransactionCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -510,6 +570,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Provides information on the charges, pre-advised or included in the entry amount.\r\n\r\nUsage: This component (on transaction level) can be used in case the booking is for a single transaction, and charges are included in the entry amount. It can also be used in case individual charge amounts are applied to individual transactions in case of a batch or aggregate amount booking."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmCharges
+	 * EntryTransaction9.mmCharges}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -526,6 +594,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			definition = "Provides information on the charges, pre-advised or included in the entry amount.\r\n\r\nUsage: This component (on transaction level) can be used in case the booking is for a single transaction, and charges are included in the entry amount. It can also be used in case individual charge amounts are applied to individual transactions in case of a batch or aggregate amount booking.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmCharges);
 			previousVersion_lazy = () -> EntryTransaction7.mmCharges;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -564,7 +633,15 @@ public class EntryTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides details of the interest amount included in the entry amount.\n\nUsage: This component (on transaction level) can be used if the booking is for a single transaction, and interest amount is included in the entry amount.  It can also be used if individual interest amounts are applied to individual transactions in the case of a batch or aggregate amount booking."
+	 * "Provides details of the interest amount included in the entry amount.\n\nUsage: This component (on transaction level) can be used if the booking is for a single transaction, and interest amount is included in the entry amount. It can also be used if individual interest amounts are applied to individual transactions in the case of a batch or aggregate amount booking."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmInterest
+	 * EntryTransaction9.mmInterest}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -581,7 +658,8 @@ public class EntryTransaction8 {
 			xmlTag = "Intrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
-			definition = "Provides details of the interest amount included in the entry amount.\n\nUsage: This component (on transaction level) can be used if the booking is for a single transaction, and interest amount is included in the entry amount.  It can also be used if individual interest amounts are applied to individual transactions in the case of a batch or aggregate amount booking.";
+			definition = "Provides details of the interest amount included in the entry amount.\n\nUsage: This component (on transaction level) can be used if the booking is for a single transaction, and interest amount is included in the entry amount. It can also be used if individual interest amounts are applied to individual transactions in the case of a batch or aggregate amount booking.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmInterest);
 			previousVersion_lazy = () -> EntryTransaction7.mmInterest;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -622,6 +700,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Set of elements used to identify the parties related to the underlying transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedParties
+	 * EntryTransaction9.mmRelatedParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -638,6 +724,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedParties";
 			definition = "Set of elements used to identify the parties related to the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmRelatedParties);
 			previousVersion_lazy = () -> EntryTransaction7.mmRelatedParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -678,6 +765,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Set of elements used to identify the agents related to the underlying transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedAgents
+	 * EntryTransaction9.mmRelatedAgents}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -694,6 +789,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedAgents";
 			definition = "Set of elements used to identify the agents related to the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmRelatedAgents);
 			previousVersion_lazy = () -> EntryTransaction7.mmRelatedAgents;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -734,6 +830,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmPurpose
+	 * EntryTransaction9.mmPurpose}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -750,6 +854,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmPurpose);
 			previousVersion_lazy = () -> EntryTransaction7.mmPurpose;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -790,6 +895,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedRemittanceInformation
+	 * EntryTransaction9.mmRelatedRemittanceInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -806,6 +919,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedRemittanceInformation";
 			definition = "Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmRelatedRemittanceInformation);
 			previousVersion_lazy = () -> EntryTransaction7.mmRelatedRemittanceInformation;
 			maxOccurs = 10;
 			minOccurs = 0;
@@ -847,6 +961,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Structured information that enables the matching, that is reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRemittanceInformation
+	 * EntryTransaction9.mmRemittanceInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -863,6 +985,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Structured information that enables the matching, that is reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmRemittanceInformation);
 			previousVersion_lazy = () -> EntryTransaction7.mmRemittanceInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -903,6 +1026,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Set of elements used to identify the dates related to the underlying transactions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedDates
+	 * EntryTransaction9.mmRelatedDates}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -919,6 +1050,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedDates";
 			definition = "Set of elements used to identify the dates related to the underlying transactions.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmRelatedDates);
 			previousVersion_lazy = () -> EntryTransaction7.mmRelatedDates;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -960,6 +1092,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Set of elements used to identify the price information related to the underlying transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedPrice
+	 * EntryTransaction9.mmRelatedPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -976,6 +1116,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPrice";
 			definition = "Set of elements used to identify the price information related to the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmRelatedPrice);
 			previousVersion_lazy = () -> EntryTransaction7.mmRelatedPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1017,6 +1158,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Set of elements used to identify the related quantities, such as securities, in the underlying transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmRelatedQuantities
+	 * EntryTransaction9.mmRelatedQuantities}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1033,6 +1182,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedQuantities";
 			definition = "Set of elements used to identify the related quantities, such as securities, in the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmRelatedQuantities);
 			previousVersion_lazy = () -> EntryTransaction7.mmRelatedQuantities;
 			minOccurs = 0;
 			isComposite = true;
@@ -1073,6 +1223,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Identification of a security, as assigned under a formal or proprietary identification scheme."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmFinancialInstrumentIdentification
+	 * EntryTransaction9.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1089,6 +1247,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Identification of a security, as assigned under a formal or proprietary identification scheme.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmFinancialInstrumentIdentification);
 			previousVersion_lazy = () -> EntryTransaction7.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1127,6 +1286,13 @@ public class EntryTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides details on the tax."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.EntryTransaction9#mmTax
+	 * EntryTransaction9.mmTax}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1143,6 +1309,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Provides details on the tax.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmTax);
 			previousVersion_lazy = () -> EntryTransaction7.mmTax;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1181,6 +1348,14 @@ public class EntryTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the return information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmReturnInformation
+	 * EntryTransaction9.mmReturnInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1197,6 +1372,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReturnInformation";
 			definition = "Provides the return information.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmReturnInformation);
 			previousVersion_lazy = () -> EntryTransaction7.mmReturnInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1236,6 +1412,14 @@ public class EntryTransaction8 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to identify the underlying corporate action."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmCorporateAction
+	 * EntryTransaction9.mmCorporateAction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1252,6 +1436,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateAction";
 			definition = "Set of elements used to identify the underlying corporate action.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmCorporateAction);
 			previousVersion_lazy = () -> EntryTransaction7.mmCorporateAction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1292,6 +1477,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Safekeeping or investment account. A safekeeping account is an account on which a securities entry is made. An investment account is an account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmSafekeepingAccount
+	 * EntryTransaction9.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1308,6 +1501,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Safekeeping or investment account. A safekeeping account is an account on which a securities entry is made. An investment account is an account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmSafekeepingAccount);
 			previousVersion_lazy = () -> EntryTransaction7.mmSafekeepingAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1347,6 +1541,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Provides the details of a cash deposit for an amount of money in cash notes and/or coins."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmCashDeposit
+	 * EntryTransaction9.mmCashDeposit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1363,6 +1565,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDeposit";
 			definition = "Provides the details of a cash deposit for an amount of money in cash notes and/or coins.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmCashDeposit);
 			previousVersion_lazy = () -> EntryTransaction7.mmCashDeposit;
 			minOccurs = 0;
 			isComposite = true;
@@ -1403,6 +1606,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Provides the data related to the card (number, scheme), terminal (number, identification) and transactional data used to uniquely identify a card transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmCardTransaction
+	 * EntryTransaction9.mmCardTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1419,6 +1630,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardTransaction";
 			definition = "Provides the data related to the card (number, scheme), terminal (number, identification) and transactional data used to uniquely identify a card transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmCardTransaction);
 			previousVersion_lazy = () -> EntryTransaction7.mmCardTransaction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1452,6 +1664,14 @@ public class EntryTransaction8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further details of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmAdditionalTransactionInformation
+	 * EntryTransaction9.mmAdditionalTransactionInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1467,6 +1687,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalTransactionInformation";
 			definition = "Further details of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmAdditionalTransactionInformation);
 			previousVersion_lazy = () -> EntryTransaction7.mmAdditionalTransactionInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1503,6 +1724,14 @@ public class EntryTransaction8 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmSupplementaryData
+	 * EntryTransaction9.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1518,6 +1747,7 @@ public class EntryTransaction8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmSupplementaryData);
 			previousVersion_lazy = () -> EntryTransaction7.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -1542,6 +1772,7 @@ public class EntryTransaction8 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryTransaction8";
 				definition = "Identifies the underlying transaction.";
+				nextVersions_lazy = () -> Arrays.asList(EntryTransaction9.mmObject());
 				previousVersion_lazy = () -> EntryTransaction7.mmObject();
 			}
 		});

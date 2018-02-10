@@ -380,6 +380,9 @@ import java.util.concurrent.atomic.AtomicReference;
  * {@linkplain com.tools20022.repository.msg.Transaction48#mmTransactionDetails
  * Transaction48.mmTransactionDetails}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.Transaction51#mmTransactionDetails
+ * Transaction51.mmTransactionDetails}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msg.Transaction53#mmTransactionDetails
  * Transaction53.mmTransactionDetails}</li>
  * <li>
@@ -406,6 +409,66 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.TransactionDetails101#mmTransactionDetails
  * TransactionDetails101.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport21#mmTransactionData
+ * CommonTradeDataReport21.mmTransactionData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport20#mmTransactionData
+ * CommonTradeDataReport20.mmTransactionData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport23#mmTransactionData
+ * CommonTradeDataReport23.mmTransactionData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport22#mmTransactionData
+ * CommonTradeDataReport22.mmTransactionData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport24#mmTransactionData
+ * CommonTradeDataReport24.mmTransactionData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport19#mmTransactionData
+ * CommonTradeDataReport19.mmTransactionData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport25#mmTransactionData
+ * CommonTradeDataReport25.mmTransactionData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transaction58#mmTransactionDetails
+ * Transaction58.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmOtherAmounts
+ * SecuritiesTradeDetails71.mmOtherAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transaction60#mmTransactionDetails
+ * Transaction60.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmOtherAmounts
+ * SecuritiesTradeDetails72.mmOtherAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transaction61#mmTransactionDetails
+ * Transaction61.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transaction62#mmTransactionDetails
+ * Transaction62.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmTransactionDetails
+ * TransactionDetails106.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmOtherAmounts
+ * SecuritiesTradeDetails81.mmOtherAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmOtherAmounts
+ * SecuritiesTradeDetails85.mmOtherAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails108#mmTransactionDetails
+ * TransactionDetails108.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transaction63#mmTransactionDetails
+ * Transaction63.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transaction64#mmTransactionDetails
+ * Transaction64.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Transaction65#mmTransactionDetails
+ * Transaction65.mmTransactionDetails}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -883,6 +946,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesTradeDetails65}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66
  * SecuritiesTradeDetails66}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails93
+ * TransactionDetails93}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction51 Transaction51}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition7Choice
+ * TradeTransactionCondition7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails94
+ * TransactionDetails94}</li>
  * <li>{@linkplain com.tools20022.repository.msg.DerivativeCommodity2
  * DerivativeCommodity2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AdditionalParameters29
@@ -921,6 +992,85 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransactionDetails98}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails101
  * TransactionDetails101}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction15
+ * TradeTransaction15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction17
+ * TradeTransaction17}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction14
+ * TradeTransaction14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction18
+ * TradeTransaction18}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction16
+ * TradeTransaction16}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction58 Transaction58}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails102
+ * TransactionDetails102}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DerivativeUnderlyingLeg1
+ * DerivativeUnderlyingLeg1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts41 OtherAmounts41}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71
+ * SecuritiesTradeDetails71}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts39 OtherAmounts39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails105
+ * TransactionDetails105}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts40 OtherAmounts40}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction60 Transaction60}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72
+ * SecuritiesTradeDetails72}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails104
+ * TransactionDetails104}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction61 Transaction61}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails103
+ * TransactionDetails103}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction62 Transaction62}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73
+ * SecuritiesTradeDetails73}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75
+ * SecuritiesTradeDetails75}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76
+ * SecuritiesTradeDetails76}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails106
+ * TransactionDetails106}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails107
+ * TransactionDetails107}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78
+ * SecuritiesTradeDetails78}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79
+ * SecuritiesTradeDetails79}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails80
+ * SecuritiesTradeDetails80}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81
+ * SecuritiesTradeDetails81}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts42 OtherAmounts42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts43 OtherAmounts43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails84
+ * SecuritiesTradeDetails84}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85
+ * SecuritiesTradeDetails85}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86
+ * SecuritiesTradeDetails86}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OtherAmounts44 OtherAmounts44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87
+ * SecuritiesTradeDetails87}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88
+ * SecuritiesTradeDetails88}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails108
+ * TransactionDetails108}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails109
+ * TransactionDetails109}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89
+ * SecuritiesTradeDetails89}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90
+ * SecuritiesTradeDetails90}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails110
+ * TransactionDetails110}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction63 Transaction63}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails111
+ * TransactionDetails111}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction64 Transaction64}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction65 Transaction65}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionDetails112
+ * TransactionDetails112}</li>
  * </ul>
  * </li>
  * <li>
@@ -1069,11 +1219,29 @@ public class SecuritiesTrade extends Trade {
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails12#mmIdentification
 	 * IntraPositionMovementDetails12.mmIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmReference
+	 * RequestDetails17.mmReference}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation4#mmTransactionIdentification
+	 * IntraPositionCancellation4.mmTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria6#mmReferences
+	 * IntraPositionQueryCriteria6.mmReferences}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18#mmReference
+	 * RequestDetails18.mmReference}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails13#mmIdentification
 	 * IntraPositionMovementDetails13.mmIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#mmIdentification
 	 * IntraPositionMovementDetails14.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmIdentification
+	 * IntraPositionMovementDetails15.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails16#mmIdentification
+	 * IntraPositionMovementDetails16.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1102,8 +1270,9 @@ public class SecuritiesTrade extends Trade {
 					RequestDetails8.mmReference, RequestDetails9.mmReference, RequestDetails11.mmReference, RequestDetails12.mmReference, IntraPositionMovementDetails3.mmIdentification, IntraPositionMovementDetails4.mmIdentification,
 					IntraPositionQueryCriteria1.mmReferences, RequestDetails10.mmReference, IntraPositionCancellation2.mmTransactionIdentification, SecuritiesFinancing1.mmSecondLegIdentification,
 					Cancellation6Choice.mmCancellationByReference, RequestDetails13.mmReference, RequestDetails14.mmReference, Cancellation7Choice.mmCancellationByReference, RequestDetails15.mmReference,
-					IntraPositionMovementDetails11.mmIdentification, Cancellation11Choice.mmCancellationByReference, RequestDetails16.mmReference, IntraPositionMovementDetails12.mmIdentification,
-					IntraPositionMovementDetails13.mmIdentification, IntraPositionMovementDetails14.mmIdentification);
+					IntraPositionMovementDetails11.mmIdentification, Cancellation11Choice.mmCancellationByReference, RequestDetails16.mmReference, IntraPositionMovementDetails12.mmIdentification, RequestDetails17.mmReference,
+					IntraPositionCancellation4.mmTransactionIdentification, IntraPositionQueryCriteria6.mmReferences, RequestDetails18.mmReference, IntraPositionMovementDetails13.mmIdentification,
+					IntraPositionMovementDetails14.mmIdentification, IntraPositionMovementDetails15.mmIdentification, IntraPositionMovementDetails16.mmIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1294,6 +1463,48 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OtherAmounts36#mmTradeAmount
 	 * OtherAmounts36.mmTradeAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmNotionalAmount
+	 * TradeTransaction15.mmNotionalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmNotionalAmount
+	 * TradeTransaction17.mmNotionalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmNotionalAmount
+	 * TradeTransaction14.mmNotionalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmNotionalAmount
+	 * TradeTransaction16.mmNotionalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmNetAmount
+	 * ReceiveInformation18.mmNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmNetAmount
+	 * DeliverInformation19.mmNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmNetAmount
+	 * ReceiveInformation19.mmNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmNetAmount
+	 * DeliverInformation18.mmNetAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmTradeAmount
+	 * OtherAmounts41.mmTradeAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmTradeAmount
+	 * OtherAmounts39.mmTradeAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmTradeAmount
+	 * OtherAmounts40.mmTradeAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmTradeAmount
+	 * OtherAmounts42.mmTradeAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmTradeAmount
+	 * OtherAmounts43.mmTradeAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmTradeAmount
+	 * OtherAmounts44.mmTradeAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1327,7 +1538,10 @@ public class SecuritiesTrade extends Trade {
 					TwoLegTransactionDetails1.mmGrossTradeAmount, OtherAmounts8.mmTradeAmount, OtherAmounts11.mmTradeAmount, ReceiveInformation13.mmNetAmount, ReceiveInformation12.mmNetAmount, DeliverInformation12.mmNetAmount,
 					DeliverInformation13.mmNetAmount, DeliverInformation15.mmNetAmount, DeliverInformation14.mmNetAmount, ReceiveInformation15.mmNetAmount, ReceiveInformation14.mmNetAmount, SecuritiesTransaction1.mmNetAmount,
 					OtherAmounts28.mmTradeAmount, OtherAmounts30.mmTradeAmount, OtherAmounts31.mmTradeAmount, OtherAmounts32.mmTradeAmount, ReceiveInformation17.mmNetAmount, ReceiveInformation16.mmNetAmount,
-					DeliverInformation16.mmNetAmount, DeliverInformation17.mmNetAmount, OtherAmounts35.mmTradeAmount, OtherAmounts34.mmTradeAmount, OtherAmounts38.mmTradeAmount, OtherAmounts36.mmTradeAmount);
+					DeliverInformation16.mmNetAmount, DeliverInformation17.mmNetAmount, OtherAmounts35.mmTradeAmount, OtherAmounts34.mmTradeAmount, OtherAmounts38.mmTradeAmount, OtherAmounts36.mmTradeAmount,
+					TradeTransaction15.mmNotionalAmount, TradeTransaction17.mmNotionalAmount, TradeTransaction14.mmNotionalAmount, TradeTransaction16.mmNotionalAmount, ReceiveInformation18.mmNetAmount, DeliverInformation19.mmNetAmount,
+					ReceiveInformation19.mmNetAmount, DeliverInformation18.mmNetAmount, OtherAmounts41.mmTradeAmount, OtherAmounts39.mmTradeAmount, OtherAmounts40.mmTradeAmount, OtherAmounts42.mmTradeAmount, OtherAmounts43.mmTradeAmount,
+					OtherAmounts44.mmTradeAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::DEAL"), new FIXSynonym(this, "381"));
@@ -1451,6 +1665,36 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmOpeningClosing
 	 * SecuritiesTradeDetails70.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmOpeningClosing
+	 * SecuritiesTradeDetails73.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmOpeningClosing
+	 * SecuritiesTradeDetails75.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmOpeningClosing
+	 * SecuritiesTradeDetails76.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmOpeningClosing
+	 * SecuritiesTradeDetails78.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmOpeningClosing
+	 * SecuritiesTradeDetails79.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmOpeningClosing
+	 * SecuritiesTradeDetails86.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmOpeningClosing
+	 * SecuritiesTradeDetails87.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmOpeningClosing
+	 * SecuritiesTradeDetails88.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmOpeningClosing
+	 * SecuritiesTradeDetails89.mmOpeningClosing}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmOpeningClosing
+	 * SecuritiesTradeDetails90.mmOpeningClosing}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1482,7 +1726,9 @@ public class SecuritiesTrade extends Trade {
 					SecuritiesTradeDetails34.mmOpeningClosing, SecuritiesTradeDetails32.mmOpeningClosing, SecuritiesTradeDetails44.mmOpeningClosing, SecuritiesTradeDetails43.mmOpeningClosing, SecuritiesTradeDetails46.mmOpeningClosing,
 					SecuritiesTradeDetails47.mmOpeningClosing, SecuritiesTradeDetails51.mmOpeningClosing, SecuritiesTradeDetails53.mmOpeningClosing, SecuritiesTradeDetails52.mmOpeningClosing, SecuritiesTradeDetails50.mmOpeningClosing,
 					SecuritiesTradeDetails63.mmOpeningClosing, SecuritiesTradeDetails62.mmOpeningClosing, SecuritiesTradeDetails65.mmOpeningClosing, SecuritiesTradeDetails66.mmOpeningClosing, SecuritiesTradeDetails67.mmOpeningClosing,
-					SecuritiesTradeDetails70.mmOpeningClosing);
+					SecuritiesTradeDetails70.mmOpeningClosing, SecuritiesTradeDetails73.mmOpeningClosing, SecuritiesTradeDetails75.mmOpeningClosing, SecuritiesTradeDetails76.mmOpeningClosing, SecuritiesTradeDetails78.mmOpeningClosing,
+					SecuritiesTradeDetails79.mmOpeningClosing, SecuritiesTradeDetails86.mmOpeningClosing, SecuritiesTradeDetails87.mmOpeningClosing, SecuritiesTradeDetails88.mmOpeningClosing, SecuritiesTradeDetails89.mmOpeningClosing,
+					SecuritiesTradeDetails90.mmOpeningClosing);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::PROC"));
@@ -1739,6 +1985,15 @@ public class SecuritiesTrade extends Trade {
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmTradeTransactionCondition
 	 * SecuritiesTradeDetails66.mmTradeTransactionCondition}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition7Choice#mmCode
+	 * TradeTransactionCondition7Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition7Choice#mmProprietary
+	 * TradeTransactionCondition7Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Debt3#mmTransactionConditions
+	 * Debt3.mmTransactionConditions}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FundSettlementParameters11#mmTradeTransactionCondition
 	 * FundSettlementParameters11.mmTradeTransactionCondition}</li>
 	 * <li>
@@ -1756,6 +2011,60 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails70#mmTradeTransactionCondition
 	 * SecuritiesTradeDetails70.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails71.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails73.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails74.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails75.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails76.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails77.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails78.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails79.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails80#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails80.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails82.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails83.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails84#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails84.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails85.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails86.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails87.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails88.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails89.mmTradeTransactionCondition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails90.mmTradeTransactionCondition}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1799,9 +2108,14 @@ public class SecuritiesTrade extends Trade {
 					SecuritiesTradeDetails54.mmTradeTransactionCondition, TradeTransactionCondition5Choice.mmCode, TradeTransactionCondition5Choice.mmProprietary, SecuritiesTradeDetails52.mmTradeTransactionCondition,
 					SecuritiesTradeDetails50.mmTradeTransactionCondition, SecuritiesTradeDetails59.mmTradeTransactionCondition, SecuritiesTradeDetails58.mmTradeTransactionCondition, SecuritiesTradeDetails61.mmTradeTransactionCondition,
 					SecuritiesTradeDetails63.mmTradeTransactionCondition, SecuritiesTradeDetails62.mmTradeTransactionCondition, SecuritiesTradeDetails60.mmTradeTransactionCondition, TradeTransactionCondition6Choice.mmCode,
-					TradeTransactionCondition6Choice.mmProprietary, SecuritiesTradeDetails65.mmTradeTransactionCondition, SecuritiesTradeDetails66.mmTradeTransactionCondition, FundSettlementParameters11.mmTradeTransactionCondition,
-					FundSettlementParameters12.mmTradeTransactionCondition, SecuritiesTradeDetails67.mmTradeTransactionCondition, SecuritiesTradeDetails68.mmTradeTransactionCondition, SecuritiesTradeDetails69.mmTradeTransactionCondition,
-					SecuritiesTradeDetails70.mmTradeTransactionCondition);
+					TradeTransactionCondition6Choice.mmProprietary, SecuritiesTradeDetails65.mmTradeTransactionCondition, SecuritiesTradeDetails66.mmTradeTransactionCondition, TradeTransactionCondition7Choice.mmCode,
+					TradeTransactionCondition7Choice.mmProprietary, Debt3.mmTransactionConditions, FundSettlementParameters11.mmTradeTransactionCondition, FundSettlementParameters12.mmTradeTransactionCondition,
+					SecuritiesTradeDetails67.mmTradeTransactionCondition, SecuritiesTradeDetails68.mmTradeTransactionCondition, SecuritiesTradeDetails69.mmTradeTransactionCondition, SecuritiesTradeDetails70.mmTradeTransactionCondition,
+					SecuritiesTradeDetails71.mmTradeTransactionCondition, SecuritiesTradeDetails73.mmTradeTransactionCondition, SecuritiesTradeDetails74.mmTradeTransactionCondition, SecuritiesTradeDetails75.mmTradeTransactionCondition,
+					SecuritiesTradeDetails76.mmTradeTransactionCondition, SecuritiesTradeDetails77.mmTradeTransactionCondition, SecuritiesTradeDetails78.mmTradeTransactionCondition, SecuritiesTradeDetails79.mmTradeTransactionCondition,
+					SecuritiesTradeDetails80.mmTradeTransactionCondition, SecuritiesTradeDetails82.mmTradeTransactionCondition, SecuritiesTradeDetails83.mmTradeTransactionCondition, SecuritiesTradeDetails84.mmTradeTransactionCondition,
+					SecuritiesTradeDetails85.mmTradeTransactionCondition, SecuritiesTradeDetails86.mmTradeTransactionCondition, SecuritiesTradeDetails87.mmTradeTransactionCondition, SecuritiesTradeDetails88.mmTradeTransactionCondition,
+					SecuritiesTradeDetails89.mmTradeTransactionCondition, SecuritiesTradeDetails90.mmTradeTransactionCondition);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22a::TTCO"));
@@ -1937,11 +2251,41 @@ public class SecuritiesTrade extends Trade {
 	 * {@linkplain com.tools20022.repository.msg.RequestDetails16#mmMatchingDenial
 	 * RequestDetails16.mmMatchingDenial}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation3#mmProcessingStatus
+	 * IntraBalanceCancellation3.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmProcessingStatus
+	 * IntraBalanceCancellation4.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification4#mmProcessingStatus
+	 * IntraBalanceModification4.mmProcessingStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails18#mmMatchingDenial
+	 * RequestDetails18.mmMatchingDenial}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmStatusAndReason
+	 * Transaction51.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification3#mmProcessingStatus
+	 * IntraBalanceModification3.mmProcessingStatus}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction53#mmStatusAndReason
 	 * Transaction53.mmStatusAndReason}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction57#mmStatusAndReason
 	 * Transaction57.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmTradeConfirmation
+	 * TradeTransaction18.mmTradeConfirmation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction58#mmStatusAndReason
+	 * Transaction58.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmStatusAndReason
+	 * Transaction60.mmStatusAndReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmStatusAndReason
+	 * Transaction64.mmStatusAndReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1967,7 +2311,9 @@ public class SecuritiesTrade extends Trade {
 					Transaction16.mmStatusAndReason, Transaction19.mmStatusAndReason, Transaction22.mmStatusAndReason, Transaction27.mmStatusAndReason, Transaction31.mmStatusAndReason, IntraBalanceCancellation2.mmProcessingStatus,
 					IntraBalanceCancellation1.mmProcessingStatus, Transaction25.mmStatusAndReason, IntraBalanceModification2.mmProcessingStatus, IntraBalanceModification1.mmProcessingStatus, Transaction34.mmStatusAndReason,
 					RequestDetails13.mmMatchingDenial, Transaction38.mmStatusAndReason, RequestDetails14.mmMatchingDenial, Transaction41.mmStatusAndReason, Transaction43.mmStatusAndReason, Transaction47.mmStatusAndReason,
-					RequestDetails15.mmMatchingDenial, Transaction49.mmStatusAndReason, RequestDetails16.mmMatchingDenial, Transaction53.mmStatusAndReason, Transaction57.mmStatusAndReason);
+					RequestDetails15.mmMatchingDenial, Transaction49.mmStatusAndReason, RequestDetails16.mmMatchingDenial, IntraBalanceCancellation3.mmProcessingStatus, IntraBalanceCancellation4.mmProcessingStatus,
+					IntraBalanceModification4.mmProcessingStatus, RequestDetails18.mmMatchingDenial, Transaction51.mmStatusAndReason, IntraBalanceModification3.mmProcessingStatus, Transaction53.mmStatusAndReason,
+					Transaction57.mmStatusAndReason, TradeTransaction18.mmTradeConfirmation, Transaction58.mmStatusAndReason, Transaction60.mmStatusAndReason, Transaction64.mmStatusAndReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2111,6 +2457,9 @@ public class SecuritiesTrade extends Trade {
 	 * {@linkplain com.tools20022.repository.choice.TransactionActivity4Choice#mmProprietary
 	 * TransactionActivity4Choice.mmProprietary}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmTransactionActivity
+	 * TransactionDetails93.mmTransactionActivity}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails96#mmTransactionActivity
 	 * TransactionDetails96.mmTransactionActivity}</li>
 	 * <li>
@@ -2122,6 +2471,21 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmTransactionActivity
 	 * TransactionDetails98.mmTransactionActivity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmTransactionActivity
+	 * TransactionDetails102.mmTransactionActivity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmTransactionActivity
+	 * TransactionDetails104.mmTransactionActivity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmTransactionActivity
+	 * TransactionDetails103.mmTransactionActivity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmTransactionActivity
+	 * TransactionDetails111.mmTransactionActivity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmTransactionActivity
+	 * TransactionDetails112.mmTransactionActivity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2151,7 +2515,9 @@ public class SecuritiesTrade extends Trade {
 					TransactionDetails51.mmTransactionActivity, TransactionDetails62.mmTransactionActivity, TransactionDetails63.mmTransactionActivity, TransactionDetails67.mmTransactionActivity, TransactionDetails68.mmTransactionActivity,
 					TransactionDetails69.mmTransactionActivity, TransactionDetails72.mmTransactionActivity, TransactionDetails75.mmTransactionActivity, TransactionDetails78.mmTransactionActivity, TransactionActivity3Choice.mmCode,
 					TransactionActivity3Choice.mmProprietary, TransactionDetails91.mmTransactionActivity, TransactionDetails90.mmTransactionActivity, TransactionActivity4Choice.mmCode, TransactionActivity4Choice.mmProprietary,
-					TransactionDetails96.mmTransactionActivity, TransactionDetails95.mmTransactionActivity, TransactionDetails99.mmTransactionActivity, TransactionDetails98.mmTransactionActivity);
+					TransactionDetails93.mmTransactionActivity, TransactionDetails96.mmTransactionActivity, TransactionDetails95.mmTransactionActivity, TransactionDetails99.mmTransactionActivity, TransactionDetails98.mmTransactionActivity,
+					TransactionDetails102.mmTransactionActivity, TransactionDetails104.mmTransactionActivity, TransactionDetails103.mmTransactionActivity, TransactionDetails111.mmTransactionActivity,
+					TransactionDetails112.mmTransactionActivity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2214,6 +2580,21 @@ public class SecuritiesTrade extends Trade {
 	 * TradeLeg10.mmTradeQuantity}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.TradeLeg9#mmTradeQuantity
 	 * TradeLeg9.mmTradeQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmQuantity
+	 * TradeTransaction15.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmQuantity
+	 * TradeTransaction17.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmQuantity
+	 * TradeTransaction14.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmQuantity
+	 * TradeTransaction18.mmQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmQuantity
+	 * TradeTransaction16.mmQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2237,7 +2618,8 @@ public class SecuritiesTrade extends Trade {
 	public static final MMBusinessAssociationEnd mmTradeQuantity = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TransactionDetails1.mmExecutedTradeQuantity, TradeLeg2.mmTradeQuantity, TradeLeg5.mmTradeQuantity, TradeLeg1.mmTradeQuantity, TradeLeg3.mmTradeQuantity, TradeLeg6.mmTradeQuantity,
-					TradeLeg4.mmTradeQuantity, TradeLeg7.mmTradeQuantity, TradeLeg8.mmTradeQuantity, TradeLeg10.mmTradeQuantity, TradeLeg9.mmTradeQuantity);
+					TradeLeg4.mmTradeQuantity, TradeLeg7.mmTradeQuantity, TradeLeg8.mmTradeQuantity, TradeLeg10.mmTradeQuantity, TradeLeg9.mmTradeQuantity, TradeTransaction15.mmQuantity, TradeTransaction17.mmQuantity,
+					TradeTransaction14.mmQuantity, TradeTransaction18.mmQuantity, TradeTransaction16.mmQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2485,6 +2867,18 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmFinancialInstrumentAttributes
 	 * SecuritiesTradeDetails69.mmFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmFinancialInstrumentAttributes
+	 * SecuritiesTradeDetails71.mmFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmFinancialInstrumentAttributes
+	 * SecuritiesTradeDetails72.mmFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmFinancialInstrumentAttributes
+	 * SecuritiesTradeDetails81.mmFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmFinancialInstrumentAttributes
+	 * SecuritiesTradeDetails85.mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2512,7 +2906,8 @@ public class SecuritiesTrade extends Trade {
 					SecuritiesTradeDetails24.mmFinancialInstrumentAttributes, SecuritiesTradeDetails30.mmFinancialInstrumentAttributes, SecuritiesTradeDetails35.mmFinancialInstrumentAttributes,
 					SecuritiesTradeDetails42.mmFinancialInstrumentAttributes, SecuritiesTradeDetails49.mmFinancialInstrumentAttributes, SecuritiesTradeDetails48.mmFinancialInstrumentAttributes,
 					SecuritiesTradeDetails57.mmFinancialInstrumentAttributes, SecuritiesTradeDetails61.mmFinancialInstrumentAttributes, SecuritiesTradeDetails68.mmFinancialInstrumentAttributes,
-					SecuritiesTradeDetails69.mmFinancialInstrumentAttributes);
+					SecuritiesTradeDetails69.mmFinancialInstrumentAttributes, SecuritiesTradeDetails71.mmFinancialInstrumentAttributes, SecuritiesTradeDetails72.mmFinancialInstrumentAttributes,
+					SecuritiesTradeDetails81.mmFinancialInstrumentAttributes, SecuritiesTradeDetails85.mmFinancialInstrumentAttributes);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2560,6 +2955,16 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransaction1#mmPrice
 	 * SecuritiesTransaction1.mmPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction15#mmPrice
+	 * TradeTransaction15.mmPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction17#mmPrice
+	 * TradeTransaction17.mmPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction14#mmPrice
+	 * TradeTransaction14.mmPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction18#mmPrice
+	 * TradeTransaction18.mmPrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction16#mmPrice
+	 * TradeTransaction16.mmPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2582,7 +2987,8 @@ public class SecuritiesTrade extends Trade {
 	 */
 	public static final MMBusinessAssociationEnd mmTradePrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(TransactionDetails1.mmExecutedTradePrice, NetPosition1.mmAverageDealPrice, NetPosition2.mmAverageDealPrice, NetPosition3.mmAverageDealPrice, SecuritiesTransaction1.mmPrice);
+			derivation_lazy = () -> Arrays.asList(TransactionDetails1.mmExecutedTradePrice, NetPosition1.mmAverageDealPrice, NetPosition2.mmAverageDealPrice, NetPosition3.mmAverageDealPrice, SecuritiesTransaction1.mmPrice,
+					TradeTransaction15.mmPrice, TradeTransaction17.mmPrice, TradeTransaction14.mmPrice, TradeTransaction18.mmPrice, TradeTransaction16.mmPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2679,6 +3085,18 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmOtherBusinessParties
 	 * SecuritiesTradeDetails69.mmOtherBusinessParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmOtherBusinessParties
+	 * SecuritiesTradeDetails71.mmOtherBusinessParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmOtherBusinessParties
+	 * SecuritiesTradeDetails72.mmOtherBusinessParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmOtherBusinessParties
+	 * SecuritiesTradeDetails81.mmOtherBusinessParties}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmOtherBusinessParties
+	 * SecuritiesTradeDetails85.mmOtherBusinessParties}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2706,7 +3124,8 @@ public class SecuritiesTrade extends Trade {
 					SecuritiesTradeDetails29.mmOtherBusinessParties, SecuritiesTradeDetails14.mmOtherBusinessParties, SecuritiesTradeDetails20.mmOtherBusinessParties, SecuritiesTradeDetails24.mmOtherBusinessParties,
 					SecuritiesTradeDetails30.mmOtherBusinessParties, OrderStatusAndReason5.mmOtherBusinessParties, SecuritiesTradeDetails35.mmOtherBusinessParties, SecuritiesTradeDetails42.mmOtherBusinessParties,
 					SecuritiesTradeDetails49.mmOtherBusinessParties, SecuritiesTradeDetails48.mmOtherBusinessParties, SecuritiesTradeDetails57.mmOtherBusinessParties, SecuritiesTradeDetails61.mmOtherBusinessParties,
-					SecuritiesTradeDetails68.mmOtherBusinessParties, SecuritiesTradeDetails69.mmOtherBusinessParties);
+					SecuritiesTradeDetails68.mmOtherBusinessParties, SecuritiesTradeDetails69.mmOtherBusinessParties, SecuritiesTradeDetails71.mmOtherBusinessParties, SecuritiesTradeDetails72.mmOtherBusinessParties,
+					SecuritiesTradeDetails81.mmOtherBusinessParties, SecuritiesTradeDetails85.mmOtherBusinessParties);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2775,6 +3194,12 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails69#mmSecuritiesFinancingDetails
 	 * SecuritiesTradeDetails69.mmSecuritiesFinancingDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmSecuritiesFinancingDetails
+	 * SecuritiesTradeDetails71.mmSecuritiesFinancingDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmSecuritiesFinancingDetails
+	 * SecuritiesTradeDetails85.mmSecuritiesFinancingDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2798,7 +3223,7 @@ public class SecuritiesTrade extends Trade {
 			derivation_lazy = () -> Arrays.asList(SecuritiesTradeDetails4.mmSecuritiesFinancingDetails, SecuritiesTradeDetails17.mmSecuritiesFinancingDetails, SecuritiesTradeDetails10.mmSecuritiesFinancingDetails,
 					SecuritiesTradeDetails22.mmSecuritiesFinancingDetails, SecuritiesTradeDetails23.mmSecuritiesFinancingDetails, SecuritiesTradeDetails29.mmSecuritiesFinancingDetails, SecuritiesTradeDetails35.mmSecuritiesFinancingDetails,
 					SecuritiesTradeDetails42.mmSecuritiesFinancingDetails, SecuritiesTradeDetails49.mmSecuritiesFinancingDetails, SecuritiesTradeDetails61.mmSecuritiesFinancingDetails, SecuritiesTradeDetails68.mmSecuritiesFinancingDetails,
-					SecuritiesTradeDetails69.mmSecuritiesFinancingDetails);
+					SecuritiesTradeDetails69.mmSecuritiesFinancingDetails, SecuritiesTradeDetails71.mmSecuritiesFinancingDetails, SecuritiesTradeDetails85.mmSecuritiesFinancingDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3254,6 +3679,18 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.LegalFramework4Choice#mmProprietary
 	 * LegalFramework4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmLegalFramework
+	 * SecuritiesFinancingTransactionDetails37.mmLegalFramework}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmLegalFramework
+	 * SecuritiesFinancingTransactionDetails38.mmLegalFramework}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmLegalFramework
+	 * SecuritiesFinancingTransactionDetails39.mmLegalFramework}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41#mmLegalFramework
+	 * SecuritiesFinancingTransactionDetails41.mmLegalFramework}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3280,7 +3717,8 @@ public class SecuritiesTrade extends Trade {
 					SecuritiesFinancingTransactionDetails19.mmLegalFramework, SecuritiesFinancingTransactionDetails20.mmLegalFramework, SecuritiesFinancingTransactionDetails9.mmLegalFramework, SecuritiesFinancing1.mmLegalFramework,
 					SecuritiesFinancingTransactionDetails28.mmLegalFramework, SecuritiesFinancingTransactionDetails27.mmLegalFramework, SecuritiesFinancingTransactionDetails29.mmLegalFramework, LegalFramework3Choice.mmCode,
 					LegalFramework3Choice.mmProprietary, SecuritiesFinancingTransactionDetails32.mmLegalFramework, SecuritiesFinancingTransactionDetails30.mmLegalFramework, SecuritiesFinancingTransactionDetails34.mmLegalFramework,
-					LegalFramework4Choice.mmCode, LegalFramework4Choice.mmProprietary);
+					LegalFramework4Choice.mmCode, LegalFramework4Choice.mmProprietary, SecuritiesFinancingTransactionDetails37.mmLegalFramework, SecuritiesFinancingTransactionDetails38.mmLegalFramework,
+					SecuritiesFinancingTransactionDetails39.mmLegalFramework, SecuritiesFinancingTransactionDetails41.mmLegalFramework);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3893,6 +4331,93 @@ public class SecuritiesTrade extends Trade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#mmTransactionType
 	 * ForeignExchangeSwapTransaction3.mmTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmSecuritiesTransactionType
+	 * SettlementDetails140.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmSecuritiesTransactionType
+	 * SettlementDetails142.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmSecuritiesTransactionType
+	 * SettlementDetails144.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmSecuritiesTransactionType
+	 * SettlementDetails141.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmSecuritiesTransactionType
+	 * SettlementDetails145.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent22Choice#mmSecuritiesTransactionType
+	 * SettlementOrCorporateActionEvent22Choice.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType36Choice#mmCode
+	 * SecuritiesTransactionType36Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType36Choice#mmProprietary
+	 * SecuritiesTransactionType36Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmSecuritiesTransactionType
+	 * SettlementDetails146.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType37Choice#mmCode
+	 * SecuritiesTransactionType37Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType37Choice#mmProprietary
+	 * SecuritiesTransactionType37Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmSecuritiesTransactionType
+	 * SettlementDetails143.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType38Choice#mmCode
+	 * SecuritiesTransactionType38Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType38Choice#mmProprietary
+	 * SecuritiesTransactionType38Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent23Choice#mmSecuritiesTransactionType
+	 * SettlementOrCorporateActionEvent23Choice.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmSecuritiesTransactionType
+	 * SettlementDetails153.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType39Choice#mmCode
+	 * SecuritiesTransactionType39Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType39Choice#mmProprietary
+	 * SecuritiesTransactionType39Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmSecuritiesTransactionType
+	 * SettlementDetails155.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType41Choice#mmCode
+	 * SecuritiesTransactionType41Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType41Choice#mmProprietary
+	 * SecuritiesTransactionType41Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmSecuritiesTransactionType
+	 * SettlementDetails156.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType42Choice#mmCode
+	 * SecuritiesTransactionType42Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecuritiesTransactionType42Choice#mmProprietary
+	 * SecuritiesTransactionType42Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmSecuritiesTransactionType
+	 * SettlementDetails157.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmSecuritiesTransactionType
+	 * SettlementDetails158.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmSecuritiesTransactionType
+	 * SettlementDetails160.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent24Choice#mmSecuritiesTransactionType
+	 * SettlementOrCorporateActionEvent24Choice.mmSecuritiesTransactionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettlementOrCorporateActionEvent25Choice#mmSecuritiesTransactionType
+	 * SettlementOrCorporateActionEvent25Choice.mmSecuritiesTransactionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3968,7 +4493,15 @@ public class SecuritiesTrade extends Trade {
 					TransactionTypeAndAdditionalParameters18.mmSecuritiesFinancingTransactionType, SettlementDetails137.mmSecuritiesTransactionType, SecuritiesFinancingTransactionDetails36.mmSecuritiesFinancingTransactionType,
 					SettlementDetails132.mmSecuritiesTransactionType, SecuritiesTransactionType34Choice.mmCode, SecuritiesTransactionType34Choice.mmProprietary, SettlementDetails138.mmSecuritiesTransactionType,
 					SettlementDetails131.mmSecuritiesTransactionType, SettlementOrCorporateActionEvent20Choice.mmSecuritiesTransactionType, SecuritiesTransactionType35Choice.mmCode, SecuritiesTransactionType35Choice.mmProprietary,
-					SettlementOrCorporateActionEvent21Choice.mmSecuritiesTransactionType, SettlementDetails133.mmSecuritiesTransactionType, ForeignExchangeSwapTransaction3.mmTransactionType);
+					SettlementOrCorporateActionEvent21Choice.mmSecuritiesTransactionType, SettlementDetails133.mmSecuritiesTransactionType, ForeignExchangeSwapTransaction3.mmTransactionType,
+					SettlementDetails140.mmSecuritiesTransactionType, SettlementDetails142.mmSecuritiesTransactionType, SettlementDetails144.mmSecuritiesTransactionType, SettlementDetails141.mmSecuritiesTransactionType,
+					SettlementDetails145.mmSecuritiesTransactionType, SettlementOrCorporateActionEvent22Choice.mmSecuritiesTransactionType, SecuritiesTransactionType36Choice.mmCode, SecuritiesTransactionType36Choice.mmProprietary,
+					SettlementDetails146.mmSecuritiesTransactionType, SecuritiesTransactionType37Choice.mmCode, SecuritiesTransactionType37Choice.mmProprietary, SettlementDetails143.mmSecuritiesTransactionType,
+					SecuritiesTransactionType38Choice.mmCode, SecuritiesTransactionType38Choice.mmProprietary, SettlementOrCorporateActionEvent23Choice.mmSecuritiesTransactionType, SettlementDetails153.mmSecuritiesTransactionType,
+					SecuritiesTransactionType39Choice.mmCode, SecuritiesTransactionType39Choice.mmProprietary, SettlementDetails155.mmSecuritiesTransactionType, SecuritiesTransactionType41Choice.mmCode,
+					SecuritiesTransactionType41Choice.mmProprietary, SettlementDetails156.mmSecuritiesTransactionType, SecuritiesTransactionType42Choice.mmCode, SecuritiesTransactionType42Choice.mmProprietary,
+					SettlementDetails157.mmSecuritiesTransactionType, SettlementDetails158.mmSecuritiesTransactionType, SettlementDetails160.mmSecuritiesTransactionType, SettlementOrCorporateActionEvent24Choice.mmSecuritiesTransactionType,
+					SettlementOrCorporateActionEvent25Choice.mmSecuritiesTransactionType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTrade.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::SETR"));
@@ -4017,8 +4550,12 @@ public class SecuritiesTrade extends Trade {
 						TradeLeg9.mmTradeRegistrationOrigin, Transaction43.mmTransactionDetails, Transaction42.mmTransactionDetails, SecuritiesTradeDetails49.mmOtherAmounts, Transaction47.mmTransactionDetails,
 						TransactionDetails76.mmTransactionDetails, SecuritiesTradeDetails48.mmOtherAmounts, Transaction45.mmTransactionDetails, Transaction46.mmTransactionDetails, SecuritiesTradeDetails57.mmOtherAmounts,
 						Transaction49.mmTransactionDetails, SecuritiesTradeDetails61.mmOtherAmounts, TransactionDetails85.mmTransactionDetails, Transaction50.mmTransactionDetails, Transaction48.mmTransactionDetails,
-						Transaction53.mmTransactionDetails, SecuritiesTradeDetails68.mmOtherAmounts, Transaction54.mmTransactionDetails, Transaction52.mmTransactionDetails, SecuritiesTradeDetails69.mmOtherAmounts,
-						Transaction57.mmTransactionDetails, Transaction56.mmTransactionDetails, Transaction55.mmTransactionDetails, TransactionDetails101.mmTransactionDetails);
+						Transaction51.mmTransactionDetails, Transaction53.mmTransactionDetails, SecuritiesTradeDetails68.mmOtherAmounts, Transaction54.mmTransactionDetails, Transaction52.mmTransactionDetails,
+						SecuritiesTradeDetails69.mmOtherAmounts, Transaction57.mmTransactionDetails, Transaction56.mmTransactionDetails, Transaction55.mmTransactionDetails, TransactionDetails101.mmTransactionDetails,
+						CommonTradeDataReport21.mmTransactionData, CommonTradeDataReport20.mmTransactionData, CommonTradeDataReport23.mmTransactionData, CommonTradeDataReport22.mmTransactionData, CommonTradeDataReport24.mmTransactionData,
+						CommonTradeDataReport19.mmTransactionData, CommonTradeDataReport25.mmTransactionData, Transaction58.mmTransactionDetails, SecuritiesTradeDetails71.mmOtherAmounts, Transaction60.mmTransactionDetails,
+						SecuritiesTradeDetails72.mmOtherAmounts, Transaction61.mmTransactionDetails, Transaction62.mmTransactionDetails, TransactionDetails106.mmTransactionDetails, SecuritiesTradeDetails81.mmOtherAmounts,
+						SecuritiesTradeDetails85.mmOtherAmounts, TransactionDetails108.mmTransactionDetails, Transaction63.mmTransactionDetails, Transaction64.mmTransactionDetails, Transaction65.mmTransactionDetails);
 				subType_lazy = () -> Arrays.asList(InvestmentFundTransaction.mmObject(), com.tools20022.repository.entity.SecuritiesFinancing.mmObject(), SecuritiesTransaction.mmObject(), SecuritiesOptionTrade.mmObject());
 				superType_lazy = () -> Trade.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTrade.mmSecuritiesTradeRelatedIdentifications, com.tools20022.repository.entity.SecuritiesTrade.mmTradeAmount,
@@ -4072,10 +4609,18 @@ public class SecuritiesTrade extends Trade {
 						AdditionalParameters28.mmObject(), OtherAmounts38.mmObject(), SecuritiesTradeDetails62.mmObject(), AdditionalParameters27.mmObject(), TransactionDetails85.mmObject(), TransactionDetails87.mmObject(),
 						OtherAmounts36.mmObject(), SecuritiesTradeDetails60.mmObject(), OtherAmounts33.mmObject(), LegalFramework4Choice.mmObject(), TradeTransactionCondition6Choice.mmObject(), Transaction50.mmObject(),
 						TransactionDetails91.mmObject(), UnilateralSplit4Choice.mmObject(), Transaction48.mmObject(), TransactionDetails90.mmObject(), TransactionActivity4Choice.mmObject(), SecuritiesTradeDetails65.mmObject(),
-						SecuritiesTradeDetails66.mmObject(), DerivativeCommodity2.mmObject(), AdditionalParameters29.mmObject(), AdditionalParameters30.mmObject(), SecuritiesTradeDetails67.mmObject(), Transaction53.mmObject(),
-						SecuritiesTradeDetails68.mmObject(), TransactionDetails97.mmObject(), TransactionDetails96.mmObject(), Transaction54.mmObject(), Transaction52.mmObject(), TransactionDetails95.mmObject(),
-						SecuritiesTradeDetails69.mmObject(), AdditionalParameters31.mmObject(), Transaction57.mmObject(), SecuritiesTradeDetails70.mmObject(), AdditionalParameters32.mmObject(), Transaction56.mmObject(),
-						TransactionDetails100.mmObject(), TransactionDetails99.mmObject(), Transaction55.mmObject(), TransactionDetails98.mmObject(), TransactionDetails101.mmObject());
+						SecuritiesTradeDetails66.mmObject(), TransactionDetails93.mmObject(), Transaction51.mmObject(), TradeTransactionCondition7Choice.mmObject(), TransactionDetails94.mmObject(), DerivativeCommodity2.mmObject(),
+						AdditionalParameters29.mmObject(), AdditionalParameters30.mmObject(), SecuritiesTradeDetails67.mmObject(), Transaction53.mmObject(), SecuritiesTradeDetails68.mmObject(), TransactionDetails97.mmObject(),
+						TransactionDetails96.mmObject(), Transaction54.mmObject(), Transaction52.mmObject(), TransactionDetails95.mmObject(), SecuritiesTradeDetails69.mmObject(), AdditionalParameters31.mmObject(), Transaction57.mmObject(),
+						SecuritiesTradeDetails70.mmObject(), AdditionalParameters32.mmObject(), Transaction56.mmObject(), TransactionDetails100.mmObject(), TransactionDetails99.mmObject(), Transaction55.mmObject(),
+						TransactionDetails98.mmObject(), TransactionDetails101.mmObject(), TradeTransaction15.mmObject(), TradeTransaction17.mmObject(), TradeTransaction14.mmObject(), TradeTransaction18.mmObject(),
+						TradeTransaction16.mmObject(), Transaction58.mmObject(), TransactionDetails102.mmObject(), DerivativeUnderlyingLeg1.mmObject(), OtherAmounts41.mmObject(), SecuritiesTradeDetails71.mmObject(),
+						OtherAmounts39.mmObject(), TransactionDetails105.mmObject(), OtherAmounts40.mmObject(), Transaction60.mmObject(), SecuritiesTradeDetails72.mmObject(), TransactionDetails104.mmObject(), Transaction61.mmObject(),
+						TransactionDetails103.mmObject(), Transaction62.mmObject(), SecuritiesTradeDetails73.mmObject(), SecuritiesTradeDetails75.mmObject(), SecuritiesTradeDetails76.mmObject(), TransactionDetails106.mmObject(),
+						TransactionDetails107.mmObject(), SecuritiesTradeDetails78.mmObject(), SecuritiesTradeDetails79.mmObject(), SecuritiesTradeDetails80.mmObject(), SecuritiesTradeDetails81.mmObject(), OtherAmounts42.mmObject(),
+						OtherAmounts43.mmObject(), SecuritiesTradeDetails84.mmObject(), SecuritiesTradeDetails85.mmObject(), SecuritiesTradeDetails86.mmObject(), OtherAmounts44.mmObject(), SecuritiesTradeDetails87.mmObject(),
+						SecuritiesTradeDetails88.mmObject(), TransactionDetails108.mmObject(), TransactionDetails109.mmObject(), SecuritiesTradeDetails89.mmObject(), SecuritiesTradeDetails90.mmObject(), TransactionDetails110.mmObject(),
+						Transaction63.mmObject(), TransactionDetails111.mmObject(), Transaction64.mmObject(), Transaction65.mmObject(), TransactionDetails112.mmObject());
 			}
 
 			@Override

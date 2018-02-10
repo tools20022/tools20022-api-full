@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyConversion15
+ * CurrencyConversion15}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CurrencyConversion8
@@ -109,6 +116,14 @@ public class CurrencyConversion13 {
 	 * definition} =
 	 * "True if the cardholder has accepted the currency conversion that the acquirer has proposed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion15#mmAcceptedByCardholder
+	 * CurrencyConversion15.mmAcceptedByCardholder}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +139,7 @@ public class CurrencyConversion13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedByCardholder";
 			definition = "True if the cardholder has accepted the currency conversion that the acquirer has proposed.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion15.mmAcceptedByCardholder);
 			previousVersion_lazy = () -> CurrencyConversion8.mmAcceptedByCardholder;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -158,6 +174,14 @@ public class CurrencyConversion13 {
 	 * definition} =
 	 * "Conversion between the currency of a card acceptor and the currency of a cardholder, provided by a dedicated service provider."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion15#mmConversion
+	 * CurrencyConversion15.mmConversion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -173,6 +197,7 @@ public class CurrencyConversion13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Conversion";
 			definition = "Conversion between the currency of a card acceptor and the currency of a cardholder, provided by a dedicated service provider.";
+			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion15.mmConversion);
 			previousVersion_lazy = () -> CurrencyConversion8.mmConversion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -190,6 +215,7 @@ public class CurrencyConversion13 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencyConversion13";
 				definition = "Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider.";
+				nextVersions_lazy = () -> Arrays.asList(CurrencyConversion15.mmObject());
 				previousVersion_lazy = () -> CurrencyConversion8.mmObject();
 			}
 		});

@@ -36,6 +36,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ExternalDocumentPurposeCode
+ * ExternalDocumentPurposeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -55,7 +58,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "ExternalDocumentPurpose1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the document purpose as published in an external  document purpose code list.\r\nExternal code sets can be downloaded from www.iso20022.org."
+ * "Specifies the document purpose as published in an external document purpose code list.\r\nExternal code sets can be downloaded from www.iso20022.org."
  * </li>
  * </ul>
  */
@@ -75,7 +78,8 @@ public class ExternalDocumentPurpose1Code extends MMCode {
 				example = Arrays.asList("CORT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalDocumentPurpose1Code";
-				definition = "Specifies the document purpose as published in an external  document purpose code list.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				definition = "Specifies the document purpose as published in an external document purpose code list.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				trace_lazy = () -> ExternalDocumentPurposeCode.mmObject();
 				minLength = 1;
 				maxLength = 4;
 			}

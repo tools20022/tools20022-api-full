@@ -62,6 +62,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Rate3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of elements used to qualify the interest rate."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Rate4 Rate4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +105,12 @@ public class Rate3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of interest rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Rate4#mmType Rate4.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -110,6 +122,7 @@ public class Rate3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of interest rate.";
+			nextVersions_lazy = () -> Arrays.asList(Rate4.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -147,6 +160,13 @@ public class Rate3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "An amount range where the interest rate is applicable."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Rate4#mmValidityRange
+	 * Rate4.mmValidityRange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmValidityRange = new MMMessageAssociationEnd() {
@@ -158,6 +178,7 @@ public class Rate3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityRange";
 			definition = "An amount range where the interest rate is applicable.";
+			nextVersions_lazy = () -> Arrays.asList(Rate4.mmValidityRange);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -174,6 +195,7 @@ public class Rate3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Rate3";
 				definition = "Set of elements used to qualify the interest rate.";
+				nextVersions_lazy = () -> Arrays.asList(Rate4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01;
 import com.tools20022.repository.choice.SecurityIdentification22Choice;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.ISODateTime;
@@ -82,6 +83,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
  * TreasuryTrade}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01#mmTradeDetail
+ * ForeignExchangeTradeCaptureReportV01.mmTradeDetail}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -838,6 +848,7 @@ public class Trade1 {
 						com.tools20022.repository.msg.Trade1.mmTradingMode, com.tools20022.repository.msg.Trade1.mmClearingMethod, com.tools20022.repository.msg.Trade1.mmExecutionType, com.tools20022.repository.msg.Trade1.mmSymbol,
 						com.tools20022.repository.msg.Trade1.mmPlaceOfConfirmation, com.tools20022.repository.msg.Trade1.mmTransactionTime, com.tools20022.repository.msg.Trade1.mmForeignExchangeDetails,
 						com.tools20022.repository.msg.Trade1.mmSwapLeg, com.tools20022.repository.msg.Trade1.mmOption, com.tools20022.repository.msg.Trade1.mmProductIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeCaptureReportV01.mmTradeDetail);
 				trace_lazy = () -> TreasuryTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintForeignExchangeDetailsRule.forTrade1, com.tools20022.repository.constraints.ConstraintSwapLegRule.forTrade1,

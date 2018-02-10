@@ -92,7 +92,7 @@ public class ConstraintChargesAmountGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount  is recommended to be the same as the currency of InterbankSettlementAmount."
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -114,7 +114,7 @@ public class ConstraintChargesAmountGuideline {
 			validator = ConstraintChargesAmountGuideline::checkDirectDebitTransactionInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount  is recommended to be the same as the currency of InterbankSettlementAmount.";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountRule.forDirectDebitTransactionInformation14;
 			owner_lazy = () -> DirectDebitTransactionInformation17.mmObject();
@@ -173,7 +173,7 @@ public class ConstraintChargesAmountGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount  is recommended to be the same as the currency of InterbankSettlementAmount."
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -195,7 +195,7 @@ public class ConstraintChargesAmountGuideline {
 			validator = ConstraintChargesAmountGuideline::checkDirectDebitTransactionInformation20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount  is recommended to be the same as the currency of InterbankSettlementAmount.";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation21);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation17;
 			owner_lazy = () -> DirectDebitTransactionInformation20.mmObject();
@@ -218,7 +218,7 @@ public class ConstraintChargesAmountGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount  is recommended to be the same as the currency of InterbankSettlementAmount."
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -232,9 +232,39 @@ public class ConstraintChargesAmountGuideline {
 			validator = ConstraintChargesAmountGuideline::checkDirectDebitTransactionInformation21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAmountGuideline";
-			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount  is recommended to be the same as the currency of InterbankSettlementAmount.";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChargesAmountGuideline.forDirectDebitTransactionInformation20;
 			owner_lazy = () -> DirectDebitTransactionInformation21.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30
+	 * CreditTransferTransaction30}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChargesAmountGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransaction30> forCreditTransferTransaction30 = new MMConstraint<CreditTransferTransaction30>() {
+		{
+			validator = ConstraintChargesAmountGuideline::checkCreditTransferTransaction30;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChargesAmountGuideline";
+			definition = "If ChargesInformation is present, then the currency of ChargesInformation/ChargesAmount is recommended to be the same as the currency of InterbankSettlementAmount.";
+			owner_lazy = () -> CreditTransferTransaction30.mmObject();
 		}
 	};
 
@@ -280,6 +310,15 @@ public class ConstraintChargesAmountGuideline {
 	 * currency of InterbankSettlementAmount.
 	 */
 	public static void checkDirectDebitTransactionInformation21(DirectDebitTransactionInformation21 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ChargesInformation is present, then the currency of
+	 * ChargesInformation/ChargesAmount is recommended to be the same as the
+	 * currency of InterbankSettlementAmount.
+	 */
+	public static void checkCreditTransferTransaction30(CreditTransferTransaction30 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

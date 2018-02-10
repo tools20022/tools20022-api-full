@@ -63,7 +63,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TransactionModification2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Contains the requested modifications. "</li>
+ * definition} = "Contains the requested modifications."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -204,7 +204,7 @@ public class TransactionModification2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TransactionModification2";
-				definition = "Contains the requested modifications. ";
+				definition = "Contains the requested modifications.";
 				nextVersions_lazy = () -> Arrays.asList(TransactionModification3.mmObject());
 			}
 		});

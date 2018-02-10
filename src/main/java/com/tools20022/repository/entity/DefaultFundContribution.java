@@ -21,10 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.DebitCreditCode;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.Contribution1;
-import com.tools20022.repository.msg.DefaultFund1;
-import com.tools20022.repository.msg.MarginCallResult1;
-import com.tools20022.repository.msg.MarginCallResult3;
+import com.tools20022.repository.msg.*;
 import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
@@ -283,6 +280,14 @@ public class DefaultFundContribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Account Account}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EndOfDayRequirement2#mmMarginAccountIdentification
+	 * EndOfDayRequirement2.mmMarginAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -303,6 +308,7 @@ public class DefaultFundContribution {
 	 */
 	public static final MMBusinessAssociationEnd mmContributionAccount = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(EndOfDayRequirement2.mmMarginAccountIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DefaultFundContribution.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;

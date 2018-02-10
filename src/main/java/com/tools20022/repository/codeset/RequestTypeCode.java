@@ -212,14 +212,14 @@ public class RequestTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type is a request to change the sequence of the  transactions."</li>
+	 * "Type is a request to change the sequence of the transactions."</li>
 	 * </ul>
 	 */
 	public static final RequestTypeCode ReSequence = new RequestTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReSequence";
-			definition = "Type is a request to change the sequence of the  transactions.";
+			definition = "Type is a request to change the sequence of the transactions.";
 			owner_lazy = () -> com.tools20022.repository.codeset.RequestTypeCode.mmObject();
 			codeName = "RT04";
 		}

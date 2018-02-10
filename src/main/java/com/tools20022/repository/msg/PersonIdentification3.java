@@ -190,7 +190,7 @@ public class PersonIdentification3 {
 	 * name} = "CustomerNumber"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number assigned by an agent  to identify its customer."</li>
+	 * definition} = "Number assigned by an agent to identify its customer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCustomerNumber = new MMMessageAttribute() {
@@ -200,7 +200,7 @@ public class PersonIdentification3 {
 			xmlTag = "CstmrNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerNumber";
-			definition = "Number assigned by an agent  to identify its customer.";
+			definition = "Number assigned by an agent to identify its customer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

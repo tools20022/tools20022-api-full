@@ -106,7 +106,7 @@ public class CheckCodeLineCode extends MMCode {
 		}
 	};
 	/**
-	 * Magnetic ink character recognition.,conform to ISO 1004.
+	 * Magnetic ink character recognition., conform to ISO 1004.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -123,20 +123,21 @@ public class CheckCodeLineCode extends MMCode {
 	 * name} = "E13B"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Magnetic ink character recognition.,conform to ISO 1004."</li>
+	 * definition} = "Magnetic ink character recognition., conform to ISO 1004."
+	 * </li>
 	 * </ul>
 	 */
 	public static final CheckCodeLineCode E13B = new CheckCodeLineCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "E13B";
-			definition = "Magnetic ink character recognition.,conform to ISO 1004.";
+			definition = "Magnetic ink character recognition., conform to ISO 1004.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CheckCodeLineCode.mmObject();
 			codeName = "E13B";
 		}
 	};
 	/**
-	 * Optical character recognition font A, conform to ANSI X3.17:1981.
+	 * Optical character recognition font A, conform to ANSI X3.17: 1981.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -154,20 +155,20 @@ public class CheckCodeLineCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Optical character recognition font A, conform to ANSI X3.17:1981."</li>
+	 * "Optical character recognition font A, conform to ANSI X3.17: 1981."</li>
 	 * </ul>
 	 */
 	public static final CheckCodeLineCode OCRA = new CheckCodeLineCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRA";
-			definition = "Optical character recognition font A, conform to ANSI X3.17:1981.";
+			definition = "Optical character recognition font A, conform to ANSI X3.17: 1981.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CheckCodeLineCode.mmObject();
 			codeName = "OCRA";
 		}
 	};
 	/**
-	 * Optical character recognition font B, conform to ANSI X3.49:1975.
+	 * Optical character recognition font B, conform to ANSI X3.49: 1975.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -185,14 +186,14 @@ public class CheckCodeLineCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Optical character recognition font B, conform to ANSI X3.49:1975."</li>
+	 * "Optical character recognition font B, conform to ANSI X3.49: 1975."</li>
 	 * </ul>
 	 */
 	public static final CheckCodeLineCode OCRB = new CheckCodeLineCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OCRB";
-			definition = "Optical character recognition font B, conform to ANSI X3.49:1975.";
+			definition = "Optical character recognition font B, conform to ANSI X3.49: 1975.";
 			owner_lazy = () -> com.tools20022.repository.codeset.CheckCodeLineCode.mmObject();
 			codeName = "OCRB";
 		}

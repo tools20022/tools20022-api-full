@@ -95,6 +95,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery1 TradeDelivery1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery2 TradeDelivery2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery3 TradeDelivery3}</li>
  * </ul>
  * </li>
  * <li>
@@ -143,6 +144,9 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradeDelivery2#mmDeliveryPeriod
 	 * TradeDelivery2.mmDeliveryPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmDeliveryPeriod
+	 * TradeDelivery3.mmDeliveryPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -163,7 +167,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	 */
 	public static final MMBusinessAssociationEnd mmDeliveryPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(TradeDelivery1.mmDeliveryPeriod, TradeDelivery2.mmDeliveryPeriod);
+			derivation_lazy = () -> Arrays.asList(TradeDelivery1.mmDeliveryPeriod, TradeDelivery2.mmDeliveryPeriod, TradeDelivery3.mmDeliveryPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -228,6 +232,9 @@ public class ProductDelivery extends ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TradeDelivery2#mmConsignment
 	 * TradeDelivery2.mmConsignment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmConsignment
+	 * TradeDelivery3.mmConsignment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -249,7 +256,7 @@ public class ProductDelivery extends ObligationFulfilment {
 	public static final MMBusinessAssociationEnd mmRouting = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeDelivery1.mmConsignment, LineItemDetails4.mmRoutingSummary, LineItem5.mmRoutingSummary, LineItemDetails7.mmRoutingSummary, LineItem7.mmRoutingSummary, CertificateDataSet1.mmTransport,
-					LineItem11.mmRoutingSummary, LineItemDetails10.mmRoutingSummary, LineItemDetails13.mmRoutingSummary, LineItem13.mmRoutingSummary, TradeDelivery2.mmConsignment);
+					LineItem11.mmRoutingSummary, LineItemDetails10.mmRoutingSummary, LineItemDetails13.mmRoutingSummary, LineItem13.mmRoutingSummary, TradeDelivery2.mmConsignment, TradeDelivery3.mmConsignment);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ProductDelivery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -533,7 +540,7 @@ public class ProductDelivery extends ObligationFulfilment {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ProductDelivery.mmDeliveryPeriod, com.tools20022.repository.entity.ProductDelivery.mmRouting,
 						com.tools20022.repository.entity.ProductDelivery.mmTradeSettlement, com.tools20022.repository.entity.ProductDelivery.mmObligation, com.tools20022.repository.entity.ProductDelivery.mmTradeCertificate,
 						com.tools20022.repository.entity.ProductDelivery.mmInsuranceCertificate, com.tools20022.repository.entity.ProductDelivery.mmProduct);
-				derivationComponent_lazy = () -> Arrays.asList(TradeDelivery1.mmObject(), TradeDelivery2.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(TradeDelivery1.mmObject(), TradeDelivery2.mmObject(), TradeDelivery3.mmObject());
 			}
 
 			@Override

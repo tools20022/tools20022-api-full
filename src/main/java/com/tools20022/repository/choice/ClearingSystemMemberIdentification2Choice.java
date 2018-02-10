@@ -1103,7 +1103,7 @@ public class ClearingSystemMemberIdentification2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions , as assigned by the Australian Payments Clearing Association (APCA)."
+	 * "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1115,7 +1115,7 @@ public class ClearingSystemMemberIdentification2Choice {
 			xmlTag = "AUBSBs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AustralianSmallNetworkIdentification";
-			definition = "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions , as assigned by the Australian Payments Clearing Association (APCA).";
+			definition = "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SmallNetworkIdentifier.mmObject();

@@ -238,7 +238,7 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n"
+	 * "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -250,7 +250,7 @@ public class InvestmentAccountOwnershipInformation2 {
 			xmlTag = "MnyLndrgChck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MoneyLaunderingCheck";
-			definition = "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n";
+			definition = "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> OldMoneyLaunderingCheck1Code.mmObject();
@@ -289,7 +289,7 @@ public class InvestmentAccountOwnershipInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n"
+	 * "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -301,7 +301,7 @@ public class InvestmentAccountOwnershipInformation2 {
 			xmlTag = "XtndedMnyLndrgChck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExtendedMoneyLaunderingCheck";
-			definition = "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n";
+			definition = "Status of an identity check to prevent money laundering. This includes the counter-terrorism check.\n\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Extended350Code.mmObject();

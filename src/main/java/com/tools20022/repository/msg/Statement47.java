@@ -102,6 +102,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "General characteristics related to a statement which reports information."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Statement65 Statement65}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Statement12
  * Statement12}</li>
@@ -141,6 +147,14 @@ public class Statement47 {
 	 * definition} =
 	 * "Indicates whether the statement contains missing instructions only or all instructions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement65#mmStatementType
+	 * Statement65.mmStatementType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -156,6 +170,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementType";
 			definition = "Indicates whether the statement contains missing instructions only or all instructions.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmStatementType);
 			previousVersion_lazy = () -> Statement12.mmStatementType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -191,6 +206,14 @@ public class Statement47 {
 	 * definition} =
 	 * "Indicates whether the statement report on account holdings for corporate action events is for single account/multiple events or multiple accounts/single event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement65#mmReportingType
+	 * Statement65.mmReportingType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -206,6 +229,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingType";
 			definition = "Indicates whether the statement report on account holdings for corporate action events is for single account/multiple events or multiple accounts/single event.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmReportingType);
 			previousVersion_lazy = () -> Statement12.mmReportingType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -238,6 +262,14 @@ public class Statement47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference of the statement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement65#mmStatementIdentification
+	 * Statement65.mmStatementIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -253,6 +285,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Reference of the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmStatementIdentification);
 			previousVersion_lazy = () -> Statement12.mmStatementIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -289,6 +322,13 @@ public class Statement47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Sequential number of the statement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement65#mmReportNumber
+	 * Statement65.mmReportNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -305,6 +345,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportNumber";
 			definition = "Sequential number of the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmReportNumber);
 			previousVersion_lazy = () -> Statement12.mmReportNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -341,6 +382,14 @@ public class Statement47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date of the statement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement65#mmStatementDateTime
+	 * Statement65.mmStatementDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -357,6 +406,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementDateTime";
 			definition = "Date of the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmStatementDateTime);
 			previousVersion_lazy = () -> Statement12.mmStatementDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -393,6 +443,13 @@ public class Statement47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Frequency of the statement."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement65#mmFrequency
+	 * Statement65.mmFrequency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -409,6 +466,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Frequency";
 			definition = "Frequency of the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmFrequency);
 			previousVersion_lazy = () -> Statement12.mmFrequency;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -446,6 +504,13 @@ public class Statement47 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the report is complete or contains changes only."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Statement65#mmUpdateType
+	 * Statement65.mmUpdateType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -462,6 +527,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UpdateType";
 			definition = "Indicates whether the report is complete or contains changes only.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmUpdateType);
 			previousVersion_lazy = () -> Statement12.mmUpdateType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -500,6 +566,14 @@ public class Statement47 {
 	 * definition} =
 	 * "Indicates whether there is activity or information update reported in the statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement65#mmActivityIndicator
+	 * Statement65.mmActivityIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -516,6 +590,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActivityIndicator";
 			definition = "Indicates whether there is activity or information update reported in the statement.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmActivityIndicator);
 			previousVersion_lazy = () -> Statement12.mmActivityIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -549,6 +624,14 @@ public class Statement47 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period during which identification deadline has been set."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Statement65#mmNotificationDeadlinePeriod
+	 * Statement65.mmNotificationDeadlinePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -564,6 +647,7 @@ public class Statement47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotificationDeadlinePeriod";
 			definition = "Period during which identification deadline has been set.";
+			nextVersions_lazy = () -> Arrays.asList(Statement65.mmNotificationDeadlinePeriod);
 			previousVersion_lazy = () -> Statement12.mmNotificationDeadlinePeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -584,6 +668,7 @@ public class Statement47 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Statement47";
 				definition = "General characteristics related to a statement which reports information.";
+				nextVersions_lazy = () -> Arrays.asList(Statement65.mmObject());
 				previousVersion_lazy = () -> Statement12.mmObject();
 			}
 		});

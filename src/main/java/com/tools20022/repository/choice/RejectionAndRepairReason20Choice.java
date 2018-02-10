@@ -68,6 +68,14 @@ import javax.xml.bind.annotation.XmlType;
  * "RejectionAndRepairReason20Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the rejection or repair reason."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason32Choice
+ * RejectionAndRepairReason32Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,6 +121,14 @@ public class RejectionAndRepairReason20Choice {
 	 * definition} =
 	 * "Specifies the reason why the instruction/request has a repair or rejection status."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason32Choice#mmCode
+	 * RejectionAndRepairReason32Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -125,6 +141,7 @@ public class RejectionAndRepairReason20Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction/request has a repair or rejection status.";
+			nextVersions_lazy = () -> Arrays.asList(RejectionAndRepairReason32Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RejectionReason33Code.mmObject();
@@ -168,6 +185,14 @@ public class RejectionAndRepairReason20Choice {
 	 * definition} =
 	 * "Specifies the reason why the instruction/request has a repair or rejection status."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionAndRepairReason32Choice#mmProprietary
+	 * RejectionAndRepairReason32Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -180,6 +205,7 @@ public class RejectionAndRepairReason20Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies the reason why the instruction/request has a repair or rejection status.";
+			nextVersions_lazy = () -> Arrays.asList(RejectionAndRepairReason32Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -195,6 +221,7 @@ public class RejectionAndRepairReason20Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RejectionAndRepairReason20Choice";
 				definition = "Choice of format for the rejection or repair reason.";
+				nextVersions_lazy = () -> Arrays.asList(RejectionAndRepairReason32Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

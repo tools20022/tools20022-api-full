@@ -92,6 +92,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.SettlementDateCode#WhenIssued
  * SettlementDateCode.WhenIssued}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDateCode#SameDay
+ * SettlementDateCode.SameDay}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.SettlementDateCode#PreviousDay
+ * SettlementDateCode.PreviousDay}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -107,6 +112,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * SettlementDate2Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate3Code
  * SettlementDate3Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.SettlementDate6Code
+ * SettlementDate6Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -769,6 +776,66 @@ public class SettlementDateCode extends MMCode {
 			codeName = "WISS";
 		}
 	};
+	/**
+	 * Event occurs on the same day or at time T.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.SettlementDateCode
+	 * SettlementDateCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "SAMD"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SameDay"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Event occurs on the same day or at time T."</li>
+	 * </ul>
+	 */
+	public static final SettlementDateCode SameDay = new SettlementDateCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SameDay";
+			definition = "Event occurs on the same day or at time T.";
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDateCode.mmObject();
+			codeName = "SAMD";
+		}
+	};
+	/**
+	 * Event occurs on the previous day.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.SettlementDateCode
+	 * SettlementDateCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "PRVD"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PreviousDay"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "Event occurs on the previous day."</li>
+	 * </ul>
+	 */
+	public static final SettlementDateCode PreviousDay = new SettlementDateCode() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PreviousDay";
+			definition = "Event occurs on the previous day.";
+			owner_lazy = () -> com.tools20022.repository.codeset.SettlementDateCode.mmObject();
+			codeName = "PRVD";
+		}
+	};
 	final static private LinkedHashMap<String, SettlementDateCode> codesByName = new LinkedHashMap<>();
 
 	protected SettlementDateCode() {
@@ -782,14 +849,16 @@ public class SettlementDateCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementDateCode";
 				definition = "Specifies the date of settlement, in coded form.";
-				derivation_lazy = () -> Arrays.asList(SettlementDate1Code.mmObject(), SettlementDate4Code.mmObject(), SettlementDate5Code.mmObject(), SettlementDate2Code.mmObject(), SettlementDate3Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(SettlementDate1Code.mmObject(), SettlementDate4Code.mmObject(), SettlementDate5Code.mmObject(), SettlementDate2Code.mmObject(), SettlementDate3Code.mmObject(),
+						SettlementDate6Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementDateCode.Regular, com.tools20022.repository.codeset.SettlementDateCode.Cash, com.tools20022.repository.codeset.SettlementDateCode.NextDay,
 						com.tools20022.repository.codeset.SettlementDateCode.TPlusOne, com.tools20022.repository.codeset.SettlementDateCode.TPlusTwo, com.tools20022.repository.codeset.SettlementDateCode.TPlusThree,
 						com.tools20022.repository.codeset.SettlementDateCode.TPlusFour, com.tools20022.repository.codeset.SettlementDateCode.TPlusFive, com.tools20022.repository.codeset.SettlementDateCode.SellersOption,
 						com.tools20022.repository.codeset.SettlementDateCode.Future, com.tools20022.repository.codeset.SettlementDateCode.AsSoonAsPossible, com.tools20022.repository.codeset.SettlementDateCode.AtEndOfContract,
 						com.tools20022.repository.codeset.SettlementDateCode.WhenAndIfIssued, com.tools20022.repository.codeset.SettlementDateCode.WhenDistributed,
 						com.tools20022.repository.codeset.SettlementDateCode.WhenIssuedOrDistributed, com.tools20022.repository.codeset.SettlementDateCode.ToBeAnnouncedTrade, com.tools20022.repository.codeset.SettlementDateCode.EndOfMonth,
-						com.tools20022.repository.codeset.SettlementDateCode.Cleared, com.tools20022.repository.codeset.SettlementDateCode.SavingsPlan, com.tools20022.repository.codeset.SettlementDateCode.WhenIssued);
+						com.tools20022.repository.codeset.SettlementDateCode.Cleared, com.tools20022.repository.codeset.SettlementDateCode.SavingsPlan, com.tools20022.repository.codeset.SettlementDateCode.WhenIssued,
+						com.tools20022.repository.codeset.SettlementDateCode.SameDay, com.tools20022.repository.codeset.SettlementDateCode.PreviousDay);
 			}
 		});
 		return mmObject_lazy.get();
@@ -816,6 +885,8 @@ public class SettlementDateCode extends MMCode {
 		codesByName.put(Cleared.getCodeName().get(), Cleared);
 		codesByName.put(SavingsPlan.getCodeName().get(), SavingsPlan);
 		codesByName.put(WhenIssued.getCodeName().get(), WhenIssued);
+		codesByName.put(SameDay.getCodeName().get(), SameDay);
+		codesByName.put(PreviousDay.getCodeName().get(), PreviousDay);
 	}
 
 	public static SettlementDateCode valueOf(String codeName) {

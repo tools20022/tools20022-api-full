@@ -212,7 +212,7 @@ public class SecuritiesOptionSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the type of payout associated with the event (for example:  principal, long term capital gain)."
+	 * "Specifies the type of payout associated with the event (for example: principal, long term capital gain)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -231,7 +231,7 @@ public class SecuritiesOptionSD7 {
 			xmlTag = "PyoutTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
-			definition = "Specifies the type of payout associated with the event (for example:  principal, long term capital gain).";
+			definition = "Specifies the type of payout associated with the event (for example: principal, long term capital gain).";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD8.mmPayoutType);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -268,7 +268,7 @@ public class SecuritiesOptionSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. "
+	 * "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -293,7 +293,7 @@ public class SecuritiesOptionSD7 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
-			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
+			definition = "Indicates the type of payment. Used in stock dividends processing at DTC(The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD8.mmDTCPayMethod);
 			previousVersion_lazy = () -> SecuritiesOptionSD6.mmDTCPayMethod;
 			maxOccurs = 1;
@@ -331,7 +331,7 @@ public class SecuritiesOptionSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema."
+	 * "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -356,7 +356,7 @@ public class SecuritiesOptionSD7 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Order"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
-			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation).  Valid values list will be maintained separately from the schema.";
+			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD8.mmDTCPayOrder);
 			previousVersion_lazy = () -> SecuritiesOptionSD6.mmDTCPayOrder;
 			maxOccurs = 1;
@@ -395,7 +395,7 @@ public class SecuritiesOptionSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Income classification of the cash proceeds for dividend reinvestment ."</li>
+	 * "Income classification of the cash proceeds for dividend reinvestment."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -419,7 +419,7 @@ public class SecuritiesOptionSD7 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reinvestment Income Classification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
-			definition = "Income classification of the cash proceeds for dividend reinvestment .";
+			definition = "Income classification of the cash proceeds for dividend reinvestment.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD8.mmReinvestmentIncomeClassification);
 			previousVersion_lazy = () -> SecuritiesOptionSD6.mmReinvestmentIncomeClassification;
 			maxOccurs = 1;
@@ -520,7 +520,7 @@ public class SecuritiesOptionSD7 {
 	 * name} = "PriceBasis"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Price is based on either base or disbursed security. "</li>
+	 * definition} = "Price is based on either base or disbursed security."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -544,7 +544,7 @@ public class SecuritiesOptionSD7 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Price Basis"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceBasis";
-			definition = "Price is based on either base or disbursed security. ";
+			definition = "Price is based on either base or disbursed security.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD8.mmPriceBasis);
 			previousVersion_lazy = () -> SecuritiesOptionSD6.mmPriceBasis;
 			maxOccurs = 1;
@@ -583,7 +583,7 @@ public class SecuritiesOptionSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. "
+	 * "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -608,7 +608,7 @@ public class SecuritiesOptionSD7 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Exit Explanation Indicator"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitExplanationIndicator";
-			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares. ";
+			definition = "Specifies the reason for DTC (The Depository Trust Corporation) to exit the shares.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD8.mmDTCExitExplanationIndicator);
 			previousVersion_lazy = () -> SecuritiesOptionSD6.mmDTCExitExplanationIndicator;
 			maxOccurs = 1;
@@ -775,7 +775,7 @@ public class SecuritiesOptionSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the price from the offeror is estimated or final. "</li>
+	 * "Indicates whether the price from the offeror is estimated or final."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -799,7 +799,7 @@ public class SecuritiesOptionSD7 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Estimated Price Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedPriceFlag";
-			definition = "Indicates whether the price from the offeror is estimated or final. ";
+			definition = "Indicates whether the price from the offeror is estimated or final.";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD8.mmEstimatedPriceFlag);
 			previousVersion_lazy = () -> SecuritiesOptionSD6.mmEstimatedPriceFlag;
 			maxOccurs = 1;
@@ -962,7 +962,7 @@ public class SecuritiesOptionSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  "
+	 * "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -986,7 +986,7 @@ public class SecuritiesOptionSD7 {
 			xmlTag = "RDPRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
-			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  ";
+			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).";
 			nextVersions_lazy = () -> Arrays.asList(SecuritiesOptionSD8.mmRDPReferenceNumber);
 			previousVersion_lazy = () -> SecuritiesOptionSD6.mmRDPReferenceNumber;
 			maxOccurs = 1;

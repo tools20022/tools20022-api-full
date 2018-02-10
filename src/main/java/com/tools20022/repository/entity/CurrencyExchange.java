@@ -280,6 +280,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.ForeignExchangeTerms24
  * ForeignExchangeTerms24}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AgreedRate3 AgreedRate3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.BalanceTransferFundingLimit1
+ * BalanceTransferFundingLimit1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ForeignExchangeTerms26
  * ForeignExchangeTerms26}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ForeignExchangeTerms28
@@ -310,6 +312,19 @@ import java.util.concurrent.atomic.AtomicReference;
  * CurrencyConversion12}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CurrencyConversion11
  * CurrencyConversion11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ExchangeRateBasis2
+ * ExchangeRateBasis2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyExchange11
+ * CurrencyExchange11}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria1
+ * CurrencyExchangeSearchCriteria1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyConversion14
+ * CurrencyConversion14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyConversion15
+ * CurrencyConversion15}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CurrencyConversion16
+ * CurrencyConversion16}</li>
  * </ul>
  * </li>
  * <li>
@@ -553,6 +568,9 @@ public class CurrencyExchange {
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts36#mmOriginalAmount
 	 * CorporateActionAmounts36.mmOriginalAmount}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceTransferFundingLimit1#mmCurrencyAmount
+	 * BalanceTransferFundingLimit1.mmCurrencyAmount}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts38#mmOriginalAmount
 	 * CorporateActionAmounts38.mmOriginalAmount}</li>
 	 * <li>
@@ -600,6 +618,45 @@ public class CurrencyExchange {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion12#mmOriginalAmount
 	 * CurrencyConversion12.mmOriginalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection87#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection87.mmOriginalCurrencyAndOrderedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection88.mmOriginalCurrencyAndOrderedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection89#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection89.mmOriginalCurrencyAndOrderedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmOriginalAmount
+	 * CorporateActionAmounts42.mmOriginalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmOriginalAmount
+	 * CorporateActionAmounts43.mmOriginalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmOriginalAmount
+	 * CorporateActionAmounts44.mmOriginalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmOriginalAmount
+	 * CorporateActionAmounts45.mmOriginalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmOriginalAmount
+	 * CorporateActionAmounts46.mmOriginalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmOriginalAmount
+	 * CorporateActionAmounts47.mmOriginalAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection90#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection90.mmOriginalCurrencyAndOrderedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection92#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection92.mmOriginalCurrencyAndOrderedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection91#mmOriginalCurrencyAndOrderedAmount
+	 * AmountAndDirection91.mmOriginalCurrencyAndOrderedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmOriginalAmount
+	 * CurrencyConversion14.mmOriginalAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -639,11 +696,14 @@ public class CurrencyExchange {
 					AmountAndDirection40.mmOriginalCurrencyAndOrderedAmount, CurrencyConversion1.mmOriginalAmount, CurrencyConversion2.mmOriginalAmount, ForeignExchangeSwapTransaction1.mmTransactionNominalAmount,
 					CurrencyConversion4.mmOriginalAmount, AmountAndDirection46.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection49.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection48.mmOriginalCurrencyAndOrderedAmount,
 					AmountAndDirection44.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection45.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection51.mmOriginalCurrencyAndOrderedAmount, CorporateActionAmounts37.mmOriginalAmount,
-					CorporateActionAmounts36.mmOriginalAmount, CorporateActionAmounts38.mmOriginalAmount, CorporateActionAmounts39.mmOriginalAmount, CorporateActionAmounts41.mmOriginalAmount, CorporateActionAmounts40.mmOriginalAmount,
-					AmountAndDirection66.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection60.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection71.mmOriginalCurrencyAndOrderedAmount,
+					CorporateActionAmounts36.mmOriginalAmount, BalanceTransferFundingLimit1.mmCurrencyAmount, CorporateActionAmounts38.mmOriginalAmount, CorporateActionAmounts39.mmOriginalAmount, CorporateActionAmounts41.mmOriginalAmount,
+					CorporateActionAmounts40.mmOriginalAmount, AmountAndDirection66.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection60.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection71.mmOriginalCurrencyAndOrderedAmount,
 					AmountAndDirection85.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection55.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection58.mmOriginalCurrencyAndOrderedAmount,
 					AmountAndDirection67.mmOriginalCurrencyAndOrderedAmount, ForeignExchangeSwapTransaction2.mmTransactionNominalAmount, CurrencyConversion6.mmOriginalAmount, CurrencyConversion9.mmOriginalAmount,
-					ForeignExchangeSwapTransaction3.mmTransactionNominalAmount, CurrencyConversion12.mmOriginalAmount);
+					ForeignExchangeSwapTransaction3.mmTransactionNominalAmount, CurrencyConversion12.mmOriginalAmount, AmountAndDirection87.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection88.mmOriginalCurrencyAndOrderedAmount,
+					AmountAndDirection89.mmOriginalCurrencyAndOrderedAmount, CorporateActionAmounts42.mmOriginalAmount, CorporateActionAmounts43.mmOriginalAmount, CorporateActionAmounts44.mmOriginalAmount,
+					CorporateActionAmounts45.mmOriginalAmount, CorporateActionAmounts46.mmOriginalAmount, CorporateActionAmounts47.mmOriginalAmount, AmountAndDirection90.mmOriginalCurrencyAndOrderedAmount,
+					AmountAndDirection92.mmOriginalCurrencyAndOrderedAmount, AmountAndDirection91.mmOriginalCurrencyAndOrderedAmount, CurrencyConversion14.mmOriginalAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -838,6 +898,9 @@ public class CurrencyExchange {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FundOrderData6#mmUnitCurrency
 	 * FundOrderData6.mmUnitCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeRateBasis2#mmBaseCurrency
+	 * ExchangeRateBasis2.mmBaseCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -867,7 +930,7 @@ public class CurrencyExchange {
 					ForeignExchangeTerms7.mmUnitCurrency, ForeignExchangeTerms8.mmUnitCurrency, ForeignExchangeTerms9.mmUnitCurrency, ForeignExchangeTerms17.mmUnitCurrency, CurrencyExchange6.mmUnitCurrency,
 					ForeignExchangeTerms10.mmUnitCurrency, ForeignExchangeTerms22.mmUnitCurrency, ForeignExchangeTerms23.mmUnitCurrency, ForeignExchangeTerms24.mmUnitCurrency, AgreedRate3.mmUnitCurrency,
 					ForeignExchangeTerms26.mmUnitCurrency, ForeignExchangeTerms28.mmUnitCurrency, ForeignExchangeTerms27.mmUnitCurrency, ForeignExchangeTerms31.mmUnitCurrency, ForeignExchangeTerms33.mmUnitCurrency,
-					ForeignExchangeTerms32.mmUnitCurrency, FundOrderData5.mmUnitCurrency, FundOrderData6.mmUnitCurrency);
+					ForeignExchangeTerms32.mmUnitCurrency, FundOrderData5.mmUnitCurrency, FundOrderData6.mmUnitCurrency, ExchangeRateBasis2.mmBaseCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1013,6 +1076,9 @@ public class CurrencyExchange {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OpeningConditions1#mmSettlementCurrency
 	 * OpeningConditions1.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ExchangeRateBasis2#mmQuotedCurrency
+	 * ExchangeRateBasis2.mmQuotedCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1042,7 +1108,7 @@ public class CurrencyExchange {
 					ForeignExchangeTerms9.mmQuotedCurrency, CurrencyExchangeDetails.mmQuotedCurrency, ForeignExchangeTerms17.mmQuotedCurrency, ForeignExchangeTerms10.mmQuotedCurrency, CurrencyExchange7.mmQuotedCurrency,
 					ForeignExchangeTerms22.mmQuotedCurrency, ForeignExchangeTerms23.mmQuotedCurrency, ForeignExchangeTerms24.mmQuotedCurrency, AgreedRate3.mmQuotedCurrency, ForeignExchangeTerms26.mmQuotedCurrency,
 					ForeignExchangeTerms28.mmQuotedCurrency, ForeignExchangeTerms27.mmQuotedCurrency, ForeignExchangeTerms31.mmQuotedCurrency, ForeignExchangeTerms33.mmQuotedCurrency, ForeignExchangeTerms32.mmQuotedCurrency,
-					FundOrderData5.mmQuotedCurrency, FundOrderData6.mmQuotedCurrency, OpeningConditions1.mmSettlementCurrency);
+					FundOrderData5.mmQuotedCurrency, FundOrderData6.mmQuotedCurrency, OpeningConditions1.mmSettlementCurrency, ExchangeRateBasis2.mmQuotedCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1344,6 +1410,27 @@ public class CurrencyExchange {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion12#mmInvertedExchangeRate
 	 * CurrencyConversion12.mmInvertedExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchange11#mmExchangeRate
+	 * CurrencyExchange11.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchange11#mmForwardExchangeRate
+	 * CurrencyExchange11.mmForwardExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchange11#mmExchangeRateBasis
+	 * CurrencyExchange11.mmExchangeRateBasis}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmExchangeRate
+	 * PaymentTransaction87.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmExchangeRate
+	 * PaymentTransaction88.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmExchangeRate
+	 * CurrencyConversion14.mmExchangeRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmInvertedExchangeRate
+	 * CurrencyConversion14.mmInvertedExchangeRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1387,7 +1474,8 @@ public class CurrencyExchange {
 					ForeignExchangeTerms26.mmExchangeRate, CollateralValuation5.mmExchangeRate, ForeignExchangeTerms28.mmExchangeRate, ForeignExchangeTerms27.mmExchangeRate, ForeignExchangeTerms31.mmExchangeRate,
 					CurrencyConversion6.mmExchangeRate, CurrencyConversion6.mmInvertedExchangeRate, CurrencyConversion9.mmExchangeRate, CurrencyConversion9.mmInvertedExchangeRate, ForeignExchangeTerms33.mmExchangeRate,
 					ForeignExchangeTerms32.mmExchangeRate, CurrencyReference3.mmExchangeRateInformation, DirectDebitTransactionInformation21.mmExchangeRate, PaymentTransaction81.mmExchangeRate, PaymentTransaction76.mmExchangeRate,
-					FixingConditions1.mmExchangeRate, CurrencyConversion12.mmExchangeRate, CurrencyConversion12.mmInvertedExchangeRate);
+					FixingConditions1.mmExchangeRate, CurrencyConversion12.mmExchangeRate, CurrencyConversion12.mmInvertedExchangeRate, CurrencyExchange11.mmExchangeRate, CurrencyExchange11.mmForwardExchangeRate,
+					CurrencyExchange11.mmExchangeRateBasis, PaymentTransaction87.mmExchangeRate, PaymentTransaction88.mmExchangeRate, CurrencyConversion14.mmExchangeRate, CurrencyConversion14.mmInvertedExchangeRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::EXCH"));
@@ -1493,6 +1581,9 @@ public class CurrencyExchange {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion12#mmResultingAmount
 	 * CurrencyConversion12.mmResultingAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmResultingAmount
+	 * CurrencyConversion14.mmResultingAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1518,7 +1609,8 @@ public class CurrencyExchange {
 					CurrencyExchange4.mmResultingAmount, ForeignExchangeTerms18.mmConvertedAmount, OtherAmounts16.mmConvertedAmount, AmountAndCurrencyExchange2.mmCounterValueAmount, AmountAndCurrencyExchange3.mmCounterValueAmount,
 					Value.mmAlternateCurrencyItem, ForeignExchangeTerms8.mmResultingAmount, ForeignExchangeTerms9.mmResultingAmount, ForeignExchangeTerms17.mmResultingAmount, CurrencyConversion1.mmResultingAmount,
 					CurrencyConversion2.mmResultingAmount, CurrencyConversion4.mmResultingAmount, CurrencyConversion5.mmCalculatedAmount, ForeignExchangeTerms23.mmResultingAmount, ForeignExchangeTerms24.mmResultingAmount,
-					ForeignExchangeTerms28.mmResultingAmount, ForeignExchangeTerms27.mmResultingAmount, CurrencyConversion6.mmResultingAmount, CurrencyConversion9.mmResultingAmount, CurrencyConversion12.mmResultingAmount);
+					ForeignExchangeTerms28.mmResultingAmount, ForeignExchangeTerms27.mmResultingAmount, CurrencyConversion6.mmResultingAmount, CurrencyConversion9.mmResultingAmount, CurrencyConversion12.mmResultingAmount,
+					CurrencyConversion14.mmResultingAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1728,6 +1820,9 @@ public class CurrencyExchange {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion12#mmQuotationDate
 	 * CurrencyConversion12.mmQuotationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmQuotationDate
+	 * CurrencyConversion14.mmQuotationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1753,7 +1848,7 @@ public class CurrencyExchange {
 					ForeignExchangeTerms4.mmQuotationDate, ForeignExchangeTerms7.mmQuotationDate, CurrencyExchangeDetails.mmQuotationDate, CurrencyExchange6.mmQuotationDate, CurrencyExchange7.mmQuotationDate,
 					CurrencyConversion1.mmQuotationDate, CurrencyConversion2.mmQuotationDate, CurrencyConversion4.mmQuotationDate, DetailedAmount8.mmQuotationDate, ForeignExchangeTerms22.mmQuotationDate,
 					ForeignExchangeTerms26.mmQuotationDate, ForeignExchangeTerms31.mmQuotationDate, CurrencyConversion6.mmQuotationDate, CurrencyConversion9.mmQuotationDate, ForeignExchangeTerms33.mmQuotationDate,
-					ForeignExchangeTerms32.mmQuotationDate, CurrencyConversion12.mmQuotationDate);
+					ForeignExchangeTerms32.mmQuotationDate, CurrencyConversion12.mmQuotationDate, CurrencyConversion14.mmQuotationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1880,6 +1975,21 @@ public class CurrencyExchange {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion12#mmSourceCurrency
 	 * CurrencyConversion12.mmSourceCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchange11#mmDeliverableCrossCurrency
+	 * CurrencyExchange11.mmDeliverableCrossCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmCurrency
+	 * TradeTransaction18.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ConcentrationAccount1#mmCurrency
+	 * ConcentrationAccount1.mmCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria1#mmSourceCurrency
+	 * CurrencyExchangeSearchCriteria1.mmSourceCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmSourceCurrency
+	 * CurrencyConversion14.mmSourceCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1904,7 +2014,8 @@ public class CurrencyExchange {
 			derivation_lazy = () -> Arrays.asList(CurrencyReferenceDetails.mmSourceCurrency, CurrencyExchange4.mmSourceAndTargetCurrency, CurrencyExchange3.mmSourceCurrency, CurrencyExchange5.mmSourceCurrency,
 					CurrencyReference2.mmSourceCurrency, CurrencyExchangeSearchCriteria.mmSourceCurrency, CurrencyExchange6.mmSourceCurrency, CurrencySourceTarget1.mmSourceCurrency, CurrencyConversion1.mmSourceCurrency,
 					CurrencyConversion2.mmSourceCurrency, CurrencyConversion4.mmSourceCurrency, CurrencyConversion5.mmSourceCurrency, CurrencyConversion6.mmSourceCurrency, CurrencyConversion9.mmSourceCurrency,
-					CurrencyReference3.mmSourceCurrency, CurrencyConversion12.mmSourceCurrency);
+					CurrencyReference3.mmSourceCurrency, CurrencyConversion12.mmSourceCurrency, CurrencyExchange11.mmDeliverableCrossCurrency, TradeTransaction18.mmCurrency, ConcentrationAccount1.mmCurrency,
+					CurrencyExchangeSearchCriteria1.mmSourceCurrency, CurrencyConversion14.mmSourceCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1990,6 +2101,12 @@ public class CurrencyExchange {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion12#mmTargetCurrency
 	 * CurrencyConversion12.mmTargetCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyExchangeSearchCriteria1#mmTargetCurrency
+	 * CurrencyExchangeSearchCriteria1.mmTargetCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmTargetCurrency
+	 * CurrencyConversion14.mmTargetCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2015,7 +2132,8 @@ public class CurrencyExchange {
 			derivation_lazy = () -> Arrays.asList(CurrencyReferenceDetails.mmTargetCurrency, CurrencyExchange3.mmTargetCurrency, CurrencyExchange5.mmTargetCurrency, CurrencyReference2.mmTargetCurrency,
 					CurrencyExchangeSearchCriteria.mmTargetCurrency, CurrencyExchange6.mmTargetCurrency, CurrencySourceTarget1.mmTargetCurrency, CurrencyConversion1.mmTargetCurrency, CurrencyConversion2.mmTargetCurrency,
 					ForeignExchange1.mmForeignCurrency, CurrencyConversion4.mmTargetCurrency, CurrencyConversion5.mmTargetCurrency, CashAccount33.mmSettlementCurrency, PaymentInstrument13.mmSettlementCurrency,
-					CurrencyConversion6.mmTargetCurrency, CurrencyConversion9.mmTargetCurrency, CurrencyReference3.mmTargetCurrency, CurrencyConversion12.mmTargetCurrency);
+					CurrencyConversion6.mmTargetCurrency, CurrencyConversion9.mmTargetCurrency, CurrencyReference3.mmTargetCurrency, CurrencyConversion12.mmTargetCurrency, CurrencyExchangeSearchCriteria1.mmTargetCurrency,
+					CurrencyConversion14.mmTargetCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CurrencyExchange.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2820,10 +2938,11 @@ public class CurrencyExchange {
 						ForeignExchangeTerms9.mmObject(), CurrencyReference2.mmObject(), CurrencyExchangeSearchCriteria.mmObject(), CurrencyExchangeDetails.mmObject(), ForeignExchangeTerms17.mmObject(), CurrencyExchange6.mmObject(),
 						ForeignExchangeTerms10.mmObject(), RateType1Choice.mmObject(), RateType2Choice.mmObject(), CurrencySourceTarget1.mmObject(), CurrencyExchange7.mmObject(), CurrencyConversion1.mmObject(),
 						CurrencyDesignation1.mmObject(), CurrencyConversion3.mmObject(), CurrencyConversion2.mmObject(), ForeignExchange1.mmObject(), CurrencyConversion4.mmObject(), CurrencyConversion5.mmObject(),
-						ForeignExchangeTerms22.mmObject(), ForeignExchangeTerms23.mmObject(), ForeignExchangeTerms24.mmObject(), AgreedRate3.mmObject(), ForeignExchangeTerms26.mmObject(), ForeignExchangeTerms28.mmObject(),
-						ForeignExchangeTerms27.mmObject(), ForeignExchangeTerms31.mmObject(), CurrencyConversion7.mmObject(), CurrencyConversion6.mmObject(), CurrencyConversion8.mmObject(), CurrencyConversion9.mmObject(),
-						CurrencyConversion10.mmObject(), ForeignExchangeTerms33.mmObject(), ForeignExchangeTerms32.mmObject(), CurrencyReference3.mmObject(), CurrencyConversion13.mmObject(), CurrencyConversion12.mmObject(),
-						CurrencyConversion11.mmObject());
+						ForeignExchangeTerms22.mmObject(), ForeignExchangeTerms23.mmObject(), ForeignExchangeTerms24.mmObject(), AgreedRate3.mmObject(), BalanceTransferFundingLimit1.mmObject(), ForeignExchangeTerms26.mmObject(),
+						ForeignExchangeTerms28.mmObject(), ForeignExchangeTerms27.mmObject(), ForeignExchangeTerms31.mmObject(), CurrencyConversion7.mmObject(), CurrencyConversion6.mmObject(), CurrencyConversion8.mmObject(),
+						CurrencyConversion9.mmObject(), CurrencyConversion10.mmObject(), ForeignExchangeTerms33.mmObject(), ForeignExchangeTerms32.mmObject(), CurrencyReference3.mmObject(), CurrencyConversion13.mmObject(),
+						CurrencyConversion12.mmObject(), CurrencyConversion11.mmObject(), ExchangeRateBasis2.mmObject(), CurrencyExchange11.mmObject(), CurrencyExchangeSearchCriteria1.mmObject(), CurrencyConversion14.mmObject(),
+						CurrencyConversion15.mmObject(), CurrencyConversion16.mmObject());
 			}
 
 			@Override

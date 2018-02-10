@@ -107,7 +107,7 @@ public class UndertakingWording1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions. "
+	 * "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions."
 	 * </li>
 	 * </ul>
 	 */
@@ -119,7 +119,7 @@ public class UndertakingWording1 {
 			xmlTag = "MdlForm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModelForm";
-			definition = "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions. ";
+			definition = "Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

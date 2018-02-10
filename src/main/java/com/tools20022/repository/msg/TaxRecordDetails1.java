@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides information on the individual tax amount(s) per period of the tax record."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxRecordDetails2
+ * TaxRecordDetails2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,6 +107,13 @@ public class TaxRecordDetails1 {
 	 * definition} =
 	 * "Set of elements used to provide details on the period of time related to the tax payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxRecordDetails2#mmPeriod
+	 * TaxRecordDetails2.mmPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPeriod = new MMMessageAssociationEnd() {
@@ -110,6 +124,7 @@ public class TaxRecordDetails1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Period";
 			definition = "Set of elements used to provide details on the period of time related to the tax payment.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecordDetails2.mmPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -148,6 +163,13 @@ public class TaxRecordDetails1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Underlying tax amount related to the specified period."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxRecordDetails2#mmAmount
+	 * TaxRecordDetails2.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -159,6 +181,7 @@ public class TaxRecordDetails1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Underlying tax amount related to the specified period.";
+			nextVersions_lazy = () -> Arrays.asList(TaxRecordDetails2.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -174,6 +197,7 @@ public class TaxRecordDetails1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxRecordDetails1";
 				definition = "Provides information on the individual tax amount(s) per period of the tax record.";
+				nextVersions_lazy = () -> Arrays.asList(TaxRecordDetails2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

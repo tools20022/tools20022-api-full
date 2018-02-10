@@ -103,6 +103,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action option cash movement details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashOptionSD11 CashOptionSD11}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.CashOptionSD9
  * CashOptionSD9}</li>
@@ -140,6 +146,14 @@ public class CashOptionSD10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmPlaceAndName
+	 * CashOptionSD11.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -155,6 +169,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmPlaceAndName);
 			previousVersion_lazy = () -> CashOptionSD9.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -188,7 +203,15 @@ public class CashOptionSD10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the type of payout associated with the event (for example:  principal, long term capital gain)."
+	 * "Specifies the type of payout associated with the event (for example: principal, long term capital gain)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmPayoutType
+	 * CashOptionSD11.mmPayoutType}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -204,7 +227,8 @@ public class CashOptionSD10 {
 			xmlTag = "PyoutTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayoutType";
-			definition = "Specifies the type of payout associated with the event (for example:  principal, long term capital gain).";
+			definition = "Specifies the type of payout associated with the event (for example: principal, long term capital gain).";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmPayoutType);
 			previousVersion_lazy = () -> CashOptionSD9.mmPayoutType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -240,7 +264,15 @@ public class CashOptionSD10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. "
+	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmDTCPayMethod
+	 * CashOptionSD11.mmDTCPayMethod}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -257,7 +289,8 @@ public class CashOptionSD10 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
-			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
+			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmDTCPayMethod);
 			previousVersion_lazy = () -> CashOptionSD9.mmDTCPayMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -295,6 +328,14 @@ public class CashOptionSD10 {
 	 * definition} =
 	 * "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmDTCPayOrder
+	 * CashOptionSD11.mmDTCPayOrder}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -311,6 +352,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayOrder";
 			definition = "Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmDTCPayOrder);
 			previousVersion_lazy = () -> CashOptionSD9.mmDTCPayOrder;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -348,6 +390,14 @@ public class CashOptionSD10 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates how the entitlements were calculated optional dividends."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmEntitlementCalculationMethod
+	 * CashOptionSD11.mmEntitlementCalculationMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -364,6 +414,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementCalculationMethod";
 			definition = "Indicates how the entitlements were calculated optional dividends.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmEntitlementCalculationMethod);
 			previousVersion_lazy = () -> CashOptionSD9.mmEntitlementCalculationMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -400,6 +451,14 @@ public class CashOptionSD10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Denotes whether the rate is approximate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmEstimatedRateFlag
+	 * CashOptionSD11.mmEstimatedRateFlag}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -416,6 +475,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EstimatedRateFlag";
 			definition = "Denotes whether the rate is approximate.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmEstimatedRateFlag);
 			previousVersion_lazy = () -> CashOptionSD9.mmEstimatedRateFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -454,6 +514,14 @@ public class CashOptionSD10 {
 	 * definition} =
 	 * "Identifies the income events which are subject to withholding tax if paid to a non-U.S. resident alien (NRA)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmNRATaxReportableFlag
+	 * CashOptionSD11.mmNRATaxReportableFlag}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -470,6 +538,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NRATaxReportableFlag";
 			definition = "Identifies the income events which are subject to withholding tax if paid to a non-U.S. resident alien (NRA).";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmNRATaxReportableFlag);
 			previousVersion_lazy = () -> CashOptionSD9.mmNRATaxReportableFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -508,6 +577,14 @@ public class CashOptionSD10 {
 	 * definition} =
 	 * "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmProtectChargeFlag
+	 * CashOptionSD11.mmProtectChargeFlag}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -524,6 +601,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectChargeFlag";
 			definition = "Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to \"no\" changes are due when protect is covered.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmProtectChargeFlag);
 			previousVersion_lazy = () -> CashOptionSD9.mmProtectChargeFlag;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -560,7 +638,15 @@ public class CashOptionSD10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Cash rate associated to the payout as declared  on the market by the issuer or offeror."
+	 * "Cash rate associated to the payout as declared on the market by the issuer or offeror."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmDeclaredCashRate
+	 * CashOptionSD11.mmDeclaredCashRate}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -577,7 +663,8 @@ public class CashOptionSD10 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Declared Cash Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredCashRate";
-			definition = "Cash rate associated to the payout as declared  on the market by the issuer or offeror.";
+			definition = "Cash rate associated to the payout as declared on the market by the issuer or offeror.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmDeclaredCashRate);
 			previousVersion_lazy = () -> CashOptionSD9.mmDeclaredCashRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -616,6 +703,14 @@ public class CashOptionSD10 {
 	 * definition} =
 	 * "Gross cash rate associated to the payout as declared on the market by the issuer or offeror."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmDeclaredGrossRate
+	 * CashOptionSD11.mmDeclaredGrossRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -632,6 +727,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredGrossRate";
 			definition = "Gross cash rate associated to the payout as declared on the market by the issuer or offeror.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmDeclaredGrossRate);
 			previousVersion_lazy = () -> CashOptionSD9.mmDeclaredGrossRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -670,6 +766,14 @@ public class CashOptionSD10 {
 	 * definition} =
 	 * "Net cash rate associated to the payout as declared on the market by the issuer or offeror."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmDeclaredNetRate
+	 * CashOptionSD11.mmDeclaredNetRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -686,6 +790,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredNetRate";
 			definition = "Net cash rate associated to the payout as declared on the market by the issuer or offeror.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmDeclaredNetRate);
 			previousVersion_lazy = () -> CashOptionSD9.mmDeclaredNetRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -724,6 +829,14 @@ public class CashOptionSD10 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Rate at which the fee will be charged to a DTC participant."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmDeclaredFeeRate
+	 * CashOptionSD11.mmDeclaredFeeRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -740,6 +853,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredFeeRate";
 			definition = "Rate at which the fee will be charged to a DTC participant.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmDeclaredFeeRate);
 			previousVersion_lazy = () -> CashOptionSD9.mmDeclaredFeeRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -778,6 +892,14 @@ public class CashOptionSD10 {
 	 * definition} =
 	 * "Indicates the period during which the instructions for DTC (The Depository Trust Corporation) US Tax service will be accepted."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmDTCUSTaxInstructionPeriod
+	 * CashOptionSD11.mmDTCUSTaxInstructionPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -794,6 +916,7 @@ public class CashOptionSD10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCUSTaxInstructionPeriod";
 			definition = "Indicates the period during which the instructions for DTC (The Depository Trust Corporation) US Tax service will be accepted.";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmDTCUSTaxInstructionPeriod);
 			previousVersion_lazy = () -> CashOptionSD9.mmDTCUSTaxInstructionPeriod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -827,7 +950,15 @@ public class CashOptionSD10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  "
+	 * "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOptionSD11#mmRDPReferenceNumber
+	 * CashOptionSD11.mmRDPReferenceNumber}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -843,7 +974,8 @@ public class CashOptionSD10 {
 			xmlTag = "RDPRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
-			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  ";
+			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).";
+			nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmRDPReferenceNumber);
 			previousVersion_lazy = () -> CashOptionSD9.mmRDPReferenceNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -863,6 +995,7 @@ public class CashOptionSD10 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashOptionSD10";
 				definition = "Provides additional information regarding corporate action option cash movement details.";
+				nextVersions_lazy = () -> Arrays.asList(CashOptionSD11.mmObject());
 				previousVersion_lazy = () -> CashOptionSD9.mmObject();
 			}
 		});

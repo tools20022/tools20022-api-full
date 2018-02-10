@@ -26,7 +26,7 @@ import java.util.Arrays;
 /**
  * Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount
  * may be present, both elements may not be present together.<br>
- * (MT 566 NVR C3)
+ * (MT 566 NVR C3).
  */
 public class ConstraintTaxCreditRate2Rule {
 
@@ -46,7 +46,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,7 +55,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails2.mmObject();
 		}
 	};
@@ -75,7 +75,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -84,7 +84,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails4.mmObject();
 		}
 	};
@@ -143,7 +143,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -152,7 +152,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails7.mmObject();
 		}
 	};
@@ -202,7 +202,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -211,7 +211,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails9.mmObject();
 		}
 	};
@@ -231,7 +231,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -248,7 +248,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails15);
 			owner_lazy = () -> RateDetails11.mmObject();
 		}
@@ -269,7 +269,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -278,7 +278,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails12.mmObject();
 		}
 	};
@@ -298,7 +298,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -307,7 +307,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails3.mmObject();
 		}
 	};
@@ -327,7 +327,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -336,7 +336,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails5.mmObject();
 		}
 	};
@@ -425,7 +425,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -442,7 +442,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails14);
 			owner_lazy = () -> RateDetails10.mmObject();
 		}
@@ -463,7 +463,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -472,7 +472,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails13.mmObject();
 		}
 	};
@@ -492,7 +492,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -514,7 +514,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails23);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails11;
 			owner_lazy = () -> RateDetails15.mmObject();
@@ -626,7 +626,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -648,7 +648,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails22);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails10;
 			owner_lazy = () -> RateDetails14.mmObject();
@@ -700,7 +700,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)."
 	 * </li>
 	 * </ul>
 	 */
@@ -709,7 +709,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and any one of the three previous elements may not be present together.\r\n(MT 564 NVR C8).";
 			owner_lazy = () -> RateDetails18.mmObject();
 		}
 	};
@@ -729,7 +729,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -738,7 +738,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails21.mmObject();
 		}
 	};
@@ -788,7 +788,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -810,7 +810,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails27);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails15;
 			owner_lazy = () -> RateDetails23.mmObject();
@@ -868,7 +868,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -890,7 +890,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails26);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails14;
 			owner_lazy = () -> RateDetails22.mmObject();
@@ -913,7 +913,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of TaxCreditRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of TaxCreditRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -927,7 +927,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkCorporateActionRate72;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of TaxCreditRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of TaxCreditRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forCorporateActionRate49;
 			owner_lazy = () -> CorporateActionRate72.mmObject();
 		}
@@ -948,7 +948,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -957,7 +957,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails24.mmObject();
 		}
 	};
@@ -977,7 +977,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)."
 	 * </li>
 	 * </ul>
 	 */
@@ -986,7 +986,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7).";
 			owner_lazy = () -> RateDetails25.mmObject();
 		}
 	};
@@ -1037,7 +1037,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of TaxCreditRate/Amount may be present.\r\n(MT 566 NVR C3)"
+	 * "Only a single occurrence of TaxCreditRate/Amount may be present.\r\n(MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1046,7 +1046,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkCorporateActionRate75;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of TaxCreditRate/Amount may be present.\r\n(MT 566 NVR C3)";
+			definition = "Only a single occurrence of TaxCreditRate/Amount may be present.\r\n(MT 566 NVR C3).";
 			owner_lazy = () -> CorporateActionRate75.mmObject();
 		}
 	};
@@ -1066,7 +1066,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1080,7 +1080,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails22;
 			owner_lazy = () -> RateDetails26.mmObject();
 		}
@@ -1101,7 +1101,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1115,7 +1115,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxCreditRate2Rule.forRateDetails23;
 			owner_lazy = () -> RateDetails27.mmObject();
 		}
@@ -1136,7 +1136,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1145,7 +1145,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and only one of those elements may be present. (MT 564 NVR C7).";
 			owner_lazy = () -> RateDetails28.mmObject();
 		}
 	};
@@ -1165,7 +1165,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)"
+	 * "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1174,7 +1174,7 @@ public class ConstraintTaxCreditRate2Rule {
 			validator = ConstraintTaxCreditRate2Rule::checkRateDetails30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxCreditRate2Rule";
-			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3)";
+			definition = "Only a single occurrence of either TaxCreditRate/Rate or TaxCreditRate/Amount may be present, both elements may not be present together. (MT 566 NVR C3).";
 			owner_lazy = () -> RateDetails30.mmObject();
 		}
 	};
@@ -1183,7 +1183,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
 	 * together.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails2(RateDetails2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1193,7 +1193,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
 	 * together.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails4(RateDetails4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1211,7 +1211,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
 	 * together.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails7(RateDetails7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1229,7 +1229,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
 	 * together.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails9(RateDetails9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1239,7 +1239,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
 	 * together.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails11(RateDetails11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1249,7 +1249,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
 	 * together.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails12(RateDetails12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1259,7 +1259,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
 	 * any one of the three previous elements may not be present together.<br>
-	 * (MT 564 NVR C8)
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails3(RateDetails3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1269,7 +1269,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
 	 * any one of the three previous elements may not be present together.<br>
-	 * (MT 564 NVR C8)
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails5(RateDetails5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1297,7 +1297,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
 	 * any one of the three previous elements may not be present together.<br>
-	 * (MT 564 NVR C8)
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails10(RateDetails10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1307,7 +1307,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
 	 * any one of the three previous elements may not be present together.<br>
-	 * (MT 564 NVR C8)
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails13(RateDetails13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1317,7 +1317,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
 	 * together.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails15(RateDetails15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1344,7 +1344,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
 	 * any one of the three previous elements may not be present together.<br>
-	 * (MT 564 NVR C8)
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails14(RateDetails14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1363,7 +1363,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
 	 * any one of the three previous elements may not be present together.<br>
-	 * (MT 564 NVR C8)
+	 * (MT 564 NVR C8).
 	 */
 	public static void checkRateDetails18(RateDetails18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1373,7 +1373,7 @@ public class ConstraintTaxCreditRate2Rule {
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
 	 * together.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails21(RateDetails21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1390,7 +1390,7 @@ public class ConstraintTaxCreditRate2Rule {
 	/**
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
-	 * together. (MT 566 NVR C3)
+	 * together. (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails23(RateDetails23 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1408,7 +1408,7 @@ public class ConstraintTaxCreditRate2Rule {
 	/**
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
-	 * only one of those elements may be present. (MT 564 NVR C7)
+	 * only one of those elements may be present. (MT 564 NVR C7).
 	 */
 	public static void checkRateDetails22(RateDetails22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1416,7 +1416,7 @@ public class ConstraintTaxCreditRate2Rule {
 
 	/**
 	 * Only a single occurrence of TaxCreditRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkCorporateActionRate72(CorporateActionRate72 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1425,7 +1425,7 @@ public class ConstraintTaxCreditRate2Rule {
 	/**
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
-	 * together. (MT 566 NVR C3)
+	 * together. (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails24(RateDetails24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1434,7 +1434,7 @@ public class ConstraintTaxCreditRate2Rule {
 	/**
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
-	 * only one of those elements may be present. (MT 564 NVR C7)
+	 * only one of those elements may be present. (MT 564 NVR C7).
 	 */
 	public static void checkRateDetails25(RateDetails25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1451,7 +1451,7 @@ public class ConstraintTaxCreditRate2Rule {
 
 	/**
 	 * Only a single occurrence of TaxCreditRate/Amount may be present.<br>
-	 * (MT 566 NVR C3)
+	 * (MT 566 NVR C3).
 	 */
 	public static void checkCorporateActionRate75(CorporateActionRate75 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1460,7 +1460,7 @@ public class ConstraintTaxCreditRate2Rule {
 	/**
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
-	 * only one of those elements may be present. (MT 564 NVR C7)
+	 * only one of those elements may be present. (MT 564 NVR C7).
 	 */
 	public static void checkRateDetails26(RateDetails26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1469,7 +1469,7 @@ public class ConstraintTaxCreditRate2Rule {
 	/**
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
-	 * together. (MT 566 NVR C3)
+	 * together. (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails27(RateDetails27 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1478,7 +1478,7 @@ public class ConstraintTaxCreditRate2Rule {
 	/**
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount or TaxCreditRate/NotSpecifiedRate may be present and
-	 * only one of those elements may be present. (MT 564 NVR C7)
+	 * only one of those elements may be present. (MT 564 NVR C7).
 	 */
 	public static void checkRateDetails28(RateDetails28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1487,7 +1487,7 @@ public class ConstraintTaxCreditRate2Rule {
 	/**
 	 * Only a single occurrence of either TaxCreditRate/Rate or
 	 * TaxCreditRate/Amount may be present, both elements may not be present
-	 * together. (MT 566 NVR C3)
+	 * together. (MT 566 NVR C3).
 	 */
 	public static void checkRateDetails30(RateDetails30 obj) throws Exception {
 		throw new NotImplementedConstraintException();

@@ -65,6 +65,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the limit report as either an operational error or a business report."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError3Choice
+ * LimitJournalReportOrError3Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,6 +108,14 @@ public class LimitJournalReportOrError1Choice {
 	 * definition} =
 	 * "Specifies the business report either as a limit utilisation journal or a business error."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError3Choice#mmBusinessReport
+	 * LimitJournalReportOrError3Choice.mmBusinessReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBusinessReport = new MMMessageAssociationEnd() {
@@ -110,6 +126,7 @@ public class LimitJournalReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Specifies the business report either as a limit utilisation journal or a business error.";
+			nextVersions_lazy = () -> Arrays.asList(LimitJournalReportOrError3Choice.mmBusinessReport);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> LimitJournalReport1.mmObject();
@@ -143,6 +160,14 @@ public class LimitJournalReportOrError1Choice {
 	 * definition} =
 	 * "Specifies the operational error resulting from the processing of a request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError3Choice#mmOperationalError
+	 * LimitJournalReportOrError3Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
@@ -153,6 +178,7 @@ public class LimitJournalReportOrError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Specifies the operational error resulting from the processing of a request.";
+			nextVersions_lazy = () -> Arrays.asList(LimitJournalReportOrError3Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -167,6 +193,7 @@ public class LimitJournalReportOrError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalReportOrError1Choice";
 				definition = "Defines the limit report as either an operational error or a business report.";
+				nextVersions_lazy = () -> Arrays.asList(LimitJournalReportOrError3Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

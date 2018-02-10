@@ -68,6 +68,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies tax vouchers in the framework of a corporate action event."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher4 TaxVoucher4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +117,14 @@ public class TaxVoucher2 {
 	 * definition} =
 	 * "Unique reference for the tax voucher required by the relevant tax authorities to ensure that any claim relating to this particular tax voucher cannot be duplicated."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher4#mmIdentification
+	 * TaxVoucher4.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -123,6 +137,7 @@ public class TaxVoucher2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique reference for the tax voucher required by the relevant tax authorities to ensure that any claim relating to this particular tax voucher cannot be duplicated.";
+			nextVersions_lazy = () -> Arrays.asList(TaxVoucher4.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -165,6 +180,13 @@ public class TaxVoucher2 {
 	 * definition} =
 	 * "Date on which a dividend reinvestment purchase was completed. If there is only one bargain involved, the time it was struck needs to be included."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TaxVoucher4#mmBargainDate
+	 * TaxVoucher4.mmBargainDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBargainDate = new MMMessageAttribute() {
@@ -177,6 +199,7 @@ public class TaxVoucher2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BargainDate";
 			definition = "Date on which a dividend reinvestment purchase was completed. If there is only one bargain involved, the time it was struck needs to be included.";
+			nextVersions_lazy = () -> Arrays.asList(TaxVoucher4.mmBargainDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -218,6 +241,14 @@ public class TaxVoucher2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Settlement date of the dividend reinvestment purchase transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TaxVoucher4#mmBargainSettlementDate
+	 * TaxVoucher4.mmBargainSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBargainSettlementDate = new MMMessageAttribute() {
@@ -230,6 +261,7 @@ public class TaxVoucher2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BargainSettlementDate";
 			definition = "Settlement date of the dividend reinvestment purchase transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TaxVoucher4.mmBargainSettlementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -246,6 +278,7 @@ public class TaxVoucher2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TaxVoucher2";
 				definition = "Specifies tax vouchers in the framework of a corporate action event.";
+				nextVersions_lazy = () -> Arrays.asList(TaxVoucher4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

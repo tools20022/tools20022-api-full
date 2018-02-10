@@ -406,7 +406,7 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date/Time on which the posting / draft of  cash is scheduled to take place for a transaction."
+	 * "Date/Time on which the posting / draft of cash is scheduled to take place for a transaction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -426,7 +426,7 @@ public class CorporateActionMovementCashMovementDetailsSD1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Payable Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
-			definition = "Date/Time on which the posting / draft of  cash is scheduled to take place for a transaction.";
+			definition = "Date/Time on which the posting / draft of cash is scheduled to take place for a transaction.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionMovementCashMovementDetailsSD2.mmEarliestPaymentDate);
 			maxOccurs = 1;
 			minOccurs = 0;

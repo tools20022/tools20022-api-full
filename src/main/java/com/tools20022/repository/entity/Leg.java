@@ -18,6 +18,7 @@
 package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
+import com.tools20022.repository.choice.InterestRate12Choice;
 import com.tools20022.repository.choice.QuoteCancellation1Choice;
 import com.tools20022.repository.codeset.CurrencyCode;
 import com.tools20022.repository.datatype.Max35Text;
@@ -92,6 +93,8 @@ import java.util.Optional;
  * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg3 InstrumentLeg3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg1 InstrumentLeg1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.InstrumentLeg6 InstrumentLeg6}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.InterestRate12Choice
+ * InterestRate12Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -246,6 +249,18 @@ public class Leg {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InstrumentLeg6#mmLegCurrency
 	 * InstrumentLeg6.mmLegCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType5#mmNotionalCurrencyFirstLeg
+	 * ContractType5.mmNotionalCurrencyFirstLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType5#mmNotionalCurrencySecondLeg
+	 * ContractType5.mmNotionalCurrencySecondLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType5#mmSettlementCurrency
+	 * ContractType5.mmSettlementCurrency}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType6#mmSettlementCurrency
+	 * ContractType6.mmSettlementCurrency}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -266,7 +281,8 @@ public class Leg {
 	 */
 	public static final MMBusinessAttribute mmCurrency = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(LegDetails1.mmCurrency, InstrumentLeg6.mmLegCurrency);
+			derivation_lazy = () -> Arrays.asList(LegDetails1.mmCurrency, InstrumentLeg6.mmLegCurrency, ContractType5.mmNotionalCurrencyFirstLeg, ContractType5.mmNotionalCurrencySecondLeg, ContractType5.mmSettlementCurrency,
+					ContractType6.mmSettlementCurrency);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Leg.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -443,7 +459,7 @@ public class Leg {
 						RequestForQuote.mmInstrumentLegGroupDetails);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Leg.mmRelatedAsset, com.tools20022.repository.entity.Leg.mmRatioQuantity, com.tools20022.repository.entity.Leg.mmCurrency,
 						com.tools20022.repository.entity.Leg.mmSwapType, com.tools20022.repository.entity.Leg.mmPool, com.tools20022.repository.entity.Leg.mmTrade);
-				derivationComponent_lazy = () -> Arrays.asList(LegDetails1.mmObject(), InstrumentLeg2.mmObject(), InstrumentLeg3.mmObject(), InstrumentLeg1.mmObject(), InstrumentLeg6.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(LegDetails1.mmObject(), InstrumentLeg2.mmObject(), InstrumentLeg3.mmObject(), InstrumentLeg1.mmObject(), InstrumentLeg6.mmObject(), InterestRate12Choice.mmObject());
 			}
 
 			@Override

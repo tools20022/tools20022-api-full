@@ -25,7 +25,7 @@ import com.tools20022.repository.area.seev.AgentCANotificationAdviceV01;
 /**
  * If the value of CorporateActionGeneralInformation/MandatoryVoluntaryEventType
  * is Mandatory, then CorporateActionDetails/DefaultOptionNumber and
- * CorporateActionDetails/DefaultOptionType must be present.
+ * CorporateActionDetails/DefaultOptionType must be present. .
  */
 public class ConstraintDefaultOptionRule {
 
@@ -46,7 +46,7 @@ public class ConstraintDefaultOptionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If the value of CorporateActionGeneralInformation/MandatoryVoluntaryEventType is Mandatory, then CorporateActionDetails/DefaultOptionNumber  and CorporateActionDetails/DefaultOptionType must be present.\n"
+	 * "If the value of CorporateActionGeneralInformation/MandatoryVoluntaryEventType is Mandatory, then CorporateActionDetails/DefaultOptionNumber and CorporateActionDetails/DefaultOptionType must be present.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,7 +55,7 @@ public class ConstraintDefaultOptionRule {
 			validator = ConstraintDefaultOptionRule::checkAgentCANotificationAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultOptionRule";
-			definition = "If the value of CorporateActionGeneralInformation/MandatoryVoluntaryEventType is Mandatory, then CorporateActionDetails/DefaultOptionNumber  and CorporateActionDetails/DefaultOptionType must be present.\n";
+			definition = "If the value of CorporateActionGeneralInformation/MandatoryVoluntaryEventType is Mandatory, then CorporateActionDetails/DefaultOptionNumber and CorporateActionDetails/DefaultOptionType must be present.\n.";
 			owner_lazy = () -> AgentCANotificationAdviceV01.mmObject();
 		}
 	};
@@ -64,7 +64,7 @@ public class ConstraintDefaultOptionRule {
 	 * If the value of
 	 * CorporateActionGeneralInformation/MandatoryVoluntaryEventType is
 	 * Mandatory, then CorporateActionDetails/DefaultOptionNumber and
-	 * CorporateActionDetails/DefaultOptionType must be present.
+	 * CorporateActionDetails/DefaultOptionType must be present. .
 	 */
 	public static void checkAgentCANotificationAdviceV01(AgentCANotificationAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();

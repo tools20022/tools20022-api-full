@@ -157,6 +157,12 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment57#mmMerchant
  * CardPaymentEnvironment57.mmMerchant}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment70#mmMerchant
+ * CardPaymentEnvironment70.mmMerchant}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment68#mmMerchant
+ * CardPaymentEnvironment68.mmMerchant}</li>
  * </ul>
  * </li>
  * <li>
@@ -347,6 +353,24 @@ public class MerchantRole extends CardPaymentPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction69#mmMerchantCategoryCode
 	 * CardPaymentTransaction69.mmMerchantCategoryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonData7#mmMerchantCategoryCode
+	 * CommonData7.mmMerchantCategoryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmMerchantCategoryCode
+	 * CardPaymentTransaction83.mmMerchantCategoryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmMerchantCategoryCode
+	 * CardPaymentTransaction81.mmMerchantCategoryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction82#mmMerchantCategoryCode
+	 * CardPaymentTransaction82.mmMerchantCategoryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction80#mmMerchantCategoryCode
+	 * CardPaymentTransaction80.mmMerchantCategoryCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction85#mmMerchantCategoryCode
+	 * CardPaymentTransaction85.mmMerchantCategoryCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -380,7 +404,9 @@ public class MerchantRole extends CardPaymentPartyRole {
 					CardPaymentTransaction61.mmMerchantCategoryCode, CardPaymentTransaction64.mmMerchantCategoryCode, CardPaymentTransaction59.mmMerchantCategoryCode, CardPaymentTransaction56.mmMerchantCategoryCode,
 					CardPaymentTransaction51.mmMerchantCategoryCode, CommonData5.mmMerchantCategoryCode, CardPaymentTransaction55.mmMerchantCategoryCode, CardPaymentTransaction62.mmMerchantCategoryCode,
 					CardPaymentTransaction71.mmMerchantCategoryCode, CardPaymentTransaction75.mmMerchantCategoryCode, CardPaymentTransaction74.mmMerchantCategoryCode, CardPaymentTransaction70.mmMerchantCategoryCode,
-					CardPaymentTransaction72.mmMerchantCategoryCode, CardPaymentTransaction76.mmMerchantCategoryCode, CommonData6.mmMerchantCategoryCode, CardPaymentTransaction69.mmMerchantCategoryCode);
+					CardPaymentTransaction72.mmMerchantCategoryCode, CardPaymentTransaction76.mmMerchantCategoryCode, CommonData6.mmMerchantCategoryCode, CardPaymentTransaction69.mmMerchantCategoryCode, CommonData7.mmMerchantCategoryCode,
+					CardPaymentTransaction83.mmMerchantCategoryCode, CardPaymentTransaction81.mmMerchantCategoryCode, CardPaymentTransaction82.mmMerchantCategoryCode, CardPaymentTransaction80.mmMerchantCategoryCode,
+					CardPaymentTransaction85.mmMerchantCategoryCode);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MerchantRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -458,7 +484,8 @@ public class MerchantRole extends CardPaymentPartyRole {
 						CardPaymentEnvironment40.mmMerchant, CardPaymentEnvironment34.mmMerchant, CardPaymentEnvironment35.mmMerchant, CardPaymentEnvironment39.mmMerchant, CardPaymentEnvironment52.mmMerchant,
 						CardPaymentEnvironment49.mmMerchant, CardPaymentEnvironment51.mmMerchant, CardPaymentEnvironment48.mmMerchant, CardPaymentEnvironment45.mmMerchant, CardPaymentEnvironment54.mmMerchantIdentification,
 						CardPaymentEnvironment53.mmMerchant, CardPaymentEnvironment47.mmMerchant, CardPaymentEnvironment61.mmMerchant, CardPaymentEnvironment60.mmMerchant, CardPaymentEnvironment66.mmMerchantIdentification,
-						CardPaymentEnvironment62.mmMerchant, CardPaymentEnvironment58.mmMerchant, CardPaymentEnvironment59.mmMerchant, CardPaymentEnvironment57.mmMerchant);
+						CardPaymentEnvironment62.mmMerchant, CardPaymentEnvironment58.mmMerchant, CardPaymentEnvironment59.mmMerchant, CardPaymentEnvironment57.mmMerchant, CardPaymentEnvironment70.mmMerchant,
+						CardPaymentEnvironment68.mmMerchant);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MerchantRole.mmMerchantCategoryCode, com.tools20022.repository.entity.MerchantRole.mmMerchantIdentification);
 			}

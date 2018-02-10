@@ -23,7 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.Trade1;
 
 /**
- * If ForeignExchangeTradeProduct is present,then Option is not allowed.
+ * If ForeignExchangeTradeProduct is present, then Option is not allowed.
  */
 public class ConstraintForeignExchangeTradeProductAndOptionRule1 {
 
@@ -43,7 +43,7 @@ public class ConstraintForeignExchangeTradeProductAndOptionRule1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ForeignExchangeTradeProduct is present,then Option is not allowed."</li>
+	 * "If ForeignExchangeTradeProduct is present, then Option is not allowed."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Trade1> forTrade1 = new MMConstraint<Trade1>() {
@@ -51,13 +51,13 @@ public class ConstraintForeignExchangeTradeProductAndOptionRule1 {
 			validator = ConstraintForeignExchangeTradeProductAndOptionRule1::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeTradeProductAndOptionRule1";
-			definition = "If ForeignExchangeTradeProduct is present,then Option is not allowed.";
+			definition = "If ForeignExchangeTradeProduct is present, then Option is not allowed.";
 			owner_lazy = () -> Trade1.mmObject();
 		}
 	};
 
 	/**
-	 * If ForeignExchangeTradeProduct is present,then Option is not allowed.
+	 * If ForeignExchangeTradeProduct is present, then Option is not allowed.
 	 */
 	public static void checkTrade1(Trade1 obj) throws Exception {
 		throw new NotImplementedConstraintException();

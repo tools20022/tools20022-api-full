@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.UnableToApplyV05;
+import com.tools20022.repository.area.camt.UnableToApplyV06;
 import com.tools20022.repository.datatype.TrueFalseIndicator;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
@@ -62,6 +63,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV05#mmJustification
  * UnableToApplyV05.mmJustification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.UnableToApplyV06#mmJustification
+ * UnableToApplyV06.mmJustification}</li>
  * </ul>
  * </li>
  * <li>
@@ -249,7 +253,7 @@ public class UnableToApplyJustification3Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmAnyInformation,
 						com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmMissingOrIncorrectInformation, com.tools20022.repository.choice.UnableToApplyJustification3Choice.mmPossibleDuplicateInstruction);
-				messageBuildingBlock_lazy = () -> Arrays.asList(UnableToApplyV05.mmJustification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(UnableToApplyV05.mmJustification, UnableToApplyV06.mmJustification);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnableToApplyJustification3Choice";

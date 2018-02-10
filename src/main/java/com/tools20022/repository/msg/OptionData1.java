@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Set of data which contains the link to a previously notified option trade.
+ * Set of data which contains the link to a previously notified option trade. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -77,7 +77,7 @@ import javax.xml.bind.annotation.XmlType;
  * "OptionData1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Set of data which contains the link to a previously notified option trade.\n"
+ * "Set of data which contains the link to a previously notified option trade.\n."
  * </li>
  * </ul>
  */
@@ -207,7 +207,7 @@ public class OptionData1 {
 	 * name} = "CommonReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reference common to the parties of a trade. "</li>
+	 * definition} = "Reference common to the parties of a trade."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
@@ -218,7 +218,7 @@ public class OptionData1 {
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			definition = "Reference common to the parties of a trade. ";
+			definition = "Reference common to the parties of a trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -250,7 +250,7 @@ public class OptionData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Refers to the identification of a previous event in the life of a foreign exchange option trade. "
+	 * "Refers to the identification of a previous event in the life of a foreign exchange option trade."
 	 * </li>
 	 * </ul>
 	 */
@@ -261,7 +261,7 @@ public class OptionData1 {
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
-			definition = "Refers to the identification of a previous event in the life of a foreign exchange option trade. ";
+			definition = "Refers to the identification of a previous event in the life of a foreign exchange option trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -366,7 +366,7 @@ public class OptionData1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionData1";
-				definition = "Set of data which contains the link to a previously notified option trade.\n";
+				definition = "Set of data which contains the link to a previously notified option trade.\n.";
 			}
 		});
 		return mmObject_lazy.get();

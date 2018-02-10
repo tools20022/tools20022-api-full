@@ -92,10 +92,10 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
 	 * Per individual account X share holding per account X Cash Rate divided by
-	 * the Stock Rate = Whole Shares + CIL of Fractions Example: 100 shares X
-	 * .50 (Cash Rate) divided by $20.00 (Stock Rate)=2 whole shares and .500000
+	 * the Stock Rate = Whole Shares + CIL of Fractions Example: 100 shares X.50
+	 * (Cash Rate) divided by $20.00 (Stock Rate)=2 whole shares and.500000
 	 * fractions Fractional Entitlement: If the price is $15.00 per share, you
-	 * would calculate .500000 X $15.00 = $7.50 for CIL.
+	 * would calculate.500000 X $15.00 = $7.50 for CIL.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -113,7 +113,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Per individual account X share holding per account X Cash Rate divided by the Stock Rate = Whole Shares + CIL of Fractions  Example: 100 shares X .50 (Cash Rate) divided by $20.00 (Stock Rate)=2 whole shares and .500000 fractions Fractional Entitlement:  If the price is $15.00 per share, you would calculate .500000 X $15.00 = $7.50 for CIL."
+	 * "Per individual account X share holding per account X Cash Rate divided by the Stock Rate = Whole Shares + CIL of Fractions Example: 100 shares X.50 (Cash Rate) divided by $20.00 (Stock Rate)=2 whole shares and.500000 fractions Fractional Entitlement: If the price is $15.00 per share, you would calculate.500000 X $15.00 = $7.50 for CIL."
 	 * </li>
 	 * </ul>
 	 */
@@ -121,14 +121,14 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockRateFC15";
-			definition = "Per individual account X share holding per account X Cash Rate divided by the Stock Rate = Whole Shares + CIL of Fractions  Example: 100 shares X .50 (Cash Rate) divided by $20.00 (Stock Rate)=2 whole shares and .500000 fractions Fractional Entitlement:  If the price is $15.00 per share, you would calculate .500000 X $15.00 = $7.50 for CIL.";
+			definition = "Per individual account X share holding per account X Cash Rate divided by the Stock Rate = Whole Shares + CIL of Fractions Example: 100 shares X.50 (Cash Rate) divided by $20.00 (Stock Rate)=2 whole shares and.500000 fractions Fractional Entitlement: If the price is $15.00 per share, you would calculate.500000 X $15.00 = $7.50 for CIL.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCEntitlementCalculationMethodCode.mmObject();
 			codeName = "SR15";
 		}
 	};
 	/**
 	 * Per individual account X share holding per account X Cash Rate =
-	 * entitlement Example: 100 shares X .50 (Cash Rate) = $50.00 in cash.
+	 * entitlement Example: 100 shares X.50 (Cash Rate) = $50.00 in cash.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -146,7 +146,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Per individual account X share holding per account X Cash Rate = entitlement Example: 100 shares X .50 (Cash Rate) = $50.00 in cash."
+	 * "Per individual account X share holding per account X Cash Rate = entitlement Example: 100 shares X.50 (Cash Rate) = $50.00 in cash."
 	 * </li>
 	 * </ul>
 	 */
@@ -154,7 +154,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashRateFC17";
-			definition = "Per individual account X share holding per account X Cash Rate = entitlement Example: 100 shares X .50 (Cash Rate) = $50.00 in cash.";
+			definition = "Per individual account X share holding per account X Cash Rate = entitlement Example: 100 shares X.50 (Cash Rate) = $50.00 in cash.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCEntitlementCalculationMethodCode.mmObject();
 			codeName = "CR17";
 		}
@@ -162,8 +162,8 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	/**
 	 * Per individual account X share holding per account X Stock Rate = whole
 	 * shares + CIL of Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole
-	 * shares and .500000 fractions Fractional Entitlement: If the CIL price is
-	 * $10.00 per share, you would calculate .500000 X $10.00 = $5.00 for CIL.
+	 * shares and.500000 fractions Fractional Entitlement: If the CIL price is
+	 * $10.00 per share, you would calculate.500000 X $10.00 = $5.00 for CIL.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -181,7 +181,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Per individual account X share holding per account X Stock Rate = whole shares + CIL of Fractions Example:  150 shares X 5% (Stock Rate) = 7 whole shares and .500000 fractions Fractional Entitlement: If the CIL price is $10.00 per share, you would calculate .500000 X $10.00 = $5.00 for CIL."
+	 * "Per individual account X share holding per account X Stock Rate = whole shares + CIL of Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares and.500000 fractions Fractional Entitlement: If the CIL price is $10.00 per share, you would calculate.500000 X $10.00 = $5.00 for CIL."
 	 * </li>
 	 * </ul>
 	 */
@@ -189,7 +189,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockRateFC18";
-			definition = "Per individual account X share holding per account X Stock Rate = whole shares + CIL of Fractions Example:  150 shares X 5% (Stock Rate) = 7 whole shares and .500000 fractions Fractional Entitlement: If the CIL price is $10.00 per share, you would calculate .500000 X $10.00 = $5.00 for CIL.";
+			definition = "Per individual account X share holding per account X Stock Rate = whole shares + CIL of Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares and.500000 fractions Fractional Entitlement: If the CIL price is $10.00 per share, you would calculate.500000 X $10.00 = $5.00 for CIL.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCEntitlementCalculationMethodCode.mmObject();
 			codeName = "SR18";
 		}
@@ -197,7 +197,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	/**
 	 * Per individual account X share holding per account X Stock Rate = whole
 	 * shares + Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares
-	 * and .500000 fractions. Cash Entitlement: If the CIL price is $10.00 per
+	 * and.500000 fractions. Cash Entitlement: If the CIL price is $10.00 per
 	 * share, you would calculate 7.500000 shares X $10.00 = $75.00 in cash.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -216,7 +216,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Per individual account X share holding per account X Stock Rate = whole shares + Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares and .500000 fractions.  Cash Entitlement:  If the CIL price is $10.00 per share, you would calculate 7.500000 shares X $10.00 = $75.00 in cash."
+	 * "Per individual account X share holding per account X Stock Rate = whole shares + Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares and.500000 fractions. Cash Entitlement: If the CIL price is $10.00 per share, you would calculate 7.500000 shares X $10.00 = $75.00 in cash."
 	 * </li>
 	 * </ul>
 	 */
@@ -224,7 +224,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockRateXCashRateFC19";
-			definition = "Per individual account X share holding per account X Stock Rate = whole shares + Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares and .500000 fractions.  Cash Entitlement:  If the CIL price is $10.00 per share, you would calculate 7.500000 shares X $10.00 = $75.00 in cash.";
+			definition = "Per individual account X share holding per account X Stock Rate = whole shares + Fractions Example: 150 shares X 5% (Stock Rate) = 7 whole shares and.500000 fractions. Cash Entitlement: If the CIL price is $10.00 per share, you would calculate 7.500000 shares X $10.00 = $75.00 in cash.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCEntitlementCalculationMethodCode.mmObject();
 			codeName = "SC19";
 		}
@@ -261,7 +261,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "A) Per individual account X share holding per account X Stock Rate = Whole shares + CIL of Fractions (Note 1)Note 1- Then option is to buy fraction so as to round up to one (1) whole share  B) Per individual account X (1 whole share-fractional issuable) = fractions to be bought X CIL Fraction Price= Cash to be charged to each individual account (Note 1) + 1 whole share to be added to the individual account (Note 2)Note 1- Appropriate cash adjustment decreasing a participants cash position will be transacted Note 2- Appropriate share adjustment increasing a participants share position will be transacted Special Note: The following two formulas relate to those situations whereby the option allows you to buy an additional fraction so as to round up to one (1) whole share. F/C 20-can be used for most fractions buy round ups.  F/C 21-was once a mandatory fraction buy round up formula used by a agent. (The end result is the same if you use either F/C)."
+	 * "A) Per individual account X share holding per account X Stock Rate = Whole shares + CIL of Fractions (Note 1)Note 1- Then option is to buy fraction so as to round up to one (1) whole share B) Per individual account X (1 whole share-fractional issuable) = fractions to be bought X CIL Fraction Price= Cash to be charged to each individual account (Note 1) + 1 whole share to be added to the individual account (Note 2)Note 1- Appropriate cash adjustment decreasing a participants cash position will be transacted Note 2- Appropriate share adjustment increasing a participants share position will be transacted Special Note: The following two formulas relate to those situations whereby the option allows you to buy an additional fraction so as to round up to one (1) whole share. F/C 20-can be used for most fractions buy round ups. F/C 21-was once a mandatory fraction buy round up formula used by a agent. (The end result is the same if you use either F/C)."
 	 * </li>
 	 * </ul>
 	 */
@@ -269,7 +269,7 @@ public class DTCEntitlementCalculationMethodCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockRateEnableBuyUpToNextWholeShareFC20";
-			definition = "A) Per individual account X share holding per account X Stock Rate = Whole shares + CIL of Fractions (Note 1)Note 1- Then option is to buy fraction so as to round up to one (1) whole share  B) Per individual account X (1 whole share-fractional issuable) = fractions to be bought X CIL Fraction Price= Cash to be charged to each individual account (Note 1) + 1 whole share to be added to the individual account (Note 2)Note 1- Appropriate cash adjustment decreasing a participants cash position will be transacted Note 2- Appropriate share adjustment increasing a participants share position will be transacted Special Note: The following two formulas relate to those situations whereby the option allows you to buy an additional fraction so as to round up to one (1) whole share. F/C 20-can be used for most fractions buy round ups.  F/C 21-was once a mandatory fraction buy round up formula used by a agent. (The end result is the same if you use either F/C).";
+			definition = "A) Per individual account X share holding per account X Stock Rate = Whole shares + CIL of Fractions (Note 1)Note 1- Then option is to buy fraction so as to round up to one (1) whole share B) Per individual account X (1 whole share-fractional issuable) = fractions to be bought X CIL Fraction Price= Cash to be charged to each individual account (Note 1) + 1 whole share to be added to the individual account (Note 2)Note 1- Appropriate cash adjustment decreasing a participants cash position will be transacted Note 2- Appropriate share adjustment increasing a participants share position will be transacted Special Note: The following two formulas relate to those situations whereby the option allows you to buy an additional fraction so as to round up to one (1) whole share. F/C 20-can be used for most fractions buy round ups. F/C 21-was once a mandatory fraction buy round up formula used by a agent. (The end result is the same if you use either F/C).";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCEntitlementCalculationMethodCode.mmObject();
 			codeName = "SB20";
 		}

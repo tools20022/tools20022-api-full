@@ -23,6 +23,8 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.AccountReport1;
 import com.tools20022.repository.msg.AccountReport14;
 import com.tools20022.repository.msg.AccountReport15;
+import com.tools20022.repository.msg.AccountReport20;
+import java.util.Arrays;
 
 /**
  * ContractDates/ClosingDate should not be used as part of an account opening
@@ -108,6 +110,14 @@ public class ConstraintContractDates2Rule {
 	 * definition} =
 	 * "ContractDates/ClosingDate should not be used as part of an account opening and maintenance process."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintContractDates2Rule#forAccountReport20
+	 * ConstraintContractDates2Rule.forAccountReport20}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<AccountReport14> forAccountReport14 = new MMConstraint<AccountReport14>() {
@@ -116,7 +126,44 @@ public class ConstraintContractDates2Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates2Rule ";
 			definition = "ContractDates/ClosingDate should not be used as part of an account opening and maintenance process.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintContractDates2Rule.forAccountReport20);
 			owner_lazy = () -> AccountReport14.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20
+	 * AccountReport20}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ContractDates2Rule "</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "ContractDates/ClosingDate should not be used as part of an account opening and maintenance process."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintContractDates2Rule#forAccountReport14
+	 * ConstraintContractDates2Rule.forAccountReport14}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountReport20> forAccountReport20 = new MMConstraint<AccountReport20>() {
+		{
+			validator = ConstraintContractDates2Rule::checkAccountReport20;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ContractDates2Rule ";
+			definition = "ContractDates/ClosingDate should not be used as part of an account opening and maintenance process.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintContractDates2Rule.forAccountReport14;
+			owner_lazy = () -> AccountReport20.mmObject();
 		}
 	};
 
@@ -141,6 +188,14 @@ public class ConstraintContractDates2Rule {
 	 * opening and maintenance process.
 	 */
 	public static void checkAccountReport14(AccountReport14 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * ContractDates/ClosingDate should not be used as part of an account
+	 * opening and maintenance process.
+	 */
+	public static void checkAccountReport20(AccountReport20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

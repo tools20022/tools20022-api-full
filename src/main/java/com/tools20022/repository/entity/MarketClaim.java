@@ -171,6 +171,18 @@ public class MarketClaim {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmMarketClaimAmount
 	 * CorporateActionAmounts40.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmMarketClaimAmount
+	 * CorporateActionAmounts43.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmMarketClaimAmount
+	 * CorporateActionAmounts44.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmMarketClaimAmount
+	 * CorporateActionAmounts45.mmMarketClaimAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmMarketClaimAmount
+	 * CorporateActionAmounts46.mmMarketClaimAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -196,7 +208,8 @@ public class MarketClaim {
 					CorporateActionAmounts16.mmMarketClaimAmount, CorporateActionAmounts19.mmMarketClaimAmount, CorporateActionAmounts22.mmMarketClaimAmount, CorporateActionAmounts25.mmMarketClaimAmount,
 					CorporateActionAmounts1.mmMarketClaimAmount, CorporateActionAmounts29.mmMarketClaimAmount, CorporateActionAmounts28.mmMarketClaimAmount, CorporateActionAmounts33.mmMarketClaimAmount,
 					CorporateActionAmounts35.mmMarketClaimAmount, CorporateActionAmounts37.mmMarketClaimAmount, CorporateActionAmounts38.mmMarketClaimAmount, CorporateActionAmounts39.mmMarketClaimAmount,
-					CorporateActionAmounts40.mmMarketClaimAmount);
+					CorporateActionAmounts40.mmMarketClaimAmount, CorporateActionAmounts43.mmMarketClaimAmount, CorporateActionAmounts44.mmMarketClaimAmount, CorporateActionAmounts45.mmMarketClaimAmount,
+					CorporateActionAmounts46.mmMarketClaimAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -258,6 +271,12 @@ public class MarketClaim {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmMarketClaimTrackingEndDate
 	 * CorporateActionDate58.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate61.mmMarketClaimTrackingEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmMarketClaimTrackingEndDate
+	 * CorporateActionDate74.mmMarketClaimTrackingEndDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -281,7 +300,8 @@ public class MarketClaim {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmMarketClaimTrackingEndDate, CorporateActionDate13.mmMarketClaimTrackingEndDate, CorporateActionDate14.mmMarketClaimTrackingEndDate,
 					CorporateActionDate21.mmMarketClaimTrackingEndDate, CorporateActionDate22.mmMarketClaimTrackingEndDate, CorporateActionDate25.mmMarketClaimTrackingEndDate, CorporateActionDate27.mmMarketClaimTrackingEndDate,
-					CorporateActionDate28.mmMarketClaimTrackingEndDate, CorporateActionDate44.mmMarketClaimTrackingEndDate, CorporateActionDate58.mmMarketClaimTrackingEndDate);
+					CorporateActionDate28.mmMarketClaimTrackingEndDate, CorporateActionDate44.mmMarketClaimTrackingEndDate, CorporateActionDate58.mmMarketClaimTrackingEndDate, CorporateActionDate61.mmMarketClaimTrackingEndDate,
+					CorporateActionDate74.mmMarketClaimTrackingEndDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.MarketClaim.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

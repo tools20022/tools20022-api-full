@@ -98,6 +98,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Information about the status of a transfer instruction and its reason."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransferStatusAndReason5
+ * TransferStatusAndReason5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason3
@@ -143,6 +150,14 @@ public class TransferStatusAndReason4 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmMasterReference
+	 * TransferStatusAndReason5.mmMasterReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -159,6 +174,7 @@ public class TransferStatusAndReason4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MasterReference";
 			definition = "Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.";
+			nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmMasterReference);
 			previousVersion_lazy = () -> TransferStatusAndReason3.mmMasterReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -199,6 +215,14 @@ public class TransferStatusAndReason4 {
 	 * definition} =
 	 * "Unique and unambiguous identification of a transfer, as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmTransferReference
+	 * TransferStatusAndReason5.mmTransferReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -215,6 +239,7 @@ public class TransferStatusAndReason4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferReference";
 			definition = "Unique and unambiguous identification of a transfer, as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmTransferReference);
 			previousVersion_lazy = () -> TransferStatusAndReason3.mmTransferReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -256,6 +281,14 @@ public class TransferStatusAndReason4 {
 	 * definition} =
 	 * "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmClientReference
+	 * TransferStatusAndReason5.mmClientReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -272,6 +305,7 @@ public class TransferStatusAndReason4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
+			nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmClientReference);
 			previousVersion_lazy = () -> TransferStatusAndReason3.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -307,6 +341,14 @@ public class TransferStatusAndReason4 {
 	 * definition} =
 	 * "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmCancellationReference
+	 * TransferStatusAndReason5.mmCancellationReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -322,6 +364,7 @@ public class TransferStatusAndReason4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationReference";
 			definition = "Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmCancellationReference);
 			previousVersion_lazy = () -> TransferStatusAndReason3.mmCancellationReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -360,6 +403,14 @@ public class TransferStatusAndReason4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the transfer instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmTransferStatus
+	 * TransferStatusAndReason5.mmTransferStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -376,6 +427,7 @@ public class TransferStatusAndReason4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferStatus";
 			definition = "Status of the transfer instruction.";
+			nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmTransferStatus);
 			previousVersion_lazy = () -> TransferStatusAndReason3.mmTransferStatus;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -415,6 +467,14 @@ public class TransferStatusAndReason4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the transfer was executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmTradeDate
+	 * TransferStatusAndReason5.mmTradeDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -431,6 +491,7 @@ public class TransferStatusAndReason4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Date and time at which the transfer was executed.";
+			nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmTradeDate);
 			previousVersion_lazy = () -> TransferStatusAndReason3.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -466,6 +527,14 @@ public class TransferStatusAndReason4 {
 	 * definition} =
 	 * "Date on which the document, for example, the application form, was sent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmSendOutDate
+	 * TransferStatusAndReason5.mmSendOutDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -481,6 +550,7 @@ public class TransferStatusAndReason4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SendOutDate";
 			definition = "Date on which the document, for example, the application form, was sent.";
+			nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmSendOutDate);
 			previousVersion_lazy = () -> TransferStatusAndReason3.mmSendOutDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -519,6 +589,14 @@ public class TransferStatusAndReason4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that initiates the status."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransferStatusAndReason5#mmStatusInitiator
+	 * TransferStatusAndReason5.mmStatusInitiator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -535,6 +613,7 @@ public class TransferStatusAndReason4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusInitiator";
 			definition = "Party that initiates the status.";
+			nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmStatusInitiator);
 			previousVersion_lazy = () -> TransferStatusAndReason3.mmStatusInitiator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -556,6 +635,7 @@ public class TransferStatusAndReason4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransferStatusAndReason4";
 				definition = "Information about the status of a transfer instruction and its reason.";
+				nextVersions_lazy = () -> Arrays.asList(TransferStatusAndReason5.mmObject());
 				previousVersion_lazy = () -> TransferStatusAndReason3.mmObject();
 			}
 		});

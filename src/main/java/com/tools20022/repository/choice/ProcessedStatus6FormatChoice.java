@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessedStatus6FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the processing status of a deactivation instruction."
+ * "Choice of formats to express the processing status of a deactivation instruction."
  * </li>
  * </ul>
  */
@@ -159,7 +159,7 @@ public class ProcessedStatus6FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the processing status of a deactivation instruction."
+	 * "Proprietary code to express the processing status of a deactivation instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -171,7 +171,7 @@ public class ProcessedStatus6FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the processing status of a deactivation instruction.";
+			definition = "Proprietary code to express the processing status of a deactivation instruction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -186,7 +186,7 @@ public class ProcessedStatus6FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProcessedStatus6FormatChoice";
-				definition = "Choice of formats to  express the processing status of a deactivation instruction.";
+				definition = "Choice of formats to express the processing status of a deactivation instruction.";
 			}
 		});
 		return mmObject_lazy.get();

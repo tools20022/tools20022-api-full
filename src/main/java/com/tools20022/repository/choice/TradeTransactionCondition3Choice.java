@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * "TradeTransactionCondition3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for trade transaction condition."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition7Choice
+ * TradeTransactionCondition7Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +115,14 @@ public class TradeTransactionCondition3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Trade transaction condition expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition7Choice#mmCode
+	 * TradeTransactionCondition7Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -118,6 +134,7 @@ public class TradeTransactionCondition3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Trade transaction condition expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(TradeTransactionCondition7Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TradeTransactionCondition2Code.mmObject();
@@ -156,6 +173,14 @@ public class TradeTransactionCondition3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Trade transaction condition expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeTransactionCondition7Choice#mmProprietary
+	 * TradeTransactionCondition7Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -167,6 +192,7 @@ public class TradeTransactionCondition3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Trade transaction condition expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(TradeTransactionCondition7Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +209,7 @@ public class TradeTransactionCondition3Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "TradeTransactionCondition3Choice";
 				definition = "Choice of format for trade transaction condition.";
+				nextVersions_lazy = () -> Arrays.asList(TradeTransactionCondition7Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

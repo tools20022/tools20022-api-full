@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Sequence of terminal management actions to be performed by a point of interaction (POI)."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ManagementPlan7
+ * ManagementPlan7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.ManagementPlan5
  * ManagementPlan5}</li>
@@ -125,6 +132,14 @@ public class ManagementPlan6 {
 	 * definition} =
 	 * "Identification of the point of interaction (POI) for terminal management."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlan7#mmPOIIdentification
+	 * ManagementPlan7.mmPOIIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -141,6 +156,7 @@ public class ManagementPlan6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POIIdentification";
 			definition = "Identification of the point of interaction (POI) for terminal management.";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlan7.mmPOIIdentification);
 			previousVersion_lazy = () -> ManagementPlan5.mmPOIIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -182,6 +198,14 @@ public class ManagementPlan6 {
 	 * definition} =
 	 * "Identification of the terminal management system (TMS) sending the management plan."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlan7#mmTerminalManagerIdentification
+	 * ManagementPlan7.mmTerminalManagerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -198,6 +222,7 @@ public class ManagementPlan6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalManagerIdentification";
 			definition = "Identification of the terminal management system (TMS) sending the management plan.";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlan7.mmTerminalManagerIdentification);
 			previousVersion_lazy = () -> ManagementPlan5.mmTerminalManagerIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -239,6 +264,13 @@ public class ManagementPlan6 {
 	 * definition} =
 	 * "Data set related to the sequence of actions to be performed by a point of interaction (POI)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ManagementPlan7#mmDataSet
+	 * ManagementPlan7.mmDataSet}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -255,6 +287,7 @@ public class ManagementPlan6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Data set related to the sequence of actions to be performed by a point of interaction (POI).";
+			nextVersions_lazy = () -> Arrays.asList(ManagementPlan7.mmDataSet);
 			previousVersion_lazy = () -> ManagementPlan5.mmDataSet;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -274,6 +307,7 @@ public class ManagementPlan6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ManagementPlan6";
 				definition = "Sequence of terminal management actions to be performed by a point of interaction (POI).";
+				nextVersions_lazy = () -> Arrays.asList(ManagementPlan7.mmObject());
 				previousVersion_lazy = () -> ManagementPlan5.mmObject();
 			}
 		});

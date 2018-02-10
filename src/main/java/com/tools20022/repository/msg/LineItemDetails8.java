@@ -592,7 +592,7 @@ public class LineItemDetails8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Quantity of a product for which a mismatched data set has been submitted and has not yet been accepted or rejected.."
+	 * "Quantity of a product for which a mismatched data set has been submitted and has not yet been accepted or rejected."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -611,7 +611,7 @@ public class LineItemDetails8 {
 			xmlTag = "PdgQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingQuantity";
-			definition = "Quantity of a product for which a mismatched data set has been submitted and has not yet been accepted or rejected..";
+			definition = "Quantity of a product for which a mismatched data set has been submitted and has not yet been accepted or rejected.";
 			nextVersions_lazy = () -> Arrays.asList(LineItemDetails12.mmPendingQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;

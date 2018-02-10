@@ -20,8 +20,10 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ActiveCurrencyAndAmount;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.IntraDayRequirement1;
 import com.tools20022.repository.msg.MarginRequirement1;
 import com.tools20022.repository.msg.Requirement1;
+import com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -75,6 +77,11 @@ import java.util.Optional;
  * <li>{@linkplain com.tools20022.repository.msg.MarginRequirement1
  * MarginRequirement1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Requirement1 Requirement1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraDayRequirement1
+ * IntraDayRequirement1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StressLiquidResourceRequirementAmount1
+ * StressLiquidResourceRequirementAmount1}</li>
  * </ul>
  * </li>
  * <li>
@@ -322,7 +329,7 @@ public class MarginAmountRequirement {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ExposureCalculation.mmVariationMarginAmountRequirement, com.tools20022.repository.entity.ExposureCalculation.mmSegregatedAmountRequirement);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.MarginAmountRequirement.mmVariationMarginAmountRequirementCalculation, com.tools20022.repository.entity.MarginAmountRequirement.mmDeliverMarginAmount,
 						com.tools20022.repository.entity.MarginAmountRequirement.mmReturnMarginAmount, com.tools20022.repository.entity.MarginAmountRequirement.mmSegregatedAmountRequirementCalculation);
-				derivationComponent_lazy = () -> Arrays.asList(MarginRequirement1.mmObject(), Requirement1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(MarginRequirement1.mmObject(), Requirement1.mmObject(), IntraDayRequirement1.mmObject(), StressLiquidResourceRequirementAmount1.mmObject());
 			}
 
 			@Override

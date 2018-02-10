@@ -206,7 +206,7 @@ public class SecuritiesInstrumentClassification2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Details the validity of the specific record.\r\n\r\nUsage:\r\nWithin MiFIR, the FromDate is populated while the instrument is valid.  From Date To Date is only populated when the record is being invalidated."
+	 * "Details the validity of the specific record.\r\n\r\nUsage:\r\nWithin MiFIR, the FromDate is populated while the instrument is valid. From Date To Date is only populated when the record is being invalidated."
 	 * </li>
 	 * </ul>
 	 */
@@ -217,7 +217,7 @@ public class SecuritiesInstrumentClassification2 {
 			xmlTag = "VldtyPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityPeriod";
-			definition = "Details the validity of the specific record.\r\n\r\nUsage:\r\nWithin MiFIR, the FromDate is populated while the instrument is valid.  From Date To Date is only populated when the record is being invalidated.";
+			definition = "Details the validity of the specific record.\r\n\r\nUsage:\r\nWithin MiFIR, the FromDate is populated while the instrument is valid. From Date To Date is only populated when the record is being invalidated.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

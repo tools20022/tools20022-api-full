@@ -160,7 +160,7 @@ public class HoldIndicator6 {
 	 * name} = "Reason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the reason of the registration staus."</li>
+	 * definition} = "Specifies the reason of the registration status."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -176,7 +176,7 @@ public class HoldIndicator6 {
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
-			definition = "Specifies the reason of the registration staus.";
+			definition = "Specifies the reason of the registration status.";
 			previousVersion_lazy = () -> HoldIndicator4.mmReason;
 			minOccurs = 0;
 			isComposite = true;

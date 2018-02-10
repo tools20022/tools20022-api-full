@@ -20,6 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.FinancialInstrumentProperties1Choice;
 import com.tools20022.repository.choice.WarrantStyle2Choice;
+import com.tools20022.repository.choice.WarrantStyle3Choice;
 import com.tools20022.repository.codeset.WarrantStyleCode;
 import com.tools20022.repository.datatype.BaseOneRate;
 import com.tools20022.repository.entity.Security;
@@ -62,8 +63,8 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.entity.SecuritiesPricing#mmRelatedWarrant
  * SecuritiesPricing.mmRelatedWarrant}</li>
- * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmwarrant
- * QuantityRatio.mmwarrant}</li>
+ * <li>{@linkplain com.tools20022.repository.entity.QuantityRatio#mmWarrant
+ * QuantityRatio.mmWarrant}</li>
  * </ul>
  * </li>
  * <li>
@@ -76,6 +77,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.FinancialInstrument28#mmWarrant
  * FinancialInstrument28.mmWarrant}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrument54#mmWarrant
+ * FinancialInstrument54.mmWarrant}</li>
  * </ul>
  * </li>
  * <li>
@@ -86,6 +90,9 @@ import java.util.Objects;
  * <li>{@linkplain com.tools20022.repository.choice.WarrantStyle2Choice
  * WarrantStyle2Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Warrant2 Warrant2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Warrant3 Warrant3}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.WarrantStyle3Choice
+ * WarrantStyle3Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -204,6 +211,21 @@ public class Warrant extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmSubscriptionPrice
 	 * FinancialInstrumentAttributes78.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Warrant3#mmSubscriptionPrice
+	 * Warrant3.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes91.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes92.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes95.mmSubscriptionPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes97.mmSubscriptionPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -231,7 +253,8 @@ public class Warrant extends Security {
 					FinancialInstrumentAttributes14.mmSubscriptionPrice, FinancialInstrumentAttributes30.mmSubscriptionPrice, FinancialInstrumentAttributes28.mmSubscriptionPrice, Warrant1.mmSubscriptionPrice,
 					FinancialInstrumentAttributes31.mmSubscriptionPrice, FinancialInstrumentAttributes44.mmSubscriptionPrice, FinancialInstrumentAttributes15.mmSubscriptionPrice, FinancialInstrumentAttributes29.mmSubscriptionPrice,
 					Warrant2.mmSubscriptionPrice, FinancialInstrumentAttributes2.mmSubscriptionPrice, FinancialInstrumentAttributes63.mmSubscriptionPrice, FinancialInstrumentAttributes64.mmSubscriptionPrice,
-					FinancialInstrumentAttributes75.mmSubscriptionPrice, FinancialInstrumentAttributes78.mmSubscriptionPrice);
+					FinancialInstrumentAttributes75.mmSubscriptionPrice, FinancialInstrumentAttributes78.mmSubscriptionPrice, Warrant3.mmSubscriptionPrice, FinancialInstrumentAttributes91.mmSubscriptionPrice,
+					FinancialInstrumentAttributes92.mmSubscriptionPrice, FinancialInstrumentAttributes95.mmSubscriptionPrice, FinancialInstrumentAttributes97.mmSubscriptionPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -261,6 +284,8 @@ public class Warrant extends Security {
 	 * Warrant1.mmMultiplier}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Warrant2#mmMultiplier
 	 * Warrant2.mmMultiplier}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Warrant3#mmMultiplier
+	 * Warrant3.mmMultiplier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -282,7 +307,7 @@ public class Warrant extends Security {
 	 */
 	public static final MMBusinessAttribute mmMultiplier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Warrant1.mmMultiplier, Warrant2.mmMultiplier);
+			derivation_lazy = () -> Arrays.asList(Warrant1.mmMultiplier, Warrant2.mmMultiplier, Warrant3.mmMultiplier);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -323,6 +348,14 @@ public class Warrant extends Security {
 	 * WarrantStyle2Choice.mmProprietary}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Warrant2#mmType
 	 * Warrant2.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Warrant3#mmType
+	 * Warrant3.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.WarrantStyle3Choice#mmCode
+	 * WarrantStyle3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.WarrantStyle3Choice#mmProprietary
+	 * WarrantStyle3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -342,7 +375,7 @@ public class Warrant extends Security {
 	 */
 	public static final MMBusinessAttribute mmStyle = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(WarrantStyle2Choice.mmCode, WarrantStyle2Choice.mmProprietary, Warrant2.mmType);
+			derivation_lazy = () -> Arrays.asList(WarrantStyle2Choice.mmCode, WarrantStyle2Choice.mmProprietary, Warrant2.mmType, Warrant3.mmType, WarrantStyle3Choice.mmCode, WarrantStyle3Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -370,8 +403,8 @@ public class Warrant extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getOpposite
 	 * opposite} =
-	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmwarrant
-	 * QuantityRatio.mmwarrant}</li>
+	 * {@linkplain com.tools20022.repository.entity.QuantityRatio#mmWarrant
+	 * QuantityRatio.mmWarrant}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getAggregation
 	 * aggregation} = com.tools20022.metamodel.MMAggregation.NONE</li>
@@ -409,13 +442,13 @@ public class Warrant extends Security {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "WarrantParity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides the ratio between the quantity of warrants and the quantity of underlying securities. "
+	 * "Provides the ratio between the quantity of warrants and the quantity of underlying securities."
 	 * </li>
 	 * </ul>
 	 */
@@ -425,12 +458,12 @@ public class Warrant extends Security {
 					FinancialInstrumentAttributes70.mmWarrantParity, FinancialInstrumentAttributes79.mmWarrantParity, FinancialInstrumentAttributes85.mmWarrantParity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Warrant.mmObject();
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "WarrantParity";
-			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities. ";
+			definition = "Provides the ratio between the quantity of warrants and the quantity of underlying securities.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			opposite_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmwarrant;
+			opposite_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmWarrant;
 			aggregation = MMAggregation.NONE;
 			type_lazy = () -> com.tools20022.repository.entity.QuantityRatio.mmObject();
 		}
@@ -443,12 +476,12 @@ public class Warrant extends Security {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Warrant";
 				definition = "Financial instrument that gives the holder the right to purchase shares or bonds at a given price within a specified time.";
-				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant, com.tools20022.repository.entity.QuantityRatio.mmwarrant);
-				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmWarrant, FinancialInstrument28.mmWarrant);
+				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPricing.mmRelatedWarrant, com.tools20022.repository.entity.QuantityRatio.mmWarrant);
+				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmWarrant, FinancialInstrument28.mmWarrant, FinancialInstrument54.mmWarrant);
 				superType_lazy = () -> Security.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Warrant.mmSubscriptionPrice, com.tools20022.repository.entity.Warrant.mmMultiplier, com.tools20022.repository.entity.Warrant.mmStyle,
 						com.tools20022.repository.entity.Warrant.mmWarrantParity);
-				derivationComponent_lazy = () -> Arrays.asList(Warrant1.mmObject(), WarrantStyle2Choice.mmObject(), Warrant2.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(Warrant1.mmObject(), WarrantStyle2Choice.mmObject(), Warrant2.mmObject(), Warrant3.mmObject(), WarrantStyle3Choice.mmObject());
 			}
 
 			@Override

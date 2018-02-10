@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * "InstructedBalanceDetails5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides information about total instructed balance."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.InstructedBalanceDetails7
+ * InstructedBalanceDetails7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails3
@@ -113,6 +120,14 @@ public class InstructedBalanceDetails5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides information about the total instructed balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails7#mmTotalInstructedBalance
+	 * InstructedBalanceDetails7.mmTotalInstructedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +144,7 @@ public class InstructedBalanceDetails5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInstructedBalance";
 			definition = "Provides information about the total instructed balance.";
+			nextVersions_lazy = () -> Arrays.asList(InstructedBalanceDetails7.mmTotalInstructedBalance);
 			previousVersion_lazy = () -> InstructedBalanceDetails3.mmTotalInstructedBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -168,6 +184,14 @@ public class InstructedBalanceDetails5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provide instructed balance breakdown information per option."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedBalanceDetails7#mmOptionDetails
+	 * InstructedBalanceDetails7.mmOptionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -184,6 +208,7 @@ public class InstructedBalanceDetails5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionDetails";
 			definition = "Provide instructed balance breakdown information per option.";
+			nextVersions_lazy = () -> Arrays.asList(InstructedBalanceDetails7.mmOptionDetails);
 			previousVersion_lazy = () -> InstructedBalanceDetails3.mmOptionDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -200,6 +225,7 @@ public class InstructedBalanceDetails5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructedBalanceDetails5";
 				definition = "Provides information about total instructed balance.";
+				nextVersions_lazy = () -> Arrays.asList(InstructedBalanceDetails7.mmObject());
 				previousVersion_lazy = () -> InstructedBalanceDetails3.mmObject();
 			}
 		});

@@ -122,6 +122,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action instructed balance details at option level."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2
+ * CorporateActionInstructedBalanceOptionInstructionDetailsSD2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -158,6 +166,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmPlaceAndName
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -168,6 +185,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -208,6 +226,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Number identifying the available corporate action options."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmOptionNumber
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmOptionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOptionNumber = new MMMessageAssociationEnd() {
@@ -220,6 +247,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmOptionNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -253,7 +281,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique number assigned by the Depository.  Transaction identification will be either the DTC Instruction Reference Number for reorganisation instructions (VOI) or the DAM Reference Number for custody / reorganisation deposits. "
+	 * "Unique number assigned by the Depository. Transaction identification will be either the DTC Instruction Reference Number for reorganisation instructions (VOI) or the DAM Reference Number for custody / reorganisation deposits."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionIdentification
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -264,7 +301,8 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			xmlTag = "TxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
-			definition = "Unique number assigned by the Depository.  Transaction identification will be either the DTC Instruction Reference Number for reorganisation instructions (VOI) or the DAM Reference Number for custody / reorganisation deposits. ";
+			definition = "Unique number assigned by the Depository. Transaction identification will be either the DTC Instruction Reference Number for reorganisation instructions (VOI) or the DAM Reference Number for custody / reorganisation deposits.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15Text.mmObject();
@@ -298,7 +336,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number which further identifies DTC intsruction reference number.  Not applicable to reorganisation / custody deposits."
+	 * "Number which further identifies DTC intsruction reference number. Not applicable to reorganisation / custody deposits."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionSequenceNumber
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionSequenceNumber}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -309,7 +356,8 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			xmlTag = "TxSeqNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionSequenceNumber";
-			definition = "Number which further identifies DTC intsruction reference number.  Not applicable to reorganisation / custody deposits.";
+			definition = "Number which further identifies DTC intsruction reference number. Not applicable to reorganisation / custody deposits.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionSequenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -344,6 +392,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * definition} =
 	 * "Instruction date and time for reorganisation instructions or the deposit date for reorganisation / custody deposits."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionIdentificationDate
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionIdentificationDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationDate = new MMMessageAttribute() {
@@ -354,6 +411,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationDate";
 			definition = "Instruction date and time for reorganisation instructions or the deposit date for reorganisation / custody deposits.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionIdentificationDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -385,6 +443,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Contra CUSIP Identification of the option instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionContraCUSIP
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionContraCUSIP}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransactionContraCUSIP = new MMMessageAssociationEnd() {
@@ -395,6 +462,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionContraCUSIP";
 			definition = "Contra CUSIP Identification of the option instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionContraCUSIP);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -430,6 +498,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * definition} =
 	 * "Instructed quantity for reorganisation instructions or the deposit quantity for reorganisation / custody deposits."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionIdentificationQuantity
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionIdentificationQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentificationQuantity = new MMMessageAssociationEnd() {
@@ -440,6 +517,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationQuantity";
 			definition = "Instructed quantity for reorganisation instructions or the deposit quantity for reorganisation / custody deposits.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionIdentificationQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -472,7 +550,16 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * name} = "TransactionIdentificationOversubscriptionQuantity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Quantity relating only to the oversubscription.  "</li>
+	 * definition} = "Quantity relating only to the oversubscription."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionIdentificationOversubscriptionQuantity
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionIdentificationOversubscriptionQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransactionIdentificationOversubscriptionQuantity = new MMMessageAssociationEnd() {
@@ -482,7 +569,8 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			xmlTag = "TxIdOvrsbcptQty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationOversubscriptionQuantity";
-			definition = "Quantity relating only to the oversubscription.  ";
+			definition = "Quantity relating only to the oversubscription.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionIdentificationOversubscriptionQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -517,6 +605,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionIdentificationStatus
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionIdentificationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationStatus = new MMMessageAttribute() {
@@ -527,6 +624,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationStatus";
 			definition = "Status of the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionIdentificationStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DTCInstructionStatus2Code.mmObject();
@@ -559,6 +657,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time of the protect instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionIdentificationProtectDate
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionIdentificationProtectDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationProtectDate = new MMMessageAttribute() {
@@ -569,6 +676,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationProtectDate";
 			definition = "Date and time of the protect instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionIdentificationProtectDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -601,6 +709,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time of the cover protect."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionIdentificationCoverProtectDate
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionIdentificationCoverProtectDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTransactionIdentificationCoverProtectDate = new MMMessageAttribute() {
@@ -611,6 +728,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationCoverProtectDate";
 			definition = "Date and time of the cover protect.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionIdentificationCoverProtectDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -643,6 +761,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Conditional quantity on the instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionConditionalQuantity
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionConditionalQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransactionConditionalQuantity = new MMMessageAssociationEnd() {
@@ -653,6 +780,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionConditionalQuantity";
 			definition = "Conditional quantity on the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionConditionalQuantity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -685,6 +813,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Tender bid price of the instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmTransactionTenderBidPrice
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmTransactionTenderBidPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransactionTenderBidPrice = new MMMessageAssociationEnd() {
@@ -695,6 +832,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTenderBidPrice";
 			definition = "Tender bid price of the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmTransactionTenderBidPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -729,6 +867,15 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Customer identification entered by client upon instruction submission."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmCustomerReferenceIdentification
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmCustomerReferenceIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCustomerReferenceIdentification = new MMMessageAttribute() {
@@ -739,6 +886,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerReferenceIdentification";
 			definition = "Customer identification entered by client upon instruction submission.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmCustomerReferenceIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max15Text.mmObject();
@@ -766,6 +914,7 @@ public class CorporateActionInstructedBalanceOptionInstructionDetailsSD1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionInstructedBalanceOptionInstructionDetailsSD1";
 				definition = "Provides additional information regarding corporate action instructed balance details at option level.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

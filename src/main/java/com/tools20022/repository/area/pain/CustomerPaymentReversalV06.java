@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.PaymentsInitiationPreviousVersion;
+import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader56;
 import com.tools20022.repository.msg.OriginalGroupHeader3;
 import com.tools20022.repository.msg.OriginalPaymentInstruction16;
@@ -85,8 +85,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CstmrPmtRvsl"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
- * PaymentsInitiationPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
+ * PaymentsInitiationArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.007.001.06}</li>
@@ -400,7 +400,7 @@ public class CustomerPaymentReversalV06 {
 				messageSet_lazy = () -> Arrays.asList(PaymentsInitiationISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrPmtRvsl";
-				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
+				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV06.mmGroupHeader, com.tools20022.repository.area.pain.CustomerPaymentReversalV06.mmOriginalGroupInformation,
 						com.tools20022.repository.area.pain.CustomerPaymentReversalV06.mmOriginalPaymentInformationAndReversal, com.tools20022.repository.area.pain.CustomerPaymentReversalV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

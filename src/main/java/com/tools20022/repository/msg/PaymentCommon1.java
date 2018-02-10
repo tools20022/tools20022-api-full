@@ -220,7 +220,7 @@ public class PaymentCommon1 {
 	 * name} = "CommonStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of a transfer.\n"</li>
+	 * definition} = "Status of a transfer.\n."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -239,7 +239,7 @@ public class PaymentCommon1 {
 			xmlTag = "CmonSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonStatus";
-			definition = "Status of a transfer.\n";
+			definition = "Status of a transfer.\n.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentCommon2.mmCommonStatus);
 			minOccurs = 0;
 			isComposite = true;
@@ -395,7 +395,7 @@ public class PaymentCommon1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the payment instruction is a debit or a credit.\n"</li>
+	 * "Indicates whether the payment instruction is a debit or a credit.\n."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -414,7 +414,7 @@ public class PaymentCommon1 {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the payment instruction is a debit or a credit.\n";
+			definition = "Indicates whether the payment instruction is a debit or a credit.\n.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentCommon2.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;

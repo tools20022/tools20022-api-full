@@ -173,7 +173,7 @@ public class TradeData6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the unique system identification assigned to the trade  by the central matching system."
+	 * "Reference to the unique system identification assigned to the trade by the central matching system."
 	 * </li>
 	 * </ul>
 	 */
@@ -184,7 +184,7 @@ public class TradeData6 {
 			xmlTag = "MtchgSysUnqRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MatchingSystemUniqueReference";
-			definition = "Reference to the unique system identification assigned to the trade  by the central matching system.";
+			definition = "Reference to the unique system identification assigned to the trade by the central matching system.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

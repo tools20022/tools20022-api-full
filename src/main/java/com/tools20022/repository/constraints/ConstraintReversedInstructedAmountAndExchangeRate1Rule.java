@@ -195,7 +195,7 @@ public class ConstraintReversedInstructedAmountAndExchangeRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf ReversedInstructedAmount is present and the currency is different from the currency in ReversedInterbankSettlementAmount, then ExchangeRate must be present."
+	 * "ISO20022 Rule: \nIf ReversedInstructedAmount is present and the currency is different from the currency in ReversedInterbankSettlementAmount, then ExchangeRate must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -204,7 +204,7 @@ public class ConstraintReversedInstructedAmountAndExchangeRate1Rule {
 			validator = ConstraintReversedInstructedAmountAndExchangeRate1Rule::checkPaymentTransactionInformation17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversedInstructedAmountAndExchangeRate1Rule";
-			definition = "ISO20022 Rule:\nIf ReversedInstructedAmount is present and the currency is different from the currency in ReversedInterbankSettlementAmount, then ExchangeRate must be present.";
+			definition = "ISO20022 Rule: \nIf ReversedInstructedAmount is present and the currency is different from the currency in ReversedInterbankSettlementAmount, then ExchangeRate must be present.";
 			owner_lazy = () -> PaymentTransactionInformation17.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/ReversedInstructedAmount/@Currency</leftOperand><rightOperand>/ReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -230,7 +230,7 @@ public class ConstraintReversedInstructedAmountAndExchangeRate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf ReversedInstructedAmount is present and the currency is different from the currency in ReversedInterbankSettlementAmount, then ExchangeRate must be present."
+	 * "ISO20022 Rule: \nIf ReversedInstructedAmount is present and the currency is different from the currency in ReversedInterbankSettlementAmount, then ExchangeRate must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -239,7 +239,7 @@ public class ConstraintReversedInstructedAmountAndExchangeRate1Rule {
 			validator = ConstraintReversedInstructedAmountAndExchangeRate1Rule::checkPaymentTransactionInformation24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversedInstructedAmountAndExchangeRate1Rule";
-			definition = "ISO20022 Rule:\nIf ReversedInstructedAmount is present and the currency is different from the currency in ReversedInterbankSettlementAmount, then ExchangeRate must be present.";
+			definition = "ISO20022 Rule: \nIf ReversedInstructedAmount is present and the currency is different from the currency in ReversedInterbankSettlementAmount, then ExchangeRate must be present.";
 			owner_lazy = () -> PaymentTransactionInformation24.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/ReversedInstructedAmount/@Currency</leftOperand><rightOperand>/ReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -371,6 +371,15 @@ public class ConstraintReversedInstructedAmountAndExchangeRate1Rule {
 	 * definition} =
 	 * "If ReversedInstructedAmount is present and the currency is different from the currency in InterbankSettlementAmount, then ExchangeRate must be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate1Rule#forPaymentTransaction88
+	 * ConstraintReversedInstructedAmountAndExchangeRate1Rule.
+	 * forPaymentTransaction88}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -385,8 +394,51 @@ public class ConstraintReversedInstructedAmountAndExchangeRate1Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversedInstructedAmountAndExchangeRate1Rule";
 			definition = "If ReversedInstructedAmount is present and the currency is different from the currency in InterbankSettlementAmount, then ExchangeRate must be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate1Rule.forPaymentTransaction88);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate1Rule.forPaymentTransaction60;
 			owner_lazy = () -> PaymentTransaction81.mmObject();
+			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/ReversedInstructedAmount/@Currency</leftOperand><rightOperand>/ReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88
+	 * PaymentTransaction88}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"&gt;&lt;ComplexRule xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ExchangeRate&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/ReversedInstructedAmount&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"DifferentFromNode\"&gt;&lt;leftOperand&gt;/ReversedInstructedAmount/@Currency&lt;/leftOperand&gt;&lt;rightOperand&gt;/ReversedInterbankSettlementAmount/@Currency&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ReversedInstructedAmountAndExchangeRate1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ReversedInstructedAmount is present and the currency is different from the currency in InterbankSettlementAmount, then ExchangeRate must be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate1Rule#forPaymentTransaction81
+	 * ConstraintReversedInstructedAmountAndExchangeRate1Rule.
+	 * forPaymentTransaction81}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentTransaction88> forPaymentTransaction88 = new MMConstraint<PaymentTransaction88>() {
+		{
+			validator = ConstraintReversedInstructedAmountAndExchangeRate1Rule::checkPaymentTransaction88;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ReversedInstructedAmountAndExchangeRate1Rule";
+			definition = "If ReversedInstructedAmount is present and the currency is different from the currency in InterbankSettlementAmount, then ExchangeRate must be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintReversedInstructedAmountAndExchangeRate1Rule.forPaymentTransaction81;
+			owner_lazy = () -> PaymentTransaction88.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ExchangeRate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ReversedInstructedAmount</leftOperand></BooleanRule><BooleanRule xsi:type=\"DifferentFromNode\"><leftOperand>/ReversedInstructedAmount/@Currency</leftOperand><rightOperand>/ReversedInterbankSettlementAmount/@Currency</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
 	};
@@ -469,6 +521,15 @@ public class ConstraintReversedInstructedAmountAndExchangeRate1Rule {
 	 * present.
 	 */
 	public static void checkPaymentTransaction81(PaymentTransaction81 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ReversedInstructedAmount is present and the currency is different from
+	 * the currency in InterbankSettlementAmount, then ExchangeRate must be
+	 * present.
+	 */
+	public static void checkPaymentTransaction88(PaymentTransaction88 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -714,6 +714,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * Balance13.mmQuantity}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Balance12#mmQuantity
  * Balance12.mmQuantity}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Balance14#mmBalanceForAccount
+ * Balance14.mmBalanceForAccount}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmAggregateBalance
+ * AggregateBalanceInformation34.mmAggregateBalance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmNotAvailableBalance
+ * AggregateBalanceInformation34.mmNotAvailableBalance}</li>
  * <li>
  * {@linkplain com.tools20022.repository.msg.SafekeepingAccount7#mmBalanceDetails
  * SafekeepingAccount7.mmBalanceDetails}</li>
@@ -1271,6 +1279,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * SecuritiesBalanceType8Choice}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Balance13 Balance13}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Balance12 Balance12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Balance14 Balance14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34
+ * AggregateBalanceInformation34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionType2
+ * IntraPositionType2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AggregateHoldingBalance3
  * AggregateHoldingBalance3}</li>
  * </ul>
@@ -1375,6 +1388,24 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OtherAmounts38#mmNetGainLoss
 	 * OtherAmounts38.mmNetGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts41#mmNetGainLoss
+	 * OtherAmounts41.mmNetGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts39#mmNetGainLoss
+	 * OtherAmounts39.mmNetGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts40#mmNetGainLoss
+	 * OtherAmounts40.mmNetGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts42#mmNetGainLoss
+	 * OtherAmounts42.mmNetGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts43#mmNetGainLoss
+	 * OtherAmounts43.mmNetGainLoss}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OtherAmounts44#mmNetGainLoss
+	 * OtherAmounts44.mmNetGainLoss}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1403,7 +1434,8 @@ public class SecuritiesBalance extends Balance {
 			derivation_lazy = () -> Arrays.asList(OtherAmounts12.mmNetGainLoss, OtherAmounts14.mmNetGainLoss, OtherAmounts20.mmNetGainLoss, OtherAmounts4.mmNetGainLoss, OtherAmounts5.mmNetGainLoss, OtherAmounts17.mmNetGainLoss,
 					OtherAmounts23.mmNetGainLoss, OtherAmounts3.mmNetGainLoss, OtherAmounts7.mmNetGainLoss, OtherAmounts9.mmNetGainLoss, OtherAmounts10.mmNetGainLoss, OtherAmounts18.mmNetGainLoss, OtherAmounts24.mmNetGainLoss,
 					OtherAmounts13.mmNetGainLoss, OtherAmounts1.mmNetGainLoss, OtherAmounts16.mmNetGainLoss, OtherAmounts28.mmNetGainLoss, OtherAmounts30.mmNetGainLoss, OtherAmounts31.mmNetGainLoss, OtherAmounts35.mmNetGainLoss,
-					OtherAmounts34.mmNetGainLoss, OtherAmounts38.mmNetGainLoss);
+					OtherAmounts34.mmNetGainLoss, OtherAmounts38.mmNetGainLoss, OtherAmounts41.mmNetGainLoss, OtherAmounts39.mmNetGainLoss, OtherAmounts40.mmNetGainLoss, OtherAmounts42.mmNetGainLoss, OtherAmounts43.mmNetGainLoss,
+					OtherAmounts44.mmNetGainLoss);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::ANTO"));
@@ -1462,6 +1494,12 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Balance3#mmSafekeepingAccount
 	 * Balance3.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Balance14#mmSafekeepingAccount
+	 * Balance14.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation4#mmSafekeepingAccount
+	 * IntraPositionCancellation4.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1485,7 +1523,7 @@ public class SecuritiesBalance extends Balance {
 	public static final MMBusinessAssociationEnd mmSecuritiesAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountingStatementOfHoldings1.mmAccountDetails, AccountingStatementOfHoldings2.mmAccountDetails, CustodyStatementOfHoldings1.mmAccountDetails, SecurityPosition3.mmAccount,
-					IntraPositionCancellation2.mmSafekeepingAccount, Balance3.mmSafekeepingAccount);
+					IntraPositionCancellation2.mmSafekeepingAccount, Balance3.mmSafekeepingAccount, Balance14.mmSafekeepingAccount, IntraPositionCancellation4.mmSafekeepingAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2762,6 +2800,28 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30#mmAdditionalBalanceBreakdown
 	 * AggregateBalancePerSafekeepingPlace30.mmAdditionalBalanceBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmBalanceBreakdown
+	 * AggregateBalanceInformation34.mmBalanceBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmAdditionalBalanceBreakdown
+	 * AggregateBalanceInformation34.mmAdditionalBalanceBreakdown}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmBalanceAtSafekeepingPlace
+	 * AggregateBalanceInformation34.mmBalanceAtSafekeepingPlace}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionType2#mmBalanceFrom
+	 * IntraPositionType2.mmBalanceFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionType2#mmBalanceTo
+	 * IntraPositionType2.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPosition5#mmSecuritiesSubBalanceIdentification
+	 * IntraPosition5.mmSecuritiesSubBalanceIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PendingBalance5#mmBalance
+	 * PendingBalance5.mmBalance}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.PendingBalance6#mmBalance
+	 * PendingBalance6.mmBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2845,7 +2905,9 @@ public class SecuritiesBalance extends Balance {
 					AggregateBalanceInformation33.mmBalanceBreakdown, AggregateBalanceInformation33.mmAdditionalBalanceBreakdown, AggregateBalanceInformation33.mmBalanceAtSafekeepingPlace,
 					SubBalanceQuantity7Choice.mmQuantityAndAvailability, AggregateBalancePerSafekeepingPlace31.mmBalanceBreakdown, AggregateBalancePerSafekeepingPlace31.mmAdditionalBalanceBreakdown,
 					SubBalanceInformation17.mmAdditionalBalanceBreakdownDetails, SubBalanceInformation16.mmAdditionalBalanceBreakdownDetails, AggregateBalancePerSafekeepingPlace30.mmBalanceBreakdown,
-					AggregateBalancePerSafekeepingPlace30.mmAdditionalBalanceBreakdown);
+					AggregateBalancePerSafekeepingPlace30.mmAdditionalBalanceBreakdown, AggregateBalanceInformation34.mmBalanceBreakdown, AggregateBalanceInformation34.mmAdditionalBalanceBreakdown,
+					AggregateBalanceInformation34.mmBalanceAtSafekeepingPlace, IntraPositionType2.mmBalanceFrom, IntraPositionType2.mmBalanceTo, IntraPosition5.mmSecuritiesSubBalanceIdentification, PendingBalance5.mmBalance,
+					PendingBalance6.mmBalance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3432,6 +3494,30 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails14#mmBalanceTo
 	 * IntraPositionMovementDetails14.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails46#mmBalanceFrom
+	 * IntraPositionDetails46.mmBalanceFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails46#mmBalanceTo
+	 * IntraPositionDetails46.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails45#mmBalanceFrom
+	 * IntraPositionDetails45.mmBalanceFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmBalanceTo
+	 * IntraPositionMovementDetails15.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails47#mmBalanceFrom
+	 * IntraPositionDetails47.mmBalanceFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails47#mmBalanceTo
+	 * IntraPositionDetails47.mmBalanceTo}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails48#mmBalanceFrom
+	 * IntraPositionDetails48.mmBalanceFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails16#mmBalanceTo
+	 * IntraPositionMovementDetails16.mmBalanceTo}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3491,7 +3577,8 @@ public class SecuritiesBalance extends Balance {
 					IntraPositionMovementDetails12.mmBalanceTo, SecuritiesBalanceType8Choice.mmCode, SecuritiesBalanceType8Choice.mmProprietary, IntraPositionDetails37.mmBalanceFrom, IntraPositionDetails41.mmBalanceFrom,
 					IntraPositionDetails41.mmBalanceTo, IntraPositionDetails39.mmBalanceFrom, IntraPositionDetails39.mmBalanceTo, IntraPositionDetails40.mmBalanceFrom, IntraPositionMovementDetails13.mmBalanceTo,
 					IntraPositionDetails43.mmBalanceFrom, IntraPositionDetails43.mmBalanceTo, IntraPositionDetails42.mmBalanceFrom, IntraPositionDetails42.mmBalanceTo, IntraPositionDetails44.mmBalanceFrom,
-					IntraPositionMovementDetails14.mmBalanceTo);
+					IntraPositionMovementDetails14.mmBalanceTo, IntraPositionDetails46.mmBalanceFrom, IntraPositionDetails46.mmBalanceTo, IntraPositionDetails45.mmBalanceFrom, IntraPositionMovementDetails15.mmBalanceTo,
+					IntraPositionDetails47.mmBalanceFrom, IntraPositionDetails47.mmBalanceTo, IntraPositionDetails48.mmBalanceFrom, IntraPositionMovementDetails16.mmBalanceTo);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3811,6 +3898,9 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation33#mmFinancialInstrumentAttributes
 	 * AggregateBalanceInformation33.mmFinancialInstrumentAttributes}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmFinancialInstrumentAttributes
+	 * AggregateBalanceInformation34.mmFinancialInstrumentAttributes}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3839,7 +3929,7 @@ public class SecuritiesBalance extends Balance {
 					AggregateBalanceInformation24.mmFinancialInstrumentAttributes, AggregateBalanceInformation20.mmFinancialInstrumentAttributes, AggregateBalanceInformation26.mmFinancialInstrumentAttributes,
 					AggregateBalanceInformation25.mmFinancialInstrumentAttributes, AggregateBalanceInformation28.mmFinancialInstrumentAttributes, AggregateBalanceInformation27.mmFinancialInstrumentAttributes,
 					AggregateBalanceInformation30.mmFinancialInstrumentAttributes, AggregateBalanceInformation31.mmFinancialInstrumentAttributes, AggregateBalanceInformation32.mmFinancialInstrumentAttributes,
-					AggregateBalanceInformation33.mmFinancialInstrumentAttributes);
+					AggregateBalanceInformation33.mmFinancialInstrumentAttributes, AggregateBalanceInformation34.mmFinancialInstrumentAttributes);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4061,6 +4151,9 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30#mmForeignExchangeDetails
 	 * AggregateBalancePerSafekeepingPlace30.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmForeignExchangeDetails
+	 * AggregateBalanceInformation34.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4103,7 +4196,8 @@ public class SecuritiesBalance extends Balance {
 					AggregateBalanceInformation28.mmForeignExchangeDetails, AggregateBalanceInformation27.mmForeignExchangeDetails, AggregateBalancePerSafekeepingPlace26.mmForeignExchangeDetails,
 					AggregateBalancePerSafekeepingPlace27.mmForeignExchangeDetails, AggregateBalanceInformation30.mmForeignExchangeDetails, AggregateBalanceInformation31.mmForeignExchangeDetails,
 					AggregateBalancePerSafekeepingPlace28.mmForeignExchangeDetails, AggregateBalancePerSafekeepingPlace29.mmForeignExchangeDetails, AggregateBalanceInformation32.mmForeignExchangeDetails,
-					AggregateBalanceInformation33.mmForeignExchangeDetails, AggregateBalancePerSafekeepingPlace31.mmForeignExchangeDetails, AggregateBalancePerSafekeepingPlace30.mmForeignExchangeDetails);
+					AggregateBalanceInformation33.mmForeignExchangeDetails, AggregateBalancePerSafekeepingPlace31.mmForeignExchangeDetails, AggregateBalancePerSafekeepingPlace30.mmForeignExchangeDetails,
+					AggregateBalanceInformation34.mmForeignExchangeDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4290,6 +4384,9 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace31#mmAvailableBalance
 	 * AggregateBalancePerSafekeepingPlace31.mmAvailableBalance}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmAvailableBalance
+	 * AggregateBalanceInformation34.mmAvailableBalance}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4320,7 +4417,7 @@ public class SecuritiesBalance extends Balance {
 					AggregateBalanceInformation24.mmAvailableBalance, AggregateBalancePerSafekeepingPlace19.mmAvailableBalance, AggregateBalanceInformation20.mmAvailableBalance, AggregateBalancePerSafekeepingPlace5.mmAvailableQuantity,
 					AggregateBalanceInformation7.mmAvailableQuantity, AggregateBalanceInformation25.mmAvailableBalance, AggregateBalancePerSafekeepingPlace24.mmAvailableBalance, AggregateBalanceInformation28.mmAvailableBalance,
 					AggregateBalancePerSafekeepingPlace27.mmAvailableBalance, AggregateBalanceInformation30.mmAvailableBalance, AggregateBalancePerSafekeepingPlace28.mmAvailableBalance, AggregateBalanceInformation33.mmAvailableBalance,
-					AggregateBalancePerSafekeepingPlace31.mmAvailableBalance);
+					AggregateBalancePerSafekeepingPlace31.mmAvailableBalance, AggregateBalanceInformation34.mmAvailableBalance);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4511,7 +4608,7 @@ public class SecuritiesBalance extends Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Postings used to calculate a balance. It is derived from the association between Balance and Entry"
+	 * "Postings used to calculate a balance. It is derived from the association between Balance and Entry."
 	 * </li>
 	 * </ul>
 	 */
@@ -4521,7 +4618,7 @@ public class SecuritiesBalance extends Balance {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesBalance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SecuritiesEntry";
-			definition = "Postings used to calculate a balance. It is derived from the association between Balance and Entry";
+			definition = "Postings used to calculate a balance. It is derived from the association between Balance and Entry.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.SecuritiesEntry.mmSecuritiesBalance;
 			aggregation = MMAggregation.NONE;
@@ -4818,11 +4915,12 @@ public class SecuritiesBalance extends Balance {
 						TotalEligibleBalanceFormat9.mmPartWayPeriodUnits, BalanceFormat10Choice.mmBalance, BalanceFormat10Choice.mmEligibleBalance, BalanceFormat10Choice.mmNotEligibleBalance, BalanceFormat10Choice.mmFullPeriodUnits,
 						BalanceFormat10Choice.mmPartWayPeriodUnits, AggregateBalanceInformation32.mmAggregateBalance, AggregateBalanceInformation33.mmAggregateBalance, AggregateBalanceInformation33.mmNotAvailableBalance,
 						Balance11.mmQuantity, AggregateBalancePerSafekeepingPlace31.mmAggregateBalance, AggregateBalancePerSafekeepingPlace31.mmNotAvailableBalance, ClosingBalance4.mmClosingBalance, Balance10.mmQuantity,
-						AggregateBalancePerSafekeepingPlace30.mmAggregateBalance, Balance13.mmQuantity, Balance12.mmQuantity, SafekeepingAccount7.mmBalanceDetails, SafekeepingAccount7.mmAccountSubLevel1Difference,
-						AccountSubLevel15.mmBalanceDetails, AccountSubLevel15.mmAccountSubLevel6Difference, AccountSubLevel16.mmBalanceDetails, AccountSubLevel16.mmAccountSubLevel7Difference, AggregateHoldingBalance3.mmBalanceForAccount,
-						AccountSubLevel18.mmBalanceDetails, AccountSubLevel18.mmAccountSubLevel9Difference, AccountSubLevel19.mmBalanceDetails, AccountSubLevel11.mmBalanceDetails, AccountSubLevel11.mmAccountSubLevel2Difference,
-						AccountSubLevel12.mmBalanceDetails, AccountSubLevel12.mmAccountSubLevel3Difference, AccountSubLevel17.mmBalanceDetails, AccountSubLevel17.mmAccountSubLevel8Difference, AccountSubLevel13.mmBalanceDetails,
-						AccountSubLevel13.mmAccountSubLevel4Difference, AccountSubLevel14.mmBalanceDetails, AccountSubLevel14.mmAccountSubLevel5Difference);
+						AggregateBalancePerSafekeepingPlace30.mmAggregateBalance, Balance13.mmQuantity, Balance12.mmQuantity, Balance14.mmBalanceForAccount, AggregateBalanceInformation34.mmAggregateBalance,
+						AggregateBalanceInformation34.mmNotAvailableBalance, SafekeepingAccount7.mmBalanceDetails, SafekeepingAccount7.mmAccountSubLevel1Difference, AccountSubLevel15.mmBalanceDetails,
+						AccountSubLevel15.mmAccountSubLevel6Difference, AccountSubLevel16.mmBalanceDetails, AccountSubLevel16.mmAccountSubLevel7Difference, AggregateHoldingBalance3.mmBalanceForAccount, AccountSubLevel18.mmBalanceDetails,
+						AccountSubLevel18.mmAccountSubLevel9Difference, AccountSubLevel19.mmBalanceDetails, AccountSubLevel11.mmBalanceDetails, AccountSubLevel11.mmAccountSubLevel2Difference, AccountSubLevel12.mmBalanceDetails,
+						AccountSubLevel12.mmAccountSubLevel3Difference, AccountSubLevel17.mmBalanceDetails, AccountSubLevel17.mmAccountSubLevel8Difference, AccountSubLevel13.mmBalanceDetails, AccountSubLevel13.mmAccountSubLevel4Difference,
+						AccountSubLevel14.mmBalanceDetails, AccountSubLevel14.mmAccountSubLevel5Difference);
 				superType_lazy = () -> Balance.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesBalance.mmNetGainLoss, com.tools20022.repository.entity.SecuritiesBalance.mmSecuritiesAccount,
 						com.tools20022.repository.entity.SecuritiesBalance.mmEligibleBalanceRelatedEntitlement, com.tools20022.repository.entity.SecuritiesBalance.mmShortLong,
@@ -4879,7 +4977,7 @@ public class SecuritiesBalance extends Balance {
 						BalanceQuantity10Choice.mmObject(), OpeningClosing4Choice.mmObject(), AggregateBalancePerSafekeepingPlace31.mmObject(), BalanceQuantity12Choice.mmObject(), AdditionalBalanceInformation17.mmObject(),
 						SubBalanceInformation17.mmObject(), ClosingBalance5Choice.mmObject(), SecuritiesBalanceType11Choice.mmObject(), OpeningBalance5Choice.mmObject(), SubBalanceInformation16.mmObject(),
 						SubBalanceType13Choice.mmObject(), ClosingBalance4.mmObject(), OpeningBalance4.mmObject(), Balance10.mmObject(), AggregateBalancePerSafekeepingPlace30.mmObject(), SecuritiesBalanceType8Choice.mmObject(),
-						Balance13.mmObject(), Balance12.mmObject(), AggregateHoldingBalance3.mmObject());
+						Balance13.mmObject(), Balance12.mmObject(), Balance14.mmObject(), AggregateBalanceInformation34.mmObject(), IntraPositionType2.mmObject(), AggregateHoldingBalance3.mmObject());
 			}
 
 			@Override

@@ -187,7 +187,7 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction status at DTC  (The Depository Trust Corporation)."</li>
+	 * "Instruction status at DTC (The Depository Trust Corporation)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -198,7 +198,7 @@ public class CorporateActionInstructionExtension3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Status"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			definition = "Instruction status at DTC  (The Depository Trust Corporation).";
+			definition = "Instruction status at DTC (The Depository Trust Corporation).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DTCInstructionStatus1Code.mmObject();
@@ -422,7 +422,7 @@ public class CorporateActionInstructionExtension3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Account Transaction Processor Relative Block Number. DTCC (The Depository Trust and Clearing Corporation). reference identification to the share movement on  an instruction."
+	 * "Account Transaction Processor Relative Block Number. DTCC (The Depository Trust and Clearing Corporation). reference identification to the share movement on an instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -434,7 +434,7 @@ public class CorporateActionInstructionExtension3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "ATP RBN Number"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountTransactionProcessorRelativeBlockNumber";
-			definition = "Account Transaction Processor Relative Block Number. DTCC (The Depository Trust and Clearing Corporation). reference identification to the share movement on  an instruction.";
+			definition = "Account Transaction Processor Relative Block Number. DTCC (The Depository Trust and Clearing Corporation). reference identification to the share movement on an instruction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -809,7 +809,7 @@ public class CorporateActionInstructionExtension3 {
 	 * name} = "PayingAgent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Paying agent for this corporate action event. "</li>
+	 * definition} = "Paying agent for this corporate action event."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPayingAgent = new MMMessageAttribute() {
@@ -820,7 +820,7 @@ public class CorporateActionInstructionExtension3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Paying Agent"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PayingAgent";
-			definition = "Paying agent for this corporate action event. ";
+			definition = "Paying agent for this corporate action event.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8Text.mmObject();

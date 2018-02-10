@@ -35,6 +35,43 @@ public class ConstraintPhysicalInstructionDetailsUsageRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV06
+	 * SecuritiesSettlementTransactionModificationRequestV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhysicalInstructionDetailsUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "PhysicalInstructionDetails can only be used with free of payment instructions."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#forSecuritiesSettlementTransactionModificationRequestV05
+	 * ConstraintPhysicalInstructionDetailsUsageRule.
+	 * forSecuritiesSettlementTransactionModificationRequestV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV06> forSecuritiesSettlementTransactionModificationRequestV06 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV06>() {
+		{
+			validator = ConstraintPhysicalInstructionDetailsUsageRule::checkSecuritiesSettlementTransactionModificationRequestV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PhysicalInstructionDetailsUsageRule";
+			definition = "PhysicalInstructionDetails can only be used with free of payment instructions.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV05;
+			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV05
 	 * SecuritiesSettlementTransactionModificationRequestV05}</li>
 	 * <li>
@@ -47,6 +84,15 @@ public class ConstraintPhysicalInstructionDetailsUsageRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "PhysicalInstructionDetails can only be used with free of payment instructions."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#forSecuritiesSettlementTransactionModificationRequestV06
+	 * ConstraintPhysicalInstructionDetailsUsageRule.
+	 * forSecuritiesSettlementTransactionModificationRequestV06}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -62,6 +108,7 @@ public class ConstraintPhysicalInstructionDetailsUsageRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalInstructionDetailsUsageRule";
 			definition = "PhysicalInstructionDetails can only be used with free of payment instructions.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV04;
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV05.mmObject();
 		}
@@ -94,83 +141,6 @@ public class ConstraintPhysicalInstructionDetailsUsageRule {
 			name = "PhysicalInstructionDetailsUsageRule";
 			definition = "PhysicalInstructionDetails can only be used with free of payment instructions.";
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequest002V05.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04
-	 * SecuritiesSettlementTransactionModificationRequestV04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PhysicalInstructionDetailsUsageRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "PhysicalInstructionDetails can only be used with free of payment instructions."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#forSecuritiesSettlementTransactionModificationRequestV05
-	 * ConstraintPhysicalInstructionDetailsUsageRule.
-	 * forSecuritiesSettlementTransactionModificationRequestV05}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#forSecuritiesSettlementTransactionModificationRequestV03
-	 * ConstraintPhysicalInstructionDetailsUsageRule.
-	 * forSecuritiesSettlementTransactionModificationRequestV03}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV04> forSecuritiesSettlementTransactionModificationRequestV04 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV04>() {
-		{
-			validator = ConstraintPhysicalInstructionDetailsUsageRule::checkSecuritiesSettlementTransactionModificationRequestV04;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PhysicalInstructionDetailsUsageRule";
-			definition = "PhysicalInstructionDetails can only be used with free of payment instructions.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV05);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV03;
-			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV04.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04
-	 * SecuritiesSettlementTransactionModificationRequest002V04}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "PhysicalInstructionDetailsUsageRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "PhysicalInstructionDetails can only be used with free of payment instructions."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequest002V04> forSecuritiesSettlementTransactionModificationRequest002V04 = new MMConstraint<SecuritiesSettlementTransactionModificationRequest002V04>() {
-		{
-			validator = ConstraintPhysicalInstructionDetailsUsageRule::checkSecuritiesSettlementTransactionModificationRequest002V04;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "PhysicalInstructionDetailsUsageRule";
-			definition = "PhysicalInstructionDetails can only be used with free of payment instructions.";
-			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequest002V04.mmObject();
 		}
 	};
 	/**
@@ -290,6 +260,91 @@ public class ConstraintPhysicalInstructionDetailsUsageRule {
 			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV03.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequestV04
+	 * SecuritiesSettlementTransactionModificationRequestV04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhysicalInstructionDetailsUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "PhysicalInstructionDetails can only be used with free of payment instructions."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#forSecuritiesSettlementTransactionModificationRequestV05
+	 * ConstraintPhysicalInstructionDetailsUsageRule.
+	 * forSecuritiesSettlementTransactionModificationRequestV05}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule#forSecuritiesSettlementTransactionModificationRequestV03
+	 * ConstraintPhysicalInstructionDetailsUsageRule.
+	 * forSecuritiesSettlementTransactionModificationRequestV03}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequestV04> forSecuritiesSettlementTransactionModificationRequestV04 = new MMConstraint<SecuritiesSettlementTransactionModificationRequestV04>() {
+		{
+			validator = ConstraintPhysicalInstructionDetailsUsageRule::checkSecuritiesSettlementTransactionModificationRequestV04;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PhysicalInstructionDetailsUsageRule";
+			definition = "PhysicalInstructionDetails can only be used with free of payment instructions.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV05);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPhysicalInstructionDetailsUsageRule.forSecuritiesSettlementTransactionModificationRequestV03;
+			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequestV04.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionModificationRequest002V04
+	 * SecuritiesSettlementTransactionModificationRequest002V04}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PhysicalInstructionDetailsUsageRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "PhysicalInstructionDetails can only be used with free of payment instructions."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SecuritiesSettlementTransactionModificationRequest002V04> forSecuritiesSettlementTransactionModificationRequest002V04 = new MMConstraint<SecuritiesSettlementTransactionModificationRequest002V04>() {
+		{
+			validator = ConstraintPhysicalInstructionDetailsUsageRule::checkSecuritiesSettlementTransactionModificationRequest002V04;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PhysicalInstructionDetailsUsageRule";
+			definition = "PhysicalInstructionDetails can only be used with free of payment instructions.";
+			owner_lazy = () -> SecuritiesSettlementTransactionModificationRequest002V04.mmObject();
+		}
+	};
+
+	/**
+	 * PhysicalInstructionDetails can only be used with free of payment
+	 * instructions.
+	 */
+	public static void checkSecuritiesSettlementTransactionModificationRequestV06(SecuritiesSettlementTransactionModificationRequestV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * PhysicalInstructionDetails can only be used with free of payment
@@ -304,22 +359,6 @@ public class ConstraintPhysicalInstructionDetailsUsageRule {
 	 * instructions.
 	 */
 	public static void checkSecuritiesSettlementTransactionModificationRequest002V05(SecuritiesSettlementTransactionModificationRequest002V05 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * PhysicalInstructionDetails can only be used with free of payment
-	 * instructions.
-	 */
-	public static void checkSecuritiesSettlementTransactionModificationRequestV04(SecuritiesSettlementTransactionModificationRequestV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * PhysicalInstructionDetails can only be used with free of payment
-	 * instructions.
-	 */
-	public static void checkSecuritiesSettlementTransactionModificationRequest002V04(SecuritiesSettlementTransactionModificationRequest002V04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -344,6 +383,22 @@ public class ConstraintPhysicalInstructionDetailsUsageRule {
 	 * instructions.
 	 */
 	public static void checkSecuritiesSettlementTransactionModificationRequestV03(SecuritiesSettlementTransactionModificationRequestV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * PhysicalInstructionDetails can only be used with free of payment
+	 * instructions.
+	 */
+	public static void checkSecuritiesSettlementTransactionModificationRequestV04(SecuritiesSettlementTransactionModificationRequestV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * PhysicalInstructionDetails can only be used with free of payment
+	 * instructions.
+	 */
+	public static void checkSecuritiesSettlementTransactionModificationRequest002V04(SecuritiesSettlementTransactionModificationRequest002V04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraBalancePosting1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides the transactions in the report."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraBalancePosting3
+ * IntraBalancePosting3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -102,6 +109,14 @@ public class IntraBalancePosting1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance from which the amount of money is moved."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePosting3#mmBalanceFrom
+	 * IntraBalancePosting3.mmBalanceFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalanceFrom = new MMMessageAssociationEnd() {
@@ -113,6 +128,7 @@ public class IntraBalancePosting1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceFrom";
 			definition = "Balance from which the amount of money is moved.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalancePosting3.mmBalanceFrom);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -145,6 +161,14 @@ public class IntraBalancePosting1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the individual transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePosting3#mmMovement
+	 * IntraBalancePosting3.mmMovement}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMovement = new MMMessageAssociationEnd() {
@@ -155,6 +179,7 @@ public class IntraBalancePosting1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Movement";
 			definition = "Identifies the individual transaction.";
+			nextVersions_lazy = () -> Arrays.asList(IntraBalancePosting3.mmMovement);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.IntraBalancePosting2.mmObject();
@@ -170,6 +195,7 @@ public class IntraBalancePosting1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "IntraBalancePosting1";
 				definition = "Provides the transactions in the report.";
+				nextVersions_lazy = () -> Arrays.asList(IntraBalancePosting3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

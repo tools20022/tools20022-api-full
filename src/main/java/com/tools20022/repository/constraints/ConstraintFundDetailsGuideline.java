@@ -47,7 +47,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			owner_lazy = () -> InvestmentAccount17.mmObject();
 		}
 	};
@@ -77,7 +77,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * </ul>
 	 */
@@ -86,7 +86,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			owner_lazy = () -> InvestmentAccount27.mmObject();
 		}
 	};
@@ -107,7 +107,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -124,7 +124,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount38);
 			owner_lazy = () -> InvestmentAccount35.mmObject();
 		}
@@ -146,7 +146,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * </ul>
 	 */
@@ -155,7 +155,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			owner_lazy = () -> InvestmentAccount18.mmObject();
 		}
 	};
@@ -176,7 +176,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * </ul>
 	 */
@@ -185,7 +185,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			owner_lazy = () -> InvestmentAccount28.mmObject();
 		}
 	};
@@ -206,7 +206,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -223,7 +223,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount39);
 			owner_lazy = () -> InvestmentAccount36.mmObject();
 		}
@@ -245,7 +245,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * </ul>
 	 */
@@ -254,7 +254,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			owner_lazy = () -> InvestmentAccount16.mmObject();
 		}
 	};
@@ -275,7 +275,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * </ul>
 	 */
@@ -284,7 +284,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			owner_lazy = () -> InvestmentAccount26.mmObject();
 		}
 	};
@@ -305,7 +305,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -322,7 +322,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount37);
 			owner_lazy = () -> InvestmentAccount34.mmObject();
 		}
@@ -344,7 +344,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -366,7 +366,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount46);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount35;
 			owner_lazy = () -> InvestmentAccount38.mmObject();
@@ -389,7 +389,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -411,7 +411,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount49);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount34;
 			owner_lazy = () -> InvestmentAccount37.mmObject();
@@ -434,7 +434,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -456,7 +456,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount47);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount36;
 			owner_lazy = () -> InvestmentAccount39.mmObject();
@@ -479,7 +479,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -501,7 +501,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount50);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount38;
 			owner_lazy = () -> InvestmentAccount46.mmObject();
@@ -524,7 +524,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -546,7 +546,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount51);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount39;
 			owner_lazy = () -> InvestmentAccount47.mmObject();
@@ -569,7 +569,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -591,7 +591,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount49;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsGuideline.forInvestmentAccount61);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount37;
 			owner_lazy = () -> InvestmentAccount49.mmObject();
@@ -614,7 +614,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -636,7 +636,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsGuideline.forInvestmentAccount63);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount47;
 			owner_lazy = () -> InvestmentAccount51.mmObject();
@@ -659,7 +659,7 @@ public class ConstraintFundDetailsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
+	 * "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -681,7 +681,7 @@ public class ConstraintFundDetailsGuideline {
 			validator = ConstraintFundDetailsGuideline::checkInvestmentAccount50;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FundDetailsGuideline";
-			definition = "FundDetails may be present if a single investment fund is associated to the  investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
+			definition = "FundDetails may be present if a single investment fund is associated to the investment account. If several investment funds are associated to the investment account, the FundFamilyName only should be specified.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentDetailsGuideline.forInvestmentAccount62);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintFundDetailsGuideline.forInvestmentAccount46;
 			owner_lazy = () -> InvestmentAccount50.mmObject();

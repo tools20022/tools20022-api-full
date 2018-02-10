@@ -163,7 +163,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the securities account to be credited.\r\n会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。"
+	 * "Specifies the securities account to be credited.\r\n会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。."
 	 * </li>
 	 * </ul>
 	 */
@@ -174,7 +174,7 @@ public class UpdatedAdditionalInformation6SD3 {
 			xmlTag = "SctiesCdtAcctId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesCreditAccountIdentification";
-			definition = "Specifies the securities account to be credited.\r\n会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。";
+			definition = "Specifies the securities account to be credited.\r\n会社法制の見直し要綱の、22ページ第３－１－①をご参照ください。.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max50Text.mmObject();
@@ -253,7 +253,7 @@ public class UpdatedAdditionalInformation6SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Local code of Offeror's share when the corporate action event type code is TEND.\r\n買付者 銘柄コード"
+	 * "Local code of Offeror's share when the corporate action event type code is TEND.\r\n買付者 銘柄コード."
 	 * </li>
 	 * </ul>
 	 */
@@ -264,7 +264,7 @@ public class UpdatedAdditionalInformation6SD3 {
 			xmlTag = "OfferrShrLclCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfferorShareLocalCode";
-			definition = "Local code of Offeror's share when the corporate action event type code is TEND.\r\n買付者 銘柄コード";
+			definition = "Local code of Offeror's share when the corporate action event type code is TEND.\r\n買付者 銘柄コード.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5AlphaNumericText.mmObject();

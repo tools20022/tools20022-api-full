@@ -231,7 +231,7 @@ public class Expiry {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Condition that indicates when the undertaking will cease to be available at the place for presentation. "
+	 * "Condition that indicates when the undertaking will cease to be available at the place for presentation."
 	 * </li>
 	 * </ul>
 	 */
@@ -242,7 +242,7 @@ public class Expiry {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Expiry.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExpiryCondition";
-			definition = "Condition that indicates when the undertaking will cease to be available at the place for presentation. ";
+			definition = "Condition that indicates when the undertaking will cease to be available at the place for presentation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max2000Text.mmObject();

@@ -230,7 +230,7 @@ public class GenericIdentification73 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Entity assigning the identification , for example merchant, acceptor, acquirer or card issuer."
+	 * "Entity assigning the identification, for example merchant, acceptor, acquirer or card issuer."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -247,7 +247,7 @@ public class GenericIdentification73 {
 			xmlTag = "Issr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
-			definition = "Entity assigning the identification , for example merchant, acceptor, acquirer or card issuer.";
+			definition = "Entity assigning the identification, for example merchant, acceptor, acquirer or card issuer.";
 			previousVersion_lazy = () -> GenericIdentification53.mmIssuer;
 			maxOccurs = 1;
 			minOccurs = 0;

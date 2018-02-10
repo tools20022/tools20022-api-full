@@ -115,7 +115,7 @@ public class TaxCalculation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Currency that all totals for taxable services must be converted to for calculating taxes owed for this tax region.  This also is the currency in which the payment of tax obligations is usually submitted to the taxing authority."
+	 * "Currency that all totals for taxable services must be converted to for calculating taxes owed for this tax region. This also is the currency in which the payment of tax obligations is usually submitted to the taxing authority."
 	 * </li>
 	 * </ul>
 	 */
@@ -127,7 +127,7 @@ public class TaxCalculation1 {
 			xmlTag = "HstCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCurrency";
-			definition = "Currency that all totals for taxable services must be converted to for calculating taxes owed for this tax region.  This also is the currency in which the payment of tax obligations is usually submitted to the taxing authority.";
+			definition = "Currency that all totals for taxable services must be converted to for calculating taxes owed for this tax region. This also is the currency in which the payment of tax obligations is usually submitted to the taxing authority.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -214,7 +214,7 @@ public class TaxCalculation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total of all services subject to tax for a specific tax region.  \n\nUsage:\nThis field will equal the sum of all the separate host tax charge for service equivalent totals for each individual currency.  It is expressed in the tax region’s Host currency. This total is used to determine the tax due by calculating using each tax identifications rate."
+	 * "Total of all services subject to tax for a specific tax region. \n\nUsage: \nThis field will equal the sum of all the separate host tax charge for service equivalent totals for each individual currency. It is expressed in the tax region’s Host currency. This total is used to determine the tax due by calculating using each tax identifications rate."
 	 * </li>
 	 * </ul>
 	 */
@@ -226,7 +226,7 @@ public class TaxCalculation1 {
 			xmlTag = "TtlTaxblSvcChrgHstAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTaxableServiceChargeHostAmount";
-			definition = "Total of all services subject to tax for a specific tax region.  \n\nUsage:\nThis field will equal the sum of all the separate host tax charge for service equivalent totals for each individual currency.  It is expressed in the tax region’s Host currency. This total is used to determine the tax due by calculating using each tax identifications rate.";
+			definition = "Total of all services subject to tax for a specific tax region. \n\nUsage: \nThis field will equal the sum of all the separate host tax charge for service equivalent totals for each individual currency. It is expressed in the tax region’s Host currency. This total is used to determine the tax due by calculating using each tax identifications rate.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -313,7 +313,7 @@ public class TaxCalculation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total amount of all taxes for a specific customer within the tax region.  This is a sum of all individual total tax amounts for tax identification ’s expressed in the tax region’s host currency."
+	 * "Total amount of all taxes for a specific customer within the tax region. This is a sum of all individual total tax amounts for tax identification ’s expressed in the tax region’s host currency."
 	 * </li>
 	 * </ul>
 	 */
@@ -325,7 +325,7 @@ public class TaxCalculation1 {
 			xmlTag = "TtlTax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalTax";
-			definition = "Total amount of all taxes for a specific customer within the tax region.  This is a sum of all individual total tax amounts for tax identification ’s expressed in the tax region’s host currency.";
+			definition = "Total amount of all taxes for a specific customer within the tax region. This is a sum of all individual total tax amounts for tax identification ’s expressed in the tax region’s host currency.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

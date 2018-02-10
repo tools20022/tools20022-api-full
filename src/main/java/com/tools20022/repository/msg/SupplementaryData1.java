@@ -53,7 +53,7 @@ import javax.xml.bind.annotation.XmlType;
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
- * messageBuildingBlock} = List of 527 elements</li>
+ * messageBuildingBlock} = List of 652 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =

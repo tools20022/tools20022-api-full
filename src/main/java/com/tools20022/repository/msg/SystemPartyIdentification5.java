@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SystemPartyIdentification5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Unique and unambiguous way to identify a system party."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemPartyIdentification6
+ * SystemPartyIdentification6}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +114,14 @@ public class SystemPartyIdentification5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Unique identification of the party referenced by a request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification6#mmRelatedPartyIdentification
+	 * SystemPartyIdentification6.mmRelatedPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRelatedPartyIdentification = new MMMessageAssociationEnd() {
@@ -118,6 +133,7 @@ public class SystemPartyIdentification5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedPartyIdentification";
 			definition = "Unique identification of the party referenced by a request.";
+			nextVersions_lazy = () -> Arrays.asList(SystemPartyIdentification6.mmRelatedPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -159,6 +175,14 @@ public class SystemPartyIdentification5 {
 	 * definition} =
 	 * "Unique identification of the party responsible for the maintenance of the party reference data."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SystemPartyIdentification6#mmResponsiblePartyIdentification
+	 * SystemPartyIdentification6.mmResponsiblePartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmResponsiblePartyIdentification = new MMMessageAttribute() {
@@ -170,6 +194,7 @@ public class SystemPartyIdentification5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponsiblePartyIdentification";
 			definition = "Unique identification of the party responsible for the maintenance of the party reference data.";
+			nextVersions_lazy = () -> Arrays.asList(SystemPartyIdentification6.mmResponsiblePartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> BICFIIdentifier.mmObject();
@@ -185,6 +210,7 @@ public class SystemPartyIdentification5 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SystemPartyIdentification5";
 				definition = "Unique and unambiguous way to identify a system party.";
+				nextVersions_lazy = () -> Arrays.asList(SystemPartyIdentification6.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

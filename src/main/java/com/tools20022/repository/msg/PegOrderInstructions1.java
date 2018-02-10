@@ -401,7 +401,7 @@ public class PegOrderInstructions1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If the calculated peg price is not a valid tick price, specifies how to round the price (e.g. be more or less aggressive)"
+	 * "If the calculated peg price is not a valid tick price, specifies how to round the price (e.g. be more or less aggressive)."
 	 * </li>
 	 * </ul>
 	 */
@@ -414,7 +414,7 @@ public class PegOrderInstructions1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "838"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RoundDirection";
-			definition = "If the calculated peg price is not a valid tick price, specifies how to round the price (e.g. be more or less aggressive)";
+			definition = "If the calculated peg price is not a valid tick price, specifies how to round the price (e.g. be more or less aggressive).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

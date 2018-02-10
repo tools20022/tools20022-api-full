@@ -119,7 +119,7 @@ public class CardTransaction11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of network management service (correspond to the ISO 8583 field 24)"
+	 * "Type of network management service (correspond to the ISO 8583 field 24)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -138,7 +138,7 @@ public class CardTransaction11 {
 			xmlTag = "NtwkMgmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkManagementType";
-			definition = "Type of network management service (correspond to the ISO 8583 field 24)";
+			definition = "Type of network management service (correspond to the ISO 8583 field 24).";
 			nextVersions_lazy = () -> Arrays.asList(CardTransaction12.mmNetworkManagementType);
 			maxOccurs = 1;
 			minOccurs = 1;

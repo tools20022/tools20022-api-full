@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08;
 import com.tools20022.repository.choice.GeneratedReasons5Choice;
 import com.tools20022.repository.datatype.Max210Text;
 import com.tools20022.repository.entity.SecuritiesTradeStatusReason;
@@ -67,6 +68,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07#mmGeneratedReason
  * SecuritiesSettlementTransactionGenerationNotificationV07.mmGeneratedReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08#mmGeneratedReason
+ * SecuritiesSettlementTransactionGenerationNotificationV08.mmGeneratedReason}</li>
  * </ul>
  * </li>
  * <li>
@@ -208,7 +212,8 @@ public class GeneratedReason5 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.GeneratedReason5.mmCode, com.tools20022.repository.msg.GeneratedReason5.mmAdditionalReasonInformation);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotificationV06.mmGeneratedReason, SecuritiesSettlementTransactionGenerationNotificationV07.mmGeneratedReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotificationV06.mmGeneratedReason, SecuritiesSettlementTransactionGenerationNotificationV07.mmGeneratedReason,
+						SecuritiesSettlementTransactionGenerationNotificationV08.mmGeneratedReason);
 				trace_lazy = () -> SecuritiesTradeStatusReason.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

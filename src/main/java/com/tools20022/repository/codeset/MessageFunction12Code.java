@@ -99,6 +99,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "MessageFunction12Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Type of message supporting a service."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.MessageFunction15Code
+ * MessageFunction15Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.MessageFunction5Code
@@ -123,6 +130,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialAuthorisationRequest"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#FinancialAuthorisationRequest
+	 * MessageFunction15Code.FinancialAuthorisationRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -134,6 +149,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialAuthorisationRequest";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.FinancialAuthorisationRequest);
 			previousVersion_lazy = () -> MessageFunction5Code.FinancialAuthorisationRequest;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.FinancialAuthorisationRequest.getCodeName().orElse(name);
@@ -153,6 +169,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationRequest"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#CancellationRequest
+	 * MessageFunction15Code.CancellationRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -164,6 +188,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationRequest";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.CancellationRequest);
 			previousVersion_lazy = () -> MessageFunction5Code.CancellationRequest;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.CancellationRequest.getCodeName().orElse(name);
@@ -183,6 +208,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CompletionAdvice"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#CompletionAdvice
+	 * MessageFunction15Code.CompletionAdvice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -194,6 +227,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompletionAdvice";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.CompletionAdvice);
 			previousVersion_lazy = () -> MessageFunction5Code.CompletionAdvice;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.CompletionAdvice.getCodeName().orElse(name);
@@ -213,6 +247,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DiagnosticRequest"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#DiagnosticRequest
+	 * MessageFunction15Code.DiagnosticRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -224,6 +266,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DiagnosticRequest";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.DiagnosticRequest);
 			previousVersion_lazy = () -> MessageFunction5Code.DiagnosticRequest;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.DiagnosticRequest.getCodeName().orElse(name);
@@ -243,6 +286,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReconciliationRequest"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#ReconciliationRequest
+	 * MessageFunction15Code.ReconciliationRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -254,6 +305,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationRequest";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.ReconciliationRequest);
 			previousVersion_lazy = () -> MessageFunction5Code.ReconciliationRequest;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.ReconciliationRequest.getCodeName().orElse(name);
@@ -273,6 +325,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CancellationAdvice"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#CancellationAdvice
+	 * MessageFunction15Code.CancellationAdvice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -284,6 +344,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationAdvice";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.CancellationAdvice);
 			previousVersion_lazy = () -> MessageFunction5Code.CancellationAdvice;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.CancellationAdvice.getCodeName().orElse(name);
@@ -303,6 +364,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "BatchTransfer"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#BatchTransfer
+	 * MessageFunction15Code.BatchTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -314,6 +383,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchTransfer";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.BatchTransfer);
 			previousVersion_lazy = () -> MessageFunction5Code.BatchTransfer;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.BatchTransfer.getCodeName().orElse(name);
@@ -333,6 +403,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialReversalAdvice"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#FinancialReversalAdvice
+	 * MessageFunction15Code.FinancialReversalAdvice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -344,6 +422,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialReversalAdvice";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.FinancialReversalAdvice);
 			previousVersion_lazy = () -> MessageFunction5Code.FinancialReversalAdvice;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.FinancialReversalAdvice.getCodeName().orElse(name);
@@ -363,6 +442,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "AuthorisationRequest"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#AuthorisationRequest
+	 * MessageFunction15Code.AuthorisationRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,6 +461,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthorisationRequest";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.AuthorisationRequest);
 			previousVersion_lazy = () -> MessageFunction5Code.AuthorisationRequest;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.AuthorisationRequest.getCodeName().orElse(name);
@@ -393,6 +481,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "FinancialCompletionAdvice"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#FinancialCompletionAdvice
+	 * MessageFunction15Code.FinancialCompletionAdvice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -404,6 +500,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialCompletionAdvice";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.FinancialCompletionAdvice);
 			previousVersion_lazy = () -> MessageFunction5Code.FinancialCompletionAdvice;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.FinancialCompletionAdvice.getCodeName().orElse(name);
@@ -423,6 +520,14 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CurrencyConversionRequest"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#CurrencyConversionRequest
+	 * MessageFunction15Code.CurrencyConversionRequest}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -434,6 +539,7 @@ public class MessageFunction12Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionRequest";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.CurrencyConversionRequest);
 			previousVersion_lazy = () -> MessageFunction5Code.CurrencyConversionRequest;
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.CurrencyConversionRequest.getCodeName().orElse(name);
@@ -453,12 +559,21 @@ public class MessageFunction12Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ReversalAdvice"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.MessageFunction15Code#ReversalAdvice
+	 * MessageFunction15Code.ReversalAdvice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MessageFunction12Code ReversalAdvice = new MessageFunction12Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalAdvice";
+			nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.ReversalAdvice);
 			owner_lazy = () -> com.tools20022.repository.codeset.MessageFunction12Code.mmObject();
 			codeName = MessageFunctionCode.ReversalAdvice.getCodeName().orElse(name);
 		}
@@ -500,6 +615,7 @@ public class MessageFunction12Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageFunction12Code";
 				definition = "Type of message supporting a service.";
+				nextVersions_lazy = () -> Arrays.asList(MessageFunction15Code.mmObject());
 				previousVersion_lazy = () -> MessageFunction5Code.mmObject();
 				trace_lazy = () -> MessageFunctionCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.MessageFunction12Code.FinancialAuthorisationRequest, com.tools20022.repository.codeset.MessageFunction12Code.CancellationRequest,

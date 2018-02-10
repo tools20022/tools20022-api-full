@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesEventsLatestVersion;
+import com.tools20022.repository.area.SecuritiesEventsPreviousVersion;
 import com.tools20022.repository.choice.InstructionProcessingStatus29Choice;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.CorporateActionsISOLatestversion;
@@ -97,8 +97,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CorpActnInstrStsAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesEventsLatestVersion
- * SecuritiesEventsLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesEventsPreviousVersion
+ * SecuritiesEventsPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code seev.034.001.08}</li>
@@ -120,6 +120,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Scope\r\nAn account servicer sends the CorporateActionInstructionStatusAdvice message to an account owner or its designated agent, to report status of a received corporate action election instruction.\r\r\nThis message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH)."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09
+ * CorporateActionInstructionStatusAdviceV09}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -156,6 +164,14 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a related instruction document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmInstructionIdentification
+	 * CorporateActionInstructionStatusAdviceV09.mmInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -169,6 +185,7 @@ public class CorporateActionInstructionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Identification of a related instruction document.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV09.mmInstructionIdentification);
 			previousVersion_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -207,6 +224,14 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of other documents as well as the document number."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmOtherDocumentIdentification
+	 * CorporateActionInstructionStatusAdviceV09.mmOtherDocumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -220,6 +245,7 @@ public class CorporateActionInstructionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDocumentIdentification";
 			definition = "Identification of other documents as well as the document number.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV09.mmOtherDocumentIdentification);
 			previousVersion_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmOtherDocumentIdentification;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification33.mmObject();
@@ -256,6 +282,15 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "General information about the corporate action event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmCorporateActionGeneralInformation
+	 * CorporateActionInstructionStatusAdviceV09.
+	 * mmCorporateActionGeneralInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,6 +305,7 @@ public class CorporateActionInstructionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionGeneralInformation";
 			definition = "General information about the corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV09.mmCorporateActionGeneralInformation);
 			previousVersion_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmCorporateActionGeneralInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -308,6 +344,14 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides information about the processing status of the instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmInstructionProcessingStatus
+	 * CorporateActionInstructionStatusAdviceV09.mmInstructionProcessingStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -321,6 +365,7 @@ public class CorporateActionInstructionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingStatus";
 			definition = "Provides information about the processing status of the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV09.mmInstructionProcessingStatus);
 			previousVersion_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmInstructionProcessingStatus;
 			minOccurs = 1;
 			complexType_lazy = () -> InstructionProcessingStatus29Choice.mmObject();
@@ -357,6 +402,14 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information about the corporate action instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmCorporateActionInstruction
+	 * CorporateActionInstructionStatusAdviceV09.mmCorporateActionInstruction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -370,6 +423,7 @@ public class CorporateActionInstructionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionInstruction";
 			definition = "Information about the corporate action instruction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV09.mmCorporateActionInstruction);
 			previousVersion_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmCorporateActionInstruction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -407,6 +461,14 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides additional information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmAdditionalInformation
+	 * CorporateActionInstructionStatusAdviceV09.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -420,6 +482,7 @@ public class CorporateActionInstructionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV09.mmAdditionalInformation);
 			previousVersion_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -459,6 +522,14 @@ public class CorporateActionInstructionStatusAdviceV08 {
 	 * definition} =
 	 * "Additional information that can not be captured in the structured fields and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmSupplementaryData
+	 * CorporateActionInstructionStatusAdviceV09.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -472,6 +543,7 @@ public class CorporateActionInstructionStatusAdviceV08 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV09.mmSupplementaryData);
 			previousVersion_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
@@ -493,11 +565,12 @@ public class CorporateActionInstructionStatusAdviceV08 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionInstructionStatusAdviceV08";
 				definition = "Scope\r\nAn account servicer sends the CorporateActionInstructionStatusAdvice message to an account owner or its designated agent, to report status of a received corporate action election instruction.\r\r\nThis message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction.\r\nUsage\r\nThe message may also be used to:\r\n- re-send a message previously sent (the sub-function of the message is Duplicate),\r\n- provide a third party with a copy of a message for information (the sub-function of the message is Copy),\r\n- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate),\r\nusing the relevant elements in the business application header (BAH).";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionInstructionStatusAdviceV09.mmObject());
 				previousVersion_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmObject();
 				messageSet_lazy = () -> Arrays.asList(CorporateActionsISOLatestversion.mmObject(), CorporateActionsMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "CorpActnInstrStsAdvc";
-				businessArea_lazy = () -> SecuritiesEventsLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesEventsPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmInstructionIdentification,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmOtherDocumentIdentification,
 						com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08.mmCorporateActionGeneralInformation,

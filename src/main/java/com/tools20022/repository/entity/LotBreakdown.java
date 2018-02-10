@@ -105,6 +105,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * Quantity11.mmQuantityBreakdown}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Quantity12#mmQuantityBreakdown
  * Quantity12.mmQuantityBreakdown}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity14#mmQuantityBreakdown
+ * Quantity14.mmQuantityBreakdown}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Quantity15#mmQuantityBreakdown
+ * Quantity15.mmQuantityBreakdown}</li>
  * </ul>
  * </li>
  * <li>
@@ -188,6 +192,16 @@ import java.util.concurrent.atomic.AtomicReference;
  * QuantityBreakdown33}</li>
  * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown34
  * QuantityBreakdown34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown45
+ * QuantityBreakdown45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown46
+ * QuantityBreakdown46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown47
+ * QuantityBreakdown47}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown48
+ * QuantityBreakdown48}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.QuantityBreakdown52
+ * QuantityBreakdown52}</li>
  * </ul>
  * </li>
  * <li>
@@ -226,6 +240,8 @@ public class LotBreakdown {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Unit4#mmTotalUnitsNumber
 	 * Unit4.mmTotalUnitsNumber}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit9#mmTotalUnitsNumber
+	 * Unit9.mmTotalUnitsNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -248,7 +264,7 @@ public class LotBreakdown {
 	 */
 	public static final MMBusinessAttribute mmLotUnit = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Unit4.mmTotalUnitsNumber);
+			derivation_lazy = () -> Arrays.asList(Unit4.mmTotalUnitsNumber, Unit9.mmTotalUnitsNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "UNIT"));
@@ -406,6 +422,21 @@ public class LotBreakdown {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown34#mmLotQuantity
 	 * QuantityBreakdown34.mmLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown45#mmLotQuantity
+	 * QuantityBreakdown45.mmLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown46#mmLotQuantity
+	 * QuantityBreakdown46.mmLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmLotQuantity
+	 * QuantityBreakdown47.mmLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown48#mmLotQuantity
+	 * QuantityBreakdown48.mmLotQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown52#mmLotQuantity
+	 * QuantityBreakdown52.mmLotQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -431,7 +462,8 @@ public class LotBreakdown {
 					QuantityBreakdown23.mmLotQuantity, QuantityBreakdown26.mmLotQuantity, QuantityBreakdown10.mmLotQuantity, QuantityBreakdown16.mmLotQuantity, QuantityBreakdown21.mmLotQuantity, QuantityBreakdown11.mmLotQuantity,
 					LotDetails1.mmLotQuantityAndAmount, QuantityBreakdown22.mmLotQuantity, QuantityBreakDown2.mmLotQuantity, QuantityBreakDown1.mmLotQuantity, QuantityBreakdown27.mmLotQuantity, QuantityBreakdown30.mmLotQuantity,
 					QuantityBreakdown29.mmLotQuantity, QuantityBreakdown28.mmLotQuantity, QuantityBreakdown32.mmLotQuantity, QuantityBreakdown31.mmLotQuantity, QuantityBreakdown40.mmLotQuantity, QuantityBreakdown39.mmLotQuantity,
-					QuantityBreakdown38.mmLotQuantity, QuantityBreakdown44.mmLotQuantity, QuantityBreakdown33.mmLotQuantity, QuantityBreakdown34.mmLotQuantity);
+					QuantityBreakdown38.mmLotQuantity, QuantityBreakdown44.mmLotQuantity, QuantityBreakdown33.mmLotQuantity, QuantityBreakdown34.mmLotQuantity, QuantityBreakdown45.mmLotQuantity, QuantityBreakdown46.mmLotQuantity,
+					QuantityBreakdown47.mmLotQuantity, QuantityBreakdown48.mmLotQuantity, QuantityBreakdown52.mmLotQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -620,11 +652,29 @@ public class LotBreakdown {
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown34#mmLotNumber
 	 * QuantityBreakdown34.mmLotNumber}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmTaxLotNumber
+	 * CommonFinancialInstrumentAttributes4.mmTaxLotNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown45#mmLotNumber
+	 * QuantityBreakdown45.mmLotNumber}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails39#mmLotNumber
 	 * IntraPositionDetails39.mmLotNumber}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionDetails42#mmLotNumber
 	 * IntraPositionDetails42.mmLotNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown46#mmLotNumber
+	 * QuantityBreakdown46.mmLotNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmLotNumber
+	 * QuantityBreakdown47.mmLotNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown48#mmLotNumber
+	 * QuantityBreakdown48.mmLotNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown52#mmLotNumber
+	 * QuantityBreakdown52.mmLotNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -652,8 +702,9 @@ public class LotBreakdown {
 					IntraPositionDetails19.mmLotNumber, IntraPositionDetails23.mmLotNumber, IntraPositionMovementDetails3.mmLotNumber, IntraPositionMovementDetails4.mmLotNumber, QuantityBreakdown22.mmLotNumber,
 					CommonFinancialInstrumentAttributes1.mmTaxLotNumber, QuantityBreakDown2.mmLotNumber, QuantityBreakDown1.mmLotNumber, IntraPositionDetails31.mmLotNumber, QuantityBreakdown27.mmLotNumber, QuantityBreakdown30.mmLotNumber,
 					QuantityBreakdown29.mmLotNumber, QuantityBreakdown28.mmLotNumber, QuantityBreakdown32.mmLotNumber, QuantityBreakdown31.mmLotNumber, IntraPositionDetails38.mmLotNumber, QuantityBreakdown40.mmLotNumber,
-					QuantityBreakdown39.mmLotNumber, QuantityBreakdown38.mmLotNumber, QuantityBreakdown44.mmLotNumber, QuantityBreakdown33.mmLotNumber, QuantityBreakdown34.mmLotNumber, IntraPositionDetails39.mmLotNumber,
-					IntraPositionDetails42.mmLotNumber);
+					QuantityBreakdown39.mmLotNumber, QuantityBreakdown38.mmLotNumber, QuantityBreakdown44.mmLotNumber, QuantityBreakdown33.mmLotNumber, QuantityBreakdown34.mmLotNumber, CommonFinancialInstrumentAttributes4.mmTaxLotNumber,
+					QuantityBreakdown45.mmLotNumber, IntraPositionDetails39.mmLotNumber, IntraPositionDetails42.mmLotNumber, QuantityBreakdown46.mmLotNumber, QuantityBreakdown47.mmLotNumber, QuantityBreakdown48.mmLotNumber,
+					QuantityBreakdown52.mmLotNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -761,6 +812,18 @@ public class LotBreakdown {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown44#mmLotDateTime
 	 * QuantityBreakdown44.mmLotDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown46#mmLotDateTime
+	 * QuantityBreakdown46.mmLotDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmLotDateTime
+	 * QuantityBreakdown47.mmLotDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown48#mmLotDateTime
+	 * QuantityBreakdown48.mmLotDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown52#mmLotDateTime
+	 * QuantityBreakdown52.mmLotDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -784,7 +847,8 @@ public class LotBreakdown {
 					QuantityBreakdown8.mmLotDateTime, QuantityBreakdown14.mmLotDateTime, QuantityBreakdown19.mmLotDateTime, QuantityBreakdown24.mmLotDateTime, QuantityBreakdown25.mmLotDateTime, QuantityBreakdown7.mmLotDateTime,
 					QuantityBreakdown23.mmLotDateTime, QuantityBreakdown26.mmLotDateTime, QuantityBreakdown10.mmLotDateTime, QuantityBreakdown16.mmLotDateTime, QuantityBreakdown21.mmLotDateTime, QuantityBreakdown11.mmLotDateTime,
 					LotDetails1.mmTradeDate, QuantityBreakDown2.mmLotDateTime, QuantityBreakDown1.mmLotDateTime, QuantityBreakdown27.mmLotDateTime, QuantityBreakdown30.mmLotDateTime, QuantityBreakdown29.mmLotDateTime,
-					QuantityBreakdown28.mmLotDateTime, QuantityBreakdown40.mmLotDateTime, QuantityBreakdown39.mmLotDateTime, QuantityBreakdown38.mmLotDateTime, QuantityBreakdown44.mmLotDateTime);
+					QuantityBreakdown28.mmLotDateTime, QuantityBreakdown40.mmLotDateTime, QuantityBreakdown39.mmLotDateTime, QuantityBreakdown38.mmLotDateTime, QuantityBreakdown44.mmLotDateTime, QuantityBreakdown46.mmLotDateTime,
+					QuantityBreakdown47.mmLotDateTime, QuantityBreakdown48.mmLotDateTime, QuantityBreakdown52.mmLotDateTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -905,6 +969,18 @@ public class LotBreakdown {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown44#mmLotPrice
 	 * QuantityBreakdown44.mmLotPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown46#mmLotPrice
+	 * QuantityBreakdown46.mmLotPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmLotPrice
+	 * QuantityBreakdown47.mmLotPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown48#mmLotPrice
+	 * QuantityBreakdown48.mmLotPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown52#mmLotPrice
+	 * QuantityBreakdown52.mmLotPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -928,7 +1004,8 @@ public class LotBreakdown {
 					QuantityBreakdown14.mmLotPrice, QuantityBreakdown19.mmLotPrice, QuantityBreakdown24.mmLotPrice, QuantityBreakdown25.mmLotPrice, QuantityBreakdown7.mmLotPrice, QuantityBreakdown23.mmLotPrice,
 					QuantityBreakdown26.mmLotPrice, QuantityBreakdown10.mmLotPrice, QuantityBreakdown16.mmLotPrice, QuantityBreakdown21.mmLotPrice, QuantityBreakdown11.mmLotPrice, QuantityBreakDown2.mmLotPrice,
 					QuantityBreakDown1.mmLotPrice, QuantityBreakdown27.mmLotPrice, QuantityBreakdown30.mmLotPrice, QuantityBreakdown29.mmLotPrice, QuantityBreakdown28.mmLotPrice, QuantityBreakdown40.mmLotPrice,
-					QuantityBreakdown39.mmLotPrice, QuantityBreakdown38.mmLotPrice, QuantityBreakdown44.mmLotPrice);
+					QuantityBreakdown39.mmLotPrice, QuantityBreakdown38.mmLotPrice, QuantityBreakdown44.mmLotPrice, QuantityBreakdown46.mmLotPrice, QuantityBreakdown47.mmLotPrice, QuantityBreakdown48.mmLotPrice,
+					QuantityBreakdown52.mmLotPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -960,6 +1037,8 @@ public class LotBreakdown {
 	 * LotDetails1.mmLotDescription}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Debt2#mmLotIdentification
 	 * Debt2.mmLotIdentification}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Debt3#mmLotIdentification
+	 * Debt3.mmLotIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -981,7 +1060,7 @@ public class LotBreakdown {
 	 */
 	public static final MMBusinessAttribute mmLotIdentifier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Debt1.mmLotIdentification, LotDetails1.mmLotDescription, Debt2.mmLotIdentification);
+			derivation_lazy = () -> Arrays.asList(Debt1.mmLotIdentification, LotDetails1.mmLotDescription, Debt2.mmLotIdentification, Debt3.mmLotIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.LotBreakdown.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1153,7 +1232,7 @@ public class LotBreakdown {
 						com.tools20022.repository.entity.TradingMarket.mmTradeLotSize, com.tools20022.repository.entity.TradingMarket.mmQuoteLot, com.tools20022.repository.entity.TradingMarket.mmRoundLot,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmLotBreakdown);
 				derivationElement_lazy = () -> Arrays.asList(Quantity5.mmQuantityBreakdown, Quantity6.mmQuantityBreakdown, Quantity7.mmQuantityBreakdown, Quantity8.mmQuantityBreakdown, Quantity11.mmQuantityBreakdown,
-						Quantity12.mmQuantityBreakdown);
+						Quantity12.mmQuantityBreakdown, Quantity14.mmQuantityBreakdown, Quantity15.mmQuantityBreakdown);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.LotBreakdown.mmLotUnit, com.tools20022.repository.entity.LotBreakdown.mmSecuritiesQuantity, com.tools20022.repository.entity.LotBreakdown.mmLotNumber,
 						com.tools20022.repository.entity.LotBreakdown.mmLotDateTime, com.tools20022.repository.entity.LotBreakdown.mmLotPrice, com.tools20022.repository.entity.LotBreakdown.mmLotIdentifier,
 						com.tools20022.repository.entity.LotBreakdown.mmTradeLotMarket, com.tools20022.repository.entity.LotBreakdown.mmQuoteLotMarket, com.tools20022.repository.entity.LotBreakdown.mmRoundLotMarket);
@@ -1163,7 +1242,8 @@ public class LotBreakdown {
 						QuantityBreakdown23.mmObject(), QuantityBreakdown26.mmObject(), QuantityBreakdown10.mmObject(), QuantityBreakdown16.mmObject(), QuantityBreakdown21.mmObject(), QuantityBreakdown11.mmObject(), LotDetails1.mmObject(),
 						QuantityBreakdown22.mmObject(), QuantityBreakDown2.mmObject(), QuantityBreakDown1.mmObject(), QuantityBreakdown27.mmObject(), QuantityBreakdown30.mmObject(), QuantityBreakdown29.mmObject(),
 						QuantityBreakdown28.mmObject(), QuantityBreakdown32.mmObject(), QuantityBreakdown31.mmObject(), QuantityBreakdown40.mmObject(), QuantityBreakdown39.mmObject(), QuantityBreakdown38.mmObject(),
-						QuantityBreakdown44.mmObject(), QuantityBreakdown33.mmObject(), QuantityBreakdown34.mmObject());
+						QuantityBreakdown44.mmObject(), QuantityBreakdown33.mmObject(), QuantityBreakdown34.mmObject(), QuantityBreakdown45.mmObject(), QuantityBreakdown46.mmObject(), QuantityBreakdown47.mmObject(),
+						QuantityBreakdown48.mmObject(), QuantityBreakdown52.mmObject());
 			}
 
 			@Override

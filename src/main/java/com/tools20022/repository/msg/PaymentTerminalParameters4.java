@@ -80,6 +80,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Manufacturer configuration parameters of the point of interaction (POI)."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTerminalParameters5
+ * PaymentTerminalParameters5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters3
@@ -119,6 +126,14 @@ public class PaymentTerminalParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of action for the configuration parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters5#mmActionType
+	 * PaymentTerminalParameters5.mmActionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -134,6 +149,7 @@ public class PaymentTerminalParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters5.mmActionType);
 			previousVersion_lazy = () -> PaymentTerminalParameters3.mmActionType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -169,6 +185,14 @@ public class PaymentTerminalParameters4 {
 	 * definition} =
 	 * "Identification of the vendor for the MTM, if the POI manages various subsets of terminal parameters."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters5#mmVendorIdentification
+	 * PaymentTerminalParameters5.mmVendorIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -184,6 +208,7 @@ public class PaymentTerminalParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VendorIdentification";
 			definition = "Identification of the vendor for the MTM, if the POI manages various subsets of terminal parameters.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters5.mmVendorIdentification);
 			previousVersion_lazy = () -> PaymentTerminalParameters3.mmVendorIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -217,6 +242,14 @@ public class PaymentTerminalParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the terminal parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters5#mmVersion
+	 * PaymentTerminalParameters5.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -232,6 +265,7 @@ public class PaymentTerminalParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the terminal parameters.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters5.mmVersion);
 			previousVersion_lazy = () -> PaymentTerminalParameters3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -266,6 +300,14 @@ public class PaymentTerminalParameters4 {
 	 * definition} =
 	 * "Parameters to synchronise the real time clock of the POI (Point Of Interaction)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters5#mmClockSynchronisation
+	 * PaymentTerminalParameters5.mmClockSynchronisation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -281,6 +323,7 @@ public class PaymentTerminalParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClockSynchronisation";
 			definition = "Parameters to synchronise the real time clock of the POI (Point Of Interaction).";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters5.mmClockSynchronisation);
 			previousVersion_lazy = () -> PaymentTerminalParameters3.mmClockSynchronisation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -317,6 +360,14 @@ public class PaymentTerminalParameters4 {
 	 * definition} =
 	 * "Time zone line to update in the time zone data base subset stored in the POI (Point Of Interaction). The format of the line is conform to the IANA (Internet Assigned Number Authority) time zone data base."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters5#mmTimeZoneLine
+	 * PaymentTerminalParameters5.mmTimeZoneLine}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -332,6 +383,7 @@ public class PaymentTerminalParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TimeZoneLine";
 			definition = "Time zone line to update in the time zone data base subset stored in the POI (Point Of Interaction). The format of the line is conform to the IANA (Internet Assigned Number Authority) time zone data base.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters5.mmTimeZoneLine);
 			previousVersion_lazy = () -> PaymentTerminalParameters3.mmTimeZoneLine;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -363,6 +415,14 @@ public class PaymentTerminalParameters4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Local time offset to UTC (Coordinated Universal Time)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters5#mmLocalDateTime
+	 * PaymentTerminalParameters5.mmLocalDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -378,6 +438,7 @@ public class PaymentTerminalParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalDateTime";
 			definition = "Local time offset to UTC (Coordinated Universal Time).";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters5.mmLocalDateTime);
 			previousVersion_lazy = () -> PaymentTerminalParameters3.mmLocalDateTime;
 			minOccurs = 0;
 			isComposite = true;
@@ -414,6 +475,14 @@ public class PaymentTerminalParameters4 {
 	 * definition} =
 	 * "Others manufacturer configuration parameters of the point of interaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTerminalParameters5#mmOtherParameters
+	 * PaymentTerminalParameters5.mmOtherParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -429,6 +498,7 @@ public class PaymentTerminalParameters4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherParameters";
 			definition = "Others manufacturer configuration parameters of the point of interaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters5.mmOtherParameters);
 			previousVersion_lazy = () -> PaymentTerminalParameters3.mmOtherParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -447,6 +517,7 @@ public class PaymentTerminalParameters4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTerminalParameters4";
 				definition = "Manufacturer configuration parameters of the point of interaction (POI).";
+				nextVersions_lazy = () -> Arrays.asList(PaymentTerminalParameters5.mmObject());
 				previousVersion_lazy = () -> PaymentTerminalParameters3.mmObject();
 			}
 		});

@@ -388,7 +388,7 @@ public class PriceFormat21Choice {
 	 * name} = "AmountPricePerAmount"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Price expressed as a ratio: amount price per amount"</li>
+	 * definition} = "Price expressed as a ratio: amount price per amount."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -408,7 +408,7 @@ public class PriceFormat21Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":90J:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerAmount";
-			definition = "Price expressed as a ratio: amount price per amount";
+			definition = "Price expressed as a ratio: amount price per amount.";
 			nextVersions_lazy = () -> Arrays.asList(PriceFormat33Choice.mmAmountPricePerAmount);
 			maxOccurs = 1;
 			minOccurs = 1;

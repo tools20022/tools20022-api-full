@@ -74,6 +74,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the criteria used to search for system business day information."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria2
+ * BusinessDaySearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class BusinessDaySearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date for which the availability information is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria2#mmSystemDate
+	 * BusinessDaySearchCriteria2.mmSystemDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
@@ -118,6 +133,7 @@ public class BusinessDaySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the availability information is provided.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDaySearchCriteria2.mmSystemDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -150,7 +166,15 @@ public class BusinessDaySearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identification of the system, as assigned by the system administrator. "
+	 * "Unique and unambiguous identification of the system, as assigned by the system administrator."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria2#mmSystemIdentification
+	 * BusinessDaySearchCriteria2.mmSystemIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -161,7 +185,8 @@ public class BusinessDaySearchCriteria1 {
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
-			definition = "Unique and unambiguous identification of the system, as assigned by the system administrator. ";
+			definition = "Unique and unambiguous identification of the system, as assigned by the system administrator.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDaySearchCriteria2.mmSystemIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> SystemIdentification2Choice.mmObject();
@@ -197,6 +222,14 @@ public class BusinessDaySearchCriteria1 {
 	 * definition} =
 	 * "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria2#mmSystemCurrency
+	 * BusinessDaySearchCriteria2.mmSystemCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSystemCurrency = new MMMessageAttribute() {
@@ -207,6 +240,7 @@ public class BusinessDaySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemCurrency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDaySearchCriteria2.mmSystemCurrency);
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
 		}
@@ -238,6 +272,14 @@ public class BusinessDaySearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Nature of the event that has occurred."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria2#mmEventType
+	 * BusinessDaySearchCriteria2.mmEventType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEventType = new MMMessageAssociationEnd() {
@@ -248,6 +290,7 @@ public class BusinessDaySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Nature of the event that has occurred.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDaySearchCriteria2.mmEventType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -282,6 +325,14 @@ public class BusinessDaySearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Period of time when the system is closed/not operating."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDaySearchCriteria2#mmClosurePeriod
+	 * BusinessDaySearchCriteria2.mmClosurePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClosurePeriod = new MMMessageAttribute() {
@@ -292,6 +343,7 @@ public class BusinessDaySearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosurePeriod";
 			definition = "Period of time when the system is closed/not operating.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDaySearchCriteria2.mmClosurePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -308,6 +360,7 @@ public class BusinessDaySearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "BusinessDaySearchCriteria1";
 				definition = "Defines the criteria used to search for system business day information.";
+				nextVersions_lazy = () -> Arrays.asList(BusinessDaySearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

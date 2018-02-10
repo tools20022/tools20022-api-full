@@ -483,6 +483,12 @@ public class FinancialTransaction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DirectDebitTransactionInformation22#mmRegulatoryReporting
 	 * DirectDebitTransactionInformation22.mmRegulatoryReporting}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27#mmRegulatoryReporting
+	 * CreditTransferTransaction27.mmRegulatoryReporting}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmRegulatoryReporting
+	 * CreditTransferTransaction30.mmRegulatoryReporting}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -515,7 +521,7 @@ public class FinancialTransaction {
 					DirectDebitTransactionInformation8.mmRegulatoryReporting, TradeData11.mmRegulatoryReporting, CreditTransferTransaction19.mmRegulatoryReporting, DirectDebitTransactionInformation17.mmRegulatoryReporting,
 					DirectDebitTransactionInformation18.mmRegulatoryReporting, CreditTransferTransaction20.mmRegulatoryReporting, CreditTransferTransaction21.mmRegulatoryReporting, CreditTransferTransaction25.mmRegulatoryReporting,
 					DirectDebitTransactionInformation20.mmRegulatoryReporting, CreditTransferTransaction26.mmRegulatoryReporting, DirectDebitTransactionInformation19.mmRegulatoryReporting, CreditTransferTransaction22.mmRegulatoryReporting,
-					DirectDebitTransactionInformation21.mmRegulatoryReporting, DirectDebitTransactionInformation22.mmRegulatoryReporting);
+					DirectDebitTransactionInformation21.mmRegulatoryReporting, DirectDebitTransactionInformation22.mmRegulatoryReporting, CreditTransferTransaction27.mmRegulatoryReporting, CreditTransferTransaction30.mmRegulatoryReporting);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.FinancialTransaction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

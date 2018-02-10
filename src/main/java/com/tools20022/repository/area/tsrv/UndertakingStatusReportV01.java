@@ -111,7 +111,7 @@ public class UndertakingStatusReportV01 {
 	 * name} = "UndertakingStatusReportDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Details of the undertaking status report"</li>
+	 * definition} = "Details of the undertaking status report."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmUndertakingStatusReportDetails = new MMMessageBuildingBlock() {
@@ -119,7 +119,7 @@ public class UndertakingStatusReportV01 {
 			xmlTag = "UdrtkgStsRptDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UndertakingStatusReportDetails";
-			definition = "Details of the undertaking status report";
+			definition = "Details of the undertaking status report.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> UndertakingStatusAdvice1.mmObject();

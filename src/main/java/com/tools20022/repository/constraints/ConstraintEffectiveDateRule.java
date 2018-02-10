@@ -299,6 +299,14 @@ public class ConstraintEffectiveDateRule {
 	 * definition} =
 	 * "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveDateRule#forCorporateActionDate61
+	 * ConstraintEffectiveDateRule.forCorporateActionDate61}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -312,6 +320,7 @@ public class ConstraintEffectiveDateRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateRule";
 			definition = "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEffectiveDateRule.forCorporateActionDate61);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveDateRule.forCorporateActionDate27;
 			owner_lazy = () -> CorporateActionDate44.mmObject();
 		}
@@ -344,6 +353,72 @@ public class ConstraintEffectiveDateRule {
 			name = "EffectiveDateRule";
 			definition = "Effective date is to be used in events where there is no concept of entitlement, for instance Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for instance Merger (MRGR).";
 			owner_lazy = () -> CorporateActionDate58.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61
+	 * CorporateActionDate61}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Effective date is to be used in events where there is no concept of entitlement, for example Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for example Merger (MRGR)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEffectiveDateRule#forCorporateActionDate44
+	 * ConstraintEffectiveDateRule.forCorporateActionDate44}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionDate61> forCorporateActionDate61 = new MMConstraint<CorporateActionDate61>() {
+		{
+			validator = ConstraintEffectiveDateRule::checkCorporateActionDate61;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveDateRule";
+			definition = "Effective date is to be used in events where there is no concept of entitlement, for example Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for example Merger (MRGR).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEffectiveDateRule.forCorporateActionDate44;
+			owner_lazy = () -> CorporateActionDate61.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74
+	 * CorporateActionDate74}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EffectiveDateRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Effective date is to be used in events where there is no concept of entitlement, for example Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for example Merger (MRGR)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionDate74> forCorporateActionDate74 = new MMConstraint<CorporateActionDate74>() {
+		{
+			validator = ConstraintEffectiveDateRule::checkCorporateActionDate74;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EffectiveDateRule";
+			definition = "Effective date is to be used in events where there is no concept of entitlement, for example Name Change (CHAN) or Place of Incorporation (PLAC), and in events where there is a sense of eligibility but with a legal obligation, for example Merger (MRGR).";
+			owner_lazy = () -> CorporateActionDate74.mmObject();
 		}
 	};
 
@@ -444,6 +519,26 @@ public class ConstraintEffectiveDateRule {
 	 * legal obligation, for instance Merger (MRGR).
 	 */
 	public static void checkCorporateActionDate58(CorporateActionDate58 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Effective date is to be used in events where there is no concept of
+	 * entitlement, for example Name Change (CHAN) or Place of Incorporation
+	 * (PLAC), and in events where there is a sense of eligibility but with a
+	 * legal obligation, for example Merger (MRGR).
+	 */
+	public static void checkCorporateActionDate61(CorporateActionDate61 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Effective date is to be used in events where there is no concept of
+	 * entitlement, for example Name Change (CHAN) or Place of Incorporation
+	 * (PLAC), and in events where there is a sense of eligibility but with a
+	 * legal obligation, for example Merger (MRGR).
+	 */
+	public static void checkCorporateActionDate74(CorporateActionDate74 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

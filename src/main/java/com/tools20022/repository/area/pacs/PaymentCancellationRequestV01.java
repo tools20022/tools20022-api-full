@@ -54,7 +54,8 @@ import javax.xml.bind.annotation.*;
  * by means of references only or by means of references and a set of elements
  * from the original instruction.<br>
  * The PaymentCancellationRequest message exchanged between agents is identified
- * in the schema as follows: urn:iso:std:iso:20022:tech:xsd:pacs.006.001.01
+ * in the schema as follows: urn: iso: std: iso: 20022: tech: xsd:
+ * pacs.006.001.01 .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -133,7 +134,7 @@ import javax.xml.bind.annotation.*;
  * "PaymentCancellationRequestV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Scope\r\nThe PaymentCancellationRequest message is sent by the initiating party or any agent, to the next party in the payment chain. It is used to request the cancellation of an instruction previously sent.\r\nUsage\r\nThe PaymentCancellationRequest message is exchanged between agents to request the cancellation of a payment message previously sent (i.e. FIToFICustomerCreditTransfer, FIToFICustomerDirectDebit, and FinancialInstitutionCreditTransfer).\r\nThe PaymentCancellationRequest message can be used to request the cancellation of single instructions or multiple instructions, from one or multiple files.\r\nThe PaymentCancellationRequest message can be used in domestic and cross-border scenarios.\r\nThe PaymentCancellationRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe PaymentCancellationRequest message exchanged between agents is identified in the schema as follows:\nurn:iso:std:iso:20022:tech:xsd:pacs.006.001.01\r"
+ * "Scope\r\nThe PaymentCancellationRequest message is sent by the initiating party or any agent, to the next party in the payment chain. It is used to request the cancellation of an instruction previously sent.\r\nUsage\r\nThe PaymentCancellationRequest message is exchanged between agents to request the cancellation of a payment message previously sent (i.e. FIToFICustomerCreditTransfer, FIToFICustomerDirectDebit, and FinancialInstitutionCreditTransfer).\r\nThe PaymentCancellationRequest message can be used to request the cancellation of single instructions or multiple instructions, from one or multiple files.\r\nThe PaymentCancellationRequest message can be used in domestic and cross-border scenarios.\r\nThe PaymentCancellationRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe PaymentCancellationRequest message exchanged between agents is identified in the schema as follows: \nurn: iso: std: iso: 20022: tech: xsd: pacs.006.001.01\r."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -298,7 +299,7 @@ public class PaymentCancellationRequestV01 {
 						com.tools20022.repository.constraints.ConstraintGroupCancellationAndTransactionInformationRule.forPaymentCancellationRequestV01);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentCancellationRequestV01";
-				definition = "Scope\r\nThe PaymentCancellationRequest message is sent by the initiating party or any agent, to the next party in the payment chain. It is used to request the cancellation of an instruction previously sent.\r\nUsage\r\nThe PaymentCancellationRequest message is exchanged between agents to request the cancellation of a payment message previously sent (i.e. FIToFICustomerCreditTransfer, FIToFICustomerDirectDebit, and FinancialInstitutionCreditTransfer).\r\nThe PaymentCancellationRequest message can be used to request the cancellation of single instructions or multiple instructions, from one or multiple files.\r\nThe PaymentCancellationRequest message can be used in domestic and cross-border scenarios.\r\nThe PaymentCancellationRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe PaymentCancellationRequest message exchanged between agents is identified in the schema as follows:\nurn:iso:std:iso:20022:tech:xsd:pacs.006.001.01\r";
+				definition = "Scope\r\nThe PaymentCancellationRequest message is sent by the initiating party or any agent, to the next party in the payment chain. It is used to request the cancellation of an instruction previously sent.\r\nUsage\r\nThe PaymentCancellationRequest message is exchanged between agents to request the cancellation of a payment message previously sent (i.e. FIToFICustomerCreditTransfer, FIToFICustomerDirectDebit, and FinancialInstitutionCreditTransfer).\r\nThe PaymentCancellationRequest message can be used to request the cancellation of single instructions or multiple instructions, from one or multiple files.\r\nThe PaymentCancellationRequest message can be used in domestic and cross-border scenarios.\r\nThe PaymentCancellationRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.\r\nThe PaymentCancellationRequest message exchanged between agents is identified in the schema as follows: \nurn: iso: std: iso: 20022: tech: xsd: pacs.006.001.01\r.";
 				nextVersions_lazy = () -> Arrays.asList(FIToFIPaymentCancellationRequestV01.mmObject());
 				messageSet_lazy = () -> Arrays.asList(ISOArchive.mmObject());
 				rootElement = "Document";

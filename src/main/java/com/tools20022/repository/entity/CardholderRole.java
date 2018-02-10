@@ -129,6 +129,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment57#mmCardholder
  * CardPaymentEnvironment57.mmCardholder}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment68#mmCardholder
+ * CardPaymentEnvironment68.mmCardholder}</li>
  * </ul>
  * </li>
  * <li>
@@ -155,6 +158,7 @@ import java.util.Objects;
  * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer6 ATMCustomer6}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ATMCustomer4 ATMCustomer4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Cardholder12 Cardholder12}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder13 Cardholder13}</li>
  * </ul>
  * </li>
  * <li>
@@ -235,6 +239,9 @@ public class CardholderRole extends CardPaymentPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Cardholder12#mmAuthentication
 	 * Cardholder12.mmAuthentication}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cardholder13#mmAuthentication
+	 * Cardholder13.mmAuthentication}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -256,7 +263,8 @@ public class CardholderRole extends CardPaymentPartyRole {
 	public static final MMBusinessAssociationEnd mmAuthentication = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PaymentContext3.mmAuthenticationMethod, Cardholder2.mmAuthentication, Cardholder4.mmAuthentication, Cardholder1.mmAuthentication, Cardholder3.mmAuthentication, Cardholder5.mmAuthentication,
-					Cardholder6.mmAuthentication, Cardholder7.mmAuthentication, ATMCustomer1.mmAuthentication, Cardholder9.mmAuthentication, Cardholder10.mmAuthentication, ATMCustomer4.mmAuthentication, Cardholder12.mmAuthentication);
+					Cardholder6.mmAuthentication, Cardholder7.mmAuthentication, ATMCustomer1.mmAuthentication, Cardholder9.mmAuthentication, Cardholder10.mmAuthentication, ATMCustomer4.mmAuthentication, Cardholder12.mmAuthentication,
+					Cardholder13.mmAuthentication);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardholderRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -281,12 +289,12 @@ public class CardholderRole extends CardPaymentPartyRole {
 						CardPaymentEnvironment9.mmCardholder, CardPaymentEnvironment2.mmCardholder, CardPaymentEnvironment10.mmCardholder, CardPaymentEnvironment20.mmCardholder, CardPaymentEnvironment27.mmCardholder,
 						CardPaymentEnvironment22.mmCardholder, CardPaymentEnvironment32.mmCardholder, CardPaymentEnvironment40.mmCardholder, CardPaymentEnvironment34.mmCardholder, PaymentCard18.mmHolderName,
 						CardPaymentEnvironment52.mmCardholder, CardPaymentEnvironment45.mmCardholder, CardPaymentEnvironment53.mmCardholder, CardPaymentEnvironment47.mmCardholder, PaymentCard25.mmHolderName,
-						CardPaymentEnvironment61.mmCardholder, CardPaymentEnvironment60.mmCardholder, CardPaymentEnvironment62.mmCardholder, CardPaymentEnvironment57.mmCardholder);
+						CardPaymentEnvironment61.mmCardholder, CardPaymentEnvironment60.mmCardholder, CardPaymentEnvironment62.mmCardholder, CardPaymentEnvironment57.mmCardholder, CardPaymentEnvironment68.mmCardholder);
 				superType_lazy = () -> CardPaymentPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardholderRole.mmAuthentication);
 				derivationComponent_lazy = () -> Arrays.asList(Cardholder2.mmObject(), Cardholder4.mmObject(), Cardholder1.mmObject(), Cardholder3.mmObject(), Cardholder5.mmObject(), Cardholder6.mmObject(), Cardholder8.mmObject(),
 						Cardholder7.mmObject(), ATMCustomer1.mmObject(), ATMCustomer2.mmObject(), ATMCustomer3.mmObject(), Cardholder9.mmObject(), AntiMoneyLaundering1.mmObject(), Cardholder11.mmObject(), Cardholder10.mmObject(),
-						ATMCustomer5.mmObject(), ATMCustomer6.mmObject(), ATMCustomer4.mmObject(), Cardholder12.mmObject());
+						ATMCustomer5.mmObject(), ATMCustomer6.mmObject(), ATMCustomer4.mmObject(), Cardholder12.mmObject(), Cardholder13.mmObject());
 			}
 
 			@Override

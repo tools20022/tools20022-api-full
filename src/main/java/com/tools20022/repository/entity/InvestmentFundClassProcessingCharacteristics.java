@@ -226,7 +226,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "InvestmentFundClassProcessingCharacteristics"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Processing characteristics linked to the instrument, ie, not to  the market."
+ * "Processing characteristics linked to the instrument, ie, not to the market."
  * </li>
  * </ul>
  */
@@ -269,7 +269,7 @@ public class InvestmentFundClassProcessingCharacteristics {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,"
+	 * "Frequency with which the reinvestment takes place, This is the same or less than the dividend frequency."
 	 * </li>
 	 * </ul>
 	 */
@@ -280,7 +280,7 @@ public class InvestmentFundClassProcessingCharacteristics {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundClassProcessingCharacteristics.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReinvestmentFrequency";
-			definition = "Frequency with which the reinvestment takes place,  This is the same or less than the dividend frequency,";
+			definition = "Frequency with which the reinvestment takes place, This is the same or less than the dividend frequency.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EventFrequencyCode.mmObject();
@@ -2405,7 +2405,7 @@ public class InvestmentFundClassProcessingCharacteristics {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InvestmentFundClassProcessingCharacteristics";
-				definition = "Processing characteristics linked to the instrument, ie, not to  the market.";
+				definition = "Processing characteristics linked to the instrument, ie, not to the market.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestmentFundClass.mmProcessingCharacteristics, com.tools20022.repository.entity.Country.mmCountryRelatedInvestmentFundProcessing,
 						com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing, com.tools20022.repository.entity.TimeFrame.mmSubscriptionSettlementRelatedFundProcessing,
 						com.tools20022.repository.entity.TimeFrame.mmRelatedProcessingCharacteristics, com.tools20022.repository.entity.Account.mmRelatedFundProcessingCharacteristics);

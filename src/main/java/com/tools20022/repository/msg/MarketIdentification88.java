@@ -20,6 +20,7 @@ package com.tools20022.repository.msg;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01;
 import com.tools20022.repository.choice.MarketIdentification1Choice;
 import com.tools20022.repository.choice.MarketType13Choice;
 import com.tools20022.repository.GeneratedRepository;
@@ -47,6 +48,16 @@ import javax.xml.bind.annotation.XmlType;
  * MarketIdentification88.mmIdentification}</li>
  * <li>{@linkplain com.tools20022.repository.msg.MarketIdentification88#mmType
  * MarketIdentification88.mmType}</li>
+ * </ul>
+ * </li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01#mmMarketIdentification
+ * ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.
+ * mmMarketIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -171,6 +182,7 @@ public class MarketIdentification88 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MarketIdentification88.mmIdentification, com.tools20022.repository.msg.MarketIdentification88.mmType);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.mmMarketIdentification);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMarketTypeAndIdentificationRule.forMarketIdentification88);
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -88,6 +88,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation10
  * StructuredRemittanceInformation10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation14
+ * StructuredRemittanceInformation14}</li>
  * </ul>
  * </li>
  * </ul>
@@ -139,6 +142,9 @@ public class StructuredRemittanceInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmReferredDocumentInformation
 	 * StructuredRemittanceInformation12.mmReferredDocumentInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation14#mmReferredDocumentInformation
+	 * StructuredRemittanceInformation14.mmReferredDocumentInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -152,7 +158,8 @@ public class StructuredRemittanceInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentInformation";
 			definition = "Set of elements used to identify the documents referred to in the remittance information.";
-			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmReferredDocumentInformation, StructuredRemittanceInformation12.mmReferredDocumentInformation);
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmReferredDocumentInformation, StructuredRemittanceInformation12.mmReferredDocumentInformation,
+					StructuredRemittanceInformation14.mmReferredDocumentInformation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ReferredDocumentInformation3.mmObject();
@@ -199,6 +206,9 @@ public class StructuredRemittanceInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmReferredDocumentAmount
 	 * StructuredRemittanceInformation12.mmReferredDocumentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation14#mmReferredDocumentAmount
+	 * StructuredRemittanceInformation14.mmReferredDocumentAmount}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -212,7 +222,7 @@ public class StructuredRemittanceInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferredDocumentAmount";
 			definition = "Provides details on the amounts of the referred document.";
-			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmReferredDocumentAmount, StructuredRemittanceInformation12.mmReferredDocumentAmount);
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmReferredDocumentAmount, StructuredRemittanceInformation12.mmReferredDocumentAmount, StructuredRemittanceInformation14.mmReferredDocumentAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -262,6 +272,9 @@ public class StructuredRemittanceInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmCreditorReferenceInformation
 	 * StructuredRemittanceInformation12.mmCreditorReferenceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation14#mmCreditorReferenceInformation
+	 * StructuredRemittanceInformation14.mmCreditorReferenceInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -275,7 +288,8 @@ public class StructuredRemittanceInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorReferenceInformation";
 			definition = "Reference information provided by the creditor to allow the identification of the underlying documents.";
-			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmCreditorReferenceInformation, StructuredRemittanceInformation12.mmCreditorReferenceInformation);
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmCreditorReferenceInformation, StructuredRemittanceInformation12.mmCreditorReferenceInformation,
+					StructuredRemittanceInformation14.mmCreditorReferenceInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -324,6 +338,9 @@ public class StructuredRemittanceInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmInvoicer
 	 * StructuredRemittanceInformation12.mmInvoicer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation14#mmInvoicer
+	 * StructuredRemittanceInformation14.mmInvoicer}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -337,7 +354,7 @@ public class StructuredRemittanceInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicer";
 			definition = "Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.";
-			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmInvoicer, StructuredRemittanceInformation12.mmInvoicer);
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmInvoicer, StructuredRemittanceInformation12.mmInvoicer, StructuredRemittanceInformation14.mmInvoicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -385,6 +402,9 @@ public class StructuredRemittanceInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmInvoicee
 	 * StructuredRemittanceInformation12.mmInvoicee}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation14#mmInvoicee
+	 * StructuredRemittanceInformation14.mmInvoicee}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -398,7 +418,7 @@ public class StructuredRemittanceInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicee";
 			definition = "Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.";
-			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmInvoicee, StructuredRemittanceInformation12.mmInvoicee);
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmInvoicee, StructuredRemittanceInformation12.mmInvoicee, StructuredRemittanceInformation14.mmInvoicee);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -447,6 +467,9 @@ public class StructuredRemittanceInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation12#mmAdditionalRemittanceInformation
 	 * StructuredRemittanceInformation12.mmAdditionalRemittanceInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StructuredRemittanceInformation14#mmAdditionalRemittanceInformation
+	 * StructuredRemittanceInformation14.mmAdditionalRemittanceInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -460,7 +483,8 @@ public class StructuredRemittanceInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalRemittanceInformation";
 			definition = "Additional information, in free text form, to complement the structured remittance information.";
-			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmAdditionalRemittanceInformation, StructuredRemittanceInformation12.mmAdditionalRemittanceInformation);
+			nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmAdditionalRemittanceInformation, StructuredRemittanceInformation12.mmAdditionalRemittanceInformation,
+					StructuredRemittanceInformation14.mmAdditionalRemittanceInformation);
 			maxOccurs = 3;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -479,7 +503,7 @@ public class StructuredRemittanceInformation9 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StructuredRemittanceInformation9";
 				definition = "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.";
-				nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(StructuredRemittanceInformation10.mmObject(), StructuredRemittanceInformation14.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

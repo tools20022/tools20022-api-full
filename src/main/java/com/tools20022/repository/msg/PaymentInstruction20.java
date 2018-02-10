@@ -189,6 +189,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction22
  * PaymentInstruction22}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentInstruction24
+ * PaymentInstruction24}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -243,6 +245,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmPaymentInformationIdentification
 	 * PaymentInstruction22.mmPaymentInformationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmPaymentInformationIdentification
+	 * PaymentInstruction24.mmPaymentInformationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -261,7 +266,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInformationIdentification";
 			definition = "Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmPaymentInformationIdentification);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmPaymentInformationIdentification, PaymentInstruction24.mmPaymentInformationIdentification);
 			previousVersion_lazy = () -> PaymentInstruction16.mmPaymentInformationIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -309,6 +314,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmPaymentMethod
 	 * PaymentInstruction22.mmPaymentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmPaymentMethod
+	 * PaymentInstruction24.mmPaymentMethod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -327,7 +335,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Specifies the means of payment that will be used to move the amount of money.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmPaymentMethod);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmPaymentMethod, PaymentInstruction24.mmPaymentMethod);
 			previousVersion_lazy = () -> PaymentInstruction16.mmPaymentMethod;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -370,6 +378,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmBatchBooking
 	 * PaymentInstruction22.mmBatchBooking}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmBatchBooking
+	 * PaymentInstruction24.mmBatchBooking}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -387,7 +398,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchBooking";
 			definition = "Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.\nUsage: Batch booking is used to request and not order a possible batch booking.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmBatchBooking);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmBatchBooking, PaymentInstruction24.mmBatchBooking);
 			previousVersion_lazy = () -> PaymentInstruction16.mmBatchBooking;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -430,6 +441,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmNumberOfTransactions
 	 * PaymentInstruction22.mmNumberOfTransactions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmNumberOfTransactions
+	 * PaymentInstruction24.mmNumberOfTransactions}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -447,7 +461,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactions";
 			definition = "Number of individual transactions contained in the payment information group.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmNumberOfTransactions);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmNumberOfTransactions, PaymentInstruction24.mmNumberOfTransactions);
 			previousVersion_lazy = () -> PaymentInstruction16.mmNumberOfTransactions;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -490,6 +504,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmControlSum
 	 * PaymentInstruction22.mmControlSum}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmControlSum
+	 * PaymentInstruction24.mmControlSum}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -507,7 +524,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ControlSum";
 			definition = "Total of all individual amounts included in the group, irrespective of currencies.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmControlSum);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmControlSum, PaymentInstruction24.mmControlSum);
 			previousVersion_lazy = () -> PaymentInstruction16.mmControlSum;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -553,6 +570,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmPaymentTypeInformation
 	 * PaymentInstruction22.mmPaymentTypeInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmPaymentTypeInformation
+	 * PaymentInstruction24.mmPaymentTypeInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -571,7 +591,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeInformation";
 			definition = "Set of elements used to further specify the type of transaction.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmPaymentTypeInformation);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmPaymentTypeInformation, PaymentInstruction24.mmPaymentTypeInformation);
 			previousVersion_lazy = () -> PaymentInstruction16.mmPaymentTypeInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -619,6 +639,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmRequestedExecutionDate
 	 * PaymentInstruction22.mmRequestedExecutionDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmRequestedExecutionDate
+	 * PaymentInstruction24.mmRequestedExecutionDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -637,7 +660,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmRequestedExecutionDate);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmRequestedExecutionDate, PaymentInstruction24.mmRequestedExecutionDate);
 			previousVersion_lazy = () -> PaymentInstruction16.mmRequestedExecutionDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -684,6 +707,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmPoolingAdjustmentDate
 	 * PaymentInstruction22.mmPoolingAdjustmentDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmPoolingAdjustmentDate
+	 * PaymentInstruction24.mmPoolingAdjustmentDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -702,7 +728,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolingAdjustmentDate";
 			definition = "Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmPoolingAdjustmentDate);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmPoolingAdjustmentDate, PaymentInstruction24.mmPoolingAdjustmentDate);
 			previousVersion_lazy = () -> PaymentInstruction16.mmPoolingAdjustmentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -747,6 +773,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmDebtor
 	 * PaymentInstruction22.mmDebtor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmDebtor
+	 * PaymentInstruction24.mmDebtor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -765,7 +794,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmDebtor);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmDebtor, PaymentInstruction24.mmDebtor);
 			previousVersion_lazy = () -> PaymentInstruction16.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -812,6 +841,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmDebtorAccount
 	 * PaymentInstruction22.mmDebtorAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmDebtorAccount
+	 * PaymentInstruction24.mmDebtorAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -830,7 +862,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmDebtorAccount);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmDebtorAccount, PaymentInstruction24.mmDebtorAccount);
 			previousVersion_lazy = () -> PaymentInstruction16.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -877,6 +909,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmDebtorAgent
 	 * PaymentInstruction22.mmDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmDebtorAgent
+	 * PaymentInstruction24.mmDebtorAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -895,7 +930,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmDebtorAgent);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmDebtorAgent, PaymentInstruction24.mmDebtorAgent);
 			previousVersion_lazy = () -> PaymentInstruction16.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -942,6 +977,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmDebtorAgentAccount
 	 * PaymentInstruction22.mmDebtorAgentAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmDebtorAgentAccount
+	 * PaymentInstruction24.mmDebtorAgentAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -960,7 +998,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentAccount";
 			definition = "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmDebtorAgentAccount);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmDebtorAgentAccount, PaymentInstruction24.mmDebtorAgentAccount);
 			previousVersion_lazy = () -> PaymentInstruction16.mmDebtorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1008,6 +1046,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmInstructionForDebtorAgent
 	 * PaymentInstruction22.mmInstructionForDebtorAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmInstructionForDebtorAgent
+	 * PaymentInstruction24.mmInstructionForDebtorAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1026,7 +1067,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForDebtorAgent";
 			definition = "Further information related to the processing of the payment instruction, that may need to be acted upon by the debtor agent, depending on agreement between debtor and the debtor agent.\r\n\r\nUsage: when present, then the instructions for the debtor agent apply for all credit transfer transaction information occurrences, present in the payment information.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmInstructionForDebtorAgent);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmInstructionForDebtorAgent, PaymentInstruction24.mmInstructionForDebtorAgent);
 			previousVersion_lazy = () -> PaymentInstruction16.mmInstructionForDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1072,6 +1113,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmUltimateDebtor
 	 * PaymentInstruction22.mmUltimateDebtor}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmUltimateDebtor
+	 * PaymentInstruction24.mmUltimateDebtor}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1090,7 +1134,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmUltimateDebtor);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmUltimateDebtor, PaymentInstruction24.mmUltimateDebtor);
 			previousVersion_lazy = () -> PaymentInstruction16.mmUltimateDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1139,6 +1183,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmChargeBearer
 	 * PaymentInstruction22.mmChargeBearer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmChargeBearer
+	 * PaymentInstruction24.mmChargeBearer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1157,7 +1204,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies which party/parties will bear the charges associated with the processing of the payment transaction.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmChargeBearer);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmChargeBearer, PaymentInstruction24.mmChargeBearer);
 			previousVersion_lazy = () -> PaymentInstruction16.mmChargeBearer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1203,6 +1250,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmChargesAccount
 	 * PaymentInstruction22.mmChargesAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmChargesAccount
+	 * PaymentInstruction24.mmChargesAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1221,7 +1271,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccount";
 			definition = "Account used to process charges associated with a transaction.\n\nUsage: Charges account should be used when charges have to be booked to an account different from the account identified in debtor's account.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmChargesAccount);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmChargesAccount, PaymentInstruction24.mmChargesAccount);
 			previousVersion_lazy = () -> PaymentInstruction16.mmChargesAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1269,6 +1319,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmChargesAccountAgent
 	 * PaymentInstruction22.mmChargesAccountAgent}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmChargesAccountAgent
+	 * PaymentInstruction24.mmChargesAccountAgent}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1287,7 +1340,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesAccountAgent";
 			definition = "Agent that services a charges account.\n\nUsage: Charges account agent should only be used when the charges account agent is different from the debtor agent.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmChargesAccountAgent);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmChargesAccountAgent, PaymentInstruction24.mmChargesAccountAgent);
 			previousVersion_lazy = () -> PaymentInstruction16.mmChargesAccountAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1335,6 +1388,9 @@ public class PaymentInstruction20 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction22#mmCreditTransferTransactionInformation
 	 * PaymentInstruction22.mmCreditTransferTransactionInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24#mmCreditTransferTransactionInformation
+	 * PaymentInstruction24.mmCreditTransferTransactionInformation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1353,7 +1409,7 @@ public class PaymentInstruction20 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditTransferTransactionInformation";
 			definition = "Provides information on the individual transaction(s) included in the message.";
-			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmCreditTransferTransactionInformation);
+			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmCreditTransferTransactionInformation, PaymentInstruction24.mmCreditTransferTransactionInformation);
 			previousVersion_lazy = () -> PaymentInstruction16.mmCreditTransferTransactionInformation;
 			minOccurs = 1;
 			isComposite = true;
@@ -1388,7 +1444,7 @@ public class PaymentInstruction20 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentInstruction20";
 				definition = "Characteristics that apply to the debit side of the payment transactions included in the credit transfer initiation.";
-				nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(PaymentInstruction22.mmObject(), PaymentInstruction24.mmObject());
 				previousVersion_lazy = () -> PaymentInstruction16.mmObject();
 			}
 		});

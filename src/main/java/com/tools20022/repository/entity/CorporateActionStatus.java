@@ -1128,6 +1128,36 @@ public class CorporateActionStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus34#mmRateStatus
 	 * RateTypeAndAmountAndStatus34.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus38#mmRateStatus
+	 * RateTypeAndAmountAndStatus38.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus37#mmRateStatus
+	 * RateTypeAndAmountAndStatus37.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus41#mmRateStatus
+	 * RateTypeAndAmountAndStatus41.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus40#mmRateStatus
+	 * RateTypeAndAmountAndStatus40.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus39#mmRateStatus
+	 * RateTypeAndAmountAndStatus39.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus42#mmRateStatus
+	 * RateTypeAndAmountAndStatus42.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus43#mmRateStatus
+	 * RateTypeAndAmountAndStatus43.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus44#mmRateStatus
+	 * RateTypeAndAmountAndStatus44.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus45#mmRateStatus
+	 * RateTypeAndAmountAndStatus45.mmRateStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RateTypeAndAmountAndStatus54#mmRateStatus
+	 * RateTypeAndAmountAndStatus54.mmRateStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1155,7 +1185,9 @@ public class CorporateActionStatus extends Status {
 					RateTypeAndAmountAndStatus20.mmRateStatus, RateTypeAndAmountAndStatus21.mmRateStatus, RateTypeAndAmountAndStatus24.mmRateStatus, RateTypeAndAmountAndStatus22.mmRateStatus, RateTypeAndAmountAndStatus25.mmRateStatus,
 					RateTypeAndAmountAndStatus27.mmRateStatus, RateTypeAndAmountAndStatus26.mmRateStatus, RateTypeAndAmountAndStatus28.mmRateStatus, RateTypeAndAmountAndStatus29.mmRateStatus, RateTypeAndAmountAndStatus32.mmRateStatus,
 					RateTypeAndAmountAndStatus31.mmRateStatus, RateTypeAndAmountAndStatus33.mmRateStatus, RateTypeAndAmountAndStatus36.mmRateStatus, RateTypeAndAmountAndStatus35.mmRateStatus, RateTypeAndAmountAndStatus30.mmRateStatus,
-					RateTypeAndAmountAndStatus34.mmRateStatus);
+					RateTypeAndAmountAndStatus34.mmRateStatus, RateTypeAndAmountAndStatus38.mmRateStatus, RateTypeAndAmountAndStatus37.mmRateStatus, RateTypeAndAmountAndStatus41.mmRateStatus, RateTypeAndAmountAndStatus40.mmRateStatus,
+					RateTypeAndAmountAndStatus39.mmRateStatus, RateTypeAndAmountAndStatus42.mmRateStatus, RateTypeAndAmountAndStatus43.mmRateStatus, RateTypeAndAmountAndStatus44.mmRateStatus, RateTypeAndAmountAndStatus45.mmRateStatus,
+					RateTypeAndAmountAndStatus54.mmRateStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1275,6 +1307,18 @@ public class CorporateActionStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOptionAvailabilityStatus
 	 * CorporateActionOption133.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmOptionAvailabilityStatus
+	 * CorporateActionOption138.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmOptionAvailabilityStatus
+	 * CorporateActionOption139.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmOptionAvailabilityStatus
+	 * CorporateActionOption148.mmOptionAvailabilityStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmOptionAvailabilityStatus
+	 * CorporateActionOption150.mmOptionAvailabilityStatus}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1302,7 +1346,8 @@ public class CorporateActionStatus extends Status {
 					CorporateActionOption56.mmOptionAvailabilityStatus, CorporateActionOption1.mmOptionAvailabilityStatus, CorporateActionOption100.mmOptionAvailabilityStatus, CorporateActionOption101.mmOptionAvailabilityStatus,
 					CorporateActionOption108.mmOptionAvailabilityStatus, CorporateActionOption106.mmOptionAvailabilityStatus, CorporateActionOption115.mmOptionAvailabilityStatus, CorporateActionOption114.mmOptionAvailabilityStatus,
 					CorporateActionOption125.mmOptionAvailabilityStatus, CorporateActionOption127.mmOptionAvailabilityStatus, CorporateActionOption130.mmOptionAvailabilityStatus, CorporateActionOption129.mmOptionAvailabilityStatus,
-					CorporateActionOption135.mmOptionAvailabilityStatus, CorporateActionOption133.mmOptionAvailabilityStatus);
+					CorporateActionOption135.mmOptionAvailabilityStatus, CorporateActionOption133.mmOptionAvailabilityStatus, CorporateActionOption138.mmOptionAvailabilityStatus, CorporateActionOption139.mmOptionAvailabilityStatus,
+					CorporateActionOption148.mmOptionAvailabilityStatus, CorporateActionOption150.mmOptionAvailabilityStatus);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

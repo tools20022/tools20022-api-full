@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * "Counterparty9Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between buyer and seller."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.Counterparty11Choice
+ * Counterparty11Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.Counterparty3Choice
@@ -110,6 +117,14 @@ public class Counterparty9Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that sells goods or services, or a financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Counterparty11Choice#mmSeller
+	 * Counterparty11Choice.mmSeller}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -127,6 +142,7 @@ public class Counterparty9Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Seller";
 			definition = "Party that sells goods or services, or a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(Counterparty11Choice.mmSeller);
 			previousVersion_lazy = () -> Counterparty3Choice.mmSeller;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -170,6 +186,14 @@ public class Counterparty9Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that buys goods or services, or a financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Counterparty11Choice#mmBuyer
+	 * Counterparty11Choice.mmBuyer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -187,6 +211,7 @@ public class Counterparty9Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Buyer";
 			definition = "Party that buys goods or services, or a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(Counterparty11Choice.mmBuyer);
 			previousVersion_lazy = () -> Counterparty3Choice.mmBuyer;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -204,6 +229,7 @@ public class Counterparty9Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Counterparty9Choice";
 				definition = "Choice between buyer and seller.";
+				nextVersions_lazy = () -> Arrays.asList(Counterparty11Choice.mmObject());
 				previousVersion_lazy = () -> Counterparty3Choice.mmObject();
 			}
 		});

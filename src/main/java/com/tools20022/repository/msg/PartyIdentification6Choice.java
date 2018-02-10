@@ -83,7 +83,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyIdentification6Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Identification of a party with the  Bank Identification Code or Market Identification Code or party issuer identification or name and address."
+ * "Identification of a party with the Bank Identification Code or Market Identification Code or party issuer identification or name and address."
  * </li>
  * </ul>
  */
@@ -360,7 +360,7 @@ public class PartyIdentification6Choice {
 					}
 				})).get();
 				name = "PartyIdentification6Choice";
-				definition = "Identification of a party with the  Bank Identification Code or Market Identification Code or party issuer identification or name and address.";
+				definition = "Identification of a party with the Bank Identification Code or Market Identification Code or party issuer identification or name and address.";
 			}
 		});
 		return mmObject_lazy.get();

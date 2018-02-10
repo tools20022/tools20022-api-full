@@ -20,6 +20,7 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.ReturnTransactionV07;
 import com.tools20022.repository.msg.ReturnTransactionCopy1;
 
 /**
@@ -29,6 +30,36 @@ import com.tools20022.repository.msg.ReturnTransactionCopy1;
  */
 public class ConstraintCurrencyGuideline {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.camt.ReturnTransactionV07
+	 * ReturnTransactionV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrencyGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro)."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ReturnTransactionV07> forReturnTransactionV07 = new MMConstraint<ReturnTransactionV07>() {
+		{
+			validator = ConstraintCurrencyGuideline::checkReturnTransactionV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrencyGuideline";
+			definition = "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro).";
+			owner_lazy = () -> ReturnTransactionV07.mmObject();
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -46,7 +77,7 @@ public class ConstraintCurrencyGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro). "
+	 * "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro)."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,10 +86,19 @@ public class ConstraintCurrencyGuideline {
 			validator = ConstraintCurrencyGuideline::checkReturnTransactionCopy1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyGuideline";
-			definition = "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro). ";
+			definition = "The currency may be omitted in the amounts present in the message. However, this should only be done in cases of one single currency systems (eg, the euro).";
 			owner_lazy = () -> ReturnTransactionCopy1.mmObject();
 		}
 	};
+
+	/**
+	 * The currency may be omitted in the amounts present in the message.
+	 * However, this should only be done in cases of one single currency systems
+	 * (eg, the euro).
+	 */
+	public static void checkReturnTransactionV07(ReturnTransactionV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * The currency may be omitted in the amounts present in the message.

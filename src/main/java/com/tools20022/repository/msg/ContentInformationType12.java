@@ -155,6 +155,8 @@ import javax.xml.bind.annotation.XmlType;
  * ContentInformationType13}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ContentInformationType14
  * ContentInformationType14}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContentInformationType19
+ * ContentInformationType19}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -205,6 +207,9 @@ public class ContentInformationType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ContentInformationType14#mmContentType
 	 * ContentInformationType14.mmContentType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType19#mmContentType
+	 * ContentInformationType19.mmContentType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -222,7 +227,7 @@ public class ContentInformationType12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
-			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmContentType, ContentInformationType14.mmContentType);
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmContentType, ContentInformationType14.mmContentType, ContentInformationType19.mmContentType);
 			previousVersion_lazy = () -> ContentInformationType9.mmContentType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -255,6 +260,14 @@ public class ContentInformationType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data protection by encryption, with a session key."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType19#mmEnvelopedData
+	 * ContentInformationType19.mmEnvelopedData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,6 +283,7 @@ public class ContentInformationType12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption, with a session key.";
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType19.mmEnvelopedData);
 			previousVersion_lazy = () -> ContentInformationType9.mmEnvelopedData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -309,6 +323,9 @@ public class ContentInformationType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ContentInformationType13#mmAuthenticatedData
 	 * ContentInformationType13.mmAuthenticatedData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType19#mmAuthenticatedData
+	 * ContentInformationType19.mmAuthenticatedData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -326,7 +343,7 @@ public class ContentInformationType12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
-			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmAuthenticatedData);
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmAuthenticatedData, ContentInformationType19.mmAuthenticatedData);
 			previousVersion_lazy = () -> ContentInformationType9.mmAuthenticatedData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -369,6 +386,9 @@ public class ContentInformationType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ContentInformationType14#mmSignedData
 	 * ContentInformationType14.mmSignedData}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType19#mmSignedData
+	 * ContentInformationType19.mmSignedData}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -386,7 +406,7 @@ public class ContentInformationType12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SignedData";
 			definition = "Data protected by a digital signatures.";
-			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmSignedData, ContentInformationType14.mmSignedData);
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmSignedData, ContentInformationType14.mmSignedData, ContentInformationType19.mmSignedData);
 			previousVersion_lazy = () -> ContentInformationType9.mmSignedData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -420,6 +440,14 @@ public class ContentInformationType12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data protected by a digest."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType19#mmDigestedData
+	 * ContentInformationType19.mmDigestedData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -435,6 +463,7 @@ public class ContentInformationType12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DigestedData";
 			definition = "Data protected by a digest.";
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType19.mmDigestedData);
 			previousVersion_lazy = () -> ContentInformationType9.mmDigestedData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -458,7 +487,7 @@ public class ContentInformationType12 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType12";
 				definition = "General cryptographic message syntax (CMS) containing protected data.";
-				nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmObject(), ContentInformationType14.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(ContentInformationType13.mmObject(), ContentInformationType14.mmObject(), ContentInformationType19.mmObject());
 				previousVersion_lazy = () -> ContentInformationType9.mmObject();
 			}
 		});

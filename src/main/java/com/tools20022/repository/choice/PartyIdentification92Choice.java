@@ -76,6 +76,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV06#mmAccountOwner
  * IntraPositionMovementConfirmationV06.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV07#mmAccountOwner
+ * IntraPositionMovementConfirmationV07.mmAccountOwner}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV07#mmAccountOwner
+ * IntraPositionMovementPostingReportV07.mmAccountOwner}</li>
  * </ul>
  * </li>
  * <li>
@@ -236,7 +242,7 @@ public class PartyIdentification92Choice {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.choice.PartyIdentification92Choice.mmAnyBIC, com.tools20022.repository.choice.PartyIdentification92Choice.mmProprietaryIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(IntraPositionMovementInstructionV04.mmAccountOwner, IntraPositionMovementPostingReportV05.mmAccountOwner, IntraPositionMovementConfirmationV05.mmAccountOwner,
-						IntraPositionMovementPostingReportV06.mmAccountOwner, IntraPositionMovementConfirmationV06.mmAccountOwner);
+						IntraPositionMovementPostingReportV06.mmAccountOwner, IntraPositionMovementConfirmationV06.mmAccountOwner, IntraPositionMovementConfirmationV07.mmAccountOwner, IntraPositionMovementPostingReportV07.mmAccountOwner);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

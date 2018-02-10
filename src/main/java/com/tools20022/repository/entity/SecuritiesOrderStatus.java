@@ -380,6 +380,18 @@ public class SecuritiesOrderStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ConfirmationStatus1Choice#mmStatus
 	 * ConfirmationStatus1Choice.mmStatus}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmTradeConfirmation
+	 * TradeTransaction15.mmTradeConfirmation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmTradeConfirmation
+	 * TradeTransaction17.mmTradeConfirmation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmTradeConfirmation
+	 * TradeTransaction14.mmTradeConfirmation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmTradeConfirmation
+	 * TradeTransaction16.mmTradeConfirmation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -400,7 +412,8 @@ public class SecuritiesOrderStatus extends Status {
 	 */
 	public static final MMBusinessAttribute mmConfirmationStatus = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(IndividualOrderConfirmationStatusAndReason1.mmStatus, ConfirmationStatus1Choice.mmStatus);
+			derivation_lazy = () -> Arrays.asList(IndividualOrderConfirmationStatusAndReason1.mmStatus, ConfirmationStatus1Choice.mmStatus, TradeTransaction15.mmTradeConfirmation, TradeTransaction17.mmTradeConfirmation,
+					TradeTransaction14.mmTradeConfirmation, TradeTransaction16.mmTradeConfirmation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesOrderStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

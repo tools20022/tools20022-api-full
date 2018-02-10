@@ -20,10 +20,8 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.msg.BalanceDetails2;
-import com.tools20022.repository.msg.BalanceDetails3;
-import com.tools20022.repository.msg.BalanceDetails4;
-import com.tools20022.repository.msg.CashBalance4;
+import com.tools20022.repository.msg.*;
+import java.util.Arrays;
 
 /**
  * If at least one occurrence of BalanceType is present and is MULT, then no
@@ -144,6 +142,14 @@ public class ConstraintCounterpartyIdentification1Rule {
 	 * definition} =
 	 * "If at least one occurrence of CounterpartyType is present and is equal to Multilateral (MULT), then no occurrence of CounterpartyIdentification is allowed.\r\nIf CounterpartyType is not present, then any occurrence of CounterpartyIdentification is optional."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCounterpartyIdentification1Rule#forCashBalance9
+	 * ConstraintCounterpartyIdentification1Rule.forCashBalance9}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashBalance4> forCashBalance4 = new MMConstraint<CashBalance4>() {
@@ -152,7 +158,48 @@ public class ConstraintCounterpartyIdentification1Rule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification1Rule";
 			definition = "If at least one occurrence of CounterpartyType is present and is equal to Multilateral (MULT), then no occurrence of CounterpartyIdentification is allowed.\r\nIf CounterpartyType is not present, then any occurrence of CounterpartyIdentification is optional.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCounterpartyIdentification1Rule.forCashBalance9);
 			owner_lazy = () -> CashBalance4.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CounterpartyIdentification[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CounterpartyType</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CounterpartyType</leftOperand><rightOperand>Multilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashBalance9 CashBalance9}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/CounterpartyIdentification[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CounterpartyType&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/CounterpartyType&lt;/leftOperand&gt;&lt;rightOperand&gt;Multilateral&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CounterpartyIdentification1Rule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If at least one occurrence of CounterpartyType is present and is equal to Multilateral (MULT), then no occurrence of CounterpartyIdentification is allowed.\r\nIf CounterpartyType is not present, then any occurrence of CounterpartyIdentification is optional."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCounterpartyIdentification1Rule#forCashBalance4
+	 * ConstraintCounterpartyIdentification1Rule.forCashBalance4}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashBalance9> forCashBalance9 = new MMConstraint<CashBalance9>() {
+		{
+			validator = ConstraintCounterpartyIdentification1Rule::checkCashBalance9;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CounterpartyIdentification1Rule";
+			definition = "If at least one occurrence of CounterpartyType is present and is equal to Multilateral (MULT), then no occurrence of CounterpartyIdentification is allowed.\r\nIf CounterpartyType is not present, then any occurrence of CounterpartyIdentification is optional.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCounterpartyIdentification1Rule.forCashBalance4;
+			owner_lazy = () -> CashBalance9.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/CounterpartyIdentification[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CounterpartyType</leftOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CounterpartyType</leftOperand><rightOperand>Multilateral</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
@@ -195,6 +242,17 @@ public class ConstraintCounterpartyIdentification1Rule {
 	 * CounterpartyIdentification is optional.
 	 */
 	public static void checkCashBalance4(CashBalance4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If at least one occurrence of CounterpartyType is present and is equal to
+	 * Multilateral (MULT), then no occurrence of CounterpartyIdentification is
+	 * allowed.<br>
+	 * If CounterpartyType is not present, then any occurrence of
+	 * CounterpartyIdentification is optional.
+	 */
+	public static void checkCashBalance9(CashBalance9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

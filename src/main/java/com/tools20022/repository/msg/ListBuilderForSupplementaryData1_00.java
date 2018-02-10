@@ -377,6 +377,14 @@ class ListBuilderForSupplementaryData1_00 {
 		list.add((T) ContractRegistrationStatementV01.mmSupplementaryData);
 		list.add((T) PaymentRegulatoryInformationNotificationV01.mmSupplementaryData);
 		list.add((T) CurrencyControlRequestOrLetterV01.mmSupplementaryData);
+		list.add((T) ForeignExchangeTradeConfirmationStatusAdviceV01.mmSupplementaryData);
+		list.add((T) ForeignExchangeTradeConfirmationRequestCancellationRequestV01.mmSupplementaryData);
+		list.add((T) ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmSupplementaryData);
+		list.add((T) ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.mmSupplementaryData);
+		list.add((T) ForeignExchangeTradeConfirmationRequestV01.mmSupplementaryData);
+		list.add((T) ForeignExchangeTradeCaptureReportRequestV01.mmSupplementaryData);
+		list.add((T) ForeignExchangeTradeCaptureReportV01.mmSupplementaryData);
+		list.add((T) ForeignExchangeTradeCaptureReportAcknowledgementV01.mmSupplementaryData);
 		list.add((T) BankToCustomerAccountReportV06.mmSupplementaryData);
 		list.add((T) FIToFICustomerDirectDebitV06.mmSupplementaryData);
 		list.add((T) CustomerCreditTransferInitiationV07.mmSupplementaryData);
@@ -484,6 +492,7 @@ class ListBuilderForSupplementaryData1_00 {
 		list.add((T) NettingCutOffReferenceDataUpdateRequestV01.mmSupplementaryData);
 		list.add((T) NetReportV01.mmSupplementaryData);
 		list.add((T) NettingCutOffReferenceDataReportV01.mmSupplementaryData);
+		list.add((T) CancelTransactionV07.mmSupplementaryData);
 		list.add((T) MandateAcceptanceReportV05.mmSupplementaryData);
 		list.add((T) MandateAmendmentRequestV05.mmSupplementaryData);
 		list.add((T) UnableToApplyV05.mmSupplementaryData);
@@ -496,6 +505,7 @@ class ListBuilderForSupplementaryData1_00 {
 		list.add((T) AdditionalPaymentInformationV07.mmSupplementaryData);
 		list.add((T) ResolutionOfInvestigationV07.mmSupplementaryData);
 		list.add((T) FIToFICustomerDirectDebitV07.mmSupplementaryData);
+		list.add((T) FIToFICustomerCreditTransferV07.mmSupplementaryData);
 		list.add((T) CustomerCreditTransferInitiationV08.mmSupplementaryData);
 		list.add((T) FIToFIPaymentCancellationRequestV06.mmSupplementaryData);
 		list.add((T) MandateCancellationRequestV05.mmSupplementaryData);
@@ -503,6 +513,7 @@ class ListBuilderForSupplementaryData1_00 {
 		list.add((T) DebitAuthorisationRequestV05.mmSupplementaryData);
 		list.add((T) CreditorPaymentActivationRequestStatusReportV06.mmSupplementaryData);
 		list.add((T) CustomerPaymentStatusReportV08.mmSupplementaryData);
+		list.add((T) FinancialInstitutionCreditTransferV07.mmSupplementaryData);
 		list.add((T) CreditorPaymentActivationRequestV06.mmSupplementaryData);
 		list.add((T) ClaimNonReceiptV05.mmSupplementaryData);
 		list.add((T) RequestToModifyPaymentV04.mmSupplementaryData);
@@ -533,17 +544,6 @@ class ListBuilderForSupplementaryData1_00 {
 		list.add((T) SecuritiesSettlementTransactionInstruction002V07.mmSupplementaryData);
 		list.add((T) CorporateActionMovementReversalAdvice002V08.mmSupplementaryData);
 		list.add((T) CorporateActionInstructionCancellationRequest002V07.mmSupplementaryData);
-		list.add((T) CorporateActionEventProcessingStatusAdvice002V06.mmSupplementaryData);
-		list.add((T) SecuritiesFinancingConfirmation002V07.mmSupplementaryData);
-		list.add((T) SecuritiesFinancingStatusAdvice002V07.mmSupplementaryData);
-		list.add((T) SecuritiesSettlementConditionsModificationRequest002V07.mmSupplementaryData);
-		list.add((T) CorporateActionInstructionCancellationRequestStatusAdvice002V07.mmSupplementaryData);
-		list.add((T) CorporateActionMovementPreliminaryAdviceCancellationAdvice002V07.mmSupplementaryData);
-		list.add((T) CorporateActionNotification002V07.mmSupplementaryData);
-		list.add((T) SecuritiesSettlementTransactionStatusAdvice002V08.mmSupplementaryData);
-		list.add((T) CorporateActionInstructionStatementReport002V06.mmSupplementaryData);
-		list.add((T) SecuritiesFinancingInstruction002V07.mmSupplementaryData);
-		list.add((T) CorporateActionInstructionStatusAdvice002V08.mmSupplementaryData);
 		ListBuilderForSupplementaryData1_01.addElems(list);
 		return list;
 	}

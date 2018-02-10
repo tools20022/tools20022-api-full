@@ -157,7 +157,7 @@ public class ConstraintOtherCodeRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If Structured is OTHR, then AdditionalInformation is mandatory.."</li>
+	 * "If Structured is OTHR, then AdditionalInformation is mandatory."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ChargeType2> forChargeType2 = new MMConstraint<ChargeType2>() {
@@ -165,7 +165,7 @@ public class ConstraintOtherCodeRule {
 			validator = ConstraintOtherCodeRule::checkChargeType2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCodeRule";
-			definition = "If Structured is OTHR, then AdditionalInformation is mandatory..";
+			definition = "If Structured is OTHR, then AdditionalInformation is mandatory.";
 			owner_lazy = () -> ChargeType2.mmObject();
 		}
 	};
@@ -771,7 +771,7 @@ public class ConstraintOtherCodeRule {
 	}
 
 	/**
-	 * If Structured is OTHR, then AdditionalInformation is mandatory..
+	 * If Structured is OTHR, then AdditionalInformation is mandatory.
 	 */
 	public static void checkChargeType2(ChargeType2 obj) throws Exception {
 		throw new NotImplementedConstraintException();

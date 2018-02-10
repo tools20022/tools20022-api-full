@@ -23,10 +23,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.Settlement;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.CardPaymentInvoice1;
-import com.tools20022.repository.msg.CardPaymentInvoice2;
-import com.tools20022.repository.msg.EarlyPaymentsVAT1;
-import com.tools20022.repository.msg.TradeSettlement1;
+import com.tools20022.repository.msg.*;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -304,6 +301,9 @@ public class CommercialTradeSettlement extends Settlement {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice2#mmTradeDelivery
 	 * CardPaymentInvoice2.mmTradeDelivery}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentInvoice3#mmTradeDelivery
+	 * CardPaymentInvoice3.mmTradeDelivery}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -324,7 +324,7 @@ public class CommercialTradeSettlement extends Settlement {
 	 */
 	public static final MMBusinessAssociationEnd mmProductDelivery = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CardPaymentInvoice1.mmTradeDelivery, CardPaymentInvoice2.mmTradeDelivery);
+			derivation_lazy = () -> Arrays.asList(CardPaymentInvoice1.mmTradeDelivery, CardPaymentInvoice2.mmTradeDelivery, CardPaymentInvoice3.mmTradeDelivery);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CommercialTradeSettlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

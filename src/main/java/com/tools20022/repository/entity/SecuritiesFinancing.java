@@ -393,6 +393,26 @@ import java.util.concurrent.atomic.AtomicReference;
  * RepurchaseType24Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.RepurchaseType26Choice
  * RepurchaseType26Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74
+ * SecuritiesTradeDetails74}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77
+ * SecuritiesTradeDetails77}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37
+ * SecuritiesFinancingTransactionDetails37}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38
+ * SecuritiesFinancingTransactionDetails38}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82
+ * SecuritiesTradeDetails82}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39
+ * SecuritiesFinancingTransactionDetails39}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83
+ * SecuritiesTradeDetails83}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41
+ * SecuritiesFinancingTransactionDetails41}</li>
  * </ul>
  * </li>
  * <li>
@@ -507,6 +527,27 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmReturnLeg
 	 * SettlementDetails138.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmReturnLeg
+	 * SettlementDetails140.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmReturnLeg
+	 * SettlementDetails142.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmReturnLeg
+	 * SettlementDetails145.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmReturnLeg
+	 * SettlementDetails146.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmReturnLeg
+	 * SettlementDetails156.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmReturnLeg
+	 * SettlementDetails157.mmReturnLeg}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmReturnLeg
+	 * SettlementDetails158.mmReturnLeg}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -533,7 +574,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SettlementDetails35.mmReturnLeg, SettlementDetails42.mmReturnLeg, SettlementDetails52.mmReturnLeg, SettlementDetails43.mmReturnLeg, SettlementDetails67.mmReturnLeg, SettlementDetails68.mmReturnLeg,
 					SettlementDetails81.mmReturnLeg, SettlementDetails83.mmReturnLeg, SettlementDetails93.mmReturnLeg, SettlementDetails94.mmReturnLeg, SettlementDetails101.mmReturnLeg, SettlementDetails111.mmReturnLeg,
 					SettlementDetails112.mmReturnLeg, SettlementDetails113.mmReturnLeg, SettlementDetails120.mmReturnLeg, SettlementDetails119.mmReturnLeg, SettlementDetails122.mmReturnLeg, SettlementDetails137.mmReturnLeg,
-					SettlementDetails132.mmReturnLeg, SettlementDetails138.mmReturnLeg);
+					SettlementDetails132.mmReturnLeg, SettlementDetails138.mmReturnLeg, SettlementDetails140.mmReturnLeg, SettlementDetails142.mmReturnLeg, SettlementDetails145.mmReturnLeg, SettlementDetails146.mmReturnLeg,
+					SettlementDetails156.mmReturnLeg, SettlementDetails157.mmReturnLeg, SettlementDetails158.mmReturnLeg);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -710,6 +752,33 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmTerminationDate
 	 * SecuritiesFinancingTransactionDetails36.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmTerminationDate
+	 * TradeTransaction15.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmTerminationDate
+	 * TradeTransaction17.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmTerminationDate
+	 * TradeTransaction14.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmTerminationDate
+	 * TradeTransaction18.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmTerminationDate
+	 * TradeTransaction16.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails37.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails38.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails39.mmTerminationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41#mmTerminationDate
+	 * SecuritiesFinancingTransactionDetails41.mmTerminationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -743,7 +812,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails24.mmTerminationDate, SecuritiesFinancingTransactionDetails25.mmTerminationDate, SecuritiesFinancingTransactionDetails26.mmTerminationDate,
 					SecuritiesFinancingTransactionDetails28.mmTerminationDate, SecuritiesFinancingTransactionDetails27.mmTerminationDate, SecuritiesFinancingTransactionDetails29.mmTerminationDate,
 					SecuritiesFinancingTransactionDetails33.mmTerminationDate, SecuritiesFinancingTransactionDetails32.mmTerminationDate, SecuritiesFinancingTransactionDetails30.mmTerminationDate,
-					SecuritiesFinancingTransactionDetails34.mmTerminationDate, SecuritiesFinancingTransactionDetails35.mmTerminationDate, SecuritiesFinancingTransactionDetails36.mmTerminationDate);
+					SecuritiesFinancingTransactionDetails34.mmTerminationDate, SecuritiesFinancingTransactionDetails35.mmTerminationDate, SecuritiesFinancingTransactionDetails36.mmTerminationDate, TradeTransaction15.mmTerminationDate,
+					TradeTransaction17.mmTerminationDate, TradeTransaction14.mmTerminationDate, TradeTransaction18.mmTerminationDate, TradeTransaction16.mmTerminationDate, SecuritiesFinancingTransactionDetails37.mmTerminationDate,
+					SecuritiesFinancingTransactionDetails38.mmTerminationDate, SecuritiesFinancingTransactionDetails39.mmTerminationDate, SecuritiesFinancingTransactionDetails41.mmTerminationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::TERM"));
@@ -860,6 +931,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmRateChangeDate
 	 * SecuritiesFinancingTransactionDetails36.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails37.mmRateChangeDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmRateChangeDate
+	 * SecuritiesFinancingTransactionDetails39.mmRateChangeDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -888,7 +965,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails22.mmRateChangeDate, SecuritiesFinancingTransactionDetails24.mmRateChangeDate, SecuritiesFinancingTransactionDetails25.mmRateChangeDate,
 					SecuritiesFinancingTransactionDetails26.mmRateChangeDate, SecuritiesFinancingTransactionDetails28.mmRateChangeDate, SecuritiesFinancingTransactionDetails27.mmRateChangeDate,
 					SecuritiesFinancingTransactionDetails33.mmRateChangeDate, SecuritiesFinancingTransactionDetails32.mmRateChangeDate, SecuritiesFinancingTransactionDetails30.mmRateChangeDate,
-					SecuritiesFinancingTransactionDetails35.mmRateChangeDate, SecuritiesFinancingTransactionDetails36.mmRateChangeDate);
+					SecuritiesFinancingTransactionDetails35.mmRateChangeDate, SecuritiesFinancingTransactionDetails36.mmRateChangeDate, SecuritiesFinancingTransactionDetails37.mmRateChangeDate,
+					SecuritiesFinancingTransactionDetails39.mmRateChangeDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -999,6 +1077,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.RevaluationIndicator4Choice#mmProprietary
 	 * RevaluationIndicator4Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails37.mmRevaluation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmRevaluation
+	 * SecuritiesFinancingTransactionDetails39.mmRevaluation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1027,7 +1111,7 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails19.mmRevaluation, SecuritiesFinancingTransactionDetails20.mmRevaluation, Revaluation1Choice.mmIndicator, Revaluation1Choice.mmProprietary,
 					SecuritiesFinancing1.mmRevaluationIndicator, SecuritiesFinancingTransactionDetails28.mmRevaluation, SecuritiesFinancingTransactionDetails27.mmRevaluation, RevaluationIndicator3Choice.mmIndicator,
 					RevaluationIndicator3Choice.mmProprietary, SecuritiesFinancingTransactionDetails32.mmRevaluation, SecuritiesFinancingTransactionDetails30.mmRevaluation, RevaluationIndicator4Choice.mmIndicator,
-					RevaluationIndicator4Choice.mmProprietary);
+					RevaluationIndicator4Choice.mmProprietary, SecuritiesFinancingTransactionDetails37.mmRevaluation, SecuritiesFinancingTransactionDetails39.mmRevaluation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1108,6 +1192,18 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmInterestPayment
 	 * SecuritiesFinancingTransactionDetails34.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails37.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails38.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails39.mmInterestPayment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41#mmInterestPayment
+	 * SecuritiesFinancingTransactionDetails41.mmInterestPayment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1135,7 +1231,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails7.mmInterestPayment, SecuritiesFinancingTransactionDetails19.mmInterestPayment, SecuritiesFinancingTransactionDetails20.mmInterestPayment,
 					SecuritiesFinancingTransactionDetails9.mmInterestPayment, SecuritiesFinancingTransactionDetails28.mmInterestPayment, SecuritiesFinancingTransactionDetails27.mmInterestPayment,
 					SecuritiesFinancingTransactionDetails29.mmInterestPayment, SecuritiesFinancingTransactionDetails32.mmInterestPayment, SecuritiesFinancingTransactionDetails30.mmInterestPayment,
-					SecuritiesFinancingTransactionDetails34.mmInterestPayment);
+					SecuritiesFinancingTransactionDetails34.mmInterestPayment, SecuritiesFinancingTransactionDetails37.mmInterestPayment, SecuritiesFinancingTransactionDetails38.mmInterestPayment,
+					SecuritiesFinancingTransactionDetails39.mmInterestPayment, SecuritiesFinancingTransactionDetails41.mmInterestPayment);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1263,6 +1360,18 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmVariableRateSupport
 	 * SecuritiesFinancingTransactionDetails36.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails37.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails38.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails39.mmVariableRateSupport}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41#mmVariableRateSupport
+	 * SecuritiesFinancingTransactionDetails41.mmVariableRateSupport}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1298,7 +1407,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails25.mmVariableRateSupport, SecuritiesFinancingTransactionDetails26.mmVariableRateSupport, SecuritiesFinancingTransactionDetails28.mmVariableRateSupport,
 					SecuritiesFinancingTransactionDetails27.mmVariableRateSupport, SecuritiesFinancingTransactionDetails29.mmVariableRateSupport, SecuritiesFinancingTransactionDetails33.mmVariableRateSupport,
 					SecuritiesFinancingTransactionDetails32.mmVariableRateSupport, SecuritiesFinancingTransactionDetails30.mmVariableRateSupport, SecuritiesFinancingTransactionDetails34.mmVariableRateSupport,
-					SecuritiesFinancingTransactionDetails35.mmVariableRateSupport, SecuritiesFinancingTransactionDetails36.mmVariableRateSupport);
+					SecuritiesFinancingTransactionDetails35.mmVariableRateSupport, SecuritiesFinancingTransactionDetails36.mmVariableRateSupport, SecuritiesFinancingTransactionDetails37.mmVariableRateSupport,
+					SecuritiesFinancingTransactionDetails38.mmVariableRateSupport, SecuritiesFinancingTransactionDetails39.mmVariableRateSupport, SecuritiesFinancingTransactionDetails41.mmVariableRateSupport);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92C::VASU"));
@@ -1428,6 +1538,18 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmRepurchaseRate
 	 * SecuritiesFinancingTransactionDetails36.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails37.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails38.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails39.mmRepurchaseRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41#mmRepurchaseRate
+	 * SecuritiesFinancingTransactionDetails41.mmRepurchaseRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1460,7 +1582,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails24.mmRepurchaseRate, SecuritiesFinancingTransactionDetails25.mmRepurchaseRate, SecuritiesFinancingTransactionDetails26.mmRepurchaseRate,
 					SecuritiesFinancingTransactionDetails28.mmRepurchaseRate, SecuritiesFinancingTransactionDetails27.mmRepurchaseRate, SecuritiesFinancingTransactionDetails29.mmRepurchaseRate,
 					SecuritiesFinancingTransactionDetails33.mmRepurchaseRate, SecuritiesFinancingTransactionDetails32.mmRepurchaseRate, SecuritiesFinancingTransactionDetails30.mmRepurchaseRate,
-					SecuritiesFinancingTransactionDetails34.mmRepurchaseRate, SecuritiesFinancingTransactionDetails35.mmRepurchaseRate, SecuritiesFinancingTransactionDetails36.mmRepurchaseRate);
+					SecuritiesFinancingTransactionDetails34.mmRepurchaseRate, SecuritiesFinancingTransactionDetails35.mmRepurchaseRate, SecuritiesFinancingTransactionDetails36.mmRepurchaseRate,
+					SecuritiesFinancingTransactionDetails37.mmRepurchaseRate, SecuritiesFinancingTransactionDetails38.mmRepurchaseRate, SecuritiesFinancingTransactionDetails39.mmRepurchaseRate,
+					SecuritiesFinancingTransactionDetails41.mmRepurchaseRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::REPO"));
@@ -1578,6 +1702,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmStockLoanMargin
 	 * SecuritiesFinancingTransactionDetails36.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails37.mmStockLoanMargin}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmStockLoanMargin
+	 * SecuritiesFinancingTransactionDetails39.mmStockLoanMargin}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1608,7 +1738,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails22.mmStockLoanMargin, SecuritiesFinancingTransactionDetails24.mmStockLoanMargin, SecuritiesFinancingTransactionDetails25.mmStockLoanMargin,
 					SecuritiesFinancingTransactionDetails26.mmStockLoanMargin, SecuritiesFinancingTransactionDetails28.mmStockLoanMargin, SecuritiesFinancingTransactionDetails27.mmStockLoanMargin,
 					SecuritiesFinancingTransactionDetails33.mmStockLoanMargin, SecuritiesFinancingTransactionDetails32.mmStockLoanMargin, SecuritiesFinancingTransactionDetails30.mmStockLoanMargin,
-					SecuritiesFinancingTransactionDetails35.mmStockLoanMargin, SecuritiesFinancingTransactionDetails36.mmStockLoanMargin);
+					SecuritiesFinancingTransactionDetails35.mmStockLoanMargin, SecuritiesFinancingTransactionDetails36.mmStockLoanMargin, SecuritiesFinancingTransactionDetails37.mmStockLoanMargin,
+					SecuritiesFinancingTransactionDetails39.mmStockLoanMargin);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1731,6 +1862,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmPricingRate
 	 * SecuritiesFinancingTransactionDetails36.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails37.mmPricingRate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmPricingRate
+	 * SecuritiesFinancingTransactionDetails39.mmPricingRate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1758,7 +1895,7 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancing1.mmPricing, SecuritiesFinancingTransactionDetails21.mmPricingRate, SecuritiesFinancingTransactionDetails22.mmPricingRate, SecuritiesFinancingTransactionDetails24.mmPricingRate,
 					SecuritiesFinancingTransactionDetails25.mmPricingRate, SecuritiesFinancingTransactionDetails26.mmPricingRate, SecuritiesFinancingTransactionDetails28.mmPricingRate, SecuritiesFinancingTransactionDetails27.mmPricingRate,
 					SecuritiesFinancingTransactionDetails33.mmPricingRate, SecuritiesFinancingTransactionDetails32.mmPricingRate, SecuritiesFinancingTransactionDetails30.mmPricingRate, SecuritiesFinancingTransactionDetails35.mmPricingRate,
-					SecuritiesFinancingTransactionDetails36.mmPricingRate);
+					SecuritiesFinancingTransactionDetails36.mmPricingRate, SecuritiesFinancingTransactionDetails37.mmPricingRate, SecuritiesFinancingTransactionDetails39.mmPricingRate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1868,6 +2005,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmSpread
 	 * SecuritiesFinancingTransactionDetails36.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmSpread
+	 * SecuritiesFinancingTransactionDetails37.mmSpread}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmSpread
+	 * SecuritiesFinancingTransactionDetails39.mmSpread}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1899,7 +2042,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails10.mmSpread, SecuritiesFinancingTransactionDetails17.mmSpread, SecuritiesFinancingTransactionDetails18.mmSpread, SecuritiesFinancingTransactionDetails21.mmSpread,
 					SecuritiesFinancingTransactionDetails22.mmSpread, SecuritiesFinancingTransactionDetails24.mmSpread, SecuritiesFinancingTransactionDetails25.mmSpread, SecuritiesFinancingTransactionDetails26.mmSpread,
 					SecuritiesFinancingTransactionDetails28.mmSpread, SecuritiesFinancingTransactionDetails27.mmSpread, SecuritiesFinancingTransactionDetails33.mmSpread, SecuritiesFinancingTransactionDetails32.mmSpread,
-					SecuritiesFinancingTransactionDetails30.mmSpread, SecuritiesFinancingTransactionDetails35.mmSpread, SecuritiesFinancingTransactionDetails36.mmSpread);
+					SecuritiesFinancingTransactionDetails30.mmSpread, SecuritiesFinancingTransactionDetails35.mmSpread, SecuritiesFinancingTransactionDetails36.mmSpread, SecuritiesFinancingTransactionDetails37.mmSpread,
+					SecuritiesFinancingTransactionDetails39.mmSpread);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::RSPR"));
@@ -1981,6 +2125,18 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmTransactionCallDelay
 	 * SecuritiesFinancingTransactionDetails34.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails37.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails38.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails39.mmTransactionCallDelay}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41#mmTransactionCallDelay
+	 * SecuritiesFinancingTransactionDetails41.mmTransactionCallDelay}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2008,7 +2164,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancing10.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails7.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails19.mmTransactionCallDelay,
 					SecuritiesFinancingTransactionDetails20.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails9.mmTransactionCallDelay, SecuritiesFinancing1.mmTransactionCallDelay,
 					SecuritiesFinancingTransactionDetails28.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails27.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails29.mmTransactionCallDelay,
-					SecuritiesFinancingTransactionDetails32.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails30.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails34.mmTransactionCallDelay);
+					SecuritiesFinancingTransactionDetails32.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails30.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails34.mmTransactionCallDelay,
+					SecuritiesFinancingTransactionDetails37.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails38.mmTransactionCallDelay, SecuritiesFinancingTransactionDetails39.mmTransactionCallDelay,
+					SecuritiesFinancingTransactionDetails41.mmTransactionCallDelay);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2095,6 +2253,14 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmTotalNumberOfCollateralInstructions
 	 * SecuritiesFinancingTransactionDetails30.
 	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails37.
+	 * mmTotalNumberOfCollateralInstructions}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmTotalNumberOfCollateralInstructions
+	 * SecuritiesFinancingTransactionDetails39.
+	 * mmTotalNumberOfCollateralInstructions}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2125,7 +2291,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails14.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails4.mmTotalNumberOfCollateralInstructions, SecuritiesFinancing10.mmTotalNumberOfCollateralInstructions,
 					SecuritiesFinancingTransactionDetails19.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails20.mmTotalNumberOfCollateralInstructions, SecuritiesFinancing1.mmTotalNumberOfCollateralInstructions,
 					SecuritiesFinancingTransactionDetails28.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails27.mmTotalNumberOfCollateralInstructions,
-					SecuritiesFinancingTransactionDetails32.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails30.mmTotalNumberOfCollateralInstructions);
+					SecuritiesFinancingTransactionDetails32.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails30.mmTotalNumberOfCollateralInstructions,
+					SecuritiesFinancingTransactionDetails37.mmTotalNumberOfCollateralInstructions, SecuritiesFinancingTransactionDetails39.mmTotalNumberOfCollateralInstructions);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":99B::TOCO"));
@@ -2198,6 +2365,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmDealAmount
 	 * SecuritiesFinancingTransactionDetails30.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails37.mmDealAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmDealAmount
+	 * SecuritiesFinancingTransactionDetails39.mmDealAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2224,7 +2397,7 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails3.mmDealAmount, SecuritiesFinancingTransactionDetails5.mmDealAmount, SecuritiesFinancingTransactionDetails1.mmDealAmount,
 					SecuritiesFinancingTransactionDetails11.mmDealAmount, SecuritiesFinancingTransactionDetails14.mmDealAmount, SecuritiesFinancingTransactionDetails4.mmDealAmount, SecuritiesFinancingTransactionDetails19.mmDealAmount,
 					SecuritiesFinancingTransactionDetails20.mmDealAmount, SecuritiesFinancing1.mmDealAmount, SecuritiesFinancingTransactionDetails28.mmDealAmount, SecuritiesFinancingTransactionDetails27.mmDealAmount,
-					SecuritiesFinancingTransactionDetails32.mmDealAmount, SecuritiesFinancingTransactionDetails30.mmDealAmount);
+					SecuritiesFinancingTransactionDetails32.mmDealAmount, SecuritiesFinancingTransactionDetails30.mmDealAmount, SecuritiesFinancingTransactionDetails37.mmDealAmount, SecuritiesFinancingTransactionDetails39.mmDealAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::DEAL"));
@@ -2300,6 +2473,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmForfeitAmount
 	 * SecuritiesFinancingTransactionDetails30.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails37.mmForfeitAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmForfeitAmount
+	 * SecuritiesFinancingTransactionDetails39.mmForfeitAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2328,7 +2507,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails3.mmForfeitAmount, SecuritiesFinancingTransactionDetails5.mmForfeitAmount, SecuritiesFinancingTransactionDetails1.mmForfeitAmount,
 					SecuritiesFinancingTransactionDetails11.mmForfeitAmount, SecuritiesFinancingTransactionDetails14.mmForfeitAmount, SecuritiesFinancingTransactionDetails4.mmForfeitAmount, SecuritiesFinancing10.mmForfeitAmount,
 					SecuritiesFinancingTransactionDetails19.mmForfeitAmount, SecuritiesFinancingTransactionDetails20.mmForfeitAmount, SecuritiesFinancing1.mmForfeitAmount, SecuritiesFinancingTransactionDetails28.mmForfeitAmount,
-					SecuritiesFinancingTransactionDetails27.mmForfeitAmount, SecuritiesFinancingTransactionDetails32.mmForfeitAmount, SecuritiesFinancingTransactionDetails30.mmForfeitAmount);
+					SecuritiesFinancingTransactionDetails27.mmForfeitAmount, SecuritiesFinancingTransactionDetails32.mmForfeitAmount, SecuritiesFinancingTransactionDetails30.mmForfeitAmount,
+					SecuritiesFinancingTransactionDetails37.mmForfeitAmount, SecuritiesFinancingTransactionDetails39.mmForfeitAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::FORF"));
@@ -2404,6 +2584,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmPremiumAmount
 	 * SecuritiesFinancingTransactionDetails30.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails37.mmPremiumAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmPremiumAmount
+	 * SecuritiesFinancingTransactionDetails39.mmPremiumAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2432,7 +2618,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails3.mmPremiumAmount, SecuritiesFinancingTransactionDetails5.mmPremiumAmount, SecuritiesFinancingTransactionDetails1.mmPremiumAmount,
 					SecuritiesFinancingTransactionDetails11.mmPremiumAmount, SecuritiesFinancingTransactionDetails14.mmPremiumAmount, SecuritiesFinancingTransactionDetails4.mmPremiumAmount, SecuritiesFinancing10.mmPremiumAmount,
 					SecuritiesFinancingTransactionDetails19.mmPremiumAmount, SecuritiesFinancingTransactionDetails20.mmPremiumAmount, SecuritiesFinancing1.mmPremiumAmount, SecuritiesFinancingTransactionDetails28.mmPremiumAmount,
-					SecuritiesFinancingTransactionDetails27.mmPremiumAmount, SecuritiesFinancingTransactionDetails32.mmPremiumAmount, SecuritiesFinancingTransactionDetails30.mmPremiumAmount);
+					SecuritiesFinancingTransactionDetails27.mmPremiumAmount, SecuritiesFinancingTransactionDetails32.mmPremiumAmount, SecuritiesFinancingTransactionDetails30.mmPremiumAmount,
+					SecuritiesFinancingTransactionDetails37.mmPremiumAmount, SecuritiesFinancingTransactionDetails39.mmPremiumAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19A::REPP"));
@@ -2517,6 +2704,14 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmTerminationAmountPerPieceOfCollateral
 	 * SecuritiesFinancingTransactionDetails30.
 	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails37.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmTerminationAmountPerPieceOfCollateral
+	 * SecuritiesFinancingTransactionDetails39.
+	 * mmTerminationAmountPerPieceOfCollateral}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2545,7 +2740,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails19.mmTerminationAmountPerPieceOfCollateral, SecuritiesFinancingTransactionDetails20.mmTerminationAmountPerPieceOfCollateral,
 					SecuritiesFinancing1.mmTerminationAmountPerPiecesOfCollateral, SecuritiesFinancingTransactionDetails28.mmTerminationAmountPerPieceOfCollateral,
 					SecuritiesFinancingTransactionDetails27.mmTerminationAmountPerPieceOfCollateral, SecuritiesFinancingTransactionDetails32.mmTerminationAmountPerPieceOfCollateral,
-					SecuritiesFinancingTransactionDetails30.mmTerminationAmountPerPieceOfCollateral);
+					SecuritiesFinancingTransactionDetails30.mmTerminationAmountPerPieceOfCollateral, SecuritiesFinancingTransactionDetails37.mmTerminationAmountPerPieceOfCollateral,
+					SecuritiesFinancingTransactionDetails39.mmTerminationAmountPerPieceOfCollateral);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2674,6 +2870,18 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmTerminationTransactionAmount
 	 * SecuritiesFinancingTransactionDetails36.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails37.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails38.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails39.mmTerminationTransactionAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41#mmTerminationTransactionAmount
+	 * SecuritiesFinancingTransactionDetails41.mmTerminationTransactionAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2705,7 +2913,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails24.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails25.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails26.mmTerminationTransactionAmount,
 					SecuritiesFinancingTransactionDetails28.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails27.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails29.mmTerminationTransactionAmount,
 					SecuritiesFinancingTransactionDetails33.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails32.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails30.mmTerminationTransactionAmount,
-					SecuritiesFinancingTransactionDetails34.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails35.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails36.mmTerminationTransactionAmount);
+					SecuritiesFinancingTransactionDetails34.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails35.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails36.mmTerminationTransactionAmount,
+					SecuritiesFinancingTransactionDetails37.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails38.mmTerminationTransactionAmount, SecuritiesFinancingTransactionDetails39.mmTerminationTransactionAmount,
+					SecuritiesFinancingTransactionDetails41.mmTerminationTransactionAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2780,6 +2990,18 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails34#mmMaturityDateModification
 	 * SecuritiesFinancingTransactionDetails34.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails37.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails38#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails38.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails39.mmMaturityDateModification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails41#mmMaturityDateModification
+	 * SecuritiesFinancingTransactionDetails41.mmMaturityDateModification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2806,7 +3028,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails14.mmMaturityDateModification, SecuritiesFinancingTransactionDetails4.mmMaturityDateModification, SecuritiesFinancingTransactionDetails7.mmMaturityDateModification,
 					SecuritiesFinancingTransactionDetails19.mmMaturityDateModification, SecuritiesFinancingTransactionDetails20.mmMaturityDateModification, SecuritiesFinancingTransactionDetails9.mmMaturityDateModification,
 					SecuritiesFinancingTransactionDetails28.mmMaturityDateModification, SecuritiesFinancingTransactionDetails27.mmMaturityDateModification, SecuritiesFinancingTransactionDetails29.mmMaturityDateModification,
-					SecuritiesFinancingTransactionDetails32.mmMaturityDateModification, SecuritiesFinancingTransactionDetails30.mmMaturityDateModification, SecuritiesFinancingTransactionDetails34.mmMaturityDateModification);
+					SecuritiesFinancingTransactionDetails32.mmMaturityDateModification, SecuritiesFinancingTransactionDetails30.mmMaturityDateModification, SecuritiesFinancingTransactionDetails34.mmMaturityDateModification,
+					SecuritiesFinancingTransactionDetails37.mmMaturityDateModification, SecuritiesFinancingTransactionDetails38.mmMaturityDateModification, SecuritiesFinancingTransactionDetails39.mmMaturityDateModification,
+					SecuritiesFinancingTransactionDetails41.mmMaturityDateModification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2862,6 +3086,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmEarliestCallBackDate
 	 * SecuritiesFinancingTransactionDetails30.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails37.mmEarliestCallBackDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmEarliestCallBackDate
+	 * SecuritiesFinancingTransactionDetails39.mmEarliestCallBackDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2885,7 +3115,8 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails11.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails14.mmEarliestCallBackDate,
 					SecuritiesFinancingTransactionDetails19.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails20.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails28.mmEarliestCallBackDate,
-					SecuritiesFinancingTransactionDetails27.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails32.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails30.mmEarliestCallBackDate);
+					SecuritiesFinancingTransactionDetails27.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails32.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails30.mmEarliestCallBackDate,
+					SecuritiesFinancingTransactionDetails37.mmEarliestCallBackDate, SecuritiesFinancingTransactionDetails39.mmEarliestCallBackDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2983,6 +3214,12 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails36#mmOpeningSettlementDate
 	 * SecuritiesFinancingTransactionDetails36.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails77.mmOpeningSettlementDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83#mmOpeningSettlementDate
+	 * SecuritiesTradeDetails83.mmOpeningSettlementDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3011,7 +3248,7 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					SecuritiesFinancingTransactionDetails22.mmOpeningSettlementDate, SecuritiesTradeDetails40.mmOpeningSettlementDate, SecuritiesFinancingTransactionDetails24.mmOpeningSettlementDate,
 					SecuritiesFinancingTransactionDetails25.mmOpeningSettlementDate, SecuritiesFinancingTransactionDetails26.mmOpeningSettlementDate, SecuritiesTradeDetails56.mmOpeningSettlementDate,
 					SecuritiesTradeDetails59.mmOpeningSettlementDate, SecuritiesFinancingTransactionDetails33.mmOpeningSettlementDate, SecuritiesFinancingTransactionDetails35.mmOpeningSettlementDate,
-					SecuritiesFinancingTransactionDetails36.mmOpeningSettlementDate);
+					SecuritiesFinancingTransactionDetails36.mmOpeningSettlementDate, SecuritiesTradeDetails77.mmOpeningSettlementDate, SecuritiesTradeDetails83.mmOpeningSettlementDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3428,6 +3665,51 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails139#mmRepurchaseType
 	 * SettlementDetails139.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmRepurchaseType
+	 * SettlementDetails140.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmRepurchaseType
+	 * SettlementDetails142.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmRepurchaseType
+	 * SettlementDetails144.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails141#mmRepurchaseType
+	 * SettlementDetails141.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmRepurchaseType
+	 * SettlementDetails145.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails143#mmRepurchaseType
+	 * SettlementDetails143.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails149#mmRepurchaseType
+	 * SettlementDetails149.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails150#mmRepurchaseType
+	 * SettlementDetails150.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails153#mmRepurchaseType
+	 * SettlementDetails153.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmRepurchaseType
+	 * SettlementDetails155.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmRepurchaseType
+	 * SettlementDetails156.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmRepurchaseType
+	 * SettlementDetails157.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails160#mmRepurchaseType
+	 * SettlementDetails160.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails161#mmRepurchaseType
+	 * SettlementDetails161.mmRepurchaseType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails162#mmRepurchaseType
+	 * SettlementDetails162.mmRepurchaseType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3471,7 +3753,10 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 					RepurchaseType22Choice.mmProprietary, SettlementDetails127.mmRepurchaseType, RepurchaseType21Choice.mmCode, RepurchaseType21Choice.mmProprietary, RepurchaseType23Choice.mmCode, RepurchaseType23Choice.mmProprietary,
 					SettlementDetails121.mmRepurchaseType, SettlementDetails134.mmRepurchaseType, SettlementDetails137.mmRepurchaseType, SettlementDetails132.mmRepurchaseType, RepurchaseType31Choice.mmCode,
 					RepurchaseType31Choice.mmProprietary, SettlementDetails130.mmRepurchaseType, RepurchaseType24Choice.mmCode, RepurchaseType24Choice.mmProprietary, RepurchaseType26Choice.mmCode, RepurchaseType26Choice.mmProprietary,
-					SettlementDetails131.mmRepurchaseType, SettlementDetails133.mmRepurchaseType, SettlementDetails139.mmRepurchaseType);
+					SettlementDetails131.mmRepurchaseType, SettlementDetails133.mmRepurchaseType, SettlementDetails139.mmRepurchaseType, SettlementDetails140.mmRepurchaseType, SettlementDetails142.mmRepurchaseType,
+					SettlementDetails144.mmRepurchaseType, SettlementDetails141.mmRepurchaseType, SettlementDetails145.mmRepurchaseType, SettlementDetails143.mmRepurchaseType, SettlementDetails149.mmRepurchaseType,
+					SettlementDetails150.mmRepurchaseType, SettlementDetails153.mmRepurchaseType, SettlementDetails155.mmRepurchaseType, SettlementDetails156.mmRepurchaseType, SettlementDetails157.mmRepurchaseType,
+					SettlementDetails160.mmRepurchaseType, SettlementDetails161.mmRepurchaseType, SettlementDetails162.mmRepurchaseType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3632,6 +3917,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancing1#mmFinancingAgreement
 	 * SecuritiesFinancing1.mmFinancingAgreement}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmMasterAgreement
+	 * TradeTransaction18.mmMasterAgreement}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3654,7 +3942,7 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 	 */
 	public static final MMBusinessAssociationEnd mmFinancingAgreement = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmFinancingAgreement, SecuritiesFinancing1.mmFinancingAgreement);
+			derivation_lazy = () -> Arrays.asList(SecuritiesFinancing10.mmFinancingAgreement, SecuritiesFinancing1.mmFinancingAgreement, TradeTransaction18.mmMasterAgreement);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesFinancing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4024,7 +4312,9 @@ public class SecuritiesFinancing extends SecuritiesTrade {
 						SecuritiesTradeDetails59.mmObject(), SecuritiesFinancingTransactionDetails33.mmObject(), SecuritiesFinancingTransactionDetails32.mmObject(), SecuritiesTradeDetails58.mmObject(),
 						SecuritiesFinancingTransactionDetails30.mmObject(), SecuritiesFinancingTransactionDetails34.mmObject(), RevaluationIndicator4Choice.mmObject(), RepurchaseType19Choice.mmObject(), RepurchaseType16Choice.mmObject(),
 						RepurchaseType17Choice.mmObject(), RepurchaseType20Choice.mmObject(), SecuritiesFinancingTransactionDetails35.mmObject(), RepurchaseType22Choice.mmObject(), RepurchaseType21Choice.mmObject(),
-						RepurchaseType23Choice.mmObject(), SecuritiesFinancingTransactionDetails36.mmObject(), RepurchaseType31Choice.mmObject(), RepurchaseType24Choice.mmObject(), RepurchaseType26Choice.mmObject());
+						RepurchaseType23Choice.mmObject(), SecuritiesFinancingTransactionDetails36.mmObject(), RepurchaseType31Choice.mmObject(), RepurchaseType24Choice.mmObject(), RepurchaseType26Choice.mmObject(),
+						SecuritiesTradeDetails74.mmObject(), SecuritiesTradeDetails77.mmObject(), SecuritiesFinancingTransactionDetails37.mmObject(), SecuritiesFinancingTransactionDetails38.mmObject(), SecuritiesTradeDetails82.mmObject(),
+						SecuritiesFinancingTransactionDetails39.mmObject(), SecuritiesTradeDetails83.mmObject(), SecuritiesFinancingTransactionDetails41.mmObject());
 			}
 
 			@Override

@@ -1071,6 +1071,153 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction78#mmTransactionDetails
  * CardPaymentTransaction78.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardTransaction16#mmTransaction
+ * CardTransaction16.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmCardTransaction
+ * EntryTransaction9.mmCardTransaction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportEntry9#mmCardTransaction
+ * ReportEntry9.mmCardTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CardTransaction3Choice#mmAggregated
+ * CardTransaction3Choice.mmAggregated}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CardTransaction3Choice#mmIndividual
+ * CardTransaction3Choice.mmIndividual}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardEntry3#mmAggregatedEntry
+ * CardEntry3.mmAggregatedEntry}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse7#mmEnvironment
+ * AcceptorCancellationResponse7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse7#mmTransaction
+ * AcceptorCancellationResponse7.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse7#mmTransactionResponse
+ * AcceptorCancellationResponse7.mmTransactionResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice7#mmEnvironment
+ * AcceptorCancellationAdvice7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice7#mmTransaction
+ * AcceptorCancellationAdvice7.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse7#mmEnvironment
+ * AcceptorCancellationAdviceResponse7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse5#mmEnvironment
+ * AcceptorDiagnosticResponse5.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest5#mmEnvironment
+ * AcceptorCurrencyConversionRequest5.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest5#mmTransaction
+ * AcceptorCurrencyConversionRequest5.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7#mmEnvironment
+ * AcceptorCompletionAdvice7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7#mmTransaction
+ * AcceptorCompletionAdvice7.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest7#mmEnvironment
+ * AcceptorDiagnosticRequest7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest7#mmEnvironment
+ * AcceptorCancellationRequest7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest7#mmTransaction
+ * AcceptorCancellationRequest7.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5#mmEnvironment
+ * AcceptorCurrencyConversionResponse5.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5#mmTransaction
+ * AcceptorCurrencyConversionResponse5.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7#mmEnvironment
+ * AcceptorAuthorisationRequest7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7#mmTransaction
+ * AcceptorAuthorisationRequest7.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse7#mmEnvironment
+ * AcceptorAuthorisationResponse7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse7#mmTransaction
+ * AcceptorAuthorisationResponse7.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse7#mmTransactionResponse
+ * AcceptorAuthorisationResponse7.mmTransactionResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice2#mmEnvironment
+ * AcceptorCurrencyConversionAdvice2.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice2#mmTransaction
+ * AcceptorCurrencyConversionAdvice2.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse7#mmEnvironment
+ * AcceptorCompletionAdviceResponse7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction22#mmEnvironment
+ * CardPaymentDataSetTransaction22.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction22#mmTransaction
+ * CardPaymentDataSetTransaction22.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25#mmEnvironment
+ * CardPaymentDataSetTransaction25.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25#mmTransaction
+ * CardPaymentDataSetTransaction25.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25#mmTransactionResponse
+ * CardPaymentDataSetTransaction25.mmTransactionResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction24#mmEnvironment
+ * CardPaymentDataSetTransaction24.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction24#mmTransaction
+ * CardPaymentDataSetTransaction24.mmTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction23#mmEnvironment
+ * CardPaymentDataSetTransaction23.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction23#mmTransaction
+ * CardPaymentDataSetTransaction23.mmTransaction}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData7#mmEnvironment
+ * CommonData7.mmEnvironment}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmOriginalTransaction
+ * CardPaymentTransaction83.mmOriginalTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmTransactionDetails
+ * CardPaymentTransaction83.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmOriginalTransaction
+ * CardPaymentTransaction81.mmOriginalTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmTransactionDetails
+ * CardPaymentTransaction81.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction82#mmOriginalTransaction
+ * CardPaymentTransaction82.mmOriginalTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction82#mmTransactionDetails
+ * CardPaymentTransaction82.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction80#mmOriginalTransaction
+ * CardPaymentTransaction80.mmOriginalTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction80#mmTransactionDetails
+ * CardPaymentTransaction80.mmTransactionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction85#mmOriginalTransaction
+ * CardPaymentTransaction85.mmOriginalTransaction}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction85#mmTransactionDetails
+ * CardPaymentTransaction85.mmTransactionDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -1833,6 +1980,94 @@ import java.util.concurrent.atomic.AtomicReference;
  * CardPaymentTransaction77}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction78
  * CardPaymentTransaction78}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndCurrency2
+ * AmountAndCurrency2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardTransaction16
+ * CardTransaction16}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CardTransaction3Choice
+ * CardTransaction3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardAggregated2
+ * CardAggregated2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardEntry3 CardEntry3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationResponse7
+ * AcceptorCancellationResponse7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice7
+ * AcceptorCancellationAdvice7}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdviceResponse7
+ * AcceptorCancellationAdviceResponse7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticResponse5
+ * AcceptorDiagnosticResponse5}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionRequest5
+ * AcceptorCurrencyConversionRequest5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7
+ * AcceptorCompletionAdvice7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorDiagnosticRequest7
+ * AcceptorDiagnosticRequest7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest7
+ * AcceptorCancellationRequest7}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionResponse5
+ * AcceptorCurrencyConversionResponse5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7
+ * AcceptorAuthorisationRequest7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorAuthorisationResponse7
+ * AcceptorAuthorisationResponse7}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice2
+ * AcceptorCurrencyConversionAdvice2}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdviceResponse7
+ * AcceptorCompletionAdviceResponse7}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction22
+ * CardPaymentDataSetTransaction22}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction25
+ * CardPaymentDataSetTransaction25}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction24
+ * CardPaymentDataSetTransaction24}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction23
+ * CardPaymentDataSetTransaction23}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommonData7 CommonData7}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment70
+ * CardPaymentEnvironment70}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment71
+ * CardPaymentEnvironment71}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction84
+ * CardPaymentTransaction84}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment69
+ * CardPaymentEnvironment69}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection93
+ * AmountAndDirection93}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44
+ * CardPaymentTransactionDetails44}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction79
+ * CardPaymentTransaction79}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment68
+ * CardPaymentEnvironment68}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction83
+ * CardPaymentTransaction83}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails45
+ * CardPaymentTransactionDetails45}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction81
+ * CardPaymentTransaction81}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction82
+ * CardPaymentTransaction82}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction80
+ * CardPaymentTransaction80}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails46
+ * CardPaymentTransactionDetails46}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction85
+ * CardPaymentTransaction85}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentTransaction86
+ * CardPaymentTransaction86}</li>
  * </ul>
  * </li>
  * <li>
@@ -2038,6 +2273,13 @@ public class CardPayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment57#mmCard
 	 * CardPaymentEnvironment57.mmCard}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardTransaction16#mmCard
+	 * CardTransaction16.mmCard}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardEntry3#mmCard
+	 * CardEntry3.mmCard}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment68#mmCard
+	 * CardPaymentEnvironment68.mmCard}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2066,7 +2308,8 @@ public class CardPayment extends IndividualPayment {
 					CardTransaction2.mmCard, CardEntry2.mmCard, CardPaymentEnvironment32.mmCard, CardPaymentEnvironment36.mmCard, CardPaymentEnvironment40.mmCard, CardPaymentEnvironment44.mmCard, CardPaymentEnvironment34.mmCard,
 					CardPaymentEnvironment35.mmCard, PaymentInstrument18Choice.mmPaymentCardDetails, CardPaymentEnvironment52.mmCard, CardPaymentEnvironment49.mmCard, CardPaymentEnvironment48.mmCard, CardPaymentEnvironment56.mmCard,
 					CardPaymentEnvironment45.mmCard, CardPaymentEnvironment54.mmCard, CardPaymentEnvironment53.mmCard, CardPaymentEnvironment47.mmCard, PaymentInstrument20Choice.mmPaymentCardDetails, CardPaymentEnvironment61.mmCard,
-					CardPaymentEnvironment60.mmCard, CardPaymentEnvironment66.mmCard, CardPaymentEnvironment62.mmCard, CardPaymentEnvironment63.mmCard, CardPaymentEnvironment59.mmCard, CardPaymentEnvironment57.mmCard);
+					CardPaymentEnvironment60.mmCard, CardPaymentEnvironment66.mmCard, CardPaymentEnvironment62.mmCard, CardPaymentEnvironment63.mmCard, CardPaymentEnvironment59.mmCard, CardPaymentEnvironment57.mmCard,
+					CardTransaction16.mmCard, CardEntry3.mmCard, CardPaymentEnvironment68.mmCard);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2165,6 +2408,12 @@ public class CardPayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails37#mmSaleItem
 	 * CardPaymentTransactionDetails37.mmSaleItem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44#mmSaleItem
+	 * CardPaymentTransactionDetails44.mmSaleItem}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails45#mmSaleItem
+	 * CardPaymentTransactionDetails45.mmSaleItem}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2188,7 +2437,7 @@ public class CardPayment extends IndividualPayment {
 					CardPaymentTransactionDetails3.mmProduct, CardPaymentTransactionDetails12.mmProduct, CardPaymentTransactionDetails16.mmProduct, CardPaymentTransactionDetails14.mmProduct, CardPaymentTransactionDetails15.mmProduct,
 					CardIndividualTransaction2.mmProduct, CardPaymentTransactionDetails23.mmProduct, CardPaymentTransactionDetails21.mmProduct, CardPaymentTransactionDetails19.mmProduct, CardPaymentTransactionDetails24.mmProduct,
 					CardPaymentTransactionDetails29.mmSaleItem, CardPaymentTransactionDetails30.mmSaleItem, CardPaymentTransactionDetails27.mmSaleItem, CardPaymentTransactionDetails31.mmSaleItem, CardPaymentTransactionDetails39.mmSaleItem,
-					CardPaymentTransactionDetails38.mmSaleItem, CardPaymentTransactionDetails41.mmSaleItem, CardPaymentTransactionDetails37.mmSaleItem);
+					CardPaymentTransactionDetails38.mmSaleItem, CardPaymentTransactionDetails41.mmSaleItem, CardPaymentTransactionDetails37.mmSaleItem, CardPaymentTransactionDetails44.mmSaleItem, CardPaymentTransactionDetails45.mmSaleItem);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2379,6 +2628,15 @@ public class CardPayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails43#mmDetailedAmount
 	 * CardPaymentTransactionDetails43.mmDetailedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44#mmDetailedAmount
+	 * CardPaymentTransactionDetails44.mmDetailedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails45#mmDetailedAmount
+	 * CardPaymentTransactionDetails45.mmDetailedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails46#mmDetailedAmount
+	 * CardPaymentTransactionDetails46.mmDetailedAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2411,7 +2669,8 @@ public class CardPayment extends IndividualPayment {
 					CardTransactionAmount4.mmDetailedAmount, CardTransactionDetail3.mmAdditionalAmounts, CardPaymentTransactionDetails32.mmDetailedAmount, CardPaymentTransactionDetails33.mmDetailedAmount,
 					CardPaymentTransactionDetails28.mmDetailedAmount, CardPaymentTransactionDetails29.mmDetailedAmount, CardPaymentTransactionDetails30.mmDetailedAmount, CardPaymentTransactionDetails27.mmDetailedAmount,
 					CardPaymentTransactionDetails31.mmDetailedAmount, CardPaymentTransactionDetails39.mmDetailedAmount, CardPaymentTransactionDetails38.mmDetailedAmount, CardPaymentTransactionDetails41.mmDetailedAmount,
-					CardPaymentTransactionDetails37.mmDetailedAmount, CardPaymentTransactionDetails40.mmDetailedAmount, CardPaymentTransactionDetails42.mmDetailedAmount, CardPaymentTransactionDetails43.mmDetailedAmount);
+					CardPaymentTransactionDetails37.mmDetailedAmount, CardPaymentTransactionDetails40.mmDetailedAmount, CardPaymentTransactionDetails42.mmDetailedAmount, CardPaymentTransactionDetails43.mmDetailedAmount,
+					CardPaymentTransactionDetails44.mmDetailedAmount, CardPaymentTransactionDetails45.mmDetailedAmount, CardPaymentTransactionDetails46.mmDetailedAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2540,6 +2799,15 @@ public class CardPayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails40#mmAmountQualifier
 	 * CardPaymentTransactionDetails40.mmAmountQualifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails44#mmAmountQualifier
+	 * CardPaymentTransactionDetails44.mmAmountQualifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails45#mmAmountQualifier
+	 * CardPaymentTransactionDetails45.mmAmountQualifier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransactionDetails46#mmAmountQualifier
+	 * CardPaymentTransactionDetails46.mmAmountQualifier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2566,7 +2834,8 @@ public class CardPayment extends IndividualPayment {
 					CardPaymentTransactionDetails24.mmAmountQualifier, DetailedAmount11.mmType, DetailedAmount11.mmAdditionalType, DetailedAmount10.mmType, DetailedAmount9.mmType, CardTransactionAmount1.mmAmountQualifier,
 					CardTransactionAmount3.mmAmountQualifier, CardPaymentTransactionDetails33.mmAmountQualifier, CardPaymentTransactionDetails29.mmAmountQualifier, CardPaymentTransactionDetails30.mmAmountQualifier,
 					CardPaymentTransactionDetails27.mmAmountQualifier, CardPaymentTransactionDetails31.mmAmountQualifier, CardPaymentTransactionDetails39.mmAmountQualifier, CardPaymentTransactionDetails38.mmAmountQualifier,
-					CardPaymentTransactionDetails41.mmAmountQualifier, CardPaymentTransactionDetails37.mmAmountQualifier, CardPaymentTransactionDetails40.mmAmountQualifier);
+					CardPaymentTransactionDetails41.mmAmountQualifier, CardPaymentTransactionDetails37.mmAmountQualifier, CardPaymentTransactionDetails40.mmAmountQualifier, CardPaymentTransactionDetails44.mmAmountQualifier,
+					CardPaymentTransactionDetails45.mmAmountQualifier, CardPaymentTransactionDetails46.mmAmountQualifier);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2823,6 +3092,29 @@ public class CardPayment extends IndividualPayment {
 	 * CardPaymentDataSetTransaction18.mmContext}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CommonData6#mmContext
 	 * CommonData6.mmContext}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCancellationAdvice7#mmContext
+	 * AcceptorCancellationAdvice7.mmContext}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCompletionAdvice7#mmContext
+	 * AcceptorCompletionAdvice7.mmContext}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCancellationRequest7#mmContext
+	 * AcceptorCancellationRequest7.mmContext}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorAuthorisationRequest7#mmContext
+	 * AcceptorAuthorisationRequest7.mmContext}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction22#mmContext
+	 * CardPaymentDataSetTransaction22.mmContext}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction24#mmContext
+	 * CardPaymentDataSetTransaction24.mmContext}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentDataSetTransaction23#mmContext
+	 * CardPaymentDataSetTransaction23.mmContext}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CommonData7#mmContext
+	 * CommonData7.mmContext}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2857,7 +3149,9 @@ public class CardPayment extends IndividualPayment {
 					CardPaymentDataSetTransaction15.mmContext, CardPaymentDataSetTransaction16.mmContext, CommonData5.mmContext, TransactionReconciliation4.mmReconciliationTransactionIdentification,
 					ATMTransaction18.mmTransactionIdentification, ATMTransaction14.mmTransactionIdentification, ATMTransaction17.mmTransactionIdentification, ATMTransaction20.mmTransactionIdentification,
 					ATMTransaction21.mmTransactionIdentification, ATMTransaction29.mmTransactionIdentification, AcceptorCancellationRequest6.mmContext, AcceptorAuthorisationRequest6.mmContext, AcceptorCancellationAdvice6.mmContext,
-					AcceptorCompletionAdvice6.mmContext, CardPaymentDataSetTransaction19.mmContext, CardPaymentDataSetTransaction20.mmContext, CardPaymentDataSetTransaction18.mmContext, CommonData6.mmContext);
+					AcceptorCompletionAdvice6.mmContext, CardPaymentDataSetTransaction19.mmContext, CardPaymentDataSetTransaction20.mmContext, CardPaymentDataSetTransaction18.mmContext, CommonData6.mmContext,
+					AcceptorCancellationAdvice7.mmContext, AcceptorCompletionAdvice7.mmContext, AcceptorCancellationRequest7.mmContext, AcceptorAuthorisationRequest7.mmContext, CardPaymentDataSetTransaction22.mmContext,
+					CardPaymentDataSetTransaction24.mmContext, CardPaymentDataSetTransaction23.mmContext, CommonData7.mmContext);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3067,6 +3361,9 @@ public class CardPayment extends IndividualPayment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse4#mmTransaction
 	 * AcceptorReconciliationResponse4.mmTransaction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse5#mmTransaction
+	 * AcceptorReconciliationResponse5.mmTransaction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3087,7 +3384,7 @@ public class CardPayment extends IndividualPayment {
 	public static final MMBusinessAssociationEnd mmReconciliation = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationResponse1.mmTransaction, AcceptorReconciliationResponse2.mmTransaction, AcceptorReconciliationResponse3.mmTransaction, CardTransaction8.mmReconciliation,
-					CardTransaction7.mmReconciliation, AcceptorReconciliationResponse4.mmTransaction);
+					CardTransaction7.mmReconciliation, AcceptorReconciliationResponse4.mmTransaction, AcceptorReconciliationResponse5.mmTransaction);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPayment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3431,7 +3728,19 @@ public class CardPayment extends IndividualPayment {
 						CardPaymentTransaction70.mmTransactionDetails, CardPaymentDataSetTransaction20.mmEnvironment, CardPaymentDataSetTransaction20.mmTransaction, CardPaymentTransaction72.mmOriginalTransaction,
 						CardPaymentTransaction72.mmTransactionDetails, CardPaymentTransaction76.mmOriginalTransaction, CardPaymentTransaction76.mmTransactionDetails, CardPaymentDataSetTransaction18.mmEnvironment,
 						CardPaymentDataSetTransaction18.mmTransaction, CommonData6.mmEnvironment, CardPaymentTransaction69.mmOriginalTransaction, CardPaymentTransaction69.mmTransactionDetails,
-						AcceptorCurrencyConversionAdvice1.mmEnvironment, AcceptorCurrencyConversionAdvice1.mmTransaction, CardPaymentTransaction77.mmTransactionDetails, CardPaymentTransaction78.mmTransactionDetails);
+						AcceptorCurrencyConversionAdvice1.mmEnvironment, AcceptorCurrencyConversionAdvice1.mmTransaction, CardPaymentTransaction77.mmTransactionDetails, CardPaymentTransaction78.mmTransactionDetails,
+						CardTransaction16.mmTransaction, EntryTransaction9.mmCardTransaction, ReportEntry9.mmCardTransaction, CardTransaction3Choice.mmAggregated, CardTransaction3Choice.mmIndividual, CardEntry3.mmAggregatedEntry,
+						AcceptorCancellationResponse7.mmEnvironment, AcceptorCancellationResponse7.mmTransaction, AcceptorCancellationResponse7.mmTransactionResponse, AcceptorCancellationAdvice7.mmEnvironment,
+						AcceptorCancellationAdvice7.mmTransaction, AcceptorCancellationAdviceResponse7.mmEnvironment, AcceptorDiagnosticResponse5.mmEnvironment, AcceptorCurrencyConversionRequest5.mmEnvironment,
+						AcceptorCurrencyConversionRequest5.mmTransaction, AcceptorCompletionAdvice7.mmEnvironment, AcceptorCompletionAdvice7.mmTransaction, AcceptorDiagnosticRequest7.mmEnvironment,
+						AcceptorCancellationRequest7.mmEnvironment, AcceptorCancellationRequest7.mmTransaction, AcceptorCurrencyConversionResponse5.mmEnvironment, AcceptorCurrencyConversionResponse5.mmTransaction,
+						AcceptorAuthorisationRequest7.mmEnvironment, AcceptorAuthorisationRequest7.mmTransaction, AcceptorAuthorisationResponse7.mmEnvironment, AcceptorAuthorisationResponse7.mmTransaction,
+						AcceptorAuthorisationResponse7.mmTransactionResponse, AcceptorCurrencyConversionAdvice2.mmEnvironment, AcceptorCurrencyConversionAdvice2.mmTransaction, AcceptorCompletionAdviceResponse7.mmEnvironment,
+						CardPaymentDataSetTransaction22.mmEnvironment, CardPaymentDataSetTransaction22.mmTransaction, CardPaymentDataSetTransaction25.mmEnvironment, CardPaymentDataSetTransaction25.mmTransaction,
+						CardPaymentDataSetTransaction25.mmTransactionResponse, CardPaymentDataSetTransaction24.mmEnvironment, CardPaymentDataSetTransaction24.mmTransaction, CardPaymentDataSetTransaction23.mmEnvironment,
+						CardPaymentDataSetTransaction23.mmTransaction, CommonData7.mmEnvironment, CardPaymentTransaction83.mmOriginalTransaction, CardPaymentTransaction83.mmTransactionDetails,
+						CardPaymentTransaction81.mmOriginalTransaction, CardPaymentTransaction81.mmTransactionDetails, CardPaymentTransaction82.mmOriginalTransaction, CardPaymentTransaction82.mmTransactionDetails,
+						CardPaymentTransaction80.mmOriginalTransaction, CardPaymentTransaction80.mmTransactionDetails, CardPaymentTransaction85.mmOriginalTransaction, CardPaymentTransaction85.mmTransactionDetails);
 				superType_lazy = () -> IndividualPayment.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPayment.mmPaymentCard, com.tools20022.repository.entity.CardPayment.mmProduct, com.tools20022.repository.entity.CardPayment.mmDetailedAmount,
 						com.tools20022.repository.entity.CardPayment.mmAmountQualifier, com.tools20022.repository.entity.CardPayment.mmCardPaymentAcquiring, com.tools20022.repository.entity.CardPayment.mmPaymentCardPartyRole,
@@ -3505,7 +3814,15 @@ public class CardPayment extends IndividualPayment {
 						CardPaymentEnvironment62.mmObject(), CardPaymentEnvironment63.mmObject(), CardPaymentTransaction72.mmObject(), CardPaymentTransaction76.mmObject(), CardPaymentTransaction68.mmObject(),
 						CardPaymentDataSetTransaction18.mmObject(), CardPaymentEnvironment58.mmObject(), CardPaymentEnvironment59.mmObject(), CardPaymentTransactionDetails37.mmObject(), CommonData6.mmObject(),
 						CardPaymentEnvironment57.mmObject(), CardPaymentTransaction69.mmObject(), CardPaymentTransactionDetails40.mmObject(), CardPaymentTransactionDetails42.mmObject(), CardPaymentTransactionDetails43.mmObject(),
-						AcceptorCurrencyConversionAdvice1.mmObject(), CardPaymentTransaction77.mmObject(), CardPaymentTransaction78.mmObject());
+						AcceptorCurrencyConversionAdvice1.mmObject(), CardPaymentTransaction77.mmObject(), CardPaymentTransaction78.mmObject(), AmountAndCurrency2.mmObject(), CardTransaction16.mmObject(), CardTransaction3Choice.mmObject(),
+						CardAggregated2.mmObject(), CardEntry3.mmObject(), AcceptorCancellationResponse7.mmObject(), AcceptorCancellationAdvice7.mmObject(), AcceptorCancellationAdviceResponse7.mmObject(),
+						AcceptorDiagnosticResponse5.mmObject(), AcceptorCurrencyConversionRequest5.mmObject(), AcceptorCompletionAdvice7.mmObject(), AcceptorDiagnosticRequest7.mmObject(), AcceptorCancellationRequest7.mmObject(),
+						AcceptorCurrencyConversionResponse5.mmObject(), AcceptorAuthorisationRequest7.mmObject(), AcceptorAuthorisationResponse7.mmObject(), AcceptorCurrencyConversionAdvice2.mmObject(),
+						AcceptorCompletionAdviceResponse7.mmObject(), CardPaymentDataSetTransaction22.mmObject(), CardPaymentDataSetTransaction25.mmObject(), CardPaymentDataSetTransaction24.mmObject(),
+						CardPaymentDataSetTransaction23.mmObject(), CommonData7.mmObject(), CardPaymentEnvironment70.mmObject(), CardPaymentEnvironment71.mmObject(), CardPaymentTransaction84.mmObject(), CardPaymentEnvironment69.mmObject(),
+						AmountAndDirection93.mmObject(), CardPaymentTransactionDetails44.mmObject(), CardPaymentTransaction79.mmObject(), CardPaymentEnvironment68.mmObject(), CardPaymentTransaction83.mmObject(),
+						CardPaymentTransactionDetails45.mmObject(), CardPaymentTransaction81.mmObject(), CardPaymentTransaction82.mmObject(), CardPaymentTransaction80.mmObject(), CardPaymentTransactionDetails46.mmObject(),
+						CardPaymentTransaction85.mmObject(), CardPaymentTransaction86.mmObject());
 			}
 
 			@Override

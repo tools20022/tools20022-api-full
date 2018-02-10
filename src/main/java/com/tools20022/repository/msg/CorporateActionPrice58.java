@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionPrice58"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies prices related to a corporate action option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPrice68
+ * CorporateActionPrice68}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionPrice28
@@ -112,6 +119,14 @@ public class CorporateActionPrice58 {
 	 * definition} =
 	 * "Cash disbursement in lieu of equities; usually in lieu of fractional quantity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice68#mmCashInLieuOfSharePrice
+	 * CorporateActionPrice68.mmCashInLieuOfSharePrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -129,6 +144,7 @@ public class CorporateActionPrice58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashInLieuOfSharePrice";
 			definition = "Cash disbursement in lieu of equities; usually in lieu of fractional quantity.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPrice68.mmCashInLieuOfSharePrice);
 			previousVersion_lazy = () -> CorporateActionPrice28.mmCashInLieuOfSharePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -172,6 +188,14 @@ public class CorporateActionPrice58 {
 	 * definition} =
 	 * "Amount of money required per over-subscribed equity as defined by the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPrice68#mmOverSubscriptionDepositPrice
+	 * CorporateActionPrice68.mmOverSubscriptionDepositPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +213,7 @@ public class CorporateActionPrice58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OverSubscriptionDepositPrice";
 			definition = "Amount of money required per over-subscribed equity as defined by the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPrice68.mmOverSubscriptionDepositPrice);
 			previousVersion_lazy = () -> CorporateActionPrice28.mmOverSubscriptionDepositPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -206,6 +231,7 @@ public class CorporateActionPrice58 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPrice58";
 				definition = "Specifies prices related to a corporate action option.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionPrice68.mmObject());
 				previousVersion_lazy = () -> CorporateActionPrice28.mmObject();
 			}
 		});

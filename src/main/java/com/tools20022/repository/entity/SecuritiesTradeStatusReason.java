@@ -836,11 +836,47 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.choice.ProcessingStatus60Choice#mmModificationRequested
  * ProcessingStatus60Choice.mmModificationRequested}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmCompleted
+ * ProcessingStatus72Choice.mmCompleted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus72Choice#mmProprietary
+ * ProcessingStatus72Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus71Choice#mmCompleted
+ * ProcessingStatus71Choice.mmCompleted}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus71Choice#mmProprietary
+ * ProcessingStatus71Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus69Choice#mmProprietary
+ * ProcessingStatus69Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ProcessingStatus67Choice#mmProprietary
+ * ProcessingStatus67Choice.mmProprietary}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason32#mmCode
+ * RejectionOrRepairReason32.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus39Choice#mmReason
+ * RejectionOrRepairStatus39Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus38Choice#mmReason
+ * RejectionOrRepairStatus38Choice.mmReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason33#mmCode
+ * RejectionOrRepairReason33.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason34#mmCode
+ * RejectionOrRepairReason34.mmCode}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus40Choice#mmReason
+ * RejectionOrRepairStatus40Choice.mmReason}</li>
  * </ul>
  * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationComponent
- * derivationComponent} = List of 807 elements</li>
+ * derivationComponent} = List of 821 elements</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -1546,6 +1582,12 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.DeniedReason24Choice#mmProprietary
 	 * DeniedReason24Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus71Choice#mmDenied
+	 * ProcessingStatus71Choice.mmDenied}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus69Choice#mmDenied
+	 * ProcessingStatus69Choice.mmDenied}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1586,7 +1628,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 					RepoCallRequestStatus9Choice.mmDenied, ProcessingStatus65Choice.mmDenied, ProcessingStatus58Choice.mmDenied, Reason17Choice.mmDeniedReason, DeniedReason23Choice.mmCode, DeniedReason23Choice.mmProprietary,
 					DeniedReason21Choice.mmCode, DeniedReason21Choice.mmProprietary, DeniedReason18Choice.mmCode, DeniedReason18Choice.mmProprietary, ModificationProcessingStatus8Choice.mmDenied, ProcessingStatus61Choice.mmDenied,
 					DeniedStatus21Choice.mmReason, DeniedStatus18Choice.mmReason, DeniedReason13.mmCode, DeniedReason16.mmCode, DeniedStatus19Choice.mmReason, DeniedReason17.mmCode, DeniedReason24Choice.mmCode,
-					DeniedReason24Choice.mmProprietary);
+					DeniedReason24Choice.mmProprietary, ProcessingStatus71Choice.mmDenied, ProcessingStatus69Choice.mmDenied);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2512,6 +2554,18 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus60Choice#mmRepair
 	 * ProcessingStatus60Choice.mmRepair}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus71Choice#mmRepair
+	 * ProcessingStatus71Choice.mmRepair}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus69Choice#mmRepair
+	 * ProcessingStatus69Choice.mmRepair}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus67Choice#mmRepair
+	 * ProcessingStatus67Choice.mmRepair}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus66Choice#mmRepair
+	 * ProcessingStatus66Choice.mmRepair}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2554,7 +2608,7 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 					ProcessingStatus65Choice.mmRepair, ProcessingStatus63Choice.mmRepair, RepairStatus15Choice.mmReason, RepairReason11.mmCode, Reason17Choice.mmRepairReason, RepairReason18Choice.mmCode, RepairReason18Choice.mmProprietary,
 					ProcessingStatus62Choice.mmRepair, RepairReason12.mmCode, RepairReason14Choice.mmCode, RepairReason14Choice.mmProprietary, InstructionProcessingStatus27Choice.mmRepair, RepairReason13.mmCode,
 					ModificationProcessingStatus8Choice.mmRepaired, RepairStatus17Choice.mmReason, ProcessingStatus61Choice.mmRepair, RepairStatus16Choice.mmReason, RepairReason13Choice.mmCode, RepairReason13Choice.mmProprietary,
-					ProcessingStatus60Choice.mmRepair);
+					ProcessingStatus60Choice.mmRepair, ProcessingStatus71Choice.mmRepair, ProcessingStatus69Choice.mmRepair, ProcessingStatus67Choice.mmRepair, ProcessingStatus66Choice.mmRepair);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2880,7 +2934,10 @@ public class SecuritiesTradeStatusReason extends StatusReason {
 						ProcessingStatus62Choice.mmProprietary, ProcessingStatus62Choice.mmCancellationRequested, AcceptedStatus10Choice.mmReason, UnmatchedStatus19Choice.mmReason, GeneratedStatus8Choice.mmReason,
 						RejectionOrRepairReason31.mmCode, ModificationStatus5Choice.mmReason, InstructionProcessingStatus27Choice.mmModificationRequested, RejectionOrRepairStatus34Choice.mmReason, RejectionOrRepairReason28.mmCode,
 						UnmatchedStatus21Choice.mmReason, ProcessingStatus61Choice.mmProprietary, RejectionOrRepairStatus35Choice.mmReason, RejectionOrRepairStatus33Choice.mmReason, RejectionOrRepairReason27.mmCode,
-						UnmatchedStatus20Choice.mmReason, RejectionOrRepairStatus37Choice.mmReason, ProcessingStatus60Choice.mmProprietary, ProcessingStatus60Choice.mmCancellationRequested, ProcessingStatus60Choice.mmModificationRequested);
+						UnmatchedStatus20Choice.mmReason, RejectionOrRepairStatus37Choice.mmReason, ProcessingStatus60Choice.mmProprietary, ProcessingStatus60Choice.mmCancellationRequested, ProcessingStatus60Choice.mmModificationRequested,
+						ProcessingStatus72Choice.mmCompleted, ProcessingStatus72Choice.mmProprietary, ProcessingStatus71Choice.mmCompleted, ProcessingStatus71Choice.mmProprietary, ProcessingStatus69Choice.mmProprietary,
+						ProcessingStatus67Choice.mmProprietary, RejectionOrRepairReason32.mmCode, RejectionOrRepairStatus39Choice.mmReason, RejectionOrRepairStatus38Choice.mmReason, RejectionOrRepairReason33.mmCode,
+						RejectionOrRepairReason34.mmCode, RejectionOrRepairStatus40Choice.mmReason);
 				superType_lazy = () -> StatusReason.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmUnmatchedReason, com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmDeniedReason,
 						com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmSecuritiesTradeStatus, com.tools20022.repository.entity.SecuritiesTradeStatusReason.mmGeneratedReason,

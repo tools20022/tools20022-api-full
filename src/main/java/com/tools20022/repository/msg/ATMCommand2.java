@@ -79,6 +79,7 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.ATMCommand3 ATMCommand3}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ATMCommand5 ATMCommand5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMCommand11 ATMCommand11}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -125,6 +126,8 @@ public class ATMCommand2 {
 	 * ATMCommand3.mmType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand5#mmType
 	 * ATMCommand5.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand11#mmType
+	 * ATMCommand11.mmType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -142,7 +145,7 @@ public class ATMCommand2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of command to be performed by the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmType, ATMCommand5.mmType);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmType, ATMCommand5.mmType, ATMCommand11.mmType);
 			previousVersion_lazy = () -> ATMCommand1.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -182,6 +185,9 @@ public class ATMCommand2 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#mmRequiredDateTime
 	 * ATMCommand5.mmRequiredDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand11#mmRequiredDateTime
+	 * ATMCommand11.mmRequiredDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -199,7 +205,7 @@ public class ATMCommand2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequiredDateTime";
 			definition = "Date time on which the command has been requested to be performed.";
-			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmRequiredDateTime);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmRequiredDateTime, ATMCommand11.mmRequiredDateTime);
 			previousVersion_lazy = () -> ATMCommand1.mmDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -238,6 +244,9 @@ public class ATMCommand2 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#mmProcessedDateTime
 	 * ATMCommand5.mmProcessedDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand11#mmProcessedDateTime
+	 * ATMCommand11.mmProcessedDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -250,7 +259,7 @@ public class ATMCommand2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessedDateTime";
 			definition = "Date time on which the command has been performed.";
-			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmProcessedDateTime);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmProcessedDateTime, ATMCommand11.mmProcessedDateTime);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -291,6 +300,9 @@ public class ATMCommand2 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#mmCommandIdentification
 	 * ATMCommand5.mmCommandIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand11#mmCommandIdentification
+	 * ATMCommand11.mmCommandIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -308,7 +320,7 @@ public class ATMCommand2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommandIdentification";
 			definition = "Identification of the entity issuing the command.";
-			nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmCommandIdentification, ATMCommand5.mmCommandIdentification);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmCommandIdentification, ATMCommand5.mmCommandIdentification, ATMCommand11.mmCommandIdentification);
 			previousVersion_lazy = () -> ATMCommand1.mmCommandIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -348,6 +360,8 @@ public class ATMCommand2 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand5#mmResult
 	 * ATMCommand5.mmResult}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ATMCommand11#mmResult
+	 * ATMCommand11.mmResult}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -360,7 +374,7 @@ public class ATMCommand2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Result";
 			definition = "Final result of the processed command at the ATM.";
-			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmResult);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmResult, ATMCommand11.mmResult);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementActionResult2Code.mmObject();
@@ -400,6 +414,9 @@ public class ATMCommand2 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ATMCommand5#mmAdditionalErrorInformation
 	 * ATMCommand5.mmAdditionalErrorInformation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMCommand11#mmAdditionalErrorInformation
+	 * ATMCommand11.mmAdditionalErrorInformation}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -412,7 +429,7 @@ public class ATMCommand2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalErrorInformation";
 			definition = "Additional information on the failure to be logged for further examination.";
-			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmAdditionalErrorInformation);
+			nextVersions_lazy = () -> Arrays.asList(ATMCommand5.mmAdditionalErrorInformation, ATMCommand11.mmAdditionalErrorInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -428,7 +445,7 @@ public class ATMCommand2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMCommand2";
 				definition = "Result of a maintenance command performed by the ATM.";
-				nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmObject(), ATMCommand5.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(ATMCommand3.mmObject(), ATMCommand5.mmObject(), ATMCommand11.mmObject());
 				previousVersion_lazy = () -> ATMCommand1.mmObject();
 			}
 		});

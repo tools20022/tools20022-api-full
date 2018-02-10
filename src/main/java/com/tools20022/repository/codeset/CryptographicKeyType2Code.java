@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Codes for qualifying the type of cryptographic keys;
+ * Codes for qualifying the type of cryptographic keys;.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CryptographicKeyType2Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Codes for qualifying the type of cryptographic keys;"</li>
+ * definition} = "Codes for qualifying the type of cryptographic keys;."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -193,7 +193,7 @@ public class CryptographicKeyType2Code extends MMCode {
 				example = Arrays.asList("AES2");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CryptographicKeyType2Code";
-				definition = "Codes for qualifying the type of cryptographic keys;";
+				definition = "Codes for qualifying the type of cryptographic keys;.";
 				nextVersions_lazy = () -> Arrays.asList(CryptographicKeyType3Code.mmObject());
 				trace_lazy = () -> CryptographicKeyTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CryptographicKeyType2Code.AES128, com.tools20022.repository.codeset.CryptographicKeyType2Code.DES112,

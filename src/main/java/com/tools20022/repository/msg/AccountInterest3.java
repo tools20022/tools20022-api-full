@@ -73,6 +73,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides further details on the interest that applies to the account at a particular moment in time."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountInterest4
+ * AccountInterest4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +118,13 @@ public class AccountInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of interest."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountInterest4#mmType
+	 * AccountInterest4.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -122,6 +136,7 @@ public class AccountInterest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the type of interest.";
+			nextVersions_lazy = () -> Arrays.asList(AccountInterest4.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -158,6 +173,13 @@ public class AccountInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Set of elements used to qualify the interest rate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountInterest4#mmRate
+	 * AccountInterest4.mmRate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRate = new MMMessageAssociationEnd() {
@@ -169,6 +191,7 @@ public class AccountInterest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
 			definition = "Set of elements used to qualify the interest rate.";
+			nextVersions_lazy = () -> Arrays.asList(AccountInterest4.mmRate);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Rate3.mmObject();
@@ -207,6 +230,14 @@ public class AccountInterest3 {
 	 * definition} =
 	 * "Range of time between a start date and an end date for the calculation of the interest."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountInterest4#mmFromToDate
+	 * AccountInterest4.mmFromToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
@@ -218,6 +249,7 @@ public class AccountInterest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date for the calculation of the interest.";
+			nextVersions_lazy = () -> Arrays.asList(AccountInterest4.mmFromToDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -251,6 +283,13 @@ public class AccountInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reason for the interest."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountInterest4#mmReason
+	 * AccountInterest4.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReason = new MMMessageAttribute() {
@@ -261,6 +300,7 @@ public class AccountInterest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the interest.";
+			nextVersions_lazy = () -> Arrays.asList(AccountInterest4.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -298,6 +338,13 @@ public class AccountInterest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides details on the tax applied to charges."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountInterest4#mmTax
+	 * AccountInterest4.mmTax}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTax = new MMMessageAttribute() {
@@ -309,6 +356,7 @@ public class AccountInterest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
 			definition = "Provides details on the tax applied to charges.";
+			nextVersions_lazy = () -> Arrays.asList(AccountInterest4.mmTax);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.TaxCharges2.mmObject();
@@ -325,6 +373,7 @@ public class AccountInterest3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountInterest3";
 				definition = "Provides further details on the interest that applies to the account at a particular moment in time.";
+				nextVersions_lazy = () -> Arrays.asList(AccountInterest4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

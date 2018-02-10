@@ -480,7 +480,7 @@ public class InvestmentAccount19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that provides services relating to financial products to investors, eg, advice on products and placement of orders for the investment fund. "
+	 * "Party that provides services relating to financial products to investors, eg, advice on products and placement of orders for the investment fund."
 	 * </li>
 	 * </ul>
 	 */
@@ -492,7 +492,7 @@ public class InvestmentAccount19 {
 			xmlTag = "Intrmy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Intermediary";
-			definition = "Party that provides services relating to financial products to investors, eg, advice on products and placement of orders for the investment fund. ";
+			definition = "Party that provides services relating to financial products to investors, eg, advice on products and placement of orders for the investment fund.";
 			maxOccurs = 10;
 			minOccurs = 0;
 			isComposite = true;
@@ -531,7 +531,7 @@ public class InvestmentAccount19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n"
+	 * "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -543,7 +543,7 @@ public class InvestmentAccount19 {
 			xmlTag = "AcctSvcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
-			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n";
+			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

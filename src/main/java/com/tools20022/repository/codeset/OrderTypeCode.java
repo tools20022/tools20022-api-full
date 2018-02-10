@@ -144,7 +144,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "OrderTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument."
+ * "Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument."
  * </li>
  * </ul>
  */
@@ -1304,7 +1304,7 @@ public class OrderTypeCode extends MMCode {
 				example = Arrays.asList("ALNO");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OrderTypeCode";
-				definition = "Indicates the type of  instruction to a broker or dealer to buy or sell a financial instrument.";
+				definition = "Indicates the type of instruction to a broker or dealer to buy or sell a financial instrument.";
 				derivation_lazy = () -> Arrays.asList(OrderType1Code.mmObject(), OrderType2Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OrderTypeCode.AllOrNone, com.tools20022.repository.codeset.OrderTypeCode.BuyContraShortExempt,
 						com.tools20022.repository.codeset.OrderTypeCode.BuyContraShort, com.tools20022.repository.codeset.OrderTypeCode.BuyMinus, com.tools20022.repository.codeset.OrderTypeCode.Carefully,

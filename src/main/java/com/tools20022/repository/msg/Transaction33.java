@@ -81,6 +81,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Transaction33"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information related to the payment transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction59 Transaction59}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Transaction24
  * Transaction24}</li>
@@ -120,6 +126,13 @@ public class Transaction33 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Destination of the payment (be it a member or a system or both)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transaction59#mmPaymentTo
+	 * Transaction59.mmPaymentTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -136,6 +149,7 @@ public class Transaction33 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTo";
 			definition = "Destination of the payment (be it a member or a system or both).";
+			nextVersions_lazy = () -> Arrays.asList(Transaction59.mmPaymentTo);
 			previousVersion_lazy = () -> Transaction24.mmPaymentTo;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -172,6 +186,14 @@ public class Transaction33 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Origin of the payment (be it a member or a system or both)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction59#mmPaymentFrom
+	 * Transaction59.mmPaymentFrom}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -188,6 +210,7 @@ public class Transaction33 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrom";
 			definition = "Origin of the payment (be it a member or a system or both).";
+			nextVersions_lazy = () -> Arrays.asList(Transaction59.mmPaymentFrom);
 			previousVersion_lazy = () -> Transaction24.mmPaymentFrom;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -227,7 +250,15 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the payment transaction is a debit or credit transaction. \n"
+	 * "Indicates whether the payment transaction is a debit or credit transaction. \n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction59#mmCreditDebitIndicator
+	 * Transaction59.mmCreditDebitIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -244,7 +275,8 @@ public class Transaction33 {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the payment transaction is a debit or credit transaction. \n";
+			definition = "Indicates whether the payment transaction is a debit or credit transaction. \n.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction59.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> Transaction24.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -281,7 +313,14 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n"
+	 * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transaction59#mmPayment
+	 * Transaction59.mmPayment}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -298,7 +337,8 @@ public class Transaction33 {
 			xmlTag = "Pmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Payment";
-			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
+			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction59.mmPayment);
 			previousVersion_lazy = () -> Transaction24.mmPayment;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -336,7 +376,15 @@ public class Transaction33 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. "
+	 * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction59#mmAccountEntry
+	 * Transaction59.mmAccountEntry}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -353,7 +401,8 @@ public class Transaction33 {
 			xmlTag = "AcctNtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountEntry";
-			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
+			definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
+			nextVersions_lazy = () -> Arrays.asList(Transaction59.mmAccountEntry);
 			previousVersion_lazy = () -> Transaction24.mmAccountEntry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -374,6 +423,7 @@ public class Transaction33 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transaction33";
 				definition = "Information related to the payment transaction.";
+				nextVersions_lazy = () -> Arrays.asList(Transaction59.mmObject());
 				previousVersion_lazy = () -> Transaction24.mmObject();
 			}
 		});

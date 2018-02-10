@@ -80,6 +80,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action options date details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDateSD9
+ * CorporateActionDateSD9}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -115,6 +122,14 @@ public class CorporateActionDateSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD9#mmPlaceAndName
+	 * CorporateActionDateSD9.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -125,6 +140,7 @@ public class CorporateActionDateSD7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD9.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -158,6 +174,14 @@ public class CorporateActionDateSD7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Actual early expiration time as set by the issuer/offer/agent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD9#mmActualEarlyExpirationDate
+	 * CorporateActionDateSD9.mmActualEarlyExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmActualEarlyExpirationDate = new MMMessageAttribute() {
@@ -168,6 +192,7 @@ public class CorporateActionDateSD7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyExpirationDate";
 			definition = "Actual early expiration time as set by the issuer/offer/agent.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD9.mmActualEarlyExpirationDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -200,7 +225,15 @@ public class CorporateActionDateSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Last day protect instructions can be submitted to the issuer / agent. "</li>
+	 * "Last day protect instructions can be submitted to the issuer / agent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD9#mmActualProtectExpirationDate
+	 * CorporateActionDateSD9.mmActualProtectExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmActualProtectExpirationDate = new MMMessageAttribute() {
@@ -210,7 +243,8 @@ public class CorporateActionDateSD7 {
 			xmlTag = "ActlPrtctXprtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualProtectExpirationDate";
-			definition = "Last day protect instructions can be submitted to the issuer / agent. ";
+			definition = "Last day protect instructions can be submitted to the issuer / agent.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD9.mmActualProtectExpirationDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -243,7 +277,15 @@ public class CorporateActionDateSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Last day protect instructions can be submitted to the issuer / agent for the early expiration. "
+	 * "Last day protect instructions can be submitted to the issuer / agent for the early expiration."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD9#mmActualEarlyProtectExpirationDate
+	 * CorporateActionDateSD9.mmActualEarlyProtectExpirationDate}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -254,7 +296,8 @@ public class CorporateActionDateSD7 {
 			xmlTag = "ActlEarlyPrtctXprtnDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyProtectExpirationDate";
-			definition = "Last day protect instructions can be submitted to the issuer / agent for the early expiration. ";
+			definition = "Last day protect instructions can be submitted to the issuer / agent for the early expiration.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD9.mmActualEarlyProtectExpirationDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -289,6 +332,14 @@ public class CorporateActionDateSD7 {
 	 * definition} =
 	 * "Last day protect instructions can be submitted to DTC for the early expiration."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD9#mmDTCEarlyProtectExpirationDate
+	 * CorporateActionDateSD9.mmDTCEarlyProtectExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDTCEarlyProtectExpirationDate = new MMMessageAttribute() {
@@ -299,6 +350,7 @@ public class CorporateActionDateSD7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCEarlyProtectExpirationDate";
 			definition = "Last day protect instructions can be submitted to DTC for the early expiration.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD9.mmDTCEarlyProtectExpirationDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -333,6 +385,14 @@ public class CorporateActionDateSD7 {
 	 * definition} =
 	 * "Last day cover early protect instructions can be submitted to the issuer / agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD9#mmActualEarlyCoverProtectExpirationDate
+	 * CorporateActionDateSD9.mmActualEarlyCoverProtectExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmActualEarlyCoverProtectExpirationDate = new MMMessageAttribute() {
@@ -343,6 +403,7 @@ public class CorporateActionDateSD7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActualEarlyCoverProtectExpirationDate";
 			definition = "Last day cover early protect instructions can be submitted to the issuer / agent.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD9.mmActualEarlyCoverProtectExpirationDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -376,6 +437,14 @@ public class CorporateActionDateSD7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Last day cover early protect instructions can be submitted to DTC."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD9#mmDTCEarlyCoverProtectExpirationDate
+	 * CorporateActionDateSD9.mmDTCEarlyCoverProtectExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDTCEarlyCoverProtectExpirationDate = new MMMessageAttribute() {
@@ -386,6 +455,7 @@ public class CorporateActionDateSD7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCEarlyCoverProtectExpirationDate";
 			definition = "Last day cover early protect instructions can be submitted to DTC.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD9.mmDTCEarlyCoverProtectExpirationDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -403,6 +473,7 @@ public class CorporateActionDateSD7 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionDateSD7";
 				definition = "Provides additional information regarding corporate action options date details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

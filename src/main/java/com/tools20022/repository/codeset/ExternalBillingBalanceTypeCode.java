@@ -36,6 +36,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
+ * =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ExternalBillingBalanceType1Code
+ * ExternalBillingBalanceType1Code}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -76,6 +84,7 @@ public class ExternalBillingBalanceTypeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExternalBillingBalanceTypeCode";
 				definition = "Defines the balance of the billing service, as published in an external billing balance code list.\r\nExternal code sets can be downloaded from www.iso20022.org.";
+				derivation_lazy = () -> Arrays.asList(ExternalBillingBalanceType1Code.mmObject());
 				minLength = 1;
 				maxLength = 4;
 			}

@@ -317,6 +317,18 @@ public class PaymentProcessing {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction76#mmSettlementPriority
 	 * PaymentTransaction76.mmSettlementPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction87#mmSettlementPriority
+	 * PaymentTransaction87.mmSettlementPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31#mmSettlementPriority
+	 * CreditTransferTransaction31.mmSettlementPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction88#mmSettlementPriority
+	 * PaymentTransaction88.mmSettlementPriority}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30#mmSettlementPriority
+	 * CreditTransferTransaction30.mmSettlementPriority}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -349,7 +361,8 @@ public class PaymentProcessing {
 					PaymentTypeInformation17.mmInstructionPriority, PaymentTransaction50.mmSettlementPriority, CreditTransferTransaction17.mmSettlementPriority, CreditTransferTransaction19.mmSettlementPriority,
 					DirectDebitTransactionInformation17.mmSettlementPriority, PaymentTransaction51.mmSettlementPriority, CreditTransferTransaction23.mmSettlementPriority, CreditTransferTransaction25.mmSettlementPriority,
 					PaymentTransaction65.mmSettlementPriority, DirectDebitTransactionInformation20.mmSettlementPriority, PaymentTransaction60.mmSettlementPriority, DirectDebitTransactionInformation21.mmSettlementPriority,
-					PaymentTransaction81.mmSettlementPriority, PaymentTransaction76.mmSettlementPriority);
+					PaymentTransaction81.mmSettlementPriority, PaymentTransaction76.mmSettlementPriority, PaymentTransaction87.mmSettlementPriority, CreditTransferTransaction31.mmSettlementPriority,
+					PaymentTransaction88.mmSettlementPriority, CreditTransferTransaction30.mmSettlementPriority);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -572,6 +585,12 @@ public class PaymentProcessing {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RequestDetails10#mmClearingChannel
 	 * RequestDetails10.mmClearingChannel}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestDetails17#mmClearingChannel
+	 * RequestDetails17.mmClearingChannel}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ResolutionInformation2#mmClearingChannel
+	 * ResolutionInformation2.mmClearingChannel}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -597,7 +616,7 @@ public class PaymentProcessing {
 			derivation_lazy = () -> Arrays.asList(PaymentTypeInformation1.mmClearingChannel, PaymentTypeInformation2.mmClearingChannel, PaymentTypeInformation6.mmClearingChannel, PaymentTypeInformation4.mmClearingChannel,
 					PaymentTypeInformation22.mmClearingChannel, PaymentTypeInformation25.mmClearingChannel, PaymentTypeInformation3.mmClearingChannel, PaymentTypeInformation21.mmClearingChannel, PaymentTypeInformation5.mmClearingChannel,
 					PaymentTypeInformation23.mmClearingChannel, ReturnInformation1.mmClearingChannel, ResolutionInformation1.mmClearingChannel, PaymentTypeInformation12.mmClearingChannel, PaymentTypeInformation10.mmClearingChannel,
-					PaymentTypeInformation11.mmClearingChannel, RequestDetails10.mmClearingChannel);
+					PaymentTypeInformation11.mmClearingChannel, RequestDetails10.mmClearingChannel, RequestDetails17.mmClearingChannel, ResolutionInformation2.mmClearingChannel);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -706,6 +725,9 @@ public class PaymentProcessing {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PaymentTypeInformation17#mmLocalInstrument
 	 * PaymentTypeInformation17.mmLocalInstrument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EntryTransaction9#mmLocalInstrument
+	 * EntryTransaction9.mmLocalInstrument}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -722,7 +744,7 @@ public class PaymentProcessing {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "User community specific instrument.\nUsage : When available, codes provided by local authorities should be used."
+	 * "User community specific instrument.\nUsage: When available, codes provided by local authorities should be used."
 	 * </li>
 	 * </ul>
 	 */
@@ -733,12 +755,12 @@ public class PaymentProcessing {
 					PaymentTypeInformation4.mmLocalInstrument, PaymentTypeInformation22.mmLocalInstrument, PaymentTypeInformation25.mmLocalInstrument, PaymentTypeInformation3.mmLocalInstrument, PaymentTypeInformation21.mmLocalInstrument,
 					PaymentTypeInformation5.mmLocalInstrument, PaymentTypeInformation23.mmLocalInstrument, LocalInstrument1.mmCode, PaymentTypeInformation15.mmLocalInstrument, PaymentTypeInformation12.mmLocalInstrument,
 					PaymentTypeInformation18.mmLocalInstrument, PaymentTypeInformation10.mmLocalInstrument, PaymentTypeInformation16.mmLocalInstrument, PaymentTypeInformation14.mmLocalInstrument, PaymentTypeInformation11.mmLocalInstrument,
-					PaymentTypeInformation17.mmLocalInstrument);
+					PaymentTypeInformation17.mmLocalInstrument, EntryTransaction9.mmLocalInstrument);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentProcessing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "LocalInstrument";
-			definition = "User community specific instrument.\nUsage : When available, codes provided by local authorities should be used.";
+			definition = "User community specific instrument.\nUsage: When available, codes provided by local authorities should be used.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ExternalCode.mmObject();

@@ -112,7 +112,7 @@ public class AcquirerReversalInitiation {
 	 * name} = "Header"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information related to the protocol management"</li>
+	 * definition} = "Information related to the protocol management."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
@@ -120,7 +120,7 @@ public class AcquirerReversalInitiation {
 			xmlTag = "Hdr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
-			definition = "Information related to the protocol management";
+			definition = "Information related to the protocol management.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header18.mmObject();

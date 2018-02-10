@@ -1295,6 +1295,14 @@ public class ConstraintInvestorCountryCodeRule {
 	 * definition} =
 	 * "If Investor is present with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule#forTransactionDetails105
+	 * ConstraintInvestorCountryCodeRule.forTransactionDetails105}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1308,6 +1316,7 @@ public class ConstraintInvestorCountryCodeRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is present with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails105);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails79;
 			owner_lazy = () -> TransactionDetails97.mmObject();
 		}
@@ -1340,6 +1349,72 @@ public class ConstraintInvestorCountryCodeRule {
 			name = "InvestorCountryCodeRule";
 			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
 			owner_lazy = () -> TransactionDetails100.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105
+	 * TransactionDetails105}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCountryCodeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Investor is present with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule#forTransactionDetails97
+	 * ConstraintInvestorCountryCodeRule.forTransactionDetails97}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails105> forTransactionDetails105 = new MMConstraint<TransactionDetails105>() {
+		{
+			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails105;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCountryCodeRule";
+			definition = "If Investor is present with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forTransactionDetails97;
+			owner_lazy = () -> TransactionDetails105.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110
+	 * TransactionDetails110}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InvestorCountryCodeRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails110> forTransactionDetails110 = new MMConstraint<TransactionDetails110>() {
+		{
+			validator = ConstraintInvestorCountryCodeRule::checkTransactionDetails110;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InvestorCountryCodeRule";
+			definition = "If Investor is used with a country code, then the country code specifies the nationality of the investor, for example for the settlement of certain securities (that is airlines, defence manufacturers) under the EU legislation.";
+			owner_lazy = () -> TransactionDetails110.mmObject();
 		}
 	};
 
@@ -1740,6 +1815,26 @@ public class ConstraintInvestorCountryCodeRule {
 	 * legislation.
 	 */
 	public static void checkTransactionDetails100(TransactionDetails100 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Investor is present with a country code, then the country code
+	 * specifies the nationality of the investor, for example for the settlement
+	 * of certain securities (that is airlines, defence manufacturers) under the
+	 * EU legislation.
+	 */
+	public static void checkTransactionDetails105(TransactionDetails105 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If Investor is used with a country code, then the country code specifies
+	 * the nationality of the investor, for example for the settlement of
+	 * certain securities (that is airlines, defence manufacturers) under the EU
+	 * legislation.
+	 */
+	public static void checkTransactionDetails110(TransactionDetails110 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

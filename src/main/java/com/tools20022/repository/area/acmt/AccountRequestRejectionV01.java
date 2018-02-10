@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.*;
  * The AccountRequestRejection message is sent from a financial institution to
  * an organisation. This message is sent in response to a request message from
  * the organisation, if the business content is not valid.<br>
- * Usage
+ * Usage.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -91,7 +91,7 @@ import javax.xml.bind.annotation.*;
  * "AccountRequestRejectionV01"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Scope\r\nThe AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid.\r\nUsage"
+ * "Scope\r\nThe AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid.\r\nUsage."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -338,7 +338,7 @@ public class AccountRequestRejectionV01 {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountRequestRejectionV01";
-				definition = "Scope\r\nThe AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid.\r\nUsage";
+				definition = "Scope\r\nThe AccountRequestRejection message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation, if the business content is not valid.\r\nUsage.";
 				nextVersions_lazy = () -> Arrays.asList(AccountRequestRejectionV02.mmObject());
 				messageSet_lazy = () -> Arrays.asList(BankAccountManagementISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";

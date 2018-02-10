@@ -86,6 +86,13 @@ import java.util.Objects;
  * RequestForQuote.mmCashParties}</li>
  * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch5#mmParties
  * PaymentSearch5.mmParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch6#mmParties
+ * PaymentSearch6.mmParties}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch7#mmParties
+ * PaymentSearch7.mmParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentContext26#mmDirectDebitContext
+ * CardPaymentContext26.mmDirectDebitContext}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -157,6 +164,10 @@ import java.util.Objects;
  * <li>{@linkplain com.tools20022.repository.msg.CashParties29 CashParties29}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CashParties30 CashParties30}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CashParties32 CashParties32}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionParties4
+ * TransactionParties4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CardDirectDebit1
+ * CardDirectDebit1}</li>
  * </ul>
  * </li>
  * <li>
@@ -196,7 +207,7 @@ public class PaymentPartyRole extends Role {
 	 * type} = {@linkplain com.tools20022.repository.entity.CashAccount
 	 * CashAccount}</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
-	 * derivation} = List of 503 elements</li>
+	 * derivation} = List of 560 elements</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -211,7 +222,7 @@ public class PaymentPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account..."
+	 * "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account."
 	 * </li>
 	 * </ul>
 	 */
@@ -222,7 +233,7 @@ public class PaymentPartyRole extends Role {
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashAccount";
-			definition = "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account...";
+			definition = "Unambiguous identification of the account used in the context of the party role such as debtor account, instructing agent account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.CashAccount.mmPaymentPartyRole;
 			aggregation = MMAggregation.NONE;
@@ -285,7 +296,7 @@ public class PaymentPartyRole extends Role {
 				definition = "Role played by a party in the context of a payment.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CashAccount.mmPaymentPartyRole, com.tools20022.repository.entity.Payment.mmPartyRole);
 				derivationElement_lazy = () -> Arrays.asList(PaymentSearch4.mmParties, SecuritiesTradeDetails4.mmCashParties, SecuritiesTradeDetails10.mmCashParties, InstrumentLeg2.mmCashParties, SingleQuote1.mmCashParties,
-						InstrumentLeg3.mmCashParties, QuoteRequest1.mmCashParties, RequestForQuote.mmCashParties, PaymentSearch5.mmParties);
+						InstrumentLeg3.mmCashParties, QuoteRequest1.mmCashParties, RequestForQuote.mmCashParties, PaymentSearch5.mmParties, PaymentSearch6.mmParties, PaymentSearch7.mmParties, CardPaymentContext26.mmDirectDebitContext);
 				subType_lazy = () -> Arrays.asList(InstructingAgentRole.mmObject(), InstructedAgentRole.mmObject(), DebtorRole.mmObject(), DebtorAgentRole.mmObject(), CreditorRole.mmObject(), IntermediaryAgentRole.mmObject(),
 						CreditorAgentRole.mmObject(), ForwardingAgentRole.mmObject(), InitiatingPartyRole.mmObject());
 				superType_lazy = () -> Role.mmObject();
@@ -294,7 +305,8 @@ public class PaymentPartyRole extends Role {
 						CashParties2.mmObject(), CashParties5.mmObject(), CashParties10.mmObject(), CashParties12.mmObject(), CashParties4.mmObject(), CashParties7.mmObject(), CashParties13.mmObject(), CashParties17.mmObject(),
 						CashParties19.mmObject(), CashParties6.mmObject(), TransactionParty1.mmObject(), TransactionParty2.mmObject(), TransactionParties3.mmObject(), CashParties18.mmObject(), SettlementParties1.mmObject(),
 						SettlementParties9.mmObject(), SettlementParties29.mmObject(), CashParties11.mmObject(), CashParties9.mmObject(), CashParties15.mmObject(), CashParties16.mmObject(), CashParties24.mmObject(),
-						CashParties21.mmObject(), CashParties23.mmObject(), CashParties26.mmObject(), CashParties25.mmObject(), CashParties28.mmObject(), CashParties29.mmObject(), CashParties30.mmObject(), CashParties32.mmObject());
+						CashParties21.mmObject(), CashParties23.mmObject(), CashParties26.mmObject(), CashParties25.mmObject(), CashParties28.mmObject(), CashParties29.mmObject(), CashParties30.mmObject(), CashParties32.mmObject(),
+						TransactionParties4.mmObject(), CardDirectDebit1.mmObject());
 			}
 
 			@Override

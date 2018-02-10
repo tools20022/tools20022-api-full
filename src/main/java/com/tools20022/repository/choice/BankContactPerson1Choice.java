@@ -172,7 +172,7 @@ public class BankContactPerson1Choice {
 	 * name} = "SellerBankContactPerson"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Person to be contacted in the seller's bank. "</li>
+	 * definition} = "Person to be contacted in the seller's bank."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSellerBankContactPerson = new MMMessageAssociationEnd() {
@@ -183,7 +183,7 @@ public class BankContactPerson1Choice {
 			xmlTag = "SellrBkCtctPrsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBankContactPerson";
-			definition = "Person to be contacted in the seller's bank. ";
+			definition = "Person to be contacted in the seller's bank.";
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ContactIdentification1.mmObject();

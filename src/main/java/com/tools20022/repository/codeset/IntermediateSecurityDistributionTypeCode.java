@@ -470,7 +470,7 @@ public class IntermediateSecurityDistributionTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * A distribution of subsidiary stock to the shareholders
+	 * A distribution of subsidiary stock to the shareholders.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -487,14 +487,14 @@ public class IntermediateSecurityDistributionTypeCode extends MMCode {
 	 * name} = "SpinOff"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "A distribution of subsidiary stock to the shareholders"</li>
+	 * definition} = "A distribution of subsidiary stock to the shareholders."</li>
 	 * </ul>
 	 */
 	public static final IntermediateSecurityDistributionTypeCode SpinOff = new IntermediateSecurityDistributionTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SpinOff";
-			definition = "A distribution of subsidiary stock to the shareholders";
+			definition = "A distribution of subsidiary stock to the shareholders.";
 			owner_lazy = () -> com.tools20022.repository.codeset.IntermediateSecurityDistributionTypeCode.mmObject();
 			codeName = "SOFF";
 		}

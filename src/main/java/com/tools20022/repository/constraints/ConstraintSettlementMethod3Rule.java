@@ -48,7 +48,7 @@ public class ConstraintSettlementMethod3Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SettlementMethod is equal to CLRG then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s)  is(are) not allowed;\n- ClearingSystem must be present."
+	 * "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -57,7 +57,7 @@ public class ConstraintSettlementMethod3Rule {
 			validator = ConstraintSettlementMethod3Rule::checkSettlementInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod3Rule";
-			definition = "If SettlementMethod is equal to CLRG then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s)  is(are) not allowed;\n- ClearingSystem must be present.";
+			definition = "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present.";
 			owner_lazy = () -> SettlementInformation1.mmObject();
 		}
 	};
@@ -82,7 +82,7 @@ public class ConstraintSettlementMethod3Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SettlementMethod is equal to CLRG then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s)  is(are) not allowed;\n- ClearingSystem must be present."
+	 * "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -91,7 +91,7 @@ public class ConstraintSettlementMethod3Rule {
 			validator = ConstraintSettlementMethod3Rule::checkSettlementInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod3Rule";
-			definition = "If SettlementMethod is equal to CLRG then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s)  is(are) not allowed;\n- ClearingSystem must be present.";
+			definition = "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present.";
 			owner_lazy = () -> SettlementInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>ClearingSystem</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -117,7 +117,7 @@ public class ConstraintSettlementMethod3Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SettlementMethod is equal to CLRG then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s)  is(are) not allowed;\n- ClearingSystem must be present."
+	 * "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -126,7 +126,7 @@ public class ConstraintSettlementMethod3Rule {
 			validator = ConstraintSettlementMethod3Rule::checkSettlementInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod3Rule";
-			definition = "If SettlementMethod is equal to CLRG then:\n- SettlementAccount is not allowed;\n- Reimbursement agent(s)  is(are) not allowed;\n- ClearingSystem must be present.";
+			definition = "If SettlementMethod is equal to CLRG then: \n- SettlementAccount is not allowed;\n- Reimbursement agent(s) is(are) not allowed;\n- ClearingSystem must be present.";
 			owner_lazy = () -> SettlementInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/SettlementAccount</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>ClearingSystem</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}

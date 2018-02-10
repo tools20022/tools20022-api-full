@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06;
 import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.codeset.PreConfirmation1Code;
 import com.tools20022.repository.datatype.Max35Text;
@@ -72,6 +73,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#mmAdditionalParameters
  * SecuritiesFinancingConfirmationV07.mmAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08#mmAdditionalParameters
+ * SecuritiesFinancingConfirmationV08.mmAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
@@ -291,7 +295,8 @@ public class AdditionalParameters24 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AdditionalParameters24.mmPreConfirmation, com.tools20022.repository.msg.AdditionalParameters24.mmPartialSettlement,
 						com.tools20022.repository.msg.AdditionalParameters24.mmPreviousPartialConfirmationIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV06.mmAdditionalParameters, SecuritiesFinancingConfirmationV07.mmAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays
+						.asList(SecuritiesFinancingConfirmationV06.mmAdditionalParameters, SecuritiesFinancingConfirmationV07.mmAdditionalParameters, SecuritiesFinancingConfirmationV08.mmAdditionalParameters);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPartialSettlementGuideline.forAdditionalParameters24);

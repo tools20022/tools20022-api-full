@@ -149,6 +149,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * UnmatchedStatusReason1Code.DisagreementReceivingOrDeliveringCustodian}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.UnmatchedStatusReasonCode
+ * UnmatchedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -204,6 +207,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Matching instruction from the counterparty could not be found.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "CMIS";
+			codeName = UnmatchedStatusReasonCode.MatchingInstructionNotFound.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -234,6 +238,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the settlement date/time.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DDAT";
+			codeName = UnmatchedStatusReasonCode.DisagreementSettlementDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -267,6 +272,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty expects a delivery not a receipt, or counterparty expects a receipt not a delivery.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DELN";
+			codeName = UnmatchedStatusReasonCode.DisagreementDirectionOfTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -297,6 +303,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the place of settlement.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DEPT";
+			codeName = UnmatchedStatusReasonCode.DisagreementPlaceOfSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -327,6 +334,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the settlement amount.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DMON";
+			codeName = UnmatchedStatusReasonCode.DisagreementSettlementAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -357,6 +365,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the deal price.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DDEA";
+			codeName = UnmatchedStatusReasonCode.DisagreementDealPrice.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -388,6 +397,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the quantity of the financial instrument.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DQUA";
+			codeName = UnmatchedStatusReasonCode.DisagreementQuantity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -418,6 +428,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Repurchase call delay does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "CADE";
+			codeName = UnmatchedStatusReasonCode.DisagreementRepurchaseCallDelay.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -448,6 +459,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Settlement transaction type does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "SETR";
+			codeName = UnmatchedStatusReasonCode.DisagreementSettlementTransaction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -481,6 +493,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the security/issue, eg, ISIN or a financial instrument attribute differs.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DSEC";
+			codeName = UnmatchedStatusReasonCode.DisagreementSecurity.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -511,6 +524,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Variable rate support does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "VASU";
+			codeName = UnmatchedStatusReasonCode.DisagreementVariableRateSupport.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -541,6 +555,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty does not recognise the transaction.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DTRA";
+			codeName = UnmatchedStatusReasonCode.NotRecognised.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -571,6 +586,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Repurchase spread rate does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "RSPR";
+			codeName = UnmatchedStatusReasonCode.DisagreementRepurchaseSpreadRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -601,6 +617,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Repurchase rate does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "REPO";
+			codeName = UnmatchedStatusReasonCode.DisagreementRepurchaseRate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -631,6 +648,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty's instruction was too late.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "CLAT";
+			codeName = UnmatchedStatusReasonCode.CounterpartyTooLateForMatching.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -661,6 +679,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Repurchase rate type does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "RERT";
+			codeName = UnmatchedStatusReasonCode.DisagreementRepurchaseRateType.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -691,6 +710,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Repurchase amount does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "REPA";
+			codeName = UnmatchedStatusReasonCode.DisagreementRepurchaseAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -721,6 +741,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Repurchase premium amount does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "REPP";
+			codeName = UnmatchedStatusReasonCode.DisagreementRepurchasePremiumAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -754,6 +775,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty's instructions is for physical settlement, and yours is not, or vice versa.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "PHYS";
+			codeName = UnmatchedStatusReasonCode.DisagreementPhysicalSettlement.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -784,6 +806,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the common reference.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "IIND";
+			codeName = UnmatchedStatusReasonCode.DisagreementCommonReference.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -817,6 +840,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty's instructions is for free settlement, and yours is for settlement against payment, or vice versa.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "FRAP";
+			codeName = UnmatchedStatusReasonCode.DisagreementPaymentCode.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -847,6 +871,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Place of trade does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "PLCE";
+			codeName = UnmatchedStatusReasonCode.DisagreementPlaceOfTrade.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -877,6 +902,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Instruction is a possible duplicate.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "PODU";
+			codeName = UnmatchedStatusReasonCode.PossibleDuplicateInstruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -907,6 +933,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Repurchase forfeit amount does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "FORF";
+			codeName = UnmatchedStatusReasonCode.DisagreementForfeitRepurchaseamount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -940,6 +967,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Discrepancies exist in the registration details linked to the transaction.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "REGD";
+			codeName = UnmatchedStatusReasonCode.DisagreementRegistrationDetails.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -973,6 +1001,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty indicates a settlement via RTGS system and you indicate non-RTGS settlement, or vice versa.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "RTGS";
+			codeName = UnmatchedStatusReasonCode.DisagreementRTGSSystem.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1004,6 +1033,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty indicated an incorrect delivery or receiving agent.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "ICAG";
+			codeName = UnmatchedStatusReasonCode.IncorrectAgent.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1034,6 +1064,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty has cancelled the transaction/instruction.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "CPCA";
+			codeName = UnmatchedStatusReasonCode.CounterpartyCancelledInstruction.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1064,6 +1095,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees on the amount of charges.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "CHAR";
+			codeName = UnmatchedStatusReasonCode.DisagreementChargesAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1097,6 +1129,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Instruction indicates an incorrect buyer (receiver) or seller (deliverer).";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "IEXE";
+			codeName = UnmatchedStatusReasonCode.IncorrectBuyerOrSeller.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1128,6 +1161,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the currency of the settlement amount.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "NCRR";
+			codeName = UnmatchedStatusReasonCode.DisagreementCurrencySettlementAmount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1158,6 +1192,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Matching process has not yet started.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "NMAS";
+			codeName = UnmatchedStatusReasonCode.NoMatchingStarted.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1180,7 +1215,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Safekeeping account used as a matching criteria on the market concerned  does not match."
+	 * "Safekeeping account used as a matching criteria on the market concerned does not match."
 	 * </li>
 	 * </ul>
 	 */
@@ -1188,9 +1223,10 @@ public class UnmatchedStatusReason1Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisagreementSafekeepingAccount";
-			definition = "Safekeeping account used as a matching criteria on the market concerned  does not match.";
+			definition = "Safekeeping account used as a matching criteria on the market concerned does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "SAFE";
+			codeName = UnmatchedStatusReasonCode.DisagreementSafekeepingAccount.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1221,6 +1257,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Counterparty disagrees with the trade date.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "DTRD";
+			codeName = UnmatchedStatusReasonCode.DisagreementTradeDate.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1251,6 +1288,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Instruction received too late for matching.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "LATE";
+			codeName = UnmatchedStatusReasonCode.YourInstructionTooLateForMatching.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1281,6 +1319,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Closing date/time does not match.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "TERM";
+			codeName = UnmatchedStatusReasonCode.DisagreementClosingDateTime.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -1311,6 +1350,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 			definition = "Incorrect delivering or receiving custodian.";
 			owner_lazy = () -> com.tools20022.repository.codeset.UnmatchedStatusReason1Code.mmObject();
 			codeName = "ICUS";
+			codeName = UnmatchedStatusReasonCode.DisagreementReceivingOrDeliveringCustodian.getCodeName().orElse(name);
 		}
 	};
 	final static private LinkedHashMap<String, UnmatchedStatusReason1Code> codesByName = new LinkedHashMap<>();
@@ -1326,6 +1366,7 @@ public class UnmatchedStatusReason1Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnmatchedStatusReason1Code";
 				definition = "Specifies the reason the transaction/instruction is unmatched.";
+				trace_lazy = () -> UnmatchedStatusReasonCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.UnmatchedStatusReason1Code.MatchingInstructionNotFound, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementSettlementDate,
 						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementDirectionOfTrade, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementPlaceOfSettlement,
 						com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementSettlementAmount, com.tools20022.repository.codeset.UnmatchedStatusReason1Code.DisagreementDealPrice,

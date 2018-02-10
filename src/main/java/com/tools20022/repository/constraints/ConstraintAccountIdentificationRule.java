@@ -1736,6 +1736,9 @@ public class ConstraintAccountIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forInvestmentAccount57
 	 * ConstraintAccountIdentificationRule.forInvestmentAccount57}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forInvestmentAccount65
+	 * ConstraintAccountIdentificationRule.forInvestmentAccount65}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1751,7 +1754,8 @@ public class ConstraintAccountIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount57);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount57,
+					com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount41;
 			owner_lazy = () -> InvestmentAccount55.mmObject();
 		}
@@ -1775,6 +1779,14 @@ public class ConstraintAccountIdentificationRule {
 	 * definition} =
 	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forInvestmentAccount68
+	 * ConstraintAccountIdentificationRule.forInvestmentAccount68}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1788,8 +1800,81 @@ public class ConstraintAccountIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentificationRule";
 			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount55;
 			owner_lazy = () -> InvestmentAccount57.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount65
+	 * InvestmentAccount65}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccountIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forInvestmentAccount55
+	 * ConstraintAccountIdentificationRule.forInvestmentAccount55}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount65> forInvestmentAccount65 = new MMConstraint<InvestmentAccount65>() {
+		{
+			validator = ConstraintAccountIdentificationRule::checkInvestmentAccount65;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AccountIdentificationRule";
+			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount55;
+			owner_lazy = () -> InvestmentAccount65.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68
+	 * InvestmentAccount68}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AccountIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAccountIdentificationRule#forInvestmentAccount57
+	 * ConstraintAccountIdentificationRule.forInvestmentAccount57}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<InvestmentAccount68> forInvestmentAccount68 = new MMConstraint<InvestmentAccount68>() {
+		{
+			validator = ConstraintAccountIdentificationRule::checkInvestmentAccount68;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AccountIdentificationRule";
+			definition = "At least one occurrence of one message element in the list (OwnerIdentification, AccountIdentification, AccountName) must be present. If an element in the list is repetitive, more than one occurrence of this message element may be present. More than one message element in the list may be present.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAccountIdentificationRule.forInvestmentAccount57;
+			owner_lazy = () -> InvestmentAccount68.mmObject();
 		}
 	};
 
@@ -2352,6 +2437,28 @@ public class ConstraintAccountIdentificationRule {
 	 * element in the list may be present.
 	 */
 	public static void checkInvestmentAccount57(InvestmentAccount57 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one occurrence of one message element in the list
+	 * (OwnerIdentification, AccountIdentification, AccountName) must be
+	 * present. If an element in the list is repetitive, more than one
+	 * occurrence of this message element may be present. More than one message
+	 * element in the list may be present.
+	 */
+	public static void checkInvestmentAccount65(InvestmentAccount65 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * At least one occurrence of one message element in the list
+	 * (OwnerIdentification, AccountIdentification, AccountName) must be
+	 * present. If an element in the list is repetitive, more than one
+	 * occurrence of this message element may be present. More than one message
+	 * element in the list may be present.
+	 */
+	public static void checkInvestmentAccount68(InvestmentAccount68 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

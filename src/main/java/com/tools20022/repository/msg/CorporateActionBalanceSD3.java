@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action balance details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD4
+ * CorporateActionBalanceSD4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD1
@@ -117,6 +124,14 @@ public class CorporateActionBalanceSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD4#mmPlaceAndName
+	 * CorporateActionBalanceSD4.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -132,6 +147,7 @@ public class CorporateActionBalanceSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD4.mmPlaceAndName);
 			previousVersion_lazy = () -> CorporateActionBalanceSD1.mmPlaceAndName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -166,6 +182,14 @@ public class CorporateActionBalanceSD3 {
 	 * definition} =
 	 * "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD4#mmOriginalBalance
+	 * CorporateActionBalanceSD4.mmOriginalBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -181,6 +205,7 @@ public class CorporateActionBalanceSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD4.mmOriginalBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceSD1.mmOriginalBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -214,7 +239,15 @@ public class CorporateActionBalanceSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Adjusted position held in  a security that is subject to redemption call."
+	 * "Adjusted position held in a security that is subject to redemption call."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD4#mmAdjustedBalance
+	 * CorporateActionBalanceSD4.mmAdjustedBalance}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -230,7 +263,8 @@ public class CorporateActionBalanceSD3 {
 			xmlTag = "AdjstdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedBalance";
-			definition = "Adjusted position held in  a security that is subject to redemption call.";
+			definition = "Adjusted position held in a security that is subject to redemption call.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD4.mmAdjustedBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceSD1.mmAdjustedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -266,6 +300,14 @@ public class CorporateActionBalanceSD3 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD4#mmUnpledgedBalance
+	 * CorporateActionBalanceSD4.mmUnpledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -281,6 +323,7 @@ public class CorporateActionBalanceSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD4.mmUnpledgedBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceSD1.mmUnpledgedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -316,6 +359,14 @@ public class CorporateActionBalanceSD3 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD4#mmInvestmentUnpledgedBalance
+	 * CorporateActionBalanceSD4.mmInvestmentUnpledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -331,6 +382,7 @@ public class CorporateActionBalanceSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD4.mmInvestmentUnpledgedBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceSD1.mmInvestmentUnpledgedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -366,6 +418,14 @@ public class CorporateActionBalanceSD3 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD4#mmInvestmentPledgedBalance
+	 * CorporateActionBalanceSD4.mmInvestmentPledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -381,6 +441,7 @@ public class CorporateActionBalanceSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD4.mmInvestmentPledgedBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceSD1.mmInvestmentPledgedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -416,6 +477,14 @@ public class CorporateActionBalanceSD3 {
 	 * definition} =
 	 * "Position held in DTC Segregated account. This position is eligible for payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceSD4#mmMemoSegregationBalance
+	 * CorporateActionBalanceSD4.mmMemoSegregationBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMemoSegregationBalance = new MMMessageAssociationEnd() {
@@ -426,6 +495,7 @@ public class CorporateActionBalanceSD3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemoSegregationBalance";
 			definition = "Position held in DTC Segregated account. This position is eligible for payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD4.mmMemoSegregationBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -444,6 +514,7 @@ public class CorporateActionBalanceSD3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionBalanceSD3";
 				definition = "Provides additional information regarding corporate action balance details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD4.mmObject());
 				previousVersion_lazy = () -> CorporateActionBalanceSD1.mmObject();
 			}
 		});

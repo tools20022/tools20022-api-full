@@ -146,7 +146,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * name} = "ReportIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identifies the report. "</li>
+	 * definition} = "Identifies the report."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -159,7 +159,7 @@ public class ForwardDataSetSubmissionReportV05 {
 			xmlTag = "RptId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportIdentification";
-			definition = "Identifies the report. ";
+			definition = "Identifies the report.";
 			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmReportIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -352,7 +352,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the buyer, uniquely identified by its BIC. "
+	 * "The financial institution of the buyer, uniquely identified by its BIC."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -366,7 +366,7 @@ public class ForwardDataSetSubmissionReportV05 {
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
-			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
+			definition = "The financial institution of the buyer, uniquely identified by its BIC.";
 			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmBuyerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -404,7 +404,7 @@ public class ForwardDataSetSubmissionReportV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the seller, uniquely identified by its BIC. "
+	 * "The financial institution of the seller, uniquely identified by its BIC."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -418,7 +418,7 @@ public class ForwardDataSetSubmissionReportV05 {
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
-			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
+			definition = "The financial institution of the seller, uniquely identified by its BIC.";
 			previousVersion_lazy = () -> ForwardDataSetSubmissionReportV04.mmSellerBank;
 			maxOccurs = 1;
 			minOccurs = 1;

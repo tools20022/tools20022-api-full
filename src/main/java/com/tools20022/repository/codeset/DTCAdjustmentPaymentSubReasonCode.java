@@ -951,14 +951,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * name} = "SupplementaryInterimOn"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Supplementary interim on  user defined date."</li>
+	 * definition} = "Supplementary interim on user defined date."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode SupplementaryInterimOn = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryInterimOn";
-			definition = "Supplementary interim on  user defined date.";
+			definition = "Supplementary interim on user defined date.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SAFA";
 		}
@@ -2306,7 +2306,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Deposit after cut off date  transferred into the name of the CEDE on record date."
+	 * "Deposit after cut off date transferred into the name of the CEDE on record date."
 	 * </li>
 	 * </ul>
 	 */
@@ -2314,7 +2314,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositTransferredIntoTheNameOfTheCEDEAndCo";
-			definition = "Deposit after cut off date  transferred into the name of the CEDE on record date.";
+			definition = "Deposit after cut off date transferred into the name of the CEDE on record date.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SDCD";
 		}
@@ -2872,7 +2872,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Refund of french tax based on acceptance of global reclamation for the june 1992 distribution refer to important notice  b # 1352‑93."
+	 * "Refund of french tax based on acceptance of global reclamation for the june 1992 distribution refer to important notice b # 1352‑93."
 	 * </li>
 	 * </ul>
 	 */
@@ -2880,14 +2880,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundOfFrenchTaxJune";
-			definition = "Refund of french tax based on acceptance of global reclamation for the june 1992 distribution refer to important notice  b # 1352‑93.";
+			definition = "Refund of french tax based on acceptance of global reclamation for the june 1992 distribution refer to important notice b # 1352‑93.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SFRA";
 		}
 	};
 	/**
 	 * Refund of french tax based on acceptance of global reclamation for the
-	 * july 1992 distribution refer to important notice b # 1352‑93
+	 * july 1992 distribution refer to important notice b # 1352‑93.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2905,7 +2905,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Refund of french tax based on acceptance of global reclamation for the july 1992 distribution refer to important notice  b # 1352‑93"
+	 * "Refund of french tax based on acceptance of global reclamation for the july 1992 distribution refer to important notice b # 1352‑93."
 	 * </li>
 	 * </ul>
 	 */
@@ -2913,7 +2913,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RefundOfFrenchTaxJuly";
-			definition = "Refund of french tax based on acceptance of global reclamation for the july 1992 distribution refer to important notice  b # 1352‑93";
+			definition = "Refund of french tax based on acceptance of global reclamation for the july 1992 distribution refer to important notice b # 1352‑93.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SFRB";
 		}
@@ -2998,14 +2998,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * name} = "AllocationAdjustment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Allocation adjustment. "</li>
+	 * definition} = "Allocation adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode AllocationAdjustment = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationAdjustment";
-			definition = "Allocation adjustment. ";
+			definition = "Allocation adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SGLA";
 		}
@@ -3182,14 +3182,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Your interim position was adjusted for deliver orderactivity. "</li>
+	 * "Your interim position was adjusted for deliver orderactivity."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode InterimPositionAdjustedForDeliverOrderActivity = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterimPositionAdjustedForDeliverOrderActivity";
-			definition = "Your interim position was adjusted for deliver orderactivity. ";
+			definition = "Your interim position was adjusted for deliver orderactivity.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SIGE";
 		}
@@ -3273,14 +3273,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * name} = "DepositAdjustment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "DTCC deposit  related adjustment."</li>
+	 * definition} = "DTCC deposit related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode DepositAdjustment = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositAdjustment";
-			definition = "DTCC deposit  related adjustment.";
+			definition = "DTCC deposit related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SJDD";
 		}
@@ -3393,14 +3393,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * name} = "InvestmentIdAdjustment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "DTCC investment id  related adjustment."</li>
+	 * definition} = "DTCC investment id related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode InvestmentIdAdjustment = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentIdAdjustment";
-			definition = "DTCC investment id  related adjustment.";
+			definition = "DTCC investment id related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SJIE";
 		}
@@ -3483,14 +3483,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * name} = "ReorganizationAdjustment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "DTCC reorganization  related adjustment.\r\n"</li>
+	 * definition} = "DTCC reorganization related adjustment.\r\n"</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode ReorganizationAdjustment = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorganizationAdjustment";
-			definition = "DTCC reorganization  related adjustment.\r\n";
+			definition = "DTCC reorganization related adjustment.\r\n";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SJR7";
 		}
@@ -3513,14 +3513,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * name} = "WithdrawalTransferAdjustment"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "DTCC WT related adjustment.   "</li>
+	 * definition} = "DTCC WT related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode WithdrawalTransferAdjustment = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WithdrawalTransferAdjustment";
-			definition = "DTCC WT related adjustment.   ";
+			definition = "DTCC WT related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SJWT";
 		}
@@ -3644,14 +3644,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * name} = "MuniBearerBondCoupon"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Muni bearer bond coupon  related adjustment."</li>
+	 * definition} = "Muni bearer bond coupon related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode MuniBearerBondCoupon = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCoupon";
-			definition = "Muni bearer bond coupon  related adjustment.";
+			definition = "Muni bearer bond coupon related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SMAM";
 		}
@@ -3691,7 +3691,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	};
 	/**
 	 * Muni bearer bond coupon adjustment for coupon(s) missing from a
-	 * withdrawal
+	 * withdrawal.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -3709,7 +3709,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Muni bearer bond coupon adjustment for coupon(s) missing from a withdrawal"
+	 * "Muni bearer bond coupon adjustment for coupon(s) missing from a withdrawal."
 	 * </li>
 	 * </ul>
 	 */
@@ -3717,7 +3717,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MuniBearerBondCouponAdjustmentForCouponsMissingFromaWithdrawal";
-			definition = "Muni bearer bond coupon adjustment for coupon(s) missing from a withdrawal";
+			definition = "Muni bearer bond coupon adjustment for coupon(s) missing from a withdrawal.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SMCM";
 		}
@@ -4121,7 +4121,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "This adjustment is in response to your inquiry. refer to control number: "
+	 * "This adjustment is in response to your inquiry. refer to control number:"
 	 * </li>
 	 * </ul>
 	 */
@@ -4129,7 +4129,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentIsInResponseToYourInquiry";
-			definition = "This adjustment is in response to your inquiry. refer to control number: ";
+			definition = "This adjustment is in response to your inquiry. refer to control number:";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SRIH";
 		}
@@ -4247,7 +4247,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "This allocation was adjusted for a rate change. Please refer to DIVA comment field for additional information. "
+	 * "This allocation was adjusted for a rate change. Please refer to DIVA comment field for additional information."
 	 * </li>
 	 * </ul>
 	 */
@@ -4255,7 +4255,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChange";
-			definition = "This allocation was adjusted for a rate change. Please refer to DIVA comment field for additional information. ";
+			definition = "This allocation was adjusted for a rate change. Please refer to DIVA comment field for additional information.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SRTA";
 		}
@@ -4470,7 +4470,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Dividend reinvestment (DRP) allocation of cash in lieu of fractions  related adjustment."
+	 * "Dividend reinvestment (DRP) allocation of cash in lieu of fractions related adjustment."
 	 * </li>
 	 * </ul>
 	 */
@@ -4478,7 +4478,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendReinvestmentAllocationOfCashInLieuOfFractions";
-			definition = "Dividend reinvestment (DRP) allocation of cash in lieu of fractions  related adjustment.";
+			definition = "Dividend reinvestment (DRP) allocation of cash in lieu of fractions related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SSE6";
 		}
@@ -4594,7 +4594,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proceeds resulting from a (buy) transaction affected in our  DTCC/dividend trading account (#428‑10288‑1‑3‑039)."
+	 * "Proceeds resulting from a (buy) transaction affected in our DTCC/dividend trading account (#428‑10288‑1‑3‑039)."
 	 * </li>
 	 * </ul>
 	 */
@@ -4602,7 +4602,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProceedsFromBuyTransactionInOurDTCCDividendTradingAccount";
-			definition = "Proceeds resulting from a (buy) transaction affected in our  DTCC/dividend trading account (#428‑10288‑1‑3‑039).";
+			definition = "Proceeds resulting from a (buy) transaction affected in our DTCC/dividend trading account (#428‑10288‑1‑3‑039).";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SSP4";
 		}
@@ -4703,7 +4703,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	};
 	/**
 	 * Share adjustment resulting from a (sell) transaction affected in our
-	 * DTCC/dividend trading account (#428‑10288‑1‑3‑039) .
+	 * DTCC/dividend trading account (#428‑10288‑1‑3‑039).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -4723,7 +4723,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Share adjustment resulting from a (sell) transaction affected in our DTCC/dividend trading account (#428‑10288‑1‑3‑039) ."
+	 * "Share adjustment resulting from a (sell) transaction affected in our DTCC/dividend trading account (#428‑10288‑1‑3‑039)."
 	 * </li>
 	 * </ul>
 	 */
@@ -4731,7 +4731,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShareAdjustmentResultingFromASellTransactionAffectedInOurDTCCDividendTradingAccount";
-			definition = "Share adjustment resulting from a (sell) transaction affected in our DTCC/dividend trading account (#428‑10288‑1‑3‑039) .";
+			definition = "Share adjustment resulting from a (sell) transaction affected in our DTCC/dividend trading account (#428‑10288‑1‑3‑039).";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SSR5";
 		}
@@ -4891,7 +4891,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Allocation of dividend reinvestment shares - DRP/TEDS  instruction @100%."
+	 * "Allocation of dividend reinvestment shares - DRP/TEDS instruction @100%."
 	 * </li>
 	 * </ul>
 	 */
@@ -4899,7 +4899,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AllocationOfDRPTEDSInstruction";
-			definition = "Allocation of dividend reinvestment shares - DRP/TEDS  instruction @100%.";
+			definition = "Allocation of dividend reinvestment shares - DRP/TEDS instruction @100%.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SST6";
 		}
@@ -5022,7 +5022,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Adjustment made for a withdrawal by transfer that was not transferred into your clients name by the record date. "
+	 * "Adjustment made for a withdrawal by transfer that was not transferred into your clients name by the record date."
 	 * </li>
 	 * </ul>
 	 */
@@ -5030,7 +5030,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustmentForAWithdrawalByTransferNotTransferredIntoYourClientsName";
-			definition = "Adjustment made for a withdrawal by transfer that was not transferred into your clients name by the record date. ";
+			definition = "Adjustment made for a withdrawal by transfer that was not transferred into your clients name by the record date.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SWL1";
 		}
@@ -5267,7 +5267,7 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 		}
 	};
 	/**
-	 * Foreign cash dividends allocation at unfavorable rate
+	 * Foreign cash dividends allocation at unfavorable rate.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -5284,14 +5284,14 @@ public class DTCAdjustmentPaymentSubReasonCode extends MMCode {
 	 * name} = "ForeignCashDividendUnfavorableRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Foreign cash dividends allocation at unfavorable rate"</li>
+	 * definition} = "Foreign cash dividends allocation at unfavorable rate."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentSubReasonCode ForeignCashDividendUnfavorableRate = new DTCAdjustmentPaymentSubReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignCashDividendUnfavorableRate";
-			definition = "Foreign cash dividends allocation at unfavorable rate";
+			definition = "Foreign cash dividends allocation at unfavorable rate.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentSubReasonCode.mmObject();
 			codeName = "SFL9";
 		}

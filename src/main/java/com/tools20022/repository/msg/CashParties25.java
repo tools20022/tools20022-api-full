@@ -22,10 +22,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05;
-import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06;
-import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV05;
-import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06;
+import com.tools20022.repository.area.sese.*;
 import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
@@ -75,6 +72,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06#mmCashParties
  * SecuritiesSettlementTransactionReversalAdviceV06.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07#mmCashParties
+ * SecuritiesSettlementTransactionAllegementNotificationV07.mmCashParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV07#mmCashParties
+ * SecuritiesSettlementTransactionReversalAdviceV07.mmCashParties}</li>
  * </ul>
  * </li>
  * <li>
@@ -348,7 +351,8 @@ public class CashParties25 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CashParties25.mmDebtor, com.tools20022.repository.msg.CashParties25.mmDebtorAgent, com.tools20022.repository.msg.CashParties25.mmCreditor,
 						com.tools20022.repository.msg.CashParties25.mmCreditorAgent);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionReversalAdviceV05.mmCashParties, SecuritiesSettlementTransactionAllegementNotificationV05.mmCashParties,
-						SecuritiesSettlementTransactionAllegementNotificationV06.mmCashParties, SecuritiesSettlementTransactionReversalAdviceV06.mmCashParties);
+						SecuritiesSettlementTransactionAllegementNotificationV06.mmCashParties, SecuritiesSettlementTransactionReversalAdviceV06.mmCashParties, SecuritiesSettlementTransactionAllegementNotificationV07.mmCashParties,
+						SecuritiesSettlementTransactionReversalAdviceV07.mmCashParties);
 				trace_lazy = () -> PaymentPartyRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -27,7 +27,7 @@ import com.tools20022.repository.msg.TotalNumber1;
  * using TotalOfLinkedInstructions.<br>
  * The CurrentInstructionNumber of the parent must be 000. The children must
  * have an incremental CurrentInstructionNumber from 001 to 999.<br>
- * For more details, see the relevant market practice document on www.smpg.info
+ * For more details, see the relevant market practice document on www.smpg.info.
  */
 public class ConstraintBlockTradeGuideline {
 
@@ -47,7 +47,7 @@ public class ConstraintBlockTradeGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a block trade instruction, the total number of children must be provided using TotalOfLinkedInstructions.\r\nThe CurrentInstructionNumber of the parent must be 000. The children must have an incremental CurrentInstructionNumber from 001 to 999.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a block trade instruction, the total number of children must be provided using TotalOfLinkedInstructions.\r\nThe CurrentInstructionNumber of the parent must be 000. The children must have an incremental CurrentInstructionNumber from 001 to 999.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintBlockTradeGuideline {
 			validator = ConstraintBlockTradeGuideline::checkTotalNumber1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockTradeGuideline";
-			definition = "In a block trade instruction, the total number of children must be provided using TotalOfLinkedInstructions.\r\nThe CurrentInstructionNumber of the parent must be 000. The children must have an incremental CurrentInstructionNumber from 001 to 999.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a block trade instruction, the total number of children must be provided using TotalOfLinkedInstructions.\r\nThe CurrentInstructionNumber of the parent must be 000. The children must have an incremental CurrentInstructionNumber from 001 to 999.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> TotalNumber1.mmObject();
 		}
 	};
@@ -67,7 +67,7 @@ public class ConstraintBlockTradeGuideline {
 	 * The CurrentInstructionNumber of the parent must be 000. The children must
 	 * have an incremental CurrentInstructionNumber from 001 to 999.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkTotalNumber1(TotalNumber1 obj) throws Exception {
 		throw new NotImplementedConstraintException();

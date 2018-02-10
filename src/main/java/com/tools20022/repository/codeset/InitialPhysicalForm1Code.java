@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Indicates the physical form of the securities
+ * Indicates the physical form of the securities.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "InitialPhysicalForm1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Indicates the physical form of the securities"</li>
+ * definition} = "Indicates the physical form of the securities."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -159,7 +159,7 @@ public class InitialPhysicalForm1Code extends MMCode {
 				example = Arrays.asList("GTGT");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InitialPhysicalForm1Code";
-				definition = "Indicates the physical form of the securities";
+				definition = "Indicates the physical form of the securities.";
 				trace_lazy = () -> InitialPhysicalFormCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.InitialPhysicalForm1Code.GT, com.tools20022.repository.codeset.InitialPhysicalForm1Code.GP,
 						com.tools20022.repository.codeset.InitialPhysicalForm1Code.Definitive);

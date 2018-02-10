@@ -110,7 +110,7 @@ public class PEPISATransfer1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification assigned by the new plan manager to each transfer of asset. "
+	 * "Identification assigned by the new plan manager to each transfer of asset."
 	 * </li>
 	 * </ul>
 	 */
@@ -121,7 +121,7 @@ public class PEPISATransfer1 {
 			xmlTag = "TrfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferIdentification";
-			definition = "Identification assigned by the new plan manager to each transfer of asset. ";
+			definition = "Identification assigned by the new plan manager to each transfer of asset.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

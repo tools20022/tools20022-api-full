@@ -117,6 +117,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides further details on the original transactions, to which the status report message refers."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction91
+ * PaymentTransaction91}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PaymentTransaction63
@@ -158,6 +165,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reported status.\nUsage: The instructing party is the party sending the status message and not the party that sent the original instruction that is being reported on."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmStatusIdentification
+	 * PaymentTransaction91.mmStatusIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -173,6 +188,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusIdentification";
 			definition = "Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reported status.\nUsage: The instructing party is the party sending the status message and not the party that sent the original instruction that is being reported on.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmStatusIdentification);
 			previousVersion_lazy = () -> PaymentTransaction63.mmStatusIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -214,6 +230,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmOriginalGroupInformation
+	 * PaymentTransaction91.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -230,6 +254,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmOriginalGroupInformation);
 			previousVersion_lazy = () -> PaymentTransaction63.mmOriginalGroupInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -270,6 +295,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmOriginalInstructionIdentification
+	 * PaymentTransaction91.mmOriginalInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -286,6 +319,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructionIdentification";
 			definition = "Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmOriginalInstructionIdentification);
 			previousVersion_lazy = () -> PaymentTransaction63.mmOriginalInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -326,6 +360,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmOriginalEndToEndIdentification
+	 * PaymentTransaction91.mmOriginalEndToEndIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -342,6 +384,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmOriginalEndToEndIdentification);
 			previousVersion_lazy = () -> PaymentTransaction63.mmOriginalEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -382,6 +425,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmOriginalTransactionIdentification
+	 * PaymentTransaction91.mmOriginalTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -398,6 +449,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionIdentification";
 			definition = "Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmOriginalTransactionIdentification);
 			previousVersion_lazy = () -> PaymentTransaction63.mmOriginalTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -437,6 +489,14 @@ public class PaymentTransaction80 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the status of a transaction, in a coded form."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmTransactionStatus
+	 * PaymentTransaction91.mmTransactionStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -453,6 +513,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionStatus";
 			definition = "Specifies the status of a transaction, in a coded form.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmTransactionStatus);
 			previousVersion_lazy = () -> PaymentTransaction63.mmTransactionStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -491,6 +552,14 @@ public class PaymentTransaction80 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides detailed information on the status reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmStatusReasonInformation
+	 * PaymentTransaction91.mmStatusReasonInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -507,6 +576,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformation";
 			definition = "Provides detailed information on the status reason.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmStatusReasonInformation);
 			previousVersion_lazy = () -> PaymentTransaction63.mmStatusReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -544,6 +614,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Provides information on the charges related to the processing of the rejection of the instruction.\n\nUsage: This is passed on for information purposes only. Settlement of the charges will be done separately."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmChargesInformation
+	 * PaymentTransaction91.mmChargesInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -560,6 +638,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargesInformation";
 			definition = "Provides information on the charges related to the processing of the rejection of the instruction.\n\nUsage: This is passed on for information purposes only. Settlement of the charges will be done separately.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmChargesInformation);
 			previousVersion_lazy = () -> PaymentTransaction63.mmChargesInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -600,6 +679,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmAcceptanceDateTime
+	 * PaymentTransaction91.mmAcceptanceDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -616,6 +703,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptanceDateTime";
 			definition = "Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmAcceptanceDateTime);
 			previousVersion_lazy = () -> PaymentTransaction63.mmAcceptanceDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -656,6 +744,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmAccountServicerReference
+	 * PaymentTransaction91.mmAccountServicerReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -672,6 +768,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmAccountServicerReference);
 			previousVersion_lazy = () -> PaymentTransaction63.mmAccountServicerReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -712,6 +809,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Unique reference, as assigned by a clearing system, to unambiguously identify the instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmClearingSystemReference
+	 * PaymentTransaction91.mmClearingSystemReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -728,6 +833,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemReference";
 			definition = "Unique reference, as assigned by a clearing system, to unambiguously identify the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmClearingSystemReference);
 			previousVersion_lazy = () -> PaymentTransaction63.mmClearingSystemReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -768,6 +874,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructing agent is the party sending the status message and not the party that sent the original instruction that is being reported on."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmInstructingAgent
+	 * PaymentTransaction91.mmInstructingAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -784,6 +898,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingAgent";
 			definition = "Agent that instructs the next party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructing agent is the party sending the status message and not the party that sent the original instruction that is being reported on.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmInstructingAgent);
 			previousVersion_lazy = () -> PaymentTransaction63.mmInstructingAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -825,6 +940,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructed agent is the party receiving the status message and not the party that received the original instruction that is being reported on."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmInstructedAgent
+	 * PaymentTransaction91.mmInstructedAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -841,6 +964,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAgent";
 			definition = "Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).\n\nUsage: The instructed agent is the party receiving the status message and not the party that received the original instruction that is being reported on.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmInstructedAgent);
 			previousVersion_lazy = () -> PaymentTransaction63.mmInstructedAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -881,6 +1005,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Key elements used to identify the original transaction that is being referred to."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmOriginalTransactionReference
+	 * PaymentTransaction91.mmOriginalTransactionReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -897,6 +1029,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionReference";
 			definition = "Key elements used to identify the original transaction that is being referred to.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmOriginalTransactionReference);
 			previousVersion_lazy = () -> PaymentTransaction63.mmOriginalTransactionReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -934,6 +1067,14 @@ public class PaymentTransaction80 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction91#mmSupplementaryData
+	 * PaymentTransaction91.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -949,6 +1090,7 @@ public class PaymentTransaction80 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmSupplementaryData);
 			previousVersion_lazy = () -> PaymentTransaction63.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SupplementaryData1.mmObject();
@@ -972,6 +1114,7 @@ public class PaymentTransaction80 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction80";
 				definition = "Provides further details on the original transactions, to which the status report message refers.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentTransaction91.mmObject());
 				previousVersion_lazy = () -> PaymentTransaction63.mmObject();
 			}
 		});

@@ -169,7 +169,7 @@ public class NameAndAddress5 {
 	 * name} = "Address"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Postal address of a party."</li>
+	 * definition} = "Postal address of the party."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -188,7 +188,7 @@ public class NameAndAddress5 {
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
-			definition = "Postal address of a party.";
+			definition = "Postal address of the party.";
 			nextVersions_lazy = () -> Arrays.asList(NameAndAddress15.mmPostalAddress);
 			maxOccurs = 1;
 			minOccurs = 0;

@@ -61,6 +61,14 @@ import javax.xml.bind.annotation.XmlType;
  * "SecurityRestrictionType1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice between the type of restriction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.SecurityRestrictionType2Choice
+ * SecurityRestrictionType2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +106,14 @@ public class SecurityRestrictionType1Choice {
 	 * definition} =
 	 * "Type of the restriction, for example, selling restriction, buying restriction, placing restriction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityRestrictionType2Choice#mmProprietaryRestriction
+	 * SecurityRestrictionType2Choice.mmProprietaryRestriction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietaryRestriction = new MMMessageAttribute() {
@@ -108,6 +124,7 @@ public class SecurityRestrictionType1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryRestriction";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityRestrictionType2Choice.mmProprietaryRestriction);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification40.mmObject();
@@ -143,6 +160,14 @@ public class SecurityRestrictionType1Choice {
 	 * definition} =
 	 * "Type of the restriction, for example, selling restriction, buying restriction, placing restriction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SecurityRestrictionType2Choice#mmRestrictionType
+	 * SecurityRestrictionType2Choice.mmRestrictionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRestrictionType = new MMMessageAttribute() {
@@ -153,6 +178,7 @@ public class SecurityRestrictionType1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RestrictionType";
 			definition = "Type of the restriction, for example, selling restriction, buying restriction, placing restriction.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityRestrictionType2Choice.mmRestrictionType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictionType1Code.mmObject();
@@ -167,6 +193,7 @@ public class SecurityRestrictionType1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityRestrictionType1Choice";
 				definition = "Choice between the type of restriction.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityRestrictionType2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

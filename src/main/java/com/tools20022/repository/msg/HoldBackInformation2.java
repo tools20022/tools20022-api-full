@@ -435,7 +435,7 @@ public class HoldBackInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies whether or not additional redemption order instructions are required in order for the redemption to be completed. "
+	 * "Specifies whether or not additional redemption order instructions are required in order for the redemption to be completed."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -454,7 +454,7 @@ public class HoldBackInformation2 {
 			xmlTag = "RedCmpltn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionCompletion";
-			definition = "Specifies whether or not additional redemption order instructions are required in order for the redemption to be completed. ";
+			definition = "Specifies whether or not additional redemption order instructions are required in order for the redemption to be completed.";
 			nextVersions_lazy = () -> Arrays.asList(HoldBackInformation3.mmRedemptionCompletion);
 			maxOccurs = 1;
 			minOccurs = 0;

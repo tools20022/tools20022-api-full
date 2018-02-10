@@ -235,7 +235,7 @@ import java.util.Objects;
  * "SecuritiesProceedsDefinition"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The definition of the securities proceeds for a corporate action in generic terms; that is, before applying it to specific securities holding. An example would be the definition of a  bonus rights issue where all the information will be given in general on a per share basis."
+ * "The definition of the securities proceeds for a corporate action in generic terms; that is, before applying it to specific securities holding. An example would be the definition of a bonus rights issue where all the information will be given in general on a per share basis."
  * </li>
  * </ul>
  */
@@ -398,6 +398,30 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmSecuritiesQuantity
 	 * CorporateActionOption133.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption141#mmStatusQuantity
+	 * CorporateActionOption141.mmStatusQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmSecuritiesQuantity
+	 * CorporateActionOption138.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmSecuritiesQuantityOrInstructedAmount
+	 * CorporateActionOption142.mmSecuritiesQuantityOrInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmSecuritiesQuantity
+	 * CorporateActionOption139.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption144#mmStatusQuantity
+	 * CorporateActionOption144.mmStatusQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmSecuritiesQuantityOrInstructedAmount
+	 * CorporateActionOption146.mmSecuritiesQuantityOrInstructedAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmSecuritiesQuantity
+	 * CorporateActionOption148.mmSecuritiesQuantity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmSecuritiesQuantity
+	 * CorporateActionOption150.mmSecuritiesQuantity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -428,7 +452,9 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionOption101.mmSecuritiesQuantity, CorporateActionOption108.mmSecuritiesQuantity, CorporateActionOption107.mmSecuritiesQuantity, CorporateActionOption106.mmSecuritiesQuantity,
 					CorporateActionOption118.mmSecuritiesQuantity, CorporateActionOption115.mmSecuritiesQuantity, CorporateActionOption114.mmSecuritiesQuantity, CorporateActionOption125.mmSecuritiesQuantity,
 					CorporateActionOption123.mmSecuritiesQuantity, CorporateActionOption127.mmSecuritiesQuantity, CorporateActionOption130.mmSecuritiesQuantity, CorporateActionOption131.mmSecuritiesQuantityOrInstructedAmount,
-					CorporateActionOption129.mmSecuritiesQuantity, CorporateActionOption134.mmSecuritiesQuantityOrInstructedAmount, CorporateActionOption135.mmSecuritiesQuantity, CorporateActionOption133.mmSecuritiesQuantity);
+					CorporateActionOption129.mmSecuritiesQuantity, CorporateActionOption134.mmSecuritiesQuantityOrInstructedAmount, CorporateActionOption135.mmSecuritiesQuantity, CorporateActionOption133.mmSecuritiesQuantity,
+					CorporateActionOption141.mmStatusQuantity, CorporateActionOption138.mmSecuritiesQuantity, CorporateActionOption142.mmSecuritiesQuantityOrInstructedAmount, CorporateActionOption139.mmSecuritiesQuantity,
+					CorporateActionOption144.mmStatusQuantity, CorporateActionOption146.mmSecuritiesQuantityOrInstructedAmount, CorporateActionOption148.mmSecuritiesQuantity, CorporateActionOption150.mmSecuritiesQuantity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -746,6 +772,12 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod11#mmParallelTradingPeriod
 	 * CorporateActionPeriod11.mmParallelTradingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmParallelTradingPeriod
+	 * CorporateActionPeriod12.mmParallelTradingPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod13#mmParallelTradingPeriod
+	 * CorporateActionPeriod13.mmParallelTradingPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -769,7 +801,8 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	public static final MMBusinessAssociationEnd mmParallelTradingPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod4.mmParallelTradingPeriod, CorporateActionPeriod9.mmParallelTradingPeriod, CorporateActionPeriod5.mmParallelTradingPeriod,
-					CorporateActionPeriod7.mmParallelTradingPeriod, CorporateActionPeriod2.mmParallelTradingPeriod, CorporateActionPeriod11.mmParallelTradingPeriod);
+					CorporateActionPeriod7.mmParallelTradingPeriod, CorporateActionPeriod2.mmParallelTradingPeriod, CorporateActionPeriod11.mmParallelTradingPeriod, CorporateActionPeriod12.mmParallelTradingPeriod,
+					CorporateActionPeriod13.mmParallelTradingPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -891,6 +924,22 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate75#mmAdditionalQuantityForSubscribedResultantSecurities
 	 * CorporateActionRate75.
 	 * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmAdditionalQuantityForSubscribedResultantSecurities
+	 * CorporateActionRate90.
+	 * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate89#mmAdditionalQuantityForSubscribedResultantSecurities
+	 * CorporateActionRate89.
+	 * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate93#mmAdditionalQuantityForSubscribedResultantSecurities
+	 * CorporateActionRate93.
+	 * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate95#mmAdditionalQuantityForSubscribedResultantSecurities
+	 * CorporateActionRate95.
+	 * mmAdditionalQuantityForSubscribedResultantSecurities}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -923,7 +972,9 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionRate48.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate49.mmAdditionalQuantityForSubscribedResultantSecurities,
 					CorporateActionRate58.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate65.mmAdditionalQuantityForSubscribedResultantSecurities,
 					CorporateActionRate69.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate72.mmAdditionalQuantityForSubscribedResultantSecurities,
-					CorporateActionRate77.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate75.mmAdditionalQuantityForSubscribedResultantSecurities);
+					CorporateActionRate77.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate75.mmAdditionalQuantityForSubscribedResultantSecurities,
+					CorporateActionRate90.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate89.mmAdditionalQuantityForSubscribedResultantSecurities,
+					CorporateActionRate93.mmAdditionalQuantityForSubscribedResultantSecurities, CorporateActionRate95.mmAdditionalQuantityForSubscribedResultantSecurities);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1024,6 +1075,18 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate75#mmAdditionalQuantityForExistingSecurities
 	 * CorporateActionRate75.mmAdditionalQuantityForExistingSecurities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmAdditionalQuantityForExistingSecurities
+	 * CorporateActionRate90.mmAdditionalQuantityForExistingSecurities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate89#mmAdditionalQuantityForExistingSecurities
+	 * CorporateActionRate89.mmAdditionalQuantityForExistingSecurities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate93#mmAdditionalQuantityForExistingSecurities
+	 * CorporateActionRate93.mmAdditionalQuantityForExistingSecurities}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate95#mmAdditionalQuantityForExistingSecurities
+	 * CorporateActionRate95.mmAdditionalQuantityForExistingSecurities}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1053,7 +1116,8 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionRate33.mmAdditionalQuantityForExistingSecurities, CorporateActionRate2.mmAdditionalQuantityForExistingSecurities, SecurityOption1.mmAdditionalQuantityForExistingSecurities,
 					CorporateActionRate48.mmAdditionalQuantityForExistingSecurities, CorporateActionRate49.mmAdditionalQuantityForExistingSecurities, CorporateActionRate58.mmAdditionalQuantityForExistingSecurities,
 					CorporateActionRate65.mmAdditionalQuantityForExistingSecurities, CorporateActionRate69.mmAdditionalQuantityForExistingSecurities, CorporateActionRate72.mmAdditionalQuantityForExistingSecurities,
-					CorporateActionRate77.mmAdditionalQuantityForExistingSecurities, CorporateActionRate75.mmAdditionalQuantityForExistingSecurities);
+					CorporateActionRate77.mmAdditionalQuantityForExistingSecurities, CorporateActionRate75.mmAdditionalQuantityForExistingSecurities, CorporateActionRate90.mmAdditionalQuantityForExistingSecurities,
+					CorporateActionRate89.mmAdditionalQuantityForExistingSecurities, CorporateActionRate93.mmAdditionalQuantityForExistingSecurities, CorporateActionRate95.mmAdditionalQuantityForExistingSecurities);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1150,6 +1214,18 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate75#mmNewToOld
 	 * CorporateActionRate75.mmNewToOld}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate90#mmNewToOld
+	 * CorporateActionRate90.mmNewToOld}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate89#mmNewToOld
+	 * CorporateActionRate89.mmNewToOld}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate93#mmNewToOld
+	 * CorporateActionRate93.mmNewToOld}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate95#mmNewToOld
+	 * CorporateActionRate95.mmNewToOld}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1175,7 +1251,8 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 			derivation_lazy = () -> Arrays.asList(CorporateActionRate6.mmNewToOld, CorporateActionRate11.mmNewToOld, CorporateActionRate21.mmNewToOld, CorporateActionRate23.mmNewToOld, CorporateActionRate29.mmNewToOld,
 					CorporateActionRate34.mmNewToOld, CorporateActionRate7.mmNewToOld, CorporateActionRate13.mmNewToOld, CorporateActionRate17.mmNewToOld, CorporateActionRate19.mmNewToOld, CorporateActionRate28.mmNewToOld,
 					CorporateActionRate33.mmNewToOld, CorporateActionRate2.mmNewToOld, CorporateActionRate48.mmNewToOld, CorporateActionRate49.mmNewToOld, CorporateActionRate58.mmNewToOld, CorporateActionRate65.mmNewToOld,
-					CorporateActionRate69.mmNewToOld, CorporateActionRate72.mmNewToOld, CorporateActionRate77.mmNewToOld, CorporateActionRate75.mmNewToOld);
+					CorporateActionRate69.mmNewToOld, CorporateActionRate72.mmNewToOld, CorporateActionRate77.mmNewToOld, CorporateActionRate75.mmNewToOld, CorporateActionRate90.mmNewToOld, CorporateActionRate89.mmNewToOld,
+					CorporateActionRate93.mmNewToOld, CorporateActionRate95.mmNewToOld);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1385,6 +1462,24 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts40#mmReinvestmentAmount
 	 * CorporateActionAmounts40.mmReinvestmentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts42#mmReinvestmentAmount
+	 * CorporateActionAmounts42.mmReinvestmentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts43#mmReinvestmentAmount
+	 * CorporateActionAmounts43.mmReinvestmentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts44#mmReinvestmentAmount
+	 * CorporateActionAmounts44.mmReinvestmentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts45#mmReinvestmentAmount
+	 * CorporateActionAmounts45.mmReinvestmentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts46#mmReinvestmentAmount
+	 * CorporateActionAmounts46.mmReinvestmentAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionAmounts47#mmReinvestmentAmount
+	 * CorporateActionAmounts47.mmReinvestmentAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1414,7 +1509,8 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionAmounts1.mmReinvestmentAmount, CorporateActionAmounts29.mmReinvestmentAmount, CorporateActionAmounts27.mmReinvestmentAmount, CorporateActionAmounts28.mmReinvestmentAmount,
 					CorporateActionAmounts33.mmReinvestmentAmount, CorporateActionAmounts32.mmReinvestmentAmount, CorporateActionAmounts35.mmReinvestmentAmount, CorporateActionAmounts37.mmReinvestmentAmount,
 					CorporateActionAmounts36.mmReinvestmentAmount, CorporateActionAmounts38.mmReinvestmentAmount, CorporateActionAmounts39.mmReinvestmentAmount, CorporateActionAmounts41.mmReinvestmentAmount,
-					CorporateActionAmounts40.mmReinvestmentAmount);
+					CorporateActionAmounts40.mmReinvestmentAmount, CorporateActionAmounts42.mmReinvestmentAmount, CorporateActionAmounts43.mmReinvestmentAmount, CorporateActionAmounts44.mmReinvestmentAmount,
+					CorporateActionAmounts45.mmReinvestmentAmount, CorporateActionAmounts46.mmReinvestmentAmount, CorporateActionAmounts47.mmReinvestmentAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1683,6 +1779,26 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption135#mmIntermediateSecuritiesDistributionType
 	 * CorporateActionOption135.mmIntermediateSecuritiesDistributionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation126#mmIntermediateSecuritiesDistributionType
+	 * CorporateActionGeneralInformation126.
+	 * mmIntermediateSecuritiesDistributionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmIntermediateSecuritiesDistributionType
+	 * CorporateAction41.mmIntermediateSecuritiesDistributionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmIntermediateSecuritiesDistributionType
+	 * CorporateActionOption139.mmIntermediateSecuritiesDistributionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation130#mmIntermediateSecuritiesDistributionType
+	 * CorporateActionGeneralInformation130.
+	 * mmIntermediateSecuritiesDistributionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmIntermediateSecuritiesDistributionType
+	 * CorporateActionOption148.mmIntermediateSecuritiesDistributionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmIntermediateSecuritiesDistributionType
+	 * CorporateAction51.mmIntermediateSecuritiesDistributionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1730,7 +1846,9 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionGeneralInformation98.mmIntermediateSecuritiesDistributionType, CorporateActionOption125.mmIntermediateSecuritiesDistributionType, CorporateAction40.mmIntermediateSecuritiesDistributionType,
 					IntermediateSecuritiesDistributionTypeFormat18Choice.mmCode, IntermediateSecuritiesDistributionTypeFormat18Choice.mmProprietary, IntermediateSecuritiesDistributionTypeFormat17Choice.mmCode,
 					IntermediateSecuritiesDistributionTypeFormat17Choice.mmProprietary, CorporateActionGeneralInformation111.mmIntermediateSecuritiesDistributionType, CorporateActionOption129.mmIntermediateSecuritiesDistributionType,
-					CorporateActionGeneralInformation118.mmIntermediateSecuritiesDistributionType, CorporateActionOption135.mmIntermediateSecuritiesDistributionType);
+					CorporateActionGeneralInformation118.mmIntermediateSecuritiesDistributionType, CorporateActionOption135.mmIntermediateSecuritiesDistributionType,
+					CorporateActionGeneralInformation126.mmIntermediateSecuritiesDistributionType, CorporateAction41.mmIntermediateSecuritiesDistributionType, CorporateActionOption139.mmIntermediateSecuritiesDistributionType,
+					CorporateActionGeneralInformation130.mmIntermediateSecuritiesDistributionType, CorporateActionOption148.mmIntermediateSecuritiesDistributionType, CorporateAction51.mmIntermediateSecuritiesDistributionType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2028,6 +2146,14 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes73#mmIntermediateSecuritiesToUnderlyingRatio
 	 * FinancialInstrumentAttributes73.mmIntermediateSecuritiesToUnderlyingRatio
 	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmIntermediateSecuritiesToUnderlyingRatio
+	 * FinancialInstrumentAttributes93.mmIntermediateSecuritiesToUnderlyingRatio
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes94#mmIntermediateSecuritiesToUnderlyingRatio
+	 * FinancialInstrumentAttributes94.mmIntermediateSecuritiesToUnderlyingRatio
+	 * }</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2053,7 +2179,8 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes3.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes12.mmIntermediateSecuritiesToUnderlyingRatio,
 					FinancialInstrumentAttributes17.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes25.mmIntermediateSecuritiesToUnderlyingRatio,
 					FinancialInstrumentAttributes46.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes47.mmIntermediateSecuritiesToUnderlyingRatio,
-					FinancialInstrumentAttributes68.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes73.mmIntermediateSecuritiesToUnderlyingRatio);
+					FinancialInstrumentAttributes68.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes73.mmIntermediateSecuritiesToUnderlyingRatio,
+					FinancialInstrumentAttributes93.mmIntermediateSecuritiesToUnderlyingRatio, FinancialInstrumentAttributes94.mmIntermediateSecuritiesToUnderlyingRatio);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2119,6 +2246,12 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate78#mmReinvestmentDiscountRateToMarket
 	 * CorporateActionRate78.mmReinvestmentDiscountRateToMarket}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate91#mmReinvestmentDiscountRateToMarket
+	 * CorporateActionRate91.mmReinvestmentDiscountRateToMarket}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionRate96#mmReinvestmentDiscountRateToMarket
+	 * CorporateActionRate96.mmReinvestmentDiscountRateToMarket}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2145,7 +2278,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 					CorporateActionRate24.mmReinvestmentDiscountRateToMarket, CorporateActionRate27.mmReinvestmentDiscountRateToMarket, CorporateActionRate32.mmReinvestmentDiscountRateToMarket,
 					CorporateActionRate35.mmReinvestmentDiscountRateToMarket, CorporateActionRate41.mmReinvestmentDiscountRateToMarket, CorporateActionRate1.mmReinvestmentDiscountToMarket,
 					CorporateActionRate43.mmReinvestmentDiscountRateToMarket, CorporateActionRate56.mmReinvestmentDiscountRateToMarket, CorporateActionRate66.mmReinvestmentDiscountRateToMarket,
-					CorporateActionRate78.mmReinvestmentDiscountRateToMarket);
+					CorporateActionRate78.mmReinvestmentDiscountRateToMarket, CorporateActionRate91.mmReinvestmentDiscountRateToMarket, CorporateActionRate96.mmReinvestmentDiscountRateToMarket);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesProceedsDefinition.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2401,7 +2534,7 @@ public class SecuritiesProceedsDefinition extends ProceedsDefinition {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesProceedsDefinition";
-				definition = "The definition of the securities proceeds for a corporate action in generic terms; that is, before applying it to specific securities holding. An example would be the definition of a  bonus rights issue where all the information will be given in general on a per share basis.";
+				definition = "The definition of the securities proceeds for a corporate action in generic terms; that is, before applying it to specific securities holding. An example would be the definition of a bonus rights issue where all the information will be given in general on a per share basis.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmParallelTradingProceedsDefinition, com.tools20022.repository.entity.DateTimePeriod.mmAssentedLinePeriodProceedsDefinition,
 						com.tools20022.repository.entity.DateTimePeriod.mmSellThruIssuerProceedsDefinition, com.tools20022.repository.entity.SecuritiesQuantity.mmSecuritiesProceedsDefinition,
 						com.tools20022.repository.entity.SecuritiesQuantity.mmConditionalQuantitySecuritiesProceeds, com.tools20022.repository.entity.SecuritiesQuantity.mmOverAndAboveQuantitySecuritiesProceeds,

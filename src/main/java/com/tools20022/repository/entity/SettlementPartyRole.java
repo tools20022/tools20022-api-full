@@ -141,6 +141,9 @@ public class SettlementPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount13#mmDelivererDetails
 	 * DeliveringPartiesAndAccount13.mmDelivererDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliveringPartiesAndAccount17#mmDelivererDetails
+	 * DeliveringPartiesAndAccount17.mmDelivererDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -162,7 +165,7 @@ public class SettlementPartyRole extends Role {
 	public static final MMBusinessAssociationEnd mmSettlementAccount = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(DeliveringPartiesAndAccount1.mmDelivererDetails, DeliveringPartiesAndAccount4.mmDelivererDetails, DeliveringPartiesAndAccount8.mmDelivererDetails,
-					DeliveringPartiesAndAccount9.mmDelivererDetails, DeliveringPartiesAndAccount13.mmDelivererDetails);
+					DeliveringPartiesAndAccount9.mmDelivererDetails, DeliveringPartiesAndAccount13.mmDelivererDetails, DeliveringPartiesAndAccount17.mmDelivererDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SettlementPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

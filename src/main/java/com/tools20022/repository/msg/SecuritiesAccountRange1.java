@@ -57,6 +57,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesAccountRange1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies a range of securities accounts."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccountRange2
+ * SecuritiesAccountRange2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -91,6 +98,14 @@ public class SecuritiesAccountRange1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Securities account number or code at which the range starts."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountRange2#mmFrom
+	 * SecuritiesAccountRange2.mmFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFrom = new MMMessageAssociationEnd() {
@@ -101,6 +116,7 @@ public class SecuritiesAccountRange1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "From";
 			definition = "Securities account number or code at which the range starts.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountRange2.mmFrom);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -134,6 +150,14 @@ public class SecuritiesAccountRange1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Securities account number or code at which the range ends."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountRange2#mmTo
+	 * SecuritiesAccountRange2.mmTo}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTo = new MMMessageAssociationEnd() {
@@ -144,6 +168,7 @@ public class SecuritiesAccountRange1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "To";
 			definition = "Securities account number or code at which the range ends.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountRange2.mmTo);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -159,6 +184,7 @@ public class SecuritiesAccountRange1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountRange1";
 				definition = "Specifies a range of securities accounts.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountRange2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

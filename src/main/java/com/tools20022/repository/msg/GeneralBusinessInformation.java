@@ -24,8 +24,11 @@ import com.tools20022.repository.datatype.Max350Text;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.SystemBusinessInformation;
 import com.tools20022.repository.GeneratedRepository;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Optional;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -63,12 +66,20 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "GeneralBusinessInformation"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details about business information related to a system."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.GeneralBusinessInformation1
+ * GeneralBusinessInformation1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +122,14 @@ public class GeneralBusinessInformation {
 	 * definition} =
 	 * "Further information about the criticality or importance of a general business information system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation1#mmQualifier
+	 * GeneralBusinessInformation1.mmQualifier}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQualifier = new MMMessageAttribute() {
@@ -122,6 +141,7 @@ public class GeneralBusinessInformation {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Qualifier";
 			definition = "Further information about the criticality or importance of a general business information system.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformation1.mmQualifier);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.InformationQualifierType.mmObject();
@@ -161,6 +181,14 @@ public class GeneralBusinessInformation {
 	 * definition} =
 	 * "Subject line of an item of general business information, summarizing the topic and intended destination of the information."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation1#mmSubject
+	 * GeneralBusinessInformation1.mmSubject}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubject = new MMMessageAttribute() {
@@ -172,6 +200,7 @@ public class GeneralBusinessInformation {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Subject";
 			definition = "Subject line of an item of general business information, summarizing the topic and intended destination of the information.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformation1.mmSubject);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -209,6 +238,14 @@ public class GeneralBusinessInformation {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "General business information, in unstructured form."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GeneralBusinessInformation1#mmSubjectDetails
+	 * GeneralBusinessInformation1.mmSubjectDetails}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubjectDetails = new MMMessageAttribute() {
@@ -220,6 +257,7 @@ public class GeneralBusinessInformation {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubjectDetails";
 			definition = "General business information, in unstructured form.";
+			nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformation1.mmSubjectDetails);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -233,9 +271,17 @@ public class GeneralBusinessInformation {
 						com.tools20022.repository.msg.GeneralBusinessInformation.mmSubjectDetails);
 				trace_lazy = () -> SystemBusinessInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "GeneralBusinessInformation";
 				definition = "Details about business information related to a system.";
+				nextVersions_lazy = () -> Arrays.asList(GeneralBusinessInformation1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

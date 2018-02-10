@@ -89,6 +89,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SettlementParties63
+ * SettlementParties63}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SettlementParties26
@@ -133,6 +140,14 @@ public class SettlementParties39 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the party 1."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties63#mmParty2
+	 * SettlementParties63.mmParty2}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -149,6 +164,7 @@ public class SettlementParties39 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party2";
 			definition = "Party that, in a settlement chain interacts with the party 1.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties63.mmParty2);
 			previousVersion_lazy = () -> SettlementParties26.mmParty2;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -189,6 +205,14 @@ public class SettlementParties39 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the party 2."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties63#mmParty3
+	 * SettlementParties63.mmParty3}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -205,6 +229,7 @@ public class SettlementParties39 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party3";
 			definition = "Party that, in a settlement chain interacts with the party 2.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties63.mmParty3);
 			previousVersion_lazy = () -> SettlementParties26.mmParty3;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -245,6 +270,14 @@ public class SettlementParties39 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the party 3."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties63#mmParty4
+	 * SettlementParties63.mmParty4}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -261,6 +294,7 @@ public class SettlementParties39 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party4";
 			definition = "Party that, in a settlement chain interacts with the party 3.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties63.mmParty4);
 			previousVersion_lazy = () -> SettlementParties26.mmParty4;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -301,6 +335,14 @@ public class SettlementParties39 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that, in a settlement chain interacts with the party 4."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties63#mmParty5
+	 * SettlementParties63.mmParty5}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -317,6 +359,7 @@ public class SettlementParties39 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party5";
 			definition = "Party that, in a settlement chain interacts with the party 4.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementParties63.mmParty5);
 			previousVersion_lazy = () -> SettlementParties26.mmParty5;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -337,6 +380,7 @@ public class SettlementParties39 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementParties39";
 				definition = "Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementParties63.mmObject());
 				previousVersion_lazy = () -> SettlementParties26.mmObject();
 			}
 		});

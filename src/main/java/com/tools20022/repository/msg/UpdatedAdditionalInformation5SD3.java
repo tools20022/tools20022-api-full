@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Extension for updated additional information
+ * Extension for updated additional information.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -85,7 +85,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "UpdatedAdditionalInformation5SD3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Extension for updated additional information"</li>
+ * definition} = "Extension for updated additional information."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation5SD1
@@ -174,7 +174,8 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * name} = "DistributionAmountPerShare"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Total distribution fund rate per share.\r\n一株あたりの交付金先等の額"</li>
+	 * definition} = "Total distribution fund rate per share.\r\n一株あたりの交付金先等の額."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,7 +190,7 @@ public class UpdatedAdditionalInformation5SD3 {
 			xmlTag = "DstrbtnAmtPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DistributionAmountPerShare";
-			definition = "Total distribution fund rate per share.\r\n一株あたりの交付金先等の額";
+			definition = "Total distribution fund rate per share.\r\n一株あたりの交付金先等の額.";
 			previousVersion_lazy = () -> UpdatedAdditionalInformation5SD1.mmDistributionAmountPerShare;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -286,7 +287,7 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Distribution amount of accumulated profit per share.\r\n一株あたり利益剰余金の額"</li>
+	 * "Distribution amount of accumulated profit per share.\r\n一株あたり利益剰余金の額."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -302,7 +303,7 @@ public class UpdatedAdditionalInformation5SD3 {
 			xmlTag = "AcmltdPrftPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccumulatedProfitPerShare";
-			definition = "Distribution amount of accumulated profit per share.\r\n一株あたり利益剰余金の額";
+			definition = "Distribution amount of accumulated profit per share.\r\n一株あたり利益剰余金の額.";
 			previousVersion_lazy = () -> UpdatedAdditionalInformation5SD1.mmAccumulatedProfitPerShare;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -336,7 +337,8 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * name} = "DeemedDividendPerShare"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Taxable distribution amount of dividend.\r\n一株あたりみなし配当の額"</li>
+	 * definition} = "Taxable distribution amount of dividend.\r\n一株あたりみなし配当の額."
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -351,7 +353,7 @@ public class UpdatedAdditionalInformation5SD3 {
 			xmlTag = "DmdDvddPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeemedDividendPerShare";
-			definition = "Taxable distribution amount of dividend.\r\n一株あたりみなし配当の額";
+			definition = "Taxable distribution amount of dividend.\r\n一株あたりみなし配当の額.";
 			previousVersion_lazy = () -> UpdatedAdditionalInformation5SD1.mmDeemedDividendPerShare;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -386,7 +388,7 @@ public class UpdatedAdditionalInformation5SD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Tax exempted distribution amount of dividend.  \r\n一株あたりみなし譲渡収入の額"</li>
+	 * "Tax exempted distribution amount of dividend. \r\n一株あたりみなし譲渡収入の額."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -401,7 +403,7 @@ public class UpdatedAdditionalInformation5SD3 {
 			xmlTag = "RsdlDstrbtnAmtPerShr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResidualDistributionAmountPerShare";
-			definition = "Tax exempted distribution amount of dividend.  \r\n一株あたりみなし譲渡収入の額";
+			definition = "Tax exempted distribution amount of dividend. \r\n一株あたりみなし譲渡収入の額.";
 			previousVersion_lazy = () -> UpdatedAdditionalInformation5SD1.mmResidualDistributionAmountPerShare;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -420,7 +422,7 @@ public class UpdatedAdditionalInformation5SD3 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUseOfShareholderListRegistrarContactDetailsRule.forUpdatedAdditionalInformation5SD3);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "UpdatedAdditionalInformation5SD3";
-				definition = "Extension for updated additional information";
+				definition = "Extension for updated additional information.";
 				previousVersion_lazy = () -> UpdatedAdditionalInformation5SD1.mmObject();
 			}
 		});

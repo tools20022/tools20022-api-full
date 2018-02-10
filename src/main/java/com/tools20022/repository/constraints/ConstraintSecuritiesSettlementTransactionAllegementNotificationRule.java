@@ -26,7 +26,7 @@ import java.util.Arrays;
 /**
  * The SecuritiesMessageCancellationAdvice can be used to cancel a
  * SecuritiesSettlementTransactionAllegementNotification for two reasons: - The
- * message was sent by mistake - The counterparty cancelled its instruction
+ * message was sent by mistake - The counterparty cancelled its instruction.
  */
 public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule {
 
@@ -47,7 +47,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences3Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			owner_lazy = () -> References3Choice.mmObject();
 		}
 	};
@@ -77,7 +77,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -86,7 +86,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences9Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			owner_lazy = () -> References9Choice.mmObject();
 		}
 	};
@@ -107,7 +107,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -116,7 +116,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences18Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			owner_lazy = () -> References18Choice.mmObject();
 		}
 	};
@@ -137,7 +137,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -146,7 +146,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences20Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			owner_lazy = () -> References20Choice.mmObject();
 		}
 	};
@@ -167,7 +167,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -176,7 +176,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences29Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			owner_lazy = () -> References29Choice.mmObject();
 		}
 	};
@@ -197,7 +197,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -215,7 +215,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences37Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSecuritiesSettlementTransactionAllegementNotificationRule.forReferences43Choice);
 			owner_lazy = () -> References37Choice.mmObject();
 		}
@@ -237,7 +237,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -246,7 +246,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences38Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			owner_lazy = () -> References38Choice.mmObject();
 		}
 	};
@@ -267,7 +267,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -282,7 +282,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences43Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSecuritiesSettlementTransactionAllegementNotificationRule.forReferences37Choice;
 			owner_lazy = () -> References43Choice.mmObject();
 		}
@@ -304,7 +304,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction"
+	 * "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction."
 	 * </li>
 	 * </ul>
 	 */
@@ -313,7 +313,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 			validator = ConstraintSecuritiesSettlementTransactionAllegementNotificationRule::checkReferences53Choice;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSettlementTransactionAllegementNotificationRule";
-			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons:\n- The message was sent by mistake\n- The counterparty cancelled its instruction";
+			definition = "The SecuritiesMessageCancellationAdvice can be used to cancel a SecuritiesSettlementTransactionAllegementNotification for two reasons: \n- The message was sent by mistake\n- The counterparty cancelled its instruction.";
 			owner_lazy = () -> References53Choice.mmObject();
 		}
 	};
@@ -322,7 +322,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences3Choice(References3Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -332,7 +332,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences9Choice(References9Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -342,7 +342,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences18Choice(References18Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -352,7 +352,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences20Choice(References20Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -362,7 +362,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences29Choice(References29Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -372,7 +372,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences37Choice(References37Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -382,7 +382,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences38Choice(References38Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -392,7 +392,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences43Choice(References43Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -402,7 +402,7 @@ public class ConstraintSecuritiesSettlementTransactionAllegementNotificationRule
 	 * The SecuritiesMessageCancellationAdvice can be used to cancel a
 	 * SecuritiesSettlementTransactionAllegementNotification for two reasons: -
 	 * The message was sent by mistake - The counterparty cancelled its
-	 * instruction
+	 * instruction.
 	 */
 	public static void checkReferences53Choice(References53Choice obj) throws Exception {
 		throw new NotImplementedConstraintException();

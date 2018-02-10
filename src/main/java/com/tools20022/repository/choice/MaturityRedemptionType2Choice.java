@@ -62,6 +62,14 @@ import javax.xml.bind.annotation.XmlType;
  * "MaturityRedemptionType2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for maturity redemption type."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.MaturityRedemptionType3Choice
+ * MaturityRedemptionType3Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +105,14 @@ public class MaturityRedemptionType2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Maturity redemption type expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MaturityRedemptionType3Choice#mmCode
+	 * MaturityRedemptionType3Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -107,6 +123,7 @@ public class MaturityRedemptionType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Maturity redemption type expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(MaturityRedemptionType3Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> MaturityRedemptionType1Code.mmObject();
@@ -140,6 +157,14 @@ public class MaturityRedemptionType2Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Maturity redemption type expressed as a proprietary code."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.MaturityRedemptionType3Choice#mmProprietary
+	 * MaturityRedemptionType3Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -150,6 +175,7 @@ public class MaturityRedemptionType2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Maturity redemption type expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(MaturityRedemptionType3Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -165,6 +191,7 @@ public class MaturityRedemptionType2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "MaturityRedemptionType2Choice";
 				definition = "Choice of format for maturity redemption type.";
+				nextVersions_lazy = () -> Arrays.asList(MaturityRedemptionType3Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

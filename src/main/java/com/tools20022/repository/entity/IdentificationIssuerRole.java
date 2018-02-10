@@ -301,6 +301,27 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.GenericIdentification164#mmIssuer
  * GenericIdentification164.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification165#mmIssuer
+ * GenericIdentification165.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification166#mmIssuer
+ * GenericIdentification166.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification169#mmIssuer
+ * GenericIdentification169.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification168#mmIssuer
+ * GenericIdentification168.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification172#mmIssuer
+ * GenericIdentification172.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification167#mmIssuer
+ * GenericIdentification167.mmIssuer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.GenericIdentification170#mmIssuer
+ * GenericIdentification170.mmIssuer}</li>
  * </ul>
  * </li>
  * <li>
@@ -560,7 +581,8 @@ public class IdentificationIssuerRole extends InformationPartyRole {
 						GenericIdentification64.mmIssuer, GenericIdentification67.mmIssuer, GenericIdentification53.mmIssuer, GenericIdentification71.mmIssuer, GenericIdentification73.mmIssuer, GenericIdentification74.mmIssuer,
 						GenericIdentification72.mmIssuer, GenericIdentification70.mmIssuer, GenericIdentification75.mmIssuer, GenericIdentification76.mmIssuer, GenericIdentification77.mmIssuer, AlternateIdentification4.mmIssuer,
 						GenericIdentification82.mmIssuer, GenericIdentification84.mmIssuer, GenericIdentification86.mmIssuer, GenericIdentification144.mmIssuer, GenericIdentification163.mmIssuer, GenericIdentification79.mmIssuer,
-						GenericIdentification94.mmIssuer, GenericIdentification90.mmIssuer, GenericIdentification93.mmIssuer, GenericIdentification92.mmIssuer, GenericIdentification164.mmIssuer);
+						GenericIdentification94.mmIssuer, GenericIdentification90.mmIssuer, GenericIdentification93.mmIssuer, GenericIdentification92.mmIssuer, GenericIdentification164.mmIssuer, GenericIdentification165.mmIssuer,
+						GenericIdentification166.mmIssuer, GenericIdentification169.mmIssuer, GenericIdentification168.mmIssuer, GenericIdentification172.mmIssuer, GenericIdentification167.mmIssuer, GenericIdentification170.mmIssuer);
 				superType_lazy = () -> InformationPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.IdentificationIssuerRole.mmCountry, com.tools20022.repository.entity.IdentificationIssuerRole.mmEntityName,
 						com.tools20022.repository.entity.IdentificationIssuerRole.mmOwnerCode);

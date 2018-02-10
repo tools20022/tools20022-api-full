@@ -68,6 +68,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding optional dividend election details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD3
+ * OptionalDividendAccountQuantitySD3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD1
@@ -106,6 +114,14 @@ public class OptionalDividendAccountQuantitySD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD3#mmPlaceAndName
+	 * OptionalDividendAccountQuantitySD3.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -116,6 +132,7 @@ public class OptionalDividendAccountQuantitySD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(OptionalDividendAccountQuantitySD3.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -152,6 +169,14 @@ public class OptionalDividendAccountQuantitySD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Beneficial owner quantity to be paid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD3#mmBeneficialOwnerQuantity
+	 * OptionalDividendAccountQuantitySD3.mmBeneficialOwnerQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBeneficialOwnerQuantity = new MMMessageAttribute() {
@@ -163,6 +188,7 @@ public class OptionalDividendAccountQuantitySD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BeneficialOwnerQuantity";
 			definition = "Beneficial owner quantity to be paid.";
+			nextVersions_lazy = () -> Arrays.asList(OptionalDividendAccountQuantitySD3.mmBeneficialOwnerQuantity);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();
@@ -197,6 +223,14 @@ public class OptionalDividendAccountQuantitySD2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Number of accounts for which the beneficial quantity is elected."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OptionalDividendAccountQuantitySD3#mmNumberOfAccounts
+	 * OptionalDividendAccountQuantitySD3.mmNumberOfAccounts}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNumberOfAccounts = new MMMessageAttribute() {
@@ -207,6 +241,7 @@ public class OptionalDividendAccountQuantitySD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfAccounts";
 			definition = "Number of accounts for which the beneficial quantity is elected.";
+			nextVersions_lazy = () -> Arrays.asList(OptionalDividendAccountQuantitySD3.mmNumberOfAccounts);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max15NumericText.mmObject();
@@ -222,6 +257,7 @@ public class OptionalDividendAccountQuantitySD2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "OptionalDividendAccountQuantitySD2";
 				definition = "Provides additional information regarding optional dividend election details.";
+				nextVersions_lazy = () -> Arrays.asList(OptionalDividendAccountQuantitySD3.mmObject());
 				previousVersion_lazy = () -> OptionalDividendAccountQuantitySD1.mmObject();
 			}
 		});

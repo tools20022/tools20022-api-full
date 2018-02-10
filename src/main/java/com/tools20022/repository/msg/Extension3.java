@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Additional information that can not be captured in the structured fields
- * and/or any other specific block .
+ * and/or any other specific block.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Extension3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Additional information that can not be captured in the structured fields and/or any other specific block ."
+ * "Additional information that can not be captured in the structured fields and/or any other specific block."
  * </li>
  * </ul>
  */
@@ -162,7 +162,7 @@ public class Extension3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Extension3";
-				definition = "Additional information that can not be captured in the structured fields and/or any other specific block .";
+				definition = "Additional information that can not be captured in the structured fields and/or any other specific block.";
 			}
 		});
 		return mmObject_lazy.get();

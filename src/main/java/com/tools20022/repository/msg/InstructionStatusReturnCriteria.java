@@ -65,6 +65,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines the criteria which are used to report on the payment status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstructionStatusReturnCriteria1
+ * InstructionStatusReturnCriteria1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,6 +108,14 @@ public class InstructionStatusReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates if the instruction status is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionStatusReturnCriteria1#mmPaymentInstructionStatusIndicator
+	 * InstructionStatusReturnCriteria1.mmPaymentInstructionStatusIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusIndicator = new MMMessageAttribute() {
@@ -110,6 +126,7 @@ public class InstructionStatusReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusIndicator";
 			definition = "Indicates if the instruction status is requested.";
+			nextVersions_lazy = () -> Arrays.asList(InstructionStatusReturnCriteria1.mmPaymentInstructionStatusIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -143,6 +160,15 @@ public class InstructionStatusReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates if the status date and time are requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionStatusReturnCriteria1#mmPaymentInstructionStatusDateTimeIndicator
+	 * InstructionStatusReturnCriteria1.
+	 * mmPaymentInstructionStatusDateTimeIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusDateTimeIndicator = new MMMessageAttribute() {
@@ -153,6 +179,7 @@ public class InstructionStatusReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusDateTimeIndicator";
 			definition = "Indicates if the status date and time are requested.";
+			nextVersions_lazy = () -> Arrays.asList(InstructionStatusReturnCriteria1.mmPaymentInstructionStatusDateTimeIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -186,6 +213,15 @@ public class InstructionStatusReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates if the status reason is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructionStatusReturnCriteria1#mmPaymentInstructionStatusReasonIndicator
+	 * InstructionStatusReturnCriteria1.
+	 * mmPaymentInstructionStatusReasonIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusReasonIndicator = new MMMessageAttribute() {
@@ -196,6 +232,7 @@ public class InstructionStatusReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusReasonIndicator";
 			definition = "Indicates if the status reason is requested.";
+			nextVersions_lazy = () -> Arrays.asList(InstructionStatusReturnCriteria1.mmPaymentInstructionStatusReasonIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -211,6 +248,7 @@ public class InstructionStatusReturnCriteria {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "InstructionStatusReturnCriteria";
 				definition = "Defines the criteria which are used to report on the payment status.";
+				nextVersions_lazy = () -> Arrays.asList(InstructionStatusReturnCriteria1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

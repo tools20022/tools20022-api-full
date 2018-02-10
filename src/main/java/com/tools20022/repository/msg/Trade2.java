@@ -21,6 +21,9 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01;
 import com.tools20022.repository.choice.SecurityIdentification22Choice;
 import com.tools20022.repository.codeset.*;
 import com.tools20022.repository.datatype.AnyBICIdentifier;
@@ -38,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the foreign exchange trade including spot\forward\NDF\swap that is
- * confirmed .
+ * confirmed.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -83,6 +86,21 @@ import javax.xml.bind.annotation.XmlType;
  * trace} = {@linkplain com.tools20022.repository.entity.TreasuryTrade
  * TreasuryTrade}</li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01#mmTradeDetail
+ * ForeignExchangeTradeConfirmationStatusAdviceV01.mmTradeDetail}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01#mmTradeDetail
+ * ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmTradeDetail}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestV01#mmTradeDetail
+ * ForeignExchangeTradeConfirmationRequestV01.mmTradeDetail}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -121,7 +139,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Trade2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Details of the foreign exchange trade including spot\\forward\\NDF\\swap that is confirmed ."
+ * "Details of the foreign exchange trade including spot\\forward\\NDF\\swap that is confirmed."
  * </li>
  * </ul>
  */
@@ -752,6 +770,8 @@ public class Trade2 {
 						com.tools20022.repository.msg.Trade2.mmTradingMode, com.tools20022.repository.msg.Trade2.mmClearingMethod, com.tools20022.repository.msg.Trade2.mmSymbol, com.tools20022.repository.msg.Trade2.mmPlaceOfConfirmation,
 						com.tools20022.repository.msg.Trade2.mmForeignExchangeDetails, com.tools20022.repository.msg.Trade2.mmSwapLeg, com.tools20022.repository.msg.Trade2.mmProductIdentification,
 						com.tools20022.repository.msg.Trade2.mmAssociatedTradeReference);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationStatusAdviceV01.mmTradeDetail, ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmTradeDetail,
+						ForeignExchangeTradeConfirmationRequestV01.mmTradeDetail);
 				trace_lazy = () -> TreasuryTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintForeignExchangeTradeProductRule.forTrade2, com.tools20022.repository.constraints.ConstraintForeignExchangeTradeProductRule1.forTrade2,
@@ -760,7 +780,7 @@ public class Trade2 {
 						com.tools20022.repository.constraints.ConstraintForwardPointsRule.forTrade2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trade2";
-				definition = "Details of the foreign exchange trade including spot\\forward\\NDF\\swap that is confirmed .";
+				definition = "Details of the foreign exchange trade including spot\\forward\\NDF\\swap that is confirmed.";
 			}
 		});
 		return mmObject_lazy.get();

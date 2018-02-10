@@ -30,32 +30,32 @@ import java.util.Arrays;
  * SecuritiesFinancingTransactionType codes:<br>
  * <br>
  * Repo Opening<br>
- * SecuritiesMovementType : Delivery (DELI)<br>
- * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+ * SecuritiesMovementType: Delivery (DELI)<br>
+ * SecuritiesFinancingTransactionType: Repo (REPU)<br>
  * Repo Closing<br>
- * SecuritiesMovementType : Receive (RECE)<br>
- * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+ * SecuritiesMovementType: Receive (RECE)<br>
+ * SecuritiesFinancingTransactionType: Repo (REPU)<br>
  * <br>
  * Reverse Repo Opening<br>
- * SecuritiesMovementType : Receive (RECE)<br>
- * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+ * SecuritiesMovementType: Receive (RECE)<br>
+ * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
  * Reverse Repo Closing<br>
- * SecuritiesMovementType : Delivery (DELI) <br>
- * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+ * SecuritiesMovementType: Delivery (DELI) <br>
+ * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
  * <br>
  * Securities Lending Initiation<br>
- * SecuritiesMovementType : Delivery (DELI)<br>
- * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+ * SecuritiesMovementType: Delivery (DELI)<br>
+ * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
  * Securities Lending Return<br>
- * SecuritiesMovementType : Receive (RECE)<br>
- * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+ * SecuritiesMovementType: Receive (RECE)<br>
+ * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
  * <br>
  * Securities Borrowing Initiation<br>
- * SecuritiesMovementType : Receive (RECE)<br>
- * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+ * SecuritiesMovementType: Receive (RECE)<br>
+ * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
  * Securities Borrowing Return<br>
- * SecuritiesMovementType : Delivery (DELI) <br>
- * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+ * SecuritiesMovementType: Delivery (DELI) <br>
+ * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
  */
 public class ConstraintTwoLegTransactionOpeningClosingRule {
 
@@ -76,7 +76,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -94,7 +94,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkTransactionTypeAndAdditionalParameters3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forTransactionTypeAndAdditionalParameters10);
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters3.mmObject();
 		}
@@ -116,7 +116,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -125,7 +125,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkTransactionTypeAndAdditionalParameters6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters6.mmObject();
 		}
 	};
@@ -146,7 +146,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -155,7 +155,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails2.mmObject();
 		}
 	};
@@ -176,7 +176,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -185,7 +185,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails8.mmObject();
 		}
 	};
@@ -206,7 +206,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -215,7 +215,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails6.mmObject();
 		}
 	};
@@ -236,7 +236,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -245,7 +245,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails10.mmObject();
 		}
 	};
@@ -266,7 +266,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -284,7 +284,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails21);
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails17.mmObject();
 		}
@@ -306,7 +306,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -315,7 +315,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails18.mmObject();
 		}
 	};
@@ -336,7 +336,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -360,7 +360,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails17;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails21.mmObject();
@@ -383,7 +383,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -392,7 +392,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails22.mmObject();
 		}
 	};
@@ -413,7 +413,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -437,7 +437,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails26);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails21;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails24.mmObject();
@@ -460,7 +460,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -469,7 +469,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails25.mmObject();
 		}
 	};
@@ -490,7 +490,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -514,7 +514,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails35);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails24;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails26.mmObject();
@@ -537,7 +537,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -561,7 +561,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkTransactionTypeAndAdditionalParameters10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forTransactionTypeAndAdditionalParameters16);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forTransactionTypeAndAdditionalParameters3;
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters10.mmObject();
@@ -584,7 +584,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -593,7 +593,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails33.mmObject();
 		}
 	};
@@ -614,7 +614,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -623,7 +623,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkTransactionTypeAndAdditionalParameters12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters12.mmObject();
 		}
 	};
@@ -644,7 +644,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -659,7 +659,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkTransactionTypeAndAdditionalParameters16;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forTransactionTypeAndAdditionalParameters10;
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters16.mmObject();
 		}
@@ -681,7 +681,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -696,7 +696,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forSecuritiesFinancingTransactionDetails26;
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails35.mmObject();
 		}
@@ -718,7 +718,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -727,7 +727,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkTransactionTypeAndAdditionalParameters19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> TransactionTypeAndAdditionalParameters19.mmObject();
 		}
 	};
@@ -748,7 +748,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)"
+	 * "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)."
 	 * </li>
 	 * </ul>
 	 */
@@ -757,7 +757,7 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 			validator = ConstraintTwoLegTransactionOpeningClosingRule::checkSecuritiesFinancingTransactionDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TwoLegTransactionOpeningClosingRule";
-			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType : Delivery (DELI)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType : Receive (RECE)\r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType : Delivery (DELI) \r\nSecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)";
+			definition = "For transactions settling in two legs (Securities Financing), the opening/initiation and closing/return information of the transaction is provided by sending the below combination of SecuritiesMovementType codes and SecuritiesFinancingTransactionType codes:\r\n\r\nRepo Opening\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\nRepo Closing\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: Repo (REPU)\r\n\r\nReverse Repo Opening\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\nReverse Repo Closing\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: ReverseRepo (RVPO)\r\n\r\nSecurities Lending Initiation\r\nSecuritiesMovementType: Delivery (DELI)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\nSecurities Lending Return\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesLending (SECL)\r\n\r\nSecurities Borrowing Initiation\r\nSecuritiesMovementType: Receive (RECE)\r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)\r\nSecurities Borrowing Return\r\nSecuritiesMovementType: Delivery (DELI) \r\nSecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).";
 			owner_lazy = () -> SecuritiesFinancingTransactionDetails36.mmObject();
 		}
 	};
@@ -769,32 +769,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkTransactionTypeAndAdditionalParameters3(TransactionTypeAndAdditionalParameters3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -807,32 +807,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkTransactionTypeAndAdditionalParameters6(TransactionTypeAndAdditionalParameters6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -845,32 +845,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails2(SecuritiesFinancingTransactionDetails2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -883,32 +883,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails8(SecuritiesFinancingTransactionDetails8 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -921,32 +921,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails6(SecuritiesFinancingTransactionDetails6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -959,32 +959,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails10(SecuritiesFinancingTransactionDetails10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -997,32 +997,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails17(SecuritiesFinancingTransactionDetails17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1035,32 +1035,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails18(SecuritiesFinancingTransactionDetails18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1073,32 +1073,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails21(SecuritiesFinancingTransactionDetails21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1111,32 +1111,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails22(SecuritiesFinancingTransactionDetails22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1149,32 +1149,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails24(SecuritiesFinancingTransactionDetails24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1187,32 +1187,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails25(SecuritiesFinancingTransactionDetails25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1225,32 +1225,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails26(SecuritiesFinancingTransactionDetails26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1263,32 +1263,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkTransactionTypeAndAdditionalParameters10(TransactionTypeAndAdditionalParameters10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1301,32 +1301,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails33(SecuritiesFinancingTransactionDetails33 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1339,32 +1339,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkTransactionTypeAndAdditionalParameters12(TransactionTypeAndAdditionalParameters12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1377,32 +1377,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkTransactionTypeAndAdditionalParameters16(TransactionTypeAndAdditionalParameters16 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1415,32 +1415,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails35(SecuritiesFinancingTransactionDetails35 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1453,32 +1453,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkTransactionTypeAndAdditionalParameters19(TransactionTypeAndAdditionalParameters19 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1491,32 +1491,32 @@ public class ConstraintTwoLegTransactionOpeningClosingRule {
 	 * and SecuritiesFinancingTransactionType codes:<br>
 	 * <br>
 	 * Repo Opening<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * Repo Closing<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : Repo (REPU)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: Repo (REPU)<br>
 	 * <br>
 	 * Reverse Repo Opening<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * Reverse Repo Closing<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : ReverseRepo (RVPO)<br>
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: ReverseRepo (RVPO)<br>
 	 * <br>
 	 * Securities Lending Initiation<br>
-	 * SecuritiesMovementType : Delivery (DELI)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Delivery (DELI)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * Securities Lending Return<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesLending (SECL)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesLending (SECL)<br>
 	 * <br>
 	 * Securities Borrowing Initiation<br>
-	 * SecuritiesMovementType : Receive (RECE)<br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)<br>
+	 * SecuritiesMovementType: Receive (RECE)<br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB)<br>
 	 * Securities Borrowing Return<br>
-	 * SecuritiesMovementType : Delivery (DELI) <br>
-	 * SecuritiesFinancingTransactionType : SecuritiesBorrowing (SECB)
+	 * SecuritiesMovementType: Delivery (DELI) <br>
+	 * SecuritiesFinancingTransactionType: SecuritiesBorrowing (SECB).
 	 */
 	public static void checkSecuritiesFinancingTransactionDetails36(SecuritiesFinancingTransactionDetails36 obj) throws Exception {
 		throw new NotImplementedConstraintException();

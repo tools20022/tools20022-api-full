@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyOrBusinessError1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Report between the party reference data or a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.PartyOrBusinessError2Choice
+ * PartyOrBusinessError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,6 +103,14 @@ public class PartyOrBusinessError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Business error resulting from a rejection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyOrBusinessError2Choice#mmBusinessError
+	 * PartyOrBusinessError2Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
@@ -106,6 +121,7 @@ public class PartyOrBusinessError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Business error resulting from a rejection.";
+			nextVersions_lazy = () -> Arrays.asList(PartyOrBusinessError2Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -137,6 +153,14 @@ public class PartyOrBusinessError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifications of a party defined within a system."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PartyOrBusinessError2Choice#mmSystemParty
+	 * PartyOrBusinessError2Choice.mmSystemParty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSystemParty = new MMMessageAssociationEnd() {
@@ -147,6 +171,7 @@ public class PartyOrBusinessError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemParty";
 			definition = "Specifications of a party defined within a system.";
+			nextVersions_lazy = () -> Arrays.asList(PartyOrBusinessError2Choice.mmSystemParty);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -162,6 +187,7 @@ public class PartyOrBusinessError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyOrBusinessError1Choice";
 				definition = "Report between the party reference data or a business error.";
+				nextVersions_lazy = () -> Arrays.asList(PartyOrBusinessError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Business relationship between two entities; one entity is the account owner,
- * the other entity is the account servicer.
+ * the other entity is the account servicer. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Account3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n"
+ * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n."
  * </li>
  * </ul>
  */
@@ -155,7 +155,7 @@ public class Account3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n"
+	 * "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -167,7 +167,7 @@ public class Account3 {
 			xmlTag = "Svcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Servicer";
-			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n";
+			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -183,7 +183,7 @@ public class Account3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Account3";
-				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n";
+				definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n.";
 			}
 		});
 		return mmObject_lazy.get();

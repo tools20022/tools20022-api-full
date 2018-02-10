@@ -78,6 +78,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Data related to a component of the POI (Point Of Interaction) performing the transaction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8
+ * PointOfInteractionComponent8}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent6
@@ -118,6 +125,14 @@ public class PointOfInteractionComponent7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Type of component belonging to a POI (Point Of Interaction) Terminal."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8#mmType
+	 * PointOfInteractionComponent8.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -133,6 +148,7 @@ public class PointOfInteractionComponent7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of component belonging to a POI (Point Of Interaction) Terminal.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponent8.mmType);
 			previousVersion_lazy = () -> PointOfInteractionComponent6.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -168,6 +184,14 @@ public class PointOfInteractionComponent7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the POI (Point Of Interaction) component."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8#mmIdentification
+	 * PointOfInteractionComponent8.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -183,6 +207,7 @@ public class PointOfInteractionComponent7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the POI (Point Of Interaction) component.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponent8.mmIdentification);
 			previousVersion_lazy = () -> PointOfInteractionComponent6.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -221,6 +246,14 @@ public class PointOfInteractionComponent7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the POI (Point Of Interaction) component."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8#mmStatus
+	 * PointOfInteractionComponent8.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,6 +270,7 @@ public class PointOfInteractionComponent7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the POI (Point Of Interaction) component.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponent8.mmStatus);
 			previousVersion_lazy = () -> PointOfInteractionComponent6.mmStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -272,6 +306,14 @@ public class PointOfInteractionComponent7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the standard for which the component complies with."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8#mmStandardCompliance
+	 * PointOfInteractionComponent8.mmStandardCompliance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -287,6 +329,7 @@ public class PointOfInteractionComponent7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandardCompliance";
 			definition = "Identification of the standard for which the component complies with.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponent8.mmStandardCompliance);
 			previousVersion_lazy = () -> PointOfInteractionComponent6.mmStandardCompliance;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.GenericIdentification48.mmObject();
@@ -321,6 +364,14 @@ public class PointOfInteractionComponent7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Characteristics of a POI (Point Of Interaction) component."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8#mmCharacteristics
+	 * PointOfInteractionComponent8.mmCharacteristics}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -336,6 +387,7 @@ public class PointOfInteractionComponent7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Characteristics";
 			definition = "Characteristics of a POI (Point Of Interaction) component.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponent8.mmCharacteristics);
 			previousVersion_lazy = () -> PointOfInteractionComponent6.mmCharacteristics;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -371,6 +423,14 @@ public class PointOfInteractionComponent7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Assessments for the component of the point of interaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PointOfInteractionComponent8#mmAssessment
+	 * PointOfInteractionComponent8.mmAssessment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -386,6 +446,7 @@ public class PointOfInteractionComponent7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Assessment";
 			definition = "Assessments for the component of the point of interaction.";
+			nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponent8.mmAssessment);
 			previousVersion_lazy = () -> PointOfInteractionComponent6.mmAssessment;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PointOfInteractionComponentAssessment1.mmObject();
@@ -403,6 +464,7 @@ public class PointOfInteractionComponent7 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PointOfInteractionComponent7";
 				definition = "Data related to a component of the POI (Point Of Interaction) performing the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(PointOfInteractionComponent8.mmObject());
 				previousVersion_lazy = () -> PointOfInteractionComponent6.mmObject();
 			}
 		});

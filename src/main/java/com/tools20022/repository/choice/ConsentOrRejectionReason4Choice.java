@@ -175,7 +175,7 @@ public class ConsentOrRejectionReason4Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the reason why the counterparty response has a  rejection status."
+	 * "Specifies the reason why the counterparty response has a rejection status."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -193,7 +193,7 @@ public class ConsentOrRejectionReason4Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":24B::REJT or REPR/4!c[4c]/4!c"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Specifies the reason why the counterparty response has a  rejection status.";
+			definition = "Specifies the reason why the counterparty response has a rejection status.";
 			previousVersion_lazy = () -> ConsentOrRejectionReason2Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;

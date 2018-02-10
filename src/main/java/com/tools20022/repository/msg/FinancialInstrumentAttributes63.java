@@ -214,6 +214,14 @@ import javax.xml.bind.annotation.XmlType;
  * "FinancialInstrumentAttributes63"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Elements characterising a financial instrument."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92
+ * FinancialInstrumentAttributes92}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes36
@@ -263,6 +271,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Market(s) on which the security is listed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPlaceOfListing
+	 * FinancialInstrumentAttributes92.mmPlaceOfListing}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -280,6 +296,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListing";
 			definition = "Market(s) on which the security is listed.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmPlaceOfListing);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmPlaceOfListing;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -324,6 +341,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Specifies the computation method of (accrued) interest of the security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmDayCountBasis
+	 * FinancialInstrumentAttributes92.mmDayCountBasis}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -341,6 +366,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DayCountBasis";
 			definition = "Specifies the computation method of (accrued) interest of the security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmDayCountBasis);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmDayCountBasis;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -383,6 +409,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the form, this is, ownership, of the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmRegistrationForm
+	 * FinancialInstrumentAttributes92.mmRegistrationForm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -400,6 +434,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationForm";
 			definition = "Specifies the form, this is, ownership, of the security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmRegistrationForm);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmRegistrationForm;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -441,6 +476,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the frequency of an interest payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPaymentFrequency
+	 * FinancialInstrumentAttributes92.mmPaymentFrequency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -458,6 +501,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentFrequency";
 			definition = "Specifies the frequency of an interest payment.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmPaymentFrequency);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmPaymentFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -500,6 +544,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of payment of a security at a particular time."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPaymentStatus
+	 * FinancialInstrumentAttributes92.mmPaymentStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -517,6 +569,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentStatus";
 			definition = "Status of payment of a security at a particular time.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmPaymentStatus);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmPaymentStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -560,6 +613,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Specifies the frequency of change to the variable rate of an interest bearing instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmVariableRateChangeFrequency
+	 * FinancialInstrumentAttributes92.mmVariableRateChangeFrequency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -577,6 +638,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateChangeFrequency";
 			definition = "Specifies the frequency of change to the variable rate of an interest bearing instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmVariableRateChangeFrequency);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmVariableRateChangeFrequency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -621,6 +683,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmClassificationType
+	 * FinancialInstrumentAttributes92.mmClassificationType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -638,6 +708,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationType";
 			definition = "Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmClassificationType);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmClassificationType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -679,7 +750,15 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies how an option can be exercised (American, European, Bermudan)"
+	 * "Specifies how an option can be exercised (American, European, Bermudan)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmOptionStyle
+	 * FinancialInstrumentAttributes92.mmOptionStyle}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -697,7 +776,8 @@ public class FinancialInstrumentAttributes63 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":12B::OPST"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionStyle";
-			definition = "Specifies how an option can be exercised (American, European, Bermudan)";
+			definition = "Specifies how an option can be exercised (American, European, Bermudan).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmOptionStyle);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmOptionStyle;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -741,6 +821,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Specifies whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmOptionType
+	 * FinancialInstrumentAttributes92.mmOptionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -758,6 +846,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies whether it is a Call option (right to purchase a specific underlying asset) or a Put option (right to sell a specific underlying asset).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmOptionType);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmOptionType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -801,6 +890,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency in which a security is issued or redenominated."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmDenominationCurrency
+	 * FinancialInstrumentAttributes92.mmDenominationCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -818,6 +915,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DenominationCurrency";
 			definition = "Currency in which a security is issued or redenominated.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmDenominationCurrency);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmDenominationCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -860,6 +958,14 @@ public class FinancialInstrumentAttributes63 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Next payment date of an interest bearing financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmCouponDate
+	 * FinancialInstrumentAttributes92.mmCouponDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -877,6 +983,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponDate";
 			definition = "Next payment date of an interest bearing financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmCouponDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmCouponDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -918,6 +1025,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date on which a privilege expires."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmExpiryDate
+	 * FinancialInstrumentAttributes92.mmExpiryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -935,6 +1050,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date on which a privilege expires.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmExpiryDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmExpiryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -978,6 +1094,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmFloatingRateFixingDate
+	 * FinancialInstrumentAttributes92.mmFloatingRateFixingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -995,6 +1119,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloatingRateFixingDate";
 			definition = "Date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmFloatingRateFixingDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmFloatingRateFixingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1036,6 +1161,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Planned final repayment date at the time of issuance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmMaturityDate
+	 * FinancialInstrumentAttributes92.mmMaturityDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1053,6 +1186,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaturityDate";
 			definition = "Planned final repayment date at the time of issuance.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmMaturityDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmMaturityDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1094,6 +1228,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date at which the security was made available."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmIssueDate
+	 * FinancialInstrumentAttributes92.mmIssueDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1111,6 +1253,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date at which the security was made available.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmIssueDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmIssueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1154,6 +1297,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Next date at which the issuer has the right to pay the security prior to maturity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmNextCallableDate
+	 * FinancialInstrumentAttributes92.mmNextCallableDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1171,6 +1322,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextCallableDate";
 			definition = "Next date at which the issuer has the right to pay the security prior to maturity.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmNextCallableDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmNextCallableDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1214,6 +1366,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Date at which the holder has the right to ask for redemption of the security prior to final maturity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPutableDate
+	 * FinancialInstrumentAttributes92.mmPutableDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1231,6 +1391,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutableDate";
 			definition = "Date at which the holder has the right to ask for redemption of the security prior to final maturity.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmPutableDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmPutableDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1273,6 +1434,14 @@ public class FinancialInstrumentAttributes63 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "First date at which a security begins to accrue interest."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmDatedDate
+	 * FinancialInstrumentAttributes92.mmDatedDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1290,6 +1459,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatedDate";
 			definition = "First date at which a security begins to accrue interest.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmDatedDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmDatedDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1333,6 +1503,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Date at which the first interest payment is due to holders of the security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmFirstPaymentDate
+	 * FinancialInstrumentAttributes92.mmFirstPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1350,6 +1528,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FirstPaymentDate";
 			definition = "Date at which the first interest payment is due to holders of the security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmFirstPaymentDate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmFirstPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1393,6 +1572,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Rate expressed as a decimal between 0 and 1 that was applicable before the current factor and defines the outstanding principal of the financial instrument (for factored securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPreviousFactor
+	 * FinancialInstrumentAttributes92.mmPreviousFactor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1410,6 +1597,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 that was applicable before the current factor and defines the outstanding principal of the financial instrument (for factored securities).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmPreviousFactor);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmPreviousFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1453,6 +1641,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Rate expressed as a decimal between 0 and 1 defining the outstanding principal of the financial instrument (for factored securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmCurrentFactor
+	 * FinancialInstrumentAttributes92.mmCurrentFactor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1470,6 +1666,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 defining the outstanding principal of the financial instrument (for factored securities).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmCurrentFactor);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmCurrentFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1513,6 +1710,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Rate expressed as a decimal between 0 and 1 that will be applicable as of the next factor date and defines the outstanding principal of the financial instrument (for factored securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmNextFactor
+	 * FinancialInstrumentAttributes92.mmNextFactor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1530,6 +1735,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextFactor";
 			definition = "Rate expressed as a decimal between 0 and 1 that will be applicable as of the next factor date and defines the outstanding principal of the financial instrument (for factored securities).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmNextFactor);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmNextFactor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1574,6 +1780,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmInterestRate
+	 * FinancialInstrumentAttributes92.mmInterestRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1591,6 +1805,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestRate";
 			definition = "Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmInterestRate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmInterestRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1631,6 +1846,14 @@ public class FinancialInstrumentAttributes63 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Rate of return anticipated on a bond when held until maturity date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmYieldToMaturityRate
+	 * FinancialInstrumentAttributes92.mmYieldToMaturityRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1647,6 +1870,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "YieldToMaturityRate";
 			definition = "Rate of return anticipated on a bond when held until maturity date.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmYieldToMaturityRate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmYieldToMaturityRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1691,6 +1915,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Interest rate applicable to the next interest payment period in relation to variable rate instruments."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmNextInterestRate
+	 * FinancialInstrumentAttributes92.mmNextInterestRate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1708,6 +1940,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NextInterestRate";
 			definition = "Interest rate applicable to the next interest payment period in relation to variable rate instruments.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmNextInterestRate);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmNextInterestRate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1752,6 +1985,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Specifies the reference rate for fixed income instruments where the \nprice of the instrument is indexed to the price of an underlying benchmark."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmIndexRateBasis
+	 * FinancialInstrumentAttributes92.mmIndexRateBasis}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1769,6 +2010,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IndexRateBasis";
 			definition = "Specifies the reference rate for fixed income instruments where the \nprice of the instrument is indexed to the price of an underlying benchmark.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmIndexRateBasis);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmIndexRateBasis;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1809,6 +2051,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Number of the coupon attached to the physical security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmCouponAttachedNumber
+	 * FinancialInstrumentAttributes92.mmCouponAttachedNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1826,6 +2076,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CouponAttachedNumber";
 			definition = "Number of the coupon attached to the physical security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmCouponAttachedNumber);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmCouponAttachedNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1870,6 +2121,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Number identifying a group of underlying assets assigned by the issuer of a factored security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPoolNumber
+	 * FinancialInstrumentAttributes92.mmPoolNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1887,6 +2146,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolNumber";
 			definition = "Number identifying a group of underlying assets assigned by the issuer of a factored security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmPoolNumber);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmPoolNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1927,6 +2187,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Breakdown of a quantity into lots such as tax lots, instrument series, etc."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmQuantityBreakdown
+	 * FinancialInstrumentAttributes92.mmQuantityBreakdown}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1943,6 +2211,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityBreakdown";
 			definition = "Breakdown of a quantity into lots such as tax lots, instrument series, etc.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmQuantityBreakdown);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmQuantityBreakdown;
 			minOccurs = 0;
 			isComposite = true;
@@ -1987,6 +2256,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Indicates whether the interest rate of an interest bearing instrument is reset periodically."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmVariableRateIndicator
+	 * FinancialInstrumentAttributes92.mmVariableRateIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2004,6 +2281,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VariableRateIndicator";
 			definition = "Indicates whether the interest rate of an interest bearing instrument is reset periodically.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmVariableRateIndicator);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmVariableRateIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2048,6 +2326,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmCallableIndicator
+	 * FinancialInstrumentAttributes92.mmCallableIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2065,6 +2351,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallableIndicator";
 			definition = "Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmCallableIndicator);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmCallableIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2109,6 +2396,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmPutableIndicator
+	 * FinancialInstrumentAttributes92.mmPutableIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2126,6 +2421,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PutableIndicator";
 			definition = "Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmPutableIndicator);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmPutableIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2163,6 +2459,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Value of the price, for example, as a currency and value per unit or as a percentage."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmMarketOrIndicativePrice
+	 * FinancialInstrumentAttributes92.mmMarketOrIndicativePrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2179,6 +2483,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketOrIndicativePrice";
 			definition = "Value of the price, for example, as a currency and value per unit or as a percentage.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmMarketOrIndicativePrice);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmMarketOrIndicativePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2221,6 +2526,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Predetermined price at which the holder of a derivative will buy or sell the underlying instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmExercisePrice
+	 * FinancialInstrumentAttributes92.mmExercisePrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2238,6 +2551,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
 			definition = "Predetermined price at which the holder of a derivative will buy or sell the underlying instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmExercisePrice);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmExercisePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2280,6 +2594,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Pre-determined price at which the holder of a right is entitled to buy the underlying instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmSubscriptionPrice
+	 * FinancialInstrumentAttributes92.mmSubscriptionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2297,6 +2619,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPrice";
 			definition = "Pre-determined price at which the holder of a right is entitled to buy the underlying instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmSubscriptionPrice);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmSubscriptionPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2337,6 +2660,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Price of one target security in the conversion."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmConversionPrice
+	 * FinancialInstrumentAttributes92.mmConversionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2354,6 +2685,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConversionPrice";
 			definition = "Price of one target security in the conversion.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmConversionPrice);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmConversionPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2396,6 +2728,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Predetermined price at which the holder will have to buy or sell the underlying instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmStrikePrice
+	 * FinancialInstrumentAttributes92.mmStrikePrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2413,6 +2753,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StrikePrice";
 			definition = "Predetermined price at which the holder will have to buy or sell the underlying instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmStrikePrice);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmStrikePrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2455,6 +2796,14 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Minimum nominal quantity of financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmMinimumNominalQuantity
+	 * FinancialInstrumentAttributes92.mmMinimumNominalQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2472,6 +2821,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumNominalQuantity";
 			definition = "Minimum nominal quantity of financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmMinimumNominalQuantity);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmMinimumNominalQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2516,6 +2866,14 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Ratio or multiplying factor used to convert one contract into a quantity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmContractSize
+	 * FinancialInstrumentAttributes92.mmContractSize}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2533,6 +2891,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractSize";
 			definition = "Ratio or multiplying factor used to convert one contract into a quantity.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmContractSize);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmContractSize;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2575,6 +2934,15 @@ public class FinancialInstrumentAttributes63 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the underlying security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmUnderlyingFinancialInstrumentIdentification
+	 * FinancialInstrumentAttributes92.
+	 * mmUnderlyingFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2593,6 +2961,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingFinancialInstrumentIdentification";
 			definition = "Identification of the underlying security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmUnderlyingFinancialInstrumentIdentification);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmUnderlyingFinancialInstrumentIdentification;
 			minOccurs = 0;
 			isComposite = true;
@@ -2631,6 +3000,15 @@ public class FinancialInstrumentAttributes63 {
 	 * definition} =
 	 * "Provides additional information about the financial instrument in narrative form."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmFinancialInstrumentAttributeAdditionalDetails
+	 * FinancialInstrumentAttributes92.
+	 * mmFinancialInstrumentAttributeAdditionalDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2648,6 +3026,7 @@ public class FinancialInstrumentAttributes63 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributeAdditionalDetails";
 			definition = "Provides additional information about the financial instrument in narrative form.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmFinancialInstrumentAttributeAdditionalDetails);
 			previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmFinancialInstrumentAttributeAdditionalDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -2688,6 +3067,7 @@ public class FinancialInstrumentAttributes63 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentAttributes63";
 				definition = "Elements characterising a financial instrument.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributes92.mmObject());
 				previousVersion_lazy = () -> FinancialInstrumentAttributes36.mmObject();
 			}
 		});

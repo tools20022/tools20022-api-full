@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding additional comments."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD4
+ * CorporateActionCancellationSD4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class CorporateActionCancellationSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD4#mmPlaceAndName
+	 * CorporateActionCancellationSD4.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class CorporateActionCancellationSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD4.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -139,7 +155,15 @@ public class CorporateActionCancellationSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Additional textual information regarding the cancelled event. "</li>
+	 * "Additional textual information regarding the cancelled event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD4#mmExternalComments
+	 * CorporateActionCancellationSD4.mmExternalComments}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmExternalComments = new MMMessageAttribute() {
@@ -149,7 +173,8 @@ public class CorporateActionCancellationSD2 {
 			xmlTag = "XtrnlCmnts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExternalComments";
-			definition = "Additional textual information regarding the cancelled event. ";
+			definition = "Additional textual information regarding the cancelled event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD4.mmExternalComments);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max8000Text.mmObject();
@@ -164,6 +189,7 @@ public class CorporateActionCancellationSD2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellationSD2";
 				definition = "Provides additional information regarding additional comments.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

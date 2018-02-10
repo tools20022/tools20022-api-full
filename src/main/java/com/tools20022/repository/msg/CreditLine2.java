@@ -63,6 +63,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CreditLine2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of elements used to provide details of the credit line."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CreditLine3 CreditLine3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +105,13 @@ public class CreditLine2 {
 	 * definition} =
 	 * "Indicates whether or not the credit line is included in the balance.\n\nUsage: If not present, credit line is not included in the balance amount."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CreditLine3#mmIncluded
+	 * CreditLine3.mmIncluded}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIncluded = new MMMessageAttribute() {
@@ -109,6 +122,7 @@ public class CreditLine2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Included";
 			definition = "Indicates whether or not the credit line is included in the balance.\n\nUsage: If not present, credit line is not included in the balance amount.";
+			nextVersions_lazy = () -> Arrays.asList(CreditLine3.mmIncluded);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -146,6 +160,13 @@ public class CreditLine2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money of the credit line."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CreditLine3#mmAmount
+	 * CreditLine3.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -157,6 +178,7 @@ public class CreditLine2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the credit line.";
+			nextVersions_lazy = () -> Arrays.asList(CreditLine3.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -172,6 +194,7 @@ public class CreditLine2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CreditLine2";
 				definition = "Set of elements used to provide details of the credit line.";
+				nextVersions_lazy = () -> Arrays.asList(CreditLine3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

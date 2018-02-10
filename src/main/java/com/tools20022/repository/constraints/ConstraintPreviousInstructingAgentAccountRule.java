@@ -500,7 +500,7 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed."
+	 * "ISO20022 Rule: \nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -509,7 +509,7 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
-			definition = "ISO20022 Rule:\nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed.";
+			definition = "ISO20022 Rule: \nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation7.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -535,7 +535,7 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Rule:\nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed."
+	 * "ISO20022 Rule: \nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -544,7 +544,7 @@ public class ConstraintPreviousInstructingAgentAccountRule {
 			validator = ConstraintPreviousInstructingAgentAccountRule::checkCreditTransferTransactionInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousInstructingAgentAccountRule";
-			definition = "ISO20022 Rule:\nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed.";
+			definition = "ISO20022 Rule: \nIf PreviousInstructingAgent is not present, then PreviousInstructingAgentAccount is not allowed.";
 			owner_lazy = () -> CreditTransferTransactionInformation9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgentAccount</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/PreviousInstructingAgent</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}

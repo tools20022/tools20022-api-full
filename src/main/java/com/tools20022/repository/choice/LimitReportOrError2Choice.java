@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between details of one or more limits set by the member (or on behalf of the member) and managed by the transaction administrator or an operational error when the requested data cannot be retrieved."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.LimitReportOrError3Choice
+ * LimitReportOrError3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.LimitReportOrError1Choice
@@ -103,6 +110,14 @@ public class LimitReportOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reports on limits."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitReportOrError3Choice#mmBusinessReport
+	 * LimitReportOrError3Choice.mmBusinessReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -118,6 +133,7 @@ public class LimitReportOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports on limits.";
+			nextVersions_lazy = () -> Arrays.asList(LimitReportOrError3Choice.mmBusinessReport);
 			previousVersion_lazy = () -> LimitReportOrError1Choice.mmBusinessReport;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -153,6 +169,14 @@ public class LimitReportOrError2Choice {
 	 * definition} =
 	 * "Indicates that an operational error has been issued during the processing of the related request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitReportOrError3Choice#mmOperationalError
+	 * LimitReportOrError3Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +192,7 @@ public class LimitReportOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
+			nextVersions_lazy = () -> Arrays.asList(LimitReportOrError3Choice.mmOperationalError);
 			previousVersion_lazy = () -> LimitReportOrError1Choice.mmOperationalError;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +208,7 @@ public class LimitReportOrError2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitReportOrError2Choice";
 				definition = "Choice between details of one or more limits set by the member (or on behalf of the member) and managed by the transaction administrator or an operational error when the requested data cannot be retrieved.";
+				nextVersions_lazy = () -> Arrays.asList(LimitReportOrError3Choice.mmObject());
 				previousVersion_lazy = () -> LimitReportOrError1Choice.mmObject();
 			}
 		});

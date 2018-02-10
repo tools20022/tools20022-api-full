@@ -282,7 +282,7 @@ public class DisclosedBid1 {
 	 * name} = "TradingSession"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Established constraints under which a market operates"</li>
+	 * definition} = "Established constraints under which a market operates."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTradingSession = new MMMessageAssociationEnd() {
@@ -293,7 +293,7 @@ public class DisclosedBid1 {
 			xmlTag = "TradgSsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSession";
-			definition = "Established constraints under which a market operates";
+			definition = "Established constraints under which a market operates.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

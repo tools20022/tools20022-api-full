@@ -21,10 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07;
-import com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV08;
-import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07;
-import com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.CorporateActionReversalReason3Choice;
 import com.tools20022.repository.datatype.Max256Text;
 import com.tools20022.repository.entity.CorporateActionStatusReason;
@@ -76,6 +73,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV08#mmReversalReason
  * CorporateActionMovementReversalAdviceV08.mmReversalReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09#mmReversalReason
+ * CorporateActionMovementReversalAdviceV09.mmReversalReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09#mmReversalReason
+ * CorporateActionMovementPreliminaryAdviceV09.mmReversalReason}</li>
  * </ul>
  * </li>
  * <li>
@@ -228,7 +231,8 @@ public class CorporateActionReversalReason3 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CorporateActionReversalReason3.mmReason, com.tools20022.repository.msg.CorporateActionReversalReason3.mmAdditionalReasonInformation);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceV07.mmReversalReason, CorporateActionMovementReversalAdviceV07.mmReversalReason,
-						CorporateActionMovementPreliminaryAdviceV08.mmReversalReason, CorporateActionMovementReversalAdviceV08.mmReversalReason);
+						CorporateActionMovementPreliminaryAdviceV08.mmReversalReason, CorporateActionMovementReversalAdviceV08.mmReversalReason, CorporateActionMovementReversalAdviceV09.mmReversalReason,
+						CorporateActionMovementPreliminaryAdviceV09.mmReversalReason);
 				trace_lazy = () -> CorporateActionStatusReason.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalReasonInforrmationRule.forCorporateActionReversalReason3);

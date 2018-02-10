@@ -76,6 +76,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Specifies the corrective transaction on which the investigation is processed."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction3Choice
+ * CorrectiveTransaction3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction1Choice
@@ -121,6 +129,14 @@ public class CorrectiveTransaction2Choice {
 	 * definition} =
 	 * "Set of elements used to reference the details of the corrective payment initiation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction3Choice#mmInitiation
+	 * CorrectiveTransaction3Choice.mmInitiation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -137,6 +153,7 @@ public class CorrectiveTransaction2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Initiation";
 			definition = "Set of elements used to reference the details of the corrective payment initiation.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectiveTransaction3Choice.mmInitiation);
 			previousVersion_lazy = () -> CorrectiveTransaction1Choice.mmInitiation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -177,6 +194,14 @@ public class CorrectiveTransaction2Choice {
 	 * definition} =
 	 * "Set of elements used to reference the details of the corrective interbank payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CorrectiveTransaction3Choice#mmInterbank
+	 * CorrectiveTransaction3Choice.mmInterbank}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -193,6 +218,7 @@ public class CorrectiveTransaction2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interbank";
 			definition = "Set of elements used to reference the details of the corrective interbank payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CorrectiveTransaction3Choice.mmInterbank);
 			previousVersion_lazy = () -> CorrectiveTransaction1Choice.mmInterbank;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -211,6 +237,7 @@ public class CorrectiveTransaction2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorrectiveTransaction2Choice";
 				definition = "Specifies the corrective transaction on which the investigation is processed.";
+				nextVersions_lazy = () -> Arrays.asList(CorrectiveTransaction3Choice.mmObject());
 				previousVersion_lazy = () -> CorrectiveTransaction1Choice.mmObject();
 			}
 		});

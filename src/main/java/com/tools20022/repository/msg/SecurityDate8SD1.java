@@ -147,7 +147,7 @@ public class SecurityDate8SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Settlement date for the transaction where the new security is issued. \r\n発行日決済日程情報/決済日"
+	 * "Settlement date for the transaction where the new security is issued. \r\n発行日決済日程情報/決済日."
 	 * </li>
 	 * </ul>
 	 */
@@ -158,7 +158,7 @@ public class SecurityDate8SD1 {
 			xmlTag = "SttlmDtOfNewScty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDateOfNewSecurity";
-			definition = "Settlement date for the transaction where the new security is issued. \r\n発行日決済日程情報/決済日";
+			definition = "Settlement date for the transaction where the new security is issued. \r\n発行日決済日程情報/決済日.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat22Choice.mmObject();

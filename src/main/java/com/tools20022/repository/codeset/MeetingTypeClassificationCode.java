@@ -154,7 +154,7 @@ public class MeetingTypeClassificationCode extends MMCode {
 	};
 	/**
 	 * Meeting for holders of a specific type of asset, e.g. preferred shs,
-	 * bonds, 
+	 * bonds, .
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -172,7 +172,7 @@ public class MeetingTypeClassificationCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Meeting for holders of a specific type of asset, e.g. preferred shs, bonds, "
+	 * "Meeting for holders of a specific type of asset, e.g. preferred shs, bonds, ."
 	 * </li>
 	 * </ul>
 	 */
@@ -180,7 +180,7 @@ public class MeetingTypeClassificationCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Class";
-			definition = "Meeting for holders of a specific type of asset, e.g. preferred shs, bonds, ";
+			definition = "Meeting for holders of a specific type of asset, e.g. preferred shs, bonds, .";
 			owner_lazy = () -> com.tools20022.repository.codeset.MeetingTypeClassificationCode.mmObject();
 			codeName = "CLAS";
 		}

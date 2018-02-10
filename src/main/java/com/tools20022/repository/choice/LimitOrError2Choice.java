@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between risk management limit details or a business error when the requested data cannot be retrieved."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.LimitOrError3Choice
+ * LimitOrError3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.LimitOrError1Choice
@@ -101,6 +108,14 @@ public class LimitOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested information on the limit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitOrError3Choice#mmLimit
+	 * LimitOrError3Choice.mmLimit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -116,6 +131,7 @@ public class LimitOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Limit";
 			definition = "Requested information on the limit.";
+			nextVersions_lazy = () -> Arrays.asList(LimitOrError3Choice.mmLimit);
 			previousVersion_lazy = () -> LimitOrError1Choice.mmLimit;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -149,6 +165,14 @@ public class LimitOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason the requested business information is not given."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitOrError3Choice#mmBusinessError
+	 * LimitOrError3Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -164,6 +188,7 @@ public class LimitOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
+			nextVersions_lazy = () -> Arrays.asList(LimitOrError3Choice.mmBusinessError);
 			previousVersion_lazy = () -> LimitOrError1Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
@@ -179,6 +204,7 @@ public class LimitOrError2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "LimitOrError2Choice";
 				definition = "Choice between risk management limit details or a business error when the requested data cannot be retrieved.";
+				nextVersions_lazy = () -> Arrays.asList(LimitOrError3Choice.mmObject());
 				previousVersion_lazy = () -> LimitOrError1Choice.mmObject();
 			}
 		});

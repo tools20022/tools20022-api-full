@@ -269,7 +269,7 @@ public class StatusChangeRequestV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the baseline status requested by the submitter by means of a code. "
+	 * "Specifies the baseline status requested by the submitter by means of a code."
 	 * </li>
 	 * </ul>
 	 */
@@ -278,7 +278,7 @@ public class StatusChangeRequestV02 {
 			xmlTag = "ReqdSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedStatus";
-			definition = "Specifies the baseline status requested by the submitter by means of a code. ";
+			definition = "Specifies the baseline status requested by the submitter by means of a code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionStatus3.mmObject();

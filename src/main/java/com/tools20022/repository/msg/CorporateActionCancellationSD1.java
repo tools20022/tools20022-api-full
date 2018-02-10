@@ -74,7 +74,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionCancellationSD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Provides additional information regarding linkage details. "</li>
+ * definition} = "Provides additional information regarding linkage details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD3
+ * CorporateActionCancellationSD3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +116,14 @@ public class CorporateActionCancellationSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD3#mmPlaceAndName
+	 * CorporateActionCancellationSD3.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -119,6 +134,7 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD3.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -157,6 +173,14 @@ public class CorporateActionCancellationSD1 {
 	 * definition} =
 	 * "Reference assigned by the account servicer to unambiguously identify a related corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD3#mmLinkedCorporateActionIdentification
+	 * CorporateActionCancellationSD3.mmLinkedCorporateActionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLinkedCorporateActionIdentification = new MMMessageAttribute() {
@@ -168,6 +192,7 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedCorporateActionIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a related corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD3.mmLinkedCorporateActionIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -204,6 +229,14 @@ public class CorporateActionCancellationSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the reason why two or more events are related."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD3#mmLinkageType
+	 * CorporateActionCancellationSD3.mmLinkageType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLinkageType = new MMMessageAttribute() {
@@ -215,6 +248,7 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkageType";
 			definition = "Indicates the reason why two or more events are related.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD3.mmLinkageType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DTCCLinkType1Code.mmObject();
@@ -252,6 +286,14 @@ public class CorporateActionCancellationSD1 {
 	 * definition} =
 	 * "Events can be linked together. This date represents the date on which the link was established."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD3#mmLinkAddedDate
+	 * CorporateActionCancellationSD3.mmLinkAddedDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLinkAddedDate = new MMMessageAttribute() {
@@ -263,6 +305,7 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkAddedDate";
 			definition = "Events can be linked together. This date represents the date on which the link was established.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD3.mmLinkAddedDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -300,6 +343,14 @@ public class CorporateActionCancellationSD1 {
 	 * definition} =
 	 * "Events can be linked together. This date represents the date on which the link was modified."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionCancellationSD3#mmLinkModifiedDate
+	 * CorporateActionCancellationSD3.mmLinkModifiedDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLinkModifiedDate = new MMMessageAttribute() {
@@ -311,6 +362,7 @@ public class CorporateActionCancellationSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkModifiedDate";
 			definition = "Events can be linked together. This date represents the date on which the link was modified.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD3.mmLinkModifiedDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -326,7 +378,8 @@ public class CorporateActionCancellationSD1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionCancellationSD1";
-				definition = "Provides additional information regarding linkage details. ";
+				definition = "Provides additional information regarding linkage details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionCancellationSD3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

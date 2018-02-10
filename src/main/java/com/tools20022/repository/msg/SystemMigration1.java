@@ -274,7 +274,7 @@ public class SystemMigration1 {
 	 * name} = "LastDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date of the latest RABIS service"</li>
+	 * definition} = "Date of the latest RABIS service."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLastDate = new MMMessageAttribute() {
@@ -284,7 +284,7 @@ public class SystemMigration1 {
 			xmlTag = "LastDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastDate";
-			definition = "Date of the latest RABIS service";
+			definition = "Date of the latest RABIS service.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();

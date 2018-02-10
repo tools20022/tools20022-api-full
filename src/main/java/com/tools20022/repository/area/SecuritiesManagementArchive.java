@@ -196,6 +196,21 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV06
  * SecuritiesTransactionPendingReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV06
+ * SecuritiesTransactionPostingReportV06}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReportV05
+ * IntraPositionMovementPostingReportV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmationV05
+ * IntraPositionMovementConfirmationV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReportV05
+ * SecuritiesSettlementTransactionAllegementReportV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReportV07
+ * SecuritiesTransactionPendingReportV07}</li>
  * </ul>
  * </li>
  * <li>
@@ -239,7 +254,8 @@ public class SecuritiesManagementArchive {
 						SecuritiesSettlementTransactionAllegementReportV01.mmObject(), SecuritiesSettlementTransactionAllegementReportV02.mmObject(), SecuritiesStatementQueryV01.mmObject(), SecuritiesStatementQueryV02.mmObject(),
 						SecuritiesSettlementTransactionAllegementReportV03.mmObject(), SecuritiesStatementQueryV03.mmObject(), IntraPositionMovementStatusAdviceV03.mmObject(), SecuritiesTransactionPendingReportV05.mmObject(),
 						SecuritiesTransactionPostingReportV05.mmObject(), SecuritiesBalanceCustodyReportV07.mmObject(), SecuritiesBalanceAccountingReportV07.mmObject(), SecuritiesSettlementTransactionAllegementReportV04.mmObject(),
-						SecuritiesStatementQueryV04.mmObject(), SecuritiesTransactionPendingReportV06.mmObject());
+						SecuritiesStatementQueryV04.mmObject(), SecuritiesTransactionPendingReportV06.mmObject(), SecuritiesTransactionPostingReportV06.mmObject(), IntraPositionMovementPostingReportV05.mmObject(),
+						IntraPositionMovementConfirmationV05.mmObject(), SecuritiesSettlementTransactionAllegementReportV05.mmObject(), SecuritiesTransactionPendingReportV07.mmObject());
 				code = "semt";
 			}
 		});

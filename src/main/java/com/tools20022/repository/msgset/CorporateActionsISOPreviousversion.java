@@ -29,8 +29,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * or local custodians, involved in the corporate action processing chain
  * between the issuer (agent) and the investors. The messages support corporate
  * action events announcements and entitlements, elections, reminders, movements
- * preliminary advices , movements confirmations , movements reversals and
- * status reporting. <br>
+ * preliminary advices, movements confirmations, movements reversals and status
+ * reporting. <br>
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -91,7 +91,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Corporate Actions - ISO - Previous version"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Set of messages used by intermediaries, such as (I)CSD's, global custodians or local custodians, involved in the corporate action processing chain between the issuer (agent) and the investors. The messages support corporate action events announcements and entitlements, elections, reminders, movements preliminary advices , movements confirmations , movements reversals and status reporting. \r\n"
+ * "Set of messages used by intermediaries, such as (I)CSD's, global custodians or local custodians, involved in the corporate action processing chain between the issuer (agent) and the investors. The messages support corporate action events announcements and entitlements, elections, reminders, movements preliminary advices, movements confirmations, movements reversals and status reporting. \r\n"
  * </li>
  * </ul>
  */
@@ -105,7 +105,7 @@ public class CorporateActionsISOPreviousversion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Corporate Actions - ISO - Previous version";
-				definition = "Set of messages used by intermediaries, such as (I)CSD's, global custodians or local custodians, involved in the corporate action processing chain between the issuer (agent) and the investors. The messages support corporate action events announcements and entitlements, elections, reminders, movements preliminary advices , movements confirmations , movements reversals and status reporting. \r\n";
+				definition = "Set of messages used by intermediaries, such as (I)CSD's, global custodians or local custodians, involved in the corporate action processing chain between the issuer (agent) and the investors. The messages support corporate action events announcements and entitlements, elections, reminders, movements preliminary advices, movements confirmations, movements reversals and status reporting. \r\n";
 				messageDefinition_lazy = () -> Arrays.asList(CorporateActionMovementPreliminaryAdviceCancellationAdviceV06.mmObject(), CorporateActionInstructionCancellationRequestStatusAdviceV06.mmObject(),
 						CorporateActionInstructionV06.mmObject(), CorporateActionMovementPreliminaryAdviceV07.mmObject(), CorporateActionInstructionStatementReportV05.mmObject(), CorporateActionMovementConfirmationV07.mmObject(),
 						CorporateActionNotificationV06.mmObject(), CorporateActionEventProcessingStatusAdviceV05.mmObject(), CorporateActionInstructionCancellationRequestV06.mmObject(), CorporateActionInstructionStatusAdviceV07.mmObject(),

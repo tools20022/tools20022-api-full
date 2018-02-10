@@ -101,7 +101,7 @@ public class CommodityDerivate6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Place where the delivery and the cash settlement of the base product occurs. "
+	 * "Place where the delivery and the cash settlement of the base product occurs."
 	 * </li>
 	 * </ul>
 	 */
@@ -113,7 +113,7 @@ public class CommodityDerivate6 {
 			xmlTag = "SttlmLctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementLocation";
-			definition = "Place where the delivery and the cash settlement of the base product occurs. ";
+			definition = "Place where the delivery and the cash settlement of the base product occurs.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max25Text.mmObject();

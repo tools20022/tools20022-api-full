@@ -158,6 +158,12 @@ public class SourceOfPrice extends InformationPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PriceInformation14#mmSourceOfPrice
 	 * PriceInformation14.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation18#mmSourceOfPrice
+	 * PriceInformation18.mmSourceOfPrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PriceInformation19#mmSourceOfPrice
+	 * PriceInformation19.mmSourceOfPrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -179,7 +185,8 @@ public class SourceOfPrice extends InformationPartyRole {
 	public static final MMBusinessAssociationEnd mmMarketIdentification = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(PriceInformation5.mmSourceOfPrice, PriceInformation7.mmSourceOfPrice, PriceInformation6.mmSourceOfPrice, PriceInformation8.mmSourceOfPrice, PriceInformation9.mmSourceOfPrice,
-					PriceInformation11.mmSourceOfPrice, PriceInformation12.mmSourceOfPrice, PriceInformation13.mmSourceOfPrice, PriceInformation16.mmSourceOfPrice, PriceInformation14.mmSourceOfPrice);
+					PriceInformation11.mmSourceOfPrice, PriceInformation12.mmSourceOfPrice, PriceInformation13.mmSourceOfPrice, PriceInformation16.mmSourceOfPrice, PriceInformation14.mmSourceOfPrice, PriceInformation18.mmSourceOfPrice,
+					PriceInformation19.mmSourceOfPrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SourceOfPrice.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

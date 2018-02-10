@@ -21,6 +21,7 @@ import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.*;
+import java.util.Arrays;
 
 /**
  * If CurrentYear is not present then PreviousYears is mandatory. If CurrentYear
@@ -75,7 +76,7 @@ public class ConstraintCurrentYearRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CurrentYearType or ExtendedCurrentYearType is not present then PreviousYears must be present. If CurrentYearType  or ExtendedCurrentYearType  is present then PreviousYears may be present."
+	 * "If CurrentYearType or ExtendedCurrentYearType is not present then PreviousYears must be present. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears may be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -84,7 +85,7 @@ public class ConstraintCurrentYearRule {
 			validator = ConstraintCurrentYearRule::checkISAYearsOfIssue1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearRule";
-			definition = "If CurrentYearType or ExtendedCurrentYearType is not present then PreviousYears must be present. If CurrentYearType  or ExtendedCurrentYearType  is present then PreviousYears may be present.";
+			definition = "If CurrentYearType or ExtendedCurrentYearType is not present then PreviousYears must be present. If CurrentYearType or ExtendedCurrentYearType is present then PreviousYears may be present.";
 			owner_lazy = () -> ISAYearsOfIssue1.mmObject();
 		}
 	};
@@ -105,7 +106,7 @@ public class ConstraintCurrentYearRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional. "
+	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
 	 * </li>
 	 * </ul>
 	 */
@@ -114,7 +115,7 @@ public class ConstraintCurrentYearRule {
 			validator = ConstraintCurrentYearRule::checkISAYearsOfIssue4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearRule";
-			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional. ";
+			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
 			owner_lazy = () -> ISAYearsOfIssue4.mmObject();
 		}
 	};
@@ -135,7 +136,7 @@ public class ConstraintCurrentYearRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional. "
+	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
 	 * </li>
 	 * </ul>
 	 */
@@ -144,7 +145,7 @@ public class ConstraintCurrentYearRule {
 			validator = ConstraintCurrentYearRule::checkISAYearsOfIssue5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearRule";
-			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional. ";
+			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
 			owner_lazy = () -> ISAYearsOfIssue5.mmObject();
 		}
 	};
@@ -167,6 +168,14 @@ public class ConstraintCurrentYearRule {
 	 * definition} =
 	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCurrentYearRule#forISAYearsOfIssue7
+	 * ConstraintCurrentYearRule.forISAYearsOfIssue7}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<ISAYearsOfIssue6> forISAYearsOfIssue6 = new MMConstraint<ISAYearsOfIssue6>() {
@@ -175,7 +184,44 @@ public class ConstraintCurrentYearRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentYearRule";
 			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCurrentYearRule.forISAYearsOfIssue7);
 			owner_lazy = () -> ISAYearsOfIssue6.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.ISAYearsOfIssue7
+	 * ISAYearsOfIssue7}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CurrentYearRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCurrentYearRule#forISAYearsOfIssue6
+	 * ConstraintCurrentYearRule.forISAYearsOfIssue6}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<ISAYearsOfIssue7> forISAYearsOfIssue7 = new MMConstraint<ISAYearsOfIssue7>() {
+		{
+			validator = ConstraintCurrentYearRule::checkISAYearsOfIssue7;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CurrentYearRule";
+			definition = "If CurrentYear is not present, then PreviousYears is mandatory. If CurrentYear is present then PreviousYears is optional.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCurrentYearRule.forISAYearsOfIssue6;
+			owner_lazy = () -> ISAYearsOfIssue7.mmObject();
 		}
 	};
 
@@ -217,6 +263,14 @@ public class ConstraintCurrentYearRule {
 	 * CurrentYear is present then PreviousYears is optional.
 	 */
 	public static void checkISAYearsOfIssue6(ISAYearsOfIssue6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CurrentYear is not present, then PreviousYears is mandatory. If
+	 * CurrentYear is present then PreviousYears is optional.
+	 */
+	public static void checkISAYearsOfIssue7(ISAYearsOfIssue7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

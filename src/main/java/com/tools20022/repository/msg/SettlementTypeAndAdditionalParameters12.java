@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
 import com.tools20022.repository.datatype.Max35Text;
@@ -72,6 +73,10 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06#mmSettlementTypeAndAdditionalParameters
  * SecuritiesSettlementTransactionAllegementNotificationV06.
+ * mmSettlementTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07#mmSettlementTypeAndAdditionalParameters
+ * SecuritiesSettlementTransactionAllegementNotificationV07.
  * mmSettlementTypeAndAdditionalParameters}</li>
  * </ul>
  * </li>
@@ -290,7 +295,7 @@ public class SettlementTypeAndAdditionalParameters12 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters12.mmSecuritiesMovementType, com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters12.mmPayment,
 						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters12.mmCommonIdentification);
 				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV05.mmSettlementTypeAndAdditionalParameters,
-						SecuritiesSettlementTransactionAllegementNotificationV06.mmSettlementTypeAndAdditionalParameters);
+						SecuritiesSettlementTransactionAllegementNotificationV06.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionAllegementNotificationV07.mmSettlementTypeAndAdditionalParameters);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -85,6 +85,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Cardholder12"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Data related to the cardholder."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Cardholder13 Cardholder13}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Cardholder10
  * Cardholder10}</li>
@@ -126,6 +132,14 @@ public class Cardholder12 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the cardholder involved in a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cardholder13#mmIdentification
+	 * Cardholder13.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -142,6 +156,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the cardholder involved in a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmIdentification);
 			previousVersion_lazy = () -> Cardholder10.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -180,6 +195,13 @@ public class Cardholder12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cardholder name associated with the card."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder13#mmName
+	 * Cardholder13.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -196,6 +218,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Cardholder name associated with the card.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmName);
 			previousVersion_lazy = () -> Cardholder10.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -235,6 +258,13 @@ public class Cardholder12 {
 	 * definition} =
 	 * "Language selected for the cardholder interface during the transaction.\r\nReference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder13#mmLanguage
+	 * Cardholder13.mmLanguage}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -251,6 +281,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Language";
 			definition = "Language selected for the cardholder interface during the transaction.\r\nReference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmLanguage);
 			previousVersion_lazy = () -> Cardholder10.mmLanguage;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -282,6 +313,14 @@ public class Cardholder12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Postal address of the owner of the payment card."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cardholder13#mmBillingAddress
+	 * Cardholder13.mmBillingAddress}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -297,6 +336,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BillingAddress";
 			definition = "Postal address of the owner of the payment card.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmBillingAddress);
 			previousVersion_lazy = () -> Cardholder10.mmBillingAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -329,6 +369,14 @@ public class Cardholder12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Postal address for delivery of goods or services."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cardholder13#mmShippingAddress
+	 * Cardholder13.mmShippingAddress}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -344,6 +392,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShippingAddress";
 			definition = "Postal address for delivery of goods or services.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmShippingAddress);
 			previousVersion_lazy = () -> Cardholder10.mmShippingAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -377,6 +426,13 @@ public class Cardholder12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the trip."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder13#mmTripNumber
+	 * Cardholder13.mmTripNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -392,6 +448,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripNumber";
 			definition = "Identification of the trip.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmTripNumber);
 			previousVersion_lazy = () -> Cardholder10.mmTripNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -423,6 +480,13 @@ public class Cardholder12 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to the vehicle used for the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Cardholder13#mmVehicle
+	 * Cardholder13.mmVehicle}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -438,6 +502,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vehicle";
 			definition = "Information related to the vehicle used for the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmVehicle);
 			previousVersion_lazy = () -> Cardholder10.mmVehicle;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -478,6 +543,14 @@ public class Cardholder12 {
 	 * definition} =
 	 * "Method and data intended to be used for this transaction to authenticate the cardholder and its card."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cardholder13#mmAuthentication
+	 * Cardholder13.mmAuthentication}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -494,6 +567,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Authentication";
 			definition = "Method and data intended to be used for this transaction to authenticate the cardholder and its card.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmAuthentication);
 			previousVersion_lazy = () -> Cardholder10.mmAuthentication;
 			minOccurs = 0;
 			isComposite = true;
@@ -526,6 +600,14 @@ public class Cardholder12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Result of performed verifications for the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cardholder13#mmTransactionVerificationResult
+	 * Cardholder13.mmTransactionVerificationResult}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -541,6 +623,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionVerificationResult";
 			definition = "Result of performed verifications for the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmTransactionVerificationResult);
 			previousVersion_lazy = () -> Cardholder10.mmTransactionVerificationResult;
 			minOccurs = 0;
 			isComposite = true;
@@ -573,6 +656,14 @@ public class Cardholder12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies personal data related to the cardholder."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Cardholder13#mmPersonalData
+	 * Cardholder13.mmPersonalData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -588,6 +679,7 @@ public class Cardholder12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PersonalData";
 			definition = "Identifies personal data related to the cardholder.";
+			nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmPersonalData);
 			previousVersion_lazy = () -> Cardholder10.mmPersonalData;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -607,6 +699,7 @@ public class Cardholder12 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Cardholder12";
 				definition = "Data related to the cardholder.";
+				nextVersions_lazy = () -> Arrays.asList(Cardholder13.mmObject());
 				previousVersion_lazy = () -> Cardholder10.mmObject();
 			}
 		});

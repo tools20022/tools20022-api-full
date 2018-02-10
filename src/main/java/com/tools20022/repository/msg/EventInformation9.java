@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * "EventInformation9"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides information about event of a corporate action."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.EventInformation11
+ * EventInformation11}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.EventInformation7
@@ -127,6 +134,14 @@ public class EventInformation9 {
 	 * definition} =
 	 * "Reference assigned by the account servicer to unambiguously identify a corporate action event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmCorporateActionEventIdentification
+	 * EventInformation11.mmCorporateActionEventIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -144,6 +159,7 @@ public class EventInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventIdentification";
 			definition = "Reference assigned by the account servicer to unambiguously identify a corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(EventInformation11.mmCorporateActionEventIdentification);
 			previousVersion_lazy = () -> EventInformation7.mmCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -187,6 +203,14 @@ public class EventInformation9 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides the reference of the linked official corporate action event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmOfficialCorporateActionEventIdentification
+	 * EventInformation11.mmOfficialCorporateActionEventIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -204,6 +228,7 @@ public class EventInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OfficialCorporateActionEventIdentification";
 			definition = "Provides the reference of the linked official corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(EventInformation11.mmOfficialCorporateActionEventIdentification);
 			previousVersion_lazy = () -> EventInformation7.mmOfficialCorporateActionEventIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -246,6 +271,14 @@ public class EventInformation9 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of corporate action event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmEventType
+	 * EventInformation11.mmEventType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -263,6 +296,7 @@ public class EventInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventType";
 			definition = "Type of corporate action event.";
+			nextVersions_lazy = () -> Arrays.asList(EventInformation11.mmEventType);
 			previousVersion_lazy = () -> EventInformation7.mmEventType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -307,6 +341,14 @@ public class EventInformation9 {
 	 * definition} =
 	 * "Specifies whether the event is mandatory, mandatory with options or voluntary."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmMandatoryVoluntaryEventType
+	 * EventInformation11.mmMandatoryVoluntaryEventType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -324,6 +366,7 @@ public class EventInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryVoluntaryEventType";
 			definition = "Specifies whether the event is mandatory, mandatory with options or voluntary.";
+			nextVersions_lazy = () -> Arrays.asList(EventInformation11.mmMandatoryVoluntaryEventType);
 			previousVersion_lazy = () -> EventInformation7.mmMandatoryVoluntaryEventType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -367,6 +410,14 @@ public class EventInformation9 {
 	 * definition} =
 	 * "Provides information about the identification of the last notification."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmLastNotificationIdentification
+	 * EventInformation11.mmLastNotificationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -384,6 +435,7 @@ public class EventInformation9 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastNotificationIdentification";
 			definition = "Provides information about the identification of the last notification.";
+			nextVersions_lazy = () -> Arrays.asList(EventInformation11.mmLastNotificationIdentification);
 			previousVersion_lazy = () -> EventInformation7.mmLastNotificationIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -403,6 +455,7 @@ public class EventInformation9 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EventInformation9";
 				definition = "Provides information about event of a corporate action.";
+				nextVersions_lazy = () -> Arrays.asList(EventInformation11.mmObject());
 				previousVersion_lazy = () -> EventInformation7.mmObject();
 			}
 		});

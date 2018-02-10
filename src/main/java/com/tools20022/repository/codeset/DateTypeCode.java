@@ -87,7 +87,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "DateTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Ongoing basis,  which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\"."
+ * "Ongoing basis, which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\"."
  * </li>
  * </ul>
  */
@@ -174,7 +174,7 @@ public class DateTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Ongoing basis,  which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\"."
+	 * "Ongoing basis, which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\"."
 	 * </li>
 	 * </ul>
 	 */
@@ -182,7 +182,7 @@ public class DateTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Ongoing";
-			definition = "Ongoing basis,  which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\".";
+			definition = "Ongoing basis, which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\".";
 			owner_lazy = () -> com.tools20022.repository.codeset.DateTypeCode.mmObject();
 			codeName = "ONGO";
 		}
@@ -229,7 +229,7 @@ public class DateTypeCode extends MMCode {
 				example = Arrays.asList("OPEN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DateTypeCode";
-				definition = "Ongoing basis,  which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\".";
+				definition = "Ongoing basis, which indicates that the date is determined by \"ongoing basis\" process, for example \"au fil de l'eau\".";
 				derivation_lazy = () -> Arrays.asList(DateType3Code.mmObject(), DateType6Code.mmObject(), DateType8Code.mmObject(), DateType7Code.mmObject(), DateType1Code.mmObject(), DateType5Code.mmObject(), DateType4Code.mmObject(),
 						DateType2Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DateTypeCode.Open, com.tools20022.repository.codeset.DateTypeCode.Unknown, com.tools20022.repository.codeset.DateTypeCode.Ongoing,

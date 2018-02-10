@@ -71,6 +71,13 @@ import javax.xml.bind.annotation.XmlType;
  * "GenericIdentification84"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification using a proprietary scheme."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.GenericIdentification172
+ * GenericIdentification172}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -113,6 +120,14 @@ public class GenericIdentification84 {
 	 * definition} =
 	 * "Proprietary information, often a code, issued by the data source scheme issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification172#mmIdentification
+	 * GenericIdentification172.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -124,6 +139,7 @@ public class GenericIdentification84 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Proprietary information, often a code, issued by the data source scheme issuer.";
+			nextVersions_lazy = () -> Arrays.asList(GenericIdentification172.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINXMax34Text.mmObject();
@@ -162,6 +178,14 @@ public class GenericIdentification84 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Entity that assigns the identification."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification172#mmIssuer
+	 * GenericIdentification172.mmIssuer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuer = new MMMessageAttribute() {
@@ -173,6 +197,7 @@ public class GenericIdentification84 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Issuer";
 			definition = "Entity that assigns the identification.";
+			nextVersions_lazy = () -> Arrays.asList(GenericIdentification172.mmIssuer);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -211,6 +236,14 @@ public class GenericIdentification84 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Short textual description of the scheme."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.GenericIdentification172#mmSchemeName
+	 * GenericIdentification172.mmSchemeName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSchemeName = new MMMessageAttribute() {
@@ -222,6 +255,7 @@ public class GenericIdentification84 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SchemeName";
 			definition = "Short textual description of the scheme.";
+			nextVersions_lazy = () -> Arrays.asList(GenericIdentification172.mmSchemeName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();
@@ -238,6 +272,7 @@ public class GenericIdentification84 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "GenericIdentification84";
 				definition = "Identification using a proprietary scheme.";
+				nextVersions_lazy = () -> Arrays.asList(GenericIdentification172.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

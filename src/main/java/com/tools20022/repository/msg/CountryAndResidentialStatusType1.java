@@ -23,7 +23,6 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.codeset.CountryCode;
 import com.tools20022.repository.codeset.ResidentialStatus1Code;
 import com.tools20022.repository.entity.Country;
-import com.tools20022.repository.entity.Party;
 import com.tools20022.repository.entity.Person;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
@@ -52,7 +51,7 @@ import javax.xml.bind.annotation.XmlType;
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
- * trace} = {@linkplain com.tools20022.repository.entity.Party Party}</li>
+ * trace} = {@linkplain com.tools20022.repository.entity.Person Person}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -203,7 +202,7 @@ public class CountryAndResidentialStatusType1 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmCountry, com.tools20022.repository.msg.CountryAndResidentialStatusType1.mmResidentialStatus);
-				trace_lazy = () -> Party.mmObject();
+				trace_lazy = () -> Person.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CountryAndResidentialStatusType1";

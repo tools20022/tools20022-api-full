@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the limit business report as either a limit report or a business error."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError4Choice
+ * LimitJournalReportOrError4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +107,14 @@ public class LimitJournalReportOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested information on the limit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError4Choice#mmLimitJournal
+	 * LimitJournalReportOrError4Choice.mmLimitJournal}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLimitJournal = new MMMessageAssociationEnd() {
@@ -109,6 +125,7 @@ public class LimitJournalReportOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LimitJournal";
 			definition = "Requested information on the limit.";
+			nextVersions_lazy = () -> Arrays.asList(LimitJournalReportOrError4Choice.mmLimitJournal);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -141,6 +158,14 @@ public class LimitJournalReportOrError2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason the requested business information is not given."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LimitJournalReportOrError4Choice#mmBusinessError
+	 * LimitJournalReportOrError4Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBusinessError = new MMMessageAssociationEnd() {
@@ -151,6 +176,7 @@ public class LimitJournalReportOrError2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
+			nextVersions_lazy = () -> Arrays.asList(LimitJournalReportOrError4Choice.mmBusinessError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -165,6 +191,7 @@ public class LimitJournalReportOrError2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LimitJournalReportOrError2Choice";
 				definition = "Defines the limit business report as either a limit report or a business error.";
+				nextVersions_lazy = () -> Arrays.asList(LimitJournalReportOrError4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

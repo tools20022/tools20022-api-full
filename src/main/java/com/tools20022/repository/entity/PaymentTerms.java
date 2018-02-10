@@ -386,7 +386,7 @@ public class PaymentTerms {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the time of the payment relative to an event such as product delivery or receipt of invoice. "
+	 * "Specifies the time of the payment relative to an event such as product delivery or receipt of invoice."
 	 * </li>
 	 * </ul>
 	 */
@@ -397,7 +397,7 @@ public class PaymentTerms {
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentTerms.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PaymentTime";
-			definition = "Specifies the time of the payment relative to an event such as product delivery or receipt of invoice. ";
+			definition = "Specifies the time of the payment relative to an event such as product delivery or receipt of invoice.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PaymentTimeCode.mmObject();

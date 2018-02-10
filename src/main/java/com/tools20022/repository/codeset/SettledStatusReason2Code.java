@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Partial settlement status information or information about gating
+ * Partial settlement status information or information about gating.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "SettledStatusReason2Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Partial settlement status information or information about gating"</li>
+ * "Partial settlement status information or information about gating."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -207,7 +207,7 @@ public class SettledStatusReason2Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettledStatusReason2Code";
-				definition = "Partial settlement status information or information about gating";
+				definition = "Partial settlement status information or information about gating.";
 				trace_lazy = () -> SettledStatusReasonCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettledStatusReason2Code.CashPartiallySettled, com.tools20022.repository.codeset.SettledStatusReason2Code.GatedMultipleNAV,
 						com.tools20022.repository.codeset.SettledStatusReason2Code.GatedOneNAV, com.tools20022.repository.codeset.SettledStatusReason2Code.UnitsCashPartiallySettled,

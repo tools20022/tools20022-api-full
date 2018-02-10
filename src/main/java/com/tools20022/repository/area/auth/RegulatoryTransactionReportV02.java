@@ -216,7 +216,7 @@ public class RegulatoryTransactionReportV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the firm that is legally responsible for sending the transaction report.\n"
+	 * "Identification of the firm that is legally responsible for sending the transaction report.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -225,7 +225,7 @@ public class RegulatoryTransactionReportV02 {
 			xmlTag = "RptgInstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingInstitution";
-			definition = "Identification of the firm that is legally responsible for sending the transaction report.\n";
+			definition = "Identification of the firm that is legally responsible for sending the transaction report.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();

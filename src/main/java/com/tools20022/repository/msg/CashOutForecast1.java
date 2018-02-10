@@ -317,7 +317,7 @@ public class CashOutForecast1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Breakdown of cash out amounts, eg,  by transaction or order type."</li>
+	 * "Breakdown of cash out amounts, eg, by transaction or order type."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCashOutBreakdownDetails = new MMMessageAssociationEnd() {
@@ -328,7 +328,7 @@ public class CashOutForecast1 {
 			xmlTag = "CshOutBrkdwnDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashOutBreakdownDetails";
-			definition = "Breakdown of cash out amounts, eg,  by transaction or order type.";
+			definition = "Breakdown of cash out amounts, eg, by transaction or order type.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.FundCashOutBreakdown1.mmObject();

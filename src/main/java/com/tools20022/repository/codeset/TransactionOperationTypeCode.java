@@ -77,6 +77,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.TransactionOperationType1Code
  * TransactionOperationType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.TransactionOperationType3Code
+ * TransactionOperationType3Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -453,7 +456,7 @@ public class TransactionOperationTypeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionOperationTypeCode";
 				definition = "Specifies the type of process related to a specific transaction.";
-				derivation_lazy = () -> Arrays.asList(TransactionOperationType1Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(TransactionOperationType1Code.mmObject(), TransactionOperationType3Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.TransactionOperationTypeCode.NewTransaction, com.tools20022.repository.codeset.TransactionOperationTypeCode.Cancellation,
 						com.tools20022.repository.codeset.TransactionOperationTypeCode.Amendment, com.tools20022.repository.codeset.TransactionOperationTypeCode.Correction,
 						com.tools20022.repository.codeset.TransactionOperationTypeCode.EarlyTermination, com.tools20022.repository.codeset.TransactionOperationTypeCode.Error,

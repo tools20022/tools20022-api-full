@@ -229,7 +229,7 @@ public class EntitlementAssessment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode)"
+	 * "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode)."
 	 * </li>
 	 * </ul>
 	 */
@@ -241,7 +241,7 @@ public class EntitlementAssessment1 {
 			xmlTag = "SctiesBlckgSTPDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBlockingSTPDeadline";
-			definition = "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode)";
+			definition = "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat2Choice.mmObject();
@@ -380,7 +380,7 @@ public class EntitlementAssessment1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date..."
+	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date."
 	 * </li>
 	 * </ul>
 	 */
@@ -392,7 +392,7 @@ public class EntitlementAssessment1 {
 			xmlTag = "EntitlmntFxgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementFixingDate";
-			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date...";
+			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateFormat3Choice.mmObject();

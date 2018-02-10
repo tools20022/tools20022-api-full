@@ -87,7 +87,7 @@ public class ConstraintConsolidatedNetCashRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ConsolidatedNetCashForecast is present, then at least one occurrence of  either FundOrSubFundDetails or EstimatedFundCashForecastDetails must be present. Both FundOrSubFundDetails and EstimatedFundCashForecastDetails may be present."
+	 * "If ConsolidatedNetCashForecast is present, then at least one occurrence of either FundOrSubFundDetails or EstimatedFundCashForecastDetails must be present. Both FundOrSubFundDetails and EstimatedFundCashForecastDetails may be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -96,7 +96,7 @@ public class ConstraintConsolidatedNetCashRule {
 			validator = ConstraintConsolidatedNetCashRule::checkFundEstimatedCashForecastReportV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ConsolidatedNetCashRule";
-			definition = "If ConsolidatedNetCashForecast is present, then at least one occurrence of  either FundOrSubFundDetails or EstimatedFundCashForecastDetails must be present. Both FundOrSubFundDetails and EstimatedFundCashForecastDetails may be present.";
+			definition = "If ConsolidatedNetCashForecast is present, then at least one occurrence of either FundOrSubFundDetails or EstimatedFundCashForecastDetails must be present. Both FundOrSubFundDetails and EstimatedFundCashForecastDetails may be present.";
 			owner_lazy = () -> FundEstimatedCashForecastReportV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/FundOrSubFundDetails[*]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/EstimatedFundCashForecastDetails[*]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/ConsolidatedNetCashForecast</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}

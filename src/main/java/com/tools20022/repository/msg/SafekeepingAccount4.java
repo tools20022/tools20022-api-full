@@ -265,7 +265,7 @@ public class SafekeepingAccount4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of a subaccount within the safekeeping account"</li>
+	 * "Identification of a subaccount within the safekeeping account."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -284,7 +284,7 @@ public class SafekeepingAccount4 {
 			xmlTag = "SubAcctDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
-			definition = "Identification of a subaccount within the safekeeping account";
+			definition = "Identification of a subaccount within the safekeeping account.";
 			nextVersions_lazy = () -> Arrays.asList(SafekeepingAccount6.mmSubAccountDetails);
 			maxOccurs = 1;
 			minOccurs = 0;

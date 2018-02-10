@@ -86,6 +86,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CollateralValueSearchCriteria1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to search for an account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2
+ * CollateralValueSearchCriteria2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -122,6 +129,14 @@ public class CollateralValueSearchCriteria1 {
 	 * definition} =
 	 * "Unique and unambiguous identification for the account between the account owner and the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2#mmAccountIdentification
+	 * CollateralValueSearchCriteria2.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountIdentification = new MMMessageAssociationEnd() {
@@ -132,6 +147,7 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Unique and unambiguous identification for the account between the account owner and the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -166,6 +182,14 @@ public class CollateralValueSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Medium of exchange of value."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2#mmCurrency
+	 * CollateralValueSearchCriteria2.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
@@ -176,6 +200,7 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmCurrency);
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
 		}
@@ -208,6 +233,14 @@ public class CollateralValueSearchCriteria1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account being queried."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2#mmAccountOwner
+	 * CollateralValueSearchCriteria2.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountOwner = new MMMessageAttribute() {
@@ -218,6 +251,7 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account being queried.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -253,6 +287,14 @@ public class CollateralValueSearchCriteria1 {
 	 * definition} =
 	 * "Party that manages the account on behalf of the account owner, which is being queried."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2#mmAccountServicer
+	 * CollateralValueSearchCriteria2.mmAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
@@ -263,6 +305,7 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, which is being queried.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -297,6 +340,14 @@ public class CollateralValueSearchCriteria1 {
 	 * definition} =
 	 * "ISIN identification of the related financial instrument into which this security can be converted."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2#mmFinancialInstrumentIdentification
+	 * CollateralValueSearchCriteria2.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFinancialInstrumentIdentification = new MMMessageAssociationEnd() {
@@ -307,6 +358,7 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "ISIN identification of the related financial instrument into which this security can be converted.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmFinancialInstrumentIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecurityIdentification14.mmObject();
@@ -341,6 +393,14 @@ public class CollateralValueSearchCriteria1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Unique and unambiguous identification of the securities account owner."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2#mmSecuritiesAccountOwner
+	 * CollateralValueSearchCriteria2.mmSecuritiesAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecuritiesAccountOwner = new MMMessageAttribute() {
@@ -351,6 +411,7 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountOwner";
 			definition = "Unique and unambiguous identification of the securities account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmSecuritiesAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -386,6 +447,14 @@ public class CollateralValueSearchCriteria1 {
 	 * definition} =
 	 * "Party that manages the securities account on behalf of the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CollateralValueSearchCriteria2#mmSecuritiesAccountServicer
+	 * CollateralValueSearchCriteria2.mmSecuritiesAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecuritiesAccountServicer = new MMMessageAttribute() {
@@ -396,6 +465,7 @@ public class CollateralValueSearchCriteria1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccountServicer";
 			definition = "Party that manages the securities account on behalf of the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmSecuritiesAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification71Choice.mmObject();
@@ -414,6 +484,7 @@ public class CollateralValueSearchCriteria1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CollateralValueSearchCriteria1";
 				definition = "Defines the criteria used to search for an account.";
+				nextVersions_lazy = () -> Arrays.asList(CollateralValueSearchCriteria2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

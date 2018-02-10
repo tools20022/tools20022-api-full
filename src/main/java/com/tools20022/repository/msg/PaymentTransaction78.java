@@ -98,6 +98,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides reference and status information on the original transactions, included in the original instruction, to which the cancellation request message applies."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentTransaction84
+ * PaymentTransaction84}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PaymentTransaction66
@@ -139,6 +146,14 @@ public class PaymentTransaction78 {
 	 * definition} =
 	 * "Unique and unambiguous identifier of a cancellation request status, as assigned by the assigner.\n\nUsage: The cancellation status identification can be used for reconciliation or to link tasks relating to the cancellation request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmCancellationStatusIdentification
+	 * PaymentTransaction84.mmCancellationStatusIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -154,6 +169,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusIdentification";
 			definition = "Unique and unambiguous identifier of a cancellation request status, as assigned by the assigner.\n\nUsage: The cancellation status identification can be used for reconciliation or to link tasks relating to the cancellation request.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmCancellationStatusIdentification);
 			previousVersion_lazy = () -> PaymentTransaction66.mmCancellationStatusIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -190,6 +206,14 @@ public class PaymentTransaction78 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the resolved case."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmResolvedCase
+	 * PaymentTransaction84.mmResolvedCase}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -206,6 +230,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResolvedCase";
 			definition = "Identifies the resolved case.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmResolvedCase);
 			previousVersion_lazy = () -> PaymentTransaction66.mmResolvedCase;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -247,6 +272,14 @@ public class PaymentTransaction78 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original instructing party for the original instructed party to unambiguously identify the original instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmOriginalInstructionIdentification
+	 * PaymentTransaction84.mmOriginalInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -263,6 +296,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructionIdentification";
 			definition = "Unique identification, as assigned by the original instructing party for the original instructed party to unambiguously identify the original instruction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmOriginalInstructionIdentification);
 			previousVersion_lazy = () -> PaymentTransaction66.mmOriginalInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -303,6 +337,14 @@ public class PaymentTransaction78 {
 	 * definition} =
 	 * "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmOriginalEndToEndIdentification
+	 * PaymentTransaction84.mmOriginalEndToEndIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -319,6 +361,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEndToEndIdentification";
 			definition = "Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmOriginalEndToEndIdentification);
 			previousVersion_lazy = () -> PaymentTransaction66.mmOriginalEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -359,6 +402,14 @@ public class PaymentTransaction78 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the status of the transaction cancellation request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmTransactionCancellationStatus
+	 * PaymentTransaction84.mmTransactionCancellationStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -375,6 +426,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCancellationStatus";
 			definition = "Specifies the status of the transaction cancellation request.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmTransactionCancellationStatus);
 			previousVersion_lazy = () -> PaymentTransaction66.mmTransactionCancellationStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -414,6 +466,14 @@ public class PaymentTransaction78 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides detailed information on the cancellation status reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmCancellationStatusReasonInformation
+	 * PaymentTransaction84.mmCancellationStatusReasonInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -430,6 +490,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationStatusReasonInformation";
 			definition = "Provides detailed information on the cancellation status reason.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmCancellationStatusReasonInformation);
 			previousVersion_lazy = () -> PaymentTransaction66.mmCancellationStatusReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -471,6 +532,14 @@ public class PaymentTransaction78 {
 	 * definition} =
 	 * "Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.\r\nUsage: This amount has to be transported unchanged through the transaction chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmOriginalInstructedAmount
+	 * PaymentTransaction84.mmOriginalInstructedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -487,6 +556,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInstructedAmount";
 			definition = "Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.\r\nUsage: This amount has to be transported unchanged through the transaction chain.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmOriginalInstructedAmount);
 			previousVersion_lazy = () -> PaymentTransaction66.mmOriginalInstructedAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -528,6 +598,14 @@ public class PaymentTransaction78 {
 	 * definition} =
 	 * "Date at which the initiating party originally requested the clearing agent to process the payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmOriginalRequestedExecutionDate
+	 * PaymentTransaction84.mmOriginalRequestedExecutionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -544,6 +622,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestedExecutionDate";
 			definition = "Date at which the initiating party originally requested the clearing agent to process the payment.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmOriginalRequestedExecutionDate);
 			previousVersion_lazy = () -> PaymentTransaction66.mmOriginalRequestedExecutionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -584,6 +663,14 @@ public class PaymentTransaction78 {
 	 * definition} =
 	 * "Date at which the creditor originally requested the collection of the amount of money from the debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmOriginalRequestedCollectionDate
+	 * PaymentTransaction84.mmOriginalRequestedCollectionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -600,6 +687,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalRequestedCollectionDate";
 			definition = "Date at which the creditor originally requested the collection of the amount of money from the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmOriginalRequestedCollectionDate);
 			previousVersion_lazy = () -> PaymentTransaction66.mmOriginalRequestedCollectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -639,6 +727,14 @@ public class PaymentTransaction78 {
 	 * definition} =
 	 * "Key elements used to identify the original transaction that is being referred to."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentTransaction84#mmOriginalTransactionReference
+	 * PaymentTransaction84.mmOriginalTransactionReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -655,6 +751,7 @@ public class PaymentTransaction78 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalTransactionReference";
 			definition = "Key elements used to identify the original transaction that is being referred to.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmOriginalTransactionReference);
 			previousVersion_lazy = () -> PaymentTransaction66.mmOriginalTransactionReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -676,6 +773,7 @@ public class PaymentTransaction78 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentTransaction78";
 				definition = "Provides reference and status information on the original transactions, included in the original instruction, to which the cancellation request message applies.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentTransaction84.mmObject());
 				previousVersion_lazy = () -> PaymentTransaction66.mmObject();
 			}
 		});

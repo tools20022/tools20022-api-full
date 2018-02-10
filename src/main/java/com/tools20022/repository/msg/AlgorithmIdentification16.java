@@ -57,6 +57,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AlgorithmIdentification16"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Cryptographic algorithm and parameters of digests."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AlgorithmIdentification21
+ * AlgorithmIdentification21}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification5
@@ -96,6 +103,14 @@ public class AlgorithmIdentification16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the digest algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification21#mmAlgorithm
+	 * AlgorithmIdentification21.mmAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -111,6 +126,7 @@ public class AlgorithmIdentification16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the digest algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification21.mmAlgorithm);
 			previousVersion_lazy = () -> AlgorithmIdentification5.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -126,6 +142,7 @@ public class AlgorithmIdentification16 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification16";
 				definition = "Cryptographic algorithm and parameters of digests.";
+				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification21.mmObject());
 				previousVersion_lazy = () -> AlgorithmIdentification5.mmObject();
 			}
 		});

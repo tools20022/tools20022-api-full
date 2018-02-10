@@ -85,6 +85,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CashBalance4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Balance details for a cash account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance9 CashBalance9}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -122,6 +128,13 @@ public class CashBalance4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the nature of a balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance9#mmType
+	 * CashBalance9.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -133,6 +146,7 @@ public class CashBalance4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of a balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance9.mmType);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> BalanceType8Choice.mmObject();
@@ -172,6 +186,14 @@ public class CashBalance4 {
 	 * definition} =
 	 * "Specifies the type of counterparty for which the balance is calculated."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance9#mmCounterpartyType
+	 * CashBalance9.mmCounterpartyType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCounterpartyType = new MMMessageAttribute() {
@@ -183,6 +205,7 @@ public class CashBalance4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyType";
 			definition = "Specifies the type of counterparty for which the balance is calculated.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance9.mmCounterpartyType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> BalanceCounterparty1Code.mmObject();
@@ -220,6 +243,14 @@ public class CashBalance4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the counterparty for which the balance is calculated."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance9#mmCounterpartyIdentification
+	 * CashBalance9.mmCounterpartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCounterpartyIdentification = new MMMessageAssociationEnd() {
@@ -231,6 +262,7 @@ public class CashBalance4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartyIdentification";
 			definition = "Specifies the counterparty for which the balance is calculated.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance9.mmCounterpartyIdentification);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BranchAndFinancialInstitutionIdentification5.mmObject();
@@ -269,6 +301,13 @@ public class CashBalance4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which the balance is or will be available."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance9#mmValueDate
+	 * CashBalance9.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
@@ -280,6 +319,7 @@ public class CashBalance4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date and time at which the balance is or will be available.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance9.mmValueDate);
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
 		}
@@ -297,6 +337,7 @@ public class CashBalance4 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashBalance4";
 				definition = "Balance details for a cash account.";
+				nextVersions_lazy = () -> Arrays.asList(CashBalance9.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

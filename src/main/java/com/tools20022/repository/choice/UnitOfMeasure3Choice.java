@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "UnitOfMeasure3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies a unit of measure with a code or free text."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.UnitOfMeasure6Choice
+ * UnitOfMeasure6Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +114,14 @@ public class UnitOfMeasure3Choice {
 	 * definition} =
 	 * "Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnitOfMeasure6Choice#mmUnitOfMeasureCode
+	 * UnitOfMeasure6Choice.mmUnitOfMeasureCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUnitOfMeasureCode = new MMMessageAttribute() {
@@ -118,6 +133,7 @@ public class UnitOfMeasure3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasureCode";
 			definition = "Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).";
+			nextVersions_lazy = () -> Arrays.asList(UnitOfMeasure6Choice.mmUnitOfMeasureCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasure4Code.mmObject();
@@ -156,6 +172,14 @@ public class UnitOfMeasure3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the unit of measure not present in the code list."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UnitOfMeasure6Choice#mmOtherUnitOfMeasure
+	 * UnitOfMeasure6Choice.mmOtherUnitOfMeasure}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOtherUnitOfMeasure = new MMMessageAttribute() {
@@ -167,6 +191,7 @@ public class UnitOfMeasure3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherUnitOfMeasure";
 			definition = "Identifies the unit of measure not present in the code list.";
+			nextVersions_lazy = () -> Arrays.asList(UnitOfMeasure6Choice.mmOtherUnitOfMeasure);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -182,6 +207,7 @@ public class UnitOfMeasure3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnitOfMeasure3Choice";
 				definition = "Specifies a unit of measure with a code or free text.";
+				nextVersions_lazy = () -> Arrays.asList(UnitOfMeasure6Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

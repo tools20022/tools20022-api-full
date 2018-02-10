@@ -93,6 +93,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Reports on the actual set up up of the account, related services and mandates."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountReport20
+ * AccountReport20}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -131,6 +138,13 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Characteristics of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport20#mmAccount
+	 * AccountReport20.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
@@ -142,6 +156,7 @@ public class AccountReport14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Characteristics of the account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -181,6 +196,14 @@ public class AccountReport14 {
 	 * definition} =
 	 * "Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20#mmUnderlyingMasterAgreement
+	 * AccountReport20.mmUnderlyingMasterAgreement}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUnderlyingMasterAgreement = new MMMessageAssociationEnd() {
@@ -192,6 +215,7 @@ public class AccountReport14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnderlyingMasterAgreement";
 			definition = "Account contract established between the organisation or the group to which the organisation belongs, and the account servicer. This contract has to be applied for the new account to be opened and maintained.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmUnderlyingMasterAgreement);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -229,6 +253,14 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies target and actual dates."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20#mmContractDates
+	 * AccountReport20.mmContractDates}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmContractDates = new MMMessageAssociationEnd() {
@@ -240,6 +272,7 @@ public class AccountReport14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractDates";
 			definition = "Specifies target and actual dates.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmContractDates);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -277,6 +310,13 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information specifying the account mandate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountReport20#mmMandate
+	 * AccountReport20.mmMandate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMandate = new MMMessageAssociationEnd() {
@@ -288,6 +328,7 @@ public class AccountReport14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Mandate";
 			definition = "Information specifying the account mandate.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmMandate);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.OperationMandate1.mmObject();
@@ -326,6 +367,14 @@ public class AccountReport14 {
 	 * definition} =
 	 * "Unique and unambiguous identification of the account used as a reference for the opening of another account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20#mmReferenceAccount
+	 * AccountReport20.mmReferenceAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReferenceAccount = new MMMessageAssociationEnd() {
@@ -337,6 +386,7 @@ public class AccountReport14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceAccount";
 			definition = "Unique and unambiguous identification of the account used as a reference for the opening of another account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmReferenceAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -376,6 +426,14 @@ public class AccountReport14 {
 	 * definition} =
 	 * "Unique and unambiguous identification of the account where to transfer the balance."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20#mmBalanceTransferAccount
+	 * AccountReport20.mmBalanceTransferAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalanceTransferAccount = new MMMessageAssociationEnd() {
@@ -387,6 +445,7 @@ public class AccountReport14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTransferAccount";
 			definition = "Unique and unambiguous identification of the account where to transfer the balance.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmBalanceTransferAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -424,7 +483,15 @@ public class AccountReport14 {
 	 * name} = "TransferAccountServicerIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of  the transfer account servicer."</li>
+	 * definition} = "Identification of the transfer account servicer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20#mmTransferAccountServicerIdentification
+	 * AccountReport20.mmTransferAccountServicerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransferAccountServicerIdentification = new MMMessageAssociationEnd() {
@@ -435,7 +502,8 @@ public class AccountReport14 {
 			xmlTag = "TrfAcctSvcrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferAccountServicerIdentification";
-			definition = "Identification of  the transfer account servicer.";
+			definition = "Identification of the transfer account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmTransferAccountServicerIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -474,6 +542,14 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20#mmAccountOwner
+	 * AccountReport20.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -485,6 +561,7 @@ public class AccountReport14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -517,6 +594,14 @@ public class AccountReport14 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary characteristics of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountReport20#mmProprietary
+	 * AccountReport20.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -527,6 +612,7 @@ public class AccountReport14 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary characteristics of the account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmProprietary);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
@@ -546,6 +632,7 @@ public class AccountReport14 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountReport14";
 				definition = "Reports on the actual set up up of the account, related services and mandates.";
+				nextVersions_lazy = () -> Arrays.asList(AccountReport20.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -126,7 +126,7 @@ public class RegisteredContract1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identification of the  contract registration amendment. "
+	 * "Unique and unambiguous identification of the contract registration amendment."
 	 * </li>
 	 * </ul>
 	 */
@@ -138,7 +138,7 @@ public class RegisteredContract1 {
 			xmlTag = "CtrctRegnAmdmntId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContractRegistrationAmendmentIdentification";
-			definition = "Unique and unambiguous identification of the  contract registration amendment. ";
+			definition = "Unique and unambiguous identification of the contract registration amendment.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

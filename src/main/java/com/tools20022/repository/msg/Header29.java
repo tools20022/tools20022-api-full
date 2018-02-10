@@ -76,6 +76,18 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV03#mmHeader
  * MaintenanceDelegationRequestV03.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV04#mmHeader
+ * MaintenanceDelegationRequestV04.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV02#mmHeader
+ * CertificateManagementRequestV02.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV02#mmHeader
+ * CertificateManagementResponseV02.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV03#mmHeader
+ * MaintenanceDelegationResponseV03.mmHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -350,7 +362,7 @@ public class Header29 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Header29.mmProtocolVersion, com.tools20022.repository.msg.Header29.mmExchangeIdentification, com.tools20022.repository.msg.Header29.mmCreationDateTime,
 						com.tools20022.repository.msg.Header29.mmInitiatingParty, com.tools20022.repository.msg.Header29.mmRecipientParty);
 				messageBuildingBlock_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV02.mmHeader, MaintenanceDelegationRequestV02.mmHeader, CertificateManagementResponseV01.mmHeader, CertificateManagementRequestV01.mmHeader,
-						MaintenanceDelegationRequestV03.mmHeader);
+						MaintenanceDelegationRequestV03.mmHeader, MaintenanceDelegationRequestV04.mmHeader, CertificateManagementRequestV02.mmHeader, CertificateManagementResponseV02.mmHeader, MaintenanceDelegationResponseV03.mmHeader);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header29";

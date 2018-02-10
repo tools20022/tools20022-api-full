@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ArrestedFunds1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Information about funds that have been arrested. "</li>
+ * definition} = "Information about funds that have been arrested."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -252,7 +252,7 @@ public class ArrestedFunds1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ArrestedFunds1";
-				definition = "Information about funds that have been arrested. ";
+				definition = "Information about funds that have been arrested.";
 			}
 		});
 		return mmObject_lazy.get();

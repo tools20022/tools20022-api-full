@@ -644,7 +644,7 @@ public class InstrumentLeg2 {
 	 * name} = "LegStipulations"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Provides details about the leg stipulations"</li>
+	 * definition} = "Provides details about the leg stipulations."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLegStipulations = new MMMessageAssociationEnd() {
@@ -655,7 +655,7 @@ public class InstrumentLeg2 {
 			xmlTag = "LegStiptns";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegStipulations";
-			definition = "Provides details about the leg stipulations";
+			definition = "Provides details about the leg stipulations.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

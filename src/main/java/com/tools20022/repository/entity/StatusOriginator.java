@@ -64,6 +64,12 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.MandateSuspensionReason1#mmOriginator
  * MandateSuspensionReason1.mmOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReturnReason4#mmOriginator
+ * PaymentReturnReason4.mmOriginator}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.PaymentReturnReason3#mmOriginator
+ * PaymentReturnReason3.mmOriginator}</li>
  * </ul>
  * </li>
  * <li>
@@ -95,7 +101,7 @@ public class StatusOriginator extends InvestigationPartyRole {
 				name = "StatusOriginator";
 				definition = "Provides the identification of the originator issuing the transaction reason.";
 				derivationElement_lazy = () -> Arrays.asList(PaymentReturnReason2.mmOriginator, PaymentReturnReason1.mmOriginator, TradeData1.mmStatusOriginator, TradeData4.mmStatusOriginator, TradeData3.mmStatusOriginator,
-						TradeData2.mmStatusOriginator, TradeData6.mmStatusOriginator, ValidationStatusReason1.mmOriginator, MandateSuspensionReason1.mmOriginator);
+						TradeData2.mmStatusOriginator, TradeData6.mmStatusOriginator, ValidationStatusReason1.mmOriginator, MandateSuspensionReason1.mmOriginator, PaymentReturnReason4.mmOriginator, PaymentReturnReason3.mmOriginator);
 				superType_lazy = () -> InvestigationPartyRole.mmObject();
 			}
 

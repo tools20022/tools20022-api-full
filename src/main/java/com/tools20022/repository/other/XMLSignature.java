@@ -31,7 +31,7 @@ import java.util.function.Supplier;
  * The W3C XML Schema that specifies following standard signature:<br>
  * XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10
  * June 2008<br>
- * http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/
+ * http://www.w3.org/TR/2008/REC-xmldsig-core-20080610/.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -55,7 +55,7 @@ import java.util.function.Supplier;
  * "XMLSignature"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The W3C XML Schema that specifies following standard signature:\r\n XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10 June 2008\r\nhttp://www.w3.org/TR/2008/REC-xmldsig-core-20080610/"
+ * "The W3C XML Schema that specifies following standard signature:\r\n XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10 June 2008\r\nhttp://www.w3.org/TR/2008/REC-xmldsig-core-20080610/."
  * </li>
  * </ul>
  */
@@ -76,7 +76,7 @@ public class XMLSignature {
 					}
 				})).get();
 				name = "XMLSignature";
-				definition = "The W3C XML Schema that specifies following standard signature:\r\n XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10 June 2008\r\nhttp://www.w3.org/TR/2008/REC-xmldsig-core-20080610/";
+				definition = "The W3C XML Schema that specifies following standard signature:\r\n XML Signature Syntax and Processing (Second Edition) W3C Recommendation 10 June 2008\r\nhttp://www.w3.org/TR/2008/REC-xmldsig-core-20080610/.";
 				namespaceList = "http://www.w3.org/2000/09/xmldsig#";
 				namespace = MMNamespace.list;
 				processContents = MMProcessContent.LAX;

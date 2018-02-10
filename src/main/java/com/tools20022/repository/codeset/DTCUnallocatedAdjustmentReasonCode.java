@@ -471,14 +471,14 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 	 * name} = "HolidayInCountryOfOrigin"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Holiday  in country of origin."</li>
+	 * definition} = "Holiday in country of origin."</li>
 	 * </ul>
 	 */
 	public static final DTCUnallocatedAdjustmentReasonCode HolidayInCountryOfOrigin = new DTCUnallocatedAdjustmentReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HolidayInCountryOfOrigin";
-			definition = "Holiday  in country of origin.";
+			definition = "Holiday in country of origin.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmObject();
 			codeName = "HICO";
 		}
@@ -501,14 +501,14 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 	 * name} = "InsufficientFundsReceivedFromAgent"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Insufficient funds  were received from the agent."</li>
+	 * definition} = "Insufficient funds were received from the agent."</li>
 	 * </ul>
 	 */
 	public static final DTCUnallocatedAdjustmentReasonCode InsufficientFundsReceivedFromAgent = new DTCUnallocatedAdjustmentReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InsufficientFundsReceivedFromAgent";
-			definition = "Insufficient funds  were received from the agent.";
+			definition = "Insufficient funds were received from the agent.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmObject();
 			codeName = "MASF";
 		}
@@ -771,14 +771,14 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 	 * name} = "PendingConversionOfFunds"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Pending conversion of funds. "</li>
+	 * definition} = "Pending conversion of funds."</li>
 	 * </ul>
 	 */
 	public static final DTCUnallocatedAdjustmentReasonCode PendingConversionOfFunds = new DTCUnallocatedAdjustmentReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingConversionOfFunds";
-			definition = "Pending conversion of funds. ";
+			definition = "Pending conversion of funds.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmObject();
 			codeName = "RRFX";
 		}
@@ -994,7 +994,7 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 		}
 	};
 	/**
-	 * Call Rescinded
+	 * Call Rescinded.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1011,20 +1011,20 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 	 * name} = "CallRescinded"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Call Rescinded"</li>
+	 * definition} = "Call Rescinded."</li>
 	 * </ul>
 	 */
 	public static final DTCUnallocatedAdjustmentReasonCode CallRescinded = new DTCUnallocatedAdjustmentReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CallRescinded";
-			definition = "Call Rescinded";
+			definition = "Call Rescinded.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmObject();
 			codeName = "RESC";
 		}
 	};
 	/**
-	 * CD Accelerated Maturity
+	 * CD Accelerated Maturity.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1041,14 +1041,14 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 	 * name} = "CDAcceleratedMaturity"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "CD Accelerated Maturity"</li>
+	 * definition} = "CD Accelerated Maturity."</li>
 	 * </ul>
 	 */
 	public static final DTCUnallocatedAdjustmentReasonCode CDAcceleratedMaturity = new DTCUnallocatedAdjustmentReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CDAcceleratedMaturity";
-			definition = "CD Accelerated Maturity";
+			definition = "CD Accelerated Maturity.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmObject();
 			codeName = "ERLY";
 		}
@@ -1084,7 +1084,7 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 		}
 	};
 	/**
-	 * Five Day Grace Period
+	 * Five Day Grace Period.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1101,14 +1101,14 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 	 * name} = "FiveDayGracePeriod"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Five Day Grace Period"</li>
+	 * definition} = "Five Day Grace Period."</li>
 	 * </ul>
 	 */
 	public static final DTCUnallocatedAdjustmentReasonCode FiveDayGracePeriod = new DTCUnallocatedAdjustmentReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FiveDayGracePeriod";
-			definition = "Five Day Grace Period";
+			definition = "Five Day Grace Period.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmObject();
 			codeName = "FVDG";
 		}
@@ -1144,7 +1144,7 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 		}
 	};
 	/**
-	 * Pledged Position
+	 * Pledged Position.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1161,14 +1161,14 @@ public class DTCUnallocatedAdjustmentReasonCode extends MMCode {
 	 * name} = "PledgedPosition"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Pledged Position"</li>
+	 * definition} = "Pledged Position."</li>
 	 * </ul>
 	 */
 	public static final DTCUnallocatedAdjustmentReasonCode PledgedPosition = new DTCUnallocatedAdjustmentReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgedPosition";
-			definition = "Pledged Position";
+			definition = "Pledged Position.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCUnallocatedAdjustmentReasonCode.mmObject();
 			codeName = "PLEG";
 		}

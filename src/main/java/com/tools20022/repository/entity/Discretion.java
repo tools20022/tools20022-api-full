@@ -477,7 +477,7 @@ public class Discretion {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If the calculated discretion price is not a valid tick price, specifies how to round the price (e.g. to be more or less aggressive)"
+	 * "If the calculated discretion price is not a valid tick price, specifies how to round the price (e.g. to be more or less aggressive)."
 	 * </li>
 	 * </ul>
 	 */
@@ -488,7 +488,7 @@ public class Discretion {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RoundDirection";
-			definition = "If the calculated discretion price is not a valid tick price, specifies how to round the price (e.g. to be more or less aggressive)";
+			definition = "If the calculated discretion price is not a valid tick price, specifies how to round the price (e.g. to be more or less aggressive).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -537,7 +537,7 @@ public class Discretion {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The scope of \"related to\" price of the discretion (e.g. local, global etc)"
+	 * "The scope of \"related to\" price of the discretion (e.g. local, global etc)."
 	 * </li>
 	 * </ul>
 	 */
@@ -548,7 +548,7 @@ public class Discretion {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Scope";
-			definition = "The scope of \"related to\" price of the discretion (e.g. local, global etc)";
+			definition = "The scope of \"related to\" price of the discretion (e.g. local, global etc).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PriceProtectionScopeCode.mmObject();
@@ -593,7 +593,7 @@ public class Discretion {
 	 * name} = "OffsetType"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Describes the type of Discretion Offset ."</li>
+	 * definition} = "Describes the type of Discretion Offset."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmOffsetType = new MMBusinessAttribute() {
@@ -603,7 +603,7 @@ public class Discretion {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Discretion.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OffsetType";
-			definition = "Describes the type of Discretion Offset .";
+			definition = "Describes the type of Discretion Offset.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OffsetTypeCode.mmObject();

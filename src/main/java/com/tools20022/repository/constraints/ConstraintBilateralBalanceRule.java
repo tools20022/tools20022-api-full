@@ -20,10 +20,8 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.msg.CashAccount23;
-import com.tools20022.repository.msg.CashAccountDetails1;
-import com.tools20022.repository.msg.CashAccountDetails3;
-import com.tools20022.repository.msg.CashAccountDetails4;
+import com.tools20022.repository.msg.*;
+import java.util.Arrays;
 
 /**
  * If MultilateralBalance is not present, then at least one occurrence of
@@ -145,6 +143,14 @@ public class ConstraintBilateralBalanceRule {
 	 * definition} =
 	 * "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBilateralBalanceRule#forCashAccount35
+	 * ConstraintBilateralBalanceRule.forCashAccount35}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<CashAccount23> forCashAccount23 = new MMConstraint<CashAccount23>() {
@@ -153,7 +159,48 @@ public class ConstraintBilateralBalanceRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BilateralBalanceRule";
 			definition = "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintBilateralBalanceRule.forCashAccount35);
 			owner_lazy = () -> CashAccount23.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentBilateralLimit[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentBilateralLimit[1]/BilateralBalance[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/MultilateralBalance[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CashAccount35 CashAccount35}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CurrentBilateralLimit[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CurrentBilateralLimit[1]/BilateralBalance[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Absence\"&gt;&lt;leftOperand&gt;/MultilateralBalance[1]&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "BilateralBalanceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintBilateralBalanceRule#forCashAccount23
+	 * ConstraintBilateralBalanceRule.forCashAccount23}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CashAccount35> forCashAccount35 = new MMConstraint<CashAccount35>() {
+		{
+			validator = ConstraintBilateralBalanceRule::checkCashAccount35;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "BilateralBalanceRule";
+			definition = "If MultilateralBalance is not present, then at least one occurrence of CurrentBilateralLimit/BilateralBalance must be present.\nIf MultilateralBalance is present, then any occurrence of CurrentBilateralLimit/BilateralBalance is optional.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintBilateralBalanceRule.forCashAccount23;
+			owner_lazy = () -> CashAccount35.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentBilateralLimit[1]</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/CurrentBilateralLimit[1]/BilateralBalance[1]</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/MultilateralBalance[1]</leftOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
@@ -195,6 +242,16 @@ public class ConstraintBilateralBalanceRule {
 	 * CurrentBilateralLimit/BilateralBalance is optional.
 	 */
 	public static void checkCashAccount23(CashAccount23 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If MultilateralBalance is not present, then at least one occurrence of
+	 * CurrentBilateralLimit/BilateralBalance must be present. If
+	 * MultilateralBalance is present, then any occurrence of
+	 * CurrentBilateralLimit/BilateralBalance is optional.
+	 */
+	public static void checkCashAccount35(CashAccount35 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

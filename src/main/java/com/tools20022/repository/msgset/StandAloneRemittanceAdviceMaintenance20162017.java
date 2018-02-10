@@ -54,7 +54,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Stand-Alone Remittance Advice - Maintenance 2016 - 2017"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This document describes the ISO 20022 Stand-alone Remittance Advice message set. "
+ * "This document describes the ISO 20022 Stand-alone Remittance Advice message set."
  * </li>
  * </ul>
  */
@@ -68,7 +68,7 @@ public class StandAloneRemittanceAdviceMaintenance20162017 {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Stand-Alone Remittance Advice - Maintenance 2016 - 2017";
-				definition = "This document describes the ISO 20022 Stand-alone Remittance Advice message set. ";
+				definition = "This document describes the ISO 20022 Stand-alone Remittance Advice message set.";
 				messageDefinition_lazy = () -> Arrays.asList(RemittanceLocationAdviceV01.mmObject(), RemittanceAdviceV03.mmObject());
 			}
 		});

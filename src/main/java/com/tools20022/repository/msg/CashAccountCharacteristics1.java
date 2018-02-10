@@ -674,7 +674,7 @@ public class CashAccountCharacteristics1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Currency used to specify the account's settlement currency"</li>
+	 * "Currency used to specify the account's settlement currency."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -693,7 +693,7 @@ public class CashAccountCharacteristics1 {
 			xmlTag = "SttlmCcyCd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementCurrencyCode";
-			definition = "Currency used to specify the account's settlement currency";
+			definition = "Currency used to specify the account's settlement currency.";
 			nextVersions_lazy = () -> Arrays.asList(CashAccountCharacteristics2.mmSettlementCurrencyCode);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -789,7 +789,7 @@ public class CashAccountCharacteristics1 {
 	 * name} = "Tax"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Describes account taxing parameters"</li>
+	 * definition} = "Describes account taxing parameters."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -808,7 +808,7 @@ public class CashAccountCharacteristics1 {
 			xmlTag = "Tax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Tax";
-			definition = "Describes account taxing parameters";
+			definition = "Describes account taxing parameters.";
 			nextVersions_lazy = () -> Arrays.asList(CashAccountCharacteristics2.mmTax);
 			maxOccurs = 1;
 			minOccurs = 0;

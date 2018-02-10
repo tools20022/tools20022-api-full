@@ -82,6 +82,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Container for proprietary information. Business content of this element is not specified."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData7
+ * ProprietaryData7}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -115,7 +122,14 @@ public class ProprietaryData4 {
 	 * name} = "Type"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the type of proprietary document"</li>
+	 * definition} = "Specifies the type of proprietary document."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData7#mmType
+	 * ProprietaryData7.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -125,7 +139,8 @@ public class ProprietaryData4 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Specifies the type of proprietary document";
+			definition = "Specifies the type of proprietary document.";
+			nextVersions_lazy = () -> Arrays.asList(ProprietaryData7.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -157,6 +172,13 @@ public class ProprietaryData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary data content."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.ProprietaryData7#mmData
+	 * ProprietaryData7.mmData}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmData = new MMMessageAssociationEnd() {
@@ -167,6 +189,7 @@ public class ProprietaryData4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Data";
 			definition = "Proprietary data content.";
+			nextVersions_lazy = () -> Arrays.asList(ProprietaryData7.mmData);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +206,7 @@ public class ProprietaryData4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ProprietaryData4";
 				definition = "Container for proprietary information. Business content of this element is not specified.";
+				nextVersions_lazy = () -> Arrays.asList(ProprietaryData7.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

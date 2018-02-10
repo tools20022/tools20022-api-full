@@ -92,6 +92,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionDate48"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies corporate action dates."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDate64
+ * CorporateActionDate64}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionDate29
@@ -140,6 +147,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmEarlyResponseDeadline
+	 * CorporateActionDate64.mmEarlyResponseDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -157,6 +172,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarlyResponseDeadline";
 			definition = "Date/time that the account servicer has set as the deadline to respond, with instructions, to an outstanding event, giving the holder eligibility to incentives. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmEarlyResponseDeadline);
 			previousVersion_lazy = () -> CorporateActionDate29.mmEarlyResponseDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -200,6 +216,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Last day a holder can deliver the securities that it had elected on and/or previously protected."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmCoverExpirationDate
+	 * CorporateActionDate64.mmCoverExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -217,6 +241,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CoverExpirationDate";
 			definition = "Last day a holder can deliver the securities that it had elected on and/or previously protected.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmCoverExpirationDate);
 			previousVersion_lazy = () -> CorporateActionDate29.mmCoverExpirationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -260,6 +285,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Last date/time a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmProtectDate
+	 * CorporateActionDate64.mmProtectDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -277,6 +310,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectDate";
 			definition = "Last date/time a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmProtectDate);
 			previousVersion_lazy = () -> CorporateActionDate29.mmProtectDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -320,6 +354,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Issuer or issuer's agent deadline to respond, with an instruction, to an outstanding offer or privilege."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmMarketDeadline
+	 * CorporateActionDate64.mmMarketDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -337,6 +379,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketDeadline";
 			definition = "Issuer or issuer's agent deadline to respond, with an instruction, to an outstanding offer or privilege.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmMarketDeadline);
 			previousVersion_lazy = () -> CorporateActionDate29.mmMarketDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -380,6 +423,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmResponseDeadline
+	 * CorporateActionDate64.mmResponseDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -397,6 +448,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResponseDeadline";
 			definition = "Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. This time is dependent on the reference time zone of the account servicer as specified in a Service Level Agreement (SLA).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmResponseDeadline);
 			previousVersion_lazy = () -> CorporateActionDate29.mmResponseDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -440,6 +492,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Date/time at which an order expires or on which a privilege or offer terminates."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmExpiryDate
+	 * CorporateActionDate64.mmExpiryDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -457,6 +517,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
 			definition = "Date/time at which an order expires or on which a privilege or offer terminates.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmExpiryDate);
 			previousVersion_lazy = () -> CorporateActionDate29.mmExpiryDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -500,6 +561,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Date/time by which cash must be in place in order to take part in the event."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmSubscriptionCostDebitDate
+	 * CorporateActionDate64.mmSubscriptionCostDebitDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -517,6 +586,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionCostDebitDate";
 			definition = "Date/time by which cash must be in place in order to take part in the event.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmSubscriptionCostDebitDate);
 			previousVersion_lazy = () -> CorporateActionDate29.mmSubscriptionCostDebitDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -560,6 +630,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Last day that a participant of the depository can deliver securities that it had elected on and/or previously protected."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmDepositoryCoverExpirationDate
+	 * CorporateActionDate64.mmDepositoryCoverExpirationDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -577,6 +655,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryCoverExpirationDate";
 			definition = "Last day that a participant of the depository can deliver securities that it had elected on and/or previously protected.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmDepositoryCoverExpirationDate);
 			previousVersion_lazy = () -> CorporateActionDate29.mmDepositoryCoverExpirationDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -617,6 +696,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Date/time set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmStockLendingDeadline
+	 * CorporateActionDate64.mmStockLendingDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -633,6 +720,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StockLendingDeadline";
 			definition = "Date/time set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmStockLendingDeadline);
 			previousVersion_lazy = () -> CorporateActionDate29.mmStockLendingDeadline;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -673,6 +761,14 @@ public class CorporateActionDate48 {
 	 * definition} =
 	 * "Specifies the party borrowing stocks and the associated stock lending deadline assigned to the borrower."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate64#mmBorrowerStockLendingDeadline
+	 * CorporateActionDate64.mmBorrowerStockLendingDeadline}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBorrowerStockLendingDeadline = new MMMessageAssociationEnd() {
@@ -684,6 +780,7 @@ public class CorporateActionDate48 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowerStockLendingDeadline";
 			definition = "Specifies the party borrowing stocks and the associated stock lending deadline assigned to the borrower.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmBorrowerStockLendingDeadline);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BorrowerLendingDeadline1.mmObject();
@@ -703,6 +800,7 @@ public class CorporateActionDate48 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate48";
 				definition = "Specifies corporate action dates.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionDate64.mmObject());
 				previousVersion_lazy = () -> CorporateActionDate29.mmObject();
 			}
 		});

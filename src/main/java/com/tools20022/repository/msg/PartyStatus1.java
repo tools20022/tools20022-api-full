@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.reda.PartyStatusAdviceV01;
 import com.tools20022.repository.codeset.Status6Code;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.*;
@@ -49,6 +50,15 @@ import javax.xml.bind.annotation.XmlType;
  * </ul>
  * </li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.reda.PartyStatusAdviceV01#mmPartyStatus
+ * PartyStatusAdviceV01.mmPartyStatus}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -71,7 +81,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PartyStatus1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Business status of the party for processing in the system. "</li>
+ * definition} = "Business status of the party for processing in the system."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -210,11 +220,12 @@ public class PartyStatus1 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyStatus1.mmStatus, com.tools20022.repository.msg.PartyStatus1.mmStatusReason,
 						com.tools20022.repository.msg.PartyStatus1.mmSystemPartyIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PartyStatusAdviceV01.mmPartyStatus);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forPartyStatus1, com.tools20022.repository.constraints.ConstraintPartyPresenceRule.forPartyStatus1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyStatus1";
-				definition = "Business status of the party for processing in the system. ";
+				definition = "Business status of the party for processing in the system.";
 			}
 		});
 		return mmObject_lazy.get();

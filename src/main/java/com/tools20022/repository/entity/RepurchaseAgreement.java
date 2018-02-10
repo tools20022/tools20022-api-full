@@ -110,7 +110,7 @@ import java.util.Objects;
  * "RepurchaseAgreement"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement. "
+ * "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement."
  * </li>
  * </ul>
  */
@@ -172,7 +172,7 @@ public class RepurchaseAgreement extends SecuritiesFinancing {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RepurchaseAgreement";
-				definition = "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement. ";
+				definition = "Sale of securities together with an agreement for the seller to buy back the securities at a later date.\r\nA repo is equivalent to a spot sale combined with a forward contract.\r\nFor the seller of the security it is a repo; for the buyer of the security it is a reverse repurchase agreement.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.PaymentObligation.mmRepurchaseAgreement);
 				derivationElement_lazy = () -> Arrays.asList(SecuredMarketTransaction1.mmFloatingRateRepurchaseAgreement, SecuredMarketTransaction2.mmFloatingRateRepurchaseAgreement,
 						SecuredMarketTransaction3.mmFloatingRateRepurchaseAgreement, SecuredMarketTransaction4.mmFloatingRateRepurchaseAgreement);

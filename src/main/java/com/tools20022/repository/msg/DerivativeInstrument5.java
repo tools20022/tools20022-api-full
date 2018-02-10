@@ -136,7 +136,7 @@ public class DerivativeInstrument5 {
 	 * name} = "ExpiryDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Expiry date of the financial instrument. "</li>
+	 * definition} = "Expiry date of the financial instrument."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmExpiryDate = new MMMessageAttribute() {
@@ -147,7 +147,7 @@ public class DerivativeInstrument5 {
 			xmlTag = "XpryDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExpiryDate";
-			definition = "Expiry date of the financial instrument. ";
+			definition = "Expiry date of the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();

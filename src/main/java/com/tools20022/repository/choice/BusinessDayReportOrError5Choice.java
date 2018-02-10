@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between business day information details or an operational error when the requested data cannot be retrieved."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError7Choice
+ * BusinessDayReportOrError7Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError1Choice
@@ -104,6 +112,14 @@ public class BusinessDayReportOrError5Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reports either business day information or a business error."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError7Choice#mmBusinessReport
+	 * BusinessDayReportOrError7Choice.mmBusinessReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +135,7 @@ public class BusinessDayReportOrError5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessReport";
 			definition = "Reports either business day information or a business error.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError7Choice.mmBusinessReport);
 			previousVersion_lazy = () -> BusinessDayReportOrError1Choice.mmBusinessReport;
 			minOccurs = 1;
 			isComposite = true;
@@ -153,6 +170,14 @@ public class BusinessDayReportOrError5Choice {
 	 * definition} =
 	 * "Indicates that an operational error has been issued during the processing of the related request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BusinessDayReportOrError7Choice#mmOperationalError
+	 * BusinessDayReportOrError7Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +193,7 @@ public class BusinessDayReportOrError5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Indicates that an operational error has been issued during the processing of the related request.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError7Choice.mmOperationalError);
 			previousVersion_lazy = () -> BusinessDayReportOrError1Choice.mmOperationalError;
 			minOccurs = 1;
 			isComposite = true;
@@ -183,6 +209,7 @@ public class BusinessDayReportOrError5Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessDayReportOrError5Choice";
 				definition = "Choice between business day information details or an operational error when the requested data cannot be retrieved.";
+				nextVersions_lazy = () -> Arrays.asList(BusinessDayReportOrError7Choice.mmObject());
 				previousVersion_lazy = () -> BusinessDayReportOrError1Choice.mmObject();
 			}
 		});

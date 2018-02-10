@@ -50,6 +50,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * ConditionallyAcceptedStatusReason1Code.Other}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.ConditionallyAcceptedStatusReasonCode
+ * ConditionallyAcceptedStatusReasonCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -107,6 +110,7 @@ public class ConditionallyAcceptedStatusReason1Code extends MMCode {
 			definition = "Specifies that the order is accepted for further processing but that the execution of the order is pending until there is enough cash in the account to pay the subscription.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmObject();
 			codeName = "AWMO";
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingMoney.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -141,6 +145,7 @@ public class ConditionallyAcceptedStatusReason1Code extends MMCode {
 			definition = "Specifies that the order is accepted for further processing but that the execution of the order is pending until there are enough funds in the account to complete the redemption.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmObject();
 			codeName = "AWSH";
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingFunds.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -175,6 +180,7 @@ public class ConditionallyAcceptedStatusReason1Code extends MMCode {
 			definition = "Specifies that the order is pending until documents are completed and received, eg, legal documents from the successor, legal proceeds because of bankruptcy, missing signature.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmObject();
 			codeName = "DOCC";
+			codeName = ConditionallyAcceptedStatusReasonCode.AwaitingDocuments.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -205,6 +211,7 @@ public class ConditionallyAcceptedStatusReason1Code extends MMCode {
 			definition = "Another reason for the status conditionally accepted.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.mmObject();
 			codeName = "OTHR";
+			codeName = ConditionallyAcceptedStatusReasonCode.Other.getCodeName().orElse(name);
 		}
 	};
 	final static private LinkedHashMap<String, ConditionallyAcceptedStatusReason1Code> codesByName = new LinkedHashMap<>();
@@ -220,6 +227,7 @@ public class ConditionallyAcceptedStatusReason1Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConditionallyAcceptedStatusReason1Code";
 				definition = "Specifies the reason for a conditionally accepted status.";
+				trace_lazy = () -> ConditionallyAcceptedStatusReasonCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.AwaitingMoney, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.AwaitingFunds,
 						com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.AwaitingDocuments, com.tools20022.repository.codeset.ConditionallyAcceptedStatusReason1Code.Other);
 			}

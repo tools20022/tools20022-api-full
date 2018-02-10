@@ -418,6 +418,9 @@ public class ConstraintChequeFromGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeFromGuideline#forPaymentInstruction22
 	 * ConstraintChequeFromGuideline.forPaymentInstruction22}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeFromGuideline#forPaymentInstruction24
+	 * ConstraintChequeFromGuideline.forPaymentInstruction24}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -433,7 +436,7 @@ public class ConstraintChequeFromGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChequeFromGuideline";
 			definition = "CreditTransferTransactionInformation/ChequeInstruction/ChequeFrom may only be present if different from CreditTransferTransactionInformation/UltimateDebtor or Debtor.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeFromGuideline.forPaymentInstruction22);
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintChequeFromGuideline.forPaymentInstruction22, com.tools20022.repository.constraints.ConstraintChequeFromGuideline.forPaymentInstruction24);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeFromGuideline.forPaymentInstruction16;
 			owner_lazy = () -> PaymentInstruction20.mmObject();
 		}
@@ -508,6 +511,42 @@ public class ConstraintChequeFromGuideline {
 			definition = "CreditTransferTransactionInformation/ChequeInstruction/ChequeFrom may only be present if different from CreditTransferTransactionInformation/UltimateDebtor or Debtor.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeFromGuideline.forPaymentInstruction20;
 			owner_lazy = () -> PaymentInstruction22.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.PaymentInstruction24
+	 * PaymentInstruction24}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "ChequeFromGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "CreditTransferTransactionInformation/ChequeInstruction/ChequeFrom may only be present if different from CreditTransferTransactionInformation/UltimateDebtor or Debtor."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintChequeFromGuideline#forPaymentInstruction20
+	 * ConstraintChequeFromGuideline.forPaymentInstruction20}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PaymentInstruction24> forPaymentInstruction24 = new MMConstraint<PaymentInstruction24>() {
+		{
+			validator = ConstraintChequeFromGuideline::checkPaymentInstruction24;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "ChequeFromGuideline";
+			definition = "CreditTransferTransactionInformation/ChequeInstruction/ChequeFrom may only be present if different from CreditTransferTransactionInformation/UltimateDebtor or Debtor.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintChequeFromGuideline.forPaymentInstruction20;
+			owner_lazy = () -> PaymentInstruction24.mmObject();
 		}
 	};
 
@@ -625,6 +664,15 @@ public class ConstraintChequeFromGuideline {
 	 * CreditTransferTransactionInformation/UltimateDebtor or Debtor.
 	 */
 	public static void checkPaymentInstruction22(PaymentInstruction22 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * CreditTransferTransactionInformation/ChequeInstruction/ChequeFrom may
+	 * only be present if different from
+	 * CreditTransferTransactionInformation/UltimateDebtor or Debtor.
+	 */
+	public static void checkPaymentInstruction24(PaymentInstruction24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

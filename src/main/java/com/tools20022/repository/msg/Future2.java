@@ -169,7 +169,7 @@ public class Future2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Predetermined price at which the holder of a Future will have  to buy or sell the underlying instrument."
+	 * "Predetermined price at which the holder of a Future will have to buy or sell the underlying instrument."
 	 * </li>
 	 * </ul>
 	 */
@@ -181,7 +181,7 @@ public class Future2 {
 			xmlTag = "ExrcPric";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExercisePrice";
-			definition = "Predetermined price at which the holder of a Future will have  to buy or sell the underlying instrument.";
+			definition = "Predetermined price at which the holder of a Future will have to buy or sell the underlying instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Price1.mmObject();
@@ -319,7 +319,7 @@ public class Future2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Used to indicate the measurement unit of the underlying commodity on which the contract is based (for example, 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)"
+	 * "Used to indicate the measurement unit of the underlying commodity on which the contract is based (for example, 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -332,7 +332,7 @@ public class Future2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "996"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitOfMeasure";
-			definition = "Used to indicate the measurement unit of the underlying commodity on which the contract is based (for example, 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)";
+			definition = "Used to indicate the measurement unit of the underlying commodity on which the contract is based (for example, 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> UnitOfMeasure2Choice.mmObject();

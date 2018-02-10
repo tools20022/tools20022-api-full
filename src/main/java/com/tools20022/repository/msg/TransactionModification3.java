@@ -63,7 +63,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TransactionModification3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Contains the requested modifications. "</li>
+ * definition} = "Contains the requested modifications."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionModification4
+ * TransactionModification4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransactionModification2
@@ -109,6 +116,14 @@ public class TransactionModification3 {
 	 * definition} =
 	 * "Reference to the instruction related to the payment for which a modification is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionModification4#mmPaymentIdentification
+	 * TransactionModification4.mmPaymentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +140,7 @@ public class TransactionModification3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Reference to the instruction related to the payment for which a modification is requested.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionModification4.mmPaymentIdentification);
 			previousVersion_lazy = () -> TransactionModification2.mmPaymentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -163,6 +179,14 @@ public class TransactionModification3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "New payment values."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionModification4#mmNewPaymentValueSet
+	 * TransactionModification4.mmNewPaymentValueSet}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,6 +203,7 @@ public class TransactionModification3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewPaymentValueSet";
 			definition = "New payment values.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionModification4.mmNewPaymentValueSet);
 			previousVersion_lazy = () -> TransactionModification2.mmNewPaymentValueSet;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -195,7 +220,8 @@ public class TransactionModification3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionModification3";
-				definition = "Contains the requested modifications. ";
+				definition = "Contains the requested modifications.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionModification4.mmObject());
 				previousVersion_lazy = () -> TransactionModification2.mmObject();
 			}
 		});

@@ -102,6 +102,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrument61
+ * FinancialInstrument61}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.FinancialInstrument37
@@ -148,6 +155,14 @@ public class FinancialInstrument47 {
 	 * definition} =
 	 * "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmIdentification
+	 * FinancialInstrument61.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -164,6 +179,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmIdentification);
 			previousVersion_lazy = () -> FinancialInstrument37.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -202,6 +218,14 @@ public class FinancialInstrument47 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Name of the financial instrument in free format text."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmName
+	 * FinancialInstrument61.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -218,6 +242,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the financial instrument in free format text.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmName);
 			previousVersion_lazy = () -> FinancialInstrument37.mmName;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -258,6 +283,14 @@ public class FinancialInstrument47 {
 	 * definition} =
 	 * "Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmShortName
+	 * FinancialInstrument61.mmShortName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmShortName = new MMMessageAttribute() {
@@ -269,6 +302,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortName";
 			definition = "Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmShortName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -309,6 +343,14 @@ public class FinancialInstrument47 {
 	 * definition} =
 	 * "Specifies the quantity of assets to be transferred in units or in a percentage rate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmQuantity
+	 * FinancialInstrument61.mmQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -325,6 +367,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Quantity";
 			definition = "Specifies the quantity of assets to be transferred in units or in a percentage rate.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmQuantity);
 			previousVersion_lazy = () -> FinancialInstrument37.mmQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -366,6 +409,14 @@ public class FinancialInstrument47 {
 	 * definition} =
 	 * "Average cost per share of a security, including all charges and commissions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmAverageAcquisitionPrice
+	 * FinancialInstrument61.mmAverageAcquisitionPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -382,6 +433,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AverageAcquisitionPrice";
 			definition = "Average cost per share of a security, including all charges and commissions.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmAverageAcquisitionPrice);
 			previousVersion_lazy = () -> FinancialInstrument37.mmAverageAcquisitionPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -423,6 +475,14 @@ public class FinancialInstrument47 {
 	 * definition} =
 	 * "Net asset on balance sheet - total portfolio value minus or plus the unrealised gain or loss."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmTotalBookValue
+	 * FinancialInstrument61.mmTotalBookValue}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -439,6 +499,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalBookValue";
 			definition = "Net asset on balance sheet - total portfolio value minus or plus the unrealised gain or loss.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmTotalBookValue);
 			previousVersion_lazy = () -> FinancialInstrument37.mmTotalBookValue;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -479,6 +540,14 @@ public class FinancialInstrument47 {
 	 * definition} =
 	 * "Account held in the name of a party that is not the name of the beneficial owner of the shares."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmTransfereeAccount
+	 * FinancialInstrument61.mmTransfereeAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -495,6 +564,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransfereeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmTransfereeAccount);
 			previousVersion_lazy = () -> FinancialInstrument37.mmTransfereeAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -533,6 +603,14 @@ public class FinancialInstrument47 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Sub-accounts that are grouped in a master or omnibus account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmSubAccountDetails
+	 * FinancialInstrument61.mmSubAccountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -549,6 +627,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-accounts that are grouped in a master or omnibus account.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmSubAccountDetails);
 			previousVersion_lazy = () -> FinancialInstrument37.mmSubAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -591,6 +670,14 @@ public class FinancialInstrument47 {
 	 * definition} =
 	 * "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrument61#mmDeliveringAgentDetails
+	 * FinancialInstrument61.mmDeliveringAgentDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -607,6 +694,7 @@ public class FinancialInstrument47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringAgentDetails";
 			definition = "Party that delivers securities to the receiving agent at the place of settlement, for example, a central securities depository.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmDeliveringAgentDetails);
 			previousVersion_lazy = () -> FinancialInstrument37.mmDeliveringAgentDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -627,6 +715,7 @@ public class FinancialInstrument47 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrument47";
 				definition = "Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, for example, dividend option or valuation currency.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrument61.mmObject());
 				previousVersion_lazy = () -> FinancialInstrument37.mmObject();
 			}
 		});

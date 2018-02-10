@@ -112,7 +112,7 @@ public class UTCOffset1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the offset is before or after 00:00 hour UTC."</li>
+	 * "Indicates whether the offset is before or after 00: 00 hour UTC."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSign = new MMMessageAttribute() {
@@ -123,7 +123,7 @@ public class UTCOffset1 {
 			xmlTag = "Sgn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
-			definition = "Indicates whether the offset is before or after 00:00 hour UTC.";
+			definition = "Indicates whether the offset is before or after 00: 00 hour UTC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PlusOrMinusIndicator.mmObject();
@@ -160,7 +160,7 @@ public class UTCOffset1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Offset of the reporting time, in hours,  before or after 00:00 hour UTC."
+	 * "Offset of the reporting time, in hours, before or after 00: 00 hour UTC."
 	 * </li>
 	 * </ul>
 	 */
@@ -172,7 +172,7 @@ public class UTCOffset1 {
 			xmlTag = "NbOfHrs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfHours";
-			definition = "Offset of the reporting time, in hours,  before or after 00:00 hour UTC.";
+			definition = "Offset of the reporting time, in hours, before or after 00: 00 hour UTC.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISOTime.mmObject();

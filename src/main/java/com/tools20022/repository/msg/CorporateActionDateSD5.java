@@ -88,6 +88,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding corporate action date details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDateSD8
+ * CorporateActionDateSD8}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -123,6 +130,14 @@ public class CorporateActionDateSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmPlaceAndName
+	 * CorporateActionDateSD8.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -133,6 +148,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -170,6 +186,14 @@ public class CorporateActionDateSD5 {
 	 * definition} =
 	 * "Last day on which DTC (The Depository Trust Corporation) will accept instructions for CD early redemptions. This is specific to CDs when the registered holder is deceased."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmDTCLastDayForEarlyRedemption
+	 * CorporateActionDateSD8.mmDTCLastDayForEarlyRedemption}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDTCLastDayForEarlyRedemption = new MMMessageAttribute() {
@@ -181,6 +205,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCLastDayForEarlyRedemption";
 			definition = "Last day on which DTC (The Depository Trust Corporation) will accept instructions for CD early redemptions. This is specific to CDs when the registered holder is deceased.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmDTCLastDayForEarlyRedemption);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -218,6 +243,14 @@ public class CorporateActionDateSD5 {
 	 * definition} =
 	 * "Date when positions are captured and entitlements are calculated in the system at DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmDTCPositionCaptureDate
+	 * CorporateActionDateSD8.mmDTCPositionCaptureDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDTCPositionCaptureDate = new MMMessageAttribute() {
@@ -229,6 +262,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPositionCaptureDate";
 			definition = "Date when positions are captured and entitlements are calculated in the system at DTC (The Depository Trust Corporation).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmDTCPositionCaptureDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -266,6 +300,14 @@ public class CorporateActionDateSD5 {
 	 * definition} =
 	 * "Last day to deposit securities at DTC and receive the entitlement for an event approaching record date. Issues that have a New York cut-off date have an out-of-town agent on DTC's records."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmNewYorkCutOffDate
+	 * CorporateActionDateSD8.mmNewYorkCutOffDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNewYorkCutOffDate = new MMMessageAttribute() {
@@ -277,6 +319,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewYorkCutOffDate";
 			definition = "Last day to deposit securities at DTC and receive the entitlement for an event approaching record date. Issues that have a New York cut-off date have an out-of-town agent on DTC's records.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmNewYorkCutOffDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -314,6 +357,14 @@ public class CorporateActionDateSD5 {
 	 * definition} =
 	 * "Cutoff date for DTC (The Depository Trust Corporation) deposit and withdrawal activity. Certain events require an earlier cutoff date. This is typically used on event securities requiring the submission of bearer coupons. Those events usually stop deposit and withdrawal activity one month prior to the declared record date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmDTCExtendedCutOffDate
+	 * CorporateActionDateSD8.mmDTCExtendedCutOffDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDTCExtendedCutOffDate = new MMMessageAttribute() {
@@ -325,6 +376,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExtendedCutOffDate";
 			definition = "Cutoff date for DTC (The Depository Trust Corporation) deposit and withdrawal activity. Certain events require an earlier cutoff date. This is typically used on event securities requiring the submission of bearer coupons. Those events usually stop deposit and withdrawal activity one month prior to the declared record date.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmDTCExtendedCutOffDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -362,6 +414,14 @@ public class CorporateActionDateSD5 {
 	 * definition} =
 	 * "Effective date as declared by the primary exchange that generally coincides with cessation of trading in the old security and commencement of trading in the new security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmEffectiveDateByExchange
+	 * CorporateActionDateSD8.mmEffectiveDateByExchange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEffectiveDateByExchange = new MMMessageAttribute() {
@@ -373,6 +433,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveDateByExchange";
 			definition = "Effective date as declared by the primary exchange that generally coincides with cessation of trading in the old security and commencement of trading in the new security.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmEffectiveDateByExchange);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -408,7 +469,15 @@ public class CorporateActionDateSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void. "
+	 * "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmDateDeclaredWorthless
+	 * CorporateActionDateSD8.mmDateDeclaredWorthless}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -420,7 +489,8 @@ public class CorporateActionDateSD5 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Date Declared Worthless"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDeclaredWorthless";
-			definition = "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void. ";
+			definition = "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmDateDeclaredWorthless);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -458,6 +528,14 @@ public class CorporateActionDateSD5 {
 	 * definition} =
 	 * "Date when DTC participant positions will be deleted. Typically used for expired rights and warrants."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmDeleteWorthlessSecurityDate
+	 * CorporateActionDateSD8.mmDeleteWorthlessSecurityDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDeleteWorthlessSecurityDate = new MMMessageAttribute() {
@@ -469,6 +547,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeleteWorthlessSecurityDate";
 			definition = "Date when DTC participant positions will be deleted. Typically used for expired rights and warrants.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmDeleteWorthlessSecurityDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -506,6 +585,14 @@ public class CorporateActionDateSD5 {
 	 * definition} =
 	 * "Date on which securities will be exited to DTC participants from DTC (The Depository Trust Corporation)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmDTCExitDate
+	 * CorporateActionDateSD8.mmDTCExitDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDTCExitDate = new MMMessageAttribute() {
@@ -517,6 +604,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCExitDate";
 			definition = "Date on which securities will be exited to DTC participants from DTC (The Depository Trust Corporation).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmDTCExitDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -554,6 +642,14 @@ public class CorporateActionDateSD5 {
 	 * definition} =
 	 * "Date on which a holder can begin to subscribe for new/additional shares."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDateSD8#mmSubscriptionBeginDate
+	 * CorporateActionDateSD8.mmSubscriptionBeginDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSubscriptionBeginDate = new MMMessageAttribute() {
@@ -565,6 +661,7 @@ public class CorporateActionDateSD5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionBeginDate";
 			definition = "Date on which a holder can begin to subscribe for new/additional shares.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmSubscriptionBeginDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -583,6 +680,7 @@ public class CorporateActionDateSD5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDateSD5";
 				definition = "Provides additional information regarding corporate action date details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionDateSD8.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

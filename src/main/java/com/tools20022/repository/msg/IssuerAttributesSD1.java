@@ -281,7 +281,7 @@ public class IssuerAttributesSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Equivalent, unique number of the entity for the  Registered Number Type."
+	 * "Equivalent, unique number of the entity for the Registered Number Type."
 	 * </li>
 	 * </ul>
 	 */
@@ -292,7 +292,7 @@ public class IssuerAttributesSD1 {
 			xmlTag = "RegnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegistrationNumber";
-			definition = "Equivalent, unique number of the entity for the  Registered Number Type.";
+			definition = "Equivalent, unique number of the entity for the Registered Number Type.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -325,7 +325,7 @@ public class IssuerAttributesSD1 {
 	 * name} = "IssuerIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "ASX  Issuer Code."</li>
+	 * definition} = "ASX Issuer Code."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuerIdentification = new MMMessageAttribute() {
@@ -335,7 +335,7 @@ public class IssuerAttributesSD1 {
 			xmlTag = "IssrId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerIdentification";
-			definition = "ASX  Issuer Code.";
+			definition = "ASX Issuer Code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact3UpperCaseAlphaNumericText.mmObject();

@@ -266,7 +266,8 @@ public class PaymentInstruction1 {
 	 * name} = "Status"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Detailed information about the status of a transfer.\n\n"</li>
+	 * definition} = "Detailed information about the status of a transfer.\n\n."
+	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -285,7 +286,7 @@ public class PaymentInstruction1 {
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			definition = "Detailed information about the status of a transfer.\n\n";
+			definition = "Detailed information about the status of a transfer.\n\n.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction14.mmStatus);
 			minOccurs = 0;
 			isComposite = true;
@@ -562,7 +563,7 @@ public class PaymentInstruction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n"
+	 * "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -582,7 +583,7 @@ public class PaymentInstruction1 {
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
-			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n";
+			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction14.mmPriority);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -622,7 +623,7 @@ public class PaymentInstruction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time range within which the payment instruction must be processed.\n"
+	 * "Date and time range within which the payment instruction must be processed.\n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -642,7 +643,7 @@ public class PaymentInstruction1 {
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingValidityTime";
-			definition = "Date and time range within which the payment instruction must be processed.\n";
+			definition = "Date and time range within which the payment instruction must be processed.\n.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction14.mmProcessingValidityTime);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -732,7 +733,7 @@ public class PaymentInstruction1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type, or nature, of the payment, such as express payment.\n"</li>
+	 * "Type, or nature, of the payment, such as express payment.\n."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -751,7 +752,7 @@ public class PaymentInstruction1 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Type, or nature, of the payment, such as express payment.\n";
+			definition = "Type, or nature, of the payment, such as express payment.\n.";
 			nextVersions_lazy = () -> Arrays.asList(PaymentInstruction14.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;

@@ -142,7 +142,7 @@ public class FrequencyPeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number of instructions to be created and processed during the specified period"
+	 * "Number of instructions to be created and processed during the specified period."
 	 * </li>
 	 * </ul>
 	 */
@@ -153,7 +153,7 @@ public class FrequencyPeriod1 {
 			xmlTag = "CntPerPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountPerPeriod";
-			definition = "Number of instructions to be created and processed during the specified period";
+			definition = "Number of instructions to be created and processed during the specified period.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DecimalNumber.mmObject();

@@ -115,6 +115,18 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02#mmHeader
  * ATMKeyDownloadResponseV02.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV03#mmHeader
+ * ATMDeviceControlV03.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV03#mmHeader
+ * ATMDeviceReportV03.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV03#mmHeader
+ * ATMKeyDownloadRequestV03.mmHeader}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV03#mmHeader
+ * ATMKeyDownloadResponseV03.mmHeader}</li>
  * </ul>
  * </li>
  * <li>
@@ -483,7 +495,8 @@ public class Header31 {
 						com.tools20022.repository.msg.Header31.mmProcessState, com.tools20022.repository.msg.Header31.mmTraceability);
 				messageBuildingBlock_lazy = () -> Arrays.asList(ATMWithdrawalRequestV02.mmHeader, ATMDeviceControlV02.mmHeader, ATMDepositResponseV01.mmHeader, ATMDepositRequestV01.mmHeader, ATMInquiryResponseV02.mmHeader,
 						ATMDeviceReportV02.mmHeader, ATMPINManagementRequestV02.mmHeader, ATMTransferRequestV01.mmHeader, ATMDiagnosticResponseV02.mmHeader, ATMDiagnosticRequestV02.mmHeader, ATMKeyDownloadRequestV02.mmHeader,
-						ATMWithdrawalResponseV02.mmHeader, ATMPINManagementResponseV02.mmHeader, ATMInquiryRequestV02.mmHeader, ATMTransferResponseV01.mmHeader, ATMKeyDownloadResponseV02.mmHeader);
+						ATMWithdrawalResponseV02.mmHeader, ATMPINManagementResponseV02.mmHeader, ATMInquiryRequestV02.mmHeader, ATMTransferResponseV01.mmHeader, ATMKeyDownloadResponseV02.mmHeader, ATMDeviceControlV03.mmHeader,
+						ATMDeviceReportV03.mmHeader, ATMKeyDownloadRequestV03.mmHeader, ATMKeyDownloadResponseV03.mmHeader);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header31";

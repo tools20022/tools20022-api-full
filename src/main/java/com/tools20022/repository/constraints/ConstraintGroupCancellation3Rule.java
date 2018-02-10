@@ -25,7 +25,7 @@ import com.tools20022.repository.area.pain.PaymentCancellationRequestV01;
 /**
  * If GroupHeader/GroupCancellation is false, then
  * GroupHeader/NumberOfTransactions specifies the number of occurrences of
- * TransactionInformation.
+ * TransactionInformation. .
  */
 public class ConstraintGroupCancellation3Rule {
 
@@ -46,7 +46,7 @@ public class ConstraintGroupCancellation3Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If GroupHeader/GroupCancellation is false, then GroupHeader/NumberOfTransactions specifies the number of occurrences of TransactionInformation.\n"
+	 * "If GroupHeader/GroupCancellation is false, then GroupHeader/NumberOfTransactions specifies the number of occurrences of TransactionInformation.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,7 +55,7 @@ public class ConstraintGroupCancellation3Rule {
 			validator = ConstraintGroupCancellation3Rule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupCancellation3Rule";
-			definition = "If GroupHeader/GroupCancellation is false, then GroupHeader/NumberOfTransactions specifies the number of occurrences of TransactionInformation.\n";
+			definition = "If GroupHeader/GroupCancellation is false, then GroupHeader/NumberOfTransactions specifies the number of occurrences of TransactionInformation.\n.";
 			owner_lazy = () -> PaymentCancellationRequestV01.mmObject();
 		}
 	};
@@ -63,7 +63,7 @@ public class ConstraintGroupCancellation3Rule {
 	/**
 	 * If GroupHeader/GroupCancellation is false, then
 	 * GroupHeader/NumberOfTransactions specifies the number of occurrences of
-	 * TransactionInformation.
+	 * TransactionInformation. .
 	 */
 	public static void checkPaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();

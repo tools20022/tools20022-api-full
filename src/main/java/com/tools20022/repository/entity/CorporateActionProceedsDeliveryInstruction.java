@@ -349,6 +349,30 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmSecuritiesMovementDetails
 	 * CorporateActionOption133.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmSecuritiesMovementDetails
+	 * CorporateActionOption140.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmSecuritiesMovementDetails
+	 * CorporateActionOption138.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmSecuritiesMovementDetails
+	 * CorporateActionOption139.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption143#mmSecuritiesMovementDetails
+	 * CorporateActionOption143.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmSecuritiesMovementDetails
+	 * CorporateActionOption147.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmSecuritiesMovementDetails
+	 * CorporateActionOption148.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption149#mmSecuritiesMovementDetails
+	 * CorporateActionOption149.mmSecuritiesMovementDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmSecuritiesMovementDetails
+	 * CorporateActionOption150.mmSecuritiesMovementDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -384,7 +408,9 @@ public class CorporateActionProceedsDeliveryInstruction {
 					CorporateActionOption113.mmSecuritiesMovementDetails, CorporateActionOption117.mmSecuritiesMovementDetails, CorporateActionOption119.mmSecuritiesMovementDetails, CorporateActionOption115.mmSecuritiesMovementDetails,
 					CorporateActionOption114.mmSecuritiesMovementDetails, CorporateActionOption126.mmSecuritiesMovementDetails, CorporateActionOption124.mmSecuritiesMovementDetails, CorporateActionOption125.mmSecuritiesMovementDetails,
 					CorporateActionOption127.mmSecuritiesMovementDetails, CorporateActionOption132.mmSecuritiesMovementDetails, CorporateActionOption130.mmSecuritiesMovementDetails, CorporateActionOption129.mmSecuritiesMovementDetails,
-					CorporateActionOption136.mmSecuritiesMovementDetails, CorporateActionOption135.mmSecuritiesMovementDetails, CorporateActionOption133.mmSecuritiesMovementDetails);
+					CorporateActionOption136.mmSecuritiesMovementDetails, CorporateActionOption135.mmSecuritiesMovementDetails, CorporateActionOption133.mmSecuritiesMovementDetails, CorporateActionOption140.mmSecuritiesMovementDetails,
+					CorporateActionOption138.mmSecuritiesMovementDetails, CorporateActionOption139.mmSecuritiesMovementDetails, CorporateActionOption143.mmSecuritiesMovementDetails, CorporateActionOption147.mmSecuritiesMovementDetails,
+					CorporateActionOption148.mmSecuritiesMovementDetails, CorporateActionOption149.mmSecuritiesMovementDetails, CorporateActionOption150.mmSecuritiesMovementDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -484,7 +510,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information relative to the account(s) to be used for the delivery of the proceeds (cash or securities)"
+	 * "Information relative to the account(s) to be used for the delivery of the proceeds (cash or securities)."
 	 * </li>
 	 * </ul>
 	 */
@@ -494,7 +520,7 @@ public class CorporateActionProceedsDeliveryInstruction {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionProceedsDeliveryInstruction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SettlementAccount";
-			definition = "Information relative to the account(s) to be used for the delivery of the proceeds (cash or securities)";
+			definition = "Information relative to the account(s) to be used for the delivery of the proceeds (cash or securities).";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmRelatedProceedsDelivery;
 			aggregation = MMAggregation.NONE;

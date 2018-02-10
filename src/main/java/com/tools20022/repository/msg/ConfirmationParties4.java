@@ -654,7 +654,7 @@ public class ConfirmationParties4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party responsible for executing an order (for example, an executing or give-up broker).  Usually a commission is charged to the client for executing an order."
+	 * "Party responsible for executing an order (for example, an executing or give-up broker). Usually a commission is charged to the client for executing an order."
 	 * </li>
 	 * </ul>
 	 */
@@ -666,7 +666,7 @@ public class ConfirmationParties4 {
 			xmlTag = "ExctgBrkr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExecutingBroker";
-			definition = "Party responsible for executing an order (for example, an executing or give-up broker).  Usually a commission is charged to the client for executing an order.";
+			definition = "Party responsible for executing an order (for example, an executing or give-up broker). Usually a commission is charged to the client for executing an order.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails6.mmObject();
@@ -756,8 +756,7 @@ public class ConfirmationParties4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Party involved  in a legal proceeding, agreement, or other transaction."
-	 * </li>
+	 * "Party involved in a legal proceeding, agreement, or other transaction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTradeBeneficiaryParty = new MMMessageAttribute() {
@@ -768,7 +767,7 @@ public class ConfirmationParties4 {
 			xmlTag = "TradBnfcryPty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeBeneficiaryParty";
-			definition = "Party involved  in a legal proceeding, agreement, or other transaction.";
+			definition = "Party involved in a legal proceeding, agreement, or other transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.ConfirmationPartyDetails3.mmObject();

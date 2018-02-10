@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
+import com.tools20022.repository.area.SecuritiesSettlementArchive;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.InvestmentFundsISOPreviousversion;
@@ -107,8 +107,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "TrfInConf"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
- * SecuritiesSettlementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementArchive
+ * SecuritiesSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.007.001.06}</li>
@@ -475,8 +475,7 @@ public class TransferInConfirmationV06 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "General information related to the transfer of a financial instrument. "
-	 * </li>
+	 * "General information related to the transfer of a financial instrument."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -497,7 +496,7 @@ public class TransferInConfirmationV06 {
 			xmlTag = "TrfDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferDetails";
-			definition = "General information related to the transfer of a financial instrument. ";
+			definition = "General information related to the transfer of a financial instrument.";
 			nextVersions_lazy = () -> Arrays.asList(TransferInConfirmationV07.mmTransferDetails);
 			previousVersion_lazy = () -> TransferInConfirmationV05.mmTransferDetails;
 			minOccurs = 1;
@@ -826,7 +825,7 @@ public class TransferInConfirmationV06 {
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOPreviousversion.mmObject(), ISOArchive.mmObject());
 				rootElement = "Document";
 				xmlTag = "TrfInConf";
-				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.TransferInConfirmationV06.mmMessageIdentification, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmPoolReference,
 						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmPreviousReference, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmRelatedReference,
 						com.tools20022.repository.area.sese.TransferInConfirmationV06.mmMasterReference, com.tools20022.repository.area.sese.TransferInConfirmationV06.mmTransferDetails,

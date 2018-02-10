@@ -265,7 +265,7 @@ public class BankOperation extends CashAccountService {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the period, for instance a number of days, for which the bank operations are permitted. "
+	 * "Specifies the period, for instance a number of days, for which the bank operations are permitted."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +276,7 @@ public class BankOperation extends CashAccountService {
 			elementContext_lazy = () -> com.tools20022.repository.entity.BankOperation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ApplicablePeriod";
-			definition = "Specifies the period, for instance a number of days, for which the bank operations are permitted. ";
+			definition = "Specifies the period, for instance a number of days, for which the bank operations are permitted.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmBankOperation;
 			aggregation = MMAggregation.NONE;

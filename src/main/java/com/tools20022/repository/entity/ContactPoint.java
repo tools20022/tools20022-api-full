@@ -153,6 +153,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.RemittanceLocation4#mmRemittanceLocationDetails
  * RemittanceLocation4.mmRemittanceLocationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Organisation20#mmRepresentativeOfficer
+ * Organisation20.mmRepresentativeOfficer}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmPrimaryCommunicationAddress
+ * IndividualPerson19.mmPrimaryCommunicationAddress}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmSecondaryCommunicationAddress
+ * IndividualPerson19.mmSecondaryCommunicationAddress}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -202,6 +211,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * CommunicationAddress5}</li>
  * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress6
  * CommunicationAddress6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress8
+ * CommunicationAddress8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CommunicationAddress9
+ * CommunicationAddress9}</li>
  * </ul>
  * </li>
  * <li>
@@ -349,6 +362,8 @@ public class ContactPoint {
 	 * MemberDetails.mmMemberReturnAddress}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Member1#mmReturnAddress
 	 * Member1.mmReturnAddress}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Member4#mmReturnAddress
+	 * Member4.mmReturnAddress}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -368,7 +383,7 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAttribute mmBICAddress = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ContactAttributes1.mmIdentification, MemberDetails.mmMemberReturnAddress, Member1.mmReturnAddress);
+			derivation_lazy = () -> Arrays.asList(ContactAttributes1.mmIdentification, MemberDetails.mmMemberReturnAddress, Member1.mmReturnAddress, Member4.mmReturnAddress);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -845,6 +860,9 @@ public class ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.MemberDetails1#mmMemberReturnAddress
 	 * MemberDetails1.mmMemberReturnAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Member3#mmMemberReturnAddress
+	 * Member3.mmMemberReturnAddress}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -866,7 +884,7 @@ public class ContactPoint {
 	 */
 	public static final MMBusinessAssociationEnd mmReturnAddress = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(MemberDetails1.mmMemberReturnAddress);
+			derivation_lazy = () -> Arrays.asList(MemberDetails1.mmMemberReturnAddress, Member3.mmMemberReturnAddress);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ContactPoint.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1110,7 +1128,7 @@ public class ContactPoint {
 						com.tools20022.repository.entity.CorporateActionEvent.mmDocumentationLocation, com.tools20022.repository.entity.Meeting.mmMeetingLocation,
 						com.tools20022.repository.entity.ProxyAppointmentCondition.mmNotificationAddress, com.tools20022.repository.entity.VotingCondition.mmVoteLocation, com.tools20022.repository.entity.AttendanceCard.mmDeliveryPlace);
 				derivationElement_lazy = () -> Arrays.asList(RemittanceLocation1.mmRemittanceLocationElectronicAddress, RemittanceLocation2.mmRemittanceLocationElectronicAddress, RemittanceLocation3.mmRemittanceLocationDetails,
-						RemittanceLocation4.mmRemittanceLocationDetails);
+						RemittanceLocation4.mmRemittanceLocationDetails, Organisation20.mmRepresentativeOfficer, IndividualPerson19.mmPrimaryCommunicationAddress, IndividualPerson19.mmSecondaryCommunicationAddress);
 				subType_lazy = () -> Arrays.asList(PostalAddress.mmObject(), PhoneAddress.mmObject(), ElectronicAddress.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.ContactPoint.mmIdentification, com.tools20022.repository.entity.ContactPoint.mmRelatedInvestmentFund,
 						com.tools20022.repository.entity.ContactPoint.mmBICAddress, com.tools20022.repository.entity.ContactPoint.mmRelatedParty, com.tools20022.repository.entity.ContactPoint.mmRelatedCorporateActionEvent,
@@ -1121,7 +1139,8 @@ public class ContactPoint {
 						com.tools20022.repository.entity.ContactPoint.mmInvestmentFundClassProcessing);
 				derivationComponent_lazy = () -> Arrays.asList(OrderDeskContactDetails.mmObject(), ContactAttributes1.mmObject(), CommunicationAddress3.mmObject(), CommunicationMethod2Choice.mmObject(), RemittanceLocation1.mmObject(),
 						RemittanceLocation2.mmObject(), ContactInformation1.mmObject(), CommunicationAddress4.mmObject(), LocationFormat1Choice.mmObject(), CommunicationAddressDetails.mmObject(), OtherContact1.mmObject(),
-						ResidenceLocation1Choice.mmObject(), RemittanceLocation3.mmObject(), RemittanceLocationDetails1.mmObject(), RemittanceLocation4.mmObject(), CommunicationAddress5.mmObject(), CommunicationAddress6.mmObject());
+						ResidenceLocation1Choice.mmObject(), RemittanceLocation3.mmObject(), RemittanceLocationDetails1.mmObject(), RemittanceLocation4.mmObject(), CommunicationAddress5.mmObject(), CommunicationAddress6.mmObject(),
+						CommunicationAddress8.mmObject(), CommunicationAddress9.mmObject());
 			}
 
 			@Override

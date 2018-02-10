@@ -81,6 +81,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Defines how the securities account is linked to the cash account."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountLink3 AccountLink3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -118,6 +124,14 @@ public class AccountLink1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a securities entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink3#mmSecuritiesAccount
+	 * AccountLink3.mmSecuritiesAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSecuritiesAccount = new MMMessageAssociationEnd() {
@@ -129,6 +143,7 @@ public class AccountLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesAccount";
 			definition = "Account to or from which a securities entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(AccountLink3.mmSecuritiesAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -165,6 +180,13 @@ public class AccountLink1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a cash entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink3#mmCashAccount
+	 * AccountLink3.mmCashAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCashAccount = new MMMessageAssociationEnd() {
@@ -176,6 +198,7 @@ public class AccountLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccount";
 			definition = "Account to or from which a cash entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(AccountLink3.mmCashAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -216,6 +239,13 @@ public class AccountLink1 {
 	 * definition} =
 	 * "Defines the date since when the securities account is linked to the cash account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink3#mmValidFrom
+	 * AccountLink3.mmValidFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValidFrom = new MMMessageAttribute() {
@@ -227,6 +257,7 @@ public class AccountLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidFrom";
 			definition = "Defines the date since when the securities account is linked to the cash account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountLink3.mmValidFrom);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -266,6 +297,13 @@ public class AccountLink1 {
 	 * definition} =
 	 * "Defines the date until when the securities account is linked to the cash account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink3#mmValidTo
+	 * AccountLink3.mmValidTo}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValidTo = new MMMessageAttribute() {
@@ -277,6 +315,7 @@ public class AccountLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidTo";
 			definition = "Defines the date until when the securities account is linked to the cash account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountLink3.mmValidTo);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -316,6 +355,14 @@ public class AccountLink1 {
 	 * definition} =
 	 * "Specifies whether created account link is set as default for settlement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink3#mmDefaultIndicator
+	 * AccountLink3.mmDefaultIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDefaultIndicator = new MMMessageAttribute() {
@@ -327,6 +374,7 @@ public class AccountLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DefaultIndicator";
 			definition = "Specifies whether created account link is set as default for settlement.";
+			nextVersions_lazy = () -> Arrays.asList(AccountLink3.mmDefaultIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -366,6 +414,14 @@ public class AccountLink1 {
 	 * definition} =
 	 * "Specifies whether market infrastructure can use the securities, earmarked as collateral and held on the securities account, for auto-collateralisation operations on the linked market infrastructure dedicated cash account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink3#mmCollateralisationIndicator
+	 * AccountLink3.mmCollateralisationIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCollateralisationIndicator = new MMMessageAttribute() {
@@ -377,6 +433,7 @@ public class AccountLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisationIndicator";
 			definition = "Specifies whether market infrastructure can use the securities, earmarked as collateral and held on the securities account, for auto-collateralisation operations on the linked market infrastructure dedicated cash account.";
+			nextVersions_lazy = () -> Arrays.asList(AccountLink3.mmCollateralisationIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -416,6 +473,14 @@ public class AccountLink1 {
 	 * definition} =
 	 * "Specifies whether market infrastructure can use the link between the securities account and the market infrastructure dedicated cash account for the settlement of the cash leg of a settlement instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AccountLink3#mmCashSettlementIndicator
+	 * AccountLink3.mmCashSettlementIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCashSettlementIndicator = new MMMessageAttribute() {
@@ -427,6 +492,7 @@ public class AccountLink1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashSettlementIndicator";
 			definition = "Specifies whether market infrastructure can use the link between the securities account and the market infrastructure dedicated cash account for the settlement of the cash leg of a settlement instruction.";
+			nextVersions_lazy = () -> Arrays.asList(AccountLink3.mmCashSettlementIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -444,6 +510,7 @@ public class AccountLink1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountLink1";
 				definition = "Defines how the securities account is linked to the cash account.";
+				nextVersions_lazy = () -> Arrays.asList(AccountLink3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

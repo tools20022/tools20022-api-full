@@ -220,7 +220,7 @@ public class CorporateActionBalanceSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Adjusted position held in  a security that is subject to redemption call."
+	 * "Adjusted position held in a security that is subject to redemption call."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -239,7 +239,7 @@ public class CorporateActionBalanceSD1 {
 			xmlTag = "AdjstdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdjustedBalance";
-			definition = "Adjusted position held in  a security that is subject to redemption call.";
+			definition = "Adjusted position held in a security that is subject to redemption call.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceSD3.mmAdjustedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;

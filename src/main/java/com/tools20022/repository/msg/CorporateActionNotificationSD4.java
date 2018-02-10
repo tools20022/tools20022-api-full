@@ -305,7 +305,7 @@ public class CorporateActionNotificationSD4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system."
+	 * "Date until which the event will remain in an active status on DTCC (The Depository Trust and Clearing Corporation) system."
 	 * </li>
 	 * </ul>
 	 */
@@ -317,7 +317,7 @@ public class CorporateActionNotificationSD4 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Active Until Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActiveUntilDate";
-			definition = "Date until which the event will remain in an active status on DTCC  (The Depository Trust and Clearing Corporation) system.";
+			definition = "Date until which the event will remain in an active status on DTCC (The Depository Trust and Clearing Corporation) system.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();

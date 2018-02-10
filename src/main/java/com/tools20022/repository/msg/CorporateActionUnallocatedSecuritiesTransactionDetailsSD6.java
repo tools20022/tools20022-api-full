@@ -84,6 +84,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionUnallocatedSecuritiesTransactionDetailsSD6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Breakdown of unallocated securities transactions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD7
+ * CorporateActionUnallocatedSecuritiesTransactionDetailsSD7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD5
@@ -126,6 +134,15 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the value is a debit or a credit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD7#mmCreditDebitIndicator
+	 * CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.
+	 * mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -143,6 +160,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the value is a debit or a credit.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -180,6 +198,14 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD7#mmReasonCode
+	 * CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.mmReasonCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -196,6 +222,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReasonCode";
 			definition = "Transaction reason.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.mmReasonCode);
 			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmReasonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -234,6 +261,15 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Resulting quantity of securities concerned in this transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD7#mmTransactionQuantity
+	 * CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.
+	 * mmTransactionQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -251,6 +287,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionQuantity";
 			definition = "Resulting quantity of securities concerned in this transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.mmTransactionQuantity);
 			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmTransactionQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -288,6 +325,15 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason for the unallocation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD7#mmUnallocatedReasonCode
+	 * CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.
+	 * mmUnallocatedReasonCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -305,6 +351,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnallocatedReasonCode";
 			definition = "Reason for the unallocation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.mmUnallocatedReasonCode);
 			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmUnallocatedReasonCode;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -343,6 +390,15 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 	 * definition} =
 	 * "Transaction contra participant identification when shares are distributed / delivered to / from another participant."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD7#mmContraParticipantNumber
+	 * CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.
+	 * mmContraParticipantNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -360,6 +416,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContraParticipantNumber";
 			definition = "Transaction contra participant identification when shares are distributed / delivered to / from another participant.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.mmContraParticipantNumber);
 			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmContraParticipantNumber;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -399,6 +456,15 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 	 * definition} =
 	 * "Date/time at which the movement was due to take place (cash and/or securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedSecuritiesTransactionDetailsSD7#mmEarliestPaymentDate
+	 * CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.
+	 * mmEarliestPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -416,6 +482,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which the movement was due to take place (cash and/or securities).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.mmEarliestPaymentDate);
 			previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmEarliestPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -435,6 +502,7 @@ public class CorporateActionUnallocatedSecuritiesTransactionDetailsSD6 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionUnallocatedSecuritiesTransactionDetailsSD6";
 				definition = "Breakdown of unallocated securities transactions.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedSecuritiesTransactionDetailsSD7.mmObject());
 				previousVersion_lazy = () -> CorporateActionUnallocatedSecuritiesTransactionDetailsSD5.mmObject();
 			}
 		});

@@ -22,8 +22,8 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08;
 import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07;
-import com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08;
 import com.tools20022.repository.choice.DateAndDateTimeChoice;
 import com.tools20022.repository.choice.Frequency26Choice;
 import com.tools20022.repository.choice.Number3Choice;
@@ -80,7 +80,7 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V07#mmStatementGeneralDetails
  * SecuritiesTransactionPendingReport002V07.mmStatementGeneralDetails}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08#mmStatementGeneralDetails
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08#mmStatementGeneralDetails
  * SecuritiesTransactionPendingReport002V08.mmStatementGeneralDetails}</li>
  * </ul>
  * </li>

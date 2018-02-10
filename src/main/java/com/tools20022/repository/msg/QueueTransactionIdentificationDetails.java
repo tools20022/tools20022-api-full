@@ -63,6 +63,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Identification of a payment instruction by its relative position in a queue of payment transactions managed by the clearing agent."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QueueTransactionIdentification1
+ * QueueTransactionIdentification1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +107,14 @@ public class QueueTransactionIdentificationDetails {
 	 * definition} =
 	 * "Identification of the payment queue where the payment instruction resides."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QueueTransactionIdentification1#mmQueueIdentification
+	 * QueueTransactionIdentification1.mmQueueIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueueIdentification = new MMMessageAttribute() {
@@ -109,6 +125,7 @@ public class QueueTransactionIdentificationDetails {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueueIdentification";
 			definition = "Identification of the payment queue where the payment instruction resides.";
+			nextVersions_lazy = () -> Arrays.asList(QueueTransactionIdentification1.mmQueueIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -142,6 +159,14 @@ public class QueueTransactionIdentificationDetails {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Position of the payment instruction within the identified queue."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QueueTransactionIdentification1#mmPositionInQueue
+	 * QueueTransactionIdentification1.mmPositionInQueue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPositionInQueue = new MMMessageAttribute() {
@@ -152,6 +177,7 @@ public class QueueTransactionIdentificationDetails {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PositionInQueue";
 			definition = "Position of the payment instruction within the identified queue.";
+			nextVersions_lazy = () -> Arrays.asList(QueueTransactionIdentification1.mmPositionInQueue);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -166,6 +192,7 @@ public class QueueTransactionIdentificationDetails {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "QueueTransactionIdentificationDetails";
 				definition = "Identification of a payment instruction by its relative position in a queue of payment transactions managed by the clearing agent.";
+				nextVersions_lazy = () -> Arrays.asList(QueueTransactionIdentification1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

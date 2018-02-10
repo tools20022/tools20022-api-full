@@ -20,10 +20,7 @@ package com.tools20022.repository.constraints;
 import com.tools20022.core.repo.NotImplementedConstraintException;
 import com.tools20022.metamodel.MMConstraint;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.msg.CorporateActionPeriod10;
-import com.tools20022.repository.msg.CorporateActionPeriod3;
-import com.tools20022.repository.msg.CorporateActionPeriod6;
-import com.tools20022.repository.msg.CorporateActionPeriod8;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 
 /**
@@ -150,6 +147,14 @@ public class ConstraintInterestPeriodRule {
 	 * definition} =
 	 * "InterestPeriod must be used only if it is different from a normal accrued interest period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInterestPeriodRule#forCorporateActionPeriod14
+	 * ConstraintInterestPeriodRule.forCorporateActionPeriod14}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -163,8 +168,45 @@ public class ConstraintInterestPeriodRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterestPeriodRule";
 			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod14);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod8;
 			owner_lazy = () -> CorporateActionPeriod10.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14
+	 * CorporateActionPeriod14}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "InterestPeriodRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "InterestPeriod must be used only if it is different from a normal accrued interest period."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintInterestPeriodRule#forCorporateActionPeriod10
+	 * ConstraintInterestPeriodRule.forCorporateActionPeriod10}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionPeriod14> forCorporateActionPeriod14 = new MMConstraint<CorporateActionPeriod14>() {
+		{
+			validator = ConstraintInterestPeriodRule::checkCorporateActionPeriod14;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "InterestPeriodRule";
+			definition = "InterestPeriod must be used only if it is different from a normal accrued interest period.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintInterestPeriodRule.forCorporateActionPeriod10;
+			owner_lazy = () -> CorporateActionPeriod14.mmObject();
 		}
 	};
 
@@ -197,6 +239,14 @@ public class ConstraintInterestPeriodRule {
 	 * interest period.
 	 */
 	public static void checkCorporateActionPeriod10(CorporateActionPeriod10 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * InterestPeriod must be used only if it is different from a normal accrued
+	 * interest period.
+	 */
+	public static void checkCorporateActionPeriod14(CorporateActionPeriod14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

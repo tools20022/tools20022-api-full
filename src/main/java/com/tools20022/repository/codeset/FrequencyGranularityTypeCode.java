@@ -157,14 +157,14 @@ public class FrequencyGranularityTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Event takes place at the end of each month or period of one  month."</li>
+	 * "Event takes place at the end of each month or period of one month."</li>
 	 * </ul>
 	 */
 	public static final FrequencyGranularityTypeCode EndOfMonth = new FrequencyGranularityTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndOfMonth";
-			definition = "Event takes place at the end of each month or period of one  month.";
+			definition = "Event takes place at the end of each month or period of one month.";
 			owner_lazy = () -> com.tools20022.repository.codeset.FrequencyGranularityTypeCode.mmObject();
 			codeName = "EMON";
 		}

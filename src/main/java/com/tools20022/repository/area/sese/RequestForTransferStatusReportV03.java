@@ -131,7 +131,7 @@ public class RequestForTransferStatusReportV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference that uniquely identifies a message from a business application standpoint. "
+	 * "Reference that uniquely identifies a message from a business application standpoint."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -148,7 +148,7 @@ public class RequestForTransferStatusReportV03 {
 			xmlTag = "MsgId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
-			definition = "Reference that uniquely identifies a message from a business application standpoint. ";
+			definition = "Reference that uniquely identifies a message from a business application standpoint.";
 			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV04.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -186,7 +186,7 @@ public class RequestForTransferStatusReportV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information to identify the transfer for which the status is requested.\n"
+	 * "Information to identify the transfer for which the status is requested.\n."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -203,7 +203,7 @@ public class RequestForTransferStatusReportV03 {
 			xmlTag = "ReqDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestDetails";
-			definition = "Information to identify the transfer for which the status is requested.\n";
+			definition = "Information to identify the transfer for which the status is requested.\n.";
 			nextVersions_lazy = () -> Arrays.asList(RequestForTransferStatusReportV04.mmRequestDetails);
 			minOccurs = 1;
 			complexType_lazy = () -> MessageAndBusinessReference6.mmObject();

@@ -109,7 +109,7 @@ import java.util.Optional;
  * "SecuritiesPegOrderInstruction"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Instructions specific to pegged orders, which consist in an investor buying large amounts of  the underlying asset of a derivative it holds.\r\n"
+ * "Instructions specific to pegged orders, which consist in an investor buying large amounts of the underlying asset of a derivative it holds.\r\n"
  * </li>
  * </ul>
  */
@@ -624,7 +624,7 @@ public class SecuritiesPegOrderInstruction {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesPegOrderInstruction";
-				definition = "Instructions specific to pegged orders, which consist in an investor buying large amounts of  the underlying asset of a derivative it holds.\r\n";
+				definition = "Instructions specific to pegged orders, which consist in an investor buying large amounts of the underlying asset of a derivative it holds.\r\n";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.RoundingParameters.mmRelatedPegOrderInstruction, com.tools20022.repository.entity.SecuritiesOrderParameters.mmPegInstructions);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffset, com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmPriceType,
 						com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmMoveType, com.tools20022.repository.entity.SecuritiesPegOrderInstruction.mmOffsetType,

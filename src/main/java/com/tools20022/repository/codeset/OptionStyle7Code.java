@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "OptionStyle7Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies how an option  for a derivative or securities derivative can be exercised."
+ * "Specifies how an option for a derivative or securities derivative can be exercised."
  * </li>
  * </ul>
  */
@@ -213,7 +213,7 @@ public class OptionStyle7Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OptionStyle7Code";
-				definition = "Specifies how an option  for a derivative or securities derivative can be exercised.";
+				definition = "Specifies how an option for a derivative or securities derivative can be exercised.";
 				trace_lazy = () -> OptionStyleCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.OptionStyle7Code.American, com.tools20022.repository.codeset.OptionStyle7Code.Asian, com.tools20022.repository.codeset.OptionStyle7Code.Bermudan,
 						com.tools20022.repository.codeset.OptionStyle7Code.European, com.tools20022.repository.codeset.OptionStyle7Code.Other);

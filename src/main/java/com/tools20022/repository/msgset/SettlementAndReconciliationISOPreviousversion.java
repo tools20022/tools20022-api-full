@@ -150,7 +150,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Settlement And Reconciliation - ISO - Previous version"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Set of messages  used for settlement and reconciliation activities and used by intermediaries involved in the settlement and reconciliation processing chain such as the broker, the investment manager, the global custodian, the stock exchange, the market insfrastructure, etc. \r\n"
+ * "Set of messages used for settlement and reconciliation activities and used by intermediaries involved in the settlement and reconciliation processing chain such as the broker, the investment manager, the global custodian, the stock exchange, the market insfrastructure, etc. \r\n"
  * </li>
  * </ul>
  */
@@ -164,7 +164,7 @@ public class SettlementAndReconciliationISOPreviousversion {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Settlement And Reconciliation - ISO - Previous version";
-				definition = "Set of messages  used for settlement and reconciliation activities and used by intermediaries involved in the settlement and reconciliation processing chain such as the broker, the investment manager, the global custodian, the stock exchange, the market insfrastructure, etc. \r\n";
+				definition = "Set of messages used for settlement and reconciliation activities and used by intermediaries involved in the settlement and reconciliation processing chain such as the broker, the investment manager, the global custodian, the stock exchange, the market insfrastructure, etc. \r\n";
 				messageDefinition_lazy = () -> Arrays.asList(SecuritiesMessageCancellationAdviceV04.mmObject(), SecuritiesSettlementAllegementRemovalAdviceV03.mmObject(), SecuritiesStatusOrStatementQueryStatusAdviceV03.mmObject(),
 						SecuritiesTransactionStatusQueryV03.mmObject(), IntraPositionMovementInstructionV03.mmObject(), PortfolioTransferNotificationV03.mmObject(), SecuritiesSettlementTransactionCounterpartyResponseV01.mmObject(),
 						SecuritiesTransactionCancellationRequestV04.mmObject(), SecuritiesBalanceCustodyReportV08.mmObject(), SecuritiesStatementQueryV05.mmObject(), SecuritiesBalanceAccountingReportV08.mmObject(),

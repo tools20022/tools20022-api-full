@@ -46,7 +46,7 @@ public class ConstraintSettlementMethod1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
+	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,7 +55,7 @@ public class ConstraintSettlementMethod1Rule {
 			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
-			definition = "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
+			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation1.mmObject();
 		}
 	};
@@ -76,7 +76,7 @@ public class ConstraintSettlementMethod1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ClearingSystem is not allowed."
+	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -85,7 +85,7 @@ public class ConstraintSettlementMethod1Rule {
 			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
-			definition = "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ClearingSystem is not allowed.";
+			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation2.mmObject();
 		}
 	};
@@ -110,7 +110,7 @@ public class ConstraintSettlementMethod1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
+	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -119,7 +119,7 @@ public class ConstraintSettlementMethod1Rule {
 			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
-			definition = "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
+			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation6.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -215,7 +215,7 @@ public class ConstraintSettlementMethod1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
+	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -224,7 +224,7 @@ public class ConstraintSettlementMethod1Rule {
 			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
-			definition = "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
+			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ReimbursementAgent(s) is(are) not allowed;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation8.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructingReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/InstructedReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ThirdReimbursementAgent</leftOperand></BooleanRule><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}
@@ -250,7 +250,7 @@ public class ConstraintSettlementMethod1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ClearingSystem is not allowed."
+	 * "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -259,7 +259,7 @@ public class ConstraintSettlementMethod1Rule {
 			validator = ConstraintSettlementMethod1Rule::checkSettlementInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementMethod1Rule";
-			definition = "If SettlementMethod is equal to INDA or INGA then:\n- SettlementAccount may be present;\n- ClearingSystem is not allowed.";
+			definition = "If SettlementMethod is equal to INDA or INGA then: \n- SettlementAccount may be present;\n- ClearingSystem is not allowed.";
 			owner_lazy = () -> SettlementInformation9.mmObject();
 			expression = "<RuleDefinition xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"><ComplexRule xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Absence\"><leftOperand>/ClearingSystem</leftOperand></BooleanRule></mustBe><onCondition><connector>OR</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructingAgent</rightOperand></BooleanRule><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/SettlementMethod</leftOperand><rightOperand>InstructedAgent</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>\n";
 		}

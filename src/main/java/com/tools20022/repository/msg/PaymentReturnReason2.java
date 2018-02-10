@@ -81,6 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides further details on the reason of the return of the transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentReturnReason3
+ * PaymentReturnReason3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -122,6 +129,14 @@ public class PaymentReturnReason2 {
 	 * definition} =
 	 * "Bank transaction code included in the original entry for the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnReason3#mmOriginalBankTransactionCode
+	 * PaymentReturnReason3.mmOriginalBankTransactionCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginalBankTransactionCode = new MMMessageAssociationEnd() {
@@ -133,6 +148,7 @@ public class PaymentReturnReason2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBankTransactionCode";
 			definition = "Bank transaction code included in the original entry for the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnReason3.mmOriginalBankTransactionCode);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -170,6 +186,14 @@ public class PaymentReturnReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that issues the return."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnReason3#mmOriginator
+	 * PaymentReturnReason3.mmOriginator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginator = new MMMessageAssociationEnd() {
@@ -181,6 +205,7 @@ public class PaymentReturnReason2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Originator";
 			definition = "Party that issues the return.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnReason3.mmOriginator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -218,6 +243,14 @@ public class PaymentReturnReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reason for the return."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnReason3#mmReason
+	 * PaymentReturnReason3.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
@@ -229,6 +262,7 @@ public class PaymentReturnReason2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason for the return.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnReason3.mmReason);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -262,6 +296,14 @@ public class PaymentReturnReason2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further details on the return reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnReason3#mmAdditionalInformation
+	 * PaymentReturnReason3.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalInformation = new MMMessageAttribute() {
@@ -272,6 +314,7 @@ public class PaymentReturnReason2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Further details on the return reason.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnReason3.mmAdditionalInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max105Text.mmObject();
 		}
@@ -288,6 +331,7 @@ public class PaymentReturnReason2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReturnReason2";
 				definition = "Provides further details on the reason of the return of the transaction.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentReturnReason3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

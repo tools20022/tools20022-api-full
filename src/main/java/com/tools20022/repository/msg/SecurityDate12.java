@@ -75,6 +75,12 @@ import javax.xml.bind.annotation.XmlType;
  * "SecurityDate12"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies security date details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityDate16 SecurityDate16}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.SecurityDate9
  * SecurityDate9}</li>
@@ -120,6 +126,14 @@ public class SecurityDate12 {
 	 * definition} =
 	 * "Date/time at which the movement is due to take place (cash and/or securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmPaymentDate
+	 * SecurityDate16.mmPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -137,6 +151,7 @@ public class SecurityDate12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date/time at which the movement is due to take place (cash and/or securities).";
+			nextVersions_lazy = () -> Arrays.asList(SecurityDate16.mmPaymentDate);
 			previousVersion_lazy = () -> SecurityDate9.mmPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -179,6 +194,14 @@ public class SecurityDate12 {
 	 * definition} =
 	 * "Date/time at which securities become available for trading, for example first dealing date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmAvailableDate
+	 * SecurityDate16.mmAvailableDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -196,6 +219,7 @@ public class SecurityDate12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDate";
 			definition = "Date/time at which securities become available for trading, for example first dealing date.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityDate16.mmAvailableDate);
 			previousVersion_lazy = () -> SecurityDate9.mmAvailableDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -237,6 +261,14 @@ public class SecurityDate12 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time at which a security will be entitled to a dividend."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmDividendRankingDate
+	 * SecurityDate16.mmDividendRankingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -254,6 +286,7 @@ public class SecurityDate12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendRankingDate";
 			definition = "Date/time at which a security will be entitled to a dividend.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityDate16.mmDividendRankingDate);
 			previousVersion_lazy = () -> SecurityDate9.mmDividendRankingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -296,6 +329,14 @@ public class SecurityDate12 {
 	 * definition} =
 	 * "Date/time at which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmEarliestPaymentDate
+	 * SecurityDate16.mmEarliestPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -313,6 +354,7 @@ public class SecurityDate12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date/time at which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityDate16.mmEarliestPaymentDate);
 			previousVersion_lazy = () -> SecurityDate9.mmEarliestPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -355,6 +397,14 @@ public class SecurityDate12 {
 	 * definition} =
 	 * "Date/time at which security will assimilate, become fungible, or have the same rights to dividends as the parent issue."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmPariPassuDate
+	 * SecurityDate16.mmPariPassuDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -372,6 +422,7 @@ public class SecurityDate12 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PariPassuDate";
 			definition = "Date/time at which security will assimilate, become fungible, or have the same rights to dividends as the parent issue.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityDate16.mmPariPassuDate);
 			previousVersion_lazy = () -> SecurityDate9.mmPariPassuDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -406,7 +457,15 @@ public class SecurityDate12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date/time at which the securities to be reorganised will cease to be tradeable. "
+	 * "Date/time at which the securities to be reorganised will cease to be tradeable."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityDate16#mmLastTradingDate
+	 * SecurityDate16.mmLastTradingDate}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -422,7 +481,8 @@ public class SecurityDate12 {
 			xmlTag = "LastTradgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTradingDate";
-			definition = "Date/time at which the securities to be reorganised will cease to be tradeable. ";
+			definition = "Date/time at which the securities to be reorganised will cease to be tradeable.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityDate16.mmLastTradingDate);
 			previousVersion_lazy = () -> SecurityDate9.mmLastTradingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -441,6 +501,7 @@ public class SecurityDate12 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityDate12";
 				definition = "Specifies security date details.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityDate16.mmObject());
 				previousVersion_lazy = () -> SecurityDate9.mmObject();
 			}
 		});

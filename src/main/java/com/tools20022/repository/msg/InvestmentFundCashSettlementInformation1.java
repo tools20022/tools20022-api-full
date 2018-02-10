@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Settlement instructions to be used to transfer cash from the Debtor to the
- * Creditor.
+ * Creditor. .
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -69,7 +69,7 @@ import javax.xml.bind.annotation.XmlType;
  * "InvestmentFundCashSettlementInformation1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Settlement instructions to be used to transfer cash from the Debtor to the Creditor.\n"
+ * "Settlement instructions to be used to transfer cash from the Debtor to the Creditor.\n."
  * </li>
  * </ul>
  */
@@ -108,7 +108,7 @@ public class InvestmentFundCashSettlementInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.\n"
+	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -120,7 +120,7 @@ public class InvestmentFundCashSettlementInformation1 {
 			xmlTag = "SbcptPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubscriptionPaymentInstrument";
-			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.\n";
+			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -157,7 +157,7 @@ public class InvestmentFundCashSettlementInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a redemption payment.\n"
+	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a redemption payment.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -169,7 +169,7 @@ public class InvestmentFundCashSettlementInformation1 {
 			xmlTag = "RedPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RedemptionPaymentInstrument";
-			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a redemption payment.\n";
+			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a redemption payment.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -206,7 +206,7 @@ public class InvestmentFundCashSettlementInformation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a dividend payment.\n"
+	 * "Instrument that has or represents monetary value and is used to process a payment instruction for a dividend payment.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -218,7 +218,7 @@ public class InvestmentFundCashSettlementInformation1 {
 			xmlTag = "DvddPmtInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DividendPaymentInstrument";
-			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a dividend payment.\n";
+			definition = "Instrument that has or represents monetary value and is used to process a payment instruction for a dividend payment.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -285,7 +285,7 @@ public class InvestmentFundCashSettlementInformation1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InvestmentFundCashSettlementInformation1";
-				definition = "Settlement instructions to be used to transfer cash from the Debtor to the Creditor.\n";
+				definition = "Settlement instructions to be used to transfer cash from the Debtor to the Creditor.\n.";
 			}
 		});
 		return mmObject_lazy.get();

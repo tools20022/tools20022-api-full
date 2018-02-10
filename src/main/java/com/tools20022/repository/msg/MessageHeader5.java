@@ -77,6 +77,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of characteristics, such as the identification or the creation date and time, specific to the message."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageHeader8 MessageHeader8}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -112,6 +118,14 @@ public class MessageHeader5 {
 	 * definition} =
 	 * "Point to point reference, as assigned by the sender, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageHeader8#mmMessageIdentification
+	 * MessageHeader8.mmMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageIdentification = new MMMessageAttribute() {
@@ -122,6 +136,7 @@ public class MessageHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the sender, to unambiguously identify the message.\nUsage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader8.mmMessageIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -153,6 +168,14 @@ public class MessageHeader5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageHeader8#mmCreationDateTime
+	 * MessageHeader8.mmCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreationDateTime = new MMMessageAttribute() {
@@ -163,6 +186,7 @@ public class MessageHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader8.mmCreationDateTime);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -196,6 +220,14 @@ public class MessageHeader5 {
 	 * definition} =
 	 * "Pagination of the message.\nUsage: the pagination of the message is only allowed when agreed between the parties."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageHeader8#mmMessagePagination
+	 * MessageHeader8.mmMessagePagination}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessagePagination = new MMMessageAttribute() {
@@ -206,6 +238,7 @@ public class MessageHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessagePagination";
 			definition = "Pagination of the message.\nUsage: the pagination of the message is only allowed when agreed between the parties.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader8.mmMessagePagination);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Pagination.mmObject();
@@ -236,6 +269,14 @@ public class MessageHeader5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identification of the original query message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageHeader8#mmOriginalBusinessQuery
+	 * MessageHeader8.mmOriginalBusinessQuery}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginalBusinessQuery = new MMMessageAssociationEnd() {
@@ -246,6 +287,7 @@ public class MessageHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBusinessQuery";
 			definition = "Unique identification of the original query message.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader8.mmOriginalBusinessQuery);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -279,6 +321,14 @@ public class MessageHeader5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specific actions to be executed through the request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.MessageHeader8#mmRequestType
+	 * MessageHeader8.mmRequestType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRequestType = new MMMessageAttribute() {
@@ -289,6 +339,7 @@ public class MessageHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestType";
 			definition = "Specific actions to be executed through the request.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader8.mmRequestType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> RequestType2Choice.mmObject();
@@ -322,6 +373,13 @@ public class MessageHeader5 {
 	 * definition} =
 	 * "Recalls the criteria (search and return criteria) defined in a preceding query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.MessageHeader8#mmQueryName
+	 * MessageHeader8.mmQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmQueryName = new MMMessageAttribute() {
@@ -332,6 +390,7 @@ public class MessageHeader5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
+			nextVersions_lazy = () -> Arrays.asList(MessageHeader8.mmQueryName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -348,6 +407,7 @@ public class MessageHeader5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageHeader5";
 				definition = "Set of characteristics, such as the identification or the creation date and time, specific to the message.";
+				nextVersions_lazy = () -> Arrays.asList(MessageHeader8.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

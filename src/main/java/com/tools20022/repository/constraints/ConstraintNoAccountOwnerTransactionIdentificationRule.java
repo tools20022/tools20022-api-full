@@ -1841,6 +1841,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraPositionPending4
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraPositionPending4}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionPending2> forIntraPositionPending2 = new MMConstraint<IntraPositionPending2>() {
@@ -1849,6 +1858,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionPending4);
 			owner_lazy = () -> IntraPositionPending2.mmObject();
 		}
 	};
@@ -1871,6 +1881,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraBalanceMovement3
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraBalanceMovement3}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraBalanceMovement1> forIntraBalanceMovement1 = new MMConstraint<IntraBalanceMovement1>() {
@@ -1879,6 +1898,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalanceMovement3);
 			owner_lazy = () -> IntraBalanceMovement1.mmObject();
 		}
 	};
@@ -1901,6 +1921,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraPositionMovement3
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraPositionMovement3}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraPositionMovement1> forIntraPositionMovement1 = new MMConstraint<IntraPositionMovement1>() {
@@ -1909,6 +1938,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionMovement3);
 			owner_lazy = () -> IntraPositionMovement1.mmObject();
 		}
 	};
@@ -1931,6 +1961,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraBalancePending4
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraBalancePending4}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraBalancePending2> forIntraBalancePending2 = new MMConstraint<IntraBalancePending2>() {
@@ -1939,6 +1978,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalancePending4);
 			owner_lazy = () -> IntraBalancePending2.mmObject();
 		}
 	};
@@ -1961,6 +2001,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraBalancePosting4
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraBalancePosting4}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<IntraBalancePosting2> forIntraBalancePosting2 = new MMConstraint<IntraBalancePosting2>() {
@@ -1969,6 +2018,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalancePosting4);
 			owner_lazy = () -> IntraBalancePosting2.mmObject();
 		}
 	};
@@ -1990,6 +2040,14 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction51
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction51}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMConstraint<Transaction25> forTransaction25 = new MMConstraint<Transaction25>() {
@@ -1998,6 +2056,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction51);
 			owner_lazy = () -> Transaction25.mmObject();
 		}
 	};
@@ -2606,6 +2665,15 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransactionDetails106
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forTransactionDetails106}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2620,6 +2688,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails106);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails64;
 			owner_lazy = () -> TransactionDetails76.mmObject();
 		}
@@ -3247,7 +3316,8 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.msg.Transaction53 Transaction53}</li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement3
+	 * IntraBalanceMovement3}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -3262,6 +3332,262 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraBalanceMovement1
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraBalanceMovement1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraBalanceMovement3> forIntraBalanceMovement3 = new MMConstraint<IntraBalanceMovement3>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalanceMovement3;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalanceMovement1;
+			owner_lazy = () -> IntraBalanceMovement3.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionPending4
+	 * IntraPositionPending4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraPositionPending6
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraPositionPending6}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraPositionPending2
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraPositionPending2}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionPending4> forIntraPositionPending4 = new MMConstraint<IntraPositionPending4>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionPending4;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionPending6);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionPending2;
+			owner_lazy = () -> IntraPositionPending4.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction51 Transaction51}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction58
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction58}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction25
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction25}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction51> forTransaction51 = new MMConstraint<Transaction51>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction51;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction58);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction25;
+			owner_lazy = () -> Transaction51.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePending4
+	 * IntraBalancePending4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraBalancePending2
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraBalancePending2}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraBalancePending4> forIntraBalancePending4 = new MMConstraint<IntraBalancePending4>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalancePending4;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalancePending2;
+			owner_lazy = () -> IntraBalancePending4.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraBalancePosting4
+	 * IntraBalancePosting4}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraBalancePosting2
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraBalancePosting2}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraBalancePosting4> forIntraBalancePosting4 = new MMConstraint<IntraBalancePosting4>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraBalancePosting4;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraBalancePosting2;
+			owner_lazy = () -> IntraBalancePosting4.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovement3
+	 * IntraPositionMovement3}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraPositionMovement5
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraPositionMovement5}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraPositionMovement1
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraPositionMovement1}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionMovement3> forIntraPositionMovement3 = new MMConstraint<IntraPositionMovement3>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionMovement3;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionMovement5);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionMovement1;
+			owner_lazy = () -> IntraPositionMovement3.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction53 Transaction53}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction60
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction60}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction47
 	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction47}</li>
 	 * </ul>
@@ -3272,6 +3598,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction60);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction47;
 			owner_lazy = () -> Transaction53.mmObject();
 		}
@@ -3294,6 +3621,14 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction61
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction61}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3307,6 +3642,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction61);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction45;
 			owner_lazy = () -> Transaction54.mmObject();
 		}
@@ -3329,6 +3665,14 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * definition} =
 	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction62
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction62}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -3342,6 +3686,7 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoAccountOwnerTransactionIdentificationRule";
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction62);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction46;
 			owner_lazy = () -> Transaction52.mmObject();
 		}
@@ -3468,6 +3813,374 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails85;
 			owner_lazy = () -> TransactionDetails101.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovement5
+	 * IntraPositionMovement5}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraPositionMovement3
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraPositionMovement3}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionMovement5> forIntraPositionMovement5 = new MMConstraint<IntraPositionMovement5>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionMovement5;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionMovement3;
+			owner_lazy = () -> IntraPositionMovement5.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction58 Transaction58}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction51
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction51}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction58> forTransaction58 = new MMConstraint<Transaction58>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction58;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction51;
+			owner_lazy = () -> Transaction58.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionPending6
+	 * IntraPositionPending6}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forIntraPositionPending4
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forIntraPositionPending4}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<IntraPositionPending6> forIntraPositionPending6 = new MMConstraint<IntraPositionPending6>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkIntraPositionPending6;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forIntraPositionPending4;
+			owner_lazy = () -> IntraPositionPending6.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction60 Transaction60}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction53
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction53}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction60> forTransaction60 = new MMConstraint<Transaction60>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction60;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction53;
+			owner_lazy = () -> Transaction60.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction61 Transaction61}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction54
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction54}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction61> forTransaction61 = new MMConstraint<Transaction61>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction61;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction54;
+			owner_lazy = () -> Transaction61.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction62 Transaction62}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransaction52
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction52}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction62> forTransaction62 = new MMConstraint<Transaction62>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction62;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransaction52;
+			owner_lazy = () -> Transaction62.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106
+	 * TransactionDetails106}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule#forTransactionDetails76
+	 * ConstraintNoAccountOwnerTransactionIdentificationRule.
+	 * forTransactionDetails76}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails106> forTransactionDetails106 = new MMConstraint<TransactionDetails106>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails106;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionDetails76;
+			owner_lazy = () -> TransactionDetails106.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails108
+	 * TransactionDetails108}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<TransactionDetails108> forTransactionDetails108 = new MMConstraint<TransactionDetails108>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransactionDetails108;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, then the AccountOwnerTransactionIdentification must be NONREF.";
+			owner_lazy = () -> TransactionDetails108.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction63 Transaction63}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction63> forTransaction63 = new MMConstraint<Transaction63>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction63;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			owner_lazy = () -> Transaction63.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction64 Transaction64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction64> forTransaction64 = new MMConstraint<Transaction64>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			owner_lazy = () -> Transaction64.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.Transaction65 Transaction65}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "NoAccountOwnerTransactionIdentificationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<Transaction65> forTransaction65 = new MMConstraint<Transaction65>() {
+		{
+			validator = ConstraintNoAccountOwnerTransactionIdentificationRule::checkTransaction65;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "NoAccountOwnerTransactionIdentificationRule";
+			definition = "If no reference is available for the AccountOwnerTransactionIdentification, for example, the transaction was sent by fax, then the AccountOwnerTransactionIdentification must be NONREF.";
+			owner_lazy = () -> Transaction65.mmObject();
 		}
 	};
 
@@ -4446,6 +5159,66 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * sent by fax, then the AccountOwnerTransactionIdentification must be
 	 * NONREF.
 	 */
+	public static void checkIntraBalanceMovement3(IntraBalanceMovement3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkIntraPositionPending4(IntraPositionPending4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkTransaction51(Transaction51 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkIntraBalancePending4(IntraBalancePending4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkIntraBalancePosting4(IntraBalancePosting4 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkIntraPositionMovement3(IntraPositionMovement3 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
 	public static void checkTransaction53(Transaction53 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -4506,6 +5279,114 @@ public class ConstraintNoAccountOwnerTransactionIdentificationRule {
 	 * AccountOwnerTransactionIdentification must be NONREF.
 	 */
 	public static void checkTransactionDetails101(TransactionDetails101 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkIntraPositionMovement5(IntraPositionMovement5 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkTransaction58(Transaction58 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkIntraPositionPending6(IntraPositionPending6 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkTransaction60(Transaction60 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkTransaction61(Transaction61 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkTransaction62(Transaction62 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, then the
+	 * AccountOwnerTransactionIdentification must be NONREF.
+	 */
+	public static void checkTransactionDetails106(TransactionDetails106 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, then the
+	 * AccountOwnerTransactionIdentification must be NONREF.
+	 */
+	public static void checkTransactionDetails108(TransactionDetails108 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkTransaction63(Transaction63 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkTransaction64(Transaction64 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If no reference is available for the
+	 * AccountOwnerTransactionIdentification, for example, the transaction was
+	 * sent by fax, then the AccountOwnerTransactionIdentification must be
+	 * NONREF.
+	 */
+	public static void checkTransaction65(Transaction65 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -151,7 +151,7 @@ public class CorporateActionEventStageFormat4SD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The number of securities purchased.\r\nThe value should be the actual number, or 0 (if, as a result, TEND or BIDS will not take place).\r\n買付株式数／未定／非設定\r\n※買付前の通知において、「非設定」のデータが1件あり。未定との違いは不明。\""
+	 * "The number of securities purchased.\r\nThe value should be the actual number, or 0 (if, as a result, TEND or BIDS will not take place).\r\n買付株式数／未定／非設定\r\n※買付前の通知において、「非設定」のデータが1件あり。未定との違いは不明。\"."
 	 * </li>
 	 * </ul>
 	 */
@@ -162,7 +162,7 @@ public class CorporateActionEventStageFormat4SD1 {
 			xmlTag = "SctiesPurchsd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesPurchased";
-			definition = "The number of securities purchased.\r\nThe value should be the actual number, or 0 (if, as a result, TEND or BIDS will not take place).\r\n買付株式数／未定／非設定\r\n※買付前の通知において、「非設定」のデータが1件あり。未定との違いは不明。\"";
+			definition = "The number of securities purchased.\r\nThe value should be the actual number, or 0 (if, as a result, TEND or BIDS will not take place).\r\n買付株式数／未定／非設定\r\n※買付前の通知において、「非設定」のデータが1件あり。未定との違いは不明。\".";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> FinancialInstrumentQuantity15Choice.mmObject();

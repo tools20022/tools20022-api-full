@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ReservationOrError5Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reports either on the reservation or on a business error."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ReservationOrError7Choice
+ * ReservationOrError7Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.ReservationOrError3Choice
@@ -108,6 +115,14 @@ public class ReservationOrError5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Requested information on the limit."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationOrError7Choice#mmReservation
+	 * ReservationOrError7Choice.mmReservation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -124,6 +139,7 @@ public class ReservationOrError5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reservation";
 			definition = "Requested information on the limit.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationOrError7Choice.mmReservation);
 			previousVersion_lazy = () -> ReservationOrError3Choice.mmReservation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -157,6 +173,14 @@ public class ReservationOrError5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reason the requested business information is not given."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ReservationOrError7Choice#mmBusinessError
+	 * ReservationOrError7Choice.mmBusinessError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,6 +196,7 @@ public class ReservationOrError5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessError";
 			definition = "Reason the requested business information is not given.";
+			nextVersions_lazy = () -> Arrays.asList(ReservationOrError7Choice.mmBusinessError);
 			previousVersion_lazy = () -> ReservationOrError3Choice.mmBusinessError;
 			minOccurs = 1;
 			isComposite = true;
@@ -188,6 +213,7 @@ public class ReservationOrError5Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReservationOrError5Choice";
 				definition = "Reports either on the reservation or on a business error.";
+				nextVersions_lazy = () -> Arrays.asList(ReservationOrError7Choice.mmObject());
 				previousVersion_lazy = () -> ReservationOrError3Choice.mmObject();
 			}
 		});

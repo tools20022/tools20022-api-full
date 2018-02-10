@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Role played by a party in the context of a security certificate
+ * Role played by a party in the context of a security certificate.
  * <p>
  * <strong>Class diagram</strong>
  * <p>
@@ -84,7 +84,7 @@ import java.util.Objects;
  * "SecurityCertificatePartyRole"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Role played by a party in the context of a security certificate"</li>
+ * "Role played by a party in the context of a security certificate."</li>
  * </ul>
  */
 public class SecurityCertificatePartyRole extends Role {
@@ -157,7 +157,7 @@ public class SecurityCertificatePartyRole extends Role {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecurityCertificatePartyRole";
-				definition = "Role played by a party in the context of a security certificate";
+				definition = "Role played by a party in the context of a security certificate.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecurityCertificate.mmSecurityCertificatePartyRole);
 				subType_lazy = () -> Arrays.asList(SecurityCertificateHolderRole.mmObject(), SecurityCertificateIssuerRole.mmObject());
 				superType_lazy = () -> Role.mmObject();

@@ -288,7 +288,7 @@ public class SwitchSubscriptionLegExecution4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Investment fund class to which the subscription leg of the investment fund order execution is related. "
+	 * "Investment fund class to which the subscription leg of the investment fund order execution is related."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -305,7 +305,7 @@ public class SwitchSubscriptionLegExecution4 {
 			xmlTag = "FinInstrmDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentDetails";
-			definition = "Investment fund class to which the subscription leg of the investment fund order execution is related. ";
+			definition = "Investment fund class to which the subscription leg of the investment fund order execution is related.";
 			previousVersion_lazy = () -> SwitchSubscriptionLegExecution3.mmFinancialInstrumentDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -458,7 +458,7 @@ public class SwitchSubscriptionLegExecution4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of money to be paid by the investor when subscribing to fund units.\r\nGross amount = (Quantity * Price) + (Fees + Taxes). "
+	 * "Amount of money to be paid by the investor when subscribing to fund units.\r\nGross amount = (Quantity * Price) + (Fees + Taxes)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -475,7 +475,7 @@ public class SwitchSubscriptionLegExecution4 {
 			xmlTag = "GrssAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GrossAmount";
-			definition = "Amount of money to be paid by the investor when subscribing to fund units.\r\nGross amount = (Quantity * Price) + (Fees + Taxes). ";
+			definition = "Amount of money to be paid by the investor when subscribing to fund units.\r\nGross amount = (Quantity * Price) + (Fees + Taxes).";
 			previousVersion_lazy = () -> SwitchSubscriptionLegExecution3.mmGrossAmount;
 			maxOccurs = 1;
 			minOccurs = 0;

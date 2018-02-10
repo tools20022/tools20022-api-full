@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TransferReason1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the transfer reason."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TransferReason1Choice
+ * TransferReason1Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class TransferReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transfer reason expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransferReason1Choice#mmCode
+	 * TransferReason1Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -119,6 +134,7 @@ public class TransferReason1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Transfer reason expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReason1Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransferReason1Code.mmObject();
@@ -157,6 +173,14 @@ public class TransferReason1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transfer reason expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransferReason1Choice#mmProprietary
+	 * TransferReason1Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -168,6 +192,7 @@ public class TransferReason1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Transfer reason expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(TransferReason1Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification27.mmObject();
@@ -190,6 +215,7 @@ public class TransferReason1 {
 				})).get();
 				name = "TransferReason1";
 				definition = "Choice of format for the transfer reason.";
+				nextVersions_lazy = () -> Arrays.asList(TransferReason1Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

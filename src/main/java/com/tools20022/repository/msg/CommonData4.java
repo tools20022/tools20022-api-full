@@ -259,7 +259,7 @@ public class CommonData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of transaction being undertaken for the main service, common to a set of transaction.."
+	 * "Type of transaction being undertaken for the main service, common to a set of transaction."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -284,7 +284,7 @@ public class CommonData4 {
 			xmlTag = "TxTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionType";
-			definition = "Type of transaction being undertaken for the main service, common to a set of transaction..";
+			definition = "Type of transaction being undertaken for the main service, common to a set of transaction.";
 			nextVersions_lazy = () -> Arrays.asList(CommonData5.mmTransactionType);
 			previousVersion_lazy = () -> CommonData3.mmTransactionType;
 			maxOccurs = 1;

@@ -140,6 +140,16 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmCallPutOption
  * UnsecuredMarketTransaction4.mmCallPutOption}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction15#mmOption
+ * TradeTransaction15.mmOption}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction17#mmOption
+ * TradeTransaction17.mmOption}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction14#mmOption
+ * TradeTransaction14.mmOption}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction18#mmOption
+ * TradeTransaction18.mmOption}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction16#mmOption
+ * TradeTransaction16.mmOption}</li>
  * </ul>
  * </li>
  * <li>
@@ -183,6 +193,15 @@ import java.util.Objects;
  * OptionStyle9Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.OptionType7Choice
  * OptionType7Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Option13 Option13}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AssignmentMethod2Choice
+ * AssignmentMethod2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.OptionType8Choice
+ * OptionType8Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.SettleStyle2Choice
+ * SettleStyle2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.OptionOrSwaption6
+ * OptionOrSwaption6}</li>
  * </ul>
  * </li>
  * <li>
@@ -231,6 +250,15 @@ public class Option extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Option7#mmInstrumentAssignmentMethod
 	 * Option7.mmInstrumentAssignmentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Option13#mmInstrumentAssignmentMethod
+	 * Option13.mmInstrumentAssignmentMethod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AssignmentMethod2Choice#mmCode
+	 * AssignmentMethod2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AssignmentMethod2Choice#mmProprietary
+	 * AssignmentMethod2Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -250,7 +278,8 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmInstrumentAssignmentMethod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Option1.mmInstrumentAssignmentMethod, AssignmentMethod1Choice.mmCode, AssignmentMethod1Choice.mmProprietary, Option7.mmInstrumentAssignmentMethod);
+			derivation_lazy = () -> Arrays.asList(Option1.mmInstrumentAssignmentMethod, AssignmentMethod1Choice.mmCode, AssignmentMethod1Choice.mmProprietary, Option7.mmInstrumentAssignmentMethod, Option13.mmInstrumentAssignmentMethod,
+					AssignmentMethod2Choice.mmCode, AssignmentMethod2Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -297,6 +326,15 @@ public class Option extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Option7#mmOptionSettlementStyle
 	 * Option7.mmOptionSettlementStyle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Option13#mmOptionSettlementStyle
+	 * Option13.mmOptionSettlementStyle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettleStyle2Choice#mmCode
+	 * SettleStyle2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettleStyle2Choice#mmProprietary
+	 * SettleStyle2Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -318,7 +356,8 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmSettleStyle = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Option1.mmSettleStyle, FinancialInstrumentAttributes1.mmSettleStyle, SettleStyle1Choice.mmCode, SettleStyle1Choice.mmProprietary, Option7.mmOptionSettlementStyle);
+			derivation_lazy = () -> Arrays.asList(Option1.mmSettleStyle, FinancialInstrumentAttributes1.mmSettleStyle, SettleStyle1Choice.mmCode, SettleStyle1Choice.mmProprietary, Option7.mmOptionSettlementStyle,
+					Option13.mmOptionSettlementStyle, SettleStyle2Choice.mmCode, SettleStyle2Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -738,6 +777,9 @@ public class Option extends Derivative {
 	 * Option5.mmSettlementType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Option6#mmSettlementType
 	 * Option6.mmSettlementType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmSettlementType
+	 * UnderlyingAttributes3.mmSettlementType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -760,7 +802,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmSettlementType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(UnderlyingAttributes.mmSettlementType, Option2.mmSettlementType, Option3.mmSettlementType, UnderlyingAttributes2.mmSettlementType, Option4.mmSettlementType, Option5.mmSettlementType,
-					Option6.mmSettlementType);
+					Option6.mmSettlementType, UnderlyingAttributes3.mmSettlementType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -797,11 +839,29 @@ public class Option extends Derivative {
 	 * <li>{@linkplain com.tools20022.repository.msg.Option7#mmStrikeMultiplier
 	 * Option7.mmStrikeMultiplier}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Option13#mmStrikeMultiplier
+	 * Option13.mmStrikeMultiplier}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmPriceMultiplier
 	 * DerivativeInstrument5.mmPriceMultiplier}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument6#mmPriceMultiplier
 	 * DerivativeInstrument6.mmPriceMultiplier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction15#mmPriceMultiplier
+	 * TradeTransaction15.mmPriceMultiplier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction17#mmPriceMultiplier
+	 * TradeTransaction17.mmPriceMultiplier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction14#mmPriceMultiplier
+	 * TradeTransaction14.mmPriceMultiplier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmPriceMultiplier
+	 * TradeTransaction18.mmPriceMultiplier}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction16#mmPriceMultiplier
+	 * TradeTransaction16.mmPriceMultiplier}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -823,7 +883,8 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmStrikeMultiplier = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Option1.mmStrikeMultiplier, Option7.mmStrikeMultiplier, DerivativeInstrument5.mmPriceMultiplier, DerivativeInstrument6.mmPriceMultiplier);
+			derivation_lazy = () -> Arrays.asList(Option1.mmStrikeMultiplier, Option7.mmStrikeMultiplier, Option13.mmStrikeMultiplier, DerivativeInstrument5.mmPriceMultiplier, DerivativeInstrument6.mmPriceMultiplier,
+					TradeTransaction15.mmPriceMultiplier, TradeTransaction17.mmPriceMultiplier, TradeTransaction14.mmPriceMultiplier, TradeTransaction18.mmPriceMultiplier, TradeTransaction16.mmPriceMultiplier);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -872,6 +933,8 @@ public class Option extends Derivative {
 	 * Option6.mmExpiryLocation}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Option10#mmExpiryLocation
 	 * Option10.mmExpiryLocation}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option13#mmExpiryLocation
+	 * Option13.mmExpiryLocation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -892,7 +955,7 @@ public class Option extends Derivative {
 	public static final MMBusinessAttribute mmExpiryLocation = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Option1.mmExpiryLocation, Option2.mmExpiryLocation, Option3.mmExpiryLocation, Option7.mmExpiryLocation, Option4.mmExpiryLocation, Option5.mmExpiryLocation, Option6.mmExpiryLocation,
-					Option10.mmExpiryLocation);
+					Option10.mmExpiryLocation, Option13.mmExpiryLocation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1180,6 +1243,8 @@ public class Option extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmOptionStyle
 	 * FinancialInstrumentAttributes78.mmOptionStyle}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option13#mmOptionStyle
+	 * Option13.mmOptionStyle}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmOptionExerciseStyle
 	 * DerivativeInstrument5.mmOptionExerciseStyle}</li>
@@ -1198,6 +1263,21 @@ public class Option extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83#mmOptionStyle
 	 * FinancialInstrumentAttributes83.mmOptionStyle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OptionOrSwaption6#mmOptionExerciseStyle
+	 * OptionOrSwaption6.mmOptionExerciseStyle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmOptionStyle
+	 * FinancialInstrumentAttributes91.mmOptionStyle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmOptionStyle
+	 * FinancialInstrumentAttributes92.mmOptionStyle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmOptionStyle
+	 * FinancialInstrumentAttributes95.mmOptionStyle}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmOptionStyle
+	 * FinancialInstrumentAttributes97.mmOptionStyle}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1213,7 +1293,7 @@ public class Option extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies how an option can be exercised (American, European, Bermudan)"
+	 * "Specifies how an option can be exercised (American, European, Bermudan)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1233,13 +1313,14 @@ public class Option extends Derivative {
 					FinancialInstrumentAttributes49.mmOptionStyle, FinancialInstrumentAttributes55.mmOptionStyle, FinancialInstrumentAttributes56.mmOptionStyle, OptionStyle8Choice.mmCode, OptionStyle8Choice.mmProprietary,
 					FinancialInstrumentAttributes63.mmOptionStyle, FinancialInstrumentAttributes64.mmOptionStyle, FinancialInstrumentAttributes66.mmOptionStyle, FinancialInstrumentAttributes67.mmOptionStyle,
 					FinancialInstrumentAttributes70.mmOptionStyle, OptionStyle9Choice.mmCode, OptionStyle9Choice.mmProprietary, FinancialInstrumentAttributes71.mmOptionStyle, FinancialInstrumentAttributes75.mmOptionStyle,
-					FinancialInstrumentAttributes78.mmOptionStyle, DerivativeInstrument5.mmOptionExerciseStyle, DerivativeInstrument6.mmOptionExerciseStyle, FinancialInstrumentAttributes79.mmOptionStyle,
-					FinancialInstrumentAttributes80.mmOptionStyle, FinancialInstrumentAttributes85.mmOptionStyle, FinancialInstrumentAttributes83.mmOptionStyle);
+					FinancialInstrumentAttributes78.mmOptionStyle, Option13.mmOptionStyle, DerivativeInstrument5.mmOptionExerciseStyle, DerivativeInstrument6.mmOptionExerciseStyle, FinancialInstrumentAttributes79.mmOptionStyle,
+					FinancialInstrumentAttributes80.mmOptionStyle, FinancialInstrumentAttributes85.mmOptionStyle, FinancialInstrumentAttributes83.mmOptionStyle, OptionOrSwaption6.mmOptionExerciseStyle,
+					FinancialInstrumentAttributes91.mmOptionStyle, FinancialInstrumentAttributes92.mmOptionStyle, FinancialInstrumentAttributes95.mmOptionStyle, FinancialInstrumentAttributes97.mmOptionStyle);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OptionStyle";
-			definition = "Specifies how an option can be exercised (American, European, Bermudan)";
+			definition = "Specifies how an option can be exercised (American, European, Bermudan).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OptionStyleCode.mmObject();
@@ -1441,6 +1522,9 @@ public class Option extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument6#mmStrikePrice
 	 * DerivativeInstrument6.mmStrikePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OptionOrSwaption6#mmStrikePrice
+	 * OptionOrSwaption6.mmStrikePrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1462,7 +1546,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAssociationEnd mmStrikePrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(DerivativeInstrument5.mmStrikePrice, DerivativeInstrument6.mmStrikePrice);
+			derivation_lazy = () -> Arrays.asList(DerivativeInstrument5.mmStrikePrice, DerivativeInstrument6.mmStrikePrice, OptionOrSwaption6.mmStrikePrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1730,12 +1814,35 @@ public class Option extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.OptionType7Choice#mmProprietary
 	 * OptionType7Choice.mmProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option13#mmOptionType
+	 * Option13.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionType8Choice#mmCode
+	 * OptionType8Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OptionType8Choice#mmProprietary
+	 * OptionType8Choice.mmProprietary}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument5#mmOptionType
 	 * DerivativeInstrument5.mmOptionType}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DerivativeInstrument6#mmOptionType
 	 * DerivativeInstrument6.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OptionOrSwaption6#mmOptionType
+	 * OptionOrSwaption6.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmOptionType
+	 * FinancialInstrumentAttributes91.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmOptionType
+	 * FinancialInstrumentAttributes92.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmOptionType
+	 * FinancialInstrumentAttributes95.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmOptionType
+	 * FinancialInstrumentAttributes97.mmOptionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1765,7 +1872,9 @@ public class Option extends Derivative {
 					FinancialInstrumentAttributes44.mmOptionType, SecurityInstrumentDescription1.mmOptionType, SecurityInstrumentDescription2.mmOptionType, FinancialInstrumentAttributes15.mmOptionType,
 					FinancialInstrumentAttributes29.mmOptionType, OptionType5Choice.mmCode, OptionType5Choice.mmProprietary, Option7.mmOptionType, FinancialInstrumentAttributes2.mmOptionType, Option12.mmType, Option10.mmOptionType,
 					FinancialInstrumentAttributes63.mmOptionType, FinancialInstrumentAttributes64.mmOptionType, OptionType6Choice.mmCode, OptionType6Choice.mmProprietary, FinancialInstrumentAttributes75.mmOptionType,
-					FinancialInstrumentAttributes78.mmOptionType, OptionType7Choice.mmCode, OptionType7Choice.mmProprietary, DerivativeInstrument5.mmOptionType, DerivativeInstrument6.mmOptionType);
+					FinancialInstrumentAttributes78.mmOptionType, OptionType7Choice.mmCode, OptionType7Choice.mmProprietary, Option13.mmOptionType, OptionType8Choice.mmCode, OptionType8Choice.mmProprietary,
+					DerivativeInstrument5.mmOptionType, DerivativeInstrument6.mmOptionType, OptionOrSwaption6.mmOptionType, FinancialInstrumentAttributes91.mmOptionType, FinancialInstrumentAttributes92.mmOptionType,
+					FinancialInstrumentAttributes95.mmOptionType, FinancialInstrumentAttributes97.mmOptionType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1801,6 +1910,8 @@ public class Option extends Derivative {
 	 * Option1.mmStrikeValue}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Option7#mmStrikeValue
 	 * Option7.mmStrikeValue}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Option13#mmStrikeValue
+	 * Option13.mmStrikeValue}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1822,7 +1933,7 @@ public class Option extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmStrikeValue = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Option1.mmStrikeValue, Option7.mmStrikeValue);
+			derivation_lazy = () -> Arrays.asList(Option1.mmStrikeValue, Option7.mmStrikeValue, Option13.mmStrikeValue);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Option.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1899,7 +2010,8 @@ public class Option extends Derivative {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Price.mmOption, com.tools20022.repository.entity.SecuritiesConversion.mmRelatedOption,
 						com.tools20022.repository.entity.CurrencyOption.mmOptionDefinition, com.tools20022.repository.entity.SecuritiesOptionTrade.mmOption);
 				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentProperties1Choice.mmOption, UnsecuredMarketTransaction1.mmCallPutOption, UnsecuredMarketTransaction2.mmCallPutOption,
-						UnsecuredMarketTransaction3.mmCallPutOption, UnsecuredMarketTransaction4.mmCallPutOption);
+						UnsecuredMarketTransaction3.mmCallPutOption, UnsecuredMarketTransaction4.mmCallPutOption, TradeTransaction15.mmOption, TradeTransaction17.mmOption, TradeTransaction14.mmOption, TradeTransaction18.mmOption,
+						TradeTransaction16.mmOption);
 				superType_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Option.mmInstrumentAssignmentMethod, com.tools20022.repository.entity.Option.mmSettleStyle, com.tools20022.repository.entity.Option.mmStandardisation,
 						com.tools20022.repository.entity.Option.mmPositionLimit, com.tools20022.repository.entity.Option.mmUnderlyingType, com.tools20022.repository.entity.Option.mmCoverIndicator,
@@ -1912,7 +2024,7 @@ public class Option extends Derivative {
 				derivationComponent_lazy = () -> Arrays.asList(OptionStyle4Choice.mmObject(), OptionType1Choice.mmObject(), OptionType2Choice.mmObject(), OptionStyle5Choice.mmObject(), OptionType3Choice.mmObject(),
 						OptionStyle1Choice.mmObject(), Option1.mmObject(), OptionStyle6Choice.mmObject(), OptionType4Choice.mmObject(), SettleStyle1Choice.mmObject(), OptionType5Choice.mmObject(), AssignmentMethod1Choice.mmObject(),
 						Option7.mmObject(), OptionStyle2Choice.mmObject(), Option12.mmObject(), OptionDateOrPeriod1Choice.mmObject(), OptionStyle8Choice.mmObject(), OptionType6Choice.mmObject(), OptionStyle9Choice.mmObject(),
-						OptionType7Choice.mmObject());
+						OptionType7Choice.mmObject(), Option13.mmObject(), AssignmentMethod2Choice.mmObject(), OptionType8Choice.mmObject(), SettleStyle2Choice.mmObject(), OptionOrSwaption6.mmObject());
 			}
 
 			@Override

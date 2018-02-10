@@ -339,7 +339,7 @@ public class YieldTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The yield of a security calculated by using its book value instead of the current market price.  This term is typically used in the US domestic market."
+	 * "The yield of a security calculated by using its book value instead of the current market price. This term is typically used in the US domestic market."
 	 * </li>
 	 * </ul>
 	 */
@@ -347,7 +347,7 @@ public class YieldTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Book";
-			definition = "The yield of a security calculated by using its book value instead of the current market price.  This term is typically used in the US domestic market.";
+			definition = "The yield of a security calculated by using its book value instead of the current market price. This term is typically used in the US domestic market.";
 			owner_lazy = () -> com.tools20022.repository.codeset.YieldTypeCode.mmObject();
 			codeName = "BOOK";
 		}
@@ -796,7 +796,7 @@ public class YieldTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The yield assuming only mandatory sinks are taken.  This results in a lower paydown of debt; the yield is then calculated to the final payment date."
+	 * "The yield assuming only mandatory sinks are taken. This results in a lower paydown of debt; the yield is then calculated to the final payment date."
 	 * </li>
 	 * </ul>
 	 */
@@ -804,7 +804,7 @@ public class YieldTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverageLife";
-			definition = "The yield assuming only mandatory sinks are taken.  This results in a lower paydown of debt; the yield is then calculated to the final payment date.";
+			definition = "The yield assuming only mandatory sinks are taken. This results in a lower paydown of debt; the yield is then calculated to the final payment date.";
 			owner_lazy = () -> com.tools20022.repository.codeset.YieldTypeCode.mmObject();
 			codeName = "LGAL";
 		}
@@ -830,7 +830,7 @@ public class YieldTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Yield to Longest Average (Sinking Fund Bonds) - The yield assuming only mandatory sinks are taken.  This results in a slower paydown of debt; the yield is then calculated to the final payment date."
+	 * "Yield to Longest Average (Sinking Fund Bonds) - The yield assuming only mandatory sinks are taken. This results in a slower paydown of debt; the yield is then calculated to the final payment date."
 	 * </li>
 	 * </ul>
 	 */
@@ -838,7 +838,7 @@ public class YieldTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LongestAverage";
-			definition = "Yield to Longest Average (Sinking Fund Bonds) - The yield assuming only mandatory sinks are taken.  This results in a slower paydown of debt; the yield is then calculated to the final payment date.";
+			definition = "Yield to Longest Average (Sinking Fund Bonds) - The yield assuming only mandatory sinks are taken. This results in a slower paydown of debt; the yield is then calculated to the final payment date.";
 			owner_lazy = () -> com.tools20022.repository.codeset.YieldTypeCode.mmObject();
 			codeName = "LGAV";
 		}
@@ -1154,7 +1154,7 @@ public class YieldTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Yield to Shortest Average (Sinking Fund Bonds) - The yield assuming that all sinks (mandatory and voluntary) are taken.  This results in a faster paydown of debt; the yield is then calculated to the final payment date."
+	 * "Yield to Shortest Average (Sinking Fund Bonds) - The yield assuming that all sinks (mandatory and voluntary) are taken. This results in a faster paydown of debt; the yield is then calculated to the final payment date."
 	 * </li>
 	 * </ul>
 	 */
@@ -1162,7 +1162,7 @@ public class YieldTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ShortestAverage";
-			definition = "Yield to Shortest Average (Sinking Fund Bonds) - The yield assuming that all sinks (mandatory and voluntary) are taken.  This results in a faster paydown of debt; the yield is then calculated to the final payment date.";
+			definition = "Yield to Shortest Average (Sinking Fund Bonds) - The yield assuming that all sinks (mandatory and voluntary) are taken. This results in a faster paydown of debt; the yield is then calculated to the final payment date.";
 			owner_lazy = () -> com.tools20022.repository.codeset.YieldTypeCode.mmObject();
 			codeName = "SHAV";
 		}
@@ -1220,7 +1220,7 @@ public class YieldTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The after tax yield grossed up by the maximum federal tax rate of 39.6%.  For comparison to taxable yields."
+	 * "The after tax yield grossed up by the maximum federal tax rate of 39.6%. For comparison to taxable yields."
 	 * </li>
 	 * </ul>
 	 */
@@ -1228,7 +1228,7 @@ public class YieldTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxEquivalent";
-			definition = "The after tax yield grossed up by the maximum federal tax rate of 39.6%.  For comparison to taxable yields.";
+			definition = "The after tax yield grossed up by the maximum federal tax rate of 39.6%. For comparison to taxable yields.";
 			owner_lazy = () -> com.tools20022.repository.codeset.YieldTypeCode.mmObject();
 			codeName = "TXQV";
 		}

@@ -1029,6 +1029,12 @@ import java.util.Optional;
  * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat26Choice#mmTypeAndIdentification
  * SafekeepingPlaceFormat26Choice.mmTypeAndIdentification}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmSafekeepingPlace
+ * AggregateBalanceInformation34.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmSafekeepingPlace
+ * TransactionDetails93.mmSafekeepingPlace}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.msg.AccountIdentification40#mmSafekeepingPlace
  * AccountIdentification40.mmSafekeepingPlace}</li>
  * <li>
@@ -1112,6 +1118,108 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.choice.SafekeepingPlaceFormat27Choice#mmTypeAndIdentification
  * SafekeepingPlaceFormat27Choice.mmTypeAndIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmSafekeepingPlace
+ * TransactionDetails102.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount66#mmSafekeepingPlace
+ * InvestmentAccount66.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount67#mmSafekeepingPlace
+ * InvestmentAccount67.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmSafekeepingPlace
+ * InvestmentAccount68.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmSafekeepingPlace
+ * FinancialInstrumentDetails28.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64#mmSafekeepingPlace
+ * QuantityAndAccount64.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmSafekeepingPlace
+ * TransactionDetails105.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount63#mmSafekeepingPlace
+ * QuantityAndAccount63.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails104#mmSafekeepingPlace
+ * TransactionDetails104.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmSafekeepingPlace
+ * TransactionDetails103.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails45#mmSafekeepingPlace
+ * IntraPositionDetails45.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount65#mmSafekeepingPlace
+ * QuantityAndAccount65.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount66#mmSafekeepingPlace
+ * QuantityAndAccount66.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount67#mmSafekeepingPlace
+ * QuantityAndAccount67.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68#mmSafekeepingPlace
+ * QuantityAndAccount68.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption141#mmSafekeepingPlace
+ * CorporateActionOption141.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification43#mmSafekeepingPlace
+ * AccountIdentification43.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmSafekeepingPlace
+ * SecuritiesOption64.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmSafekeepingPlace
+ * SecuritiesOption65.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionOption144#mmSafekeepingPlace
+ * CorporateActionOption144.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AccountIdentification44#mmSafekeepingPlace
+ * AccountIdentification44.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmSafekeepingPlace
+ * SecuritiesOption67.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmSafekeepingPlace
+ * SecuritiesOption68.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.IntraPositionDetails48#mmSafekeepingPlace
+ * IntraPositionDetails48.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount69#mmSafekeepingPlace
+ * QuantityAndAccount69.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount70#mmSafekeepingPlace
+ * QuantityAndAccount70.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount71#mmSafekeepingPlace
+ * QuantityAndAccount71.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72#mmSafekeepingPlace
+ * QuantityAndAccount72.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount75#mmSafekeepingPlace
+ * QuantityAndAccount75.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.QuantityAndAccount76#mmSafekeepingPlace
+ * QuantityAndAccount76.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmSafekeepingPlace
+ * TransactionDetails110.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails111#mmSafekeepingPlace
+ * TransactionDetails111.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails31#mmSafekeepingPlace
+ * FinancialInstrumentDetails31.mmSafekeepingPlace}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmSafekeepingPlace
+ * TransactionDetails112.mmSafekeepingPlace}</li>
  * </ul>
  * </li>
  * <li>
@@ -1614,13 +1722,21 @@ public class SafekeepingPlace extends SecuritiesPartyRole {
 						QuantityAndAccount51.mmSafekeepingPlace, TransactionDetails87.mmSafekeepingPlace, QuantityAndAccount49.mmSafekeepingPlace, AggregateBalancePerSafekeepingPlace31.mmSafekeepingPlace,
 						TransactionDetails91.mmSafekeepingPlace, QuantityAndAccount50.mmSafekeepingPlace, TransactionDetails90.mmSafekeepingPlace, AggregateBalancePerSafekeepingPlace30.mmSafekeepingPlace,
 						QuantityAndAccount55.mmSafekeepingPlace, QuantityAndAccount54.mmSafekeepingPlace, IntraPositionDetails37.mmSafekeepingPlace, SafekeepingPlaceFormat26Choice.mmIdentification,
-						SafekeepingPlaceFormat26Choice.mmTypeAndIdentification, AccountIdentification40.mmSafekeepingPlace, SecuritiesOption60.mmSafekeepingPlace, SecuritiesOption59.mmSafekeepingPlace,
-						FinancialInstrumentDetails25.mmSafekeepingPlace, TransactionDetails97.mmSafekeepingPlace, SecuritiesFinancingTransactionDetails35.mmSafekeepingPlace, TransactionDetails96.mmSafekeepingPlace,
-						IntraPositionDetails40.mmSafekeepingPlace, TransactionDetails95.mmSafekeepingPlace, SecuritiesCollateral8.mmSafekeepingPlace, FinancialInstrumentDetails27.mmSafekeepingPlace,
-						AccountIdentification41.mmSafekeepingPlace, SecuritiesFinancingTransactionDetails36.mmSafekeepingPlace, SecuritiesOption61.mmSafekeepingPlace, IntraPositionDetails44.mmSafekeepingPlace,
-						SecuritiesOption63.mmSafekeepingPlace, TransactionDetails100.mmSafekeepingPlace, TransactionDetails99.mmSafekeepingPlace, TransactionDetails98.mmSafekeepingPlace, QuantityAndAccount57.mmSafekeepingPlace,
-						QuantityAndAccount58.mmSafekeepingPlace, QuantityAndAccount56.mmSafekeepingPlace, QuantityAndAccount61.mmSafekeepingPlace, QuantityAndAccount62.mmSafekeepingPlace, QuantityAndAccount59.mmSafekeepingPlace,
-						QuantityAndAccount60.mmSafekeepingPlace, SafekeepingPlaceFormat27Choice.mmIdentification, SafekeepingPlaceFormat27Choice.mmTypeAndIdentification);
+						SafekeepingPlaceFormat26Choice.mmTypeAndIdentification, AggregateBalanceInformation34.mmSafekeepingPlace, TransactionDetails93.mmSafekeepingPlace, AccountIdentification40.mmSafekeepingPlace,
+						SecuritiesOption60.mmSafekeepingPlace, SecuritiesOption59.mmSafekeepingPlace, FinancialInstrumentDetails25.mmSafekeepingPlace, TransactionDetails97.mmSafekeepingPlace,
+						SecuritiesFinancingTransactionDetails35.mmSafekeepingPlace, TransactionDetails96.mmSafekeepingPlace, IntraPositionDetails40.mmSafekeepingPlace, TransactionDetails95.mmSafekeepingPlace,
+						SecuritiesCollateral8.mmSafekeepingPlace, FinancialInstrumentDetails27.mmSafekeepingPlace, AccountIdentification41.mmSafekeepingPlace, SecuritiesFinancingTransactionDetails36.mmSafekeepingPlace,
+						SecuritiesOption61.mmSafekeepingPlace, IntraPositionDetails44.mmSafekeepingPlace, SecuritiesOption63.mmSafekeepingPlace, TransactionDetails100.mmSafekeepingPlace, TransactionDetails99.mmSafekeepingPlace,
+						TransactionDetails98.mmSafekeepingPlace, QuantityAndAccount57.mmSafekeepingPlace, QuantityAndAccount58.mmSafekeepingPlace, QuantityAndAccount56.mmSafekeepingPlace, QuantityAndAccount61.mmSafekeepingPlace,
+						QuantityAndAccount62.mmSafekeepingPlace, QuantityAndAccount59.mmSafekeepingPlace, QuantityAndAccount60.mmSafekeepingPlace, SafekeepingPlaceFormat27Choice.mmIdentification,
+						SafekeepingPlaceFormat27Choice.mmTypeAndIdentification, TransactionDetails102.mmSafekeepingPlace, InvestmentAccount66.mmSafekeepingPlace, InvestmentAccount67.mmSafekeepingPlace,
+						InvestmentAccount68.mmSafekeepingPlace, FinancialInstrumentDetails28.mmSafekeepingPlace, QuantityAndAccount64.mmSafekeepingPlace, TransactionDetails105.mmSafekeepingPlace, QuantityAndAccount63.mmSafekeepingPlace,
+						TransactionDetails104.mmSafekeepingPlace, TransactionDetails103.mmSafekeepingPlace, IntraPositionDetails45.mmSafekeepingPlace, QuantityAndAccount65.mmSafekeepingPlace, QuantityAndAccount66.mmSafekeepingPlace,
+						QuantityAndAccount67.mmSafekeepingPlace, QuantityAndAccount68.mmSafekeepingPlace, CorporateActionOption141.mmSafekeepingPlace, AccountIdentification43.mmSafekeepingPlace, SecuritiesOption64.mmSafekeepingPlace,
+						SecuritiesOption65.mmSafekeepingPlace, CorporateActionOption144.mmSafekeepingPlace, AccountIdentification44.mmSafekeepingPlace, SecuritiesOption67.mmSafekeepingPlace, SecuritiesOption68.mmSafekeepingPlace,
+						IntraPositionDetails48.mmSafekeepingPlace, QuantityAndAccount69.mmSafekeepingPlace, QuantityAndAccount70.mmSafekeepingPlace, QuantityAndAccount71.mmSafekeepingPlace, QuantityAndAccount72.mmSafekeepingPlace,
+						QuantityAndAccount75.mmSafekeepingPlace, QuantityAndAccount76.mmSafekeepingPlace, TransactionDetails110.mmSafekeepingPlace, TransactionDetails111.mmSafekeepingPlace, FinancialInstrumentDetails31.mmSafekeepingPlace,
+						TransactionDetails112.mmSafekeepingPlace);
 				superType_lazy = () -> SecuritiesPartyRole.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SafekeepingPlace.mmSafekeepingPlaceType, com.tools20022.repository.entity.SafekeepingPlace.mmCountry,
 						com.tools20022.repository.entity.SafekeepingPlace.mmRelatedSecuritiesAccount, com.tools20022.repository.entity.SafekeepingPlace.mmSecuritiesBalance,

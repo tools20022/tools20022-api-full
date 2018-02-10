@@ -129,6 +129,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of the standing settlement instruction to be applied."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14
+ * StandingSettlementInstruction14}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction3
@@ -177,6 +185,14 @@ public class StandingSettlementInstruction11 {
 	 * definition} =
 	 * "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14#mmSettlementStandingInstructionDatabase
+	 * StandingSettlementInstruction14.mmSettlementStandingInstructionDatabase}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -194,6 +210,7 @@ public class StandingSettlementInstruction11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementStandingInstructionDatabase";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(StandingSettlementInstruction14.mmSettlementStandingInstructionDatabase);
 			previousVersion_lazy = () -> StandingSettlementInstruction3.mmSettlementStandingInstructionDatabase;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -237,6 +254,14 @@ public class StandingSettlementInstruction11 {
 	 * definition} =
 	 * "Identification of the buyer or seller in a standing settlement instruction enabling to derive the Standing Settlement Instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14#mmCounterparty
+	 * StandingSettlementInstruction14.mmCounterparty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -254,6 +279,7 @@ public class StandingSettlementInstruction11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Counterparty";
 			definition = "Identification of the buyer or seller in a standing settlement instruction enabling to derive the Standing Settlement Instruction.";
+			nextVersions_lazy = () -> Arrays.asList(StandingSettlementInstruction14.mmCounterparty);
 			previousVersion_lazy = () -> StandingSettlementInstruction3.mmCounterparty;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -297,6 +323,14 @@ public class StandingSettlementInstruction11 {
 	 * definition} =
 	 * "Vendor of the Settlement Standing Instruction database requested to be consulted."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14#mmVendor
+	 * StandingSettlementInstruction14.mmVendor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -314,6 +348,7 @@ public class StandingSettlementInstruction11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Vendor";
 			definition = "Vendor of the Settlement Standing Instruction database requested to be consulted.";
+			nextVersions_lazy = () -> Arrays.asList(StandingSettlementInstruction14.mmVendor);
 			previousVersion_lazy = () -> StandingSettlementInstruction3.mmVendor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -357,6 +392,14 @@ public class StandingSettlementInstruction11 {
 	 * definition} =
 	 * "Delivering parties, other than the seller, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14#mmOtherDeliveringSettlementParties
+	 * StandingSettlementInstruction14.mmOtherDeliveringSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -374,6 +417,7 @@ public class StandingSettlementInstruction11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherDeliveringSettlementParties";
 			definition = "Delivering parties, other than the seller, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).";
+			nextVersions_lazy = () -> Arrays.asList(StandingSettlementInstruction14.mmOtherDeliveringSettlementParties);
 			previousVersion_lazy = () -> StandingSettlementInstruction3.mmOtherDeliveringSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -417,6 +461,14 @@ public class StandingSettlementInstruction11 {
 	 * definition} =
 	 * "Receiving parties, other than the buyer, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StandingSettlementInstruction14#mmOtherReceivingSettlementParties
+	 * StandingSettlementInstruction14.mmOtherReceivingSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -434,6 +486,7 @@ public class StandingSettlementInstruction11 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherReceivingSettlementParties";
 			definition = "Receiving parties, other than the buyer, needed for deriving the standing settlement instruction (for example, depository) or provided for information purposes (for example, instructing party settlement chain).";
+			nextVersions_lazy = () -> Arrays.asList(StandingSettlementInstruction14.mmOtherReceivingSettlementParties);
 			previousVersion_lazy = () -> StandingSettlementInstruction3.mmOtherReceivingSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -459,6 +512,7 @@ public class StandingSettlementInstruction11 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StandingSettlementInstruction11";
 				definition = "Details of the standing settlement instruction to be applied.";
+				nextVersions_lazy = () -> Arrays.asList(StandingSettlementInstruction14.mmObject());
 				previousVersion_lazy = () -> StandingSettlementInstruction3.mmObject();
 			}
 		});

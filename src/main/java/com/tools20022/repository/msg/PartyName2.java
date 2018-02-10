@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyName2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the party name entity through  the valid short and long names of the party within the system."
+ * "Specifies the party name entity through the valid short and long names of the party within the system."
  * </li>
  * </ul>
  */
@@ -206,7 +206,7 @@ public class PartyName2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PartyName2";
-				definition = "Specifies the party name entity through  the valid short and long names of the party within the system.";
+				definition = "Specifies the party name entity through the valid short and long names of the party within the system.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -65,6 +65,14 @@ import javax.xml.bind.annotation.XmlType;
  * "ModificationProcessingStatus1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of modification processing status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus9Choice
+ * ModificationProcessingStatus9Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +116,14 @@ public class ModificationProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of a modification request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus9Choice#mmCode
+	 * ModificationProcessingStatus9Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -120,6 +136,7 @@ public class ModificationProcessingStatus1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of a modification request.";
+			nextVersions_lazy = () -> Arrays.asList(ModificationProcessingStatus9Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ModificationProcessingStatus1Code.mmObject();
@@ -161,6 +178,14 @@ public class ModificationProcessingStatus1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of a modification request."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ModificationProcessingStatus9Choice#mmProprietary
+	 * ModificationProcessingStatus9Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -173,6 +198,7 @@ public class ModificationProcessingStatus1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Provides the status of a modification request.";
+			nextVersions_lazy = () -> Arrays.asList(ModificationProcessingStatus9Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification20.mmObject();
@@ -188,6 +214,7 @@ public class ModificationProcessingStatus1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ModificationProcessingStatus1Choice";
 				definition = "Choice of modification processing status.";
+				nextVersions_lazy = () -> Arrays.asList(ModificationProcessingStatus9Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

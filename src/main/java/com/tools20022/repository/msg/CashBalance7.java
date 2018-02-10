@@ -83,6 +83,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CashBalance7"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Set of elements used to define the balance details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashBalance8 CashBalance8}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.CashBalance3
  * CashBalance3}</li>
@@ -123,6 +129,13 @@ public class CashBalance7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the nature of a balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance8#mmType
+	 * CashBalance8.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +152,7 @@ public class CashBalance7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Specifies the nature of a balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance8.mmType);
 			previousVersion_lazy = () -> CashBalance3.mmType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -177,6 +191,13 @@ public class CashBalance7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to provide details on the credit line."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance8#mmCreditLine
+	 * CashBalance8.mmCreditLine}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -193,6 +214,7 @@ public class CashBalance7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditLine";
 			definition = "Set of elements used to provide details on the credit line.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance8.mmCreditLine);
 			previousVersion_lazy = () -> CashBalance3.mmCreditLine;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -232,6 +254,13 @@ public class CashBalance7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money of the cash balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance8#mmAmount
+	 * CashBalance8.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -248,6 +277,7 @@ public class CashBalance7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money of the cash balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance8.mmAmount);
 			previousVersion_lazy = () -> CashBalance3.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -288,6 +318,14 @@ public class CashBalance7 {
 	 * definition} =
 	 * "Indicates whether the balance is a credit or a debit balance. \nUsage: A zero balance is considered to be a credit balance."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance8#mmCreditDebitIndicator
+	 * CashBalance8.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -304,6 +342,7 @@ public class CashBalance7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the balance is a credit or a debit balance. \nUsage: A zero balance is considered to be a credit balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance8.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> CashBalance3.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -342,6 +381,13 @@ public class CashBalance7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the date (and time) of the balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance8#mmDate
+	 * CashBalance8.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -358,6 +404,7 @@ public class CashBalance7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Indicates the date (and time) of the balance.";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance8.mmDate);
 			previousVersion_lazy = () -> CashBalance3.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -396,6 +443,14 @@ public class CashBalance7 {
 	 * definition} =
 	 * "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest. \n\nUsage: This type of information is used in the US and is linked to particular instruments such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance8#mmAvailability
+	 * CashBalance8.mmAvailability}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -412,6 +467,7 @@ public class CashBalance7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
 			definition = "Set of elements used to indicate when the booked amount of money will become available, that is can be accessed and starts generating interest. \n\nUsage: This type of information is used in the US and is linked to particular instruments such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).";
+			nextVersions_lazy = () -> Arrays.asList(CashBalance8.mmAvailability);
 			previousVersion_lazy = () -> CashBalance3.mmAvailability;
 			minOccurs = 0;
 			isComposite = true;
@@ -430,6 +486,7 @@ public class CashBalance7 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashBalance7";
 				definition = "Set of elements used to define the balance details.";
+				nextVersions_lazy = () -> Arrays.asList(CashBalance8.mmObject());
 				previousVersion_lazy = () -> CashBalance3.mmObject();
 			}
 		});

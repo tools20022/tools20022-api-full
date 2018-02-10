@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides details of the eligible securities as defined in the collateral reference data."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.EligibleSecurity2
+ * EligibleSecurity2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -103,6 +110,14 @@ public class EligibleSecurity1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a security by an ISIN."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleSecurity2#mmSecurityIdentification
+	 * EligibleSecurity2.mmSecurityIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecurityIdentification = new MMMessageAttribute() {
@@ -113,6 +128,7 @@ public class EligibleSecurity1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityIdentification";
 			definition = "Identification of a security by an ISIN.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleSecurity2.mmSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISINIdentifier.mmObject();
@@ -148,6 +164,14 @@ public class EligibleSecurity1 {
 	 * definition} =
 	 * "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleSecurity2#mmCollateralisationCurrency
+	 * EligibleSecurity2.mmCollateralisationCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCollateralisationCurrency = new MMMessageAttribute() {
@@ -158,6 +182,7 @@ public class EligibleSecurity1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralisationCurrency";
 			definition = "Currency which may be processed by the system. A system may process transactions in a single currency or in multiple currencies.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleSecurity2.mmCollateralisationCurrency);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -192,6 +217,14 @@ public class EligibleSecurity1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the party for which the eligible security is defined."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EligibleSecurity2#mmPartyIdentification
+	 * EligibleSecurity2.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
@@ -202,6 +235,7 @@ public class EligibleSecurity1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Identifies the party for which the eligible security is defined.";
+			nextVersions_lazy = () -> Arrays.asList(EligibleSecurity2.mmPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> NCBOrPaymentBank1Choice.mmObject();
@@ -217,6 +251,7 @@ public class EligibleSecurity1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "EligibleSecurity1";
 				definition = "Provides details of the eligible securities as defined in the collateral reference data.";
+				nextVersions_lazy = () -> Arrays.asList(EligibleSecurity2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

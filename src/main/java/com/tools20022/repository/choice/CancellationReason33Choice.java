@@ -163,7 +163,7 @@ public class CancellationReason33Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reason for the cancellation request, in a proprietary form"</li>
+	 * "Reason for the cancellation request, in a proprietary form."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,7 +179,7 @@ public class CancellationReason33Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Reason for the cancellation request, in a proprietary form";
+			definition = "Reason for the cancellation request, in a proprietary form.";
 			previousVersion_lazy = () -> CancellationReason14Choice.mmProprietary;
 			maxOccurs = 1;
 			minOccurs = 1;

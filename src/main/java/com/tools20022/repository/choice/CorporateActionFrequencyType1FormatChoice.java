@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CorporateActionFrequencyType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the frequency of a CA event."</li>
+ * definition} = "Choice of formats to express the frequency of a CA event."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -104,7 +104,7 @@ public class CorporateActionFrequencyType1FormatChoice {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Standard code to  specify the frequency of a CA event."</li>
+	 * definition} = "Standard code to specify the frequency of a CA event."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -115,7 +115,7 @@ public class CorporateActionFrequencyType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the frequency of a CA event.";
+			definition = "Standard code to specify the frequency of a CA event.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionFrequencyType1Code.mmObject();
@@ -153,8 +153,7 @@ public class CorporateActionFrequencyType1FormatChoice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Proprietary code to  express the frequency of a CA event."
-	 * </li>
+	 * definition} = "Proprietary code to express the frequency of a CA event."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -165,7 +164,7 @@ public class CorporateActionFrequencyType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the frequency of a CA event.";
+			definition = "Proprietary code to express the frequency of a CA event.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -180,7 +179,7 @@ public class CorporateActionFrequencyType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionFrequencyType1FormatChoice";
-				definition = "Choice of formats to  express the frequency of a CA event.";
+				definition = "Choice of formats to express the frequency of a CA event.";
 			}
 		});
 		return mmObject_lazy.get();

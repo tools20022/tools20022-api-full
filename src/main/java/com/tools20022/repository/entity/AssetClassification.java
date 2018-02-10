@@ -82,6 +82,9 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.FinancialInstrumentClassification1#mmClassificationType
  * FinancialInstrumentClassification1.mmClassificationType}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.Derivative3#mmDerivativeClassification
+ * Derivative3.mmDerivativeClassification}</li>
  * </ul>
  * </li>
  * <li>
@@ -109,11 +112,22 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.choice.FinancialInstrumentProductType1Choice
  * FinancialInstrumentProductType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ProductClassificationCriteria1
+ * ProductClassificationCriteria1}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ProductClassification1Choice
+ * ProductClassification1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.AssetClassCommodity2Choice
+ * AssetClassCommodity2Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.ClassificationType32Choice
  * ClassificationType32Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.ClassificationType33Choice
  * ClassificationType33Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ClassificationType2
+ * ClassificationType2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AssetClass2 AssetClass2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.DerivativeClassification1
+ * DerivativeClassification1}</li>
  * </ul>
  * </li>
  * <li>
@@ -339,6 +353,12 @@ public class AssetClassification {
 	 * {@linkplain com.tools20022.repository.msg.CollateralValuation4#mmType
 	 * CollateralValuation4.mmType}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ProductClassificationCriteria1#mmClassificationFinancialInstrument
+	 * ProductClassificationCriteria1.mmClassificationFinancialInstrument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProductClassification1Choice#mmClassificationFinancialInstrument
+	 * ProductClassification1Choice.mmClassificationFinancialInstrument}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes63#mmClassificationType
 	 * FinancialInstrumentAttributes63.mmClassificationType}</li>
 	 * <li>
@@ -390,6 +410,12 @@ public class AssetClassification {
 	 * {@linkplain com.tools20022.repository.msg.SecurityInstrumentDescription11#mmClassificationType
 	 * SecurityInstrumentDescription11.mmClassificationType}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClassificationType2#mmClassificationFinancialInstrument
+	 * ClassificationType2.mmClassificationFinancialInstrument}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClassificationType2#mmAlternateClassification
+	 * ClassificationType2.mmAlternateClassification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport11#mmFinancialInstrumentClassification
 	 * TransparencyDataReport11.mmFinancialInstrumentClassification}</li>
 	 * <li>
@@ -413,6 +439,18 @@ public class AssetClassification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes83#mmClassificationType
 	 * FinancialInstrumentAttributes83.mmClassificationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmClassificationType
+	 * FinancialInstrumentAttributes91.mmClassificationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmClassificationType
+	 * FinancialInstrumentAttributes92.mmClassificationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmClassificationType
+	 * FinancialInstrumentAttributes95.mmClassificationType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmClassificationType
+	 * FinancialInstrumentAttributes97.mmClassificationType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -451,14 +489,16 @@ public class AssetClassification {
 					FinancialInstrumentAttributes44.mmClassificationType, SecurityInstrumentDescription1.mmClassificationType, SecurityInstrumentDescription2.mmClassificationType, FinancialInstrumentAttributes15.mmClassificationType,
 					FinancialInstrumentAttributes29.mmClassificationType, ClassificationType1.mmClassificationFinancialInstrument, ClassificationType1.mmAlternateClassification, FinancialInstrumentAttributes2.mmClassificationType,
 					FinancialInstrumentAttributes48.mmClassificationType, FinancialInstrumentAttributes50.mmClassificationType, FinancialInstrumentAttributes49.mmClassificationType, FinancialInstrumentAttributes55.mmClassificationType,
-					FinancialInstrumentAttributes57.mmClassificationType, FinancialInstrumentAttributes56.mmClassificationType, CollateralValuation4.mmType, FinancialInstrumentAttributes63.mmClassificationType,
-					FinancialInstrumentAttributes64.mmClassificationType, FinancialInstrumentAttributes66.mmClassificationType, FinancialInstrumentAttributes65.mmClassificationType, FinancialInstrumentAttributes67.mmClassificationType,
+					FinancialInstrumentAttributes57.mmClassificationType, FinancialInstrumentAttributes56.mmClassificationType, CollateralValuation4.mmType, ProductClassificationCriteria1.mmClassificationFinancialInstrument,
+					ProductClassification1Choice.mmClassificationFinancialInstrument, FinancialInstrumentAttributes63.mmClassificationType, FinancialInstrumentAttributes64.mmClassificationType,
+					FinancialInstrumentAttributes66.mmClassificationType, FinancialInstrumentAttributes65.mmClassificationType, FinancialInstrumentAttributes67.mmClassificationType,
 					ClassificationType32Choice.mmClassificationFinancialInstrument, ClassificationType32Choice.mmAlternateClassification, ClassificationType33Choice.mmClassificationFinancialInstrument,
 					ClassificationType33Choice.mmAlternateClassification, FinancialInstrumentAttributes70.mmClassificationType, FinancialInstrumentAttributes69.mmClassificationType, FinancialInstrumentAttributes71.mmClassificationType,
 					FinancialInstrumentAttributes75.mmClassificationType, FinancialInstrumentAttributes78.mmClassificationType, CollateralValuation7.mmType, SecurityInstrumentDescription9.mmClassificationType,
-					SecurityInstrumentDescription11.mmClassificationType, TransparencyDataReport11.mmFinancialInstrumentClassification, TransparencyDataReport10.mmFinancialInstrumentClassification,
-					FinancialInstrumentAttributes79.mmClassificationType, FinancialInstrumentAttributes81.mmClassificationType, FinancialInstrumentAttributes80.mmClassificationType, FinancialInstrumentAttributes85.mmClassificationType,
-					FinancialInstrumentAttributes84.mmClassificationType, FinancialInstrumentAttributes83.mmClassificationType);
+					SecurityInstrumentDescription11.mmClassificationType, ClassificationType2.mmClassificationFinancialInstrument, ClassificationType2.mmAlternateClassification, TransparencyDataReport11.mmFinancialInstrumentClassification,
+					TransparencyDataReport10.mmFinancialInstrumentClassification, FinancialInstrumentAttributes79.mmClassificationType, FinancialInstrumentAttributes81.mmClassificationType,
+					FinancialInstrumentAttributes80.mmClassificationType, FinancialInstrumentAttributes85.mmClassificationType, FinancialInstrumentAttributes84.mmClassificationType, FinancialInstrumentAttributes83.mmClassificationType,
+					FinancialInstrumentAttributes91.mmClassificationType, FinancialInstrumentAttributes92.mmClassificationType, FinancialInstrumentAttributes95.mmClassificationType, FinancialInstrumentAttributes97.mmClassificationType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -494,6 +534,17 @@ public class AssetClassification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessAssociationEnd#getType
 	 * type} = {@linkplain com.tools20022.repository.entity.Asset Asset}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType5#mmContractType
+	 * ContractType5.mmContractType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType6#mmContractType
+	 * ContractType6.mmContractType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -512,6 +563,7 @@ public class AssetClassification {
 	 */
 	public static final MMBusinessAssociationEnd mmAsset = new MMBusinessAssociationEnd() {
 		{
+			derivation_lazy = () -> Arrays.asList(ContractType5.mmContractType, ContractType6.mmContractType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -652,6 +704,9 @@ public class AssetClassification {
 	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction3#mmInstrumentType
 	 * UnsecuredMarketTransaction3.mmInstrumentType}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClassificationType2#mmFinancialInstrumentProductTypeCode
+	 * ClassificationType2.mmFinancialInstrumentProductTypeCode}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmDerivativeContractType
 	 * TransparencyDataReport10.mmDerivativeContractType}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.DebtInstrument5#mmType
@@ -671,6 +726,18 @@ public class AssetClassification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4#mmInstrumentType
 	 * UnsecuredMarketTransaction4.mmInstrumentType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ContractType5#mmAssetClass
+	 * ContractType5.mmAssetClass}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ContractType6#mmAssetClass
+	 * ContractType6.mmAssetClass}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.ClearedProduct1#mmProduct
+	 * ClearedProduct1.mmProduct}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DerivativeClassification1#mmBaseProduct
+	 * DerivativeClassification1.mmBaseProduct}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DerivativeClassification1#mmTransactionType
+	 * DerivativeClassification1.mmTransactionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -692,8 +759,9 @@ public class AssetClassification {
 	public static final MMBusinessAttribute mmProductType = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClassificationType1.mmFinancialInstrumentProductTypeCode, FinancialInstrumentProductType1Choice.mmCode, FinancialInstrumentProductType1Choice.mmProprietary,
-					UnsecuredMarketTransaction1.mmInstrumentType, UnsecuredMarketTransaction2.mmInstrumentType, UnsecuredMarketTransaction3.mmInstrumentType, TransparencyDataReport10.mmDerivativeContractType, DebtInstrument5.mmType,
-					EquityDerivative3Choice.mmBasket, EquityDerivative3Choice.mmIndex, EquityDerivative3Choice.mmSingleName, EquityDerivative3Choice.mmOther, UnsecuredMarketTransaction4.mmInstrumentType);
+					UnsecuredMarketTransaction1.mmInstrumentType, UnsecuredMarketTransaction2.mmInstrumentType, UnsecuredMarketTransaction3.mmInstrumentType, ClassificationType2.mmFinancialInstrumentProductTypeCode,
+					TransparencyDataReport10.mmDerivativeContractType, DebtInstrument5.mmType, EquityDerivative3Choice.mmBasket, EquityDerivative3Choice.mmIndex, EquityDerivative3Choice.mmSingleName, EquityDerivative3Choice.mmOther,
+					UnsecuredMarketTransaction4.mmInstrumentType, ContractType5.mmAssetClass, ContractType6.mmAssetClass, ClearedProduct1.mmProduct, DerivativeClassification1.mmBaseProduct, DerivativeClassification1.mmTransactionType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AssetClassification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -770,13 +838,14 @@ public class AssetClassification {
 				definition = "Other classification type of the security, ie, other than ISO 10962.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Asset.mmAssetClassification, com.tools20022.repository.entity.Scheme.mmAssetClassification,
 						com.tools20022.repository.entity.AssetClassStrategy.mmAssetClass);
-				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentClassification1.mmClassificationType);
+				derivationElement_lazy = () -> Arrays.asList(FinancialInstrumentClassification1.mmClassificationType, Derivative3.mmDerivativeClassification);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AssetClassification.mmClassificationType, com.tools20022.repository.entity.AssetClassification.mmAsset,
 						com.tools20022.repository.entity.AssetClassification.mmLanguage, com.tools20022.repository.entity.AssetClassification.mmAssetClassScheme, com.tools20022.repository.entity.AssetClassification.mmProductType,
 						com.tools20022.repository.entity.AssetClassification.mmStrategy);
 				derivationComponent_lazy = () -> Arrays.asList(ClassificationType1Choice.mmObject(), ClassificationType2Choice.mmObject(), ClassificationType3Choice.mmObject(), ClassificationType4Choice.mmObject(),
 						SecurityClassificationType1Choice.mmObject(), ClassificationType30Choice.mmObject(), ClassificationType1.mmObject(), FinancialInstrumentClassification1.mmObject(), FinancialInstrumentProductType1Choice.mmObject(),
-						ClassificationType32Choice.mmObject(), ClassificationType33Choice.mmObject(), AssetClass2.mmObject());
+						ProductClassificationCriteria1.mmObject(), ProductClassification1Choice.mmObject(), AssetClassCommodity2Choice.mmObject(), ClassificationType32Choice.mmObject(), ClassificationType33Choice.mmObject(),
+						ClassificationType2.mmObject(), AssetClass2.mmObject(), DerivativeClassification1.mmObject());
 			}
 
 			@Override

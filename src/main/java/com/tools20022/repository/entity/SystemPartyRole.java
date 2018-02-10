@@ -115,6 +115,8 @@ import java.util.Objects;
  * SystemPartyIdentification4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.NonGuaranteedTrade3
  * NonGuaranteedTrade3}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemPartyIdentification6
+ * SystemPartyIdentification6}</li>
  * </ul>
  * </li>
  * <li>
@@ -165,7 +167,7 @@ public class SystemPartyRole extends Role {
 	 * name} = "RelatedSystem"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the system for which a party plays a role"</li>
+	 * definition} = "Specifies the system for which a party plays a role."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAssociationEnd mmRelatedSystem = new MMBusinessAssociationEnd() {
@@ -174,7 +176,7 @@ public class SystemPartyRole extends Role {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RelatedSystem";
-			definition = "Specifies the system for which a party plays a role";
+			definition = "Specifies the system for which a party plays a role.";
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.System.mmPartyRole;
 			aggregation = MMAggregation.NONE;
@@ -197,7 +199,7 @@ public class SystemPartyRole extends Role {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemPartyRole.mmRelatedSystem);
 				derivationComponent_lazy = () -> Arrays.asList(NonGuaranteedTrade1.mmObject(), NonGuaranteedTrade2.mmObject(), SystemPartyIdentification3.mmObject(), SystemPartyIdentification5.mmObject(),
 						SystemPartyIdentification1Choice.mmObject(), SystemPartyIdentification1.mmObject(), CSDOrNCB1Choice.mmObject(), SystemPartyIdentification2.mmObject(), SystemPartyIdentification4.mmObject(),
-						NonGuaranteedTrade3.mmObject());
+						NonGuaranteedTrade3.mmObject(), SystemPartyIdentification6.mmObject());
 			}
 
 			@Override

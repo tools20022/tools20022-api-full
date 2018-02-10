@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CardPaymentEnvironment58"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Environment common to a collection of transactions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardPaymentEnvironment70
+ * CardPaymentEnvironment70}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment51
@@ -109,6 +116,14 @@ public class CardPaymentEnvironment58 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Acquirer involved in the card payment transactions."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment70#mmAcquirer
+	 * CardPaymentEnvironment70.mmAcquirer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +140,7 @@ public class CardPaymentEnvironment58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Acquirer";
 			definition = "Acquirer involved in the card payment transactions.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment70.mmAcquirer);
 			previousVersion_lazy = () -> CardPaymentEnvironment51.mmAcquirer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -164,6 +180,14 @@ public class CardPaymentEnvironment58 {
 	 * definition} =
 	 * "Merchant performing the card payment transactions.\r\nUsage: In some cases, merchant and acceptor may be regarded as the same entity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment70#mmMerchant
+	 * CardPaymentEnvironment70.mmMerchant}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +204,7 @@ public class CardPaymentEnvironment58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Merchant";
 			definition = "Merchant performing the card payment transactions.\r\nUsage: In some cases, merchant and acceptor may be regarded as the same entity.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment70.mmMerchant);
 			previousVersion_lazy = () -> CardPaymentEnvironment51.mmMerchant;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -220,6 +245,14 @@ public class CardPaymentEnvironment58 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Point of interaction (POI) performing the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentEnvironment70#mmPOI
+	 * CardPaymentEnvironment70.mmPOI}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -236,6 +269,7 @@ public class CardPaymentEnvironment58 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POI";
 			definition = "Point of interaction (POI) performing the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment70.mmPOI);
 			previousVersion_lazy = () -> CardPaymentEnvironment51.mmPOI;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -253,6 +287,7 @@ public class CardPaymentEnvironment58 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentEnvironment58";
 				definition = "Environment common to a collection of transactions.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentEnvironment70.mmObject());
 				previousVersion_lazy = () -> CardPaymentEnvironment51.mmObject();
 			}
 		});

@@ -151,7 +151,7 @@ public class HoldIndicator7 {
 	 * name} = "Reason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the reason of the registration staus."</li>
+	 * definition} = "Specifies the reason of the registration status."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
@@ -162,7 +162,7 @@ public class HoldIndicator7 {
 			xmlTag = "Rsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
-			definition = "Specifies the reason of the registration staus.";
+			definition = "Specifies the reason of the registration status.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.RegistrationReason6.mmObject();

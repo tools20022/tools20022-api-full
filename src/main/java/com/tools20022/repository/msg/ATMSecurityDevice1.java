@@ -71,6 +71,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMSecurityDevice1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Hardware security module of the ATM."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ATMSecurityDevice2
+ * ATMSecurityDevice2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +113,14 @@ public class ATMSecurityDevice1 {
 	 * definition} =
 	 * "Hardware security module information, so called EPP for Encrypted PIN Pad."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityDevice2#mmDeviceProperty
+	 * ATMSecurityDevice2.mmDeviceProperty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDeviceProperty = new MMMessageAssociationEnd() {
@@ -116,6 +131,7 @@ public class ATMSecurityDevice1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeviceProperty";
 			definition = "Hardware security module information, so called EPP for Encrypted PIN Pad.";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityDevice2.mmDeviceProperty);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -149,6 +165,14 @@ public class ATMSecurityDevice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Configuration parameters in use by the security device."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityDevice2#mmCurrentConfiguration
+	 * ATMSecurityDevice2.mmCurrentConfiguration}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCurrentConfiguration = new MMMessageAssociationEnd() {
@@ -159,6 +183,7 @@ public class ATMSecurityDevice1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentConfiguration";
 			definition = "Configuration parameters in use by the security device.";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityDevice2.mmCurrentConfiguration);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -193,6 +218,14 @@ public class ATMSecurityDevice1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Configuration parameters supported by the security device."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityDevice2#mmSupportedConfiguration
+	 * ATMSecurityDevice2.mmSupportedConfiguration}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSupportedConfiguration = new MMMessageAssociationEnd() {
@@ -203,6 +236,7 @@ public class ATMSecurityDevice1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupportedConfiguration";
 			definition = "Configuration parameters supported by the security device.";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityDevice2.mmSupportedConfiguration);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -237,6 +271,14 @@ public class ATMSecurityDevice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Current status of the security device."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityDevice2#mmCurrentStatus
+	 * ATMSecurityDevice2.mmCurrentStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrentStatus = new MMMessageAttribute() {
@@ -247,6 +289,7 @@ public class ATMSecurityDevice1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrentStatus";
 			definition = "Current status of the security device.";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityDevice2.mmCurrentStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ATMStatus2Code.mmObject();
@@ -280,6 +323,14 @@ public class ATMSecurityDevice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Incident occurring on the device."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ATMSecurityDevice2#mmIncident
+	 * ATMSecurityDevice2.mmIncident}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIncident = new MMMessageAttribute() {
@@ -290,6 +341,7 @@ public class ATMSecurityDevice1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Incident";
 			definition = "Incident occurring on the device.";
+			nextVersions_lazy = () -> Arrays.asList(ATMSecurityDevice2.mmIncident);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> FailureReason5Code.mmObject();
@@ -305,6 +357,7 @@ public class ATMSecurityDevice1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMSecurityDevice1";
 				definition = "Hardware security module of the ATM.";
+				nextVersions_lazy = () -> Arrays.asList(ATMSecurityDevice2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

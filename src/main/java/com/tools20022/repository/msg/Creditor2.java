@@ -70,6 +70,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Creditor2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Information about the creditor."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Creditor3 Creditor3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -111,6 +117,13 @@ public class Creditor2 {
 	 * definition} =
 	 * "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Creditor3#mmCreditor
+	 * Creditor3.mmCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditor = new MMMessageAttribute() {
@@ -122,6 +135,7 @@ public class Creditor2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.";
+			nextVersions_lazy = () -> Arrays.asList(Creditor3.mmCreditor);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification2Choice.mmObject();
@@ -237,6 +251,7 @@ public class Creditor2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Creditor2";
 				definition = "Information about the creditor.";
+				nextVersions_lazy = () -> Arrays.asList(Creditor3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

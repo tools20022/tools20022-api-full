@@ -114,6 +114,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "CardPaymentServiceType5Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Main service provided during the card payment transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code
+ * CardPaymentServiceType12Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType4Code
@@ -138,6 +146,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Balance"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#Balance
+	 * CardPaymentServiceType12Code.Balance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -149,6 +165,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Balance";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.Balance);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.Balance;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.Balance.getCodeName().orElse(name);
@@ -168,6 +185,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardActivation"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#CardActivation
+	 * CardPaymentServiceType12Code.CardActivation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,6 +204,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardActivation";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.CardActivation);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.CardActivation;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.CardActivation.getCodeName().orElse(name);
@@ -198,6 +224,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardPayment"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#CardPayment
+	 * CardPaymentServiceType12Code.CardPayment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -209,6 +243,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardPayment";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.CardPayment);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.CardPayment;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.CardPayment.getCodeName().orElse(name);
@@ -228,6 +263,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardsFundTransferPush"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#CardsFundTransferPush
+	 * CardPaymentServiceType12Code.CardsFundTransferPush}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -239,6 +282,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardsFundTransferPush";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.CardsFundTransferPush);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.CardsFundTransfer;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.CardsFundTransferPush.getCodeName().orElse(name);
@@ -258,6 +302,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardVerification"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#CardVerification
+	 * CardPaymentServiceType12Code.CardVerification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -269,6 +321,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardVerification";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.CardVerification);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.CardVerification;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.CardVerification.getCodeName().orElse(name);
@@ -288,6 +341,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashAdvance"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#CashAdvance
+	 * CardPaymentServiceType12Code.CashAdvance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -299,6 +360,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAdvance";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.CashAdvance);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.CashAdvance;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.CashAdvance.getCodeName().orElse(name);
@@ -318,6 +380,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CashDeposit"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#CashDeposit
+	 * CardPaymentServiceType12Code.CashDeposit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -329,6 +399,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashDeposit";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.CashDeposit);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.CashDeposit;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.CashDeposit.getCodeName().orElse(name);
@@ -348,6 +419,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "DeferredPayment"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#DeferredPayment
+	 * CardPaymentServiceType12Code.DeferredPayment}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -359,6 +438,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeferredPayment";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.DeferredPayment);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.DeferredPayment;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.DeferredPayment.getCodeName().orElse(name);
@@ -378,6 +458,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Loading"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#Loading
+	 * CardPaymentServiceType12Code.Loading}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -389,6 +477,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Loading";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.Loading);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.Loading;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.Loading.getCodeName().orElse(name);
@@ -408,6 +497,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "OriginalCredit"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#OriginalCredit
+	 * CardPaymentServiceType12Code.OriginalCredit}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -419,6 +516,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCredit";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.OriginalCredit);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.OriginalCredit;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.OriginalCredit.getCodeName().orElse(name);
@@ -438,6 +536,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "PINChange"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#PINChange
+	 * CardPaymentServiceType12Code.PINChange}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -449,6 +555,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PINChange";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.PINChange);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.PINChange;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.PINChange.getCodeName().orElse(name);
@@ -468,6 +575,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "QuasiCash"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#QuasiCash
+	 * CardPaymentServiceType12Code.QuasiCash}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -479,6 +594,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuasiCash";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.QuasiCash);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.QuasiCash;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.QuasiCash.getCodeName().orElse(name);
@@ -498,6 +614,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Refund"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#Refund
+	 * CardPaymentServiceType12Code.Refund}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -509,6 +633,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Refund";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.Refund);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.Refund;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.Refund.getCodeName().orElse(name);
@@ -528,6 +653,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Reservation"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#Reservation
+	 * CardPaymentServiceType12Code.Reservation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -539,6 +672,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reservation";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.Reservation);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.Reservation;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.Reservation.getCodeName().orElse(name);
@@ -558,6 +692,14 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "ValidityCheck"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#ValidityCheck
+	 * CardPaymentServiceType12Code.ValidityCheck}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -569,6 +711,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValidityCheck";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.ValidityCheck);
 			previousVersion_lazy = () -> CardPaymentServiceType4Code.ValidityCheck;
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.ValidityCheck.getCodeName().orElse(name);
@@ -588,12 +731,21 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Unloading"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#Unloading
+	 * CardPaymentServiceType12Code.Unloading}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CardPaymentServiceType5Code Unloading = new CardPaymentServiceType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unloading";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.Unloading);
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.Unloading.getCodeName().orElse(name);
 		}
@@ -612,12 +764,21 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardsFundTransfer"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#CardsFundTransfer
+	 * CardPaymentServiceType12Code.CardsFundTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CardPaymentServiceType5Code CardsFundTransfer = new CardPaymentServiceType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardsFundTransfer";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.CardsFundTransfer);
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.CardsFundTransfer.getCodeName().orElse(name);
 		}
@@ -636,12 +797,21 @@ public class CardPaymentServiceType5Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "CardsFundTransferPull"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.codeset.CardPaymentServiceType12Code#CardsFundTransferPull
+	 * CardPaymentServiceType12Code.CardsFundTransferPull}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final CardPaymentServiceType5Code CardsFundTransferPull = new CardPaymentServiceType5Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardsFundTransferPull";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.CardsFundTransferPull);
 			owner_lazy = () -> com.tools20022.repository.codeset.CardPaymentServiceType5Code.mmObject();
 			codeName = CardPaymentServiceTypeCode.CardsFundTransferPull.getCodeName().orElse(name);
 		}
@@ -659,6 +829,7 @@ public class CardPaymentServiceType5Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentServiceType5Code";
 				definition = "Main service provided during the card payment transaction.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentServiceType12Code.mmObject());
 				previousVersion_lazy = () -> CardPaymentServiceType4Code.mmObject();
 				trace_lazy = () -> CardPaymentServiceTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardPaymentServiceType5Code.Balance, com.tools20022.repository.codeset.CardPaymentServiceType5Code.CardActivation,

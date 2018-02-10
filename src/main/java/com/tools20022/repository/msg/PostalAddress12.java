@@ -107,7 +107,7 @@ public class PostalAddress12 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Name of a built-up area, with defined boundaries, and a local government.\n"
+	 * "Name of a built-up area, with defined boundaries, and a local government.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -119,7 +119,7 @@ public class PostalAddress12 {
 			xmlTag = "TwnNm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TownName";
-			definition = "Name of a built-up area, with defined boundaries, and a local government.\n";
+			definition = "Name of a built-up area, with defined boundaries, and a local government.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

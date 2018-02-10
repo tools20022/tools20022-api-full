@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion;
+import com.tools20022.repository.area.PaymentsClearingandSettlementArchive;
 import com.tools20022.repository.msg.GroupHeader72;
 import com.tools20022.repository.msg.OriginalGroupHeader2;
 import com.tools20022.repository.msg.PaymentTransaction65;
@@ -87,8 +87,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "PmtRtr"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementPreviousVersion
- * PaymentsClearingandSettlementPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.PaymentsClearingandSettlementArchive
+ * PaymentsClearingandSettlementArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pacs.004.001.06}</li>
@@ -428,7 +428,7 @@ public class PaymentReturnV06 {
 				messageSet_lazy = () -> Arrays.asList(PaymentsClearingandSettlementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "PmtRtr";
-				businessArea_lazy = () -> PaymentsClearingandSettlementPreviousVersion.mmObject();
+				businessArea_lazy = () -> PaymentsClearingandSettlementArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pacs.PaymentReturnV06.mmGroupHeader, com.tools20022.repository.area.pacs.PaymentReturnV06.mmOriginalGroupInformation,
 						com.tools20022.repository.area.pacs.PaymentReturnV06.mmTransactionInformation, com.tools20022.repository.area.pacs.PaymentReturnV06.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

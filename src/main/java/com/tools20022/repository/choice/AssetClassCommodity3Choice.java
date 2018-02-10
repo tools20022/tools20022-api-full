@@ -681,7 +681,7 @@ public class AssetClassCommodity3Choice {
 	 * name} = "MultiCommodityExotic"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Multi Commodity Exotic"</li>
+	 * definition} = "Multi Commodity Exotic."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMultiCommodityExotic = new MMMessageAssociationEnd() {
@@ -692,7 +692,7 @@ public class AssetClassCommodity3Choice {
 			xmlTag = "MultiCmmdtyExtc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MultiCommodityExotic";
-			definition = "Multi Commodity Exotic";
+			definition = "Multi Commodity Exotic.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

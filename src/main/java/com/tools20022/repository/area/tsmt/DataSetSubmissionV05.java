@@ -316,7 +316,7 @@ public class DataSetSubmissionV05 {
 	 * name} = "Instruction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the instruction given by the submitter. "</li>
+	 * definition} = "Specifies the instruction given by the submitter."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -329,7 +329,7 @@ public class DataSetSubmissionV05 {
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
-			definition = "Specifies the instruction given by the submitter. ";
+			definition = "Specifies the instruction given by the submitter.";
 			previousVersion_lazy = () -> DataSetSubmissionV04.mmInstruction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -367,7 +367,7 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the buyer, uniquely identified by its BIC. "
+	 * "The financial institution of the buyer, uniquely identified by its BIC."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -381,7 +381,7 @@ public class DataSetSubmissionV05 {
 			xmlTag = "BuyrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BuyerBank";
-			definition = "The financial institution of the buyer, uniquely identified by its BIC. ";
+			definition = "The financial institution of the buyer, uniquely identified by its BIC.";
 			previousVersion_lazy = () -> DataSetSubmissionV04.mmBuyerBank;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -419,7 +419,7 @@ public class DataSetSubmissionV05 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The financial institution of the seller, uniquely identified by its BIC. "
+	 * "The financial institution of the seller, uniquely identified by its BIC."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -433,7 +433,7 @@ public class DataSetSubmissionV05 {
 			xmlTag = "SellrBk";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SellerBank";
-			definition = "The financial institution of the seller, uniquely identified by its BIC. ";
+			definition = "The financial institution of the seller, uniquely identified by its BIC.";
 			previousVersion_lazy = () -> DataSetSubmissionV04.mmSellerBank;
 			maxOccurs = 1;
 			minOccurs = 1;

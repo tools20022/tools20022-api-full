@@ -104,6 +104,7 @@ import java.util.Objects;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.Future1 Future1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Future2 Future2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Future3 Future3}</li>
  * </ul>
  * </li>
  * <li>
@@ -146,6 +147,8 @@ public class Future extends Derivative {
 	 * FutureOrOptionDetails1.mmFutureDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Future2#mmFutureDate
 	 * Future2.mmFutureDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future3#mmFutureDate
+	 * Future3.mmFutureDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -165,7 +168,7 @@ public class Future extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmFutureDate = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Future1.mmFutureDate, FutureOrOptionDetails1.mmFutureDate, Future2.mmFutureDate);
+			derivation_lazy = () -> Arrays.asList(Future1.mmFutureDate, FutureOrOptionDetails1.mmFutureDate, Future2.mmFutureDate, Future3.mmFutureDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -205,6 +208,8 @@ public class Future extends Derivative {
 	 * FutureOrOptionDetails1.mmMinimumSize}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Future2#mmMinimumSize
 	 * Future2.mmMinimumSize}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future3#mmMinimumSize
+	 * Future3.mmMinimumSize}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -226,7 +231,7 @@ public class Future extends Derivative {
 	 */
 	public static final MMBusinessAttribute mmMinimumSize = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Future1.mmMinimumSize, FutureOrOptionDetails1.mmMinimumSize, Future2.mmMinimumSize);
+			derivation_lazy = () -> Arrays.asList(Future1.mmMinimumSize, FutureOrOptionDetails1.mmMinimumSize, Future2.mmMinimumSize, Future3.mmMinimumSize);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -266,6 +271,8 @@ public class Future extends Derivative {
 	 * FutureOrOptionDetails1.mmUnitOfMeasure}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Future2#mmUnitOfMeasure
 	 * Future2.mmUnitOfMeasure}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future3#mmUnitOfMeasure
+	 * Future3.mmUnitOfMeasure}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -281,18 +288,18 @@ public class Future extends Derivative {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)"
+	 * "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmUnitOfMeasure = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Future1.mmUnitOfMeasure, FutureOrOptionDetails1.mmUnitOfMeasure, Future2.mmUnitOfMeasure);
+			derivation_lazy = () -> Arrays.asList(Future1.mmUnitOfMeasure, FutureOrOptionDetails1.mmUnitOfMeasure, Future2.mmUnitOfMeasure, Future3.mmUnitOfMeasure);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Future.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "UnitOfMeasure";
-			definition = "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.)";
+			definition = "Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UnitOfMeasureCode.mmObject();
@@ -519,7 +526,7 @@ public class Future extends Derivative {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Future.mmFutureDate, com.tools20022.repository.entity.Future.mmMinimumSize, com.tools20022.repository.entity.Future.mmUnitOfMeasure,
 						com.tools20022.repository.entity.Future.mmLastDeliveryDate, com.tools20022.repository.entity.Future.mmStandardisation, com.tools20022.repository.entity.Future.mmUnderlyingType,
 						com.tools20022.repository.entity.Future.mmFutureRule);
-				derivationComponent_lazy = () -> Arrays.asList(Future1.mmObject(), Future2.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(Future1.mmObject(), Future2.mmObject(), Future3.mmObject());
 			}
 
 			@Override

@@ -198,7 +198,7 @@ public class CardTransaction13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Key that must be created and sent in the response, or that must be verified.."
+	 * "Key that must be created and sent in the response, or that must be verified."
 	 * </li>
 	 * </ul>
 	 */
@@ -209,7 +209,7 @@ public class CardTransaction13 {
 			xmlTag = "ReqdKey";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedKey";
-			definition = "Key that must be created and sent in the response, or that must be verified..";
+			definition = "Key that must be created and sent in the response, or that must be verified.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.KEKIdentifier3.mmObject();

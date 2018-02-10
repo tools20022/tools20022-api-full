@@ -60,6 +60,12 @@ import javax.xml.bind.annotation.XmlType;
  * "DatePeriod1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Range of time defined by a start date and an end date."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.DatePeriod2 DatePeriod2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +104,13 @@ public class DatePeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Start date of the range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.DatePeriod2#mmFromDate
+	 * DatePeriod2.mmFromDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
@@ -109,6 +122,7 @@ public class DatePeriod1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDate";
 			definition = "Start date of the range.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriod2.mmFromDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -145,6 +159,13 @@ public class DatePeriod1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "End date of the range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.DatePeriod2#mmToDate
+	 * DatePeriod2.mmToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
@@ -156,6 +177,7 @@ public class DatePeriod1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDate";
 			definition = "End date of the range.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriod2.mmToDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -170,6 +192,7 @@ public class DatePeriod1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DatePeriod1";
 				definition = "Range of time defined by a start date and an end date.";
+				nextVersions_lazy = () -> Arrays.asList(DatePeriod2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

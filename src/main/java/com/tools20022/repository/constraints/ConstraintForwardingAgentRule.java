@@ -25,6 +25,8 @@ import com.tools20022.repository.area.pacs.PaymentStatusReportV02;
 
 /**
  * GroupHeader/ForwardingAgent is not allowed.
+ * 
+ * .
  */
 public class ConstraintForwardingAgentRule {
 
@@ -44,7 +46,7 @@ public class ConstraintForwardingAgentRule {
 	 * name} = "ForwardingAgentRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "GroupHeader/ForwardingAgent is not allowed.\n\n"</li>
+	 * definition} = "GroupHeader/ForwardingAgent is not allowed.\n\n."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentCancellationRequestV01> forPaymentCancellationRequestV01 = new MMConstraint<PaymentCancellationRequestV01>() {
@@ -52,7 +54,7 @@ public class ConstraintForwardingAgentRule {
 			validator = ConstraintForwardingAgentRule::checkPaymentCancellationRequestV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardingAgentRule";
-			definition = "GroupHeader/ForwardingAgent is not allowed.\n\n";
+			definition = "GroupHeader/ForwardingAgent is not allowed.\n\n.";
 			owner_lazy = () -> PaymentCancellationRequestV01.mmObject();
 		}
 	};
@@ -72,7 +74,7 @@ public class ConstraintForwardingAgentRule {
 	 * name} = "ForwardingAgentRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "GroupHeader/ForwardingAgent is not allowed.\n\n"</li>
+	 * definition} = "GroupHeader/ForwardingAgent is not allowed.\n\n."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PaymentStatusReportV02> forPaymentStatusReportV02 = new MMConstraint<PaymentStatusReportV02>() {
@@ -80,13 +82,15 @@ public class ConstraintForwardingAgentRule {
 			validator = ConstraintForwardingAgentRule::checkPaymentStatusReportV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardingAgentRule";
-			definition = "GroupHeader/ForwardingAgent is not allowed.\n\n";
+			definition = "GroupHeader/ForwardingAgent is not allowed.\n\n.";
 			owner_lazy = () -> PaymentStatusReportV02.mmObject();
 		}
 	};
 
 	/**
 	 * GroupHeader/ForwardingAgent is not allowed.
+	 * 
+	 * .
 	 */
 	public static void checkPaymentCancellationRequestV01(PaymentCancellationRequestV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -94,6 +98,8 @@ public class ConstraintForwardingAgentRule {
 
 	/**
 	 * GroupHeader/ForwardingAgent is not allowed.
+	 * 
+	 * .
 	 */
 	public static void checkPaymentStatusReportV02(PaymentStatusReportV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();

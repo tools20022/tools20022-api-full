@@ -121,6 +121,7 @@ public class EventTypeCode extends MMCode {
 	 * In fixed income this is the call provision on the bond allowing the bond
 	 * issuer
 	 * "the right to redeem [the bond] prior to its maturity date, under certain conditions."
+	 * .
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -138,7 +139,7 @@ public class EventTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In fixed income this is the call provision on the bond allowing the bond issuer \"the right to redeem [the bond] prior to its maturity date, under certain conditions.\""
+	 * "In fixed income this is the call provision on the bond allowing the bond issuer \"the right to redeem [the bond] prior to its maturity date, under certain conditions.\"."
 	 * </li>
 	 * </ul>
 	 */
@@ -146,7 +147,7 @@ public class EventTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Call";
-			definition = "In fixed income this is the call provision on the bond allowing the bond issuer \"the right to redeem [the bond] prior to its maturity date, under certain conditions.\"";
+			definition = "In fixed income this is the call provision on the bond allowing the bond issuer \"the right to redeem [the bond] prior to its maturity date, under certain conditions.\".";
 			owner_lazy = () -> com.tools20022.repository.codeset.EventTypeCode.mmObject();
 			codeName = "CALL";
 		}

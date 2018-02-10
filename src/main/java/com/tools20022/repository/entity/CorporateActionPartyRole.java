@@ -25,6 +25,8 @@ import com.tools20022.repository.entity.Role;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.BorrowerLendingDeadline1;
 import com.tools20022.repository.msg.BorrowerLendingDeadline2;
+import com.tools20022.repository.msg.BorrowerLendingDeadline3;
+import com.tools20022.repository.msg.BorrowerLendingDeadline4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -76,6 +78,12 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline2#mmBorrower
  * BorrowerLendingDeadline2.mmBorrower}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline3#mmBorrower
+ * BorrowerLendingDeadline3.mmBorrower}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.BorrowerLendingDeadline4#mmBorrower
+ * BorrowerLendingDeadline4.mmBorrower}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -214,7 +222,7 @@ public class CorporateActionPartyRole extends Role {
 				name = "CorporateActionPartyRole";
 				definition = "Role played by a party in the context of a corporate action.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Account.mmRelatedCorporateActionPartyRole, com.tools20022.repository.entity.CorporateActionEvent.mmCorporateActionPartyRole);
-				derivationElement_lazy = () -> Arrays.asList(BorrowerLendingDeadline1.mmBorrower, BorrowerLendingDeadline2.mmBorrower);
+				derivationElement_lazy = () -> Arrays.asList(BorrowerLendingDeadline1.mmBorrower, BorrowerLendingDeadline2.mmBorrower, BorrowerLendingDeadline3.mmBorrower, BorrowerLendingDeadline4.mmBorrower);
 				subType_lazy = () -> Arrays.asList(MeetingPartyRole.mmObject(), CorporateActionAgent.mmObject(), MarketClaimCounterparty.mmObject(), CorporateActionOfferor.mmObject());
 				superType_lazy = () -> Role.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CorporateActionPartyRole.mmCorporateActionEvent, com.tools20022.repository.entity.CorporateActionPartyRole.mmAccount);

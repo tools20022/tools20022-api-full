@@ -82,7 +82,15 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesAccountReturnCriteria"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Return criteria for information to be returned in the report deriving from a query about securities account reference data. "
+ * "Return criteria for information to be returned in the report deriving from a query about securities account reference data."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1
+ * SecuritiesAccountReturnCriteria1}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -120,6 +128,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the identification of the account is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmAccountIdentification
+	 * SecuritiesAccountReturnCriteria1.mmAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountIdentification = new MMMessageAttribute() {
@@ -130,6 +146,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountIdentification";
 			definition = "Indicates whether the identification of the account is requested.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -165,6 +182,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * definition} =
 	 * "Indicates whether the identification of the party owning the account is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmPartyIdentification
+	 * SecuritiesAccountReturnCriteria1.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartyIdentification = new MMMessageAttribute() {
@@ -175,6 +200,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Indicates whether the identification of the party owning the account is requested.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmPartyIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -210,6 +236,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * definition} =
 	 * "Indicates whether the type of the party owning the account is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmPartyType
+	 * SecuritiesAccountReturnCriteria1.mmPartyType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPartyType = new MMMessageAttribute() {
@@ -220,6 +254,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyType";
 			definition = "Indicates whether the type of the party owning the account is requested.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmPartyType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -253,6 +288,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the account servicer is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmAccountServicer
+	 * SecuritiesAccountReturnCriteria1.mmAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountServicer = new MMMessageAttribute() {
@@ -263,6 +306,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Indicates whether the account servicer is requested.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -296,6 +340,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the account type is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmAccountType
+	 * SecuritiesAccountReturnCriteria1.mmAccountType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountType = new MMMessageAttribute() {
@@ -306,6 +358,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountType";
 			definition = "Indicates whether the account type is requested.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmAccountType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -340,6 +393,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the opening date for the account is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmOpeningDate
+	 * SecuritiesAccountReturnCriteria1.mmOpeningDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOpeningDate = new MMMessageAttribute() {
@@ -350,6 +411,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Indicates whether the opening date for the account is requested.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmOpeningDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -384,6 +446,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the closing date for the account is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmClosingDate
+	 * SecuritiesAccountReturnCriteria1.mmClosingDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
@@ -394,6 +464,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Indicates whether the closing date for the account is requested.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmClosingDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -429,6 +500,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * definition} =
 	 * "Specifies information to identify securities accounts where allocation instructions are posted."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmEndInvestorFlag
+	 * SecuritiesAccountReturnCriteria1.mmEndInvestorFlag}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmEndInvestorFlag = new MMMessageAttribute() {
@@ -439,6 +518,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndInvestorFlag";
 			definition = "Specifies information to identify securities accounts where allocation instructions are posted.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmEndInvestorFlag);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -473,6 +553,14 @@ public class SecuritiesAccountReturnCriteria {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Defines how the price is applied to the securities account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountReturnCriteria1#mmPricingScheme
+	 * SecuritiesAccountReturnCriteria1.mmPricingScheme}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPricingScheme = new MMMessageAttribute() {
@@ -483,6 +571,7 @@ public class SecuritiesAccountReturnCriteria {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PricingScheme";
 			definition = "Defines how the price is applied to the securities account.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmPricingScheme);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -500,7 +589,8 @@ public class SecuritiesAccountReturnCriteria {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountReturnCriteria";
-				definition = "Return criteria for information to be returned in the report deriving from a query about securities account reference data. ";
+				definition = "Return criteria for information to be returned in the report deriving from a query about securities account reference data.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountReturnCriteria1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

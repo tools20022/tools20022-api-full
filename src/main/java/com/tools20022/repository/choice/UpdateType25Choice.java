@@ -78,6 +78,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Specifies the type of update requested. That is addition, deletion or modification."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.UpdateType27Choice
+ * UpdateType27Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.UpdateType14Choice
@@ -116,6 +123,14 @@ public class UpdateType25Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Addition of information to the securities transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType27Choice#mmAddition
+	 * UpdateType27Choice.mmAddition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +146,7 @@ public class UpdateType25Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Addition";
 			definition = "Addition of information to the securities transaction.";
+			nextVersions_lazy = () -> Arrays.asList(UpdateType27Choice.mmAddition);
 			previousVersion_lazy = () -> UpdateType14Choice.mmAddition;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -165,6 +181,14 @@ public class UpdateType25Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Deletion of information in the securities transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType27Choice#mmDeletion
+	 * UpdateType27Choice.mmDeletion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +204,7 @@ public class UpdateType25Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Deletion";
 			definition = "Deletion of information in the securities transaction.";
+			nextVersions_lazy = () -> Arrays.asList(UpdateType27Choice.mmDeletion);
 			previousVersion_lazy = () -> UpdateType14Choice.mmDeletion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -215,6 +240,14 @@ public class UpdateType25Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Modification of information in the securities transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.UpdateType27Choice#mmModification
+	 * UpdateType27Choice.mmModification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -230,6 +263,7 @@ public class UpdateType25Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Modification";
 			definition = "Modification of information in the securities transaction.";
+			nextVersions_lazy = () -> Arrays.asList(UpdateType27Choice.mmModification);
 			previousVersion_lazy = () -> UpdateType14Choice.mmModification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -248,6 +282,7 @@ public class UpdateType25Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UpdateType25Choice";
 				definition = "Specifies the type of update requested. That is addition, deletion or modification.";
+				nextVersions_lazy = () -> Arrays.asList(UpdateType27Choice.mmObject());
 				previousVersion_lazy = () -> UpdateType14Choice.mmObject();
 			}
 		});

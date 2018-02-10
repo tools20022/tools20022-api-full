@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TransactionQuery2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the query criteria."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionQuery3
+ * TransactionQuery3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransactionQuery1
@@ -102,6 +109,14 @@ public class TransactionQuery2 {
 	 * definition} =
 	 * "Specifies the type of matching items to be returned in the response to the query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionQuery3#mmQueryType
+	 * TransactionQuery3.mmQueryType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -117,6 +132,7 @@ public class TransactionQuery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryType";
 			definition = "Specifies the type of matching items to be returned in the response to the query.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionQuery3.mmQueryType);
 			previousVersion_lazy = () -> TransactionQuery1.mmQueryType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -150,6 +166,14 @@ public class TransactionQuery2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the payment transaction query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionQuery3#mmTransactionCriteria
+	 * TransactionQuery3.mmTransactionCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,6 +189,7 @@ public class TransactionQuery2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionCriteria";
 			definition = "Defines the payment transaction query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionQuery3.mmTransactionCriteria);
 			previousVersion_lazy = () -> TransactionQuery1.mmTransactionCriteria;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -181,6 +206,7 @@ public class TransactionQuery2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionQuery2";
 				definition = "Defines the query criteria.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionQuery3.mmObject());
 				previousVersion_lazy = () -> TransactionQuery1.mmObject();
 			}
 		});

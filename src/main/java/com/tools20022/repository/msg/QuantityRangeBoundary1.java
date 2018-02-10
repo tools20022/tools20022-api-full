@@ -139,7 +139,7 @@ public class QuantityRangeBoundary1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the boundary quantity is included in the range of quantity values. "
+	 * "Indicates whether the boundary quantity is included in the range of quantity values."
 	 * </li>
 	 * </ul>
 	 */
@@ -150,7 +150,7 @@ public class QuantityRangeBoundary1 {
 			xmlTag = "Incl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Included";
-			definition = "Indicates whether the boundary quantity is included in the range of quantity values. ";
+			definition = "Indicates whether the boundary quantity is included in the range of quantity values.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

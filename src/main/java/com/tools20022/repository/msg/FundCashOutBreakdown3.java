@@ -294,7 +294,7 @@ public class FundCashOutBreakdown3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Type of transaction that resulted in the cash-out movement, for example, redemption, switch-out. "
+	 * "Type of transaction that resulted in the cash-out movement, for example, redemption, switch-out."
 	 * </li>
 	 * </ul>
 	 */
@@ -306,7 +306,7 @@ public class FundCashOutBreakdown3 {
 			xmlTag = "InvstmtFndTxOutTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentFundTransactionOutType";
-			definition = "Type of transaction that resulted in the cash-out movement, for example, redemption, switch-out. ";
+			definition = "Type of transaction that resulted in the cash-out movement, for example, redemption, switch-out.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

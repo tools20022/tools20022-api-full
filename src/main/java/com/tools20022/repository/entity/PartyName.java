@@ -385,6 +385,21 @@ public class PartyName {
 	 * PartyIdentification77.mmName}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.LegalOrganisation2#mmName
 	 * LegalOrganisation2.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmSurname
+	 * IndividualPersonNameLong1.mmSurname}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmMiddleName
+	 * IndividualPersonNameLong1.mmMiddleName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmName
+	 * IndividualPersonNameLong1.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmCurrentName
+	 * IndividualPerson19.mmCurrentName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPerson19#mmPreviousName
+	 * IndividualPerson19.mmPreviousName}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Organisation22#mmName
 	 * Organisation22.mmName}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Organisation23#mmName
@@ -408,6 +423,12 @@ public class PartyName {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification112#mmName
 	 * PartyIdentification112.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrganisationIdentification3Choice#mmClientIdentification
+	 * OrganisationIdentification3Choice.mmClientIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.OrganisationIdentification2Choice#mmClientIdentification
+	 * OrganisationIdentification2Choice.mmClientIdentification}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Organisation30#mmName
 	 * Organisation30.mmName}</li>
 	 * <li>
@@ -418,6 +439,29 @@ public class PartyName {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.MarketIdentification92#mmInstitutionName
 	 * MarketIdentification92.mmInstitutionName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentificationAndAddress1#mmName
+	 * ContactIdentificationAndAddress1.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Member4#mmName
+	 * Member4.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification125#mmName
+	 * PartyIdentification125.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification126#mmName
+	 * PartyIdentification126.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContactIdentification5#mmName
+	 * ContactIdentification5.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeceasedStatusSD1#mmBeneficialOwnerName
+	 * DeceasedStatusSD1.mmBeneficialOwnerName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation32#mmCommonName
+	 * Organisation32.mmCommonName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification129#mmName
+	 * PartyIdentification129.mmName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -455,9 +499,11 @@ public class PartyName {
 					TransportByRail4.mmCarrierAgentName, TransportByAir4.mmAirCarrierName, TransportByAir4.mmCarrierAgentName, TransportByRoad4.mmRoadCarrierName, TransportByRoad4.mmCarrierAgentName, TransportBySea5.mmCarrierAgentName,
 					TransportByAir5.mmAirCarrierName, TransportByAir5.mmCarrierAgentName, TransportBySea6.mmSeaCarrierName, TransportBySea6.mmCarrierAgentName, TransportByRail5.mmRailCarrierName, TransportByRail5.mmCarrierAgentName,
 					TransportByRoad5.mmRoadCarrierName, TransportByRoad5.mmCarrierAgentName, Organisation16.mmName, Organisation17.mmName, IdentificationSource5Choice.mmProprietaryIdentificationSource, PersonIdentification10.mmName,
-					PartyIdentification77.mmName, LegalOrganisation2.mmName, Organisation22.mmName, Organisation23.mmName, Organisation24.mmName, PersonalInformation1.mmMaidenNameOfMother, PaymentCard18.mmCardIssuerName,
-					NameAndAddress15.mmName, Organisation25.mmCommonName, Organisation26.mmCommonName, PartyIdentification112.mmName, Organisation30.mmName, PaymentCard25.mmCardIssuerName, Organisation29.mmName,
-					MarketIdentification92.mmInstitutionName);
+					PartyIdentification77.mmName, LegalOrganisation2.mmName, IndividualPersonNameLong1.mmSurname, IndividualPersonNameLong1.mmMiddleName, IndividualPersonNameLong1.mmName, IndividualPerson19.mmCurrentName,
+					IndividualPerson19.mmPreviousName, Organisation22.mmName, Organisation23.mmName, Organisation24.mmName, PersonalInformation1.mmMaidenNameOfMother, PaymentCard18.mmCardIssuerName, NameAndAddress15.mmName,
+					Organisation25.mmCommonName, Organisation26.mmCommonName, PartyIdentification112.mmName, OrganisationIdentification3Choice.mmClientIdentification, OrganisationIdentification2Choice.mmClientIdentification,
+					Organisation30.mmName, PaymentCard25.mmCardIssuerName, Organisation29.mmName, MarketIdentification92.mmInstitutionName, ContactIdentificationAndAddress1.mmName, Member4.mmName, PartyIdentification125.mmName,
+					PartyIdentification126.mmName, ContactIdentification5.mmName, DeceasedStatusSD1.mmBeneficialOwnerName, Organisation32.mmCommonName, PartyIdentification129.mmName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PartyName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

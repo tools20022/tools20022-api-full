@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV07;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.Entry;
 import com.tools20022.repository.entity.SecuritiesTradeIdentification;
@@ -81,6 +82,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV08#mmTransactionIdentification
  * SecuritiesSettlementTransactionStatusAdviceV08.mmTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionStatusAdviceV09#mmTransactionIdentification
+ * SecuritiesSettlementTransactionStatusAdviceV09.mmTransactionIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -473,7 +477,8 @@ public class TransactionIdentifications31 {
 						com.tools20022.repository.msg.TransactionIdentifications31.mmAccountServicerTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications31.mmMarketInfrastructureTransactionIdentification,
 						com.tools20022.repository.msg.TransactionIdentifications31.mmProcessorTransactionIdentification, com.tools20022.repository.msg.TransactionIdentifications31.mmCommonIdentification,
 						com.tools20022.repository.msg.TransactionIdentifications31.mmNettingServiceProviderIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV07.mmTransactionIdentification, SecuritiesSettlementTransactionStatusAdviceV08.mmTransactionIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionStatusAdviceV07.mmTransactionIdentification, SecuritiesSettlementTransactionStatusAdviceV08.mmTransactionIdentification,
+						SecuritiesSettlementTransactionStatusAdviceV09.mmTransactionIdentification);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintNoAccountOwnerTransactionIdentificationRule.forTransactionIdentifications31);

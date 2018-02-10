@@ -197,6 +197,18 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV02#mmProtectedATMKeyDownloadResponse
  * ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceControlV03#mmProtectedATMDeviceControl
+ * ATMDeviceControlV03.mmProtectedATMDeviceControl}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMDeviceReportV03#mmProtectedATMDeviceReport
+ * ATMDeviceReportV03.mmProtectedATMDeviceReport}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadRequestV03#mmProtectedATMKeyDownloadRequest
+ * ATMKeyDownloadRequestV03.mmProtectedATMKeyDownloadRequest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.caam.ATMKeyDownloadResponseV03#mmProtectedATMKeyDownloadResponse
+ * ATMKeyDownloadResponseV03.mmProtectedATMKeyDownloadResponse}</li>
  * </ul>
  * </li>
  * <li>
@@ -213,6 +225,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "General cryptographic message syntax (CMS) containing encrypted data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ContentInformationType17
+ * ContentInformationType17}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ContentInformationType7
@@ -252,6 +271,14 @@ public class ContentInformationType10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of data protection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType17#mmContentType
+	 * ContentInformationType17.mmContentType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -267,6 +294,7 @@ public class ContentInformationType10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType17.mmContentType);
 			previousVersion_lazy = () -> ContentInformationType7.mmContentType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -301,6 +329,14 @@ public class ContentInformationType10 {
 	 * definition} =
 	 * "Data protection by encryption or by a digital envelope, with an encryption key."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType17#mmEnvelopedData
+	 * ContentInformationType17.mmEnvelopedData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -316,6 +352,7 @@ public class ContentInformationType10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EnvelopedData";
 			definition = "Data protection by encryption or by a digital envelope, with an encryption key.";
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType17.mmEnvelopedData);
 			previousVersion_lazy = () -> ContentInformationType7.mmEnvelopedData;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -343,11 +380,13 @@ public class ContentInformationType10 {
 						ATMWithdrawalResponseV02.mmProtectedATMWithdrawalResponse, ATMWithdrawalCompletionAcknowledgementV02.mmProtectedATMWithdrawalCompletionAcknowledgement,
 						ATMPINManagementResponseV02.mmProtectedATMPINManagementResponse, ATMDepositCompletionAdviceV01.mmProtectedATMDepositCompletionAdvice, ATMInquiryRequestV02.mmProtectedATMInquiryRequest,
 						ATMCompletionAcknowledgementV02.mmProtectedATMCompletionAcknowledgement, ATMCompletionAdviceV02.mmProtectedATMCompletionAdvice, ATMTransferResponseV01.mmProtectedATMTransferResponse,
-						ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse);
+						ATMKeyDownloadResponseV02.mmProtectedATMKeyDownloadResponse, ATMDeviceControlV03.mmProtectedATMDeviceControl, ATMDeviceReportV03.mmProtectedATMDeviceReport, ATMKeyDownloadRequestV03.mmProtectedATMKeyDownloadRequest,
+						ATMKeyDownloadResponseV03.mmProtectedATMKeyDownloadResponse);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType10";
 				definition = "General cryptographic message syntax (CMS) containing encrypted data.";
+				nextVersions_lazy = () -> Arrays.asList(ContentInformationType17.mmObject());
 				previousVersion_lazy = () -> ContentInformationType7.mmObject();
 			}
 		});

@@ -105,7 +105,7 @@ public class OriginalAndCurrentQuantities1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument."
+	 * "Quantity expressed as an amount representing the face amount, that is, the principal of a debt instrument."
 	 * </li>
 	 * </ul>
 	 */
@@ -117,7 +117,7 @@ public class OriginalAndCurrentQuantities1 {
 			xmlTag = "FaceAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
-			definition = "Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument.";
+			definition = "Quantity expressed as an amount representing the face amount, that is, the principal of a debt instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();

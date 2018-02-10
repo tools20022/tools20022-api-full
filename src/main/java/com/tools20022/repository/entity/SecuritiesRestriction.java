@@ -19,7 +19,9 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.InvestorRestrictionType2Choice;
+import com.tools20022.repository.choice.InvestorRestrictionType3Choice;
 import com.tools20022.repository.choice.LegalRestrictions3Choice;
+import com.tools20022.repository.choice.LegalRestrictions4Choice;
 import com.tools20022.repository.codeset.InvestorRestrictionTypeCode;
 import com.tools20022.repository.codeset.InvestorTypeCode;
 import com.tools20022.repository.codeset.LegalRestrictionsCode;
@@ -90,6 +92,11 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.InvestorRestrictionType2Choice
  * InvestorRestrictionType2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.InvestorRestrictionType3Choice
+ * InvestorRestrictionType3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.LegalRestrictions4Choice
+ * LegalRestrictions4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -180,6 +187,12 @@ public class SecuritiesRestriction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.LegalRestrictions3Choice#mmProprietary
 	 * LegalRestrictions3Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LegalRestrictions4Choice#mmCode
+	 * LegalRestrictions4Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.LegalRestrictions4Choice#mmProprietary
+	 * LegalRestrictions4Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -201,7 +214,8 @@ public class SecuritiesRestriction {
 	 */
 	public static final MMBusinessAttribute mmLegalRestrictionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmLegalRestrictions, LegalRestrictions3Choice.mmCode, LegalRestrictions3Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes1.mmLegalRestrictions, LegalRestrictions3Choice.mmCode, LegalRestrictions3Choice.mmProprietary, LegalRestrictions4Choice.mmCode,
+					LegalRestrictions4Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRestriction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -338,6 +352,12 @@ public class SecuritiesRestriction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.InvestorRestrictionType2Choice#mmProprietary
 	 * InvestorRestrictionType2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorRestrictionType3Choice#mmCode
+	 * InvestorRestrictionType3Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestorRestrictionType3Choice#mmProprietary
+	 * InvestorRestrictionType3Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -360,7 +380,7 @@ public class SecuritiesRestriction {
 	 */
 	public static final MMBusinessAttribute mmInvestorStatusRestrictionType = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(InvestorRestrictionType2Choice.mmCode, InvestorRestrictionType2Choice.mmProprietary);
+			derivation_lazy = () -> Arrays.asList(InvestorRestrictionType2Choice.mmCode, InvestorRestrictionType2Choice.mmProprietary, InvestorRestrictionType3Choice.mmCode, InvestorRestrictionType3Choice.mmProprietary);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesRestriction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -533,7 +553,7 @@ public class SecuritiesRestriction {
 						com.tools20022.repository.entity.SecuritiesRestriction.mmJurisdiction, com.tools20022.repository.entity.SecuritiesRestriction.mmRestrictionType,
 						com.tools20022.repository.entity.SecuritiesRestriction.mmInvestorStatusRestrictionType, com.tools20022.repository.entity.SecuritiesRestriction.mmEffectivePeriod,
 						com.tools20022.repository.entity.SecuritiesRestriction.mmRate, com.tools20022.repository.entity.SecuritiesRestriction.mmInvestorType);
-				derivationComponent_lazy = () -> Arrays.asList(LegalRestrictions3Choice.mmObject(), InvestorRestrictionType2Choice.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(LegalRestrictions3Choice.mmObject(), InvestorRestrictionType2Choice.mmObject(), InvestorRestrictionType3Choice.mmObject(), LegalRestrictions4Choice.mmObject());
 			}
 
 			@Override

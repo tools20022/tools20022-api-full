@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Specifies amounts in the framework of a corporate action event..
+ * Specifies amounts in the framework of a corporate action event.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -208,7 +208,7 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionAmounts1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies amounts in the framework of a corporate action event.."</li>
+ * "Specifies amounts in the framework of a corporate action event."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -2746,7 +2746,7 @@ public class CorporateActionAmounts1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionAmounts1";
-				definition = "Specifies amounts in the framework of a corporate action event..";
+				definition = "Specifies amounts in the framework of a corporate action event.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Data related to the status report of a point of interaction (POI)."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TerminalManagementDataSet26
+ * TerminalManagementDataSet26}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet16
@@ -104,6 +111,14 @@ public class TerminalManagementDataSet21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the data set containing the status report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet26#mmIdentification
+	 * TerminalManagementDataSet26.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class TerminalManagementDataSet21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the data set containing the status report.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet26.mmIdentification);
 			previousVersion_lazy = () -> TerminalManagementDataSet16.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -155,6 +171,14 @@ public class TerminalManagementDataSet21 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Counter to identify a single data set within the whole transfer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet26#mmSequenceCounter
+	 * TerminalManagementDataSet26.mmSequenceCounter}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -170,6 +194,7 @@ public class TerminalManagementDataSet21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SequenceCounter";
 			definition = "Counter to identify a single data set within the whole transfer.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet26.mmSequenceCounter);
 			previousVersion_lazy = () -> TerminalManagementDataSet16.mmSequenceCounter;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -202,6 +227,14 @@ public class TerminalManagementDataSet21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Content of the status report."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TerminalManagementDataSet26#mmContent
+	 * TerminalManagementDataSet26.mmContent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -217,6 +250,7 @@ public class TerminalManagementDataSet21 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Content";
 			definition = "Content of the status report.";
+			nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet26.mmContent);
 			previousVersion_lazy = () -> TerminalManagementDataSet16.mmContent;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -234,6 +268,7 @@ public class TerminalManagementDataSet21 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TerminalManagementDataSet21";
 				definition = "Data related to the status report of a point of interaction (POI).";
+				nextVersions_lazy = () -> Arrays.asList(TerminalManagementDataSet26.mmObject());
 				previousVersion_lazy = () -> TerminalManagementDataSet16.mmObject();
 			}
 		});

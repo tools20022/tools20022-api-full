@@ -2288,7 +2288,7 @@ public class CorporateActionAmounts10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of interest that has been accrued in between coupon payment periods"
+	 * "Amount of interest that has been accrued in between coupon payment periods."
 	 * </li>
 	 * </ul>
 	 */
@@ -2301,7 +2301,7 @@ public class CorporateActionAmounts10 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":19B::ACRU"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccruedInterestAmount";
-			definition = "Amount of interest that has been accrued in between coupon payment periods";
+			definition = "Amount of interest that has been accrued in between coupon payment periods.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

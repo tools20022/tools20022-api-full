@@ -142,8 +142,7 @@ public class InvestmentAccountOwnershipInformation6 {
 	 * name} = "Party"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information about the organisation or individual person. "
-	 * </li>
+	 * definition} = "Information about the organisation or individual person."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -162,7 +161,7 @@ public class InvestmentAccountOwnershipInformation6 {
 			xmlTag = "Pty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
-			definition = "Information about the organisation or individual person. ";
+			definition = "Information about the organisation or individual person.";
 			nextVersions_lazy = () -> Arrays.asList(InvestmentAccountOwnershipInformation9.mmParty);
 			maxOccurs = 1;
 			minOccurs = 1;

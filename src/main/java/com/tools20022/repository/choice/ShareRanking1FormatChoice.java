@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ShareRanking1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats to  express the share ranking."</li>
+ * definition} = "Choice of formats to express the share ranking."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -162,7 +162,7 @@ public class ShareRanking1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShareRanking1FormatChoice";
-				definition = "Choice of formats to  express the share ranking.";
+				definition = "Choice of formats to express the share ranking.";
 			}
 		});
 		return mmObject_lazy.get();

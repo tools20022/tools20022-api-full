@@ -73,7 +73,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountBalanceExtensionSD2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  "
+ * "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs)."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -204,7 +204,7 @@ public class AccountBalanceExtensionSD2 {
 	 * name} = "AsOfDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Effective date of the transaction. "</li>
+	 * definition} = "Effective date of the transaction."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAsOfDate = new MMMessageAttribute() {
@@ -215,7 +215,7 @@ public class AccountBalanceExtensionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "As Of Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AsOfDate";
-			definition = "Effective date of the transaction. ";
+			definition = "Effective date of the transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -278,7 +278,7 @@ public class AccountBalanceExtensionSD2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountBalanceExtensionSD2";
-				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).  ";
+				definition = "Provides additional information regarding account balance. Contains transaction details of the stock loans, repurchase agreements (REPOs) and undelivered trades (FAILs).";
 				previousVersion_lazy = () -> AccountBalanceExtensionSD1.mmObject();
 			}
 		});

@@ -267,7 +267,7 @@ public class ClosingData2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Refers to the identification of a previous event in the life of a  non deliverable forward trade."
+	 * "Refers to the identification of a previous event in the life of a non deliverable forward trade."
 	 * </li>
 	 * </ul>
 	 */
@@ -278,7 +278,7 @@ public class ClosingData2 {
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
-			definition = "Refers to the identification of a previous event in the life of a  non deliverable forward trade.";
+			definition = "Refers to the identification of a previous event in the life of a non deliverable forward trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.PaymentsInitiationLatestVersion;
+import com.tools20022.repository.area.PaymentsInitiationPreviousVersion;
 import com.tools20022.repository.msg.GroupHeader56;
 import com.tools20022.repository.msg.OriginalGroupHeader3;
 import com.tools20022.repository.msg.OriginalPaymentInstruction21;
@@ -93,8 +93,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CstmrPmtRvsl"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationLatestVersion
- * PaymentsInitiationLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
+ * PaymentsInitiationPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.007.001.07}</li>
@@ -131,6 +131,14 @@ import javax.xml.bind.annotation.*;
  * definition} =
  * "Scope\r\nThe CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.\r\nThe CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentReversal message can be used in domestic and cross-border scenarios."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08
+ * CustomerPaymentReversalV08}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV06
@@ -166,6 +174,14 @@ public class CustomerPaymentReversalV07 {
 	 * definition} =
 	 * "Set of characteristics shared by all individual transactions included in the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08#mmGroupHeader
+	 * CustomerPaymentReversalV08.mmGroupHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,6 +195,7 @@ public class CustomerPaymentReversalV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupHeader";
 			definition = "Set of characteristics shared by all individual transactions included in the message.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV08.mmGroupHeader);
 			previousVersion_lazy = () -> CustomerPaymentReversalV06.mmGroupHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -218,6 +235,14 @@ public class CustomerPaymentReversalV07 {
 	 * definition} =
 	 * "Information concerning the original group of transactions, to which the message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08#mmOriginalGroupInformation
+	 * CustomerPaymentReversalV08.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +256,7 @@ public class CustomerPaymentReversalV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Information concerning the original group of transactions, to which the message refers.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV08.mmOriginalGroupInformation);
 			previousVersion_lazy = () -> CustomerPaymentReversalV06.mmOriginalGroupInformation;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -270,6 +296,14 @@ public class CustomerPaymentReversalV07 {
 	 * definition} =
 	 * "Information concerning the original payment information, to which the reversal message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08#mmOriginalPaymentInformationAndReversal
+	 * CustomerPaymentReversalV08.mmOriginalPaymentInformationAndReversal}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -283,6 +317,7 @@ public class CustomerPaymentReversalV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalPaymentInformationAndReversal";
 			definition = "Information concerning the original payment information, to which the reversal message refers.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV08.mmOriginalPaymentInformationAndReversal);
 			previousVersion_lazy = () -> CustomerPaymentReversalV06.mmOriginalPaymentInformationAndReversal;
 			minOccurs = 0;
 			complexType_lazy = () -> OriginalPaymentInstruction21.mmObject();
@@ -321,6 +356,14 @@ public class CustomerPaymentReversalV07 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.pain.CustomerPaymentReversalV08#mmSupplementaryData
+	 * CustomerPaymentReversalV08.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -334,6 +377,7 @@ public class CustomerPaymentReversalV07 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV08.mmSupplementaryData);
 			previousVersion_lazy = () -> CustomerPaymentReversalV06.mmSupplementaryData;
 			minOccurs = 0;
 			complexType_lazy = () -> SupplementaryData1.mmObject();
@@ -359,11 +403,12 @@ public class CustomerPaymentReversalV07 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CustomerPaymentReversalV07";
 				definition = "Scope\r\nThe CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.\r\nUsage\r\nThe CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.\r\nThe CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.\r\nThe CustomerPaymentReversal message can be used in domestic and cross-border scenarios.";
+				nextVersions_lazy = () -> Arrays.asList(CustomerPaymentReversalV08.mmObject());
 				previousVersion_lazy = () -> CustomerPaymentReversalV06.mmObject();
 				messageSet_lazy = () -> Arrays.asList(PaymentsInitiationISOLatestversion.mmObject(), MX_Payment_Maintenance_2016_2017.mmObject(), PaymentsInitiationMaintenance20162017.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrPmtRvsl";
-				businessArea_lazy = () -> PaymentsInitiationLatestVersion.mmObject();
+				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentReversalV07.mmGroupHeader, com.tools20022.repository.area.pain.CustomerPaymentReversalV07.mmOriginalGroupInformation,
 						com.tools20022.repository.area.pain.CustomerPaymentReversalV07.mmOriginalPaymentInformationAndReversal, com.tools20022.repository.area.pain.CustomerPaymentReversalV07.mmSupplementaryData);
 				messageDefinitionIdentifier_lazy = () -> new MMMessageDefinitionIdentifier() {

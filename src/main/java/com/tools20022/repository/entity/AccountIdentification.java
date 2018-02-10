@@ -272,6 +272,24 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.choice.AccountIdentification37Choice#mmAccountsListAndBalanceDetails
  * AccountIdentification37Choice.mmAccountsListAndBalanceDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification38Choice#mmCashAccountIdentification
+ * AccountIdentification38Choice.mmCashAccountIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CollateralAccount5#mmIdentification
+ * CollateralAccount5.mmIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmCard
+ * AccountIdentification39Choice.mmCard}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmMSISDN
+ * AccountIdentification39Choice.mmMSISDN}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmEMail
+ * AccountIdentification39Choice.mmEMail}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmDomestic
+ * AccountIdentification39Choice.mmDomestic}</li>
  * </ul>
  * </li>
  * <li>
@@ -535,12 +553,27 @@ import java.util.Optional;
  * AccountIdentification37}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AccountIdentification39
  * AccountIdentification39}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification38Choice
+ * AccountIdentification38Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SubAccountIdentification48
+ * SubAccountIdentification48}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AccountIdentification40
  * AccountIdentification40}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AccountIdentification41
  * AccountIdentification41}</li>
  * <li>{@linkplain com.tools20022.repository.msg.AccountIdentification42
  * AccountIdentification42}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountIdentification43
+ * AccountIdentification43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AccountIdentification44
+ * AccountIdentification44}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice
+ * AccountIdentification39Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice
+ * CashAccountIdentification7Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -659,6 +692,12 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmIBAN
 	 * AccountIdentification31Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmIBAN
+	 * AccountIdentification39Choice.mmIBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice#mmIBAN
+	 * CashAccountIdentification7Choice.mmIBAN}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -683,7 +722,7 @@ public class AccountIdentification {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmIBAN, AccountIdentification5Choice.mmIBAN, CashAccountIdentification1Choice.mmIBAN, AccountIdentification3Choice.mmIBAN, AccountIdentification4Choice.mmIBAN,
 					AccountIdentification4Choice.mmOther, CashAccountIdentification5Choice.mmIBAN, CashAccountIdentification2Choice.mmIBAN, CashAccountIdentification6Choice.mmIBAN, AccountIdentification2.mmIBAN,
-					AccountIdentification30Choice.mmIBAN, AccountIdentification31Choice.mmIBAN);
+					AccountIdentification30Choice.mmIBAN, AccountIdentification31Choice.mmIBAN, AccountIdentification39Choice.mmIBAN, CashAccountIdentification7Choice.mmIBAN);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -734,6 +773,12 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmBBAN
 	 * AccountIdentification31Choice.mmBBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmBBAN
+	 * AccountIdentification39Choice.mmBBAN}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice#mmBBAN
+	 * CashAccountIdentification7Choice.mmBBAN}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -757,7 +802,7 @@ public class AccountIdentification {
 	public static final MMBusinessAttribute mmBBAN = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmBBAN, AccountIdentification5Choice.mmBBAN, CashAccountIdentification1Choice.mmBBAN, AccountIdentification3Choice.mmBBAN, AccountIdentification30Choice.mmBBAN,
-					AccountIdentification31Choice.mmBBAN);
+					AccountIdentification31Choice.mmBBAN, AccountIdentification39Choice.mmBBAN, CashAccountIdentification7Choice.mmBBAN);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -805,6 +850,12 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.AccountIdentification31Choice#mmUPIC
 	 * AccountIdentification31Choice.mmUPIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmUPIC
+	 * AccountIdentification39Choice.mmUPIC}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice#mmUPIC
+	 * CashAccountIdentification7Choice.mmUPIC}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -827,8 +878,8 @@ public class AccountIdentification {
 	 */
 	public static final MMBusinessAttribute mmUPIC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays
-					.asList(AccountIdentification1Choice.mmUPIC, CashAccountIdentification1Choice.mmUPIC, AccountIdentification3Choice.mmUPIC, AccountIdentification30Choice.mmUPIC, AccountIdentification31Choice.mmUPIC);
+			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmUPIC, CashAccountIdentification1Choice.mmUPIC, AccountIdentification3Choice.mmUPIC, AccountIdentification30Choice.mmUPIC,
+					AccountIdentification31Choice.mmUPIC, AccountIdentification39Choice.mmUPIC, CashAccountIdentification7Choice.mmUPIC);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -917,6 +968,15 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.AccountDesignation1Choice#mmProprietary
 	 * AccountDesignation1Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmProprietary
+	 * CustomerAccount7.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.AccountIdentification39Choice#mmOther
+	 * AccountIdentification39Choice.mmOther}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountIdentification7Choice#mmDomesticAccount
+	 * CashAccountIdentification7Choice.mmDomesticAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -949,7 +1009,8 @@ public class AccountIdentification {
 			derivation_lazy = () -> Arrays.asList(AccountIdentification1Choice.mmDomesticAccount, AccountIdentification5Choice.mmDomesticAccount, AccountIdentification5Choice.mmDepositoryAccount, AccountIdentification1.mmProprietary,
 					CashAccountIdentification1Choice.mmDomesticAccount, AccountIdentification3Choice.mmProprietaryAccount, CashAccountIdentification5Choice.mmProprietary, CashAccountIdentification2Choice.mmProprietary,
 					CashAccountIdentification6Choice.mmProprietary, AccountIdentification26.mmProprietary, AccountIdentification4.mmProprietary, CashAccountIdentification1.mmDomesticAccount, CustomerAccount2.mmProprietary,
-					AccountIdentification30Choice.mmOther, AccountIdentification31Choice.mmDomesticAccount, AccountDesignation1Choice.mmProprietary);
+					AccountIdentification30Choice.mmOther, AccountIdentification31Choice.mmDomesticAccount, AccountDesignation1Choice.mmProprietary, CustomerAccount7.mmProprietary, AccountIdentification39Choice.mmOther,
+					CashAccountIdentification7Choice.mmDomesticAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			semanticMarkup_lazy = () -> Arrays
@@ -1231,6 +1292,10 @@ public class AccountIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardAccount12#mmAccountName
 	 * CardAccount12.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount7#mmName
+	 * CustomerAccount7.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount6#mmName
+	 * CustomerAccount6.mmName}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount61#mmName
 	 * InvestmentAccount61.mmName}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentAccount63#mmName
@@ -1246,6 +1311,25 @@ public class AccountIdentification {
 	 * InvestmentAccount64.mmName}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CollateralAccount3#mmName
 	 * CollateralAccount3.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount66#mmAccountName
+	 * InvestmentAccount66.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount67#mmAccountName
+	 * InvestmentAccount67.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount65#mmAccountName
+	 * InvestmentAccount65.mmAccountName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InvestmentAccount68#mmAccountName
+	 * InvestmentAccount68.mmAccountName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount35#mmName
+	 * CashAccount35.mmName}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashAccount36#mmName
+	 * CashAccount36.mmName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardAccount14#mmAccountName
+	 * CardAccount14.mmAccountName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1283,8 +1367,9 @@ public class AccountIdentification {
 					CardAccount2.mmAccountName, SecuritiesAccount24.mmName, SecuritiesAccount26.mmName, SecuritiesAccount25.mmName, InvestmentAccount49.mmName, InvestmentAccount54.mmAccountName, InvestmentAccount51.mmName,
 					InvestmentAccount50.mmName, InvestmentAccount56.mmAccountName, InvestmentAccount52.mmName, SubAccount5.mmName, InvestmentAccount55.mmAccountName, AccountIdentificationAndName5.mmName, InvestmentAccount53.mmAccountName,
 					InvestmentAccount57.mmAccountName, CollateralAccount2.mmName, SecuritiesAccount33.mmName, SecuritiesAccount27.mmName, SecuritiesAccount30.mmName, SecuritiesAccount34.mmName, CardAccount10.mmAccountName,
-					CardAccount9.mmAccountName, CardAccount8.mmAccountName, CardAccount11.mmAccountName, CardAccount13.mmAccountName, CardAccount7.mmAccountName, CardAccount12.mmAccountName, InvestmentAccount61.mmName,
-					InvestmentAccount63.mmName, InvestmentAccount62.mmName, InvestmentAccount58.mmAccountName, SubAccount6.mmName, InvestmentAccount64.mmName, CollateralAccount3.mmName);
+					CardAccount9.mmAccountName, CardAccount8.mmAccountName, CardAccount11.mmAccountName, CardAccount13.mmAccountName, CardAccount7.mmAccountName, CardAccount12.mmAccountName, CustomerAccount7.mmName,
+					CustomerAccount6.mmName, InvestmentAccount61.mmName, InvestmentAccount63.mmName, InvestmentAccount62.mmName, InvestmentAccount58.mmAccountName, SubAccount6.mmName, InvestmentAccount64.mmName, CollateralAccount3.mmName,
+					InvestmentAccount66.mmAccountName, InvestmentAccount67.mmAccountName, InvestmentAccount65.mmAccountName, InvestmentAccount68.mmAccountName, CashAccount35.mmName, CashAccount36.mmName, CardAccount14.mmAccountName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AccountIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1458,7 +1543,8 @@ public class AccountIdentification {
 						AccountIdentification30Choice.mmCard, AccountIdentification30Choice.mmMSISDN, AccountIdentification30Choice.mmEMail, AccountIdentification30Choice.mmDomestic, AccountIdentification33Choice.mmForAllAccounts,
 						AccountIdentification33Choice.mmAccountsListAndBalanceDetails, AccountIdentification29Choice.mmForAllAccounts, AccountIdentification29Choice.mmAccountsList, AccountIdentification32Choice.mmForAllAccounts,
 						AccountIdentificationAndName5.mmIdentification, AccountIdentification34Choice.mmForAllAccounts, AccountIdentification34Choice.mmAccountsList, AccountIdentification36Choice.mmForAllAccounts,
-						AccountIdentification37Choice.mmForAllAccounts, AccountIdentification37Choice.mmAccountsListAndBalanceDetails);
+						AccountIdentification37Choice.mmForAllAccounts, AccountIdentification37Choice.mmAccountsListAndBalanceDetails, AccountIdentification38Choice.mmCashAccountIdentification, CollateralAccount5.mmIdentification,
+						AccountIdentification39Choice.mmCard, AccountIdentification39Choice.mmMSISDN, AccountIdentification39Choice.mmEMail, AccountIdentification39Choice.mmDomestic);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.AccountIdentification.mmAccount, com.tools20022.repository.entity.AccountIdentification.mmIBAN,
 						com.tools20022.repository.entity.AccountIdentification.mmBBAN, com.tools20022.repository.entity.AccountIdentification.mmUPIC, com.tools20022.repository.entity.AccountIdentification.mmProprietaryIdentification,
 						com.tools20022.repository.entity.AccountIdentification.mmName, com.tools20022.repository.entity.AccountIdentification.mmCostReferencePattern, com.tools20022.repository.entity.AccountIdentification.mmNumber);
@@ -1483,8 +1569,9 @@ public class AccountIdentification {
 						AccountIdentification23Choice.mmObject(), AccountIdentification26Choice.mmObject(), SubAccountIdentification36.mmObject(), AccountIdentification30Choice.mmObject(), AccountIdentification31Choice.mmObject(),
 						AccountIdentification33Choice.mmObject(), AccountIdentification29Choice.mmObject(), AccountIdentification33.mmObject(), AccountIdentification32Choice.mmObject(), AccountIdentification31.mmObject(),
 						AccountIdentification32.mmObject(), AccountIdentificationAndName5.mmObject(), AccountIdentification34Choice.mmObject(), AccountIdentification36Choice.mmObject(), AccountIdentification37Choice.mmObject(),
-						AccountIdentification35.mmObject(), AccountIdentification34.mmObject(), AccountIdentification37.mmObject(), AccountIdentification39.mmObject(), AccountIdentification40.mmObject(), AccountIdentification41.mmObject(),
-						AccountIdentification42.mmObject());
+						AccountIdentification35.mmObject(), AccountIdentification34.mmObject(), AccountIdentification37.mmObject(), AccountIdentification39.mmObject(), AccountIdentification38Choice.mmObject(),
+						SubAccountIdentification48.mmObject(), AccountIdentification40.mmObject(), AccountIdentification41.mmObject(), AccountIdentification42.mmObject(), AccountIdentification43.mmObject(),
+						AccountIdentification44.mmObject(), AccountIdentification39Choice.mmObject(), CashAccountIdentification7Choice.mmObject());
 			}
 
 			@Override

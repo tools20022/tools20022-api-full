@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action option securities movement price details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPriceSD5
+ * CorporateActionPriceSD5}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +106,14 @@ public class CorporateActionPriceSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD5#mmPlaceAndName
+	 * CorporateActionPriceSD5.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -109,6 +124,7 @@ public class CorporateActionPriceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPriceSD5.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -144,6 +160,14 @@ public class CorporateActionPriceSD1 {
 	 * definition} =
 	 * "Corresponding cash in lieu price as declared on the market by issuer/ offeror."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPriceSD5#mmDeclaredCashInLieuPrice
+	 * CorporateActionPriceSD5.mmDeclaredCashInLieuPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDeclaredCashInLieuPrice = new MMMessageAttribute() {
@@ -154,6 +178,7 @@ public class CorporateActionPriceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeclaredCashInLieuPrice";
 			definition = "Corresponding cash in lieu price as declared on the market by issuer/ offeror.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPriceSD5.mmDeclaredCashInLieuPrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RestrictedFINActiveCurrencyAnd13DecimalAmount.mmObject();
@@ -168,6 +193,7 @@ public class CorporateActionPriceSD1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPriceSD1";
 				definition = "Provides additional information regarding corporate action option securities movement price details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionPriceSD5.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

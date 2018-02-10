@@ -81,7 +81,7 @@ import javax.xml.bind.annotation.*;
  * "AcquirerFinancialInitiation"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "The AcquirerFinancialInitiation message is sent by an acquirer or  an agent to an issuer or an agent, to request, advice or notify the approval and the clearing of a card transaction."
+ * "The AcquirerFinancialInitiation message is sent by an acquirer or an agent to an issuer or an agent, to request, advice or notify the approval and the clearing of a card transaction."
  * </li>
  * </ul>
  */
@@ -227,7 +227,7 @@ public class AcquirerFinancialInitiation {
 			{
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerFinancialInitiation";
-				definition = "The AcquirerFinancialInitiation message is sent by an acquirer or  an agent to an issuer or an agent, to request, advice or notify the approval and the clearing of a card transaction.";
+				definition = "The AcquirerFinancialInitiation message is sent by an acquirer or an agent to an issuer or an agent, to request, advice or notify the approval and the clearing of a card transaction.";
 				messageSet_lazy = () -> Arrays.asList(AcquirertoIssuerCardMessagesISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcqrrFinInitn";

@@ -83,7 +83,7 @@ public class ConstraintForwardPointsRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW', then ForwardPoints Must be present. "
+	 * "If ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW', then ForwardPoints Must be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -92,7 +92,7 @@ public class ConstraintForwardPointsRule {
 			validator = ConstraintForwardPointsRule::checkTrade1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForwardPointsRule";
-			definition = "If ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW', then ForwardPoints Must be present. ";
+			definition = "If ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW', then ForwardPoints Must be present.";
 			owner_lazy = () -> Trade1.mmObject();
 			expression = "On Condition\r\n\t/ForeignExchangeTradeProduct is equal to value 'NDFO' or 'FORW'\r\nFollowing Must be True\r\n\t/ForwardPoints Must be present";
 		}

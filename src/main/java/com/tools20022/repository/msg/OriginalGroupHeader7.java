@@ -115,6 +115,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides details on the original group, to which the message refers."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalGroupHeader13
+ * OriginalGroupHeader13}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader1
@@ -161,6 +168,14 @@ public class OriginalGroupHeader7 {
 	 * definition} =
 	 * "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmOriginalMessageIdentification
+	 * OriginalGroupHeader13.mmOriginalMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +192,7 @@ public class OriginalGroupHeader7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageIdentification";
 			definition = "Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmOriginalMessageIdentification);
 			previousVersion_lazy = () -> OriginalGroupHeader1.mmOriginalMessageIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -212,6 +228,14 @@ public class OriginalGroupHeader7 {
 	 * definition} =
 	 * "Specifies the original message name identifier to which the message refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmOriginalMessageNameIdentification
+	 * OriginalGroupHeader13.mmOriginalMessageNameIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -227,6 +251,7 @@ public class OriginalGroupHeader7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalMessageNameIdentification";
 			definition = "Specifies the original message name identifier to which the message refers.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmOriginalMessageNameIdentification);
 			previousVersion_lazy = () -> OriginalGroupHeader1.mmOriginalMessageNameIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -265,6 +290,14 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the original message was created."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmOriginalCreationDateTime
+	 * OriginalGroupHeader13.mmOriginalCreationDateTime}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -281,6 +314,7 @@ public class OriginalGroupHeader7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalCreationDateTime";
 			definition = "Date and time at which the original message was created.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmOriginalCreationDateTime);
 			previousVersion_lazy = () -> OriginalGroupHeader1.mmOriginalCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -316,6 +350,14 @@ public class OriginalGroupHeader7 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Number of individual transactions contained in the original message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmOriginalNumberOfTransactions
+	 * OriginalGroupHeader13.mmOriginalNumberOfTransactions}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -331,6 +373,7 @@ public class OriginalGroupHeader7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalNumberOfTransactions";
 			definition = "Number of individual transactions contained in the original message.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmOriginalNumberOfTransactions);
 			previousVersion_lazy = () -> OriginalGroupHeader1.mmOriginalNumberOfTransactions;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -367,6 +410,14 @@ public class OriginalGroupHeader7 {
 	 * definition} =
 	 * "Total of all individual amounts included in the original message, irrespective of currencies."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmOriginalControlSum
+	 * OriginalGroupHeader13.mmOriginalControlSum}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -382,6 +433,7 @@ public class OriginalGroupHeader7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalControlSum";
 			definition = "Total of all individual amounts included in the original message, irrespective of currencies.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmOriginalControlSum);
 			previousVersion_lazy = () -> OriginalGroupHeader1.mmOriginalControlSum;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -421,6 +473,14 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the status of a group of transactions."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmGroupStatus
+	 * OriginalGroupHeader13.mmGroupStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -437,6 +497,7 @@ public class OriginalGroupHeader7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupStatus";
 			definition = "Specifies the status of a group of transactions.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmGroupStatus);
 			previousVersion_lazy = () -> OriginalGroupHeader1.mmGroupStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -475,6 +536,14 @@ public class OriginalGroupHeader7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides detailed information on the status reason."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmStatusReasonInformation
+	 * OriginalGroupHeader13.mmStatusReasonInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -491,6 +560,7 @@ public class OriginalGroupHeader7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReasonInformation";
 			definition = "Provides detailed information on the status reason.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmStatusReasonInformation);
 			previousVersion_lazy = () -> OriginalGroupHeader1.mmStatusReasonInformation;
 			minOccurs = 0;
 			isComposite = true;
@@ -526,6 +596,14 @@ public class OriginalGroupHeader7 {
 	 * definition} =
 	 * "Detailed information on the number of transactions for each identical transaction status."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalGroupHeader13#mmNumberOfTransactionsPerStatus
+	 * OriginalGroupHeader13.mmNumberOfTransactionsPerStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -541,6 +619,7 @@ public class OriginalGroupHeader7 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfTransactionsPerStatus";
 			definition = "Detailed information on the number of transactions for each identical transaction status.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmNumberOfTransactionsPerStatus);
 			previousVersion_lazy = () -> OriginalGroupHeader1.mmNumberOfTransactionsPerStatus;
 			minOccurs = 0;
 			isComposite = true;
@@ -563,6 +642,7 @@ public class OriginalGroupHeader7 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalGroupHeader7";
 				definition = "Provides details on the original group, to which the message refers.";
+				nextVersions_lazy = () -> Arrays.asList(OriginalGroupHeader13.mmObject());
 				previousVersion_lazy = () -> OriginalGroupHeader1.mmObject();
 			}
 		});

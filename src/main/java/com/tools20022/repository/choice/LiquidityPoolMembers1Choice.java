@@ -62,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * "LiquidityPoolMembers1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice between head member or subordinate member identifiers of liquidity pool. "
+ * "Choice between head member or subordinate member identifiers of liquidity pool."
  * </li>
  * </ul>
  */
@@ -165,7 +165,7 @@ public class LiquidityPoolMembers1Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "LiquidityPoolMembers1Choice";
-				definition = "Choice between head member or subordinate member identifiers of liquidity pool. ";
+				definition = "Choice between head member or subordinate member identifiers of liquidity pool.";
 			}
 		});
 		return mmObject_lazy.get();

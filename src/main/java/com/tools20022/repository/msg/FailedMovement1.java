@@ -83,7 +83,7 @@ import javax.xml.bind.annotation.XmlType;
  * "FailedMovement1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Provides information about  a movement that failed the settlement."</li>
+ * "Provides information about a movement that failed the settlement."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -344,7 +344,7 @@ public class FailedMovement1 {
 					}
 				})).get();
 				name = "FailedMovement1";
-				definition = "Provides information about  a movement that failed the settlement.";
+				definition = "Provides information about a movement that failed the settlement.";
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.FailedMovement1.CashAmountOrSecuritiesQuantityRule);
 			}
 		});

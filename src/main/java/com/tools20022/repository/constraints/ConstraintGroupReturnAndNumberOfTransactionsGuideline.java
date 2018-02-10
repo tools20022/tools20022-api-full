@@ -141,7 +141,7 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Guideline:\nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message."
+	 * "ISO20022 Guideline: \nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
 	 * </ul>
 	 */
@@ -150,7 +150,7 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 			validator = ConstraintGroupReturnAndNumberOfTransactionsGuideline::checkGroupHeader17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndNumberOfTransactionsGuideline";
-			definition = "ISO20022 Guideline:\nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
+			definition = "ISO20022 Guideline: \nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader17.mmObject();
 		}
 	};
@@ -170,7 +170,7 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Guideline:\nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message."
+	 * "ISO20022 Guideline: \nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message."
 	 * </li>
 	 * </ul>
 	 */
@@ -179,7 +179,7 @@ public class ConstraintGroupReturnAndNumberOfTransactionsGuideline {
 			validator = ConstraintGroupReturnAndNumberOfTransactionsGuideline::checkGroupHeader27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GroupReturnAndNumberOfTransactionsGuideline";
-			definition = "ISO20022 Guideline:\nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
+			definition = "ISO20022 Guideline: \nIf GroupReturn is true, then NumberOfTransactions equals the number of transactions in the original message.";
 			owner_lazy = () -> GroupHeader27.mmObject();
 		}
 	};

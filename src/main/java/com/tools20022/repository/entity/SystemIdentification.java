@@ -592,6 +592,18 @@ public class SystemIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction73#mmPOIIdentification
 	 * CardPaymentTransaction73.mmPOIIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlan7#mmPOIIdentification
+	 * ManagementPlan7.mmPOIIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ManagementPlan7#mmTerminalManagerIdentification
+	 * ManagementPlan7.mmTerminalManagerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction79#mmPOIIdentification
+	 * CardPaymentTransaction79.mmPOIIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction86#mmPOIIdentification
+	 * CardPaymentTransaction86.mmPOIIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -616,7 +628,8 @@ public class SystemIdentification {
 					CardPaymentTransaction17.mmPOIIdentification, ManagementPlan3.mmPOIIdentification, ManagementPlan3.mmTerminalManagerIdentification, CardPaymentTransaction21.mmPOIIdentification,
 					CardPaymentTransaction33.mmPOIIdentification, ManagementPlan4.mmPOIIdentification, ManagementPlan4.mmTerminalManagerIdentification, CardPaymentTransaction50.mmPOIIdentification,
 					CardPaymentTransaction37.mmPOIIdentification, ManagementPlan5.mmPOIIdentification, ManagementPlan5.mmTerminalManagerIdentification, CardPaymentTransaction52.mmPOIIdentification,
-					CardPaymentTransaction65.mmPOIIdentification, ManagementPlan6.mmPOIIdentification, ManagementPlan6.mmTerminalManagerIdentification, CardPaymentTransaction73.mmPOIIdentification);
+					CardPaymentTransaction65.mmPOIIdentification, ManagementPlan6.mmPOIIdentification, ManagementPlan6.mmTerminalManagerIdentification, CardPaymentTransaction73.mmPOIIdentification, ManagementPlan7.mmPOIIdentification,
+					ManagementPlan7.mmTerminalManagerIdentification, CardPaymentTransaction79.mmPOIIdentification, CardPaymentTransaction86.mmPOIIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

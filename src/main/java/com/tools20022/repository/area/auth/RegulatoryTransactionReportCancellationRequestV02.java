@@ -237,7 +237,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the firm that executed the transaction.\n"</li>
+	 * "Identification of the firm that executed the transaction.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmReportingInstitution = new MMMessageBuildingBlock() {
@@ -245,7 +245,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			xmlTag = "RptgInstn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingInstitution";
-			definition = "Identification of the firm that executed the transaction.\n";
+			definition = "Identification of the firm that executed the transaction.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PartyIdentification23Choice.mmObject();
@@ -282,7 +282,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identifies the intermediary which is reporting on behalf on the reporting institution. "
+	 * "Identifies the intermediary which is reporting on behalf on the reporting institution."
 	 * </li>
 	 * </ul>
 	 */
@@ -291,7 +291,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			xmlTag = "RptgAgt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingAgent";
-			definition = "Identifies the intermediary which is reporting on behalf on the reporting institution. ";
+			definition = "Identifies the intermediary which is reporting on behalf on the reporting institution.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> PartyIdentification24Choice.mmObject();
@@ -328,7 +328,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides all the details of the transaction report that needs to be cancelled. More than one set of details can be provided.\n\n"
+	 * "Provides all the details of the transaction report that needs to be cancelled. More than one set of details can be provided.\n\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -337,7 +337,7 @@ public class RegulatoryTransactionReportCancellationRequestV02 {
 			xmlTag = "CxlByTxDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CancellationByTransactionDetails";
-			definition = "Provides all the details of the transaction report that needs to be cancelled. More than one set of details can be provided.\n\n";
+			definition = "Provides all the details of the transaction report that needs to be cancelled. More than one set of details can be provided.\n\n.";
 			minOccurs = 1;
 			complexType_lazy = () -> TransactionDetails3.mmObject();
 		}

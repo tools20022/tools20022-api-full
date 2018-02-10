@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CutOff1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the cut-off  type."</li>
+ * definition} = "Specifies the cut-off type."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -153,7 +153,7 @@ public class CutOff1Code extends MMCode {
 				example = Arrays.asList("AERL");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CutOff1Code";
-				definition = "Specifies the cut-off  type.";
+				definition = "Specifies the cut-off type.";
 				trace_lazy = () -> CutOffCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CutOff1Code.AnticipatedEarlyCutoff, com.tools20022.repository.codeset.CutOff1Code.Early, com.tools20022.repository.codeset.CutOff1Code.Late);
 			}

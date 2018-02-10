@@ -114,6 +114,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Eligible and not eligible balance of securities for a corporate action event."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37
+ * CorporateActionBalanceDetails37}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails9
@@ -163,6 +171,14 @@ public class CorporateActionBalanceDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmTotalEligibleBalance
+	 * CorporateActionBalanceDetails37.mmTotalEligibleBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +196,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmTotalEligibleBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmTotalEligibleBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -222,6 +239,14 @@ public class CorporateActionBalanceDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of securities in the sub-balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmUninstructedBalance
+	 * CorporateActionBalanceDetails37.mmUninstructedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -239,6 +264,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UninstructedBalance";
 			definition = "Quantity of securities in the sub-balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmUninstructedBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmUninstructedBalance;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -277,6 +303,14 @@ public class CorporateActionBalanceDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides information about the total instructed balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmTotalInstructedBalanceDetails
+	 * CorporateActionBalanceDetails37.mmTotalInstructedBalanceDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -293,6 +327,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalInstructedBalanceDetails";
 			definition = "Provides information about the total instructed balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmTotalInstructedBalanceDetails);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmTotalInstructedBalanceDetails;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -336,6 +371,14 @@ public class CorporateActionBalanceDetails30 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance of financial instruments that are blocked."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmBlockedBalance
+	 * CorporateActionBalanceDetails37.mmBlockedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -353,6 +396,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BlockedBalance";
 			definition = "Balance of financial instruments that are blocked.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmBlockedBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmBlockedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -397,6 +441,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of financial instruments that have been borrowed from another party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmBorrowedBalance
+	 * CorporateActionBalanceDetails37.mmBorrowedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -414,6 +466,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BorrowedBalance";
 			definition = "Balance of financial instruments that have been borrowed from another party.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmBorrowedBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmBorrowedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -458,6 +511,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of securities that belong to a third party and that are held for the purpose of collateralisation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmCollateralInBalance
+	 * CorporateActionBalanceDetails37.mmCollateralInBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -475,6 +536,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralInBalance";
 			definition = "Balance of securities that belong to a third party and that are held for the purpose of collateralisation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmCollateralInBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmCollateralInBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -519,6 +581,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of securities that belong to the safekeeping account indicated within this message, and are deposited with a third party for the purpose of collateralisation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmCollateralOutBalance
+	 * CorporateActionBalanceDetails37.mmCollateralOutBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -536,6 +606,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralOutBalance";
 			definition = "Balance of securities that belong to the safekeeping account indicated within this message, and are deposited with a third party for the purpose of collateralisation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmCollateralOutBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmCollateralOutBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -580,6 +651,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of financial instruments that have been loaned to a third party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmOnLoanBalance
+	 * CorporateActionBalanceDetails37.mmOnLoanBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -597,6 +676,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLoanBalance";
 			definition = "Balance of financial instruments that have been loaned to a third party.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmOnLoanBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmOnLoanBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -641,6 +721,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmOutForRegistrationBalance
+	 * CorporateActionBalanceDetails37.mmOutForRegistrationBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -658,6 +746,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OutForRegistrationBalance";
 			definition = "Balance of financial instruments currently being processed by the institution responsible for registering the new beneficial owner (or nominee).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmOutForRegistrationBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmOutForRegistrationBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -702,6 +791,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of securities representing only settled transactions; pending transactions not included."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmSettlementPositionBalance
+	 * CorporateActionBalanceDetails37.mmSettlementPositionBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -719,6 +816,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPositionBalance";
 			definition = "Balance of securities representing only settled transactions; pending transactions not included.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmSettlementPositionBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmSettlementPositionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -763,6 +861,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of financial instruments that remain registered in the name of the prior beneficial owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmStreetPositionBalance
+	 * CorporateActionBalanceDetails37.mmStreetPositionBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -780,6 +886,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StreetPositionBalance";
 			definition = "Balance of financial instruments that remain registered in the name of the prior beneficial owner.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmStreetPositionBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmStreetPositionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -824,6 +931,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of securities based on trade date, for example, includes all pending transactions in addition to the balance of settled transactions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmTradeDatePositionBalance
+	 * CorporateActionBalanceDetails37.mmTradeDatePositionBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -841,6 +956,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDatePositionBalance";
 			definition = "Balance of securities based on trade date, for example, includes all pending transactions in addition to the balance of settled transactions.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmTradeDatePositionBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmTradeDatePositionBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -885,6 +1001,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of physical securities that are in the process of being transferred from one depository/agent to another."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmInTransshipmentBalance
+	 * CorporateActionBalanceDetails37.mmInTransshipmentBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -902,6 +1026,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InTransshipmentBalance";
 			definition = "Balance of physical securities that are in the process of being transferred from one depository/agent to another.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmInTransshipmentBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmInTransshipmentBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -946,6 +1071,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Balance of financial instruments that are registered (in the name of a nominee name or of the beneficial owner)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmRegisteredBalance
+	 * CorporateActionBalanceDetails37.mmRegisteredBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -963,6 +1096,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredBalance";
 			definition = "Balance of financial instruments that are registered (in the name of a nominee name or of the beneficial owner).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmRegisteredBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmRegisteredBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1007,6 +1141,14 @@ public class CorporateActionBalanceDetails30 {
 	 * definition} =
 	 * "Position that account holders should return to the account servicer to participate in the event or to fulfil their obligation for the event to be complete, for example, return of securities for late announced drawing."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmObligatedBalance
+	 * CorporateActionBalanceDetails37.mmObligatedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1024,6 +1166,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligatedBalance";
 			definition = "Position that account holders should return to the account servicer to participate in the event or to fulfil their obligation for the event to be complete, for example, return of securities for late announced drawing.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmObligatedBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmObligatedBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1065,6 +1208,14 @@ public class CorporateActionBalanceDetails30 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance of financial instruments that are pending delivery."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmPendingDeliveryBalance
+	 * CorporateActionBalanceDetails37.mmPendingDeliveryBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1082,6 +1233,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingDeliveryBalance";
 			definition = "Balance of financial instruments that are pending delivery.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmPendingDeliveryBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmPendingDeliveryBalance;
 			minOccurs = 0;
 			isComposite = true;
@@ -1123,6 +1275,14 @@ public class CorporateActionBalanceDetails30 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Balance of financial instruments that are pending receipt."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionBalanceDetails37#mmPendingReceiptBalance
+	 * CorporateActionBalanceDetails37.mmPendingReceiptBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1140,6 +1300,7 @@ public class CorporateActionBalanceDetails30 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PendingReceiptBalance";
 			definition = "Balance of financial instruments that are pending receipt.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmPendingReceiptBalance);
 			previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmPendingReceiptBalance;
 			minOccurs = 0;
 			isComposite = true;
@@ -1164,6 +1325,7 @@ public class CorporateActionBalanceDetails30 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionBalanceDetails30";
 				definition = "Eligible and not eligible balance of securities for a corporate action event.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionBalanceDetails37.mmObject());
 				previousVersion_lazy = () -> CorporateActionBalanceDetails9.mmObject();
 			}
 		});

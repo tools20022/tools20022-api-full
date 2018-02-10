@@ -38,7 +38,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trade settlement details for this invoice which involves the payment of an
- * outstanding debt, account, or charge
+ * outstanding debt, account, or charge.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -151,7 +151,7 @@ import javax.xml.bind.annotation.XmlType;
  * "TradeSettlement1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge"
+ * "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -1507,7 +1507,7 @@ public class TradeSettlement1 {
 					}
 				})).get();
 				name = "TradeSettlement1";
-				definition = "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge";
+				definition = "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge.";
 				nextVersions_lazy = () -> Arrays.asList(TradeSettlement2.mmObject());
 			}
 		});

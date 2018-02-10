@@ -21,10 +21,7 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.CommercialTradePartyRole;
 import com.tools20022.repository.GeneratedRepository;
-import com.tools20022.repository.msg.LineItem10;
-import com.tools20022.repository.msg.LineItem16;
-import com.tools20022.repository.msg.TradeDelivery1;
-import com.tools20022.repository.msg.TradeDelivery2;
+import com.tools20022.repository.msg.*;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -59,6 +56,13 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeDelivery2.mmUltimateShipTo}</li>
  * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmShipTo
  * LineItem16.mmShipTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeDelivery3#mmShipTo
+ * TradeDelivery3.mmShipTo}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmUltimateShipTo
+ * TradeDelivery3.mmUltimateShipTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmShipTo
+ * LineItem17.mmShipTo}</li>
  * </ul>
  * </li>
  * <li>
@@ -87,7 +91,8 @@ public class ShipTo extends CommercialTradePartyRole {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ShipTo";
 				definition = "Party to whom the goods must be delivered.";
-				derivationElement_lazy = () -> Arrays.asList(TradeDelivery1.mmShipTo, TradeDelivery1.mmUltimateShipTo, LineItem10.mmShipTo, TradeDelivery2.mmShipTo, TradeDelivery2.mmUltimateShipTo, LineItem16.mmShipTo);
+				derivationElement_lazy = () -> Arrays.asList(TradeDelivery1.mmShipTo, TradeDelivery1.mmUltimateShipTo, LineItem10.mmShipTo, TradeDelivery2.mmShipTo, TradeDelivery2.mmUltimateShipTo, LineItem16.mmShipTo,
+						TradeDelivery3.mmShipTo, TradeDelivery3.mmUltimateShipTo, LineItem17.mmShipTo);
 				superType_lazy = () -> CommercialTradePartyRole.mmObject();
 			}
 

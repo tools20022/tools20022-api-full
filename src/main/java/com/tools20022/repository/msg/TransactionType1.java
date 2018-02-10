@@ -72,6 +72,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Set of elements used to identify the transactions to be reported."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionType2
+ * TransactionType2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -114,6 +121,13 @@ public class TransactionType1 {
 	 * definition} =
 	 * "Specifies the status on the books of the account servicer of the transactions to be reported."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.TransactionType2#mmStatus
+	 * TransactionType2.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -125,6 +139,7 @@ public class TransactionType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the status on the books of the account servicer of the transactions to be reported.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionType2.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> EntryStatus2Code.mmObject();
@@ -165,6 +180,14 @@ public class TransactionType1 {
 	 * definition} =
 	 * "Indicates whether the reporting request refers to credit or debit entries."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionType2#mmCreditDebitIndicator
+	 * TransactionType2.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
@@ -176,6 +199,7 @@ public class TransactionType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the reporting request refers to credit or debit entries.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionType2.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -213,6 +237,14 @@ public class TransactionType1 {
 	 * definition} =
 	 * "Specifies the minimum value of entries to be reported in the requested message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionType2#mmFloorLimit
+	 * TransactionType2.mmFloorLimit}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFloorLimit = new MMMessageAssociationEnd() {
@@ -224,6 +256,7 @@ public class TransactionType1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FloorLimit";
 			definition = "Specifies the minimum value of entries to be reported in the requested message.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionType2.mmFloorLimit);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Limit2.mmObject();
@@ -240,6 +273,7 @@ public class TransactionType1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionType1";
 				definition = "Set of elements used to identify the transactions to be reported.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionType2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

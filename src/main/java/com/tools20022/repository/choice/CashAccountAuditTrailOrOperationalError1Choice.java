@@ -67,6 +67,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Used to report between the cash account reference data or an operational error."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError2Choice
+ * CashAccountAuditTrailOrOperationalError2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -101,6 +109,15 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Report information about cash account reference data."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError2Choice#mmCashAccountAuditTrailReport
+	 * CashAccountAuditTrailOrOperationalError2Choice.
+	 * mmCashAccountAuditTrailReport}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCashAccountAuditTrailReport = new MMMessageAssociationEnd() {
@@ -111,6 +128,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashAccountAuditTrailReport";
 			definition = "Report information about cash account reference data.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailOrOperationalError2Choice.mmCashAccountAuditTrailReport);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> CashAccountAuditTrailReport1.mmObject();
@@ -142,6 +160,14 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Operational error resulting from a rejection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashAccountAuditTrailOrOperationalError2Choice#mmOperationalError
+	 * CashAccountAuditTrailOrOperationalError2Choice.mmOperationalError}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOperationalError = new MMMessageAssociationEnd() {
@@ -152,6 +178,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OperationalError";
 			definition = "Operational error resulting from a rejection.";
+			nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailOrOperationalError2Choice.mmOperationalError);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ErrorHandling3.mmObject();
@@ -167,6 +194,7 @@ public class CashAccountAuditTrailOrOperationalError1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CashAccountAuditTrailOrOperationalError1Choice";
 				definition = "Used to report between the cash account reference data or an operational error.";
+				nextVersions_lazy = () -> Arrays.asList(CashAccountAuditTrailOrOperationalError2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

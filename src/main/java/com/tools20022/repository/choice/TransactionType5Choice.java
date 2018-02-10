@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TransactionType5Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of formats for the specification of the  order type."</li>
+ * definition} = "Choice of formats for the specification of the order type."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.OrderType2Choice
@@ -195,7 +195,7 @@ public class TransactionType5Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionType5Choice";
-				definition = "Choice of formats for the specification of the  order type.";
+				definition = "Choice of formats for the specification of the order type.";
 				previousVersion_lazy = () -> OrderType2Choice.mmObject();
 			}
 		});

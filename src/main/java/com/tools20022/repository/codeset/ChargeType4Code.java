@@ -30,7 +30,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 /**
- * Type of service for which a charge is asked or paid..
+ * Type of service for which a charge is asked or paid.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "ChargeType4Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Type of service for which a charge is asked or paid.."</li>
+ * definition} = "Type of service for which a charge is asked or paid."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -104,7 +104,7 @@ public class ChargeType4Code extends MMCode {
 				example = Arrays.asList("TRAN");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeType4Code";
-				definition = "Type of service for which a charge is asked or paid..";
+				definition = "Type of service for which a charge is asked or paid.";
 				trace_lazy = () -> ChargeTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ChargeType4Code.TransferFee);
 			}

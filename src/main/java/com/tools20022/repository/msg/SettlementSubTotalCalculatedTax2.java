@@ -81,7 +81,7 @@ import javax.xml.bind.annotation.XmlType;
  * "SettlementSubTotalCalculatedTax2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies  the subtotal calculated tax applicable for this settlement."</li>
+ * "Specifies the subtotal calculated tax applicable for this settlement."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -323,7 +323,7 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reason for tax exemption expressed as a code,  if invoice or card transaction is out of tax processing."
+	 * "Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing."
 	 * </li>
 	 * </ul>
 	 */
@@ -336,7 +336,7 @@ public class SettlementSubTotalCalculatedTax2 {
 			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR7.forExemptionReasonCode);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonCode";
-			definition = "Reason for tax exemption expressed as a code,  if invoice or card transaction is out of tax processing.";
+			definition = "Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
@@ -374,7 +374,7 @@ public class SettlementSubTotalCalculatedTax2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reason for a tax exemption,  if invoice or card transaction is out of tax processing."
+	 * "Reason for a tax exemption, if invoice or card transaction is out of tax processing."
 	 * </li>
 	 * </ul>
 	 */
@@ -386,7 +386,7 @@ public class SettlementSubTotalCalculatedTax2 {
 			xmlTag = "XmptnRsnTxt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonText";
-			definition = "Reason for a tax exemption,  if invoice or card transaction is out of tax processing.";
+			definition = "Reason for a tax exemption, if invoice or card transaction is out of tax processing.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max500Text.mmObject();
@@ -448,7 +448,7 @@ public class SettlementSubTotalCalculatedTax2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SettlementSubTotalCalculatedTax2";
-				definition = "Specifies  the subtotal calculated tax applicable for this settlement.";
+				definition = "Specifies the subtotal calculated tax applicable for this settlement.";
 			}
 		});
 		return mmObject_lazy.get();

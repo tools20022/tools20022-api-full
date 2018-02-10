@@ -359,9 +359,7 @@ public class AmendmentRejectionV02 {
 	 * name} = "RejectionReason"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Specifies the reaons for rejecting the amendment.                                                    "
-	 * </li>
+	 * definition} = "Specifies the reaons for rejecting the amendment."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmRejectionReason = new MMMessageBuildingBlock() {
@@ -369,7 +367,7 @@ public class AmendmentRejectionV02 {
 			xmlTag = "RjctnRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RejectionReason";
-			definition = "Specifies the reaons for rejecting the amendment.                                                    ";
+			definition = "Specifies the reaons for rejecting the amendment.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> RejectionReason1Choice.mmObject();

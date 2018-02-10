@@ -144,6 +144,10 @@ import java.util.concurrent.atomic.AtomicReference;
  * Transaction33.mmPaymentTo}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Transaction33#mmPaymentFrom
  * Transaction33.mmPaymentFrom}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction59#mmPaymentTo
+ * Transaction59.mmPaymentTo}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Transaction59#mmPaymentFrom
+ * Transaction59.mmPaymentFrom}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -177,6 +181,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * SystemAvailabilityAndEvents1}</li>
  * <li>{@linkplain com.tools20022.repository.msg.SystemDetails2 SystemDetails2}</li>
  * <li>{@linkplain com.tools20022.repository.msg.System1 System1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemAvailabilityAndEvents2
+ * SystemAvailabilityAndEvents2}</li>
  * </ul>
  * </li>
  * <li>
@@ -303,11 +309,29 @@ public class System extends RolePlayer {
 	 * {@linkplain com.tools20022.repository.msg.ATMCompletionAcknowledgement2#mmATM
 	 * ATMCompletionAcknowledgement2.mmATM}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClearingPartyAndTime3#mmCCP
+	 * ClearingPartyAndTime3.mmCCP}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration6#mmTerminalManagerIdentification
 	 * AcceptorConfiguration6.mmTerminalManagerIdentification}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration4#mmHostIdentification
 	 * AcquirerHostConfiguration4.mmHostIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfiguration7#mmTerminalManagerIdentification
+	 * AcceptorConfiguration7.mmTerminalManagerIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PhysicalInterfaceParameter1#mmInterfaceName
+	 * PhysicalInterfaceParameter1.mmInterfaceName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration5#mmHostIdentification
+	 * AcquirerHostConfiguration5.mmHostIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter5#mmHostIdentification
+	 * HostCommunicationParameter5.mmHostIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TMSEvent6#mmTerminalManagerIdentification
+	 * TMSEvent6.mmTerminalManagerIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -333,8 +357,9 @@ public class System extends RolePlayer {
 					AcquirerHostConfiguration2.mmHostIdentification, HostCommunicationParameter2.mmHostIdentification, AcceptorConfiguration2.mmPOIIdentification, AcceptorConfiguration2.mmTerminalManagerIdentification,
 					AcceptorConfiguration3.mmPOIIdentification, AcceptorConfiguration3.mmTerminalManagerIdentification, AcceptorConfiguration4.mmPOIIdentification, AcceptorConfiguration4.mmTerminalManagerIdentification,
 					AcquirerHostConfiguration3.mmHostIdentification, HostCommunicationParameter3.mmHostIdentification, ATMCompletionAcknowledgement1.mmATM, CardAcceptorTerminal1.mmIdentification,
-					AcceptorConfiguration5.mmTerminalManagerIdentification, HostCommunicationParameter4.mmHostIdentification, ATMCompletionAcknowledgement2.mmATM, AcceptorConfiguration6.mmTerminalManagerIdentification,
-					AcquirerHostConfiguration4.mmHostIdentification);
+					AcceptorConfiguration5.mmTerminalManagerIdentification, HostCommunicationParameter4.mmHostIdentification, ATMCompletionAcknowledgement2.mmATM, ClearingPartyAndTime3.mmCCP,
+					AcceptorConfiguration6.mmTerminalManagerIdentification, AcquirerHostConfiguration4.mmHostIdentification, AcceptorConfiguration7.mmTerminalManagerIdentification, PhysicalInterfaceParameter1.mmInterfaceName,
+					AcquirerHostConfiguration5.mmHostIdentification, HostCommunicationParameter5.mmHostIdentification, TMSEvent6.mmTerminalManagerIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -631,6 +656,54 @@ public class System extends RolePlayer {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation1#mmAccountOwner
 	 * IntraPositionCancellation1.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification3#mmAccountOwner
+	 * IntraPositionModification3.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovements2#mmAccountOwner
+	 * IntraPositionMovements2.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation3#mmAccountOwner
+	 * IntraPositionCancellation3.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation3#mmAccountOwner
+	 * IntraBalanceCancellation3.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionCancellation4#mmAccountOwner
+	 * IntraPositionCancellation4.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement3#mmAccountOwner
+	 * IntraBalanceMovement3.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceCancellation4#mmAccountOwner
+	 * IntraBalanceCancellation4.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification4#mmAccountOwner
+	 * IntraBalanceModification4.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionQueryCriteria6#mmSafekeepingAccountOwner
+	 * IntraPositionQueryCriteria6.mmSafekeepingAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovements2#mmAccountOwner
+	 * IntraBalanceMovements2.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionModification4#mmAccountOwner
+	 * IntraPositionModification4.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovement3#mmAccountOwner
+	 * IntraPositionMovement3.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceQueryCriteria6#mmCashAccountOwner
+	 * IntraBalanceQueryCriteria6.mmCashAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceModification3#mmAccountOwner
+	 * IntraBalanceModification3.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovements3#mmAccountOwner
+	 * IntraPositionMovements3.mmAccountOwner}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovement5#mmAccountOwner
+	 * IntraPositionMovement5.mmAccountOwner}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -652,7 +725,11 @@ public class System extends RolePlayer {
 		{
 			derivation_lazy = () -> Arrays.asList(IntraBalanceCancellation2.mmAccountOwner, IntraBalanceCancellation1.mmAccountOwner, IntraBalanceMovement1.mmAccountOwner, IntraBalanceMovements1.mmAccountOwner,
 					IntraPositionMovement1.mmAccountOwner, IntraPositionMovements1.mmAccountOwner, IntraPositionQueryCriteria1.mmSafekeepingAccountOwner, IntraBalanceModification2.mmAccountOwner, IntraBalanceModification1.mmAccountOwner,
-					IntraBalanceQueryCriteria3.mmCashAccountOwner, IntraPositionModification2.mmAccountOwner, IntraPositionModification1.mmAccountOwner, IntraPositionCancellation2.mmAccountOwner, IntraPositionCancellation1.mmAccountOwner);
+					IntraBalanceQueryCriteria3.mmCashAccountOwner, IntraPositionModification2.mmAccountOwner, IntraPositionModification1.mmAccountOwner, IntraPositionCancellation2.mmAccountOwner, IntraPositionCancellation1.mmAccountOwner,
+					IntraPositionModification3.mmAccountOwner, IntraPositionMovements2.mmAccountOwner, IntraPositionCancellation3.mmAccountOwner, IntraBalanceCancellation3.mmAccountOwner, IntraPositionCancellation4.mmAccountOwner,
+					IntraBalanceMovement3.mmAccountOwner, IntraBalanceCancellation4.mmAccountOwner, IntraBalanceModification4.mmAccountOwner, IntraPositionQueryCriteria6.mmSafekeepingAccountOwner, IntraBalanceMovements2.mmAccountOwner,
+					IntraPositionModification4.mmAccountOwner, IntraPositionMovement3.mmAccountOwner, IntraBalanceQueryCriteria6.mmCashAccountOwner, IntraBalanceModification3.mmAccountOwner, IntraPositionMovements3.mmAccountOwner,
+					IntraPositionMovement5.mmAccountOwner);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.System.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1190,7 +1267,7 @@ public class System extends RolePlayer {
 						com.tools20022.repository.entity.SystemBusinessInformation.mmSystem, com.tools20022.repository.entity.Negotiation.mmTradingSystem, com.tools20022.repository.entity.Reconciliation.mmSystem,
 						com.tools20022.repository.entity.Assessment.mmSystem, com.tools20022.repository.entity.Position.mmSystem);
 				derivationElement_lazy = () -> Arrays.asList(Transaction3.mmPaymentTo, Transaction3.mmPaymentFrom, Transaction4.mmPaymentTo, Transaction4.mmPaymentFrom, Transaction5.mmPaymentTo, Transaction5.mmPaymentFrom,
-						Transaction24.mmPaymentTo, Transaction24.mmPaymentFrom, Transaction33.mmPaymentTo, Transaction33.mmPaymentFrom);
+						Transaction24.mmPaymentTo, Transaction24.mmPaymentFrom, Transaction33.mmPaymentTo, Transaction33.mmPaymentFrom, Transaction59.mmPaymentTo, Transaction59.mmPaymentFrom);
 				subType_lazy = () -> Arrays.asList(ClearingSystem.mmObject(), SecuritiesSettlementSystem.mmObject(), PointOfInteraction.mmObject(), TerminalManagementSystem.mmObject(), MatchingSystem.mmObject(),
 						TreasurySettlementSystem.mmObject());
 				superType_lazy = () -> RolePlayer.mmObject();
@@ -1200,7 +1277,7 @@ public class System extends RolePlayer {
 						com.tools20022.repository.entity.System.mmNegotiation, com.tools20022.repository.entity.System.mmAccount, com.tools20022.repository.entity.System.mmTrade, com.tools20022.repository.entity.System.mmAssessment,
 						com.tools20022.repository.entity.System.mmTradesPosition, com.tools20022.repository.entity.System.mmSystemLanguage);
 				derivationComponent_lazy = () -> Arrays.asList(SystemDetails1.mmObject(), SystemSearch2.mmObject(), SystemSearch3.mmObject(), SystemAvailabilityAndEventsDetails1.mmObject(), SystemAvailabilityAndEvents1.mmObject(),
-						SystemDetails2.mmObject(), System1.mmObject());
+						SystemDetails2.mmObject(), System1.mmObject(), SystemAvailabilityAndEvents2.mmObject());
 			}
 
 			@Override

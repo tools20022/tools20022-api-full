@@ -415,7 +415,7 @@ public class CorporateActionPeriod2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Period during which the price of a security is determined (for  outturn securities)."
+	 * "Period during which the price of a security is determined (for outturn securities)."
 	 * </li>
 	 * </ul>
 	 */
@@ -427,7 +427,7 @@ public class CorporateActionPeriod2 {
 			xmlTag = "PricClctnPrd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceCalculationPeriod";
-			definition = "Period during which the price of a security is determined (for  outturn securities).";
+			definition = "Period during which the price of a security is determined (for outturn securities).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Period1.mmObject();

@@ -105,7 +105,7 @@ public class LocationFormat1Choice {
 	 * name} = "Address"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies physical address of the meeting"</li>
+	 * definition} = "Specifies physical address of the meeting."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAddress = new MMMessageAssociationEnd() {
@@ -116,7 +116,7 @@ public class LocationFormat1Choice {
 			xmlTag = "Adr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
-			definition = "Specifies physical address of the meeting";
+			definition = "Specifies physical address of the meeting.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

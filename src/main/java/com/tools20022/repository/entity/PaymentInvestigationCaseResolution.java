@@ -20,6 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.InvestigationStatus2Choice;
 import com.tools20022.repository.choice.InvestigationStatus3Choice;
+import com.tools20022.repository.choice.InvestigationStatus4Choice;
 import com.tools20022.repository.choice.InvestigationStatusChoice;
 import com.tools20022.repository.codeset.InvestigationExecutionConfirmationCode;
 import com.tools20022.repository.entity.InvestigationResolution;
@@ -112,6 +113,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * InvestigationStatus2Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.InvestigationStatus3Choice
  * InvestigationStatus3Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.InvestigationStatus4Choice
+ * InvestigationStatus4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -163,6 +166,9 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.InvestigationStatus3Choice#mmConfirmation
 	 * InvestigationStatus3Choice.mmConfirmation}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestigationStatus4Choice#mmConfirmation
+	 * InvestigationStatus4Choice.mmConfirmation}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -184,7 +190,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	public static final MMBusinessAttribute mmInvestigationStatus = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmConfirmation, com.tools20022.repository.msg.InvestigationStatus.mmConfirmation, CaseStatus.mmInvestigationStatus, InvestigationStatus2Choice.mmConfirmation,
-					InvestigationStatus3Choice.mmConfirmation);
+					InvestigationStatus3Choice.mmConfirmation, InvestigationStatus4Choice.mmConfirmation);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -512,7 +518,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or  the modification of a payment."
+	 * "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or the modification of a payment."
 	 * </li>
 	 * </ul>
 	 */
@@ -523,7 +529,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestigationCaseRejection";
-			definition = "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or  the modification of a payment.";
+			definition = "Specifies the rejection of an activity linked to a payment. The rejected activity may be the assignment of an investigation case, the cancellation or the modification of a payment.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			opposite_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseRejection.mmRelatedInvestigationCaseResolution;
@@ -561,6 +567,9 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.InvestigationStatus3Choice#mmDuplicateOf
 	 * InvestigationStatus3Choice.mmDuplicateOf}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InvestigationStatus4Choice#mmDuplicateOf
+	 * InvestigationStatus4Choice.mmDuplicateOf}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -583,7 +592,7 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 	 */
 	public static final MMBusinessAssociationEnd mmDuplicateCase = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmDuplicateOf, InvestigationStatus2Choice.mmDuplicateOf, InvestigationStatus3Choice.mmDuplicateOf);
+			derivation_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmDuplicateOf, InvestigationStatus2Choice.mmDuplicateOf, InvestigationStatus3Choice.mmDuplicateOf, InvestigationStatus4Choice.mmDuplicateOf);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -613,7 +622,8 @@ public class PaymentInvestigationCaseResolution extends InvestigationResolution 
 						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmEntryCorrection, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentCorrection,
 						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmPaymentExecutionCorrection, com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmInvestigationCaseRejection,
 						com.tools20022.repository.entity.PaymentInvestigationCaseResolution.mmDuplicateCase);
-				derivationComponent_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmObject(), com.tools20022.repository.msg.InvestigationStatus.mmObject(), InvestigationStatus2Choice.mmObject(), InvestigationStatus3Choice.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(InvestigationStatusChoice.mmObject(), com.tools20022.repository.msg.InvestigationStatus.mmObject(), InvestigationStatus2Choice.mmObject(),
+						InvestigationStatus3Choice.mmObject(), InvestigationStatus4Choice.mmObject());
 			}
 
 			@Override

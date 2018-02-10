@@ -153,7 +153,7 @@ public class CancellationReason2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reason for the cancellation request, in a proprietary form"</li>
+	 * "Reason for the cancellation request, in a proprietary form."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -164,7 +164,7 @@ public class CancellationReason2Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Reason for the cancellation request, in a proprietary form";
+			definition = "Reason for the cancellation request, in a proprietary form.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

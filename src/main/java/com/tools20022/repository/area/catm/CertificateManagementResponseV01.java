@@ -25,8 +25,6 @@ import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.CertificateManagementResponse1;
 import com.tools20022.repository.msg.ContentInformationType13;
 import com.tools20022.repository.msg.Header29;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -63,12 +61,6 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
  * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016
- * CAPETerminalManagementMaintenance20152016}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
- * CAPETerminalManagementMaintenance20162017}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -91,6 +83,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "The CertificateManagementResponse is sent by a terminal manager in response to a CertificateManagementRequest to provide the outcome of the requested service."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV02
+ * CertificateManagementResponseV02}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -121,6 +121,14 @@ public class CertificateManagementResponseV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information related to the protocol management."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV02#mmHeader
+	 * CertificateManagementResponseV02.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmHeader = new MMMessageBuildingBlock() {
@@ -129,6 +137,7 @@ public class CertificateManagementResponseV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Information related to the protocol management.";
+			nextVersions_lazy = () -> Arrays.asList(CertificateManagementResponseV02.mmHeader);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Header29.mmObject();
@@ -167,6 +176,14 @@ public class CertificateManagementResponseV01 {
 	 * definition} =
 	 * "Information related to the result of the certificate management request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV02#mmCertificateManagementResponse
+	 * CertificateManagementResponseV02.mmCertificateManagementResponse}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmCertificateManagementResponse = new MMMessageBuildingBlock() {
@@ -175,6 +192,7 @@ public class CertificateManagementResponseV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateManagementResponse";
 			definition = "Information related to the result of the certificate management request.";
+			nextVersions_lazy = () -> Arrays.asList(CertificateManagementResponseV02.mmCertificateManagementResponse);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> CertificateManagementResponse1.mmObject();
@@ -212,6 +230,14 @@ public class CertificateManagementResponseV01 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV02#mmSecurityTrailer
+	 * CertificateManagementResponseV02.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmSecurityTrailer = new MMMessageBuildingBlock() {
@@ -220,6 +246,7 @@ public class CertificateManagementResponseV01 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
+			nextVersions_lazy = () -> Arrays.asList(CertificateManagementResponseV02.mmSecurityTrailer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ContentInformationType13.mmObject();
@@ -240,7 +267,8 @@ public class CertificateManagementResponseV01 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateManagementResponseV01";
 				definition = "The CertificateManagementResponse is sent by a terminal manager in response to a CertificateManagementRequest to provide the outcome of the requested service.";
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPETerminalManagementMaintenance20152016.mmObject(), CAPETerminalManagementMaintenance20162017.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(CertificateManagementResponseV02.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CertMgmtRspn";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

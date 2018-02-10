@@ -123,6 +123,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AcquirerProtocolParameters10"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Acceptor parameters dedicated to the acquirer protocol."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11
+ * AcquirerProtocolParameters11}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters9
@@ -164,6 +171,14 @@ public class AcquirerProtocolParameters10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of action for the configuration parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmActionType
+	 * AcquirerProtocolParameters11.mmActionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -179,6 +194,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmActionType);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmActionType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -217,6 +233,14 @@ public class AcquirerProtocolParameters10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the acquirer using this protocol."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmAcquirerIdentification
+	 * AcquirerProtocolParameters11.mmAcquirerIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -233,6 +257,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerIdentification";
 			definition = "Identification of the acquirer using this protocol.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmAcquirerIdentification);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmAcquirerIdentification;
 			minOccurs = 1;
 			isComposite = true;
@@ -266,6 +291,14 @@ public class AcquirerProtocolParameters10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the acquirer protocol parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmVersion
+	 * AcquirerProtocolParameters11.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -281,6 +314,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the acquirer protocol parameters.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmVersion);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -321,6 +355,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "Identification of the payment application, user of the acquirer protocol."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmApplicationIdentification
+	 * AcquirerProtocolParameters11.mmApplicationIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -337,6 +379,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationIdentification";
 			definition = "Identification of the payment application, user of the acquirer protocol.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmApplicationIdentification);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmApplicationIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -374,6 +417,14 @@ public class AcquirerProtocolParameters10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Acquirer host configuration."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmHost
+	 * AcquirerProtocolParameters11.mmHost}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -390,6 +441,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Host";
 			definition = "Acquirer host configuration.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmHost);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmHost;
 			minOccurs = 0;
 			isComposite = true;
@@ -430,6 +482,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "Acquirer protocol parameters of transactions performing an online authorisation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmOnLineTransaction
+	 * AcquirerProtocolParameters11.mmOnLineTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -446,6 +506,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OnLineTransaction";
 			definition = "Acquirer protocol parameters of transactions performing an online authorisation.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmOnLineTransaction);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmOnLineTransaction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -482,6 +543,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "Acquirer protocol parameters of transactions performing an offline authorisation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmOffLineTransaction
+	 * AcquirerProtocolParameters11.mmOffLineTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -497,6 +566,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OffLineTransaction";
 			definition = "Acquirer protocol parameters of transactions performing an offline authorisation.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmOffLineTransaction);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmOffLineTransaction;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -530,6 +600,14 @@ public class AcquirerProtocolParameters10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Configuration parameters of reconciliation exchanges."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmReconciliationExchange
+	 * AcquirerProtocolParameters11.mmReconciliationExchange}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -545,6 +623,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationExchange";
 			definition = "Configuration parameters of reconciliation exchanges.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmReconciliationExchange);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmReconciliationExchange;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -587,6 +666,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "Indicates the reconciliation period is assigned by the acquirer instead of the acceptor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmReconciliationByAcquirer
+	 * AcquirerProtocolParameters11.mmReconciliationByAcquirer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -603,6 +690,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationByAcquirer";
 			definition = "Indicates the reconciliation period is assigned by the acquirer instead of the acceptor.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmReconciliationByAcquirer);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmReconciliationByAcquirer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -643,6 +731,14 @@ public class AcquirerProtocolParameters10 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates the reconciliation total amounts are computed per currency."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmTotalsPerCurrency
+	 * AcquirerProtocolParameters11.mmTotalsPerCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -659,6 +755,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalsPerCurrency";
 			definition = "Indicates the reconciliation total amounts are computed per currency.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmTotalsPerCurrency);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmTotalsPerCurrency;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -695,6 +792,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "Indicates that totals in reconciliation or batch must be split per group of points of interaction and card product profiles when these information are present in the transactions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmSplitTotals
+	 * AcquirerProtocolParameters11.mmSplitTotals}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -710,6 +815,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SplitTotals";
 			definition = "Indicates that totals in reconciliation or batch must be split per group of points of interaction and card product profiles when these information are present in the transactions.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmSplitTotals);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmSplitTotals;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -746,6 +852,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "After an error in a totals of the Reconciliation, the POI sends transactions in error in the BatchTransfer messages."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmReconciliationError
+	 * AcquirerProtocolParameters11.mmReconciliationError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -761,6 +875,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReconciliationError";
 			definition = "After an error in a totals of the Reconciliation, the POI sends transactions in error in the BatchTransfer messages.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmReconciliationError);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmReconciliationError;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -797,6 +912,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "True if the POI must send card data (protected or plain card data) in the AcceptorCompletionAdvice message following an authorisation exchange."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmCardDataVerification
+	 * AcquirerProtocolParameters11.mmCardDataVerification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -812,6 +935,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardDataVerification";
 			definition = "True if the POI must send card data (protected or plain card data) in the AcceptorCompletionAdvice message following an authorisation exchange.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmCardDataVerification);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmCardDataVerification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -847,6 +971,14 @@ public class AcquirerProtocolParameters10 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Send a cancellation advice for offline transactions not yet captured."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmNotifyOffLineCancellation
+	 * AcquirerProtocolParameters11.mmNotifyOffLineCancellation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -862,6 +994,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotifyOffLineCancellation";
 			definition = "Send a cancellation advice for offline transactions not yet captured.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmNotifyOffLineCancellation);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmNotifyOffLineCancellation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -901,6 +1034,14 @@ public class AcquirerProtocolParameters10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Types of transaction to include in the batch."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmBatchTransferContent
+	 * AcquirerProtocolParameters11.mmBatchTransferContent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -917,6 +1058,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchTransferContent";
 			definition = "Types of transaction to include in the batch.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmBatchTransferContent);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmBatchTransferContent;
 			minOccurs = 0;
 			simpleType_lazy = () -> BatchTransactionType1Code.mmObject();
@@ -952,6 +1094,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "BatchTransfer are exchanged per file transfer protocol rather than per message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmFileTransferBatch
+	 * AcquirerProtocolParameters11.mmFileTransferBatch}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -967,6 +1117,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FileTransferBatch";
 			definition = "BatchTransfer are exchanged per file transfer protocol rather than per message.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmFileTransferBatch);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmFileTransferBatch;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1003,6 +1154,14 @@ public class AcquirerProtocolParameters10 {
 	 * definition} =
 	 * "BatchTransfer are authenticated by digital signature rather than a MAC (Message Authentication Code)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmBatchDigitalSignature
+	 * AcquirerProtocolParameters11.mmBatchDigitalSignature}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1018,6 +1177,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BatchDigitalSignature";
 			definition = "BatchTransfer are authenticated by digital signature rather than a MAC (Message Authentication Code).";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmBatchDigitalSignature);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmBatchDigitalSignature;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1050,6 +1210,14 @@ public class AcquirerProtocolParameters10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Configuration of a message item."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmMessageItem
+	 * AcquirerProtocolParameters11.mmMessageItem}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1065,6 +1233,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageItem";
 			definition = "Configuration of a message item.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmMessageItem);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmMessageItem;
 			minOccurs = 0;
 			isComposite = true;
@@ -1105,6 +1274,14 @@ public class AcquirerProtocolParameters10 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicator to require protection of sensitive card data in messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmProtectCardData
+	 * AcquirerProtocolParameters11.mmProtectCardData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1121,6 +1298,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtectCardData";
 			definition = "Indicator to require protection of sensitive card data in messages.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmProtectCardData);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmProtectCardData;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -1155,6 +1333,14 @@ public class AcquirerProtocolParameters10 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "A security trailer is mandatory in the messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerProtocolParameters11#mmMandatorySecurityTrailer
+	 * AcquirerProtocolParameters11.mmMandatorySecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1170,6 +1356,7 @@ public class AcquirerProtocolParameters10 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatorySecurityTrailer";
 			definition = "A security trailer is mandatory in the messages.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmMandatorySecurityTrailer);
 			previousVersion_lazy = () -> AcquirerProtocolParameters9.mmMandatorySecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1195,6 +1382,7 @@ public class AcquirerProtocolParameters10 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerProtocolParameters10";
 				definition = "Acceptor parameters dedicated to the acquirer protocol.";
+				nextVersions_lazy = () -> Arrays.asList(AcquirerProtocolParameters11.mmObject());
 				previousVersion_lazy = () -> AcquirerProtocolParameters9.mmObject();
 			}
 		});

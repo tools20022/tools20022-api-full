@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementPreviousversionsubsetvariant;
+import com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06;
 import com.tools20022.repository.choice.PartyIdentification103Choice;
 import com.tools20022.repository.msg.FinancialInstrumentDetails22;
 import com.tools20022.repository.msg.Pagination;
@@ -113,7 +114,7 @@ import javax.xml.bind.annotation.*;
  * nextVersions} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06
  * IntraPositionMovementPostingReport002V06}</li>
  * </ul>
  * </li>

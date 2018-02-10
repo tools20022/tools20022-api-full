@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the account management instruction
- * message for which the status is requested .
+ * message for which the status is requested.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -106,7 +106,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountManagementMessageReference1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information about the message reference of the account management instruction message for which the status is requested ."
+ * "Information about the message reference of the account management instruction message for which the status is requested."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -432,7 +432,7 @@ public class AccountManagementMessageReference1 {
 					}
 				})).get();
 				name = "AccountManagementMessageReference1";
-				definition = "Information about the message reference of the account management instruction message for which the status is requested .";
+				definition = "Information about the message reference of the account management instruction message for which the status is requested.";
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementMessageReference2.mmObject());
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference1.PreviousReferenceOrOtherReferenceRule);
 			}

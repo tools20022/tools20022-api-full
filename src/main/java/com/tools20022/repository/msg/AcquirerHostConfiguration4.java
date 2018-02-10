@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AcquirerHostConfiguration4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Acquirer configuration parameters for a host."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration5
+ * AcquirerHostConfiguration5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration3
@@ -112,6 +119,14 @@ public class AcquirerHostConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a host."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration5#mmHostIdentification
+	 * AcquirerHostConfiguration5.mmHostIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -128,6 +143,7 @@ public class AcquirerHostConfiguration4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostIdentification";
 			definition = "Identification of a host.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerHostConfiguration5.mmHostIdentification);
 			previousVersion_lazy = () -> AcquirerHostConfiguration3.mmHostIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -162,6 +178,14 @@ public class AcquirerHostConfiguration4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Types of message to sent to this host."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcquirerHostConfiguration5#mmMessageToSend
+	 * AcquirerHostConfiguration5.mmMessageToSend}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +201,7 @@ public class AcquirerHostConfiguration4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageToSend";
 			definition = "Types of message to sent to this host.";
+			nextVersions_lazy = () -> Arrays.asList(AcquirerHostConfiguration5.mmMessageToSend);
 			previousVersion_lazy = () -> AcquirerHostConfiguration3.mmMessageToSend;
 			minOccurs = 0;
 			simpleType_lazy = () -> MessageFunction12Code.mmObject();
@@ -192,6 +217,7 @@ public class AcquirerHostConfiguration4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcquirerHostConfiguration4";
 				definition = "Acquirer configuration parameters for a host.";
+				nextVersions_lazy = () -> Arrays.asList(AcquirerHostConfiguration5.mmObject());
 				previousVersion_lazy = () -> AcquirerHostConfiguration3.mmObject();
 			}
 		});

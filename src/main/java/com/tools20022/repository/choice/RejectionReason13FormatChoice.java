@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  * "RejectionReason13FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the reason of a rejection of a movement."</li>
+ * "Choice of formats to express the reason of a rejection of a movement."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -158,7 +158,7 @@ public class RejectionReason13FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the reason of a rejection of a movement."</li>
+	 * "Proprietary code to express the reason of a rejection of a movement."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -169,7 +169,7 @@ public class RejectionReason13FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the reason of a rejection of a movement.";
+			definition = "Proprietary code to express the reason of a rejection of a movement.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -184,7 +184,7 @@ public class RejectionReason13FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason13FormatChoice";
-				definition = "Choice of formats to  express the reason of a rejection of a movement.";
+				definition = "Choice of formats to express the reason of a rejection of a movement.";
 			}
 		});
 		return mmObject_lazy.get();

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
 import com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code;
@@ -86,6 +87,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#mmTransactionIdentificationDetails
  * SecuritiesFinancingConfirmationV07.mmTransactionIdentificationDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08#mmTransactionIdentificationDetails
+ * SecuritiesFinancingConfirmationV08.mmTransactionIdentificationDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -618,7 +622,7 @@ public class TransactionTypeAndAdditionalParameters16 {
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmSecuritiesFinancingTransactionType, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmSecuritiesMovementType,
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmCommonIdentification,
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmPoolIdentification, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters16.mmCorporateActionEventIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV07.mmTransactionIdentificationDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV07.mmTransactionIdentificationDetails, SecuritiesFinancingConfirmationV08.mmTransactionIdentificationDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTwoLegTransactionOpeningClosingRule.forTransactionTypeAndAdditionalParameters16);

@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TransactionReport2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides details on the payment transactions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.TransactionReport4
+ * TransactionReport4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransactionReport1
@@ -101,6 +108,14 @@ public class TransactionReport2 {
 	 * definition} =
 	 * "Reference to the instruction related to the payment for which information is requested."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReport4#mmPaymentIdentification
+	 * TransactionReport4.mmPaymentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -116,6 +131,7 @@ public class TransactionReport2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
 			definition = "Reference to the instruction related to the payment for which information is requested.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionReport4.mmPaymentIdentification);
 			previousVersion_lazy = () -> TransactionReport1.mmPaymentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -152,6 +168,14 @@ public class TransactionReport2 {
 	 * definition} =
 	 * "Requested information on the payment transaction when information has not been found."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionReport4#mmTransactionOrError
+	 * TransactionReport4.mmTransactionOrError}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -167,6 +191,7 @@ public class TransactionReport2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionOrError";
 			definition = "Requested information on the payment transaction when information has not been found.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionReport4.mmTransactionOrError);
 			previousVersion_lazy = () -> TransactionReport1.mmTransactionOrError;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -183,6 +208,7 @@ public class TransactionReport2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionReport2";
 				definition = "Provides details on the payment transactions.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionReport4.mmObject());
 				previousVersion_lazy = () -> TransactionReport1.mmObject();
 			}
 		});

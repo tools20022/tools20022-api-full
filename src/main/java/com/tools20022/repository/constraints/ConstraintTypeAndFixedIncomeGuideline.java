@@ -23,7 +23,7 @@ import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.msg.OrderParameters1;
 
 /**
- * It is recommended that for fixed income orders,Type only contains the value
+ * It is recommended that for fixed income orders, Type only contains the value
  * MRKT(Market) or LMTO (Limit) or PRQT (PreviouslyQuoted) or PRID
  * (PreviouslyIndicated).
  */
@@ -46,7 +46,7 @@ public class ConstraintTypeAndFixedIncomeGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended that for fixed income orders,Type only contains the value MRKT(Market) or LMTO (Limit) or PRQT (PreviouslyQuoted) or PRID (PreviouslyIndicated)."
+	 * "It is recommended that for fixed income orders, Type only contains the value MRKT(Market) or LMTO (Limit) or PRQT (PreviouslyQuoted) or PRID (PreviouslyIndicated)."
 	 * </li>
 	 * </ul>
 	 */
@@ -55,13 +55,13 @@ public class ConstraintTypeAndFixedIncomeGuideline {
 			validator = ConstraintTypeAndFixedIncomeGuideline::checkOrderParameters1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeAndFixedIncomeGuideline";
-			definition = "It is recommended that for fixed income orders,Type only contains the value MRKT(Market) or LMTO (Limit) or PRQT (PreviouslyQuoted) or PRID (PreviouslyIndicated).";
+			definition = "It is recommended that for fixed income orders, Type only contains the value MRKT(Market) or LMTO (Limit) or PRQT (PreviouslyQuoted) or PRID (PreviouslyIndicated).";
 			owner_lazy = () -> OrderParameters1.mmObject();
 		}
 	};
 
 	/**
-	 * It is recommended that for fixed income orders,Type only contains the
+	 * It is recommended that for fixed income orders, Type only contains the
 	 * value MRKT(Market) or LMTO (Limit) or PRQT (PreviouslyQuoted) or PRID
 	 * (PreviouslyIndicated).
 	 */

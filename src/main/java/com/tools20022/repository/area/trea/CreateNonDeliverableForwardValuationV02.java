@@ -169,7 +169,7 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the trading side of the valuation of the non deliverable trade which is created. "
+	 * "Specifies the trading side of the valuation of the non deliverable trade which is created."
 	 * </li>
 	 * </ul>
 	 */
@@ -178,7 +178,7 @@ public class CreateNonDeliverableForwardValuationV02 {
 			xmlTag = "TradgSdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradingSideIdentification";
-			definition = "Specifies the trading side of the valuation of the non deliverable trade which is created. ";
+			definition = "Specifies the trading side of the valuation of the non deliverable trade which is created.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
@@ -215,7 +215,7 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the counterparty of the valuation of the non deliverable trade which is created. "
+	 * "Specifies the counterparty of the valuation of the non deliverable trade which is created."
 	 * </li>
 	 * </ul>
 	 */
@@ -224,7 +224,7 @@ public class CreateNonDeliverableForwardValuationV02 {
 			xmlTag = "CtrPtySdId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CounterpartySideIdentification";
-			definition = "Specifies the counterparty of the valuation of the non deliverable trade which is created. ";
+			definition = "Specifies the counterparty of the valuation of the non deliverable trade which is created.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> TradePartyIdentification3.mmObject();
@@ -261,7 +261,7 @@ public class CreateNonDeliverableForwardValuationV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the amounts of the valuation of the non deliverable trade which is created. "
+	 * "Specifies the amounts of the valuation of the non deliverable trade which is created."
 	 * </li>
 	 * </ul>
 	 */
@@ -270,7 +270,7 @@ public class CreateNonDeliverableForwardValuationV02 {
 			xmlTag = "TradAmts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeAmounts";
-			definition = "Specifies the amounts of the valuation of the non deliverable trade which is created. ";
+			definition = "Specifies the amounts of the valuation of the non deliverable trade which is created.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AmountsAndValueDate1.mmObject();

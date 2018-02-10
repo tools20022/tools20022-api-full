@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Details of the settlement condition modification request
+ * Details of the settlement condition modification request.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -108,7 +108,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RequestDetails2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Details of the settlement condition modification request"</li>
+ * definition} = "Details of the settlement condition modification request."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -255,7 +255,7 @@ public class RequestDetails2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies whether the instruction due to expire is confirmed for settlement"
+	 * "Specifies whether the instruction due to expire is confirmed for settlement."
 	 * </li>
 	 * </ul>
 	 */
@@ -267,7 +267,7 @@ public class RequestDetails2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CONP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RetainIndicator";
-			definition = "Specifies whether the instruction due to expire is confirmed for settlement";
+			definition = "Specifies whether the instruction due to expire is confirmed for settlement.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -403,7 +403,7 @@ public class RequestDetails2 {
 	 * name} = "OtherProcessing"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies another type of processing change request"</li>
+	 * definition} = "Specifies another type of processing change request."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOtherProcessing = new MMMessageAssociationEnd() {
@@ -414,7 +414,7 @@ public class RequestDetails2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::PROC"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherProcessing";
-			definition = "Specifies another type of processing change request";
+			definition = "Specifies another type of processing change request.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification25.mmObject();
@@ -748,7 +748,7 @@ public class RequestDetails2 {
 						com.tools20022.repository.constraints.ConstraintOtherProcessingRule.forRequestDetails2, com.tools20022.repository.constraints.ConstraintSettlementConditionModificationApplicabilityRule.forRequestDetails2);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestDetails2";
-				definition = "Details of the settlement condition modification request";
+				definition = "Details of the settlement condition modification request.";
 			}
 		});
 		return mmObject_lazy.get();

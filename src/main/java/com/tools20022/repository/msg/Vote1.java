@@ -117,7 +117,7 @@ public class Vote1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Numbering of the resolution as specified by the issuer or  its agent."</li>
+	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuerLabel = new MMMessageAttribute() {
@@ -128,7 +128,7 @@ public class Vote1 {
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
-			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
+			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -163,7 +163,7 @@ public class Vote1 {
 	 * name} = "For"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes in favour of one resolution"</li>
+	 * definition} = "Number of votes in favour of one resolution."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFor = new MMMessageAttribute() {
@@ -174,7 +174,7 @@ public class Vote1 {
 			xmlTag = "For";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
-			definition = "Number of votes in favour of one resolution";
+			definition = "Number of votes in favour of one resolution.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -210,7 +210,7 @@ public class Vote1 {
 	 * name} = "Against"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes against one resolution"</li>
+	 * definition} = "Number of votes against one resolution."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAgainst = new MMMessageAttribute() {
@@ -221,7 +221,7 @@ public class Vote1 {
 			xmlTag = "Agnst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
-			definition = "Number of votes against one resolution";
+			definition = "Number of votes against one resolution.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -304,7 +304,7 @@ public class Vote1 {
 	 * name} = "Withhold"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes withheld for one resolution"</li>
+	 * definition} = "Number of votes withheld for one resolution."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmWithhold = new MMMessageAttribute() {
@@ -315,7 +315,7 @@ public class Vote1 {
 			xmlTag = "Wthhld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withhold";
-			definition = "Number of votes withheld for one resolution";
+			definition = "Number of votes withheld for one resolution.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();

@@ -21,6 +21,8 @@ import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.entity.PaymentPartyRole;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.Compensation1;
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
@@ -35,6 +37,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSuperType
  * superType} = {@linkplain com.tools20022.repository.entity.PaymentPartyRole
  * PaymentPartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMBusinessComponent#getDerivationElement
+ * derivationElement} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Compensation1#mmDebtorAgent
+ * Compensation1.mmDebtorAgent}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -61,6 +71,7 @@ public class DebtorAgentRole extends PaymentPartyRole {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebtorAgentRole";
 				definition = "Financial institution servicing an account for the debtor.";
+				derivationElement_lazy = () -> Arrays.asList(Compensation1.mmDebtorAgent);
 				superType_lazy = () -> PaymentPartyRole.mmObject();
 			}
 

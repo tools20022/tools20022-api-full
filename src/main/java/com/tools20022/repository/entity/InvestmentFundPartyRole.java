@@ -162,7 +162,7 @@ public class InvestmentFundPartyRole extends Role {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unambiguous identification of the account used in the context of the investment fund party role such as intermediary's account, beneficiary's account..."
+	 * "Unambiguous identification of the account used in the context of the investment fund party role such as intermediary's account, beneficiary's account."
 	 * </li>
 	 * </ul>
 	 */
@@ -172,7 +172,7 @@ public class InvestmentFundPartyRole extends Role {
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestmentFundPartyRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Account";
-			definition = "Unambiguous identification of the account used in the context of the investment fund party role such as intermediary's account, beneficiary's account...";
+			definition = "Unambiguous identification of the account used in the context of the investment fund party role such as intermediary's account, beneficiary's account.";
 			minOccurs = 0;
 			opposite_lazy = () -> com.tools20022.repository.entity.Account.mmInvestmentFundPartyRole;
 			aggregation = MMAggregation.NONE;

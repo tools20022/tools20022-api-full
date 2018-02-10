@@ -144,7 +144,7 @@ public class SettlementObligation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Last reference given by the settlement platform (this is the central securities depository)  to the transaction (non settled instruction)."
+	 * "Last reference given by the settlement platform (this is the central securities depository) to the transaction (non settled instruction)."
 	 * </li>
 	 * </ul>
 	 */
@@ -155,7 +155,7 @@ public class SettlementObligation1 {
 			xmlTag = "CSDTxId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDTransactionIdentification";
-			definition = "Last reference given by the settlement platform (this is the central securities depository)  to the transaction (non settled instruction).";
+			definition = "Last reference given by the settlement platform (this is the central securities depository) to the transaction (non settled instruction).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

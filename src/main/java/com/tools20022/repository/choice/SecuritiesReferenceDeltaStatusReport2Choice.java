@@ -75,7 +75,7 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesReferenceDeltaStatusReport2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice defining financial instruments that are either new or have been modified. "
+ * "Choice defining financial instruments that are either new or have been modified."
  * </li>
  * </ul>
  */
@@ -228,7 +228,7 @@ public class SecuritiesReferenceDeltaStatusReport2Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesReferenceDeltaStatusReport2Choice";
-				definition = "Choice defining financial instruments that are either new or have been modified. ";
+				definition = "Choice defining financial instruments that are either new or have been modified.";
 			}
 		});
 		return mmObject_lazy.get();

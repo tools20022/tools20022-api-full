@@ -92,6 +92,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionOption119"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides information about the corporate action option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption143
+ * CorporateActionOption143}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionOption39
@@ -138,6 +145,14 @@ public class CorporateActionOption119 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Number identifying the available corporate action options."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption143#mmOptionNumber
+	 * CorporateActionOption143.mmOptionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -155,6 +170,7 @@ public class CorporateActionOption119 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption143.mmOptionNumber);
 			previousVersion_lazy = () -> CorporateActionOption39.mmOptionNumber;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -198,6 +214,14 @@ public class CorporateActionOption119 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the corporate action options available to the account owner."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption143#mmOptionType
+	 * CorporateActionOption143.mmOptionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -215,6 +239,7 @@ public class CorporateActionOption119 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption143.mmOptionType);
 			previousVersion_lazy = () -> CorporateActionOption39.mmOptionType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -258,6 +283,14 @@ public class CorporateActionOption119 {
 	 * definition} =
 	 * "Provides information about the securities movement linked to the corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption143#mmSecuritiesMovementDetails
+	 * CorporateActionOption143.mmSecuritiesMovementDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -275,6 +308,7 @@ public class CorporateActionOption119 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementDetails";
 			definition = "Provides information about the securities movement linked to the corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption143.mmSecuritiesMovementDetails);
 			previousVersion_lazy = () -> CorporateActionOption39.mmSecuritiesMovementDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -317,6 +351,14 @@ public class CorporateActionOption119 {
 	 * definition} =
 	 * "Provides information about the cash movement related to a corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption143#mmCashMovementDetails
+	 * CorporateActionOption143.mmCashMovementDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -334,6 +376,7 @@ public class CorporateActionOption119 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMovementDetails";
 			definition = "Provides information about the cash movement related to a corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption143.mmCashMovementDetails);
 			previousVersion_lazy = () -> CorporateActionOption39.mmCashMovementDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -352,6 +395,7 @@ public class CorporateActionOption119 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption119";
 				definition = "Provides information about the corporate action option.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionOption143.mmObject());
 				previousVersion_lazy = () -> CorporateActionOption39.mmObject();
 			}
 		});

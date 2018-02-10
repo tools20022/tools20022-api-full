@@ -38,6 +38,190 @@ public class ConstraintAdditionalInformationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV09
+	 * CorporateActionMovementReversalAdviceV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementReversalAdviceV08
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionMovementReversalAdviceV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementReversalAdviceV09> forCorporateActionMovementReversalAdviceV09 = new MMConstraint<CorporateActionMovementReversalAdviceV09>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionMovementReversalAdviceV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV08;
+			owner_lazy = () -> CorporateActionMovementReversalAdviceV09.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08
+	 * CorporateActionInstructionV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV07
+	 * ConstraintAdditionalInformationRule.forCorporateActionInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionV08> forCorporateActionInstructionV08 = new MMConstraint<CorporateActionInstructionV08>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV07;
+			owner_lazy = () -> CorporateActionInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV09
+	 * CorporateActionMovementConfirmationV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementConfirmationV08
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionMovementConfirmationV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementConfirmationV09> forCorporateActionMovementConfirmationV09 = new MMConstraint<CorporateActionMovementConfirmationV09>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionMovementConfirmationV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV08;
+			owner_lazy = () -> CorporateActionMovementConfirmationV09.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09
+	 * CorporateActionInstructionStatusAdviceV09}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All elements in the AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionStatusAdviceV08
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionInstructionStatusAdviceV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionStatusAdviceV09> forCorporateActionInstructionStatusAdviceV09 = new MMConstraint<CorporateActionInstructionStatusAdviceV09>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionStatusAdviceV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "All elements in the AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionStatusAdviceV08;
+			owner_lazy = () -> CorporateActionInstructionStatusAdviceV09.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV08
+	 * CorporateActionInstructionCancellationRequestStatusAdviceV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV07
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionInstructionCancellationRequestStatusAdviceV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV08> forCorporateActionInstructionCancellationRequestStatusAdviceV08 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV08>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV07;
+			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV08
 	 * CorporateActionMovementConfirmationV08}</li>
 	 * <li>
@@ -50,6 +234,15 @@ public class ConstraintAdditionalInformationRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementConfirmationV09
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionMovementConfirmationV09}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -65,6 +258,7 @@ public class ConstraintAdditionalInformationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
 			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV07;
 			owner_lazy = () -> CorporateActionMovementConfirmationV08.mmObject();
 		}
@@ -88,6 +282,15 @@ public class ConstraintAdditionalInformationRule {
 	 * definition} =
 	 * "All elements in the AdditionalInformation sequence must not\r\ncontain information that can be provided in a structured field unless\r\nbilaterally agreed or advised differently in the element definition\r\nas in AdditionalInformation/NarrativeVersion."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementReversalAdviceV09
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionMovementReversalAdviceV09}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -102,6 +305,7 @@ public class ConstraintAdditionalInformationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
 			definition = "All elements in the AdditionalInformation sequence must not\r\ncontain information that can be provided in a structured field unless\r\nbilaterally agreed or advised differently in the element definition\r\nas in AdditionalInformation/NarrativeVersion.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV07;
 			owner_lazy = () -> CorporateActionMovementReversalAdviceV08.mmObject();
 		}
@@ -125,6 +329,15 @@ public class ConstraintAdditionalInformationRule {
 	 * definition} =
 	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV08
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionInstructionCancellationRequestStatusAdviceV08}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +352,7 @@ public class ConstraintAdditionalInformationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
 			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV06;
 			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV07.mmObject();
 		}
@@ -160,7 +374,15 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition. "
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV08
+	 * ConstraintAdditionalInformationRule.forCorporateActionInstructionV08}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -174,7 +396,8 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition. ";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV06;
 			owner_lazy = () -> CorporateActionInstructionV07.mmObject();
 		}
@@ -198,6 +421,15 @@ public class ConstraintAdditionalInformationRule {
 	 * definition} =
 	 * "All elements in the AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionStatusAdviceV09
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionInstructionStatusAdviceV09}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -212,6 +444,7 @@ public class ConstraintAdditionalInformationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
 			definition = "All elements in the AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionStatusAdviceV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionStatusAdviceV07;
 			owner_lazy = () -> CorporateActionInstructionStatusAdviceV08.mmObject();
 		}
@@ -233,7 +466,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition. "
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition."
 	 * </li>
 	 * </ul>
 	 */
@@ -242,7 +475,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstruction002V07;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition. ";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition.";
 			owner_lazy = () -> CorporateActionInstruction002V07.mmObject();
 		}
 	};
@@ -372,239 +605,6 @@ public class ConstraintAdditionalInformationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06
-	 * CorporateActionInstructionCancellationRequestStatusAdviceV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV07
-	 * ConstraintAdditionalInformationRule.
-	 * forCorporateActionInstructionCancellationRequestStatusAdviceV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV05
-	 * ConstraintAdditionalInformationRule.
-	 * forCorporateActionInstructionCancellationRequestStatusAdviceV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV06> forCorporateActionInstructionCancellationRequestStatusAdviceV06 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV06>() {
-		{
-			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalInformationRule";
-			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV05;
-			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
-	 * CorporateActionInstructionV06}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition. "
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV07
-	 * ConstraintAdditionalInformationRule.forCorporateActionInstructionV07}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV05
-	 * ConstraintAdditionalInformationRule.forCorporateActionInstructionV05}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstructionV06> forCorporateActionInstructionV06 = new MMConstraint<CorporateActionInstructionV06>() {
-		{
-			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV06;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalInformationRule";
-			definition = "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition. ";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV07);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV05;
-			owner_lazy = () -> CorporateActionInstructionV06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07
-	 * CorporateActionMovementConfirmationV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementConfirmationV08
-	 * ConstraintAdditionalInformationRule.
-	 * forCorporateActionMovementConfirmationV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementConfirmationV06
-	 * ConstraintAdditionalInformationRule.
-	 * forCorporateActionMovementConfirmationV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionMovementConfirmationV07> forCorporateActionMovementConfirmationV07 = new MMConstraint<CorporateActionMovementConfirmationV07>() {
-		{
-			validator = ConstraintAdditionalInformationRule::checkCorporateActionMovementConfirmationV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalInformationRule";
-			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV06;
-			owner_lazy = () -> CorporateActionMovementConfirmationV07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07
-	 * CorporateActionInstructionStatusAdviceV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "All elements in the AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionStatusAdviceV08
-	 * ConstraintAdditionalInformationRule.
-	 * forCorporateActionInstructionStatusAdviceV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionStatusAdviceV06
-	 * ConstraintAdditionalInformationRule.
-	 * forCorporateActionInstructionStatusAdviceV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstructionStatusAdviceV07> forCorporateActionInstructionStatusAdviceV07 = new MMConstraint<CorporateActionInstructionStatusAdviceV07>() {
-		{
-			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionStatusAdviceV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalInformationRule";
-			definition = "All elements in the AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionStatusAdviceV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionStatusAdviceV06;
-			owner_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07
-	 * CorporateActionMovementReversalAdviceV07}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "AdditionalInformationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "All elements in the AdditionalInformation sequence must not\r\ncontain information that can be provided in a structured field unless\r\nbilaterally agreed or advised differently in the element definition\r\nas in AdditionalInformation/NarrativeVersion."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementReversalAdviceV08
-	 * ConstraintAdditionalInformationRule.
-	 * forCorporateActionMovementReversalAdviceV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementReversalAdviceV06
-	 * ConstraintAdditionalInformationRule.
-	 * forCorporateActionMovementReversalAdviceV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionMovementReversalAdviceV07> forCorporateActionMovementReversalAdviceV07 = new MMConstraint<CorporateActionMovementReversalAdviceV07>() {
-		{
-			validator = ConstraintAdditionalInformationRule::checkCorporateActionMovementReversalAdviceV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "AdditionalInformationRule";
-			definition = "All elements in the AdditionalInformation sequence must not\r\ncontain information that can be provided in a structured field unless\r\nbilaterally agreed or advised differently in the element definition\r\nas in AdditionalInformation/NarrativeVersion.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV06;
-			owner_lazy = () -> CorporateActionMovementReversalAdviceV07.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV01
 	 * CorporateActionInstructionV01}</li>
 	 * <li>
@@ -616,7 +616,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. "
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -625,7 +625,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. ";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionInstructionV01.mmObject();
 		}
 	};
@@ -646,7 +646,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. "
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -655,7 +655,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. ";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionInstructionV02.mmObject();
 		}
 	};
@@ -676,7 +676,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. "
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -685,7 +685,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. ";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionInstructionV03.mmObject();
 		}
 	};
@@ -706,7 +706,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. "
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -723,7 +723,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. ";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV05);
 			owner_lazy = () -> CorporateActionInstructionV04.mmObject();
 		}
@@ -1359,7 +1359,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. "
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1381,7 +1381,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation  must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion. ";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/CorporateActionAdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV04;
 			owner_lazy = () -> CorporateActionInstructionV05.mmObject();
@@ -1628,6 +1628,239 @@ public class ConstraintAdditionalInformationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV06
+	 * CorporateActionInstructionCancellationRequestStatusAdviceV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV07
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionInstructionCancellationRequestStatusAdviceV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionCancellationRequestStatusAdviceV05
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionInstructionCancellationRequestStatusAdviceV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV06> forCorporateActionInstructionCancellationRequestStatusAdviceV06 = new MMConstraint<CorporateActionInstructionCancellationRequestStatusAdviceV06>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionCancellationRequestStatusAdviceV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionCancellationRequestStatusAdviceV05;
+			owner_lazy = () -> CorporateActionInstructionCancellationRequestStatusAdviceV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV06
+	 * CorporateActionInstructionV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV07
+	 * ConstraintAdditionalInformationRule.forCorporateActionInstructionV07}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionV05
+	 * ConstraintAdditionalInformationRule.forCorporateActionInstructionV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionV06> forCorporateActionInstructionV06 = new MMConstraint<CorporateActionInstructionV06>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "Elements in AdditionalInformation and CorporateActionInstruction/AdditionalInformation must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV07);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionV05;
+			owner_lazy = () -> CorporateActionInstructionV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementConfirmationV07
+	 * CorporateActionMovementConfirmationV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementConfirmationV08
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionMovementConfirmationV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementConfirmationV06
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionMovementConfirmationV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementConfirmationV07> forCorporateActionMovementConfirmationV07 = new MMConstraint<CorporateActionMovementConfirmationV07>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionMovementConfirmationV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "All elements in the AdditionalInformation sequence must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in AdditionalInformation/NarrativeVersion.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementConfirmationV06;
+			owner_lazy = () -> CorporateActionMovementConfirmationV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV07
+	 * CorporateActionInstructionStatusAdviceV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All elements in the AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionStatusAdviceV08
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionInstructionStatusAdviceV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionInstructionStatusAdviceV06
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionInstructionStatusAdviceV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionStatusAdviceV07> forCorporateActionInstructionStatusAdviceV07 = new MMConstraint<CorporateActionInstructionStatusAdviceV07>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionInstructionStatusAdviceV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "All elements in the AdditionalInformation element must not contain information that can be provided in a structured field unless bilaterally agreed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionStatusAdviceV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionInstructionStatusAdviceV06;
+			owner_lazy = () -> CorporateActionInstructionStatusAdviceV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementReversalAdviceV07
+	 * CorporateActionMovementReversalAdviceV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "AdditionalInformationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "All elements in the AdditionalInformation sequence must not\r\ncontain information that can be provided in a structured field unless\r\nbilaterally agreed or advised differently in the element definition\r\nas in AdditionalInformation/NarrativeVersion."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementReversalAdviceV08
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionMovementReversalAdviceV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintAdditionalInformationRule#forCorporateActionMovementReversalAdviceV06
+	 * ConstraintAdditionalInformationRule.
+	 * forCorporateActionMovementReversalAdviceV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementReversalAdviceV07> forCorporateActionMovementReversalAdviceV07 = new MMConstraint<CorporateActionMovementReversalAdviceV07>() {
+		{
+			validator = ConstraintAdditionalInformationRule::checkCorporateActionMovementReversalAdviceV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "AdditionalInformationRule";
+			definition = "All elements in the AdditionalInformation sequence must not\r\ncontain information that can be provided in a structured field unless\r\nbilaterally agreed or advised differently in the element definition\r\nas in AdditionalInformation/NarrativeVersion.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInformationRule.forCorporateActionMovementReversalAdviceV06;
+			owner_lazy = () -> CorporateActionMovementReversalAdviceV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.UpdatedAdditionalInformation8
 	 * UpdatedAdditionalInformation8}</li>
 	 * <li>
@@ -1783,7 +2016,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1797,7 +2030,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionNarrative29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAdditionalInforrmationRule.forCorporateActionNarrative20;
 			owner_lazy = () -> CorporateActionNarrative29.mmObject();
 		}
@@ -1849,7 +2082,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -1858,7 +2091,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionNarrative41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative41.mmObject();
 		}
 	};
@@ -1879,7 +2112,7 @@ public class ConstraintAdditionalInformationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,"
+	 * "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion."
 	 * </li>
 	 * </ul>
 	 */
@@ -1888,7 +2121,7 @@ public class ConstraintAdditionalInformationRule {
 			validator = ConstraintAdditionalInformationRule::checkCorporateActionNarrative36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformationRule";
-			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion,";
+			definition = "The AdditionalInformation field in all elements must not contain information that can be provided in a structured field unless bilaterally agreed or advised differently in the element definition as in NarrativeVersion.";
 			owner_lazy = () -> CorporateActionNarrative36.mmObject();
 		}
 	};
@@ -1952,6 +2185,54 @@ public class ConstraintAdditionalInformationRule {
 			owner_lazy = () -> CorporateActionNarrative39.mmObject();
 		}
 	};
+
+	/**
+	 * All elements in the AdditionalInformation sequence must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed or advised differently in the element definition as in
+	 * AdditionalInformation/NarrativeVersion.
+	 */
+	public static void checkCorporateActionMovementReversalAdviceV09(CorporateActionMovementReversalAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Elements in AdditionalInformation and
+	 * CorporateActionInstruction/AdditionalInformation must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed or advised differently in the element definition.
+	 */
+	public static void checkCorporateActionInstructionV08(CorporateActionInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * All elements in the AdditionalInformation sequence must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed or advised differently in the element definition as in
+	 * AdditionalInformation/NarrativeVersion.
+	 */
+	public static void checkCorporateActionMovementConfirmationV09(CorporateActionMovementConfirmationV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * All elements in the AdditionalInformation element must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed.
+	 */
+	public static void checkCorporateActionInstructionStatusAdviceV09(CorporateActionInstructionStatusAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * All elements in the AdditionalInformation sequence must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed.
+	 */
+	public static void checkCorporateActionInstructionCancellationRequestStatusAdviceV08(CorporateActionInstructionCancellationRequestStatusAdviceV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * All elements in the AdditionalInformation sequence must not contain
@@ -2046,54 +2327,6 @@ public class ConstraintAdditionalInformationRule {
 	 * AdditionalInformation/NarrativeVersion.
 	 */
 	public static void checkCorporateActionMovementConfirmation002V08(CorporateActionMovementConfirmation002V08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * All elements in the AdditionalInformation sequence must not contain
-	 * information that can be provided in a structured field unless bilaterally
-	 * agreed.
-	 */
-	public static void checkCorporateActionInstructionCancellationRequestStatusAdviceV06(CorporateActionInstructionCancellationRequestStatusAdviceV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * Elements in AdditionalInformation and
-	 * CorporateActionInstruction/AdditionalInformation must not contain
-	 * information that can be provided in a structured field unless bilaterally
-	 * agreed or advised differently in the element definition.
-	 */
-	public static void checkCorporateActionInstructionV06(CorporateActionInstructionV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * All elements in the AdditionalInformation sequence must not contain
-	 * information that can be provided in a structured field unless bilaterally
-	 * agreed or advised differently in the element definition as in
-	 * AdditionalInformation/NarrativeVersion.
-	 */
-	public static void checkCorporateActionMovementConfirmationV07(CorporateActionMovementConfirmationV07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * All elements in the AdditionalInformation element must not contain
-	 * information that can be provided in a structured field unless bilaterally
-	 * agreed.
-	 */
-	public static void checkCorporateActionInstructionStatusAdviceV07(CorporateActionInstructionStatusAdviceV07 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * All elements in the AdditionalInformation sequence must not<br>
-	 * contain information that can be provided in a structured field unless<br>
-	 * bilaterally agreed or advised differently in the element definition<br>
-	 * as in AdditionalInformation/NarrativeVersion.
-	 */
-	public static void checkCorporateActionMovementReversalAdviceV07(CorporateActionMovementReversalAdviceV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -2372,6 +2605,54 @@ public class ConstraintAdditionalInformationRule {
 	}
 
 	/**
+	 * All elements in the AdditionalInformation sequence must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed.
+	 */
+	public static void checkCorporateActionInstructionCancellationRequestStatusAdviceV06(CorporateActionInstructionCancellationRequestStatusAdviceV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Elements in AdditionalInformation and
+	 * CorporateActionInstruction/AdditionalInformation must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed or advised differently in the element definition.
+	 */
+	public static void checkCorporateActionInstructionV06(CorporateActionInstructionV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * All elements in the AdditionalInformation sequence must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed or advised differently in the element definition as in
+	 * AdditionalInformation/NarrativeVersion.
+	 */
+	public static void checkCorporateActionMovementConfirmationV07(CorporateActionMovementConfirmationV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * All elements in the AdditionalInformation element must not contain
+	 * information that can be provided in a structured field unless bilaterally
+	 * agreed.
+	 */
+	public static void checkCorporateActionInstructionStatusAdviceV07(CorporateActionInstructionStatusAdviceV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * All elements in the AdditionalInformation sequence must not<br>
+	 * contain information that can be provided in a structured field unless<br>
+	 * bilaterally agreed or advised differently in the element definition<br>
+	 * as in AdditionalInformation/NarrativeVersion.
+	 */
+	public static void checkCorporateActionMovementReversalAdviceV07(CorporateActionMovementReversalAdviceV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
 	 * The Additionalnformation element must not contain information that can be
 	 * provided in a structured field unless bilaterally agreed.
 	 */
@@ -2412,7 +2693,7 @@ public class ConstraintAdditionalInformationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative29(CorporateActionNarrative29 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -2432,7 +2713,7 @@ public class ConstraintAdditionalInformationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative41(CorporateActionNarrative41 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -2442,7 +2723,7 @@ public class ConstraintAdditionalInformationRule {
 	 * The AdditionalInformation field in all elements must not contain
 	 * information that can be provided in a structured field unless bilaterally
 	 * agreed or advised differently in the element definition as in
-	 * NarrativeVersion,
+	 * NarrativeVersion.
 	 */
 	public static void checkCorporateActionNarrative36(CorporateActionNarrative36 obj) throws Exception {
 		throw new NotImplementedConstraintException();

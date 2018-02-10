@@ -168,7 +168,7 @@ public class TimeFrame {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction,"
+	 * "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction."
 	 * </li>
 	 * </ul>
 	 */
@@ -179,7 +179,7 @@ public class TimeFrame {
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TradeMinus";
-			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction,";
+			definition = "An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition\r\nWhere = T is the date that the price is applied to a transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -517,7 +517,7 @@ public class TimeFrame {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame"
+	 * "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame."
 	 * </li>
 	 * </ul>
 	 */
@@ -528,7 +528,7 @@ public class TimeFrame {
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimeFrame.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OtherTimeFrameDescription";
-			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame";
+			definition = "Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();

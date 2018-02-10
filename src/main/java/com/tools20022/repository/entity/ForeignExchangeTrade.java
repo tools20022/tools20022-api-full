@@ -475,6 +475,36 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ForeignExchangeSwapTransaction3#mmForeignExchange
 	 * ForeignExchangeSwapTransaction3.mmForeignExchange}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmForeignExchangeDetails
+	 * ReceiveInformation18.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmForeignExchangeDetails
+	 * DeliverInformation19.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmForeignExchangeDetails
+	 * ReceiveInformation19.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmForeignExchangeDetails
+	 * DeliverInformation18.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection87#mmForeignExchangeDetails
+	 * AmountAndDirection87.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection88#mmForeignExchangeDetails
+	 * AmountAndDirection88.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection89#mmForeignExchangeDetails
+	 * AmountAndDirection89.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection90#mmForeignExchangeDetails
+	 * AmountAndDirection90.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection92#mmForeignExchangeDetails
+	 * AmountAndDirection92.mmForeignExchangeDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection91#mmForeignExchangeDetails
+	 * AmountAndDirection91.mmForeignExchangeDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -519,7 +549,10 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 					AmountAndDirection58.mmForeignExchangeDetails, AmountAndDirection72.mmForeignExchangeDetails, ForeignExchangeSwapTransaction2.mmForeignExchange, SwitchExecution7.mmForeignExchangeDetails,
 					SwitchOrder7.mmForeignExchangeDetails, RedemptionOrder14.mmForeignExchangeDetails, SubscriptionExecution13.mmForeignExchangeDetails, SubscriptionExecution12.mmForeignExchangeDetails,
 					SubscriptionOrder15.mmForeignExchangeDetails, RedemptionOrder15.mmForeignExchangeDetails, RedemptionExecution16.mmForeignExchangeDetails, SubscriptionOrder14.mmForeignExchangeDetails,
-					RedemptionExecution15.mmForeignExchangeDetails, SplitTradeDetails3.mmAgreedRate, ForeignExchangeSwapTransaction3.mmForeignExchange);
+					RedemptionExecution15.mmForeignExchangeDetails, SplitTradeDetails3.mmAgreedRate, ForeignExchangeSwapTransaction3.mmForeignExchange, ReceiveInformation18.mmForeignExchangeDetails,
+					DeliverInformation19.mmForeignExchangeDetails, ReceiveInformation19.mmForeignExchangeDetails, DeliverInformation18.mmForeignExchangeDetails, AmountAndDirection87.mmForeignExchangeDetails,
+					AmountAndDirection88.mmForeignExchangeDetails, AmountAndDirection89.mmForeignExchangeDetails, AmountAndDirection90.mmForeignExchangeDetails, AmountAndDirection92.mmForeignExchangeDetails,
+					AmountAndDirection91.mmForeignExchangeDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1135,7 +1168,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Difference between the foreign exchange spot rate and the foreign exchange forward rate expressed in basis points quoted in accordance with the prevailing market conventions for the currency pair. "
+	 * "Difference between the foreign exchange spot rate and the foreign exchange forward rate expressed in basis points quoted in accordance with the prevailing market conventions for the currency pair."
 	 * </li>
 	 * </ul>
 	 */
@@ -1146,7 +1179,7 @@ public class ForeignExchangeTrade extends TreasuryTrade {
 			elementContext_lazy = () -> com.tools20022.repository.entity.ForeignExchangeTrade.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ExchangeForwardPoint";
-			definition = "Difference between the foreign exchange spot rate and the foreign exchange forward rate expressed in basis points quoted in accordance with the prevailing market conventions for the currency pair. ";
+			definition = "Difference between the foreign exchange spot rate and the foreign exchange forward rate expressed in basis points quoted in accordance with the prevailing market conventions for the currency pair.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> DecimalNumber.mmObject();

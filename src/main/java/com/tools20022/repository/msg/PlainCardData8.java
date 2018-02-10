@@ -113,7 +113,7 @@ public class PlainCardData8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Primary Account Number (PAN) of the card, , or surrogate of the PAN by a payment token."
+	 * "Primary Account Number (PAN) of the card, or surrogate of the PAN by a payment token."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -130,7 +130,7 @@ public class PlainCardData8 {
 			xmlTag = "PAN";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PAN";
-			definition = "Primary Account Number (PAN) of the card, , or surrogate of the PAN by a payment token.";
+			definition = "Primary Account Number (PAN) of the card, or surrogate of the PAN by a payment token.";
 			previousVersion_lazy = () -> PlainCardData2.mmPAN;
 			maxOccurs = 1;
 			minOccurs = 1;

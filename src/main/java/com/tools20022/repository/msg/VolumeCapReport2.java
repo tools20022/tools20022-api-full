@@ -300,7 +300,7 @@ public class VolumeCapReport2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total volume of trading under reference price waiver as defined under the local regulation"
+	 * "Total volume of trading under reference price waiver as defined under the local regulation."
 	 * </li>
 	 * </ul>
 	 */
@@ -311,7 +311,7 @@ public class VolumeCapReport2 {
 			xmlTag = "TtlRefPricTradgVol";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalReferencePriceTradingVolume";
-			definition = "Total volume of trading under reference price waiver as defined under the local regulation";
+			definition = "Total volume of trading under reference price waiver as defined under the local regulation.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();

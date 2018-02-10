@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 /**
  * Reference of the PayInSchedule being confirmed. This is the Message
  * Identification element from the Report Data sequence of the Pay In Schedule
- * message
+ * message.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ConfirmationDetails1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Reference of the PayInSchedule being confirmed. This is the Message Identification element from the Report Data sequence of the Pay In Schedule message"
+ * "Reference of the PayInSchedule being confirmed. This is the Message Identification element from the Report Data sequence of the Pay In Schedule message."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -127,7 +127,7 @@ public class ConfirmationDetails1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ConfirmationDetails1";
-				definition = "Reference of the PayInSchedule being confirmed. This is the Message Identification element from the Report Data sequence of the Pay In Schedule message";
+				definition = "Reference of the PayInSchedule being confirmed. This is the Message Identification element from the Report Data sequence of the Pay In Schedule message.";
 				nextVersions_lazy = () -> Arrays.asList(AcknowledgementDetails1Choice.mmObject());
 			}
 		});

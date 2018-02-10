@@ -179,7 +179,7 @@ public class CashOptionSD7 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. "
+	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -196,7 +196,7 @@ public class CashOptionSD7 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
-			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
+			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			previousVersion_lazy = () -> CashOptionSD2.mmDTCPayMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -498,7 +498,7 @@ public class CashOptionSD7 {
 	 * name} = "CSDCashRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Corresponding cash rate paid by CSD. "</li>
+	 * definition} = "Corresponding cash rate paid by CSD."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -514,7 +514,7 @@ public class CashOptionSD7 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Cash Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDCashRate";
-			definition = "Corresponding cash rate paid by CSD. ";
+			definition = "Corresponding cash rate paid by CSD.";
 			previousVersion_lazy = () -> CashOptionSD2.mmCSDCashRate;
 			maxOccurs = 1;
 			minOccurs = 0;

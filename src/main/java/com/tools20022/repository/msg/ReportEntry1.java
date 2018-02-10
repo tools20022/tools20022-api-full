@@ -249,7 +249,7 @@ public class ReportEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the entry is the result of a reversal operation.\n\nUsage : this element should only be present if the entry is the result of a reversal operation.\nIf the CreditDebitIndicator is CRDT and ReversalIndicator is Yes, the original operation was a debit entry.\nIf the CreditDebitIndicator is DBIT and ReversalIndicator is Yes, the original operation was a credit entry."
+	 * "Indicates whether the entry is the result of a reversal operation.\n\nUsage: this element should only be present if the entry is the result of a reversal operation.\nIf the CreditDebitIndicator is CRDT and ReversalIndicator is Yes, the original operation was a debit entry.\nIf the CreditDebitIndicator is DBIT and ReversalIndicator is Yes, the original operation was a credit entry."
 	 * </li>
 	 * </ul>
 	 */
@@ -261,7 +261,7 @@ public class ReportEntry1 {
 			xmlTag = "RvslInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalIndicator";
-			definition = "Indicates whether the entry is the result of a reversal operation.\n\nUsage : this element should only be present if the entry is the result of a reversal operation.\nIf the CreditDebitIndicator is CRDT and ReversalIndicator is Yes, the original operation was a debit entry.\nIf the CreditDebitIndicator is DBIT and ReversalIndicator is Yes, the original operation was a credit entry.";
+			definition = "Indicates whether the entry is the result of a reversal operation.\n\nUsage: this element should only be present if the entry is the result of a reversal operation.\nIf the CreditDebitIndicator is CRDT and ReversalIndicator is Yes, the original operation was a debit entry.\nIf the CreditDebitIndicator is DBIT and ReversalIndicator is Yes, the original operation was a credit entry.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TrueFalseIndicator.mmObject();
@@ -346,7 +346,7 @@ public class ReportEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time when an entry is posted to an account on the account servicer's books.\n\nUsage : Booking date is only present if Status is booked."
+	 * "Date and time when an entry is posted to an account on the account servicer's books.\n\nUsage: Booking date is only present if Status is booked."
 	 * </li>
 	 * </ul>
 	 */
@@ -358,7 +358,7 @@ public class ReportEntry1 {
 			xmlTag = "BookgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingDate";
-			definition = "Date and time when an entry is posted to an account on the account servicer's books.\n\nUsage : Booking date is only present if Status is booked.";
+			definition = "Date and time when an entry is posted to an account on the account servicer's books.\n\nUsage: Booking date is only present if Status is booked.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -396,7 +396,7 @@ public class ReportEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).\n \nUsage : When entry status is pending , and value date is present, value date refers to an expected/requested value date.\nFor entries which are subject to availability/float (and for which availability information is present), value date must  not be used, as the availability component identifies the number of availability days."
+	 * "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).\n \nUsage: When entry status is pending, and value date is present, value date refers to an expected/requested value date.\nFor entries which are subject to availability/float (and for which availability information is present), value date must not be used, as the availability component identifies the number of availability days."
 	 * </li>
 	 * </ul>
 	 */
@@ -408,7 +408,7 @@ public class ReportEntry1 {
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
-			definition = "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).\n \nUsage : When entry status is pending , and value date is present, value date refers to an expected/requested value date.\nFor entries which are subject to availability/float (and for which availability information is present), value date must  not be used, as the availability component identifies the number of availability days.";
+			definition = "Date and time assets become available to the account owner (in a credit entry), or cease to be available to the account owner (in a debit entry).\n \nUsage: When entry status is pending, and value date is present, value date refers to an expected/requested value date.\nFor entries which are subject to availability/float (and for which availability information is present), value date must not be used, as the availability component identifies the number of availability days.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -493,7 +493,7 @@ public class ReportEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Set of elements used to indicate when the booked amount of money will become available, ie can be accessed and start generating interest. \n\nUsage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations)."
+	 * "Set of elements used to indicate when the booked amount of money will become available, ie can be accessed and start generating interest. \n\nUsage: this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations)."
 	 * </li>
 	 * </ul>
 	 */
@@ -505,7 +505,7 @@ public class ReportEntry1 {
 			xmlTag = "Avlbty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Availability";
-			definition = "Set of elements used to indicate when the booked amount of money will become available, ie can be accessed and start generating interest. \n\nUsage : this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample : When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).";
+			definition = "Set of elements used to indicate when the booked amount of money will become available, ie can be accessed and start generating interest. \n\nUsage: this type of info is eg used in US, and is linked to particular instruments, such as cheques.\nExample: When a cheque is deposited, it will be booked on the deposit day, but the funds will only be accessible as of the indicated availability day (according to national banking regulations).";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.CashBalanceAvailability1.mmObject();
@@ -678,7 +678,7 @@ public class ReportEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Set of elements providing details on batched transactions.\n\nUsage : this element can be repeated in case more than one batch is included in the entry, eg, in lockbox scenarios, to specify the ID and number of transactions included in each of the batches."
+	 * "Set of elements providing details on batched transactions.\n\nUsage: this element can be repeated in case more than one batch is included in the entry, eg, in lockbox scenarios, to specify the ID and number of transactions included in each of the batches."
 	 * </li>
 	 * </ul>
 	 */
@@ -689,7 +689,7 @@ public class ReportEntry1 {
 			xmlTag = "Btch";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Batch";
-			definition = "Set of elements providing details on batched transactions.\n\nUsage : this element can be repeated in case more than one batch is included in the entry, eg, in lockbox scenarios, to specify the ID and number of transactions included in each of the batches.";
+			definition = "Set of elements providing details on batched transactions.\n\nUsage: this element can be repeated in case more than one batch is included in the entry, eg, in lockbox scenarios, to specify the ID and number of transactions included in each of the batches.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BatchInformation1.mmObject();
@@ -726,7 +726,7 @@ public class ReportEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Set of elements providing information on the original amount.\n\nUsage : This component (on entry level) should be used when a total original batch or aggregate amount has to be provided. (If required, the individual original amounts can be included in the same component on transaction details level)."
+	 * "Set of elements providing information on the original amount.\n\nUsage: This component (on entry level) should be used when a total original batch or aggregate amount has to be provided. (If required, the individual original amounts can be included in the same component on transaction details level)."
 	 * </li>
 	 * </ul>
 	 */
@@ -738,7 +738,7 @@ public class ReportEntry1 {
 			xmlTag = "AmtDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountDetails";
-			definition = "Set of elements providing information on the original amount.\n\nUsage : This component (on entry level) should be used when a total original batch or aggregate amount has to be provided. (If required, the individual original amounts can be included in the same component on transaction details level).";
+			definition = "Set of elements providing information on the original amount.\n\nUsage: This component (on entry level) should be used when a total original batch or aggregate amount has to be provided. (If required, the individual original amounts can be included in the same component on transaction details level).";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -775,7 +775,7 @@ public class ReportEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides information on the charges included in the entry amount.\n\nUsage : this component is used on entry level in case of batch or aggregate bookings."
+	 * "Provides information on the charges included in the entry amount.\n\nUsage: this component is used on entry level in case of batch or aggregate bookings."
 	 * </li>
 	 * </ul>
 	 */
@@ -787,7 +787,7 @@ public class ReportEntry1 {
 			xmlTag = "Chrgs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
-			definition = "Provides information on the charges included in the entry amount.\n\nUsage : this component is used on entry level in case of batch or aggregate bookings.";
+			definition = "Provides information on the charges included in the entry amount.\n\nUsage: this component is used on entry level in case of batch or aggregate bookings.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.ChargesInformation3.mmObject();
@@ -823,7 +823,7 @@ public class ReportEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Set of elements providing details on the interest amount included in the entry amount.\n\nUsage : This component is used on entry level in case of batch or aggregate bookings."
+	 * "Set of elements providing details on the interest amount included in the entry amount.\n\nUsage: This component is used on entry level in case of batch or aggregate bookings."
 	 * </li>
 	 * </ul>
 	 */
@@ -835,7 +835,7 @@ public class ReportEntry1 {
 			xmlTag = "Intrst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Interest";
-			definition = "Set of elements providing details on the interest amount included in the entry amount.\n\nUsage : This component is used on entry level in case of batch or aggregate bookings.";
+			definition = "Set of elements providing details on the interest amount included in the entry amount.\n\nUsage: This component is used on entry level in case of batch or aggregate bookings.";
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.TransactionInterest1.mmObject();

@@ -58,6 +58,13 @@ import javax.xml.bind.annotation.XmlType;
  * "TradeDate5Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the trade date."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TradeDate8Choice
+ * TradeDate8Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.TradeDate1Choice
@@ -101,6 +108,13 @@ public class TradeDate5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date expressed as a ISO date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.choice.TradeDate8Choice#mmDate
+	 * TradeDate8Choice.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -117,6 +131,7 @@ public class TradeDate5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date expressed as a ISO date.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDate8Choice.mmDate);
 			previousVersion_lazy = () -> TradeDate1Choice.mmDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -154,6 +169,14 @@ public class TradeDate5Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date expressed as a code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TradeDate8Choice#mmDateCode
+	 * TradeDate8Choice.mmDateCode}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -170,6 +193,7 @@ public class TradeDate5Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCode";
 			definition = "Date expressed as a code.";
+			nextVersions_lazy = () -> Arrays.asList(TradeDate8Choice.mmDateCode);
 			previousVersion_lazy = () -> TradeDate1Choice.mmDateCode;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -185,6 +209,7 @@ public class TradeDate5Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeDate5Choice";
 				definition = "Choice of format for the trade date.";
+				nextVersions_lazy = () -> Arrays.asList(TradeDate8Choice.mmObject());
 				previousVersion_lazy = () -> TradeDate1Choice.mmObject();
 			}
 		});

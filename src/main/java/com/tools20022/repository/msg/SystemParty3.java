@@ -157,7 +157,7 @@ public class SystemParty3 {
 	 * name} = "ClosingDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the closing date of the party"</li>
+	 * definition} = "Specifies the closing date of the party."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClosingDate = new MMMessageAttribute() {
@@ -167,7 +167,7 @@ public class SystemParty3 {
 			xmlTag = "ClsgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
-			definition = "Specifies the closing date of the party";
+			definition = "Specifies the closing date of the party.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();

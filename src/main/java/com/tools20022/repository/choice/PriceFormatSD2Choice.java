@@ -82,6 +82,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Choice between a percentage price or an amount price or an unspecified price or an amount price per amount or an amount price per financial instrument quantity."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.PriceFormatSD3Choice
+ * PriceFormatSD3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.PriceFormatSD1Choice
@@ -124,6 +131,14 @@ public class PriceFormatSD2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Value of the price not specified."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD3Choice#mmNotSpecifiedPrice
+	 * PriceFormatSD3Choice.mmNotSpecifiedPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -140,6 +155,7 @@ public class PriceFormatSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NotSpecifiedPrice";
 			definition = "Value of the price not specified.";
+			nextVersions_lazy = () -> Arrays.asList(PriceFormatSD3Choice.mmNotSpecifiedPrice);
 			previousVersion_lazy = () -> PriceFormatSD1Choice.mmNotSpecifiedPrice;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -178,6 +194,14 @@ public class PriceFormatSD2Choice {
 	 * definition} =
 	 * "Price expressed as a ratio: amount price per financial instrument quantity."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.PriceFormatSD3Choice#mmAmountPricePerFinancialInstrumentQuantity
+	 * PriceFormatSD3Choice.mmAmountPricePerFinancialInstrumentQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -194,6 +218,7 @@ public class PriceFormatSD2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AmountPricePerFinancialInstrumentQuantity";
 			definition = "Price expressed as a ratio: amount price per financial instrument quantity.";
+			nextVersions_lazy = () -> Arrays.asList(PriceFormatSD3Choice.mmAmountPricePerFinancialInstrumentQuantity);
 			previousVersion_lazy = () -> PriceFormatSD1Choice.mmAmountPricePerFinancialInstrumentQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -219,6 +244,7 @@ public class PriceFormatSD2Choice {
 				})).get();
 				name = "PriceFormatSD2Choice";
 				definition = "Choice between a percentage price or an amount price or an unspecified price or an amount price per amount or an amount price per financial instrument quantity.";
+				nextVersions_lazy = () -> Arrays.asList(PriceFormatSD3Choice.mmObject());
 				previousVersion_lazy = () -> PriceFormatSD1Choice.mmObject();
 			}
 		});

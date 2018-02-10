@@ -348,7 +348,7 @@ public class AgentExtension3 {
 	 * name} = "ContactInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Agent designated contact Information details. "</li>
+	 * definition} = "Agent designated contact Information details."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmContactInformation = new MMMessageAssociationEnd() {
@@ -359,7 +359,7 @@ public class AgentExtension3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Contact Information Address"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactInformation";
-			definition = "Agent designated contact Information details. ";
+			definition = "Agent designated contact Information details.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

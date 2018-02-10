@@ -72,6 +72,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies whether the status is provided with a reason or not."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus40Choice
+ * RejectionOrRepairStatus40Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -115,6 +123,14 @@ public class RejectionOrRepairStatus27Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates that there is no reason available or to report."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus40Choice#mmNoSpecifiedReason
+	 * RejectionOrRepairStatus40Choice.mmNoSpecifiedReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmNoSpecifiedReason = new MMMessageAttribute() {
@@ -127,6 +143,7 @@ public class RejectionOrRepairStatus27Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NoSpecifiedReason";
 			definition = "Indicates that there is no reason available or to report.";
+			nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairStatus40Choice.mmNoSpecifiedReason);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> NoReasonCode.mmObject();
@@ -167,6 +184,14 @@ public class RejectionOrRepairStatus27Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the reason of the rejection or repair status."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.RejectionOrRepairStatus40Choice#mmReason
+	 * RejectionOrRepairStatus40Choice.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReason = new MMMessageAssociationEnd() {
@@ -179,6 +204,7 @@ public class RejectionOrRepairStatus27Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reason";
 			definition = "Specifies the reason of the rejection or repair status.";
+			nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairStatus40Choice.mmReason);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> RejectionOrRepairReason21.mmObject();
@@ -194,6 +220,7 @@ public class RejectionOrRepairStatus27Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RejectionOrRepairStatus27Choice";
 				definition = "Specifies whether the status is provided with a reason or not.";
+				nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairStatus40Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

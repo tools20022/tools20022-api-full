@@ -449,6 +449,18 @@ public class PhysicalDelivery {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DeliverInformation17#mmPhysicalTransfer
 	 * DeliverInformation17.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation18#mmPhysicalTransfer
+	 * ReceiveInformation18.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation19#mmPhysicalTransfer
+	 * DeliverInformation19.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmPhysicalTransfer
+	 * ReceiveInformation19.mmPhysicalTransfer}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DeliverInformation18#mmPhysicalTransfer
+	 * DeliverInformation18.mmPhysicalTransfer}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -474,7 +486,7 @@ public class PhysicalDelivery {
 					DeliverInformation5.mmPhysicalTransfer, DeliverInformation9.mmPhysicalTransfer, DeliverInformation6.mmPhysicalTransfer, ReceiveInformation13.mmPhysicalTransfer, ReceiveInformation12.mmPhysicalTransfer,
 					DeliverInformation12.mmPhysicalTransfer, DeliverInformation13.mmPhysicalTransfer, DeliverInformation15.mmPhysicalTransfer, DeliverInformation14.mmPhysicalTransfer, ReceiveInformation15.mmPhysicalTransfer,
 					ReceiveInformation14.mmPhysicalTransfer, AggregateHoldingBalance1.mmHoldingPhysicalType, ReceiveInformation17.mmPhysicalTransfer, ReceiveInformation16.mmPhysicalTransfer, DeliverInformation16.mmPhysicalTransfer,
-					DeliverInformation17.mmPhysicalTransfer);
+					DeliverInformation17.mmPhysicalTransfer, ReceiveInformation18.mmPhysicalTransfer, DeliverInformation19.mmPhysicalTransfer, ReceiveInformation19.mmPhysicalTransfer, DeliverInformation18.mmPhysicalTransfer);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.PhysicalDelivery.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the account management instruction
- * message for which the status is requested .
+ * message for which the status is requested.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -88,7 +88,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountManagementMessageReference"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information about the message reference of the account management instruction message for which the status is requested ."
+ * "Information about the message reference of the account management instruction message for which the status is requested."
  * </li>
  * </ul>
  */
@@ -255,7 +255,7 @@ public class AccountManagementMessageReference {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identifier of the account opening or account modification instruction at application level.\n"
+	 * "Unique and unambiguous identifier of the account opening or account modification instruction at application level.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -266,7 +266,7 @@ public class AccountManagementMessageReference {
 			xmlTag = "AcctApplId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountApplicationIdentification";
-			definition = "Unique and unambiguous identifier of the account opening or account modification instruction at application level.\n";
+			definition = "Unique and unambiguous identifier of the account opening or account modification instruction at application level.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -371,7 +371,7 @@ public class AccountManagementMessageReference {
 						com.tools20022.repository.constraints.ConstraintPreviousReferenceGuideline.forAccountManagementMessageReference);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountManagementMessageReference";
-				definition = "Information about the message reference of the account management instruction message for which the status is requested .";
+				definition = "Information about the message reference of the account management instruction message for which the status is requested.";
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.AccountManagementMessageReference.PreviousReferenceOrOtherReferenceRule);
 			}
 		});

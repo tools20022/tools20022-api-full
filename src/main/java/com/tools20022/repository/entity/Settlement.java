@@ -463,6 +463,57 @@ public class Settlement {
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails31#mmStandingSettlementInstructionDetails
 	 * SecuritiesSettlementTransactionDetails31.
 	 * mmStandingSettlementInstructionDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmFXStandingInstruction
+	 * SettlementDetails140.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmFXStandingInstruction
+	 * SettlementDetails142.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails148#mmFXStandingInstruction
+	 * SettlementDetails148.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmFXStandingInstruction
+	 * SettlementDetails145.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails34#mmStandingSettlementInstructionDetails
+	 * SecuritiesSettlementTransactionDetails34.
+	 * mmStandingSettlementInstructionDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmFXStandingInstruction
+	 * SettlementDetails146.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmStandingSettlementInstructionDetails
+	 * SecuritiesSettlementTransactionDetails33.
+	 * mmStandingSettlementInstructionDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails32#mmStandingSettlementInstructionDetails
+	 * SecuritiesSettlementTransactionDetails32.
+	 * mmStandingSettlementInstructionDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails152#mmFXStandingInstruction
+	 * SettlementDetails152.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmFXStandingInstruction
+	 * SettlementDetails156.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmFXStandingInstruction
+	 * SettlementDetails157.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails35#mmStandingSettlementInstructionDetails
+	 * SecuritiesSettlementTransactionDetails35.
+	 * mmStandingSettlementInstructionDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmFXStandingInstruction
+	 * SettlementDetails158.mmFXStandingInstruction}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails36#mmStandingSettlementInstructionDetails
+	 * SecuritiesSettlementTransactionDetails36.
+	 * mmStandingSettlementInstructionDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails37#mmStandingSettlementInstructionDetails
+	 * SecuritiesSettlementTransactionDetails37.
+	 * mmStandingSettlementInstructionDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -504,7 +555,11 @@ public class Settlement {
 					SettlementDetails120.mmFXStandingInstruction, SettlementDetails119.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails27.mmStandingSettlementInstructionDetails,
 					SecuritiesSettlementTransactionDetails28.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails26.mmStandingSettlementInstructionDetails, SettlementDetails122.mmFXStandingInstruction,
 					SettlementDetails137.mmFXStandingInstruction, SettlementDetails132.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails30.mmStandingSettlementInstructionDetails, SettlementDetails138.mmFXStandingInstruction,
-					SecuritiesSettlementTransactionDetails29.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails31.mmStandingSettlementInstructionDetails);
+					SecuritiesSettlementTransactionDetails29.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails31.mmStandingSettlementInstructionDetails, SettlementDetails140.mmFXStandingInstruction,
+					SettlementDetails142.mmFXStandingInstruction, SettlementDetails148.mmFXStandingInstruction, SettlementDetails145.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails34.mmStandingSettlementInstructionDetails,
+					SettlementDetails146.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails33.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails32.mmStandingSettlementInstructionDetails,
+					SettlementDetails152.mmFXStandingInstruction, SettlementDetails156.mmFXStandingInstruction, SettlementDetails157.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails35.mmStandingSettlementInstructionDetails,
+					SettlementDetails158.mmFXStandingInstruction, SecuritiesSettlementTransactionDetails36.mmStandingSettlementInstructionDetails, SecuritiesSettlementTransactionDetails37.mmStandingSettlementInstructionDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Settlement.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

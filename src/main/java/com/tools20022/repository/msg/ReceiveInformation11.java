@@ -699,7 +699,7 @@ public class ReceiveInformation11 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the financial instrument is to be physically  delivered."
+	 * "Indicates whether the financial instrument is to be physically delivered."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -719,7 +719,7 @@ public class ReceiveInformation11 {
 			xmlTag = "PhysTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransfer";
-			definition = "Indicates whether the financial instrument is to be physically  delivered.";
+			definition = "Indicates whether the financial instrument is to be physically delivered.";
 			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation12.mmPhysicalTransfer);
 			maxOccurs = 1;
 			minOccurs = 0;

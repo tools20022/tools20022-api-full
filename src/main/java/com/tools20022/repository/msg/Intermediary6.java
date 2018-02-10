@@ -181,7 +181,7 @@ public class Intermediary6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n"
+	 * "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n."
 	 * </li>
 	 * </ul>
 	 */
@@ -193,7 +193,7 @@ public class Intermediary6 {
 			xmlTag = "Acct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
-			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n";
+			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Account2.mmObject();

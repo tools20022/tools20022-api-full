@@ -65,6 +65,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Key encryption key (KEK), using previously distributed symmetric key."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.KEK5 KEK5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.KEK3 KEK3}</li>
  * </ul>
@@ -99,6 +105,13 @@ public class KEK4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Version of the data structure."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.KEK5#mmVersion
+	 * KEK5.mmVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -113,6 +126,7 @@ public class KEK4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Version";
 			definition = "Version of the data structure.";
+			nextVersions_lazy = () -> Arrays.asList(KEK5.mmVersion);
 			previousVersion_lazy = () -> KEK3.mmVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -143,6 +157,13 @@ public class KEK4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the key encryption key (KEK)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.KEK5#mmKEKIdentification
+	 * KEK5.mmKEKIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -158,6 +179,7 @@ public class KEK4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KEKIdentification";
 			definition = "Identification of the key encryption key (KEK).";
+			nextVersions_lazy = () -> Arrays.asList(KEK5.mmKEKIdentification);
 			previousVersion_lazy = () -> KEK3.mmKEKIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -190,6 +212,14 @@ public class KEK4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Algorithm to encrypt the key encryption key (KEK)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.KEK5#mmKeyEncryptionAlgorithm
+	 * KEK5.mmKeyEncryptionAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -205,6 +235,7 @@ public class KEK4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "KeyEncryptionAlgorithm";
 			definition = "Algorithm to encrypt the key encryption key (KEK).";
+			nextVersions_lazy = () -> Arrays.asList(KEK5.mmKeyEncryptionAlgorithm);
 			previousVersion_lazy = () -> KEK3.mmKeyEncryptionAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -238,6 +269,13 @@ public class KEK4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Encrypted key encryption key (KEK)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.KEK5#mmEncryptedKey
+	 * KEK5.mmEncryptedKey}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -253,6 +291,7 @@ public class KEK4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedKey";
 			definition = "Encrypted key encryption key (KEK).";
+			nextVersions_lazy = () -> Arrays.asList(KEK5.mmEncryptedKey);
 			previousVersion_lazy = () -> KEK3.mmEncryptedKey;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -269,6 +308,7 @@ public class KEK4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEK4";
 				definition = "Key encryption key (KEK), using previously distributed symmetric key.";
+				nextVersions_lazy = () -> Arrays.asList(KEK5.mmObject());
 				previousVersion_lazy = () -> KEK3.mmObject();
 			}
 		});

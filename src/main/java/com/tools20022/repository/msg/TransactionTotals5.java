@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Total of credit or debit transactions
+ * Total of credit or debit transactions.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -74,7 +74,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "TransactionTotals5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Total of credit or debit transactions"</li>
+ * definition} = "Total of credit or debit transactions."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.TransactionTotals4
@@ -397,7 +397,7 @@ public class TransactionTotals5 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionTotals5";
-				definition = "Total of credit or debit transactions";
+				definition = "Total of credit or debit transactions.";
 				previousVersion_lazy = () -> TransactionTotals4.mmObject();
 			}
 		});

@@ -636,6 +636,14 @@ public class ConstraintPlaceOfListingRule {
 	 * definition} =
 	 * "If PlaceOfListing is used and an ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfListingRule#forFinancialInstrumentAttributes92
+	 * ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes92}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -649,6 +657,7 @@ public class ConstraintPlaceOfListingRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListingRule";
 			definition = "If PlaceOfListing is used and an ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes92);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes36;
 			owner_lazy = () -> FinancialInstrumentAttributes63.mmObject();
 		}
@@ -672,6 +681,14 @@ public class ConstraintPlaceOfListingRule {
 	 * definition} =
 	 * "If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfListingRule#forFinancialInstrumentAttributes91
+	 * ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes91}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -685,6 +702,7 @@ public class ConstraintPlaceOfListingRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfListingRule";
 			definition = "If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes91);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes35;
 			owner_lazy = () -> FinancialInstrumentAttributes64.mmObject();
 		}
@@ -747,6 +765,138 @@ public class ConstraintPlaceOfListingRule {
 			name = "PlaceOfListingRule";
 			definition = "If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used.";
 			owner_lazy = () -> FinancialInstrumentAttributes78.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91
+	 * FinancialInstrumentAttributes91}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfListingRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfListingRule#forFinancialInstrumentAttributes64
+	 * ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes64}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes91> forFinancialInstrumentAttributes91 = new MMConstraint<FinancialInstrumentAttributes91>() {
+		{
+			validator = ConstraintPlaceOfListingRule::checkFinancialInstrumentAttributes91;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfListingRule";
+			definition = "If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes64;
+			owner_lazy = () -> FinancialInstrumentAttributes91.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92
+	 * FinancialInstrumentAttributes92}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfListingRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfListing is used and an ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintPlaceOfListingRule#forFinancialInstrumentAttributes63
+	 * ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes63}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes92> forFinancialInstrumentAttributes92 = new MMConstraint<FinancialInstrumentAttributes92>() {
+		{
+			validator = ConstraintPlaceOfListingRule::checkFinancialInstrumentAttributes92;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfListingRule";
+			definition = "If PlaceOfListing is used and an ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintPlaceOfListingRule.forFinancialInstrumentAttributes63;
+			owner_lazy = () -> FinancialInstrumentAttributes92.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95
+	 * FinancialInstrumentAttributes95}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfListingRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfListing is used and an ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes95> forFinancialInstrumentAttributes95 = new MMConstraint<FinancialInstrumentAttributes95>() {
+		{
+			validator = ConstraintPlaceOfListingRule::checkFinancialInstrumentAttributes95;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfListingRule";
+			definition = "If PlaceOfListing is used and an ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> FinancialInstrumentAttributes95.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97
+	 * FinancialInstrumentAttributes97}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "PlaceOfListingRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<FinancialInstrumentAttributes97> forFinancialInstrumentAttributes97 = new MMConstraint<FinancialInstrumentAttributes97>() {
+		{
+			validator = ConstraintPlaceOfListingRule::checkFinancialInstrumentAttributes97;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "PlaceOfListingRule";
+			definition = "If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be identified, the ISO 10383 Market Identifier Code (MIC) must be used.";
+			owner_lazy = () -> FinancialInstrumentAttributes97.mmObject();
 		}
 	};
 
@@ -931,6 +1081,38 @@ public class ConstraintPlaceOfListingRule {
 	 * identified, the ISO 10383 Market Identifier Code (MIC) must be used.
 	 */
 	public static void checkFinancialInstrumentAttributes78(FinancialInstrumentAttributes78 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be
+	 * identified, the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkFinancialInstrumentAttributes91(FinancialInstrumentAttributes91 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfListing is used and an ISO 10383 MIC exists for the market to
+	 * be identified, the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkFinancialInstrumentAttributes92(FinancialInstrumentAttributes92 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfListing is used and an ISO 10383 MIC exists for the market to
+	 * be identified, the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkFinancialInstrumentAttributes95(FinancialInstrumentAttributes95 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If PlaceOfListing is used and a ISO 10383 MIC exists for the market to be
+	 * identified, the ISO 10383 Market Identifier Code (MIC) must be used.
+	 */
+	public static void checkFinancialInstrumentAttributes97(FinancialInstrumentAttributes97 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

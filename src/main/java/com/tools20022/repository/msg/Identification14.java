@@ -92,6 +92,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV06#mmConfirmationReference
  * SecuritiesSettlementTransactionReversalAdviceV06.mmConfirmationReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07#mmMarketInfrastructureTransactionIdentification
+ * SecuritiesSettlementTransactionAllegementNotificationV07.
+ * mmMarketInfrastructureTransactionIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV07#mmConfirmationReference
+ * SecuritiesSettlementTransactionReversalAdviceV07.mmConfirmationReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -175,7 +182,8 @@ public class Identification14 {
 						SecuritiesSettlementTransactionModificationRequestStatusAdviceV04.mmModificationRequestReference, SecuritiesSettlementConditionModificationStatusAdviceV07.mmRequestReference,
 						SecuritiesSettlementAllegementRemovalAdviceV04.mmMarketInfrastructureTransactionIdentification, SecuritiesTransactionCancellationRequestStatusAdviceV05.mmCancellationRequestReference,
 						SecuritiesSettlementTransactionAuditTrailReportV03.mmQueryReference, SecuritiesSettlementTransactionAllegementNotificationV05.mmMarketInfrastructureTransactionIdentification,
-						SecuritiesSettlementTransactionAllegementNotificationV06.mmMarketInfrastructureTransactionIdentification, SecuritiesSettlementTransactionReversalAdviceV06.mmConfirmationReference);
+						SecuritiesSettlementTransactionAllegementNotificationV06.mmMarketInfrastructureTransactionIdentification, SecuritiesSettlementTransactionReversalAdviceV06.mmConfirmationReference,
+						SecuritiesSettlementTransactionAllegementNotificationV07.mmMarketInfrastructureTransactionIdentification, SecuritiesSettlementTransactionReversalAdviceV07.mmConfirmationReference);
 				trace_lazy = () -> SecuritiesTradeIdentification.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

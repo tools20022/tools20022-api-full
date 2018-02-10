@@ -25,8 +25,6 @@ import com.tools20022.repository.area.TerminalManagementLatestVersion;
 import com.tools20022.repository.msg.ContentInformationType12;
 import com.tools20022.repository.msg.Header29;
 import com.tools20022.repository.msg.MaintenanceDelegationResponse2;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016;
-import com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017;
 import com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion;
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -62,12 +60,6 @@ import javax.xml.bind.annotation.*;
  * <li>
  * {@linkplain com.tools20022.repository.msgset.CardPaymentsExchangesTerminalManagementISOLatestversion
  * CardPaymentsExchangesTerminalManagementISOLatestversion}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20152016
- * CAPETerminalManagementMaintenance20152016}</li>
- * <li>
- * {@linkplain com.tools20022.repository.msgset.CAPETerminalManagementMaintenance20162017
- * CAPETerminalManagementMaintenance20162017}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getRootElement
@@ -90,6 +82,14 @@ import javax.xml.bind.annotation.*;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "The master terminal manager provides the outcome of a maintenance delegation request to a terminal manager."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV03
+ * MaintenanceDelegationResponseV03}</li>
+ * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -125,6 +125,14 @@ public class MaintenanceDelegationResponseV02 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Maintenance delegation response message management information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV03#mmHeader
+	 * MaintenanceDelegationResponseV03.mmHeader}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -138,6 +146,7 @@ public class MaintenanceDelegationResponseV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Header";
 			definition = "Maintenance delegation response message management information.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV03.mmHeader);
 			previousVersion_lazy = () -> MaintenanceDelegationResponseV01.mmHeader;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -176,6 +185,14 @@ public class MaintenanceDelegationResponseV02 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to the request of maintenance delegations."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV03#mmMaintenanceDelegationResponse
+	 * MaintenanceDelegationResponseV03.mmMaintenanceDelegationResponse}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +206,7 @@ public class MaintenanceDelegationResponseV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaintenanceDelegationResponse";
 			definition = "Information related to the request of maintenance delegations.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV03.mmMaintenanceDelegationResponse);
 			previousVersion_lazy = () -> MaintenanceDelegationResponseV01.mmMaintenanceDelegationResponse;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -227,6 +245,14 @@ public class MaintenanceDelegationResponseV02 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Trailer of the message containing a MAC or a digital signature."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV03#mmSecurityTrailer
+	 * MaintenanceDelegationResponseV03.mmSecurityTrailer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -240,6 +266,7 @@ public class MaintenanceDelegationResponseV02 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityTrailer";
 			definition = "Trailer of the message containing a MAC or a digital signature.";
+			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV03.mmSecurityTrailer);
 			previousVersion_lazy = () -> MaintenanceDelegationResponseV01.mmSecurityTrailer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -261,8 +288,9 @@ public class MaintenanceDelegationResponseV02 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MaintenanceDelegationResponseV02";
 				definition = "The master terminal manager provides the outcome of a maintenance delegation request to a terminal manager.";
+				nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV03.mmObject());
 				previousVersion_lazy = () -> MaintenanceDelegationResponseV01.mmObject();
-				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject(), CAPETerminalManagementMaintenance20152016.mmObject(), CAPETerminalManagementMaintenance20162017.mmObject());
+				messageSet_lazy = () -> Arrays.asList(CardPaymentsExchangesTerminalManagementISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "MntncDlgtnRspn";
 				businessArea_lazy = () -> TerminalManagementLatestVersion.mmObject();

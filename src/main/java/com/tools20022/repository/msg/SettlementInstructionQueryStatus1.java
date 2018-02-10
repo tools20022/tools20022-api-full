@@ -64,6 +64,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the settlement instruction status query criteria including the status period."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryStatus2
+ * SettlementInstructionQueryStatus2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -98,6 +106,14 @@ public class SettlementInstructionQueryStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the status type of query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryStatus2#mmType
+	 * SettlementInstructionQueryStatus2.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -108,6 +124,7 @@ public class SettlementInstructionQueryStatus1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Defines the status type of query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryStatus2.mmType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -141,6 +158,14 @@ public class SettlementInstructionQueryStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specified date period of the status."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementInstructionQueryStatus2#mmDatePeriod
+	 * SettlementInstructionQueryStatus2.mmDatePeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDatePeriod = new MMMessageAssociationEnd() {
@@ -151,6 +176,7 @@ public class SettlementInstructionQueryStatus1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DatePeriod";
 			definition = "Specified date period of the status.";
+			nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryStatus2.mmDatePeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -166,6 +192,7 @@ public class SettlementInstructionQueryStatus1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettlementInstructionQueryStatus1";
 				definition = "Defines the settlement instruction status query criteria including the status period.";
+				nextVersions_lazy = () -> Arrays.asList(SettlementInstructionQueryStatus2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

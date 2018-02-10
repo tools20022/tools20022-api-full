@@ -111,6 +111,7 @@ import javax.xml.bind.annotation.XmlType;
  * nextVersions} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.Header34 Header34}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Header36 Header36}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -155,6 +156,8 @@ public class Header24 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Header34#mmMessageFunction
 	 * Header34.mmMessageFunction}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header36#mmMessageFunction
+	 * Header36.mmMessageFunction}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -172,7 +175,7 @@ public class Header24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageFunction";
 			definition = "Identifies the type of process related to the message.";
-			nextVersions_lazy = () -> Arrays.asList(Header34.mmMessageFunction);
+			nextVersions_lazy = () -> Arrays.asList(Header34.mmMessageFunction, Header36.mmMessageFunction);
 			previousVersion_lazy = () -> Header11.mmMessageFunction;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -210,6 +213,8 @@ public class Header24 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Header34#mmProtocolVersion
 	 * Header34.mmProtocolVersion}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header36#mmProtocolVersion
+	 * Header36.mmProtocolVersion}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -227,7 +232,7 @@ public class Header24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProtocolVersion";
 			definition = "Version of the acquirer protocol specifications.";
-			nextVersions_lazy = () -> Arrays.asList(Header34.mmProtocolVersion);
+			nextVersions_lazy = () -> Arrays.asList(Header34.mmProtocolVersion, Header36.mmProtocolVersion);
 			previousVersion_lazy = () -> Header11.mmProtocolVersion;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -266,6 +271,9 @@ public class Header24 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Header34#mmExchangeIdentification
 	 * Header34.mmExchangeIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Header36#mmExchangeIdentification
+	 * Header36.mmExchangeIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -283,7 +291,7 @@ public class Header24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExchangeIdentification";
 			definition = "Unique identification of an exchange occurrence.";
-			nextVersions_lazy = () -> Arrays.asList(Header34.mmExchangeIdentification);
+			nextVersions_lazy = () -> Arrays.asList(Header34.mmExchangeIdentification, Header36.mmExchangeIdentification);
 			previousVersion_lazy = () -> Header11.mmExchangeIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -323,6 +331,9 @@ public class Header24 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Header34#mmReTransmissionCounter
 	 * Header34.mmReTransmissionCounter}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Header36#mmReTransmissionCounter
+	 * Header36.mmReTransmissionCounter}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -340,7 +351,7 @@ public class Header24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReTransmissionCounter";
 			definition = "Number of retransmissions of the message.";
-			nextVersions_lazy = () -> Arrays.asList(Header34.mmReTransmissionCounter);
+			nextVersions_lazy = () -> Arrays.asList(Header34.mmReTransmissionCounter, Header36.mmReTransmissionCounter);
 			previousVersion_lazy = () -> Header11.mmReTransmissionCounter;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -379,6 +390,9 @@ public class Header24 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Header34#mmCreationDateTime
 	 * Header34.mmCreationDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Header36#mmCreationDateTime
+	 * Header36.mmCreationDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -396,7 +410,7 @@ public class Header24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreationDateTime";
 			definition = "Date and time at which the message was created.";
-			nextVersions_lazy = () -> Arrays.asList(Header34.mmCreationDateTime);
+			nextVersions_lazy = () -> Arrays.asList(Header34.mmCreationDateTime, Header36.mmCreationDateTime);
 			previousVersion_lazy = () -> Header11.mmCreationDateTime;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -435,6 +449,8 @@ public class Header24 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Header34#mmInitiatingParty
 	 * Header34.mmInitiatingParty}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header36#mmInitiatingParty
+	 * Header36.mmInitiatingParty}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -452,7 +468,7 @@ public class Header24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InitiatingParty";
 			definition = "Unique identification of the partner that has initiated the exchange.";
-			nextVersions_lazy = () -> Arrays.asList(Header34.mmInitiatingParty);
+			nextVersions_lazy = () -> Arrays.asList(Header34.mmInitiatingParty, Header36.mmInitiatingParty);
 			previousVersion_lazy = () -> Header11.mmInitiatingParty;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -493,6 +509,8 @@ public class Header24 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Header34#mmRecipientParty
 	 * Header34.mmRecipientParty}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header36#mmRecipientParty
+	 * Header36.mmRecipientParty}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -510,7 +528,7 @@ public class Header24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RecipientParty";
 			definition = "Unique identification of the partner that is the recipient of the message exchange.";
-			nextVersions_lazy = () -> Arrays.asList(Header34.mmRecipientParty);
+			nextVersions_lazy = () -> Arrays.asList(Header34.mmRecipientParty, Header36.mmRecipientParty);
 			previousVersion_lazy = () -> Header11.mmRecipientParty;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -551,6 +569,8 @@ public class Header24 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Header34#mmTraceability
 	 * Header34.mmTraceability}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Header36#mmTraceability
+	 * Header36.mmTraceability}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -568,7 +588,7 @@ public class Header24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Traceability";
 			definition = "Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.";
-			nextVersions_lazy = () -> Arrays.asList(Header34.mmTraceability);
+			nextVersions_lazy = () -> Arrays.asList(Header34.mmTraceability, Header36.mmTraceability);
 			previousVersion_lazy = () -> Header11.mmTraceability;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Traceability5.mmObject();
@@ -587,7 +607,7 @@ public class Header24 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Header24";
 				definition = "Set of characteristics related to the protocol.";
-				nextVersions_lazy = () -> Arrays.asList(Header34.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(Header34.mmObject(), Header36.mmObject());
 				previousVersion_lazy = () -> Header11.mmObject();
 			}
 		});

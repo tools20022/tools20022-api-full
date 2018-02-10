@@ -124,7 +124,7 @@ public class TransportDetails3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the identification of  the underlying transport document."</li>
+	 * "Reference to the identification of the underlying transport document."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -147,7 +147,7 @@ public class TransportDetails3 {
 			xmlTag = "TrnsprtDocRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransportDocumentReference";
-			definition = "Reference to the identification of  the underlying transport document.";
+			definition = "Reference to the identification of the underlying transport document.";
 			nextVersions_lazy = () -> Arrays.asList(TransportDetails4.mmTransportDocumentReference);
 			previousVersion_lazy = () -> TransportDetails2.mmTransportDocumentReference;
 			minOccurs = 1;

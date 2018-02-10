@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Choice of format for the registration processing status
+ * Choice of format for the registration processing status.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RegistrationProcessingStatus3Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of format for the registration processing status"</li>
+ * definition} = "Choice of format for the registration processing status."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.RegistrationProcessingStatus1Choice
@@ -205,7 +205,7 @@ public class RegistrationProcessingStatus3Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RegistrationProcessingStatus3Choice";
-				definition = "Choice of format for the registration processing status";
+				definition = "Choice of format for the registration processing status.";
 				previousVersion_lazy = () -> RegistrationProcessingStatus1Choice.mmObject();
 			}
 		});

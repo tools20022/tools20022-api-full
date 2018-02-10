@@ -118,7 +118,7 @@ public class SectorAndLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Represents the counterparty institutional section (such as non-financial corporation, central bank, ...)."
+	 * "Represents the counterparty institutional section (such as non-financial corporation, central bank.)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -138,7 +138,7 @@ public class SectorAndLocation1 {
 			xmlTag = "Sctr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sector";
-			definition = "Represents the counterparty institutional section (such as non-financial corporation, central bank, ...).";
+			definition = "Represents the counterparty institutional section (such as non-financial corporation, central bank.).";
 			nextVersions_lazy = () -> Arrays.asList(NameOrSector1Choice.mmSector);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -177,7 +177,7 @@ public class SectorAndLocation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Location of the country in which the counterparty is incorporated. "</li>
+	 * "Location of the country in which the counterparty is incorporated."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -196,7 +196,7 @@ public class SectorAndLocation1 {
 			xmlTag = "Lctn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Location";
-			definition = "Location of the country in which the counterparty is incorporated. ";
+			definition = "Location of the country in which the counterparty is incorporated.";
 			nextVersions_lazy = () -> Arrays.asList(ReportedPartyIdentification1.mmLocation);
 			maxOccurs = 1;
 			minOccurs = 1;

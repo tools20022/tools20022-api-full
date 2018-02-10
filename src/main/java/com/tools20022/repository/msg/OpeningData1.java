@@ -123,7 +123,7 @@ public class OpeningData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date at which the trading parties execute a treasury trade. "</li>
+	 * "Date at which the trading parties execute a treasury trade."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTradeDate = new MMMessageAttribute() {
@@ -134,7 +134,7 @@ public class OpeningData1 {
 			xmlTag = "TradDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
-			definition = "Date at which the trading parties execute a treasury trade. ";
+			definition = "Date at which the trading parties execute a treasury trade.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -213,7 +213,7 @@ public class OpeningData1 {
 	 * name} = "CommonReference"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reference common to the parties of a trade. "</li>
+	 * definition} = "Reference common to the parties of a trade."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCommonReference = new MMMessageAttribute() {
@@ -224,7 +224,7 @@ public class OpeningData1 {
 			xmlTag = "CmonRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CommonReference";
-			definition = "Reference common to the parties of a trade. ";
+			definition = "Reference common to the parties of a trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -256,7 +256,7 @@ public class OpeningData1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Refers to the identification of a previous event in the life of a  non deliverable forward trade. "
+	 * "Refers to the identification of a previous event in the life of a non deliverable forward trade."
 	 * </li>
 	 * </ul>
 	 */
@@ -267,7 +267,7 @@ public class OpeningData1 {
 			xmlTag = "RltdRef";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
-			definition = "Refers to the identification of a previous event in the life of a  non deliverable forward trade. ";
+			definition = "Refers to the identification of a previous event in the life of a non deliverable forward trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

@@ -171,7 +171,7 @@ public class CurrencyConversion3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Plain text explaining the result of the  currency conversion request."</li>
+	 * "Plain text explaining the result of the currency conversion request."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -189,7 +189,7 @@ public class CurrencyConversion3 {
 			xmlTag = "RsltRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ResultReason";
-			definition = "Plain text explaining the result of the  currency conversion request.";
+			definition = "Plain text explaining the result of the currency conversion request.";
 			nextVersions_lazy = () -> Arrays.asList(CurrencyConversion7.mmResultReason);
 			maxOccurs = 1;
 			minOccurs = 0;

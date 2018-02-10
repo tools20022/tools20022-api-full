@@ -154,6 +154,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SecuritiesTradeDetails53"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of the securities trade."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76
+ * SecuritiesTradeDetails76}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails31
@@ -200,6 +207,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTradeIdentification
+	 * SecuritiesTradeDetails76.mmTradeIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -216,6 +231,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeIdentification";
 			definition = "Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmTradeIdentification);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmTradeIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -255,6 +271,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Unambiguous identification of a collateral transaction as assigned by the instructing party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails76.mmCollateralTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -271,6 +295,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralTransactionIdentification";
 			definition = "Unambiguous identification of a collateral transaction as assigned by the instructing party.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmCollateralTransactionIdentification);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmCollateralTransactionIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -308,6 +333,14 @@ public class SecuritiesTradeDetails53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Market in which a trade transaction has been executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmPlaceOfTrade
+	 * SecuritiesTradeDetails76.mmPlaceOfTrade}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -324,6 +357,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Market in which a trade transaction has been executed.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmPlaceOfTrade);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmPlaceOfTrade;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -366,6 +400,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Infrastructure which may be a component of a clearing house and wich facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmPlaceOfClearing
+	 * SecuritiesTradeDetails76.mmPlaceOfClearing}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -382,6 +424,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfClearing";
 			definition = "Infrastructure which may be a component of a clearing house and wich facilitates clearing and settlement for its members by standing between the buyer and the seller. It may net transactions and it substitutes itself as settlement counterparty for each position.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmPlaceOfClearing);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmPlaceOfClearing;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -419,6 +462,14 @@ public class SecuritiesTradeDetails53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the date/time on which the trade was executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTradeDate
+	 * SecuritiesTradeDetails76.mmTradeDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -435,6 +486,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDate";
 			definition = "Specifies the date/time on which the trade was executed.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmTradeDate);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmTradeDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -475,6 +527,14 @@ public class SecuritiesTradeDetails53 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date and time at which the securities are to be delivered or received."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmSettlementDate
+	 * SecuritiesTradeDetails76.mmSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -491,6 +551,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities are to be delivered or received.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmSettlementDate);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -532,6 +593,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Date and time at which a transaction is completed and cleared, ie, payment is effected and securities are delivered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmEffectiveSettlementDate
+	 * SecuritiesTradeDetails76.mmEffectiveSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -548,6 +617,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EffectiveSettlementDate";
 			definition = "Date and time at which a transaction is completed and cleared, ie, payment is effected and securities are delivered.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmEffectiveSettlementDate);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmEffectiveSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -587,6 +657,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Specifies the price of the traded financial instrument.\nThis is the deal price of the individual trade transaction. \nIf there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmDealPrice
+	 * SecuritiesTradeDetails76.mmDealPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -603,6 +681,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			definition = "Specifies the price of the traded financial instrument.\nThis is the deal price of the individual trade transaction. \nIf there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmDealPrice);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmDealPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -644,6 +723,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Number of days on which the interest rate accrues (daily accrual note)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails76.mmNumberOfDaysAccrued}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -660,6 +747,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NumberOfDaysAccrued";
 			definition = "Number of days on which the interest rate accrues (daily accrual note).";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmNumberOfDaysAccrued);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmNumberOfDaysAccrued;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -701,6 +789,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Specifies additional information relative to the processing of the trade."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmOpeningClosing
+	 * SecuritiesTradeDetails76.mmOpeningClosing}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -717,6 +813,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningClosing";
 			definition = "Specifies additional information relative to the processing of the trade.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmOpeningClosing);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmOpeningClosing;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -752,6 +849,14 @@ public class SecuritiesTradeDetails53 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies that a trade is to be reported to a third party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmReporting
+	 * SecuritiesTradeDetails76.mmReporting}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -767,6 +872,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reporting";
 			definition = "Specifies that a trade is to be reported to a third party.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmReporting);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmReporting;
 			minOccurs = 0;
 			complexType_lazy = () -> Reporting6Choice.mmObject();
@@ -807,6 +913,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Indicates the conditions under which the order/trade is to be/was executed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTradeTransactionCondition
+	 * SecuritiesTradeDetails76.mmTradeTransactionCondition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -823,6 +937,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeTransactionCondition";
 			definition = "Indicates the conditions under which the order/trade is to be/was executed.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmTradeTransactionCondition);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmTradeTransactionCondition;
 			minOccurs = 0;
 			complexType_lazy = () -> TradeTransactionCondition5Choice.mmObject();
@@ -861,6 +976,14 @@ public class SecuritiesTradeDetails53 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the role of the investor in the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmInvestorCapacity
+	 * SecuritiesTradeDetails76.mmInvestorCapacity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -877,6 +1000,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestorCapacity";
 			definition = "Specifies the role of the investor in the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmInvestorCapacity);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmInvestorCapacity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -917,6 +1041,14 @@ public class SecuritiesTradeDetails53 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the role of the trading party in the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTradeOriginatorRole
+	 * SecuritiesTradeDetails76.mmTradeOriginatorRole}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -933,6 +1065,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeOriginatorRole";
 			definition = "Specifies the role of the trading party in the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmTradeOriginatorRole);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmTradeOriginatorRole;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -973,6 +1106,14 @@ public class SecuritiesTradeDetails53 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the type of price and information about the price."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmTypeOfPrice
+	 * SecuritiesTradeDetails76.mmTypeOfPrice}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -989,6 +1130,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TypeOfPrice";
 			definition = "Specifies the type of price and information about the price.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmTypeOfPrice);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmTypeOfPrice;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1029,6 +1171,14 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Provides additional details pertaining to foreign exchange instructions."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmFXAdditionalDetails
+	 * SecuritiesTradeDetails76.mmFXAdditionalDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1045,6 +1195,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXAdditionalDetails";
 			definition = "Provides additional details pertaining to foreign exchange instructions.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmFXAdditionalDetails);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmFXAdditionalDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1080,6 +1231,15 @@ public class SecuritiesTradeDetails53 {
 	 * definition} =
 	 * "Provides additional settlement processing information which can not be included within the structured fields of the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmSettlementInstructionProcessingAdditionalDetails
+	 * SecuritiesTradeDetails76.
+	 * mmSettlementInstructionProcessingAdditionalDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1096,6 +1256,7 @@ public class SecuritiesTradeDetails53 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmSettlementInstructionProcessingAdditionalDetails);
 			previousVersion_lazy = () -> SecuritiesTradeDetails31.mmSettlementInstructionProcessingAdditionalDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1124,6 +1285,7 @@ public class SecuritiesTradeDetails53 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesTradeDetails53";
 				definition = "Details of the securities trade.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesTradeDetails76.mmObject());
 				previousVersion_lazy = () -> SecuritiesTradeDetails31.mmObject();
 			}
 		});

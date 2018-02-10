@@ -53,6 +53,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * AccountOwnerType1Code.SecondaryOwner}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.AccountOwnerTypeCode
+ * AccountOwnerTypeCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -110,6 +113,7 @@ public class AccountOwnerType1Code extends MMCode {
 			definition = "Owner of the property. The ownership can be split among several owners, and the primary owner is the one giving its address and account details for the registration.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "POWN";
+			codeName = AccountOwnerTypeCode.PrimaryOwner.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -143,6 +147,7 @@ public class AccountOwnerType1Code extends MMCode {
 			definition = "Legal owners of the property. However, the beneficiary has the equitable or beneficial ownership.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "TRUS";
+			codeName = AccountOwnerTypeCode.Trustee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -177,6 +182,7 @@ public class AccountOwnerType1Code extends MMCode {
 			definition = "Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "CUST";
+			codeName = AccountOwnerTypeCode.CustodianForMinor.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -210,6 +216,7 @@ public class AccountOwnerType1Code extends MMCode {
 			definition = "Entity named by the beneficial owner to act on its behalf, often to facilitate dealing, or to conceal the identity of the beneficiary.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "NOMI";
+			codeName = AccountOwnerTypeCode.Nominee.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -244,6 +251,7 @@ public class AccountOwnerType1Code extends MMCode {
 			definition = "One of the owners of the property. The ownership can be split among several owners, and only the primary owner gives its address and account details for the registration.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AccountOwnerType1Code.mmObject();
 			codeName = "SECO";
+			codeName = AccountOwnerTypeCode.SecondaryOwner.getCodeName().orElse(name);
 		}
 	};
 	final static private LinkedHashMap<String, AccountOwnerType1Code> codesByName = new LinkedHashMap<>();
@@ -259,6 +267,7 @@ public class AccountOwnerType1Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountOwnerType1Code";
 				definition = "Specifies the type of account owner.";
+				trace_lazy = () -> AccountOwnerTypeCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AccountOwnerType1Code.PrimaryOwner, com.tools20022.repository.codeset.AccountOwnerType1Code.Trustee,
 						com.tools20022.repository.codeset.AccountOwnerType1Code.CustodianForMinor, com.tools20022.repository.codeset.AccountOwnerType1Code.Nominee, com.tools20022.repository.codeset.AccountOwnerType1Code.SecondaryOwner);
 			}

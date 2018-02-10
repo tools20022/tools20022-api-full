@@ -149,7 +149,7 @@ public class AmountOrRate3Choice {
 	 * name} = "Rate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Rate used to calculate the amount "</li>
+	 * definition} = "Rate used to calculate the amount."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRate = new MMMessageAttribute() {
@@ -160,7 +160,7 @@ public class AmountOrRate3Choice {
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
-			definition = "Rate used to calculate the amount ";
+			definition = "Rate used to calculate the amount.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();

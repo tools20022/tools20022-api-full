@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * General cryptographic message syntax (CMS) containing data. protected by a
- * digital signature
+ * digital signature.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -62,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ContentInformationType14"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "General cryptographic message syntax (CMS) containing data. protected by a digital signature"
+ * "General cryptographic message syntax (CMS) containing data. protected by a digital signature."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -180,7 +180,7 @@ public class ContentInformationType14 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType14";
-				definition = "General cryptographic message syntax (CMS) containing data. protected by a digital signature";
+				definition = "General cryptographic message syntax (CMS) containing data. protected by a digital signature.";
 				previousVersion_lazy = () -> ContentInformationType12.mmObject();
 			}
 		});

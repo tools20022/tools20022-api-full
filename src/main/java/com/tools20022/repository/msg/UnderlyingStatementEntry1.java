@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Set of elements used to provide information on the underlying statement entry."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.UnderlyingStatementEntry2
+ * UnderlyingStatementEntry2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -105,6 +112,14 @@ public class UnderlyingStatementEntry1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to provide information on the original message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingStatementEntry2#mmOriginalGroupInformation
+	 * UnderlyingStatementEntry2.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginalGroupInformation = new MMMessageAssociationEnd() {
@@ -115,6 +130,7 @@ public class UnderlyingStatementEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Set of elements used to provide information on the original message.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingStatementEntry2.mmOriginalGroupInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -150,6 +166,14 @@ public class UnderlyingStatementEntry1 {
 	 * definition} =
 	 * "Unique identification, as assigned by the account servicer, to unambiguously identify the original statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingStatementEntry2#mmOriginalStatementIdentification
+	 * UnderlyingStatementEntry2.mmOriginalStatementIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalStatementIdentification = new MMMessageAttribute() {
@@ -160,6 +184,7 @@ public class UnderlyingStatementEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalStatementIdentification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the original statement.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingStatementEntry2.mmOriginalStatementIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -199,6 +224,14 @@ public class UnderlyingStatementEntry1 {
 	 * definition} =
 	 * "Original unique identification, as assigned by the account servicer, to unambiguously identify the original entry."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingStatementEntry2#mmOriginalEntryIdentification
+	 * UnderlyingStatementEntry2.mmOriginalEntryIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalEntryIdentification = new MMMessageAttribute() {
@@ -210,6 +243,7 @@ public class UnderlyingStatementEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalEntryIdentification";
 			definition = "Original unique identification, as assigned by the account servicer, to unambiguously identify the original entry.";
+			nextVersions_lazy = () -> Arrays.asList(UnderlyingStatementEntry2.mmOriginalEntryIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -226,6 +260,7 @@ public class UnderlyingStatementEntry1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "UnderlyingStatementEntry1";
 				definition = "Set of elements used to provide information on the underlying statement entry.";
+				nextVersions_lazy = () -> Arrays.asList(UnderlyingStatementEntry2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

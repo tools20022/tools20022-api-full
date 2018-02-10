@@ -373,7 +373,7 @@ public class StructuredRemittanceInformation2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the organization issuing the invoice when different than the creditor or final party"
+	 * "Identification of the organization issuing the invoice when different than the creditor or final party."
 	 * </li>
 	 * </ul>
 	 */
@@ -385,7 +385,7 @@ public class StructuredRemittanceInformation2 {
 			xmlTag = "Invcr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Invoicer";
-			definition = "Identification of the organization issuing the invoice when different than the creditor or final party";
+			definition = "Identification of the organization issuing the invoice when different than the creditor or final party.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

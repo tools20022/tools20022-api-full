@@ -203,7 +203,7 @@ public class Authorisation2 {
 	 * name} = "MaximumAmountByBulkSubmission"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the maximum amount for each  bulk submission."</li>
+	 * definition} = "Specifies the maximum amount for each bulk submission."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumAmountByBulkSubmission = new MMMessageAttribute() {
@@ -214,7 +214,7 @@ public class Authorisation2 {
 			xmlTag = "MaxAmtByBlkSubmissn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAmountByBulkSubmission";
-			definition = "Specifies the maximum amount for each  bulk submission.";
+			definition = "Specifies the maximum amount for each bulk submission.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FixedAmountOrUnlimited1Choice.mmObject();

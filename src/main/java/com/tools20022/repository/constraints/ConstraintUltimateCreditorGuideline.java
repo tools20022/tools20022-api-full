@@ -1215,7 +1215,7 @@ public class ConstraintUltimateCreditorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO2022 Guideline:\nUltimateCreditor may only be present if different from Creditor."
+	 * "ISO2022 Guideline: \nUltimateCreditor may only be present if different from Creditor."
 	 * </li>
 	 * </ul>
 	 */
@@ -1224,7 +1224,7 @@ public class ConstraintUltimateCreditorGuideline {
 			validator = ConstraintUltimateCreditorGuideline::checkCreditTransferTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditorGuideline";
-			definition = "ISO2022 Guideline:\nUltimateCreditor may only be present if different from Creditor.";
+			definition = "ISO2022 Guideline: \nUltimateCreditor may only be present if different from Creditor.";
 			owner_lazy = () -> CreditTransferTransactionInformation8.mmObject();
 		}
 	};
@@ -1274,7 +1274,7 @@ public class ConstraintUltimateCreditorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Guideline:\nUltimateCreditor may only be present if different from Creditor."
+	 * "ISO20022 Guideline: \nUltimateCreditor may only be present if different from Creditor."
 	 * </li>
 	 * </ul>
 	 */
@@ -1283,7 +1283,7 @@ public class ConstraintUltimateCreditorGuideline {
 			validator = ConstraintUltimateCreditorGuideline::checkCreditTransferTransactionInformation9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditorGuideline";
-			definition = "ISO20022 Guideline:\nUltimateCreditor may only be present if different from Creditor.";
+			definition = "ISO20022 Guideline: \nUltimateCreditor may only be present if different from Creditor.";
 			owner_lazy = () -> CreditTransferTransactionInformation9.mmObject();
 		}
 	};
@@ -1304,7 +1304,7 @@ public class ConstraintUltimateCreditorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Guideline:\nUltimateCreditor may only be present if different from Creditor."
+	 * "ISO20022 Guideline: \nUltimateCreditor may only be present if different from Creditor."
 	 * </li>
 	 * </ul>
 	 */
@@ -1313,7 +1313,7 @@ public class ConstraintUltimateCreditorGuideline {
 			validator = ConstraintUltimateCreditorGuideline::checkDirectDebitTransactionInformation6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditorGuideline";
-			definition = "ISO20022 Guideline:\nUltimateCreditor may only be present if different from Creditor.";
+			definition = "ISO20022 Guideline: \nUltimateCreditor may only be present if different from Creditor.";
 			owner_lazy = () -> DirectDebitTransactionInformation6.mmObject();
 		}
 	};
@@ -1334,7 +1334,7 @@ public class ConstraintUltimateCreditorGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "ISO20022 Guideline:\nUltimateCreditor may only be present if different from Creditor."
+	 * "ISO20022 Guideline: \nUltimateCreditor may only be present if different from Creditor."
 	 * </li>
 	 * </ul>
 	 */
@@ -1343,7 +1343,7 @@ public class ConstraintUltimateCreditorGuideline {
 			validator = ConstraintUltimateCreditorGuideline::checkDirectDebitTransactionInformation8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditorGuideline";
-			definition = "ISO20022 Guideline:\nUltimateCreditor may only be present if different from Creditor.";
+			definition = "ISO20022 Guideline: \nUltimateCreditor may only be present if different from Creditor.";
 			owner_lazy = () -> DirectDebitTransactionInformation8.mmObject();
 		}
 	};
@@ -1894,6 +1894,14 @@ public class ConstraintUltimateCreditorGuideline {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "UltimateCreditor may only be present if different from Creditor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline#forCreditTransferTransaction31
+	 * ConstraintUltimateCreditorGuideline.forCreditTransferTransaction31}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1907,6 +1915,7 @@ public class ConstraintUltimateCreditorGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditorGuideline";
 			definition = "UltimateCreditor may only be present if different from Creditor.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forCreditTransferTransaction31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forCreditTransferTransaction17;
 			owner_lazy = () -> CreditTransferTransaction23.mmObject();
 		}
@@ -2010,6 +2019,14 @@ public class ConstraintUltimateCreditorGuideline {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "UltimateCreditor may only be present if different from Creditor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline#forCreditTransferTransaction32
+	 * ConstraintUltimateCreditorGuideline.forCreditTransferTransaction32}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -2023,6 +2040,7 @@ public class ConstraintUltimateCreditorGuideline {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditorGuideline";
 			definition = "UltimateCreditor may only be present if different from Creditor.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forCreditTransferTransaction32);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forCreditTransferTransaction18;
 			owner_lazy = () -> CreditTransferTransaction24.mmObject();
 		}
@@ -2393,6 +2411,134 @@ public class ConstraintUltimateCreditorGuideline {
 			definition = "UltimateCreditor may only be present if different from Creditor.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forMandate6;
 			owner_lazy = () -> Mandate8.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction27
+	 * CreditTransferTransaction27}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UltimateCreditorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "UltimateCreditor may only be present if different from Creditor."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransaction27> forCreditTransferTransaction27 = new MMConstraint<CreditTransferTransaction27>() {
+		{
+			validator = ConstraintUltimateCreditorGuideline::checkCreditTransferTransaction27;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "UltimateCreditorGuideline";
+			definition = "UltimateCreditor may only be present if different from Creditor.";
+			owner_lazy = () -> CreditTransferTransaction27.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction31
+	 * CreditTransferTransaction31}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UltimateCreditorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "UltimateCreditor may only be present if different from Creditor."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline#forCreditTransferTransaction23
+	 * ConstraintUltimateCreditorGuideline.forCreditTransferTransaction23}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransaction31> forCreditTransferTransaction31 = new MMConstraint<CreditTransferTransaction31>() {
+		{
+			validator = ConstraintUltimateCreditorGuideline::checkCreditTransferTransaction31;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "UltimateCreditorGuideline";
+			definition = "UltimateCreditor may only be present if different from Creditor.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forCreditTransferTransaction23;
+			owner_lazy = () -> CreditTransferTransaction31.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction32
+	 * CreditTransferTransaction32}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UltimateCreditorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "UltimateCreditor may only be present if different from Creditor."</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline#forCreditTransferTransaction24
+	 * ConstraintUltimateCreditorGuideline.forCreditTransferTransaction24}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransaction32> forCreditTransferTransaction32 = new MMConstraint<CreditTransferTransaction32>() {
+		{
+			validator = ConstraintUltimateCreditorGuideline::checkCreditTransferTransaction32;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "UltimateCreditorGuideline";
+			definition = "UltimateCreditor may only be present if different from Creditor.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintUltimateCreditorGuideline.forCreditTransferTransaction24;
+			owner_lazy = () -> CreditTransferTransaction32.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CreditTransferTransaction30
+	 * CreditTransferTransaction30}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "UltimateCreditorGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "UltimateCreditor may only be present if different from Creditor."</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CreditTransferTransaction30> forCreditTransferTransaction30 = new MMConstraint<CreditTransferTransaction30>() {
+		{
+			validator = ConstraintUltimateCreditorGuideline::checkCreditTransferTransaction30;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "UltimateCreditorGuideline";
+			definition = "UltimateCreditor may only be present if different from Creditor.";
+			owner_lazy = () -> CreditTransferTransaction30.mmObject();
 		}
 	};
 
@@ -2873,6 +3019,34 @@ public class ConstraintUltimateCreditorGuideline {
 	 * UltimateCreditor may only be present if different from Creditor.
 	 */
 	public static void checkMandate8(Mandate8 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * UltimateCreditor may only be present if different from Creditor.
+	 */
+	public static void checkCreditTransferTransaction27(CreditTransferTransaction27 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * UltimateCreditor may only be present if different from Creditor.
+	 */
+	public static void checkCreditTransferTransaction31(CreditTransferTransaction31 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * UltimateCreditor may only be present if different from Creditor.
+	 */
+	public static void checkCreditTransferTransaction32(CreditTransferTransaction32 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * UltimateCreditor may only be present if different from Creditor.
+	 */
+	public static void checkCreditTransferTransaction30(CreditTransferTransaction30 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

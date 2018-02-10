@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV06;
 import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07;
+import com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08;
 import com.tools20022.repository.choice.CashAccountIdentification5Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.Quantity6Choice;
@@ -89,6 +90,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV07#mmQuantityAndAccountDetails
  * SecuritiesFinancingConfirmationV07.mmQuantityAndAccountDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08#mmQuantityAndAccountDetails
+ * SecuritiesFinancingConfirmationV08.mmQuantityAndAccountDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -620,7 +624,7 @@ public class QuantityAndAccount40 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -638,7 +642,7 @@ public class QuantityAndAccount40 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94a::SAFE"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
-			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
 			previousVersion_lazy = () -> QuantityAndAccount18.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -654,7 +658,8 @@ public class QuantityAndAccount40 {
 						com.tools20022.repository.msg.QuantityAndAccount40.mmRemainingToBeSettledQuantity, com.tools20022.repository.msg.QuantityAndAccount40.mmPreviouslySettledAmount,
 						com.tools20022.repository.msg.QuantityAndAccount40.mmRemainingToBeSettledAmount, com.tools20022.repository.msg.QuantityAndAccount40.mmAccountOwner,
 						com.tools20022.repository.msg.QuantityAndAccount40.mmSafekeepingAccount, com.tools20022.repository.msg.QuantityAndAccount40.mmCashAccount, com.tools20022.repository.msg.QuantityAndAccount40.mmSafekeepingPlace);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV06.mmQuantityAndAccountDetails, SecuritiesFinancingConfirmationV07.mmQuantityAndAccountDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingConfirmationV06.mmQuantityAndAccountDetails, SecuritiesFinancingConfirmationV07.mmQuantityAndAccountDetails,
+						SecuritiesFinancingConfirmationV08.mmQuantityAndAccountDetails);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

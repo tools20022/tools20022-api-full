@@ -188,7 +188,7 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 * name} = "DepositoryOrPlaceOfListingPresenceRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "At least Depository or PlaceOfListing must be present"</li>
+	 * definition} = "At least Depository or PlaceOfListing must be present."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<NetPosition1> forNetPosition1 = new MMConstraint<NetPosition1>() {
@@ -196,7 +196,7 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkNetPosition1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
-			definition = "At least Depository or PlaceOfListing must be present";
+			definition = "At least Depository or PlaceOfListing must be present.";
 			owner_lazy = () -> NetPosition1.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Depository</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeLegDetails[*]/PlaceOfListing</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
 		}
@@ -220,7 +220,7 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 * name} = "DepositoryOrPlaceOfListingPresenceRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "At least Depository or PlaceOfListing must be present"</li>
+	 * definition} = "At least Depository or PlaceOfListing must be present."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -236,7 +236,7 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkNetPosition2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
-			definition = "At least Depository or PlaceOfListing must be present";
+			definition = "At least Depository or PlaceOfListing must be present.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forNetPosition3);
 			owner_lazy = () -> NetPosition2.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Depository</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeLegDetails[*]/PlaceOfListing</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
@@ -261,7 +261,7 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	 * name} = "DepositoryOrPlaceOfListingPresenceRule"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "At least Depository or PlaceOfListing must be present"</li>
+	 * definition} = "At least Depository or PlaceOfListing must be present."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -274,7 +274,7 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 			validator = ConstraintDepositoryOrPlaceOfListingPresenceRule::checkNetPosition3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryOrPlaceOfListingPresenceRule";
-			definition = "At least Depository or PlaceOfListing must be present";
+			definition = "At least Depository or PlaceOfListing must be present.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDepositoryOrPlaceOfListingPresenceRule.forNetPosition2;
 			owner_lazy = () -> NetPosition3.mmObject();
 			expression = "<RuleDefinition><SimpleRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"SimpleRule\"><mustBe><connector>OR</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Depository</leftOperand></BooleanRule><BooleanRule xsi:type=\"Presence\"><leftOperand>/TradeLegDetails[*]/PlaceOfListing</leftOperand></BooleanRule></mustBe></SimpleRule></RuleDefinition>";
@@ -348,21 +348,21 @@ public class ConstraintDepositoryOrPlaceOfListingPresenceRule {
 	}
 
 	/**
-	 * At least Depository or PlaceOfListing must be present
+	 * At least Depository or PlaceOfListing must be present.
 	 */
 	public static void checkNetPosition1(NetPosition1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * At least Depository or PlaceOfListing must be present
+	 * At least Depository or PlaceOfListing must be present.
 	 */
 	public static void checkNetPosition2(NetPosition2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
 	/**
-	 * At least Depository or PlaceOfListing must be present
+	 * At least Depository or PlaceOfListing must be present.
 	 */
 	public static void checkNetPosition3(NetPosition3 obj) throws Exception {
 		throw new NotImplementedConstraintException();

@@ -126,6 +126,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentReturnCriteria3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to report on the payment."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4
+ * PaymentReturnCriteria4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -166,6 +173,14 @@ public class PaymentReturnCriteria3 {
 	 * definition} =
 	 * "Indicates whether the original payment transaction message identification is requested.\nUsage: this is the former TransactionReference."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmMessageIdentificationIndicator
+	 * PaymentReturnCriteria4.mmMessageIdentificationIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMessageIdentificationIndicator = new MMMessageAttribute() {
@@ -176,6 +191,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentificationIndicator";
 			definition = "Indicates whether the original payment transaction message identification is requested.\nUsage: this is the former TransactionReference.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmMessageIdentificationIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -211,6 +227,14 @@ public class PaymentReturnCriteria3 {
 	 * definition} =
 	 * "Indicates whether the requested execution date is requested.\nUsage: this is the former TransferValueDate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmRequestedExecutionDateIndicator
+	 * PaymentReturnCriteria4.mmRequestedExecutionDateIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRequestedExecutionDateIndicator = new MMMessageAttribute() {
@@ -221,6 +245,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDateIndicator";
 			definition = "Indicates whether the requested execution date is requested.\nUsage: this is the former TransferValueDate.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmRequestedExecutionDateIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -254,6 +279,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the instruction is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmInstructionIndicator
+	 * PaymentReturnCriteria4.mmInstructionIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInstructionIndicator = new MMMessageAttribute() {
@@ -264,6 +297,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIndicator";
 			definition = "Indicates whether the instruction is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmInstructionIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -297,6 +331,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the instruction status is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmInstructionStatusReturnCriteria
+	 * PaymentReturnCriteria4.mmInstructionStatusReturnCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInstructionStatusReturnCriteria = new MMMessageAttribute() {
@@ -307,6 +349,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionStatusReturnCriteria";
 			definition = "Indicates whether the instruction status is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmInstructionStatusReturnCriteria);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.InstructionStatusReturnCriteria.mmObject();
@@ -340,6 +383,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the instructed amount is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmInstructedAmountIndicator
+	 * PaymentReturnCriteria4.mmInstructedAmountIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInstructedAmountIndicator = new MMMessageAttribute() {
@@ -350,6 +401,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountIndicator";
 			definition = "Indicates whether the instructed amount is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmInstructedAmountIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -384,6 +436,14 @@ public class PaymentReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the credit debit indicator is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmCreditDebitIndicator
+	 * PaymentReturnCriteria4.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
@@ -394,6 +454,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the credit debit indicator is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -428,6 +489,14 @@ public class PaymentReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the interbank settlement amount is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmInterbankSettlementAmountIndicator
+	 * PaymentReturnCriteria4.mmInterbankSettlementAmountIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementAmountIndicator = new MMMessageAttribute() {
@@ -438,6 +507,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmountIndicator";
 			definition = "Indicates whether the interbank settlement amount is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmInterbankSettlementAmountIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -471,6 +541,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the payment priority is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmPriorityIndicator
+	 * PaymentReturnCriteria4.mmPriorityIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPriorityIndicator = new MMMessageAttribute() {
@@ -481,6 +559,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriorityIndicator";
 			definition = "Indicates whether the payment priority is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmPriorityIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -515,6 +594,14 @@ public class PaymentReturnCriteria3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the processing validity time is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmProcessingValidityTimeIndicator
+	 * PaymentReturnCriteria4.mmProcessingValidityTimeIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProcessingValidityTimeIndicator = new MMMessageAttribute() {
@@ -525,6 +612,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingValidityTimeIndicator";
 			definition = "Indicates whether the processing validity time is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmProcessingValidityTimeIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -558,6 +646,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the transfer reason is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmPurposeIndicator
+	 * PaymentReturnCriteria4.mmPurposeIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPurposeIndicator = new MMMessageAttribute() {
@@ -568,6 +664,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PurposeIndicator";
 			definition = "Indicates whether the transfer reason is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmPurposeIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -601,6 +698,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the instruction copy is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmInstructionCopyIndicator
+	 * PaymentReturnCriteria4.mmInstructionCopyIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInstructionCopyIndicator = new MMMessageAttribute() {
@@ -611,6 +716,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionCopyIndicator";
 			definition = "Indicates whether the instruction copy is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmInstructionCopyIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -644,6 +750,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the payment message type is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmPaymentMessageTypeIndicator
+	 * PaymentReturnCriteria4.mmPaymentMessageTypeIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentMessageTypeIndicator = new MMMessageAttribute() {
@@ -654,6 +768,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMessageTypeIndicator";
 			definition = "Indicates whether the payment message type is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmPaymentMessageTypeIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -687,6 +802,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the payment type is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmPaymentTypeIndicator
+	 * PaymentReturnCriteria4.mmPaymentTypeIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentTypeIndicator = new MMMessageAttribute() {
@@ -697,6 +820,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeIndicator";
 			definition = "Indicates whether the payment type is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmPaymentTypeIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -730,7 +854,15 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the transaction identification is requested.\nUsage:  this is the former PaymentInstructionReference. "
+	 * "Indicates whether the transaction identification is requested.\nUsage: this is the former PaymentInstructionReference."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmTransactionIdentificationIndicator
+	 * PaymentReturnCriteria4.mmTransactionIdentificationIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -741,7 +873,8 @@ public class PaymentReturnCriteria3 {
 			xmlTag = "TxIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentificationIndicator";
-			definition = "Indicates whether the transaction identification is requested.\nUsage:  this is the former PaymentInstructionReference. ";
+			definition = "Indicates whether the transaction identification is requested.\nUsage: this is the former PaymentInstructionReference.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmTransactionIdentificationIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -777,6 +910,14 @@ public class PaymentReturnCriteria3 {
 	 * definition} =
 	 * "Indicates whether the interbank settlement date is requested.\nUsage: this is the former InterbankValueDate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmInterbankSettlementDateIndicator
+	 * PaymentReturnCriteria4.mmInterbankSettlementDateIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmInterbankSettlementDateIndicator = new MMMessageAttribute() {
@@ -787,6 +928,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDateIndicator";
 			definition = "Indicates whether the interbank settlement date is requested.\nUsage: this is the former InterbankValueDate.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmInterbankSettlementDateIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -820,7 +962,15 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the end-to-end identification is requested.\nUsage: this is the former RelatedReference"
+	 * "Indicates whether the end-to-end identification is requested.\nUsage: this is the former RelatedReference."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmEndToEndIdentificationIndicator
+	 * PaymentReturnCriteria4.mmEndToEndIdentificationIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -831,7 +981,8 @@ public class PaymentReturnCriteria3 {
 			xmlTag = "EndToEndIdInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentificationIndicator";
-			definition = "Indicates whether the end-to-end identification is requested.\nUsage: this is the former RelatedReference";
+			definition = "Indicates whether the end-to-end identification is requested.\nUsage: this is the former RelatedReference.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmEndToEndIdentificationIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -865,6 +1016,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the payment method is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmPaymentMethodIndicator
+	 * PaymentReturnCriteria4.mmPaymentMethodIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentMethodIndicator = new MMMessageAttribute() {
@@ -875,6 +1034,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethodIndicator";
 			definition = "Indicates whether the payment method is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmPaymentMethodIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -908,6 +1068,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the debtor is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmDebtorIndicator
+	 * PaymentReturnCriteria4.mmDebtorIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDebtorIndicator = new MMMessageAttribute() {
@@ -918,6 +1086,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorIndicator";
 			definition = "Indicates whether the debtor is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmDebtorIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -953,6 +1122,14 @@ public class PaymentReturnCriteria3 {
 	 * definition} =
 	 * "Indicates whether the debtor agent is requested.\nUsage: this is the former FirstAgent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmDebtorAgentIndicator
+	 * PaymentReturnCriteria4.mmDebtorAgentIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDebtorAgentIndicator = new MMMessageAttribute() {
@@ -963,6 +1140,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentIndicator";
 			definition = "Indicates whether the debtor agent is requested.\nUsage: this is the former FirstAgent.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmDebtorAgentIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -996,7 +1174,15 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the instructing reimbursement agent  is requested.\r\nUsage: this is the former InstructingAgentCorrespondent."
+	 * "Indicates whether the instructing reimbursement agent is requested.\r\nUsage: this is the former InstructingAgentCorrespondent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmInstructingReimbursementAgentIndicator
+	 * PaymentReturnCriteria4.mmInstructingReimbursementAgentIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -1007,7 +1193,8 @@ public class PaymentReturnCriteria3 {
 			xmlTag = "InstgRmbrsmntAgtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructingReimbursementAgentIndicator";
-			definition = "Indicates whether the instructing reimbursement agent  is requested.\r\nUsage: this is the former InstructingAgentCorrespondent.";
+			definition = "Indicates whether the instructing reimbursement agent is requested.\r\nUsage: this is the former InstructingAgentCorrespondent.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmInstructingReimbursementAgentIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -1041,7 +1228,15 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the instructed reimbursement agent  is requested.\r\nUsage: this is the former InstructedAgentCorrespondent."
+	 * "Indicates whether the instructed reimbursement agent is requested.\r\nUsage: this is the former InstructedAgentCorrespondent."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmInstructedReimbursementAgentIndicator
+	 * PaymentReturnCriteria4.mmInstructedReimbursementAgentIndicator}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -1052,7 +1247,8 @@ public class PaymentReturnCriteria3 {
 			xmlTag = "InstdRmbrsmntAgtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedReimbursementAgentIndicator";
-			definition = "Indicates whether the instructed reimbursement agent  is requested.\r\nUsage: this is the former InstructedAgentCorrespondent.";
+			definition = "Indicates whether the instructed reimbursement agent is requested.\r\nUsage: this is the former InstructedAgentCorrespondent.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmInstructedReimbursementAgentIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -1086,6 +1282,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the intermediary is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmIntermediaryIndicator
+	 * PaymentReturnCriteria4.mmIntermediaryIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIntermediaryIndicator = new MMMessageAttribute() {
@@ -1096,6 +1300,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryIndicator";
 			definition = "Indicates whether the intermediary is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmIntermediaryIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -1131,6 +1336,14 @@ public class PaymentReturnCriteria3 {
 	 * definition} =
 	 * "Indicates whether the creditor agent is requested.\nUsage: this is the former FinalAgent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmCreditorAgentIndicator
+	 * PaymentReturnCriteria4.mmCreditorAgentIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditorAgentIndicator = new MMMessageAttribute() {
@@ -1141,6 +1354,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentIndicator";
 			definition = "Indicates whether the creditor agent is requested.\nUsage: this is the former FinalAgent.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmCreditorAgentIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -1174,6 +1388,14 @@ public class PaymentReturnCriteria3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates whether the creditor is requested."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentReturnCriteria4#mmCreditorIndicator
+	 * PaymentReturnCriteria4.mmCreditorIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditorIndicator = new MMMessageAttribute() {
@@ -1184,6 +1406,7 @@ public class PaymentReturnCriteria3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorIndicator";
 			definition = "Indicates whether the creditor is requested.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmCreditorIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> RequestedIndicator.mmObject();
@@ -1209,6 +1432,7 @@ public class PaymentReturnCriteria3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentReturnCriteria3";
 				definition = "Defines the criteria used to report on the payment.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentReturnCriteria4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

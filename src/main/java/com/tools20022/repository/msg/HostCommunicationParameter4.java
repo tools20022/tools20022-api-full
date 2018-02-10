@@ -76,6 +76,13 @@ import javax.xml.bind.annotation.XmlType;
  * "HostCommunicationParameter4"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Configuration parameters to communicate with a host."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.HostCommunicationParameter5
+ * HostCommunicationParameter5}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter3
@@ -115,6 +122,14 @@ public class HostCommunicationParameter4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of action for the configuration parameters."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter5#mmActionType
+	 * HostCommunicationParameter5.mmActionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmActionType = new MMMessageAttribute() {
@@ -125,6 +140,7 @@ public class HostCommunicationParameter4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ActionType";
 			definition = "Type of action for the configuration parameters.";
+			nextVersions_lazy = () -> Arrays.asList(HostCommunicationParameter5.mmActionType);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TerminalManagementAction3Code.mmObject();
@@ -162,6 +178,14 @@ public class HostCommunicationParameter4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the host."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter5#mmHostIdentification
+	 * HostCommunicationParameter5.mmHostIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -178,6 +202,7 @@ public class HostCommunicationParameter4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostIdentification";
 			definition = "Identification of the host.";
+			nextVersions_lazy = () -> Arrays.asList(HostCommunicationParameter5.mmHostIdentification);
 			previousVersion_lazy = () -> HostCommunicationParameter3.mmHostIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -215,6 +240,14 @@ public class HostCommunicationParameter4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Network parameters of the host."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter5#mmAddress
+	 * HostCommunicationParameter5.mmAddress}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -231,6 +264,7 @@ public class HostCommunicationParameter4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Address";
 			definition = "Network parameters of the host.";
+			nextVersions_lazy = () -> Arrays.asList(HostCommunicationParameter5.mmAddress);
 			previousVersion_lazy = () -> HostCommunicationParameter3.mmAddress;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -264,6 +298,14 @@ public class HostCommunicationParameter4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Cryptographic key used to communicate with the host."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter5#mmKey
+	 * HostCommunicationParameter5.mmKey}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -279,6 +321,7 @@ public class HostCommunicationParameter4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Key";
 			definition = "Cryptographic key used to communicate with the host.";
+			nextVersions_lazy = () -> Arrays.asList(HostCommunicationParameter5.mmKey);
 			previousVersion_lazy = () -> HostCommunicationParameter3.mmKey;
 			minOccurs = 0;
 			isComposite = true;
@@ -312,6 +355,14 @@ public class HostCommunicationParameter4 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Access information to reach an intermediate network service provider."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.HostCommunicationParameter5#mmNetworkServiceProvider
+	 * HostCommunicationParameter5.mmNetworkServiceProvider}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmNetworkServiceProvider = new MMMessageAssociationEnd() {
@@ -322,6 +373,7 @@ public class HostCommunicationParameter4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetworkServiceProvider";
 			definition = "Access information to reach an intermediate network service provider.";
+			nextVersions_lazy = () -> Arrays.asList(HostCommunicationParameter5.mmNetworkServiceProvider);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -340,6 +392,7 @@ public class HostCommunicationParameter4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "HostCommunicationParameter4";
 				definition = "Configuration parameters to communicate with a host.";
+				nextVersions_lazy = () -> Arrays.asList(HostCommunicationParameter5.mmObject());
 				previousVersion_lazy = () -> HostCommunicationParameter3.mmObject();
 			}
 		});

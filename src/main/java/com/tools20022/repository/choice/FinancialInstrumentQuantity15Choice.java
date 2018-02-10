@@ -112,7 +112,8 @@ public class FinancialInstrumentQuantity15Choice {
 	 * name} = "Unit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Quantity expressed as a number, eg, a number of shares."</li>
+	 * definition} =
+	 * "Quantity expressed as a number, for example, a number of shares."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUnit = new MMMessageAttribute() {
@@ -124,7 +125,7 @@ public class FinancialInstrumentQuantity15Choice {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, "UNIT"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Unit";
-			definition = "Quantity expressed as a number, eg, a number of shares.";
+			definition = "Quantity expressed as a number, for example, a number of shares.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINDecimalNumber.mmObject();
@@ -163,7 +164,7 @@ public class FinancialInstrumentQuantity15Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument."
+	 * "Quantity expressed as an amount representing the face amount, that is, the principal of a debt instrument."
 	 * </li>
 	 * </ul>
 	 */
@@ -175,7 +176,7 @@ public class FinancialInstrumentQuantity15Choice {
 			xmlTag = "FaceAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FaceAmount";
-			definition = "Quantity expressed as an amount representing the face amount, ie, the principal, of a debt instrument.";
+			definition = "Quantity expressed as an amount representing the face amount, that is, the principal of a debt instrument.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> RestrictedFINImpliedCurrencyAndAmount.mmObject();

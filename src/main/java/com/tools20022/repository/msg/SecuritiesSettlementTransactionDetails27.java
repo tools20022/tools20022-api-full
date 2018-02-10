@@ -105,6 +105,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides the details of the update(s) for the settlement transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33
+ * SecuritiesSettlementTransactionDetails33}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails20
@@ -150,6 +158,15 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides settlement type and identification information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmSettlementTypeAndAdditionalParameters
+	 * SecuritiesSettlementTransactionDetails33.
+	 * mmSettlementTypeAndAdditionalParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -167,6 +184,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementTypeAndAdditionalParameters";
 			definition = "Provides settlement type and identification information.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmSettlementTypeAndAdditionalParameters);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmSettlementTypeAndAdditionalParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -201,6 +219,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * definition} =
 	 * "Link to another transaction that must be processed after, before or at the same time."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmLinkages
+	 * SecuritiesSettlementTransactionDetails33.mmLinkages}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -216,6 +242,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Linkages";
 			definition = "Link to another transaction that must be processed after, before or at the same time.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmLinkages);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmLinkages;
 			minOccurs = 0;
 			isComposite = true;
@@ -254,6 +281,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Details of the trade."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmTradeDetails
+	 * SecuritiesSettlementTransactionDetails33.mmTradeDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -270,6 +305,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TradeDetails";
 			definition = "Details of the trade.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmTradeDetails);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmTradeDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -309,6 +345,15 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Attributes defining a financial instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmFinancialInstrumentAttributes
+	 * SecuritiesSettlementTransactionDetails33.mmFinancialInstrumentAttributes}
+	 * </li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -326,6 +371,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentAttributes";
 			definition = "Attributes defining a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmFinancialInstrumentAttributes);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmFinancialInstrumentAttributes;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -366,6 +412,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * definition} =
 	 * "Details related to the account and quantity involved in the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmQuantityAndAccountDetails
+	 * SecuritiesSettlementTransactionDetails33.mmQuantityAndAccountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -382,6 +436,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QuantityAndAccountDetails";
 			definition = "Details related to the account and quantity involved in the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmQuantityAndAccountDetails);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmQuantityAndAccountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -420,7 +475,15 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in."
+	 * "Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmSettlementParameters
+	 * SecuritiesSettlementTransactionDetails33.mmSettlementParameters}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -437,7 +500,8 @@ public class SecuritiesSettlementTransactionDetails27 {
 			xmlTag = "SttlmParams";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementParameters";
-			definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular  transaction of a financial instrument can be settled.  These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
+			definition = "Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmSettlementParameters);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmSettlementParameters;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -479,6 +543,15 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * definition} =
 	 * "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmStandingSettlementInstructionDetails
+	 * SecuritiesSettlementTransactionDetails33.
+	 * mmStandingSettlementInstructionDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -496,6 +569,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StandingSettlementInstructionDetails";
 			definition = "Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmStandingSettlementInstructionDetails);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmStandingSettlementInstructionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -534,6 +608,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of delivering settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmDeliveringSettlementParties
+	 * SecuritiesSettlementTransactionDetails33.mmDeliveringSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -550,6 +632,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DeliveringSettlementParties";
 			definition = "Identifies the chain of delivering settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmDeliveringSettlementParties);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmDeliveringSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -588,6 +671,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the chain of receiving settlement parties."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmReceivingSettlementParties
+	 * SecuritiesSettlementTransactionDetails33.mmReceivingSettlementParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -604,6 +695,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReceivingSettlementParties";
 			definition = "Identifies the chain of receiving settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmReceivingSettlementParties);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmReceivingSettlementParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -644,6 +736,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * definition} =
 	 * "Cash parties involved in the transaction if different for the securities settlement parties."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmCashParties
+	 * SecuritiesSettlementTransactionDetails33.mmCashParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -660,6 +760,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashParties";
 			definition = "Cash parties involved in the transaction if different for the securities settlement parties.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmCashParties);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmCashParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -700,6 +801,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * definition} =
 	 * "Total amount of money to be paid or received in exchange for the securities."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmSettlementAmount
+	 * SecuritiesSettlementTransactionDetails33.mmSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -716,6 +825,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money to be paid or received in exchange for the securities.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmSettlementAmount);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -749,6 +859,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Other amounts than the settlement amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmOtherAmounts
+	 * SecuritiesSettlementTransactionDetails33.mmOtherAmounts}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -764,6 +882,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherAmounts";
 			definition = "Other amounts than the settlement amount.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmOtherAmounts);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmOtherAmounts;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -797,6 +916,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Other business parties relevant to the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmOtherBusinessParties
+	 * SecuritiesSettlementTransactionDetails33.mmOtherBusinessParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -812,6 +939,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherBusinessParties";
 			definition = "Other business parties relevant to the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmOtherBusinessParties);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmOtherBusinessParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -853,6 +981,15 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * definition} =
 	 * "Provides information required for the registration or physical settlement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmAdditionalPhysicalOrRegistrationDetails
+	 * SecuritiesSettlementTransactionDetails33.
+	 * mmAdditionalPhysicalOrRegistrationDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -870,6 +1007,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalPhysicalOrRegistrationDetails";
 			definition = "Provides information required for the registration or physical settlement.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmAdditionalPhysicalOrRegistrationDetails);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmAdditionalPhysicalOrRegistrationDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -905,6 +1043,14 @@ public class SecuritiesSettlementTransactionDetails27 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesSettlementTransactionDetails33#mmSupplementaryData
+	 * SecuritiesSettlementTransactionDetails33.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -920,6 +1066,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmSupplementaryData);
 			previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
@@ -943,6 +1090,7 @@ public class SecuritiesSettlementTransactionDetails27 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "SecuritiesSettlementTransactionDetails27";
 				definition = "Provides the details of the update(s) for the settlement transaction.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionDetails33.mmObject());
 				previousVersion_lazy = () -> SecuritiesSettlementTransactionDetails20.mmObject();
 			}
 		});

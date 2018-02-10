@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.camt.ClaimNonReceiptV04;
 import com.tools20022.repository.area.camt.ClaimNonReceiptV05;
+import com.tools20022.repository.area.camt.ClaimNonReceiptV06;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.entity.PaymentInvestigationCase;
 import com.tools20022.repository.entity.PaymentInvestigationCaseResolution;
@@ -67,6 +68,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV05#mmCoverDetails
  * ClaimNonReceiptV05.mmCoverDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.ClaimNonReceiptV06#mmCoverDetails
+ * ClaimNonReceiptV06.mmCoverDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -192,7 +196,7 @@ public class MissingCover3 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.MissingCover3.mmMissingCoverIndicator, com.tools20022.repository.msg.MissingCover3.mmCoverCorrection);
-				messageBuildingBlock_lazy = () -> Arrays.asList(ClaimNonReceiptV04.mmCoverDetails, ClaimNonReceiptV05.mmCoverDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ClaimNonReceiptV04.mmCoverDetails, ClaimNonReceiptV05.mmCoverDetails, ClaimNonReceiptV06.mmCoverDetails);
 				trace_lazy = () -> PaymentInvestigationCase.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

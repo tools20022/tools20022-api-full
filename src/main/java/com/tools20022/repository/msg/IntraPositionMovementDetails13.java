@@ -107,6 +107,13 @@ import javax.xml.bind.annotation.XmlType;
  * "IntraPositionMovementDetails13"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Details of the intra-position movement."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15
+ * IntraPositionMovementDetails15}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails11
@@ -152,6 +159,14 @@ public class IntraPositionMovementDetails13 {
 	 * definition} =
 	 * "Identifications (account owner and/or account servicer) of the intra-position movement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmIdentification
+	 * IntraPositionMovementDetails15.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -168,6 +183,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identifications (account owner and/or account servicer) of the intra-position movement.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmIdentification);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -207,6 +223,14 @@ public class IntraPositionMovementDetails13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of financial instrument effectively settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmSettledQuantity
+	 * IntraPositionMovementDetails15.mmSettledQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -223,6 +247,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettledQuantity";
 			definition = "Quantity of financial instrument effectively settled.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmSettledQuantity);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmSettledQuantity;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -262,6 +287,14 @@ public class IntraPositionMovementDetails13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of financial instrument previously settled."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmPreviouslySettledQuantity
+	 * IntraPositionMovementDetails15.mmPreviouslySettledQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -278,6 +311,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviouslySettledQuantity";
 			definition = "Quantity of financial instrument previously settled.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmPreviouslySettledQuantity);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmPreviouslySettledQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -318,6 +352,14 @@ public class IntraPositionMovementDetails13 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Quantity of financial instrument remaining to be settled."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmRemainingToBeSettledQuantity
+	 * IntraPositionMovementDetails15.mmRemainingToBeSettledQuantity}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -334,6 +376,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemainingToBeSettledQuantity";
 			definition = "Quantity of financial instrument remaining to be settled.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmRemainingToBeSettledQuantity);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmRemainingToBeSettledQuantity;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -370,6 +413,14 @@ public class IntraPositionMovementDetails13 {
 	 * definition} =
 	 * "Number identifying a securities sub-balance type (example restriction identification etc…)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmSecuritiesSubBalanceIdentification
+	 * IntraPositionMovementDetails15.mmSecuritiesSubBalanceIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -385,6 +436,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesSubBalanceIdentification";
 			definition = "Number identifying a securities sub-balance type (example restriction identification etc…).";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmSecuritiesSubBalanceIdentification);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmSecuritiesSubBalanceIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -424,6 +476,14 @@ public class IntraPositionMovementDetails13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Balance to which the securities were moved."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmBalanceTo
+	 * IntraPositionMovementDetails15.mmBalanceTo}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -440,6 +500,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTo";
 			definition = "Balance to which the securities were moved.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmBalanceTo);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmBalanceTo;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -479,6 +540,14 @@ public class IntraPositionMovementDetails13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date and time at which the securities were moved."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmSettlementDate
+	 * IntraPositionMovementDetails15.mmSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -495,6 +564,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementDate";
 			definition = "Date and time at which the securities were moved.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmSettlementDate);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -536,6 +606,14 @@ public class IntraPositionMovementDetails13 {
 	 * definition} =
 	 * "Date/time securities become available for sale (if securities become unavailable, this specifies the date/time at which they will become available again)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmAvailableDate
+	 * IntraPositionMovementDetails15.mmAvailableDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -552,6 +630,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AvailableDate";
 			definition = "Date/time securities become available for sale (if securities become unavailable, this specifies the date/time at which they will become available again).";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmAvailableDate);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmAvailableDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -586,6 +665,14 @@ public class IntraPositionMovementDetails13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Time stamp on when the transaction is acknowledged."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmAcknowledgedStatusTimeStamp
+	 * IntraPositionMovementDetails15.mmAcknowledgedStatusTimeStamp}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAcknowledgedStatusTimeStamp = new MMMessageAttribute() {
@@ -596,6 +683,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgedStatusTimeStamp";
 			definition = "Time stamp on when the transaction is acknowledged.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmAcknowledgedStatusTimeStamp);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -633,6 +721,14 @@ public class IntraPositionMovementDetails13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of corporate event."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmCorporateActionEventType
+	 * IntraPositionMovementDetails15.mmCorporateActionEventType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -649,6 +745,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventType";
 			definition = "Specifies the type of corporate event.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmCorporateActionEventType);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmCorporateActionEventType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -689,6 +786,14 @@ public class IntraPositionMovementDetails13 {
 	 * definition} =
 	 * "Value of the collateral available for the delivery settlement process at the account level."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmCollateralMonitorAmount
+	 * IntraPositionMovementDetails15.mmCollateralMonitorAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -705,6 +810,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CollateralMonitorAmount";
 			definition = "Value of the collateral available for the delivery settlement process at the account level.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmCollateralMonitorAmount);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmCollateralMonitorAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -741,6 +847,14 @@ public class IntraPositionMovementDetails13 {
 	 * definition} =
 	 * "Provides additional settlement processing information which can not be included within the structured fields of the message."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmInstructionProcessingAdditionalDetails
+	 * IntraPositionMovementDetails15.mmInstructionProcessingAdditionalDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -756,6 +870,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionProcessingAdditionalDetails";
 			definition = "Provides additional settlement processing information which can not be included within the structured fields of the message.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmInstructionProcessingAdditionalDetails);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmInstructionProcessingAdditionalDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -790,6 +905,14 @@ public class IntraPositionMovementDetails13 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraPositionMovementDetails15#mmSupplementaryData
+	 * IntraPositionMovementDetails15.mmSupplementaryData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -805,6 +928,7 @@ public class IntraPositionMovementDetails13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SupplementaryData";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmSupplementaryData);
 			previousVersion_lazy = () -> IntraPositionMovementDetails11.mmSupplementaryData;
 			minOccurs = 0;
 			isComposite = true;
@@ -828,6 +952,7 @@ public class IntraPositionMovementDetails13 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "IntraPositionMovementDetails13";
 				definition = "Details of the intra-position movement.";
+				nextVersions_lazy = () -> Arrays.asList(IntraPositionMovementDetails15.mmObject());
 				previousVersion_lazy = () -> IntraPositionMovementDetails11.mmObject();
 			}
 		});

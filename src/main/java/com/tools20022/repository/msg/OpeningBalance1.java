@@ -189,7 +189,7 @@ public class OpeningBalance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance)"
+	 * "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -210,7 +210,7 @@ public class OpeningBalance1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::FIOP or INOP"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningBalance";
-			definition = "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance)";
+			definition = "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance).";
 			nextVersions_lazy = () -> Arrays.asList(OpeningBalance3.mmOpeningBalance);
 			maxOccurs = 1;
 			minOccurs = 1;

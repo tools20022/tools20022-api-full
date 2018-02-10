@@ -280,8 +280,7 @@ public class GeneralInformation4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Method used by the trading parties to negotiate and/or execute a deal. "
-	 * </li>
+	 * "Method used by the trading parties to negotiate and/or execute a deal."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -300,7 +299,7 @@ public class GeneralInformation4 {
 			xmlTag = "DealgMtd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealingMethod";
-			definition = "Method used by the trading parties to negotiate and/or execute a deal. ";
+			definition = "Method used by the trading parties to negotiate and/or execute a deal.";
 			nextVersions_lazy = () -> Arrays.asList(GeneralInformation5.mmDealingMethod);
 			maxOccurs = 1;
 			minOccurs = 0;

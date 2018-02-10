@@ -44,7 +44,7 @@ import java.util.Arrays;
  * structure, ETC.) and should not be provided by the account owner.<br>
  * • The SafekeepingPlace is the counterparty's Depository. The transaction is
  * therefore domestic (to an NCSD) or internal to an ICSD.<br>
- * For more details, see the relevant market practice document on www.smpg.info
+ * For more details, see the relevant market practice document on www.smpg.info.
  */
 public class ConstraintSafekeepingPlaceGuideline {
 
@@ -65,7 +65,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -82,7 +82,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount44);
 			owner_lazy = () -> QuantityAndAccount29.mmObject();
 		}
@@ -104,7 +104,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -121,7 +121,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount43);
 			owner_lazy = () -> QuantityAndAccount30.mmObject();
 		}
@@ -143,7 +143,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -152,7 +152,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount32;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount32.mmObject();
 		}
 	};
@@ -173,7 +173,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -182,7 +182,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount33;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount33.mmObject();
 		}
 	};
@@ -203,7 +203,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -212,7 +212,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount1.mmObject();
 		}
 	};
@@ -233,7 +233,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -242,7 +242,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount5.mmObject();
 		}
 	};
@@ -263,7 +263,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -272,7 +272,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount17.mmObject();
 		}
 	};
@@ -293,7 +293,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -302,7 +302,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount24;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount24.mmObject();
 		}
 	};
@@ -323,7 +323,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -340,7 +340,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount39);
 			owner_lazy = () -> QuantityAndAccount25.mmObject();
 		}
@@ -362,7 +362,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -371,7 +371,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount34;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount34.mmObject();
 		}
 	};
@@ -392,7 +392,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -401,7 +401,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount2.mmObject();
 		}
 	};
@@ -422,7 +422,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -431,7 +431,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount12.mmObject();
 		}
 	};
@@ -452,7 +452,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -461,7 +461,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount15.mmObject();
 		}
 	};
@@ -482,7 +482,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -491,7 +491,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount20.mmObject();
 		}
 	};
@@ -512,7 +512,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -529,7 +529,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount41);
 			owner_lazy = () -> QuantityAndAccount28.mmObject();
 		}
@@ -551,7 +551,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -560,7 +560,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> QuantityAndAccount37.mmObject();
 		}
 	};
@@ -581,7 +581,15 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount65
+	 * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount65}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -595,7 +603,8 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount65);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount25;
 			owner_lazy = () -> QuantityAndAccount39.mmObject();
 		}
@@ -617,7 +626,15 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount64
+	 * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount64}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -631,7 +648,8 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount41;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount64);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount28;
 			owner_lazy = () -> QuantityAndAccount41.mmObject();
 		}
@@ -653,7 +671,15 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount68
+	 * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount68}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -667,7 +693,8 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount43;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount68);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount30;
 			owner_lazy = () -> QuantityAndAccount43.mmObject();
 		}
@@ -689,7 +716,15 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount66
+	 * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount66}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -703,7 +738,8 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount66);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount29;
 			owner_lazy = () -> QuantityAndAccount44.mmObject();
 		}
@@ -725,7 +761,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -742,7 +778,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount47;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount56);
 			owner_lazy = () -> QuantityAndAccount47.mmObject();
 		}
@@ -764,7 +800,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -781,7 +817,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount51;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount57);
 			owner_lazy = () -> QuantityAndAccount51.mmObject();
 		}
@@ -803,7 +839,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -820,7 +856,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount55;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount60);
 			owner_lazy = () -> QuantityAndAccount55.mmObject();
 		}
@@ -842,7 +878,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -859,7 +895,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount54;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount59);
 			owner_lazy = () -> QuantityAndAccount54.mmObject();
 		}
@@ -881,7 +917,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -895,7 +931,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount51;
 			owner_lazy = () -> QuantityAndAccount57.mmObject();
 		}
@@ -917,7 +953,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -931,7 +967,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount56;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount47;
 			owner_lazy = () -> QuantityAndAccount56.mmObject();
 		}
@@ -953,7 +989,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -967,7 +1003,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount59;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount54;
 			owner_lazy = () -> QuantityAndAccount59.mmObject();
 		}
@@ -989,7 +1025,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1003,9 +1039,273 @@ public class ConstraintSafekeepingPlaceGuideline {
 			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlaceGuideline";
-			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount55;
 			owner_lazy = () -> QuantityAndAccount60.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount64
+	 * QuantityAndAccount64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount41
+	 * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount41}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount64> forQuantityAndAccount64 = new MMConstraint<QuantityAndAccount64>() {
+		{
+			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceGuideline";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount41;
+			owner_lazy = () -> QuantityAndAccount64.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount65
+	 * QuantityAndAccount65}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the account owner, it is recommended to use the place of safekeeping field following the market practice described below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount39
+	 * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount39}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount65> forQuantityAndAccount65 = new MMConstraint<QuantityAndAccount65>() {
+		{
+			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount65;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceGuideline";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the account owner, it is recommended to use the place of safekeeping field following the market practice described below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount39;
+			owner_lazy = () -> QuantityAndAccount65.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount66
+	 * QuantityAndAccount66}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount44
+	 * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount44}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount66> forQuantityAndAccount66 = new MMConstraint<QuantityAndAccount66>() {
+		{
+			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount66;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceGuideline";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount44;
+			owner_lazy = () -> QuantityAndAccount66.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount68
+	 * QuantityAndAccount68}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline#forQuantityAndAccount43
+	 * ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount43}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount68> forQuantityAndAccount68 = new MMConstraint<QuantityAndAccount68>() {
+		{
+			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount68;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceGuideline";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintSafekeepingPlaceGuideline.forQuantityAndAccount43;
+			owner_lazy = () -> QuantityAndAccount68.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount69
+	 * QuantityAndAccount69}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the account owner, it is recommended to use the place of safekeeping field following the market practice described below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount69> forQuantityAndAccount69 = new MMConstraint<QuantityAndAccount69>() {
+		{
+			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount69;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceGuideline";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the account owner, it is recommended to use the place of safekeeping field following the market practice described below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> QuantityAndAccount69.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount72
+	 * QuantityAndAccount72}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount72> forQuantityAndAccount72 = new MMConstraint<QuantityAndAccount72>() {
+		{
+			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount72;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceGuideline";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> QuantityAndAccount72.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount75
+	 * QuantityAndAccount75}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount75> forQuantityAndAccount75 = new MMConstraint<QuantityAndAccount75>() {
+		{
+			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount75;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceGuideline";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> QuantityAndAccount75.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.QuantityAndAccount76
+	 * QuantityAndAccount76}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "SafekeepingPlaceGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<QuantityAndAccount76> forQuantityAndAccount76 = new MMConstraint<QuantityAndAccount76>() {
+		{
+			validator = ConstraintSafekeepingPlaceGuideline::checkQuantityAndAccount76;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "SafekeepingPlaceGuideline";
+			definition = "When used (see usage rule SafekeepingPlaceRule), unless special arrangements exist between the account servicer and the\r\naccount owner, it is recommended to use the place of safekeeping field following the market practice\r\ndescribed below:\r\n• SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for domestic and NCSD to NCSD settlement instructions.\r\n• SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for ICSD internal, ICSD/local and ICSD to ICSD settlement\r\ninstructions.\r\n• SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for instance, when the account servicer is a global custodian and provides the account owner with a position reporting at global custodian's agents' level. When instructing, the fund manager would therefore mention, as a place of safekeeping, the BIC of the global custodian's agent on the market.\r\nAbsence of SafekeepingPlace means that:\r\n• The SafekeepingPlace info is kept by the account servicer (SLA, account structure, ETC.) and should not be provided by the account owner.\r\n• The SafekeepingPlace is the counterparty's Depository. The transaction is therefore domestic (to an NCSD) or internal to an ICSD.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> QuantityAndAccount76.mmObject();
 		}
 	};
 
@@ -1032,7 +1332,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount29(QuantityAndAccount29 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1061,7 +1361,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount30(QuantityAndAccount30 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1090,7 +1390,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount32(QuantityAndAccount32 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1119,7 +1419,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount33(QuantityAndAccount33 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1148,7 +1448,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount1(QuantityAndAccount1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1177,7 +1477,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount5(QuantityAndAccount5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1206,7 +1506,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount17(QuantityAndAccount17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1235,7 +1535,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount24(QuantityAndAccount24 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1264,7 +1564,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount25(QuantityAndAccount25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1293,7 +1593,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount34(QuantityAndAccount34 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1322,7 +1622,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount2(QuantityAndAccount2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1351,7 +1651,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount12(QuantityAndAccount12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1380,7 +1680,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount15(QuantityAndAccount15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1409,7 +1709,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount20(QuantityAndAccount20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1438,7 +1738,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount28(QuantityAndAccount28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1467,7 +1767,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount37(QuantityAndAccount37 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1496,7 +1796,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount39(QuantityAndAccount39 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1525,7 +1825,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount41(QuantityAndAccount41 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1554,7 +1854,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount43(QuantityAndAccount43 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1583,7 +1883,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount44(QuantityAndAccount44 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1612,7 +1912,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount47(QuantityAndAccount47 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1641,7 +1941,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount51(QuantityAndAccount51 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1670,7 +1970,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount55(QuantityAndAccount55 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1699,7 +1999,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount54(QuantityAndAccount54 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1728,7 +2028,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount57(QuantityAndAccount57 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1757,7 +2057,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount56(QuantityAndAccount56 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1786,7 +2086,7 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount59(QuantityAndAccount59 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1815,9 +2115,239 @@ public class ConstraintSafekeepingPlaceGuideline {
 	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
 	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkQuantityAndAccount60(QuantityAndAccount60 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used (see usage rule SafekeepingPlaceRule), unless special
+	 * arrangements exist between the account servicer and the<br>
+	 * account owner, it is recommended to use the place of safekeeping field
+	 * following the market practice<br>
+	 * described below:<br>
+	 * • SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for
+	 * domestic and NCSD to NCSD settlement instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for
+	 * ICSD internal, ICSD/local and ICSD to ICSD settlement<br>
+	 * instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for
+	 * instance, when the account servicer is a global custodian and provides
+	 * the account owner with a position reporting at global custodian's agents'
+	 * level. When instructing, the fund manager would therefore mention, as a
+	 * place of safekeeping, the BIC of the global custodian's agent on the
+	 * market.<br>
+	 * Absence of SafekeepingPlace means that:<br>
+	 * • The SafekeepingPlace info is kept by the account servicer (SLA, account
+	 * structure, ETC.) and should not be provided by the account owner.<br>
+	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
+	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount64(QuantityAndAccount64 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used (see usage rule SafekeepingPlaceRule), unless special
+	 * arrangements exist between the account servicer and the account owner, it
+	 * is recommended to use the place of safekeeping field following the market
+	 * practice described below:<br>
+	 * • SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for
+	 * domestic and NCSD to NCSD settlement instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for
+	 * ICSD internal, ICSD/local and ICSD to ICSD settlement<br>
+	 * instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for
+	 * instance, when the account servicer is a global custodian and provides
+	 * the account owner with a position reporting at global custodian's agents'
+	 * level. When instructing, the fund manager would therefore mention, as a
+	 * place of safekeeping, the BIC of the global custodian's agent on the
+	 * market.<br>
+	 * Absence of SafekeepingPlace means that:<br>
+	 * • The SafekeepingPlace info is kept by the account servicer (SLA, account
+	 * structure, ETC.) and should not be provided by the account owner.<br>
+	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
+	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount65(QuantityAndAccount65 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used (see usage rule SafekeepingPlaceRule), unless special
+	 * arrangements exist between the account servicer and the<br>
+	 * account owner, it is recommended to use the place of safekeeping field
+	 * following the market practice<br>
+	 * described below:<br>
+	 * • SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for
+	 * domestic and NCSD to NCSD settlement instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for
+	 * ICSD internal, ICSD/local and ICSD to ICSD settlement<br>
+	 * instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for
+	 * instance, when the account servicer is a global custodian and provides
+	 * the account owner with a position reporting at global custodian's agents'
+	 * level. When instructing, the fund manager would therefore mention, as a
+	 * place of safekeeping, the BIC of the global custodian's agent on the
+	 * market.<br>
+	 * Absence of SafekeepingPlace means that:<br>
+	 * • The SafekeepingPlace info is kept by the account servicer (SLA, account
+	 * structure, ETC.) and should not be provided by the account owner.<br>
+	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
+	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount66(QuantityAndAccount66 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used (see usage rule SafekeepingPlaceRule), unless special
+	 * arrangements exist between the account servicer and the<br>
+	 * account owner, it is recommended to use the place of safekeeping field
+	 * following the market practice<br>
+	 * described below:<br>
+	 * • SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for
+	 * domestic and NCSD to NCSD settlement instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for
+	 * ICSD internal, ICSD/local and ICSD to ICSD settlement<br>
+	 * instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for
+	 * instance, when the account servicer is a global custodian and provides
+	 * the account owner with a position reporting at global custodian's agents'
+	 * level. When instructing, the fund manager would therefore mention, as a
+	 * place of safekeeping, the BIC of the global custodian's agent on the
+	 * market.<br>
+	 * Absence of SafekeepingPlace means that:<br>
+	 * • The SafekeepingPlace info is kept by the account servicer (SLA, account
+	 * structure, ETC.) and should not be provided by the account owner.<br>
+	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
+	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount68(QuantityAndAccount68 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used (see usage rule SafekeepingPlaceRule), unless special
+	 * arrangements exist between the account servicer and the account owner, it
+	 * is recommended to use the place of safekeeping field following the market
+	 * practice described below:<br>
+	 * • SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for
+	 * domestic and NCSD to NCSD settlement instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for
+	 * ICSD internal, ICSD/local and ICSD to ICSD settlement<br>
+	 * instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for
+	 * instance, when the account servicer is a global custodian and provides
+	 * the account owner with a position reporting at global custodian's agents'
+	 * level. When instructing, the fund manager would therefore mention, as a
+	 * place of safekeeping, the BIC of the global custodian's agent on the
+	 * market.<br>
+	 * Absence of SafekeepingPlace means that:<br>
+	 * • The SafekeepingPlace info is kept by the account servicer (SLA, account
+	 * structure, ETC.) and should not be provided by the account owner.<br>
+	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
+	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount69(QuantityAndAccount69 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used (see usage rule SafekeepingPlaceRule), unless special
+	 * arrangements exist between the account servicer and the<br>
+	 * account owner, it is recommended to use the place of safekeeping field
+	 * following the market practice<br>
+	 * described below:<br>
+	 * • SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for
+	 * domestic and NCSD to NCSD settlement instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for
+	 * ICSD internal, ICSD/local and ICSD to ICSD settlement<br>
+	 * instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for
+	 * instance, when the account servicer is a global custodian and provides
+	 * the account owner with a position reporting at global custodian's agents'
+	 * level. When instructing, the fund manager would therefore mention, as a
+	 * place of safekeeping, the BIC of the global custodian's agent on the
+	 * market.<br>
+	 * Absence of SafekeepingPlace means that:<br>
+	 * • The SafekeepingPlace info is kept by the account servicer (SLA, account
+	 * structure, ETC.) and should not be provided by the account owner.<br>
+	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
+	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount72(QuantityAndAccount72 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used (see usage rule SafekeepingPlaceRule), unless special
+	 * arrangements exist between the account servicer and the<br>
+	 * account owner, it is recommended to use the place of safekeeping field
+	 * following the market practice<br>
+	 * described below:<br>
+	 * • SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for
+	 * domestic and NCSD to NCSD settlement instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for
+	 * ICSD internal, ICSD/local and ICSD to ICSD settlement<br>
+	 * instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for
+	 * instance, when the account servicer is a global custodian and provides
+	 * the account owner with a position reporting at global custodian's agents'
+	 * level. When instructing, the fund manager would therefore mention, as a
+	 * place of safekeeping, the BIC of the global custodian's agent on the
+	 * market.<br>
+	 * Absence of SafekeepingPlace means that:<br>
+	 * • The SafekeepingPlace info is kept by the account servicer (SLA, account
+	 * structure, ETC.) and should not be provided by the account owner.<br>
+	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
+	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount75(QuantityAndAccount75 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * When used (see usage rule SafekeepingPlaceRule), unless special
+	 * arrangements exist between the account servicer and the<br>
+	 * account owner, it is recommended to use the place of safekeeping field
+	 * following the market practice<br>
+	 * described below:<br>
+	 * • SafekeepingPlaceType/SharesHeldAtNCSD: a NCSD's BIC will be used for
+	 * domestic and NCSD to NCSD settlement instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtICSD: an ICSD's BIC will be used for
+	 * ICSD internal, ICSD/local and ICSD to ICSD settlement<br>
+	 * instructions.<br>
+	 * • SafekeepingPlaceType/SharesHeldAtLoaclCustodian: applicable, for
+	 * instance, when the account servicer is a global custodian and provides
+	 * the account owner with a position reporting at global custodian's agents'
+	 * level. When instructing, the fund manager would therefore mention, as a
+	 * place of safekeeping, the BIC of the global custodian's agent on the
+	 * market.<br>
+	 * Absence of SafekeepingPlace means that:<br>
+	 * • The SafekeepingPlace info is kept by the account servicer (SLA, account
+	 * structure, ETC.) and should not be provided by the account owner.<br>
+	 * • The SafekeepingPlace is the counterparty's Depository. The transaction
+	 * is therefore domestic (to an NCSD) or internal to an ICSD.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkQuantityAndAccount76(QuantityAndAccount76 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

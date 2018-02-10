@@ -323,6 +323,36 @@ public class ClassAction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation113#mmClassActionNumber
 	 * CorporateActionGeneralInformation113.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation127#mmClassActionNumber
+	 * CorporateActionGeneralInformation127.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation126#mmClassActionNumber
+	 * CorporateActionGeneralInformation126.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmClassActionNumber
+	 * CorporateActionGeneralInformation125.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation124#mmClassActionNumber
+	 * CorporateActionGeneralInformation124.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation128#mmClassActionNumber
+	 * CorporateActionGeneralInformation128.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation129#mmClassActionNumber
+	 * CorporateActionGeneralInformation129.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation130#mmClassActionNumber
+	 * CorporateActionGeneralInformation130.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation131#mmClassActionNumber
+	 * CorporateActionGeneralInformation131.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation132#mmClassActionNumber
+	 * CorporateActionGeneralInformation132.mmClassActionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation134#mmClassActionNumber
+	 * CorporateActionGeneralInformation134.mmClassActionNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -365,7 +395,11 @@ public class ClassAction {
 					CorporateActionGeneralInformation109.mmClassActionNumber, CorporateActionGeneralInformation111.mmClassActionNumber, CorporateActionGeneralInformation112.mmClassActionNumber,
 					CorporateActionGeneralInformation105.mmClassActionNumber, CorporateActionGeneralInformation106.mmClassActionNumber, CorporateActionGeneralInformation108.mmClassActionNumber,
 					CorporateActionGeneralInformation114.mmClassActionNumber, CorporateActionGeneralInformation120.mmClassActionNumber, CorporateActionGeneralInformation118.mmClassActionNumber,
-					CorporateActionGeneralInformation123.mmClassActionNumber, CorporateActionGeneralInformation117.mmClassActionNumber, CorporateActionGeneralInformation113.mmClassActionNumber);
+					CorporateActionGeneralInformation123.mmClassActionNumber, CorporateActionGeneralInformation117.mmClassActionNumber, CorporateActionGeneralInformation113.mmClassActionNumber,
+					CorporateActionGeneralInformation127.mmClassActionNumber, CorporateActionGeneralInformation126.mmClassActionNumber, CorporateActionGeneralInformation125.mmClassActionNumber,
+					CorporateActionGeneralInformation124.mmClassActionNumber, CorporateActionGeneralInformation128.mmClassActionNumber, CorporateActionGeneralInformation129.mmClassActionNumber,
+					CorporateActionGeneralInformation130.mmClassActionNumber, CorporateActionGeneralInformation131.mmClassActionNumber, CorporateActionGeneralInformation132.mmClassActionNumber,
+					CorporateActionGeneralInformation134.mmClassActionNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -427,6 +461,12 @@ public class ClassAction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmLeadPlaintiffDeadline
 	 * CorporateActionDate58.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmLeadPlaintiffDeadline
+	 * CorporateActionDate61.mmLeadPlaintiffDeadline}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmLeadPlaintiffDeadline
+	 * CorporateActionDate74.mmLeadPlaintiffDeadline}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -448,7 +488,7 @@ public class ClassAction {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate8.mmLeadPlaintiffDeadline, CorporateActionDate11.mmLeadPlaintiffDeadline, CorporateActionDate14.mmLeadPlaintiffDeadline, CorporateActionDate21.mmLeadPlaintiffDeadline,
 					CorporateActionDate22.mmLeadPlaintiffDeadline, CorporateActionDate25.mmLeadPlaintiffDeadline, CorporateActionDate27.mmLeadPlaintiffDeadline, CorporateActionDate28.mmLeadPlaintiffDeadline,
-					CorporateActionDate44.mmLeadPlaintiffDeadline, CorporateActionDate58.mmLeadPlaintiffDeadline);
+					CorporateActionDate44.mmLeadPlaintiffDeadline, CorporateActionDate58.mmLeadPlaintiffDeadline, CorporateActionDate61.mmLeadPlaintiffDeadline, CorporateActionDate74.mmLeadPlaintiffDeadline);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -513,6 +553,12 @@ public class ClassAction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmCourtApprovalDate
 	 * CorporateActionDate58.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmCourtApprovalDate
+	 * CorporateActionDate61.mmCourtApprovalDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmCourtApprovalDate
+	 * CorporateActionDate74.mmCourtApprovalDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -534,7 +580,7 @@ public class ClassAction {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmCourtApprovalDate, CorporateActionDate13.mmCourtApprovalDate, CorporateActionDate14.mmCourtApprovalDate, CorporateActionDate21.mmCourtApprovalDate,
 					CorporateActionDate22.mmCourtApprovalDate, CorporateActionDate25.mmCourtApprovalDate, CorporateActionDate27.mmCourtApprovalDate, CorporateActionDate28.mmCourtApprovalDate, CorporateActionDate2.mmCourtApprovalDate,
-					CorporateActionDate44.mmCourtApprovalDate, CorporateActionDate58.mmCourtApprovalDate);
+					CorporateActionDate44.mmCourtApprovalDate, CorporateActionDate58.mmCourtApprovalDate, CorporateActionDate61.mmCourtApprovalDate, CorporateActionDate74.mmCourtApprovalDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -586,6 +632,9 @@ public class ClassAction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod10#mmClaimPeriod
 	 * CorporateActionPeriod10.mmClaimPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod14#mmClaimPeriod
+	 * CorporateActionPeriod14.mmClaimPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -607,7 +656,8 @@ public class ClassAction {
 	 */
 	public static final MMBusinessAssociationEnd mmClaimPeriod = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmClaimPeriod, CorporateActionPeriod6.mmClaimPeriod, CorporateActionPeriod8.mmClaimPeriod, CorporateActionPeriod10.mmClaimPeriod);
+			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod3.mmClaimPeriod, CorporateActionPeriod6.mmClaimPeriod, CorporateActionPeriod8.mmClaimPeriod, CorporateActionPeriod10.mmClaimPeriod,
+					CorporateActionPeriod14.mmClaimPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -651,6 +701,12 @@ public class ClassAction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmFilingDate
 	 * CorporateActionDate58.mmFilingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmFilingDate
+	 * CorporateActionDate61.mmFilingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmFilingDate
+	 * CorporateActionDate74.mmFilingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -672,7 +728,7 @@ public class ClassAction {
 	public static final MMBusinessAttribute mmFilingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate22.mmFilingDate, CorporateActionDate25.mmFilingDate, CorporateActionDate27.mmFilingDate, CorporateActionDate28.mmFilingDate, CorporateActionDate44.mmFilingDate,
-					CorporateActionDate58.mmFilingDate);
+					CorporateActionDate58.mmFilingDate, CorporateActionDate61.mmFilingDate, CorporateActionDate74.mmFilingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -722,6 +778,12 @@ public class ClassAction {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmHearingDate
 	 * CorporateActionDate58.mmHearingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmHearingDate
+	 * CorporateActionDate61.mmHearingDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmHearingDate
+	 * CorporateActionDate74.mmHearingDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -744,7 +806,7 @@ public class ClassAction {
 	public static final MMBusinessAttribute mmHearingDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate22.mmHearingDate, CorporateActionDate25.mmHearingDate, CorporateActionDate27.mmHearingDate, CorporateActionDate28.mmHearingDate, CorporateActionDate44.mmHearingDate,
-					CorporateActionDate58.mmHearingDate);
+					CorporateActionDate58.mmHearingDate, CorporateActionDate61.mmHearingDate, CorporateActionDate74.mmHearingDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ClassAction.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

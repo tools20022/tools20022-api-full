@@ -162,7 +162,7 @@ public class PayInCallV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Contains  the report generation information and the report items."</li>
+	 * "Contains the report generation information and the report items."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmReportData = new MMMessageBuildingBlock() {
@@ -170,7 +170,7 @@ public class PayInCallV02 {
 			xmlTag = "RptData";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportData";
-			definition = "Contains  the report generation information and the report items.";
+			definition = "Contains the report generation information and the report items.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ReportData5.mmObject();

@@ -59,7 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "FirstAgentRole"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Organisation offering invoice financing services. "</li>
+ * definition} = "Organisation offering invoice financing services."</li>
  * </ul>
  */
 public class FirstAgentRole extends InvoiceFinancingPartyRole {
@@ -72,7 +72,7 @@ public class FirstAgentRole extends InvoiceFinancingPartyRole {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FirstAgentRole";
-				definition = "Organisation offering invoice financing services. ";
+				definition = "Organisation offering invoice financing services.";
 				derivationElement_lazy = () -> Arrays.asList(RequestGroupInformation1.mmFirstAgent);
 				superType_lazy = () -> InvoiceFinancingPartyRole.mmObject();
 			}

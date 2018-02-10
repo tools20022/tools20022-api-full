@@ -467,6 +467,32 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.Period4Choice#mmFromDateToDate
  * Period4Choice.mmFromDateToDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateOrBlankQuery2Choice#mmRange
+ * DateOrBlankQuery2Choice.mmRange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmReportingPeriod
+ * ReportingRequest4.mmReportingPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DateTimePeriod1Choice#mmDateTimeRange
+ * DateTimePeriod1Choice.mmDateTimeRange}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.DatePeriod2Choice#mmFromToDate
+ * DatePeriod2Choice.mmFromToDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Period5Choice#mmFromDateTimeToDateTime
+ * Period5Choice.mmFromDateTimeToDateTime}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.Period5Choice#mmFromDateToDate
+ * Period5Choice.mmFromDateToDate}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption8#mmEventDeadlines
+ * InstructedCorporateActionOption8.mmEventDeadlines}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Period6Choice#mmPeriod
+ * Period6Choice.mmPeriod}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption9#mmEventDeadlines
+ * InstructedCorporateActionOption9.mmEventDeadlines}</li>
  * </ul>
  * </li>
  * <li>
@@ -505,6 +531,24 @@ import java.util.concurrent.atomic.AtomicReference;
  * </li>
  * <li>{@linkplain com.tools20022.repository.msg.DateTimePeriod1
  * DateTimePeriod1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Period10 Period10}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateOrBlankQuery2Choice
+ * DateOrBlankQuery2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DateTimePeriod1Choice
+ * DateTimePeriod1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.DatePeriod2Choice
+ * DatePeriod2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportingPeriod2
+ * ReportingPeriod2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Period5Choice Period5Choice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.msg.DateTimePeriodDetails2
+ * DateTimePeriodDetails2}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Period6Choice Period6Choice}
+ * </li>
+ * <li>{@linkplain com.tools20022.repository.msg.Period11 Period11}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Period13 Period13}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Period14 Period14}</li>
  * </ul>
  * </li>
  * <li>
@@ -701,6 +745,17 @@ public class DateTimePeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DateTimePeriod1#mmFromDateTime
 	 * DateTimePeriod1.mmFromDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period10#mmFromDateTime
+	 * Period10.mmFromDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmEstablishedDate
+	 * Organisation20.mmEstablishedDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmRegistrationDate
+	 * Organisation20.mmRegistrationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmStartDate
+	 * IndividualPersonNameLong1.mmStartDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan12#mmStartDate
 	 * InvestmentPlan12.mmStartDate}</li>
@@ -709,12 +764,68 @@ public class DateTimePeriod {
 	 * InvestmentPlan13.mmStartDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.DateAndAmount1#mmDate
 	 * DateAndAmount1.mmDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink3#mmValidFrom
+	 * AccountLink3.mmValidFrom}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink4#mmValidFrom
+	 * AccountLink4.mmValidFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommonFinancialInstrumentAttributes4#mmNameValidFrom
+	 * CommonFinancialInstrumentAttributes4.mmNameValidFrom}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmISINValidFrom
+	 * Issuance3.mmISINValidFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentIdentificationValidity2#mmISINValidFrom
+	 * FinancialInstrumentIdentificationValidity2.mmISINValidFrom}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria4#mmLimitValidAsOfDate
+	 * LimitSearchCriteria4.mmLimitValidAsOfDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan14#mmStartDate
 	 * InvestmentPlan14.mmStartDate}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.InvestmentPlan15#mmStartDate
 	 * InvestmentPlan15.mmStartDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Reservation4#mmStartDateTime
+	 * Reservation4.mmStartDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateTimePeriod1Choice#mmFromDateTime
+	 * DateTimePeriod1Choice.mmFromDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriod2Choice#mmFromDate
+	 * DatePeriod2Choice.mmFromDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DatePeriod2#mmFromDate
+	 * DatePeriod2.mmFromDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingPeriod2#mmFromToDate
+	 * ReportingPeriod2.mmFromToDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingPeriod2#mmFromToTime
+	 * ReportingPeriod2.mmFromToTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Reservation3#mmStartDateTime
+	 * Reservation3.mmStartDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limit7#mmStartDateTime
+	 * Limit7.mmStartDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Limit8#mmStartDateTime
+	 * Limit8.mmStartDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LimitSearchCriteria5#mmLimitValidAsOfDate
+	 * LimitSearchCriteria5.mmLimitValidAsOfDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CreditLine3#mmDate
+	 * CreditLine3.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriodSearch1Choice#mmFromDate
+	 * DatePeriodSearch1Choice.mmFromDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DateTimePeriodDetails2#mmFromDateTime
+	 * DateTimePeriodDetails2.mmFromDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period11#mmStartDate
+	 * Period11.mmStartDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period13#mmStartDate
+	 * Period13.mmStartDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period14#mmStartDate
+	 * Period14.mmStartDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -744,7 +855,12 @@ public class DateTimePeriod {
 					Issuance1.mmISINValidFrom, CommonFinancialInstrumentAttributes1.mmNameValidFrom, SystemPartyIdentification1.mmValidFrom, PostalAddress10.mmValidFrom, FinancialInstrumentName1.mmValidFrom,
 					FinancialInstrumentIdentificationValidity1.mmISINValidFrom, SystemPartyIdentification2.mmValidFrom, PostalAddress9.mmValidFrom, Agreement1.mmStartDate, AccountLink1.mmValidFrom, AccountLink2.mmValidFrom,
 					InvestmentPlan9.mmStartDate, InvestmentPlan8.mmStartDate, InvestmentPlan10.mmStartDate, InvestmentPlan11.mmStartDate, AmountAndPeriod1.mmStartDate, PercentageAndPeriod1.mmStartDate, PercentageAndPeriod1.mmEndDate,
-					Period4Choice.mmFromDate, DateTimePeriod1.mmFromDateTime, InvestmentPlan12.mmStartDate, InvestmentPlan13.mmStartDate, DateAndAmount1.mmDate, InvestmentPlan14.mmStartDate, InvestmentPlan15.mmStartDate);
+					Period4Choice.mmFromDate, DateTimePeriod1.mmFromDateTime, Period10.mmFromDateTime, Organisation20.mmEstablishedDate, Organisation20.mmRegistrationDate, IndividualPersonNameLong1.mmStartDate,
+					InvestmentPlan12.mmStartDate, InvestmentPlan13.mmStartDate, DateAndAmount1.mmDate, AccountLink3.mmValidFrom, AccountLink4.mmValidFrom, CommonFinancialInstrumentAttributes4.mmNameValidFrom, Issuance3.mmISINValidFrom,
+					FinancialInstrumentIdentificationValidity2.mmISINValidFrom, LimitSearchCriteria4.mmLimitValidAsOfDate, InvestmentPlan14.mmStartDate, InvestmentPlan15.mmStartDate, Reservation4.mmStartDateTime,
+					DateTimePeriod1Choice.mmFromDateTime, DatePeriod2Choice.mmFromDate, DatePeriod2.mmFromDate, ReportingPeriod2.mmFromToDate, ReportingPeriod2.mmFromToTime, Reservation3.mmStartDateTime, Limit7.mmStartDateTime,
+					Limit8.mmStartDateTime, LimitSearchCriteria5.mmLimitValidAsOfDate, CreditLine3.mmDate, DatePeriodSearch1Choice.mmFromDate, DateTimePeriodDetails2.mmFromDateTime, Period11.mmStartDate, Period13.mmStartDate,
+					Period14.mmStartDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -866,14 +982,41 @@ public class DateTimePeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.DateTimePeriod1#mmToDateTime
 	 * DateTimePeriod1.mmToDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period10#mmToDateTime
+	 * Period10.mmToDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IndividualPersonNameLong1#mmEndDate
+	 * IndividualPersonNameLong1.mmEndDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan12#mmEndDate
 	 * InvestmentPlan12.mmEndDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan13#mmEndDate
 	 * InvestmentPlan13.mmEndDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.AccountLink3#mmValidTo
+	 * AccountLink3.mmValidTo}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan14#mmEndDate
 	 * InvestmentPlan14.mmEndDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.InvestmentPlan15#mmEndDate
 	 * InvestmentPlan15.mmEndDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DateTimePeriod1Choice#mmToDateTime
+	 * DateTimePeriod1Choice.mmToDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriod2Choice#mmToDate
+	 * DatePeriod2Choice.mmToDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.DatePeriod2#mmToDate
+	 * DatePeriod2.mmToDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriodSearch1Choice#mmToDate
+	 * DatePeriodSearch1Choice.mmToDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DateTimePeriodDetails2#mmToDateTime
+	 * DateTimePeriodDetails2.mmToDateTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period11#mmEndDate
+	 * Period11.mmEndDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period13#mmEndDate
+	 * Period13.mmEndDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Period14#mmEndDate
+	 * Period14.mmEndDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -899,8 +1042,9 @@ public class DateTimePeriod {
 					Period3.mmEndDate, Period5.mmEndDate, Period4.mmEndDate, DateTimePeriodDetails1.mmToDateTime, Restriction1.mmValidUntil, OperationMandate1.mmEndDate, OperationMandate2.mmEndDate, OperationMandate3.mmEndDate,
 					EntitlementAssessment.mmSecuritiesBlockingPeriodEndDate, EntitlementAssessment1.mmSecuritiesBlockingPeriodEndDate, EntitlementAssessment2.mmSecuritiesBlockingPeriodEndDate, Period1.mmEndDate, DatePeriod1.mmToDate,
 					AccountLink1.mmValidTo, AccountLinkUpdate1.mmValidTo, InvestmentPlan9.mmEndDate, InvestmentPlan8.mmEndDate, InvestmentPlan10.mmEndDate, InvestmentPlan11.mmEndDate,
-					EntitlementAssessment3.mmSecuritiesBlockingPeriodEndDate, AmountAndPeriod1.mmEndDate, Period4Choice.mmToDate, DateTimePeriod1.mmToDateTime, InvestmentPlan12.mmEndDate, InvestmentPlan13.mmEndDate,
-					InvestmentPlan14.mmEndDate, InvestmentPlan15.mmEndDate);
+					EntitlementAssessment3.mmSecuritiesBlockingPeriodEndDate, AmountAndPeriod1.mmEndDate, Period4Choice.mmToDate, DateTimePeriod1.mmToDateTime, Period10.mmToDateTime, IndividualPersonNameLong1.mmEndDate,
+					InvestmentPlan12.mmEndDate, InvestmentPlan13.mmEndDate, AccountLink3.mmValidTo, InvestmentPlan14.mmEndDate, InvestmentPlan15.mmEndDate, DateTimePeriod1Choice.mmToDateTime, DatePeriod2Choice.mmToDate,
+					DatePeriod2.mmToDate, DatePeriodSearch1Choice.mmToDate, DateTimePeriodDetails2.mmToDateTime, Period11.mmEndDate, Period13.mmEndDate, Period14.mmEndDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1551,6 +1695,12 @@ public class DateTimePeriod {
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails66#mmNumberOfDaysAccrued
 	 * SecuritiesTradeDetails66.mmNumberOfDaysAccrued}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmDaysAccrued
+	 * AggregateBalanceInformation34.mmDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails93#mmNumberOfDaysAccrued
+	 * TransactionDetails93.mmNumberOfDaysAccrued}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnitPrice22#mmNumberOfDaysAccrued
 	 * UnitPrice22.mmNumberOfDaysAccrued}</li>
 	 * <li>
@@ -1571,6 +1721,84 @@ public class DateTimePeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails98#mmNumberOfDaysAccrued
 	 * TransactionDetails98.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails102#mmNumberOfDaysAccrued
+	 * TransactionDetails102.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnitPrice23#mmNumberOfDaysAccrued
+	 * UnitPrice23.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails71.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails72#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails72.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails103#mmNumberOfDaysAccrued
+	 * TransactionDetails103.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails73.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails74#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails74.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails75.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails76.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails77#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails77.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails78.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails79.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails80#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails80.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmInterestAccruedNumberOfDays
+	 * CorporateAction41.mmInterestAccruedNumberOfDays}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmInterestAccruedNumberOfDays
+	 * CorporateAction51.mmInterestAccruedNumberOfDays}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails81#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails81.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails82#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails82.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails83#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails83.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails84#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails84.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails85.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails86.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails87.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails88.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails89.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmNumberOfDaysAccrued
+	 * SecuritiesTradeDetails90.mmNumberOfDaysAccrued}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails112#mmNumberOfDaysAccrued
+	 * TransactionDetails112.mmNumberOfDaysAccrued}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1632,8 +1860,15 @@ public class DateTimePeriod {
 					SecuritiesTradeDetails59.mmNumberOfDaysAccrued, AggregateBalanceInformation32.mmDaysAccrued, SecuritiesTradeDetails58.mmNumberOfDaysAccrued, SecuritiesTradeDetails61.mmNumberOfDaysAccrued,
 					AggregateBalanceInformation33.mmDaysAccrued, SecuritiesTradeDetails63.mmNumberOfDaysAccrued, SecuritiesTradeDetails62.mmNumberOfDaysAccrued, SecuritiesTradeDetails60.mmNumberOfDaysAccrued,
 					AggregateBalancePerSafekeepingPlace31.mmDaysAccrued, TransactionDetails91.mmNumberOfDaysAccrued, AggregateBalancePerSafekeepingPlace30.mmDaysAccrued, SecuritiesTradeDetails65.mmNumberOfDaysAccrued,
-					SecuritiesTradeDetails66.mmNumberOfDaysAccrued, UnitPrice22.mmNumberOfDaysAccrued, SecuritiesTradeDetails67.mmNumberOfDaysAccrued, SecuritiesTradeDetails68.mmNumberOfDaysAccrued,
-					TransactionDetails95.mmNumberOfDaysAccrued, SecuritiesTradeDetails69.mmNumberOfDaysAccrued, SecuritiesTradeDetails70.mmNumberOfDaysAccrued, TransactionDetails98.mmNumberOfDaysAccrued);
+					SecuritiesTradeDetails66.mmNumberOfDaysAccrued, AggregateBalanceInformation34.mmDaysAccrued, TransactionDetails93.mmNumberOfDaysAccrued, UnitPrice22.mmNumberOfDaysAccrued, SecuritiesTradeDetails67.mmNumberOfDaysAccrued,
+					SecuritiesTradeDetails68.mmNumberOfDaysAccrued, TransactionDetails95.mmNumberOfDaysAccrued, SecuritiesTradeDetails69.mmNumberOfDaysAccrued, SecuritiesTradeDetails70.mmNumberOfDaysAccrued,
+					TransactionDetails98.mmNumberOfDaysAccrued, TransactionDetails102.mmNumberOfDaysAccrued, UnitPrice23.mmNumberOfDaysAccrued, SecuritiesTradeDetails71.mmNumberOfDaysAccrued, SecuritiesTradeDetails72.mmNumberOfDaysAccrued,
+					TransactionDetails103.mmNumberOfDaysAccrued, SecuritiesTradeDetails73.mmNumberOfDaysAccrued, SecuritiesTradeDetails74.mmNumberOfDaysAccrued, SecuritiesTradeDetails75.mmNumberOfDaysAccrued,
+					SecuritiesTradeDetails76.mmNumberOfDaysAccrued, SecuritiesTradeDetails77.mmNumberOfDaysAccrued, SecuritiesTradeDetails78.mmNumberOfDaysAccrued, SecuritiesTradeDetails79.mmNumberOfDaysAccrued,
+					SecuritiesTradeDetails80.mmNumberOfDaysAccrued, CorporateAction41.mmInterestAccruedNumberOfDays, CorporateAction51.mmInterestAccruedNumberOfDays, SecuritiesTradeDetails81.mmNumberOfDaysAccrued,
+					SecuritiesTradeDetails82.mmNumberOfDaysAccrued, SecuritiesTradeDetails83.mmNumberOfDaysAccrued, SecuritiesTradeDetails84.mmNumberOfDaysAccrued, SecuritiesTradeDetails85.mmNumberOfDaysAccrued,
+					SecuritiesTradeDetails86.mmNumberOfDaysAccrued, SecuritiesTradeDetails87.mmNumberOfDaysAccrued, SecuritiesTradeDetails88.mmNumberOfDaysAccrued, SecuritiesTradeDetails89.mmNumberOfDaysAccrued,
+					SecuritiesTradeDetails90.mmNumberOfDaysAccrued, TransactionDetails112.mmNumberOfDaysAccrued);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.DateTimePeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4865,7 +5100,9 @@ public class DateTimePeriod {
 						com.tools20022.repository.entity.ComponentSecurity.mmSeparationPeriod, com.tools20022.repository.entity.FinancialInstrumentSwap.mmMaturity, com.tools20022.repository.entity.AmountAndPeriod.mmPeriod,
 						com.tools20022.repository.entity.PaymentTerms.mmPaymentPeriod, com.tools20022.repository.entity.PercentageAndPeriod.mmPeriod);
 				derivationElement_lazy = () -> Arrays.asList(DateTimePeriodChoice.mmDateTimeRange, DateAndPeriod2Choice.mmPeriod, DatePeriodDetails2Choice.mmFromToDate, Period1Choice.mmPeriod, Period3Choice.mmPeriod,
-						Period2Choice.mmFromDateTimeToDateTime, Period2Choice.mmFromDateToDate, ReportingRequest3.mmReportingPeriod, Period4Choice.mmDate, Period4Choice.mmFromDateToDate);
+						Period2Choice.mmFromDateTimeToDateTime, Period2Choice.mmFromDateToDate, ReportingRequest3.mmReportingPeriod, Period4Choice.mmDate, Period4Choice.mmFromDateToDate, DateOrBlankQuery2Choice.mmRange,
+						ReportingRequest4.mmReportingPeriod, DateTimePeriod1Choice.mmDateTimeRange, DatePeriod2Choice.mmFromToDate, Period5Choice.mmFromDateTimeToDateTime, Period5Choice.mmFromDateToDate,
+						InstructedCorporateActionOption8.mmEventDeadlines, Period6Choice.mmPeriod, InstructedCorporateActionOption9.mmEventDeadlines);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.DateTimePeriod.mmFromDateTime, com.tools20022.repository.entity.DateTimePeriod.mmToDateTime,
 						com.tools20022.repository.entity.DateTimePeriod.mmRelatedStandingOrder, com.tools20022.repository.entity.DateTimePeriod.mmPaymentInstruction, com.tools20022.repository.entity.DateTimePeriod.mmNumberOfDays,
 						com.tools20022.repository.entity.DateTimePeriod.mmValuationStatistics, com.tools20022.repository.entity.DateTimePeriod.mmPerformanceFactors, com.tools20022.repository.entity.DateTimePeriod.mmStatus,
@@ -4897,7 +5134,9 @@ public class DateTimePeriod {
 						com.tools20022.repository.entity.DateTimePeriod.mmRelatedRolePlayer, com.tools20022.repository.entity.DateTimePeriod.mmRelatedSystemAvailability);
 				derivationComponent_lazy = () -> Arrays.asList(DatePeriodDetails.mmObject(), DateTimePeriodDetails.mmObject(), DateTimePeriodChoice.mmObject(), Period2.mmObject(), DatePeriodDetails2Choice.mmObject(),
 						DatePeriodDetails1.mmObject(), Period3.mmObject(), Period5.mmObject(), Period1Choice.mmObject(), Period4.mmObject(), Period3Choice.mmObject(), Period2Choice.mmObject(), DateTimePeriodDetails1.mmObject(),
-						Period1.mmObject(), ReportingPeriod1.mmObject(), DateAndDateTimeSearch2Choice.mmObject(), Period4Choice.mmObject(), DateTimePeriod1.mmObject());
+						Period1.mmObject(), ReportingPeriod1.mmObject(), DateAndDateTimeSearch2Choice.mmObject(), Period4Choice.mmObject(), DateTimePeriod1.mmObject(), Period10.mmObject(), DateOrBlankQuery2Choice.mmObject(),
+						DateTimePeriod1Choice.mmObject(), DatePeriod2Choice.mmObject(), ReportingPeriod2.mmObject(), Period5Choice.mmObject(), DateTimePeriodDetails2.mmObject(), Period6Choice.mmObject(), Period11.mmObject(),
+						Period13.mmObject(), Period14.mmObject());
 			}
 
 			@Override

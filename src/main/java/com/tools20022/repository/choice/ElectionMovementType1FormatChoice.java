@@ -62,7 +62,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ElectionMovementType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the effect on the holdings of electing a Corporate Action option."
+ * "Choice of formats to express the effect on the holdings of electing a Corporate Action option."
  * </li>
  * </ul>
  */
@@ -99,7 +99,7 @@ public class ElectionMovementType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to  specify the effect on the holdings of electing a Corporate Action option."
+	 * "Standard code to specify the effect on the holdings of electing a Corporate Action option."
 	 * </li>
 	 * </ul>
 	 */
@@ -110,7 +110,7 @@ public class ElectionMovementType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the effect on the holdings of electing a Corporate Action option.";
+			definition = "Standard code to specify the effect on the holdings of electing a Corporate Action option.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ElectionMovementType1Code.mmObject();
@@ -144,7 +144,7 @@ public class ElectionMovementType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the effect on the holdings of electing a Corporate Action option."
+	 * "Proprietary code to express the effect on the holdings of electing a Corporate Action option."
 	 * </li>
 	 * </ul>
 	 */
@@ -155,7 +155,7 @@ public class ElectionMovementType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the effect on the holdings of electing a Corporate Action option.";
+			definition = "Proprietary code to express the effect on the holdings of electing a Corporate Action option.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -169,7 +169,7 @@ public class ElectionMovementType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ElectionMovementType1FormatChoice";
-				definition = "Choice of formats to  express the effect on the holdings of electing a Corporate Action option.";
+				definition = "Choice of formats to express the effect on the holdings of electing a Corporate Action option.";
 			}
 		});
 		return mmObject_lazy.get();

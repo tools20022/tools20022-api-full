@@ -58,7 +58,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "ISO3ACountryCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-3 code). The code is checked against the list of country namescoded with three alphabetic characters,  defined in the standard."
+ * "Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-3 code). The code is checked against the list of country namescoded with three alphabetic characters, defined in the standard."
  * </li>
  * </ul>
  */
@@ -78,7 +78,7 @@ public class ISO3ACountryCode extends MMCode {
 				example = Arrays.asList("USA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ISO3ACountryCode";
-				definition = "Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-3 code). The code is checked against the list of country namescoded with three alphabetic characters,  defined in the standard.";
+				definition = "Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-3 code). The code is checked against the list of country namescoded with three alphabetic characters, defined in the standard.";
 				pattern = "[A-Z]{3,3}";
 			}
 		});

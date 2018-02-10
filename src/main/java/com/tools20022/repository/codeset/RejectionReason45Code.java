@@ -76,7 +76,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "RejectionReason45Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specify  the reason why the instruction cancellation request has a rejected status."
+ * "Specify the reason why the instruction cancellation request has a rejected status."
  * </li>
  * </ul>
  */
@@ -263,7 +263,7 @@ public class RejectionReason45Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason45Code";
-				definition = "Specify  the reason why the instruction cancellation request has a rejected status.";
+				definition = "Specify the reason why the instruction cancellation request has a rejected status.";
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason45Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason45Code.InvalidReference,
 						com.tools20022.repository.codeset.RejectionReason45Code.Other, com.tools20022.repository.codeset.RejectionReason45Code.RejectedSinceAlreadyCancelled,

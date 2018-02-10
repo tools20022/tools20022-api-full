@@ -924,6 +924,12 @@ public class CorporateActionEventRegistration {
 	 * CorporateActionGeneralInformation104.mmCorporateActionEventIdentification
 	 * }</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement3#mmCorporateActionEventIdentification
+	 * IntraBalanceMovement3.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmCorporateActionEventIdentification
+	 * Transaction51.mmCorporateActionEventIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation109#mmCorporateActionEventIdentification
 	 * CorporateActionGeneralInformation109.mmCorporateActionEventIdentification
 	 * }</li>
@@ -1041,6 +1047,79 @@ public class CorporateActionEventRegistration {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction55#mmCorporateActionEventIdentification
 	 * Transaction55.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction58#mmCorporateActionEventIdentification
+	 * Transaction58.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmCorporateActionEventIdentification
+	 * TransactionDetails105.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmCorporateActionEventIdentification
+	 * Transaction60.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmCorporateActionEventIdentification
+	 * Transaction61.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmCorporateActionEventIdentification
+	 * Transaction62.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation127#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation127.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation126#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation126.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation125.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation124#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation124.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation128#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation128.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmCorporateActionEventIdentification
+	 * EventInformation11.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation129#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation129.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation12#mmCorporateActionEventIdentification
+	 * EventInformation12.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation130#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation130.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation131#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation131.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation132#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation132.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation134#mmCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation134.mmCorporateActionEventIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmCorporateActionEventIdentification
+	 * TransactionDetails110.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmCorporateActionEventIdentification
+	 * Transaction63.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmCorporateActionEventIdentification
+	 * Transaction64.mmCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmCorporateActionEventIdentification
+	 * Transaction65.mmCorporateActionEventIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1146,20 +1225,27 @@ public class CorporateActionEventRegistration {
 					AdditionalParameters25.mmCorporateActionEventIdentification, SettlementTypeAndAdditionalParameters16.mmCorporateActionEventIdentification, SettlementTypeAndIdentification24.mmCorporateActionEventIdentification,
 					TransactionDetails87.mmCorporateActionEventIdentification, Identification24.mmCorporateActionEventIdentification, Transaction50.mmCorporateActionEventIdentification, Transaction48.mmCorporateActionEventIdentification,
 					SettlementTypeAndAdditionalParameters18.mmCorporateActionEventIdentification, SettlementTypeAndAdditionalParameters17.mmCorporateActionEventIdentification,
-					CorporateActionGeneralInformation104.mmCorporateActionEventIdentification, CorporateActionGeneralInformation109.mmCorporateActionEventIdentification,
-					CorporateActionGeneralInformation111.mmCorporateActionEventIdentification, CorporateActionGeneralInformation112.mmCorporateActionEventIdentification,
-					CorporateActionGeneralInformation110.mmCorporateActionEventIdentification, CorporateActionGeneralInformation105.mmCorporateActionEventIdentification,
-					CorporateActionGeneralInformation107.mmCorporateActionEventIdentification, CorporateActionGeneralInformation106.mmCorporateActionEventIdentification,
-					CorporateActionGeneralInformation108.mmCorporateActionEventIdentification, EventInformation9.mmCorporateActionEventIdentification, SettlementTypeAndAdditionalParameters19.mmCorporateActionEventIdentification,
-					Transaction53.mmCorporateActionEventIdentification, TransactionDetails97.mmCorporateActionEventIdentification, TransactionTypeAndAdditionalParameters16.mmCorporateActionEventIdentification,
-					SecuritiesFinancingTransactionDetails35.mmCorporateActionEventIdentification, Transaction54.mmCorporateActionEventIdentification, Transaction52.mmCorporateActionEventIdentification,
-					TransactionTypeAndAdditionalParameters19.mmCorporateActionEventIdentification, CorporateActionGeneralInformation114.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation104.mmCorporateActionEventIdentification, IntraBalanceMovement3.mmCorporateActionEventIdentification, Transaction51.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation109.mmCorporateActionEventIdentification, CorporateActionGeneralInformation111.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation112.mmCorporateActionEventIdentification, CorporateActionGeneralInformation110.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation105.mmCorporateActionEventIdentification, CorporateActionGeneralInformation107.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation106.mmCorporateActionEventIdentification, CorporateActionGeneralInformation108.mmCorporateActionEventIdentification, EventInformation9.mmCorporateActionEventIdentification,
+					SettlementTypeAndAdditionalParameters19.mmCorporateActionEventIdentification, Transaction53.mmCorporateActionEventIdentification, TransactionDetails97.mmCorporateActionEventIdentification,
+					TransactionTypeAndAdditionalParameters16.mmCorporateActionEventIdentification, SecuritiesFinancingTransactionDetails35.mmCorporateActionEventIdentification, Transaction54.mmCorporateActionEventIdentification,
+					Transaction52.mmCorporateActionEventIdentification, TransactionTypeAndAdditionalParameters19.mmCorporateActionEventIdentification, CorporateActionGeneralInformation114.mmCorporateActionEventIdentification,
 					CorporateActionGeneralInformation120.mmCorporateActionEventIdentification, CorporateActionGeneralInformation115.mmCorporateActionEventIdentification,
 					CorporateActionGeneralInformation118.mmCorporateActionEventIdentification, Transaction57.mmCorporateActionEventIdentification, CorporateActionGeneralInformation121.mmCorporateActionEventIdentification,
 					CorporateActionGeneralInformation123.mmCorporateActionEventIdentification, CorporateActionGeneralInformation117.mmCorporateActionEventIdentification,
 					SecuritiesFinancingTransactionDetails36.mmCorporateActionEventIdentification, CorporateActionGeneralInformation113.mmCorporateActionEventIdentification,
 					SettlementTypeAndAdditionalParameters20.mmCorporateActionEventIdentification, EventInformation10.mmCorporateActionEventIdentification, Transaction56.mmCorporateActionEventIdentification,
-					TransactionDetails100.mmCorporateActionEventIdentification, Transaction55.mmCorporateActionEventIdentification);
+					TransactionDetails100.mmCorporateActionEventIdentification, Transaction55.mmCorporateActionEventIdentification, Transaction58.mmCorporateActionEventIdentification,
+					TransactionDetails105.mmCorporateActionEventIdentification, Transaction60.mmCorporateActionEventIdentification, Transaction61.mmCorporateActionEventIdentification, Transaction62.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation127.mmCorporateActionEventIdentification, CorporateActionGeneralInformation126.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation125.mmCorporateActionEventIdentification, CorporateActionGeneralInformation124.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation128.mmCorporateActionEventIdentification, EventInformation11.mmCorporateActionEventIdentification, CorporateActionGeneralInformation129.mmCorporateActionEventIdentification,
+					EventInformation12.mmCorporateActionEventIdentification, CorporateActionGeneralInformation130.mmCorporateActionEventIdentification, CorporateActionGeneralInformation131.mmCorporateActionEventIdentification,
+					CorporateActionGeneralInformation132.mmCorporateActionEventIdentification, CorporateActionGeneralInformation134.mmCorporateActionEventIdentification, TransactionDetails110.mmCorporateActionEventIdentification,
+					Transaction63.mmCorporateActionEventIdentification, Transaction64.mmCorporateActionEventIdentification, Transaction65.mmCorporateActionEventIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1657,6 +1743,52 @@ public class CorporateActionEventRegistration {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.EventInformation10#mmOfficialCorporateActionEventIdentification
 	 * EventInformation10.mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation127#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation127.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation126#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation126.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation125#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation125.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation124#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation124.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation128#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation128.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmOfficialCorporateActionEventIdentification
+	 * EventInformation11.mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation129#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation129.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation12#mmOfficialCorporateActionEventIdentification
+	 * EventInformation12.mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation130#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation130.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation131#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation131.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation132#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation132.
+	 * mmOfficialCorporateActionEventIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformation134#mmOfficialCorporateActionEventIdentification
+	 * CorporateActionGeneralInformation134.
+	 * mmOfficialCorporateActionEventIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1737,7 +1869,12 @@ public class CorporateActionEventRegistration {
 					CorporateActionGeneralInformation115.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation118.mmOfficialCorporateActionEventIdentification,
 					CorporateActionGeneralInformation121.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation123.mmOfficialCorporateActionEventIdentification,
 					CorporateActionGeneralInformation117.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation113.mmOfficialCorporateActionEventIdentification,
-					EventInformation10.mmOfficialCorporateActionEventIdentification);
+					EventInformation10.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation127.mmOfficialCorporateActionEventIdentification,
+					CorporateActionGeneralInformation126.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation125.mmOfficialCorporateActionEventIdentification,
+					CorporateActionGeneralInformation124.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation128.mmOfficialCorporateActionEventIdentification,
+					EventInformation11.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation129.mmOfficialCorporateActionEventIdentification, EventInformation12.mmOfficialCorporateActionEventIdentification,
+					CorporateActionGeneralInformation130.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation131.mmOfficialCorporateActionEventIdentification,
+					CorporateActionGeneralInformation132.mmOfficialCorporateActionEventIdentification, CorporateActionGeneralInformation134.mmOfficialCorporateActionEventIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1802,6 +1939,12 @@ public class CorporateActionEventRegistration {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate58#mmOfficialAnnouncementPublicationDate
 	 * CorporateActionDate58.mmOfficialAnnouncementPublicationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate61#mmOfficialAnnouncementPublicationDate
+	 * CorporateActionDate61.mmOfficialAnnouncementPublicationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate74#mmOfficialAnnouncementPublicationDate
+	 * CorporateActionDate74.mmOfficialAnnouncementPublicationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1827,7 +1970,8 @@ public class CorporateActionEventRegistration {
 			derivation_lazy = () -> Arrays.asList(CorporateActionDate1.mmOfficialAnnouncementPublicationDate, CorporateActionDate13.mmOfficialAnnouncementPublicationDate, CorporateActionDate14.mmOfficialAnnouncementPublicationDate,
 					CorporateActionDate21.mmOfficialAnnouncementPublicationDate, CorporateActionDate22.mmOfficialAnnouncementPublicationDate, CorporateActionDate25.mmOfficialAnnouncementPublicationDate,
 					CorporateActionDate27.mmOfficialAnnouncementPublicationDate, CorporateActionDate28.mmOfficialAnnouncementPublicationDate, CorporateActionNotification1.mmOfficialAnnouncementPublicationDate,
-					CorporateActionDate44.mmOfficialAnnouncementPublicationDate, CorporateActionDate58.mmOfficialAnnouncementPublicationDate);
+					CorporateActionDate44.mmOfficialAnnouncementPublicationDate, CorporateActionDate58.mmOfficialAnnouncementPublicationDate, CorporateActionDate61.mmOfficialAnnouncementPublicationDate,
+					CorporateActionDate74.mmOfficialAnnouncementPublicationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionEventRegistration.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

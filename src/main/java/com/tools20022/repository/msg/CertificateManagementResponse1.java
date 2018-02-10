@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catm.CertificateManagementResponseV01;
+import com.tools20022.repository.area.catm.CertificateManagementResponseV02;
 import com.tools20022.repository.codeset.CardPaymentServiceType10Code;
 import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max3000Binary;
@@ -76,6 +77,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV01#mmCertificateManagementResponse
  * CertificateManagementResponseV01.mmCertificateManagementResponse}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementResponseV02#mmCertificateManagementResponse
+ * CertificateManagementResponseV02.mmCertificateManagementResponse}</li>
  * </ul>
  * </li>
  * <li>
@@ -458,7 +462,7 @@ public class CertificateManagementResponse1 {
 						com.tools20022.repository.msg.CertificateManagementResponse1.mmCertificateService, com.tools20022.repository.msg.CertificateManagementResponse1.mmResult,
 						com.tools20022.repository.msg.CertificateManagementResponse1.mmSecurityProfile, com.tools20022.repository.msg.CertificateManagementResponse1.mmClientCertificate,
 						com.tools20022.repository.msg.CertificateManagementResponse1.mmClientCertificatePath, com.tools20022.repository.msg.CertificateManagementResponse1.mmServerCertificatePath);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CertificateManagementResponseV01.mmCertificateManagementResponse);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CertificateManagementResponseV01.mmCertificateManagementResponse, CertificateManagementResponseV02.mmCertificateManagementResponse);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateManagementResponse1";

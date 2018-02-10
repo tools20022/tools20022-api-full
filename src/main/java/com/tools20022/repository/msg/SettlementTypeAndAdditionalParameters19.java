@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.ReceiveDelivery1Code;
 import com.tools20022.repository.datatype.Max35Text;
@@ -92,6 +93,10 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#mmSettlementTypeAndAdditionalParameters
  * SecuritiesSettlementTransactionInstructionV07.
+ * mmSettlementTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08#mmSettlementTypeAndAdditionalParameters
+ * SecuritiesSettlementTransactionInstructionV08.
  * mmSettlementTypeAndAdditionalParameters}</li>
  * </ul>
  * </li>
@@ -635,7 +640,7 @@ public class SettlementTypeAndAdditionalParameters19 {
 						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmClientCollateralTransactionIdentification,
 						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
 						com.tools20022.repository.msg.SettlementTypeAndAdditionalParameters19.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionInstructionV07.mmSettlementTypeAndAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionInstructionV07.mmSettlementTypeAndAdditionalParameters, SecuritiesSettlementTransactionInstructionV08.mmSettlementTypeAndAdditionalParameters);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

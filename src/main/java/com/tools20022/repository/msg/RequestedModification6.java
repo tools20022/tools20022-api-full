@@ -150,6 +150,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provide further details on the requested modifications of the underlying payment instruction."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RequestedModification7
+ * RequestedModification7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.RequestedModification5
@@ -197,6 +204,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Unique identification as assigned by an instructing party for an instructed party to unambiguously identify the instruction.\n\nUsage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInstructionIdentification
+	 * RequestedModification7.mmInstructionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -213,6 +228,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionIdentification";
 			definition = "Unique identification as assigned by an instructing party for an instructed party to unambiguously identify the instruction.\n\nUsage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmInstructionIdentification);
 			previousVersion_lazy = () -> RequestedModification5.mmInstructionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -253,6 +269,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\n\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmEndToEndIdentification
+	 * RequestedModification7.mmEndToEndIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -269,6 +293,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\n\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmEndToEndIdentification);
 			previousVersion_lazy = () -> RequestedModification5.mmEndToEndIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -309,6 +334,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain. \nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmTransactionIdentification
+	 * RequestedModification7.mmTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -325,6 +358,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain. \nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmTransactionIdentification);
 			previousVersion_lazy = () -> RequestedModification5.mmTransactionIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -364,6 +398,14 @@ public class RequestedModification6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to further specify the type of transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmPaymentTypeInformation
+	 * RequestedModification7.mmPaymentTypeInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -380,6 +422,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeInformation";
 			definition = "Set of elements used to further specify the type of transaction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmPaymentTypeInformation);
 			previousVersion_lazy = () -> RequestedModification5.mmPaymentTypeInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -422,6 +465,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmRequestedExecutionDate
+	 * RequestedModification7.mmRequestedExecutionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -438,6 +489,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmRequestedExecutionDate);
 			previousVersion_lazy = () -> RequestedModification5.mmRequestedExecutionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -478,6 +530,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Date and time at which the creditor requests that the amount of money is to be collected from the debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmRequestedCollectionDate
+	 * RequestedModification7.mmRequestedCollectionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -494,6 +554,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedCollectionDate";
 			definition = "Date and time at which the creditor requests that the amount of money is to be collected from the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmRequestedCollectionDate);
 			previousVersion_lazy = () -> RequestedModification5.mmRequestedCollectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -534,6 +595,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInterbankSettlementDate
+	 * RequestedModification7.mmInterbankSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -550,6 +619,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmInterbankSettlementDate);
 			previousVersion_lazy = () -> RequestedModification5.mmInterbankSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -589,6 +659,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmAmount
+	 * RequestedModification7.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -605,6 +683,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmAmount);
 			previousVersion_lazy = () -> RequestedModification5.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -647,6 +726,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Amount of money moved between the instructing agent and the instructed agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInterbankSettlementAmount
+	 * RequestedModification7.mmInterbankSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -663,6 +750,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmInterbankSettlementAmount);
 			previousVersion_lazy = () -> RequestedModification5.mmInterbankSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -704,6 +792,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Specifies which party/parties will bear the charges associated with the processing of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmChargeBearer
+	 * RequestedModification7.mmChargeBearer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -720,6 +816,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeBearer";
 			definition = "Specifies which party/parties will bear the charges associated with the processing of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmChargeBearer);
 			previousVersion_lazy = () -> RequestedModification5.mmChargeBearer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -759,6 +856,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Ultimate party that owes an amount of money to the (ultimate) creditor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmUltimateDebtor
+	 * RequestedModification7.mmUltimateDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -775,6 +880,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmUltimateDebtor);
 			previousVersion_lazy = () -> RequestedModification5.mmUltimateDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -815,6 +921,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmDebtor
+	 * RequestedModification7.mmDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -831,6 +945,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmDebtor);
 			previousVersion_lazy = () -> RequestedModification5.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -871,6 +986,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmDebtorAccount
+	 * RequestedModification7.mmDebtorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -887,6 +1010,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmDebtorAccount);
 			previousVersion_lazy = () -> RequestedModification5.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -927,6 +1051,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmDebtorAgentAccount
+	 * RequestedModification7.mmDebtorAgentAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -943,6 +1075,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentAccount";
 			definition = "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmDebtorAgentAccount);
 			previousVersion_lazy = () -> RequestedModification5.mmDebtorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -983,6 +1116,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Instruction between two clearing agents stipulating the cash transfer characteristics between the two parties."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmSettlementInformation
+	 * RequestedModification7.mmSettlementInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -999,6 +1140,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInformation";
 			definition = "Instruction between two clearing agents stipulating the cash transfer characteristics between the two parties.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmSettlementInformation);
 			previousVersion_lazy = () -> RequestedModification5.mmSettlementInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1039,6 +1181,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmCreditorAgentAccount
+	 * RequestedModification7.mmCreditorAgentAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1055,6 +1205,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentAccount";
 			definition = "Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmCreditorAgentAccount);
 			previousVersion_lazy = () -> RequestedModification5.mmCreditorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1093,6 +1244,14 @@ public class RequestedModification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party to which an amount of money is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmCreditor
+	 * RequestedModification7.mmCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1109,6 +1268,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party to which an amount of money is due.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmCreditor);
 			previousVersion_lazy = () -> RequestedModification5.mmCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1149,6 +1309,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmCreditorAccount
+	 * RequestedModification7.mmCreditorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1165,6 +1333,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmCreditorAccount);
 			previousVersion_lazy = () -> RequestedModification5.mmCreditorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1203,6 +1372,14 @@ public class RequestedModification6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Ultimate party to which an amount of money is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmUltimateCreditor
+	 * RequestedModification7.mmUltimateCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1219,6 +1396,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditor";
 			definition = "Ultimate party to which an amount of money is due.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmUltimateCreditor);
 			previousVersion_lazy = () -> RequestedModification5.mmUltimateCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1259,6 +1437,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmPurpose
+	 * RequestedModification7.mmPurpose}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1275,6 +1461,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmPurpose);
 			previousVersion_lazy = () -> RequestedModification5.mmPurpose;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1316,6 +1503,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the debtor agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInstructionForDebtorAgent
+	 * RequestedModification7.mmInstructionForDebtorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1332,6 +1527,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForDebtorAgent";
 			definition = "Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the debtor agent.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmInstructionForDebtorAgent);
 			previousVersion_lazy = () -> RequestedModification5.mmInstructionForDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1372,6 +1568,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. \n\nUsage: The next agent may not be the creditor agent.\nThe instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInstructionForNextAgent
+	 * RequestedModification7.mmInstructionForNextAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1388,6 +1592,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForNextAgent";
 			definition = "Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. \n\nUsage: The next agent may not be the creditor agent.\nThe instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmInstructionForNextAgent);
 			previousVersion_lazy = () -> RequestedModification5.mmInstructionForNextAgent;
 			minOccurs = 0;
 			isComposite = true;
@@ -1428,6 +1633,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmInstructionForCreditorAgent
+	 * RequestedModification7.mmInstructionForCreditorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1444,6 +1657,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionForCreditorAgent";
 			definition = "Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmInstructionForCreditorAgent);
 			previousVersion_lazy = () -> RequestedModification5.mmInstructionForCreditorAgent;
 			minOccurs = 0;
 			isComposite = true;
@@ -1483,6 +1697,14 @@ public class RequestedModification6 {
 	 * definition} =
 	 * "Structured information that enables the matching, that is reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RequestedModification7#mmRemittanceInformation
+	 * RequestedModification7.mmRemittanceInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1499,6 +1721,7 @@ public class RequestedModification6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Structured information that enables the matching, that is reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.";
+			nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmRemittanceInformation);
 			previousVersion_lazy = () -> RequestedModification5.mmRemittanceInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1527,6 +1750,7 @@ public class RequestedModification6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RequestedModification6";
 				definition = "Provide further details on the requested modifications of the underlying payment instruction.";
+				nextVersions_lazy = () -> Arrays.asList(RequestedModification7.mmObject());
 				previousVersion_lazy = () -> RequestedModification5.mmObject();
 			}
 		});

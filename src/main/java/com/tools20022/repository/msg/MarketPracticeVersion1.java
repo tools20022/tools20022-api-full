@@ -230,6 +230,54 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.acmt.AccountManagementStatusReportV06#mmMarketPracticeVersion
  * AccountManagementStatusReportV06.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV08#mmMarketPracticeVersion
+ * ReversalOfTransferOutConfirmationV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV08#mmMarketPracticeVersion
+ * TransferInConfirmationV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08#mmMarketPracticeVersion
+ * PortfolioTransferInstructionV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08#mmMarketPracticeVersion
+ * PortfolioTransferCancellationRequestV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV08#mmMarketPracticeVersion
+ * TransferOutCancellationRequestV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV08#mmMarketPracticeVersion
+ * TransferInInstructionV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08#mmMarketPracticeVersion
+ * PortfolioTransferConfirmationV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06#mmMarketPracticeVersion
+ * AccountHoldingInformationV06.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmMarketPracticeVersion
+ * TransferOutConfirmationV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV08#mmMarketPracticeVersion
+ * TransferInCancellationRequestV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV08#mmMarketPracticeVersion
+ * TransferOutInstructionV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV06#mmMarketPracticeVersion
+ * TransferCancellationStatusReportV06.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmMarketPracticeVersion
+ * AccountHoldingInformationRequestV05.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08#mmMarketPracticeVersion
+ * ReversalOfTransferInConfirmationV08.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06#mmMarketPracticeVersion
+ * RequestForTransferStatusReportV06.mmMarketPracticeVersion}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmMarketPracticeVersion
+ * TransferInstructionStatusReportV06.mmMarketPracticeVersion}</li>
  * </ul>
  * </li>
  * <li>
@@ -322,7 +370,7 @@ public class MarketPracticeVersion1 {
 	 * name} = "Date"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Year and month, for example, 2013-06"</li>
+	 * definition} = "Year and month, for example, 2013-06."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
@@ -332,7 +380,7 @@ public class MarketPracticeVersion1 {
 			xmlTag = "Dt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
-			definition = "Year and month, for example, 2013-06";
+			definition = "Year and month, for example, 2013-06.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISOYearMonth.mmObject();
@@ -404,7 +452,12 @@ public class MarketPracticeVersion1 {
 						TransferCancellationStatusReportV05.mmMarketPracticeVersion, TransferOutInstructionV07.mmMarketPracticeVersion, AccountManagementStatusReportV05.mmMarketPracticeVersion,
 						AccountModificationInstructionV06.mmMarketPracticeVersion, TransferInInstructionV07.mmMarketPracticeVersion, AccountHoldingInformationRequestV04.mmMarketPracticeVersion,
 						ReversalOfTransferInConfirmationV07.mmMarketPracticeVersion, AccountDetailsConfirmationV07.mmMarketPracticeVersion, AccountModificationInstructionV07.mmMarketPracticeVersion,
-						AccountOpeningInstructionV07.mmMarketPracticeVersion, AccountManagementStatusReportV06.mmMarketPracticeVersion);
+						AccountOpeningInstructionV07.mmMarketPracticeVersion, AccountManagementStatusReportV06.mmMarketPracticeVersion, ReversalOfTransferOutConfirmationV08.mmMarketPracticeVersion,
+						TransferInConfirmationV08.mmMarketPracticeVersion, PortfolioTransferInstructionV08.mmMarketPracticeVersion, PortfolioTransferCancellationRequestV08.mmMarketPracticeVersion,
+						TransferOutCancellationRequestV08.mmMarketPracticeVersion, TransferInInstructionV08.mmMarketPracticeVersion, PortfolioTransferConfirmationV08.mmMarketPracticeVersion,
+						AccountHoldingInformationV06.mmMarketPracticeVersion, TransferOutConfirmationV08.mmMarketPracticeVersion, TransferInCancellationRequestV08.mmMarketPracticeVersion, TransferOutInstructionV08.mmMarketPracticeVersion,
+						TransferCancellationStatusReportV06.mmMarketPracticeVersion, AccountHoldingInformationRequestV05.mmMarketPracticeVersion, ReversalOfTransferInConfirmationV08.mmMarketPracticeVersion,
+						RequestForTransferStatusReportV06.mmMarketPracticeVersion, TransferInstructionStatusReportV06.mmMarketPracticeVersion);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MarketPracticeVersion1";

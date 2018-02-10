@@ -292,7 +292,7 @@ public class Reference12 {
 	 * name} = "ReferenceOrderIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Unique identifier of  the order being hit or taken."</li>
+	 * definition} = "Unique identifier of the order being hit or taken."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReferenceOrderIdentification = new MMMessageAttribute() {
@@ -303,7 +303,7 @@ public class Reference12 {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "1080"), new FIXSynonym(this, "1081"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceOrderIdentification";
-			definition = "Unique identifier of  the order being hit or taken.";
+			definition = "Unique identifier of the order being hit or taken.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

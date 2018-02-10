@@ -948,7 +948,7 @@ public class CreditTransferTransactionInformation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Agent between the debtor agent and creditor agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent3 identifies the agent between the  intermediary agent 2 and the creditor agent."
+	 * "Agent between the debtor agent and creditor agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent3 identifies the agent between the intermediary agent 2 and the creditor agent."
 	 * </li>
 	 * </ul>
 	 */
@@ -960,7 +960,7 @@ public class CreditTransferTransactionInformation3 {
 			xmlTag = "IntrmyAgt3";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryAgent3";
-			definition = "Agent between the debtor agent and creditor agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent3 identifies the agent between the  intermediary agent 2 and the creditor agent.";
+			definition = "Agent between the debtor agent and creditor agent.\n\nUsage: If more than one intermediary agent is present, then IntermediaryAgent3 identifies the agent between the intermediary agent 2 and the creditor agent.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -71,7 +71,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "EUSavingsDirective1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "ndicate whether or not the fund is subject to reporting  under the EU Savings Directive.  Enter \"Variable\" if the status of the fund is likely to change from time to time."
+ * "ndicate whether or not the fund is subject to reporting under the EU Savings Directive. Enter \"Variable\" if the status of the fund is likely to change from time to time."
  * </li>
  * </ul>
  */
@@ -163,7 +163,7 @@ public class EUSavingsDirective1Code extends MMCode {
 				example = Arrays.asList("EUSI");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EUSavingsDirective1Code";
-				definition = "ndicate whether or not the fund is subject to reporting  under the EU Savings Directive.  Enter \"Variable\" if the status of the fund is likely to change from time to time.";
+				definition = "ndicate whether or not the fund is subject to reporting under the EU Savings Directive. Enter \"Variable\" if the status of the fund is likely to change from time to time.";
 				trace_lazy = () -> EUSavingsDirectiveCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsInScope, com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsOutScope,
 						com.tools20022.repository.codeset.EUSavingsDirective1Code.EUSavingsVariable);

@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.ATMCardTransactionLatestVersion;
+import com.tools20022.repository.area.ATMCardTransactionPreviousVersion;
 import com.tools20022.repository.msg.ATMWithdrawalCompletionAcknowledgement1;
 import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
@@ -75,8 +75,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "ATMWdrwlCmpltnAck"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
- * ATMCardTransactionLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.ATMCardTransactionPreviousVersion
+ * ATMCardTransactionPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catp.004.001.01}</li>
@@ -217,7 +217,7 @@ public class ATMWithdrawalCompletionAcknowledgementV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to the acknowledgement  of an ATM withdrawal transaction from the ATM manager."
+	 * "Information related to the acknowledgement of an ATM withdrawal transaction from the ATM manager."
 	 * </li>
 	 * </ul>
 	 */
@@ -226,7 +226,7 @@ public class ATMWithdrawalCompletionAcknowledgementV01 {
 			xmlTag = "ATMWdrwlCmpltnAck";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ATMWithdrawalCompletionAcknowledgement";
-			definition = "Information related to the acknowledgement  of an ATM withdrawal transaction from the ATM manager.";
+			definition = "Information related to the acknowledgement of an ATM withdrawal transaction from the ATM manager.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> ATMWithdrawalCompletionAcknowledgement1.mmObject();
@@ -295,7 +295,7 @@ public class ATMWithdrawalCompletionAcknowledgementV01 {
 				messageSet_lazy = () -> Arrays.asList(ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "ATMWdrwlCmpltnAck";
-				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
+				businessArea_lazy = () -> ATMCardTransactionPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays
 						.asList(com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.mmHeader,
 								com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01.mmProtectedATMWithdrawalCompletionAcknowledgement,

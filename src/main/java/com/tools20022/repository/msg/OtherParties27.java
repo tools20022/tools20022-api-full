@@ -101,6 +101,25 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV07#mmOtherBusinessParties
  * SecuritiesSettlementTransactionInstructionV07.mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionGenerationNotificationV08.
+ * mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionConfirmationV08#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionConfirmationV08.mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV08#mmOtherBusinessParties
+ * SecuritiesFinancingInstructionV08.mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingConfirmationV08#mmOtherBusinessParties
+ * SecuritiesFinancingConfirmationV08.mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionReversalAdviceV07#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionReversalAdviceV07.mmOtherBusinessParties}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionInstructionV08#mmOtherBusinessParties
+ * SecuritiesSettlementTransactionInstructionV08.mmOtherBusinessParties}</li>
  * </ul>
  * </li>
  * <li>
@@ -501,7 +520,9 @@ public class OtherParties27 {
 						SecuritiesFinancingInstructionV06.mmOtherBusinessParties, SecuritiesSettlementTransactionGenerationNotificationV06.mmOtherBusinessParties, SecuritiesSettlementTransactionReversalAdviceV05.mmOtherBusinessParties,
 						SecuritiesFinancingConfirmationV06.mmOtherBusinessParties, SecuritiesFinancingInstructionV07.mmOtherBusinessParties, SecuritiesSettlementTransactionGenerationNotificationV07.mmOtherBusinessParties,
 						SecuritiesSettlementTransactionConfirmationV07.mmOtherBusinessParties, SecuritiesSettlementTransactionReversalAdviceV06.mmOtherBusinessParties, SecuritiesFinancingConfirmationV07.mmOtherBusinessParties,
-						SecuritiesSettlementTransactionInstructionV07.mmOtherBusinessParties);
+						SecuritiesSettlementTransactionInstructionV07.mmOtherBusinessParties, SecuritiesSettlementTransactionGenerationNotificationV08.mmOtherBusinessParties,
+						SecuritiesSettlementTransactionConfirmationV08.mmOtherBusinessParties, SecuritiesFinancingInstructionV08.mmOtherBusinessParties, SecuritiesFinancingConfirmationV08.mmOtherBusinessParties,
+						SecuritiesSettlementTransactionReversalAdviceV07.mmOtherBusinessParties, SecuritiesSettlementTransactionInstructionV08.mmOtherBusinessParties);
 				trace_lazy = () -> Role.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintInvestorCountryCodeRule.forOtherParties27,

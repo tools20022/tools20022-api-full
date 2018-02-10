@@ -335,7 +335,7 @@ public class CashDistribution extends Distribution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Ratio of compensation for damage/loss versus value of insured entity"</li>
+	 * "Ratio of compensation for damage/loss versus value of insured entity."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmCashIndemnityRate = new MMBusinessAttribute() {
@@ -344,7 +344,7 @@ public class CashDistribution extends Distribution {
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashDistribution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CashIndemnityRate";
-			definition = "Ratio of compensation for damage/loss versus value of insured entity";
+			definition = "Ratio of compensation for damage/loss versus value of insured entity.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> PercentageRate.mmObject();

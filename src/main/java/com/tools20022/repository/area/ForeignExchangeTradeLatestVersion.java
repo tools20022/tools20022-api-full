@@ -37,6 +37,30 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageDefinition} =
  * <ul>
  * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01
+ * ForeignExchangeTradeConfirmationStatusAdviceV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestCancellationRequestV01
+ * ForeignExchangeTradeConfirmationRequestCancellationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01
+ * ForeignExchangeTradeConfirmationRequestAmendmentRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01
+ * ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestV01
+ * ForeignExchangeTradeConfirmationRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportRequestV01
+ * ForeignExchangeTradeCaptureReportRequestV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01
+ * ForeignExchangeTradeCaptureReportV01}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportAcknowledgementV01
+ * ForeignExchangeTradeCaptureReportAcknowledgementV01}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeInstructionV04
  * ForeignExchangeTradeInstructionV04}</li>
  * <li>
@@ -84,8 +108,11 @@ public class ForeignExchangeTradeLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Foreign Exchange Trade - Latest version - master";
 				definition = "Messages that support management processes for foreign exchange contracts, including reporting on trades and balances, plus any exceptions and investigations related to foreign exchange contracts.";
-				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeInstructionV04.mmObject(), ForeignExchangeTradeStatusNotificationV06.mmObject(), ForeignExchangeTradeInstructionCancellationV04.mmObject(),
-						ForeignExchangeTradeInstructionAmendmentV04.mmObject(), ForeignExchangeTradeStatusAndDetailsNotificationV04.mmObject(), ForeignExchangeTradeBulkStatusNotificationV04.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationStatusAdviceV01.mmObject(), ForeignExchangeTradeConfirmationRequestCancellationRequestV01.mmObject(),
+						ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmObject(), ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.mmObject(), ForeignExchangeTradeConfirmationRequestV01.mmObject(),
+						ForeignExchangeTradeCaptureReportRequestV01.mmObject(), ForeignExchangeTradeCaptureReportV01.mmObject(), ForeignExchangeTradeCaptureReportAcknowledgementV01.mmObject(), ForeignExchangeTradeInstructionV04.mmObject(),
+						ForeignExchangeTradeStatusNotificationV06.mmObject(), ForeignExchangeTradeInstructionCancellationV04.mmObject(), ForeignExchangeTradeInstructionAmendmentV04.mmObject(),
+						ForeignExchangeTradeStatusAndDetailsNotificationV04.mmObject(), ForeignExchangeTradeBulkStatusNotificationV04.mmObject());
 				code = "fxtr";
 			}
 		});

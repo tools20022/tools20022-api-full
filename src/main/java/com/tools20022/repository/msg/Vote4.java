@@ -126,7 +126,7 @@ public class Vote4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Numbering of the resolution as specified by the issuer or  its agent."</li>
+	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -146,7 +146,7 @@ public class Vote4 {
 			xmlTag = "IssrLabl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerLabel";
-			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
+			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			nextVersions_lazy = () -> Arrays.asList(Vote8.mmIssuerLabel, Vote6.mmIssuerLabel);
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -182,7 +182,7 @@ public class Vote4 {
 	 * name} = "For"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes in favour of one resolution"</li>
+	 * definition} = "Number of votes in favour of one resolution."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -200,7 +200,7 @@ public class Vote4 {
 			xmlTag = "For";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
-			definition = "Number of votes in favour of one resolution";
+			definition = "Number of votes in favour of one resolution.";
 			nextVersions_lazy = () -> Arrays.asList(Vote8.mmFor, Vote6.mmFor);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -237,7 +237,7 @@ public class Vote4 {
 	 * name} = "Against"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes against one resolution"</li>
+	 * definition} = "Number of votes against one resolution."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -257,7 +257,7 @@ public class Vote4 {
 			xmlTag = "Agnst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
-			definition = "Number of votes against one resolution";
+			definition = "Number of votes against one resolution.";
 			nextVersions_lazy = () -> Arrays.asList(Vote8.mmAgainst, Vote6.mmAgainst);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -351,7 +351,7 @@ public class Vote4 {
 	 * name} = "Withhold"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes withheld for one resolution"</li>
+	 * definition} = "Number of votes withheld for one resolution."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -371,7 +371,7 @@ public class Vote4 {
 			xmlTag = "Wthhld";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Withhold";
-			definition = "Number of votes withheld for one resolution";
+			definition = "Number of votes withheld for one resolution.";
 			nextVersions_lazy = () -> Arrays.asList(Vote8.mmWithhold, Vote6.mmWithhold);
 			maxOccurs = 1;
 			minOccurs = 0;

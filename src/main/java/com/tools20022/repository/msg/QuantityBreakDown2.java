@@ -131,7 +131,7 @@ public class QuantityBreakDown2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number identifying a lot constituting the financial instrument"</li>
+	 * "Number identifying a lot constituting the financial instrument."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLotNumber = new MMMessageAttribute() {
@@ -142,7 +142,7 @@ public class QuantityBreakDown2 {
 			xmlTag = "LotNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotNumber";
-			definition = "Number identifying a lot constituting the financial instrument";
+			definition = "Number identifying a lot constituting the financial instrument.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Number1Choice.mmObject();

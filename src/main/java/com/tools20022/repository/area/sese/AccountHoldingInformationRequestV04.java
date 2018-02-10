@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.SecuritiesSettlementLatestVersion;
+import com.tools20022.repository.area.SecuritiesSettlementPreviousVersion;
 import com.tools20022.repository.choice.PartyIdentification70Choice;
 import com.tools20022.repository.codeset.BusinessFlowDirectionType1Code;
 import com.tools20022.repository.msg.*;
@@ -116,8 +116,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "AcctHldgInfReq"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.SecuritiesSettlementLatestVersion
- * SecuritiesSettlementLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.SecuritiesSettlementPreviousVersion
+ * SecuritiesSettlementPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code sese.019.001.04}</li>
@@ -154,6 +154,14 @@ import javax.xml.bind.annotation.*;
  * definition} =
  * "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee) sends the AccountHoldingInformationRequest message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to request information about financial instruments held on behalf of the client.\r\nUsage\r\nThe AccountHoldingInformationRequest message is used to request information about one or more ISA or portfolio products held in a client's account for which it intends to instruct a transfer at a later time."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05
+ * AccountHoldingInformationRequestV05}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV03
@@ -189,6 +197,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmMessageReference
+	 * AccountHoldingInformationRequestV05.mmMessageReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -202,6 +218,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageReference";
 			definition = "Identifies the message.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmMessageReference);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmMessageReference;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -239,6 +256,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Collective reference identifying a set of messages."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmPoolReference
+	 * AccountHoldingInformationRequestV05.mmPoolReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -252,6 +277,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PoolReference";
 			definition = "Collective reference identifying a set of messages.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmPoolReference);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmPoolReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -289,6 +315,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Reference to a linked message that was previously sent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmPreviousReference
+	 * AccountHoldingInformationRequestV05.mmPreviousReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -302,6 +336,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PreviousReference";
 			definition = "Reference to a linked message that was previously sent.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmPreviousReference);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmPreviousReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -340,6 +375,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reference to a linked message that was previously received."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmRelatedReference
+	 * AccountHoldingInformationRequestV05.mmRelatedReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -353,6 +396,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedReference";
 			definition = "Reference to a linked message that was previously received.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmRelatedReference);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmRelatedReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -392,6 +436,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Identifies the business flow type (assets to be delivered or received)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmBusinessFlowDirectionType
+	 * AccountHoldingInformationRequestV05.mmBusinessFlowDirectionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -405,6 +457,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessFlowDirectionType";
 			definition = "Identifies the business flow type (assets to be delivered or received).";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmBusinessFlowDirectionType);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmBusinessFlowDirectionType;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -444,6 +497,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Information identifying the primary individual investor, for example, name, address, social security number and date of birth."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmPrimaryIndividualInvestor
+	 * AccountHoldingInformationRequestV05.mmPrimaryIndividualInvestor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -457,6 +518,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryIndividualInvestor";
 			definition = "Information identifying the primary individual investor, for example, name, address, social security number and date of birth.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmPrimaryIndividualInvestor);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmPrimaryIndividualInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -496,6 +558,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Information identifying the secondary individual investor, for example, name, address, social security number and date of birth."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmSecondaryIndividualInvestor
+	 * AccountHoldingInformationRequestV05.mmSecondaryIndividualInvestor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -509,6 +579,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryIndividualInvestor";
 			definition = "Information identifying the secondary individual investor, for example, name, address, social security number and date of birth.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmSecondaryIndividualInvestor);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmSecondaryIndividualInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -548,6 +619,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Information identifying other individual investors, for example, name, address, social security number and date of birth."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmOtherIndividualInvestor
+	 * AccountHoldingInformationRequestV05.mmOtherIndividualInvestor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -561,6 +640,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherIndividualInvestor";
 			definition = "Information identifying other individual investors, for example, name, address, social security number and date of birth.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmOtherIndividualInvestor);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmOtherIndividualInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> IndividualPerson8.mmObject();
@@ -598,6 +678,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Information identifying the primary corporate investor, for example, name and address."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmPrimaryCorporateInvestor
+	 * AccountHoldingInformationRequestV05.mmPrimaryCorporateInvestor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -611,6 +699,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrimaryCorporateInvestor";
 			definition = "Information identifying the primary corporate investor, for example, name and address.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmPrimaryCorporateInvestor);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmPrimaryCorporateInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -649,6 +738,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Information identifying the secondary corporate investor, for example, name and address."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmSecondaryCorporateInvestor
+	 * AccountHoldingInformationRequestV05.mmSecondaryCorporateInvestor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -662,6 +759,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecondaryCorporateInvestor";
 			definition = "Information identifying the secondary corporate investor, for example, name and address.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmSecondaryCorporateInvestor);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmSecondaryCorporateInvestor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -700,6 +798,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Information identifying the other corporate investors, for example, name and address."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmOtherCorporateInvestor
+	 * AccountHoldingInformationRequestV05.mmOtherCorporateInvestor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -713,6 +819,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OtherCorporateInvestor";
 			definition = "Information identifying the other corporate investors, for example, name and address.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmOtherCorporateInvestor);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmOtherCorporateInvestor;
 			minOccurs = 0;
 			complexType_lazy = () -> Organisation21.mmObject();
@@ -750,6 +857,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Identification of an account owned by the investor at the old plan manager (account servicer)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmTransferorAccount
+	 * AccountHoldingInformationRequestV05.mmTransferorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -763,6 +878,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferorAccount";
 			definition = "Identification of an account owned by the investor at the old plan manager (account servicer).";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmTransferorAccount);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmTransferorAccount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -801,6 +917,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Account held in the name of a party that is not the name of the beneficial owner of the shares."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmNomineeAccount
+	 * AccountHoldingInformationRequestV05.mmNomineeAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -814,6 +938,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NomineeAccount";
 			definition = "Account held in the name of a party that is not the name of the beneficial owner of the shares.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmNomineeAccount);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmNomineeAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -853,6 +978,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Information related to the institution to which the financial instrument is to be transferred."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmTransferee
+	 * AccountHoldingInformationRequestV05.mmTransferee}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -866,6 +999,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Information related to the institution to which the financial instrument is to be transferred.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmTransferee);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmTransferee;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -903,6 +1037,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides information related to the asset(s) transferred."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmProductTransfer
+	 * AccountHoldingInformationRequestV05.mmProductTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -916,6 +1058,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProductTransfer";
 			definition = "Provides information related to the asset(s) transferred.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmProductTransfer);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmProductTransfer;
 			minOccurs = 1;
 			complexType_lazy = () -> ISATransfer27.mmObject();
@@ -953,6 +1096,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identifies the market practice to which the message conforms."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmMarketPracticeVersion
+	 * AccountHoldingInformationRequestV05.mmMarketPracticeVersion}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -966,6 +1117,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketPracticeVersion";
 			definition = "Identifies the market practice to which the message conforms.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmMarketPracticeVersion);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmMarketPracticeVersion;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1004,6 +1156,14 @@ public class AccountHoldingInformationRequestV04 {
 	 * definition} =
 	 * "Additional information that cannot be captured in the structured elements and/or any other specific block."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmExtension
+	 * AccountHoldingInformationRequestV05.mmExtension}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1017,6 +1177,7 @@ public class AccountHoldingInformationRequestV04 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Extension";
 			definition = "Additional information that cannot be captured in the structured elements and/or any other specific block.";
+			nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmExtension);
 			previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmExtension;
 			minOccurs = 0;
 			complexType_lazy = () -> Extension1.mmObject();
@@ -1041,11 +1202,12 @@ public class AccountHoldingInformationRequestV04 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AccountHoldingInformationRequestV04";
 				definition = "Scope\r\nAn instructing party, for example, a (new) plan manager (Transferee) sends the AccountHoldingInformationRequest message to the executing party, for example, a (old) plan manager (Transferor), on behalf of the initiating party, for example, an investor (client), to request information about financial instruments held on behalf of the client.\r\nUsage\r\nThe AccountHoldingInformationRequest message is used to request information about one or more ISA or portfolio products held in a client's account for which it intends to instruct a transfer at a later time.";
+				nextVersions_lazy = () -> Arrays.asList(AccountHoldingInformationRequestV05.mmObject());
 				previousVersion_lazy = () -> AccountHoldingInformationRequestV03.mmObject();
 				messageSet_lazy = () -> Arrays.asList(InvestmentFundsISOLatestversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "AcctHldgInfReq";
-				businessArea_lazy = () -> SecuritiesSettlementLatestVersion.mmObject();
+				businessArea_lazy = () -> SecuritiesSettlementPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmMessageReference,
 						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmPoolReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmPreviousReference,
 						com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmRelatedReference, com.tools20022.repository.area.sese.AccountHoldingInformationRequestV04.mmBusinessFlowDirectionType,

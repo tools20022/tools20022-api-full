@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Physical packaging of goods for transport
+ * Physical packaging of goods for transport.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -61,7 +61,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Packaging1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Physical packaging of goods for transport"</li>
+ * definition} = "Physical packaging of goods for transport."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -174,7 +174,7 @@ public class Packaging1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Packaging1";
-				definition = "Physical packaging of goods for transport";
+				definition = "Physical packaging of goods for transport.";
 			}
 		});
 		return mmObject_lazy.get();

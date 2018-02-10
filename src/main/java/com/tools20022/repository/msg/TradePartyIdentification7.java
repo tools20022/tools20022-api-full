@@ -21,6 +21,10 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestCancellationRequestV01;
+import com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01;
 import com.tools20022.repository.codeset.OptionParty1Code;
 import com.tools20022.repository.codeset.OptionParty3Code;
 import com.tools20022.repository.entity.TradePartyRole;
@@ -64,6 +68,41 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.TradePartyRole
  * TradePartyRole}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01#mmTradingSideIdentification
+ * ForeignExchangeTradeConfirmationStatusAdviceV01.mmTradingSideIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01#mmCounterpartySideIdentification
+ * ForeignExchangeTradeConfirmationStatusAdviceV01.
+ * mmCounterpartySideIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestCancellationRequestV01#mmTradingSideIdentification
+ * ForeignExchangeTradeConfirmationRequestCancellationRequestV01.
+ * mmTradingSideIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestCancellationRequestV01#mmCounterpartyRoleIdentification
+ * ForeignExchangeTradeConfirmationRequestCancellationRequestV01.
+ * mmCounterpartyRoleIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01#mmTradingSideIdentification
+ * ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.
+ * mmTradingSideIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01#mmCounterpartySideIdentification
+ * ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.
+ * mmCounterpartySideIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01#mmTradingSideIdentification
+ * ForeignExchangeTradeCaptureReportV01.mmTradingSideIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01#mmCounterpartySideIdentification
+ * ForeignExchangeTradeCaptureReportV01.mmCounterpartySideIdentification}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -319,6 +358,10 @@ public class TradePartyIdentification7 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TradePartyIdentification7.mmFundInformation, com.tools20022.repository.msg.TradePartyIdentification7.mmBuyerOrSellerIndicator,
 						com.tools20022.repository.msg.TradePartyIdentification7.mmInitiatorIndicator, com.tools20022.repository.msg.TradePartyIdentification7.mmTradePartyIdentification,
 						com.tools20022.repository.msg.TradePartyIdentification7.mmSubmittingParty);
+				messageBuildingBlock_lazy = () -> Arrays.asList(ForeignExchangeTradeConfirmationStatusAdviceV01.mmTradingSideIdentification, ForeignExchangeTradeConfirmationStatusAdviceV01.mmCounterpartySideIdentification,
+						ForeignExchangeTradeConfirmationRequestCancellationRequestV01.mmTradingSideIdentification, ForeignExchangeTradeConfirmationRequestCancellationRequestV01.mmCounterpartyRoleIdentification,
+						ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmTradingSideIdentification, ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmCounterpartySideIdentification,
+						ForeignExchangeTradeCaptureReportV01.mmTradingSideIdentification, ForeignExchangeTradeCaptureReportV01.mmCounterpartySideIdentification);
 				trace_lazy = () -> TradePartyRole.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

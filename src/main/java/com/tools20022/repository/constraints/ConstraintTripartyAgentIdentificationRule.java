@@ -49,7 +49,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent. "
+	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -66,7 +66,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 			validator = ConstraintTripartyAgentIdentificationRule::checkSecuredMarketTransaction1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentIdentificationRule";
-			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent. ";
+			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction2);
 			owner_lazy = () -> SecuredMarketTransaction1.mmObject();
 		}
@@ -88,7 +88,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent. "
+	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -110,7 +110,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 			validator = ConstraintTripartyAgentIdentificationRule::checkSecuredMarketTransaction2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentIdentificationRule";
-			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent. ";
+			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction3);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction1;
 			owner_lazy = () -> SecuredMarketTransaction2.mmObject();
@@ -133,7 +133,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent. "
+	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -155,7 +155,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 			validator = ConstraintTripartyAgentIdentificationRule::checkSecuredMarketTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentIdentificationRule";
-			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent. ";
+			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction4);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction2;
 			owner_lazy = () -> SecuredMarketTransaction3.mmObject();
@@ -178,7 +178,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent. "
+	 * "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -192,7 +192,7 @@ public class ConstraintTripartyAgentIdentificationRule {
 			validator = ConstraintTripartyAgentIdentificationRule::checkSecuredMarketTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TripartyAgentIdentificationRule";
-			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent. ";
+			definition = "TripartyAgentIdentification must be present, when the transaction is performed via tri-party agent.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTripartyAgentIdentificationRule.forSecuredMarketTransaction3;
 			owner_lazy = () -> SecuredMarketTransaction4.mmObject();
 		}

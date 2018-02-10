@@ -718,7 +718,7 @@ public class DateAndAmountSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date or approximate date, that actual special dividend will be announced"
+	 * "Date or approximate date, that actual special dividend will be announced."
 	 * </li>
 	 * </ul>
 	 */
@@ -729,7 +729,7 @@ public class DateAndAmountSD1 {
 			xmlTag = "SpclAmtPerSctyAnncmntDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SpecialAmountPerSecurityAnnouncementDate";
-			definition = "Date or approximate date, that actual special dividend will be announced";
+			definition = "Date or approximate date, that actual special dividend will be announced.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1161,7 +1161,7 @@ public class DateAndAmountSD1 {
 	 * name} = "LastTradingDayForOriginalSecurities"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Last day for trading in pre-reorganisation securities. "</li>
+	 * definition} = "Last day for trading in pre-reorganisation securities."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmLastTradingDayForOriginalSecurities = new MMMessageAssociationEnd() {
@@ -1171,7 +1171,7 @@ public class DateAndAmountSD1 {
 			xmlTag = "LastTradgDayForOrgnlScties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastTradingDayForOriginalSecurities";
-			definition = "Last day for trading in pre-reorganisation securities. ";
+			definition = "Last day for trading in pre-reorganisation securities.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ProcessingStatus33Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for the processing status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.ProcessingStatus68Choice
+ * ProcessingStatus68Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +113,14 @@ public class ProcessingStatus33Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides the status of an instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus68Choice#mmCode
+	 * ProcessingStatus68Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -117,6 +132,7 @@ public class ProcessingStatus33Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Provides the status of an instruction.";
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus68Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> TransactionProcessingStatus3Code.mmObject();
@@ -159,6 +175,14 @@ public class ProcessingStatus33Choice {
 	 * definition} =
 	 * "Specifies a choice of status for the processing of an intra-balance movement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ProcessingStatus68Choice#mmProprietary
+	 * ProcessingStatus68Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -171,6 +195,7 @@ public class ProcessingStatus33Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Specifies a choice of status for the processing of an intra-balance movement.";
+			nextVersions_lazy = () -> Arrays.asList(ProcessingStatus68Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -187,6 +212,7 @@ public class ProcessingStatus33Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ProcessingStatus33Choice";
 				definition = "Choice of format for the processing status.";
+				nextVersions_lazy = () -> Arrays.asList(ProcessingStatus68Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

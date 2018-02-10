@@ -186,7 +186,7 @@ public class CashOptionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Income classification of the cash proceeds for dividend reinvestment ."</li>
+	 * "Income classification of the cash proceeds for dividend reinvestment."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReinvestmentIncomeClassification = new MMMessageAttribute() {
@@ -197,7 +197,7 @@ public class CashOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Reinvestment Income Classification"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReinvestmentIncomeClassification";
-			definition = "Income classification of the cash proceeds for dividend reinvestment .";
+			definition = "Income classification of the cash proceeds for dividend reinvestment.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ReinvestmentIncomeClassification1Code.mmObject();
@@ -232,7 +232,7 @@ public class CashOptionSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. "
+	 * "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -252,7 +252,7 @@ public class CashOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Pay Method"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCPayMethod";
-			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema. ";
+			definition = "Indicates the type of payment. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.";
 			nextVersions_lazy = () -> Arrays.asList(CashOptionSD7.mmDTCPayMethod);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -569,7 +569,7 @@ public class CashOptionSD2 {
 	 * name} = "CSDCashRate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Corresponding cash rate paid by CSD. "</li>
+	 * definition} = "Corresponding cash rate paid by CSD."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -588,7 +588,7 @@ public class CashOptionSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "DTC Cash Rate"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CSDCashRate";
-			definition = "Corresponding cash rate paid by CSD. ";
+			definition = "Corresponding cash rate paid by CSD.";
 			nextVersions_lazy = () -> Arrays.asList(CashOptionSD7.mmCSDCashRate);
 			maxOccurs = 1;
 			minOccurs = 0;

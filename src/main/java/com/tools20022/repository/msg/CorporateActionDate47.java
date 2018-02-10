@@ -76,6 +76,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionDate47"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Specifies corporate action dates."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionDate62
+ * CorporateActionDate62}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionDate23
@@ -123,6 +130,14 @@ public class CorporateActionDate47 {
 	 * definition} =
 	 * "Date on which the movement is due to take place (cash and/or securities)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate62#mmPaymentDate
+	 * CorporateActionDate62.mmPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -140,6 +155,7 @@ public class CorporateActionDate47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDate";
 			definition = "Date on which the movement is due to take place (cash and/or securities).";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate62.mmPaymentDate);
 			previousVersion_lazy = () -> CorporateActionDate23.mmPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -182,6 +198,14 @@ public class CorporateActionDate47 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time when calculating economic benefit for a cash amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate62#mmValueDate
+	 * CorporateActionDate62.mmValueDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -199,6 +223,7 @@ public class CorporateActionDate47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
 			definition = "Date/time when calculating economic benefit for a cash amount.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate62.mmValueDate);
 			previousVersion_lazy = () -> CorporateActionDate23.mmValueDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -241,6 +266,14 @@ public class CorporateActionDate47 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Date/time at which a foreign exchange rate will be determined."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate62#mmForeignExchangeRateFixingDate
+	 * CorporateActionDate62.mmForeignExchangeRateFixingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -258,6 +291,7 @@ public class CorporateActionDate47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeRateFixingDate";
 			definition = "Date/time at which a foreign exchange rate will be determined.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate62.mmForeignExchangeRateFixingDate);
 			previousVersion_lazy = () -> CorporateActionDate23.mmForeignExchangeRateFixingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -301,6 +335,14 @@ public class CorporateActionDate47 {
 	 * definition} =
 	 * "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionDate62#mmEarliestPaymentDate
+	 * CorporateActionDate62.mmEarliestPaymentDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -318,6 +360,7 @@ public class CorporateActionDate47 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EarliestPaymentDate";
 			definition = "Date on which a payment can be made, for example, if payment date is a non-business day or to indicate the first payment date of an offer.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionDate62.mmEarliestPaymentDate);
 			previousVersion_lazy = () -> CorporateActionDate23.mmEarliestPaymentDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -336,6 +379,7 @@ public class CorporateActionDate47 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionDate47";
 				definition = "Specifies corporate action dates.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionDate62.mmObject());
 				previousVersion_lazy = () -> CorporateActionDate23.mmObject();
 			}
 		});

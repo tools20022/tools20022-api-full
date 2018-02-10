@@ -105,7 +105,7 @@ public class ClassificationType4Choice {
 	 * name} = "ClassificationFinancialInstrument"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)"</li>
+	 * definition} = "ISO 10962 Classification of Financial Instrument (CFI)."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmClassificationFinancialInstrument = new MMMessageAttribute() {
@@ -116,7 +116,7 @@ public class ClassificationType4Choice {
 			xmlTag = "ClssfctnFinInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClassificationFinancialInstrument";
-			definition = "ISO 10962 Classification of Financial Instrument (CFI)";
+			definition = "ISO 10962 Classification of Financial Instrument (CFI).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CFIIdentifier.mmObject();

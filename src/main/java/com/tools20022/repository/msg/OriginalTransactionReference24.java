@@ -125,6 +125,13 @@ import javax.xml.bind.annotation.XmlType;
  * "OriginalTransactionReference24"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Key elements used to refer the original transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.OriginalTransactionReference27
+ * OriginalTransactionReference27}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference22
@@ -173,6 +180,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Amount of money moved between the instructing agent and the instructed agent."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmInterbankSettlementAmount
+	 * OriginalTransactionReference27.mmInterbankSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -189,6 +204,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Amount of money moved between the instructing agent and the instructed agent.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmInterbankSettlementAmount);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmInterbankSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -228,6 +244,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmAmount
+	 * OriginalTransactionReference27.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -244,6 +268,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmAmount);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -285,6 +310,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmInterbankSettlementDate
+	 * OriginalTransactionReference27.mmInterbankSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -301,6 +334,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmInterbankSettlementDate);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmInterbankSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -341,6 +375,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Date and time at which the creditor requests that the amount of money is to be collected from the debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmRequestedCollectionDate
+	 * OriginalTransactionReference27.mmRequestedCollectionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -357,6 +399,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedCollectionDate";
 			definition = "Date and time at which the creditor requests that the amount of money is to be collected from the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmRequestedCollectionDate);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmRequestedCollectionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -398,6 +441,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmRequestedExecutionDate
+	 * OriginalTransactionReference27.mmRequestedExecutionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -414,6 +465,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmRequestedExecutionDate);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmRequestedExecutionDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -451,6 +503,14 @@ public class OriginalTransactionReference24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Credit party that signs the mandate."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmCreditorSchemeIdentification
+	 * OriginalTransactionReference27.mmCreditorSchemeIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -467,6 +527,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorSchemeIdentification";
 			definition = "Credit party that signs the mandate.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmCreditorSchemeIdentification);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmCreditorSchemeIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -507,6 +568,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Specifies the details on how the settlement of the original transaction(s) between the instructing agent and the instructed agent was completed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmSettlementInformation
+	 * OriginalTransactionReference27.mmSettlementInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -523,6 +592,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementInformation";
 			definition = "Specifies the details on how the settlement of the original transaction(s) between the instructing agent and the instructed agent was completed.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmSettlementInformation);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmSettlementInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -563,6 +633,14 @@ public class OriginalTransactionReference24 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Set of elements used to further specify the type of transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmPaymentTypeInformation
+	 * OriginalTransactionReference27.mmPaymentTypeInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -579,6 +657,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentTypeInformation";
 			definition = "Set of elements used to further specify the type of transaction.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmPaymentTypeInformation);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmPaymentTypeInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -621,6 +700,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Specifies the means of payment that will be used to move the amount of money."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmPaymentMethod
+	 * OriginalTransactionReference27.mmPaymentMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -637,6 +724,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Specifies the means of payment that will be used to move the amount of money.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmPaymentMethod);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmPaymentMethod;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -677,6 +765,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Provides further details of the mandate signed between the creditor and the debtor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmMandateRelatedInformation
+	 * OriginalTransactionReference27.mmMandateRelatedInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -693,6 +789,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandateRelatedInformation";
 			definition = "Provides further details of the mandate signed between the creditor and the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmMandateRelatedInformation);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmMandateRelatedInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -734,6 +831,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmRemittanceInformation
+	 * OriginalTransactionReference27.mmRemittanceInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -750,6 +855,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RemittanceInformation";
 			definition = "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmRemittanceInformation);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmRemittanceInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -790,6 +896,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Ultimate party that owes an amount of money to the (ultimate) creditor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmUltimateDebtor
+	 * OriginalTransactionReference27.mmUltimateDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -806,6 +920,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateDebtor";
 			definition = "Ultimate party that owes an amount of money to the (ultimate) creditor.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmUltimateDebtor);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmUltimateDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -845,6 +960,14 @@ public class OriginalTransactionReference24 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Party that owes an amount of money to the (ultimate) creditor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmDebtor
+	 * OriginalTransactionReference27.mmDebtor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -861,6 +984,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Debtor";
 			definition = "Party that owes an amount of money to the (ultimate) creditor.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmDebtor);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmDebtor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -901,6 +1025,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmDebtorAccount
+	 * OriginalTransactionReference27.mmDebtorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -917,6 +1049,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAccount";
 			definition = "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmDebtorAccount);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmDebtorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -957,6 +1090,14 @@ public class OriginalTransactionReference24 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Financial institution servicing an account for the debtor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmDebtorAgent
+	 * OriginalTransactionReference27.mmDebtorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -973,6 +1114,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgent";
 			definition = "Financial institution servicing an account for the debtor.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmDebtorAgent);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmDebtorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1013,6 +1155,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmDebtorAgentAccount
+	 * OriginalTransactionReference27.mmDebtorAgentAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1029,6 +1179,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DebtorAgentAccount";
 			definition = "Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmDebtorAgentAccount);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmDebtorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1069,6 +1220,14 @@ public class OriginalTransactionReference24 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Financial institution servicing an account for the creditor."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmCreditorAgent
+	 * OriginalTransactionReference27.mmCreditorAgent}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1085,6 +1244,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgent";
 			definition = "Financial institution servicing an account for the creditor.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmCreditorAgent);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmCreditorAgent;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1125,6 +1285,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmCreditorAgentAccount
+	 * OriginalTransactionReference27.mmCreditorAgentAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1141,6 +1309,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAgentAccount";
 			definition = "Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmCreditorAgentAccount);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmCreditorAgentAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1179,6 +1348,14 @@ public class OriginalTransactionReference24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party to which an amount of money is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmCreditor
+	 * OriginalTransactionReference27.mmCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1195,6 +1372,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Creditor";
 			definition = "Party to which an amount of money is due.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmCreditor);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1235,6 +1413,14 @@ public class OriginalTransactionReference24 {
 	 * definition} =
 	 * "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmCreditorAccount
+	 * OriginalTransactionReference27.mmCreditorAccount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1251,6 +1437,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditorAccount";
 			definition = "Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmCreditorAccount);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmCreditorAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1289,6 +1476,14 @@ public class OriginalTransactionReference24 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Ultimate party to which an amount of money is due."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalTransactionReference27#mmUltimateCreditor
+	 * OriginalTransactionReference27.mmUltimateCreditor}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1305,6 +1500,7 @@ public class OriginalTransactionReference24 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UltimateCreditor";
 			definition = "Ultimate party to which an amount of money is due.";
+			nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmUltimateCreditor);
 			previousVersion_lazy = () -> OriginalTransactionReference22.mmUltimateCreditor;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1332,6 +1528,7 @@ public class OriginalTransactionReference24 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OriginalTransactionReference24";
 				definition = "Key elements used to refer the original transaction.";
+				nextVersions_lazy = () -> Arrays.asList(OriginalTransactionReference27.mmObject());
 				previousVersion_lazy = () -> OriginalTransactionReference22.mmObject();
 			}
 		});

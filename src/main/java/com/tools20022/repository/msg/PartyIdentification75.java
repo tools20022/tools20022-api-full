@@ -82,6 +82,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyIdentification75"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification of an entity involved in an activity."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification127
+ * PartyIdentification127}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PartyIdentification48
@@ -128,6 +135,14 @@ public class PartyIdentification75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique and unambiguous way to identify an organisation."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmIdentification
+	 * PartyIdentification127.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -145,6 +160,7 @@ public class PartyIdentification75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous way to identify an organisation.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification127.mmIdentification);
 			previousVersion_lazy = () -> PartyIdentification48.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -187,6 +203,14 @@ public class PartyIdentification75 {
 	 * definition} =
 	 * "Legal entity identification as an alternate identification for a party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmLEI
+	 * PartyIdentification127.mmLEI}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
@@ -198,6 +222,7 @@ public class PartyIdentification75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for a party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification127.mmLEI);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -238,6 +263,14 @@ public class PartyIdentification75 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Alternate identification for a party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmAlternateIdentification
+	 * PartyIdentification127.mmAlternateIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -255,6 +288,7 @@ public class PartyIdentification75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AlternateIdentification";
 			definition = "Alternate identification for a party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification127.mmAlternateIdentification);
 			previousVersion_lazy = () -> PartyIdentification48.mmAlternateIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -294,6 +328,14 @@ public class PartyIdentification75 {
 	 * definition} =
 	 * "Date/time at which the instruction was processed by the specified party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmProcessingDate
+	 * PartyIdentification127.mmProcessingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -310,6 +352,7 @@ public class PartyIdentification75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingDate";
 			definition = "Date/time at which the instruction was processed by the specified party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification127.mmProcessingDate);
 			previousVersion_lazy = () -> PartyIdentification48.mmProcessingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -349,6 +392,14 @@ public class PartyIdentification75 {
 	 * definition} =
 	 * "Unambiguous identification of the transaction for the party identified."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmProcessingIdentification
+	 * PartyIdentification127.mmProcessingIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -365,6 +416,7 @@ public class PartyIdentification75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingIdentification";
 			definition = "Unambiguous identification of the transaction for the party identified.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification127.mmProcessingIdentification);
 			previousVersion_lazy = () -> PartyIdentification48.mmProcessingIdentification;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -401,6 +453,14 @@ public class PartyIdentification75 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Provides additional information to a party identification."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification127#mmAdditionalInformation
+	 * PartyIdentification127.mmAdditionalInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -417,6 +477,7 @@ public class PartyIdentification75 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
 			definition = "Provides additional information to a party identification.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification127.mmAdditionalInformation);
 			previousVersion_lazy = () -> PartyIdentification48.mmAdditionalInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -436,6 +497,7 @@ public class PartyIdentification75 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification75";
 				definition = "Identification of an entity involved in an activity.";
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentification127.mmObject());
 				previousVersion_lazy = () -> PartyIdentification48.mmObject();
 			}
 		});

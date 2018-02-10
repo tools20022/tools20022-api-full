@@ -76,6 +76,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyIdentification97"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Party involved in the settlement chain."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification123
+ * PartyIdentification123}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.PartyIdentification21
@@ -120,6 +127,14 @@ public class PartyIdentification97 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification123#mmPartyIdentification
+	 * PartyIdentification123.mmPartyIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -136,6 +151,7 @@ public class PartyIdentification97 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartyIdentification";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification123.mmPartyIdentification);
 			previousVersion_lazy = () -> PartyIdentification21.mmPartyIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -171,6 +187,14 @@ public class PartyIdentification97 {
 	 * definition} =
 	 * "Specifies the reference of the transaction at the party identified in the sequence."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification123#mmProcessingReference
+	 * PartyIdentification123.mmProcessingReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -186,6 +210,7 @@ public class PartyIdentification97 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingReference";
 			definition = "Specifies the reference of the transaction at the party identified in the sequence.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification123.mmProcessingReference);
 			previousVersion_lazy = () -> PartyIdentification21.mmProcessingReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -222,6 +247,14 @@ public class PartyIdentification97 {
 	 * definition} =
 	 * "Date and optionally the time, at which this transaction was processed by the party identified in this sequence."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification123#mmProcessingDate
+	 * PartyIdentification123.mmProcessingDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -237,6 +270,7 @@ public class PartyIdentification97 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingDate";
 			definition = "Date and optionally the time, at which this transaction was processed by the party identified in this sequence.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification123.mmProcessingDate);
 			previousVersion_lazy = () -> PartyIdentification21.mmProcessingDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -274,6 +308,14 @@ public class PartyIdentification97 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Contact person and contact information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification123#mmContactPerson
+	 * PartyIdentification123.mmContactPerson}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -290,6 +332,7 @@ public class PartyIdentification97 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Contact person and contact information.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification123.mmContactPerson);
 			previousVersion_lazy = () -> PartyIdentification21.mmContactPerson;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -308,6 +351,7 @@ public class PartyIdentification97 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification97";
 				definition = "Party involved in the settlement chain.";
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentification123.mmObject());
 				previousVersion_lazy = () -> PartyIdentification21.mmObject();
 			}
 		});

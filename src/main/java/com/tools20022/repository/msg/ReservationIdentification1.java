@@ -21,6 +21,7 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.camt.DeleteReservationV04;
 import com.tools20022.repository.choice.AccountIdentification4Choice;
 import com.tools20022.repository.choice.ReservationType1Choice;
 import com.tools20022.repository.choice.SystemIdentification2Choice;
@@ -68,6 +69,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMMessageComponentType#getTrace
  * trace} = {@linkplain com.tools20022.repository.entity.Reservation
  * Reservation}</li>
+ * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.DeleteReservationV04#mmCurrentReservation
+ * DeleteReservationV04.mmCurrentReservation}</li>
+ * </ul>
+ * </li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -168,7 +178,7 @@ public class ReservationIdentification1 {
 	 * name} = "SystemIdentification"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Identification of a particular cash clearing system. "</li>
+	 * definition} = "Identification of a particular cash clearing system."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSystemIdentification = new MMMessageAttribute() {
@@ -179,7 +189,7 @@ public class ReservationIdentification1 {
 			xmlTag = "SysId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemIdentification";
-			definition = "Identification of a particular cash clearing system. ";
+			definition = "Identification of a particular cash clearing system.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SystemIdentification2Choice.mmObject();
@@ -341,6 +351,7 @@ public class ReservationIdentification1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.ReservationIdentification1.mmReservationIdentification, com.tools20022.repository.msg.ReservationIdentification1.mmSystemIdentification,
 						com.tools20022.repository.msg.ReservationIdentification1.mmType, com.tools20022.repository.msg.ReservationIdentification1.mmAccountOwner,
 						com.tools20022.repository.msg.ReservationIdentification1.mmAccountIdentification);
+				messageBuildingBlock_lazy = () -> Arrays.asList(DeleteReservationV04.mmCurrentReservation);
 				trace_lazy = () -> Reservation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

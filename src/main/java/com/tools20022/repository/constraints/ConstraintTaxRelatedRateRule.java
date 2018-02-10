@@ -27,7 +27,7 @@ import java.util.Arrays;
  * If TaxRelatedRate is repeated, then RateType/Code values must all be
  * different in each occurrence of TaxRelatedRate.<br>
  * <br>
- * (MT 566 NVR C3 and C4)
+ * (MT 566 NVR C3 and C4).
  */
 public class ConstraintTaxRelatedRateRule {
 
@@ -48,7 +48,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values  must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4)."
 	 * </li>
 	 * </ul>
 	 */
@@ -57,7 +57,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values  must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4).";
 			owner_lazy = () -> CorporateActionRate4.mmObject();
 		}
 	};
@@ -78,7 +78,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values  must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4)."
 	 * </li>
 	 * </ul>
 	 */
@@ -87,7 +87,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values  must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C3 and C4).";
 			owner_lazy = () -> CorporateActionRate10.mmObject();
 		}
 	};
@@ -108,7 +108,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -117,7 +117,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate20.mmObject();
 		}
 	};
@@ -137,7 +137,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -146,7 +146,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails2.mmObject();
 		}
 	};
@@ -167,7 +167,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -176,7 +176,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate22.mmObject();
 		}
 	};
@@ -196,7 +196,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -205,7 +205,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails4.mmObject();
 		}
 	};
@@ -226,7 +226,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -235,7 +235,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate26.mmObject();
 		}
 	};
@@ -255,7 +255,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -264,7 +264,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails7.mmObject();
 		}
 	};
@@ -285,7 +285,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -294,7 +294,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate31.mmObject();
 		}
 	};
@@ -314,7 +314,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -323,7 +323,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails9;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails9.mmObject();
 		}
 	};
@@ -344,7 +344,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -361,7 +361,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate38;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate46);
 			owner_lazy = () -> CorporateActionRate38.mmObject();
 		}
@@ -382,7 +382,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -399,7 +399,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forRateDetails15);
 			owner_lazy = () -> RateDetails11.mmObject();
 		}
@@ -421,7 +421,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -430,7 +430,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate39;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate39.mmObject();
 		}
 	};
@@ -450,7 +450,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -459,7 +459,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails12.mmObject();
 		}
 	};
@@ -480,7 +480,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -489,7 +489,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate5.mmObject();
 		}
 	};
@@ -510,7 +510,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -519,7 +519,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate12;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate12.mmObject();
 		}
 	};
@@ -540,7 +540,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -549,7 +549,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate15.mmObject();
 		}
 	};
@@ -569,7 +569,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -578,7 +578,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> RateDetails3.mmObject();
 		}
 	};
@@ -599,7 +599,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -608,7 +608,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate18.mmObject();
 		}
 	};
@@ -628,7 +628,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -637,7 +637,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> RateDetails5.mmObject();
 		}
 	};
@@ -658,7 +658,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -667,7 +667,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate25.mmObject();
 		}
 	};
@@ -688,7 +688,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -697,7 +697,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate30;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate30.mmObject();
 		}
 	};
@@ -718,7 +718,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -735,7 +735,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate37;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate45);
 			owner_lazy = () -> CorporateActionRate37.mmObject();
 		}
@@ -756,7 +756,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -773,7 +773,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forRateDetails14);
 			owner_lazy = () -> RateDetails10.mmObject();
 		}
@@ -795,7 +795,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -804,7 +804,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate40;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate40.mmObject();
 		}
 	};
@@ -824,7 +824,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -833,7 +833,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> RateDetails13.mmObject();
 		}
 	};
@@ -854,7 +854,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -871,7 +871,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate44);
 			owner_lazy = () -> CorporateActionRate36.mmObject();
 		}
@@ -893,7 +893,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -902,7 +902,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate42;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate42.mmObject();
 		}
 	};
@@ -922,7 +922,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -936,7 +936,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails15;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forRateDetails11;
 			owner_lazy = () -> RateDetails15.mmObject();
 		}
@@ -958,7 +958,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -972,7 +972,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate46;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate38;
 			owner_lazy = () -> CorporateActionRate46.mmObject();
 		}
@@ -994,7 +994,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1008,7 +1008,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate45;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate37;
 			owner_lazy = () -> CorporateActionRate45.mmObject();
 		}
@@ -1030,7 +1030,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1044,7 +1044,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forCorporateActionRate36;
 			owner_lazy = () -> CorporateActionRate44.mmObject();
 		}
@@ -1065,7 +1065,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -1079,7 +1079,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTaxRelatedRateRule.forRateDetails10;
 			owner_lazy = () -> RateDetails14.mmObject();
 		}
@@ -1101,7 +1101,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1110,7 +1110,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate60;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate60.mmObject();
 		}
 	};
@@ -1130,7 +1130,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1139,7 +1139,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> RateDetails18.mmObject();
 		}
 	};
@@ -1160,7 +1160,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -1169,7 +1169,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate64;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> CorporateActionRate64.mmObject();
 		}
 	};
@@ -1189,7 +1189,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )."
 	 * </li>
 	 * </ul>
 	 */
@@ -1198,7 +1198,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkRateDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 )";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 566 NVR C4 ).";
 			owner_lazy = () -> RateDetails21.mmObject();
 		}
 	};
@@ -1219,7 +1219,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)"
+	 * "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)."
 	 * </li>
 	 * </ul>
 	 */
@@ -1228,7 +1228,7 @@ public class ConstraintTaxRelatedRateRule {
 			validator = ConstraintTaxRelatedRateRule::checkCorporateActionRate57;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxRelatedRateRule";
-			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9)";
+			definition = "If TaxRelatedRate is repeated, then RateType/Code values must all be different in each occurrence of TaxRelatedRate.\r\n\r\n(MT 564 NVR C9).";
 			owner_lazy = () -> CorporateActionRate57.mmObject();
 		}
 	};
@@ -1237,7 +1237,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C3 and C4)
+	 * (MT 566 NVR C3 and C4).
 	 */
 	public static void checkCorporateActionRate4(CorporateActionRate4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1247,7 +1247,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C3 and C4)
+	 * (MT 566 NVR C3 and C4).
 	 */
 	public static void checkCorporateActionRate10(CorporateActionRate10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1257,7 +1257,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate20(CorporateActionRate20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1267,7 +1267,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkRateDetails2(RateDetails2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1277,7 +1277,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate22(CorporateActionRate22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1287,7 +1287,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkRateDetails4(RateDetails4 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1297,7 +1297,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate26(CorporateActionRate26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1307,7 +1307,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkRateDetails7(RateDetails7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1317,7 +1317,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate31(CorporateActionRate31 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1327,7 +1327,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkRateDetails9(RateDetails9 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1337,7 +1337,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate38(CorporateActionRate38 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1347,7 +1347,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkRateDetails11(RateDetails11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1357,7 +1357,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate39(CorporateActionRate39 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1367,7 +1367,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkRateDetails12(RateDetails12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1377,7 +1377,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate5(CorporateActionRate5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1387,7 +1387,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate12(CorporateActionRate12 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1397,7 +1397,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate15(CorporateActionRate15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1407,7 +1407,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkRateDetails3(RateDetails3 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1417,7 +1417,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate18(CorporateActionRate18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1427,7 +1427,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkRateDetails5(RateDetails5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1437,7 +1437,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate25(CorporateActionRate25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1447,7 +1447,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate30(CorporateActionRate30 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1457,7 +1457,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate37(CorporateActionRate37 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1467,7 +1467,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkRateDetails10(RateDetails10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1477,7 +1477,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate40(CorporateActionRate40 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1487,7 +1487,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkRateDetails13(RateDetails13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1497,7 +1497,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate36(CorporateActionRate36 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1507,7 +1507,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate42(CorporateActionRate42 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1517,7 +1517,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkRateDetails15(RateDetails15 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1527,7 +1527,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate46(CorporateActionRate46 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1537,7 +1537,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate45(CorporateActionRate45 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1547,7 +1547,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate44(CorporateActionRate44 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1557,7 +1557,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkRateDetails14(RateDetails14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1567,7 +1567,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate60(CorporateActionRate60 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1577,7 +1577,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkRateDetails18(RateDetails18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1587,7 +1587,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkCorporateActionRate64(CorporateActionRate64 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1597,7 +1597,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 566 NVR C4 )
+	 * (MT 566 NVR C4 ).
 	 */
 	public static void checkRateDetails21(RateDetails21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1607,7 +1607,7 @@ public class ConstraintTaxRelatedRateRule {
 	 * If TaxRelatedRate is repeated, then RateType/Code values must all be
 	 * different in each occurrence of TaxRelatedRate.<br>
 	 * <br>
-	 * (MT 564 NVR C9)
+	 * (MT 564 NVR C9).
 	 */
 	public static void checkCorporateActionRate57(CorporateActionRate57 obj) throws Exception {
 		throw new NotImplementedConstraintException();

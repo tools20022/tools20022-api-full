@@ -74,6 +74,14 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Status of the transactions sent in a previous batch of card payment transactions."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CardPaymentBatchTransferResponse6
+ * CardPaymentBatchTransferResponse6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CardPaymentBatchTransferResponse4
@@ -113,6 +121,14 @@ public class CardPaymentBatchTransferResponse5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Totals of transactions of all the data sets."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentBatchTransferResponse6#mmTransactionTotals
+	 * CardPaymentBatchTransferResponse6.mmTransactionTotals}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -128,6 +144,7 @@ public class CardPaymentBatchTransferResponse5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTotals";
 			definition = "Totals of transactions of all the data sets.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse6.mmTransactionTotals);
 			previousVersion_lazy = () -> CardPaymentBatchTransferResponse4.mmTransactionTotals;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.TransactionTotals7.mmObject();
@@ -162,6 +179,14 @@ public class CardPaymentBatchTransferResponse5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Information related to the previously sent set of transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentBatchTransferResponse6#mmDataSet
+	 * CardPaymentBatchTransferResponse6.mmDataSet}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -177,6 +202,7 @@ public class CardPaymentBatchTransferResponse5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DataSet";
 			definition = "Information related to the previously sent set of transaction.";
+			nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse6.mmDataSet);
 			previousVersion_lazy = () -> CardPaymentBatchTransferResponse4.mmDataSet;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CardPaymentDataSet18.mmObject();
@@ -192,6 +218,7 @@ public class CardPaymentBatchTransferResponse5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardPaymentBatchTransferResponse5";
 				definition = "Status of the transactions sent in a previous batch of card payment transactions.";
+				nextVersions_lazy = () -> Arrays.asList(CardPaymentBatchTransferResponse6.mmObject());
 				previousVersion_lazy = () -> CardPaymentBatchTransferResponse4.mmObject();
 			}
 		});

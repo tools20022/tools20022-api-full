@@ -560,7 +560,7 @@ public class DeliverInformation6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the financial instrument is to be physically  delivered."
+	 * "Indicates whether the financial instrument is to be physically delivered."
 	 * </li>
 	 * </ul>
 	 */
@@ -572,7 +572,7 @@ public class DeliverInformation6 {
 			xmlTag = "PhysTrf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransfer";
-			definition = "Indicates whether the financial instrument is to be physically  delivered.";
+			definition = "Indicates whether the financial instrument is to be physically delivered.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PhysicalTransferType1Code.mmObject();

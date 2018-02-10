@@ -19,9 +19,7 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.MMBusinessComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.choice.Party12Choice;
-import com.tools20022.repository.choice.Party28Choice;
-import com.tools20022.repository.choice.Party7Choice;
+import com.tools20022.repository.choice.*;
 import com.tools20022.repository.entity.Organisation;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
@@ -113,6 +111,14 @@ import java.util.concurrent.atomic.AtomicReference;
  * Acquirer7.mmAcquiringInstitution}</li>
  * <li>{@linkplain com.tools20022.repository.choice.Party28Choice#mmAgent
  * Party28Choice.mmAgent}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CounterpartyTradeNature5Choice#mmFinancialInstitution
+ * CounterpartyTradeNature5Choice.mmFinancialInstitution}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CounterpartyTradeNature4Choice#mmFinancialInstitution
+ * CounterpartyTradeNature4Choice.mmFinancialInstitution}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Party35Choice#mmAgent
+ * Party35Choice.mmAgent}</li>
  * </ul>
  * </li>
  * <li>
@@ -154,7 +160,7 @@ public class FinancialInstitution extends Organisation {
 						RequiredSubmission1.mmSubmitter, Baseline2.mmBuyerBank, Baseline2.mmSellerBank, PaymentObligation1.mmObligorBank, PaymentObligation1.mmRecipientBank, RequiredSubmission3.mmSubmitter, RequiredSubmission4.mmSubmitter,
 						RequiredSubmission5.mmSubmitter, Baseline3.mmBuyerBank, Baseline3.mmSellerBank, DocumentIdentification4.mmSubmitter, DocumentIdentification2.mmSubmitter, Member2.mmReturnAddress, Baseline4.mmBuyerBank,
 						Baseline4.mmSellerBank, PaymentObligation2.mmObligorBank, PaymentObligation2.mmRecipientBank, Baseline5.mmBuyerBank, Baseline5.mmSellerBank, RequiredSubmission6.mmSubmitter, Acquirer7.mmAcquiringInstitution,
-						Party28Choice.mmAgent);
+						Party28Choice.mmAgent, CounterpartyTradeNature5Choice.mmFinancialInstitution, CounterpartyTradeNature4Choice.mmFinancialInstitution, Party35Choice.mmAgent);
 				superType_lazy = () -> Organisation.mmObject();
 				derivationComponent_lazy = () -> Arrays.asList(BICIdentification1.mmObject());
 			}

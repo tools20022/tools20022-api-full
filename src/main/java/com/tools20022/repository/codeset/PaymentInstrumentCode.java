@@ -303,7 +303,7 @@ public class PaymentInstrumentCode extends MMCode {
 	};
 	/**
 	 * Payment instrument is a debit card. (The payment originated using a debit
-	 * card scheme.)
+	 * card scheme.).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -321,7 +321,7 @@ public class PaymentInstrumentCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Payment instrument is a debit card. (The payment originated using a debit card scheme.)"
+	 * "Payment instrument is a debit card. (The payment originated using a debit card scheme.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -329,14 +329,14 @@ public class PaymentInstrumentCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DebitCardPayment";
-			definition = "Payment instrument is a debit card. (The payment originated using a debit card scheme.)";
+			definition = "Payment instrument is a debit card. (The payment originated using a debit card scheme.).";
 			owner_lazy = () -> com.tools20022.repository.codeset.PaymentInstrumentCode.mmObject();
 			codeName = "DCP";
 		}
 	};
 	/**
 	 * Payment instrument is a credit card. (The payment originated using a
-	 * credit card scheme.)
+	 * credit card scheme.).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -354,7 +354,7 @@ public class PaymentInstrumentCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Payment instrument is a credit card. (The payment originated using a credit card scheme.)"
+	 * "Payment instrument is a credit card. (The payment originated using a credit card scheme.)."
 	 * </li>
 	 * </ul>
 	 */
@@ -362,7 +362,7 @@ public class PaymentInstrumentCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditCardPayment";
-			definition = "Payment instrument is a credit card. (The payment originated using a credit card scheme.)";
+			definition = "Payment instrument is a credit card. (The payment originated using a credit card scheme.).";
 			owner_lazy = () -> com.tools20022.repository.codeset.PaymentInstrumentCode.mmObject();
 			codeName = "CCP";
 		}

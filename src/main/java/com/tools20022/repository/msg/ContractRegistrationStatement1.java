@@ -329,7 +329,7 @@ public class ContractRegistrationStatement1 {
 	 * name} = "RegisteredContract"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Registered currency control contract. "</li>
+	 * definition} = "Registered currency control contract."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRegisteredContract = new MMMessageAssociationEnd() {
@@ -340,7 +340,7 @@ public class ContractRegistrationStatement1 {
 			xmlTag = "RegdCtrct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RegisteredContract";
-			definition = "Registered currency control contract. ";
+			definition = "Registered currency control contract.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -571,7 +571,7 @@ public class ContractRegistrationStatement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total turn over amount recorded under the currency control contract for the amount of all "
+	 * "Total turn over amount recorded under the currency control contract for the amount of all."
 	 * </li>
 	 * </ul>
 	 */
@@ -582,7 +582,7 @@ public class ContractRegistrationStatement1 {
 			xmlTag = "TtlCtrctTrnvrSum";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalContractTurnoverSum";
-			definition = "Total turn over amount recorded under the currency control contract for the amount of all ";
+			definition = "Total turn over amount recorded under the currency control contract for the amount of all.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

@@ -112,7 +112,7 @@ public class InstructionStatusSearch2 {
 	 * name} = "PaymentInstructionStatus"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Status of a transfer.\n"</li>
+	 * definition} = "Status of a transfer.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatus = new MMMessageAttribute() {
@@ -123,7 +123,7 @@ public class InstructionStatusSearch2 {
 			xmlTag = "PmtInstrSts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatus";
-			definition = "Status of a transfer.\n";
+			definition = "Status of a transfer.\n.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> PaymentStatusCodeSearchChoice.mmObject();
@@ -162,7 +162,7 @@ public class InstructionStatusSearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time at which the status was assigned to the transfer.\n"</li>
+	 * "Date and time at which the status was assigned to the transfer.\n."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentInstructionStatusDateTime = new MMMessageAttribute() {
@@ -173,7 +173,7 @@ public class InstructionStatusSearch2 {
 			xmlTag = "PmtInstrStsDtTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentInstructionStatusDateTime";
-			definition = "Date and time at which the status was assigned to the transfer.\n";
+			definition = "Date and time at which the status was assigned to the transfer.\n.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -207,7 +207,7 @@ public class InstructionStatusSearch2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Defines the reason that has been used by the Target2 SSP system to reject the transaction"
+	 * "Defines the reason that has been used by the Target2 SSP system to reject the transaction."
 	 * </li>
 	 * </ul>
 	 */
@@ -218,7 +218,7 @@ public class InstructionStatusSearch2 {
 			xmlTag = "PrtryStsRsn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryStatusReason";
-			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction";
+			definition = "Defines the reason that has been used by the Target2 SSP system to reject the transaction.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4AlphaNumericText.mmObject();

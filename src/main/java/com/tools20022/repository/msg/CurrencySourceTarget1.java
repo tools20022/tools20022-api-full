@@ -59,7 +59,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CurrencySourceTarget1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
@@ -105,7 +105,7 @@ public class CurrencySourceTarget1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Currency of the amount to be converted in a currency conversion. "</li>
+	 * "Currency of the amount to be converted in a currency conversion."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSourceCurrency = new MMMessageAttribute() {
@@ -116,7 +116,7 @@ public class CurrencySourceTarget1 {
 			xmlTag = "SrcCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceCurrency";
-			definition = "Currency of the amount to be converted in a currency conversion. ";
+			definition = "Currency of the amount to be converted in a currency conversion.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -155,7 +155,7 @@ public class CurrencySourceTarget1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Currency into which an amount is to be converted in a currency conversion.  "
+	 * "Currency into which an amount is to be converted in a currency conversion."
 	 * </li>
 	 * </ul>
 	 */
@@ -167,7 +167,7 @@ public class CurrencySourceTarget1 {
 			xmlTag = "TrgtCcy";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TargetCurrency";
-			definition = "Currency into which an amount is to be converted in a currency conversion.  ";
+			definition = "Currency into which an amount is to be converted in a currency conversion.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -180,7 +180,7 @@ public class CurrencySourceTarget1 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.CurrencySourceTarget1.mmSourceCurrency, com.tools20022.repository.msg.CurrencySourceTarget1.mmTargetCurrency);
 				trace_lazy = () -> CurrencyExchange.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CurrencySourceTarget1";
 				definition = "Information needed to process a currency exchange or conversion.";
 			}

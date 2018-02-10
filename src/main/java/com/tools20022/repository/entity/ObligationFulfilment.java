@@ -200,6 +200,9 @@ public class ObligationFulfilment {
 	 * {@linkplain com.tools20022.repository.msg.CertificateReference1#mmDate
 	 * CertificateReference1.mmDate}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DirectDebitInstructionDetails1#mmLastCollectionDate
+	 * DirectDebitInstructionDetails1.mmLastCollectionDate}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transfer31#mmEffectiveTransferDate
 	 * Transfer31.mmEffectiveTransferDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.Transfer31#mmAverageDate
@@ -224,6 +227,20 @@ public class ObligationFulfilment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.MandateAuthentication1#mmDate
 	 * MandateAuthentication1.mmDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ClearingPartyAndTime3#mmClearingDateTime
+	 * ClearingPartyAndTime3.mmClearingDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmEffectiveTransferDate
+	 * Transfer35.mmEffectiveTransferDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Transfer35#mmAverageDate
+	 * Transfer35.mmAverageDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transfer35#mmNewAverageDate
+	 * Transfer35.mmNewAverageDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeDelivery3#mmDeliveryDateTime
+	 * TradeDelivery3.mmDeliveryDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -249,8 +266,9 @@ public class ObligationFulfilment {
 					Transfer23.mmEffectiveTransferDate, TradeDelivery1.mmDeliveryDateTime, IntentToPay1.mmExpectedPaymentDate, ExpectedExecutionDetails3.mmPrepaymentDate, PaymentCodeOrOther1Choice.mmPaymentDueDate,
 					Transfer28.mmEffectiveTransferDate, Transfer29.mmEffectiveTransferDate, IntentToPay2.mmExpectedPaymentDate, DetailedAmount6.mmDateTime, ReconciliationList1.mmPaymentDate, ATMAccountStatement2.mmTransactionDate,
 					CardTransaction10.mmInitiatorTransactionDateTime, CardTransaction9.mmInitiatorTransactionDateTime, CardTransactionDetail2.mmValidityDate, CardTransactionDetail1.mmValidityDate, CardTransactionDetail4.mmValidityDate,
-					CardTransactionDetail3.mmValidityDate, TransactionCertificate2.mmTransactionDate, CertificateReference1.mmDate, Transfer31.mmEffectiveTransferDate, Transfer31.mmAverageDate, Transfer31.mmNewAverageDate,
-					Transfer33.mmEffectiveTransferDate, Transfer33.mmAverageDate, Transfer33.mmNewAverageDate, DetailedAmount14.mmDateTime, TradeDelivery2.mmDeliveryDateTime, MandateAuthentication1.mmDate);
+					CardTransactionDetail3.mmValidityDate, TransactionCertificate2.mmTransactionDate, CertificateReference1.mmDate, DirectDebitInstructionDetails1.mmLastCollectionDate, Transfer31.mmEffectiveTransferDate,
+					Transfer31.mmAverageDate, Transfer31.mmNewAverageDate, Transfer33.mmEffectiveTransferDate, Transfer33.mmAverageDate, Transfer33.mmNewAverageDate, DetailedAmount14.mmDateTime, TradeDelivery2.mmDeliveryDateTime,
+					MandateAuthentication1.mmDate, ClearingPartyAndTime3.mmClearingDateTime, Transfer35.mmEffectiveTransferDate, Transfer35.mmAverageDate, Transfer35.mmNewAverageDate, TradeDelivery3.mmDeliveryDateTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ObligationFulfilment.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

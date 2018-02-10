@@ -70,6 +70,13 @@ import javax.xml.bind.annotation.XmlType;
  * "RejectionOrRepairReason22"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reason for the rejection or repair status."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.RejectionOrRepairReason33
+ * RejectionOrRepairReason33}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -114,6 +121,14 @@ public class RejectionOrRepairReason22 {
 	 * definition} =
 	 * "Specifies the reason why the instruction/request has a rejected or repair status."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason33#mmCode
+	 * RejectionOrRepairReason33.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
@@ -126,6 +141,7 @@ public class RejectionOrRepairReason22 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Specifies the reason why the instruction/request has a rejected or repair status.";
+			nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairReason33.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -169,6 +185,14 @@ public class RejectionOrRepairReason22 {
 	 * definition} =
 	 * "Provides additional reason information that cannot be provided in a structured field."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RejectionOrRepairReason33#mmAdditionalReasonInformation
+	 * RejectionOrRepairReason33.mmAdditionalReasonInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalReasonInformation = new MMMessageAttribute() {
@@ -181,6 +205,7 @@ public class RejectionOrRepairReason22 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalReasonInformation";
 			definition = "Provides additional reason information that cannot be provided in a structured field.";
+			nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairReason33.mmAdditionalReasonInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max210Text.mmObject();
@@ -196,6 +221,7 @@ public class RejectionOrRepairReason22 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "RejectionOrRepairReason22";
 				definition = "Reason for the rejection or repair status.";
+				nextVersions_lazy = () -> Arrays.asList(RejectionOrRepairReason33.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -21,6 +21,7 @@ import com.tools20022.metamodel.ext.OtherSemanticMarkup;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice;
 import com.tools20022.repository.choice.ClearingSystemMemberIdentification3Choice;
+import com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice;
 import com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice;
 import com.tools20022.repository.datatype.*;
 import com.tools20022.repository.GeneratedRepository;
@@ -167,6 +168,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice
  * ClearingSystemMemberIdentification2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice
+ * ClearingSystemMemberIdentification4Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -270,6 +274,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmCHIPSUniversalIdentification
 	 * ClearingSystemMemberIdentification2Choice.mmCHIPSUniversalIdentification}
 	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmCHIPSUniversalIdentification
+	 * ClearingSystemMemberIdentification4Choice.mmCHIPSUniversalIdentification}
+	 * </li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -292,7 +300,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmCHIPSUniversalIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmCHIPSUniversalIdentification, ClearingSystemMemberIdentification2Choice.mmCHIPSUniversalIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmCHIPSUniversalIdentification, ClearingSystemMemberIdentification2Choice.mmCHIPSUniversalIdentification,
+					ClearingSystemMemberIdentification4Choice.mmCHIPSUniversalIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -331,6 +340,9 @@ public class CashClearingSystemMember {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmNewZealandNCCIdentification
 	 * ClearingSystemMemberIdentification2Choice.mmNewZealandNCCIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmNewZealandNCCIdentification
+	 * ClearingSystemMemberIdentification4Choice.mmNewZealandNCCIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -353,7 +365,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmNewZealandNCC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmNewZealandNCCIdentification, ClearingSystemMemberIdentification2Choice.mmNewZealandNCCIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmNewZealandNCCIdentification, ClearingSystemMemberIdentification2Choice.mmNewZealandNCCIdentification,
+					ClearingSystemMemberIdentification4Choice.mmNewZealandNCCIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -392,6 +405,9 @@ public class CashClearingSystemMember {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmIrishNSCIdentification
 	 * ClearingSystemMemberIdentification2Choice.mmIrishNSCIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmIrishNSCIdentification
+	 * ClearingSystemMemberIdentification4Choice.mmIrishNSCIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -414,7 +430,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmIrishNSC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmIrishNSCIdentification, ClearingSystemMemberIdentification2Choice.mmIrishNSCIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmIrishNSCIdentification, ClearingSystemMemberIdentification2Choice.mmIrishNSCIdentification,
+					ClearingSystemMemberIdentification4Choice.mmIrishNSCIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -456,6 +473,9 @@ public class CashClearingSystemMember {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmUKDomesticSortCode
 	 * ClearingSystemMemberIdentification2Choice.mmUKDomesticSortCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmUKDomesticSortCode
+	 * ClearingSystemMemberIdentification4Choice.mmUKDomesticSortCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -478,7 +498,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmUKSortCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmUKDomesticSortCode, CashAccount6.mmGBBankSortCode, ClearingSystemMemberIdentification2Choice.mmUKDomesticSortCode);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmUKDomesticSortCode, CashAccount6.mmGBBankSortCode, ClearingSystemMemberIdentification2Choice.mmUKDomesticSortCode,
+					ClearingSystemMemberIdentification4Choice.mmUKDomesticSortCode);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -519,6 +540,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmCHIPSParticipantIdentification
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmCHIPSParticipantIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmCHIPSParticipantIdentification
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmCHIPSParticipantIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -541,7 +566,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmCHIPSParticipantIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmCHIPSParticipantIdentification, ClearingSystemMemberIdentification2Choice.mmCHIPSParticipantIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmCHIPSParticipantIdentification, ClearingSystemMemberIdentification2Choice.mmCHIPSParticipantIdentification,
+					ClearingSystemMemberIdentification4Choice.mmCHIPSParticipantIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -580,6 +606,9 @@ public class CashClearingSystemMember {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmSwissBCIdentification
 	 * ClearingSystemMemberIdentification2Choice.mmSwissBCIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmSwissBCIdentification
+	 * ClearingSystemMemberIdentification4Choice.mmSwissBCIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -602,7 +631,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmSwissBC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSwissBCIdentification, ClearingSystemMemberIdentification2Choice.mmSwissBCIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSwissBCIdentification, ClearingSystemMemberIdentification2Choice.mmSwissBCIdentification,
+					ClearingSystemMemberIdentification4Choice.mmSwissBCIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -643,6 +673,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmFedwireRoutingNumberIdentification
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmFedwireRoutingNumberIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmFedwireRoutingNumberIdentification
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmFedwireRoutingNumberIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -665,7 +699,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmFedwireRoutingNumber = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmFedwireRoutingNumberIdentification, ClearingSystemMemberIdentification2Choice.mmFedwireRoutingNumberIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmFedwireRoutingNumberIdentification, ClearingSystemMemberIdentification2Choice.mmFedwireRoutingNumberIdentification,
+					ClearingSystemMemberIdentification4Choice.mmFedwireRoutingNumberIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -704,6 +739,9 @@ public class CashClearingSystemMember {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmPortugueseNCCIdentification
 	 * ClearingSystemMemberIdentification2Choice.mmPortugueseNCCIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmPortugueseNCCIdentification
+	 * ClearingSystemMemberIdentification4Choice.mmPortugueseNCCIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -726,7 +764,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmPortugueseNCC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmPortugueseNCCIdentification, ClearingSystemMemberIdentification2Choice.mmPortugueseNCCIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmPortugueseNCCIdentification, ClearingSystemMemberIdentification2Choice.mmPortugueseNCCIdentification,
+					ClearingSystemMemberIdentification4Choice.mmPortugueseNCCIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -767,6 +806,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmRussianCentralBankIdentificationCode
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmRussianCentralBankIdentificationCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmRussianCentralBankIdentificationCode
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmRussianCentralBankIdentificationCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -789,7 +832,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmRussianCentralBankIdentificationCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmRussianCentralBankIdentificationCode, ClearingSystemMemberIdentification2Choice.mmRussianCentralBankIdentificationCode);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmRussianCentralBankIdentificationCode, ClearingSystemMemberIdentification2Choice.mmRussianCentralBankIdentificationCode,
+					ClearingSystemMemberIdentification4Choice.mmRussianCentralBankIdentificationCode);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -830,6 +874,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmItalianDomesticIdentificationCode
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmItalianDomesticIdentificationCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmItalianDomesticIdentificationCode
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmItalianDomesticIdentificationCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -852,7 +900,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmItalianDomesticIdentificationCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmItalianDomesticIdentificationCode, ClearingSystemMemberIdentification2Choice.mmItalianDomesticIdentificationCode);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmItalianDomesticIdentificationCode, ClearingSystemMemberIdentification2Choice.mmItalianDomesticIdentificationCode,
+					ClearingSystemMemberIdentification4Choice.mmItalianDomesticIdentificationCode);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -893,6 +942,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmAustrianBankleitzahlIdentification
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmAustrianBankleitzahlIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmAustrianBankleitzahlIdentification
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmAustrianBankleitzahlIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -915,7 +968,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmAustrianBankleitzahl = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustrianBankleitzahlIdentification, ClearingSystemMemberIdentification2Choice.mmAustrianBankleitzahlIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustrianBankleitzahlIdentification, ClearingSystemMemberIdentification2Choice.mmAustrianBankleitzahlIdentification,
+					ClearingSystemMemberIdentification4Choice.mmAustrianBankleitzahlIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -956,6 +1010,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmCanadianPaymentsAssociationRoutingNumberIdentification
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmCanadianPaymentsAssociationRoutingNumberIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmCanadianPaymentsAssociationRoutingNumberIdentification
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmCanadianPaymentsAssociationRoutingNumberIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -979,7 +1037,7 @@ public class CashClearingSystemMember {
 	public static final MMBusinessAttribute mmCanadianPaymentsAssociationRoutingNumber = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmCanadianPaymentsAssociationRoutingNumberIdentification,
-					ClearingSystemMemberIdentification2Choice.mmCanadianPaymentsAssociationRoutingNumberIdentification);
+					ClearingSystemMemberIdentification2Choice.mmCanadianPaymentsAssociationRoutingNumberIdentification, ClearingSystemMemberIdentification4Choice.mmCanadianPaymentsAssociationRoutingNumberIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1018,6 +1076,9 @@ public class CashClearingSystemMember {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmSwissSICIdentification
 	 * ClearingSystemMemberIdentification2Choice.mmSwissSICIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmSwissSICIdentification
+	 * ClearingSystemMemberIdentification4Choice.mmSwissSICIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1040,7 +1101,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmSwissSIC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSwissSICIdentification, ClearingSystemMemberIdentification2Choice.mmSwissSICIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSwissSICIdentification, ClearingSystemMemberIdentification2Choice.mmSwissSICIdentification,
+					ClearingSystemMemberIdentification4Choice.mmSwissSICIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1081,6 +1143,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmGermanBankleitzahlIdentification
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmGermanBankleitzahlIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmGermanBankleitzahlIdentification
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmGermanBankleitzahlIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1103,7 +1169,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmGermanBankleitzahl = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmGermanBankleitzahlIdentification, ClearingSystemMemberIdentification2Choice.mmGermanBankleitzahlIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmGermanBankleitzahlIdentification, ClearingSystemMemberIdentification2Choice.mmGermanBankleitzahlIdentification,
+					ClearingSystemMemberIdentification4Choice.mmGermanBankleitzahlIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1144,6 +1211,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmSpanishDomesticInterbankingIdentification
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmSpanishDomesticInterbankingIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmSpanishDomesticInterbankingIdentification
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmSpanishDomesticInterbankingIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1166,7 +1237,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmSpanishDomesticInterbankingCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSpanishDomesticInterbankingIdentification, ClearingSystemMemberIdentification2Choice.mmSpanishDomesticInterbankingIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSpanishDomesticInterbankingIdentification, ClearingSystemMemberIdentification2Choice.mmSpanishDomesticInterbankingIdentification,
+					ClearingSystemMemberIdentification4Choice.mmSpanishDomesticInterbankingIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1207,6 +1279,10 @@ public class CashClearingSystemMember {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmSouthAfricanNCCIdentification
 	 * ClearingSystemMemberIdentification2Choice.mmSouthAfricanNCCIdentification
 	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmSouthAfricanNCCIdentification
+	 * ClearingSystemMemberIdentification4Choice.mmSouthAfricanNCCIdentification
+	 * }</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1229,7 +1305,8 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmSouthAfricanNCC = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSouthAfricanNCCIdentification, ClearingSystemMemberIdentification2Choice.mmSouthAfricanNCCIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmSouthAfricanNCCIdentification, ClearingSystemMemberIdentification2Choice.mmSouthAfricanNCCIdentification,
+					ClearingSystemMemberIdentification4Choice.mmSouthAfricanNCCIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1268,6 +1345,9 @@ public class CashClearingSystemMember {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmHongKongBankCode
 	 * ClearingSystemMemberIdentification2Choice.mmHongKongBankCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmHongKongBankCode
+	 * ClearingSystemMemberIdentification4Choice.mmHongKongBankCode}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1290,7 +1370,7 @@ public class CashClearingSystemMember {
 	 */
 	public static final MMBusinessAttribute mmHongKongBankCode = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmHongKongBankCode, ClearingSystemMemberIdentification2Choice.mmHongKongBankCode);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmHongKongBankCode, ClearingSystemMemberIdentification2Choice.mmHongKongBankCode, ClearingSystemMemberIdentification4Choice.mmHongKongBankCode);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CashClearingSystemMember.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1617,7 +1697,7 @@ public class CashClearingSystemMember {
 						com.tools20022.repository.entity.CashClearingSystemMember.mmHellenicBankIdentificationCode, com.tools20022.repository.entity.CashClearingSystemMember.mmPolishNationalClearingCode,
 						com.tools20022.repository.entity.CashClearingSystemMember.mmAustralianBSBCode);
 				derivationComponent_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmObject(), ClearingSystemMemberIdentification3Choice.mmObject(), ClearingSystemMemberIdentification2.mmObject(),
-						ClearingSystemMemberIdentification2Choice.mmObject());
+						ClearingSystemMemberIdentification2Choice.mmObject(), ClearingSystemMemberIdentification4Choice.mmObject());
 			}
 
 			@Override

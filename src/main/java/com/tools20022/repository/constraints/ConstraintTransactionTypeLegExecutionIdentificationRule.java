@@ -48,7 +48,7 @@ public class ConstraintTransactionTypeLegExecutionIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional.  If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed."
+	 * "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -66,7 +66,7 @@ public class ConstraintTransactionTypeLegExecutionIdentificationRule {
 			validator = ConstraintTransactionTypeLegExecutionIdentificationRule::checkInvestmentFundTransaction3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegExecutionIdentificationRule";
-			definition = "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional.  If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed.";
+			definition = "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintTransactionTypeLegExecutionIdentificationRule.forInvestmentFundTransaction4);
 			owner_lazy = () -> InvestmentFundTransaction3.mmObject();
 		}
@@ -88,7 +88,7 @@ public class ConstraintTransactionTypeLegExecutionIdentificationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional.  If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed."
+	 * "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -103,7 +103,7 @@ public class ConstraintTransactionTypeLegExecutionIdentificationRule {
 			validator = ConstraintTransactionTypeLegExecutionIdentificationRule::checkInvestmentFundTransaction4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionTypeLegExecutionIdentificationRule";
-			definition = "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional.  If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed.";
+			definition = "If TransactionType is SWII or SWIO, then LegExecutionIdentification is optional. If TransactionType is neither SWII nor SWIO, then LegExecutionIdentification is not allowed.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintTransactionTypeLegExecutionIdentificationRule.forInvestmentFundTransaction3;
 			owner_lazy = () -> InvestmentFundTransaction4.mmObject();
 		}

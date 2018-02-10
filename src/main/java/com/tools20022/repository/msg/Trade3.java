@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Details of the foreign exchange trade including Spot\Forward\NDF that is
- * captured
+ * captured.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -96,7 +96,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Trade3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Details of the foreign exchange trade including Spot\\Forward\\NDF that is captured"
+ * "Details of the foreign exchange trade including Spot\\Forward\\NDF that is captured."
  * </li>
  * </ul>
  */
@@ -765,7 +765,7 @@ public class Trade3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Trade3";
-				definition = "Details of the foreign exchange trade including Spot\\Forward\\NDF that is captured";
+				definition = "Details of the foreign exchange trade including Spot\\Forward\\NDF that is captured.";
 			}
 		});
 		return mmObject_lazy.get();

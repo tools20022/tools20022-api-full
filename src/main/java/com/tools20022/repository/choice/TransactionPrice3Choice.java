@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Specifies the price information related to the underlying transaction."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TransactionPrice4Choice
+ * TransactionPrice4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -109,6 +116,14 @@ public class TransactionPrice3Choice {
 	 * definition} =
 	 * "Specifies the price of the traded financial instrument.\nThis is the deal price of the individual trade transaction. \nIf there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionPrice4Choice#mmDealPrice
+	 * TransactionPrice4Choice.mmDealPrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDealPrice = new MMMessageAttribute() {
@@ -120,6 +135,7 @@ public class TransactionPrice3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DealPrice";
 			definition = "Specifies the price of the traded financial instrument.\nThis is the deal price of the individual trade transaction. \nIf there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).";
+			nextVersions_lazy = () -> Arrays.asList(TransactionPrice4Choice.mmDealPrice);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> Price2.mmObject();
@@ -157,6 +173,14 @@ public class TransactionPrice3Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Proprietary price specification related to the underlying transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionPrice4Choice#mmProprietary
+	 * TransactionPrice4Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -168,6 +192,7 @@ public class TransactionPrice3Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary price specification related to the underlying transaction.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionPrice4Choice.mmProprietary);
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ProprietaryPrice2.mmObject();
@@ -183,6 +208,7 @@ public class TransactionPrice3Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionPrice3Choice";
 				definition = "Specifies the price information related to the underlying transaction.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionPrice4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

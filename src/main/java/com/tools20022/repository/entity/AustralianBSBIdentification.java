@@ -19,6 +19,7 @@ package com.tools20022.repository.entity;
 
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice;
+import com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice;
 import com.tools20022.repository.choice.ClearingSystemMemberIdentificationChoice;
 import com.tools20022.repository.datatype.ExtensiveBranchNetworkIdentifier;
 import com.tools20022.repository.datatype.SmallNetworkIdentifier;
@@ -109,6 +110,10 @@ public class AustralianBSBIdentification {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmAustralianExtensiveBranchNetworkIdentification
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmAustralianExtensiveBranchNetworkIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmAustralianExtensiveBranchNetworkIdentification
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmAustralianExtensiveBranchNetworkIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -131,7 +136,8 @@ public class AustralianBSBIdentification {
 	 */
 	public static final MMBusinessAttribute mmExtensiveBranchNetworkIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustralianExtensiveBranchNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianExtensiveBranchNetworkIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustralianExtensiveBranchNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianExtensiveBranchNetworkIdentification,
+					ClearingSystemMemberIdentification4Choice.mmAustralianExtensiveBranchNetworkIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AustralianBSBIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -172,6 +178,10 @@ public class AustralianBSBIdentification {
 	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification2Choice#mmAustralianSmallNetworkIdentification
 	 * ClearingSystemMemberIdentification2Choice.
 	 * mmAustralianSmallNetworkIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.ClearingSystemMemberIdentification4Choice#mmAustralianSmallNetworkIdentification
+	 * ClearingSystemMemberIdentification4Choice.
+	 * mmAustralianSmallNetworkIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -188,18 +198,19 @@ public class AustralianBSBIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions , as assigned by the Australian Payments Clearing Association (APCA)."
+	 * "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA)."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmSmallNetworkIdentification = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustralianSmallNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianSmallNetworkIdentification);
+			derivation_lazy = () -> Arrays.asList(ClearingSystemMemberIdentificationChoice.mmAustralianSmallNetworkIdentification, ClearingSystemMemberIdentification2Choice.mmAustralianSmallNetworkIdentification,
+					ClearingSystemMemberIdentification4Choice.mmAustralianSmallNetworkIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.AustralianBSBIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SmallNetworkIdentification";
-			definition = "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions , as assigned by the Australian Payments Clearing Association (APCA).";
+			definition = "Small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> SmallNetworkIdentifier.mmObject();

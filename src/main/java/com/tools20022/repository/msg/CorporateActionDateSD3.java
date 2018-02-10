@@ -414,7 +414,7 @@ public class CorporateActionDateSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void. "
+	 * "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void."
 	 * </li>
 	 * </ul>
 	 */
@@ -426,7 +426,7 @@ public class CorporateActionDateSD3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Date Declared Worthless"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDeclaredWorthless";
-			definition = "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void. ";
+			definition = "Date that DTC received formal notification from the agent/issuer stating that the securities are null and void.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -654,7 +654,7 @@ public class CorporateActionDateSD3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Hearing date as set by the court. Hearing date is material to the shareholder/interested party as this may be the last opportunity to make a case against/for a settlement. "
+	 * "Hearing date as set by the court. Hearing date is material to the shareholder/interested party as this may be the last opportunity to make a case against/for a settlement."
 	 * </li>
 	 * </ul>
 	 */
@@ -666,7 +666,7 @@ public class CorporateActionDateSD3 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Hearing Date"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HearingDate";
-			definition = "Hearing date as set by the court. Hearing date is material to the shareholder/interested party as this may be the last opportunity to make a case against/for a settlement. ";
+			definition = "Hearing date as set by the court. Hearing date is material to the shareholder/interested party as this may be the last opportunity to make a case against/for a settlement.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();

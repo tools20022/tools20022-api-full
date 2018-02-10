@@ -205,7 +205,7 @@ public class Vote2 {
 	 * name} = "For"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes in favour of one resolution"</li>
+	 * definition} = "Number of votes in favour of one resolution."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFor = new MMMessageAttribute() {
@@ -216,7 +216,7 @@ public class Vote2 {
 			xmlTag = "For";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "For";
-			definition = "Number of votes in favour of one resolution";
+			definition = "Number of votes in favour of one resolution.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -252,7 +252,7 @@ public class Vote2 {
 	 * name} = "Against"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes against one resolution"</li>
+	 * definition} = "Number of votes against one resolution."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAgainst = new MMMessageAttribute() {
@@ -263,7 +263,7 @@ public class Vote2 {
 			xmlTag = "Agnst";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Against";
-			definition = "Number of votes against one resolution";
+			definition = "Number of votes against one resolution.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();

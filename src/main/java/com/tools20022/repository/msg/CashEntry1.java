@@ -81,7 +81,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CashEntry1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. "
+ * "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CashEntry2 CashEntry2}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -122,6 +128,13 @@ public class CashEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Amount of money in the cash entry."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashEntry2#mmAmount
+	 * CashEntry2.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -133,6 +146,7 @@ public class CashEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount of money in the cash entry.";
+			nextVersions_lazy = () -> Arrays.asList(CashEntry2.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -172,6 +186,13 @@ public class CashEntry1 {
 	 * definition} =
 	 * "Date at which an entry is posted to an account on the account servicer's books."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashEntry2#mmDate
+	 * CashEntry2.mmDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDate = new MMMessageAttribute() {
@@ -183,6 +204,7 @@ public class CashEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Date";
 			definition = "Date at which an entry is posted to an account on the account servicer's books.";
+			nextVersions_lazy = () -> Arrays.asList(CashEntry2.mmDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeChoice.mmObject();
@@ -220,6 +242,13 @@ public class CashEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of an entry on the books of the account servicer."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashEntry2#mmStatus
+	 * CashEntry2.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -231,6 +260,7 @@ public class CashEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of an entry on the books of the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(CashEntry2.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> EntryStatus1Code.mmObject();
@@ -267,7 +297,15 @@ public class CashEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identifier for an entry, as assigned by the account servicer. "
+	 * "Unique and unambiguous identifier for an entry, as assigned by the account servicer."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashEntry2#mmIdentification
+	 * CashEntry2.mmIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -279,7 +317,8 @@ public class CashEntry1 {
 			xmlTag = "Id";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
-			definition = "Unique and unambiguous identifier for an entry, as assigned by the account servicer. ";
+			definition = "Unique and unambiguous identifier for an entry, as assigned by the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(CashEntry2.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -313,6 +352,14 @@ public class CashEntry1 {
 	 * definition} =
 	 * "Unique identification, as assigned by the account servicer, to unambiguously identify the account statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashEntry2#mmStatementIdentification
+	 * CashEntry2.mmStatementIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatementIdentification = new MMMessageAttribute() {
@@ -323,6 +370,7 @@ public class CashEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementIdentification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the account statement.";
+			nextVersions_lazy = () -> Arrays.asList(CashEntry2.mmStatementIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -356,6 +404,14 @@ public class CashEntry1 {
 	 * definition} =
 	 * "Sequential number of the statement, as assigned by the account servicer.\nUsage: The sequential number is increased incrementally for each statement sent electronically."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashEntry2#mmAccountServicerReference
+	 * CashEntry2.mmAccountServicerReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
@@ -366,6 +422,7 @@ public class CashEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Sequential number of the statement, as assigned by the account servicer.\nUsage: The sequential number is increased incrementally for each statement sent electronically.";
+			nextVersions_lazy = () -> Arrays.asList(CashEntry2.mmAccountServicerReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -397,6 +454,14 @@ public class CashEntry1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Further details of the entry."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashEntry2#mmAdditionalEntryInformation
+	 * CashEntry2.mmAdditionalEntryInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAdditionalEntryInformation = new MMMessageAttribute() {
@@ -407,6 +472,7 @@ public class CashEntry1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalEntryInformation";
 			definition = "Further details of the entry.";
+			nextVersions_lazy = () -> Arrays.asList(CashEntry2.mmAdditionalEntryInformation);
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
 		}
@@ -422,7 +488,8 @@ public class CashEntry1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashEntry1";
-				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account. ";
+				definition = "Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.";
+				nextVersions_lazy = () -> Arrays.asList(CashEntry2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

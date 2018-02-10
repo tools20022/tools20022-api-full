@@ -154,7 +154,7 @@ public class Instalment1 {
 	 * name} = "PaymentDueDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Due date for the payment of the  invoice instalment."</li>
+	 * definition} = "Due date for the payment of the invoice instalment."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPaymentDueDate = new MMMessageAttribute() {
@@ -165,7 +165,7 @@ public class Instalment1 {
 			xmlTag = "PmtDueDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentDueDate";
-			definition = "Due date for the payment of the  invoice instalment.";
+			definition = "Due date for the payment of the invoice instalment.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();

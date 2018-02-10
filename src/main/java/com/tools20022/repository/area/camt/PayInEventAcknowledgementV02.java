@@ -211,7 +211,7 @@ public class PayInEventAcknowledgementV02 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Details of the pay in schedule or pay in call being acknowledged ."</li>
+	 * "Details of the pay in schedule or pay in call being acknowledged."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmAcknowledgementDetails = new MMMessageBuildingBlock() {
@@ -219,7 +219,7 @@ public class PayInEventAcknowledgementV02 {
 			xmlTag = "AckDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcknowledgementDetails";
-			definition = "Details of the pay in schedule or pay in call being acknowledged .";
+			definition = "Details of the pay in schedule or pay in call being acknowledged.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> AcknowledgementDetails1Choice.mmObject();

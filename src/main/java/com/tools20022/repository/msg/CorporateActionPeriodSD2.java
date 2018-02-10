@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides additional information regarding corporate action details periods details."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionPeriodSD3
+ * CorporateActionPeriodSD3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -99,6 +106,14 @@ public class CorporateActionPeriodSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriodSD3#mmPlaceAndName
+	 * CorporateActionPeriodSD3.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -109,6 +124,7 @@ public class CorporateActionPeriodSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriodSD3.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -147,6 +163,14 @@ public class CorporateActionPeriodSD2 {
 	 * definition} =
 	 * "Period during which the securities can be submitted to reorganisation deposit service at DTC (The Depository Trust Corporation). DTC \"first day for reorganisation deposit\" (start date) is the day on which security is eligible for reorganisation deposit service at DTC. DTC \"last day for reorganisation deposit\" is the last day on which securities are eligible to be submitted for reorganisation deposit service at DTC."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriodSD3#mmDTCReorganisationDepositPeriod
+	 * CorporateActionPeriodSD3.mmDTCReorganisationDepositPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDTCReorganisationDepositPeriod = new MMMessageAttribute() {
@@ -158,6 +182,7 @@ public class CorporateActionPeriodSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DTCReorganisationDepositPeriod";
 			definition = "Period during which the securities can be submitted to reorganisation deposit service at DTC (The Depository Trust Corporation). DTC \"first day for reorganisation deposit\" (start date) is the day on which security is eligible for reorganisation deposit service at DTC. DTC \"last day for reorganisation deposit\" is the last day on which securities are eligible to be submitted for reorganisation deposit service at DTC.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriodSD3.mmDTCReorganisationDepositPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.Period3.mmObject();
@@ -172,6 +197,7 @@ public class CorporateActionPeriodSD2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionPeriodSD2";
 				definition = "Provides additional information regarding corporate action details periods details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionPeriodSD3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

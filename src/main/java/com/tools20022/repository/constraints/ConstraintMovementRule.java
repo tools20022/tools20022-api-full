@@ -45,7 +45,7 @@ public class ConstraintMovementRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "At least one occurrence of either CashMovement or SecuritiesMovement  must be present. Both may be present."
+	 * "At least one occurrence of either CashMovement or SecuritiesMovement must be present. Both may be present."
 	 * </li>
 	 * </ul>
 	 */
@@ -54,7 +54,7 @@ public class ConstraintMovementRule {
 			validator = ConstraintMovementRule::checkGlobalDistributionRequest1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MovementRule";
-			definition = "At least one occurrence of either CashMovement or SecuritiesMovement  must be present. Both may be present.";
+			definition = "At least one occurrence of either CashMovement or SecuritiesMovement must be present. Both may be present.";
 			owner_lazy = () -> GlobalDistributionRequest1.mmObject();
 		}
 	};

@@ -133,6 +133,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CustomerAccount2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Account owned by a customer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount7
+ * CustomerAccount7}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -175,6 +182,14 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmIdentification
+	 * CustomerAccount7.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -186,6 +201,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Identification of the account.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
@@ -225,6 +241,13 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount7#mmName
+	 * CustomerAccount7.mmName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmName = new MMMessageAttribute() {
@@ -236,6 +259,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Name";
 			definition = "Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmName);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max70Text.mmObject();
@@ -275,6 +299,13 @@ public class CustomerAccount2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the current state of an account, eg, enabled or deleted."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount7#mmStatus
+	 * CustomerAccount7.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -286,6 +317,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Specifies the current state of an account, eg, enabled or deleted.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AccountStatus3Code.mmObject();
@@ -323,6 +355,13 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CustomerAccount7#mmType
+	 * CustomerAccount7.mmType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -334,6 +373,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
 			definition = "Type of the account.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.CashAccountType2.mmObject();
@@ -372,6 +412,14 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Medium of exchange of value."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmCurrency
+	 * CustomerAccount7.mmCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCurrency = new MMMessageAttribute() {
@@ -383,6 +431,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Currency";
 			definition = "Medium of exchange of value.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmCurrency);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -423,6 +472,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Minimum monthly average of the payment amounts (that is, payments going out) over a year."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumMonthlyPaymentValue
+	 * CustomerAccount7.mmMinimumMonthlyPaymentValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumMonthlyPaymentValue = new MMMessageAttribute() {
@@ -434,6 +491,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMonthlyPaymentValue";
 			definition = "Minimum monthly average of the payment amounts (that is, payments going out) over a year.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMinimumMonthlyPaymentValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -474,6 +532,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Maximum monthly average of the payment amounts (that is, payments going out) over a year."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumMonthlyPaymentValue
+	 * CustomerAccount7.mmMaximumMonthlyPaymentValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumMonthlyPaymentValue = new MMMessageAttribute() {
@@ -485,6 +551,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumMonthlyPaymentValue";
 			definition = "Maximum monthly average of the payment amounts (that is, payments going out) over a year.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMaximumMonthlyPaymentValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -525,6 +592,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Minimum monthly average of the received amounts over a year (that is, payments coming in)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumMonthlyReceivedValue
+	 * CustomerAccount7.mmMinimumMonthlyReceivedValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumMonthlyReceivedValue = new MMMessageAttribute() {
@@ -536,6 +611,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMonthlyReceivedValue";
 			definition = "Minimum monthly average of the received amounts over a year (that is, payments coming in).";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMinimumMonthlyReceivedValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -576,6 +652,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Maximum monthly average of the received amounts over a year (that is, payments coming in)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumMonthlyReceivedValue
+	 * CustomerAccount7.mmMaximumMonthlyReceivedValue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumMonthlyReceivedValue = new MMMessageAttribute() {
@@ -587,6 +671,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumMonthlyReceivedValue";
 			definition = "Maximum monthly average of the received amounts over a year (that is, payments coming in).";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMaximumMonthlyReceivedValue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -627,6 +712,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Minimum monthly average of the number of payments (coming in and going out) over a year."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumMonthlyTransactionNumber
+	 * CustomerAccount7.mmMinimumMonthlyTransactionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumMonthlyTransactionNumber = new MMMessageAttribute() {
@@ -638,6 +731,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumMonthlyTransactionNumber";
 			definition = "Minimum monthly average of the number of payments (coming in and going out) over a year.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMinimumMonthlyTransactionNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
@@ -678,6 +772,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Maximum monthly average of the number of payments (coming in and going out) over a year."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumMonthlyTransactionNumber
+	 * CustomerAccount7.mmMaximumMonthlyTransactionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumMonthlyTransactionNumber = new MMMessageAttribute() {
@@ -689,6 +791,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumMonthlyTransactionNumber";
 			definition = "Maximum monthly average of the number of payments (coming in and going out) over a year.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMaximumMonthlyTransactionNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
@@ -729,6 +832,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Minimum average balance, that is, sum of the end of day balances over a month divided by the number of business days in the month."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumAverageBalance
+	 * CustomerAccount7.mmMinimumAverageBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumAverageBalance = new MMMessageAttribute() {
@@ -740,6 +851,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumAverageBalance";
 			definition = "Minimum average balance, that is, sum of the end of day balances over a month divided by the number of business days in the month.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMinimumAverageBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -780,6 +892,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Maximum average balance, that is, sum of the end of day balances over a month divided by the number of business days in the month."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumAverageBalance
+	 * CustomerAccount7.mmMaximumAverageBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumAverageBalance = new MMMessageAttribute() {
@@ -791,6 +911,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAverageBalance";
 			definition = "Maximum average balance, that is, sum of the end of day balances over a month divided by the number of business days in the month.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMaximumAverageBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -828,6 +949,14 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the purpose of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmAccountPurpose
+	 * CustomerAccount7.mmAccountPurpose}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountPurpose = new MMMessageAttribute() {
@@ -839,6 +968,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountPurpose";
 			definition = "Specifies the purpose of the account.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmAccountPurpose);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max140Text.mmObject();
@@ -879,6 +1009,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Minimum floor notification amount, that is, the value of the balance under which a notification will be sent to the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumFloorNotificationAmount
+	 * CustomerAccount7.mmMinimumFloorNotificationAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumFloorNotificationAmount = new MMMessageAttribute() {
@@ -890,6 +1028,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumFloorNotificationAmount";
 			definition = "Minimum floor notification amount, that is, the value of the balance under which a notification will be sent to the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMinimumFloorNotificationAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -930,6 +1069,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Maximum floor notification amount, that is, the value of the balance under which a notification will be sent to the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumFloorNotificationAmount
+	 * CustomerAccount7.mmMaximumFloorNotificationAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumFloorNotificationAmount = new MMMessageAttribute() {
@@ -941,6 +1088,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumFloorNotificationAmount";
 			definition = "Maximum floor notification amount, that is, the value of the balance under which a notification will be sent to the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMaximumFloorNotificationAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -981,6 +1129,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Minimum ceiling notification amount, that is, the value of the balance above which a notification will be sent to the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMinimumCeilingNotificationAmount
+	 * CustomerAccount7.mmMinimumCeilingNotificationAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMinimumCeilingNotificationAmount = new MMMessageAttribute() {
@@ -992,6 +1148,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MinimumCeilingNotificationAmount";
 			definition = "Minimum ceiling notification amount, that is, the value of the balance above which a notification will be sent to the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMinimumCeilingNotificationAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -1032,6 +1189,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Maximum ceiling notification amount, that is, the value of the balance above which a notification will be sent to the account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmMaximumCeilingNotificationAmount
+	 * CustomerAccount7.mmMaximumCeilingNotificationAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumCeilingNotificationAmount = new MMMessageAttribute() {
@@ -1043,6 +1208,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumCeilingNotificationAmount";
 			definition = "Maximum ceiling notification amount, that is, the value of the balance above which a notification will be sent to the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmMaximumCeilingNotificationAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ImpliedCurrencyAndAmount.mmObject();
@@ -1081,7 +1247,7 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies how often statements (for audit purposes)  will be sent."</li>
+	 * "Specifies how often statements (for audit purposes) will be sent."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatementCycle = new MMMessageAttribute() {
@@ -1092,7 +1258,7 @@ public class CustomerAccount2 {
 			xmlTag = "StmtCycl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatementCycle";
-			definition = "Specifies how often statements (for audit purposes)  will be sent.";
+			definition = "Specifies how often statements (for audit purposes) will be sent.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Frequency3Code.mmObject();
@@ -1129,6 +1295,14 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Restriction on capability or operations allowed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmRestriction
+	 * CustomerAccount7.mmRestriction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRestriction = new MMMessageAssociationEnd() {
@@ -1140,6 +1314,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Restriction";
 			definition = "Restriction on capability or operations allowed.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmRestriction);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Restriction1.mmObject();
@@ -1176,6 +1351,14 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date when the account will be or was closed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmClosingDate
+	 * CustomerAccount7.mmClosingDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmClosingDate = new MMMessageAssociationEnd() {
@@ -1187,6 +1370,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingDate";
 			definition = "Date when the account will be or was closed.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmClosingDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1224,6 +1408,14 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date when the account was opened."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmOpeningDate
+	 * CustomerAccount7.mmOpeningDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOpeningDate = new MMMessageAssociationEnd() {
@@ -1235,6 +1427,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningDate";
 			definition = "Date when the account was opened.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmOpeningDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1276,6 +1469,14 @@ public class CustomerAccount2 {
 	 * definition} =
 	 * "Unique and unambiguous identification of the account used as a reference for the opening of another account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmReferenceAccountIdentification
+	 * CustomerAccount7.mmReferenceAccountIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmReferenceAccountIdentification = new MMMessageAttribute() {
@@ -1287,6 +1488,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReferenceAccountIdentification";
 			definition = "Unique and unambiguous identification of the account used as a reference for the opening of another account.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmReferenceAccountIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> AccountIdentification4Choice.mmObject();
@@ -1323,6 +1525,14 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Proprietary characteristics of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmProprietary
+	 * CustomerAccount7.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -1334,6 +1544,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Proprietary characteristics of the account.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmProprietary);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.GenericIdentification1.mmObject();
@@ -1371,6 +1582,14 @@ public class CustomerAccount2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CustomerAccount7#mmAccountOwner
+	 * CustomerAccount7.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -1382,6 +1601,7 @@ public class CustomerAccount2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -1408,6 +1628,7 @@ public class CustomerAccount2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CustomerAccount2";
 				definition = "Account owned by a customer.";
+				nextVersions_lazy = () -> Arrays.asList(CustomerAccount7.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

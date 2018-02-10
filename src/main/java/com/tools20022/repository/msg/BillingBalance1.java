@@ -107,7 +107,7 @@ public class BillingBalance1 {
 	 * name} = "Type"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Defines the type of  balance."</li>
+	 * definition} = "Defines the type of balance."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmType = new MMMessageAssociationEnd() {
@@ -118,7 +118,7 @@ public class BillingBalance1 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Defines the type of  balance.";
+			definition = "Defines the type of balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

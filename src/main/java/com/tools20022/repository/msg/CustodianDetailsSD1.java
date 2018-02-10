@@ -514,7 +514,7 @@ public class CustodianDetailsSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the event security of the  corresponding composite record is on SOI (security of interest) subscription. Applicable to custodian service only."
+	 * "Indicates whether the event security of the corresponding composite record is on SOI (security of interest) subscription. Applicable to custodian service only."
 	 * </li>
 	 * </ul>
 	 */
@@ -526,7 +526,7 @@ public class CustodianDetailsSD1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Composite not in Subscription Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CompositeNotInSubscriptionFlag";
-			definition = "Indicates whether the event security of the  corresponding composite record is on SOI (security of interest) subscription. Applicable to custodian service only.";
+			definition = "Indicates whether the event security of the corresponding composite record is on SOI (security of interest) subscription. Applicable to custodian service only.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();

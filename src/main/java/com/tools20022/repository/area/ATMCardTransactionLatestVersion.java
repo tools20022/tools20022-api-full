@@ -37,33 +37,6 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessArea#getMessageDefinition
  * messageDefinition} =
  * <ul>
- * <li>{@linkplain com.tools20022.repository.area.catp.ATMInquiryResponseV01
- * ATMInquiryResponseV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.catp.ATMInquiryRequestV01
- * ATMInquiryRequestV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.catp.ATMCompletionAdviceV01
- * ATMCompletionAdviceV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.catp.ATMWithdrawalResponseV01
- * ATMWithdrawalResponseV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.catp.ATMRejectV01
- * ATMRejectV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMCompletionAcknowledgementV01
- * ATMCompletionAcknowledgementV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01
- * ATMWithdrawalCompletionAdviceV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMWithdrawalCompletionAcknowledgementV01
- * ATMWithdrawalCompletionAcknowledgementV01}</li>
- * <li>{@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV01
- * ATMWithdrawalRequestV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementRequestV01
- * ATMPINManagementRequestV01}</li>
- * <li>
- * {@linkplain com.tools20022.repository.area.catp.ATMPINManagementResponseV01
- * ATMPINManagementResponseV01}</li>
  * <li>{@linkplain com.tools20022.repository.area.catp.ATMWithdrawalRequestV02
  * ATMWithdrawalRequestV02}</li>
  * <li>{@linkplain com.tools20022.repository.area.catp.ATMDepositResponseV01
@@ -135,12 +108,10 @@ public class ATMCardTransactionLatestVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "ATM Card Transaction - Latest version - master";
 				definition = "Messages that support any card related Automated Teller Machine (ATM) transactions and services between an ATM equipment and an ATM acquirer. These services include cash withdrawals, kiosk functions and card account management transactions.";
-				messageDefinition_lazy = () -> Arrays.asList(ATMInquiryResponseV01.mmObject(), ATMInquiryRequestV01.mmObject(), ATMCompletionAdviceV01.mmObject(), ATMWithdrawalResponseV01.mmObject(), ATMRejectV01.mmObject(),
-						ATMCompletionAcknowledgementV01.mmObject(), ATMWithdrawalCompletionAdviceV01.mmObject(), ATMWithdrawalCompletionAcknowledgementV01.mmObject(), ATMWithdrawalRequestV01.mmObject(),
-						ATMPINManagementRequestV01.mmObject(), ATMPINManagementResponseV01.mmObject(), ATMWithdrawalRequestV02.mmObject(), ATMDepositResponseV01.mmObject(), ATMDepositRequestV01.mmObject(),
-						ATMWithdrawalCompletionAdviceV02.mmObject(), ATMInquiryResponseV02.mmObject(), ATMDepositCompletionAcknowledgementV01.mmObject(), ATMPINManagementRequestV02.mmObject(), ATMTransferRequestV01.mmObject(),
-						ATMWithdrawalResponseV02.mmObject(), ATMWithdrawalCompletionAcknowledgementV02.mmObject(), ATMPINManagementResponseV02.mmObject(), ATMDepositCompletionAdviceV01.mmObject(), ATMRejectV02.mmObject(),
-						ATMInquiryRequestV02.mmObject(), ATMCompletionAcknowledgementV02.mmObject(), ATMCompletionAdviceV02.mmObject(), ATMTransferResponseV01.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(ATMWithdrawalRequestV02.mmObject(), ATMDepositResponseV01.mmObject(), ATMDepositRequestV01.mmObject(), ATMWithdrawalCompletionAdviceV02.mmObject(),
+						ATMInquiryResponseV02.mmObject(), ATMDepositCompletionAcknowledgementV01.mmObject(), ATMPINManagementRequestV02.mmObject(), ATMTransferRequestV01.mmObject(), ATMWithdrawalResponseV02.mmObject(),
+						ATMWithdrawalCompletionAcknowledgementV02.mmObject(), ATMPINManagementResponseV02.mmObject(), ATMDepositCompletionAdviceV01.mmObject(), ATMRejectV02.mmObject(), ATMInquiryRequestV02.mmObject(),
+						ATMCompletionAcknowledgementV02.mmObject(), ATMCompletionAdviceV02.mmObject(), ATMTransferResponseV01.mmObject());
 				code = "catp";
 			}
 		});

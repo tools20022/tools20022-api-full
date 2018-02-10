@@ -100,7 +100,7 @@ public class ChargeType5Choice {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Fee (charge/commission) expressed as a code. "</li>
+	 * definition} = "Fee (charge/commission) expressed as a code."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -111,7 +111,7 @@ public class ChargeType5Choice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Fee (charge/commission) expressed as a code. ";
+			definition = "Fee (charge/commission) expressed as a code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InvestmentFundFee1Code.mmObject();

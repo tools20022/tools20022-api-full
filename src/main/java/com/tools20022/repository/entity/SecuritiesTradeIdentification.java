@@ -194,6 +194,11 @@ import java.util.Objects;
  * Linkages49.mmReference}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Linkages48#mmReference
  * Linkages48.mmReference}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages51#mmReference
+ * Linkages51.mmReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11#mmReference
+ * MessageAndBusinessReference11.mmReference}</li>
  * </ul>
  * </li>
  * <li>
@@ -482,8 +487,13 @@ import java.util.Objects;
  * References59Choice}</li>
  * <li>{@linkplain com.tools20022.repository.choice.References54Choice
  * References54Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Linkages51 Linkages51}</li>
  * <li>{@linkplain com.tools20022.repository.msg.MessageAndBusinessReference10
  * MessageAndBusinessReference10}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.MessageAndBusinessReference11
+ * MessageAndBusinessReference11}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.References63Choice
+ * References63Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -1096,6 +1106,12 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.repository.choice.References54Choice#mmMarketInfrastructureTransactionIdentification
 	 * References54Choice.mmMarketInfrastructureTransactionIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.IntraBalanceMovement3#mmMarketInfrastructureTransactionIdentification
+	 * IntraBalanceMovement3.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmMarketInfrastructureTransactionIdentification
+	 * Transaction51.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction53#mmMarketInfrastructureTransactionIdentification
 	 * Transaction53.mmMarketInfrastructureTransactionIdentification}</li>
 	 * <li>
@@ -1124,6 +1140,45 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails101#mmMarketInfrastructureTransactionIdentification
 	 * TransactionDetails101.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction58#mmMarketInfrastructureTransactionIdentification
+	 * Transaction58.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTransactionReferences1#mmMarketInfrastructureTransactionIdentification
+	 * SecuritiesTransactionReferences1.
+	 * mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmMarketInfrastructureTransactionIdentification
+	 * SecuritiesTradeDetails71.mmMarketInfrastructureTransactionIdentification}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmMarketInfrastructureTransactionIdentification
+	 * Transaction60.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmMarketInfrastructureTransactionIdentification
+	 * Transaction61.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmMarketInfrastructureTransactionIdentification
+	 * Transaction62.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmMarketInfrastructureTransactionIdentification
+	 * TransactionDetails106.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmMarketInfrastructureTransactionIdentification
+	 * SecuritiesTradeDetails85.mmMarketInfrastructureTransactionIdentification}
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails108#mmMarketInfrastructureTransactionIdentification
+	 * TransactionDetails108.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmMarketInfrastructureTransactionIdentification
+	 * Transaction63.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmMarketInfrastructureTransactionIdentification
+	 * Transaction64.mmMarketInfrastructureTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmMarketInfrastructureTransactionIdentification
+	 * Transaction65.mmMarketInfrastructureTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1204,9 +1259,14 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					TransactionDetails85.mmMarketInfrastructureTransactionIdentification, TransactionIdentifications38.mmMarketInfrastructureTransactionIdentification, Identification24.mmMarketInfrastructureTransactionIdentification,
 					Transaction50.mmMarketInfrastructureTransactionIdentification, References50Choice.mmMarketInfrastructureTransactionIdentification, References51Choice.mmMarketInfrastructureTransactionIdentification,
 					Transaction48.mmMarketInfrastructureTransactionIdentification, References21.mmMarketInfrastructureTransactionIdentification, References54Choice.mmMarketInfrastructureTransactionIdentification,
-					Transaction53.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails68.mmMarketInfrastructureTransactionIdentification, Transaction54.mmMarketInfrastructureTransactionIdentification,
-					Transaction52.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails69.mmMarketInfrastructureTransactionIdentification, Transaction57.mmMarketInfrastructureTransactionIdentification,
-					Transaction56.mmMarketInfrastructureTransactionIdentification, Transaction55.mmMarketInfrastructureTransactionIdentification, TransactionDetails101.mmMarketInfrastructureTransactionIdentification);
+					IntraBalanceMovement3.mmMarketInfrastructureTransactionIdentification, Transaction51.mmMarketInfrastructureTransactionIdentification, Transaction53.mmMarketInfrastructureTransactionIdentification,
+					SecuritiesTradeDetails68.mmMarketInfrastructureTransactionIdentification, Transaction54.mmMarketInfrastructureTransactionIdentification, Transaction52.mmMarketInfrastructureTransactionIdentification,
+					SecuritiesTradeDetails69.mmMarketInfrastructureTransactionIdentification, Transaction57.mmMarketInfrastructureTransactionIdentification, Transaction56.mmMarketInfrastructureTransactionIdentification,
+					Transaction55.mmMarketInfrastructureTransactionIdentification, TransactionDetails101.mmMarketInfrastructureTransactionIdentification, Transaction58.mmMarketInfrastructureTransactionIdentification,
+					SecuritiesTransactionReferences1.mmMarketInfrastructureTransactionIdentification, SecuritiesTradeDetails71.mmMarketInfrastructureTransactionIdentification, Transaction60.mmMarketInfrastructureTransactionIdentification,
+					Transaction61.mmMarketInfrastructureTransactionIdentification, Transaction62.mmMarketInfrastructureTransactionIdentification, TransactionDetails106.mmMarketInfrastructureTransactionIdentification,
+					SecuritiesTradeDetails85.mmMarketInfrastructureTransactionIdentification, TransactionDetails108.mmMarketInfrastructureTransactionIdentification, Transaction63.mmMarketInfrastructureTransactionIdentification,
+					Transaction64.mmMarketInfrastructureTransactionIdentification, Transaction65.mmMarketInfrastructureTransactionIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1611,6 +1671,9 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.repository.msg.References21#mmProcessorTransactionIdentification
 	 * References21.mmProcessorTransactionIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmProcessorTransactionIdentification
+	 * Transaction51.mmProcessorTransactionIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction53#mmProcessorTransactionIdentification
 	 * Transaction53.mmProcessorTransactionIdentification}</li>
 	 * <li>
@@ -1637,6 +1700,45 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransactionDetails101#mmProcessorTransactionIdentification
 	 * TransactionDetails101.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction58#mmProcessorTransactionIdentification
+	 * Transaction58.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmProcessorTransactionIdentification
+	 * SecuritiesTradeDetails71.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmProcessorTransactionIdentification
+	 * Transaction60.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmProcessorTransactionIdentification
+	 * Transaction61.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmProcessorTransactionIdentification
+	 * Transaction62.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails106#mmProcessorTransactionIdentification
+	 * TransactionDetails106.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails80#mmProcessorTransactionIdentification
+	 * SecuritiesTradeDetails80.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails84#mmProcessorTransactionIdentification
+	 * SecuritiesTradeDetails84.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmProcessorTransactionIdentification
+	 * SecuritiesTradeDetails85.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails108#mmProcessorTransactionIdentification
+	 * TransactionDetails108.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmProcessorTransactionIdentification
+	 * Transaction63.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmProcessorTransactionIdentification
+	 * Transaction64.mmProcessorTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmProcessorTransactionIdentification
+	 * Transaction65.mmProcessorTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1697,10 +1799,13 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					TransactionIdentifications37.mmProcessorTransactionIdentification, AdditionalParameters25.mmProcessorTransactionIdentification, TransactionIdentifications34.mmProcessorTransactionIdentification,
 					SettlementTypeAndIdentification24.mmProcessorTransactionIdentification, TransactionDetails85.mmProcessorTransactionIdentification, TransactionIdentifications38.mmProcessorTransactionIdentification,
 					SecuritiesTradeDetails60.mmProcessorTransactionIdentification, Identification24.mmProcessorTransactionIdentification, Transaction50.mmProcessorTransactionIdentification,
-					References51Choice.mmProcessorTransactionIdentification, Transaction48.mmProcessorTransactionIdentification, References21.mmProcessorTransactionIdentification, Transaction53.mmProcessorTransactionIdentification,
-					SecuritiesTradeDetails68.mmProcessorTransactionIdentification, Transaction54.mmProcessorTransactionIdentification, Transaction52.mmProcessorTransactionIdentification,
+					References51Choice.mmProcessorTransactionIdentification, Transaction48.mmProcessorTransactionIdentification, References21.mmProcessorTransactionIdentification, Transaction51.mmProcessorTransactionIdentification,
+					Transaction53.mmProcessorTransactionIdentification, SecuritiesTradeDetails68.mmProcessorTransactionIdentification, Transaction54.mmProcessorTransactionIdentification, Transaction52.mmProcessorTransactionIdentification,
 					SecuritiesTradeDetails69.mmProcessorTransactionIdentification, Transaction57.mmProcessorTransactionIdentification, Transaction56.mmProcessorTransactionIdentification, Transaction55.mmProcessorTransactionIdentification,
-					TransactionDetails101.mmProcessorTransactionIdentification);
+					TransactionDetails101.mmProcessorTransactionIdentification, Transaction58.mmProcessorTransactionIdentification, SecuritiesTradeDetails71.mmProcessorTransactionIdentification,
+					Transaction60.mmProcessorTransactionIdentification, Transaction61.mmProcessorTransactionIdentification, Transaction62.mmProcessorTransactionIdentification, TransactionDetails106.mmProcessorTransactionIdentification,
+					SecuritiesTradeDetails80.mmProcessorTransactionIdentification, SecuritiesTradeDetails84.mmProcessorTransactionIdentification, SecuritiesTradeDetails85.mmProcessorTransactionIdentification,
+					TransactionDetails108.mmProcessorTransactionIdentification, Transaction63.mmProcessorTransactionIdentification, Transaction64.mmProcessorTransactionIdentification, Transaction65.mmProcessorTransactionIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2213,6 +2318,9 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.repository.choice.References54Choice#mmPoolIdentification
 	 * References54Choice.mmPoolIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmPoolIdentification
+	 * Transaction51.mmPoolIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction53#mmPoolIdentification
 	 * Transaction53.mmPoolIdentification}</li>
 	 * <li>
@@ -2260,6 +2368,39 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction55#mmPoolIdentification
 	 * Transaction55.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction58#mmPoolIdentification
+	 * Transaction58.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmPoolIdentification
+	 * SecuritiesTradeDetails71.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmPoolIdentification
+	 * TransactionDetails105.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmPoolIdentification
+	 * Transaction60.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmPoolIdentification
+	 * Transaction61.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmPoolIdentification
+	 * Transaction62.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmPoolIdentification
+	 * SecuritiesTradeDetails85.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmPoolIdentification
+	 * TransactionDetails110.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmPoolIdentification
+	 * Transaction63.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmPoolIdentification
+	 * Transaction64.mmPoolIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmPoolIdentification
+	 * Transaction65.mmPoolIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2315,11 +2456,13 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					SecuritiesFinancingTransactionDetails33.mmPoolIdentification, Transaction49.mmPoolIdentification, TransactionTypeAndAdditionalParameters14.mmPoolIdentification,
 					TransactionTypeAndAdditionalParameters12.mmPoolIdentification, SecuritiesTradeDetails61.mmPoolIdentification, AdditionalParameters25.mmPoolIdentification, SettlementTypeAndIdentification24.mmPoolIdentification,
 					TransactionDetails87.mmPoolIdentification, References58Choice.mmPoolIdentification, Identification24.mmPoolIdentification, Transaction50.mmPoolIdentification, References50Choice.mmPoolIdentification,
-					References51Choice.mmPoolIdentification, Transaction48.mmPoolIdentification, References21.mmPoolIdentification, References54Choice.mmPoolIdentification, Transaction53.mmPoolIdentification,
-					SecuritiesTradeDetails68.mmPoolIdentification, TransactionDetails97.mmPoolIdentification, TransactionTypeAndAdditionalParameters17.mmPoolIdentification, TransactionTypeAndAdditionalParameters16.mmPoolIdentification,
-					SecuritiesFinancingTransactionDetails35.mmPoolIdentification, Transaction54.mmPoolIdentification, Transaction52.mmPoolIdentification, TransactionTypeAndAdditionalParameters19.mmPoolIdentification,
-					SecuritiesTradeDetails69.mmPoolIdentification, TransactionTypeAndAdditionalParameters20.mmPoolIdentification, Transaction57.mmPoolIdentification, SecuritiesFinancingTransactionDetails36.mmPoolIdentification,
-					Transaction56.mmPoolIdentification, TransactionDetails100.mmPoolIdentification, Transaction55.mmPoolIdentification);
+					References51Choice.mmPoolIdentification, Transaction48.mmPoolIdentification, References21.mmPoolIdentification, References54Choice.mmPoolIdentification, Transaction51.mmPoolIdentification,
+					Transaction53.mmPoolIdentification, SecuritiesTradeDetails68.mmPoolIdentification, TransactionDetails97.mmPoolIdentification, TransactionTypeAndAdditionalParameters17.mmPoolIdentification,
+					TransactionTypeAndAdditionalParameters16.mmPoolIdentification, SecuritiesFinancingTransactionDetails35.mmPoolIdentification, Transaction54.mmPoolIdentification, Transaction52.mmPoolIdentification,
+					TransactionTypeAndAdditionalParameters19.mmPoolIdentification, SecuritiesTradeDetails69.mmPoolIdentification, TransactionTypeAndAdditionalParameters20.mmPoolIdentification, Transaction57.mmPoolIdentification,
+					SecuritiesFinancingTransactionDetails36.mmPoolIdentification, Transaction56.mmPoolIdentification, TransactionDetails100.mmPoolIdentification, Transaction55.mmPoolIdentification, Transaction58.mmPoolIdentification,
+					SecuritiesTradeDetails71.mmPoolIdentification, TransactionDetails105.mmPoolIdentification, Transaction60.mmPoolIdentification, Transaction61.mmPoolIdentification, Transaction62.mmPoolIdentification,
+					SecuritiesTradeDetails85.mmPoolIdentification, TransactionDetails110.mmPoolIdentification, Transaction63.mmPoolIdentification, Transaction64.mmPoolIdentification, Transaction65.mmPoolIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2609,6 +2752,72 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction55#mmClientCollateralInstructionIdentification
 	 * Transaction55.mmClientCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails71#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails71.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmClientCollateralInstructionIdentification
+	 * TransactionDetails105.mmClientCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmClientCollateralInstructionIdentification
+	 * Transaction60.mmClientCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmClientCollateralInstructionIdentification
+	 * Transaction61.mmClientCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmClientCollateralInstructionIdentification
+	 * Transaction62.mmClientCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails73#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails73.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails75#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails75.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails76#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails76.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails78#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails78.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails79#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails79.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails80#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails80.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails84#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails84.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails85#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails85.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails86#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails86.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails87#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails87.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails88#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails88.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails89#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails89.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesTradeDetails90#mmCollateralTransactionIdentification
+	 * SecuritiesTradeDetails90.mmCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmClientCollateralInstructionIdentification
+	 * TransactionDetails110.mmClientCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmClientCollateralInstructionIdentification
+	 * Transaction63.mmClientCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmClientCollateralInstructionIdentification
+	 * Transaction64.mmClientCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmClientCollateralInstructionIdentification
+	 * Transaction65.mmClientCollateralInstructionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2657,7 +2866,15 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					SecuritiesTradeDetails67.mmCollateralTransactionIdentification, Transaction53.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails68.mmCollateralTransactionIdentification,
 					TransactionDetails97.mmClientCollateralInstructionIdentification, Transaction54.mmClientCollateralInstructionIdentification, Transaction52.mmClientCollateralInstructionIdentification,
 					SecuritiesTradeDetails69.mmCollateralTransactionIdentification, Transaction57.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails70.mmCollateralTransactionIdentification,
-					Transaction56.mmClientCollateralInstructionIdentification, TransactionDetails100.mmClientCollateralInstructionIdentification, Transaction55.mmClientCollateralInstructionIdentification);
+					Transaction56.mmClientCollateralInstructionIdentification, TransactionDetails100.mmClientCollateralInstructionIdentification, Transaction55.mmClientCollateralInstructionIdentification,
+					SecuritiesTradeDetails71.mmCollateralTransactionIdentification, TransactionDetails105.mmClientCollateralInstructionIdentification, Transaction60.mmClientCollateralInstructionIdentification,
+					Transaction61.mmClientCollateralInstructionIdentification, Transaction62.mmClientCollateralInstructionIdentification, SecuritiesTradeDetails73.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails75.mmCollateralTransactionIdentification, SecuritiesTradeDetails76.mmCollateralTransactionIdentification, SecuritiesTradeDetails78.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails79.mmCollateralTransactionIdentification, SecuritiesTradeDetails80.mmCollateralTransactionIdentification, SecuritiesTradeDetails84.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails85.mmCollateralTransactionIdentification, SecuritiesTradeDetails86.mmCollateralTransactionIdentification, SecuritiesTradeDetails87.mmCollateralTransactionIdentification,
+					SecuritiesTradeDetails88.mmCollateralTransactionIdentification, SecuritiesTradeDetails89.mmCollateralTransactionIdentification, SecuritiesTradeDetails90.mmCollateralTransactionIdentification,
+					TransactionDetails110.mmClientCollateralInstructionIdentification, Transaction63.mmClientCollateralInstructionIdentification, Transaction64.mmClientCollateralInstructionIdentification,
+					Transaction65.mmClientCollateralInstructionIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3010,6 +3227,9 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.repository.msg.Transaction48#mmClientTripartyCollateralTransactionIdentification
 	 * Transaction48.mmClientTripartyCollateralTransactionIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction51.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters29#mmClientTripartyCollateralTransactionIdentification
 	 * AdditionalParameters29.
 	 * mmClientTripartyCollateralTransactionIdentification}</li>
@@ -3065,6 +3285,35 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Transaction55#mmClientTripartyCollateralTransactionIdentification
 	 * Transaction55.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction58#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction58.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmClientTripartyCollateralTransactionIdentification
+	 * TransactionDetails105.mmClientTripartyCollateralTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction60.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction61.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction62.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmClientTripartyCollateralTransactionIdentification
+	 * TransactionDetails110.mmClientTripartyCollateralTransactionIdentification
+	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction63.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction64.mmClientTripartyCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmClientTripartyCollateralTransactionIdentification
+	 * Transaction65.mmClientTripartyCollateralTransactionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3124,13 +3373,17 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					AdditionalParameters21.mmMarketInfrastructureTransactionIdentification, SecuritiesFinancingTransactionDetails33.mmClientTripartyCollateralTransactionIdentification,
 					Transaction49.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters25.mmMarketInfrastructureTransactionIdentification, AdditionalParameters28.mmClientTripartyCollateralTransactionIdentification,
 					AdditionalParameters27.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters27.mmClientCollateralInstructionIdentification, TransactionDetails87.mmClientTripartyCollateralTransactionIdentification,
-					Transaction50.mmClientTripartyCollateralTransactionIdentification, Transaction48.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters29.mmClientTripartyCollateralTransactionIdentification,
-					AdditionalParameters29.mmClientCollateralInstructionIdentification, AdditionalParameters30.mmClientTripartyCollateralTransactionIdentification, Transaction53.mmClientTripartyCollateralTransactionIdentification,
-					TransactionDetails97.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails35.mmClientTripartyCollateralTransactionIdentification,
-					Transaction54.mmClientTripartyCollateralTransactionIdentification, Transaction52.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters31.mmClientTripartyCollateralTransactionIdentification,
-					AdditionalParameters31.mmClientCollateralInstructionIdentification, Transaction57.mmClientTripartyCollateralTransactionIdentification,
-					SecuritiesFinancingTransactionDetails36.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters32.mmClientTripartyCollateralTransactionIdentification,
-					Transaction56.mmClientTripartyCollateralTransactionIdentification, TransactionDetails100.mmClientTripartyCollateralTransactionIdentification, Transaction55.mmClientTripartyCollateralTransactionIdentification);
+					Transaction50.mmClientTripartyCollateralTransactionIdentification, Transaction48.mmClientTripartyCollateralTransactionIdentification, Transaction51.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters29.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters29.mmClientCollateralInstructionIdentification, AdditionalParameters30.mmClientTripartyCollateralTransactionIdentification,
+					Transaction53.mmClientTripartyCollateralTransactionIdentification, TransactionDetails97.mmClientTripartyCollateralTransactionIdentification,
+					SecuritiesFinancingTransactionDetails35.mmClientTripartyCollateralTransactionIdentification, Transaction54.mmClientTripartyCollateralTransactionIdentification,
+					Transaction52.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters31.mmClientTripartyCollateralTransactionIdentification, AdditionalParameters31.mmClientCollateralInstructionIdentification,
+					Transaction57.mmClientTripartyCollateralTransactionIdentification, SecuritiesFinancingTransactionDetails36.mmClientTripartyCollateralTransactionIdentification,
+					AdditionalParameters32.mmClientTripartyCollateralTransactionIdentification, Transaction56.mmClientTripartyCollateralTransactionIdentification, TransactionDetails100.mmClientTripartyCollateralTransactionIdentification,
+					Transaction55.mmClientTripartyCollateralTransactionIdentification, Transaction58.mmClientTripartyCollateralTransactionIdentification, TransactionDetails105.mmClientTripartyCollateralTransactionIdentification,
+					Transaction60.mmClientTripartyCollateralTransactionIdentification, Transaction61.mmClientTripartyCollateralTransactionIdentification, Transaction62.mmClientTripartyCollateralTransactionIdentification,
+					TransactionDetails110.mmClientTripartyCollateralTransactionIdentification, Transaction63.mmClientTripartyCollateralTransactionIdentification, Transaction64.mmClientTripartyCollateralTransactionIdentification,
+					Transaction65.mmClientTripartyCollateralTransactionIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3534,6 +3787,9 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.repository.msg.Transaction48#mmTripartyCollateralInstructionIdentification
 	 * Transaction48.mmTripartyCollateralInstructionIdentification}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction51#mmTripartyAgentCollateralTransactionIdentification
+	 * Transaction51.mmTripartyAgentCollateralTransactionIdentification}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AdditionalParameters29#mmTripartyAgentServiceProviderCollateralTransactionIdentification
 	 * AdditionalParameters29.
 	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
@@ -3629,6 +3885,70 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * {@linkplain com.tools20022.repository.msg.Transaction55#mmTripartyAgentServiceProviderCollateralInstructionIdentification
 	 * Transaction55.
 	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * TransactionDetails105.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails105#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * TransactionDetails105.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * Transaction60.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction60#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * Transaction60.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * Transaction61.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction61#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * Transaction61.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * Transaction62.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction62#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * Transaction62.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * TransactionDetails110.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TransactionDetails110#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * TransactionDetails110.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * Transaction63.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction63#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * Transaction63.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * Transaction64.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction64#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * Transaction64.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmTripartyAgentServiceProviderCollateralTransactionIdentification
+	 * Transaction65.
+	 * mmTripartyAgentServiceProviderCollateralTransactionIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transaction65#mmTripartyAgentServiceProviderCollateralInstructionIdentification
+	 * Transaction65.
+	 * mmTripartyAgentServiceProviderCollateralInstructionIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3692,18 +4012,27 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 					AdditionalParameters28.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters27.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters27.mmTripartyCollateralInstructionIdentification,
 					TransactionDetails87.mmTripartyAgentCollateralTransactionIdentification, TransactionDetails87.mmTripartyCollateralInstructionIdentification, Transaction50.mmTripartyAgentCollateralTransactionIdentification,
 					Transaction50.mmTripartyCollateralInstructionIdentification, Transaction48.mmTripartyAgentCollateralTransactionIdentification, Transaction48.mmTripartyCollateralInstructionIdentification,
-					AdditionalParameters29.mmTripartyAgentServiceProviderCollateralTransactionIdentification, AdditionalParameters29.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					AdditionalParameters30.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction53.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					Transaction53.mmTripartyAgentServiceProviderCollateralInstructionIdentification, TransactionDetails97.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					TransactionDetails97.mmTripartyAgentServiceProviderCollateralInstructionIdentification, SecuritiesFinancingTransactionDetails35.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					Transaction54.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction54.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					Transaction52.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction52.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					AdditionalParameters31.mmTripartyAgentServiceProviderCollateralTransactionIdentification, AdditionalParameters31.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					Transaction57.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction57.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					SecuritiesFinancingTransactionDetails36.mmTripartyAgentServiceProviderCollateralTransactionIdentification, AdditionalParameters32.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
-					Transaction56.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction56.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					TransactionDetails100.mmTripartyAgentServiceProviderCollateralTransactionIdentification, TransactionDetails100.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
-					Transaction55.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction55.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
+					Transaction51.mmTripartyAgentCollateralTransactionIdentification, AdditionalParameters29.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					AdditionalParameters29.mmTripartyAgentServiceProviderCollateralInstructionIdentification, AdditionalParameters30.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction53.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction53.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					TransactionDetails97.mmTripartyAgentServiceProviderCollateralTransactionIdentification, TransactionDetails97.mmTripartyAgentServiceProviderCollateralInstructionIdentification,
+					SecuritiesFinancingTransactionDetails35.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction54.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction54.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction52.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction52.mmTripartyAgentServiceProviderCollateralInstructionIdentification, AdditionalParameters31.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					AdditionalParameters31.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction57.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction57.mmTripartyAgentServiceProviderCollateralInstructionIdentification, SecuritiesFinancingTransactionDetails36.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					AdditionalParameters32.mmTripartyAgentServiceProviderCollateralTransactionIdentification, Transaction56.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction56.mmTripartyAgentServiceProviderCollateralInstructionIdentification, TransactionDetails100.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					TransactionDetails100.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction55.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction55.mmTripartyAgentServiceProviderCollateralInstructionIdentification, TransactionDetails105.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					TransactionDetails105.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction60.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction60.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction61.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction61.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction62.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction62.mmTripartyAgentServiceProviderCollateralInstructionIdentification, TransactionDetails110.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					TransactionDetails110.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction63.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction63.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction64.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction64.mmTripartyAgentServiceProviderCollateralInstructionIdentification, Transaction65.mmTripartyAgentServiceProviderCollateralTransactionIdentification,
+					Transaction65.mmTripartyAgentServiceProviderCollateralInstructionIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4124,7 +4453,7 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification given by the central securities depository  to the transaction."
+	 * "Identification given by the central securities depository to the transaction."
 	 * </li>
 	 * </ul>
 	 */
@@ -4134,7 +4463,7 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 			elementContext_lazy = () -> com.tools20022.repository.entity.SecuritiesTradeIdentification.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CSDTransactionIdentification";
-			definition = "Identification given by the central securities depository  to the transaction.";
+			definition = "Identification given by the central securities depository to the transaction.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -4302,7 +4631,7 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 						Linkages23.mmReference, Linkages7.mmReference, Linkages12.mmReference, Linkages15.mmReference, Linkages18.mmReference, Linkages2.mmReference, Linkages8.mmReference, Linkages5.mmReference, Linkages13.mmReference,
 						Linkages19.mmReference, Linkages25.mmReference, Linkages26.mmReference, Identification14.mmIdentification, MessageAndBusinessReference7.mmReference, Linkages36.mmReference, Linkages37.mmReference,
 						Linkages38.mmReference, Linkages40.mmReference, MessageAndBusinessReference8.mmReference, Linkages43.mmReference, Linkages42.mmReference, Identification16.mmIdentification, Linkages49.mmReference,
-						Linkages48.mmReference);
+						Linkages48.mmReference, Linkages51.mmReference, MessageAndBusinessReference11.mmReference);
 				superType_lazy = () -> TradeIdentification.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SecuritiesTradeIdentification.mmIdentifiedTrade,
 						com.tools20022.repository.entity.SecuritiesTradeIdentification.mmMarketInfrastructureTransactionIdentification, com.tools20022.repository.entity.SecuritiesTradeIdentification.mmProcessorTransactionIdentification,
@@ -4338,7 +4667,8 @@ public class SecuritiesTradeIdentification extends TradeIdentification {
 						References20.mmObject(), MessageAndBusinessReference8.mmObject(), References48Choice.mmObject(), Linkages43.mmObject(), TransactionIdentifications35.mmObject(), References60Choice.mmObject(),
 						TransactionIdentifications39.mmObject(), TransactionIdentification7.mmObject(), TransactionIdentifications37.mmObject(), References53Choice.mmObject(), Linkages42.mmObject(), Identification16.mmObject(),
 						TransactionIdentifications34.mmObject(), TransactionIdentifications38.mmObject(), References58Choice.mmObject(), Identification24.mmObject(), References50Choice.mmObject(), References51Choice.mmObject(),
-						References21.mmObject(), Linkages49.mmObject(), Linkages48.mmObject(), References59Choice.mmObject(), References54Choice.mmObject(), MessageAndBusinessReference10.mmObject());
+						References21.mmObject(), Linkages49.mmObject(), Linkages48.mmObject(), References59Choice.mmObject(), References54Choice.mmObject(), Linkages51.mmObject(), MessageAndBusinessReference10.mmObject(),
+						MessageAndBusinessReference11.mmObject(), References63Choice.mmObject());
 			}
 
 			@Override

@@ -88,7 +88,7 @@ public class SettledStatusReasonCode extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
-	 * Units are partially settled
+	 * Units are partially settled.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -105,14 +105,14 @@ public class SettledStatusReasonCode extends MMCode {
 	 * name} = "UnitsPartiallySettled"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Units are partially settled"</li>
+	 * definition} = "Units are partially settled."</li>
 	 * </ul>
 	 */
 	public static final SettledStatusReasonCode UnitsPartiallySettled = new SettledStatusReasonCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsPartiallySettled";
-			definition = "Units are partially settled";
+			definition = "Units are partially settled.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReasonCode.mmObject();
 			codeName = "UPST";
 		}
@@ -196,7 +196,7 @@ public class SettledStatusReasonCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Redemption has been gated, all settlement will be done at the same price. "
+	 * "Redemption has been gated, all settlement will be done at the same price."
 	 * </li>
 	 * </ul>
 	 */
@@ -204,7 +204,7 @@ public class SettledStatusReasonCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GatedOneNAV";
-			definition = "Redemption has been gated, all settlement will be done at the same price. ";
+			definition = "Redemption has been gated, all settlement will be done at the same price.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettledStatusReasonCode.mmObject();
 			codeName = "GAT1";
 		}

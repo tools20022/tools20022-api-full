@@ -44,6 +44,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * EntryStatus1Code.Future}</li>
  * </ul>
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getTrace trace} =
+ * {@linkplain com.tools20022.repository.codeset.EntryStatusCode
+ * EntryStatusCode}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
@@ -100,6 +103,7 @@ public class EntryStatus1Code extends MMCode {
 			definition = "Entry is on the books of the account servicer and value has been applied to the account owner.";
 			owner_lazy = () -> com.tools20022.repository.codeset.EntryStatus1Code.mmObject();
 			codeName = "BOOK";
+			codeName = EntryStatusCode.Booked.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -133,6 +137,7 @@ public class EntryStatus1Code extends MMCode {
 			definition = "Entry is on the books of the account servicer and value has not yet been applied to the account owner.";
 			owner_lazy = () -> com.tools20022.repository.codeset.EntryStatus1Code.mmObject();
 			codeName = "PDNG";
+			codeName = EntryStatusCode.Pending.getCodeName().orElse(name);
 		}
 	};
 	/**
@@ -166,6 +171,7 @@ public class EntryStatus1Code extends MMCode {
 			definition = "Entry is on the books of the account servicer and value will be applied to the account owner at a future date and time.";
 			owner_lazy = () -> com.tools20022.repository.codeset.EntryStatus1Code.mmObject();
 			codeName = "FUTR";
+			codeName = EntryStatusCode.Future.getCodeName().orElse(name);
 		}
 	};
 	final static private LinkedHashMap<String, EntryStatus1Code> codesByName = new LinkedHashMap<>();
@@ -181,6 +187,7 @@ public class EntryStatus1Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EntryStatus1Code";
 				definition = "Specifies the status of an entry.";
+				trace_lazy = () -> EntryStatusCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.EntryStatus1Code.Booked, com.tools20022.repository.codeset.EntryStatus1Code.Pending, com.tools20022.repository.codeset.EntryStatus1Code.Future);
 			}
 		});

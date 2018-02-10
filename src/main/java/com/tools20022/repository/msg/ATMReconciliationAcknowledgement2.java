@@ -70,7 +70,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ATMReconciliationAcknowledgement2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information related to the acknowledgement  of an ATM reconciliation from the ATM. manager."
+ * "Information related to the acknowledgement of an ATM reconciliation from the ATM. manager."
  * </li>
  * </ul>
  */
@@ -173,7 +173,7 @@ public class ATMReconciliationAcknowledgement2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ATMReconciliationAcknowledgement2";
-				definition = "Information related to the acknowledgement  of an ATM reconciliation from the ATM. manager.";
+				definition = "Information related to the acknowledgement of an ATM reconciliation from the ATM. manager.";
 			}
 		});
 		return mmObject_lazy.get();

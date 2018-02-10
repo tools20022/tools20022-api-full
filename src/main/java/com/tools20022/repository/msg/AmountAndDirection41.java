@@ -69,6 +69,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection43
  * AmountAndDirection43}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AmountAndDirection93
+ * AmountAndDirection93}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -116,6 +118,9 @@ public class AmountAndDirection41 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection43#mmAmount
 	 * AmountAndDirection43.mmAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection93#mmAmount
+	 * AmountAndDirection93.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -133,7 +138,7 @@ public class AmountAndDirection41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Amount value.";
-			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmAmount);
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmAmount, AmountAndDirection93.mmAmount);
 			previousVersion_lazy = () -> AmountAndDirection30.mmAmount;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -174,6 +179,9 @@ public class AmountAndDirection41 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection43#mmSign
 	 * AmountAndDirection43.mmSign}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AmountAndDirection93#mmSign
+	 * AmountAndDirection93.mmSign}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -191,7 +199,7 @@ public class AmountAndDirection41 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Sign";
 			definition = "Indicates that the amount value is positive or negative.";
-			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmSign);
+			nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmSign, AmountAndDirection93.mmSign);
 			previousVersion_lazy = () -> AmountAndDirection30.mmSign;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -208,7 +216,7 @@ public class AmountAndDirection41 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AmountAndDirection41";
 				definition = "Signed amount.";
-				nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(AmountAndDirection43.mmObject(), AmountAndDirection93.mmObject());
 				previousVersion_lazy = () -> AmountAndDirection30.mmObject();
 			}
 		});

@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.TransactionCriteria3Choice
+ * TransactionCriteria3Choice}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.TransactionCriteria1Choice
@@ -105,6 +112,14 @@ public class TransactionCriteria2Choice {
 	 * definition} =
 	 * "Recalls the criteria (search and return criteria) defined in a preceding query."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionCriteria3Choice#mmQueryName
+	 * TransactionCriteria3Choice.mmQueryName}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -120,6 +135,7 @@ public class TransactionCriteria2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "QueryName";
 			definition = "Recalls the criteria (search and return criteria) defined in a preceding query.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionCriteria3Choice.mmQueryName);
 			previousVersion_lazy = () -> TransactionCriteria1Choice.mmQueryName;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -152,6 +168,14 @@ public class TransactionCriteria2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Explicitly defines the query criteria."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.TransactionCriteria3Choice#mmNewCriteria
+	 * TransactionCriteria3Choice.mmNewCriteria}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -167,6 +191,7 @@ public class TransactionCriteria2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NewCriteria";
 			definition = "Explicitly defines the query criteria.";
+			nextVersions_lazy = () -> Arrays.asList(TransactionCriteria3Choice.mmNewCriteria);
 			previousVersion_lazy = () -> TransactionCriteria1Choice.mmNewCriteria;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -183,6 +208,7 @@ public class TransactionCriteria2Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TransactionCriteria2Choice";
 				definition = "Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.";
+				nextVersions_lazy = () -> Arrays.asList(TransactionCriteria3Choice.mmObject());
 				previousVersion_lazy = () -> TransactionCriteria1Choice.mmObject();
 			}
 		});

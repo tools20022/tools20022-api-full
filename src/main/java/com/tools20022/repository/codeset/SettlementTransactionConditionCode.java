@@ -272,7 +272,7 @@ public class SettlementTransactionConditionCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial settlement is  allowed but must satisfy a cash value minimum (value defined in static data)."
+	 * "Partial settlement is allowed but must satisfy a cash value minimum (value defined in static data)."
 	 * </li>
 	 * </ul>
 	 */
@@ -280,7 +280,7 @@ public class SettlementTransactionConditionCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "PartialSettlementCashThresholdAllowed";
-			definition = "Partial settlement is  allowed but must satisfy a cash value minimum (value defined in static data).";
+			definition = "Partial settlement is allowed but must satisfy a cash value minimum (value defined in static data).";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementTransactionConditionCode.mmObject();
 			codeName = "PARC";
 		}

@@ -189,7 +189,7 @@ public class AttributeTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Organization name of the attribute  (ASN.1 Object Identifier: id-at-organizationName)."
+	 * "Organization name of the attribute (ASN.1 Object Identifier: id-at-organizationName)."
 	 * </li>
 	 * </ul>
 	 */
@@ -198,7 +198,7 @@ public class AttributeTypeCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new OtherSemanticMarkup(this, "Synonym", new String[]{"context", "ASN.1"}, new String[]{"value", "id-at-organizationName"}));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OrganisationName";
-			definition = "Organization name of the attribute  (ASN.1 Object Identifier: id-at-organizationName).";
+			definition = "Organization name of the attribute (ASN.1 Object Identifier: id-at-organizationName).";
 			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "OATT";
 		}
@@ -309,7 +309,7 @@ public class AttributeTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Password by which an entity may request certificate revocation
+	 * Password by which an entity may request certificate revocation.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -327,14 +327,14 @@ public class AttributeTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Password by which an entity may request certificate revocation"</li>
+	 * "Password by which an entity may request certificate revocation."</li>
 	 * </ul>
 	 */
 	public static final AttributeTypeCode ChallengePassword = new AttributeTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChallengePassword";
-			definition = "Password by which an entity may request certificate revocation";
+			definition = "Password by which an entity may request certificate revocation.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AttributeTypeCode.mmObject();
 			codeName = "CHLG";
 		}

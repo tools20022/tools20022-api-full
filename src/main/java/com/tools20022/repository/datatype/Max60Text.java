@@ -39,12 +39,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
  * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+ * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Max60Text"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies a character string with a maximum length of 60  characters."</li>
+ * "Specifies a character string with a maximum length of 60 characters."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -57,9 +57,9 @@ public class Max60Text {
 		mmObject_lazy.compareAndSet(null, new MMText() {
 			{
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Max60Text";
-				definition = "Specifies a character string with a maximum length of 60  characters.";
+				definition = "Specifies a character string with a maximum length of 60 characters.";
 				minLength = 1;
 				maxLength = 60;
 			}

@@ -190,6 +190,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TransportDetails4.mmRoutingSummary}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Consignment4#mmTransportMeans
  * Consignment4.mmTransportMeans}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment5#mmTransportMeans
+ * Consignment5.mmTransportMeans}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -265,6 +267,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.TransportDetails4
  * TransportDetails4}</li>
  * <li>{@linkplain com.tools20022.repository.msg.Consignment4 Consignment4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Consignment5 Consignment5}</li>
  * </ul>
  * </li>
  * <li>
@@ -357,6 +360,11 @@ public class Transport {
 	 * TradeAgreement13.mmIncoterms}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmIncoterms
 	 * LineItem16.mmIncoterms}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmIncoterms
+	 * LineItem17.mmIncoterms}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeAgreement16#mmIncoterms
+	 * TradeAgreement16.mmIncoterms}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -379,7 +387,7 @@ public class Transport {
 		{
 			derivation_lazy = () -> Arrays.asList(TradeAgreement6.mmIncoterms, LineItem10.mmIncoterms, LineItemDetails4.mmIncoterms, LineItem5.mmIncoterms, LineItemDetails7.mmIncoterms, LineItem7.mmIncoterms, LineItem4.mmIncoterms,
 					TransportDetails1.mmIncoterms, LineItem9.mmIncoterms, TransportDetails2.mmIncoterms, TransportDetails3.mmIncoterms, LineItem11.mmIncoterms, LineItemDetails10.mmIncoterms, LineItem12.mmIncoterms,
-					LineItemDetails13.mmIncoterms, LineItem13.mmIncoterms, LineItem15.mmIncoterms, TransportDetails4.mmIncoterms, TradeAgreement13.mmIncoterms, LineItem16.mmIncoterms);
+					LineItemDetails13.mmIncoterms, LineItem13.mmIncoterms, LineItem15.mmIncoterms, TransportDetails4.mmIncoterms, TradeAgreement13.mmIncoterms, LineItem16.mmIncoterms, LineItem17.mmIncoterms, TradeAgreement16.mmIncoterms);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -482,6 +490,8 @@ public class Transport {
 	 * TransportDetails4.mmConsignment}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.LineItem16#mmPackaging
 	 * LineItem16.mmPackaging}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.LineItem17#mmPackaging
+	 * LineItem17.mmPackaging}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -501,7 +511,7 @@ public class Transport {
 	 */
 	public static final MMBusinessAssociationEnd mmPackaging = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(LineItem10.mmPackaging, TransportDetails2.mmConsignment, TransportDetails3.mmConsignment, TransportDetails4.mmConsignment, LineItem16.mmPackaging);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmPackaging, TransportDetails2.mmConsignment, TransportDetails3.mmConsignment, TransportDetails4.mmConsignment, LineItem16.mmPackaging, LineItem17.mmPackaging);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -533,6 +543,9 @@ public class Transport {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.LineItem16#mmDeliveryDateTime
 	 * LineItem16.mmDeliveryDateTime}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.LineItem17#mmDeliveryDateTime
+	 * LineItem17.mmDeliveryDateTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -547,17 +560,17 @@ public class Transport {
 	 * name} = "ArrivalDateTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date and time when the goods reach their destination.."</li>
+	 * definition} = "Date and time when the goods reach their destination."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmArrivalDateTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(LineItem10.mmDeliveryDateTime, LineItem16.mmDeliveryDateTime);
+			derivation_lazy = () -> Arrays.asList(LineItem10.mmDeliveryDateTime, LineItem16.mmDeliveryDateTime, LineItem17.mmDeliveryDateTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Transport.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ArrivalDateTime";
-			definition = "Date and time when the goods reach their destination..";
+			definition = "Date and time when the goods reach their destination.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -1514,7 +1527,7 @@ public class Transport {
 						TransportDataSet2.mmTransportInformation, TransportMeans2.mmIndividualTransport, TransportMeans2.mmMultimodalTransport, TransportDetails2.mmRoutingSummary, TransportDataSet3.mmTransportInformation,
 						TransportDataSet4.mmTransportInformation, TransportDetails3.mmRoutingSummary, TransportMeans4.mmIndividualTransport, TransportMeans4.mmMultimodalTransport, TransportMeans5.mmIndividualTransport,
 						TransportMeans5.mmMultimodalTransport, TransportDataSet5.mmTransportInformation, TransportMeans6.mmIndividualTransport, TransportMeans6.mmMultimodalTransport, TransportDetails4.mmRoutingSummary,
-						Consignment4.mmTransportMeans);
+						Consignment4.mmTransportMeans, Consignment5.mmTransportMeans);
 				subType_lazy = () -> Arrays.asList(TransportByAir.mmObject(), TransportBySea.mmObject(), TransportByRoad.mmObject(), TransportByRail.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Transport.mmIncoterms, com.tools20022.repository.entity.Transport.mmIdentification, com.tools20022.repository.entity.Transport.mmPackaging,
 						com.tools20022.repository.entity.Transport.mmArrivalDateTime, com.tools20022.repository.entity.Transport.mmPartialShipment, com.tools20022.repository.entity.Transport.mmTransShipment,
@@ -1526,7 +1539,7 @@ public class Transport {
 						SingleTransport4.mmObject(), MultimodalTransport3.mmObject(), TransportMeans1.mmObject(), SingleTransport2.mmObject(), MultimodalTransport2.mmObject(), TransportMeans2Choice.mmObject(), TransportDetails1.mmObject(),
 						TransportDataSet2.mmObject(), SingleTransport5.mmObject(), TransportMeans2.mmObject(), TransportDetails2.mmObject(), TransportDataSet3.mmObject(), SingleTransport3.mmObject(), TransportDataSet4.mmObject(),
 						TransportDetails3.mmObject(), TransportMeans4.mmObject(), SingleTransport6.mmObject(), SingleTransport7.mmObject(), TransportMeans5.mmObject(), TransportDataSet5.mmObject(), TransportMeans6.mmObject(),
-						SingleTransport8.mmObject(), TransportDetails4.mmObject(), Consignment4.mmObject());
+						SingleTransport8.mmObject(), TransportDetails4.mmObject(), Consignment4.mmObject(), Consignment5.mmObject());
 			}
 
 			@Override

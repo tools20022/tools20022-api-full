@@ -40,8 +40,11 @@ import com.tools20022.repository.area.setr.SwitchOrderV04;
 import com.tools20022.repository.datatype.Max5NumericText;
 import com.tools20022.repository.datatype.YesNoIndicator;
 import com.tools20022.repository.GeneratedRepository;
+import java.text.DateFormat;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.Date;
+import java.util.function.Supplier;
 import java.util.Objects;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -427,16 +430,16 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReportV07#mmPagination
  * SecuritiesTransactionPostingReportV07.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPendingReport002V08#mmPagination
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPendingReport002V08#mmPagination
  * SecuritiesTransactionPendingReport002V08.mmPagination}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdvice002V08#mmPagination
  * CorporateActionMovementPreliminaryAdvice002V08.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementPostingReport002V06#mmPagination
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementPostingReport002V06#mmPagination
  * IntraPositionMovementPostingReport002V06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesSettlementTransactionAllegementReport002V06#mmPagination
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesSettlementTransactionAllegementReport002V06#mmPagination
  * SecuritiesSettlementTransactionAllegementReport002V06.mmPagination}</li>
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionNotification002V07#mmPagination
@@ -445,7 +448,7 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReport002V06#mmPagination
  * CorporateActionInstructionStatementReport002V06.mmPagination}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07#mmPagination
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07#mmPagination
  * SecuritiesTransactionPostingReport002V07.mmPagination}</li>
  * </ul>
  * </li>
@@ -456,13 +459,20 @@ import javax.xml.bind.annotation.XmlType;
  * GeneratedRepository.dataDict}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
- * registrationStatus} =
- * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+ * registrationStatus} = com.tools20022.metamodel.MMRegistrationStatus.OBSOLETE</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRemovalDate
+ * removalDate} = September 9, 2018</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "Pagination"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Number used to sequence pages when it is not possible for data to be conveyed in a single message and the data has to be split across several pages (messages)."
+ * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Pagination1 Pagination1}</li>
+ * </ul>
  * </li>
  * </ul>
  */
@@ -498,6 +508,13 @@ public class Pagination {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Page number."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Pagination1#mmPageNumber
+	 * Pagination1.mmPageNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPageNumber = new MMMessageAttribute() {
@@ -508,6 +525,7 @@ public class Pagination {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PageNumber";
 			definition = "Page number.";
+			nextVersions_lazy = () -> Arrays.asList(Pagination1.mmPageNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max5NumericText.mmObject();
@@ -540,6 +558,14 @@ public class Pagination {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the last page."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Pagination1#mmLastPageIndicator
+	 * Pagination1.mmLastPageIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLastPageIndicator = new MMMessageAttribute() {
@@ -550,6 +576,7 @@ public class Pagination {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LastPageIndicator";
 			definition = "Indicates the last page.";
+			nextVersions_lazy = () -> Arrays.asList(Pagination1.mmLastPageIndicator);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> YesNoIndicator.mmObject();
@@ -597,9 +624,17 @@ public class Pagination {
 						CorporateActionMovementPreliminaryAdvice002V08.mmPagination, IntraPositionMovementPostingReport002V06.mmPagination, SecuritiesSettlementTransactionAllegementReport002V06.mmPagination,
 						CorporateActionNotification002V07.mmPagination, CorporateActionInstructionStatementReport002V06.mmPagination, SecuritiesTransactionPostingReport002V07.mmPagination);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
-				registrationStatus = MMRegistrationStatus.REGISTERED;
+				registrationStatus = MMRegistrationStatus.OBSOLETE;
+				removalDate = ((Supplier<Date>) (() -> {
+					try {
+						return DateFormat.getDateInstance(java.text.DateFormat.LONG).parse("September 9, 2018");
+					} catch (Exception e) {
+						throw new RuntimeException(e);
+					}
+				})).get();
 				name = "Pagination";
 				definition = "Number used to sequence pages when it is not possible for data to be conveyed in a single message and the data has to be split across several pages (messages).";
+				nextVersions_lazy = () -> Arrays.asList(Pagination1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

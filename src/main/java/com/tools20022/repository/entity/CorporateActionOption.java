@@ -672,6 +672,48 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat23Choice
  * OptionFeaturesFormat23Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption140
+ * CorporateActionOption140}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption141
+ * CorporateActionOption141}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption138
+ * CorporateActionOption138}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption142
+ * CorporateActionOption142}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption139
+ * CorporateActionOption139}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption64
+ * SecuritiesOption64}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption8
+ * InstructedCorporateActionOption8}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption65
+ * SecuritiesOption65}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption143
+ * CorporateActionOption143}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption66
+ * SecuritiesOption66}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption144
+ * CorporateActionOption144}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption9
+ * InstructedCorporateActionOption9}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption146
+ * CorporateActionOption146}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption147
+ * CorporateActionOption147}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption67
+ * SecuritiesOption67}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption148
+ * CorporateActionOption148}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption68
+ * SecuritiesOption68}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption149
+ * CorporateActionOption149}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesOption69
+ * SecuritiesOption69}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption150
+ * CorporateActionOption150}</li>
  * </ul>
  * </li>
  * <li>
@@ -1025,6 +1067,56 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOptionNumber
 	 * CorporateActionOption133.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmOptionNumber
+	 * CorporateActionOption140.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption141#mmOptionNumber
+	 * CorporateActionOption141.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmOptionNumber
+	 * CorporateActionOption138.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmOptionNumber
+	 * CorporateActionOption142.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmOptionNumber
+	 * CorporateActionOption139.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption8#mmOptionNumber
+	 * InstructedCorporateActionOption8.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption143#mmOptionNumber
+	 * CorporateActionOption143.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2#mmOptionNumber
+	 * CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.
+	 * mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionInstructedBalanceOptionInstructionDetailsSD2#mmOptionNumber
+	 * CorporateActionInstructedBalanceOptionInstructionDetailsSD2.
+	 * mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption144#mmOptionNumber
+	 * CorporateActionOption144.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption9#mmOptionNumber
+	 * InstructedCorporateActionOption9.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmOptionNumber
+	 * CorporateActionOption146.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmOptionNumber
+	 * CorporateActionOption147.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmOptionNumber
+	 * CorporateActionOption148.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption149#mmOptionNumber
+	 * CorporateActionOption149.mmOptionNumber}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmOptionNumber
+	 * CorporateActionOption150.mmOptionNumber}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1067,7 +1159,11 @@ public class CorporateActionOption {
 					CorporateActionOption126.mmOptionNumber, CorporateActionOption124.mmOptionNumber, CorporateActionOption125.mmOptionNumber, CorporateActionOption123.mmOptionNumber, CorporateActionOption127.mmOptionNumber,
 					InstructedCorporateActionOption7.mmOptionNumber, CorporateActionOption128.mmOptionNumber, CorporateActionOption132.mmOptionNumber, CorporateActionOption130.mmOptionNumber, CorporateActionOption131.mmOptionNumber,
 					CorporateActionOption129.mmOptionNumber, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD1.mmOptionNumber, CorporateActionInstructedBalanceOptionInstructionDetailsSD1.mmOptionNumber,
-					CorporateActionOption134.mmOptionNumber, CorporateActionOption136.mmOptionNumber, CorporateActionOption135.mmOptionNumber, CorporateActionOption133.mmOptionNumber);
+					CorporateActionOption134.mmOptionNumber, CorporateActionOption136.mmOptionNumber, CorporateActionOption135.mmOptionNumber, CorporateActionOption133.mmOptionNumber, CorporateActionOption140.mmOptionNumber,
+					CorporateActionOption141.mmOptionNumber, CorporateActionOption138.mmOptionNumber, CorporateActionOption142.mmOptionNumber, CorporateActionOption139.mmOptionNumber, InstructedCorporateActionOption8.mmOptionNumber,
+					CorporateActionOption143.mmOptionNumber, CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2.mmOptionNumber, CorporateActionInstructedBalanceOptionInstructionDetailsSD2.mmOptionNumber,
+					CorporateActionOption144.mmOptionNumber, InstructedCorporateActionOption9.mmOptionNumber, CorporateActionOption146.mmOptionNumber, CorporateActionOption147.mmOptionNumber, CorporateActionOption148.mmOptionNumber,
+					CorporateActionOption149.mmOptionNumber, CorporateActionOption150.mmOptionNumber);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1623,6 +1719,9 @@ public class CorporateActionOption {
 	 * {@linkplain com.tools20022.repository.choice.CorporateActionOption29Choice#mmProprietary
 	 * CorporateActionOption29Choice.mmProprietary}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmCorporateActionOptionType
+	 * AggregateBalanceInformation34.mmCorporateActionOptionType}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption132#mmOptionType
 	 * CorporateActionOption132.mmOptionType}</li>
 	 * <li>
@@ -1646,6 +1745,48 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOptionType
 	 * CorporateActionOption133.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmOptionType
+	 * CorporateActionOption140.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption141#mmOptionType
+	 * CorporateActionOption141.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmOptionType
+	 * CorporateActionOption138.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmOptionType
+	 * CorporateActionOption142.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmOptionType
+	 * CorporateActionOption139.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption8#mmOptionType
+	 * InstructedCorporateActionOption8.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption143#mmOptionType
+	 * CorporateActionOption143.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption144#mmOptionType
+	 * CorporateActionOption144.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.InstructedCorporateActionOption9#mmOptionType
+	 * InstructedCorporateActionOption9.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmOptionType
+	 * CorporateActionOption146.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmOptionType
+	 * CorporateActionOption147.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmOptionType
+	 * CorporateActionOption148.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption149#mmOptionType
+	 * CorporateActionOption149.mmOptionType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmOptionType
+	 * CorporateActionOption150.mmOptionType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1705,8 +1846,11 @@ public class CorporateActionOption {
 					CorporateActionOption127.mmOptionType, CorporateActionOption26Choice.mmCode, CorporateActionOption26Choice.mmProprietary, InstructedCorporateActionOption7.mmOptionType, CorporateActionOption23Choice.mmCode,
 					CorporateActionOption23Choice.mmProprietary, CorporateActionOption22Choice.mmCode, CorporateActionOption22Choice.mmProprietary, CorporateActionOption25Choice.mmCode, CorporateActionOption25Choice.mmProprietary,
 					AggregateBalanceInformation32.mmCorporateActionOptionType, AggregateBalanceInformation33.mmCorporateActionOptionType, CorporateActionOption128.mmOptionType, CorporateActionOption29Choice.mmCode,
-					CorporateActionOption29Choice.mmProprietary, CorporateActionOption132.mmOptionType, CorporateActionOption130.mmOptionType, CorporateActionOption131.mmOptionType, CorporateActionOption129.mmOptionType,
-					CorporateActionOption134.mmOptionType, CorporateActionOption136.mmOptionType, CorporateActionOption135.mmOptionType, CorporateActionOption133.mmOptionType);
+					CorporateActionOption29Choice.mmProprietary, AggregateBalanceInformation34.mmCorporateActionOptionType, CorporateActionOption132.mmOptionType, CorporateActionOption130.mmOptionType,
+					CorporateActionOption131.mmOptionType, CorporateActionOption129.mmOptionType, CorporateActionOption134.mmOptionType, CorporateActionOption136.mmOptionType, CorporateActionOption135.mmOptionType,
+					CorporateActionOption133.mmOptionType, CorporateActionOption140.mmOptionType, CorporateActionOption141.mmOptionType, CorporateActionOption138.mmOptionType, CorporateActionOption142.mmOptionType,
+					CorporateActionOption139.mmOptionType, InstructedCorporateActionOption8.mmOptionType, CorporateActionOption143.mmOptionType, CorporateActionOption144.mmOptionType, InstructedCorporateActionOption9.mmOptionType,
+					CorporateActionOption146.mmOptionType, CorporateActionOption147.mmOptionType, CorporateActionOption148.mmOptionType, CorporateActionOption149.mmOptionType, CorporateActionOption150.mmOptionType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2237,6 +2381,48 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmFractionDisposition
 	 * SecuritiesOption63.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmFractionDisposition
+	 * CorporateActionOption140.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmFractionDisposition
+	 * CorporateActionOption138.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmFractionDisposition
+	 * CorporateActionOption142.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmFractionDisposition
+	 * CorporateActionOption139.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmFractionDisposition
+	 * SecuritiesOption64.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmFractionDisposition
+	 * SecuritiesOption65.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes93#mmFractionDisposition
+	 * FinancialInstrumentAttributes93.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmFractionDisposition
+	 * CorporateActionOption146.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmFractionDisposition
+	 * CorporateActionOption147.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmFractionDisposition
+	 * SecuritiesOption67.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmFractionDisposition
+	 * CorporateActionOption148.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmFractionDisposition
+	 * SecuritiesOption68.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes94#mmFractionDisposition
+	 * FinancialInstrumentAttributes94.mmFractionDisposition}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmFractionDisposition
+	 * CorporateActionOption150.mmFractionDisposition}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2298,7 +2484,10 @@ public class CorporateActionOption {
 					FractionDispositionType32Choice.mmProprietary, CorporateActionOption132.mmFractionDisposition, CorporateActionOption130.mmFractionDisposition, CorporateActionOption131.mmFractionDisposition,
 					CorporateActionOption129.mmFractionDisposition, SecuritiesOption60.mmFractionDisposition, SecuritiesOption59.mmFractionDisposition, CorporateActionOption134.mmFractionDisposition,
 					CorporateActionOption136.mmFractionDisposition, CorporateActionOption135.mmFractionDisposition, CorporateActionOption133.mmFractionDisposition, SecuritiesOption61.mmFractionDisposition,
-					SecuritiesOption63.mmFractionDisposition);
+					SecuritiesOption63.mmFractionDisposition, CorporateActionOption140.mmFractionDisposition, CorporateActionOption138.mmFractionDisposition, CorporateActionOption142.mmFractionDisposition,
+					CorporateActionOption139.mmFractionDisposition, SecuritiesOption64.mmFractionDisposition, SecuritiesOption65.mmFractionDisposition, FinancialInstrumentAttributes93.mmFractionDisposition,
+					CorporateActionOption146.mmFractionDisposition, CorporateActionOption147.mmFractionDisposition, SecuritiesOption67.mmFractionDisposition, CorporateActionOption148.mmFractionDisposition,
+					SecuritiesOption68.mmFractionDisposition, FinancialInstrumentAttributes94.mmFractionDisposition, CorporateActionOption150.mmFractionDisposition);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -2614,6 +2803,42 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption63#mmCurrencyOption
 	 * SecuritiesOption63.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmCurrencyOption
+	 * CorporateActionOption140.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmCurrencyOption
+	 * CorporateActionOption138.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmCurrencyOption
+	 * CorporateActionOption142.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmCurrencyOption
+	 * CorporateActionOption139.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption64#mmCurrencyOption
+	 * SecuritiesOption64.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption65#mmCurrencyOption
+	 * SecuritiesOption65.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmCurrencyOption
+	 * CorporateActionOption146.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmCurrencyOption
+	 * CorporateActionOption147.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption67#mmCurrencyOption
+	 * SecuritiesOption67.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmCurrencyOption
+	 * CorporateActionOption148.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesOption68#mmCurrencyOption
+	 * SecuritiesOption68.mmCurrencyOption}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmCurrencyOption
+	 * CorporateActionOption150.mmCurrencyOption}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -2653,7 +2878,9 @@ public class CorporateActionOption {
 					CorporateActionOption123.mmCurrencyOption, CorporateActionOption127.mmCurrencyOption, SecuritiesOption55.mmCurrencyOption, SecuritiesOption57.mmCurrencyOption, CorporateActionOption132.mmCurrencyOption,
 					CorporateActionOption130.mmCurrencyOption, CorporateActionOption131.mmCurrencyOption, CorporateActionOption129.mmCurrencyOption, SecuritiesOption60.mmCurrencyOption, SecuritiesOption59.mmCurrencyOption,
 					CorporateActionOption134.mmCurrencyOption, CorporateActionOption136.mmCurrencyOption, CorporateActionOption135.mmCurrencyOption, CorporateActionOption133.mmCurrencyOption, SecuritiesOption61.mmCurrencyOption,
-					SecuritiesOption63.mmCurrencyOption);
+					SecuritiesOption63.mmCurrencyOption, CorporateActionOption140.mmCurrencyOption, CorporateActionOption138.mmCurrencyOption, CorporateActionOption142.mmCurrencyOption, CorporateActionOption139.mmCurrencyOption,
+					SecuritiesOption64.mmCurrencyOption, SecuritiesOption65.mmCurrencyOption, CorporateActionOption146.mmCurrencyOption, CorporateActionOption147.mmCurrencyOption, SecuritiesOption67.mmCurrencyOption,
+					CorporateActionOption148.mmCurrencyOption, SecuritiesOption68.mmCurrencyOption, CorporateActionOption150.mmCurrencyOption);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3480,6 +3707,114 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashOption55#mmRateAndAmountDetails
 	 * CashOption55.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmDateDetails
+	 * CorporateActionOption140.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmPeriodDetails
+	 * CorporateActionOption140.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmRateAndAmountDetails
+	 * CorporateActionOption140.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmDateDetails
+	 * CorporateActionOption138.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmPeriodDetails
+	 * CorporateActionOption138.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmRateAndAmountDetails
+	 * CorporateActionOption138.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption142#mmRateAndAmountDetails
+	 * CorporateActionOption142.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmDateDetails
+	 * CorporateActionOption139.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmPeriodDetails
+	 * CorporateActionOption139.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmRateAndAmountDetails
+	 * CorporateActionOption139.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption56#mmAmountDetails
+	 * CashOption56.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption56#mmDateDetails
+	 * CashOption56.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption56#mmRateAndAmountDetails
+	 * CashOption56.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmAmountDetails
+	 * CashOption57.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption57#mmDateDetails
+	 * CashOption57.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption57#mmRateAndAmountDetails
+	 * CashOption57.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption58#mmAmountDetails
+	 * CashOption58.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption58#mmDateDetails
+	 * CashOption58.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption58#mmRateAndAmountDetails
+	 * CashOption58.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption146#mmRateAndAmountDetails
+	 * CorporateActionOption146.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmDateDetails
+	 * CorporateActionOption147.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmPeriodDetails
+	 * CorporateActionOption147.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmRateAndAmountDetails
+	 * CorporateActionOption147.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption60#mmAmountDetails
+	 * CashOption60.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption60#mmDateDetails
+	 * CashOption60.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption60#mmRateAndAmountDetails
+	 * CashOption60.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmDateDetails
+	 * CorporateActionOption148.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmPeriodDetails
+	 * CorporateActionOption148.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmRateAndAmountDetails
+	 * CorporateActionOption148.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption61#mmAmountDetails
+	 * CashOption61.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption61#mmDateDetails
+	 * CashOption61.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption61#mmRateAndAmountDetails
+	 * CashOption61.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmDateDetails
+	 * CorporateActionOption150.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmPeriodDetails
+	 * CorporateActionOption150.mmPeriodDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmRateAndAmountDetails
+	 * CorporateActionOption150.mmRateAndAmountDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption63#mmAmountDetails
+	 * CashOption63.mmAmountDetails}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashOption63#mmDateDetails
+	 * CashOption63.mmDateDetails}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashOption63#mmRateAndAmountDetails
+	 * CashOption63.mmRateAndAmountDetails}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3555,7 +3890,14 @@ public class CorporateActionOption {
 					CorporateActionOption136.mmDateDetails, CorporateActionOption136.mmPeriodDetails, CorporateActionOption136.mmRateAndAmountDetails, CorporateActionOption135.mmDateDetails, CorporateActionOption135.mmPeriodDetails,
 					CorporateActionOption135.mmRateAndAmountDetails, CorporateActionOption133.mmDateDetails, CorporateActionOption133.mmPeriodDetails, CorporateActionOption133.mmRateAndAmountDetails, CashOption53.mmAmountDetails,
 					CashOption53.mmDateDetails, CashOption53.mmRateAndAmountDetails, CashOption54.mmAmountDetails, CashOption54.mmDateDetails, CashOption54.mmRateAndAmountDetails, CashOption55.mmAmountDetails, CashOption55.mmDateDetails,
-					CashOption55.mmRateAndAmountDetails);
+					CashOption55.mmRateAndAmountDetails, CorporateActionOption140.mmDateDetails, CorporateActionOption140.mmPeriodDetails, CorporateActionOption140.mmRateAndAmountDetails, CorporateActionOption138.mmDateDetails,
+					CorporateActionOption138.mmPeriodDetails, CorporateActionOption138.mmRateAndAmountDetails, CorporateActionOption142.mmRateAndAmountDetails, CorporateActionOption139.mmDateDetails,
+					CorporateActionOption139.mmPeriodDetails, CorporateActionOption139.mmRateAndAmountDetails, CashOption56.mmAmountDetails, CashOption56.mmDateDetails, CashOption56.mmRateAndAmountDetails, CashOption57.mmAmountDetails,
+					CashOption57.mmDateDetails, CashOption57.mmRateAndAmountDetails, CashOption58.mmAmountDetails, CashOption58.mmDateDetails, CashOption58.mmRateAndAmountDetails, CorporateActionOption146.mmRateAndAmountDetails,
+					CorporateActionOption147.mmDateDetails, CorporateActionOption147.mmPeriodDetails, CorporateActionOption147.mmRateAndAmountDetails, CashOption60.mmAmountDetails, CashOption60.mmDateDetails,
+					CashOption60.mmRateAndAmountDetails, CorporateActionOption148.mmDateDetails, CorporateActionOption148.mmPeriodDetails, CorporateActionOption148.mmRateAndAmountDetails, CashOption61.mmAmountDetails,
+					CashOption61.mmDateDetails, CashOption61.mmRateAndAmountDetails, CorporateActionOption150.mmDateDetails, CorporateActionOption150.mmPeriodDetails, CorporateActionOption150.mmRateAndAmountDetails,
+					CashOption63.mmAmountDetails, CashOption63.mmDateDetails, CashOption63.mmRateAndAmountDetails);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3892,6 +4234,24 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.OptionFeaturesFormat23Choice#mmProprietary
 	 * OptionFeaturesFormat23Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmOptionFeatures
+	 * CorporateActionOption140.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmOptionFeatures
+	 * CorporateActionOption138.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmOptionFeatures
+	 * CorporateActionOption139.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption147#mmOptionFeatures
+	 * CorporateActionOption147.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmOptionFeatures
+	 * CorporateActionOption148.mmOptionFeatures}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmOptionFeatures
+	 * CorporateActionOption150.mmOptionFeatures}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -3929,7 +4289,8 @@ public class CorporateActionOption {
 					CorporateActionOption125.mmOptionFeatures, CorporateActionOption127.mmOptionFeatures, OptionFeaturesFormat19Choice.mmCode, OptionFeaturesFormat19Choice.mmProprietary, OptionFeaturesFormat21Choice.mmCode,
 					OptionFeaturesFormat21Choice.mmProprietary, OptionFeaturesFormat20Choice.mmCode, OptionFeaturesFormat20Choice.mmProprietary, CorporateActionOption132.mmOptionFeatures, CorporateActionOption130.mmOptionFeatures,
 					CorporateActionOption129.mmOptionFeatures, OptionFeaturesFormat22Choice.mmCode, OptionFeaturesFormat22Choice.mmProprietary, CorporateActionOption136.mmOptionFeatures, CorporateActionOption135.mmOptionFeatures,
-					CorporateActionOption133.mmOptionFeatures, OptionFeaturesFormat23Choice.mmCode, OptionFeaturesFormat23Choice.mmProprietary);
+					CorporateActionOption133.mmOptionFeatures, OptionFeaturesFormat23Choice.mmCode, OptionFeaturesFormat23Choice.mmProprietary, CorporateActionOption140.mmOptionFeatures, CorporateActionOption138.mmOptionFeatures,
+					CorporateActionOption139.mmOptionFeatures, CorporateActionOption147.mmOptionFeatures, CorporateActionOption148.mmOptionFeatures, CorporateActionOption150.mmOptionFeatures);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -3990,6 +4351,12 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod11#mmActionPeriod
 	 * CorporateActionPeriod11.mmActionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod12#mmActionPeriod
+	 * CorporateActionPeriod12.mmActionPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionPeriod13#mmActionPeriod
+	 * CorporateActionPeriod13.mmActionPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4013,7 +4380,7 @@ public class CorporateActionOption {
 	public static final MMBusinessAssociationEnd mmActionPeriod = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateActionPeriod4.mmActionPeriod, CorporateActionPeriod9.mmActionPeriod, CorporateActionPeriod5.mmActionPeriod, CorporateActionPeriod7.mmActionPeriod,
-					CorporateActionPeriod1.mmActionPeriod, CorporateActionPeriod2.mmActionPeriod, CorporateActionPeriod11.mmActionPeriod);
+					CorporateActionPeriod1.mmActionPeriod, CorporateActionPeriod2.mmActionPeriod, CorporateActionPeriod11.mmActionPeriod, CorporateActionPeriod12.mmActionPeriod, CorporateActionPeriod13.mmActionPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4220,6 +4587,24 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmOfferType
 	 * CorporateActionOption133.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmOfferType
+	 * CorporateAction41.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmOfferType
+	 * CorporateActionOption138.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmOfferType
+	 * CorporateActionOption139.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmOfferType
+	 * CorporateActionOption148.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmOfferType
+	 * CorporateAction51.mmOfferType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmOfferType
+	 * CorporateActionOption150.mmOfferType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4250,7 +4635,8 @@ public class CorporateActionOption {
 					CorporateActionOption108.mmOfferType, CorporateActionOption106.mmOfferType, CorporateAction17.mmOfferType, OfferTypeFormat8Choice.mmCode, OfferTypeFormat8Choice.mmProprietary, CorporateActionOption115.mmOfferType,
 					CorporateActionOption114.mmOfferType, CorporateAction31.mmOfferType, OfferTypeFormat10Choice.mmCode, OfferTypeFormat10Choice.mmProprietary, CorporateActionOption125.mmOfferType, CorporateActionOption127.mmOfferType,
 					CorporateAction40.mmOfferType, OfferTypeFormat11Choice.mmCode, OfferTypeFormat11Choice.mmProprietary, CorporateActionOption130.mmOfferType, CorporateActionOption129.mmOfferType, CorporateActionOption135.mmOfferType,
-					CorporateActionOption133.mmOfferType);
+					CorporateActionOption133.mmOfferType, CorporateAction41.mmOfferType, CorporateActionOption138.mmOfferType, CorporateActionOption139.mmOfferType, CorporateActionOption148.mmOfferType, CorporateAction51.mmOfferType,
+					CorporateActionOption150.mmOfferType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4409,6 +4795,24 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmChargesAppliedIndicator
 	 * CorporateActionOption133.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmChargesAppliedIndicator
+	 * CorporateAction41.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmChargesAppliedIndicator
+	 * CorporateActionOption138.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmChargesAppliedIndicator
+	 * CorporateActionOption139.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmChargesAppliedIndicator
+	 * CorporateActionOption148.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmChargesAppliedIndicator
+	 * CorporateAction51.mmChargesAppliedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmChargesAppliedIndicator
+	 * CorporateActionOption150.mmChargesAppliedIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4441,7 +4845,9 @@ public class CorporateActionOption {
 					CorporateActionOption101.mmChargesAppliedIndicator, CorporateAction12.mmChargesAppliedIndicator, CorporateActionOption108.mmChargesAppliedIndicator, CorporateActionOption106.mmChargesAppliedIndicator,
 					CorporateAction17.mmChargesAppliedIndicator, CorporateActionOption115.mmChargesAppliedIndicator, CorporateActionOption114.mmChargesAppliedIndicator, CorporateAction31.mmChargesAppliedIndicator,
 					CorporateActionOption125.mmChargesAppliedIndicator, CorporateActionOption127.mmChargesAppliedIndicator, CorporateAction40.mmChargesAppliedIndicator, CorporateActionOption130.mmChargesAppliedIndicator,
-					CorporateActionOption129.mmChargesAppliedIndicator, CorporateActionOption135.mmChargesAppliedIndicator, CorporateActionOption133.mmChargesAppliedIndicator);
+					CorporateActionOption129.mmChargesAppliedIndicator, CorporateActionOption135.mmChargesAppliedIndicator, CorporateActionOption133.mmChargesAppliedIndicator, CorporateAction41.mmChargesAppliedIndicator,
+					CorporateActionOption138.mmChargesAppliedIndicator, CorporateActionOption139.mmChargesAppliedIndicator, CorporateActionOption148.mmChargesAppliedIndicator, CorporateAction51.mmChargesAppliedIndicator,
+					CorporateActionOption150.mmChargesAppliedIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4561,6 +4967,18 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmWithdrawalAllowedIndicator
 	 * CorporateActionOption133.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption138.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption139.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption148.mmWithdrawalAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmWithdrawalAllowedIndicator
+	 * CorporateActionOption150.mmWithdrawalAllowedIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4588,7 +5006,8 @@ public class CorporateActionOption {
 					CorporateActionOption56.mmWithdrawalAllowedIndicator, CorporateActionOption1.mmWithdrawalAllowedIndicator, CorporateActionOption100.mmWithdrawalAllowedIndicator, CorporateActionOption101.mmWithdrawalAllowedIndicator,
 					CorporateActionOption108.mmWithdrawalAllowedIndicator, CorporateActionOption106.mmWithdrawalAllowedIndicator, CorporateActionOption115.mmWithdrawalAllowedIndicator, CorporateActionOption114.mmWithdrawalAllowedIndicator,
 					CorporateActionOption125.mmWithdrawalAllowedIndicator, CorporateActionOption127.mmWithdrawalAllowedIndicator, CorporateActionOption130.mmWithdrawalAllowedIndicator, CorporateActionOption129.mmWithdrawalAllowedIndicator,
-					CorporateActionOption135.mmWithdrawalAllowedIndicator, CorporateActionOption133.mmWithdrawalAllowedIndicator);
+					CorporateActionOption135.mmWithdrawalAllowedIndicator, CorporateActionOption133.mmWithdrawalAllowedIndicator, CorporateActionOption138.mmWithdrawalAllowedIndicator, CorporateActionOption139.mmWithdrawalAllowedIndicator,
+					CorporateActionOption148.mmWithdrawalAllowedIndicator, CorporateActionOption150.mmWithdrawalAllowedIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -4708,6 +5127,18 @@ public class CorporateActionOption {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption133#mmChangeAllowedIndicator
 	 * CorporateActionOption133.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption138#mmChangeAllowedIndicator
+	 * CorporateActionOption138.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption139#mmChangeAllowedIndicator
+	 * CorporateActionOption139.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption148#mmChangeAllowedIndicator
+	 * CorporateActionOption148.mmChangeAllowedIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption150#mmChangeAllowedIndicator
+	 * CorporateActionOption150.mmChangeAllowedIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -4735,7 +5166,8 @@ public class CorporateActionOption {
 					CorporateActionOption56.mmChangeAllowedIndicator, CorporateActionOption1.mmChangeAllowedIndicator, CorporateActionOption100.mmChangeAllowedIndicator, CorporateActionOption101.mmChangeAllowedIndicator,
 					CorporateActionOption108.mmChangeAllowedIndicator, CorporateActionOption106.mmChangeAllowedIndicator, CorporateActionOption115.mmChangeAllowedIndicator, CorporateActionOption114.mmChangeAllowedIndicator,
 					CorporateActionOption125.mmChangeAllowedIndicator, CorporateActionOption127.mmChangeAllowedIndicator, CorporateActionOption130.mmChangeAllowedIndicator, CorporateActionOption129.mmChangeAllowedIndicator,
-					CorporateActionOption135.mmChangeAllowedIndicator, CorporateActionOption133.mmChangeAllowedIndicator);
+					CorporateActionOption135.mmChangeAllowedIndicator, CorporateActionOption133.mmChangeAllowedIndicator, CorporateActionOption138.mmChangeAllowedIndicator, CorporateActionOption139.mmChangeAllowedIndicator,
+					CorporateActionOption148.mmChangeAllowedIndicator, CorporateActionOption150.mmChangeAllowedIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionOption.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -5010,7 +5442,11 @@ public class CorporateActionOption {
 						FractionDispositionType31Choice.mmObject(), SecuritiesOption56.mmObject(), FractionDispositionType32Choice.mmObject(), SecuritiesOption58.mmObject(), CorporateActionOption128.mmObject(),
 						CorporateActionOption29Choice.mmObject(), CorporateActionOption132.mmObject(), CorporateActionOption130.mmObject(), CorporateActionOption131.mmObject(), CorporateActionOption129.mmObject(),
 						SecuritiesOption60.mmObject(), OptionFeaturesFormat22Choice.mmObject(), SecuritiesOption59.mmObject(), CorporateActionOption134.mmObject(), CorporateActionOption136.mmObject(), CorporateActionOption135.mmObject(),
-						CorporateActionOption133.mmObject(), SecuritiesOption61.mmObject(), SecuritiesOption63.mmObject(), OptionFeaturesFormat23Choice.mmObject());
+						CorporateActionOption133.mmObject(), SecuritiesOption61.mmObject(), SecuritiesOption63.mmObject(), OptionFeaturesFormat23Choice.mmObject(), CorporateActionOption140.mmObject(), CorporateActionOption141.mmObject(),
+						CorporateActionOption138.mmObject(), CorporateActionOption142.mmObject(), CorporateActionOption139.mmObject(), SecuritiesOption64.mmObject(), InstructedCorporateActionOption8.mmObject(),
+						SecuritiesOption65.mmObject(), CorporateActionOption143.mmObject(), SecuritiesOption66.mmObject(), CorporateActionOption144.mmObject(), InstructedCorporateActionOption9.mmObject(),
+						CorporateActionOption146.mmObject(), CorporateActionOption147.mmObject(), SecuritiesOption67.mmObject(), CorporateActionOption148.mmObject(), SecuritiesOption68.mmObject(), CorporateActionOption149.mmObject(),
+						SecuritiesOption69.mmObject(), CorporateActionOption150.mmObject());
 			}
 
 			@Override

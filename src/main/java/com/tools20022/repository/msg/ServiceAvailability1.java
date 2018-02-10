@@ -99,7 +99,7 @@ public class ServiceAvailability1 {
 	 * name} = "BusinessService"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the applicable business service.  "</li>
+	 * definition} = "Specifies the applicable business service."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBusinessService = new MMMessageAttribute() {
@@ -109,7 +109,7 @@ public class ServiceAvailability1 {
 			xmlTag = "BizSvc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BusinessService";
-			definition = "Specifies the applicable business service.  ";
+			definition = "Specifies the applicable business service.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

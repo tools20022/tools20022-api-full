@@ -21,6 +21,10 @@ import com.tools20022.metamodel.MMMessageAssociationEnd;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05;
+import com.tools20022.repository.area.sese.AccountHoldingInformationV06;
+import com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08;
+import com.tools20022.repository.area.sese.PortfolioTransferInstructionV08;
 import com.tools20022.repository.choice.PartyIdentification2Choice;
 import com.tools20022.repository.choice.PartyIdentification90Choice;
 import com.tools20022.repository.datatype.LEIIdentifier;
@@ -55,6 +59,24 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.entity.PartyIdentificationInformation
  * PartyIdentificationInformation}</li>
  * <li>
+ * {@linkplain com.tools20022.metamodel.MMMessageComponentType#getMessageBuildingBlock
+ * messageBuildingBlock} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08#mmTransferee
+ * PortfolioTransferInstructionV08.mmTransferee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08#mmTransferee
+ * PortfolioTransferConfirmationV08.mmTransferee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06#mmTransferee
+ * AccountHoldingInformationV06.mmTransferee}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmTransferee
+ * AccountHoldingInformationRequestV05.mmTransferee}</li>
+ * </ul>
+ * </li>
+ * <li>
  * {@linkplain com.tools20022.metamodel.MMTopLevelDictionaryEntry#getDataDictionary
  * dataDictionary} =
  * {@linkplain com.tools20022.repository.GeneratedRepository#dataDict
@@ -67,6 +89,13 @@ import javax.xml.bind.annotation.XmlType;
  * "PartyIdentification113"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification of a party."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PartyIdentification124
+ * PartyIdentification124}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.PartyIdentification2Choice
@@ -110,6 +139,14 @@ public class PartyIdentification113 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique identification of the party."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification124#mmParty
+	 * PartyIdentification124.mmParty}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmParty = new MMMessageAssociationEnd() {
@@ -121,6 +158,7 @@ public class PartyIdentification113 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Unique identification of the party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification124.mmParty);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -157,6 +195,14 @@ public class PartyIdentification113 {
 	 * definition} =
 	 * "Legal entity identification as an alternate identification for the party."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PartyIdentification124#mmLEI
+	 * PartyIdentification124.mmLEI}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLEI = new MMMessageAttribute() {
@@ -167,6 +213,7 @@ public class PartyIdentification113 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LEI";
 			definition = "Legal entity identification as an alternate identification for the party.";
+			nextVersions_lazy = () -> Arrays.asList(PartyIdentification124.mmLEI);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> LEIIdentifier.mmObject();
@@ -177,11 +224,14 @@ public class PartyIdentification113 {
 		mmObject_lazy.compareAndSet(null, new MMMessageComponent() {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.PartyIdentification113.mmParty, com.tools20022.repository.msg.PartyIdentification113.mmLEI);
+				messageBuildingBlock_lazy = () -> Arrays.asList(PortfolioTransferInstructionV08.mmTransferee, PortfolioTransferConfirmationV08.mmTransferee, AccountHoldingInformationV06.mmTransferee,
+						AccountHoldingInformationRequestV05.mmTransferee);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PartyIdentification113";
 				definition = "Identification of a party.";
+				nextVersions_lazy = () -> Arrays.asList(PartyIdentification124.mmObject());
 				previousVersion_lazy = () -> PartyIdentification2Choice.mmObject();
 			}
 		});

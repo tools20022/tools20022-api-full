@@ -64,6 +64,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Payment system operational information, such as opening, closure, session period or events, given per currency."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.BusinessDay7 BusinessDay7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.BusinessDay2
  * BusinessDay2}</li>
@@ -100,6 +106,13 @@ public class BusinessDay4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date for which the availability information is provided."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.BusinessDay7#mmSystemDate
+	 * BusinessDay7.mmSystemDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -115,6 +128,7 @@ public class BusinessDay4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the availability information is provided.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDay7.mmSystemDate);
 			previousVersion_lazy = () -> BusinessDay2.mmSystemDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -148,6 +162,14 @@ public class BusinessDay4 {
 	 * definition} =
 	 * "Status of a system and the period of time during which the status is valid."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDay7#mmSystemStatus
+	 * BusinessDay7.mmSystemStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -163,6 +185,7 @@ public class BusinessDay4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemStatus";
 			definition = "Status of a system and the period of time during which the status is valid.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDay7.mmSystemStatus);
 			previousVersion_lazy = () -> BusinessDay2.mmSystemStatus;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -198,6 +221,14 @@ public class BusinessDay4 {
 	 * definition} =
 	 * "Information relating to system operations and foreseen events relating to the operation of the system."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BusinessDay7#mmSystemInformationPerCurrency
+	 * BusinessDay7.mmSystemInformationPerCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -213,6 +244,7 @@ public class BusinessDay4 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemInformationPerCurrency";
 			definition = "Information relating to system operations and foreseen events relating to the operation of the system.";
+			nextVersions_lazy = () -> Arrays.asList(BusinessDay7.mmSystemInformationPerCurrency);
 			previousVersion_lazy = () -> BusinessDay2.mmSystemInformationPerCurrency;
 			minOccurs = 0;
 			isComposite = true;
@@ -229,6 +261,7 @@ public class BusinessDay4 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "BusinessDay4";
 				definition = "Payment system operational information, such as opening, closure, session period or events, given per currency.";
+				nextVersions_lazy = () -> Arrays.asList(BusinessDay7.mmObject());
 				previousVersion_lazy = () -> BusinessDay2.mmObject();
 			}
 		});

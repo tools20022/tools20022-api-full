@@ -47,7 +47,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "Min2Max3AlphaText"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies an alpha string with a minimum length of 2 characters and  a maximum length of 3 characters."
+ * "Specifies an alpha string with a minimum length of 2 characters and a maximum length of 3 characters."
  * </li>
  * </ul>
  */
@@ -63,7 +63,7 @@ public class Min2Max3AlphaText {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Min2Max3AlphaText";
-				definition = "Specifies an alpha string with a minimum length of 2 characters and  a maximum length of 3 characters.";
+				definition = "Specifies an alpha string with a minimum length of 2 characters and a maximum length of 3 characters.";
 				pattern = "[a-zA-Z]{2,3}";
 			}
 		});

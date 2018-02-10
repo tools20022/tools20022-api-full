@@ -68,6 +68,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AlternateIdentification1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Alternate identification of a security."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AlternateIdentification3
+ * AlternateIdentification3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,6 +114,14 @@ public class AlternateIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Unique and unambiguous identifier of a security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification3#mmIdentification
+	 * AlternateIdentification3.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -118,6 +133,7 @@ public class AlternateIdentification1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of a security.";
+			nextVersions_lazy = () -> Arrays.asList(AlternateIdentification3.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -155,6 +171,14 @@ public class AlternateIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Source of the security identification."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlternateIdentification3#mmIdentificationSource
+	 * AlternateIdentification3.mmIdentificationSource}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIdentificationSource = new MMMessageAssociationEnd() {
@@ -166,6 +190,7 @@ public class AlternateIdentification1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IdentificationSource";
 			definition = "Source of the security identification.";
+			nextVersions_lazy = () -> Arrays.asList(AlternateIdentification3.mmIdentificationSource);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -182,6 +207,7 @@ public class AlternateIdentification1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlternateIdentification1";
 				definition = "Alternate identification of a security.";
+				nextVersions_lazy = () -> Arrays.asList(AlternateIdentification3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

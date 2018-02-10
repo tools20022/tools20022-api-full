@@ -21,6 +21,7 @@ import com.tools20022.metamodel.*;
 import com.tools20022.repository.codeset.SystemClosureReasonCode;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.SystemClosure1;
+import com.tools20022.repository.msg.SystemClosure2;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -64,6 +65,7 @@ import java.util.Objects;
  * derivationComponent} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.SystemClosure1 SystemClosure1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.SystemClosure2 SystemClosure2}</li>
  * </ul>
  * </li>
  * <li>
@@ -100,6 +102,8 @@ public class SystemClosureInformation {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.SystemClosure1#mmPeriod
 	 * SystemClosure1.mmPeriod}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemClosure2#mmPeriod
+	 * SystemClosure2.mmPeriod}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -120,7 +124,7 @@ public class SystemClosureInformation {
 	 */
 	public static final MMBusinessAttribute mmPeriod = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(SystemClosure1.mmPeriod);
+			derivation_lazy = () -> Arrays.asList(SystemClosure1.mmPeriod, SystemClosure2.mmPeriod);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -198,6 +202,15 @@ public class SystemClosureInformation {
 	 * simpleType} =
 	 * {@linkplain com.tools20022.repository.codeset.SystemClosureReasonCode
 	 * SystemClosureReasonCode}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMBusinessElement#getDerivation
+	 * derivation} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemClosure1#mmReason
+	 * SystemClosure1.mmReason}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.SystemClosure2#mmReason
+	 * SystemClosure2.mmReason}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMBusinessElement#getElementContext
 	 * elementContext} =
@@ -216,6 +229,7 @@ public class SystemClosureInformation {
 	 */
 	public static final MMBusinessAttribute mmClosureReason = new MMBusinessAttribute() {
 		{
+			derivation_lazy = () -> Arrays.asList(SystemClosure1.mmReason, SystemClosure2.mmReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.SystemClosureInformation.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -245,7 +259,7 @@ public class SystemClosureInformation {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemAvailability.mmClosureInformation);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemClosureInformation.mmPeriod, com.tools20022.repository.entity.SystemClosureInformation.mmSystemAvailability,
 						com.tools20022.repository.entity.SystemClosureInformation.mmClosureReason);
-				derivationComponent_lazy = () -> Arrays.asList(SystemClosure1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(SystemClosure1.mmObject(), SystemClosure2.mmObject());
 			}
 
 			@Override

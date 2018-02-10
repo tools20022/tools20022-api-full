@@ -25,6 +25,7 @@ class ListBuilderForGeneratedRepository_09 {
 
 	@SuppressWarnings("unchecked")
 	static <T> List<T> addElems(List<T> list) {
+		list.add((T) GroupHeader55.mmObject());
 		list.add((T) PaymentTypeInformation24.mmObject());
 		list.add((T) AmendmentInformationDetails7.mmObject());
 		list.add((T) MandateRelatedInformation7.mmObject());
@@ -524,7 +525,6 @@ class ListBuilderForGeneratedRepository_09 {
 		list.add((T) AcceptorConfiguration1.mmObject());
 		list.add((T) AcquirerHostConfiguration2.mmObject());
 		list.add((T) ExchangeConfiguration2.mmObject());
-		list.add((T) ExchangeConfiguration3.mmObject());
 		ListBuilderForGeneratedRepository_10.addElems(list);
 		return list;
 	}

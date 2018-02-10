@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * "DatePeriodDetails2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Range of time defined by a start date and an end date."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.DatePeriod2Choice
+ * DatePeriod2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class DatePeriodDetails2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Start date of the range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriod2Choice#mmFromDate
+	 * DatePeriod2Choice.mmFromDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmFromDate = new MMMessageAttribute() {
@@ -119,6 +134,7 @@ public class DatePeriodDetails2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromDate";
 			definition = "Start date of the range.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriod2Choice.mmFromDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -156,6 +172,14 @@ public class DatePeriodDetails2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "End date of the range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriod2Choice#mmToDate
+	 * DatePeriod2Choice.mmToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmToDate = new MMMessageAttribute() {
@@ -167,6 +191,7 @@ public class DatePeriodDetails2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ToDate";
 			definition = "End date of the range.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriod2Choice.mmToDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -203,6 +228,14 @@ public class DatePeriodDetails2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Range of time between a start date and an end date."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.DatePeriod2Choice#mmFromToDate
+	 * DatePeriod2Choice.mmFromToDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmFromToDate = new MMMessageAssociationEnd() {
@@ -214,6 +247,7 @@ public class DatePeriodDetails2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FromToDate";
 			definition = "Range of time between a start date and an end date.";
+			nextVersions_lazy = () -> Arrays.asList(DatePeriod2Choice.mmFromToDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -231,6 +265,7 @@ public class DatePeriodDetails2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "DatePeriodDetails2Choice";
 				definition = "Range of time defined by a start date and an end date.";
+				nextVersions_lazy = () -> Arrays.asList(DatePeriod2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

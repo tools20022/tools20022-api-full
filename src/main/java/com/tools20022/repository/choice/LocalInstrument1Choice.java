@@ -20,7 +20,7 @@ package com.tools20022.repository.choice;
 import com.tools20022.metamodel.MMChoiceComponent;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.datatype.ExternalLocalInstrumentCode;
+import com.tools20022.repository.datatype.ExternalLocalInstrumentCode_Obsolete;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.PaymentProcessing;
 import com.tools20022.repository.GeneratedRepository;
@@ -76,7 +76,7 @@ public class LocalInstrument1Choice {
 
 	final static private AtomicReference<MMChoiceComponent> mmObject_lazy = new AtomicReference<>();
 	@XmlElement(name = "Cd", required = true)
-	protected ExternalLocalInstrumentCode code;
+	protected ExternalLocalInstrumentCode_Obsolete code;
 	/**
 	 * 
 	 <p>
@@ -85,8 +85,8 @@ public class LocalInstrument1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageAttribute#getSimpleType
 	 * simpleType} =
-	 * {@linkplain com.tools20022.repository.datatype.ExternalLocalInstrumentCode
-	 * ExternalLocalInstrumentCode}</li>
+	 * {@linkplain com.tools20022.repository.datatype.ExternalLocalInstrumentCode_Obsolete
+	 * ExternalLocalInstrumentCode_Obsolete}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMMessageElement#getBusinessElementTrace
 	 * businessElementTrace} =
@@ -123,7 +123,7 @@ public class LocalInstrument1Choice {
 			definition = "Specifies the local instrument published in an external local instrument code list.";
 			maxOccurs = 1;
 			minOccurs = 1;
-			simpleType_lazy = () -> ExternalLocalInstrumentCode.mmObject();
+			simpleType_lazy = () -> ExternalLocalInstrumentCode_Obsolete.mmObject();
 		}
 	};
 	@XmlElement(name = "Prtry", required = true)
@@ -189,11 +189,11 @@ public class LocalInstrument1Choice {
 		return mmObject_lazy.get();
 	}
 
-	public ExternalLocalInstrumentCode getCode() {
+	public ExternalLocalInstrumentCode_Obsolete getCode() {
 		return code;
 	}
 
-	public LocalInstrument1Choice setCode(ExternalLocalInstrumentCode code) {
+	public LocalInstrument1Choice setCode(ExternalLocalInstrumentCode_Obsolete code) {
 		this.code = Objects.requireNonNull(code);
 		return this;
 	}

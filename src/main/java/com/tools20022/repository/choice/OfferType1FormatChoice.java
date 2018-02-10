@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * "OfferType1FormatChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of formats to  express the conditions that apply to the offer."</li>
+ * "Choice of formats to express the conditions that apply to the offer."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,7 +106,7 @@ public class OfferType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Standard code to  specify the conditions that apply to the offer."</li>
+	 * "Standard code to specify the conditions that apply to the offer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -117,7 +117,7 @@ public class OfferType1FormatChoice {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Standard code to  specify the conditions that apply to the offer.";
+			definition = "Standard code to specify the conditions that apply to the offer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> OfferType1Code.mmObject();
@@ -156,7 +156,7 @@ public class OfferType1FormatChoice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Proprietary code to  express the conditions that apply to the offer."</li>
+	 * "Proprietary code to express the conditions that apply to the offer."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -167,7 +167,7 @@ public class OfferType1FormatChoice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Proprietary code to  express the conditions that apply to the offer.";
+			definition = "Proprietary code to express the conditions that apply to the offer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification13.mmObject();
@@ -182,7 +182,7 @@ public class OfferType1FormatChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "OfferType1FormatChoice";
-				definition = "Choice of formats to  express the conditions that apply to the offer.";
+				definition = "Choice of formats to express the conditions that apply to the offer.";
 			}
 		});
 		return mmObject_lazy.get();

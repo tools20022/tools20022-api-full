@@ -53,7 +53,7 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When MaximumQuantity is present, MinimumQuantitySought must  be present  too. When MinimumQuantitySought is present, MaximumQuantity must be present  too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
+	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -71,7 +71,7 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 			validator = ConstraintMaximumAndMinimumQuantitySoughtUsageRule::checkCorporateActionQuantity5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAndMinimumQuantitySoughtUsageRule";
-			definition = "When MaximumQuantity is present, MinimumQuantitySought must  be present  too. When MinimumQuantitySought is present, MaximumQuantity must be present  too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
+			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintMaximumAndMinimumQuantitySoughtUsageRule.forCorporateActionQuantity7);
 			owner_lazy = () -> CorporateActionQuantity5.mmObject();
 		}
@@ -93,7 +93,7 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When MaximumQuantity is present, MinimumQuantitySought must  be present  too. When MinimumQuantitySought is present, MaximumQuantity must be present  too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
+	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
 	 * </li>
 	 * </ul>
 	 */
@@ -102,7 +102,7 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 			validator = ConstraintMaximumAndMinimumQuantitySoughtUsageRule::checkCorporateActionQuantity6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAndMinimumQuantitySoughtUsageRule";
-			definition = "When MaximumQuantity is present, MinimumQuantitySought must  be present  too. When MinimumQuantitySought is present, MaximumQuantity must be present  too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
+			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
 			owner_lazy = () -> CorporateActionQuantity6.mmObject();
 		}
 	};
@@ -123,7 +123,7 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When MaximumQuantity is present, MinimumQuantitySought must  be present  too. When MinimumQuantitySought is present, MaximumQuantity must be present  too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
+	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -138,7 +138,7 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 			validator = ConstraintMaximumAndMinimumQuantitySoughtUsageRule::checkCorporateActionQuantity7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAndMinimumQuantitySoughtUsageRule";
-			definition = "When MaximumQuantity is present, MinimumQuantitySought must  be present  too. When MinimumQuantitySought is present, MaximumQuantity must be present  too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
+			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintMaximumAndMinimumQuantitySoughtUsageRule.forCorporateActionQuantity5;
 			owner_lazy = () -> CorporateActionQuantity7.mmObject();
 		}
@@ -160,7 +160,7 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "When MaximumQuantity is present, MinimumQuantitySought must  be present  too. When MinimumQuantitySought is present, MaximumQuantity must be present  too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
+	 * "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll."
 	 * </li>
 	 * </ul>
 	 */
@@ -169,7 +169,7 @@ public class ConstraintMaximumAndMinimumQuantitySoughtUsageRule {
 			validator = ConstraintMaximumAndMinimumQuantitySoughtUsageRule::checkCorporateActionQuantity8;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumAndMinimumQuantitySoughtUsageRule";
-			definition = "When MaximumQuantity is present, MinimumQuantitySought must  be present  too. When MinimumQuantitySought is present, MaximumQuantity must be present  too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
+			definition = "When MaximumQuantity is present, MinimumQuantitySought must be present too. When MinimumQuantitySought is present, MaximumQuantity must be present too.\r\nWhen MinimumQuantitySought/Code is AnyAndAll, then MaximumQuantity/Code must not be AnyAndAll.\r\nWhen MaximumQuantity/Code is AnyAndAll, MinimumQuantitySought/code must not be used with the value AnyAndAll.";
 			owner_lazy = () -> CorporateActionQuantity8.mmObject();
 		}
 	};

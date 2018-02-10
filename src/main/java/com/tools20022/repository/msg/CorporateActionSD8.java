@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides additional information regarding corporate action details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionSD18
+ * CorporateActionSD18}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class CorporateActionSD8 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD18#mmPlaceAndName
+	 * CorporateActionSD18.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class CorporateActionSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD18.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -142,6 +158,14 @@ public class CorporateActionSD8 {
 	 * definition} =
 	 * "DTC generated number to distinguish between the series of lotteries run against a particular redemption."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionSD18#mmLotterySequenceNumber
+	 * CorporateActionSD18.mmLotterySequenceNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLotterySequenceNumber = new MMMessageAttribute() {
@@ -152,6 +176,7 @@ public class CorporateActionSD8 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LotterySequenceNumber";
 			definition = "DTC generated number to distinguish between the series of lotteries run against a particular redemption.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD18.mmLotterySequenceNumber);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max3NumericText.mmObject();
@@ -166,6 +191,7 @@ public class CorporateActionSD8 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionSD8";
 				definition = "Provides additional information regarding corporate action details.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionSD18.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

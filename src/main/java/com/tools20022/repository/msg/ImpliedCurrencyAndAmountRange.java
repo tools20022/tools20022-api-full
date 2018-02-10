@@ -69,6 +69,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange1
+ * ImpliedCurrencyAndAmountRange1}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -108,6 +115,14 @@ public class ImpliedCurrencyAndAmountRange {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "A specified amount or amount range."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange1#mmAmount
+	 * ImpliedCurrencyAndAmountRange1.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -119,6 +134,7 @@ public class ImpliedCurrencyAndAmountRange {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "A specified amount or amount range.";
+			nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAndAmountRange1.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> ImpliedCurrencyAmountRangeChoice.mmObject();
@@ -158,6 +174,14 @@ public class ImpliedCurrencyAndAmountRange {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Indicates whether the amount is a credited or debited amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ImpliedCurrencyAndAmountRange1#mmCreditDebitIndicator
+	 * ImpliedCurrencyAndAmountRange1.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCreditDebitIndicator = new MMMessageAttribute() {
@@ -169,6 +193,7 @@ public class ImpliedCurrencyAndAmountRange {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
 			definition = "Indicates whether the amount is a credited or debited amount.";
+			nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAndAmountRange1.mmCreditDebitIndicator);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CreditDebitCode.mmObject();
@@ -184,6 +209,7 @@ public class ImpliedCurrencyAndAmountRange {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ImpliedCurrencyAndAmountRange";
 				definition = "Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.";
+				nextVersions_lazy = () -> Arrays.asList(ImpliedCurrencyAndAmountRange1.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

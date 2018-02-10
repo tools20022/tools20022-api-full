@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * "EncryptedContent3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Encrypted data with an encryption key."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.EncryptedContent4
+ * EncryptedContent4}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.EncryptedContent2
@@ -104,6 +111,14 @@ public class EncryptedContent3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of data which have been encrypted."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EncryptedContent4#mmContentType
+	 * EncryptedContent4.mmContentType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class EncryptedContent3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data which have been encrypted.";
+			nextVersions_lazy = () -> Arrays.asList(EncryptedContent4.mmContentType);
 			previousVersion_lazy = () -> EncryptedContent2.mmContentType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -152,6 +168,14 @@ public class EncryptedContent3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Algorithm used to encrypt the data."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EncryptedContent4#mmContentEncryptionAlgorithm
+	 * EncryptedContent4.mmContentEncryptionAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -167,6 +191,7 @@ public class EncryptedContent3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentEncryptionAlgorithm";
 			definition = "Algorithm used to encrypt the data.";
+			nextVersions_lazy = () -> Arrays.asList(EncryptedContent4.mmContentEncryptionAlgorithm);
 			previousVersion_lazy = () -> EncryptedContent2.mmContentEncryptionAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -202,6 +227,14 @@ public class EncryptedContent3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Encrypted data, result of the content encryption."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EncryptedContent4#mmEncryptedData
+	 * EncryptedContent4.mmEncryptedData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -217,6 +250,7 @@ public class EncryptedContent3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EncryptedData";
 			definition = "Encrypted data, result of the content encryption.";
+			nextVersions_lazy = () -> Arrays.asList(EncryptedContent4.mmEncryptedData);
 			previousVersion_lazy = () -> EncryptedContent2.mmEncryptedData;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -233,6 +267,7 @@ public class EncryptedContent3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "EncryptedContent3";
 				definition = "Encrypted data with an encryption key.";
+				nextVersions_lazy = () -> Arrays.asList(EncryptedContent4.mmObject());
 				previousVersion_lazy = () -> EncryptedContent2.mmObject();
 			}
 		});

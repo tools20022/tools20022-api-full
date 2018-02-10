@@ -176,7 +176,7 @@ public class ReportItemStatus1Choice {
 	 * name} = "AcceptedWithException"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Statement is accepted  with an exception/s."</li>
+	 * definition} = "Statement is accepted with an exception/s."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAcceptedWithException = new MMMessageAssociationEnd() {
@@ -187,7 +187,7 @@ public class ReportItemStatus1Choice {
 			xmlTag = "AccptdWthXcptn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcceptedWithException";
-			definition = "Statement is accepted  with an exception/s.";
+			definition = "Statement is accepted with an exception/s.";
 			minOccurs = 1;
 			isComposite = true;
 			type_lazy = () -> ReportItemStatus1.mmObject();

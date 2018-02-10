@@ -79,7 +79,7 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails .\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails."
+	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails."
 	 * </li>
 	 * </ul>
 	 */
@@ -88,7 +88,7 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 			validator = ConstraintFinancialInstrumentQuantity1Rule::checkSwitchOrder3;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity1Rule";
-			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails .\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
+			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
 			owner_lazy = () -> SwitchOrder3.mmObject();
 		}
 	};
@@ -108,7 +108,7 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails .\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails."
+	 * "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -125,7 +125,7 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 			validator = ConstraintFinancialInstrumentQuantity1Rule::checkSwitchOrder4;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentQuantity1Rule";
-			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails .\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
+			definition = "If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is mandatory in each occurrence of RedemptionLegDetails.\nIf SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then it must be present in each occurrence of SubscriptionLegDetails.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintFinancialInstrumentQuantity1Rule.forSwitchOrder7);
 			owner_lazy = () -> SwitchOrder4.mmObject();
 		}
@@ -180,7 +180,7 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	/**
 	 * If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not
 	 * present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is
-	 * mandatory in each occurrence of RedemptionLegDetails . If
+	 * mandatory in each occurrence of RedemptionLegDetails. If
 	 * SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then
 	 * it must be present in each occurrence of SubscriptionLegDetails.
 	 */
@@ -191,7 +191,7 @@ public class ConstraintFinancialInstrumentQuantity1Rule {
 	/**
 	 * If SubscriptionLegDetails/FinancialInstrumentQuantityChoice is not
 	 * present, then RedemptionLegDetails/FinancialInstrumentQuantityChoice is
-	 * mandatory in each occurrence of RedemptionLegDetails . If
+	 * mandatory in each occurrence of RedemptionLegDetails. If
 	 * SubscriptionLegDetails/FinancialInstrumentQuantityChoice is present, then
 	 * it must be present in each occurrence of SubscriptionLegDetails.
 	 */

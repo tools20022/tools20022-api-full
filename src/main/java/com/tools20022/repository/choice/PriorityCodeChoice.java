@@ -60,7 +60,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "PriorityCodeChoice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Priority is expressed  as a code or a text."</li>
+ * definition} = "Priority is expressed as a code or a text."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -170,7 +170,7 @@ public class PriorityCodeChoice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "PriorityCodeChoice";
-				definition = "Priority is expressed  as a code or a text.";
+				definition = "Priority is expressed as a code or a text.";
 			}
 		});
 		return mmObject_lazy.get();

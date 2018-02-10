@@ -307,6 +307,15 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * definition} =
 	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule#forCorporateActionGeneralInformationSD28
+	 * ConstraintEDSMessagingEligibilityRule.
+	 * forCorporateActionGeneralInformationSD28}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -321,8 +330,46 @@ public class ConstraintEDSMessagingEligibilityRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EDSMessagingEligibilityRule";
 			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD28);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD22;
 			owner_lazy = () -> CorporateActionGeneralInformationSD23.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionGeneralInformationSD28
+	 * CorporateActionGeneralInformationSD28}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "EDSMessagingEligibilityRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule#forCorporateActionGeneralInformationSD23
+	 * ConstraintEDSMessagingEligibilityRule.
+	 * forCorporateActionGeneralInformationSD23}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionGeneralInformationSD28> forCorporateActionGeneralInformationSD28 = new MMConstraint<CorporateActionGeneralInformationSD28>() {
+		{
+			validator = ConstraintEDSMessagingEligibilityRule::checkCorporateActionGeneralInformationSD28;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "EDSMessagingEligibilityRule";
+			definition = "Applies only to distribution events that may be eligible for EDS ISO 20022 messaging services. It will not be present for Redemption or Reorganisation events.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintEDSMessagingEligibilityRule.forCorporateActionGeneralInformationSD23;
+			owner_lazy = () -> CorporateActionGeneralInformationSD28.mmObject();
 		}
 	};
 
@@ -386,6 +433,15 @@ public class ConstraintEDSMessagingEligibilityRule {
 	 * Reorganisation events.
 	 */
 	public static void checkCorporateActionGeneralInformationSD23(CorporateActionGeneralInformationSD23 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * Applies only to distribution events that may be eligible for EDS ISO
+	 * 20022 messaging services. It will not be present for Redemption or
+	 * Reorganisation events.
+	 */
+	public static void checkCorporateActionGeneralInformationSD28(CorporateActionGeneralInformationSD28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

@@ -654,8 +654,8 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 		}
 	};
 	/**
-	 * Relates to the issue of medium and short term paper (CP, CD, MTN, notes
-	 * ...) under a program and without syndication arrangement.
+	 * Relates to the issue of medium and short term paper (CP, CD, MTN, notes.)
+	 * under a program and without syndication arrangement.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -673,7 +673,7 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Relates to the issue of medium and short term paper (CP, CD, MTN, notes ...) under a program and without syndication arrangement."
+	 * "Relates to the issue of medium and short term paper (CP, CD, MTN, notes.) under a program and without syndication arrangement."
 	 * </li>
 	 * </ul>
 	 */
@@ -681,7 +681,7 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonSyndicated";
-			definition = "Relates to the issue of medium and short term paper (CP, CD, MTN, notes ...) under a program and without syndication arrangement.";
+			definition = "Relates to the issue of medium and short term paper (CP, CD, MTN, notes.) under a program and without syndication arrangement.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmObject();
 			codeName = "NSYN";
 		}
@@ -1878,7 +1878,7 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 		}
 	};
 	/**
-	 * Trade which is guaranteed to be finalized
+	 * Trade which is guaranteed to be finalized.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1898,7 +1898,7 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 	 * name} = "GuaranteedClose"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Trade which is guaranteed to be finalized"</li>
+	 * definition} = "Trade which is guaranteed to be finalized."</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionTypeV3Code GuaranteedClose = new SecuritiesTransactionTypeV3Code() {
@@ -1906,7 +1906,7 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "418"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "GuaranteedClose";
-			definition = "Trade which is guaranteed to be finalized";
+			definition = "Trade which is guaranteed to be finalized.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmObject();
 			codeName = "GUAR";
 		}
@@ -2223,7 +2223,7 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 		}
 	};
 	/**
-	 * Trade involving risk
+	 * Trade involving risk.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -2243,7 +2243,7 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 	 * name} = "RiskTrade"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Trade involving risk"</li>
+	 * definition} = "Trade involving risk."</li>
 	 * </ul>
 	 */
 	public static final SecuritiesTransactionTypeV3Code RiskTrade = new SecuritiesTransactionTypeV3Code() {
@@ -2251,7 +2251,7 @@ public class SecuritiesTransactionTypeV3Code extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new FIXSynonym(this, "418"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "RiskTrade";
-			definition = "Trade involving risk";
+			definition = "Trade involving risk.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesTransactionTypeV3Code.mmObject();
 			codeName = "RISK";
 		}

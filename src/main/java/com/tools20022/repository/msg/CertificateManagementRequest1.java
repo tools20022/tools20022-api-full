@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.catm.CertificateManagementRequestV01;
+import com.tools20022.repository.area.catm.CertificateManagementRequestV02;
 import com.tools20022.repository.codeset.CardPaymentServiceType10Code;
 import com.tools20022.repository.datatype.Max10KBinary;
 import com.tools20022.repository.datatype.Max20000Text;
@@ -78,6 +79,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV01#mmCertificateManagementRequest
  * CertificateManagementRequestV01.mmCertificateManagementRequest}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.CertificateManagementRequestV02#mmCertificateManagementRequest
+ * CertificateManagementRequestV02.mmCertificateManagementRequest}</li>
  * </ul>
  * </li>
  * <li>
@@ -465,7 +469,7 @@ public class CertificateManagementRequest1 {
 						com.tools20022.repository.msg.CertificateManagementRequest1.mmCertificateService, com.tools20022.repository.msg.CertificateManagementRequest1.mmSecurityDomain,
 						com.tools20022.repository.msg.CertificateManagementRequest1.mmBinaryCertificationRequest, com.tools20022.repository.msg.CertificateManagementRequest1.mmCertificationRequest,
 						com.tools20022.repository.msg.CertificateManagementRequest1.mmClientCertificate, com.tools20022.repository.msg.CertificateManagementRequest1.mmWhiteListIdentification);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CertificateManagementRequestV01.mmCertificateManagementRequest);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CertificateManagementRequestV01.mmCertificateManagementRequest, CertificateManagementRequestV02.mmCertificateManagementRequest);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CertificateManagementRequest1";

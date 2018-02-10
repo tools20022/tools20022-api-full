@@ -66,6 +66,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionNotificationSD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Customer security identification reference information.\r\n"</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD10
+ * CorporateActionNotificationSD10}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -100,6 +108,14 @@ public class CorporateActionNotificationSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD10#mmPlaceAndName
+	 * CorporateActionNotificationSD10.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -110,6 +126,7 @@ public class CorporateActionNotificationSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD10.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -145,7 +162,16 @@ public class CorporateActionNotificationSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file. "
+	 * "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD10#mmCustomerInternalSecurityIdentification
+	 * CorporateActionNotificationSD10.mmCustomerInternalSecurityIdentification}
+	 * </li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -157,7 +183,8 @@ public class CorporateActionNotificationSD1 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Customer Internal Security ID"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustomerInternalSecurityIdentification";
-			definition = "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file. ";
+			definition = "Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD10.mmCustomerInternalSecurityIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max16Text.mmObject();
@@ -197,6 +224,14 @@ public class CorporateActionNotificationSD1 {
 	 * definition} =
 	 * "Security identifier that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionNotificationSD10#mmSecurityOfInterestMatchingSecurity
+	 * CorporateActionNotificationSD10.mmSecurityOfInterestMatchingSecurity}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSecurityOfInterestMatchingSecurity = new MMMessageAttribute() {
@@ -208,6 +243,7 @@ public class CorporateActionNotificationSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityOfInterestMatchingSecurity";
 			definition = "Security identifier that is used to match the customer's SOI (Security of Interest) to the GCA VS Security Cross Reference.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD10.mmSecurityOfInterestMatchingSecurity);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityIdentification15.mmObject();
@@ -223,6 +259,7 @@ public class CorporateActionNotificationSD1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionNotificationSD1";
 				definition = "Customer security identification reference information.\r\n";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionNotificationSD10.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

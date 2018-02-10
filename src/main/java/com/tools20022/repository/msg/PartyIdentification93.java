@@ -24,6 +24,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.seev.CorporateActionInstructionV06;
 import com.tools20022.repository.area.seev.CorporateActionInstructionV07;
+import com.tools20022.repository.area.seev.CorporateActionInstructionV08;
 import com.tools20022.repository.choice.BeneficiaryCertificationType10Choice;
 import com.tools20022.repository.choice.FinancialInstrumentQuantity1Choice;
 import com.tools20022.repository.choice.PartyIdentification71Choice;
@@ -87,6 +88,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV07#mmBeneficialOwnerDetails
  * CorporateActionInstructionV07.mmBeneficialOwnerDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionV08#mmBeneficialOwnerDetails
+ * CorporateActionInstructionV08.mmBeneficialOwnerDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -276,7 +280,7 @@ public class PartyIdentification93 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Country in which a person is permanently domiciled (the place of a persons permanent home)."
+	 * "Country in which a person is permanently domiciled (the place of a person's permanent home)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -294,7 +298,7 @@ public class PartyIdentification93 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":94C::DOMI"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DomicileCountry";
-			definition = "Country in which a person is permanently domiciled (the place of a persons permanent home).";
+			definition = "Country in which a person is permanently domiciled (the place of a person's permanent home).";
 			previousVersion_lazy = () -> PartyIdentification56.mmDomicileCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -530,7 +534,7 @@ public class PartyIdentification93 {
 						com.tools20022.repository.msg.PartyIdentification93.mmDomicileCountry, com.tools20022.repository.msg.PartyIdentification93.mmNonDomicileCountry,
 						com.tools20022.repository.msg.PartyIdentification93.mmOwnedSecuritiesQuantity, com.tools20022.repository.msg.PartyIdentification93.mmCertificationType,
 						com.tools20022.repository.msg.PartyIdentification93.mmCertificationBreakdown);
-				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmBeneficialOwnerDetails, CorporateActionInstructionV07.mmBeneficialOwnerDetails);
+				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionInstructionV06.mmBeneficialOwnerDetails, CorporateActionInstructionV07.mmBeneficialOwnerDetails, CorporateActionInstructionV08.mmBeneficialOwnerDetails);
 				trace_lazy = () -> PartyIdentificationInformation.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDeclarationDetailsRule.forPartyIdentification93);

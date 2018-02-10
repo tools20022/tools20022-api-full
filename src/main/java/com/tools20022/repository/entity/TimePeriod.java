@@ -20,6 +20,7 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.datatype.ISOTime;
 import com.tools20022.repository.GeneratedRepository;
+import com.tools20022.repository.msg.TimePeriod1;
 import com.tools20022.repository.msg.TimePeriodDetails;
 import com.tools20022.repository.msg.TimePeriodDetails1;
 import java.lang.reflect.Method;
@@ -66,6 +67,7 @@ import java.util.Objects;
  * TimePeriodDetails}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TimePeriodDetails1
  * TimePeriodDetails1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TimePeriod1 TimePeriod1}</li>
  * </ul>
  * </li>
  * <li>
@@ -154,6 +156,8 @@ public class TimePeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TimePeriodDetails1#mmFromTime
 	 * TimePeriodDetails1.mmFromTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TimePeriod1#mmFromTime
+	 * TimePeriod1.mmFromTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -173,7 +177,7 @@ public class TimePeriod {
 	 */
 	public static final MMBusinessAttribute mmFromTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(TimePeriodDetails.mmFromTime, TimePeriodDetails1.mmFromTime);
+			derivation_lazy = () -> Arrays.asList(TimePeriodDetails.mmFromTime, TimePeriodDetails1.mmFromTime, TimePeriod1.mmFromTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimePeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -210,6 +214,8 @@ public class TimePeriod {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TimePeriodDetails1#mmToTime
 	 * TimePeriodDetails1.mmToTime}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.TimePeriod1#mmToTime
+	 * TimePeriod1.mmToTime}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -229,7 +235,7 @@ public class TimePeriod {
 	 */
 	public static final MMBusinessAttribute mmToTime = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(TimePeriodDetails.mmToTime, TimePeriodDetails1.mmToTime);
+			derivation_lazy = () -> Arrays.asList(TimePeriodDetails.mmToTime, TimePeriodDetails1.mmToTime, TimePeriod1.mmToTime);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.TimePeriod.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -258,7 +264,7 @@ public class TimePeriod {
 				definition = "Particular time span specified between a start time and an end time. The time period cannot exceed 24 hours.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.SystemAvailability.mmAvailableSessionPeriod);
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TimePeriod.mmSystemAvailability, com.tools20022.repository.entity.TimePeriod.mmFromTime, com.tools20022.repository.entity.TimePeriod.mmToTime);
-				derivationComponent_lazy = () -> Arrays.asList(TimePeriodDetails.mmObject(), TimePeriodDetails1.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(TimePeriodDetails.mmObject(), TimePeriodDetails1.mmObject(), TimePeriod1.mmObject());
 			}
 
 			@Override

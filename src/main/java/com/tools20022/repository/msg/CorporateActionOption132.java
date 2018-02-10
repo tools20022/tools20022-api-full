@@ -109,6 +109,13 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionOption132"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides information about the corporate action option."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CorporateActionOption140
+ * CorporateActionOption140}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.CorporateActionOption117
@@ -156,6 +163,14 @@ public class CorporateActionOption132 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Number identifying the available corporate action options."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmOptionNumber
+	 * CorporateActionOption140.mmOptionNumber}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -173,6 +188,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionNumber";
 			definition = "Number identifying the available corporate action options.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmOptionNumber);
 			previousVersion_lazy = () -> CorporateActionOption117.mmOptionNumber;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -216,6 +232,14 @@ public class CorporateActionOption132 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the corporate action options available to the account owner."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmOptionType
+	 * CorporateActionOption140.mmOptionType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -233,6 +257,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionType";
 			definition = "Specifies the corporate action options available to the account owner.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmOptionType);
 			previousVersion_lazy = () -> CorporateActionOption117.mmOptionType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -276,6 +301,14 @@ public class CorporateActionOption132 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the features that may apply to a corporate action option."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmOptionFeatures
+	 * CorporateActionOption140.mmOptionFeatures}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -293,6 +326,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OptionFeatures";
 			definition = "Specifies the features that may apply to a corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmOptionFeatures);
 			previousVersion_lazy = () -> CorporateActionOption117.mmOptionFeatures;
 			minOccurs = 0;
 			isComposite = true;
@@ -336,6 +370,14 @@ public class CorporateActionOption132 {
 	 * definition} =
 	 * "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmFractionDisposition
+	 * CorporateActionOption140.mmFractionDisposition}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -353,6 +395,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FractionDisposition";
 			definition = "Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmFractionDisposition);
 			previousVersion_lazy = () -> CorporateActionOption117.mmFractionDisposition;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -398,6 +441,14 @@ public class CorporateActionOption132 {
 	 * definition} =
 	 * "Currency in which the cash disbursed from an interest or dividend payment is offered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmCurrencyOption
+	 * CorporateActionOption140.mmCurrencyOption}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -415,6 +466,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyOption";
 			definition = "Currency in which the cash disbursed from an interest or dividend payment is offered.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmCurrencyOption);
 			previousVersion_lazy = () -> CorporateActionOption117.mmCurrencyOption;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -457,6 +509,14 @@ public class CorporateActionOption132 {
 	 * definition} =
 	 * "Provides information about the dates related to a corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmDateDetails
+	 * CorporateActionOption140.mmDateDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -474,6 +534,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateDetails";
 			definition = "Provides information about the dates related to a corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmDateDetails);
 			previousVersion_lazy = () -> CorporateActionOption117.mmDateDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -518,6 +579,14 @@ public class CorporateActionOption132 {
 	 * definition} =
 	 * "Provides information about the periods related to a corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmPeriodDetails
+	 * CorporateActionOption140.mmPeriodDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -535,6 +604,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PeriodDetails";
 			definition = "Provides information about the periods related to a corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmPeriodDetails);
 			previousVersion_lazy = () -> CorporateActionOption117.mmPeriodDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -578,6 +648,14 @@ public class CorporateActionOption132 {
 	 * definition} =
 	 * "Provides information about rates and amounts related to a corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmRateAndAmountDetails
+	 * CorporateActionOption140.mmRateAndAmountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -595,6 +673,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateAndAmountDetails";
 			definition = "Provides information about rates and amounts related to a corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmRateAndAmountDetails);
 			previousVersion_lazy = () -> CorporateActionOption117.mmRateAndAmountDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -638,6 +717,14 @@ public class CorporateActionOption132 {
 	 * definition} =
 	 * "Provides information about the prices related to a corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmPriceDetails
+	 * CorporateActionOption140.mmPriceDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -655,6 +742,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Provides information about the prices related to a corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmPriceDetails);
 			previousVersion_lazy = () -> CorporateActionOption117.mmPriceDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -696,6 +784,14 @@ public class CorporateActionOption132 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Place where the trade was executed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmPlaceOfTrade
+	 * CorporateActionOption140.mmPlaceOfTrade}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -713,6 +809,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfTrade";
 			definition = "Place where the trade was executed.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmPlaceOfTrade);
 			previousVersion_lazy = () -> CorporateActionOption117.mmPlaceOfTrade;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -756,6 +853,14 @@ public class CorporateActionOption132 {
 	 * definition} =
 	 * "Provides information about the securities movement linked to the corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmSecuritiesMovementDetails
+	 * CorporateActionOption140.mmSecuritiesMovementDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -773,6 +878,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesMovementDetails";
 			definition = "Provides information about the securities movement linked to the corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmSecuritiesMovementDetails);
 			previousVersion_lazy = () -> CorporateActionOption117.mmSecuritiesMovementDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -815,6 +921,14 @@ public class CorporateActionOption132 {
 	 * definition} =
 	 * "Provides information about the cash movement related to a corporate action option."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption140#mmCashMovementDetails
+	 * CorporateActionOption140.mmCashMovementDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -832,6 +946,7 @@ public class CorporateActionOption132 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CashMovementDetails";
 			definition = "Provides information about the cash movement related to a corporate action option.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmCashMovementDetails);
 			previousVersion_lazy = () -> CorporateActionOption117.mmCashMovementDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -854,6 +969,7 @@ public class CorporateActionOption132 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionOption132";
 				definition = "Provides information about the corporate action option.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionOption140.mmObject());
 				previousVersion_lazy = () -> CorporateActionOption117.mmObject();
 			}
 		});

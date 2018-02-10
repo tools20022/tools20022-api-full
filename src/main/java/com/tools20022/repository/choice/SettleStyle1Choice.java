@@ -66,6 +66,13 @@ import javax.xml.bind.annotation.XmlType;
  * "SettleStyle1Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for settle style."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.SettleStyle2Choice
+ * SettleStyle2Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -106,6 +113,14 @@ public class SettleStyle1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Settle style expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettleStyle2Choice#mmCode
+	 * SettleStyle2Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -117,6 +132,7 @@ public class SettleStyle1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Settle style expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(SettleStyle2Choice.mmCode);
 			minOccurs = 0;
 			simpleType_lazy = () -> SettleStyle1Code.mmObject();
 		}
@@ -153,6 +169,14 @@ public class SettleStyle1Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Settle style expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.SettleStyle2Choice#mmProprietary
+	 * SettleStyle2Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -164,6 +188,7 @@ public class SettleStyle1Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Settle style expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(SettleStyle2Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -180,6 +205,7 @@ public class SettleStyle1Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SettleStyle1Choice";
 				definition = "Choice of format for settle style.";
+				nextVersions_lazy = () -> Arrays.asList(SettleStyle2Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

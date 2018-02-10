@@ -21,9 +21,7 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.seev.CorporateActionEventProcessingStatusAdviceV06;
-import com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV07;
-import com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08;
+import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.choice.CorporateActionEventType52Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.entity.ClassAction;
@@ -82,6 +80,14 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV08#mmCorporateActionGeneralInformation
  * CorporateActionInstructionStatusAdviceV08.mmCorporateActionGeneralInformation
  * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatusAdviceV09#mmCorporateActionGeneralInformation
+ * CorporateActionInstructionStatusAdviceV09.mmCorporateActionGeneralInformation
+ * }</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionCancellationRequestStatusAdviceV08#mmCorporateActionGeneralInformation
+ * CorporateActionInstructionCancellationRequestStatusAdviceV08.
+ * mmCorporateActionGeneralInformation}</li>
  * </ul>
  * </li>
  * <li>
@@ -368,7 +374,8 @@ public class CorporateActionGeneralInformation109 {
 						com.tools20022.repository.msg.CorporateActionGeneralInformation109.mmOfficialCorporateActionEventIdentification, com.tools20022.repository.msg.CorporateActionGeneralInformation109.mmClassActionNumber,
 						com.tools20022.repository.msg.CorporateActionGeneralInformation109.mmEventType);
 				messageBuildingBlock_lazy = () -> Arrays.asList(CorporateActionEventProcessingStatusAdviceV06.mmCorporateActionGeneralInformation,
-						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmCorporateActionGeneralInformation, CorporateActionInstructionStatusAdviceV08.mmCorporateActionGeneralInformation);
+						CorporateActionInstructionCancellationRequestStatusAdviceV07.mmCorporateActionGeneralInformation, CorporateActionInstructionStatusAdviceV08.mmCorporateActionGeneralInformation,
+						CorporateActionInstructionStatusAdviceV09.mmCorporateActionGeneralInformation, CorporateActionInstructionCancellationRequestStatusAdviceV08.mmCorporateActionGeneralInformation);
 				trace_lazy = () -> CorporateActionEvent.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintEventTypeRule.forCorporateActionGeneralInformation109,

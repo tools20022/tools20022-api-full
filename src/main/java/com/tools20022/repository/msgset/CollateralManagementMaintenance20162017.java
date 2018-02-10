@@ -86,7 +86,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * "Collateral Management - Maintenance 2016 - 2017"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "This document describes the Collateral Management message set. "</li>
+ * "This document describes the Collateral Management message set."</li>
  * </ul>
  */
 public class CollateralManagementMaintenance20162017 {
@@ -99,7 +99,7 @@ public class CollateralManagementMaintenance20162017 {
 				businessProcessCatalogue_lazy = () -> GeneratedRepository.catalogue;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Collateral Management - Maintenance 2016 - 2017";
-				definition = "This document describes the Collateral Management message set. ";
+				definition = "This document describes the Collateral Management message set.";
 				messageDefinition_lazy = () -> Arrays.asList(MarginCallRequestV04.mmObject(), InterestPaymentResponseV04.mmObject(), MarginCallDisputeNotificationV04.mmObject(), CollateralSubstitutionResponseV04.mmObject(),
 						MarginCallResponseV04.mmObject(), InterestPaymentStatementV04.mmObject(), CollateralManagementCancellationRequestV04.mmObject(), CollateralSubstitutionConfirmationV04.mmObject(),
 						InterestPaymentRequestV04.mmObject(), CollateralManagementCancellationStatusV04.mmObject(), CollateralSubstitutionRequestV04.mmObject(), CollateralAndExposureReportV03.mmObject(),

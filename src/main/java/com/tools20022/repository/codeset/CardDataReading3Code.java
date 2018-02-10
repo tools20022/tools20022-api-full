@@ -70,7 +70,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "CardDataReading3Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Card  writing capabilities of the terminal performing the transaction. \r\nIt correspond to the ISO 8583, field number 22-10 for the version 93, and 27-8_9 for the version 2003."
+ * "Card writing capabilities of the terminal performing the transaction. \r\nIt correspond to the ISO 8583, field number 22-10 for the version 93, and 27-8_9 for the version 2003."
  * </li>
  * </ul>
  */
@@ -209,7 +209,7 @@ public class CardDataReading3Code extends MMCode {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardDataReading3Code";
-				definition = "Card  writing capabilities of the terminal performing the transaction. \r\nIt correspond to the ISO 8583, field number 22-10 for the version 93, and 27-8_9 for the version 2003.";
+				definition = "Card writing capabilities of the terminal performing the transaction. \r\nIt correspond to the ISO 8583, field number 22-10 for the version 93, and 27-8_9 for the version 2003.";
 				trace_lazy = () -> CardDataReadingCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CardDataReading3Code.CardOnFile, com.tools20022.repository.codeset.CardDataReading3Code.EMVProximityReader,
 						com.tools20022.repository.codeset.CardDataReading3Code.ICC, com.tools20022.repository.codeset.CardDataReading3Code.MagneticStripe, com.tools20022.repository.codeset.CardDataReading3Code.ProximityReader);

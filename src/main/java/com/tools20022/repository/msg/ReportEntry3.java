@@ -928,7 +928,7 @@ public class ReportEntry3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides details of the card transaction included in the entry amount, when globalised by the account servicer ."
+	 * "Provides details of the card transaction included in the entry amount, when globalised by the account servicer."
 	 * </li>
 	 * </ul>
 	 */
@@ -940,7 +940,7 @@ public class ReportEntry3 {
 			xmlTag = "CardTx";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CardTransaction";
-			definition = "Provides details of the card transaction included in the entry amount, when globalised by the account servicer .";
+			definition = "Provides details of the card transaction included in the entry amount, when globalised by the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

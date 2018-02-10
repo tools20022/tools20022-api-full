@@ -37,7 +37,7 @@ import java.util.Arrays;
  * The format and content of the settlement party sequences will comply with the
  * market practices published for the counterparty depository included in the
  * message.<br>
- * For more details, see the relevant market practice document on www.smpg.info
+ * For more details, see the relevant market practice document on www.smpg.info.
  */
 public class ConstraintDepositoryGuideline {
 
@@ -58,7 +58,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -67,7 +67,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties5;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties5.mmObject();
 		}
 	};
@@ -88,7 +88,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -97,7 +97,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties11.mmObject();
 		}
 	};
@@ -118,7 +118,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -127,7 +127,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties26;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties26.mmObject();
 		}
 	};
@@ -148,7 +148,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -157,7 +157,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties18.mmObject();
 		}
 	};
@@ -178,7 +178,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -187,7 +187,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties27;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties27.mmObject();
 		}
 	};
@@ -208,7 +208,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -217,7 +217,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties7.mmObject();
 		}
 	};
@@ -238,7 +238,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -255,7 +255,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryGuideline.forSettlementParties36);
 			owner_lazy = () -> SettlementParties10.mmObject();
 		}
@@ -277,7 +277,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -286,7 +286,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties17.mmObject();
 		}
 	};
@@ -307,7 +307,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -316,7 +316,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties23;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties23.mmObject();
 		}
 	};
@@ -337,7 +337,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -346,7 +346,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties14.mmObject();
 		}
 	};
@@ -367,7 +367,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -376,7 +376,7 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties20.mmObject();
 		}
 	};
@@ -645,7 +645,15 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryGuideline#forSettlementParties62
+	 * ConstraintDepositoryGuideline.forSettlementParties62}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -659,7 +667,8 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDepositoryGuideline.forSettlementParties62);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDepositoryGuideline.forSettlementParties10;
 			owner_lazy = () -> SettlementParties36.mmObject();
 		}
@@ -753,7 +762,7 @@ public class ConstraintDepositoryGuideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info"
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
 	 * </li>
 	 * </ul>
 	 */
@@ -762,8 +771,74 @@ public class ConstraintDepositoryGuideline {
 			validator = ConstraintDepositoryGuideline::checkSettlementParties44;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DepositoryGuideline";
-			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
 			owner_lazy = () -> SettlementParties44.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties62
+	 * SettlementParties62}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DepositoryGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDepositoryGuideline#forSettlementParties36
+	 * ConstraintDepositoryGuideline.forSettlementParties36}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementParties62> forSettlementParties62 = new MMConstraint<SettlementParties62>() {
+		{
+			validator = ConstraintDepositoryGuideline::checkSettlementParties62;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DepositoryGuideline";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDepositoryGuideline.forSettlementParties36;
+			owner_lazy = () -> SettlementParties62.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.msg.SettlementParties64
+	 * SettlementParties64}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DepositoryGuideline"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<SettlementParties64> forSettlementParties64 = new MMConstraint<SettlementParties64>() {
+		{
+			validator = ConstraintDepositoryGuideline::checkSettlementParties64;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DepositoryGuideline";
+			definition = "In a delivery, the receiving depository is to be understood as the requested depository of the receiving counterparty. \r\nIn a receive, the delivering depository is to be understood as the requested depository of the delivering counterparty.\r\nThe field must be populated with the BIC of a national or international CSD. When no CSD exists in a particular market, the stock exchange BIC will be used.\r\nCountry code should be used for settlement taking place outside of an institution published in the PSET's BIC list. This includes physical deliveries and investment funds not settling at a CSD. \r\nThe format and content of the settlement party sequences will comply with the market practices published for the counterparty depository included in the message.\r\nFor more details, see the relevant market practice document on www.smpg.info.";
+			owner_lazy = () -> SettlementParties64.mmObject();
 		}
 	};
 
@@ -782,7 +857,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties5(SettlementParties5 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -803,7 +878,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties11(SettlementParties11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -824,7 +899,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties26(SettlementParties26 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -845,7 +920,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties18(SettlementParties18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -866,7 +941,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties27(SettlementParties27 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -887,7 +962,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties7(SettlementParties7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -908,7 +983,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties10(SettlementParties10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -929,7 +1004,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties17(SettlementParties17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -950,7 +1025,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties23(SettlementParties23 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -971,7 +1046,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties14(SettlementParties14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -992,7 +1067,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties20(SettlementParties20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1079,7 +1154,7 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties36(SettlementParties36 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -1122,9 +1197,51 @@ public class ConstraintDepositoryGuideline {
 	 * the market practices published for the counterparty depository included
 	 * in the message.<br>
 	 * For more details, see the relevant market practice document on
-	 * www.smpg.info
+	 * www.smpg.info.
 	 */
 	public static void checkSettlementParties44(SettlementParties44 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In a delivery, the receiving depository is to be understood as the
+	 * requested depository of the receiving counterparty. <br>
+	 * In a receive, the delivering depository is to be understood as the
+	 * requested depository of the delivering counterparty.<br>
+	 * The field must be populated with the BIC of a national or international
+	 * CSD. When no CSD exists in a particular market, the stock exchange BIC
+	 * will be used.<br>
+	 * Country code should be used for settlement taking place outside of an
+	 * institution published in the PSET's BIC list. This includes physical
+	 * deliveries and investment funds not settling at a CSD. <br>
+	 * The format and content of the settlement party sequences will comply with
+	 * the market practices published for the counterparty depository included
+	 * in the message.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkSettlementParties62(SettlementParties62 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * In a delivery, the receiving depository is to be understood as the
+	 * requested depository of the receiving counterparty. <br>
+	 * In a receive, the delivering depository is to be understood as the
+	 * requested depository of the delivering counterparty.<br>
+	 * The field must be populated with the BIC of a national or international
+	 * CSD. When no CSD exists in a particular market, the stock exchange BIC
+	 * will be used.<br>
+	 * Country code should be used for settlement taking place outside of an
+	 * institution published in the PSET's BIC list. This includes physical
+	 * deliveries and investment funds not settling at a CSD. <br>
+	 * The format and content of the settlement party sequences will comply with
+	 * the market practices published for the counterparty depository included
+	 * in the message.<br>
+	 * For more details, see the relevant market practice document on
+	 * www.smpg.info.
+	 */
+	public static void checkSettlementParties64(SettlementParties64 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

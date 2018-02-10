@@ -26,7 +26,7 @@ import java.util.Arrays;
 /**
  * Unaffected balance and Affected balances should only be mentioned as a result
  * of the process that was run through the event. For instance lottery results,
- * Dutch auction results or tender offer results
+ * Dutch auction results or tender offer results.
  */
 public class ConstraintAffectedAndUnaffectedBalanceRule {
 
@@ -47,7 +47,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails2;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails2.mmObject();
 		}
 	};
@@ -77,7 +77,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -86,7 +86,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails6.mmObject();
 		}
 	};
@@ -107,7 +107,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -116,7 +116,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails11;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails11.mmObject();
 		}
 	};
@@ -137,7 +137,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -146,7 +146,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails14;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails14.mmObject();
 		}
 	};
@@ -167,7 +167,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -185,7 +185,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails18;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails22);
 			owner_lazy = () -> CorporateActionBalanceDetails18.mmObject();
 		}
@@ -207,7 +207,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -216,7 +216,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails19;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails19.mmObject();
 		}
 	};
@@ -237,7 +237,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -246,7 +246,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails1.mmObject();
 		}
 	};
@@ -267,7 +267,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -276,7 +276,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails7.mmObject();
 		}
 	};
@@ -297,7 +297,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -306,7 +306,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails10;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails10.mmObject();
 		}
 	};
@@ -327,7 +327,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -336,7 +336,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails13;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails13.mmObject();
 		}
 	};
@@ -357,7 +357,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -375,7 +375,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails17;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails21);
 			owner_lazy = () -> CorporateActionBalanceDetails17.mmObject();
 		}
@@ -397,7 +397,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -406,7 +406,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails20;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails20.mmObject();
 		}
 	};
@@ -427,7 +427,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -451,7 +451,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails21;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails29);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails17;
 			owner_lazy = () -> CorporateActionBalanceDetails21.mmObject();
@@ -474,7 +474,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -498,7 +498,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails22;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails31);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails18;
 			owner_lazy = () -> CorporateActionBalanceDetails22.mmObject();
@@ -521,7 +521,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -530,7 +530,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails25;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails25.mmObject();
 		}
 	};
@@ -551,7 +551,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -560,7 +560,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails28;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails28.mmObject();
 		}
 	};
@@ -581,7 +581,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -596,7 +596,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails31;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails22;
 			owner_lazy = () -> CorporateActionBalanceDetails31.mmObject();
 		}
@@ -618,7 +618,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -633,7 +633,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails29;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintAffectedAndUnaffectedBalanceRule.forCorporateActionBalanceDetails21;
 			owner_lazy = () -> CorporateActionBalanceDetails29.mmObject();
 		}
@@ -655,7 +655,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -664,7 +664,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails35;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "Unaffected balance and Affected balances should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails35.mmObject();
 		}
 	};
@@ -685,7 +685,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results"
+	 * "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results."
 	 * </li>
 	 * </ul>
 	 */
@@ -694,7 +694,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 			validator = ConstraintAffectedAndUnaffectedBalanceRule::checkCorporateActionBalanceDetails36;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedAndUnaffectedBalanceRule";
-			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results";
+			definition = "UnaffectedBalance and AffectedBalance should only be mentioned as a result of the process that was run through the event. For instance lottery results, Dutch auction results or tender offer results.";
 			owner_lazy = () -> CorporateActionBalanceDetails36.mmObject();
 		}
 	};
@@ -702,7 +702,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails2(CorporateActionBalanceDetails2 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -711,7 +711,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails6(CorporateActionBalanceDetails6 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -720,7 +720,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails11(CorporateActionBalanceDetails11 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -729,7 +729,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails14(CorporateActionBalanceDetails14 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -738,7 +738,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails18(CorporateActionBalanceDetails18 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -747,7 +747,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails19(CorporateActionBalanceDetails19 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -756,7 +756,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails1(CorporateActionBalanceDetails1 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -765,7 +765,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails7(CorporateActionBalanceDetails7 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -774,7 +774,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails10(CorporateActionBalanceDetails10 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -783,7 +783,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails13(CorporateActionBalanceDetails13 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -792,7 +792,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails17(CorporateActionBalanceDetails17 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -801,7 +801,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails20(CorporateActionBalanceDetails20 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -810,7 +810,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails21(CorporateActionBalanceDetails21 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -819,7 +819,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails22(CorporateActionBalanceDetails22 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -828,7 +828,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails25(CorporateActionBalanceDetails25 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -837,7 +837,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails28(CorporateActionBalanceDetails28 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -846,7 +846,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails31(CorporateActionBalanceDetails31 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -855,7 +855,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails29(CorporateActionBalanceDetails29 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -864,7 +864,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * Unaffected balance and Affected balances should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails35(CorporateActionBalanceDetails35 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -873,7 +873,7 @@ public class ConstraintAffectedAndUnaffectedBalanceRule {
 	/**
 	 * UnaffectedBalance and AffectedBalance should only be mentioned as a
 	 * result of the process that was run through the event. For instance
-	 * lottery results, Dutch auction results or tender offer results
+	 * lottery results, Dutch auction results or tender offer results.
 	 */
 	public static void checkCorporateActionBalanceDetails36(CorporateActionBalanceDetails36 obj) throws Exception {
 		throw new NotImplementedConstraintException();

@@ -352,7 +352,7 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Country for which the holder of the financial instrument must specify that it is not domiciled. (The holder must certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.)"
+	 * "Country for which the holder of the financial instrument must specify that it is not domiciled. (The holder must certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -369,7 +369,7 @@ public class BeneficialOwner2 {
 			xmlTag = "NonDmclCtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NonDomicileCountry";
-			definition = "Country for which the holder of the financial instrument must specify that it is not domiciled. (The holder must certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.)";
+			definition = "Country for which the holder of the financial instrument must specify that it is not domiciled. (The holder must certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.).";
 			previousVersion_lazy = () -> BeneficialOwner1.mmNonDomicileCountry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -409,7 +409,7 @@ public class BeneficialOwner2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether certification is required from the account owner. (Yes means that certification is required. No means certification is not required.)"
+	 * "Indicates whether certification is required from the account owner. (Yes means that certification is required. No means certification is not required.)."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -426,7 +426,7 @@ public class BeneficialOwner2 {
 			xmlTag = "CertfctnInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificationIndicator";
-			definition = "Indicates whether certification is required from the account owner. (Yes means that certification is required. No means certification is not required.)";
+			definition = "Indicates whether certification is required from the account owner. (Yes means that certification is required. No means certification is not required.).";
 			previousVersion_lazy = () -> BeneficialOwner1.mmCertificationIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;

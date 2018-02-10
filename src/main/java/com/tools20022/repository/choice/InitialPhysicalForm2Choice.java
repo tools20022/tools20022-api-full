@@ -62,6 +62,13 @@ import javax.xml.bind.annotation.XmlType;
  * "InitialPhysicalForm2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Choice of format for initial physical form."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.choice.InitialPhysicalForm4Choice
+ * InitialPhysicalForm4Choice}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class InitialPhysicalForm2Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Initial physical form expressed as an ISO 20022 code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InitialPhysicalForm4Choice#mmCode
+	 * InitialPhysicalForm4Choice.mmCode}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCode = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class InitialPhysicalForm2Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Initial physical form expressed as an ISO 20022 code.";
+			nextVersions_lazy = () -> Arrays.asList(InitialPhysicalForm4Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> InitialPhysicalForm1Code.mmObject();
@@ -138,7 +154,15 @@ public class InitialPhysicalForm2Choice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Initial physical form  expressed as a proprietary code."</li>
+	 * definition} = "Initial physical form expressed as a proprietary code."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.InitialPhysicalForm4Choice#mmProprietary
+	 * InitialPhysicalForm4Choice.mmProprietary}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmProprietary = new MMMessageAssociationEnd() {
@@ -148,7 +172,8 @@ public class InitialPhysicalForm2Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Initial physical form  expressed as a proprietary code.";
+			definition = "Initial physical form expressed as a proprietary code.";
+			nextVersions_lazy = () -> Arrays.asList(InitialPhysicalForm4Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,6 +189,7 @@ public class InitialPhysicalForm2Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "InitialPhysicalForm2Choice";
 				definition = "Choice of format for initial physical form.";
+				nextVersions_lazy = () -> Arrays.asList(InitialPhysicalForm4Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

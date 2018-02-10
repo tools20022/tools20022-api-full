@@ -89,6 +89,7 @@ import javax.xml.bind.annotation.XmlType;
  * nextVersions} =
  * <ul>
  * <li>{@linkplain com.tools20022.repository.msg.Intermediary35 Intermediary35}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Intermediary41 Intermediary41}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -139,6 +140,9 @@ public class Intermediary34 {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Intermediary35#mmIdentification
 	 * Intermediary35.mmIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary41#mmIdentification
+	 * Intermediary41.mmIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -157,7 +161,7 @@ public class Intermediary34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique and unambiguous identifier of the intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(Intermediary35.mmIdentification);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary35.mmIdentification, Intermediary41.mmIdentification);
 			previousVersion_lazy = () -> Intermediary26.mmIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -200,6 +204,8 @@ public class Intermediary34 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary35#mmAccount
 	 * Intermediary35.mmAccount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary41#mmAccount
+	 * Intermediary41.mmAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -218,7 +224,7 @@ public class Intermediary34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.";
-			nextVersions_lazy = () -> Arrays.asList(Intermediary35.mmAccount);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary35.mmAccount, Intermediary41.mmAccount);
 			previousVersion_lazy = () -> Intermediary26.mmAccount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -261,6 +267,8 @@ public class Intermediary34 {
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary35#mmRole
 	 * Intermediary35.mmRole}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Intermediary41#mmRole
+	 * Intermediary41.mmRole}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -279,7 +287,7 @@ public class Intermediary34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Role";
 			definition = "Function performed by the intermediary.";
-			nextVersions_lazy = () -> Arrays.asList(Intermediary35.mmRole);
+			nextVersions_lazy = () -> Arrays.asList(Intermediary35.mmRole, Intermediary41.mmRole);
 			previousVersion_lazy = () -> Intermediary26.mmRole;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -317,6 +325,14 @@ public class Intermediary34 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Contact person and contact information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Intermediary41#mmContactPerson
+	 * Intermediary41.mmContactPerson}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -333,6 +349,7 @@ public class Intermediary34 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContactPerson";
 			definition = "Contact person and contact information.";
+			nextVersions_lazy = () -> Arrays.asList(Intermediary41.mmContactPerson);
 			previousVersion_lazy = () -> Intermediary26.mmContactPerson;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -352,7 +369,7 @@ public class Intermediary34 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Intermediary34";
 				definition = "Party that provides services to investors relating to financial products.";
-				nextVersions_lazy = () -> Arrays.asList(Intermediary35.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(Intermediary35.mmObject(), Intermediary41.mmObject());
 				previousVersion_lazy = () -> Intermediary26.mmObject();
 			}
 		});

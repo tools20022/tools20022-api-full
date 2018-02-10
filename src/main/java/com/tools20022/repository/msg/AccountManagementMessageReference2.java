@@ -37,7 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Information about the message reference of the account management instruction
- * message for which the status is requested .
+ * message for which the status is requested.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -96,7 +96,7 @@ import javax.xml.bind.annotation.XmlType;
  * "AccountManagementMessageReference2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Information about the message reference of the account management instruction message for which the status is requested ."
+ * "Information about the message reference of the account management instruction message for which the status is requested."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -360,7 +360,7 @@ public class AccountManagementMessageReference2 {
 						com.tools20022.repository.constraints.ConstraintLinkedReferenceOrAccountApplicationIdentificationRule.forAccountManagementMessageReference2);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "AccountManagementMessageReference2";
-				definition = "Information about the message reference of the account management instruction message for which the status is requested .";
+				definition = "Information about the message reference of the account management instruction message for which the status is requested.";
 				nextVersions_lazy = () -> Arrays.asList(AccountManagementMessageReference3.mmObject());
 				previousVersion_lazy = () -> AccountManagementMessageReference1.mmObject();
 			}

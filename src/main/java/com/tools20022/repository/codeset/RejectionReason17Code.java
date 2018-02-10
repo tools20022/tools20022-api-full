@@ -121,7 +121,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "RejectionReason17Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Standard code to specify  the reason why the instruction/cancellation request has a rejected status."
+ * "Standard code to specify the reason why the instruction/cancellation request has a rejected status."
  * </li>
  * </ul>
  */
@@ -621,7 +621,7 @@ public class RejectionReason17Code extends MMCode {
 				example = Arrays.asList("ADEA");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionReason17Code";
-				definition = "Standard code to specify  the reason why the instruction/cancellation request has a rejected status.";
+				definition = "Standard code to specify the reason why the instruction/cancellation request has a rejected status.";
 				trace_lazy = () -> RejectionReasonCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.RejectionReason17Code.AccountServicerDeadlineMissed, com.tools20022.repository.codeset.RejectionReason17Code.OptionCancelled,
 						com.tools20022.repository.codeset.RejectionReason17Code.RejectedSinceAlreadyCancelled, com.tools20022.repository.codeset.RejectionReason17Code.RejectedSinceInProgress,

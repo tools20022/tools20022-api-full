@@ -67,6 +67,12 @@ import javax.xml.bind.annotation.XmlType;
  * "CardEntry2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Card transaction entry."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.CardEntry3 CardEntry3}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.CardEntry1
  * CardEntry1}</li>
@@ -109,6 +115,13 @@ public class CardEntry2 {
 	 * definition} =
 	 * "Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardEntry3#mmCard
+	 * CardEntry3.mmCard}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +138,7 @@ public class CardEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Card";
 			definition = "Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.";
+			nextVersions_lazy = () -> Arrays.asList(CardEntry3.mmCard);
 			previousVersion_lazy = () -> CardEntry1.mmCard;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -164,6 +178,13 @@ public class CardEntry2 {
 	 * definition} =
 	 * "Physical or logical card payment terminal containing software and hardware components."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.CardEntry3#mmPOI
+	 * CardEntry3.mmPOI}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -180,6 +201,7 @@ public class CardEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "POI";
 			definition = "Physical or logical card payment terminal containing software and hardware components.";
+			nextVersions_lazy = () -> Arrays.asList(CardEntry3.mmPOI);
 			previousVersion_lazy = () -> CardEntry1.mmPOI;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -218,6 +240,14 @@ public class CardEntry2 {
 	 * definition} =
 	 * "Card entry details, based on card transaction aggregated data performed by the account servicer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardEntry3#mmAggregatedEntry
+	 * CardEntry3.mmAggregatedEntry}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -234,6 +264,7 @@ public class CardEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AggregatedEntry";
 			definition = "Card entry details, based on card transaction aggregated data performed by the account servicer.";
+			nextVersions_lazy = () -> Arrays.asList(CardEntry3.mmAggregatedEntry);
 			previousVersion_lazy = () -> CardEntry1.mmAggregatedEntry;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -272,6 +303,14 @@ public class CardEntry2 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Prepaid account for the transfer or loading of an amount of money."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardEntry3#mmPrePaidAccount
+	 * CardEntry3.mmPrePaidAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPrePaidAccount = new MMMessageAssociationEnd() {
@@ -283,6 +322,7 @@ public class CardEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PrePaidAccount";
 			definition = "Prepaid account for the transfer or loading of an amount of money.";
+			nextVersions_lazy = () -> Arrays.asList(CardEntry3.mmPrePaidAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -300,6 +340,7 @@ public class CardEntry2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CardEntry2";
 				definition = "Card transaction entry.";
+				nextVersions_lazy = () -> Arrays.asList(CardEntry3.mmObject());
 				previousVersion_lazy = () -> CardEntry1.mmObject();
 			}
 		});

@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Information related to the currency conversion advice
+ * Information related to the currency conversion advice.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -77,7 +77,15 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "AcceptorCurrencyConversionAdvice1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Information related to the currency conversion advice"</li>
+ * definition} = "Information related to the currency conversion advice."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice2
+ * AcceptorCurrencyConversionAdvice2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -116,6 +124,14 @@ public class AcceptorCurrencyConversionAdvice1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Environment of the transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice2#mmEnvironment
+	 * AcceptorCurrencyConversionAdvice2.mmEnvironment}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmEnvironment = new MMMessageAssociationEnd() {
@@ -127,6 +143,7 @@ public class AcceptorCurrencyConversionAdvice1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Environment";
 			definition = "Environment of the transaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionAdvice2.mmEnvironment);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -166,6 +183,14 @@ public class AcceptorCurrencyConversionAdvice1 {
 	 * definition} =
 	 * "Currency conversion of a card payment transaction between an acceptor and a currency conversion provider."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice2#mmTransaction
+	 * AcceptorCurrencyConversionAdvice2.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransaction = new MMMessageAssociationEnd() {
@@ -177,6 +202,7 @@ public class AcceptorCurrencyConversionAdvice1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Currency conversion of a card payment transaction between an acceptor and a currency conversion provider.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionAdvice2.mmTransaction);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -216,6 +242,14 @@ public class AcceptorCurrencyConversionAdvice1 {
 	 * definition} =
 	 * "Result of the currency conversion proposed to the cardholder and its result."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorCurrencyConversionAdvice2#mmCurrencyConversionResult
+	 * AcceptorCurrencyConversionAdvice2.mmCurrencyConversionResult}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCurrencyConversionResult = new MMMessageAssociationEnd() {
@@ -227,6 +261,7 @@ public class AcceptorCurrencyConversionAdvice1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CurrencyConversionResult";
 			definition = "Result of the currency conversion proposed to the cardholder and its result.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionAdvice2.mmCurrencyConversionResult);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -244,7 +279,8 @@ public class AcceptorCurrencyConversionAdvice1 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorCurrencyConversionAdvice1";
-				definition = "Information related to the currency conversion advice";
+				definition = "Information related to the currency conversion advice.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorCurrencyConversionAdvice2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

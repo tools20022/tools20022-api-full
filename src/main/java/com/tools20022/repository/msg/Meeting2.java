@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the physical parameters of a shareholders meeting. Several dates
- * and places can be defined for a meeting
+ * and places can be defined for a meeting.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -102,7 +102,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Meeting2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting"
+ * "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting."
  * </li>
  * </ul>
  */
@@ -463,7 +463,7 @@ public class Meeting2 {
 					}
 				})).get();
 				name = "Meeting2";
-				definition = "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting";
+				definition = "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting.";
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Meeting2.QuorumQuantityOrPercentageRule);
 			}
 		});

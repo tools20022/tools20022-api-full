@@ -68,7 +68,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "RejectionStatus7Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of  rejection status."</li>
+ * definition} = "Choice of rejection status."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
  * <ul>
@@ -217,7 +217,7 @@ public class RejectionStatus7Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RejectionStatus7Choice";
-				definition = "Choice of  rejection status.";
+				definition = "Choice of rejection status.";
 				nextVersions_lazy = () -> Arrays.asList(RejectionStatus9Choice.mmObject(), RejectionStatus20Choice.mmObject());
 			}
 		});

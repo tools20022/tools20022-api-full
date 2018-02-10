@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07;
+import com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV08;
 import com.tools20022.repository.codeset.DeliveryReceiptType2Code;
 import com.tools20022.repository.codeset.SecuritiesFinancingTransactionType2Code;
 import com.tools20022.repository.datatype.Max35Text;
@@ -75,6 +76,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV07#mmTransactionTypeAndAdditionalParameters
  * SecuritiesFinancingInstructionV07.mmTransactionTypeAndAdditionalParameters}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesFinancingInstructionV08#mmTransactionTypeAndAdditionalParameters
+ * SecuritiesFinancingInstructionV08.mmTransactionTypeAndAdditionalParameters}</li>
  * </ul>
  * </li>
  * <li>
@@ -349,7 +353,7 @@ public class TransactionTypeAndAdditionalParameters15 {
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters15.mmSecuritiesFinancingTransactionType,
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters15.mmPayment, com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters15.mmCommonIdentification,
 						com.tools20022.repository.msg.TransactionTypeAndAdditionalParameters15.mmReconciliationIndicator);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingInstructionV07.mmTransactionTypeAndAdditionalParameters);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesFinancingInstructionV07.mmTransactionTypeAndAdditionalParameters, SecuritiesFinancingInstructionV08.mmTransactionTypeAndAdditionalParameters);
 				trace_lazy = () -> SecuritiesSettlement.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

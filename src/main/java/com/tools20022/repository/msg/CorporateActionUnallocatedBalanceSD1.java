@@ -83,6 +83,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionUnallocatedBalanceSD1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Balance types related to an unallocated redemption payment."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3
+ * CorporateActionUnallocatedBalanceSD3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -123,6 +131,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total quantity of financial instruments of the balance."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmTotalEligibleBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmTotalEligibleBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmTotalEligibleBalance = new MMMessageAttribute() {
@@ -134,6 +150,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
 			definition = "Total quantity of financial instruments of the balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmTotalEligibleBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat4.mmObject();
@@ -167,6 +184,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * definition} =
 	 * "The quantity that has been determined to be redeemed if the participant had\r\nposition in a redemption security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmAffectedBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmAffectedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAffectedBalance = new MMMessageAssociationEnd() {
@@ -177,6 +202,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AffectedBalance";
 			definition = "The quantity that has been determined to be redeemed if the participant had\r\nposition in a redemption security.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmAffectedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -209,6 +235,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Positions balance remaining after lottery is run."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmUnaffectedBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmUnaffectedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUnaffectedBalance = new MMMessageAssociationEnd() {
@@ -219,6 +253,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnaffectedBalance";
 			definition = "Positions balance remaining after lottery is run.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmUnaffectedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -253,6 +288,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * definition} =
 	 * "Position that account holders should return to the account servicer to participate in the event or to fulfill their obligation for the event to be complete, for example, return of securities for late announced drawing."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmObligatedBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmObligatedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmObligatedBalance = new MMMessageAssociationEnd() {
@@ -263,6 +306,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ObligatedBalance";
 			definition = "Position that account holders should return to the account servicer to participate in the event or to fulfill their obligation for the event to be complete, for example, return of securities for late announced drawing.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmObligatedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -297,6 +341,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * definition} =
 	 * "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.\r\n"
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmOriginalBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmOriginalBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginalBalance = new MMMessageAssociationEnd() {
@@ -307,6 +359,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalBalance";
 			definition = "Position held in a security as of the day prior to publication date. This position is subject to a redemption lottery call when this is the first lottery. This balance will not be adjusted for the supplemental or concurrent lotteries and will remain constant to report the original position.\r\n";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmOriginalBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -341,6 +394,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmPledgedBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmPledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPledgedBalance = new MMMessageAssociationEnd() {
@@ -351,6 +412,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmPledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -385,6 +447,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmUnpledgedBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmUnpledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmUnpledgedBalance = new MMMessageAssociationEnd() {
@@ -395,6 +465,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC General Free account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -429,6 +500,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmInvestmentPledgedBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmInvestmentPledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentPledgedBalance = new MMMessageAssociationEnd() {
@@ -439,6 +518,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Investment account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmInvestmentPledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -473,6 +553,14 @@ public class CorporateActionUnallocatedBalanceSD1 {
 	 * definition} =
 	 * "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.\r\n"
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD3#mmInvestmentUnpledgedBalance
+	 * CorporateActionUnallocatedBalanceSD3.mmInvestmentUnpledgedBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmInvestmentUnpledgedBalance = new MMMessageAssociationEnd() {
@@ -483,6 +571,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
 			definition = "Portion of the Original Balance position held in DTC Segregated account as of day prior to Publication Date. Position held in this account is subject to redemption lottery call and must be released to allow allocation.\r\n";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmInvestmentUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -502,6 +591,7 @@ public class CorporateActionUnallocatedBalanceSD1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD1";
 				definition = "Balance types related to an unallocated redemption payment.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

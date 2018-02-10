@@ -329,6 +329,15 @@ public class ElectronicAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PersonIdentification11#mmEmailAddress
 	 * PersonIdentification11.mmEmailAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress8#mmEmailAddress
+	 * CommunicationAddress8.mmEmailAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmEmail
+	 * CommunicationAddress9.mmEmail}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PersonIdentification15#mmEmailAddress
+	 * PersonIdentification15.mmEmailAddress}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -352,7 +361,7 @@ public class ElectronicAddress extends ContactPoint {
 			derivation_lazy = () -> Arrays.asList(ContactDetails1.mmEmailAddress, OrderDeskContactDetails.mmEmailAddress, ContactAttributes1.mmEmailAddress, CommunicationAddress3.mmEmail, ContactDetails2.mmEmailAddress,
 					ContactIdentification2.mmEmailAddress, ContactIdentification1.mmEmailAddress, Contacts3.mmEmailAddress, ContactInformation1.mmEmailAddress, CommunicationAddress4.mmEmailAddress, ContactIdentification4.mmEmailAddress,
 					ContactIdentification3.mmEmailAddress, CommunicationAddressDetails.mmEmailAddress, ContactDetails3.mmEmailAddress, PersonIdentification7.mmEmailAddress, CommunicationAddress5.mmEmail, CommunicationAddress6.mmEmail,
-					PersonIdentification11.mmEmailAddress);
+					PersonIdentification11.mmEmailAddress, CommunicationAddress8.mmEmailAddress, CommunicationAddress9.mmEmail, PersonIdentification15.mmEmailAddress);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -450,6 +459,9 @@ public class ElectronicAddress extends ContactPoint {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress6#mmURLAddress
 	 * CommunicationAddress6.mmURLAddress}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CommunicationAddress9#mmURLAddress
+	 * CommunicationAddress9.mmURLAddress}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -476,7 +488,7 @@ public class ElectronicAddress extends ContactPoint {
 					MeetingNotice1.mmAdditionalDocumentationURLAddress, CommunicationAddress4.mmURLAddress, MeetingNotice2.mmAdditionalDocumentationURLAddress, AdditionalRights1.mmAdditionalRightInformationURLAddress,
 					MeetingNotice3.mmAdditionalDocumentationURLAddress, IssuerInformation1.mmURLAddress, CorporateActionNarrative1.mmURLAddress, AgreementClauses1.mmDocumentURL, DocumentGeneralInformation1.mmURL,
 					DocumentGeneralInformation2.mmURL, IssuerInformation2.mmURLAddress, MeetingNotice4.mmAdditionalDocumentationURLAddress, AdditionalRights2.mmAdditionalRightInformationURLAddress, QualifiedDocumentInformation1.mmURL,
-					CommunicationAddress5.mmURLAddress, DocumentGeneralInformation3.mmURL, CommunicationAddress6.mmURLAddress);
+					CommunicationAddress5.mmURLAddress, DocumentGeneralInformation3.mmURL, CommunicationAddress6.mmURLAddress, CommunicationAddress9.mmURLAddress);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.ElectronicAddress.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

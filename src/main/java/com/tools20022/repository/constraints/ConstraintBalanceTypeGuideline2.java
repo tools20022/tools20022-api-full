@@ -45,7 +45,7 @@ public class ConstraintBalanceTypeGuideline2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "FinancialAssetTypeCategory codes and  Type codes used are subject to market practice and/or bilateral service level agreements."
+	 * "FinancialAssetTypeCategory codes and Type codes used are subject to market practice and/or bilateral service level agreements."
 	 * </li>
 	 * </ul>
 	 */
@@ -54,7 +54,7 @@ public class ConstraintBalanceTypeGuideline2 {
 			validator = ConstraintBalanceTypeGuideline2::checkBalanceDetails6;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceTypeGuideline2";
-			definition = "FinancialAssetTypeCategory codes and  Type codes used are subject to market practice and/or bilateral service level agreements.";
+			definition = "FinancialAssetTypeCategory codes and Type codes used are subject to market practice and/or bilateral service level agreements.";
 			owner_lazy = () -> BalanceDetails6.mmObject();
 		}
 	};

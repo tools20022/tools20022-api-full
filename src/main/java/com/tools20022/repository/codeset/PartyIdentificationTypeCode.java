@@ -933,7 +933,7 @@ public class PartyIdentificationTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Member identification of the FX trading system
+	 * Member identification of the FX trading system.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -950,14 +950,14 @@ public class PartyIdentificationTypeCode extends MMCode {
 	 * name} = "FXMemberID"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Member identification of the FX trading system"</li>
+	 * definition} = "Member identification of the FX trading system."</li>
 	 * </ul>
 	 */
 	public static final PartyIdentificationTypeCode FXMemberID = new PartyIdentificationTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FXMemberID";
-			definition = "Member identification of the FX trading system";
+			definition = "Member identification of the FX trading system.";
 			owner_lazy = () -> com.tools20022.repository.codeset.PartyIdentificationTypeCode.mmObject();
 			codeName = "FXID";
 		}

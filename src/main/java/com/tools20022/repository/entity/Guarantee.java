@@ -145,6 +145,8 @@ public class Guarantee extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OtherCollateral5#mmGuaranteeAmount
 	 * OtherCollateral5.mmGuaranteeAmount}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Guarantee1#mmAmount
+	 * Guarantee1.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -165,7 +167,7 @@ public class Guarantee extends Asset {
 	public static final MMBusinessAttribute mmCoveredAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(OtherCollateral1.mmGuaranteeAmount, OtherCollateral2.mmGuaranteeAmount, OtherCollateral3.mmGuaranteeAmount, OtherCollateral4.mmGuaranteeAmount, GuaranteeDetails1.mmGuaranteedAmount,
-					OtherCollateral7.mmGuaranteeAmount, OtherCollateral6.mmGuaranteeAmount, OtherCollateral5.mmGuaranteeAmount);
+					OtherCollateral7.mmGuaranteeAmount, OtherCollateral6.mmGuaranteeAmount, OtherCollateral5.mmGuaranteeAmount, Guarantee1.mmAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Guarantee.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

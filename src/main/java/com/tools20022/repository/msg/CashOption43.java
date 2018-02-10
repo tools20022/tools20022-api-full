@@ -742,8 +742,8 @@ public class CashOption43 {
 	 * name} = "ForeignExchangeDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Exchange rate between the amount and the resulting amount"
-	 * </li>
+	 * definition} =
+	 * "Exchange rate between the amount and the resulting amount."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -768,7 +768,7 @@ public class CashOption43 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":92A::EXCH"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
-			definition = "Exchange rate between the amount and the resulting amount";
+			definition = "Exchange rate between the amount and the resulting amount.";
 			nextVersions_lazy = () -> Arrays.asList(CashOption50.mmForeignExchangeDetails);
 			previousVersion_lazy = () -> CashOption32.mmForeignExchangeDetails;
 			maxOccurs = 1;

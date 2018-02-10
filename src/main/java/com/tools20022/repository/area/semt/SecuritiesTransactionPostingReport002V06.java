@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.SecuritiesManagementPreviousversionsubsetvariant;
+import com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07;
 import com.tools20022.repository.msg.*;
 import com.tools20022.repository.msgset.SettlementAndReconciliationISO15022VariantsISOPreviousversion;
 import java.lang.reflect.Method;
@@ -133,7 +134,7 @@ import javax.xml.bind.annotation.*;
  * nextVersions} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.SecuritiesTransactionPostingReport002V07
+ * {@linkplain com.tools20022.repository.area.seev.SecuritiesTransactionPostingReport002V07
  * SecuritiesTransactionPostingReport002V07}</li>
  * </ul>
  * </li>

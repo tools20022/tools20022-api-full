@@ -79,6 +79,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Information about discounts or waivers to charges and commissions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount2
+ * ChargeOrCommissionDiscount2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -121,6 +128,14 @@ public class ChargeOrCommissionDiscount1 {
 	 * definition} =
 	 * "Difference between the standard fee (charge/commission) amount and the applied fee (charge/commission) amount.\r\nEXAMPLE:\r\nStandard charge is EUR 100\r\nDiscount is EUR 30\r\nApplied charge is EUR 70."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount2#mmAmount
+	 * ChargeOrCommissionDiscount2.mmAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAmount = new MMMessageAttribute() {
@@ -132,6 +147,7 @@ public class ChargeOrCommissionDiscount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Amount";
 			definition = "Difference between the standard fee (charge/commission) amount and the applied fee (charge/commission) amount.\r\nEXAMPLE:\r\nStandard charge is EUR 100\r\nDiscount is EUR 30\r\nApplied charge is EUR 70.";
+			nextVersions_lazy = () -> Arrays.asList(ChargeOrCommissionDiscount2.mmAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -170,7 +186,15 @@ public class ChargeOrCommissionDiscount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Difference between the standard fee (charge/commission) rate and the applied rate of the fee (charge/commission).\r\nEXAMPLE:\r\nStandard rate is 5%\r\nDiscount rate is 3%\r\nApplied rate is 2%"
+	 * "Difference between the standard fee (charge/commission) rate and the applied rate of the fee (charge/commission).\r\nEXAMPLE:\r\nStandard rate is 5%\r\nDiscount rate is 3%\r\nApplied rate is 2%."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount2#mmRate
+	 * ChargeOrCommissionDiscount2.mmRate}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -182,7 +206,8 @@ public class ChargeOrCommissionDiscount1 {
 			xmlTag = "Rate";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Rate";
-			definition = "Difference between the standard fee (charge/commission) rate and the applied rate of the fee (charge/commission).\r\nEXAMPLE:\r\nStandard rate is 5%\r\nDiscount rate is 3%\r\nApplied rate is 2%";
+			definition = "Difference between the standard fee (charge/commission) rate and the applied rate of the fee (charge/commission).\r\nEXAMPLE:\r\nStandard rate is 5%\r\nDiscount rate is 3%\r\nApplied rate is 2%.";
+			nextVersions_lazy = () -> Arrays.asList(ChargeOrCommissionDiscount2.mmRate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();
@@ -220,6 +245,14 @@ public class ChargeOrCommissionDiscount1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Form of the discount or rebate, for example, cash."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount2#mmBasis
+	 * ChargeOrCommissionDiscount2.mmBasis}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBasis = new MMMessageAssociationEnd() {
@@ -231,6 +264,7 @@ public class ChargeOrCommissionDiscount1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Basis";
 			definition = "Form of the discount or rebate, for example, cash.";
+			nextVersions_lazy = () -> Arrays.asList(ChargeOrCommissionDiscount2.mmBasis);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -249,6 +283,7 @@ public class ChargeOrCommissionDiscount1 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ChargeOrCommissionDiscount1";
 				definition = "Information about discounts or waivers to charges and commissions.";
+				nextVersions_lazy = () -> Arrays.asList(ChargeOrCommissionDiscount2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

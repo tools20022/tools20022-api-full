@@ -108,7 +108,7 @@ public class BillingTaxIdentification1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Value added tax (VAT) registration number as provided by the  region’s local taxing authority."
+	 * "Value added tax (VAT) registration number as provided by the region’s local taxing authority."
 	 * </li>
 	 * </ul>
 	 */
@@ -120,7 +120,7 @@ public class BillingTaxIdentification1 {
 			xmlTag = "VATRegnNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "VATRegistrationNumber";
-			definition = "Value added tax (VAT) registration number as provided by the  region’s local taxing authority.";
+			definition = "Value added tax (VAT) registration number as provided by the region’s local taxing authority.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

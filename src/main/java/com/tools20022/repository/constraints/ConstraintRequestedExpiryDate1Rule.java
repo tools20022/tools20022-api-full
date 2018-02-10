@@ -47,7 +47,7 @@ public class ConstraintRequestedExpiryDate1Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Requested expiry date must be present when demand type is Pay or Extend. "
+	 * "Requested expiry date must be present when demand type is Pay or Extend."
 	 * </li>
 	 * </ul>
 	 */
@@ -56,7 +56,7 @@ public class ConstraintRequestedExpiryDate1Rule {
 			validator = ConstraintRequestedExpiryDate1Rule::checkDemand1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExpiryDate1Rule";
-			definition = "Requested expiry date must be present when demand type is Pay or Extend. ";
+			definition = "Requested expiry date must be present when demand type is Pay or Extend.";
 			owner_lazy = () -> Demand1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/RequestedExpiryDate</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Type</leftOperand><rightOperand>PayOrExtend</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}

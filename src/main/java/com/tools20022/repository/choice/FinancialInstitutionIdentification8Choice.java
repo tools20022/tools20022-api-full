@@ -84,6 +84,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.msg.FinancialInstitutionIdentification10
  * FinancialInstitutionIdentification10}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification9Choice
+ * FinancialInstitutionIdentification9Choice}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -131,6 +134,14 @@ public class FinancialInstitutionIdentification8Choice {
 	 * definition} =
 	 * "Identifies the name and (long) postal address of a financial institution."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification9Choice#mmNameAndAddress
+	 * FinancialInstitutionIdentification9Choice.mmNameAndAddress}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -147,6 +158,7 @@ public class FinancialInstitutionIdentification8Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NameAndAddress";
 			definition = "Identifies the name and (long) postal address of a financial institution.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification9Choice.mmNameAndAddress);
 			previousVersion_lazy = () -> FinancialInstitutionIdentification7Choice.mmNameAndAddress;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -187,6 +199,14 @@ public class FinancialInstitutionIdentification8Choice {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Identification of the financial institution expressed as a BIC."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification9Choice#mmBICFI
+	 * FinancialInstitutionIdentification9Choice.mmBICFI}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -203,6 +223,7 @@ public class FinancialInstitutionIdentification8Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BICFI";
 			definition = "Identification of the financial institution expressed as a BIC.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification9Choice.mmBICFI);
 			previousVersion_lazy = () -> FinancialInstitutionIdentification7Choice.mmBICFI;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -244,6 +265,15 @@ public class FinancialInstitutionIdentification8Choice {
 	 * definition} =
 	 * "Choice of identifier for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification9Choice#mmClearingSystemMemberIdentification
+	 * FinancialInstitutionIdentification9Choice.
+	 * mmClearingSystemMemberIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -261,6 +291,7 @@ public class FinancialInstitutionIdentification8Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClearingSystemMemberIdentification";
 			definition = "Choice of identifier for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification9Choice.mmClearingSystemMemberIdentification);
 			previousVersion_lazy = () -> FinancialInstitutionIdentification7Choice.mmClearingSystemMemberIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -301,6 +332,14 @@ public class FinancialInstitutionIdentification8Choice {
 	 * definition} =
 	 * "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.FinancialInstitutionIdentification9Choice#mmProprietaryIdentification
+	 * FinancialInstitutionIdentification9Choice.mmProprietaryIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -317,6 +356,7 @@ public class FinancialInstitutionIdentification8Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProprietaryIdentification";
 			definition = "Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification9Choice.mmProprietaryIdentification);
 			previousVersion_lazy = () -> FinancialInstitutionIdentification7Choice.mmProprietaryIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -336,7 +376,7 @@ public class FinancialInstitutionIdentification8Choice {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstitutionIdentification8Choice";
 				definition = "Choice between formats for the identification of the financial institution.";
-				nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification10.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstitutionIdentification10.mmObject(), FinancialInstitutionIdentification9Choice.mmObject());
 				previousVersion_lazy = () -> FinancialInstitutionIdentification7Choice.mmObject();
 			}
 		});

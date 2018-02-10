@@ -105,7 +105,7 @@ public class RegistrationReason6 {
 	 * name} = "Code"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the reaoson of the holding status."</li>
+	 * definition} = "Specifies the reason of the holding status."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCode = new MMMessageAssociationEnd() {
@@ -116,7 +116,7 @@ public class RegistrationReason6 {
 			xmlTag = "Cd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
-			definition = "Specifies the reaoson of the holding status.";
+			definition = "Specifies the reason of the holding status.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

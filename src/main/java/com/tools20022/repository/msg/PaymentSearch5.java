@@ -135,6 +135,12 @@ import javax.xml.bind.annotation.XmlType;
  * "PaymentSearch5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Defines the criteria used to search for a payment."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch6 PaymentSearch6}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.PaymentSearch4
  * PaymentSearch4}</li>
@@ -179,6 +185,14 @@ public class PaymentSearch5 {
 	 * definition} =
 	 * "Point to point reference, as assigned by the original initiating party, to unambiguously identify the original payment transaction message. \nUsage: this is the former transaction reference."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmMessageIdentification
+	 * PaymentSearch6.mmMessageIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -195,6 +209,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MessageIdentification";
 			definition = "Point to point reference, as assigned by the original initiating party, to unambiguously identify the original payment transaction message. \nUsage: this is the former transaction reference.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmMessageIdentification);
 			previousVersion_lazy = () -> PaymentSearch4.mmMessageIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -234,6 +249,14 @@ public class PaymentSearch5 {
 	 * definition} =
 	 * "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmRequestedExecutionDate
+	 * PaymentSearch6.mmRequestedExecutionDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -250,6 +273,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedExecutionDate";
 			definition = "Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmRequestedExecutionDate);
 			previousVersion_lazy = () -> PaymentSearch4.mmRequestedExecutionDate;
 			minOccurs = 0;
 			complexType_lazy = () -> DateAndDateTimeSearchChoice.mmObject();
@@ -286,7 +310,15 @@ public class PaymentSearch5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n"
+	 * "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmPaymentIdentification
+	 * PaymentSearch6.mmPaymentIdentification}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -303,7 +335,8 @@ public class PaymentSearch5 {
 			xmlTag = "PmtId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentIdentification";
-			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n";
+			definition = "Unique and unambiguous identifier for a payment instruction, as assigned by the clearing agent or the initiating party.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmPaymentIdentification);
 			previousVersion_lazy = () -> PaymentSearch4.mmPaymentIdentification;
 			minOccurs = 0;
 			isComposite = true;
@@ -340,7 +373,15 @@ public class PaymentSearch5 {
 	 * name} = "Status"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Detailed information about the status of a transfer.\n\n"</li>
+	 * definition} = "Detailed information about the status of a transfer.\n\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch6#mmStatus
+	 * PaymentSearch6.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -356,7 +397,8 @@ public class PaymentSearch5 {
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			definition = "Detailed information about the status of a transfer.\n\n";
+			definition = "Detailed information about the status of a transfer.\n\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmStatus);
 			previousVersion_lazy = () -> PaymentSearch4.mmStatus;
 			minOccurs = 0;
 			isComposite = true;
@@ -396,6 +438,14 @@ public class PaymentSearch5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Specifies the instructed amount(s) on which the query is performed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInstructedAmount
+	 * PaymentSearch6.mmInstructedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -412,6 +462,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmount";
 			definition = "Specifies the instructed amount(s) on which the query is performed.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmInstructedAmount);
 			previousVersion_lazy = () -> PaymentSearch4.mmInstructedAmount;
 			minOccurs = 0;
 			complexType_lazy = () -> AmountRange2Choice.mmObject();
@@ -444,6 +495,14 @@ public class PaymentSearch5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Currency in which the instructed amount is expressed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInstructedAmountCurrency
+	 * PaymentSearch6.mmInstructedAmountCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -459,6 +518,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructedAmountCurrency";
 			definition = "Currency in which the instructed amount is expressed.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmInstructedAmountCurrency);
 			previousVersion_lazy = () -> PaymentSearch4.mmInstructedAmountCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyCode.mmObject();
@@ -496,7 +556,15 @@ public class PaymentSearch5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the payment instruction is a debit or a credit.\n"</li>
+	 * "Indicates whether the payment instruction is a debit or a credit.\n."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmCreditDebitIndicator
+	 * PaymentSearch6.mmCreditDebitIndicator}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -512,7 +580,8 @@ public class PaymentSearch5 {
 			xmlTag = "CdtDbtInd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the payment instruction is a debit or a credit.\n";
+			definition = "Indicates whether the payment instruction is a debit or a credit.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmCreditDebitIndicator);
 			previousVersion_lazy = () -> PaymentSearch4.mmCreditDebitIndicator;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -553,6 +622,14 @@ public class PaymentSearch5 {
 	 * definition} =
 	 * "Specifies the interbank settlement amount(s) on which the query is performed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInterbankSettlementAmount
+	 * PaymentSearch6.mmInterbankSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -569,6 +646,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmount";
 			definition = "Specifies the interbank settlement amount(s) on which the query is performed.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmInterbankSettlementAmount);
 			previousVersion_lazy = () -> PaymentSearch4.mmInterbankSettlementAmount;
 			minOccurs = 0;
 			complexType_lazy = () -> ActiveAmountRange1Choice.mmObject();
@@ -602,6 +680,14 @@ public class PaymentSearch5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Currency in which the interbank settlement amount is expressed."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInterbankSettlementAmountCurrency
+	 * PaymentSearch6.mmInterbankSettlementAmountCurrency}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -617,6 +703,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementAmountCurrency";
 			definition = "Currency in which the interbank settlement amount is expressed.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmInterbankSettlementAmountCurrency);
 			previousVersion_lazy = () -> PaymentSearch4.mmInterbankSettlementAmountCurrency;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyCode.mmObject();
@@ -650,6 +737,14 @@ public class PaymentSearch5 {
 	 * definition} =
 	 * "Indicates the message or event from which an instruction has been initiated."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmPaymentMethod
+	 * PaymentSearch6.mmPaymentMethod}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -665,6 +760,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentMethod";
 			definition = "Indicates the message or event from which an instruction has been initiated.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmPaymentMethod);
 			previousVersion_lazy = () -> PaymentSearch4.mmPaymentMethod;
 			minOccurs = 0;
 			isComposite = true;
@@ -703,7 +799,15 @@ public class PaymentSearch5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n"
+	 * "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmPaymentType
+	 * PaymentSearch6.mmPaymentType}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -720,7 +824,8 @@ public class PaymentSearch5 {
 			xmlTag = "PmtTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentType";
-			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n";
+			definition = "Instruction to pay an amount of money to an ultimate beneficiary, on behalf of an originator. This instruction may have to be forwarded several times to complete the settlement chain.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmPaymentType);
 			previousVersion_lazy = () -> PaymentSearch4.mmPaymentType;
 			minOccurs = 0;
 			complexType_lazy = () -> PaymentType4Choice.mmObject();
@@ -758,7 +863,14 @@ public class PaymentSearch5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n"
+	 * "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch6#mmPriority
+	 * PaymentSearch6.mmPriority}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -775,7 +887,8 @@ public class PaymentSearch5 {
 			xmlTag = "Prty";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Priority";
-			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n";
+			definition = "Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmPriority);
 			previousVersion_lazy = () -> PaymentSearch4.mmPriority;
 			minOccurs = 0;
 			complexType_lazy = () -> PriorityCode3Choice.mmObject();
@@ -813,7 +926,15 @@ public class PaymentSearch5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date and time range within which the payment instruction must be processed.\n"
+	 * "Date and time range within which the payment instruction must be processed.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmProcessingValidityTime
+	 * PaymentSearch6.mmProcessingValidityTime}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -830,7 +951,8 @@ public class PaymentSearch5 {
 			xmlTag = "PrcgVldtyTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ProcessingValidityTime";
-			definition = "Date and time range within which the payment instruction must be processed.\n";
+			definition = "Date and time range within which the payment instruction must be processed.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmProcessingValidityTime);
 			previousVersion_lazy = () -> PaymentSearch4.mmProcessingValidityTime;
 			minOccurs = 0;
 			complexType_lazy = () -> DateTimePeriodChoice.mmObject();
@@ -868,7 +990,15 @@ public class PaymentSearch5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n"
+	 * "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInstruction
+	 * PaymentSearch6.mmInstruction}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -885,7 +1015,8 @@ public class PaymentSearch5 {
 			xmlTag = "Instr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Instruction";
-			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n";
+			definition = "Further information related to the processing of the payment instruction. The instruction can relate to a level of service between the bank and the customer, or give instructions to and for specific parties in the payment chain.\n.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmInstruction);
 			previousVersion_lazy = () -> PaymentSearch4.mmInstruction;
 			minOccurs = 0;
 			simpleType_lazy = () -> Instruction1Code.mmObject();
@@ -924,6 +1055,14 @@ public class PaymentSearch5 {
 	 * definition} =
 	 * "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.\nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.\nUsage: this is the former PaymentInstructionReference."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmTransactionIdentification
+	 * PaymentSearch6.mmTransactionIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -940,6 +1079,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionIdentification";
 			definition = "Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.\nUsage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.\nUsage: this is the former PaymentInstructionReference.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmTransactionIdentification);
 			previousVersion_lazy = () -> PaymentSearch4.mmTransactionIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -978,6 +1118,14 @@ public class PaymentSearch5 {
 	 * definition} =
 	 * "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.\nUsage: this is the former InterbankValueDate."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmInterbankSettlementDate
+	 * PaymentSearch6.mmInterbankSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -994,6 +1142,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InterbankSettlementDate";
 			definition = "Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.\nUsage: this is the former InterbankValueDate.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmInterbankSettlementDate);
 			previousVersion_lazy = () -> PaymentSearch4.mmInterbankSettlementDate;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -1032,6 +1181,14 @@ public class PaymentSearch5 {
 	 * definition} =
 	 * "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction.\nIt can be included in several messages related to the transaction.\nUsage: this is the former RelatedReference."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.PaymentSearch6#mmEndToEndIdentification
+	 * PaymentSearch6.mmEndToEndIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1048,6 +1205,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EndToEndIdentification";
 			definition = "Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction.\nIt can be included in several messages related to the transaction.\nUsage: this is the former RelatedReference.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmEndToEndIdentification);
 			previousVersion_lazy = () -> PaymentSearch4.mmEndToEndIdentification;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -1084,6 +1242,13 @@ public class PaymentSearch5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Defines the party fields used to search for a payment."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.PaymentSearch6#mmParties
+	 * PaymentSearch6.mmParties}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -1100,6 +1265,7 @@ public class PaymentSearch5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parties";
 			definition = "Defines the party fields used to search for a payment.";
+			nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmParties);
 			previousVersion_lazy = () -> PaymentSearch4.mmParties;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -1128,6 +1294,7 @@ public class PaymentSearch5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "PaymentSearch5";
 				definition = "Defines the criteria used to search for a payment.";
+				nextVersions_lazy = () -> Arrays.asList(PaymentSearch6.mmObject());
 				previousVersion_lazy = () -> PaymentSearch4.mmObject();
 			}
 		});

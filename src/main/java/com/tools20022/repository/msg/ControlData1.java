@@ -90,6 +90,12 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV06#mmControlData
  * FIToFIPaymentCancellationRequestV06.mmControlData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.FIToFIPaymentCancellationRequestV07#mmControlData
+ * FIToFIPaymentCancellationRequestV07.mmControlData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.camt.CustomerPaymentCancellationRequestV07#mmControlData
+ * CustomerPaymentCancellationRequestV07.mmControlData}</li>
  * </ul>
  * </li>
  * <li>
@@ -209,7 +215,7 @@ public class ControlData1 {
 				messageBuildingBlock_lazy = () -> Arrays.asList(CustomerPaymentCancellationRequestV01.mmControlData, CustomerPaymentCancellationRequestV02.mmControlData, CustomerPaymentCancellationRequestV03.mmControlData,
 						FIToFIPaymentCancellationRequestV01.mmControlData, FIToFIPaymentCancellationRequestV02.mmControlData, FIToFIPaymentCancellationRequestV03.mmControlData, FIToFIPaymentCancellationRequestV04.mmControlData,
 						CustomerPaymentCancellationRequestV04.mmControlData, FIToFIPaymentCancellationRequestV05.mmControlData, CustomerPaymentCancellationRequestV05.mmControlData, CustomerPaymentCancellationRequestV06.mmControlData,
-						FIToFIPaymentCancellationRequestV06.mmControlData);
+						FIToFIPaymentCancellationRequestV06.mmControlData, FIToFIPaymentCancellationRequestV07.mmControlData, CustomerPaymentCancellationRequestV07.mmControlData);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ControlData1";

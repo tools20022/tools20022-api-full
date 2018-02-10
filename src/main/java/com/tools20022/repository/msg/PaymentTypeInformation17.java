@@ -221,7 +221,7 @@ public class PaymentTypeInformation17 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "User community specific instrument.\n\nUsage : When available, codes provided by local authorities should be used."
+	 * "User community specific instrument.\n\nUsage: When available, codes provided by local authorities should be used."
 	 * </li>
 	 * </ul>
 	 */
@@ -233,7 +233,7 @@ public class PaymentTypeInformation17 {
 			xmlTag = "LclInstrm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LocalInstrument";
-			definition = "User community specific instrument.\n\nUsage : When available, codes provided by local authorities should be used.";
+			definition = "User community specific instrument.\n\nUsage: When available, codes provided by local authorities should be used.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

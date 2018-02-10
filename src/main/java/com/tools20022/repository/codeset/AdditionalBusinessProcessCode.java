@@ -105,6 +105,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess6Code
  * AdditionalBusinessProcess6Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.AdditionalBusinessProcess8Code
+ * AdditionalBusinessProcess8Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -429,7 +432,7 @@ public class AdditionalBusinessProcessCode extends MMCode {
 	};
 	/**
 	 * Relates to a consent within a corporate action event other than a Consent
-	 * event (:22F::CAEV//CONS).
+	 * event (: 22F:: CAEV//CONS).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -447,7 +450,7 @@ public class AdditionalBusinessProcessCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Relates to a consent within a corporate action event other than a Consent event (:22F::CAEV//CONS)."
+	 * "Relates to a consent within a corporate action event other than a Consent event (: 22F:: CAEV//CONS)."
 	 * </li>
 	 * </ul>
 	 */
@@ -455,7 +458,7 @@ public class AdditionalBusinessProcessCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Consent";
-			definition = "Relates to a consent within a corporate action event other than a Consent event (:22F::CAEV//CONS).";
+			definition = "Relates to a consent within a corporate action event other than a Consent event (: 22F:: CAEV//CONS).";
 			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcessCode.mmObject();
 			codeName = "CONS";
 		}
@@ -553,7 +556,7 @@ public class AdditionalBusinessProcessCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Partial pre-funding of a debt instrument prior to maturity drawn through a lottery process. One new security is issued with an earlier maturity date for the refunded (called portion) and the other new security is issued with the original maturity date for the non refunded (remaining) portion. Applicable only in the frame of a partial defeasance corporate action event. "
+	 * "Partial pre-funding of a debt instrument prior to maturity drawn through a lottery process. One new security is issued with an earlier maturity date for the refunded (called portion) and the other new security is issued with the original maturity date for the non refunded (remaining) portion. Applicable only in the frame of a partial defeasance corporate action event."
 	 * </li>
 	 * </ul>
 	 */
@@ -561,7 +564,7 @@ public class AdditionalBusinessProcessCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialPreFunding";
-			definition = "Partial pre-funding of a debt instrument prior to maturity drawn through a lottery process. One new security is issued with an earlier maturity date for the refunded (called portion) and the other new security is issued with the original maturity date for the non refunded (remaining) portion. Applicable only in the frame of a partial defeasance corporate action event. ";
+			definition = "Partial pre-funding of a debt instrument prior to maturity drawn through a lottery process. One new security is issued with an earlier maturity date for the refunded (called portion) and the other new security is issued with the original maturity date for the non refunded (remaining) portion. Applicable only in the frame of a partial defeasance corporate action event.";
 			owner_lazy = () -> com.tools20022.repository.codeset.AdditionalBusinessProcessCode.mmObject();
 			codeName = "PPRE";
 		}
@@ -613,7 +616,7 @@ public class AdditionalBusinessProcessCode extends MMCode {
 				name = "AdditionalBusinessProcessCode";
 				definition = "Specifies the additional business process linked to a corporate action event such as an automatic market claim.";
 				derivation_lazy = () -> Arrays.asList(AdditionalBusinessProcess3Code.mmObject(), AdditionalBusinessProcess4Code.mmObject(), AdditionalBusinessProcess2Code.mmObject(), AdditionalBusinessProcess1Code.mmObject(),
-						AdditionalBusinessProcess7Code.mmObject(), AdditionalBusinessProcess5Code.mmObject(), AdditionalBusinessProcess6Code.mmObject());
+						AdditionalBusinessProcess7Code.mmObject(), AdditionalBusinessProcess5Code.mmObject(), AdditionalBusinessProcess6Code.mmObject(), AdditionalBusinessProcess8Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.AdditionalBusinessProcessCode.AutomaticMarketClaim, com.tools20022.repository.codeset.AdditionalBusinessProcessCode.SubjectToTransformation,
 						com.tools20022.repository.codeset.AdditionalBusinessProcessCode.CancelUnderlyingTrades, com.tools20022.repository.codeset.AdditionalBusinessProcessCode.NoAutomaticMarketClaimsAndTransformations,
 						com.tools20022.repository.codeset.AdditionalBusinessProcessCode.NoSplitElection, com.tools20022.repository.codeset.AdditionalBusinessProcessCode.SchemeOrPlanOfArrangement,

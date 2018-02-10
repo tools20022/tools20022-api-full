@@ -91,7 +91,7 @@ import javax.xml.bind.annotation.XmlType;
  * "ValuationDealingProcessingCharacteristics2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Valuation dealing processing characteristics linked to the instrument, ie, not to  the market."
+ * "Valuation dealing processing characteristics linked to the instrument, ie, not to the market."
  * </li>
  * </ul>
  */
@@ -453,7 +453,7 @@ public class ValuationDealingProcessingCharacteristics2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ValuationDealingProcessingCharacteristics2";
-				definition = "Valuation dealing processing characteristics linked to the instrument, ie, not to  the market.";
+				definition = "Valuation dealing processing characteristics linked to the instrument, ie, not to the market.";
 			}
 		});
 		return mmObject_lazy.get();

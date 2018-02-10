@@ -465,7 +465,7 @@ public class FinancialInstrumentAttributesSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Ticket symbol for the event security (underlying security). "</li>
+	 * "Ticket symbol for the event security (underlying security)."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -484,7 +484,7 @@ public class FinancialInstrumentAttributesSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Ticker Symbol"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TickerSymbol";
-			definition = "Ticket symbol for the event security (underlying security). ";
+			definition = "Ticket symbol for the event security (underlying security).";
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmTickerSymbol);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -523,7 +523,7 @@ public class FinancialInstrumentAttributesSD6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. "
+	 * "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -543,7 +543,7 @@ public class FinancialInstrumentAttributesSD6 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Linked Security ID"), new DTCCSynonym(this, "Linked Security ID Type"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LinkedSecurity";
-			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security. ";
+			definition = "Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security.";
 			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentAttributesSD8.mmLinkedSecurity);
 			maxOccurs = 1;
 			minOccurs = 0;

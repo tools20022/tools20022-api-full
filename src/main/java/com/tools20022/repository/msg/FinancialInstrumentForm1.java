@@ -61,6 +61,13 @@ import javax.xml.bind.annotation.XmlType;
  * "FinancialInstrumentForm1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Indicates the form of the financial Instrument."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentForm2
+ * FinancialInstrumentForm2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -96,7 +103,15 @@ public class FinancialInstrumentForm1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates the booking appareance of the financial Instrument"</li>
+	 * "Indicates the booking appareance of the financial Instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentForm2#mmBookingAppearance
+	 * FinancialInstrumentForm2.mmBookingAppearance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmBookingAppearance = new MMMessageAttribute() {
@@ -106,7 +121,8 @@ public class FinancialInstrumentForm1 {
 			xmlTag = "BookgApprnc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BookingAppearance";
-			definition = "Indicates the booking appareance of the financial Instrument";
+			definition = "Indicates the booking appareance of the financial Instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentForm2.mmBookingAppearance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Appearance2Choice.mmObject();
@@ -140,6 +156,14 @@ public class FinancialInstrumentForm1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the form, ie, ownership, of the security."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentForm2#mmLegalForm
+	 * FinancialInstrumentForm2.mmLegalForm}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmLegalForm = new MMMessageAttribute() {
@@ -150,6 +174,7 @@ public class FinancialInstrumentForm1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "LegalForm";
 			definition = "Specifies the form, ie, ownership, of the security.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentForm2.mmLegalForm);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FormOfSecurity5Choice.mmObject();
@@ -164,6 +189,7 @@ public class FinancialInstrumentForm1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "FinancialInstrumentForm1";
 				definition = "Indicates the form of the financial Instrument.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentForm2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

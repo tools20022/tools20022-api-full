@@ -85,6 +85,13 @@ import javax.xml.bind.annotation.XmlType;
  * "FinancialInstrumentDetails25"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reporting per financial instrument."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28
+ * FinancialInstrumentDetails28}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails20
@@ -130,6 +137,14 @@ public class FinancialInstrumentDetails25 {
 	 * definition} =
 	 * "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmFinancialInstrumentIdentification
+	 * FinancialInstrumentDetails28.mmFinancialInstrumentIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -146,6 +161,7 @@ public class FinancialInstrumentDetails25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FinancialInstrumentIdentification";
 			definition = "Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails28.mmFinancialInstrumentIdentification);
 			previousVersion_lazy = () -> FinancialInstrumentDetails20.mmFinancialInstrumentIdentification;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -184,6 +200,14 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Information regarding the price of the instrument."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmPriceDetails
+	 * FinancialInstrumentDetails28.mmPriceDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -200,6 +224,7 @@ public class FinancialInstrumentDetails25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PriceDetails";
 			definition = "Information regarding the price of the instrument.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails28.mmPriceDetails);
 			previousVersion_lazy = () -> FinancialInstrumentDetails20.mmPriceDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -238,7 +263,15 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmSafekeepingPlace
+	 * FinancialInstrumentDetails28.mmSafekeepingPlace}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -255,7 +288,8 @@ public class FinancialInstrumentDetails25 {
 			xmlTag = "SfkpgPlc";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingPlace";
-			definition = "Place where the securities are safe-kept, physically or notionally.  This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			definition = "Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails28.mmSafekeepingPlace);
 			previousVersion_lazy = () -> FinancialInstrumentDetails20.mmSafekeepingPlace;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -296,6 +330,14 @@ public class FinancialInstrumentDetails25 {
 	 * definition} =
 	 * "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmOpeningBalance
+	 * FinancialInstrumentDetails28.mmOpeningBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -312,6 +354,7 @@ public class FinancialInstrumentDetails25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OpeningBalance";
 			definition = "Opening balance for the statement period (first opening balance) or of this page (intermediary opening balance).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails28.mmOpeningBalance);
 			previousVersion_lazy = () -> FinancialInstrumentDetails20.mmOpeningBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -352,6 +395,14 @@ public class FinancialInstrumentDetails25 {
 	 * definition} =
 	 * "Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmClosingBalance
+	 * FinancialInstrumentDetails28.mmClosingBalance}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -368,6 +419,7 @@ public class FinancialInstrumentDetails25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClosingBalance";
 			definition = "Closing balance for the statement period (final closing balance) or of this page (intermediary closing balance).";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails28.mmClosingBalance);
 			previousVersion_lazy = () -> FinancialInstrumentDetails20.mmClosingBalance;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -406,6 +458,14 @@ public class FinancialInstrumentDetails25 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Transaction details."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentDetails28#mmTransaction
+	 * FinancialInstrumentDetails28.mmTransaction}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -422,6 +482,7 @@ public class FinancialInstrumentDetails25 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transaction";
 			definition = "Transaction details.";
+			nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails28.mmTransaction);
 			previousVersion_lazy = () -> FinancialInstrumentDetails20.mmTransaction;
 			minOccurs = 1;
 			isComposite = true;
@@ -441,6 +502,7 @@ public class FinancialInstrumentDetails25 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "FinancialInstrumentDetails25";
 				definition = "Reporting per financial instrument.";
+				nextVersions_lazy = () -> Arrays.asList(FinancialInstrumentDetails28.mmObject());
 				previousVersion_lazy = () -> FinancialInstrumentDetails20.mmObject();
 			}
 		});

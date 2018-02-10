@@ -164,7 +164,7 @@ public class Resolution {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Numbering of the resolution as specified by the issuer or  its agent."</li>
+	 * "Numbering of the resolution as specified by the issuer or its agent."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmIssuerLabel = new MMBusinessAttribute() {
@@ -175,7 +175,7 @@ public class Resolution {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Resolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "IssuerLabel";
-			definition = "Numbering of the resolution as specified by the issuer or  its agent.";
+			definition = "Numbering of the resolution as specified by the issuer or its agent.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();

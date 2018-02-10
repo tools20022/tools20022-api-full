@@ -300,6 +300,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "General cryptographic message syntax (CMS) containing authenticated data."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ContentInformationType16
+ * ContentInformationType16}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ContentInformationType11
@@ -339,6 +346,14 @@ public class ContentInformationType15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Type of data protection."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType16#mmContentType
+	 * ContentInformationType16.mmContentType}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -354,6 +369,7 @@ public class ContentInformationType15 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ContentType";
 			definition = "Type of data protection.";
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType16.mmContentType);
 			previousVersion_lazy = () -> ContentInformationType11.mmContentType;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -386,6 +402,14 @@ public class ContentInformationType15 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Data protection by a message authentication code (MAC)."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContentInformationType16#mmAuthenticatedData
+	 * ContentInformationType16.mmAuthenticatedData}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -401,6 +425,7 @@ public class ContentInformationType15 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AuthenticatedData";
 			definition = "Data protection by a message authentication code (MAC).";
+			nextVersions_lazy = () -> Arrays.asList(ContentInformationType16.mmAuthenticatedData);
 			previousVersion_lazy = () -> ContentInformationType11.mmAuthenticatedData;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -437,6 +462,7 @@ public class ContentInformationType15 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ContentInformationType15";
 				definition = "General cryptographic message syntax (CMS) containing authenticated data.";
+				nextVersions_lazy = () -> Arrays.asList(ContentInformationType16.mmObject());
 				previousVersion_lazy = () -> ContentInformationType11.mmObject();
 			}
 		});

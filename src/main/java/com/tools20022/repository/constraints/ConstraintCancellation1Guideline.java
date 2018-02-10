@@ -50,7 +50,7 @@ public class ConstraintCancellation1Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. "
+	 * "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -64,7 +64,7 @@ public class ConstraintCancellation1Guideline {
 			validator = ConstraintCancellation1Guideline::checkMeetingCancellationV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Guideline";
-			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. ";
+			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCancellation1Guideline.forMeetingCancellationV04;
 			owner_lazy = () -> MeetingCancellationV05.mmObject();
 		}
@@ -86,7 +86,7 @@ public class ConstraintCancellation1Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. "
+	 * "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -103,7 +103,7 @@ public class ConstraintCancellation1Guideline {
 			validator = ConstraintCancellation1Guideline::checkMeetingCancellationV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Guideline";
-			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. ";
+			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCancellation1Guideline.forMeetingCancellationV05);
 			owner_lazy = () -> MeetingCancellationV04.mmObject();
 		}
@@ -125,7 +125,7 @@ public class ConstraintCancellation1Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. "
+	 * "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
 	 * </ul>
 	 */
@@ -134,7 +134,7 @@ public class ConstraintCancellation1Guideline {
 			validator = ConstraintCancellation1Guideline::checkMeetingCancellationV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Guideline";
-			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. ";
+			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV02.mmObject();
 		}
 	};
@@ -155,7 +155,7 @@ public class ConstraintCancellation1Guideline {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. "
+	 * "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components."
 	 * </li>
 	 * </ul>
 	 */
@@ -164,7 +164,7 @@ public class ConstraintCancellation1Guideline {
 			validator = ConstraintCancellation1Guideline::checkMeetingCancellationV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Cancellation1Guideline";
-			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components. ";
+			definition = "It is recommended to cancel a meeting by using MeetingReference/MeetingIdentification and Reason only. It is recommended to avoid the repetition of optional building blocks or components.";
 			owner_lazy = () -> MeetingCancellationV03.mmObject();
 		}
 	};

@@ -176,7 +176,7 @@ public class AgentCAInformationAdviceV01 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the linked Agent CA Election Advice Identification"</li>
+	 * "Identification of the linked Agent CA Election Advice Identification."</li>
 	 * </ul>
 	 */
 	public static final MMMessageBuildingBlock mmAgentCAElectionAdviceIdentification = new MMMessageBuildingBlock() {
@@ -184,7 +184,7 @@ public class AgentCAInformationAdviceV01 {
 			xmlTag = "AgtCAElctnAdvcId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AgentCAElectionAdviceIdentification";
-			definition = "Identification of the linked Agent CA Election Advice Identification";
+			definition = "Identification of the linked Agent CA Election Advice Identification.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> DocumentIdentification8.mmObject();

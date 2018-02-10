@@ -317,14 +317,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "ClaimSettlement"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Claim settlement  related adjustment."</li>
+	 * definition} = "Claim settlement related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code ClaimSettlement = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClaimSettlement";
-			definition = "Claim settlement  related adjustment.";
+			definition = "Claim settlement related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRCL";
 		}
@@ -378,14 +378,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "CustodyReorganizationDeposit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Custody reorganization deposit  related adjustment."</li>
+	 * definition} = "Custody reorganization deposit related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code CustodyReorganizationDeposit = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CustodyReorganizationDeposit";
-			definition = "Custody reorganization deposit  related adjustment.";
+			definition = "Custody reorganization deposit related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRCD";
 		}
@@ -408,14 +408,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "DynamicRateChange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Dynamic rate change  related adjustment."</li>
+	 * definition} = "Dynamic rate change related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code DynamicRateChange = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DynamicRateChange";
-			definition = "Dynamic rate change  related adjustment.";
+			definition = "Dynamic rate change related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRDR";
 		}
@@ -468,14 +468,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "FailTrackingTaxWithholding"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Fail tracking tax withholding  related adjustment."</li>
+	 * definition} = "Fail tracking tax withholding related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code FailTrackingTaxWithholding = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FailTrackingTaxWithholding";
-			definition = "Fail tracking tax withholding  related adjustment.";
+			definition = "Fail tracking tax withholding related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "TJXF";
 		}
@@ -499,14 +499,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Intra-day reversal of original tax withholding  related adjustment."</li>
+	 * "Intra-day reversal of original tax withholding related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code IntraDayReversalOfOriginalTaxWithholding = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntraDayReversalOfOriginalTaxWithholding";
-			definition = "Intra-day reversal of original tax withholding  related adjustment.";
+			definition = "Intra-day reversal of original tax withholding related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "TJXV";
 		}
@@ -651,14 +651,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "MandatoryReorganizationDeposit"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Mandatory reorganization deposit  related adjustment."</li>
+	 * definition} = "Mandatory reorganization deposit related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code MandatoryReorganizationDeposit = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MandatoryReorganizationDeposit";
-			definition = "Mandatory reorganization deposit  related adjustment.";
+			definition = "Mandatory reorganization deposit related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRMD";
 		}
@@ -741,14 +741,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "OriginalInitialTaxWithholding"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Original (initial) tax withholding  related adjustment."</li>
+	 * definition} = "Original (initial) tax withholding related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code OriginalInitialTaxWithholding = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalInitialTaxWithholding";
-			definition = "Original (initial) tax withholding  related adjustment.";
+			definition = "Original (initial) tax withholding related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "TJXO";
 		}
@@ -771,14 +771,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "OriginalLateTaxWithholding"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Original late tax withholding  related adjustment."</li>
+	 * definition} = "Original late tax withholding related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code OriginalLateTaxWithholding = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalLateTaxWithholding";
-			definition = "Original late tax withholding  related adjustment.";
+			definition = "Original late tax withholding related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "TJXL";
 		}
@@ -831,14 +831,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "RateChangeTaxWithholding"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Rate change tax withholding  related adjustment."</li>
+	 * definition} = "Rate change tax withholding related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code RateChangeTaxWithholding = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RateChangeTaxWithholding";
-			definition = "Rate change tax withholding  related adjustment.";
+			definition = "Rate change tax withholding related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "TJXT";
 		}
@@ -861,14 +861,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "ReclassificationTaxWithholding"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reclassification tax withholding  related adjustment."</li>
+	 * definition} = "Reclassification tax withholding related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code ReclassificationTaxWithholding = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReclassificationTaxWithholding";
-			definition = "Reclassification tax withholding  related adjustment.";
+			definition = "Reclassification tax withholding related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "TJXD";
 		}
@@ -893,7 +893,7 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Participant deposited a security within 10 days after a corporate action event has occurred. "
+	 * "Participant deposited a security within 10 days after a corporate action event has occurred."
 	 * </li>
 	 * </ul>
 	 */
@@ -901,7 +901,7 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorganisationDepositPhaseOne";
-			definition = "Participant deposited a security within 10 days after a corporate action event has occurred. ";
+			definition = "Participant deposited a security within 10 days after a corporate action event has occurred.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRD1";
 		}
@@ -926,7 +926,7 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Participant deposited a security 10 days after a corporate action event has occurred. "
+	 * "Participant deposited a security 10 days after a corporate action event has occurred."
 	 * </li>
 	 * </ul>
 	 */
@@ -934,7 +934,7 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReorgDepositPhaseTwo";
-			definition = "Participant deposited a security 10 days after a corporate action event has occurred. ";
+			definition = "Participant deposited a security 10 days after a corporate action event has occurred.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRD2";
 		}
@@ -987,14 +987,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "Reversal"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reversal  related adjustment."</li>
+	 * definition} = "Reversal related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code Reversal = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reversal";
-			definition = "Reversal  related adjustment.";
+			definition = "Reversal related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "REVA";
 		}
@@ -1017,14 +1017,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "ReversalOfTaxWithholding"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Reversal of tax withholding  related adjustment."</li>
+	 * definition} = "Reversal of tax withholding related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code ReversalOfTaxWithholding = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReversalOfTaxWithholding";
-			definition = "Reversal of tax withholding  related adjustment.";
+			definition = "Reversal of tax withholding related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "TJXR";
 		}
@@ -1077,14 +1077,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "RightsSales"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Rights sales  related adjustment."</li>
+	 * definition} = "Rights sales related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code RightsSales = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsSales";
-			definition = "Rights sales  related adjustment.";
+			definition = "Rights sales related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRRS";
 		}
@@ -1107,14 +1107,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "RightsStepUp"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Rights step up  related adjustment."</li>
+	 * definition} = "Rights step up related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code RightsStepUp = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RightsStepUp";
-			definition = "Rights step up  related adjustment.";
+			definition = "Rights step up related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRRU";
 		}
@@ -1197,14 +1197,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "TaxInstructionChange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tax instruction change  related adjustment."</li>
+	 * definition} = "Tax instruction change related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code TaxInstructionChange = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TaxInstructionChange";
-			definition = "Tax instruction change  related adjustment.";
+			definition = "Tax instruction change related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "TJXI";
 		}
@@ -1227,14 +1227,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "TenderOfferFraction"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Tender offer fraction  related adjustment."</li>
+	 * definition} = "Tender offer fraction related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code TenderOfferFraction = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TenderOfferFraction";
-			definition = "Tender offer fraction  related adjustment.";
+			definition = "Tender offer fraction related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRT2";
 		}
@@ -1287,14 +1287,14 @@ public class DTCAdjustmentPaymentTypeV2Code extends MMCode {
 	 * name} = "WarrantRateChange"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Warrant rate change  related adjustment."</li>
+	 * definition} = "Warrant rate change related adjustment."</li>
 	 * </ul>
 	 */
 	public static final DTCAdjustmentPaymentTypeV2Code WarrantRateChange = new DTCAdjustmentPaymentTypeV2Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "WarrantRateChange";
-			definition = "Warrant rate change  related adjustment.";
+			definition = "Warrant rate change related adjustment.";
 			owner_lazy = () -> com.tools20022.repository.codeset.DTCAdjustmentPaymentTypeV2Code.mmObject();
 			codeName = "RRWC";
 		}

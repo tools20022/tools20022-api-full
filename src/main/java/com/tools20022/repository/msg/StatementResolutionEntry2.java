@@ -104,6 +104,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Provides further details on the statement entry for the resolution of the investigation."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.StatementResolutionEntry3
+ * StatementResolutionEntry3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -138,6 +145,14 @@ public class StatementResolutionEntry2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides information on the original message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry3#mmOriginalGroupInformation
+	 * StatementResolutionEntry3.mmOriginalGroupInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmOriginalGroupInformation = new MMMessageAssociationEnd() {
@@ -148,6 +163,7 @@ public class StatementResolutionEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalGroupInformation";
 			definition = "Provides information on the original message.";
+			nextVersions_lazy = () -> Arrays.asList(StatementResolutionEntry3.mmOriginalGroupInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -183,6 +199,14 @@ public class StatementResolutionEntry2 {
 	 * definition} =
 	 * "Unique identification, as assigned by the account servicer, to unambiguously identify the original statement."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry3#mmOriginalStatementIdentification
+	 * StatementResolutionEntry3.mmOriginalStatementIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOriginalStatementIdentification = new MMMessageAttribute() {
@@ -193,6 +217,7 @@ public class StatementResolutionEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "OriginalStatementIdentification";
 			definition = "Unique identification, as assigned by the account servicer, to unambiguously identify the original statement.";
+			nextVersions_lazy = () -> Arrays.asList(StatementResolutionEntry3.mmOriginalStatementIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -232,6 +257,14 @@ public class StatementResolutionEntry2 {
 	 * definition} =
 	 * "Unique reference, as assigned by the account servicing institution, to unambiguously identify the entry."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry3#mmAccountServicerReference
+	 * StatementResolutionEntry3.mmAccountServicerReference}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAccountServicerReference = new MMMessageAttribute() {
@@ -243,6 +276,7 @@ public class StatementResolutionEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicerReference";
 			definition = "Unique reference, as assigned by the account servicing institution, to unambiguously identify the entry.";
+			nextVersions_lazy = () -> Arrays.asList(StatementResolutionEntry3.mmAccountServicerReference);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -283,6 +317,14 @@ public class StatementResolutionEntry2 {
 	 * definition} =
 	 * "Corrected debit or credit amount, compared to the original entry where the amount is incorrect.\n\nUsage: This amount may only be present if an incorrect statement entry has been reported."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry3#mmCorrectedAmount
+	 * StatementResolutionEntry3.mmCorrectedAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCorrectedAmount = new MMMessageAttribute() {
@@ -294,6 +336,7 @@ public class StatementResolutionEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorrectedAmount";
 			definition = "Corrected debit or credit amount, compared to the original entry where the amount is incorrect.\n\nUsage: This amount may only be present if an incorrect statement entry has been reported.";
+			nextVersions_lazy = () -> Arrays.asList(StatementResolutionEntry3.mmCorrectedAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveOrHistoricCurrencyAndAmount.mmObject();
@@ -331,6 +374,14 @@ public class StatementResolutionEntry2 {
 	 * definition} =
 	 * "Provides information on the charges included in the original entry amount."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry3#mmCharges
+	 * StatementResolutionEntry3.mmCharges}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCharges = new MMMessageAssociationEnd() {
@@ -342,6 +393,7 @@ public class StatementResolutionEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Charges";
 			definition = "Provides information on the charges included in the original entry amount.";
+			nextVersions_lazy = () -> Arrays.asList(StatementResolutionEntry3.mmCharges);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Charges3.mmObject();
@@ -380,6 +432,14 @@ public class StatementResolutionEntry2 {
 	 * definition} =
 	 * "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.StatementResolutionEntry3#mmPurpose
+	 * StatementResolutionEntry3.mmPurpose}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmPurpose = new MMMessageAssociationEnd() {
@@ -391,6 +451,7 @@ public class StatementResolutionEntry2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Purpose";
 			definition = "Underlying reason for the payment transaction.\nUsage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.";
+			nextVersions_lazy = () -> Arrays.asList(StatementResolutionEntry3.mmPurpose);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -411,6 +472,7 @@ public class StatementResolutionEntry2 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "StatementResolutionEntry2";
 				definition = "Provides further details on the statement entry for the resolution of the investigation.";
+				nextVersions_lazy = () -> Arrays.asList(StatementResolutionEntry3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -63,6 +63,13 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
  * "Provides system date for all of the changes occurred for an entity."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecurityStatement2
+ * SecurityStatement2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -97,6 +104,14 @@ public class SecurityStatement1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date for which the statement is valid."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityStatement2#mmSystemDate
+	 * SecurityStatement2.mmSystemDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmSystemDate = new MMMessageAttribute() {
@@ -107,6 +122,7 @@ public class SecurityStatement1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SystemDate";
 			definition = "Date for which the statement is valid.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityStatement2.mmSystemDate);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -141,6 +157,14 @@ public class SecurityStatement1 {
 	 * definition} =
 	 * "Provides information on the actual change occurred to a financial instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecurityStatement2#mmChange
+	 * SecurityStatement2.mmChange}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmChange = new MMMessageAssociationEnd() {
@@ -151,6 +175,7 @@ public class SecurityStatement1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Change";
 			definition = "Provides information on the actual change occurred to a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(SecurityStatement2.mmChange);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SecuritiesReferenceDataChange1.mmObject();
@@ -165,6 +190,7 @@ public class SecurityStatement1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecurityStatement1";
 				definition = "Provides system date for all of the changes occurred for an entity.";
+				nextVersions_lazy = () -> Arrays.asList(SecurityStatement2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

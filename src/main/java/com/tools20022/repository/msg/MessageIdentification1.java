@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.acmt.*;
 import com.tools20022.repository.area.camt.*;
+import com.tools20022.repository.area.fxtr.*;
 import com.tools20022.repository.area.reda.*;
 import com.tools20022.repository.area.seev.*;
 import com.tools20022.repository.area.semt.*;
@@ -914,6 +915,38 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV07#mmMessageIdentification
  * ReversalOfTransferInConfirmationV07.mmMessageIdentification}</li>
  * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceV01#mmAdviceIdentification
+ * ForeignExchangeTradeConfirmationStatusAdviceV01.mmAdviceIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestCancellationRequestV01#mmCancellationRequestIdentification
+ * ForeignExchangeTradeConfirmationRequestCancellationRequestV01.
+ * mmCancellationRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestAmendmentRequestV01#mmAmendmentRequestIdentification
+ * ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.
+ * mmAmendmentRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01#mmAdviceAcknowledgementIdentification
+ * ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.
+ * mmAdviceAcknowledgementIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01#mmRequestIdentification
+ * ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.
+ * mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeConfirmationRequestV01#mmRequestIdentification
+ * ForeignExchangeTradeConfirmationRequestV01.mmRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportRequestV01#mmQueryRequestIdentification
+ * ForeignExchangeTradeCaptureReportRequestV01.mmQueryRequestIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportV01#mmReportIdentification
+ * ForeignExchangeTradeCaptureReportV01.mmReportIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.fxtr.ForeignExchangeTradeCaptureReportAcknowledgementV01#mmAcknowledgementIdentification
+ * ForeignExchangeTradeCaptureReportAcknowledgementV01.
+ * mmAcknowledgementIdentification}</li>
+ * <li>
  * {@linkplain com.tools20022.repository.area.semt.SecuritiesBalanceTransparencyReportV02#mmMessageIdentification
  * SecuritiesBalanceTransparencyReportV02.mmMessageIdentification}</li>
  * <li>
@@ -1010,6 +1043,87 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.acmt.RequestForAccountManagementStatusReportV05#mmMessageIdentification
  * RequestForAccountManagementStatusReportV05.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferOutConfirmationV08#mmMessageIdentification
+ * ReversalOfTransferOutConfirmationV08.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInConfirmationV08#mmMessageIdentification
+ * TransferInConfirmationV08.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08#mmMessageReference
+ * PortfolioTransferInstructionV08.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferCancellationRequestV08#mmMessageReference
+ * PortfolioTransferCancellationRequestV08.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutCancellationRequestV08#mmMessageIdentification
+ * TransferOutCancellationRequestV08.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInInstructionV08#mmMessageIdentification
+ * TransferInInstructionV08.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08#mmMessageReference
+ * PortfolioTransferConfirmationV08.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06#mmMessageReference
+ * AccountHoldingInformationV06.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutConfirmationV08#mmMessageIdentification
+ * TransferOutConfirmationV08.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInCancellationRequestV08#mmMessageIdentification
+ * TransferInCancellationRequestV08.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferOutInstructionV08#mmMessageIdentification
+ * TransferOutInstructionV08.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferCancellationStatusReportV06#mmMessageIdentification
+ * TransferCancellationStatusReportV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05#mmMessageReference
+ * AccountHoldingInformationRequestV05.mmMessageReference}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.ReversalOfTransferInConfirmationV08#mmMessageIdentification
+ * ReversalOfTransferInConfirmationV08.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.RequestForTransferStatusReportV06#mmMessageIdentification
+ * RequestForTransferStatusReportV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.TransferInstructionStatusReportV06#mmMessageIdentification
+ * TransferInstructionStatusReportV06.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchInformationResponseV01#mmMessageIdentification
+ * AccountSwitchInformationResponseV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchBalanceTransferAcknowledgementV01#mmMessageIdentification
+ * AccountSwitchBalanceTransferAcknowledgementV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchTechnicalRejectionV01#mmMessageIdentification
+ * AccountSwitchTechnicalRejectionV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchPaymentResponseV01#mmMessageIdentification
+ * AccountSwitchPaymentResponseV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchNotifyAccountSwitchCompleteV01#mmMessageIdentification
+ * AccountSwitchNotifyAccountSwitchCompleteV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchRequestBalanceTransferV01#mmMessageIdentification
+ * AccountSwitchRequestBalanceTransferV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchInformationRequestV01#mmMessageIdentification
+ * AccountSwitchInformationRequestV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchRequestRedirectionV01#mmMessageIdentification
+ * AccountSwitchRequestRedirectionV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchTerminationSwitchV01#mmMessageIdentification
+ * AccountSwitchTerminationSwitchV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchCancelExistingPaymentV01#mmMessageIdentification
+ * AccountSwitchCancelExistingPaymentV01.mmMessageIdentification}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.acmt.AccountSwitchRequestPaymentV01#mmMessageIdentification
+ * AccountSwitchRequestPaymentV01.mmMessageIdentification}</li>
  * </ul>
  * </li>
  * <li>
@@ -1208,17 +1322,30 @@ public class MessageIdentification1 {
 						AccountDetailsConfirmationV06.mmMessageIdentification, RequestForAccountManagementStatusReportV04.mmMessageIdentification, TransferInCancellationRequestV07.mmMessageIdentification,
 						PortfolioTransferConfirmationV07.mmMessageReference, TransferCancellationStatusReportV05.mmMessageIdentification, TransferOutInstructionV07.mmMessageIdentification,
 						AccountManagementStatusReportV05.mmMessageIdentification, AccountModificationInstructionV06.mmMessageIdentification, TransferInInstructionV07.mmMessageIdentification,
-						AccountHoldingInformationRequestV04.mmMessageReference, ReversalOfTransferInConfirmationV07.mmMessageIdentification, SecuritiesBalanceTransparencyReportV02.mmMessageIdentification,
-						SubscriptionBulkOrderConfirmationV04.mmMessageIdentification, RedemptionBulkOrderV04.mmMessageIdentification, SubscriptionBulkOrderCancellationRequestV04.mmMessageIdentification,
-						RedemptionOrderV04.mmMessageIdentification, SubscriptionOrderCancellationRequestV04.mmMessageIdentification, RedemptionBulkOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
-						RedemptionBulkOrderConfirmationV04.mmMessageIdentification, RedemptionBulkOrderCancellationRequestV04.mmMessageIdentification, SwitchOrderConfirmationV04.mmMessageIdentification,
-						RequestForOrderStatusReportV04.mmMessageIdentification, SubscriptionOrderConfirmationV04.mmMessageIdentification, SubscriptionOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
-						SwitchOrderCancellationRequestV04.mmMessageIdentification, OrderCancellationStatusReportV04.mmMessageIdentification, SwitchOrderV04.mmMessageIdentification,
-						RedemptionOrderConfirmationCancellationInstructionV02.mmMessageIdentification, RedemptionOrderConfirmationV04.mmMessageIdentification, OrderInstructionStatusReportV04.mmMessageIdentification,
-						SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmMessageIdentification, RedemptionOrderCancellationRequestV04.mmMessageIdentification, RequestForOrderConfirmationStatusReportV02.mmMessageIdentification,
-						SubscriptionBulkOrderV04.mmMessageIdentification, SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification, OrderConfirmationStatusReportV02.mmMessageIdentification,
-						SubscriptionOrderV04.mmMessageIdentification, AccountDetailsConfirmationV07.mmMessageIdentification, AccountModificationInstructionV07.mmMessageIdentification, AccountOpeningInstructionV07.mmMessageIdentification,
-						AccountManagementStatusReportV06.mmMessageIdentification, RequestForAccountManagementStatusReportV05.mmMessageIdentification);
+						AccountHoldingInformationRequestV04.mmMessageReference, ReversalOfTransferInConfirmationV07.mmMessageIdentification, ForeignExchangeTradeConfirmationStatusAdviceV01.mmAdviceIdentification,
+						ForeignExchangeTradeConfirmationRequestCancellationRequestV01.mmCancellationRequestIdentification, ForeignExchangeTradeConfirmationRequestAmendmentRequestV01.mmAmendmentRequestIdentification,
+						ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.mmAdviceAcknowledgementIdentification, ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV01.mmRequestIdentification,
+						ForeignExchangeTradeConfirmationRequestV01.mmRequestIdentification, ForeignExchangeTradeCaptureReportRequestV01.mmQueryRequestIdentification, ForeignExchangeTradeCaptureReportV01.mmReportIdentification,
+						ForeignExchangeTradeCaptureReportAcknowledgementV01.mmAcknowledgementIdentification, SecuritiesBalanceTransparencyReportV02.mmMessageIdentification, SubscriptionBulkOrderConfirmationV04.mmMessageIdentification,
+						RedemptionBulkOrderV04.mmMessageIdentification, SubscriptionBulkOrderCancellationRequestV04.mmMessageIdentification, RedemptionOrderV04.mmMessageIdentification,
+						SubscriptionOrderCancellationRequestV04.mmMessageIdentification, RedemptionBulkOrderConfirmationCancellationInstructionV02.mmMessageIdentification, RedemptionBulkOrderConfirmationV04.mmMessageIdentification,
+						RedemptionBulkOrderCancellationRequestV04.mmMessageIdentification, SwitchOrderConfirmationV04.mmMessageIdentification, RequestForOrderStatusReportV04.mmMessageIdentification,
+						SubscriptionOrderConfirmationV04.mmMessageIdentification, SubscriptionOrderConfirmationCancellationInstructionV02.mmMessageIdentification, SwitchOrderCancellationRequestV04.mmMessageIdentification,
+						OrderCancellationStatusReportV04.mmMessageIdentification, SwitchOrderV04.mmMessageIdentification, RedemptionOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
+						RedemptionOrderConfirmationV04.mmMessageIdentification, OrderInstructionStatusReportV04.mmMessageIdentification, SubscriptionBulkOrderConfirmationCancellationInstructionV02.mmMessageIdentification,
+						RedemptionOrderCancellationRequestV04.mmMessageIdentification, RequestForOrderConfirmationStatusReportV02.mmMessageIdentification, SubscriptionBulkOrderV04.mmMessageIdentification,
+						SwitchOrderConfirmationCancellationInstructionV02.mmMessageIdentification, OrderConfirmationStatusReportV02.mmMessageIdentification, SubscriptionOrderV04.mmMessageIdentification,
+						AccountDetailsConfirmationV07.mmMessageIdentification, AccountModificationInstructionV07.mmMessageIdentification, AccountOpeningInstructionV07.mmMessageIdentification,
+						AccountManagementStatusReportV06.mmMessageIdentification, RequestForAccountManagementStatusReportV05.mmMessageIdentification, ReversalOfTransferOutConfirmationV08.mmMessageIdentification,
+						TransferInConfirmationV08.mmMessageIdentification, PortfolioTransferInstructionV08.mmMessageReference, PortfolioTransferCancellationRequestV08.mmMessageReference,
+						TransferOutCancellationRequestV08.mmMessageIdentification, TransferInInstructionV08.mmMessageIdentification, PortfolioTransferConfirmationV08.mmMessageReference, AccountHoldingInformationV06.mmMessageReference,
+						TransferOutConfirmationV08.mmMessageIdentification, TransferInCancellationRequestV08.mmMessageIdentification, TransferOutInstructionV08.mmMessageIdentification,
+						TransferCancellationStatusReportV06.mmMessageIdentification, AccountHoldingInformationRequestV05.mmMessageReference, ReversalOfTransferInConfirmationV08.mmMessageIdentification,
+						RequestForTransferStatusReportV06.mmMessageIdentification, TransferInstructionStatusReportV06.mmMessageIdentification, AccountSwitchInformationResponseV01.mmMessageIdentification,
+						AccountSwitchBalanceTransferAcknowledgementV01.mmMessageIdentification, AccountSwitchTechnicalRejectionV01.mmMessageIdentification, AccountSwitchPaymentResponseV01.mmMessageIdentification,
+						AccountSwitchNotifyAccountSwitchCompleteV01.mmMessageIdentification, AccountSwitchRequestBalanceTransferV01.mmMessageIdentification, AccountSwitchInformationRequestV01.mmMessageIdentification,
+						AccountSwitchRequestRedirectionV01.mmMessageIdentification, AccountSwitchTerminationSwitchV01.mmMessageIdentification, AccountSwitchCancelExistingPaymentV01.mmMessageIdentification,
+						AccountSwitchRequestPaymentV01.mmMessageIdentification);
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "MessageIdentification1";

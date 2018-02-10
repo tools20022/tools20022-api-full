@@ -1098,7 +1098,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance representing the sum of entries as a result of payments processing.  Entries relating to fees,  interest, or other movements not a result of payments sent or received by the account owner are not included."
+	 * "Balance representing the sum of entries as a result of payments processing. Entries relating to fees, interest, or other movements not a result of payments sent or received by the account owner are not included."
 	 * </li>
 	 * </ul>
 	 */
@@ -1106,7 +1106,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Payment";
-			definition = "Balance representing the sum of entries as a result of payments processing.  Entries relating to fees,  interest, or other movements not a result of payments sent or received by the account owner are not included.";
+			definition = "Balance representing the sum of entries as a result of payments processing. Entries relating to fees, interest, or other movements not a result of payments sent or received by the account owner are not included.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "PYMT";
 		}
@@ -1134,7 +1134,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance representing the regulatory reserve that a financial institution must have with the account servicing institution, eg, the minimum credit balance a financial institution is to keep with its Central Bank for mandatory reserve purposes.  In some countries, a blocked balance is known as a 'reserve' balance."
+	 * "Balance representing the regulatory reserve that a financial institution must have with the account servicing institution, eg, the minimum credit balance a financial institution is to keep with its Central Bank for mandatory reserve purposes. In some countries, a blocked balance is known as a 'reserve' balance."
 	 * </li>
 	 * </ul>
 	 */
@@ -1142,14 +1142,14 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Blocked";
-			definition = "Balance representing the regulatory reserve that a financial institution must have with the account servicing institution, eg, the minimum credit balance a financial institution is to keep with its Central Bank for mandatory reserve purposes.  In some countries, a blocked balance is known as a 'reserve' balance.";
+			definition = "Balance representing the regulatory reserve that a financial institution must have with the account servicing institution, eg, the minimum credit balance a financial institution is to keep with its Central Bank for mandatory reserve purposes. In some countries, a blocked balance is known as a 'reserve' balance.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "BLCK";
 		}
 	};
 	/**
 	 * Balance, composed of booked entries and pending items known at the time
-	 * of calculation , which projects the end of day balance if everything is
+	 * of calculation, which projects the end of day balance if everything is
 	 * booked on the account and no other entry is posted.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -1168,7 +1168,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted."
+	 * "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted."
 	 * </li>
 	 * </ul>
 	 */
@@ -1176,7 +1176,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Expected";
-			definition = "Balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
+			definition = "Balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "XPCD";
 		}
@@ -1449,7 +1449,7 @@ public class BalanceTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Balance of the account identified (as opposed to Master Balance)
+	 * Balance of the account identified (as opposed to Master Balance).
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -1467,14 +1467,14 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance of the account identified (as opposed to Master Balance)"</li>
+	 * "Balance of the account identified (as opposed to Master Balance)."</li>
 	 * </ul>
 	 */
 	public static final BalanceTypeCode Self = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Self";
-			definition = "Balance of the account identified (as opposed to Master Balance)";
+			definition = "Balance of the account identified (as opposed to Master Balance).";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "SELF";
 		}
@@ -2350,7 +2350,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report."
+	 * "Book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report."
 	 * </li>
 	 * </ul>
 	 */
@@ -2358,7 +2358,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "OpeningBooked";
-			definition = "Book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
+			definition = "Book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "OPBD";
 		}
@@ -2628,7 +2628,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Investment book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report."
+	 * "Investment book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report."
 	 * </li>
 	 * </ul>
 	 */
@@ -2636,14 +2636,14 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentOpeningBooked";
-			definition = "Investment book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
+			definition = "Investment book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IOPB";
 		}
 	};
 	/**
 	 * Investment balance, composed of booked entries and pending items known at
-	 * the time of calculation , which projects the end of day balance if
+	 * the time of calculation, which projects the end of day balance if
 	 * everything is booked on the account and no other entry is posted.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -2662,7 +2662,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Investment balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted."
+	 * "Investment balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted."
 	 * </li>
 	 * </ul>
 	 */
@@ -2670,7 +2670,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "InvestmentExpected";
-			definition = "Investment balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
+			definition = "Investment balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "IXPC";
 		}
@@ -2902,7 +2902,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Disbursement book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report."
+	 * "Disbursement book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report."
 	 * </li>
 	 * </ul>
 	 */
@@ -2910,14 +2910,14 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementOpeningBooked";
-			definition = "Disbursement book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
+			definition = "Disbursement book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DOPB";
 		}
 	};
 	/**
 	 * Disbursement balance, composed of booked entries and pending items known
-	 * at the time of calculation , which projects the end of day balance if
+	 * at the time of calculation, which projects the end of day balance if
 	 * everything is booked on the account and no other entry is posted.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -2936,7 +2936,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Disbursement balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted."
+	 * "Disbursement balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted."
 	 * </li>
 	 * </ul>
 	 */
@@ -2944,7 +2944,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DisbursementExpected";
-			definition = "Disbursement balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
+			definition = "Disbursement balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DXPC";
 		}
@@ -3176,7 +3176,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Collection book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report."
+	 * "Collection book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report."
 	 * </li>
 	 * </ul>
 	 */
@@ -3184,14 +3184,14 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionOpeningBooked";
-			definition = "Collection book balance of the account at the beginning of the account reporting period.  It always equals the closing book balance from the previous report.";
+			definition = "Collection book balance of the account at the beginning of the account reporting period. It always equals the closing book balance from the previous report.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "COPB";
 		}
 	};
 	/**
 	 * Collection balance, composed of booked entries and pending items known at
-	 * the time of calculation , which projects the end of day balance if
+	 * the time of calculation, which projects the end of day balance if
 	 * everything is booked on the account and no other entry is posted.
 	 * <p>
 	 * <strong>Constant fields:</strong>
@@ -3210,7 +3210,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Collection balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted."
+	 * "Collection balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted."
 	 * </li>
 	 * </ul>
 	 */
@@ -3218,7 +3218,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CollectionExpected";
-			definition = "Collection balance, composed of booked entries and pending items known at the time of calculation , which projects the end of day balance if everything is booked on the account and no other entry is posted.";
+			definition = "Collection balance, composed of booked entries and pending items known at the time of calculation, which projects the end of day balance if everything is booked on the account and no other entry is posted.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "CXPC";
 		}
@@ -3226,7 +3226,7 @@ public class BalanceTypeCode extends MMCode {
 	/**
 	 * Balance representing the forecast of the cash-equivalent resulting from
 	 * evaluation of existing holdings at CSD that are qualified to serve as
-	 * collateral
+	 * collateral.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -3244,7 +3244,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance representing the forecast of the cash-equivalent resulting from evaluation of existing holdings at CSD that are qualified to serve as collateral"
+	 * "Balance representing the forecast of the cash-equivalent resulting from evaluation of existing holdings at CSD that are qualified to serve as collateral."
 	 * </li>
 	 * </ul>
 	 */
@@ -3252,7 +3252,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "FirmCollateralisation";
-			definition = "Balance representing the forecast of the cash-equivalent resulting from evaluation of existing holdings at CSD that are qualified to serve as collateral";
+			definition = "Balance representing the forecast of the cash-equivalent resulting from evaluation of existing holdings at CSD that are qualified to serve as collateral.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "FCOL";
 		}
@@ -3461,7 +3461,7 @@ public class BalanceTypeCode extends MMCode {
 	};
 	/**
 	 * Balance representing the cash equivalent of all settled securities
-	 * transactions
+	 * transactions.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -3479,7 +3479,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance representing the cash equivalent of all settled securities transactions"
+	 * "Balance representing the cash equivalent of all settled securities transactions."
 	 * </li>
 	 * </ul>
 	 */
@@ -3487,7 +3487,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DefinitiveSettledSecurities";
-			definition = "Balance representing the cash equivalent of all settled securities transactions";
+			definition = "Balance representing the cash equivalent of all settled securities transactions.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "DSET";
 		}
@@ -3855,7 +3855,7 @@ public class BalanceTypeCode extends MMCode {
 		}
 	};
 	/**
-	 * Balance represents the settlement account processor queue amount
+	 * Balance represents the settlement account processor queue amount.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -3873,14 +3873,14 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance represents the settlement account processor queue amount"</li>
+	 * "Balance represents the settlement account processor queue amount."</li>
 	 * </ul>
 	 */
 	public static final BalanceTypeCode SAPQueueAmount = new BalanceTypeCode() {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "SAPQueueAmount";
-			definition = "Balance represents the settlement account processor queue amount";
+			definition = "Balance represents the settlement account processor queue amount.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "SAPP";
 		}
@@ -4124,7 +4124,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance of securities which are reserved  temporarily in the SPA account before they will effectively be exchanged."
+	 * "Balance of securities which are reserved temporarily in the SPA account before they will effectively be exchanged."
 	 * </li>
 	 * </ul>
 	 */
@@ -4132,7 +4132,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "ReservedForRemoval";
-			definition = "Balance of securities which are reserved  temporarily in the SPA account before they will effectively be exchanged.";
+			definition = "Balance of securities which are reserved temporarily in the SPA account before they will effectively be exchanged.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "RREM";
 		}
@@ -4195,7 +4195,7 @@ public class BalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total quantity of financial instruments  entitled to the account owner based on the terms of the corporate action event."
+	 * "Total quantity of financial instruments entitled to the account owner based on the terms of the corporate action event."
 	 * </li>
 	 * </ul>
 	 */
@@ -4203,7 +4203,7 @@ public class BalanceTypeCode extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "TotalEntitled";
-			definition = "Total quantity of financial instruments  entitled to the account owner based on the terms of the corporate action event.";
+			definition = "Total quantity of financial instruments entitled to the account owner based on the terms of the corporate action event.";
 			owner_lazy = () -> com.tools20022.repository.codeset.BalanceTypeCode.mmObject();
 			codeName = "TENT";
 		}

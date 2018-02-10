@@ -242,7 +242,7 @@ public class TradeStatus1 {
 	 * name} = "Status"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies the status of a trade"</li>
+	 * definition} = "Specifies the status of a trade."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -253,7 +253,7 @@ public class TradeStatus1 {
 			xmlTag = "Sts";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
-			definition = "Specifies the status of a trade";
+			definition = "Specifies the status of a trade.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> TradeStatus1Code.mmObject();

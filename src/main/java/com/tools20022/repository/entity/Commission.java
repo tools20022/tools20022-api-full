@@ -172,6 +172,15 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>
  * {@linkplain com.tools20022.repository.msg.CurrencyConversion12#mmMarkUpDetails
  * CurrencyConversion12.mmMarkUpDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.ResolutionInformation2#mmCompensation
+ * ResolutionInformation2.mmCompensation}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmCommissionDetails
+ * CurrencyConversion14.mmCommissionDetails}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CurrencyConversion14#mmMarkUpDetails
+ * CurrencyConversion14.mmMarkUpDetails}</li>
  * </ul>
  * </li>
  * <li>
@@ -215,6 +224,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * <li>{@linkplain com.tools20022.repository.msg.Commission23 Commission23}</li>
  * <li>{@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount1
  * ChargeOrCommissionDiscount1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount2
+ * ChargeOrCommissionDiscount2}</li>
  * </ul>
  * </li>
  * <li>
@@ -293,6 +304,9 @@ public class Commission extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount1#mmBasis
 	 * ChargeOrCommissionDiscount1.mmBasis}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount2#mmBasis
+	 * ChargeOrCommissionDiscount2.mmBasis}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -315,7 +329,7 @@ public class Commission extends Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(Intermediary5.mmWaivedTrailerCommissionIndicator, Intermediary12.mmWaivedTrailerCommissionIndicator, Intermediary6.mmWaivedTrailerCommissionIndicator,
 					Intermediary13.mmWaivedTrailerCommissionIndicator, Commission6.mmWaivingDetails, Commission10.mmWaivingDetails, Intermediary24.mmWaivedTrailerCommissionIndicator, Commission17.mmWaivingDetails,
-					Commission22.mmWaivingDetails, Intermediary36.mmWaivedTrailerCommissionIndicator, Commission23.mmWaivingDetails, ChargeOrCommissionDiscount1.mmBasis);
+					Commission22.mmWaivingDetails, Intermediary36.mmWaivedTrailerCommissionIndicator, Commission23.mmWaivingDetails, ChargeOrCommissionDiscount1.mmBasis, ChargeOrCommissionDiscount2.mmBasis);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -696,6 +710,12 @@ public class Commission extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails30#mmCommissionCalculationDate
 	 * SecuritiesFinancingTransactionDetails30.mmCommissionCalculationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails37#mmCommissionCalculationDate
+	 * SecuritiesFinancingTransactionDetails37.mmCommissionCalculationDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesFinancingTransactionDetails39#mmCommissionCalculationDate
+	 * SecuritiesFinancingTransactionDetails39.mmCommissionCalculationDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -717,7 +737,8 @@ public class Commission extends Adjustment {
 		{
 			derivation_lazy = () -> Arrays.asList(SecuritiesFinancingTransactionDetails11.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails14.mmCommissionCalculationDate, Commission16.mmCalculationDate,
 					SecuritiesFinancingTransactionDetails19.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails20.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails28.mmCommissionCalculationDate,
-					SecuritiesFinancingTransactionDetails27.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails32.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails30.mmCommissionCalculationDate);
+					SecuritiesFinancingTransactionDetails27.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails32.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails30.mmCommissionCalculationDate,
+					SecuritiesFinancingTransactionDetails37.mmCommissionCalculationDate, SecuritiesFinancingTransactionDetails39.mmCommissionCalculationDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -833,6 +854,9 @@ public class Commission extends Adjustment {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.GeneralInformation5#mmBrokersCommission
 	 * GeneralInformation5.mmBrokersCommission}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ChargeOrCommissionDiscount2#mmAmount
+	 * ChargeOrCommissionDiscount2.mmAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -853,7 +877,7 @@ public class Commission extends Adjustment {
 	public static final MMBusinessAttribute mmCommissionAmount = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(GeneralInformation1.mmBrokersCommission, GeneralInformation4.mmBrokersCommission, GeneralInformation2.mmBrokersCommission, ChargeOrCommissionDiscount1.mmAmount,
-					GeneralInformation5.mmBrokersCommission);
+					GeneralInformation5.mmBrokersCommission, ChargeOrCommissionDiscount2.mmAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Commission.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1212,7 +1236,8 @@ public class Commission extends Adjustment {
 				derivationElement_lazy = () -> Arrays.asList(Commission2.mmCommission, Commission16.mmCommission, RepairedConditions2.mmRepairedCommission, RepairedConditions3.mmRepairedCommission, TotalCommissions2.mmCommissionDetails,
 						TotalCommissions3.mmCommissionDetails, SummaryAmounts1.mmTotalFees, TotalCommissions4.mmCommissionDetails, CurrencyConversion1.mmCommissionDetails, CurrencyConversion1.mmMarkUpDetails,
 						CurrencyConversion2.mmCommissionDetails, CurrencyConversion2.mmMarkUpDetails, CurrencyConversion4.mmCommissionDetails, CurrencyConversion4.mmMarkUpDetails, CurrencyConversion6.mmCommissionDetails,
-						CurrencyConversion6.mmMarkUpDetails, CurrencyConversion9.mmCommissionDetails, CurrencyConversion9.mmMarkUpDetails, CurrencyConversion12.mmCommissionDetails, CurrencyConversion12.mmMarkUpDetails);
+						CurrencyConversion6.mmMarkUpDetails, CurrencyConversion9.mmCommissionDetails, CurrencyConversion9.mmMarkUpDetails, CurrencyConversion12.mmCommissionDetails, CurrencyConversion12.mmMarkUpDetails,
+						ResolutionInformation2.mmCompensation, CurrencyConversion14.mmCommissionDetails, CurrencyConversion14.mmMarkUpDetails);
 				superType_lazy = () -> Adjustment.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Commission.mmCommissionWaiving, com.tools20022.repository.entity.Commission.mmTrade, com.tools20022.repository.entity.Commission.mmCommissionType,
 						com.tools20022.repository.entity.Commission.mmBasis, com.tools20022.repository.entity.Commission.mmCommercialAgreementReference, com.tools20022.repository.entity.Commission.mmCalculationDate,
@@ -1222,7 +1247,7 @@ public class Commission extends Adjustment {
 				derivationComponent_lazy = () -> Arrays.asList(Commission12.mmObject(), CommissionType1Choice.mmObject(), Commission2.mmObject(), CommissionType2Choice.mmObject(), Commission16.mmObject(), CommissionType1.mmObject(),
 						Commission4.mmObject(), Commission9.mmObject(), Commission7.mmObject(), Commission11.mmObject(), Commission6.mmObject(), Commission10.mmObject(), TotalCommissions2.mmObject(), TotalCommissions3.mmObject(),
 						Commission14.mmObject(), Commission13.mmObject(), TotalCommissions4.mmObject(), CommissionType3Choice.mmObject(), Commission17.mmObject(), CommissionBasis1Choice.mmObject(), Commission18.mmObject(),
-						Commission19.mmObject(), Commission21.mmObject(), Commission22.mmObject(), CommissionType5Choice.mmObject(), Commission23.mmObject(), ChargeOrCommissionDiscount1.mmObject());
+						Commission19.mmObject(), Commission21.mmObject(), Commission22.mmObject(), CommissionType5Choice.mmObject(), Commission23.mmObject(), ChargeOrCommissionDiscount1.mmObject(), ChargeOrCommissionDiscount2.mmObject());
 			}
 
 			@Override

@@ -233,7 +233,7 @@ public class EntitlementAssessment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode)"
+	 * "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -253,7 +253,7 @@ public class EntitlementAssessment2 {
 			xmlTag = "SctiesBlckgSTPDdln";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecuritiesBlockingSTPDeadline";
-			definition = "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode)";
+			definition = "Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode).";
 			nextVersions_lazy = () -> Arrays.asList(EntitlementAssessment3.mmSecuritiesBlockingSTPDeadline);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -411,7 +411,7 @@ public class EntitlementAssessment2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date..."
+	 * "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -431,7 +431,7 @@ public class EntitlementAssessment2 {
 			xmlTag = "EntitlmntFxgDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitlementFixingDate";
-			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date...";
+			definition = "Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date.";
 			nextVersions_lazy = () -> Arrays.asList(EntitlementAssessment3.mmEntitlementFixingDate);
 			maxOccurs = 1;
 			minOccurs = 0;

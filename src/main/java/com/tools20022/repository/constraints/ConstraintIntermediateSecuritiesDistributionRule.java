@@ -28,10 +28,52 @@ import java.util.Arrays;
  * (IntermediateSecuritiesDistribution), then
  * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be
  * present in at least one occurrence of CorporateActionMovementDetails.<br>
- * (MT 564 NVR C11)
+ * (MT 564 NVR C11).
  */
 public class ConstraintIntermediateSecuritiesDistributionRule {
 
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV09
+	 * CorporateActionMovementPreliminaryAdviceV09}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/CorporateActionGeneralInformation/EventType/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;IntermediateSecuritiesDistribution&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IntermediateSecuritiesDistributionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV08
+	 * ConstraintIntermediateSecuritiesDistributionRule.
+	 * forCorporateActionMovementPreliminaryAdviceV08}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV09> forCorporateActionMovementPreliminaryAdviceV09 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV09>() {
+		{
+			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV09;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IntermediateSecuritiesDistributionRule";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11).";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV08;
+			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV09.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
 	/**
 	 * 
 	 <p>
@@ -53,7 +95,16 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV09
+	 * ConstraintIntermediateSecuritiesDistributionRule.
+	 * forCorporateActionMovementPreliminaryAdviceV09}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -68,7 +119,8 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV09);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV07;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV08.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -95,7 +147,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)."
 	 * </li>
 	 * </ul>
 	 */
@@ -104,60 +156,8 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdvice002V08;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11).";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdvice002V08.mmObject();
-			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07
-	 * CorporateActionMovementPreliminaryAdviceV07}</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
-	 * expression} =
-	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/CorporateActionGeneralInformation/EventType/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;IntermediateSecuritiesDistribution&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "IntermediateSecuritiesDistributionRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)"
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV08
-	 * ConstraintIntermediateSecuritiesDistributionRule.
-	 * forCorporateActionMovementPreliminaryAdviceV08}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV06
-	 * ConstraintIntermediateSecuritiesDistributionRule.
-	 * forCorporateActionMovementPreliminaryAdviceV06}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV07> forCorporateActionMovementPreliminaryAdviceV07 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV07>() {
-		{
-			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV07;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV08);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV06;
-			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
@@ -182,7 +182,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)."
 	 * </li>
 	 * </ul>
 	 */
@@ -191,7 +191,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV01;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12).";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV01.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -217,7 +217,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)."
 	 * </li>
 	 * </ul>
 	 */
@@ -226,7 +226,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV02;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12).";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV02.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -252,7 +252,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)."
 	 * </li>
 	 * </ul>
 	 */
@@ -261,7 +261,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV03;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12).";
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV03.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
@@ -287,7 +287,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -305,7 +305,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV04;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV05);
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV04.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
@@ -332,7 +332,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -356,7 +356,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV05;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV04;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV05.mmObject();
@@ -384,7 +384,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)"
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -408,10 +408,62 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV06;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediateSecuritiesDistributionRule";
-			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12)";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI, then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C12).";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV05;
 			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV06.mmObject();
+			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionMovementPreliminaryAdviceV07
+	 * CorporateActionMovementPreliminaryAdviceV07}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getExpression
+	 * expression} =
+	 * "&lt;RuleDefinition&gt;&lt;ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"&gt;&lt;mustBe&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"Presence\"&gt;&lt;leftOperand&gt;/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType&lt;/leftOperand&gt;&lt;/BooleanRule&gt;&lt;/mustBe&gt;&lt;onCondition&gt;&lt;connector&gt;AND&lt;/connector&gt;&lt;BooleanRule xsi:type=\"EqualToValue\"&gt;&lt;leftOperand&gt;/CorporateActionGeneralInformation/EventType/Code&lt;/leftOperand&gt;&lt;rightOperand&gt;IntermediateSecuritiesDistribution&lt;/rightOperand&gt;&lt;/BooleanRule&gt;&lt;/onCondition&gt;&lt;/ComplexRule&gt;&lt;/RuleDefinition&gt;"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "IntermediateSecuritiesDistributionRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11)."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV08
+	 * ConstraintIntermediateSecuritiesDistributionRule.
+	 * forCorporateActionMovementPreliminaryAdviceV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule#forCorporateActionMovementPreliminaryAdviceV06
+	 * ConstraintIntermediateSecuritiesDistributionRule.
+	 * forCorporateActionMovementPreliminaryAdviceV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionMovementPreliminaryAdviceV07> forCorporateActionMovementPreliminaryAdviceV07 = new MMConstraint<CorporateActionMovementPreliminaryAdviceV07>() {
+		{
+			validator = ConstraintIntermediateSecuritiesDistributionRule::checkCorporateActionMovementPreliminaryAdviceV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "IntermediateSecuritiesDistributionRule";
+			definition = "If CorporateActionGeneralInformation/EventType/Code is RHDI (IntermediateSecuritiesDistribution), then CorporateActionMovementDetails/IntermediateSecuritiesDistributionType must be present in at least one occurrence of CorporateActionMovementDetails.\r\n(MT 564 NVR C11).";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV08);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintIntermediateSecuritiesDistributionRule.forCorporateActionMovementPreliminaryAdviceV06;
+			owner_lazy = () -> CorporateActionMovementPreliminaryAdviceV07.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/CorporateActionMovementDetails[*]/IntermediateSecuritiesDistributionType</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/CorporateActionGeneralInformation/EventType/Code</leftOperand><rightOperand>IntermediateSecuritiesDistribution</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}
 	};
@@ -422,7 +474,19 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
 	 * must be present in at least one occurrence of
 	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C11)
+	 * (MT 564 NVR C11).
+	 */
+	public static void checkCorporateActionMovementPreliminaryAdviceV09(CorporateActionMovementPreliminaryAdviceV09 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionGeneralInformation/EventType/Code is RHDI
+	 * (IntermediateSecuritiesDistribution), then
+	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
+	 * must be present in at least one occurrence of
+	 * CorporateActionMovementDetails.<br>
+	 * (MT 564 NVR C11).
 	 */
 	public static void checkCorporateActionMovementPreliminaryAdviceV08(CorporateActionMovementPreliminaryAdviceV08 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -434,21 +498,9 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
 	 * must be present in at least one occurrence of
 	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C11)
+	 * (MT 564 NVR C11).
 	 */
 	public static void checkCorporateActionMovementPreliminaryAdvice002V08(CorporateActionMovementPreliminaryAdvice002V08 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If CorporateActionGeneralInformation/EventType/Code is RHDI
-	 * (IntermediateSecuritiesDistribution), then
-	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
-	 * must be present in at least one occurrence of
-	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C11)
-	 */
-	public static void checkCorporateActionMovementPreliminaryAdviceV07(CorporateActionMovementPreliminaryAdviceV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -457,7 +509,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
 	 * must be present in at least one occurrence of
 	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C12)
+	 * (MT 564 NVR C12).
 	 */
 	public static void checkCorporateActionMovementPreliminaryAdviceV01(CorporateActionMovementPreliminaryAdviceV01 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -468,7 +520,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
 	 * must be present in at least one occurrence of
 	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C12)
+	 * (MT 564 NVR C12).
 	 */
 	public static void checkCorporateActionMovementPreliminaryAdviceV02(CorporateActionMovementPreliminaryAdviceV02 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -479,7 +531,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
 	 * must be present in at least one occurrence of
 	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C12)
+	 * (MT 564 NVR C12).
 	 */
 	public static void checkCorporateActionMovementPreliminaryAdviceV03(CorporateActionMovementPreliminaryAdviceV03 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -490,7 +542,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
 	 * must be present in at least one occurrence of
 	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C12)
+	 * (MT 564 NVR C12).
 	 */
 	public static void checkCorporateActionMovementPreliminaryAdviceV04(CorporateActionMovementPreliminaryAdviceV04 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -501,7 +553,7 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
 	 * must be present in at least one occurrence of
 	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C12)
+	 * (MT 564 NVR C12).
 	 */
 	public static void checkCorporateActionMovementPreliminaryAdviceV05(CorporateActionMovementPreliminaryAdviceV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
@@ -512,9 +564,21 @@ public class ConstraintIntermediateSecuritiesDistributionRule {
 	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
 	 * must be present in at least one occurrence of
 	 * CorporateActionMovementDetails.<br>
-	 * (MT 564 NVR C12)
+	 * (MT 564 NVR C12).
 	 */
 	public static void checkCorporateActionMovementPreliminaryAdviceV06(CorporateActionMovementPreliminaryAdviceV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If CorporateActionGeneralInformation/EventType/Code is RHDI
+	 * (IntermediateSecuritiesDistribution), then
+	 * CorporateActionMovementDetails/IntermediateSecuritiesDistributionType
+	 * must be present in at least one occurrence of
+	 * CorporateActionMovementDetails.<br>
+	 * (MT 564 NVR C11).
+	 */
+	public static void checkCorporateActionMovementPreliminaryAdviceV07(CorporateActionMovementPreliminaryAdviceV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

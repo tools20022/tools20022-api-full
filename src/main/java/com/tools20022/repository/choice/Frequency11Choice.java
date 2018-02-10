@@ -67,6 +67,8 @@ import javax.xml.bind.annotation.XmlType;
  * <ul>
  * <li>{@linkplain com.tools20022.repository.choice.Frequency21Choice
  * Frequency21Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.Frequency35Choice
+ * Frequency35Choice}</li>
  * </ul>
  * </li>
  * </ul>
@@ -113,6 +115,9 @@ public class Frequency11Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.Frequency21Choice#mmType
 	 * Frequency21Choice.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Frequency35Choice#mmCode
+	 * Frequency35Choice.mmCode}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -126,7 +131,7 @@ public class Frequency11Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Code";
 			definition = "Frequency expressed as an ISO 20022 code.";
-			nextVersions_lazy = () -> Arrays.asList(Frequency21Choice.mmType);
+			nextVersions_lazy = () -> Arrays.asList(Frequency21Choice.mmType, Frequency35Choice.mmCode);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Frequency5Code.mmObject();
@@ -169,6 +174,9 @@ public class Frequency11Choice {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.Frequency21Choice#mmPeriod
 	 * Frequency21Choice.mmPeriod}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.Frequency35Choice#mmProprietary
+	 * Frequency35Choice.mmProprietary}</li>
 	 * </ul>
 	 * </li>
 	 * </ul>
@@ -182,7 +190,7 @@ public class Frequency11Choice {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
 			definition = "Frequency expressed as a proprietary code.";
-			nextVersions_lazy = () -> Arrays.asList(Frequency21Choice.mmPeriod);
+			nextVersions_lazy = () -> Arrays.asList(Frequency21Choice.mmPeriod, Frequency35Choice.mmProprietary);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification40.mmObject();
@@ -197,7 +205,7 @@ public class Frequency11Choice {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Frequency11Choice";
 				definition = "Choice of format for a frequency, for example, the frequency of payment.";
-				nextVersions_lazy = () -> Arrays.asList(Frequency21Choice.mmObject());
+				nextVersions_lazy = () -> Arrays.asList(Frequency21Choice.mmObject(), Frequency35Choice.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

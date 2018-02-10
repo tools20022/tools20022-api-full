@@ -155,7 +155,7 @@ public class Presentation3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Channel through which presentation documents are submitted electronically, such as SWIFT,  Web upload, or secure email.  "
+	 * "Channel through which presentation documents are submitted electronically, such as SWIFT, Web upload, or secure email."
 	 * </li>
 	 * </ul>
 	 */
@@ -167,7 +167,7 @@ public class Presentation3 {
 			xmlTag = "Chanl";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Channel";
-			definition = "Channel through which presentation documents are submitted electronically, such as SWIFT,  Web upload, or secure email.  ";
+			definition = "Channel through which presentation documents are submitted electronically, such as SWIFT, Web upload, or secure email.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> Channel1Choice.mmObject();

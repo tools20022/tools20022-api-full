@@ -190,6 +190,12 @@ public class CorporateActionServicing extends FinancialService {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption121#mmSafekeepingAccount
 	 * CorporateActionOption121.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption141#mmSafekeepingAccount
+	 * CorporateActionOption141.mmSafekeepingAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionOption144#mmSafekeepingAccount
+	 * CorporateActionOption144.mmSafekeepingAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -213,7 +219,7 @@ public class CorporateActionServicing extends FinancialService {
 			derivation_lazy = () -> Arrays.asList(CorporateActionOption9.mmSafekeepingAccount, CorporateActionOption18.mmSafekeepingAccount, CorporateActionOption22.mmSafekeepingAccount, CorporateActionOption27.mmSafekeepingAccount,
 					CorporateActionOption26.mmSafekeepingAccount, CorporateActionOption41.mmSafekeepingAccount, CorporateActionOption50.mmSafekeepingAccount, CorporateActionOption29.mmSafekeepingAccount, Instruction1.mmAccountDetails,
 					Instruction2.mmAccountDetails, CorporateActionElection3.mmAccountDetails, CorporateActionOption8.mmSafekeepingAccount, Instruction3.mmAccountDetails, CorporateActionOption116.mmSafekeepingAccount,
-					CorporateActionOption121.mmSafekeepingAccount);
+					CorporateActionOption121.mmSafekeepingAccount, CorporateActionOption141.mmSafekeepingAccount, CorporateActionOption144.mmSafekeepingAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -277,6 +283,12 @@ public class CorporateActionServicing extends FinancialService {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.EventInformation10#mmLastNotificationIdentification
 	 * EventInformation10.mmLastNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation11#mmLastNotificationIdentification
+	 * EventInformation11.mmLastNotificationIdentification}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.EventInformation12#mmLastNotificationIdentification
+	 * EventInformation12.mmLastNotificationIdentification}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -301,7 +313,8 @@ public class CorporateActionServicing extends FinancialService {
 		{
 			derivation_lazy = () -> Arrays.asList(EventInformation1.mmLastNotificationIdentification, EventInformation2.mmLastNotificationIdentification, EventInformation3.mmLastNotificationIdentification,
 					EventInformation4.mmLastNotificationIdentification, EventInformation5.mmLastNotificationIdentification, EventInformation6.mmLastNotificationIdentification, EventInformation7.mmLastNotificationIdentification,
-					EventInformation8.mmLastNotificationIdentification, EventInformation9.mmLastNotificationIdentification, EventInformation10.mmLastNotificationIdentification);
+					EventInformation8.mmLastNotificationIdentification, EventInformation9.mmLastNotificationIdentification, EventInformation10.mmLastNotificationIdentification, EventInformation11.mmLastNotificationIdentification,
+					EventInformation12.mmLastNotificationIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -374,6 +387,12 @@ public class CorporateActionServicing extends FinancialService {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CorporateAction40#mmOccurrenceType
 	 * CorporateAction40.mmOccurrenceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction41#mmOccurrenceType
+	 * CorporateAction41.mmOccurrenceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateAction51#mmOccurrenceType
+	 * CorporateAction51.mmOccurrenceType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -398,7 +417,7 @@ public class CorporateActionServicing extends FinancialService {
 		{
 			derivation_lazy = () -> Arrays.asList(CorporateAction3.mmDistributionType, CorporateAction4.mmDistributionType, CorporateAction5.mmDistributionType, CorporateAction6.mmDistributionType, CorporateAction7.mmPaymentOccurrenceType,
 					CorporateAction8.mmPaymentOccurrenceType, CorporateAction10.mmPaymentOccurrenceType, CorporateAction11.mmPaymentOccurrenceType, CorporateAction2.mmDistributionType, CorporateAction12.mmOccurrenceType,
-					CorporateAction17.mmOccurrenceType, CorporateAction31.mmOccurrenceType, CorporateAction40.mmOccurrenceType);
+					CorporateAction17.mmOccurrenceType, CorporateAction31.mmOccurrenceType, CorporateAction40.mmOccurrenceType, CorporateAction41.mmOccurrenceType, CorporateAction51.mmOccurrenceType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CorporateActionServicing.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

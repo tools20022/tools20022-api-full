@@ -92,6 +92,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ReportingRequest3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Provides further details on the reporting request."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReportingRequest4
+ * ReportingRequest4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -128,6 +135,14 @@ public class ReportingRequest3 {
 	 * definition} =
 	 * "Unique identification, as assigned by the account owner, to unambiguously identify the account reporting request."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmIdentification
+	 * ReportingRequest4.mmIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIdentification = new MMMessageAttribute() {
@@ -138,6 +153,7 @@ public class ReportingRequest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Identification";
 			definition = "Unique identification, as assigned by the account owner, to unambiguously identify the account reporting request.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmIdentification);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -170,6 +186,14 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the type of the requested reporting message."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmRequestedMessageNameIdentification
+	 * ReportingRequest4.mmRequestedMessageNameIdentification}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmRequestedMessageNameIdentification = new MMMessageAttribute() {
@@ -180,6 +204,7 @@ public class ReportingRequest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedMessageNameIdentification";
 			definition = "Specifies the type of the requested reporting message.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmRequestedMessageNameIdentification);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max35Text.mmObject();
@@ -218,6 +243,14 @@ public class ReportingRequest3 {
 	 * definition} =
 	 * "Unambiguous identification of the account to which the reporting request refers."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmAccount
+	 * ReportingRequest4.mmAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccount = new MMMessageAssociationEnd() {
@@ -229,6 +262,7 @@ public class ReportingRequest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Account";
 			definition = "Unambiguous identification of the account to which the reporting request refers.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -266,6 +300,14 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Party that legally owns the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmAccountOwner
+	 * ReportingRequest4.mmAccountOwner}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountOwner = new MMMessageAssociationEnd() {
@@ -277,6 +319,7 @@ public class ReportingRequest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountOwner";
 			definition = "Party that legally owns the account.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmAccountOwner);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -317,6 +360,14 @@ public class ReportingRequest3 {
 	 * definition} =
 	 * "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmAccountServicer
+	 * ReportingRequest4.mmAccountServicer}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountServicer = new MMMessageAssociationEnd() {
@@ -328,6 +379,7 @@ public class ReportingRequest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountServicer";
 			definition = "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmAccountServicer);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -365,6 +417,14 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Specifies the requested reporting period."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmReportingPeriod
+	 * ReportingRequest4.mmReportingPeriod}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmReportingPeriod = new MMMessageAssociationEnd() {
@@ -376,6 +436,7 @@ public class ReportingRequest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReportingPeriod";
 			definition = "Specifies the requested reporting period.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmReportingPeriod);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -413,6 +474,14 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identifies the transactions to be reported."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmRequestedTransactionType
+	 * ReportingRequest4.mmRequestedTransactionType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRequestedTransactionType = new MMMessageAssociationEnd() {
@@ -424,6 +493,7 @@ public class ReportingRequest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedTransactionType";
 			definition = "Identifies the transactions to be reported.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmRequestedTransactionType);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -461,6 +531,14 @@ public class ReportingRequest3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Provides details on the requested balance reporting."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmRequestedBalanceType
+	 * ReportingRequest4.mmRequestedBalanceType}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmRequestedBalanceType = new MMMessageAssociationEnd() {
@@ -472,6 +550,7 @@ public class ReportingRequest3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedBalanceType";
 			definition = "Provides details on the requested balance reporting.";
+			nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmRequestedBalanceType);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.BalanceType12.mmObject();
@@ -490,6 +569,7 @@ public class ReportingRequest3 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReportingRequest3";
 				definition = "Provides further details on the reporting request.";
+				nextVersions_lazy = () -> Arrays.asList(ReportingRequest4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

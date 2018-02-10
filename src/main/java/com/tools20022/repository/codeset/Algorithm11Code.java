@@ -67,6 +67,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "Algorithm11Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Identification of a digest algorithm."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.codeset.Algorithm16Code
+ * Algorithm16Code}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.codeset.Algorithm5Code Algorithm5Code}</li>
@@ -90,6 +97,13 @@ public class Algorithm11Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SHA256"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.codeset.Algorithm16Code#SHA256
+	 * Algorithm16Code.SHA256}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -101,6 +115,7 @@ public class Algorithm11Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA256";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm16Code.SHA256);
 			previousVersion_lazy = () -> Algorithm5Code.SHA256;
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm11Code.mmObject();
 			codeName = AlgorithmCode.SHA256.getCodeName().orElse(name);
@@ -120,6 +135,13 @@ public class Algorithm11Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SHA384"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.codeset.Algorithm16Code#SHA384
+	 * Algorithm16Code.SHA384}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -131,6 +153,7 @@ public class Algorithm11Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA384";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm16Code.SHA384);
 			previousVersion_lazy = () -> Algorithm5Code.SHA384;
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm11Code.mmObject();
 			codeName = AlgorithmCode.SHA384.getCodeName().orElse(name);
@@ -150,6 +173,13 @@ public class Algorithm11Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SHA512"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.codeset.Algorithm16Code#SHA512
+	 * Algorithm16Code.SHA512}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -161,6 +191,7 @@ public class Algorithm11Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA512";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm16Code.SHA512);
 			previousVersion_lazy = () -> Algorithm5Code.SHA512;
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm11Code.mmObject();
 			codeName = AlgorithmCode.SHA512.getCodeName().orElse(name);
@@ -180,12 +211,20 @@ public class Algorithm11Code extends MMCode {
 	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "SHA1"</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.codeset.Algorithm16Code#SHA1
+	 * Algorithm16Code.SHA1}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final Algorithm11Code SHA1 = new Algorithm11Code() {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SHA1";
+			nextVersions_lazy = () -> Arrays.asList(Algorithm16Code.SHA1);
 			owner_lazy = () -> com.tools20022.repository.codeset.Algorithm11Code.mmObject();
 			codeName = AlgorithmCode.SHA1.getCodeName().orElse(name);
 		}
@@ -203,6 +242,7 @@ public class Algorithm11Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Algorithm11Code";
 				definition = "Identification of a digest algorithm.";
+				nextVersions_lazy = () -> Arrays.asList(Algorithm16Code.mmObject());
 				previousVersion_lazy = () -> Algorithm5Code.mmObject();
 				trace_lazy = () -> AlgorithmCode.mmObject();
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.Algorithm11Code.SHA256, com.tools20022.repository.codeset.Algorithm11Code.SHA384, com.tools20022.repository.codeset.Algorithm11Code.SHA512,

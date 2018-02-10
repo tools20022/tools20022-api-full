@@ -39,6 +39,43 @@ public class ConstraintCorporateActionEventAndBalanceRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV07
+	 * CorporateActionInstructionStatementReportV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CorporateActionEventAndBalanceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV06
+	 * ConstraintCorporateActionEventAndBalanceRule.
+	 * forCorporateActionInstructionStatementReportV06}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionStatementReportV07> forCorporateActionInstructionStatementReportV07 = new MMConstraint<CorporateActionInstructionStatementReportV07>() {
+		{
+			validator = ConstraintCorporateActionEventAndBalanceRule::checkCorporateActionInstructionStatementReportV07;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CorporateActionEventAndBalanceRule";
+			definition = "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV06;
+			owner_lazy = () -> CorporateActionInstructionStatementReportV07.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV06
 	 * CorporateActionInstructionStatementReportV06}</li>
 	 * <li>
@@ -51,6 +88,15 @@ public class ConstraintCorporateActionEventAndBalanceRule {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV07
+	 * ConstraintCorporateActionEventAndBalanceRule.
+	 * forCorporateActionInstructionStatementReportV07}</li>
+	 * </ul>
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -66,6 +112,7 @@ public class ConstraintCorporateActionEventAndBalanceRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CorporateActionEventAndBalanceRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV07);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV05;
 			owner_lazy = () -> CorporateActionInstructionStatementReportV06.mmObject();
 		}
@@ -98,53 +145,6 @@ public class ConstraintCorporateActionEventAndBalanceRule {
 			name = "CorporateActionEventAndBalanceRule";
 			definition = "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails.";
 			owner_lazy = () -> CorporateActionInstructionStatementReport002V06.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05
-	 * CorporateActionInstructionStatementReportV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "CorporateActionEventAndBalanceRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV06
-	 * ConstraintCorporateActionEventAndBalanceRule.
-	 * forCorporateActionInstructionStatementReportV06}</li>
-	 * </ul>
-	 * </li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
-	 * previousVersion} =
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV04
-	 * ConstraintCorporateActionEventAndBalanceRule.
-	 * forCorporateActionInstructionStatementReportV04}</li>
-	 * </ul>
-	 */
-	public static final MMConstraint<CorporateActionInstructionStatementReportV05> forCorporateActionInstructionStatementReportV05 = new MMConstraint<CorporateActionInstructionStatementReportV05>() {
-		{
-			validator = ConstraintCorporateActionEventAndBalanceRule::checkCorporateActionInstructionStatementReportV05;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "CorporateActionEventAndBalanceRule";
-			definition = "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV06);
-			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV04;
-			owner_lazy = () -> CorporateActionInstructionStatementReportV05.mmObject();
 		}
 	};
 	/**
@@ -277,6 +277,66 @@ public class ConstraintCorporateActionEventAndBalanceRule {
 			owner_lazy = () -> CorporateActionInstructionStatementReportV04.mmObject();
 		}
 	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.seev.CorporateActionInstructionStatementReportV05
+	 * CorporateActionInstructionStatementReportV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "CorporateActionEventAndBalanceRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV06
+	 * ConstraintCorporateActionEventAndBalanceRule.
+	 * forCorporateActionInstructionStatementReportV06}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule#forCorporateActionInstructionStatementReportV04
+	 * ConstraintCorporateActionEventAndBalanceRule.
+	 * forCorporateActionInstructionStatementReportV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<CorporateActionInstructionStatementReportV05> forCorporateActionInstructionStatementReportV05 = new MMConstraint<CorporateActionInstructionStatementReportV05>() {
+		{
+			validator = ConstraintCorporateActionEventAndBalanceRule::checkCorporateActionInstructionStatementReportV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "CorporateActionEventAndBalanceRule";
+			definition = "If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then at least one occurrence of AccountAndStatementDetails/CorporateActionEventAndBalance must be present.\r\nIf StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then AccountAndStatementDetails/CorporateActionEventAndBalance must not be present in any occurrences of AccountAndStatementDetails.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV06);
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintCorporateActionEventAndBalanceRule.forCorporateActionInstructionStatementReportV04;
+			owner_lazy = () -> CorporateActionInstructionStatementReportV05.mmObject();
+		}
+	};
+
+	/**
+	 * If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then
+	 * at least one occurrence of
+	 * AccountAndStatementDetails/CorporateActionEventAndBalance must be
+	 * present.<br>
+	 * If StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then
+	 * AccountAndStatementDetails/CorporateActionEventAndBalance must not be
+	 * present in any occurrences of AccountAndStatementDetails.
+	 */
+	public static void checkCorporateActionInstructionStatementReportV07(CorporateActionInstructionStatementReportV07 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
 
 	/**
 	 * If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then
@@ -301,19 +361,6 @@ public class ConstraintCorporateActionEventAndBalanceRule {
 	 * present in any occurrences of AccountAndStatementDetails.
 	 */
 	public static void checkCorporateActionInstructionStatementReport002V06(CorporateActionInstructionStatementReport002V06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then
-	 * at least one occurrence of
-	 * AccountAndStatementDetails/CorporateActionEventAndBalance must be
-	 * present.<br>
-	 * If StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then
-	 * AccountAndStatementDetails/CorporateActionEventAndBalance must not be
-	 * present in any occurrences of AccountAndStatementDetails.
-	 */
-	public static void checkCorporateActionInstructionStatementReportV05(CorporateActionInstructionStatementReportV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -366,6 +413,19 @@ public class ConstraintCorporateActionEventAndBalanceRule {
 	 * present in any occurrences of AccountAndStatementDetails.
 	 */
 	public static void checkCorporateActionInstructionStatementReportV04(CorporateActionInstructionStatementReportV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If StatementGeneralDetails/ActivityIndicator is 'true' or '1' (Yes) then
+	 * at least one occurrence of
+	 * AccountAndStatementDetails/CorporateActionEventAndBalance must be
+	 * present.<br>
+	 * If StatementGeneralDetails/ActivityIndicator is 'false' or '0' (No) then
+	 * AccountAndStatementDetails/CorporateActionEventAndBalance must not be
+	 * present in any occurrences of AccountAndStatementDetails.
+	 */
+	public static void checkCorporateActionInstructionStatementReportV05(CorporateActionInstructionStatementReportV05 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 }

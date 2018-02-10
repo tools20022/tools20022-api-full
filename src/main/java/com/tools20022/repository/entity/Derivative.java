@@ -111,6 +111,35 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.choice.Derivative2Choice#mmEmissionAllowance
  * Derivative2Choice.mmEmissionAllowance}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport21#mmContractData
+ * CommonTradeDataReport21.mmContractData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport20#mmContractData
+ * CommonTradeDataReport20.mmContractData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction15#mmCredit
+ * TradeTransaction15.mmCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport23#mmContractData
+ * CommonTradeDataReport23.mmContractData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport22#mmContractData
+ * CommonTradeDataReport22.mmContractData}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport24#mmContractData
+ * CommonTradeDataReport24.mmContractData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction17#mmCredit
+ * TradeTransaction17.mmCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport19#mmContractData
+ * CommonTradeDataReport19.mmContractData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction14#mmCredit
+ * TradeTransaction14.mmCredit}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CommonTradeDataReport25#mmContractData
+ * CommonTradeDataReport25.mmContractData}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeTransaction18#mmCredit
+ * TradeTransaction18.mmCredit}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -171,8 +200,15 @@ import java.util.Objects;
  * DerivativeInstrument6}</li>
  * <li>{@linkplain com.tools20022.repository.choice.Derivative2Choice
  * Derivative2Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeCounterpartyReport5
+ * TradeCounterpartyReport5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeCounterpartyReport6
+ * TradeCounterpartyReport6}</li>
  * <li>{@linkplain com.tools20022.repository.msg.UnsecuredMarketTransaction4
  * UnsecuredMarketTransaction4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContractType5 ContractType5}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.ContractType6 ContractType6}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Derivative3 Derivative3}</li>
  * </ul>
  * </li>
  * <li>
@@ -219,6 +255,9 @@ public class Derivative extends Asset {
 	 * {@linkplain com.tools20022.repository.msg.Future2#mmAdditionalUnderlyingAttributes
 	 * Future2.mmAdditionalUnderlyingAttributes}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Future3#mmAdditionalUnderlyingAttributes
+	 * Future3.mmAdditionalUnderlyingAttributes}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.TransparencyDataReport10#mmUnderlyingInstrumentAssetClass
 	 * TransparencyDataReport10.mmUnderlyingInstrumentAssetClass}</li>
 	 * <li>
@@ -248,6 +287,15 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.choice.Derivative2Choice#mmEquity
 	 * Derivative2Choice.mmEquity}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType5#mmUnderlyingAsset
+	 * ContractType5.mmUnderlyingAsset}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ContractType6#mmUnderlyingAsset
+	 * ContractType6.mmUnderlyingAsset}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Derivative3#mmDerivativeUnderlyingLeg
+	 * Derivative3.mmDerivativeUnderlyingLeg}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -267,9 +315,9 @@ public class Derivative extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmUnderlyingAsset = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(Future2.mmAdditionalUnderlyingAttributes, TransparencyDataReport10.mmUnderlyingInstrumentAssetClass, DerivativeInstrument5.mmUnderlyingInstrument, EquityDerivative2.mmUnderlyingType,
-					ContractForDifference2.mmUnderlyingType, InterestRateDerivative5.mmUnderlyingType, DerivativeInstrument6.mmUnderlyingInstrument, Derivative2Choice.mmCommodity, Derivative2Choice.mmInterestRate,
-					Derivative2Choice.mmForeignExchange, Derivative2Choice.mmEquity);
+			derivation_lazy = () -> Arrays.asList(Future2.mmAdditionalUnderlyingAttributes, Future3.mmAdditionalUnderlyingAttributes, TransparencyDataReport10.mmUnderlyingInstrumentAssetClass, DerivativeInstrument5.mmUnderlyingInstrument,
+					EquityDerivative2.mmUnderlyingType, ContractForDifference2.mmUnderlyingType, InterestRateDerivative5.mmUnderlyingType, DerivativeInstrument6.mmUnderlyingInstrument, Derivative2Choice.mmCommodity,
+					Derivative2Choice.mmInterestRate, Derivative2Choice.mmForeignExchange, Derivative2Choice.mmEquity, ContractType5.mmUnderlyingAsset, ContractType6.mmUnderlyingAsset, Derivative3.mmDerivativeUnderlyingLeg);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -307,6 +355,12 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes2#mmCashAmount
 	 * UnderlyingAttributes2.mmCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.UnderlyingAttributes3#mmCashAmount
+	 * UnderlyingAttributes3.mmCashAmount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TradeTransaction18#mmNotionalAmount
+	 * TradeTransaction18.mmNotionalAmount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -328,7 +382,8 @@ public class Derivative extends Asset {
 	 */
 	public static final MMBusinessAttribute mmNotionalCurrencyAndAmount = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(DerivativeBasicAttributes1.mmNotionalCurrencyAndAmount, DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount, UnderlyingAttributes.mmCashAmount, UnderlyingAttributes2.mmCashAmount);
+			derivation_lazy = () -> Arrays.asList(DerivativeBasicAttributes1.mmNotionalCurrencyAndAmount, DerivativeBasicAttributes2.mmNotionalCurrencyAndAmount, UnderlyingAttributes.mmCashAmount, UnderlyingAttributes2.mmCashAmount,
+					UnderlyingAttributes3.mmCashAmount, TradeTransaction18.mmNotionalAmount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -701,6 +756,20 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes78#mmExercisePrice
 	 * FinancialInstrumentAttributes78.mmExercisePrice}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Future3#mmExercisePrice
+	 * Future3.mmExercisePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes91#mmExercisePrice
+	 * FinancialInstrumentAttributes91.mmExercisePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes92#mmExercisePrice
+	 * FinancialInstrumentAttributes92.mmExercisePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes95#mmExercisePrice
+	 * FinancialInstrumentAttributes95.mmExercisePrice}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.FinancialInstrumentAttributes97#mmExercisePrice
+	 * FinancialInstrumentAttributes97.mmExercisePrice}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -722,13 +791,16 @@ public class Derivative extends Asset {
 	 */
 	public static final MMBusinessAssociationEnd mmExercisePrice = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(FinancialInstrumentAttributes8.mmExercisePrice, FinancialInstrumentAttributes20.mmExercisePrice, FinancialInstrumentAttributes35.mmExercisePrice,
-					FinancialInstrumentAttributes41.mmExercisePrice, PriceDetails2.mmExercisePrice, PriceDetails4.mmExercisePrice, PriceDetails3.mmExercisePrice, PriceDetails5.mmExercisePrice,
-					FinancialInstrumentAttributes4.mmExercisePrice, FinancialInstrumentAttributes13.mmExercisePrice, FinancialInstrumentAttributes21.mmExercisePrice, FinancialInstrumentAttributes26.mmExercisePrice,
-					FinancialInstrumentAttributes36.mmExercisePrice, FinancialInstrumentAttributes42.mmExercisePrice, FinancialInstrumentAttributes27.mmExercisePrice, FinancialInstrumentAttributes14.mmExercisePrice,
-					FinancialInstrumentAttributes30.mmExercisePrice, FinancialInstrumentAttributes28.mmExercisePrice, Future1.mmExercisePrice, FinancialInstrumentAttributes31.mmExercisePrice,
-					FinancialInstrumentAttributes44.mmExercisePrice, FinancialInstrumentAttributes15.mmExercisePrice, FinancialInstrumentAttributes29.mmExercisePrice, Future2.mmExercisePrice, FinancialInstrumentAttributes2.mmExercisePrice,
-					FinancialInstrumentAttributes63.mmExercisePrice, FinancialInstrumentAttributes64.mmExercisePrice, FinancialInstrumentAttributes75.mmExercisePrice, FinancialInstrumentAttributes78.mmExercisePrice);
+			derivation_lazy = () -> Arrays
+					.asList(FinancialInstrumentAttributes8.mmExercisePrice, FinancialInstrumentAttributes20.mmExercisePrice, FinancialInstrumentAttributes35.mmExercisePrice, FinancialInstrumentAttributes41.mmExercisePrice,
+							PriceDetails2.mmExercisePrice, PriceDetails4.mmExercisePrice, PriceDetails3.mmExercisePrice, PriceDetails5.mmExercisePrice, FinancialInstrumentAttributes4.mmExercisePrice,
+							FinancialInstrumentAttributes13.mmExercisePrice, FinancialInstrumentAttributes21.mmExercisePrice, FinancialInstrumentAttributes26.mmExercisePrice, FinancialInstrumentAttributes36.mmExercisePrice,
+							FinancialInstrumentAttributes42.mmExercisePrice, FinancialInstrumentAttributes27.mmExercisePrice, FinancialInstrumentAttributes14.mmExercisePrice, FinancialInstrumentAttributes30.mmExercisePrice,
+							FinancialInstrumentAttributes28.mmExercisePrice, Future1.mmExercisePrice, FinancialInstrumentAttributes31.mmExercisePrice, FinancialInstrumentAttributes44.mmExercisePrice,
+							FinancialInstrumentAttributes15.mmExercisePrice, FinancialInstrumentAttributes29.mmExercisePrice, Future2.mmExercisePrice, FinancialInstrumentAttributes2.mmExercisePrice,
+							FinancialInstrumentAttributes63.mmExercisePrice, FinancialInstrumentAttributes64.mmExercisePrice, FinancialInstrumentAttributes75.mmExercisePrice, FinancialInstrumentAttributes78.mmExercisePrice,
+							Future3.mmExercisePrice, FinancialInstrumentAttributes91.mmExercisePrice, FinancialInstrumentAttributes92.mmExercisePrice, FinancialInstrumentAttributes95.mmExercisePrice,
+							FinancialInstrumentAttributes97.mmExercisePrice);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -865,7 +937,7 @@ public class Derivative extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)"
+	 * "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)."
 	 * </li>
 	 * </ul>
 	 */
@@ -877,7 +949,7 @@ public class Derivative extends Asset {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Derivative.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "VersionNumber";
-			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price)";
+			definition = "Number allocated by options exchanges to record that an option has undergone a change in its contract specifications (particularly adjustment of the strike price).";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -901,7 +973,9 @@ public class Derivative extends Asset {
 				definition = "Specifies the parameters of a derivative instrument based on a specific asset.";
 				associationDomain_lazy = () -> Arrays.asList(Asset.mmDerivative, com.tools20022.repository.entity.SecuritiesPricing.mmDerivative, com.tools20022.repository.entity.SecuritiesPricing.mmRelatedFuture);
 				derivationElement_lazy = () -> Arrays.asList(AssetClassAttributes1Choice.mmBoth, AssetClass2.mmCommodity, AssetClass2.mmInterest, AssetClass2.mmForeignExchange, DerivativeInstrument6.mmAssetClassSpecificAttributes,
-						Derivative2Choice.mmEmissionAllowance);
+						Derivative2Choice.mmEmissionAllowance, CommonTradeDataReport21.mmContractData, CommonTradeDataReport20.mmContractData, TradeTransaction15.mmCredit, CommonTradeDataReport23.mmContractData,
+						CommonTradeDataReport22.mmContractData, CommonTradeDataReport24.mmContractData, TradeTransaction17.mmCredit, CommonTradeDataReport19.mmContractData, TradeTransaction14.mmCredit,
+						CommonTradeDataReport25.mmContractData, TradeTransaction18.mmCredit);
 				subType_lazy = () -> Arrays.asList(Option.mmObject(), Future.mmObject(), Swaps.mmObject());
 				superType_lazy = () -> Asset.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Derivative.mmUnderlyingAsset, com.tools20022.repository.entity.Derivative.mmNotionalCurrencyAndAmount,
@@ -912,7 +986,8 @@ public class Derivative extends Asset {
 						UnsecuredMarketTransaction2.mmObject(), UnsecuredMarketTransaction3.mmObject(), AssetClassAttributes1Choice.mmObject(), DerivativeInterest2.mmObject(), AssetClassAttributes1.mmObject(),
 						DerivativeForeignExchange2.mmObject(), DerivativeInterest3.mmObject(), DerivativeForeignExchange3.mmObject(), DerivativeInstrument5.mmObject(), EquityDerivative2.mmObject(), EquityDerivative3Choice.mmObject(),
 						ForeignExchangeDerivative2.mmObject(), ContractForDifference2.mmObject(), InterestRateDerivative5.mmObject(), BondDerivative2.mmObject(), CommodityDerivate4.mmObject(), CommodityDerivate2Choice.mmObject(),
-						DerivativeInstrument6.mmObject(), Derivative2Choice.mmObject(), UnsecuredMarketTransaction4.mmObject());
+						DerivativeInstrument6.mmObject(), Derivative2Choice.mmObject(), TradeCounterpartyReport5.mmObject(), TradeCounterpartyReport6.mmObject(), UnsecuredMarketTransaction4.mmObject(), ContractType5.mmObject(),
+						ContractType6.mmObject(), Derivative3.mmObject());
 			}
 
 			@Override

@@ -295,7 +295,7 @@ public class UndertakingExtension {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum number of days of advance notification that must be given to indicate the undertaking  will no longer be extended. "
+	 * "Minimum number of days of advance notification that must be given to indicate the undertaking will no longer be extended."
 	 * </li>
 	 * </ul>
 	 */
@@ -306,7 +306,7 @@ public class UndertakingExtension {
 			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "NonExtensionNoticePeriod";
-			definition = "Minimum number of days of advance notification that must be given to indicate the undertaking  will no longer be extended. ";
+			definition = "Minimum number of days of advance notification that must be given to indicate the undertaking will no longer be extended.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -391,7 +391,7 @@ public class UndertakingExtension {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Minimum number of days of advance notification given to indicate the undertaking will no longer be automatically extended. "
+	 * "Minimum number of days of advance notification given to indicate the undertaking will no longer be automatically extended."
 	 * </li>
 	 * </ul>
 	 */
@@ -401,7 +401,7 @@ public class UndertakingExtension {
 			elementContext_lazy = () -> com.tools20022.repository.entity.UndertakingExtension.mmObject();
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AutoExtensionNotificationPeriod";
-			definition = "Minimum number of days of advance notification given to indicate the undertaking will no longer be automatically extended. ";
+			definition = "Minimum number of days of advance notification given to indicate the undertaking will no longer be automatically extended.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();

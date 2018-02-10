@@ -38,8 +38,8 @@ public class ConstraintDesignationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
-	 * PortfolioTransferInstructionV07}</li>
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV08
+	 * PortfolioTransferInstructionV08}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
@@ -54,6 +54,158 @@ public class ConstraintDesignationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferInstructionV07
+	 * ConstraintDesignationRule.forPortfolioTransferInstructionV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferInstructionV08> forPortfolioTransferInstructionV08 = new MMConstraint<PortfolioTransferInstructionV08>() {
+		{
+			validator = ConstraintDesignationRule::checkPortfolioTransferInstructionV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV07;
+			owner_lazy = () -> PortfolioTransferInstructionV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV08
+	 * PortfolioTransferConfirmationV08}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferConfirmationV07
+	 * ConstraintDesignationRule.forPortfolioTransferConfirmationV07}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferConfirmationV08> forPortfolioTransferConfirmationV08 = new MMConstraint<PortfolioTransferConfirmationV08>() {
+		{
+			validator = ConstraintDesignationRule::checkPortfolioTransferConfirmationV08;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV07;
+			owner_lazy = () -> PortfolioTransferConfirmationV08.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationV06
+	 * AccountHoldingInformationV06}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forAccountHoldingInformationV05
+	 * ConstraintDesignationRule.forAccountHoldingInformationV05}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationV06> forAccountHoldingInformationV06 = new MMConstraint<AccountHoldingInformationV06>() {
+		{
+			validator = ConstraintDesignationRule::checkAccountHoldingInformationV06;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationV05;
+			owner_lazy = () -> AccountHoldingInformationV06.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.AccountHoldingInformationRequestV05
+	 * AccountHoldingInformationRequestV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forAccountHoldingInformationRequestV04
+	 * ConstraintDesignationRule.forAccountHoldingInformationRequestV04}</li>
+	 * </ul>
+	 */
+	public static final MMConstraint<AccountHoldingInformationRequestV05> forAccountHoldingInformationRequestV05 = new MMConstraint<AccountHoldingInformationRequestV05>() {
+		{
+			validator = ConstraintDesignationRule::checkAccountHoldingInformationRequestV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
+			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationRequestV04;
+			owner_lazy = () -> AccountHoldingInformationRequestV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV07
+	 * PortfolioTransferInstructionV07}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferInstructionV08
+	 * ConstraintDesignationRule.forPortfolioTransferInstructionV08}</li>
+	 * </ul>
+	 * </li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
+	 * previousVersion} =
 	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferInstructionV06
 	 * ConstraintDesignationRule.forPortfolioTransferInstructionV06}</li>
 	 * </ul>
@@ -64,6 +216,7 @@ public class ConstraintDesignationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV06;
 			owner_lazy = () -> PortfolioTransferInstructionV07.mmObject();
 		}
@@ -87,6 +240,14 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forAccountHoldingInformationV06
+	 * ConstraintDesignationRule.forAccountHoldingInformationV06}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -100,6 +261,7 @@ public class ConstraintDesignationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationV06);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationV04;
 			owner_lazy = () -> AccountHoldingInformationV05.mmObject();
 		}
@@ -123,6 +285,14 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferConfirmationV08
+	 * ConstraintDesignationRule.forPortfolioTransferConfirmationV08}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -136,6 +306,7 @@ public class ConstraintDesignationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If any occurrence of ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If any occurrence of ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV08);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV06;
 			owner_lazy = () -> PortfolioTransferConfirmationV07.mmObject();
 		}
@@ -159,6 +330,14 @@ public class ConstraintDesignationRule {
 	 * definition} =
 	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n"
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forAccountHoldingInformationRequestV05
+	 * ConstraintDesignationRule.forAccountHoldingInformationRequestV05}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -172,8 +351,129 @@ public class ConstraintDesignationRule {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed.\r\n\r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationRequestV05);
 			previousVersion_lazy = () -> com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationRequestV03;
 			owner_lazy = () -> AccountHoldingInformationRequestV04.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01
+	 * PEPOrISAOrPortfolioInformationV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PEPOrISAOrPortfolioInformationV01> forPEPOrISAOrPortfolioInformationV01 = new MMConstraint<PEPOrISAOrPortfolioInformationV01>() {
+		{
+			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioInformationV01;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
+			owner_lazy = () -> PEPOrISAOrPortfolioInformationV01.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02
+	 * PEPOrISAOrPortfolioTransferConfirmationV02}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02> forPEPOrISAOrPortfolioTransferConfirmationV02 = new MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02>() {
+		{
+			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioTransferConfirmationV02;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
+			owner_lazy = () -> PEPOrISAOrPortfolioTransferConfirmationV02.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02
+	 * PEPOrISAOrPortfolioTransferInstructionV02}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02> forPEPOrISAOrPortfolioTransferInstructionV02 = new MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02>() {
+		{
+			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioTransferInstructionV02;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
+			owner_lazy = () -> PEPOrISAOrPortfolioTransferInstructionV02.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01
+	 * RequestForPEPOrISAOrPortfolioInformationV01}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01> forRequestForPEPOrISAOrPortfolioInformationV01 = new MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01>() {
+		{
+			validator = ConstraintDesignationRule::checkRequestForPEPOrISAOrPortfolioInformationV01;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
+			owner_lazy = () -> RequestForPEPOrISAOrPortfolioInformationV01.mmObject();
 		}
 	};
 	/**
@@ -252,6 +552,84 @@ public class ConstraintDesignationRule {
 			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. \r\nIf ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.\r\n";
 			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forAccountHoldingInformationV05);
 			owner_lazy = () -> AccountHoldingInformationV04.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05
+	 * PortfolioTransferInstructionV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferInstructionV06
+	 * ConstraintDesignationRule.forPortfolioTransferInstructionV06}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferInstructionV05> forPortfolioTransferInstructionV05 = new MMConstraint<PortfolioTransferInstructionV05>() {
+		{
+			validator = ConstraintDesignationRule::checkPortfolioTransferInstructionV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV06);
+			owner_lazy = () -> PortfolioTransferInstructionV05.mmObject();
+		}
+	};
+	/**
+	 * 
+	 <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05
+	 * PortfolioTransferConfirmationV05}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "DesignationRule"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} =
+	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferConfirmationV06
+	 * ConstraintDesignationRule.forPortfolioTransferConfirmationV06}</li>
+	 * </ul>
+	 * </li>
+	 * </ul>
+	 */
+	public static final MMConstraint<PortfolioTransferConfirmationV05> forPortfolioTransferConfirmationV05 = new MMConstraint<PortfolioTransferConfirmationV05>() {
+		{
+			validator = ConstraintDesignationRule::checkPortfolioTransferConfirmationV05;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "DesignationRule";
+			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
+			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV06);
+			owner_lazy = () -> PortfolioTransferConfirmationV05.mmObject();
 		}
 	};
 	/**
@@ -350,204 +728,6 @@ public class ConstraintDesignationRule {
 	 * <strong>Constant fields:</strong>
 	 * <ul>
 	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioInformationV01
-	 * PEPOrISAOrPortfolioInformationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DesignationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PEPOrISAOrPortfolioInformationV01> forPEPOrISAOrPortfolioInformationV01 = new MMConstraint<PEPOrISAOrPortfolioInformationV01>() {
-		{
-			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioInformationV01;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DesignationRule";
-			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed.";
-			owner_lazy = () -> PEPOrISAOrPortfolioInformationV01.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferConfirmationV02
-	 * PEPOrISAOrPortfolioTransferConfirmationV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DesignationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02> forPEPOrISAOrPortfolioTransferConfirmationV02 = new MMConstraint<PEPOrISAOrPortfolioTransferConfirmationV02>() {
-		{
-			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioTransferConfirmationV02;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DesignationRule";
-			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed.";
-			owner_lazy = () -> PEPOrISAOrPortfolioTransferConfirmationV02.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PEPOrISAOrPortfolioTransferInstructionV02
-	 * PEPOrISAOrPortfolioTransferInstructionV02}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DesignationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02> forPEPOrISAOrPortfolioTransferInstructionV02 = new MMConstraint<PEPOrISAOrPortfolioTransferInstructionV02>() {
-		{
-			validator = ConstraintDesignationRule::checkPEPOrISAOrPortfolioTransferInstructionV02;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DesignationRule";
-			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed.";
-			owner_lazy = () -> PEPOrISAOrPortfolioTransferInstructionV02.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.RequestForPEPOrISAOrPortfolioInformationV01
-	 * RequestForPEPOrISAOrPortfolioInformationV01}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DesignationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed."
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01> forRequestForPEPOrISAOrPortfolioInformationV01 = new MMConstraint<RequestForPEPOrISAOrPortfolioInformationV01>() {
-		{
-			validator = ConstraintDesignationRule::checkRequestForPEPOrISAOrPortfolioInformationV01;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DesignationRule";
-			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed.";
-			owner_lazy = () -> RequestForPEPOrISAOrPortfolioInformationV01.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferInstructionV05
-	 * PortfolioTransferInstructionV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DesignationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferInstructionV06
-	 * ConstraintDesignationRule.forPortfolioTransferInstructionV06}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferInstructionV05> forPortfolioTransferInstructionV05 = new MMConstraint<PortfolioTransferInstructionV05>() {
-		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferInstructionV05;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DesignationRule";
-			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferInstructionV06);
-			owner_lazy = () -> PortfolioTransferInstructionV05.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
-	 * {@linkplain com.tools20022.repository.area.sese.PortfolioTransferConfirmationV05
-	 * PortfolioTransferConfirmationV05}</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
-	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
-	 * name} = "DesignationRule"</li>
-	 * <li>
-	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} =
-	 * "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed."
-	 * </li>
-	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
-	 * nextVersions} =
-	 * <ul>
-	 * <li>
-	 * {@linkplain com.tools20022.repository.constraints.ConstraintDesignationRule#forPortfolioTransferConfirmationV06
-	 * ConstraintDesignationRule.forPortfolioTransferConfirmationV06}</li>
-	 * </ul>
-	 * </li>
-	 * </ul>
-	 */
-	public static final MMConstraint<PortfolioTransferConfirmationV05> forPortfolioTransferConfirmationV05 = new MMConstraint<PortfolioTransferConfirmationV05>() {
-		{
-			validator = ConstraintDesignationRule::checkPortfolioTransferConfirmationV05;
-			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
-			name = "DesignationRule";
-			definition = "If ProductTransfer/Portfolio/ISA is present, then TransferorAccount/Designation is not allowed. If ProductTransfer/Portfolio/Portfolio is present, then TransferorAccount/Designation is allowed.";
-			nextVersions_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDesignationRule.forPortfolioTransferConfirmationV06);
-			owner_lazy = () -> PortfolioTransferConfirmationV05.mmObject();
-		}
-	};
-	/**
-	 * 
-	 <p>
-	 * <strong>Constant fields:</strong>
-	 * <ul>
-	 * <li>{@linkplain com.tools20022.metamodel.MMConstraint#getOwner owner} =
 	 * {@linkplain com.tools20022.repository.msg.ISATransfer4 ISATransfer4}</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
@@ -617,7 +797,7 @@ public class ConstraintDesignationRule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed."
+	 * "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed."
 	 * </li>
 	 * </ul>
 	 */
@@ -626,7 +806,7 @@ public class ConstraintDesignationRule {
 			validator = ConstraintDesignationRule::checkPEPISATransfer7;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DesignationRule";
-			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio  is present, then ClientAccount\\Designation is allowed.";
+			definition = "If ProductTransfer\\ISA or ProductTransfer\\PEP is present, then ClientAccount\\Designation is not allowed.\n\nIf ProductTransfer\\Portfolio is present, then ClientAccount\\Designation is allowed.";
 			owner_lazy = () -> PEPISATransfer7.mmObject();
 		}
 	};
@@ -973,6 +1153,47 @@ public class ConstraintDesignationRule {
 	 * ProductTransfer/Portfolio/Portfolio is present, then
 	 * TransferorAccount/Designation is allowed.
 	 */
+	public static void checkPortfolioTransferInstructionV08(PortfolioTransferInstructionV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If any occurrence of ProductTransfer/Portfolio/ISA is present, then
+	 * TransferorAccount/Designation is not allowed. If any occurrence of
+	 * ProductTransfer/Portfolio/Portfolio is present, then
+	 * TransferorAccount/Designation is allowed.
+	 */
+	public static void checkPortfolioTransferConfirmationV08(PortfolioTransferConfirmationV08 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ProductTransfer/Portfolio/ISA is present, then
+	 * TransferorAccount/Designation is not allowed. <br>
+	 * If ProductTransfer/Portfolio/Portfolio is present, then
+	 * TransferorAccount/Designation is allowed.<br>
+	 */
+	public static void checkAccountHoldingInformationV06(AccountHoldingInformationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ProductTransfer/Portfolio/ISA is present, then
+	 * TransferorAccount/Designation is not allowed.<br>
+	 * <br>
+	 * If ProductTransfer/Portfolio/Portfolio is present, then
+	 * TransferorAccount/Designation is allowed.<br>
+	 */
+	public static void checkAccountHoldingInformationRequestV05(AccountHoldingInformationRequestV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If any occurrence of ProductTransfer/Portfolio/ISA is present, then
+	 * TransferorAccount/Designation is not allowed. If any occurrence of
+	 * ProductTransfer/Portfolio/Portfolio is present, then
+	 * TransferorAccount/Designation is allowed.
+	 */
 	public static void checkPortfolioTransferInstructionV07(PortfolioTransferInstructionV07 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
@@ -1005,47 +1226,6 @@ public class ConstraintDesignationRule {
 	 * TransferorAccount/Designation is allowed.<br>
 	 */
 	public static void checkAccountHoldingInformationRequestV04(AccountHoldingInformationRequestV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ProductTransfer/Portfolio/ISA is present, then
-	 * TransferorAccount/Designation is not allowed.<br>
-	 * <br>
-	 * If ProductTransfer/Portfolio/Portfolio is present, then
-	 * TransferorAccount/Designation is allowed.<br>
-	 */
-	public static void checkAccountHoldingInformationRequestV03(AccountHoldingInformationRequestV03 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If ProductTransfer/Portfolio/ISA is present, then
-	 * TransferorAccount/Designation is not allowed. <br>
-	 * If ProductTransfer/Portfolio/Portfolio is present, then
-	 * TransferorAccount/Designation is allowed.<br>
-	 */
-	public static void checkAccountHoldingInformationV04(AccountHoldingInformationV04 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If any occurrence of ProductTransfer/Portfolio/ISA is present, then
-	 * TransferorAccount/Designation is not allowed. If any occurrence of
-	 * ProductTransfer/Portfolio/Portfolio is present, then
-	 * TransferorAccount/Designation is allowed.
-	 */
-	public static void checkPortfolioTransferConfirmationV06(PortfolioTransferConfirmationV06 obj) throws Exception {
-		throw new NotImplementedConstraintException();
-	}
-
-	/**
-	 * If any occurrence of ProductTransfer/Portfolio/ISA is present, then
-	 * TransferorAccount/Designation is not allowed. If any occurrence of
-	 * ProductTransfer/Portfolio/Portfolio is present, then
-	 * TransferorAccount/Designation is allowed.
-	 */
-	public static void checkPortfolioTransferInstructionV06(PortfolioTransferInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 
@@ -1095,6 +1275,27 @@ public class ConstraintDesignationRule {
 
 	/**
 	 * If ProductTransfer/Portfolio/ISA is present, then
+	 * TransferorAccount/Designation is not allowed.<br>
+	 * <br>
+	 * If ProductTransfer/Portfolio/Portfolio is present, then
+	 * TransferorAccount/Designation is allowed.<br>
+	 */
+	public static void checkAccountHoldingInformationRequestV03(AccountHoldingInformationRequestV03 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ProductTransfer/Portfolio/ISA is present, then
+	 * TransferorAccount/Designation is not allowed. <br>
+	 * If ProductTransfer/Portfolio/Portfolio is present, then
+	 * TransferorAccount/Designation is allowed.<br>
+	 */
+	public static void checkAccountHoldingInformationV04(AccountHoldingInformationV04 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If ProductTransfer/Portfolio/ISA is present, then
 	 * TransferorAccount/Designation is not allowed. If
 	 * ProductTransfer/Portfolio/Portfolio is present, then
 	 * TransferorAccount/Designation is allowed.
@@ -1110,6 +1311,26 @@ public class ConstraintDesignationRule {
 	 * TransferorAccount/Designation is allowed.
 	 */
 	public static void checkPortfolioTransferConfirmationV05(PortfolioTransferConfirmationV05 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If any occurrence of ProductTransfer/Portfolio/ISA is present, then
+	 * TransferorAccount/Designation is not allowed. If any occurrence of
+	 * ProductTransfer/Portfolio/Portfolio is present, then
+	 * TransferorAccount/Designation is allowed.
+	 */
+	public static void checkPortfolioTransferConfirmationV06(PortfolioTransferConfirmationV06 obj) throws Exception {
+		throw new NotImplementedConstraintException();
+	}
+
+	/**
+	 * If any occurrence of ProductTransfer/Portfolio/ISA is present, then
+	 * TransferorAccount/Designation is not allowed. If any occurrence of
+	 * ProductTransfer/Portfolio/Portfolio is present, then
+	 * TransferorAccount/Designation is allowed.
+	 */
+	public static void checkPortfolioTransferInstructionV06(PortfolioTransferInstructionV06 obj) throws Exception {
 		throw new NotImplementedConstraintException();
 	}
 

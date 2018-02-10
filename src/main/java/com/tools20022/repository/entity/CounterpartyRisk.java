@@ -131,7 +131,7 @@ public class CounterpartyRisk {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
 	 * registrationStatus} =
-	 * com.tools20022.metamodel.MMRegistrationStatus.REGISTERED</li>
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
 	 * name} = "Party"</li>
 	 * <li>
@@ -148,7 +148,7 @@ public class CounterpartyRisk {
 					UnsecuredMarketTransaction4.mmCounterpartyIdentification);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CounterpartyRisk.mmObject();
-			registrationStatus = MMRegistrationStatus.REGISTERED;
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Party";
 			definition = "Specifies which role played by a party was taken into consideration for the risk calculation, for instance clearing member role.";
 			maxOccurs = 1;

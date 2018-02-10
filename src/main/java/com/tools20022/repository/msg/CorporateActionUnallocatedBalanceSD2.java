@@ -76,6 +76,14 @@ import javax.xml.bind.annotation.XmlType;
  * "CorporateActionUnallocatedBalanceSD2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Balance types related to an unallocated redemption payment."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD4
+ * CorporateActionUnallocatedBalanceSD4}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -110,6 +118,14 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "xPath to the element that is being extended."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD4#mmPlaceAndName
+	 * CorporateActionUnallocatedBalanceSD4.mmPlaceAndName}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmPlaceAndName = new MMMessageAttribute() {
@@ -120,6 +136,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceAndName";
 			definition = "xPath to the element that is being extended.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD4.mmPlaceAndName);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Max350Text.mmObject();
@@ -157,7 +174,15 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance. "
+	 * "Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD4#mmTotalEligibleBalance
+	 * CorporateActionUnallocatedBalanceSD4.mmTotalEligibleBalance}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -169,7 +194,8 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93B::ELIG"), new DTCCSynonym(this, "Total Eligible Balance"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TotalEligibleBalance";
-			definition = "Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance. ";
+			definition = "Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD4.mmTotalEligibleBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SignedQuantityFormat9.mmObject();
@@ -201,7 +227,15 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Position held in DTC Segregated account.  This position is ineligible for payment until released from pledgee.  "
+	 * "Position held in DTC Segregated account. This position is ineligible for payment until released from pledgee."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD4#mmPledgedBalance
+	 * CorporateActionUnallocatedBalanceSD4.mmPledgedBalance}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -212,7 +246,8 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			xmlTag = "PldgdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PledgedBalance";
-			definition = "Position held in DTC Segregated account.  This position is ineligible for payment until released from pledgee.  ";
+			definition = "Position held in DTC Segregated account. This position is ineligible for payment until released from pledgee.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD4.mmPledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -245,7 +280,15 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Position held in DTC Segregated account also called account 18.   This position is not eligible for instruction processing but will be eligible for payment on mandatory events."
+	 * "Position held in DTC Segregated account also called account 18. This position is not eligible for instruction processing but will be eligible for payment on mandatory events."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD4#mmInvestmentPledgedBalance
+	 * CorporateActionUnallocatedBalanceSD4.mmInvestmentPledgedBalance}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -256,7 +299,8 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			xmlTag = "InvstmtPldgdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentPledgedBalance";
-			definition = "Position held in DTC Segregated account also called account 18.   This position is not eligible for instruction processing but will be eligible for payment on mandatory events.";
+			definition = "Position held in DTC Segregated account also called account 18. This position is not eligible for instruction processing but will be eligible for payment on mandatory events.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD4.mmInvestmentPledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -289,7 +333,15 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Position held in DTC Segregated account also called account 22.   This position is not eligible for instruction processing but will be eligible for payment on mandatory events.  \r\n"
+	 * "Position held in DTC Segregated account also called account 22. This position is not eligible for instruction processing but will be eligible for payment on mandatory events. \r\n"
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD4#mmInvestmentUnpledgedBalance
+	 * CorporateActionUnallocatedBalanceSD4.mmInvestmentUnpledgedBalance}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -300,7 +352,8 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			xmlTag = "InvstmtUpldgdBal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InvestmentUnpledgedBalance";
-			definition = "Position held in DTC Segregated account also called account 22.   This position is not eligible for instruction processing but will be eligible for payment on mandatory events.  \r\n";
+			definition = "Position held in DTC Segregated account also called account 22. This position is not eligible for instruction processing but will be eligible for payment on mandatory events. \r\n";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD4.mmInvestmentUnpledgedBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -335,6 +388,14 @@ public class CorporateActionUnallocatedBalanceSD2 {
 	 * definition} =
 	 * "Position held in DTC Segregated account. This position is eligible for payment."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CorporateActionUnallocatedBalanceSD4#mmMemoSegregationBalance
+	 * CorporateActionUnallocatedBalanceSD4.mmMemoSegregationBalance}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmMemoSegregationBalance = new MMMessageAssociationEnd() {
@@ -345,6 +406,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MemoSegregationBalance";
 			definition = "Position held in DTC Segregated account. This position is eligible for payment.";
+			nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD4.mmMemoSegregationBalance);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -362,6 +424,7 @@ public class CorporateActionUnallocatedBalanceSD2 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "CorporateActionUnallocatedBalanceSD2";
 				definition = "Balance types related to an unallocated redemption payment.";
+				nextVersions_lazy = () -> Arrays.asList(CorporateActionUnallocatedBalanceSD4.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

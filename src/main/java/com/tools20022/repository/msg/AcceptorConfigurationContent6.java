@@ -82,6 +82,13 @@ import javax.xml.bind.annotation.XmlType;
  * "AcceptorConfigurationContent6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Content of the acceptor configuration."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7
+ * AcceptorConfigurationContent7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent5
@@ -124,6 +131,14 @@ public class AcceptorConfigurationContent6 {
 	 * definition} =
 	 * "True if the whole configuration related to the terminal manager has to be replaced by the configuration included in the message content."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7#mmReplaceConfiguration
+	 * AcceptorConfigurationContent7.mmReplaceConfiguration}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -139,6 +154,7 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ReplaceConfiguration";
 			definition = "True if the whole configuration related to the terminal manager has to be replaced by the configuration included in the message content.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmReplaceConfiguration);
 			previousVersion_lazy = () -> AcceptorConfigurationContent5.mmReplaceConfiguration;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -173,6 +189,14 @@ public class AcceptorConfigurationContent6 {
 	 * definition} =
 	 * "Configuration parameters of the TMS protocol between a POI and a terminal manager."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7#mmTMSProtocolParameters
+	 * AcceptorConfigurationContent7.mmTMSProtocolParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -188,6 +212,7 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TMSProtocolParameters";
 			definition = "Configuration parameters of the TMS protocol between a POI and a terminal manager.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmTMSProtocolParameters);
 			previousVersion_lazy = () -> AcceptorConfigurationContent5.mmTMSProtocolParameters;
 			minOccurs = 0;
 			isComposite = true;
@@ -226,6 +251,14 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Acceptor parameters dedicated to an acquirer protocol."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7#mmAcquirerProtocolParameters
+	 * AcceptorConfigurationContent7.mmAcquirerProtocolParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -242,6 +275,7 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AcquirerProtocolParameters";
 			definition = "Acceptor parameters dedicated to an acquirer protocol.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmAcquirerProtocolParameters);
 			previousVersion_lazy = () -> AcceptorConfigurationContent5.mmAcquirerProtocolParameters;
 			minOccurs = 0;
 			isComposite = true;
@@ -276,6 +310,14 @@ public class AcceptorConfigurationContent6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Acceptor parameters dedicated to the merchant."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7#mmMerchantParameters
+	 * AcceptorConfigurationContent7.mmMerchantParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -291,6 +333,7 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MerchantParameters";
 			definition = "Acceptor parameters dedicated to the merchant.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmMerchantParameters);
 			previousVersion_lazy = () -> AcceptorConfigurationContent5.mmMerchantParameters;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.MerchantConfigurationParameters3.mmObject();
@@ -325,6 +368,14 @@ public class AcceptorConfigurationContent6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Manufacturer configuration parameters of the point of interaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7#mmTerminalParameters
+	 * AcceptorConfigurationContent7.mmTerminalParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -340,6 +391,7 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TerminalParameters";
 			definition = "Manufacturer configuration parameters of the point of interaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmTerminalParameters);
 			previousVersion_lazy = () -> AcceptorConfigurationContent5.mmTerminalParameters;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PaymentTerminalParameters4.mmObject();
@@ -378,6 +430,14 @@ public class AcceptorConfigurationContent6 {
 	 * definition} =
 	 * "Acceptor parameters dedicated to a payment application of the point of interaction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7#mmApplicationParameters
+	 * AcceptorConfigurationContent7.mmApplicationParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -394,6 +454,7 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ApplicationParameters";
 			definition = "Acceptor parameters dedicated to a payment application of the point of interaction.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmApplicationParameters);
 			previousVersion_lazy = () -> AcceptorConfigurationContent5.mmApplicationParameters;
 			minOccurs = 0;
 			isComposite = true;
@@ -434,6 +495,14 @@ public class AcceptorConfigurationContent6 {
 	 * definition} =
 	 * "Acceptor parameters dedicated to the communication with an acquirer host or a terminal manager host."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7#mmHostCommunicationParameters
+	 * AcceptorConfigurationContent7.mmHostCommunicationParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -450,6 +519,7 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "HostCommunicationParameters";
 			definition = "Acceptor parameters dedicated to the communication with an acquirer host or a terminal manager host.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmHostCommunicationParameters);
 			previousVersion_lazy = () -> AcceptorConfigurationContent5.mmHostCommunicationParameters;
 			minOccurs = 0;
 			isComposite = true;
@@ -486,6 +556,14 @@ public class AcceptorConfigurationContent6 {
 	 * definition} =
 	 * "Point of interaction parameters related to the security of software application and application protocol."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorConfigurationContent7#mmSecurityParameters
+	 * AcceptorConfigurationContent7.mmSecurityParameters}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -501,6 +579,7 @@ public class AcceptorConfigurationContent6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SecurityParameters";
 			definition = "Point of interaction parameters related to the security of software application and application protocol.";
+			nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmSecurityParameters);
 			previousVersion_lazy = () -> AcceptorConfigurationContent5.mmSecurityParameters;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.SecurityParameters6.mmObject();
@@ -519,6 +598,7 @@ public class AcceptorConfigurationContent6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AcceptorConfigurationContent6";
 				definition = "Content of the acceptor configuration.";
+				nextVersions_lazy = () -> Arrays.asList(AcceptorConfigurationContent7.mmObject());
 				previousVersion_lazy = () -> AcceptorConfigurationContent5.mmObject();
 			}
 		});

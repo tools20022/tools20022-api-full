@@ -364,7 +364,7 @@ public class AccountLiquidityReport1 {
 	 * name} = "CreditQueuedTransactions"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information about queued credit transactions"</li>
+	 * definition} = "Information about queued credit transactions."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmCreditQueuedTransactions = new MMMessageAssociationEnd() {
@@ -374,7 +374,7 @@ public class AccountLiquidityReport1 {
 			xmlTag = "CdtQdTxs";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CreditQueuedTransactions";
-			definition = "Information about queued credit transactions";
+			definition = "Information about queued credit transactions.";
 			maxOccurs = 2;
 			minOccurs = 0;
 			isComposite = true;

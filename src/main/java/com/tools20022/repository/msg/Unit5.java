@@ -62,6 +62,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Unit5"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Quantity expressed as a number and its details."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Unit10 Unit10}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Unit4 Unit4}</li>
  * </ul>
@@ -104,6 +110,13 @@ public class Unit5 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Quantity expressed as a number, for example, a number of shares."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit10#mmUnitsNumber
+	 * Unit10.mmUnitsNumber}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmUnitsNumber = new MMMessageAttribute() {
@@ -115,6 +128,7 @@ public class Unit5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "UnitsNumber";
 			definition = "Quantity expressed as a number, for example, a number of shares.";
+			nextVersions_lazy = () -> Arrays.asList(Unit10.mmUnitsNumber);
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> com.tools20022.repository.msg.FinancialInstrumentQuantity1.mmObject();
@@ -154,6 +168,13 @@ public class Unit5 {
 	 * definition} =
 	 * "Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Unit10#mmGroup1Or2Units
+	 * Unit10.mmGroup1Or2Units}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmGroup1Or2Units = new MMMessageAttribute() {
@@ -165,6 +186,7 @@ public class Unit5 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Group1Or2Units";
 			definition = "Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.";
+			nextVersions_lazy = () -> Arrays.asList(Unit10.mmGroup1Or2Units);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> UKTaxGroupUnitCode.mmObject();
@@ -180,6 +202,7 @@ public class Unit5 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Unit5";
 				definition = "Quantity expressed as a number and its details.";
+				nextVersions_lazy = () -> Arrays.asList(Unit10.mmObject());
 				previousVersion_lazy = () -> Unit4.mmObject();
 			}
 		});

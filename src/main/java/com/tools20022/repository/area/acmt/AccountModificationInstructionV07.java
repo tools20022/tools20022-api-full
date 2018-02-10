@@ -286,7 +286,7 @@ public class AccountModificationInstructionV07 {
 	 * name} = "InstructionDetails"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Information about the modification instruction. "</li>
+	 * definition} = "Information about the modification instruction."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -299,7 +299,7 @@ public class AccountModificationInstructionV07 {
 			xmlTag = "InstrDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "InstructionDetails";
-			definition = "Information about the modification instruction. ";
+			definition = "Information about the modification instruction.";
 			previousVersion_lazy = () -> AccountModificationInstructionV06.mmInstructionDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -440,7 +440,7 @@ public class AccountModificationInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to an account  party to be inserted, updated or deleted."
+	 * "Information related to an account party to be inserted, updated or deleted."
 	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
@@ -454,7 +454,7 @@ public class AccountModificationInstructionV07 {
 			xmlTag = "ModfdAcctPties";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedAccountParties";
-			definition = "Information related to an account  party to be inserted, updated or deleted.";
+			definition = "Information related to an account party to be inserted, updated or deleted.";
 			previousVersion_lazy = () -> AccountModificationInstructionV06.mmModifiedAccountParties;
 			maxOccurs = 10;
 			minOccurs = 0;
@@ -802,7 +802,7 @@ public class AccountModificationInstructionV07 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Information related to documents to be added, deleted or updated.\n"</li>
+	 * "Information related to documents to be added, deleted or updated.\n."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -815,7 +815,7 @@ public class AccountModificationInstructionV07 {
 			xmlTag = "ModfdSvcLvlAgrmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ModifiedServiceLevelAgreement";
-			definition = "Information related to documents to be added, deleted or updated.\n";
+			definition = "Information related to documents to be added, deleted or updated.\n.";
 			previousVersion_lazy = () -> AccountModificationInstructionV06.mmModifiedServiceLevelAgreement;
 			maxOccurs = 30;
 			minOccurs = 0;

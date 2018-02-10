@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Modification on the value of goods and / or services. For example: rebate,
- * discount, surcharge
+ * discount, surcharge.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -87,7 +87,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Adjustment3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Modification on the value of goods and / or services. For example: rebate, discount, surcharge"
+ * "Modification on the value of goods and / or services. For example: rebate, discount, surcharge."
  * </li>
  * </ul>
  */
@@ -438,7 +438,7 @@ public class Adjustment3 {
 					}
 				})).get();
 				name = "Adjustment3";
-				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge";
+				definition = "Modification on the value of goods and / or services. For example: rebate, discount, surcharge.";
 				xors_lazy = () -> Arrays.asList(com.tools20022.repository.msg.Adjustment3.AmountOrRateRule, com.tools20022.repository.msg.Adjustment3.TypeOrOtherAdjustmentTypeRule);
 			}
 		});

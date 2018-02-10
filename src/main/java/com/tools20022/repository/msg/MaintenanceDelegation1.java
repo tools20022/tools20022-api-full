@@ -190,7 +190,7 @@ public class MaintenanceDelegation1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate. "
+	 * "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -209,7 +209,7 @@ public class MaintenanceDelegation1 {
 			xmlTag = "PrtlDlgtn";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PartialDelegation";
-			definition = "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate. ";
+			definition = "Flag to indicate that the delegated maintenance must be performed on a subset of the terminal estate.";
 			nextVersions_lazy = () -> Arrays.asList(MaintenanceDelegation3.mmPartialDelegation);
 			maxOccurs = 1;
 			minOccurs = 0;

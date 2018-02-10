@@ -204,6 +204,11 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2
  * OtherC10CommodityNonDeliverable2}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.AssetClassCommodity1
+ * AssetClassCommodity1}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.EnergySpecificAttribute4
+ * EnergySpecificAttribute4}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.Commodity2 Commodity2}</li>
  * </ul>
  * </li>
  * <li>
@@ -420,7 +425,7 @@ public class Commodity extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Basic category of the commodity, such as agricultural or metal.  "</li>
+	 * "Basic category of the commodity, such as agricultural or metal."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmBaseProduct = new MMBusinessAttribute() {
@@ -442,7 +447,7 @@ public class Commodity extends Asset {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "BaseProduct";
-			definition = "Basic category of the commodity, such as agricultural or metal.  ";
+			definition = "Basic category of the commodity, such as agricultural or metal.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> AssetClassProductTypeCode.mmObject();
@@ -473,6 +478,9 @@ public class Commodity extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AgriculturalCommoditySoft1#mmAdditionalSubProduct
 	 * AgriculturalCommoditySoft1.mmAdditionalSubProduct}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DerivativeClassification1#mmSubCommodity
+	 * DerivativeClassification1.mmSubCommodity}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -488,18 +496,18 @@ public class Commodity extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Further detailed description of the basic resources, such as aluminium,  iron ore or wheat"
+	 * "Further detailed description of the basic resources, such as aluminium, iron ore or wheat."
 	 * </li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmDetailedSubProduct = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(AgriculturalCommoditySoft1.mmAdditionalSubProduct);
+			derivation_lazy = () -> Arrays.asList(AgriculturalCommoditySoft1.mmAdditionalSubProduct, DerivativeClassification1.mmSubCommodity);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "DetailedSubProduct";
-			definition = "Further detailed description of the basic resources, such as aluminium,  iron ore or wheat";
+			definition = "Further detailed description of the basic resources, such as aluminium, iron ore or wheat.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> AssetClassDetailedSubProductTypeCode.mmObject();
@@ -749,6 +757,11 @@ public class Commodity extends Asset {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OtherC10CommodityNonDeliverable2#mmSubProduct
 	 * OtherC10CommodityNonDeliverable2.mmSubProduct}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.DerivativeClassification1#mmSubProduct
+	 * DerivativeClassification1.mmSubProduct}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.Commodity2#mmCommodityType
+	 * Commodity2.mmCommodityType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -786,7 +799,8 @@ public class Commodity extends Asset {
 					AssetClassCommodityFertilizer1Choice.mmDiammoniumPhosphate, AssetClassCommodityFertilizer1Choice.mmPotash, AssetClassCommodityFertilizer1Choice.mmSulphur, AssetClassCommodityFertilizer1Choice.mmUrea,
 					AssetClassCommodityFertilizer1Choice.mmUreaAndAmmoniumNitrate, AssetClassCommodityIndustrialProduct1Choice.mmConstruction, AssetClassCommodityIndustrialProduct1Choice.mmManufacturing,
 					AssetClassCommodityPolypropylene1Choice.mmPlastic, FertilizerCommodityPotash1.mmSubProduct, FertilizerCommodityUrea1.mmSubProduct, ForeignExchangeDerivative2.mmContractSubType,
-					OtherC10CommodityDeliverable2.mmSubProduct, AssetClassCommodityOtherC102Choice.mmDeliverable, AssetClassCommodityOtherC102Choice.mmNonDeliverable, OtherC10CommodityNonDeliverable2.mmSubProduct);
+					OtherC10CommodityDeliverable2.mmSubProduct, AssetClassCommodityOtherC102Choice.mmDeliverable, AssetClassCommodityOtherC102Choice.mmNonDeliverable, OtherC10CommodityNonDeliverable2.mmSubProduct,
+					DerivativeClassification1.mmSubProduct, Commodity2.mmCommodityType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Commodity.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -828,7 +842,7 @@ public class Commodity extends Asset {
 						EnergyCommodityLightEnd1.mmObject(), EnergyCommodityCoal1.mmObject(), AssetClassCommodityFertilizer1Choice.mmObject(), AssetClassCommodityMultiCommodityExotic1.mmObject(),
 						AssetClassCommodityIndustrialProduct1Choice.mmObject(), AssetClassCommodityOfficialEconomicStatistics1.mmObject(), AssetClassCommodityPolypropylene1Choice.mmObject(), FertilizerCommodityPotash1.mmObject(),
 						FertilizerCommodityUrea1.mmObject(), CommodityDerivate6.mmObject(), OtherC10CommodityDeliverable2.mmObject(), AssetClassCommodity3Choice.mmObject(), AssetClassCommodityOtherC102Choice.mmObject(),
-						OtherC10CommodityNonDeliverable2.mmObject());
+						OtherC10CommodityNonDeliverable2.mmObject(), AssetClassCommodity1.mmObject(), EnergySpecificAttribute4.mmObject(), Commodity2.mmObject());
 			}
 
 			@Override

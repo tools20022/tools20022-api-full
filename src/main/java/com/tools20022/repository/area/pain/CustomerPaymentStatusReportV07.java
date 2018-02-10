@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.PaymentsInitiationPreviousVersion;
+import com.tools20022.repository.area.PaymentsInitiationArchive;
 import com.tools20022.repository.msg.GroupHeader52;
 import com.tools20022.repository.msg.OriginalGroupHeader1;
 import com.tools20022.repository.msg.OriginalPaymentInstruction18;
@@ -91,8 +91,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "CstmrPmtStsRpt"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.PaymentsInitiationPreviousVersion
- * PaymentsInitiationPreviousVersion}</li>
+ * {@linkplain com.tools20022.repository.area.PaymentsInitiationArchive
+ * PaymentsInitiationArchive}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code pain.002.001.07}</li>
@@ -401,7 +401,7 @@ public class CustomerPaymentStatusReportV07 {
 				messageSet_lazy = () -> Arrays.asList(PaymentsInitiationISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "CstmrPmtStsRpt";
-				businessArea_lazy = () -> PaymentsInitiationPreviousVersion.mmObject();
+				businessArea_lazy = () -> PaymentsInitiationArchive.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07.mmGroupHeader,
 						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07.mmOriginalGroupInformationAndStatus, com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07.mmOriginalPaymentInformationAndStatus,
 						com.tools20022.repository.area.pain.CustomerPaymentStatusReportV07.mmSupplementaryData);

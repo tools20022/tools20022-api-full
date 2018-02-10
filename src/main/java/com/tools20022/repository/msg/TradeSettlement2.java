@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Trade settlement details for this invoice which involves the payment of an
- * outstanding debt, account, or charge
+ * outstanding debt, account, or charge.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -97,7 +97,7 @@ import javax.xml.bind.annotation.XmlType;
  * "TradeSettlement2"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge"
+ * "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
@@ -179,7 +179,7 @@ public class TradeSettlement2 {
 	 * name} = "DueDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Date when invoice should be paid. "</li>
+	 * definition} = "Date when invoice should be paid."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmDueDate = new MMMessageAttribute() {
@@ -189,7 +189,7 @@ public class TradeSettlement2 {
 			xmlTag = "DueDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DueDate";
-			definition = "Date when invoice should be paid. ";
+			definition = "Date when invoice should be paid.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -469,7 +469,7 @@ public class TradeSettlement2 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reason for tax exemption expressed as a code,  if invoice or card transaction is out of tax processing."
+	 * "Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing."
 	 * </li>
 	 * </ul>
 	 */
@@ -481,7 +481,7 @@ public class TradeSettlement2 {
 			constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintR6.forExemptionReasonCode);
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ExemptionReasonCode";
-			definition = "Reason for tax exemption expressed as a code,  if invoice or card transaction is out of tax processing.";
+			definition = "Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max4Text.mmObject();
@@ -561,7 +561,7 @@ public class TradeSettlement2 {
 	 * name} = "SubTotalCalculatedTax"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Calculated tax subtotal"</li>
+	 * definition} = "Calculated tax subtotal."</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -577,7 +577,7 @@ public class TradeSettlement2 {
 			xmlTag = "SubTtlClctdTax";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubTotalCalculatedTax";
-			definition = "Calculated tax subtotal";
+			definition = "Calculated tax subtotal.";
 			previousVersion_lazy = () -> TradeSettlement1.mmSubTotalCalculatedTax;
 			minOccurs = 0;
 			isComposite = true;
@@ -637,7 +637,7 @@ public class TradeSettlement2 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "TradeSettlement2";
-				definition = "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge";
+				definition = "Trade settlement details for this invoice which involves the payment of an outstanding debt, account, or charge.";
 				previousVersion_lazy = () -> TradeSettlement1.mmObject();
 			}
 		});

@@ -20,6 +20,8 @@ package com.tools20022.repository.entity;
 import com.tools20022.metamodel.*;
 import com.tools20022.repository.choice.CancellationStatusReason1Choice;
 import com.tools20022.repository.choice.CancellationStatusReason2Choice;
+import com.tools20022.repository.choice.CancellationStatusReason3Choice;
+import com.tools20022.repository.choice.ModificationStatusReason1Choice;
 import com.tools20022.repository.datatype.Max35Text;
 import com.tools20022.repository.GeneratedRepository;
 import com.tools20022.repository.msg.*;
@@ -80,6 +82,12 @@ import java.util.Optional;
  * <li>
  * {@linkplain com.tools20022.repository.choice.CancellationStatusReason2Choice
  * CancellationStatusReason2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.CancellationStatusReason3Choice
+ * CancellationStatusReason3Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.choice.ModificationStatusReason1Choice
+ * ModificationStatusReason1Choice}</li>
  * </ul>
  * </li>
  * <li>
@@ -139,6 +147,9 @@ public class InvestigationResolution {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction22#mmResolvedCase
 	 * OriginalPaymentInstruction22.mmResolvedCase}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.OriginalPaymentInstruction26#mmResolvedCase
+	 * OriginalPaymentInstruction26.mmResolvedCase}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -160,7 +171,7 @@ public class InvestigationResolution {
 	public static final MMBusinessAssociationEnd mmInvestigationCase = new MMBusinessAssociationEnd() {
 		{
 			derivation_lazy = () -> Arrays.asList(InvestigationStatus.mmDuplicateOf, OriginalGroupInformation24.mmResolvedCase, OriginalPaymentInstruction3.mmResolvedCase, OriginalPaymentInstruction10.mmResolvedCase,
-					OriginalPaymentInstruction17.mmResolvedCase, OriginalPaymentInstruction22.mmResolvedCase);
+					OriginalPaymentInstruction17.mmResolvedCase, OriginalPaymentInstruction22.mmResolvedCase, OriginalPaymentInstruction26.mmResolvedCase);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.InvestigationResolution.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -230,7 +241,7 @@ public class InvestigationResolution {
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationCase.mmInvestigationResolution);
 				subType_lazy = () -> Arrays.asList(PaymentInvestigationCaseResolution.mmObject(), Reassignment.mmObject(), DuplicateCase.mmObject());
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCase, com.tools20022.repository.entity.InvestigationResolution.mmInvestigationCaseReference);
-				derivationComponent_lazy = () -> Arrays.asList(CancellationStatusReason1Choice.mmObject(), CancellationStatusReason2Choice.mmObject());
+				derivationComponent_lazy = () -> Arrays.asList(CancellationStatusReason1Choice.mmObject(), CancellationStatusReason2Choice.mmObject(), CancellationStatusReason3Choice.mmObject(), ModificationStatusReason1Choice.mmObject());
 			}
 
 			@Override

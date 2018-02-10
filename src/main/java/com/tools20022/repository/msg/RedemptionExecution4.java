@@ -1192,7 +1192,7 @@ public class RedemptionExecution4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Parameters used to execute the settlement of an investment fund order"</li>
+	 * "Parameters used to execute the settlement of an investment fund order."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSettlementAndCustodyDetails = new MMMessageAssociationEnd() {
@@ -1203,7 +1203,7 @@ public class RedemptionExecution4 {
 			xmlTag = "SttlmAndCtdyDtls";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAndCustodyDetails";
-			definition = "Parameters used to execute the settlement of an investment fund order";
+			definition = "Parameters used to execute the settlement of an investment fund order.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;

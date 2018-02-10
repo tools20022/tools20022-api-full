@@ -803,7 +803,7 @@ public class SecuritiesBalanceTypeCode extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Balance of securities that is unclassified, ie, is  not identified with one of the existing sub-balance types."
+	 * "Balance of securities that is unclassified, ie, is not identified with one of the existing sub-balance types."
 	 * </li>
 	 * </ul>
 	 */
@@ -812,7 +812,7 @@ public class SecuritiesBalanceTypeCode extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":93a::OTHR"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Unclassified";
-			definition = "Balance of securities that is unclassified, ie, is  not identified with one of the existing sub-balance types.";
+			definition = "Balance of securities that is unclassified, ie, is not identified with one of the existing sub-balance types.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SecuritiesBalanceTypeCode.mmObject();
 			codeName = "OTHR";
 		}

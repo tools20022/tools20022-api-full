@@ -67,6 +67,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code#FinalPaydown
  * ExtendedEventTypeV2Code.FinalPaydown}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code#RedemptionOfWarrant
+ * ExtendedEventTypeV2Code.RedemptionOfWarrant}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMCodeSet#getDerivation derivation}
@@ -78,6 +81,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * ExtendedEventType3Code}</li>
  * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType4Code
  * ExtendedEventType4Code}</li>
+ * <li>{@linkplain com.tools20022.repository.codeset.ExtendedEventType6Code
+ * ExtendedEventType6Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -197,7 +202,7 @@ public class ExtendedEventTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Security, usually a form of a derivative, for which the agent or issuer has decided to terminate the derivative based on a change to the underlying security(ies) or a change in strategy. Distinguishes from  Mandatory Exchange, Exchange Offer event types mapped to the same ISO event type code."
+	 * "Security, usually a form of a derivative, for which the agent or issuer has decided to terminate the derivative based on a change to the underlying security(ies) or a change in strategy. Distinguishes from Mandatory Exchange, Exchange Offer event types mapped to the same ISO event type code."
 	 * </li>
 	 * </ul>
 	 */
@@ -205,7 +210,7 @@ public class ExtendedEventTypeV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Termination";
-			definition = "Security, usually a form of a derivative, for which the agent or issuer has decided to terminate the derivative based on a change to the underlying security(ies) or a change in strategy. Distinguishes from  Mandatory Exchange, Exchange Offer event types mapped to the same ISO event type code.";
+			definition = "Security, usually a form of a derivative, for which the agent or issuer has decided to terminate the derivative based on a change to the underlying security(ies) or a change in strategy. Distinguishes from Mandatory Exchange, Exchange Offer event types mapped to the same ISO event type code.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmObject();
 			codeName = "TMTN";
 		}
@@ -234,7 +239,7 @@ public class ExtendedEventTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Security holders are issued additional securities, free of payment, from the issuer in proportion to their holdings. A bonus issue is typically represented by shares or warrants. Nominal value does not change. The security holder may be offered choice of entitlement. Distinguishes from  Rights Subscription, Sale Of Rights event types mapped to the same ISO event type code."
+	 * "Security holders are issued additional securities, free of payment, from the issuer in proportion to their holdings. A bonus issue is typically represented by shares or warrants. Nominal value does not change. The security holder may be offered choice of entitlement. Distinguishes from Rights Subscription, Sale Of Rights event types mapped to the same ISO event type code."
 	 * </li>
 	 * </ul>
 	 */
@@ -242,7 +247,7 @@ public class ExtendedEventTypeV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BonusRightsIssue";
-			definition = "Security holders are issued additional securities, free of payment, from the issuer in proportion to their holdings. A bonus issue is typically represented by shares or warrants. Nominal value does not change. The security holder may be offered choice of entitlement. Distinguishes from  Rights Subscription, Sale Of Rights event types mapped to the same ISO event type code.";
+			definition = "Security holders are issued additional securities, free of payment, from the issuer in proportion to their holdings. A bonus issue is typically represented by shares or warrants. Nominal value does not change. The security holder may be offered choice of entitlement. Distinguishes from Rights Subscription, Sale Of Rights event types mapped to the same ISO event type code.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmObject();
 			codeName = "BRIS";
 		}
@@ -270,7 +275,7 @@ public class ExtendedEventTypeV2Code extends MMCode {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Exercise of a privilege by the issuer to repay, in full, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt. Distinguishes from  \"partial defeasance\", \"partial prerefunding\" event types mapped to the same ISO event type code."
+	 * "Exercise of a privilege by the issuer to repay, in full, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt. Distinguishes from \"partial defeasance\", \"partial prerefunding\" event types mapped to the same ISO event type code."
 	 * </li>
 	 * </ul>
 	 */
@@ -278,7 +283,7 @@ public class ExtendedEventTypeV2Code extends MMCode {
 		{
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullPrerefunding";
-			definition = "Exercise of a privilege by the issuer to repay, in full, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt. Distinguishes from  \"partial defeasance\", \"partial prerefunding\" event types mapped to the same ISO event type code.";
+			definition = "Exercise of a privilege by the issuer to repay, in full, any debt security prior to maturity when the issuer deposits assets in trust. This irrevocably restricts their use to satisfaction of the debt. Distinguishes from \"partial defeasance\", \"partial prerefunding\" event types mapped to the same ISO event type code.";
 			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmObject();
 			codeName = "FLPR";
 		}
@@ -453,6 +458,36 @@ public class ExtendedEventTypeV2Code extends MMCode {
 			codeName = "FPAY";
 		}
 	};
+	/**
+	 * The event is a redemption of warrant.
+	 * <p>
+	 * <strong>Constant fields:</strong>
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getOwner owner} =
+	 * {@linkplain com.tools20022.repository.codeset.ExtendedEventTypeV2Code
+	 * ExtendedEventTypeV2Code}</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMCode#getCodeName codeName} =
+	 * "REDW"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getRegistrationStatus
+	 * registrationStatus} =
+	 * com.tools20022.metamodel.MMRegistrationStatus.PROVISIONALLY_REGISTERED</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName
+	 * name} = "RedemptionOfWarrant"</li>
+	 * <li>
+	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
+	 * definition} = "The event is a redemption of warrant."</li>
+	 * </ul>
+	 */
+	public static final ExtendedEventTypeV2Code RedemptionOfWarrant = new ExtendedEventTypeV2Code() {
+		{
+			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
+			name = "RedemptionOfWarrant";
+			definition = "The event is a redemption of warrant.";
+			owner_lazy = () -> com.tools20022.repository.codeset.ExtendedEventTypeV2Code.mmObject();
+			codeName = "REDW";
+		}
+	};
 	final static private LinkedHashMap<String, ExtendedEventTypeV2Code> codesByName = new LinkedHashMap<>();
 
 	protected ExtendedEventTypeV2Code() {
@@ -466,12 +501,13 @@ public class ExtendedEventTypeV2Code extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ExtendedEventTypeV2Code";
 				definition = "Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.";
-				derivation_lazy = () -> Arrays.asList(ExtendedEventType2Code.mmObject(), ExtendedEventType3Code.mmObject(), ExtendedEventType4Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(ExtendedEventType2Code.mmObject(), ExtendedEventType3Code.mmObject(), ExtendedEventType4Code.mmObject(), ExtendedEventType6Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.ExtendedEventTypeV2Code.Meeting, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.RightsPlanAdoption,
 						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.Termination, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.BonusRightsIssue,
 						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.FullPrerefunding, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.PartialDefeasance,
 						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.PartialPrerefunding, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.PartialMandatoryPut,
-						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.CertificateOfDepositEarlyRedemption, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.FinalPaydown);
+						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.CertificateOfDepositEarlyRedemption, com.tools20022.repository.codeset.ExtendedEventTypeV2Code.FinalPaydown,
+						com.tools20022.repository.codeset.ExtendedEventTypeV2Code.RedemptionOfWarrant);
 			}
 		});
 		return mmObject_lazy.get();
@@ -488,6 +524,7 @@ public class ExtendedEventTypeV2Code extends MMCode {
 		codesByName.put(PartialMandatoryPut.getCodeName().get(), PartialMandatoryPut);
 		codesByName.put(CertificateOfDepositEarlyRedemption.getCodeName().get(), CertificateOfDepositEarlyRedemption);
 		codesByName.put(FinalPaydown.getCodeName().get(), FinalPaydown);
+		codesByName.put(RedemptionOfWarrant.getCodeName().get(), RedemptionOfWarrant);
 	}
 
 	public static ExtendedEventTypeV2Code valueOf(String codeName) {

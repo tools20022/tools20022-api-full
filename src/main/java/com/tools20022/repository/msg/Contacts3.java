@@ -401,7 +401,7 @@ public class Contacts3 {
 	 * name} = "Other"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Contact details in an other form."</li>
+	 * definition} = "Contact details in another form."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmOther = new MMMessageAttribute() {
@@ -411,7 +411,7 @@ public class Contacts3 {
 			xmlTag = "Othr";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Other";
-			definition = "Contact details in an other form.";
+			definition = "Contact details in another form.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Max35Text.mmObject();

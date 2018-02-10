@@ -21,7 +21,7 @@ import com.tools20022.metamodel.MMMessageBuildingBlock;
 import com.tools20022.metamodel.MMMessageDefinition;
 import com.tools20022.metamodel.MMMessageDefinitionIdentifier;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.ATMCardTransactionLatestVersion;
+import com.tools20022.repository.area.ATMCardTransactionPreviousVersion;
 import com.tools20022.repository.msg.ATMWithdrawalCompletionAdvice1;
 import com.tools20022.repository.msg.ContentInformationType10;
 import com.tools20022.repository.msg.ContentInformationType15;
@@ -74,8 +74,8 @@ import javax.xml.bind.annotation.*;
  * xmlTag} = "ATMWdrwlCmpltnAdvc"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMMessageDefinition#getBusinessArea
  * businessArea} =
- * {@linkplain com.tools20022.repository.area.ATMCardTransactionLatestVersion
- * ATMCardTransactionLatestVersion}</li>
+ * {@linkplain com.tools20022.repository.area.ATMCardTransactionPreviousVersion
+ * ATMCardTransactionPreviousVersion}</li>
  * <li>
  * {@linkplain com.tools20022.metamodel.MMMessageDefinition#getMessageDefinitionIdentifier
  * messageDefinitionIdentifier} = {@code catp.003.001.01}</li>
@@ -294,7 +294,7 @@ public class ATMWithdrawalCompletionAdviceV01 {
 				messageSet_lazy = () -> Arrays.asList(ATMInterfaceforTransactionProcessingandATMManagementISOPreviousversion.mmObject());
 				rootElement = "Document";
 				xmlTag = "ATMWdrwlCmpltnAdvc";
-				businessArea_lazy = () -> ATMCardTransactionLatestVersion.mmObject();
+				businessArea_lazy = () -> ATMCardTransactionPreviousVersion.mmObject();
 				messageBuildingBlock_lazy = () -> Arrays.asList(com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmHeader,
 						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmProtectedATMWithdrawalCompletionAdvice, com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmATMWithdrawalCompletionAdvice,
 						com.tools20022.repository.area.catp.ATMWithdrawalCompletionAdviceV01.mmSecurityTrailer);

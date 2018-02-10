@@ -155,7 +155,7 @@ public class Collateral6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Value of the underlying collateral (cash, securities, Letter of credit..) based on current market prices."
+	 * "Value of the underlying collateral (cash, securities, Letter of credit.) based on current market prices."
 	 * </li>
 	 * </ul>
 	 */
@@ -167,7 +167,7 @@ public class Collateral6 {
 			xmlTag = "MktVal";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MarketValue";
-			definition = "Value of the underlying collateral (cash, securities, Letter of credit..) based on current market prices.";
+			definition = "Value of the underlying collateral (cash, securities, Letter of credit.) based on current market prices.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();

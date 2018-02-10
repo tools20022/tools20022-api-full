@@ -312,7 +312,7 @@ public class CorporateActionSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer. "
+	 * "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -337,7 +337,7 @@ public class CorporateActionSD13 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Event Cash Value"), new DTCCSynonym(this, "Currency (Event Cash Value)"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EventCashValue";
-			definition = "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer. ";
+			definition = "Amount of cash set aside by the offeror. This is the maximum amount that the offeror is willing to pay out to the holders who elect to take part in the offer.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD14.mmEventCashValue);
 			previousVersion_lazy = () -> CorporateActionSD11.mmEventCashValue;
 			maxOccurs = 1;
@@ -1139,7 +1139,7 @@ public class CorporateActionSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement. "
+	 * "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1164,7 +1164,7 @@ public class CorporateActionSD13 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Surrender Shares to Agent Flag"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SurrenderSharesToAgentFlag";
-			definition = "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement. ";
+			definition = "Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD14.mmSurrenderSharesToAgentFlag);
 			previousVersion_lazy = () -> CorporateActionSD11.mmSurrenderSharesToAgentFlag;
 			maxOccurs = 1;
@@ -1455,8 +1455,7 @@ public class CorporateActionSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Provides details of certificates that have been  called  for redemption."
-	 * </li>
+	 * "Provides details of certificates that have been called for redemption."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -1480,7 +1479,7 @@ public class CorporateActionSD13 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Certificate Details"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CertificateDetails";
-			definition = "Provides details of certificates that have been  called  for redemption.";
+			definition = "Provides details of certificates that have been called for redemption.";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD14.mmCertificateDetails);
 			previousVersion_lazy = () -> CorporateActionSD11.mmCertificateDetails;
 			minOccurs = 0;
@@ -1575,7 +1574,7 @@ public class CorporateActionSD13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  "
+	 * "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption)."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -1599,7 +1598,7 @@ public class CorporateActionSD13 {
 			xmlTag = "RDPRefNb";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RDPReferenceNumber";
-			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files.  For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option.  Also, usage rules will specify the different layouts of the   RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).  ";
+			definition = "Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be \"on\" the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).";
 			nextVersions_lazy = () -> Arrays.asList(CorporateActionSD14.mmRDPReferenceNumber);
 			previousVersion_lazy = () -> CorporateActionSD11.mmRDPReferenceNumber;
 			maxOccurs = 1;

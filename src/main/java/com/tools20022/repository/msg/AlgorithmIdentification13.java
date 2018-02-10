@@ -65,6 +65,13 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Cryptographic algorithm and parameters for the protection of the transported key."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.AlgorithmIdentification23
+ * AlgorithmIdentification23}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification9
@@ -104,6 +111,14 @@ public class AlgorithmIdentification13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of the algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification23#mmAlgorithm
+	 * AlgorithmIdentification23.mmAlgorithm}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -119,6 +134,7 @@ public class AlgorithmIdentification13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Algorithm";
 			definition = "Identification of the algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification23.mmAlgorithm);
 			previousVersion_lazy = () -> AlgorithmIdentification9.mmAlgorithm;
 			maxOccurs = 1;
 			minOccurs = 1;
@@ -150,6 +166,14 @@ public class AlgorithmIdentification13 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Parameters associated to the encryption algorithm."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AlgorithmIdentification23#mmParameter
+	 * AlgorithmIdentification23.mmParameter}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -165,6 +189,7 @@ public class AlgorithmIdentification13 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Parameter";
 			definition = "Parameters associated to the encryption algorithm.";
+			nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification23.mmParameter);
 			previousVersion_lazy = () -> AlgorithmIdentification9.mmParameter;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -181,6 +206,7 @@ public class AlgorithmIdentification13 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "AlgorithmIdentification13";
 				definition = "Cryptographic algorithm and parameters for the protection of the transported key.";
+				nextVersions_lazy = () -> Arrays.asList(AlgorithmIdentification23.mmObject());
 				previousVersion_lazy = () -> AlgorithmIdentification9.mmObject();
 			}
 		});

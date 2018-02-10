@@ -88,6 +88,9 @@ import java.util.Objects;
  * <li>
  * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse4
  * AcceptorReconciliationResponse4}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse5
+ * AcceptorReconciliationResponse5}</li>
  * </ul>
  * </li>
  * <li>
@@ -258,6 +261,12 @@ public class CardPaymentStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction69#mmFailureReason
 	 * CardPaymentTransaction69.mmFailureReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction83#mmFailureReason
+	 * CardPaymentTransaction83.mmFailureReason}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CardPaymentTransaction81#mmFailureReason
+	 * CardPaymentTransaction81.mmFailureReason}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -282,7 +291,8 @@ public class CardPaymentStatus extends Status {
 					CardPaymentTransaction20.mmFailureReason, CardPaymentTransaction3.mmFailureReason, CardPaymentTransaction13.mmFailureReason, CardPaymentTransaction28.mmFailureReason, CardPaymentTransaction29.mmFailureReason,
 					CardPaymentTransaction25.mmFailureReason, CardPaymentTransaction30.mmFailureReason, CardPaymentTransaction44.mmFailureReason, CardPaymentTransaction45.mmFailureReason, CardPaymentTransaction46.mmFailureReason,
 					CardPaymentTransaction40.mmFailureReason, ATMTransaction5.mmIncident, CardPaymentTransaction60.mmFailureReason, CardPaymentTransaction61.mmFailureReason, CardPaymentTransaction59.mmFailureReason,
-					CardPaymentTransaction55.mmFailureReason, ATMTransaction20.mmIncident, CardPaymentTransaction75.mmFailureReason, CardPaymentTransaction70.mmFailureReason, CardPaymentTransaction69.mmFailureReason);
+					CardPaymentTransaction55.mmFailureReason, ATMTransaction20.mmIncident, CardPaymentTransaction75.mmFailureReason, CardPaymentTransaction70.mmFailureReason, CardPaymentTransaction69.mmFailureReason,
+					CardPaymentTransaction83.mmFailureReason, CardPaymentTransaction81.mmFailureReason);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -334,6 +344,9 @@ public class CardPaymentStatus extends Status {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse4#mmEnvironment
 	 * AcceptorReconciliationResponse4.mmEnvironment}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AcceptorReconciliationResponse5#mmEnvironment
+	 * AcceptorReconciliationResponse5.mmEnvironment}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -354,7 +367,8 @@ public class CardPaymentStatus extends Status {
 	 */
 	public static final MMBusinessAssociationEnd mmCardPayment = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationResponse1.mmEnvironment, AcceptorReconciliationResponse2.mmEnvironment, AcceptorReconciliationResponse3.mmEnvironment, AcceptorReconciliationResponse4.mmEnvironment);
+			derivation_lazy = () -> Arrays.asList(AcceptorReconciliationResponse1.mmEnvironment, AcceptorReconciliationResponse2.mmEnvironment, AcceptorReconciliationResponse3.mmEnvironment, AcceptorReconciliationResponse4.mmEnvironment,
+					AcceptorReconciliationResponse5.mmEnvironment);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.CardPaymentStatus.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -379,7 +393,7 @@ public class CardPaymentStatus extends Status {
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.CardPaymentStatus.mmRejectionReason, com.tools20022.repository.entity.CardPaymentStatus.mmFailureReason,
 						com.tools20022.repository.entity.CardPaymentStatus.mmCardPayment);
 				derivationComponent_lazy = () -> Arrays.asList(AcceptorRejection1.mmObject(), AcceptorReconciliationResponse1.mmObject(), AcceptorReconciliationResponse2.mmObject(), AcceptorRejection2.mmObject(),
-						AcceptorRejection3.mmObject(), AcceptorReconciliationResponse3.mmObject(), AcceptorRejection4.mmObject(), AcceptorReconciliationResponse4.mmObject());
+						AcceptorRejection3.mmObject(), AcceptorReconciliationResponse3.mmObject(), AcceptorRejection4.mmObject(), AcceptorReconciliationResponse4.mmObject(), AcceptorReconciliationResponse5.mmObject());
 			}
 
 			@Override

@@ -121,6 +121,12 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters5#mmRegistrarAccount
 	 * RegistrationParameters5.mmRegistrarAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters6#mmRegistrarAccount
+	 * RegistrationParameters6.mmRegistrarAccount}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.RegistrationParameters7#mmRegistrarAccount
+	 * RegistrationParameters7.mmRegistrarAccount}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -142,7 +148,8 @@ public class RegistrarRole extends SecuritiesPartyRole {
 	 */
 	public static final MMBusinessAssociationEnd mmRegistrarAccount = new MMBusinessAssociationEnd() {
 		{
-			derivation_lazy = () -> Arrays.asList(RegistrationParameters1.mmRegistrarAccount, RegistrationParameters2.mmRegistrarAccount, RegistrationParameters4.mmRegistrarAccount, RegistrationParameters5.mmRegistrarAccount);
+			derivation_lazy = () -> Arrays.asList(RegistrationParameters1.mmRegistrarAccount, RegistrationParameters2.mmRegistrarAccount, RegistrationParameters4.mmRegistrarAccount, RegistrationParameters5.mmRegistrarAccount,
+					RegistrationParameters6.mmRegistrarAccount, RegistrationParameters7.mmRegistrarAccount);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.RegistrarRole.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

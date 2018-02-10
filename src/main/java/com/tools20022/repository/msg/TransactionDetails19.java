@@ -120,7 +120,7 @@ public class TransactionDetails19 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Reference to the message advised to be cancelled by the account servicer"
+	 * "Reference to the message advised to be cancelled by the account servicer."
 	 * </li>
 	 * </ul>
 	 */
@@ -132,7 +132,7 @@ public class TransactionDetails19 {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":20C:"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Reference";
-			definition = "Reference to the message advised to be cancelled by the account servicer";
+			definition = "Reference to the message advised to be cancelled by the account servicer.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

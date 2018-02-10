@@ -75,6 +75,12 @@ import javax.xml.bind.annotation.XmlType;
  * "Transactions6"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Reports on transactions."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Transactions7 Transactions7}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} = {@linkplain com.tools20022.repository.msg.Transactions5
  * Transactions5}</li>
@@ -110,6 +116,14 @@ public class Transactions6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Common detailed payment instruction information."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transactions7#mmPaymentCommonInformation
+	 * Transactions7.mmPaymentCommonInformation}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -125,6 +139,7 @@ public class Transactions6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PaymentCommonInformation";
 			definition = "Common detailed payment instruction information.";
+			nextVersions_lazy = () -> Arrays.asList(Transactions7.mmPaymentCommonInformation);
 			previousVersion_lazy = () -> Transactions5.mmPaymentCommonInformation;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -158,6 +173,14 @@ public class Transactions6 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates the total number and sum of the transactions."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transactions7#mmTransactionsSummary
+	 * Transactions7.mmTransactionsSummary}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -173,6 +196,7 @@ public class Transactions6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionsSummary";
 			definition = "Indicates the total number and sum of the transactions.";
+			nextVersions_lazy = () -> Arrays.asList(Transactions7.mmTransactionsSummary);
 			previousVersion_lazy = () -> Transactions5.mmTransactionsSummary;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -206,6 +230,14 @@ public class Transactions6 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reports either on the transaction information or on a business error."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Transactions7#mmTransactionReport
+	 * Transactions7.mmTransactionReport}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -221,6 +253,7 @@ public class Transactions6 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransactionReport";
 			definition = "Reports either on the transaction information or on a business error.";
+			nextVersions_lazy = () -> Arrays.asList(Transactions7.mmTransactionReport);
 			previousVersion_lazy = () -> Transactions5.mmTransactionReport;
 			minOccurs = 1;
 			isComposite = true;
@@ -239,6 +272,7 @@ public class Transactions6 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Transactions6";
 				definition = "Reports on transactions.";
+				nextVersions_lazy = () -> Arrays.asList(Transactions7.mmObject());
 				previousVersion_lazy = () -> Transactions5.mmObject();
 			}
 		});

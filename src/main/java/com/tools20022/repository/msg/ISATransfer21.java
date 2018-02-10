@@ -195,7 +195,7 @@ public class ISATransfer21 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Identification of the confirmation assigned by the transferor to the transfer. "
+	 * "Identification of the confirmation assigned by the transferor to the transfer."
 	 * </li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
@@ -219,7 +219,7 @@ public class ISATransfer21 {
 			xmlTag = "TrfConfId";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransferConfirmationIdentification";
-			definition = "Identification of the confirmation assigned by the transferor to the transfer. ";
+			definition = "Identification of the confirmation assigned by the transferor to the transfer.";
 			nextVersions_lazy = () -> Arrays.asList(ISATransfer26.mmTransferConfirmationIdentification);
 			previousVersion_lazy = () -> ISATransfer13.mmTransferConfirmationIdentification;
 			maxOccurs = 1;

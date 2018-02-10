@@ -102,7 +102,7 @@ public class BillingServicesAmount3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Represents the total of all taxable services in a specific tax region for a specific currency.  For example, all taxable services for a tax region in Euro would be totalled here in the Euro currency."
+	 * "Represents the total of all taxable services in a specific tax region for a specific currency. For example, all taxable services for a tax region in Euro would be totalled here in the Euro currency."
 	 * </li>
 	 * </ul>
 	 */
@@ -114,7 +114,7 @@ public class BillingServicesAmount3 {
 			xmlTag = "SrcAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SourceAmount";
-			definition = "Represents the total of all taxable services in a specific tax region for a specific currency.  For example, all taxable services for a tax region in Euro would be totalled here in the Euro currency.";
+			definition = "Represents the total of all taxable services in a specific tax region for a specific currency. For example, all taxable services for a tax region in Euro would be totalled here in the Euro currency.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

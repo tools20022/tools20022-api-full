@@ -183,7 +183,7 @@ public class AccountRestrictions1 {
 	 * name} = "AdditionalInformation"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Additional information. "</li>
+	 * definition} = "Additional information."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -201,7 +201,7 @@ public class AccountRestrictions1 {
 			xmlTag = "AddtlInf";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AdditionalInformation";
-			definition = "Additional information. ";
+			definition = "Additional information.";
 			nextVersions_lazy = () -> Arrays.asList(AdditiononalInformation12.mmAdditionalInformation);
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -287,7 +287,7 @@ public class AccountRestrictions1 {
 	 * name} = "Type"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Type or identification of the restriction"</li>
+	 * definition} = "Type or identification of the restriction."</li>
 	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
 	 * nextVersions} =
 	 * <ul>
@@ -305,7 +305,7 @@ public class AccountRestrictions1 {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Type or identification of the restriction";
+			definition = "Type or identification of the restriction.";
 			nextVersions_lazy = () -> Arrays.asList(AdditiononalInformation12.mmType);
 			maxOccurs = 1;
 			minOccurs = 0;

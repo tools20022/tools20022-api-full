@@ -48,7 +48,7 @@ public class ConstraintPlaceOfPresentation2Rule {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "If PlaceOfPresentation is \"ANYB\", Country must be present. "</li>
+	 * "If PlaceOfPresentation is \"ANYB\", Country must be present."</li>
 	 * </ul>
 	 */
 	public static final MMConstraint<PlaceOfPresentation1> forPlaceOfPresentation1 = new MMConstraint<PlaceOfPresentation1>() {
@@ -56,7 +56,7 @@ public class ConstraintPlaceOfPresentation2Rule {
 			validator = ConstraintPlaceOfPresentation2Rule::checkPlaceOfPresentation1;
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PlaceOfPresentation2Rule";
-			definition = "If PlaceOfPresentation is \"ANYB\", Country must be present. ";
+			definition = "If PlaceOfPresentation is \"ANYB\", Country must be present.";
 			owner_lazy = () -> PlaceOfPresentation1.mmObject();
 			expression = "<RuleDefinition><ComplexRule xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:type=\"ComplexRule\"><mustBe><connector>AND</connector><BooleanRule xsi:type=\"Presence\"><leftOperand>/Country</leftOperand></BooleanRule></mustBe><onCondition><connector>AND</connector><BooleanRule xsi:type=\"EqualToValue\"><leftOperand>/Place</leftOperand><rightOperand>ANYB</rightOperand></BooleanRule></onCondition></ComplexRule></RuleDefinition>";
 		}

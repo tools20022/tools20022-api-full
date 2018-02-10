@@ -181,6 +181,9 @@ public class OrganisationName extends PartyName {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.PartyIdentification58#mmLegalName
 	 * PartyIdentification58.mmLegalName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmFullLegalName
+	 * Organisation20.mmFullLegalName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -202,7 +205,7 @@ public class OrganisationName extends PartyName {
 	public static final MMBusinessAttribute mmLegalName = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(Organisation6.mmFullLegalName, Organisation12.mmFullLegalName, Organisation14.mmFullLegalName, FullLegalNameModification1.mmFullLegalName, OrganisationModification1.mmFullLegalName,
-					Organisation7.mmFullLegalName, PartyIdentification58.mmLegalName);
+					Organisation7.mmFullLegalName, PartyIdentification58.mmLegalName, Organisation20.mmFullLegalName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -249,6 +252,9 @@ public class OrganisationName extends PartyName {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.Organisation7#mmTradingName
 	 * Organisation7.mmTradingName}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Organisation20#mmTradingName
+	 * Organisation20.mmTradingName}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -271,7 +277,8 @@ public class OrganisationName extends PartyName {
 	 */
 	public static final MMBusinessAttribute mmTradingName = new MMBusinessAttribute() {
 		{
-			derivation_lazy = () -> Arrays.asList(Organisation6.mmTradingName, Organisation12.mmTradingName, TradingNameModification1.mmTradingName, OrganisationModification1.mmTradingName, Organisation7.mmTradingName);
+			derivation_lazy = () -> Arrays.asList(Organisation6.mmTradingName, Organisation12.mmTradingName, TradingNameModification1.mmTradingName, OrganisationModification1.mmTradingName, Organisation7.mmTradingName,
+					Organisation20.mmTradingName);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.OrganisationName.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;

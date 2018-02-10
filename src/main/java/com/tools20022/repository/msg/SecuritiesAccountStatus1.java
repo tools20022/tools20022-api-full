@@ -73,7 +73,14 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SecuritiesAccountStatus1"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Status of the securities account processed in the system. "</li>
+ * definition} = "Status of the securities account processed in the system."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus2
+ * SecuritiesAccountStatus2}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -107,7 +114,15 @@ public class SecuritiesAccountStatus1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Unique identification of the securities account referenced by a request"
+	 * "Unique identification of the securities account referenced by a request."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus2#mmRelatedSecuritiesAccount
+	 * SecuritiesAccountStatus2.mmRelatedSecuritiesAccount}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -118,7 +133,8 @@ public class SecuritiesAccountStatus1 {
 			xmlTag = "RltdSctiesAcct";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RelatedSecuritiesAccount";
-			definition = "Unique identification of the securities account referenced by a request";
+			definition = "Unique identification of the securities account referenced by a request.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountStatus2.mmRelatedSecuritiesAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -153,6 +169,14 @@ public class SecuritiesAccountStatus1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Status of the securities account maintenance instruction."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus2#mmStatus
+	 * SecuritiesAccountStatus2.mmStatus}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmStatus = new MMMessageAttribute() {
@@ -163,6 +187,7 @@ public class SecuritiesAccountStatus1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Status";
 			definition = "Status of the securities account maintenance instruction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountStatus2.mmStatus);
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Status6Code.mmObject();
@@ -196,6 +221,14 @@ public class SecuritiesAccountStatus1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Reason for the status of a securities account maintenance instruction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SecuritiesAccountStatus2#mmStatusReason
+	 * SecuritiesAccountStatus2.mmStatusReason}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmStatusReason = new MMMessageAssociationEnd() {
@@ -206,6 +239,7 @@ public class SecuritiesAccountStatus1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StatusReason";
 			definition = "Reason for the status of a securities account maintenance instruction.";
+			nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountStatus2.mmStatusReason);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.StatusReasonInformation10.mmObject();
@@ -221,7 +255,8 @@ public class SecuritiesAccountStatus1 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintStatusReasonRule.forSecuritiesAccountStatus1, com.tools20022.repository.constraints.ConstraintPresenceRule.forSecuritiesAccountStatus1);
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SecuritiesAccountStatus1";
-				definition = "Status of the securities account processed in the system. ";
+				definition = "Status of the securities account processed in the system.";
+				nextVersions_lazy = () -> Arrays.asList(SecuritiesAccountStatus2.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 /**
  * Identifies whether the movement on a securities account was the result of a
  * deliver or a receive instruction and whether the instruction was free or
- * against payment
+ * against payment.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -74,7 +74,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * "SettlementInstructionType1Code"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Identifies whether  the movement on a securities account was the result of  a deliver or a receive instruction and whether the instruction was free or against payment"
+ * "Identifies whether the movement on a securities account was the result of a deliver or a receive instruction and whether the instruction was free or against payment."
  * </li>
  * </ul>
  */
@@ -83,7 +83,7 @@ public class SettlementInstructionType1Code extends MMCode {
 
 	final static private AtomicReference<MMCodeSet> mmObject_lazy = new AtomicReference<>();
 	/**
-	 * The transaction is a receive free
+	 * The transaction is a receive free.
 	 * <p>
 	 * <strong>Constant fields:</strong>
 	 * <ul>
@@ -104,7 +104,7 @@ public class SettlementInstructionType1Code extends MMCode {
 	 * name} = "ReceiveFree"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "The transaction is a receive free"</li>
+	 * definition} = "The transaction is a receive free."</li>
 	 * </ul>
 	 */
 	public static final SettlementInstructionType1Code ReceiveFree = new SettlementInstructionType1Code() {
@@ -112,7 +112,7 @@ public class SettlementInstructionType1Code extends MMCode {
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22H::REDE//RECE"), new ISO15022Synonym(this, ":22H::PAYM//FREE"));
 			registrationStatus = MMRegistrationStatus.OBSOLETE;
 			name = "ReceiveFree";
-			definition = "The transaction is a receive free";
+			definition = "The transaction is a receive free.";
 			owner_lazy = () -> com.tools20022.repository.codeset.SettlementInstructionType1Code.mmObject();
 			codeName = "RECE";
 		}
@@ -235,7 +235,7 @@ public class SettlementInstructionType1Code extends MMCode {
 				example = Arrays.asList("RECE");
 				registrationStatus = MMRegistrationStatus.OBSOLETE;
 				name = "SettlementInstructionType1Code";
-				definition = "Identifies whether  the movement on a securities account was the result of  a deliver or a receive instruction and whether the instruction was free or against payment";
+				definition = "Identifies whether the movement on a securities account was the result of a deliver or a receive instruction and whether the instruction was free or against payment.";
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.SettlementInstructionType1Code.ReceiveFree, com.tools20022.repository.codeset.SettlementInstructionType1Code.ReceiveAgainstPayment,
 						com.tools20022.repository.codeset.SettlementInstructionType1Code.DeliverFree, com.tools20022.repository.codeset.SettlementInstructionType1Code.DeliverAgainstPayment);
 			}

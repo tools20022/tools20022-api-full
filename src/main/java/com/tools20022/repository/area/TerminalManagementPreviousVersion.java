@@ -19,10 +19,7 @@ package com.tools20022.repository.area;
 
 import com.tools20022.metamodel.MMBusinessArea;
 import com.tools20022.metamodel.MMRegistrationStatus;
-import com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03;
-import com.tools20022.repository.area.catm.ManagementPlanReplacementV03;
-import com.tools20022.repository.area.catm.StatusReportV03;
-import com.tools20022.repository.area.catm.TerminalManagementRejectionV02;
+import com.tools20022.repository.area.catm.*;
 import com.tools20022.repository.GeneratedRepository;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
@@ -39,16 +36,22 @@ import java.util.concurrent.atomic.AtomicReference;
  * messageDefinition} =
  * <ul>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV02
- * TerminalManagementRejectionV02}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationResponseV01
+ * MaintenanceDelegationResponseV01}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV03
- * AcceptorConfigurationUpdateV03}</li>
+ * {@linkplain com.tools20022.repository.area.catm.TerminalManagementRejectionV03
+ * TerminalManagementRejectionV03}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV03
- * ManagementPlanReplacementV03}</li>
- * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV03
- * StatusReportV03}</li>
+ * {@linkplain com.tools20022.repository.area.catm.MaintenanceDelegationRequestV02
+ * MaintenanceDelegationRequestV02}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.AcceptorConfigurationUpdateV05
+ * AcceptorConfigurationUpdateV05}</li>
+ * <li>{@linkplain com.tools20022.repository.area.catm.StatusReportV05
+ * StatusReportV05}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.catm.ManagementPlanReplacementV05
+ * ManagementPlanReplacementV05}</li>
  * </ul>
  * </li>
  * <li>
@@ -79,7 +82,8 @@ public class TerminalManagementPreviousVersion {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Terminal Management - Previous version - master";
 				definition = "Messages that support any card related terminal management services between a Terminal Management System (TMS) and a Point of Interaction (POI) system.";
-				messageDefinition_lazy = () -> Arrays.asList(TerminalManagementRejectionV02.mmObject(), AcceptorConfigurationUpdateV03.mmObject(), ManagementPlanReplacementV03.mmObject(), StatusReportV03.mmObject());
+				messageDefinition_lazy = () -> Arrays.asList(MaintenanceDelegationResponseV01.mmObject(), TerminalManagementRejectionV03.mmObject(), MaintenanceDelegationRequestV02.mmObject(), AcceptorConfigurationUpdateV05.mmObject(),
+						StatusReportV05.mmObject(), ManagementPlanReplacementV05.mmObject());
 				code = "catm";
 			}
 		});

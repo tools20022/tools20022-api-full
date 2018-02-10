@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * Specifies the physical parameters of a shareholders meeting. Several dates
- * and places can be defined for a meeting
+ * and places can be defined for a meeting.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -95,7 +95,7 @@ import javax.xml.bind.annotation.XmlType;
  * "Meeting3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting"
+ * "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -405,7 +405,7 @@ public class Meeting3 {
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintDateStatus1Rule.forMeeting3);
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "Meeting3";
-				definition = "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting";
+				definition = "Specifies the physical parameters of a shareholders meeting. Several dates and places can be defined for a meeting.";
 				nextVersions_lazy = () -> Arrays.asList(Meeting4.mmObject());
 			}
 		});

@@ -21,8 +21,8 @@ import com.tools20022.metamodel.ext.ISO15022Synonym;
 import com.tools20022.metamodel.MMMessageAttribute;
 import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
+import com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05;
-import com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06;
 import com.tools20022.repository.codeset.PartialSettlement2Code;
 import com.tools20022.repository.datatype.RestrictedFINXMax16Text;
 import com.tools20022.repository.entity.*;
@@ -81,7 +81,7 @@ import javax.xml.bind.annotation.XmlType;
  * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V05#mmAdditionalParameters
  * IntraPositionMovementConfirmation002V05.mmAdditionalParameters}</li>
  * <li>
- * {@linkplain com.tools20022.repository.area.semt.IntraPositionMovementConfirmation002V06#mmAdditionalParameters
+ * {@linkplain com.tools20022.repository.area.seev.IntraPositionMovementConfirmation002V06#mmAdditionalParameters
  * IntraPositionMovementConfirmation002V06.mmAdditionalParameters}</li>
  * </ul>
  * </li>

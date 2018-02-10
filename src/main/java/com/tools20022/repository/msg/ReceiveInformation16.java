@@ -131,6 +131,13 @@ import javax.xml.bind.annotation.XmlType;
  * "ReceiveInformation16"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} = "Parameters applied to the settlement of a security transfer."</li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.ReceiveInformation19
+ * ReceiveInformation19}</li>
+ * </ul>
+ * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.msg.ReceiveInformation15
@@ -172,6 +179,14 @@ public class ReceiveInformation16 {
 	 * definition} =
 	 * "Party that receives (transferee) securities from the delivering agent (transferor)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmTransferee
+	 * ReceiveInformation19.mmTransferee}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransferee = new MMMessageAssociationEnd() {
@@ -182,6 +197,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Transferee";
 			definition = "Party that receives (transferee) securities from the delivering agent (transferor).";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmTransferee);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -213,6 +229,14 @@ public class ReceiveInformation16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account into which the securities are to be received."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmTransfereeRegisteredAccount
+	 * ReceiveInformation19.mmTransfereeRegisteredAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmTransfereeRegisteredAccount = new MMMessageAssociationEnd() {
@@ -223,6 +247,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "TransfereeRegisteredAccount";
 			definition = "Account into which the securities are to be received.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmTransfereeRegisteredAccount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -260,6 +285,14 @@ public class ReceiveInformation16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Identification of a related party or intermediary."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmIntermediaryInformation
+	 * ReceiveInformation19.mmIntermediaryInformation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIntermediaryInformation = new MMMessageAssociationEnd() {
@@ -271,6 +304,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IntermediaryInformation";
 			definition = "Identification of a related party or intermediary.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmIntermediaryInformation);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Intermediary34.mmObject();
@@ -310,6 +344,14 @@ public class ReceiveInformation16 {
 	 * definition} =
 	 * "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmRequestedSettlementDate
+	 * ReceiveInformation19.mmRequestedSettlementDate}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -326,6 +368,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "RequestedSettlementDate";
 			definition = "Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmRequestedSettlementDate);
 			previousVersion_lazy = () -> ReceiveInformation15.mmRequestedSettlementDate;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -367,6 +410,14 @@ public class ReceiveInformation16 {
 	 * definition} =
 	 * "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmSettlementAmount
+	 * ReceiveInformation19.mmSettlementAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -383,6 +434,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementAmount";
 			definition = "Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmSettlementAmount);
 			previousVersion_lazy = () -> ReceiveInformation15.mmSettlementAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -424,6 +476,14 @@ public class ReceiveInformation16 {
 	 * definition} =
 	 * "Indicates whether the settlement amount includes the stamp duty amount."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmStampDuty
+	 * ReceiveInformation19.mmStampDuty}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -440,6 +500,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "StampDuty";
 			definition = "Indicates whether the settlement amount includes the stamp duty amount.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmStampDuty);
 			previousVersion_lazy = () -> ReceiveInformation15.mmStampDuty;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -479,6 +540,14 @@ public class ReceiveInformation16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Deal amount."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmNetAmount
+	 * ReceiveInformation19.mmNetAmount}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -495,6 +564,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "NetAmount";
 			definition = "Deal amount.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmNetAmount);
 			previousVersion_lazy = () -> ReceiveInformation15.mmNetAmount;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -534,6 +604,14 @@ public class ReceiveInformation16 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Chain of parties involved in the settlement of a transaction."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmSettlementPartiesDetails
+	 * ReceiveInformation19.mmSettlementPartiesDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -550,6 +628,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SettlementPartiesDetails";
 			definition = "Chain of parties involved in the settlement of a transaction.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmSettlementPartiesDetails);
 			previousVersion_lazy = () -> ReceiveInformation15.mmSettlementPartiesDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -588,6 +667,14 @@ public class ReceiveInformation16 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Charge related to the transfer of a financial instrument."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmFees
+	 * ReceiveInformation19.mmFees}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -604,6 +691,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ChargeDetails";
 			definition = "Charge related to the transfer of a financial instrument.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmFees);
 			previousVersion_lazy = () -> ReceiveInformation15.mmChargeDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -749,6 +837,14 @@ public class ReceiveInformation16 {
 	 * definition} =
 	 * "Specifies foreign exchange details applied to the payment of charges, taxes and commissions as a result of the transfer."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmForeignExchangeDetails
+	 * ReceiveInformation19.mmForeignExchangeDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -765,6 +861,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ForeignExchangeDetails";
 			definition = "Specifies foreign exchange details applied to the payment of charges, taxes and commissions as a result of the transfer.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmForeignExchangeDetails);
 			previousVersion_lazy = () -> ReceiveInformation15.mmForeignExchangeDetails;
 			minOccurs = 0;
 			isComposite = true;
@@ -806,6 +903,14 @@ public class ReceiveInformation16 {
 	 * definition} =
 	 * "Indicates whether the financial instrument is to be physically delivered."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmPhysicalTransfer
+	 * ReceiveInformation19.mmPhysicalTransfer}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -822,6 +927,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransfer";
 			definition = "Indicates whether the financial instrument is to be physically delivered.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmPhysicalTransfer);
 			previousVersion_lazy = () -> ReceiveInformation15.mmPhysicalTransfer;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -859,6 +965,14 @@ public class ReceiveInformation16 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Parameters of a physical delivery."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmPhysicalTransferDetails
+	 * ReceiveInformation19.mmPhysicalTransferDetails}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -875,6 +989,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "PhysicalTransferDetails";
 			definition = "Parameters of a physical delivery.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmPhysicalTransferDetails);
 			previousVersion_lazy = () -> ReceiveInformation15.mmPhysicalTransferDetails;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -915,6 +1030,14 @@ public class ReceiveInformation16 {
 	 * definition} =
 	 * "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReceiveInformation19#mmClientReference
+	 * ReceiveInformation19.mmClientReference}</li>
+	 * </ul>
+	 * </li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
 	 * previousVersion} =
@@ -931,6 +1054,7 @@ public class ReceiveInformation16 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ClientReference";
 			definition = "Unique and unambiguous investor's identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.";
+			nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmClientReference);
 			previousVersion_lazy = () -> ReceiveInformation15.mmClientReference;
 			maxOccurs = 1;
 			minOccurs = 0;
@@ -957,6 +1081,7 @@ public class ReceiveInformation16 {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "ReceiveInformation16";
 				definition = "Parameters applied to the settlement of a security transfer.";
+				nextVersions_lazy = () -> Arrays.asList(ReceiveInformation19.mmObject());
 				previousVersion_lazy = () -> ReceiveInformation15.mmObject();
 			}
 		});

@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Choice of SubBalance
+ * Choice of SubBalance.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -64,7 +64,7 @@ import javax.xml.bind.annotation.XmlType;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "SubBalanceType2Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Choice of SubBalance"</li>
+ * definition} = "Choice of SubBalance."</li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -181,7 +181,7 @@ public class SubBalanceType2Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "SubBalanceType2Choice";
-				definition = "Choice of SubBalance";
+				definition = "Choice of SubBalance.";
 			}
 		});
 		return mmObject_lazy.get();

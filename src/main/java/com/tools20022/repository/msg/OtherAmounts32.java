@@ -23,6 +23,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV05;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07;
 import com.tools20022.repository.entity.Adjustment;
 import com.tools20022.repository.entity.Interest;
 import com.tools20022.repository.entity.SecuritiesTrade;
@@ -88,6 +89,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV06#mmOtherAmounts
  * SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherAmounts}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionAllegementNotificationV07#mmOtherAmounts
+ * SecuritiesSettlementTransactionAllegementNotificationV07.mmOtherAmounts}</li>
  * </ul>
  * </li>
  * <li>
@@ -746,7 +750,8 @@ public class OtherAmounts32 {
 						com.tools20022.repository.msg.OtherAmounts32.mmTradeAmount, com.tools20022.repository.msg.OtherAmounts32.mmExecutingBrokerAmount, com.tools20022.repository.msg.OtherAmounts32.mmLocalTax,
 						com.tools20022.repository.msg.OtherAmounts32.mmLocalBrokerCommission, com.tools20022.repository.msg.OtherAmounts32.mmOther, com.tools20022.repository.msg.OtherAmounts32.mmStampDuty,
 						com.tools20022.repository.msg.OtherAmounts32.mmTransactionTax, com.tools20022.repository.msg.OtherAmounts32.mmWithholdingTax, com.tools20022.repository.msg.OtherAmounts32.mmConsumptionTax);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherAmounts, SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherAmounts);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionAllegementNotificationV05.mmOtherAmounts, SecuritiesSettlementTransactionAllegementNotificationV06.mmOtherAmounts,
+						SecuritiesSettlementTransactionAllegementNotificationV07.mmOtherAmounts);
 				trace_lazy = () -> SecuritiesTrade.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;

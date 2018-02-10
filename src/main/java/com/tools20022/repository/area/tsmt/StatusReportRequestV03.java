@@ -167,7 +167,7 @@ public class StatusReportRequestV03 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Specifies the entities of the submitter for which the transactions have to be reported. "
+	 * "Specifies the entities of the submitter for which the transactions have to be reported."
 	 * </li>
 	 * </ul>
 	 */
@@ -176,7 +176,7 @@ public class StatusReportRequestV03 {
 			xmlTag = "NttiesToBeRptd";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "EntitiesToBeReported";
-			definition = "Specifies the entities of the submitter for which the transactions have to be reported. ";
+			definition = "Specifies the entities of the submitter for which the transactions have to be reported.";
 			minOccurs = 0;
 			complexType_lazy = () -> BICIdentification1.mmObject();
 		}

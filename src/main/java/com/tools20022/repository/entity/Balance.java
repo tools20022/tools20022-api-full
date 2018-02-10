@@ -139,6 +139,11 @@ import java.util.Objects;
  * CashSubBalanceTypeAndQuantityBreakdown1}</li>
  * <li>{@linkplain com.tools20022.repository.choice.ContractBalanceType1Choice
  * ContractBalanceType1Choice}</li>
+ * <li>{@linkplain com.tools20022.repository.choice.CashBalanceType2Choice
+ * CashBalanceType2Choice}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2
+ * CashSubBalanceTypeAndQuantityBreakdown2}</li>
  * </ul>
  * </li>
  * <li>
@@ -522,6 +527,18 @@ public class Balance {
 	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown34#mmSecuritiesSubBalanceType
 	 * QuantityBreakdown34.mmSecuritiesSubBalanceType}</li>
 	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashBalanceType2Choice#mmCode
+	 * CashBalanceType2Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.CashBalanceType2Choice#mmProprietary
+	 * CashBalanceType2Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashSubBalanceTypeAndQuantityBreakdown2#mmType
+	 * CashSubBalanceTypeAndQuantityBreakdown2.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown45#mmCashSubBalanceType
+	 * QuantityBreakdown45.mmCashSubBalanceType}</li>
+	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails128#mmSecuritiesSubBalanceType
 	 * SettlementDetails128.mmSecuritiesSubBalanceType}</li>
 	 * <li>
@@ -569,6 +586,96 @@ public class Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.SettlementDetails138#mmCashSubBalanceType
 	 * SettlementDetails138.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmSecuritiesSubBalanceType
+	 * SettlementDetails140.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails140#mmCashSubBalanceType
+	 * SettlementDetails140.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.ReportingRequest4#mmRequestedBalanceType
+	 * ReportingRequest4.mmRequestedBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BalanceType10Choice#mmCode
+	 * BalanceType10Choice.mmCode}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.choice.BalanceType10Choice#mmProprietary
+	 * BalanceType10Choice.mmProprietary}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.BalanceType13#mmCodeOrProprietary
+	 * BalanceType13.mmCodeOrProprietary}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.BalanceType13#mmSubType
+	 * BalanceType13.mmSubType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance8#mmType
+	 * CashBalance8.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance10#mmType
+	 * CashBalance10.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance9#mmType
+	 * CashBalance9.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CreditLine3#mmType
+	 * CreditLine3.mmType}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance11#mmType
+	 * CashBalance11.mmType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmDeliveringSecuritiesSubBalanceType
+	 * SettlementDetails142.mmDeliveringSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmReceivingSecuritiesSubBalanceType
+	 * SettlementDetails142.mmReceivingSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails142#mmCashSubBalanceType
+	 * SettlementDetails142.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmSecuritiesSubBalanceType
+	 * SettlementDetails144.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails144#mmCashSubBalanceType
+	 * SettlementDetails144.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmSecuritiesSubBalanceType
+	 * SettlementDetails145.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails145#mmCashSubBalanceType
+	 * SettlementDetails145.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmSecuritiesSubBalanceType
+	 * SettlementDetails146.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails146#mmCashSubBalanceType
+	 * SettlementDetails146.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown47#mmSecuritiesSubBalanceType
+	 * QuantityBreakdown47.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.QuantityBreakdown52#mmSecuritiesSubBalanceType
+	 * QuantityBreakdown52.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmSecuritiesSubBalanceType
+	 * SettlementDetails155.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails155#mmCashSubBalanceType
+	 * SettlementDetails155.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmSecuritiesSubBalanceType
+	 * SettlementDetails156.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails156#mmCashSubBalanceType
+	 * SettlementDetails156.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmDeliveringSecuritiesSubBalanceType
+	 * SettlementDetails157.mmDeliveringSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmReceivingSecuritiesSubBalanceType
+	 * SettlementDetails157.mmReceivingSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails157#mmCashSubBalanceType
+	 * SettlementDetails157.mmCashSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmSecuritiesSubBalanceType
+	 * SettlementDetails158.mmSecuritiesSubBalanceType}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.SettlementDetails158#mmCashSubBalanceType
+	 * SettlementDetails158.mmCashSubBalanceType}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -612,11 +719,18 @@ public class Balance {
 					QuantityBreakdown32.mmSecuritiesSubBalanceType, CashBalance7.mmType, SettlementDetails101.mmSecuritiesSubBalanceType, SettlementDetails101.mmCashSubBalanceType, SettlementDetails111.mmSecuritiesSubBalanceType,
 					SettlementDetails111.mmCashSubBalanceType, SettlementDetails112.mmSecuritiesSubBalanceType, SettlementDetails112.mmCashSubBalanceType, SettlementDetails110.mmSecuritiesSubBalanceType,
 					SettlementDetails110.mmCashSubBalanceType, QuantityBreakdown44.mmSecuritiesSubBalanceType, SettlementDetails113.mmSecuritiesSubBalanceType, SettlementDetails113.mmCashSubBalanceType,
-					QuantityBreakdown34.mmSecuritiesSubBalanceType, SettlementDetails128.mmSecuritiesSubBalanceType, SettlementDetails128.mmCashSubBalanceType, SettlementDetails120.mmSecuritiesSubBalanceType,
-					SettlementDetails120.mmCashSubBalanceType, SettlementDetails119.mmSecuritiesSubBalanceType, SettlementDetails119.mmCashSubBalanceType, SettlementDetails122.mmSecuritiesSubBalanceType,
-					SettlementDetails122.mmCashSubBalanceType, SettlementDetails134.mmSecuritiesSubBalanceType, SettlementDetails134.mmCashSubBalanceType, SettlementDetails137.mmSecuritiesSubBalanceType,
-					SettlementDetails137.mmCashSubBalanceType, SettlementDetails132.mmSecuritiesSubBalanceType, SettlementDetails132.mmCashSubBalanceType, SettlementDetails138.mmSecuritiesSubBalanceType,
-					SettlementDetails138.mmCashSubBalanceType);
+					QuantityBreakdown34.mmSecuritiesSubBalanceType, CashBalanceType2Choice.mmCode, CashBalanceType2Choice.mmProprietary, CashSubBalanceTypeAndQuantityBreakdown2.mmType, QuantityBreakdown45.mmCashSubBalanceType,
+					SettlementDetails128.mmSecuritiesSubBalanceType, SettlementDetails128.mmCashSubBalanceType, SettlementDetails120.mmSecuritiesSubBalanceType, SettlementDetails120.mmCashSubBalanceType,
+					SettlementDetails119.mmSecuritiesSubBalanceType, SettlementDetails119.mmCashSubBalanceType, SettlementDetails122.mmSecuritiesSubBalanceType, SettlementDetails122.mmCashSubBalanceType,
+					SettlementDetails134.mmSecuritiesSubBalanceType, SettlementDetails134.mmCashSubBalanceType, SettlementDetails137.mmSecuritiesSubBalanceType, SettlementDetails137.mmCashSubBalanceType,
+					SettlementDetails132.mmSecuritiesSubBalanceType, SettlementDetails132.mmCashSubBalanceType, SettlementDetails138.mmSecuritiesSubBalanceType, SettlementDetails138.mmCashSubBalanceType,
+					SettlementDetails140.mmSecuritiesSubBalanceType, SettlementDetails140.mmCashSubBalanceType, ReportingRequest4.mmRequestedBalanceType, BalanceType10Choice.mmCode, BalanceType10Choice.mmProprietary,
+					BalanceType13.mmCodeOrProprietary, BalanceType13.mmSubType, CashBalance8.mmType, CashBalance10.mmType, CashBalance9.mmType, CreditLine3.mmType, CashBalance11.mmType,
+					SettlementDetails142.mmDeliveringSecuritiesSubBalanceType, SettlementDetails142.mmReceivingSecuritiesSubBalanceType, SettlementDetails142.mmCashSubBalanceType, SettlementDetails144.mmSecuritiesSubBalanceType,
+					SettlementDetails144.mmCashSubBalanceType, SettlementDetails145.mmSecuritiesSubBalanceType, SettlementDetails145.mmCashSubBalanceType, SettlementDetails146.mmSecuritiesSubBalanceType,
+					SettlementDetails146.mmCashSubBalanceType, QuantityBreakdown47.mmSecuritiesSubBalanceType, QuantityBreakdown52.mmSecuritiesSubBalanceType, SettlementDetails155.mmSecuritiesSubBalanceType,
+					SettlementDetails155.mmCashSubBalanceType, SettlementDetails156.mmSecuritiesSubBalanceType, SettlementDetails156.mmCashSubBalanceType, SettlementDetails157.mmDeliveringSecuritiesSubBalanceType,
+					SettlementDetails157.mmReceivingSecuritiesSubBalanceType, SettlementDetails157.mmCashSubBalanceType, SettlementDetails158.mmSecuritiesSubBalanceType, SettlementDetails158.mmCashSubBalanceType);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -702,6 +816,17 @@ public class Balance {
 	 * FinancialInstrumentAggregateBalance1.mmItemDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance7#mmDate
 	 * CashBalance7.mmDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance8#mmDate
+	 * CashBalance8.mmDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance10#mmValueDate
+	 * CashBalance10.mmValueDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance9#mmValueDate
+	 * CashBalance9.mmValueDate}</li>
+	 * <li>{@linkplain com.tools20022.repository.msg.CashBalance11#mmValueDate
+	 * CashBalance11.mmValueDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.TotalsPerBankTransactionCode5#mmDate
+	 * TotalsPerBankTransactionCode5.mmDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -728,7 +853,7 @@ public class Balance {
 			derivation_lazy = () -> Arrays.asList(BalanceDetails2.mmBalanceValueDate, BalanceDetails3.mmBalanceValueDate, BalanceDetails4.mmBalanceValueDate, CashBalance4.mmValueDate, CashBalanceDetails2.mmValueDate,
 					CashBalanceDetails3.mmValueDate, CashBalanceDetails4.mmValueDate, CashBalanceDetails5.mmValueDate, CashBalanceDetails6.mmValueDate, CashBalanceDetails7.mmValueDate, CashBalance5.mmValueDate, CashBalance6.mmValueDate,
 					CashBalance1.mmDate, CashBalance3.mmDate, CashBalance2.mmDate, ReportData1.mmValueDate, ReportData5.mmValueDate, ReportData2.mmValueDate, ReportData3.mmValueDate, ReportData4.mmValueDate,
-					FinancialInstrumentAggregateBalance1.mmItemDate, CashBalance7.mmDate);
+					FinancialInstrumentAggregateBalance1.mmItemDate, CashBalance7.mmDate, CashBalance8.mmDate, CashBalance10.mmValueDate, CashBalance9.mmValueDate, CashBalance11.mmValueDate, TotalsPerBankTransactionCode5.mmDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":98a::VALU"));
@@ -828,6 +953,15 @@ public class Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.repository.msg.CashAvailability1#mmCreditDebitIndicator
 	 * CashAvailability1.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance8#mmCreditDebitIndicator
+	 * CashBalance8.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance10#mmCreditDebitIndicator
+	 * CashBalance10.mmCreditDebitIndicator}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.CashBalance11#mmCreditDebitIndicator
+	 * CashBalance11.mmCreditDebitIndicator}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -846,7 +980,7 @@ public class Balance {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance"
+	 * "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance."
 	 * </li>
 	 * </ul>
 	 */
@@ -856,13 +990,14 @@ public class Balance {
 					CashBalanceDetails6.mmCreditDebitIndicator, CashBalanceDetails7.mmCreditDebitIndicator, CashBalance5.mmCreditDebitIndicator, CashBalance6.mmCreditDebitIndicator, CashBalanceAvailability1.mmCreditDebitIndicator,
 					CashBalance1.mmCreditDebitIndicator, CashBalanceAvailability2.mmCreditDebitIndicator, CashBalance3.mmCreditDebitIndicator, CashBalance2.mmCreditDebitIndicator, CashAccount19.mmCreditDebitIndicator,
 					SecuritiesAccount9.mmCreditDebitIndicator, SecuritiesAccount12.mmCreditDebitIndicator, CashAccount18.mmCreditDebitIndicator, SecuritiesAccount8.mmCreditDebitIndicator, SecuritiesAccount10.mmCreditDebitIndicator,
-					ContractBalance1.mmCreditDebitIndicator, CashBalance7.mmCreditDebitIndicator, CashAvailability1.mmCreditDebitIndicator);
+					ContractBalance1.mmCreditDebitIndicator, CashBalance7.mmCreditDebitIndicator, CashAvailability1.mmCreditDebitIndicator, CashBalance8.mmCreditDebitIndicator, CashBalance10.mmCreditDebitIndicator,
+					CashBalance11.mmCreditDebitIndicator);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			semanticMarkup_lazy = () -> Arrays.asList(new ISO15022Synonym(this, ":22F::CRDB"));
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "CreditDebitIndicator";
-			definition = "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance";
+			definition = "Indicates whether the balance is a credit or a debit balance. A zero balance is considered to be a credit balance.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> DebitCreditCode.mmObject();
@@ -1312,6 +1447,12 @@ public class Balance {
 	 * {@linkplain com.tools20022.repository.msg.AggregateBalancePerSafekeepingPlace30#mmAlternateReportingCurrencyAmounts
 	 * AggregateBalancePerSafekeepingPlace30.mmAlternateReportingCurrencyAmounts
 	 * }</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmAccountBaseCurrencyAmounts
+	 * AggregateBalanceInformation34.mmAccountBaseCurrencyAmounts}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmInstrumentCurrencyAmounts
+	 * AggregateBalanceInformation34.mmInstrumentCurrencyAmounts}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1376,7 +1517,8 @@ public class Balance {
 					AggregateBalancePerSafekeepingPlace29.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace29.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation32.mmAccountBaseCurrencyAmounts,
 					AggregateBalanceInformation32.mmInstrumentCurrencyAmounts, AggregateBalanceInformation32.mmAlternateReportingCurrencyAmounts, AggregateBalanceInformation33.mmAccountBaseCurrencyAmounts,
 					AggregateBalanceInformation33.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace31.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace31.mmInstrumentCurrencyAmounts,
-					AggregateBalancePerSafekeepingPlace30.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace30.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace30.mmAlternateReportingCurrencyAmounts);
+					AggregateBalancePerSafekeepingPlace30.mmAccountBaseCurrencyAmounts, AggregateBalancePerSafekeepingPlace30.mmInstrumentCurrencyAmounts, AggregateBalancePerSafekeepingPlace30.mmAlternateReportingCurrencyAmounts,
+					AggregateBalanceInformation34.mmAccountBaseCurrencyAmounts, AggregateBalanceInformation34.mmInstrumentCurrencyAmounts);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1421,6 +1563,9 @@ public class Balance {
 	 * AggregateBalanceInformation20.mmBalanceDate}</li>
 	 * <li>{@linkplain com.tools20022.repository.msg.CardAccount2#mmBalanceDate
 	 * CardAccount2.mmBalanceDate}</li>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.AggregateBalanceInformation34#mmBalanceDate
+	 * AggregateBalanceInformation34.mmBalanceDate}</li>
 	 * </ul>
 	 * </li>
 	 * <li>
@@ -1442,7 +1587,7 @@ public class Balance {
 	public static final MMBusinessAttribute mmCalculationDate = new MMBusinessAttribute() {
 		{
 			derivation_lazy = () -> Arrays.asList(ReportData1.mmDateAndTimeStamp, ReportData5.mmDateAndTimeStamp, ReportData2.mmDateAndTimeStamp, ReportData3.mmDateAndTimeStamp, ReportData4.mmDateAndTimeStamp,
-					AggregateBalanceInformation20.mmBalanceDate, CardAccount2.mmBalanceDate);
+					AggregateBalanceInformation20.mmBalanceDate, CardAccount2.mmBalanceDate, AggregateBalanceInformation34.mmBalanceDate);
 			isDerived = false;
 			elementContext_lazy = () -> com.tools20022.repository.entity.Balance.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
@@ -1797,7 +1942,8 @@ public class Balance {
 						com.tools20022.repository.entity.Balance.mmAccount, com.tools20022.repository.entity.Balance.mmInterest, com.tools20022.repository.entity.Balance.mmBalanceEntry,
 						com.tools20022.repository.entity.Balance.mmProcessingRestriction, com.tools20022.repository.entity.Balance.mmOpeningClosingCode);
 				derivationComponent_lazy = () -> Arrays.asList(BalanceType9Choice.mmObject(), BalanceType1Choice.mmObject(), BalanceType6Choice.mmObject(), BalanceType7Choice.mmObject(), BalanceDetails6.mmObject(),
-						BalanceDetails5.mmObject(), PortfolioBalance1.mmObject(), CashBalanceType1Choice.mmObject(), CashSubBalanceTypeAndQuantityBreakdown1.mmObject(), ContractBalanceType1Choice.mmObject());
+						BalanceDetails5.mmObject(), PortfolioBalance1.mmObject(), CashBalanceType1Choice.mmObject(), CashSubBalanceTypeAndQuantityBreakdown1.mmObject(), ContractBalanceType1Choice.mmObject(),
+						CashBalanceType2Choice.mmObject(), CashSubBalanceTypeAndQuantityBreakdown2.mmObject());
 			}
 
 			@Override

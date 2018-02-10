@@ -290,7 +290,7 @@ public class CashOptionSD5 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Maximum withholding rate based on the country of the sourced income.  "</li>
+	 * "Maximum withholding rate based on the country of the sourced income."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmMaximumWithholdingTaxPercentage = new MMMessageAttribute() {
@@ -301,7 +301,7 @@ public class CashOptionSD5 {
 			semanticMarkup_lazy = () -> Arrays.asList(new DTCCSynonym(this, "Maximum Withholding Tax Percentage"));
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "MaximumWithholdingTaxPercentage";
-			definition = "Maximum withholding rate based on the country of the sourced income.  ";
+			definition = "Maximum withholding rate based on the country of the sourced income.";
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> PercentageRate.mmObject();

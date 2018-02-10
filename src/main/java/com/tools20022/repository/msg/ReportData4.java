@@ -173,7 +173,7 @@ public class ReportData4 {
 	 * name} = "ValueDate"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Value date for which the pay-in schedule is generated. "</li>
+	 * definition} = "Value date for which the pay-in schedule is generated."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmValueDate = new MMMessageAttribute() {
@@ -184,7 +184,7 @@ public class ReportData4 {
 			xmlTag = "ValDt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ValueDate";
-			definition = "Value date for which the pay-in schedule is generated. ";
+			definition = "Value date for which the pay-in schedule is generated.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -313,7 +313,7 @@ public class ReportData4 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Defines the  schedule timing that is, whether it is an initial or a revised schedule."
+	 * "Defines the schedule timing that is, whether it is an initial or a revised schedule."
 	 * </li>
 	 * </ul>
 	 */
@@ -324,7 +324,7 @@ public class ReportData4 {
 			xmlTag = "SchdlTp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ScheduleType";
-			definition = "Defines the  schedule timing that is, whether it is an initial or a revised schedule.";
+			definition = "Defines the schedule timing that is, whether it is an initial or a revised schedule.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Exact4AlphaNumericText.mmObject();

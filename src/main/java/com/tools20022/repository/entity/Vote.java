@@ -191,7 +191,7 @@ public class Vote {
 	 * name} = "For"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes in favour of one resolution"</li>
+	 * definition} = "Number of votes in favour of one resolution."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmFor = new MMBusinessAttribute() {
@@ -201,7 +201,7 @@ public class Vote {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "For";
-			definition = "Number of votes in favour of one resolution";
+			definition = "Number of votes in favour of one resolution.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -256,7 +256,7 @@ public class Vote {
 	 * name} = "Against"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes against one resolution"</li>
+	 * definition} = "Number of votes against one resolution."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmAgainst = new MMBusinessAttribute() {
@@ -266,7 +266,7 @@ public class Vote {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Against";
-			definition = "Number of votes against one resolution";
+			definition = "Number of votes against one resolution.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();
@@ -386,7 +386,7 @@ public class Vote {
 	 * name} = "Withhold"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Number of votes withheld for one resolution"</li>
+	 * definition} = "Number of votes withheld for one resolution."</li>
 	 * </ul>
 	 */
 	public static final MMBusinessAttribute mmWithhold = new MMBusinessAttribute() {
@@ -396,7 +396,7 @@ public class Vote {
 			elementContext_lazy = () -> com.tools20022.repository.entity.Vote.mmObject();
 			registrationStatus = MMRegistrationStatus.REGISTERED;
 			name = "Withhold";
-			definition = "Number of votes withheld for one resolution";
+			definition = "Number of votes withheld for one resolution.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> Number.mmObject();

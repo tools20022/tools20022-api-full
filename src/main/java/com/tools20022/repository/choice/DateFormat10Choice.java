@@ -145,7 +145,7 @@ public class DateFormat10Choice {
 	 * name} = "DateCodeAndTime"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Specifies  a date code and a time."</li>
+	 * definition} = "Specifies a date code and a time."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmDateCodeAndTime = new MMMessageAssociationEnd() {
@@ -155,7 +155,7 @@ public class DateFormat10Choice {
 			xmlTag = "DtCdAndTm";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "DateCodeAndTime";
-			definition = "Specifies  a date code and a time.";
+			definition = "Specifies a date code and a time.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;

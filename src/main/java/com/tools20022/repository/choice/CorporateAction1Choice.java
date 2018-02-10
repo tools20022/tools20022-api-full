@@ -101,7 +101,7 @@ public class CorporateAction1Choice {
 	 * name} = "Type"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Corporate action event  type expressed as a code."</li>
+	 * definition} = "Corporate action event type expressed as a code."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmType = new MMMessageAttribute() {
@@ -112,7 +112,7 @@ public class CorporateAction1Choice {
 			xmlTag = "Tp";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Type";
-			definition = "Corporate action event  type expressed as a code.";
+			definition = "Corporate action event type expressed as a code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			simpleType_lazy = () -> CorporateActionEventType1Code.mmObject();
@@ -150,7 +150,7 @@ public class CorporateAction1Choice {
 	 * name} = "Proprietary"</li>
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
-	 * definition} = "Corporate action event expressed as a proprietary code"</li>
+	 * definition} = "Corporate action event expressed as a proprietary code."</li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmProprietary = new MMMessageAttribute() {
@@ -161,7 +161,7 @@ public class CorporateAction1Choice {
 			xmlTag = "Prtry";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "Proprietary";
-			definition = "Corporate action event expressed as a proprietary code";
+			definition = "Corporate action event expressed as a proprietary code.";
 			maxOccurs = 1;
 			minOccurs = 1;
 			complexType_lazy = () -> GenericIdentification47.mmObject();

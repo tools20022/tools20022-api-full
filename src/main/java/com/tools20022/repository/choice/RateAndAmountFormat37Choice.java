@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Choice of format between a rate, an amount or a unspecified rate.
+ * Choice of format between a rate, an amount or an unspecified rate.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -66,7 +66,7 @@ import javax.xml.bind.annotation.XmlType;
  * "RateAndAmountFormat37Choice"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Choice of format between a rate, an amount or a unspecified rate."</li>
+ * "Choice of format between a rate, an amount or an unspecified rate."</li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getPreviousVersion
  * previousVersion} =
  * {@linkplain com.tools20022.repository.choice.RateAndAmountFormat14Choice
@@ -246,7 +246,7 @@ public class RateAndAmountFormat37Choice {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "RateAndAmountFormat37Choice";
-				definition = "Choice of format between a rate, an amount or a unspecified rate.";
+				definition = "Choice of format between a rate, an amount or an unspecified rate.";
 				previousVersion_lazy = () -> RateAndAmountFormat14Choice.mmObject();
 			}
 		});

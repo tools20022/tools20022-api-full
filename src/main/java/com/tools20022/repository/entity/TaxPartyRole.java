@@ -67,6 +67,8 @@ import java.util.concurrent.atomic.AtomicReference;
  * TradeParty2.mmTaxParty}</li>
  * <li>{@linkplain com.tools20022.repository.msg.TradeParty3#mmTaxParty
  * TradeParty3.mmTaxParty}</li>
+ * <li>{@linkplain com.tools20022.repository.msg.TradeParty4#mmTaxParty
+ * TradeParty4.mmTaxParty}</li>
  * </ul>
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMBusinessComponent#getSubType
@@ -256,7 +258,7 @@ public class TaxPartyRole extends Role {
 				name = "TaxPartyRole";
 				definition = "Role played by a party in the context of a tax due.";
 				associationDomain_lazy = () -> Arrays.asList(com.tools20022.repository.entity.Tax.mmPartyRole);
-				derivationElement_lazy = () -> Arrays.asList(TaxParty2.mmAuthorisation, TradeParty1.mmTaxParty, TradeParty2.mmTaxParty, TradeParty3.mmTaxParty);
+				derivationElement_lazy = () -> Arrays.asList(TaxParty2.mmAuthorisation, TradeParty1.mmTaxParty, TradeParty2.mmTaxParty, TradeParty3.mmTaxParty, TradeParty4.mmTaxParty);
 				subType_lazy = () -> Arrays.asList(CreditSideTaxDebtor.mmObject(), TaxPayer.mmObject(), DebitSideTaxDebtor.mmObject(), TaxRecipient.mmObject());
 				superType_lazy = () -> Role.mmObject();
 				element_lazy = () -> Arrays.asList(com.tools20022.repository.entity.TaxPartyRole.mmTax, com.tools20022.repository.entity.TaxPartyRole.mmVATRegistrationNumber);

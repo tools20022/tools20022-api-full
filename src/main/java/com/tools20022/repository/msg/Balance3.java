@@ -77,6 +77,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Report on the net position of a security, on a single securities account, for a certain date."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Balance14 Balance14}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -114,6 +120,14 @@ public class Balance3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Account to or from which a securities entry is made."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Balance14#mmSafekeepingAccount
+	 * Balance14.mmSafekeepingAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSafekeepingAccount = new MMMessageAssociationEnd() {
@@ -125,6 +139,7 @@ public class Balance3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SafekeepingAccount";
 			definition = "Account to or from which a securities entry is made.";
+			nextVersions_lazy = () -> Arrays.asList(Balance14.mmSafekeepingAccount);
 			maxOccurs = 1;
 			minOccurs = 1;
 			isComposite = true;
@@ -164,6 +179,14 @@ public class Balance3 {
 	 * definition} =
 	 * "Report on the net position of a security, on a single securities account, for a certain date."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Balance14#mmBalanceForAccount
+	 * Balance14.mmBalanceForAccount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmBalanceForAccount = new MMMessageAssociationEnd() {
@@ -175,6 +198,7 @@ public class Balance3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "BalanceForAccount";
 			definition = "Report on the net position of a security, on a single securities account, for a certain date.";
+			nextVersions_lazy = () -> Arrays.asList(Balance14.mmBalanceForAccount);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.AggregateBalanceInformation20.mmObject();
@@ -211,6 +235,14 @@ public class Balance3 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Sub-account of the safekeeping or investment account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Balance14#mmSubAccountDetails
+	 * Balance14.mmSubAccountDetails}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmSubAccountDetails = new MMMessageAssociationEnd() {
@@ -222,6 +254,7 @@ public class Balance3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "SubAccountDetails";
 			definition = "Sub-account of the safekeeping or investment account.";
+			nextVersions_lazy = () -> Arrays.asList(Balance14.mmSubAccountDetails);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.SubAccountIdentification27.mmObject();
@@ -254,6 +287,14 @@ public class Balance3 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Total valuation amounts provided in the base currency of the account."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Balance14#mmAccountBaseCurrencyTotalAmounts
+	 * Balance14.mmAccountBaseCurrencyTotalAmounts}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmAccountBaseCurrencyTotalAmounts = new MMMessageAssociationEnd() {
@@ -264,6 +305,7 @@ public class Balance3 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AccountBaseCurrencyTotalAmounts";
 			definition = "Total valuation amounts provided in the base currency of the account.";
+			nextVersions_lazy = () -> Arrays.asList(Balance14.mmAccountBaseCurrencyTotalAmounts);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -282,6 +324,7 @@ public class Balance3 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Balance3";
 				definition = "Report on the net position of a security, on a single securities account, for a certain date.";
+				nextVersions_lazy = () -> Arrays.asList(Balance14.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

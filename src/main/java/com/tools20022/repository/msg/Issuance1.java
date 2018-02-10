@@ -90,6 +90,12 @@ import javax.xml.bind.annotation.XmlType;
  * definition} =
  * "Preparation/bringing to market of a security (also known as primary market or Initial Public Offering (IPO) issuance)."
  * </li>
+ * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+ * nextVersions} =
+ * <ul>
+ * <li>{@linkplain com.tools20022.repository.msg.Issuance3 Issuance3}</li>
+ * </ul>
+ * </li>
  * </ul>
  */
 @XmlAccessorType(XmlAccessType.NONE)
@@ -133,6 +139,13 @@ public class Issuance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Indicates where the financial instrument was issued."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmIssuePlace
+	 * Issuance3.mmIssuePlace}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuePlace = new MMMessageAttribute() {
@@ -145,6 +158,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuePlace";
 			definition = "Indicates where the financial instrument was issued.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmIssuePlace);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> MICIdentifier.mmObject();
@@ -185,6 +199,13 @@ public class Issuance1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Country where a security is issued by the issuer or its agent."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmCountryOfIssue
+	 * Issuance3.mmCountryOfIssue}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmCountryOfIssue = new MMMessageAttribute() {
@@ -197,6 +218,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "CountryOfIssue";
 			definition = "Country where a security is issued by the issuer or its agent.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmCountryOfIssue);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> CountryCode.mmObject();
@@ -236,6 +258,13 @@ public class Issuance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Date/time at which the security was made available."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmIssueDate
+	 * Issuance3.mmIssueDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssueDate = new MMMessageAttribute() {
@@ -248,6 +277,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueDate";
 			definition = "Date/time at which the security was made available.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmIssueDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -286,6 +316,14 @@ public class Issuance1 {
 	 * definition} =
 	 * "Date/time, as announced by the issuer, at which the securities will be issued."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Issuance3#mmAnnouncementDate
+	 * Issuance3.mmAnnouncementDate}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmAnnouncementDate = new MMMessageAttribute() {
@@ -297,6 +335,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "AnnouncementDate";
 			definition = "Date/time, as announced by the issuer, at which the securities will be issued.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmAnnouncementDate);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODateTime.mmObject();
@@ -335,6 +374,13 @@ public class Issuance1 {
 	 * definition} =
 	 * "Defines the date from which the instrument code is valid. This date can be before the actual issue date of an instrument for 'when-issued' securities, but may not be a date in the future for a new security."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmISINValidFrom
+	 * Issuance3.mmISINValidFrom}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmISINValidFrom = new MMMessageAttribute() {
@@ -346,6 +392,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "ISINValidFrom";
 			definition = "Defines the date from which the instrument code is valid. This date can be before the actual issue date of an instrument for 'when-issued' securities, but may not be a date in the future for a new security.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmISINValidFrom);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ISODate.mmObject();
@@ -380,6 +427,14 @@ public class Issuance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Legal entity that has the right to issue securities."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Issuance3#mmIssuerOrganisation
+	 * Issuance3.mmIssuerOrganisation}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmIssuerOrganisation = new MMMessageAssociationEnd() {
@@ -391,6 +446,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuerOrganisation";
 			definition = "Legal entity that has the right to issue securities.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmIssuerOrganisation);
 			maxOccurs = 1;
 			minOccurs = 0;
 			isComposite = true;
@@ -429,6 +485,14 @@ public class Issuance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Total original amount or quantity published."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Issuance3#mmIssueNominalAmount
+	 * Issuance3.mmIssueNominalAmount}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssueNominalAmount = new MMMessageAttribute() {
@@ -440,6 +504,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueNominalAmount";
 			definition = "Total original amount or quantity published.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmIssueNominalAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> FinancialInstrumentQuantity1Choice.mmObject();
@@ -477,7 +542,15 @@ public class Issuance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
-	 * "Figure used as a control to verify whether the information provided is correct.  It represents the issue size multiplied by the issue price."
+	 * "Figure used as a control to verify whether the information provided is correct. It represents the issue size multiplied by the issue price."
+	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Issuance3#mmFullIssuedAmount
+	 * Issuance3.mmFullIssuedAmount}</li>
+	 * </ul>
 	 * </li>
 	 * </ul>
 	 */
@@ -489,7 +562,8 @@ public class Issuance1 {
 			xmlTag = "FullIssdAmt";
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "FullIssuedAmount";
-			definition = "Figure used as a control to verify whether the information provided is correct.  It represents the issue size multiplied by the issue price.";
+			definition = "Figure used as a control to verify whether the information provided is correct. It represents the issue size multiplied by the issue price.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmFullIssuedAmount);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> ActiveCurrencyAndAmount.mmObject();
@@ -528,6 +602,13 @@ public class Issuance1 {
 	 * definition} =
 	 * "Represents the total amount/quantity of the proceeds from the sale of all securities in the initial offering. This amount/quantity is known after the new issue is priced."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmIssueSize
+	 * Issuance3.mmIssueSize}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssueSize = new MMMessageAttribute() {
@@ -539,6 +620,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssueSize";
 			definition = "Represents the total amount/quantity of the proceeds from the sale of all securities in the initial offering. This amount/quantity is known after the new issue is priced.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmIssueSize);
 			maxOccurs = 1;
 			minOccurs = 0;
 			simpleType_lazy = () -> Number.mmObject();
@@ -575,6 +657,13 @@ public class Issuance1 {
 	 * <li>
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} = "Initial issue price of the asset."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmIssuePrice
+	 * Issuance3.mmIssuePrice}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuePrice = new MMMessageAttribute() {
@@ -586,6 +675,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuePrice";
 			definition = "Initial issue price of the asset.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmIssuePrice);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> com.tools20022.repository.msg.PriceValue1.mmObject();
@@ -620,6 +710,14 @@ public class Issuance1 {
 	 * definition} =
 	 * "Way in which the issue will be marketed to the primary market, via individual dealers (so called non syndicated distribution) or via a syndicate of managers, underwriters and selling group members (so called syndicated distribution)."
 	 * </li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>
+	 * {@linkplain com.tools20022.repository.msg.Issuance3#mmIssuanceDistribution
+	 * Issuance3.mmIssuanceDistribution}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAttribute mmIssuanceDistribution = new MMMessageAttribute() {
@@ -630,6 +728,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "IssuanceDistribution";
 			definition = "Way in which the issue will be marketed to the primary market, via individual dealers (so called non syndicated distribution) or via a syndicate of managers, underwriters and selling group members (so called syndicated distribution).";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmIssuanceDistribution);
 			maxOccurs = 1;
 			minOccurs = 0;
 			complexType_lazy = () -> SecuritiesTransactionType17Choice.mmObject();
@@ -661,6 +760,13 @@ public class Issuance1 {
 	 * {@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
 	 * definition} =
 	 * "Jurisdiction (country, county, state, province, city) of the issue."</li>
+	 * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
+	 * nextVersions} =
+	 * <ul>
+	 * <li>{@linkplain com.tools20022.repository.msg.Issuance3#mmGoverningLaw
+	 * Issuance3.mmGoverningLaw}</li>
+	 * </ul>
+	 * </li>
 	 * </ul>
 	 */
 	public static final MMMessageAssociationEnd mmGoverningLaw = new MMMessageAssociationEnd() {
@@ -671,6 +777,7 @@ public class Issuance1 {
 			registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 			name = "GoverningLaw";
 			definition = "Jurisdiction (country, county, state, province, city) of the issue.";
+			nextVersions_lazy = () -> Arrays.asList(Issuance3.mmGoverningLaw);
 			minOccurs = 0;
 			isComposite = true;
 			type_lazy = () -> com.tools20022.repository.msg.Jurisdiction1.mmObject();
@@ -689,6 +796,7 @@ public class Issuance1 {
 				registrationStatus = MMRegistrationStatus.PROVISIONALLY_REGISTERED;
 				name = "Issuance1";
 				definition = "Preparation/bringing to market of a security (also known as primary market or Initial Public Offering (IPO) issuance).";
+				nextVersions_lazy = () -> Arrays.asList(Issuance3.mmObject());
 			}
 		});
 		return mmObject_lazy.get();

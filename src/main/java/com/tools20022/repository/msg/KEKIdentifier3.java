@@ -33,7 +33,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * Key that must be created and sent in the response, or that must be verified..
+ * Key that must be created and sent in the response, or that must be verified.
  * <p>
  * <strong>Constant fields:</strong>
  * <ul>
@@ -65,7 +65,7 @@ import javax.xml.bind.annotation.XmlType;
  * "KEKIdentifier3"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
  * definition} =
- * "Key that must be created and sent in the response, or that must be verified.."
+ * "Key that must be created and sent in the response, or that must be verified."
  * </li>
  * <li>{@linkplain com.tools20022.metamodel.MMModelEntity#getNextVersions
  * nextVersions} =
@@ -296,7 +296,7 @@ public class KEKIdentifier3 {
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "KEKIdentifier3";
-				definition = "Key that must be created and sent in the response, or that must be verified..";
+				definition = "Key that must be created and sent in the response, or that must be verified.";
 				nextVersions_lazy = () -> Arrays.asList(KEKIdentifier4.mmObject());
 				previousVersion_lazy = () -> KEKIdentifier2.mmObject();
 			}

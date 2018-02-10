@@ -135,7 +135,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getName name} =
  * "CashAccountTypeCode"</li>
  * <li>{@linkplain com.tools20022.metamodel.MMRepositoryConcept#getDefinition
- * definition} = "Specifies the nature, or  use, of the cash account."</li>
+ * definition} = "Specifies the nature, or use, of the cash account."</li>
  * </ul>
  */
 @XmlJavaTypeAdapter(InternalXmlAdapter.class)
@@ -816,7 +816,7 @@ public class CashAccountTypeCode extends MMCode {
 				example = Arrays.asList("CASH");
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "CashAccountTypeCode";
-				definition = "Specifies the nature, or  use, of the cash account.";
+				definition = "Specifies the nature, or use, of the cash account.";
 				derivation_lazy = () -> Arrays.asList(CashAccountType1Code.mmObject(), CashAccountType2Code.mmObject(), CashAccountType4Code.mmObject(), CashAccountType3Code.mmObject(), CashAccountType5Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.CashAccountTypeCode.CashPayment, com.tools20022.repository.codeset.CashAccountTypeCode.Charges,
 						com.tools20022.repository.codeset.CashAccountTypeCode.Commission, com.tools20022.repository.codeset.CashAccountTypeCode.Tax, com.tools20022.repository.codeset.CashAccountTypeCode.CashIncome,

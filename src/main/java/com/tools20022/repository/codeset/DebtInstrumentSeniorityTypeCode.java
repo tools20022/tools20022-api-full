@@ -59,6 +59,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <li>
  * {@linkplain com.tools20022.repository.codeset.DebtInstrumentSeniorityType1Code
  * DebtInstrumentSeniorityType1Code}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.codeset.DebtInstrumentSeniorityType2Code
+ * DebtInstrumentSeniorityType2Code}</li>
  * </ul>
  * </li>
  * <li>
@@ -254,7 +257,7 @@ public class DebtInstrumentSeniorityTypeCode extends MMCode {
 				registrationStatus = MMRegistrationStatus.REGISTERED;
 				name = "DebtInstrumentSeniorityTypeCode";
 				definition = "Specifies the seniority type of a specific debt instrument.";
-				derivation_lazy = () -> Arrays.asList(DebtInstrumentSeniorityType1Code.mmObject());
+				derivation_lazy = () -> Arrays.asList(DebtInstrumentSeniorityType1Code.mmObject(), DebtInstrumentSeniorityType2Code.mmObject());
 				code_lazy = () -> Arrays.asList(com.tools20022.repository.codeset.DebtInstrumentSeniorityTypeCode.SeniorDebt, com.tools20022.repository.codeset.DebtInstrumentSeniorityTypeCode.MezzanineDebt,
 						com.tools20022.repository.codeset.DebtInstrumentSeniorityTypeCode.SubordinatedDebt, com.tools20022.repository.codeset.DebtInstrumentSeniorityTypeCode.JuniorDebt,
 						com.tools20022.repository.codeset.DebtInstrumentSeniorityTypeCode.Other);

@@ -22,6 +22,7 @@ import com.tools20022.metamodel.MMMessageComponent;
 import com.tools20022.metamodel.MMRegistrationStatus;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV06;
 import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07;
+import com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08;
 import com.tools20022.repository.choice.MatchingStatus24Choice;
 import com.tools20022.repository.choice.ProcessingStatus52Choice;
 import com.tools20022.repository.choice.SettlementStatus17Choice;
@@ -71,6 +72,9 @@ import javax.xml.bind.annotation.XmlType;
  * <li>
  * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV07#mmStatusAndReason
  * SecuritiesSettlementTransactionGenerationNotificationV07.mmStatusAndReason}</li>
+ * <li>
+ * {@linkplain com.tools20022.repository.area.sese.SecuritiesSettlementTransactionGenerationNotificationV08#mmStatusAndReason
+ * SecuritiesSettlementTransactionGenerationNotificationV08.mmStatusAndReason}</li>
  * </ul>
  * </li>
  * <li>
@@ -332,7 +336,8 @@ public class StatusAndReason28 {
 			{
 				messageElement_lazy = () -> Arrays.asList(com.tools20022.repository.msg.StatusAndReason28.mmProcessingStatus, com.tools20022.repository.msg.StatusAndReason28.mmInferredMatchingStatus,
 						com.tools20022.repository.msg.StatusAndReason28.mmMatchingStatus, com.tools20022.repository.msg.StatusAndReason28.mmSettlementStatus);
-				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotificationV06.mmStatusAndReason, SecuritiesSettlementTransactionGenerationNotificationV07.mmStatusAndReason);
+				messageBuildingBlock_lazy = () -> Arrays.asList(SecuritiesSettlementTransactionGenerationNotificationV06.mmStatusAndReason, SecuritiesSettlementTransactionGenerationNotificationV07.mmStatusAndReason,
+						SecuritiesSettlementTransactionGenerationNotificationV08.mmStatusAndReason);
 				trace_lazy = () -> Status.mmObject();
 				dataDictionary_lazy = () -> GeneratedRepository.dataDict;
 				constraint_lazy = () -> Arrays.asList(com.tools20022.repository.constraints.ConstraintSettlementStatusAndMatchedRule.forStatusAndReason28);
